@@ -171,15 +171,21 @@ def collect_all() -> list[dict]:
 
 
 if __name__ == "__main__":
-    # Deduplikasyon testi: sadece ilk iki SEARCHES grubunu çalıştır
-    import copy
-    _original = SEARCHES[:]
-    SEARCHES[:] = SEARCHES[:2]
+    print("İstanbul servis veritabanı oluşturuluyor…")
     results = collect_all()
-    SEARCHES[:] = _original
 
-    print(f"\nToplam benzersiz servis (ilk 2 grup): {len(results)}")
-    cats = set()
+    output_path = os.path.join(os.path.dirname(__file__), "..", "src", "services-data.json")
+    output_path = os.path.normpath(output_path)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    print(f"\nToplam benzersiz servis: {len(results)}")
+    print(f"Dosya: {output_path}")
+
+    cats = {}
     for s in results:
-        cats.update(s["kategoriler"])
-    print("Görülen kategoriler:", sorted(cats))
+        for k in s["kategoriler"]:
+            cats[k] = cats.get(k, 0) + 1
+    print("\nKategori dağılımı:")
+    for cat, count in sorted(cats.items(), key=lambda x: -x[1]):
+        print(f"  {cat}: {count}")
