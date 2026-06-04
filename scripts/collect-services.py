@@ -112,7 +112,7 @@ def extract_ilce(address: str) -> str:
             return ilce
     return "İstanbul"
 
-def normalize_phone(place: dict) -> str | None:
+def normalize_phone(place: dict):
     """tel: linki için uluslararası formatlı numara döndür."""
     raw = place.get("internationalPhoneNumber") or place.get("nationalPhoneNumber")
     if not raw:
