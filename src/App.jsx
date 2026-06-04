@@ -162,7 +162,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#3A7D44", "orta": "#C8632B", "yüksek": "#B23A2E" };
