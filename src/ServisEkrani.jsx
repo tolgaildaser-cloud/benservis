@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -43,7 +43,7 @@ function ServisKarti({ servis }) {
           )}
         </div>
         <div style={{ fontSize: 12, color: "#888", marginTop: 3 }}>
-          {servis.puan && `⭐ ${servis.puan.toFixed(1)}`}
+          {servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`}
           {servis.yorumSayisi > 0 && ` · ${servis.yorumSayisi} yorum`}
           {` · ${servis.ilce}`}
           {servis.km != null && ` · `}
@@ -130,13 +130,17 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
         setSiraliServisler(eslesmis);
         setLocationState("success");
       },
-      () => setLocationState("denied")
+      () => setLocationState("denied"),
+      { timeout: 10000 }
     );
   }, [cihaz, servisler]);
 
-  const ilceler = [...new Set(
-    servisler.filter((s) => s.kategoriler.includes(cihaz)).map((s) => s.ilce)
-  )].sort();
+  const ilceler = useMemo(
+    () => [...new Set(
+      servisler.filter((s) => s.kategoriler.includes(cihaz)).map((s) => s.ilce)
+    )].sort(),
+    [servisler, cihaz]
+  );
 
   return (
     <div style={{
@@ -183,10 +187,15 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
             ilceler={ilceler}
             secili={fallbackIlce}
             onSec={(ilce) => {
+              if (!ilce) return;
               setFallbackIlce(ilce);
               const eslesmis = servisler
                 .filter((s) => s.kategoriler.includes(cihaz) && s.ilce === ilce)
-                .sort((a, b) => (b.yetkili ? 1 : 0) - (a.yetkili ? 1 : 0))
+                .sort((a, b) =>
+                  a.yetkili !== b.yetkili
+                    ? b.yetkili ? 1 : -1
+                    : 0
+                )
                 .slice(0, 10);
               setSiraliServisler(eslesmis);
               setLocationState("success");
