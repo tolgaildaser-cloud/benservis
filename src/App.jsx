@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ServisEkrani from "./ServisEkrani.jsx";
+import SERVISLER from "./services-data.json";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -76,6 +78,7 @@ export default function App() {
   const [sonuc, setSonuc] = useState(null);
   const [hataMsg, setHataMsg] = useState("");
   const [kopyalandi, setKopyalandi] = useState(false);
+  const [showServisler, setShowServisler] = useState(false);
 
   const ekleBelirti = (b) => {
     setBelirti((prev) => {
@@ -169,6 +172,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
   return (
     <div style={s.wrap}>
+      {showServisler && (
+        <ServisEkrani
+          cihaz={cihaz}
+          servisler={SERVISLER}
+          onKapat={() => setShowServisler(false)}
+        />
+      )}
       <style>{FONT}{CSS}</style>
       <div style={s.grain} />
 
@@ -287,9 +297,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <div style={s.faz2}>
             <div>
               <div style={s.faz2Head}>Tamir ettirmek ister misin?</div>
-              <div style={s.faz2Sub}>Adresine en yakın, puanlı servisi çağırırız.</div>
+              <div style={s.faz2Sub}>Konumuna göre sıralar · Direkt arama</div>
             </div>
-            <button style={s.faz2Btn} disabled>Servis çağır <span style={s.soon}>yakında</span></button>
+            <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => setShowServisler(true)}>
+              📍 Servis Bul
+            </button>
           </div>
 
           <div style={s.altBtns}>
