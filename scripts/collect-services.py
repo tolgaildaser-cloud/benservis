@@ -107,7 +107,7 @@ ISTANBUL_ILCELERI = [
 def extract_ilce(address: str) -> str:
     """Adres metninden İstanbul ilçesini çıkar."""
     address_lower = address.lower()
-    for ilce in ISTANBUL_ILCELERI:
+    for ilce in sorted(ISTANBUL_ILCELERI, key=len, reverse=True):
         if ilce.lower() in address_lower:
             return ilce
     return "İstanbul"
@@ -146,7 +146,7 @@ def collect_all() -> list[dict]:
             print(f"  Sorgulaniyor: {query}")
             try:
                 places = search_places(query)
-            except requests.HTTPError as e:
+            except requests.RequestException as e:
                 print(f"  HATA: {e}")
                 continue
 
