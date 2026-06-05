@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
+import DPPEkrani from "./DPPEkrani.jsx";
 import SERVISLER from "./services-data.json";
 import { CIHAZLAR } from "./constants.js";
 
@@ -73,6 +74,8 @@ export default function App() {
   const [hataMsg, setHataMsg] = useState("");
   const [kopyalandi, setKopyalandi] = useState(false);
   const [showServisler, setShowServisler] = useState(false);
+  const [showDPP, setShowDPP] = useState(false);
+  const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
 
   const ekleBelirti = (b) => {
     setBelirti((prev) => {
@@ -156,7 +159,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#3A7D44", "orta": "#C8632B", "yüksek": "#B23A2E" };
@@ -171,6 +174,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           cihaz={cihaz}
           servisler={SERVISLER}
           onKapat={() => setShowServisler(false)}
+        />
+      )}
+      {showDPP && (
+        <DPPEkrani
+          initialSeriNo={dppInitialSeriNo}
+          teshisContext={adim === "sonuc" ? { cihaz, marka } : null}
+          onKapat={() => { setShowDPP(false); setDppInitialSeriNo(""); }}
         />
       )}
       <style>{FONT}{CSS}</style>
