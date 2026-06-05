@@ -167,7 +167,7 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
 
 // ─── Placeholder ekranlar (sonraki tasklarda doldurulacak) ────────────────────
 
-function PasaportGorunum({ pasaport, onTamirEkle }) {
+function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
   const { cihaz, tamirler, toplam_maliyet } = pasaport;
 
   const garantiDurumu = () => {
@@ -210,7 +210,7 @@ function PasaportGorunum({ pasaport, onTamirEkle }) {
         {cihaz.fotograflar?.length > 0 && (
           <div style={s.fotoGaleri}>
             {cihaz.fotograflar.map((url, i) => (
-              <img key={i} src={url} alt={`Cihaz ${i + 1}`} style={s.fotoKucuk} />
+              <img key={url} src={url} alt={`Cihaz ${i + 1}`} style={s.fotoKucuk} />
             ))}
           </div>
         )}
@@ -253,7 +253,7 @@ function PasaportGorunum({ pasaport, onTamirEkle }) {
             {t.fotograflar?.length > 0 && (
               <div style={s.fotoGaleri}>
                 {t.fotograflar.map((url, i) => (
-                  <img key={i} src={url} alt={`Tamir ${i + 1}`} style={s.fotoKucuk} />
+                  <img key={url} src={url} alt={`Tamir ${i + 1}`} style={s.fotoKucuk} />
                 ))}
               </div>
             )}
