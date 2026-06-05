@@ -1,6 +1,5 @@
 // src/DPPEkrani.jsx
 import React, { useState } from "react";
-import { CIHAZLAR } from "./constants.js";
 
 // Tasarım token'ları (App.jsx ile tutarlı)
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
@@ -38,6 +37,7 @@ function AramaEkrani({ onBulundu, onYeni, initialSeriNo }) {
       <p style={s.aciklama}>Seri numarasını gir — mevcut pasaportu getir veya yeni oluştur.</p>
       <input
         style={s.input}
+        aria-label="Seri numarası"
         value={seriNo}
         onChange={(e) => setSeriNo(e.target.value.toUpperCase())}
         onKeyDown={(e) => e.key === "Enter" && ara()}
@@ -76,14 +76,19 @@ export default function DPPEkrani({ initialSeriNo, teshisContext, onKapat }) {
   const handleYeni = (sn) => { setBekleyenSeriNo(sn); setEkran("yeni_cihaz"); };
   const handleOlusturuldu = (data) => { setPasaport(data); setEkran("pasaport"); };
   const handleTamirEklendi = async () => {
-    // Pasaportu yenile
-    const res = await fetch(`/api/dpp/cihaz?seri_no=${encodeURIComponent(pasaport.cihaz.seri_no)}`);
-    if (res.ok) setPasaport(await res.json());
-    setEkran("pasaport");
+    if (!pasaport?.cihaz) { setEkran("pasaport"); return; }
+    try {
+      const res = await fetch(`/api/dpp/cihaz?seri_no=${encodeURIComponent(pasaport.cihaz.seri_no)}`);
+      if (res.ok) setPasaport(await res.json());
+    } catch {
+      // Yenileme başarısız — eski pasaport göster, veri kaybolmaz
+    } finally {
+      setEkran("pasaport");
+    }
   };
 
   return (
-    <div style={s.overlay}>
+    <div style={s.overlay} onKeyDown={(e) => e.key === "Escape" && onKapat()} tabIndex={-1}>
       <div style={s.panel}>
         {/* Sticky header */}
         <div style={s.header}>
@@ -109,7 +114,7 @@ export default function DPPEkrani({ initialSeriNo, teshisContext, onKapat }) {
             <PasaportGorunum
               pasaport={pasaport}
               onTamirEkle={() => setEkran("tamir_ekle")}
-              onYenile={() => {}}
+              onYenile={() => {}} // TODO Task 7: wire up to passport refresh
             />
           )}
           {ekran === "tamir_ekle" && pasaport && (
