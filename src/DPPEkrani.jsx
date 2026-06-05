@@ -70,6 +70,8 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
 
   const olustur = async () => {
+    if (!form.kategori) { setHata("Cihaz türü seçin."); return; }
+    if (!form.marka.trim()) { setHata("Marka gerekli."); return; }
     setHata("");
     setYukleniyor(true);
     try {
@@ -113,6 +115,7 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
         {CIHAZLAR.map((c) => (
           <button
             key={c}
+            type="button"
             onClick={() => set("kategori", c)}
             style={{ ...s.chip, ...(form.kategori === c ? s.chipActive : {}) }}
           >
