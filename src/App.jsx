@@ -192,6 +192,28 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         <div style={s.trustBadge}>Tamirde sürpriz fiyat yok</div>
       </header>
 
+      {/* DPP Banner — ana ekranda her zaman görünür */}
+      {adim === "form" && (
+        <div style={s.dppBanner}>
+          <span style={s.dppBannerText}>📋 Cihaz Pasaportu</span>
+          <div style={s.dppBannerSag}>
+            <input
+              style={s.dppBannerInput}
+              value={dppInitialSeriNo}
+              onChange={(e) => setDppInitialSeriNo(e.target.value.toUpperCase())}
+              onKeyDown={(e) => e.key === "Enter" && setShowDPP(true)}
+              placeholder="Seri no ile ara"
+            />
+            <button
+              style={s.dppBannerBtn}
+              onClick={() => setShowDPP(true)}
+            >
+              Ara
+            </button>
+          </div>
+        </div>
+      )}
+
       {(adim === "form" || adim === "hata") && (
         <div style={s.card}>
           <label style={s.label}>Hangi cihaz?</label>
@@ -303,9 +325,17 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <div style={s.faz2Head}>Tamir ettirmek ister misin?</div>
               <div style={s.faz2Sub}>Konumuna göre sıralar · Direkt arama</div>
             </div>
-            <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => setShowServisler(true)}>
-              📍 Servis Bul
-            </button>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => setShowServisler(true)}>
+                📍 Servis Bul
+              </button>
+              <button
+                style={{ ...s.faz2Btn, background: "rgba(255,255,255,.15)", fontSize: 12.5 }}
+                onClick={() => { setDppInitialSeriNo(""); setShowDPP(true); }}
+              >
+                📋 Cihazı Kaydet
+              </button>
+            </div>
           </div>
 
           <div style={s.altBtns}>
@@ -391,4 +421,22 @@ const s = {
   copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
   reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #DDD3BE", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
   footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#A59E8E", marginTop: 26 },
+  dppBanner: {
+    position: "relative", zIndex: 1, marginBottom: 12,
+    background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14,
+    padding: "12px 16px", display: "flex", justifyContent: "space-between",
+    alignItems: "center", gap: 12, flexWrap: "wrap",
+  },
+  dppBannerText: { fontSize: 13.5, fontWeight: 700, color: "#22302A" },
+  dppBannerSag: { display: "flex", gap: 8, flex: 1, maxWidth: 280 },
+  dppBannerInput: {
+    flex: 1, padding: "8px 11px", borderRadius: 9,
+    border: "1.5px solid #DDD3BE", background: "#F5EFE2", fontSize: 13,
+    fontFamily: "'Hanken Grotesk', sans-serif", color: "#22302A", letterSpacing: "0.04em",
+  },
+  dppBannerBtn: {
+    padding: "8px 14px", borderRadius: 9, border: "none",
+    background: "#22302A", color: "#F5EFE2", fontSize: 13, fontWeight: 700,
+    fontFamily: "'Hanken Grotesk', sans-serif", whiteSpace: "nowrap", cursor: "pointer",
+  },
 };
