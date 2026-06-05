@@ -159,7 +159,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#3A7D44", "orta": "#C8632B", "yüksek": "#B23A2E" };
@@ -416,7 +416,6 @@ const s = {
   faz2Head: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600 },
   faz2Sub: { fontSize: 13, color: "#B8BEB6", marginTop: 3 },
   faz2Btn: { background: AMBER, color: "#fff", border: "none", borderRadius: 11, padding: "11px 15px", fontWeight: 700, fontSize: 14, opacity: .85, whiteSpace: "nowrap" },
-  soon: { fontSize: 10, background: "rgba(255,255,255,.25)", padding: "2px 6px", borderRadius: 6, marginLeft: 6, verticalAlign: "middle" },
   altBtns: { display: "flex", gap: 10, marginTop: 16 },
   copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
   reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #DDD3BE", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
