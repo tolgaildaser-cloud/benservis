@@ -18,6 +18,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "cihaz_id, tarih ve yapilan_islem gerekli" });
   }
 
+  if (isNaN(Date.parse(tarih))) {
+    return res.status(400).json({ error: "Geçersiz tarih formatı" });
+  }
+
+  const GECERLI_SERVIS_TURLERI = ["harici", "yetkili", "benservis", "sahip"];
+  if (servis_turu && !GECERLI_SERVIS_TURLERI.includes(servis_turu)) {
+    return res.status(400).json({ error: "Geçersiz servis_turu. Geçerli değerler: harici, yetkili, benservis, sahip" });
+  }
+
   // cihaz_id geçerli mi kontrol et
   const { data: cihaz, error: ce } = await supabase
     .from("cihazlar")
@@ -25,7 +34,11 @@ export default async function handler(req, res) {
     .eq("id", cihaz_id)
     .single();
 
-  if (ce || !cihaz) return res.status(404).json({ error: "Cihaz bulunamadı" });
+  if (ce) {
+    if (ce.code === "PGRST116") return res.status(404).json({ error: "Cihaz bulunamadı" });
+    return res.status(500).json({ error: "Veritabanı hatası" });
+  }
+  if (!cihaz) return res.status(404).json({ error: "Cihaz bulunamadı" });
 
   const { data: tamir, error } = await supabase
     .from("tamir_kayitlari")
@@ -34,7 +47,7 @@ export default async function handler(req, res) {
       tarih,
       yapilan_islem,
       degistirilen_parcalar: degistirilen_parcalar || [],
-      maliyet: maliyet || null,
+      maliyet: (maliyet !== undefined && maliyet !== null) ? maliyet : null,
       servis_adi: servis_adi || null,
       servis_turu: servis_turu || "harici",
       benservis_is_id: benservis_is_id || null,
