@@ -167,8 +167,105 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
 
 // ─── Placeholder ekranlar (sonraki tasklarda doldurulacak) ────────────────────
 
-function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
-  return <div style={s.ekran}><p style={s.aciklama}>Pasaport Görünümü — Task 7'de gelecek</p></div>;
+function PasaportGorunum({ pasaport, onTamirEkle }) {
+  const { cihaz, tamirler, toplam_maliyet } = pasaport;
+
+  const garantiDurumu = () => {
+    if (!cihaz.garanti_bitis_tarihi) return null;
+    const bitis = new Date(cihaz.garanti_bitis_tarihi);
+    const bugun = new Date();
+    const fark = Math.ceil((bitis - bugun) / (1000 * 60 * 60 * 24));
+    if (fark > 0) return { label: `Garanti: ${fark} gün kaldı`, renk: GREEN };
+    return { label: "Garanti süresi dolmuş", renk: "#B23A2E" };
+  };
+
+  const garanti = garantiDurumu();
+
+  return (
+    <div style={s.ekran}>
+      {/* Cihaz başlığı kartı */}
+      <div style={s.pasaportKart}>
+        <div style={s.pasaportBaslik}>
+          {cihaz.marka && cihaz.model
+            ? `${cihaz.marka} ${cihaz.model}`
+            : cihaz.marka || cihaz.kategori || "Cihaz"}
+        </div>
+        <div style={s.pasaportAlt}>
+          {cihaz.kategori && <span style={s.rozet}>{cihaz.kategori}</span>}
+          {cihaz.uretim_yili && <span style={s.metaBilgi}>{cihaz.uretim_yili}</span>}
+          {garanti && (
+            <span style={{ ...s.metaBilgi, color: garanti.renk, fontWeight: 700 }}>
+              {garanti.label}
+            </span>
+          )}
+        </div>
+        <div style={s.seriNo}>SN: {cihaz.seri_no}</div>
+        {toplam_maliyet > 0 && (
+          <div style={s.toplamMaliyet}>
+            Toplam tamir maliyeti:{" "}
+            <strong>{toplam_maliyet.toLocaleString("tr-TR")} TL</strong>
+          </div>
+        )}
+        {/* Cihaz fotoğrafları */}
+        {cihaz.fotograflar?.length > 0 && (
+          <div style={s.fotoGaleri}>
+            {cihaz.fotograflar.map((url, i) => (
+              <img key={i} src={url} alt={`Cihaz ${i + 1}`} style={s.fotoKucuk} />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Tamir zaman çizelgesi */}
+      <div style={s.secBaslik}>
+        Tamir Geçmişi
+        <span style={s.tamirSayisi}>{tamirler.length} kayıt</span>
+      </div>
+
+      {tamirler.length === 0 ? (
+        <p style={s.bosMetin}>Henüz tamir kaydı yok.</p>
+      ) : (
+        tamirler.map((t) => (
+          <div key={t.id} style={s.tamirKart}>
+            <div style={s.tamirUst}>
+              <span style={s.tamirTarih}>
+                {new Date(t.tarih + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}
+              </span>
+              {t.servis_turu === "benservis" && (
+                <span style={s.dogrulanmisRozet}>✓ Doğrulanmış</span>
+              )}
+              {t.servis_turu === "harici" && <span style={s.hariciRozet}>Harici Servis</span>}
+              {t.servis_turu === "sahip" && <span style={s.sahipRozet}>Kendim Yaptım</span>}
+              {t.servis_turu === "yetkili" && <span style={s.hariciRozet}>Yetkili Servis</span>}
+            </div>
+            <div style={s.tamirIslem}>{t.yapilan_islem}</div>
+            {t.servis_adi && <div style={s.tamirServis}>{t.servis_adi}</div>}
+            {t.degistirilen_parcalar?.length > 0 && (
+              <div style={s.parcalar}>
+                {t.degistirilen_parcalar.map((p, i) => (
+                  <span key={i} style={s.parcaChip}>{p}</span>
+                ))}
+              </div>
+            )}
+            {t.maliyet != null && (
+              <div style={s.tamirMaliyet}>{t.maliyet.toLocaleString("tr-TR")} TL</div>
+            )}
+            {t.fotograflar?.length > 0 && (
+              <div style={s.fotoGaleri}>
+                {t.fotograflar.map((url, i) => (
+                  <img key={i} src={url} alt={`Tamir ${i + 1}`} style={s.fotoKucuk} />
+                ))}
+              </div>
+            )}
+          </div>
+        ))
+      )}
+
+      <button style={{ ...s.cta, marginTop: 16 }} onClick={onTamirEkle}>
+        + Tamir Kaydı Ekle
+      </button>
+    </div>
+  );
 }
 
 function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
@@ -224,7 +321,7 @@ export default function DPPEkrani({ initialSeriNo, teshisContext, onKapat }) {
             <PasaportGorunum
               pasaport={pasaport}
               onTamirEkle={() => setEkran("tamir_ekle")}
-              onYenile={() => {}} // TODO Task 7: wire up to passport refresh
+              onYenile={handleTamirEklendi}
             />
           )}
           {ekran === "tamir_ekle" && pasaport && (
@@ -285,4 +382,36 @@ const s = {
   chip: { fontSize: 12.5, padding: "7px 12px", borderRadius: 999, border: "1.5px solid #DDD3BE", background: "#FFFDF8", color: "#5C6660", fontWeight: 600, cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif" },
   chipActive: { background: INK, color: CREAM, borderColor: INK },
   row: { display: "flex", gap: 12 },
+  pasaportKart: {
+    background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14,
+    padding: "16px 18px", marginBottom: 18,
+  },
+  pasaportBaslik: { fontFamily: "'Fraunces', serif", fontSize: 20, fontWeight: 700, color: INK },
+  pasaportAlt: { display: "flex", gap: 8, flexWrap: "wrap", marginTop: 6, alignItems: "center" },
+  rozet: { fontSize: 12, fontWeight: 700, background: INK, color: CREAM, padding: "3px 9px", borderRadius: 999 },
+  metaBilgi: { fontSize: 12.5, color: "#5C6660" },
+  seriNo: { fontSize: 12, color: "#9A9384", marginTop: 8, letterSpacing: "0.05em" },
+  toplamMaliyet: { fontSize: 13, color: "#5C6660", marginTop: 6 },
+  fotoGaleri: { display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 },
+  fotoKucuk: { width: 64, height: 64, objectFit: "cover", borderRadius: 8, border: "1px solid #E5DCC9" },
+  secBaslik: {
+    fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 600,
+    color: INK, marginBottom: 12, display: "flex", justifyContent: "space-between", alignItems: "center",
+  },
+  tamirSayisi: { fontSize: 12, color: "#9A9384", fontFamily: "'Hanken Grotesk', sans-serif", fontWeight: 400 },
+  bosMetin: { fontSize: 14, color: "#9A9384", textAlign: "center", padding: "24px 0" },
+  tamirKart: {
+    background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 12,
+    padding: "12px 14px", marginBottom: 10,
+  },
+  tamirUst: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 },
+  tamirTarih: { fontSize: 12.5, color: "#9A9384" },
+  dogrulanmisRozet: { fontSize: 11, fontWeight: 700, color: GREEN, background: "rgba(58,125,68,.1)", padding: "2px 8px", borderRadius: 999 },
+  hariciRozet: { fontSize: 11, color: "#5C6660", background: "#F0EAD8", padding: "2px 8px", borderRadius: 999 },
+  sahipRozet: { fontSize: 11, color: AMBER, background: "rgba(200,99,43,.1)", padding: "2px 8px", borderRadius: 999 },
+  tamirIslem: { fontSize: 14.5, fontWeight: 700, color: INK },
+  tamirServis: { fontSize: 12.5, color: "#5C6660", marginTop: 2 },
+  parcalar: { display: "flex", gap: 6, flexWrap: "wrap", marginTop: 6 },
+  parcaChip: { fontSize: 11.5, background: "#F0EAD8", color: "#6E6450", padding: "3px 8px", borderRadius: 6 },
+  tamirMaliyet: { fontSize: 13, fontWeight: 700, color: AMBER, marginTop: 6 },
 };
