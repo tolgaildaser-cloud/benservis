@@ -1,9 +1,106 @@
 // src/DPPEkrani.jsx
 import React, { useState } from "react";
 import { CIHAZLAR } from "./constants.js";
+import { supabase } from "./lib/supabase.js";
+
+// TODO (Faz 3+): After cihaz ID is known, move files to cihazlar/{id}/ or tamirler/{id}/
+// Auth gelince storage path'ler RLS ile kısıtlanacak.
+async function uploadPhoto(file, folder) {
+  const ext = file.name.split(".").pop().toLowerCase();
+  const allowed = ["jpg", "jpeg", "png", "webp"];
+  if (!allowed.includes(ext)) throw new Error("Desteklenmeyen format (jpg, png, webp)");
+  if (file.size > 5 * 1024 * 1024) throw new Error("Maksimum dosya boyutu 5 MB");
+
+  const fileName = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+  const path = `${folder}/${fileName}`;
+
+  const { error } = await supabase.storage
+    .from("dpp-fotograflar")
+    .upload(path, file, { contentType: file.type, upsert: false });
+  if (error) throw new Error(error.message);
+
+  const { data } = supabase.storage.from("dpp-fotograflar").getPublicUrl(path);
+  return data.publicUrl;
+}
 
 // Tasarım token'ları (App.jsx ile tutarlı)
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+
+// ─── Fotoğraf Yükleme ────────────────────────────────────────────────────────
+function FotoYukle({ urls, onUrls, maxAdet = 3 }) {
+  const [yukleniyor, setYukleniyor] = useState(false);
+  const [hata, setHata] = useState("");
+  const inputRef = React.useRef(null);
+
+  const dosyaSec = async (e) => {
+    const dosyalar = Array.from(e.target.files || []);
+    if (!dosyalar.length) return;
+    if (urls.length + dosyalar.length > maxAdet) {
+      setHata(`En fazla ${maxAdet} fotoğraf eklenebilir.`);
+      return;
+    }
+    setHata("");
+    setYukleniyor(true);
+    try {
+      const folder = `gecici/${Date.now()}`;
+      const yeniUrls = await Promise.all(dosyalar.map((f) => uploadPhoto(f, folder)));
+      onUrls([...urls, ...yeniUrls]);
+    } catch (e) {
+      setHata(e.message);
+    } finally {
+      setYukleniyor(false);
+      if (inputRef.current) inputRef.current.value = "";
+    }
+  };
+
+  const kaldir = (url) => onUrls(urls.filter((u) => u !== url));
+
+  return (
+    <div>
+      <div style={s.fotoGaleri}>
+        {urls.map((url) => (
+          <div key={url} style={{ position: "relative", flexShrink: 0 }}>
+            <img src={url} alt="Fotoğraf" style={s.fotoKucuk} />
+            <button
+              type="button"
+              onClick={() => kaldir(url)}
+              style={{
+                position: "absolute", top: -6, right: -6,
+                background: "#B23A2E", color: "#fff", border: "none",
+                borderRadius: "50%", width: 18, height: 18, fontSize: 10,
+                cursor: "pointer", display: "flex", alignItems: "center",
+                justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif",
+              }}
+            >✕</button>
+          </div>
+        ))}
+        {urls.length < maxAdet && (
+          <button
+            type="button"
+            onClick={() => inputRef.current?.click()}
+            disabled={yukleniyor}
+            style={{
+              width: 64, height: 64, border: "1.5px dashed #DDD3BE", borderRadius: 8,
+              background: "#FFFDF8", color: "#9A9384", fontSize: 22, cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+            }}
+          >
+            {yukleniyor ? "⏳" : "+"}
+          </button>
+        )}
+      </div>
+      {hata && <p style={{ ...s.hata, marginTop: 4 }}>{hata}</p>}
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/jpeg,image/png,image/webp"
+        multiple
+        style={{ display: "none" }}
+        onChange={dosyaSec}
+      />
+    </div>
+  );
+}
 
 // ─── Arama Ekranı ────────────────────────────────────────────────────────────
 function AramaEkrani({ onBulundu, onYeni, initialSeriNo }) {
@@ -64,6 +161,7 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
     satin_alma_tarihi: "",
     garanti_bitis_tarihi: "",
   });
+  const [fotograflar, setFotograflar] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(false);
   const [hata, setHata] = useState("");
 
@@ -84,6 +182,7 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
         uretim_yili: form.uretim_yili ? parseInt(form.uretim_yili, 10) : null,
         satin_alma_tarihi: form.satin_alma_tarihi || null,
         garanti_bitis_tarihi: form.garanti_bitis_tarihi || null,
+        fotograflar,
       };
       const res = await fetch("/api/dpp/cihaz", {
         method: "POST",
@@ -157,6 +256,8 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
         </div>
       </div>
 
+      <label style={s.label}>Fotoğraf <span style={s.opt}>(opsiyonel, max 3)</span></label>
+      <FotoYukle urls={fotograflar} onUrls={setFotograflar} maxAdet={3} />
       {hata && <p style={s.hata}>{hata}</p>}
       <button style={{ ...s.cta, marginTop: 18 }} onClick={olustur} disabled={yukleniyor}>
         {yukleniyor ? "Oluşturuluyor…" : "Pasaport Oluştur →"}
@@ -279,6 +380,7 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
     servis_turu: "harici",
     notlar: "",
   });
+  const [fotograflar, setFotograflar] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(false);
   const [hata, setHata] = useState("");
 
@@ -315,6 +417,7 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
           servis_adi: form.servis_adi || null,
           servis_turu: form.servis_turu,
           notlar: form.notlar || null,
+          fotograflar,
         }),
       });
       if (!res.ok) throw new Error("Sunucu hatası");
@@ -409,6 +512,8 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
         onChange={(e) => set("notlar", e.target.value)}
       />
 
+      <label style={s.label}>Fotoğraf <span style={s.opt}>(öncesi/sonrası, max 5)</span></label>
+      <FotoYukle urls={fotograflar} onUrls={setFotograflar} maxAdet={5} />
       {hata && <p style={s.hata}>{hata}</p>}
       <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
         <button type="button" style={s.iptalBtn} onClick={onIptal} disabled={yukleniyor}>İptal</button>
