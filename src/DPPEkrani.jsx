@@ -287,8 +287,11 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
   const parcaEkle = () => {
     const p = form.parcaGiris.trim();
     if (!p || form.degistirilen_parcalar.includes(p)) return;
-    set("degistirilen_parcalar", [...form.degistirilen_parcalar, p]);
-    set("parcaGiris", "");
+    setForm((f) => ({
+      ...f,
+      degistirilen_parcalar: [...f.degistirilen_parcalar, p],
+      parcaGiris: "",
+    }));
   };
 
   const parcaKaldir = (p) =>
@@ -386,8 +389,13 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
             style={s.input}
             type="number"
             min="0"
+            step="1"
             value={form.maliyet}
-            onChange={(e) => set("maliyet", e.target.value)}
+            onChange={(e) => {
+              const v = e.target.value;
+              // Sadece tam sayı kabul et
+              if (v === "" || /^\d+$/.test(v)) set("maliyet", v);
+            }}
             placeholder="850"
           />
         </div>
@@ -403,7 +411,7 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
 
       {hata && <p style={s.hata}>{hata}</p>}
       <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
-        <button type="button" style={s.iptalBtn} onClick={onIptal}>İptal</button>
+        <button type="button" style={s.iptalBtn} onClick={onIptal} disabled={yukleniyor}>İptal</button>
         <button
           type="button"
           style={{ ...s.cta, flex: 1, marginTop: 0 }}
