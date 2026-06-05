@@ -269,7 +269,152 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
 }
 
 function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
-  return <div style={s.ekran}><p style={s.aciklama}>Tamir Ekle Formu — Task 8'de gelecek</p></div>;
+  const [form, setForm] = useState({
+    tarih: new Date().toISOString().split("T")[0],
+    yapilan_islem: "",
+    parcaGiris: "",
+    degistirilen_parcalar: [],
+    maliyet: "",
+    servis_adi: "",
+    servis_turu: "harici",
+    notlar: "",
+  });
+  const [yukleniyor, setYukleniyor] = useState(false);
+  const [hata, setHata] = useState("");
+
+  const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+
+  const parcaEkle = () => {
+    const p = form.parcaGiris.trim();
+    if (!p || form.degistirilen_parcalar.includes(p)) return;
+    set("degistirilen_parcalar", [...form.degistirilen_parcalar, p]);
+    set("parcaGiris", "");
+  };
+
+  const parcaKaldir = (p) =>
+    set("degistirilen_parcalar", form.degistirilen_parcalar.filter((x) => x !== p));
+
+  const kaydet = async () => {
+    if (!form.tarih) { setHata("Tarih gerekli."); return; }
+    if (!form.yapilan_islem.trim()) { setHata("Yapılan işlem gerekli."); return; }
+    setHata("");
+    setYukleniyor(true);
+    try {
+      const res = await fetch("/api/dpp/tamir", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          cihaz_id: cihazId,
+          tarih: form.tarih,
+          yapilan_islem: form.yapilan_islem,
+          degistirilen_parcalar: form.degistirilen_parcalar,
+          maliyet: form.maliyet !== "" ? parseInt(form.maliyet, 10) : null,
+          servis_adi: form.servis_adi || null,
+          servis_turu: form.servis_turu,
+          notlar: form.notlar || null,
+        }),
+      });
+      if (!res.ok) throw new Error("Sunucu hatası");
+      onEklendi();
+    } catch {
+      setHata("Kayıt eklenemedi, tekrar dene.");
+    } finally {
+      setYukleniyor(false);
+    }
+  };
+
+  return (
+    <div style={s.ekran}>
+      <h2 style={s.baslik}>Tamir Kaydı Ekle</h2>
+
+      <label style={s.label}>Servis türü</label>
+      <div style={s.chipWrap}>
+        {[["harici", "Harici Servis"], ["yetkili", "Yetkili Servis"], ["benservis", "Benservis"], ["sahip", "Kendim Yaptım"]].map(([v, l]) => (
+          <button key={v} type="button" onClick={() => set("servis_turu", v)}
+            style={{ ...s.chip, ...(form.servis_turu === v ? s.chipActive : {}) }}>
+            {l}
+          </button>
+        ))}
+      </div>
+
+      <div style={s.row}>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Tarih</label>
+          <input style={s.input} type="date" value={form.tarih} onChange={(e) => set("tarih", e.target.value)} />
+        </div>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Servis adı <span style={s.opt}>(opsiyonel)</span></label>
+          <input style={s.input} value={form.servis_adi} onChange={(e) => set("servis_adi", e.target.value)} placeholder="Klima Pro" />
+        </div>
+      </div>
+
+      <label style={s.label}>Yapılan işlem</label>
+      <textarea
+        style={{ ...s.input, resize: "vertical", lineHeight: 1.5, minHeight: 70 }}
+        rows={3}
+        value={form.yapilan_islem}
+        onChange={(e) => set("yapilan_islem", e.target.value)}
+        placeholder="Gaz dolumu yapıldı, filtreler temizlendi"
+      />
+
+      <label style={s.label}>Değiştirilen parçalar <span style={s.opt}>(opsiyonel)</span></label>
+      <div style={{ display: "flex", gap: 8 }}>
+        <input
+          style={{ ...s.input, flex: 1 }}
+          value={form.parcaGiris}
+          onChange={(e) => set("parcaGiris", e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); parcaEkle(); } }}
+          placeholder="Parça adı yaz, Enter ile ekle"
+        />
+        <button type="button" style={s.parcaEkleBtn} onClick={parcaEkle}>+ Ekle</button>
+      </div>
+      {form.degistirilen_parcalar.length > 0 && (
+        <div style={{ ...s.parcalar, marginTop: 8 }}>
+          {form.degistirilen_parcalar.map((p) => (
+            <button key={p} type="button" onClick={() => parcaKaldir(p)}
+              style={{ ...s.parcaChip, cursor: "pointer", background: "#DDD3BE", border: "none" }}>
+              {p} ✕
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div style={s.row}>
+        <div style={{ width: 140 }}>
+          <label style={s.label}>Maliyet <span style={s.opt}>(TL)</span></label>
+          <input
+            style={s.input}
+            type="number"
+            min="0"
+            value={form.maliyet}
+            onChange={(e) => set("maliyet", e.target.value)}
+            placeholder="850"
+          />
+        </div>
+      </div>
+
+      <label style={s.label}>Notlar <span style={s.opt}>(opsiyonel)</span></label>
+      <textarea
+        style={{ ...s.input, resize: "vertical", minHeight: 52 }}
+        rows={2}
+        value={form.notlar}
+        onChange={(e) => set("notlar", e.target.value)}
+      />
+
+      {hata && <p style={s.hata}>{hata}</p>}
+      <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
+        <button type="button" style={s.iptalBtn} onClick={onIptal}>İptal</button>
+        <button
+          type="button"
+          style={{ ...s.cta, flex: 1, marginTop: 0 }}
+          onClick={kaydet}
+          disabled={yukleniyor}
+        >
+          {yukleniyor ? "Kaydediliyor…" : "Kaydet →"}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 // ─── Ana Bileşen ──────────────────────────────────────────────────────────────
@@ -414,4 +559,15 @@ const s = {
   parcalar: { display: "flex", gap: 6, flexWrap: "wrap", marginTop: 6 },
   parcaChip: { fontSize: 11.5, background: "#F0EAD8", color: "#6E6450", padding: "3px 8px", borderRadius: 6 },
   tamirMaliyet: { fontSize: 13, fontWeight: 700, color: AMBER, marginTop: 6 },
+  parcaEkleBtn: {
+    padding: "0 14px", borderRadius: 11, border: `1.5px solid ${AMBER}`,
+    background: "rgba(200,99,43,.06)", color: AMBER, fontWeight: 700, fontSize: 13,
+    whiteSpace: "nowrap", fontFamily: "'Hanken Grotesk', sans-serif", cursor: "pointer",
+    flexShrink: 0,
+  },
+  iptalBtn: {
+    padding: "13px 20px", borderRadius: 12, border: "1.5px solid #DDD3BE",
+    background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600,
+    fontFamily: "'Hanken Grotesk', sans-serif", cursor: "pointer",
+  },
 };
