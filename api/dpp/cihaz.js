@@ -53,11 +53,12 @@ export default async function handler(req, res) {
       .single();
 
     if (existing) {
-      const { data: tamirler } = await supabase
+      const { data: tamirler, error: te2 } = await supabase
         .from("tamir_kayitlari")
         .select("*")
         .eq("cihaz_id", existing.id)
         .order("tarih", { ascending: false });
+      if (te2) return res.status(500).json({ error: te2.message });
       const toplam_maliyet = (tamirler || []).reduce((s, t) => s + (t.maliyet || 0), 0);
       return res.status(200).json({ cihaz: existing, tamirler: tamirler || [], toplam_maliyet, created: false });
     }
@@ -80,7 +81,24 @@ export default async function handler(req, res) {
       .select()
       .single();
 
-    if (error) return res.status(500).json({ error: error.message });
+    if (error) {
+      // Unique constraint: concurrent request already inserted — fetch and return
+      if (error.code === "23505") {
+        const { data: existed } = await supabase
+          .from("cihazlar")
+          .select("*")
+          .eq("seri_no", seri_no)
+          .single();
+        const { data: tamirler2 } = await supabase
+          .from("tamir_kayitlari")
+          .select("*")
+          .eq("cihaz_id", existed.id)
+          .order("tarih", { ascending: false });
+        const toplam2 = (tamirler2 || []).reduce((s, t) => s + (t.maliyet || 0), 0);
+        return res.status(200).json({ cihaz: existed, tamirler: tamirler2 || [], toplam_maliyet: toplam2, created: false });
+      }
+      return res.status(500).json({ error: error.message });
+    }
     return res.status(201).json({ cihaz, tamirler: [], toplam_maliyet: 0, created: true });
   }
 
