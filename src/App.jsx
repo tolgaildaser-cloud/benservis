@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 import SERVISLER from "./services-data.json";
+import { CIHAZLAR } from "./constants.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
-
-const CIHAZLAR = [
-  "Buzdolabı","Çamaşır Makinesi","Bulaşık Makinesi","Fırın / Ocak","Klima",
-  "Kombi","Televizyon","Termosifon / Şofben","Mikrodalga","Elektrik Süpürgesi",
-  "Su Sebili / Arıtma","Cep Telefonu","Robot Süpürge","Air Fryer",
-  "Masaüstü Bilgisayar","Notebook","Yazıcı","Diğer",
-];
 
 // Cihaza özel hızlı belirti butonları (sürtünmeyi azaltır)
 const BELIRTILER = {
