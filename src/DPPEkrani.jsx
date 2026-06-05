@@ -1,5 +1,6 @@
 // src/DPPEkrani.jsx
 import React, { useState } from "react";
+import { CIHAZLAR } from "./constants.js";
 
 // Tasarım token'ları (App.jsx ile tutarlı)
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
@@ -52,10 +53,116 @@ function AramaEkrani({ onBulundu, onYeni, initialSeriNo }) {
   );
 }
 
-// ─── Placeholder ekranlar (sonraki tasklarda doldurulacak) ────────────────────
+// ─── Yeni Cihaz Formu ────────────────────────────────────────────────────────
 function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
-  return <div style={s.ekran}><p style={s.aciklama}>Yeni Cihaz Formu — Task 6'da gelecek</p></div>;
+  const [form, setForm] = useState({
+    kategori: teshisContext?.cihaz || "",
+    marka: teshisContext?.marka || "",
+    model: "",
+    renk: "",
+    uretim_yili: "",
+    satin_alma_tarihi: "",
+    garanti_bitis_tarihi: "",
+  });
+  const [yukleniyor, setYukleniyor] = useState(false);
+  const [hata, setHata] = useState("");
+
+  const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+
+  const olustur = async () => {
+    setHata("");
+    setYukleniyor(true);
+    try {
+      const body = {
+        seri_no: seriNo,
+        kategori: form.kategori || null,
+        marka: form.marka || null,
+        model: form.model || null,
+        renk: form.renk || null,
+        uretim_yili: form.uretim_yili ? parseInt(form.uretim_yili, 10) : null,
+        satin_alma_tarihi: form.satin_alma_tarihi || null,
+        garanti_bitis_tarihi: form.garanti_bitis_tarihi || null,
+      };
+      const res = await fetch("/api/dpp/cihaz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!res.ok) throw new Error("Sunucu hatası");
+      const data = await res.json();
+      onOlusturuldu(data);
+    } catch {
+      setHata("Pasaport oluşturulamadı, tekrar dene.");
+    } finally {
+      setYukleniyor(false);
+    }
+  };
+
+  return (
+    <div style={s.ekran}>
+      <h2 style={s.baslik}>Yeni Cihaz</h2>
+      <p style={{ ...s.aciklama, marginBottom: 4 }}>
+        Seri no: <strong style={{ color: INK, letterSpacing: "0.05em" }}>{seriNo}</strong>
+      </p>
+      <p style={{ ...s.aciklama, fontSize: 13, color: "#9A9384" }}>
+        Kayıtlı pasaport bulunamadı. Cihaz bilgilerini gir.
+      </p>
+
+      <label style={s.label}>Cihaz türü</label>
+      <div style={s.chipWrap}>
+        {CIHAZLAR.map((c) => (
+          <button
+            key={c}
+            onClick={() => set("kategori", c)}
+            style={{ ...s.chip, ...(form.kategori === c ? s.chipActive : {}) }}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
+      <div style={s.row}>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Marka</label>
+          <input style={s.input} value={form.marka} onChange={(e) => set("marka", e.target.value)} placeholder="Daikin" />
+        </div>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Model</label>
+          <input style={s.input} value={form.model} onChange={(e) => set("model", e.target.value)} placeholder="FTXB35C" />
+        </div>
+      </div>
+
+      <div style={s.row}>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Renk <span style={s.opt}>(opsiyonel)</span></label>
+          <input style={s.input} value={form.renk} onChange={(e) => set("renk", e.target.value)} placeholder="Beyaz" />
+        </div>
+        <div style={{ width: 110 }}>
+          <label style={s.label}>Üretim yılı</label>
+          <input style={s.input} type="number" min="1980" max="2030" value={form.uretim_yili} onChange={(e) => set("uretim_yili", e.target.value)} placeholder="2021" />
+        </div>
+      </div>
+
+      <div style={s.row}>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Satın alma tarihi <span style={s.opt}>(opsiyonel)</span></label>
+          <input style={s.input} type="date" value={form.satin_alma_tarihi} onChange={(e) => set("satin_alma_tarihi", e.target.value)} />
+        </div>
+        <div style={{ flex: 1 }}>
+          <label style={s.label}>Garanti bitişi <span style={s.opt}>(opsiyonel)</span></label>
+          <input style={s.input} type="date" value={form.garanti_bitis_tarihi} onChange={(e) => set("garanti_bitis_tarihi", e.target.value)} />
+        </div>
+      </div>
+
+      {hata && <p style={s.hata}>{hata}</p>}
+      <button style={{ ...s.cta, marginTop: 18 }} onClick={olustur} disabled={yukleniyor}>
+        {yukleniyor ? "Oluşturuluyor…" : "Pasaport Oluştur →"}
+      </button>
+    </div>
+  );
 }
+
+// ─── Placeholder ekranlar (sonraki tasklarda doldurulacak) ────────────────────
 
 function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
   return <div style={s.ekran}><p style={s.aciklama}>Pasaport Görünümü — Task 7'de gelecek</p></div>;
@@ -169,4 +276,10 @@ const s = {
     fontSize: 15, fontWeight: 700, fontFamily: "'Hanken Grotesk', sans-serif",
     cursor: "pointer",
   },
+  label: { display: "block", fontSize: 13.5, fontWeight: 700, margin: "14px 0 7px", color: INK },
+  opt: { fontWeight: 500, color: "#9A9384", fontSize: 12 },
+  chipWrap: { display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 4 },
+  chip: { fontSize: 12.5, padding: "7px 12px", borderRadius: 999, border: "1.5px solid #DDD3BE", background: "#FFFDF8", color: "#5C6660", fontWeight: 600, cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif" },
+  chipActive: { background: INK, color: CREAM, borderColor: INK },
+  row: { display: "flex", gap: 12 },
 };
