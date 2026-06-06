@@ -220,6 +220,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
   const [siraliServisler, setSiraliServisler] = useState([]);
   const [fallbackIlce, setFallbackIlce] = useState("");
   const [seciliServis, setSeciliServis] = useState(null);
+  const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -252,6 +253,16 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
     )].sort(),
     [servisler, cihaz]
   );
+
+  // Profil ekranı
+  if (ekran === "profil" && seciliServis) {
+    return (
+      <ServisProfil
+        servis={seciliServis}
+        onGeri={() => { setEkran("liste"); setSeciliServis(null); }}
+      />
+    );
+  }
 
   return (
     <div style={{
@@ -289,7 +300,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
         )}
 
         {locationState === "success" && siraliServisler.map((servis) => (
-          <ServisKarti key={servis.id} servis={servis} onSec={setSeciliServis} />
+          <ServisKarti key={servis.id} servis={servis} onSec={(s) => { setSeciliServis(s); setEkran("profil"); }} />
         ))}
 
         {/* Konum izni reddedildi — ilçe fallback */}
