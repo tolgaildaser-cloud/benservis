@@ -21,6 +21,8 @@ export default async function handler(req, res) {
   if (!servis_id) return res.status(403).json({ error: "Servis kimliği bulunamadı" });
 
   const { id } = req.query;
+  if (!id) return res.status(400).json({ error: "İş ID gerekli" });
+
   const { action, gelis_penceresi } = req.body || {};
 
   if (!["kabul", "ret", "tamamla"].includes(action)) {
@@ -30,7 +32,7 @@ export default async function handler(req, res) {
   // İşin bu servise ait olduğunu doğrula
   const { data: is, error: fetchErr } = await supabase
     .from("is_talepleri")
-    .select("*")
+    .select("id, durum, servis_ad, is_no, musteri_tel, servis_id")
     .eq("id", id)
     .eq("servis_id", servis_id)
     .single();
