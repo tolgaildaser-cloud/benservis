@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import ServisCaldir from "./ServisCaldir.jsx";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -22,7 +23,7 @@ function haversine(lat1, lng1, lat2, lng2) {
  *   servisler  {Array}    services-data.json içeriği
  *   onKapat    {Function} Geri dön butonu callback'i
  */
-function ServisKarti({ servis, onSec }) {
+function ServisKarti({ servis, onSec, onCaldir }) {
   return (
     <div
       onClick={() => onSec(servis)}
@@ -69,20 +70,15 @@ function ServisKarti({ servis, onSec }) {
         )}
       </div>
 
-      {servis.telefon ? (
-        <a
-          href={`tel:${servis.telefon}`}
-          onClick={(e) => e.stopPropagation()}
+        <button
+          onClick={(e) => { e.stopPropagation(); onCaldir(servis); }}
           style={{
-            background: "#C8632B", color: "white",
+            background: "#22302A", color: "#F5EFE2",
             borderRadius: 10, padding: "10px 14px",
-            fontSize: 15, textDecoration: "none", fontWeight: 700,
-            whiteSpace: "nowrap", flexShrink: 0,
+            fontSize: 13, border: "none", fontWeight: 700,
+            whiteSpace: "nowrap", flexShrink: 0, cursor: "pointer",
           }}
-        >📞 Ara</a>
-      ) : (
-        <span style={{ fontSize: 11, color: "#bbb", flexShrink: 0 }}>Telefon yok</span>
-      )}
+        >🔧 Servis Çağır</button>
     </div>
   );
 }
@@ -216,13 +212,14 @@ function FallbackIlce({ ilceler, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, servisler, onKapat }) {
+export default function ServisEkrani({ cihaz, belirti, servisler, onKapat }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
   const [fallbackIlce, setFallbackIlce] = useState("");
   const [seciliServis, setSeciliServis] = useState(null);
   const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
+  const [caldirServis, setCaldirServis] = useState(null);
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -271,6 +268,14 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
       position: "fixed", inset: 0, background: "#F5EFE2",
       overflowY: "auto", zIndex: 100, fontFamily: "'Hanken Grotesk', sans-serif",
     }}>
+        {caldirServis && (
+          <ServisCaldir
+            servis={caldirServis}
+            cihaz={cihaz}
+            belirti={belirti}
+            onKapat={() => setCaldirServis(null)}
+          />
+        )}
       {/* Üst bar */}
       <div style={{
         background: "#22302A", color: "#F5EFE2",
@@ -302,7 +307,12 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
         )}
 
         {locationState === "success" && siraliServisler.map((servis) => (
-          <ServisKarti key={servis.id} servis={servis} onSec={(s) => { setSeciliServis(s); setEkran("profil"); }} />
+          <ServisKarti
+            key={servis.id}
+            servis={servis}
+            onSec={(s) => { setSeciliServis(s); setEkran("profil"); }}
+            onCaldir={setCaldirServis}
+          />
         ))}
 
         {/* Konum izni reddedildi — ilçe fallback */}

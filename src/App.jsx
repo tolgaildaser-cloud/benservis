@@ -172,6 +172,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       {showServisler && (
         <ServisEkrani
           cihaz={cihaz}
+          belirti={belirti}
           servisler={SERVISLER}
           onKapat={() => setShowServisler(false)}
         />
