@@ -46,3 +46,40 @@ CREATE TABLE IF NOT EXISTS servis_katalog (
 );
 
 CREATE INDEX IF NOT EXISTS servis_katalog_servis_id_idx ON servis_katalog(servis_id);
+
+-- Faz 2.5b — Servis Çağır İş Yönetimi
+CREATE SEQUENCE IF NOT EXISTS is_no_seq START 1;
+
+CREATE TABLE IF NOT EXISTS is_talepleri (
+  id                uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  is_no             text UNIQUE NOT NULL
+                    DEFAULT 'BS-' || LPAD(nextval('is_no_seq')::text, 4, '0'),
+  servis_id         text NOT NULL,
+  servis_ad         text NOT NULL,
+  musteri_ad        text NOT NULL,
+  musteri_tel       text NOT NULL,
+  adres             text NOT NULL,
+  tarih_tercihi     text,
+  cihaz             text,
+  belirti           text,
+  durum             text NOT NULL DEFAULT 'bekliyor'
+                    CHECK (durum IN ('bekliyor','onaylandi','reddedildi','suresi_doldu','tamamlandi')),
+  son_kabul_tarihi  timestamptz NOT NULL,
+  gelis_penceresi   text,
+  twilio_numara     text,
+  puan              int CHECK (puan BETWEEN 1 AND 5),
+  odeme_durumu      text NOT NULL DEFAULT 'bekliyor',
+  created_at        timestamptz DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS is_talepleri_servis_id_idx ON is_talepleri(servis_id);
+CREATE INDEX IF NOT EXISTS is_talepleri_durum_idx ON is_talepleri(durum);
+CREATE INDEX IF NOT EXISTS is_talepleri_son_kabul_idx
+  ON is_talepleri(son_kabul_tarihi) WHERE durum = 'bekliyor';
+
+CREATE TABLE IF NOT EXISTS servis_performans (
+  servis_id         text PRIMARY KEY,
+  yanitlamamis      int NOT NULL DEFAULT 0,
+  puan_carpani      numeric(3,2) NOT NULL DEFAULT 1.00,
+  guncelleme_tarihi timestamptz DEFAULT now()
+);
