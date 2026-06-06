@@ -49,7 +49,7 @@ function ServisKarti({ servis, onSec }) {
         <div style={{ fontSize: 12, color: "#888", marginTop: 3 }}>
           {servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`}
           {servis.yorumSayisi > 0 && ` · ${servis.yorumSayisi} yorum`}
-          {` · ${servis.ilce}`}
+          {servis.ilce && ` · ${servis.ilce}`}
           {servis.km != null && ` · `}
           {servis.km != null && (
             <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong>
@@ -118,7 +118,7 @@ function ServisProfil({ servis, onGeri }) {
         <div style={{ fontSize: 13, color: "#666", marginBottom: 20 }}>
           {servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`}
           {servis.yorumSayisi > 0 && ` · ${servis.yorumSayisi} yorum`}
-          {` · ${servis.ilce}`}
+          {servis.ilce && ` · ${servis.ilce}`}
           {servis.sehir && `, ${servis.sehir}`}
           {servis.km != null && (
             <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
@@ -161,7 +161,7 @@ function ServisProfil({ servis, onGeri }) {
             margin: "0 0 12px 0", fontWeight: 600,
           }}>Hizmet Kategorileri</h3>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            {servis.kategoriler.map((k) => (
+            {(servis.kategoriler ?? []).map((k) => (
               <span key={k} style={{
                 background: "rgba(58,125,68,0.12)", color: "#3A7D44",
                 padding: "5px 12px", borderRadius: 20, fontSize: 13, fontWeight: 500,
@@ -231,7 +231,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
       (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
         const eslesmis = servisler
-          .filter((s) => s.kategoriler.includes(cihaz))
+          .filter((s) => Array.isArray(s.kategoriler) && s.kategoriler.includes(cihaz))
           .map((s) => ({ ...s, km: haversine(lat, lng, s.lat, s.lng) }))
           .sort((a, b) =>
             a.yetkili !== b.yetkili
@@ -249,7 +249,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
 
   const ilceler = useMemo(
     () => [...new Set(
-      servisler.filter((s) => s.kategoriler.includes(cihaz)).map((s) => s.ilce)
+      servisler.filter((s) => Array.isArray(s.kategoriler) && s.kategoriler.includes(cihaz)).map((s) => s.ilce)
     )].sort(),
     [servisler, cihaz]
   );
@@ -312,7 +312,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
               if (!ilce) return;
               setFallbackIlce(ilce);
               const eslesmis = servisler
-                .filter((s) => s.kategoriler.includes(cihaz) && s.ilce === ilce)
+                .filter((s) => Array.isArray(s.kategoriler) && s.kategoriler.includes(cihaz) && s.ilce === ilce)
                 .sort((a, b) =>
                   a.yetkili !== b.yetkili
                     ? b.yetkili ? 1 : -1
