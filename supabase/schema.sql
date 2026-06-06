@@ -68,7 +68,8 @@ CREATE TABLE IF NOT EXISTS is_talepleri (
   gelis_penceresi   text,
   twilio_numara     text,
   puan              int CHECK (puan BETWEEN 1 AND 5),
-  odeme_durumu      text NOT NULL DEFAULT 'bekliyor',
+  odeme_durumu      text NOT NULL DEFAULT 'bekliyor'
+                    CHECK (odeme_durumu IN ('bekliyor','tamamlandi','iptal')),
   created_at        timestamptz DEFAULT now()
 );
 
