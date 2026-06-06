@@ -13,6 +13,16 @@ const SERVISLER = JSON.parse(
 );
 
 export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    res.setHeader("Content-Type", "text/xml");
+    return res.status(405).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Method Not Allowed</Say></Response>');
+  }
+  if (!process.env.TWILIO_PHONE_NUMBER) {
+    console.error("TWILIO_PHONE_NUMBER env eksik");
+    res.setHeader("Content-Type", "text/xml");
+    return res.status(500).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say language="tr-TR">Sistem hatası.</Say></Response>');
+  }
+
   const arayanTel = req.body?.From || req.query?.From;
   if (!arayanTel) {
     res.setHeader("Content-Type", "text/xml");
@@ -22,7 +32,7 @@ export default async function handler(req, res) {
   }
 
   // Arayan müşteri telefonu ile onaylanan aktif işi bul
-  const { data: is } = await supabase
+  const { data: is, error: jobErr } = await supabase
     .from("is_talepleri")
     .select("servis_id")
     .eq("musteri_tel", arayanTel)
@@ -30,6 +40,8 @@ export default async function handler(req, res) {
     .order("created_at", { ascending: false })
     .limit(1)
     .single();
+
+  if (jobErr) console.error("is_talepleri sorgu hatası:", jobErr.message);
 
   if (!is) {
     const twiml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -50,12 +62,15 @@ export default async function handler(req, res) {
     return res.status(200).send(twiml);
   }
 
+  // telefon numarasını XML'e güvenli hale getir (sadece rakam, +, -, boşluk, parantez)
+  const guvenliTelefon = servis.telefon.replace(/[^+\d\s\-()]/g, "");
+
   // Servisin gerçek numarasına köprüle
   // callerId = Twilio sanal numarası → servis müşterinin gerçek numarasını görmez
   const twiml = `<?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Dial callerId="${process.env.TWILIO_PHONE_NUMBER}">
-    <Number>${servis.telefon}</Number>
+    <Number>${guvenliTelefon}</Number>
   </Dial>
 </Response>`;
 
