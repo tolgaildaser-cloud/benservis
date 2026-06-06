@@ -191,7 +191,9 @@ export default function ServisPanel() {
     setYukleniyor(true);
     fetch("/api/is/liste", { headers: { "Authorization": `Bearer ${session.access_token}` } })
       .then(r => r.json())
-      .then(d => { setIsler(d.isler || []); setYukleniyor(false); });
+      .then(d => { setIsler(d.isler || []); })
+      .catch(err => { console.error("İş listesi yüklenemedi:", err); })
+      .finally(() => setYukleniyor(false));
   }, [session]);
 
   const cikisYap = async () => { await supabase.auth.signOut(); setSession(null); setIsler([]); };
