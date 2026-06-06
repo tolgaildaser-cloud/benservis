@@ -25,7 +25,8 @@ export default async function handler(req, res) {
   }
 
   // Telefon formatı: +90 ile başlaması gerekir (Twilio E.164)
-  const tel = musteri_tel.startsWith("+") ? musteri_tel : `+9${musteri_tel.replace(/^0/, "")}`;
+  const telStr = String(musteri_tel);
+  const tel = telStr.startsWith("+") ? telStr : `+90${telStr.replace(/^0/, "")}`;
 
   // son_kabul_tarihi = şimdi + 30 dakika
   const son_kabul_tarihi = new Date(Date.now() + 30 * 60 * 1000).toISOString();
