@@ -28,10 +28,14 @@ export default async function handler(req, res) {
 
   for (const is of dolmus) {
     // Durumu güncelle
-    await supabase
+    const { error: updateErr } = await supabase
       .from("is_talepleri")
       .update({ durum: "suresi_doldu" })
       .eq("id", is.id);
+    if (updateErr) {
+      console.error("is_talepleri güncelleme hatası:", updateErr.message);
+      continue;
+    }
 
     // servis_performans güncelle
     const { data: perf } = await supabase
@@ -48,7 +52,7 @@ export default async function handler(req, res) {
       ? Math.max(0.50, mevcutCarpani - 0.10)
       : mevcutCarpani;
 
-    await supabase
+    const { error: upsertErr } = await supabase
       .from("servis_performans")
       .upsert({
         servis_id: is.servis_id,
@@ -56,6 +60,7 @@ export default async function handler(req, res) {
         puan_carpani: yeniCarpani,
         guncelleme_tarihi: new Date().toISOString(),
       }, { onConflict: "servis_id" });
+    if (upsertErr) console.error("servis_performans upsert hatası:", upsertErr.message);
 
     // Müşteriye SMS
     try {
@@ -69,5 +74,6 @@ export default async function handler(req, res) {
     islenenSayisi++;
   }
 
+  // musteri_tel dolmus dizisinde bulunur ama yanıta dahil edilmez; yalnızca SMS için kullanılır.
   return res.status(200).json({ islem: islenenSayisi, kapatilan: dolmus.map(i => i.is_no) });
 }
