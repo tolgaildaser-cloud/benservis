@@ -51,6 +51,10 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Bir hata oluştu");
       setTamamlandi({ is_no: data.is.is_no });
+      setAd("");
+      setTel("");
+      setAdres("");
+      setTarih("");
     } catch (err) {
       setHata(err.message);
     }
@@ -122,7 +126,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
             {hata && <div style={{ color: "#B23A2E", fontSize: 13, fontWeight: 600, marginBottom: 14 }}>{hata}</div>}
 
             <button type="submit" disabled={yukleniyor}
-              style={{ width: "100%", padding: 14, borderRadius: 12, border: "none", background: AMBER, color: "white", fontSize: 16, fontWeight: 700, cursor: "pointer" }}>
+              style={{ width: "100%", padding: 14, borderRadius: 12, border: "none", background: AMBER, color: "white", fontSize: 16, fontWeight: 700, cursor: yukleniyor ? "not-allowed" : "pointer", opacity: yukleniyor ? 0.7 : 1 }}>
               {yukleniyor ? "Gönderiliyor..." : "Talebi Gönder →"}
             </button>
           </form>
