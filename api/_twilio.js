@@ -6,7 +6,10 @@ import twilio from "twilio";
 function getClient() {
   const sid = process.env.TWILIO_ACCOUNT_SID;
   const token = process.env.TWILIO_AUTH_TOKEN;
-  if (!sid || !token) throw new Error("Twilio env değişkenleri eksik");
+  const phone = process.env.TWILIO_PHONE_NUMBER;
+  if (!sid) throw new Error("TWILIO_ACCOUNT_SID eksik");
+  if (!token) throw new Error("TWILIO_AUTH_TOKEN eksik");
+  if (!phone) throw new Error("TWILIO_PHONE_NUMBER eksik");
   return twilio(sid, token);
 }
 
