@@ -32,3 +32,17 @@ CREATE TABLE tamir_kayitlari (
 );
 
 CREATE INDEX ON tamir_kayitlari(cihaz_id);
+
+-- Faz 2.5 — Servis Katalog (ürün/parça/hizmet listesi, şimdilik boş)
+CREATE TABLE IF NOT EXISTS servis_katalog (
+  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  servis_id   text NOT NULL,          -- services-data.json'daki Google Places ID
+  tip         text NOT NULL CHECK (tip IN ('hizmet', 'yedek_parca', 'yenilenmiş_ürün')),
+  ad          text NOT NULL,
+  aciklama    text,
+  fiyat       integer,                -- kuruş cinsinden (TL × 100)
+  aktif       boolean DEFAULT true,
+  created_at  timestamptz DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS servis_katalog_servis_id_idx ON servis_katalog(servis_id);
