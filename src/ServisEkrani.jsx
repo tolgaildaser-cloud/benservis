@@ -47,12 +47,13 @@ function ServisKarti({ servis, onSec }) {
           )}
         </div>
         <div style={{ fontSize: 12, color: "#888", marginTop: 3 }}>
-          {servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`}
-          {servis.yorumSayisi > 0 && ` · ${servis.yorumSayisi} yorum`}
-          {servis.ilce && ` · ${servis.ilce}`}
-          {servis.km != null && ` · `}
+          {[
+            servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`,
+            servis.yorumSayisi > 0 && `${servis.yorumSayisi} yorum`,
+            servis.ilce,
+          ].filter(Boolean).join(" · ")}
           {servis.km != null && (
-            <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong>
+            <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
           )}
         </div>
         {servis.googleMapsUrl && (
@@ -116,10 +117,11 @@ function ServisProfil({ servis, onGeri }) {
       <div style={{ padding: "20px 16px" }}>
         {/* Puan & konum */}
         <div style={{ fontSize: 13, color: "#666", marginBottom: 20 }}>
-          {servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`}
-          {servis.yorumSayisi > 0 && ` · ${servis.yorumSayisi} yorum`}
-          {servis.ilce && ` · ${servis.ilce}`}
-          {servis.sehir && `, ${servis.sehir}`}
+          {[
+            servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`,
+            servis.yorumSayisi > 0 && `${servis.yorumSayisi} yorum`,
+            servis.ilce && (servis.sehir ? `${servis.ilce}, ${servis.sehir}` : servis.ilce),
+          ].filter(Boolean).join(" · ")}
           {servis.km != null && (
             <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
           )}
@@ -231,7 +233,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
       (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
         const eslesmis = servisler
-          .filter((s) => Array.isArray(s.kategoriler) && s.kategoriler.includes(cihaz))
+          .filter((s) => s.kategoriler?.includes(cihaz))
           .map((s) => ({ ...s, km: haversine(lat, lng, s.lat, s.lng) }))
           .sort((a, b) =>
             a.yetkili !== b.yetkili
@@ -249,7 +251,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
 
   const ilceler = useMemo(
     () => [...new Set(
-      servisler.filter((s) => Array.isArray(s.kategoriler) && s.kategoriler.includes(cihaz)).map((s) => s.ilce)
+      servisler.filter((s) => s.kategoriler?.includes(cihaz)).map((s) => s.ilce)
     )].sort(),
     [servisler, cihaz]
   );
@@ -312,7 +314,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
               if (!ilce) return;
               setFallbackIlce(ilce);
               const eslesmis = servisler
-                .filter((s) => Array.isArray(s.kategoriler) && s.kategoriler.includes(cihaz) && s.ilce === ilce)
+                .filter((s) => s.kategoriler?.includes(cihaz) && s.ilce === ilce)
                 .sort((a, b) =>
                   a.yetkili !== b.yetkili
                     ? b.yetkili ? 1 : -1
