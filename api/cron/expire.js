@@ -17,7 +17,8 @@ export default async function handler(req, res) {
     .from("is_talepleri")
     .select("id, is_no, servis_id, servis_ad, musteri_tel")
     .eq("durum", "bekliyor")
-    .lt("son_kabul_tarihi", new Date().toISOString());
+    .lt("son_kabul_tarihi", new Date().toISOString())
+    .limit(50);
 
   if (fetchErr) return res.status(500).json({ error: fetchErr.message });
   if (!dolmus || dolmus.length === 0) {

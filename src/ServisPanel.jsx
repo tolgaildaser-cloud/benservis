@@ -29,7 +29,7 @@ function GirisFormu({ onGiris }) {
     setYukleniyor(false);
     if (error) { setHata(error.message); return; }
     if (!data.user.user_metadata?.servis_id) {
-      setHata("Bu hesaba servis_id atanmamış. Supabase Dashboard'dan user_metadata.servis_id ekleyin.");
+      setHata("Hesabınız yapılandırılmamış. Lütfen Benservis ile iletişime geçin.");
       await supabase.auth.signOut();
       return;
     }
@@ -126,7 +126,7 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
       onGuncelle(is.id, data.durum);
-    } catch (e) { alert("Hata: " + e.message); }
+    } catch (e) { console.error("İşlem hatası:", e.message); }
     setYukleniyor(false);
   };
 

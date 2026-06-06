@@ -23,6 +23,22 @@ export default async function handler(req, res) {
     return res.status(500).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say language="tr-TR">Sistem hatası.</Say></Response>');
   }
 
+  // Twilio imza doğrulaması — sahte webhook isteklerini engeller
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
+  if (authToken) {
+    const twilio = (await import("twilio")).default;
+    const signature = req.headers["x-twilio-signature"] || "";
+    // Tam URL'yi req header'larından oluştur
+    const protocol = req.headers["x-forwarded-proto"] || "https";
+    const host = req.headers["host"] || "www.benservis.com";
+    const url = `${protocol}://${host}/api/twilio/callback`;
+    const params = req.body || {};
+    const valid = twilio.validateRequest(authToken, signature, url, params);
+    if (!valid) {
+      return res.status(403).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Forbidden</Say></Response>');
+    }
+  }
+
   const arayanTel = req.body?.From || req.query?.From;
   if (!arayanTel) {
     res.setHeader("Content-Type", "text/xml");
