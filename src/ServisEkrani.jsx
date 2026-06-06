@@ -22,14 +22,18 @@ function haversine(lat1, lng1, lat2, lng2) {
  *   servisler  {Array}    services-data.json içeriği
  *   onKapat    {Function} Geri dön butonu callback'i
  */
-function ServisKarti({ servis }) {
+function ServisKarti({ servis, onSec }) {
   return (
-    <div style={{
-      background: "white", borderRadius: 10,
-      padding: "12px 14px", marginBottom: 10,
-      display: "flex", justifyContent: "space-between", alignItems: "center",
-      boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
-    }}>
+    <div
+      onClick={() => onSec(servis)}
+      style={{
+        background: "white", borderRadius: 10,
+        padding: "12px 14px", marginBottom: 10,
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+        cursor: "pointer",
+      }}
+    >
       <div style={{ flex: 1, minWidth: 0, marginRight: 12 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
           <span style={{ fontWeight: 600, fontSize: 14, color: "#22302A" }}>
@@ -56,6 +60,7 @@ function ServisKarti({ servis }) {
             href={servis.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             style={{ fontSize: 11, color: "#C8632B", textDecoration: "none", marginTop: 2, display: "inline-block" }}
           >
             🗺 Haritada Gör
@@ -66,6 +71,7 @@ function ServisKarti({ servis }) {
       {servis.telefon ? (
         <a
           href={`tel:${servis.telefon}`}
+          onClick={(e) => e.stopPropagation()}
           style={{
             background: "#C8632B", color: "white",
             borderRadius: 10, padding: "10px 14px",
@@ -109,6 +115,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
   const [fallbackIlce, setFallbackIlce] = useState("");
+  const [seciliServis, setSeciliServis] = useState(null);
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -178,7 +185,7 @@ export default function ServisEkrani({ cihaz, servisler, onKapat }) {
         )}
 
         {locationState === "success" && siraliServisler.map((servis) => (
-          <ServisKarti key={servis.id} servis={servis} />
+          <ServisKarti key={servis.id} servis={servis} onSec={setSeciliServis} />
         ))}
 
         {/* Konum izni reddedildi — ilçe fallback */}
