@@ -86,6 +86,110 @@ function ServisKarti({ servis, onSec }) {
   );
 }
 
+function ServisProfil({ servis, onGeri }) {
+  return (
+    <div style={{
+      position: "fixed", inset: 0, background: "#F5EFE2",
+      overflowY: "auto", zIndex: 100, fontFamily: "'Hanken Grotesk', sans-serif",
+    }}>
+      {/* Üst bar */}
+      <div style={{
+        background: "#22302A", color: "#F5EFE2",
+        padding: "14px 16px", display: "flex", alignItems: "center", gap: 12,
+        position: "sticky", top: 0, zIndex: 10,
+      }}>
+        <button
+          onClick={onGeri}
+          style={{ background: "none", border: "none", color: "#F5EFE2", fontSize: 20, cursor: "pointer" }}
+        >←</button>
+        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600, flex: 1 }}>
+          {servis.ad}
+        </span>
+        {servis.yetkili && (
+          <span style={{
+            background: "#3A7D44", color: "white",
+            fontSize: 9, padding: "3px 7px", borderRadius: 3, fontWeight: 700,
+          }}>YETKİLİ</span>
+        )}
+      </div>
+
+      <div style={{ padding: "20px 16px" }}>
+        {/* Puan & konum */}
+        <div style={{ fontSize: 13, color: "#666", marginBottom: 20 }}>
+          {servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`}
+          {servis.yorumSayisi > 0 && ` · ${servis.yorumSayisi} yorum`}
+          {` · ${servis.ilce}`}
+          {servis.sehir && `, ${servis.sehir}`}
+          {servis.km != null && (
+            <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
+          )}
+        </div>
+
+        {/* Aksiyonlar */}
+        <div style={{ display: "flex", gap: 10, marginBottom: 28 }}>
+          {servis.telefon && (
+            <a
+              href={`tel:${servis.telefon}`}
+              style={{
+                background: "#C8632B", color: "white",
+                borderRadius: 10, padding: "12px 20px",
+                fontSize: 15, textDecoration: "none", fontWeight: 700,
+                display: "inline-flex", alignItems: "center", gap: 6,
+              }}
+            >📞 Ara</a>
+          )}
+          {servis.googleMapsUrl && (
+            <a
+              href={servis.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: "white", color: "#22302A",
+                borderRadius: 10, padding: "12px 20px",
+                fontSize: 14, textDecoration: "none", fontWeight: 600,
+                border: "1.5px solid #22302A",
+                display: "inline-flex", alignItems: "center", gap: 6,
+              }}
+            >🗺 Haritada Gör</a>
+          )}
+        </div>
+
+        {/* Hizmet kategorileri */}
+        <div style={{ marginBottom: 28 }}>
+          <h3 style={{
+            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#22302A",
+            margin: "0 0 12px 0", fontWeight: 600,
+          }}>Hizmet Kategorileri</h3>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {servis.kategoriler.map((k) => (
+              <span key={k} style={{
+                background: "rgba(58,125,68,0.12)", color: "#3A7D44",
+                padding: "5px 12px", borderRadius: 20, fontSize: 13, fontWeight: 500,
+              }}>{k}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Ürünler & parçalar */}
+        <div>
+          <h3 style={{
+            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#22302A",
+            margin: "0 0 12px 0", fontWeight: 600,
+          }}>Ürünler & Parçalar</h3>
+          <div style={{
+            background: "white", borderRadius: 10, padding: "20px 16px",
+            textAlign: "center", color: "#aaa", fontSize: 13,
+            border: "1.5px dashed #ddd",
+          }}>
+            <div style={{ fontSize: 24, marginBottom: 8 }}>🔧</div>
+            <div>Yakında — bu servis henüz ürün eklemedi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function FallbackIlce({ ilceler, secili, onSec }) {
   return (
     <div style={{ textAlign: "center", marginTop: 40 }}>
