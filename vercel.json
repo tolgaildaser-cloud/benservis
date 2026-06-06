@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/panel", "destination": "/index.html" },
+    { "source": "/panel/(.*)", "destination": "/index.html" }
+  ],
+  "crons": [
+    { "path": "/api/cron/expire", "schedule": "*/5 * * * *" }
+  ]
+}
