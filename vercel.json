@@ -2,7 +2,7 @@
   "rewrites": [
     { "source": "/panel", "destination": "/index.html" },
     { "source": "/panel/(.*)", "destination": "/index.html" },
-    { "source": "/dpp/(.*)", "destination": "/index.html" }
+    { "source": "/dpp/:seri_no", "destination": "/api/dpp/og?seri_no=:seri_no" }
   ],
   "crons": [
     { "path": "/api/cron/expire", "schedule": "*/5 * * * *" }
