@@ -369,6 +369,9 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
   const [dppTamirId, setDppTamirId] = useState(is.dpp_tamir_id || null);
   const [zenginleştirAcik, setZenginleştirAcik] = useState(false);
   const [dppZenginlesti, setDppZenginlesti] = useState(false);
+  const [cihazDurum, setCihazDurum] = useState(is.mevcut_durum || "çalışıyor");
+  const [durumYukleniyor, setDurumYukleniyor] = useState(false);
+  const [durumKaydedildi, setDurumKaydedildi] = useState(false);
   const { label, color } = DURUM_LABEL[is.durum] || { label: is.durum, color: "#888" };
 
   const qrIndir = async () => {
@@ -379,6 +382,23 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
     link.download = `dpp-qr-${is.seri_no}.png`;
     link.href = canvas.toDataURL("image/png");
     link.click();
+  };
+
+  const durumGuncelle = async (yeniDurum) => {
+    setCihazDurum(yeniDurum);
+    setDurumYukleniyor(true);
+    try {
+      const res = await fetch(`/api/dpp/cihaz?seri_no=${encodeURIComponent(is.seri_no)}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${jwtToken}` },
+        body: JSON.stringify({ mevcut_durum: yeniDurum }),
+      });
+      if (res.ok) {
+        setDurumKaydedildi(true);
+        setTimeout(() => setDurumKaydedildi(false), 2000);
+      }
+    } catch (e) { console.error("Durum güncellenemedi:", e); }
+    setDurumYukleniyor(false);
   };
 
   const islemYap = async (action, gelis_penceresi) => {
@@ -470,6 +490,21 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
               </div>
             ) : (
               <span style={{ color: "#9A9384" }}>— Seri no girilmedi, DPP kaydı yok</span>
+            )}
+            {is.seri_no && (
+              <div style={{ marginTop: 10, borderTop: "1px solid #E5DCC9", paddingTop: 8, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                <span style={{ fontSize: 11, color: "#888" }}>Cihaz durumu:</span>
+                <select
+                  value={cihazDurum}
+                  onChange={e => durumGuncelle(e.target.value)}
+                  disabled={durumYukleniyor}
+                  style={{ fontSize: 11, padding: "4px 8px", borderRadius: 6, border: "1px solid #DDD3BE", background: "#FFFDF8", cursor: durumYukleniyor ? "wait" : "pointer", fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                  <option value="çalışıyor">✓ Çalışıyor</option>
+                  <option value="arızalı">⚠ Arızalı</option>
+                  <option value="hurda">✕ Hurda</option>
+                </select>
+                {durumKaydedildi && <span style={{ fontSize: 11, color: GREEN, fontWeight: 700 }}>✓ Güncellendi</span>}
+              </div>
             )}
           </div>
         )}

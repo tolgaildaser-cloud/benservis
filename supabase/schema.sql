@@ -104,3 +104,8 @@ ALTER TABLE tamir_kayitlari
   ADD COLUMN IF NOT EXISTS servis_id text;
 
 -- servis_id: Google Places ID (services-data.json), servis_katalog FK değil
+
+-- Faz 3 Task 4 — cihaz durumu
+ALTER TABLE cihazlar
+  ADD COLUMN IF NOT EXISTS mevcut_durum text DEFAULT 'çalışıyor'
+    CHECK (mevcut_durum IN ('çalışıyor', 'arızalı', 'hurda'));

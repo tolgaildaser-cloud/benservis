@@ -110,5 +110,44 @@ export default async function handler(req, res) {
     return res.status(201).json({ cihaz, tamirler: [], toplam_maliyet: 0, created: true });
   }
 
+  // PATCH ?seri_no=SN123 { mevcut_durum } — yalnız servis sahibi güncelleyebilir
+  if (req.method === "PATCH") {
+    const { seri_no } = req.query;
+    if (!seri_no) return res.status(400).json({ error: "seri_no gerekli" });
+
+    // JWT doğrulama
+    const token = (req.headers.authorization || "").replace("Bearer ", "").trim();
+    if (!token) return res.status(401).json({ error: "Token gerekli" });
+    const { data: { user }, error: authErr } = await supabase.auth.getUser(token);
+    if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
+
+    const { mevcut_durum } = req.body || {};
+    const gecerliDurumlar = ["çalışıyor", "arızalı", "hurda"];
+    if (!gecerliDurumlar.includes(mevcut_durum)) {
+      return res.status(400).json({ error: `mevcut_durum şunlardan biri olmalı: ${gecerliDurumlar.join(", ")}` });
+    }
+
+    // Cihazı bul ve sahipliği doğrula (bu servisten en az bir tamir kaydı olmalı)
+    const { data: cihaz, error: ce } = await supabase
+      .from("cihazlar").select("id").eq("seri_no", seri_no).single();
+    if (ce || !cihaz) return res.status(404).json({ error: "Cihaz bulunamadı" });
+
+    const servis_id = user.user_metadata?.servis_id;
+    if (servis_id) {
+      const { count } = await supabase
+        .from("tamir_kayitlari")
+        .select("id", { count: "exact", head: true })
+        .eq("cihaz_id", cihaz.id)
+        .eq("servis_id", servis_id);
+      if (!count) return res.status(403).json({ error: "Bu cihazda tamir kaydınız yok" });
+    }
+
+    const { error: ue } = await supabase
+      .from("cihazlar").update({ mevcut_durum }).eq("id", cihaz.id);
+    if (ue) return res.status(500).json({ error: ue.message });
+
+    return res.status(200).json({ ok: true, seri_no, mevcut_durum });
+  }
+
   return res.status(405).json({ error: "Method not allowed" });
 }

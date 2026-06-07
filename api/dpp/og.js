@@ -107,6 +107,12 @@ export default async function handler(req, res) {
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px">
           ${cihaz.kategori ? `<span style="font-size:12px;font-weight:700;background:#EDE5D3;color:#6E6450;border-radius:999px;padding:3px 10px">${cihaz.kategori}</span>` : ""}
           ${hasBenservis ? `<span style="font-size:12px;font-weight:700;background:${AMBER};color:#fff;border-radius:999px;padding:3px 10px">✓ Benservis Doğrulanmış</span>` : ""}
+          ${(() => {
+            const d = cihaz.mevcut_durum || "çalışıyor";
+            const cfg = { "çalışıyor": { bg: "#E8F0E8", color: GREEN, label: "✓ Çalışıyor" }, "arızalı": { bg: "#FEF3E2", color: AMBER, label: "⚠ Arızalı" }, "hurda": { bg: "#FDECEA", color: "#B23A2E", label: "✕ Hurda" } };
+            const c = cfg[d] || cfg["çalışıyor"];
+            return `<span style="font-size:12px;font-weight:700;background:${c.bg};color:${c.color};border-radius:999px;padding:3px 10px">${c.label}</span>`;
+          })()}
         </div>
         ${garantiStr ? `<div style="font-size:12.5px;color:#5C6660;background:#F7F1E3;border:1px solid #EBE1CA;border-radius:8px;padding:8px 11px;margin-bottom:8px">${garantiStr}</div>` : ""}
         <div style="font-size:12px;font-weight:700;letter-spacing:.07em;color:#8A7B6A;font-family:monospace">SN: ${cihaz.seri_no}</div>

@@ -158,6 +158,20 @@ export default function DPPPublicPage() {
             <div style={s.cihazAlt}>
               {pasaport.cihaz.kategori && <span style={s.rozet}>{pasaport.cihaz.kategori}</span>}
               {pasaport.cihaz.uretim_yili && <span style={s.metaBilgi}>{pasaport.cihaz.uretim_yili}</span>}
+              {(() => {
+                const d = pasaport.cihaz.mevcut_durum || "çalışıyor";
+                const cfg = {
+                  "çalışıyor": { bg: "#E8F0E8", color: GREEN, label: "✓ Çalışıyor" },
+                  "arızalı":   { bg: "#FEF3E2", color: AMBER,  label: "⚠ Arızalı" },
+                  "hurda":     { bg: "#FDECEA", color: "#B23A2E", label: "✕ Hurda" },
+                };
+                const c = cfg[d] || cfg["çalışıyor"];
+                return (
+                  <span style={{ fontSize: 12, fontWeight: 700, background: c.bg, color: c.color, borderRadius: 999, padding: "4px 10px" }}>
+                    {c.label}
+                  </span>
+                );
+              })()}
               {pasaport.tamirler.some((t) => t.servis_turu === "benservis") && (
                 <div style={{ marginLeft: "auto" }}>
                   <BenservisRozet
