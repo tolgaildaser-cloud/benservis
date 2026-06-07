@@ -39,8 +39,9 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const {
       seri_no, kategori, marka, model, renk,
-      uretim_yili, satin_alma_tarihi, garanti_bitis_tarihi,
-      fotograflar, notlar,
+      uretim_yili, satin_alma_tarihi, garanti_baslangic_tarihi,
+      garanti_bitis_tarihi, uzatilmis_garanti, uzatilmis_garanti_bitis,
+      fatura_url, fotograflar, notlar,
     } = req.body || {};
 
     if (!seri_no) return res.status(400).json({ error: "seri_no gerekli" });
@@ -74,7 +75,11 @@ export default async function handler(req, res) {
         renk: renk || null,
         uretim_yili: uretim_yili || null,
         satin_alma_tarihi: satin_alma_tarihi || null,
+        garanti_baslangic_tarihi: garanti_baslangic_tarihi || null,
         garanti_bitis_tarihi: garanti_bitis_tarihi || null,
+        uzatilmis_garanti: uzatilmis_garanti ?? false,
+        uzatilmis_garanti_bitis: uzatilmis_garanti_bitis || null,
+        fatura_url: fatura_url || null,
         fotograflar: fotograflar || [],
         notlar: notlar || null,
       })

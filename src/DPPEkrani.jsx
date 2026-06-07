@@ -1,5 +1,6 @@
 // src/DPPEkrani.jsx
 import React, { useState } from "react";
+import BenservisRozet from "./BenservisRozet.jsx";
 import { CIHAZLAR } from "./constants.js";
 import { supabase } from "./lib/supabase.js";
 
@@ -20,6 +21,24 @@ async function uploadPhoto(file, folder) {
   if (error) throw new Error(error.message);
 
   const { data } = supabase.storage.from("dpp-fotograflar").getPublicUrl(path);
+  return data.publicUrl;
+}
+
+async function uploadFatura(file, cihazId) {
+  const ext = file.name.split(".").pop().toLowerCase();
+  const allowed = ["jpg", "jpeg", "png", "pdf"];
+  if (!allowed.includes(ext)) throw new Error("Desteklenmeyen format (jpg, png, pdf)");
+  if (file.size > 10 * 1024 * 1024) throw new Error("Maksimum dosya boyutu 10 MB");
+
+  const fileName = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+  const path = `${cihazId || "gecici"}/${fileName}`;
+
+  const { error } = await supabase.storage
+    .from("dpp-faturalar")
+    .upload(path, file, { contentType: file.type, upsert: false });
+  if (error) throw new Error(error.message);
+
+  const { data } = supabase.storage.from("dpp-faturalar").getPublicUrl(path);
   return data.publicUrl;
 }
 
@@ -159,13 +178,36 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
     renk: "",
     uretim_yili: "",
     satin_alma_tarihi: "",
+    garanti_baslangic_tarihi: "",
     garanti_bitis_tarihi: "",
+    uzatilmis_garanti: false,
+    uzatilmis_garanti_bitis: "",
   });
   const [fotograflar, setFotograflar] = useState([]);
+  const [faturaUrl, setFaturaUrl] = useState(null);
+  const [faturaYukleniyor, setFaturaYukleniyor] = useState(false);
+  const [faturaHata, setFaturaHata] = useState("");
+  const faturaRef = React.useRef(null);
   const [yukleniyor, setYukleniyor] = useState(false);
   const [hata, setHata] = useState("");
 
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+
+  const faturaYukle = async (e) => {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    setFaturaHata("");
+    setFaturaYukleniyor(true);
+    try {
+      const url = await uploadFatura(f, null);
+      setFaturaUrl(url);
+    } catch (err) {
+      setFaturaHata(err.message);
+    } finally {
+      setFaturaYukleniyor(false);
+      if (faturaRef.current) faturaRef.current.value = "";
+    }
+  };
 
   const olustur = async () => {
     if (!form.kategori) { setHata("Cihaz türü seçin."); return; }
@@ -181,7 +223,11 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
         renk: form.renk || null,
         uretim_yili: form.uretim_yili ? parseInt(form.uretim_yili, 10) : null,
         satin_alma_tarihi: form.satin_alma_tarihi || null,
+        garanti_baslangic_tarihi: form.garanti_baslangic_tarihi || null,
         garanti_bitis_tarihi: form.garanti_bitis_tarihi || null,
+        uzatilmis_garanti: form.uzatilmis_garanti,
+        uzatilmis_garanti_bitis: form.uzatilmis_garanti_bitis || null,
+        fatura_url: faturaUrl || null,
         fotograflar,
       };
       const res = await fetch("/api/dpp/cihaz", {
@@ -251,10 +297,54 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
           <input style={s.input} type="date" value={form.satin_alma_tarihi} onChange={(e) => set("satin_alma_tarihi", e.target.value)} />
         </div>
         <div style={{ flex: 1 }}>
+          <label style={s.label}>Garanti başlangıç <span style={s.opt}>(opsiyonel)</span></label>
+          <input style={s.input} type="date" value={form.garanti_baslangic_tarihi} onChange={(e) => set("garanti_baslangic_tarihi", e.target.value)} />
+        </div>
+      </div>
+      <div style={s.row}>
+        <div style={{ flex: 1 }}>
           <label style={s.label}>Garanti bitişi <span style={s.opt}>(opsiyonel)</span></label>
           <input style={s.input} type="date" value={form.garanti_bitis_tarihi} onChange={(e) => set("garanti_bitis_tarihi", e.target.value)} />
         </div>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+          <label style={{ ...s.label, display: "flex", alignItems: "center", gap: 8 }}>
+            <input
+              type="checkbox"
+              checked={form.uzatilmis_garanti}
+              onChange={e => set("uzatilmis_garanti", e.target.checked)}
+              style={{ width: 16, height: 16, cursor: "pointer" }}
+            />
+            Uzatılmış garanti
+          </label>
+          {form.uzatilmis_garanti && (
+            <input
+              style={s.input}
+              type="date"
+              value={form.uzatilmis_garanti_bitis}
+              onChange={(e) => set("uzatilmis_garanti_bitis", e.target.value)}
+            />
+          )}
+        </div>
       </div>
+
+      <label style={s.label}>Fatura <span style={s.opt}>(PDF veya fotoğraf, max 10 MB, opsiyonel)</span></label>
+      {faturaUrl ? (
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+          <a href={faturaUrl} target="_blank" rel="noopener noreferrer"
+            style={{ fontSize: 13, color: AMBER, fontWeight: 600 }}>📄 Fatura Görüntüle</a>
+          <button type="button" onClick={() => setFaturaUrl(null)}
+            style={{ fontSize: 11, color: "#B23A2E", background: "none", border: "none", cursor: "pointer" }}>Kaldır</button>
+        </div>
+      ) : (
+        <div style={{ marginBottom: 14 }}>
+          <button type="button" onClick={() => faturaRef.current?.click()} disabled={faturaYukleniyor}
+            style={{ padding: "9px 16px", borderRadius: 8, border: "1.5px dashed #DDD3BE", background: "#FFFDF8", color: "#5C6660", fontSize: 13, cursor: "pointer" }}>
+            {faturaYukleniyor ? "⏳ Yükleniyor..." : "📎 Fatura Yükle"}
+          </button>
+          {faturaHata && <p style={s.hata}>{faturaHata}</p>}
+        </div>
+      )}
+      <input ref={faturaRef} type="file" accept="image/jpeg,image/png,application/pdf" style={{ display: "none" }} onChange={faturaYukle} />
 
       <label style={s.label}>Fotoğraf <span style={s.opt}>(opsiyonel, max 3)</span></label>
       <FotoYukle urls={fotograflar} onUrls={setFotograflar} maxAdet={3} />
@@ -272,15 +362,26 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
   const { cihaz, tamirler, toplam_maliyet } = pasaport;
 
   const garantiDurumu = () => {
-    if (!cihaz.garanti_bitis_tarihi) return null;
-    const bitis = new Date(cihaz.garanti_bitis_tarihi);
     const bugun = new Date();
-    const fark = Math.ceil((bitis - bugun) / (1000 * 60 * 60 * 24));
-    if (fark > 0) return { label: `Garanti: ${fark} gün kaldı`, renk: GREEN };
-    return { label: "Garanti süresi dolmuş", renk: "#B23A2E" };
+    const sonuclar = [];
+    if (cihaz.garanti_baslangic_tarihi) {
+      sonuclar.push({ tip: "baslangic", tarih: cihaz.garanti_baslangic_tarihi });
+    }
+    if (cihaz.garanti_bitis_tarihi) {
+      const bitis = new Date(cihaz.garanti_bitis_tarihi);
+      const fark = Math.ceil((bitis - bugun) / (1000 * 60 * 60 * 24));
+      sonuclar.push({ tip: "bitis", tarih: cihaz.garanti_bitis_tarihi, kalan: fark, aktif: fark > 0 });
+    }
+    if (cihaz.uzatilmis_garanti && cihaz.uzatilmis_garanti_bitis) {
+      const bitis = new Date(cihaz.uzatilmis_garanti_bitis);
+      const fark = Math.ceil((bitis - bugun) / (1000 * 60 * 60 * 24));
+      sonuclar.push({ tip: "uzatilmis", tarih: cihaz.uzatilmis_garanti_bitis, kalan: fark, aktif: fark > 0 });
+    }
+    return sonuclar;
   };
 
-  const garanti = garantiDurumu();
+  const garantiBilgileri = garantiDurumu();
+  const hasBenservis = tamirler.some(t => t.servis_turu === "benservis");
 
   return (
     <div style={s.ekran}>
@@ -294,12 +395,39 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
         <div style={s.pasaportAlt}>
           {cihaz.kategori && <span style={s.rozet}>{cihaz.kategori}</span>}
           {cihaz.uretim_yili && <span style={s.metaBilgi}>{cihaz.uretim_yili}</span>}
-          {garanti && (
-            <span style={{ ...s.metaBilgi, color: garanti.renk, fontWeight: 700 }}>
-              {garanti.label}
-            </span>
+          {hasBenservis && (
+            <div style={{ marginLeft: "auto" }}>
+              <BenservisRozet size="lg" tarih={tamirler.find(t => t.servis_turu === "benservis")?.tarih} />
+            </div>
           )}
         </div>
+        {garantiBilgileri.length > 0 && (
+          <div style={{ marginTop: 10, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 8, padding: "10px 12px", fontSize: 12 }}>
+            {garantiBilgileri.map((g, i) => (
+              <div key={i} style={{ marginBottom: i < garantiBilgileri.length - 1 ? 4 : 0, color: "#5C6660" }}>
+                {g.tip === "baslangic" && `📅 Alındı: ${new Date(g.tarih).toLocaleDateString("tr-TR")}`}
+                {g.tip === "bitis" && (
+                  <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
+                    🛡️ Garanti: {new Date(g.tarih).toLocaleDateString("tr-TR")}
+                    {g.aktif ? ` (${g.kalan} gün kaldı)` : " (süresi doldu)"}
+                  </span>
+                )}
+                {g.tip === "uzatilmis" && (
+                  <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
+                    ➕ Uzatılmış: {new Date(g.tarih).toLocaleDateString("tr-TR")}
+                    {g.aktif ? ` (${g.kalan} gün kaldı)` : " (süresi doldu)"}
+                  </span>
+                )}
+              </div>
+            ))}
+            {cihaz.fatura_url && (
+              <div style={{ marginTop: 6 }}>
+                <a href={cihaz.fatura_url} target="_blank" rel="noopener noreferrer"
+                  style={{ fontSize: 12, color: AMBER, fontWeight: 600 }}>📄 Fatura Görüntüle</a>
+              </div>
+            )}
+          </div>
+        )}
         <div style={s.seriNo}>SN: {cihaz.seri_no}</div>
         {toplam_maliyet > 0 && (
           <div style={s.toplamMaliyet}>
@@ -333,7 +461,7 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
                 {new Date(t.tarih + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}
               </span>
               {t.servis_turu === "benservis" && (
-                <span style={s.dogrulanmisRozet}>✓ Doğrulanmış</span>
+                <BenservisRozet size="sm" tarih={t.tarih} />
               )}
               {t.servis_turu === "harici" && <span style={s.hariciRozet}>Harici Servis</span>}
               {t.servis_turu === "sahip" && <span style={s.sahipRozet}>Kendim Yaptım</span>}
