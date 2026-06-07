@@ -48,6 +48,24 @@ export default async function handler(req, res) {
     return res.status(302).redirect(`${BASE_URL}/ikinci-el/alici/${alici_token}`);
   }
 
+  // iyzico henüz yapılandırılmamışsa bilgi sayfası döndür
+  if (!process.env.IYZICO_API_KEY) {
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    return res.status(200).send(sayfaHTML(`
+      <div style="max-width:440px;margin:0 auto;text-align:center;padding:40px 0">
+        <div style="font-size:44px;margin-bottom:16px">🔒</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;margin:0 0 10px">Güvenli Ödeme — Yakında</h2>
+        <p style="font-size:14px;color:#5C6660;line-height:1.6;margin-bottom:24px">
+          Ödeme sistemi kurulum aşamasında. Satıcıyla mesajlaşmaya devam edebilirsiniz.<br>
+          Ödeme yöntemi belirlendikten sonra burayı güncelleyeceğiz.
+        </p>
+        <a href="${BASE_URL}/ikinci-el/alici/${alici_token}"
+           style="display:inline-block;padding:12px 24px;border-radius:11px;background:${AMBER};color:#fff;font-weight:700;font-size:14px;text-decoration:none">
+          ← Talepe Dön
+        </a>
+      </div>`));
+  }
+
   // iyzico yapılandır
   const iyzipay = new Iyzipay({
     apiKey:    process.env.IYZICO_API_KEY    || "sandbox-apikey",
