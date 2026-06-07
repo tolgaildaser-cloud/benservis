@@ -109,3 +109,24 @@ ALTER TABLE tamir_kayitlari
 ALTER TABLE cihazlar
   ADD COLUMN IF NOT EXISTS mevcut_durum text DEFAULT 'çalışıyor'
     CHECK (mevcut_durum IN ('çalışıyor', 'arızalı', 'hurda'));
+
+-- Faz 4 — İkinci El Pazaryeri
+CREATE TABLE IF NOT EXISTS ilanlar (
+  id                   uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  seri_no              text NOT NULL,
+  baslik               text NOT NULL,
+  aciklama             text,
+  fiyat                integer NOT NULL,
+  konum                text,
+  satici_ad            text NOT NULL,
+  satici_tel           text NOT NULL,
+  fotograflar          text[] DEFAULT '{}',
+  durum                text NOT NULL DEFAULT 'aktif'
+                       CHECK (durum IN ('aktif', 'satildi', 'silindi')),
+  goruntuleme_sayisi   integer DEFAULT 0,
+  created_at           timestamptz DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS ilanlar_seri_no_idx   ON ilanlar(seri_no);
+CREATE INDEX IF NOT EXISTS ilanlar_durum_idx     ON ilanlar(durum);
+CREATE INDEX IF NOT EXISTS ilanlar_created_at_idx ON ilanlar(created_at DESC);

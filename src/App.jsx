@@ -346,6 +346,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
+      <a href="/ikinci-el" style={s.ikinciElBanner}>
+        🛒 <strong>İkinci El Pazaryeri</strong> — DPP pasaportlu güvenli alışveriş
+        <span style={s.ikinciElOk}>→</span>
+      </a>
+
       <footer style={s.footer}>Faz 1 — AI teşhis & tahmini maliyet · prototip</footer>
     </div>
   );
@@ -439,4 +444,12 @@ const s = {
     background: "#22302A", color: "#F5EFE2", fontSize: 13, fontWeight: 700,
     fontFamily: "'Hanken Grotesk', sans-serif", whiteSpace: "nowrap", cursor: "pointer",
   },
+  ikinciElBanner: {
+    position: "relative", zIndex: 1,
+    display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10,
+    marginTop: 18, padding: "13px 18px", borderRadius: 14,
+    background: "#FFFDF8", border: "1.5px solid #E5DCC9",
+    color: INK, textDecoration: "none", fontSize: 14, lineHeight: 1.4,
+  },
+  ikinciElOk: { fontSize: 18, color: AMBER, flexShrink: 0 },
 };
