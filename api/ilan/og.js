@@ -123,19 +123,14 @@ export default async function handler(req, res) {
       </div>` : ""}
 
       <div style="background:#FFFDF8;border:1px solid #E5DCC9;border-radius:14px;padding:16px;margin-bottom:14px">
-        <div style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin-bottom:10px">Satıcı</div>
-        <div style="font-size:15px;font-weight:600;margin-bottom:14px">${ilan.satici_ad}</div>
+        <div style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin-bottom:8px">Satıcı</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:12px">${ilan.satici_ad}</div>
         ${ilan.durum === "aktif" ? `
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <a href="https://wa.me/${ilan.satici_tel.replace(/[^0-9]/g, "").replace(/^0/, "90")}?text=${encodeURIComponent(`Benservis ilanınızı gördüm: ${ilan.baslik} (${pageUrl})`)}"
-            style="flex:1;min-width:120px;padding:10px 13px;border-radius:10px;border:1.5px solid ${AMBER};background:rgba(200,99,43,.06);color:${AMBER};font-weight:700;font-size:13px;text-decoration:none;text-align:center">
-            💬 WhatsApp
-          </a>
-          <a href="tel:${ilan.satici_tel}"
-            style="flex:1;min-width:120px;padding:10px 13px;border-radius:10px;border:1.5px solid #DDD3BE;background:#FFFDF8;color:${INK};font-weight:700;font-size:13px;text-decoration:none;text-align:center">
-            📞 Ara
-          </a>
-        </div>` : `<p style="font-size:13px;color:#9A9384;margin:0">Bu ilan artık aktif değil.</p>`}
+        <p style="font-size:13px;color:#5C6660;margin:0 0 12px;line-height:1.5">🔒 Ödeme Benservis güvencesiyle korunur. Satıcı bilgileri gizlidir.</p>
+        <a href="${pageUrl}"
+          style="display:block;text-align:center;padding:13px;border-radius:12px;background:${AMBER};color:#fff;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 8px 20px -8px rgba(200,99,43,.5)">
+          Satın Almak İstiyorum →
+        </a>` : `<p style="font-size:13px;color:#9A9384;margin:0">Bu ilan artık aktif değil.</p>`}
       </div>
 
       <a href="${BASE_URL}/ikinci-el" style="display:block;text-align:center;padding:13px;border-radius:13px;background:${INK};color:${CREAM};font-weight:700;font-size:14px;text-decoration:none">

@@ -38,12 +38,28 @@ function TamirSatiri({ t }) {
   );
 }
 
+const CSS_ILANDETAY = `
+* { box-sizing:border-box; }
+@keyframes spin { to { transform:rotate(360deg); } }
+input:focus, textarea:focus { outline:none; border-color:#C8632B!important; box-shadow:0 0 0 3px rgba(200,99,43,.13); }
+button { cursor:pointer; font-family:'Hanken Grotesk',sans-serif; }
+`;
+
 export default function IlanDetay({ id }) {
-  const [ilan, setIlan]         = useState(null);
-  const [dpp, setDpp]           = useState(null);
-  const [yukleniyor, setYuk]    = useState(true);
-  const [bulunamadi, setBul]    = useState(false);
+  const [ilan, setIlan]           = useState(null);
+  const [dpp, setDpp]             = useState(null);
+  const [yukleniyor, setYuk]      = useState(true);
+  const [bulunamadi, setBul]      = useState(false);
   const [tamirAcik, setTamirAcik] = useState(false);
+  // Talep formu
+  const [talepForm, setTF]        = useState(false);
+  const [aliciAd, setAA]          = useState("");
+  const [aliciTel, setAT]         = useState("");
+  const [ilkMesaj, setIM]         = useState("");
+  const [talepGon, setTG]         = useState(false);
+  const [talepHata, setTH]        = useState("");
+  const [talepOldu, setTO]        = useState(false);
+  const [aliciToken, setAliciToken] = useState("");
 
   useEffect(() => {
     setYuk(true);
@@ -88,9 +104,27 @@ export default function IlanDetay({ id }) {
   const waMesaj       = encodeURIComponent(`Benservis ilanınızı gördüm: ${ilan.baslik} (${pageUrl})`);
   const waTel         = (ilan.satici_tel || "").replace(/[^0-9]/g, "").replace(/^0/, "90");
 
+  const talepGonder = async () => {
+    setTH("");
+    if (!aliciAd.trim())  { setTH("Adınızı girin."); return; }
+    if (!aliciTel.trim()) { setTH("Telefon numarası girin."); return; }
+    setTG(true);
+    try {
+      const res  = await fetch("/api/talep/yeni", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ilan_id: id, alici_ad: aliciAd, alici_tel: aliciTel, ilk_mesaj: ilkMesaj }),
+      });
+      const data = await res.json();
+      if (!res.ok) { setTH(data.error || "Hata oluştu."); return; }
+      setAliciToken(data.alici_token);
+      setTO(true);
+    } catch { setTH("Bağlantı hatası."); }
+    finally { setTG(false); }
+  };
+
   return (
     <div style={sWrap}>
-      <style>{FONT}</style>
+      <style>{FONT}{CSS_ILANDETAY}</style>
       <div style={st.grain} />
 
       {/* Header */}
@@ -186,27 +220,57 @@ export default function IlanDetay({ id }) {
         </div>
       )}
 
-      {/* Satıcı ve iletişim */}
+      {/* Satın Al / Talep Formu */}
       <div style={st.saticiKart}>
-        <div style={st.saticiBaslik}>Satıcı</div>
-        <div style={st.saticiAd}>{ilan.satici_ad}</div>
+        <div style={st.saticiBaslik}>Satın Al</div>
+        <div style={{ fontSize: 13.5, color: "#5C6660", marginBottom: 14, lineHeight: 1.5 }}>
+          Satıcı: <strong>{ilan.satici_ad}</strong>
+        </div>
 
-        {aktif ? (
-          <div style={st.iletisimBtnlar}>
-            <a
-              href={`https://wa.me/${waTel}?text=${waMesaj}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={st.waBtm}
-            >
-              💬 WhatsApp
-            </a>
-            <a href={`tel:${ilan.satici_tel}`} style={st.telBtn}>
-              📞 Ara
+        {!aktif && <p style={st.pasifIletisim}>Bu ilan artık aktif değil.</p>}
+
+        {aktif && !talepForm && !talepOldu && (
+          <>
+            <p style={{ fontSize: 13, color: "#5C6660", marginBottom: 14, lineHeight: 1.5 }}>
+              🔒 Ödeme Benservis güvencesiyle korunur. Satıcı bilgilerin gizlidir.
+            </p>
+            <button style={st.talepCta} onClick={() => setTF(true)}>
+              Satın Almak İstiyorum →
+            </button>
+          </>
+        )}
+
+        {aktif && talepForm && !talepOldu && (
+          <div style={{ animation: "rise .3s ease both" }}>
+            <label style={st.formLabel}>Adınız <span style={{ color: AMBER }}>*</span></label>
+            <input style={st.formInput} value={aliciAd} onChange={e => setAA(e.target.value)} placeholder="Ad Soyad" />
+
+            <label style={st.formLabel}>Telefon <span style={{ color: AMBER }}>*</span></label>
+            <input style={st.formInput} type="tel" value={aliciTel} onChange={e => setAT(e.target.value)} placeholder="0532 000 00 00" />
+
+            <label style={st.formLabel}>Mesaj (opsiyonel)</label>
+            <textarea style={{ ...st.formInput, resize: "vertical" }} rows={2} value={ilkMesaj} onChange={e => setIM(e.target.value)} placeholder="Sormak istediğiniz varsa…" maxLength={400} />
+
+            {talepHata && <div style={{ fontSize: 13, color: "#B23A2E", fontWeight: 600, marginBottom: 8 }}>{talepHata}</div>}
+
+            <button style={st.talepCta} onClick={talepGonder} disabled={talepGon}>
+              {talepGon ? "Gönderiliyor…" : "Talebi Gönder →"}
+            </button>
+            <button style={st.vazgecBtn} onClick={() => { setTF(false); setTH(""); }}>Vazgeç</button>
+          </div>
+        )}
+
+        {talepOldu && (
+          <div style={st.talepOlduKart}>
+            <div style={{ fontSize: 28, marginBottom: 8 }}>✅</div>
+            <div style={{ fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 700, marginBottom: 6 }}>Talebiniz alındı!</div>
+            <p style={{ fontSize: 13, color: "#5C6660", marginBottom: 14, lineHeight: 1.5 }}>
+              Satıcıya SMS ile bildirim gönderildi. Mesajlaşmak ve ödemeyi tamamlamak için panelinize gidin.
+            </p>
+            <a href={`/ikinci-el/alici/${aliciToken}`} style={st.talepCta}>
+              Alıcı Paneliime Git →
             </a>
           </div>
-        ) : (
-          <p style={st.pasifIletisim}>Bu ilan artık aktif değil.</p>
         )}
       </div>
 
@@ -283,11 +347,12 @@ const st = {
 
   saticiKart: { position: "relative", zIndex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14, padding: 16, marginBottom: 12 },
   saticiBaslik: { fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, marginBottom: 8 },
-  saticiAd: { fontSize: 15, fontWeight: 600, marginBottom: 14 },
-  iletisimBtnlar: { display: "flex", gap: 8, flexWrap: "wrap" },
-  waBtm: { flex: 1, minWidth: 120, padding: "11px 14px", borderRadius: 10, border: `1.5px solid ${AMBER}`, background: `rgba(200,99,43,.06)`, color: AMBER, fontWeight: 700, fontSize: 13, textDecoration: "none", textAlign: "center" },
-  telBtn: { flex: 1, minWidth: 120, padding: "11px 14px", borderRadius: 10, border: "1.5px solid #DDD3BE", background: "#FFFDF8", color: INK, fontWeight: 700, fontSize: 13, textDecoration: "none", textAlign: "center" },
   pasifIletisim: { fontSize: 13, color: "#9A9384", margin: 0 },
+  formLabel: { display: "block", fontSize: 13, fontWeight: 700, margin: "12px 0 5px" },
+  formInput: { width: "100%", padding: "10px 12px", borderRadius: 10, border: "1.5px solid #DDD3BE", background: "#FFFDF8", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", color: INK },
+  talepCta: { display: "block", textAlign: "center", marginTop: 14, padding: "13px", borderRadius: 12, border: "none", background: AMBER, color: "#fff", fontWeight: 700, fontSize: 15, textDecoration: "none", boxShadow: "0 8px 20px -8px rgba(200,99,43,.5)", width: "100%" },
+  vazgecBtn: { display: "block", width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, border: "1.5px solid #DDD3BE", background: "transparent", fontSize: 13, color: "#8A7B6A", fontWeight: 600 },
+  talepOlduKart: { textAlign: "center", padding: "8px 0" },
 
   tumuBtn: { position: "relative", zIndex: 1, display: "block", textAlign: "center", padding: 13, borderRadius: 13, background: INK, color: CREAM, fontWeight: 700, fontSize: 14, textDecoration: "none", marginTop: 8 },
   footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#A59E8E", marginTop: 20 },

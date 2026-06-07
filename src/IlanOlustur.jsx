@@ -31,6 +31,7 @@ export default function IlanOlustur() {
   const [konum, setKonum]         = useState("");
   const [saticiAd, setSaticiAd]   = useState("");
   const [saticiTel, setSaticiTel] = useState("");
+  const [saticiIban, setSaticiIban] = useState("");
 
   // Gönderim state
   const [gonderiyor, setGonderiyor] = useState(false);
@@ -87,13 +88,14 @@ export default function IlanOlustur() {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({
-          seri_no:    seriNo.trim().toUpperCase(),
-          baslik:     baslik.trim(),
-          aciklama:   aciklama.trim() || undefined,
-          fiyat:      parseInt(fiyat, 10),
-          konum:      konum.trim() || undefined,
-          satici_ad:  saticiAd.trim(),
-          satici_tel: saticiTel.trim(),
+          seri_no:     seriNo.trim().toUpperCase(),
+          baslik:      baslik.trim(),
+          aciklama:    aciklama.trim() || undefined,
+          fiyat:       parseInt(fiyat, 10),
+          konum:       konum.trim() || undefined,
+          satici_ad:   saticiAd.trim(),
+          satici_tel:  saticiTel.trim(),
+          satici_iban: saticiIban.trim() || undefined,
         }),
       });
       const data = await res.json();
@@ -276,7 +278,16 @@ export default function IlanOlustur() {
               </div>
             </div>
 
-            <div style={s.telUyari}>📵 Telefon numaranız yalnızca alıcılara gösterilir, listede gizlidir.</div>
+            <label style={s.label}>IBAN <span style={s.opsiyonel}>(opsiyonel — ödeme için)</span></label>
+            <input
+              style={s.input}
+              value={saticiIban}
+              onChange={e => setSaticiIban(e.target.value.toUpperCase())}
+              placeholder="TR00 0000 0000 0000 0000 0000 00"
+              maxLength={32}
+            />
+
+            <div style={s.telUyari}>📵 Telefon ve IBAN bilgileri alıcılardan gizlidir. Ödeme Benservis üzerinden güvenli şekilde toplanır.</div>
 
             {hataMsg && <div style={s.hata}>{hataMsg}</div>}
 

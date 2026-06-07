@@ -127,6 +127,49 @@ CREATE TABLE IF NOT EXISTS ilanlar (
   created_at           timestamptz DEFAULT now()
 );
 
-CREATE INDEX IF NOT EXISTS ilanlar_seri_no_idx   ON ilanlar(seri_no);
-CREATE INDEX IF NOT EXISTS ilanlar_durum_idx     ON ilanlar(durum);
+CREATE INDEX IF NOT EXISTS ilanlar_seri_no_idx    ON ilanlar(seri_no);
+CREATE INDEX IF NOT EXISTS ilanlar_durum_idx      ON ilanlar(durum);
 CREATE INDEX IF NOT EXISTS ilanlar_created_at_idx ON ilanlar(created_at DESC);
+
+-- Faz 4B — Güvenli Ödeme + Mesajlaşma
+ALTER TABLE ilanlar
+  ADD COLUMN IF NOT EXISTS satici_token text UNIQUE,
+  ADD COLUMN IF NOT EXISTS satici_iban  text;
+
+CREATE TABLE IF NOT EXISTS talepler (
+  id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  ilan_id             uuid NOT NULL REFERENCES ilanlar(id),
+  alici_ad            text NOT NULL,
+  alici_tel           text NOT NULL,
+  alici_email         text,
+  alici_token         text UNIQUE NOT NULL,
+  ilk_mesaj           text,
+  odeme_durumu        text NOT NULL DEFAULT 'ilgileniliyor'
+                      CHECK (odeme_durumu IN (
+                        'ilgileniliyor',    -- alıcı ilgi gösterdi
+                        'odeme_bekleniyor', -- iyzico formu açıldı
+                        'odendi',           -- ödeme onaylandı
+                        'teslim_onaylandi', -- alıcı ürünü aldı
+                        'iptal'
+                      )),
+  tutar               integer NOT NULL,
+  iyzico_payment_id   text,
+  iyzico_token        text,
+  created_at          timestamptz DEFAULT now(),
+  teslim_onay_tarihi  timestamptz
+);
+
+CREATE INDEX IF NOT EXISTS talepler_ilan_id_idx    ON talepler(ilan_id);
+CREATE UNIQUE INDEX IF NOT EXISTS talepler_alici_token_idx ON talepler(alici_token);
+CREATE INDEX IF NOT EXISTS talepler_iyzico_token_idx ON talepler(iyzico_token);
+
+CREATE TABLE IF NOT EXISTS mesajlar (
+  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  talep_id    uuid NOT NULL REFERENCES talepler(id),
+  gonderen    text NOT NULL CHECK (gonderen IN ('alici', 'satici')),
+  icerik      text NOT NULL CHECK (char_length(trim(icerik)) > 0),
+  okundu      boolean DEFAULT false,
+  created_at  timestamptz DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS mesajlar_talep_id_idx ON mesajlar(talep_id);
