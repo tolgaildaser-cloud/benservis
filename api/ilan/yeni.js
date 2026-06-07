@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const {
-    seri_no, baslik, aciklama, fiyat,
+    seri_no, kategori, baslik, aciklama, fiyat,
     konum, satici_ad, satici_tel, satici_iban, fotograflar,
   } = req.body || {};
 
@@ -71,6 +71,7 @@ export default async function handler(req, res) {
     .from("ilanlar")
     .insert({
       seri_no:      seri_no.trim(),
+      kategori:     kategori?.trim() || null,
       baslik:       baslik.trim(),
       aciklama:     aciklama?.trim() || null,
       fiyat:        parseInt(fiyat, 10),

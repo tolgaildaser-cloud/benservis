@@ -7,16 +7,21 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
 
-  const durum  = req.query.durum || "aktif";
-  const limit  = Math.min(parseInt(req.query.limit)  || 20, 50);
-  const offset = parseInt(req.query.offset) || 0;
+  const durum    = req.query.durum || "aktif";
+  const limit    = Math.min(parseInt(req.query.limit)  || 20, 50);
+  const offset   = parseInt(req.query.offset) || 0;
+  const kategori = req.query.kategori || null;
 
-  const { data: ilanlar, error, count } = await supabase
+  let query = supabase
     .from("ilanlar")
-    .select("id, seri_no, baslik, fiyat, konum, satici_ad, fotograflar, durum, created_at", { count: "exact" })
+    .select("id, seri_no, kategori, baslik, fiyat, konum, satici_ad, fotograflar, durum, created_at", { count: "exact" })
     .eq("durum", durum)
     .order("created_at", { ascending: false })
     .range(offset, offset + limit - 1);
+
+  if (kategori) query = query.eq("kategori", kategori);
+
+  const { data: ilanlar, error, count } = await query;
 
   if (error) return res.status(500).json({ error: error.message });
 

@@ -114,6 +114,7 @@ ALTER TABLE cihazlar
 CREATE TABLE IF NOT EXISTS ilanlar (
   id                   uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   seri_no              text NOT NULL,
+  kategori             text,
   baslik               text NOT NULL,
   aciklama             text,
   fiyat                integer NOT NULL,
@@ -135,6 +136,12 @@ CREATE INDEX IF NOT EXISTS ilanlar_created_at_idx ON ilanlar(created_at DESC);
 ALTER TABLE ilanlar
   ADD COLUMN IF NOT EXISTS satici_token text UNIQUE,
   ADD COLUMN IF NOT EXISTS satici_iban  text;
+
+-- Faz 4C — Cihaz Türü Filtresi
+ALTER TABLE ilanlar
+  ADD COLUMN IF NOT EXISTS kategori text;
+
+CREATE INDEX IF NOT EXISTS ilanlar_kategori_idx ON ilanlar(kategori);
 
 CREATE TABLE IF NOT EXISTS talepler (
   id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),

@@ -4,6 +4,7 @@
 // Adım 2: ilan detayları → POST /api/ilan/yeni
 import React, { useState } from "react";
 import BenservisRozet from "./BenservisRozet.jsx";
+import { CIHAZLAR } from "./constants.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
@@ -25,6 +26,7 @@ export default function IlanOlustur() {
   const [adim, setAdim]           = useState(1);
 
   // Adım 2 state
+  const [kategori, setKategori]   = useState("");
   const [baslik, setBaslik]       = useState("");
   const [fiyat, setFiyat]         = useState("");
   const [aciklama, setAciklama]   = useState("");
@@ -59,6 +61,7 @@ export default function IlanOlustur() {
           toplam_maliyet:       toplam_maliyet || 0,
           benservis_dogrulanmis: (tamirler || []).some(t => t.servis_turu === "benservis"),
         });
+        if (cihaz.kategori) setKategori(cihaz.kategori);
       } else if (res.status === 404) {
         // DPP kaydı yok — ilerlemeye izin ver
         setDpp(null);
@@ -77,6 +80,7 @@ export default function IlanOlustur() {
   // ── İlan gönder ─────────────────────────────────────────────────────────────
   const ilanGonder = async () => {
     setHataMsg("");
+    if (!kategori)           { setHataMsg("Cihaz türü seçin."); return; }
     if (!baslik.trim())      { setHataMsg("Başlık girin."); return; }
     if (!fiyat || parseInt(fiyat, 10) <= 0) { setHataMsg("Geçerli bir fiyat girin."); return; }
     if (!saticiAd.trim())    { setHataMsg("Adınızı girin."); return; }
@@ -89,6 +93,7 @@ export default function IlanOlustur() {
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({
           seri_no:     seriNo.trim().toUpperCase(),
+          kategori,
           baslik:      baslik.trim(),
           aciklama:    aciklama.trim() || undefined,
           fiyat:       parseInt(fiyat, 10),
@@ -217,6 +222,18 @@ export default function IlanOlustur() {
           {/* İlan formu */}
           <div style={s.kart}>
             <div style={s.kartBaslik}>İlan Detayları</div>
+
+            <label style={s.label}>Cihaz Türü <span style={s.zorunlu}>*</span></label>
+            <select
+              style={s.input}
+              value={kategori}
+              onChange={e => setKategori(e.target.value)}
+            >
+              <option value="">— Seçin —</option>
+              {CIHAZLAR.map(c => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
 
             <label style={s.label}>Başlık <span style={s.zorunlu}>*</span></label>
             <input

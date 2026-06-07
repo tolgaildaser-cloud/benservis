@@ -2,6 +2,7 @@
 // İkinci el ilan listesi — /ikinci-el
 import React, { useState, useEffect } from "react";
 import BenservisRozet from "./BenservisRozet.jsx";
+import { CIHAZLAR } from "./constants.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
@@ -52,15 +53,18 @@ export default function IlanListesi() {
   const [toplam, setToplam]   = useState(0);
   const [yukleniyor, setYukleniyor] = useState(true);
   const [sadeceDogru, setSadeceDogru] = useState(false);
+  const [kategori, setKategori] = useState("");
 
   useEffect(() => {
     setYukleniyor(true);
-    fetch("/api/ilan/liste?durum=aktif&limit=50")
+    const params = new URLSearchParams({ durum: "aktif", limit: "50" });
+    if (kategori) params.set("kategori", kategori);
+    fetch(`/api/ilan/liste?${params}`)
       .then(r => r.json())
       .then(d => { setIlanlar(d.ilanlar || []); setToplam(d.toplam || 0); })
       .catch(() => {})
       .finally(() => setYukleniyor(false));
-  }, []);
+  }, [kategori]);
 
   const filtreli = sadeceDogru
     ? ilanlar.filter(i => i.dpp?.benservis_dogrulanmis)
@@ -83,11 +87,20 @@ export default function IlanListesi() {
       </header>
 
       <div style={s.toolbar}>
-        <button
-          style={{ ...s.filtrBtn, ...(sadeceDogru ? s.filtrAktif : {}) }}
-          onClick={() => setSadeceDogru(!sadeceDogru)}>
-          ✓ Sadece Benservis Doğrulanmış {sadeceDogru && `(${filtreli.length})`}
-        </button>
+        <div style={s.toolbarSol}>
+          <select
+            value={kategori}
+            onChange={e => setKategori(e.target.value)}
+            style={s.kategoriSelect}>
+            <option value="">Tüm Cihazlar</option>
+            {CIHAZLAR.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+          <button
+            style={{ ...s.filtrBtn, ...(sadeceDogru ? s.filtrAktif : {}) }}
+            onClick={() => setSadeceDogru(!sadeceDogru)}>
+            ✓ Doğrulanmış {sadeceDogru && `(${filtreli.length})`}
+          </button>
+        </div>
         <a href="/ikinci-el/yeni" style={s.ilanVerBtn}>+ İlan Ver</a>
       </div>
 
@@ -102,10 +115,10 @@ export default function IlanListesi() {
         <div style={s.bos}>
           <div style={{ fontSize: 40, marginBottom: 12 }}>📦</div>
           <div style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700, marginBottom: 8 }}>
-            {sadeceDogru ? "Doğrulanmış ilan yok" : "Henüz ilan yok"}
+            {sadeceDogru ? "Doğrulanmış ilan yok" : kategori ? `${kategori} ilanı yok` : "Henüz ilan yok"}
           </div>
           <p style={{ fontSize: 13, color: "#5C6660" }}>
-            {sadeceDogru ? "Filtreyi kaldır veya daha sonra tekrar kontrol et." : "İlk ilanlayan sen ol!"}
+            {sadeceDogru || kategori ? "Filtreleri kaldır veya daha sonra tekrar kontrol et." : "İlk ilanlayan sen ol!"}
           </p>
           <a href="/ikinci-el/yeni" style={s.ilkIlanBtn}>+ İlan Ver →</a>
         </div>
@@ -139,6 +152,8 @@ const s = {
   altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#8A7B6A", textTransform: "uppercase", marginTop: 4 },
   aciklama: { fontSize: 13, color: "#5C6660", marginTop: 6 },
   toolbar: { position: "relative", zIndex: 1, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, marginBottom: 16, flexWrap: "wrap" },
+  toolbarSol: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" },
+  kategoriSelect: { fontSize: 12, fontWeight: 600, padding: "7px 10px", borderRadius: 8, border: "1.5px solid #DDD3BE", background: "#FFFDF8", color: INK, cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif", appearance: "none", paddingRight: 24, backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238A7B6A'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 8px center" },
   filtrBtn: { fontSize: 12, fontWeight: 700, padding: "7px 12px", borderRadius: 8, border: "1.5px solid #DDD3BE", background: "#FFFDF8", color: "#6E6450", cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif" },
   filtrAktif: { border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.08)", color: AMBER },
   ilanVerBtn: { fontSize: 13, fontWeight: 700, padding: "8px 16px", borderRadius: 10, background: AMBER, color: "#fff", textDecoration: "none" },
