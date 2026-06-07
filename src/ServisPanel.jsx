@@ -101,9 +101,9 @@ function ZenginleştirModal({ is, dppTamirId, jwtToken, onKapat, onZenginlesti }
         if (!IZIN_VERILEN_MIME.includes(f.type)) throw new Error(`İzin verilmeyen dosya tipi: ${f.type}`);
         const ext = f.name.split(".").pop().toLowerCase();
         const path = `tamirler/${dppTamirId}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
-        const { error } = await supabase.storage.from("dpp-fotograflar").upload(path, f, { contentType: f.type });
+        const { error } = await supabase.storage.from("DPP Foto").upload(path, f, { contentType: f.type });
         if (error) throw new Error(error.message);
-        return supabase.storage.from("dpp-fotograflar").getPublicUrl(path).data.publicUrl;
+        return supabase.storage.from("DPP Foto").getPublicUrl(path).data.publicUrl;
       }));
       const basarili = results.filter(r => r.status === "fulfilled").map(r => r.value);
       const basarisizSayisi = results.filter(r => r.status === "rejected").length;

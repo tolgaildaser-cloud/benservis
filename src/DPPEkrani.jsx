@@ -16,11 +16,11 @@ async function uploadPhoto(file, folder) {
   const path = `${folder}/${fileName}`;
 
   const { error } = await supabase.storage
-    .from("dpp-fotograflar")
+    .from("DPP Foto")
     .upload(path, file, { contentType: file.type, upsert: false });
   if (error) throw new Error(error.message);
 
-  const { data } = supabase.storage.from("dpp-fotograflar").getPublicUrl(path);
+  const { data } = supabase.storage.from("DPP Foto").getPublicUrl(path);
   return data.publicUrl;
 }
 
@@ -37,11 +37,11 @@ async function uploadFatura(file, cihazId) {
   const path = `${cihazId || "gecici"}/${fileName}`;
 
   const { error } = await supabase.storage
-    .from("dpp-faturalar")
+    .from("DPP Faturalar")
     .upload(path, file, { contentType: file.type, upsert: false });
   if (error) throw new Error(error.message);
 
-  const { data } = supabase.storage.from("dpp-faturalar").getPublicUrl(path);
+  const { data } = supabase.storage.from("DPP Faturalar").getPublicUrl(path);
   return data.publicUrl;
 }
 
