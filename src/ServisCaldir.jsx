@@ -15,6 +15,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
   const [tel, setTel] = useState("");
   const [adres, setAdres] = useState("");
   const [tarih, setTarih] = useState("");
+  const [seriNo, setSeriNo] = useState("");
   const [hata, setHata] = useState("");
   const [yukleniyor, setYukleniyor] = useState(false);
   const [tamamlandi, setTamamlandi] = useState(null); // { is_no }
@@ -44,6 +45,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
           musteri_tel: tel.trim(),
           adres: adres.trim(),
           tarih_tercihi: tarih.trim() || null,
+          seri_no: seriNo.trim() || null,
           cihaz: cihaz || null,
           belirti: belirti || null,
         }),
@@ -55,6 +57,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
       setTel("");
       setAdres("");
       setTarih("");
+      setSeriNo("");
     } catch (err) {
       setHata(err.message);
     }
@@ -122,6 +125,19 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
             </label>
             <input value={tarih} onChange={e => setTarih(e.target.value)} placeholder="örn. Yarın öğleden sonra"
               style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 20, boxSizing: "border-box" }} />
+
+            <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#22302A", marginBottom: 6 }}>
+              Seri No <span style={{ fontWeight: 400, color: "#888", fontSize: 12 }}>(opsiyonel)</span>
+            </label>
+            <input
+              value={seriNo}
+              onChange={e => setSeriNo(e.target.value)}
+              placeholder="SN1234567890"
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 2, boxSizing: "border-box" }}
+            />
+            <div style={{ fontSize: 11, color: "#aaa", marginBottom: 20 }}>
+              Cihazın arkasında veya faturasında yazar. Tamir geçmişi için kullanılır.
+            </div>
 
             {hata && <div style={{ color: "#B23A2E", fontSize: 13, fontWeight: 600, marginBottom: 14 }}>{hata}</div>}
 
