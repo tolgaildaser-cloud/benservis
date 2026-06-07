@@ -11,11 +11,13 @@ import IlanOlustur from "./IlanOlustur.jsx";
 import IlanDetay from "./IlanDetay.jsx";
 import AliciPaneli from "./AliciPaneli.jsx";
 import SaticiPaneli from "./SaticiPaneli.jsx";
+import AdminOdemePaneli from "./AdminOdemePaneli.jsx";
 
 export default function IkinciElApp() {
   const path = window.location.pathname;
 
-  if (path === "/ikinci-el/yeni") return <IlanOlustur />;
+  if (path === "/ikinci-el/yeni")  return <IlanOlustur />;
+  if (path === "/ikinci-el/admin") return <AdminOdemePaneli />;
 
   const alici = path.match(/^\/ikinci-el\/alici\/([^/]+)$/);
   if (alici) return <AliciPaneli token={decodeURIComponent(alici[1])} />;

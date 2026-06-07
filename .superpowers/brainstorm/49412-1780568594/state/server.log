@@ -1,0 +1,9 @@
+{"type":"server-started","port":62625,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:62625","screen_dir":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content","state_dir":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/state"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/matching-approach.html"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/ui-placement.html"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/service-screen.html"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/waiting-1.html"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/architecture.html"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/data-structure.html"}
+{"type":"screen-added","file":"/Users/tolgaildaser/Downloads/arizam-ne-app/.superpowers/brainstorm/49412-1780568594/content/frontend-design.html"}
+{"type":"server-stopped","reason":"idle timeout"}

@@ -1,0 +1,42 @@
+<h2>Teşhis sonrası servis eşleştirme nasıl çalışsın?</h2>
+<p class="subtitle">Kullanıcı teşhisini aldıktan sonra servislere nasıl yönlendirilsin?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Kategori eşleştirme — konum yok</h3>
+      <p>Teşhis çıktıktan sonra "Bu cihazı tamir eden İstanbul servisleri" listesi gösterilir. Sadece cihaz kategorisine göre filtreler. Kullanıcıdan adres/konum istenmez.</p>
+      <div class="pros-cons" style="margin-top:10px">
+        <div class="pros"><h4>Artı</h4><ul><li>Sürtünmesiz — ek bilgi girmek gerekmez</li><li>Hızlı MVP, hiç ek altyapı yok</li></ul></div>
+        <div class="cons"><h4>Eksi</h4><ul><li>Kadıköy'deki kullanıcıya Sarıyer servisi çıkabilir</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Kategori + ilçe seçimi</h3>
+      <p>Teşhis sonrası kullanıcı kendi ilçesini seçer (dropdown). Liste o ilçeye + komşu ilçelere göre filtrelenir. Koordinat gerekmez, Places API verisi yeterli.</p>
+      <div class="pros-cons" style="margin-top:10px">
+        <div class="pros"><h4>Artı</h4><ul><li>Anlamlı "yakın servis" deneyimi</li><li>Konum izni gerektirmez</li></ul></div>
+        <div class="cons"><h4>Eksi</h4><ul><li>Tek ekstra adım (ilçe seçmek)</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Kategori + GPS / harita</h3>
+      <p>Teşhis sonrası tarayıcıdan konum izni istenir. Servisler kuş uçuşu mesafeye göre sıralanır ve haritada gösterilir.</p>
+      <div class="pros-cons" style="margin-top:10px">
+        <div class="pros"><h4>Artı</h4><ul><li>En doğru "en yakın" sıralama</li></ul></div>
+        <div class="cons"><h4>Eksi</h4><ul><li>Konum izni reddedilirse uygulama kırılır</li><li>Harita = ek kütüphane/maliyet</li><li>En karmaşık MVP</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px">Öneri: <strong>B</strong> — ilçe seçimi hem "yakın servis" hissini verir hem de GPS gerektirmez, Places API verisiyle çalışır.</p>

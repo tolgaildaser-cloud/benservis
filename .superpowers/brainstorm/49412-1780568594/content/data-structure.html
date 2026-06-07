@@ -1,0 +1,68 @@
+<h2>Veri Yapısı</h2>
+<p class="subtitle">services-data.json — her kayıt bu alanları taşır</p>
+
+<div class="section">
+  <h3>Servis Kaydı (JSON)</h3>
+  <div style="background:#22302A;color:#a8d8a8;padding:14px;border-radius:8px;font-family:monospace;font-size:11px;line-height:1.7;overflow-x:auto">
+{<br>
+&nbsp;&nbsp;"id": "ChIJxxxxxxxxxxxxxxx",&nbsp;&nbsp;&nbsp;<span style="color:#888">// Google Place ID — benzersiz, deduplikasyon</span><br>
+&nbsp;&nbsp;"ad": "ABC Klima Teknik Servis",<br>
+&nbsp;&nbsp;"kategoriler": ["Klima", "Kombi"],&nbsp;&nbsp;&nbsp;<span style="color:#888">// Faz 1 CIHAZLAR ile birebir eşleşir</span><br>
+&nbsp;&nbsp;"telefon": "+902123456789",&nbsp;&nbsp;&nbsp;<span style="color:#888">// tel: linki için hazır format</span><br>
+&nbsp;&nbsp;"adres": "Moda Cad. No:5, Kadıköy",<br>
+&nbsp;&nbsp;"ilce": "Kadıköy",<br>
+&nbsp;&nbsp;"lat": 40.9832,&nbsp;&nbsp;&nbsp;<span style="color:#888">// Haversine için</span><br>
+&nbsp;&nbsp;"lng": 29.0285,<br>
+&nbsp;&nbsp;"puan": 4.8,<br>
+&nbsp;&nbsp;"yorumSayisi": 127,<br>
+&nbsp;&nbsp;"googleMapsUrl": "https://maps.google.com/?cid=...",<br>
+&nbsp;&nbsp;"yetkili": false&nbsp;&nbsp;&nbsp;<span style="color:#888">// "yetkili servis" kelimesi isimde geçiyorsa true</span><br>
+}
+  </div>
+</div>
+
+<div class="section">
+  <h3>Kategori → Arama Sorguları Eşlemesi</h3>
+  <p style="font-size:12px;color:#555">Script her kategori için şu sorgularla Places API'yi arar. İstanbul ilçeleri de eklenerek kapsam genişletilir.</p>
+  <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:11px">
+      <tr style="background:#22302A;color:#F5EFE2">
+        <th style="padding:7px;text-align:left">Faz 1 Kategorisi</th>
+        <th style="padding:7px;text-align:left">Places API Arama Sorguları</th>
+      </tr>
+      <tr style="background:#F5EFE2"><td style="padding:6px">Buzdolabı / Çamaşır / Bulaşık / Fırın</td><td style="padding:6px;font-family:monospace;font-size:10px">"beyaz eşya teknik servisi istanbul", "beyaz eşya tamiri istanbul"</td></tr>
+      <tr style="background:white"><td style="padding:6px">Klima</td><td style="padding:6px;font-family:monospace;font-size:10px">"klima teknik servisi istanbul", "klima tamiri istanbul"</td></tr>
+      <tr style="background:#F5EFE2"><td style="padding:6px">Kombi</td><td style="padding:6px;font-family:monospace;font-size:10px">"kombi servisi istanbul", "kombi tamiri istanbul"</td></tr>
+      <tr style="background:white"><td style="padding:6px">Televizyon</td><td style="padding:6px;font-family:monospace;font-size:10px">"televizyon tamiri istanbul", "tv teknik servisi istanbul"</td></tr>
+      <tr style="background:#F5EFE2"><td style="padding:6px">Cep Telefonu</td><td style="padding:6px;font-family:monospace;font-size:10px">"telefon tamiri istanbul", "gsm teknik servisi istanbul"</td></tr>
+      <tr style="background:white"><td style="padding:6px">Notebook</td><td style="padding:6px;font-family:monospace;font-size:10px">"notebook tamiri istanbul", "laptop servisi istanbul"</td></tr>
+      <tr style="background:#F5EFE2"><td style="padding:6px">Masaüstü Bilgisayar</td><td style="padding:6px;font-family:monospace;font-size:10px">"bilgisayar tamiri istanbul", "pc teknik servisi istanbul"</td></tr>
+      <tr style="background:white"><td style="padding:6px">Yazıcı</td><td style="padding:6px;font-family:monospace;font-size:10px">"yazıcı tamiri istanbul", "printer servisi istanbul"</td></tr>
+      <tr style="background:#F5EFE2"><td style="padding:6px">Diğerleri (Mikro, Süpürge vb.)</td><td style="padding:6px;font-family:monospace;font-size:10px">"elektronik tamir istanbul", "küçük ev aletleri tamiri istanbul"</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Kapsam Tahmini</h3>
+  <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <div style="background:#F5EFE2;border-radius:6px;padding:10px 14px;text-align:center">
+      <div style="font-size:22px;font-weight:bold;color:#22302A">~15</div>
+      <div style="font-size:11px;color:#555">arama sorgusu</div>
+    </div>
+    <div style="background:#F5EFE2;border-radius:6px;padding:10px 14px;text-align:center">
+      <div style="font-size:22px;font-weight:bold;color:#22302A">×20</div>
+      <div style="font-size:11px;color:#555">sonuç/sorgu</div>
+    </div>
+    <div style="background:#F5EFE2;border-radius:6px;padding:10px 14px;text-align:center">
+      <div style="font-size:22px;font-weight:bold;color:#C8632B">300–500</div>
+      <div style="font-size:11px;color:#555">benzersiz servis (deduplikasyon sonrası)</div>
+    </div>
+    <div style="background:#F5EFE2;border-radius:6px;padding:10px 14px;text-align:center">
+      <div style="font-size:22px;font-weight:bold;color:#3A7D44">~₺0</div>
+      <div style="font-size:11px;color:#555">maliyet (ücretsiz kota içinde)</div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle">Bir servis "beyaz eşya" altında bulunursa kategoriler listesine 4 kategori birden eklenir (Buzdolabı, Çamaşır, Bulaşık, Fırın).</p>

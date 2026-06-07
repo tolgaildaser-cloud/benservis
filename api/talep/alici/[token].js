@@ -104,7 +104,11 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: "Ödeme alınmadan teslim onaylanamaz" });
 
       await supabase.from("talepler")
-        .update({ odeme_durumu: "teslim_onaylandi", teslim_onay_tarihi: new Date().toISOString() })
+        .update({
+          odeme_durumu:        "teslim_onaylandi",
+          teslim_onay_tarihi:  new Date().toISOString(),
+          satici_odeme_durumu: "bekliyor",  // admin payout queue'ya düşer
+        })
         .eq("id", talep.id);
 
       // İlanı satıldı olarak işaretle

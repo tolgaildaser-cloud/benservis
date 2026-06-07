@@ -5,6 +5,7 @@
     { "source": "/dpp/:seri_no", "destination": "/api/dpp/og?seri_no=:seri_no" },
     { "source": "/ikinci-el",                     "destination": "/index.html" },
     { "source": "/ikinci-el/yeni",                "destination": "/index.html" },
+    { "source": "/ikinci-el/admin",               "destination": "/index.html" },
     { "source": "/ikinci-el/alici/:token",        "destination": "/index.html" },
     { "source": "/ikinci-el/satis/:token",        "destination": "/index.html" },
     { "source": "/ikinci-el/:id",                 "destination": "/api/ilan/og?id=:id" }

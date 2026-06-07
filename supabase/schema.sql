@@ -173,3 +173,9 @@ CREATE TABLE IF NOT EXISTS mesajlar (
 );
 
 CREATE INDEX IF NOT EXISTS mesajlar_talep_id_idx ON mesajlar(talep_id);
+
+-- Faz 4B ek: satıcıya ödeme takibi
+ALTER TABLE talepler
+  ADD COLUMN IF NOT EXISTS satici_odeme_durumu text DEFAULT NULL
+    CHECK (satici_odeme_durumu IN ('bekliyor', 'yapildi')),
+  ADD COLUMN IF NOT EXISTS satici_odeme_tarihi timestamptz;

@@ -1,0 +1,63 @@
+<h2>Sistem Mimarisi</h2>
+<p class="subtitle">İki ayrı parça: veri toplama (tek seferlik) + frontend entegrasyonu</p>
+
+<div class="section">
+  <h3>Genel Akış</h3>
+  <div style="background:#F5EFE2;border-radius:8px;padding:16px;font-family:monospace;font-size:12px;line-height:2">
+
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span style="background:#22302A;color:#F5EFE2;padding:3px 8px;border-radius:4px">1. VERİ TOPLAMA (bir kez çalıştır)</span>
+    </div>
+    <div style="margin-left:16px;color:#555;margin-bottom:12px">
+      scripts/collect-services.py<br>
+      → Google Places API (18 kategori × İstanbul ilçeleri)<br>
+      → Deduplikasyon (Place ID'ye göre)<br>
+      → <strong>src/services-data.json</strong> (300–500 servis)
+    </div>
+
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span style="background:#C8632B;color:white;padding:3px 8px;border-radius:4px">2. FRONTEND (mevcut App.jsx'e eklenir)</span>
+    </div>
+    <div style="margin-left:16px;color:#555;margin-bottom:12px">
+      services-data.json bundle'a dahil edilir<br>
+      Teşhis sonrası → "📍 Servis Bul" CTA<br>
+      → Tarayıcı geolocation API<br>
+      → Client-side Haversine filtre + sıralama<br>
+      → Servis listesi + 📞 Ara butonu
+    </div>
+
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span style="background:#3A7D44;color:white;padding:3px 8px;border-radius:4px">3. GÜNCELLEME (opsiyonel, periyodik)</span>
+    </div>
+    <div style="margin-left:16px;color:#555">
+      Script yeniden çalıştır → JSON güncelle → git push → Vercel otomatik deploy
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <h3>Eklenecek Dosyalar</h3>
+  <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:12px">
+      <tr style="background:#22302A;color:#F5EFE2">
+        <th style="padding:8px;text-align:left">Dosya</th>
+        <th style="padding:8px;text-align:left">Ne Yapar</th>
+      </tr>
+      <tr style="background:#F5EFE2">
+        <td style="padding:8px;font-family:monospace">scripts/collect-services.py</td>
+        <td style="padding:8px">Places API'den veri çeker, JSON üretir</td>
+      </tr>
+      <tr style="background:white">
+        <td style="padding:8px;font-family:monospace">src/services-data.json</td>
+        <td style="padding:8px">Statik servis veritabanı (~300-500 kayıt)</td>
+      </tr>
+      <tr style="background:#F5EFE2">
+        <td style="padding:8px;font-family:monospace">src/App.jsx (güncellenir)</td>
+        <td style="padding:8px">CTA butonu + ServisEkrani bileşeni eklenir</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<p class="subtitle">Mevcut <code>api/diagnose.js</code> ve Vercel config'ine dokunulmaz. Sıfır yeni altyapı.</p>
