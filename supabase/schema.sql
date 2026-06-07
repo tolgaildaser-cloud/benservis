@@ -84,3 +84,17 @@ CREATE TABLE IF NOT EXISTS servis_performans (
   puan_carpani      numeric(3,2) NOT NULL DEFAULT 1.00,
   guncelleme_tarihi timestamptz DEFAULT now()
 );
+
+-- Faz 3 — DPP Genişletme eklentileri
+ALTER TABLE is_talepleri
+  ADD COLUMN IF NOT EXISTS seri_no      text,
+  ADD COLUMN IF NOT EXISTS dpp_tamir_id uuid;
+
+ALTER TABLE cihazlar
+  ADD COLUMN IF NOT EXISTS garanti_baslangic_tarihi  date,
+  ADD COLUMN IF NOT EXISTS uzatilmis_garanti         boolean DEFAULT false,
+  ADD COLUMN IF NOT EXISTS uzatilmis_garanti_bitis   date,
+  ADD COLUMN IF NOT EXISTS fatura_url                text;
+
+ALTER TABLE tamir_kayitlari
+  ADD COLUMN IF NOT EXISTS servis_id text;
