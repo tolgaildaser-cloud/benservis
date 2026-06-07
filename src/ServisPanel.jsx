@@ -400,6 +400,7 @@ export default function ServisPanel() {
   const [session, setSession] = useState(null);
   const [isler, setIsler] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(false);
+  const [sonYenileme, setSonYenileme] = useState(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -407,15 +408,22 @@ export default function ServisPanel() {
     });
   }, []);
 
-  useEffect(() => {
-    if (!session) return;
+  const isleriGetir = React.useCallback((token) => {
     setYukleniyor(true);
-    fetch("/api/is/liste", { headers: { "Authorization": `Bearer ${session.access_token}` } })
+    return fetch("/api/is/liste", { headers: { "Authorization": `Bearer ${token}` } })
       .then(r => r.json())
-      .then(d => { setIsler(d.isler || []); })
+      .then(d => { setIsler(d.isler || []); setSonYenileme(new Date()); })
       .catch(err => { console.error("İş listesi yüklenemedi:", err); })
       .finally(() => setYukleniyor(false));
-  }, [session]);
+  }, []);
+
+  useEffect(() => {
+    if (!session) return;
+    isleriGetir(session.access_token);
+    // 30 saniyede bir otomatik yenile
+    const interval = setInterval(() => isleriGetir(session.access_token), 30000);
+    return () => clearInterval(interval);
+  }, [session, isleriGetir]);
 
   const cikisYap = async () => { await supabase.auth.signOut(); setSession(null); setIsler([]); };
 
@@ -428,17 +436,34 @@ export default function ServisPanel() {
   const bekleyenler = isler.filter(i => i.durum === "bekliyor");
   const digerler = isler.filter(i => i.durum !== "bekliyor");
 
+  const saatStr = sonYenileme
+    ? sonYenileme.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit", second: "2-digit" })
+    : "";
+
   return (
     <div style={{ minHeight: "100vh", background: "#F5EFE2", fontFamily: "'Hanken Grotesk', sans-serif" }}>
       <style>{FONT}</style>
       <div style={{ background: INK, color: CREAM, padding: "14px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 10 }}>
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>🔧 Benservis Panel</span>
-        <button onClick={cikisYap} style={{ background: "none", border: "1px solid #ffffff44", color: CREAM, borderRadius: 8, padding: "6px 12px", fontSize: 12, cursor: "pointer" }}>
-          Çıkış
-        </button>
+        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <button
+            onClick={() => isleriGetir(session.access_token)}
+            disabled={yukleniyor}
+            style={{ background: "none", border: "1px solid #ffffff44", color: CREAM, borderRadius: 8, padding: "6px 12px", fontSize: 12, cursor: "pointer", opacity: yukleniyor ? 0.5 : 1 }}>
+            {yukleniyor ? "⟳" : "↻ Yenile"}
+          </button>
+          <button onClick={cikisYap} style={{ background: "none", border: "1px solid #ffffff44", color: CREAM, borderRadius: 8, padding: "6px 12px", fontSize: 12, cursor: "pointer" }}>
+            Çıkış
+          </button>
+        </div>
       </div>
       <div style={{ padding: 16, maxWidth: 600, margin: "0 auto" }}>
-        {yukleniyor && <p style={{ textAlign: "center", color: "#888" }}>Yükleniyor...</p>}
+        {saatStr && (
+          <p style={{ textAlign: "right", fontSize: 11, color: "#A59E8E", margin: "0 0 10px" }}>
+            Son güncelleme: {saatStr} · otomatik 30 sn
+          </p>
+        )}
+        {yukleniyor && isler.length === 0 && <p style={{ textAlign: "center", color: "#888" }}>Yükleniyor...</p>}
 
         {bekleyenler.length > 0 && (
           <>
