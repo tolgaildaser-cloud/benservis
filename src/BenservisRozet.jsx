@@ -21,8 +21,9 @@ export default function BenservisRozet({ size = "sm", tarih = null }) {
   const cy = d.h / 2;
 
   // Tarih formatla
-  const tarihStr = tarih
-    ? new Date(tarih).toLocaleDateString("tr-TR", { day: "numeric", month: "short", year: "numeric" })
+  const tarihDate = tarih ? new Date(tarih) : null;
+  const tarihStr = tarihDate && !isNaN(tarihDate)
+    ? tarihDate.toLocaleDateString("tr-TR", { day: "numeric", month: "short", year: "numeric" })
     : null;
 
   return (
