@@ -2,6 +2,7 @@
 // Servis sağlayıcı paneli — /panel path'inde gösterilir.
 // Supabase Auth ile giriş, iş listesi, kabul/ret/tamamla.
 import React, { useState, useEffect } from "react";
+import QRCode from "qrcode";
 import { supabase } from "./lib/supabase.js";
 
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
@@ -288,6 +289,16 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
   const [dppZenginlesti, setDppZenginlesti] = useState(false);
   const { label, color } = DURUM_LABEL[is.durum] || { label: is.durum, color: "#888" };
 
+  const qrIndir = async () => {
+    const url = `https://benservis.com/dpp/${encodeURIComponent(is.seri_no)}`;
+    const canvas = document.createElement("canvas");
+    await QRCode.toCanvas(canvas, url, { width: 300, margin: 2, color: { dark: "#22302A", light: "#F5EFE2" } });
+    const link = document.createElement("a");
+    link.download = `dpp-qr-${is.seri_no}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  };
+
   const islemYap = async (action, gelis_penceresi) => {
     setYukleniyor(true);
     try {
@@ -358,13 +369,22 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
             {dppZenginlesti ? (
               <span style={{ color: GREEN, fontWeight: 700 }}>✓ DPP Kaydı Zenginleştirildi</span>
             ) : dppTamirId ? (
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
                 <span style={{ color: GREEN, fontWeight: 600 }}>✓ DPP Kaydı Oluşturuldu</span>
-                <button
-                  onClick={() => setZenginleştirAcik(true)}
-                  style={{ padding: "5px 10px", borderRadius: 6, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 11, cursor: "pointer" }}>
-                  📋 Zenginleştir
-                </button>
+                <div style={{ display: "flex", gap: 6 }}>
+                  {is.seri_no && (
+                    <button
+                      onClick={qrIndir}
+                      style={{ padding: "5px 10px", borderRadius: 6, border: `1.5px solid #22302A`, background: "white", color: "#22302A", fontWeight: 700, fontSize: 11, cursor: "pointer" }}>
+                      📷 QR
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setZenginleştirAcik(true)}
+                    style={{ padding: "5px 10px", borderRadius: 6, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 11, cursor: "pointer" }}>
+                    📋 Zenginleştir
+                  </button>
+                </div>
               </div>
             ) : (
               <span style={{ color: "#9A9384" }}>— Seri no girilmedi, DPP kaydı yok</span>
