@@ -32,7 +32,7 @@ export default async function handler(req, res) {
   // İşin bu servise ait olduğunu doğrula
   const { data: is, error: fetchErr } = await supabase
     .from("is_talepleri")
-    .select("id, durum, servis_ad, is_no, musteri_tel, servis_id")
+    .select("id, durum, servis_ad, is_no, musteri_tel, servis_id, seri_no, cihaz, belirti")
     .eq("id", id)
     .eq("servis_id", servis_id)
     .single();
@@ -97,6 +97,70 @@ export default async function handler(req, res) {
       .eq("id", id);
 
     if (updateErr) return res.status(500).json({ error: updateErr.message });
-    return res.status(200).json({ durum: "tamamlandi" });
+
+    // DPP otomatik yazma (seri_no varsa)
+    let dpp_tamir_id = null;
+    if (is.seri_no) {
+      try {
+        // cihazlar'da seri_no'ya bak veya oluştur
+        let cihaz_id = null;
+        const { data: mevcutCihaz } = await supabase
+          .from("cihazlar")
+          .select("id")
+          .eq("seri_no", is.seri_no)
+          .single();
+
+        if (mevcutCihaz) {
+          cihaz_id = mevcutCihaz.id;
+        } else {
+          const { data: yeniCihaz, error: cihazErr } = await supabase
+            .from("cihazlar")
+            .insert({ seri_no: is.seri_no, kategori: is.cihaz || null })
+            .select("id")
+            .single();
+          if (!cihazErr && yeniCihaz) cihaz_id = yeniCihaz.id;
+        }
+
+        if (cihaz_id) {
+          const { data: tamir, error: tamirErr } = await supabase
+            .from("tamir_kayitlari")
+            .insert({
+              cihaz_id,
+              tarih: new Date().toISOString().split("T")[0],
+              yapilan_islem: is.belirti || "Benservis tamir kaydı",
+              servis_adi: is.servis_ad,
+              servis_id: is.servis_id,
+              servis_turu: "benservis",
+              benservis_is_id: is.id,
+              degistirilen_parcalar: [],
+              maliyet: null,
+            })
+            .select("id")
+            .single();
+
+          if (!tamirErr && tamir) {
+            dpp_tamir_id = tamir.id;
+            // dpp_tamir_id'yi is_talepleri'ne geri yaz
+            await supabase
+              .from("is_talepleri")
+              .update({ dpp_tamir_id: tamir.id })
+              .eq("id", id);
+          }
+        }
+      } catch (dppErr) {
+        console.error("DPP yazma hatası:", dppErr.message);
+        // DPP hatası işi durdurmaz
+      }
+    }
+
+    // SMS bildirimi (non-blocking)
+    try {
+      await sendSMS(
+        is.musteri_tel,
+        `İşiniz tamamlandı! ${is.servis_ad} tamir kaydınızı oluşturdu. İş No: #${is.is_no}`
+      );
+    } catch (e) { console.error("SMS hatası (tamamla):", e.message); }
+
+    return res.status(200).json({ durum: "tamamlandi", dpp_tamir_id });
   }
 }
