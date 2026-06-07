@@ -88,8 +88,12 @@ CREATE TABLE IF NOT EXISTS servis_performans (
 -- Faz 3 — DPP Genişletme eklentileri
 ALTER TABLE is_talepleri
   ADD COLUMN IF NOT EXISTS seri_no      text,
-  ADD COLUMN IF NOT EXISTS dpp_tamir_id uuid;
+  ADD COLUMN IF NOT EXISTS dpp_tamir_id uuid REFERENCES tamir_kayitlari(id) ON DELETE SET NULL;
 
+-- Garanti tarihlerinin tanımları:
+-- garanti_baslangic_tarihi: ürün ilk alındığında garanti başlangıç tarihi
+-- garanti_bitis_tarihi (mevcut): standart garanti bitiş tarihi
+-- uzatilmis_garanti_bitis: uzatılmış garanti bitiş tarihi (uzatilmis_garanti=true ise aktif)
 ALTER TABLE cihazlar
   ADD COLUMN IF NOT EXISTS garanti_baslangic_tarihi  date,
   ADD COLUMN IF NOT EXISTS uzatilmis_garanti         boolean DEFAULT false,
@@ -98,3 +102,5 @@ ALTER TABLE cihazlar
 
 ALTER TABLE tamir_kayitlari
   ADD COLUMN IF NOT EXISTS servis_id text;
+
+-- servis_id: Google Places ID (services-data.json), servis_katalog FK değil
