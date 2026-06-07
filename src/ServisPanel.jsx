@@ -458,6 +458,11 @@ export default function ServisPanel() {
         </div>
       </div>
       <div style={{ padding: 16, maxWidth: 600, margin: "0 auto" }}>
+        {/* Servis kimlik bilgisi — hangi servis_id ile filtrelendiği görülsün */}
+        <div style={{ fontSize: 11, color: "#A59E8E", background: "#EDE5D3", borderRadius: 8, padding: "6px 10px", marginBottom: 10, wordBreak: "break-all" }}>
+          🔑 Servis ID: <strong>{session.user?.user_metadata?.servis_id || "— metadata'da yok"}</strong>
+          {session.user?.email && <span style={{ marginLeft: 8 }}>· {session.user.email}</span>}
+        </div>
         {saatStr && (
           <p style={{ textAlign: "right", fontSize: 11, color: "#A59E8E", margin: "0 0 10px" }}>
             Son güncelleme: {saatStr} · otomatik 30 sn
