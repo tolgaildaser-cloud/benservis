@@ -96,14 +96,19 @@ function ZenginleştirModal({ is, dppTamirId, jwtToken, onKapat, onZenginlesti }
     setFotoYukleniyor(true);
     setHata("");
     try {
-      const urls = await Promise.all(dosyalar.map(async (f) => {
+      const IZIN_VERILEN_MIME = ["image/jpeg", "image/png", "image/webp"];
+      const results = await Promise.allSettled(dosyalar.map(async (f) => {
+        if (!IZIN_VERILEN_MIME.includes(f.type)) throw new Error(`İzin verilmeyen dosya tipi: ${f.type}`);
         const ext = f.name.split(".").pop().toLowerCase();
         const path = `tamirler/${dppTamirId}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
         const { error } = await supabase.storage.from("dpp-fotograflar").upload(path, f, { contentType: f.type });
         if (error) throw new Error(error.message);
         return supabase.storage.from("dpp-fotograflar").getPublicUrl(path).data.publicUrl;
       }));
-      setFotograflar(prev => [...prev, ...urls]);
+      const basarili = results.filter(r => r.status === "fulfilled").map(r => r.value);
+      const basarisizSayisi = results.filter(r => r.status === "rejected").length;
+      if (basarili.length > 0) setFotograflar(prev => [...prev, ...basarili]);
+      if (basarisizSayisi > 0) setHata(`${basarisizSayisi} fotoğraf yüklenemedi.`);
     } catch (err) {
       setHata("Fotoğraf yüklenemedi: " + err.message);
     } finally {
