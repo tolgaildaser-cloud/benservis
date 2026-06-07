@@ -45,6 +45,9 @@ export default async function handler(req, res) {
     } = req.body || {};
 
     if (!seri_no) return res.status(400).json({ error: "seri_no gerekli" });
+    if (fatura_url && !/^https:\/\/.+/.test(fatura_url)) {
+      return res.status(400).json({ error: "Geçersiz fatura_url: https:// ile başlamalı" });
+    }
 
     // Var mı kontrol et
     const { data: existing } = await supabase

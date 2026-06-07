@@ -27,10 +27,13 @@ async function uploadPhoto(file, folder) {
 async function uploadFatura(file, cihazId) {
   const ext = file.name.split(".").pop().toLowerCase();
   const allowed = ["jpg", "jpeg", "png", "pdf"];
-  if (!allowed.includes(ext)) throw new Error("Desteklenmeyen format (jpg, png, pdf)");
+  const allowedMimes = ["image/jpeg", "image/png", "application/pdf"];
+  if (!allowed.includes(ext) || !allowedMimes.includes(file.type)) {
+    throw new Error("Desteklenmeyen format (jpg, png, pdf)");
+  }
   if (file.size > 10 * 1024 * 1024) throw new Error("Maksimum dosya boyutu 10 MB");
 
-  const fileName = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+  const fileName = `${crypto.randomUUID()}.${ext}`;
   const path = `${cihazId || "gecici"}/${fileName}`;
 
   const { error } = await supabase.storage
@@ -363,17 +366,18 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
 
   const garantiDurumu = () => {
     const bugun = new Date();
+    bugun.setHours(0, 0, 0, 0);
     const sonuclar = [];
     if (cihaz.garanti_baslangic_tarihi) {
       sonuclar.push({ tip: "baslangic", tarih: cihaz.garanti_baslangic_tarihi });
     }
     if (cihaz.garanti_bitis_tarihi) {
-      const bitis = new Date(cihaz.garanti_bitis_tarihi);
+      const bitis = new Date(cihaz.garanti_bitis_tarihi + "T00:00:00");
       const fark = Math.ceil((bitis - bugun) / (1000 * 60 * 60 * 24));
       sonuclar.push({ tip: "bitis", tarih: cihaz.garanti_bitis_tarihi, kalan: fark, aktif: fark > 0 });
     }
     if (cihaz.uzatilmis_garanti && cihaz.uzatilmis_garanti_bitis) {
-      const bitis = new Date(cihaz.uzatilmis_garanti_bitis);
+      const bitis = new Date(cihaz.uzatilmis_garanti_bitis + "T00:00:00");
       const fark = Math.ceil((bitis - bugun) / (1000 * 60 * 60 * 24));
       sonuclar.push({ tip: "uzatilmis", tarih: cihaz.uzatilmis_garanti_bitis, kalan: fark, aktif: fark > 0 });
     }
@@ -404,7 +408,7 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
         {garantiBilgileri.length > 0 && (
           <div style={{ marginTop: 10, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 8, padding: "10px 12px", fontSize: 12 }}>
             {garantiBilgileri.map((g, i) => (
-              <div key={i} style={{ marginBottom: i < garantiBilgileri.length - 1 ? 4 : 0, color: "#5C6660" }}>
+              <div key={g.tip} style={{ marginBottom: i < garantiBilgileri.length - 1 ? 4 : 0, color: "#5C6660" }}>
                 {g.tip === "baslangic" && `📅 Alındı: ${new Date(g.tarih).toLocaleDateString("tr-TR")}`}
                 {g.tip === "bitis" && (
                   <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
