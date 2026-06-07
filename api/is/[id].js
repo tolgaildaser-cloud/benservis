@@ -104,22 +104,15 @@ export default async function handler(req, res) {
       try {
         // cihazlar'da seri_no'ya bak veya oluştur
         let cihaz_id = null;
-        const { data: mevcutCihaz } = await supabase
+        const { data: cihazRow, error: cihazErr } = await supabase
           .from("cihazlar")
+          .upsert(
+            { seri_no: is.seri_no, kategori: is.cihaz || null },
+            { onConflict: "seri_no", ignoreDuplicates: false }
+          )
           .select("id")
-          .eq("seri_no", is.seri_no)
           .single();
-
-        if (mevcutCihaz) {
-          cihaz_id = mevcutCihaz.id;
-        } else {
-          const { data: yeniCihaz, error: cihazErr } = await supabase
-            .from("cihazlar")
-            .insert({ seri_no: is.seri_no, kategori: is.cihaz || null })
-            .select("id")
-            .single();
-          if (!cihazErr && yeniCihaz) cihaz_id = yeniCihaz.id;
-        }
+        if (!cihazErr && cihazRow) cihaz_id = cihazRow.id;
 
         if (cihaz_id) {
           const { data: tamir, error: tamirErr } = await supabase
@@ -141,10 +134,13 @@ export default async function handler(req, res) {
           if (!tamirErr && tamir) {
             dpp_tamir_id = tamir.id;
             // dpp_tamir_id'yi is_talepleri'ne geri yaz
-            await supabase
+            const { error: linkErr } = await supabase
               .from("is_talepleri")
               .update({ dpp_tamir_id: tamir.id })
               .eq("id", id);
+            if (linkErr) {
+              console.error("DPP link yazma hatası (tamir oluştu ama is_talepleri güncellenmedi):", linkErr.message, "tamir_id:", tamir.id, "is_id:", id);
+            }
           }
         }
       } catch (dppErr) {
