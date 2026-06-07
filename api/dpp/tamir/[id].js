@@ -54,9 +54,29 @@ export default async function handler(req, res) {
   // Güncelleme objesi — sadece gönderilen alanlar
   const guncelleme = {};
   if (yapilan_islem !== undefined) guncelleme.yapilan_islem = yapilan_islem;
-  if (degistirilen_parcalar !== undefined) guncelleme.degistirilen_parcalar = degistirilen_parcalar;
-  if (maliyet !== undefined) guncelleme.maliyet = maliyet === null ? null : Number(maliyet);
-  if (fotograflar !== undefined) guncelleme.fotograflar = fotograflar;
+  if (degistirilen_parcalar !== undefined) {
+    if (!Array.isArray(degistirilen_parcalar) || !degistirilen_parcalar.every(p => typeof p === "string")) {
+      return res.status(400).json({ error: "degistirilen_parcalar string dizisi olmalı" });
+    }
+    guncelleme.degistirilen_parcalar = degistirilen_parcalar;
+  }
+  if (maliyet !== undefined) {
+    if (maliyet !== null) {
+      const maliyetNum = Number(maliyet);
+      if (isNaN(maliyetNum) || maliyetNum < 0) {
+        return res.status(400).json({ error: "Geçersiz maliyet: sıfır veya pozitif sayı olmalı" });
+      }
+      guncelleme.maliyet = maliyetNum;
+    } else {
+      guncelleme.maliyet = null;
+    }
+  }
+  if (fotograflar !== undefined) {
+    if (!Array.isArray(fotograflar) || !fotograflar.every(u => typeof u === "string")) {
+      return res.status(400).json({ error: "fotograflar string dizisi olmalı" });
+    }
+    guncelleme.fotograflar = fotograflar;
+  }
   if (notlar !== undefined) guncelleme.notlar = notlar;
 
   const { data: guncellendi, error: updateErr } = await supabase
