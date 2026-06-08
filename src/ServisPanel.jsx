@@ -529,6 +529,7 @@ export default function ServisPanel() {
   const [isler, setIsler] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(false);
   const [sonYenileme, setSonYenileme] = useState(null);
+  const [listeHata, setListeHata] = useState("");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -538,10 +539,22 @@ export default function ServisPanel() {
 
   const isleriGetir = React.useCallback((token) => {
     setYukleniyor(true);
+    setListeHata("");
     return fetch("/api/is/liste", { headers: { "Authorization": `Bearer ${token}` } })
-      .then(r => r.json())
-      .then(d => { setIsler(d.isler || []); setSonYenileme(new Date()); })
-      .catch(err => { console.error("İş listesi yüklenemedi:", err); })
+      .then(r => r.json().then(d => ({ ok: r.ok, status: r.status, data: d })))
+      .then(({ ok, status, data: d }) => {
+        if (!ok) {
+          setListeHata(`API ${status}: ${d.error || "Bilinmeyen hata"}`);
+          setIsler([]);
+        } else {
+          setIsler(d.isler || []);
+          setSonYenileme(new Date());
+        }
+      })
+      .catch(err => {
+        console.error("İş listesi yüklenemedi:", err);
+        setListeHata("Bağlantı hatası: " + err.message);
+      })
       .finally(() => setYukleniyor(false));
   }, []);
 
@@ -617,6 +630,11 @@ export default function ServisPanel() {
           </p>
         )}
         {yukleniyor && isler.length === 0 && <p style={{ textAlign: "center", color: "#888" }}>Yükleniyor...</p>}
+        {listeHata && (
+          <div style={{ background: "#FEE2E2", border: "1px solid #FCA5A5", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 13, color: "#991B1B", fontFamily: "monospace" }}>
+            ⚠️ {listeHata}
+          </div>
+        )}
 
         {bekleyenler.length > 0 && (
           <>

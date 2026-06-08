@@ -19,6 +19,7 @@ export default async function handler(req, res) {
   if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
 
   const servis_id = user.user_metadata?.servis_id;
+  console.log("[liste] user_id:", user.id, "| servis_id:", servis_id ?? "YOK");
   if (!servis_id) return res.status(403).json({ error: "Servis kimliği bulunamadı" });
 
   const { data: isler, error } = await supabase
@@ -28,6 +29,7 @@ export default async function handler(req, res) {
     .order("created_at", { ascending: false })
     .limit(50);
 
+  console.log("[liste] query servis_id:", servis_id, "| count:", isler?.length ?? 0, "| error:", error?.message ?? null);
   if (error) return res.status(500).json({ error: error.message });
 
   return res.status(200).json({ isler: isler || [] });
