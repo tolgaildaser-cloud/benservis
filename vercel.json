@@ -9,7 +9,9 @@
     { "source": "/ikinci-el/alici/:token",        "destination": "/index.html" },
     { "source": "/ikinci-el/satis/:token",        "destination": "/index.html" },
     { "source": "/ikinci-el/:id",                 "destination": "/api/ilan/og?id=:id" },
-    { "source": "/takip/:is_no",                  "destination": "/index.html" }
+    { "source": "/takip/:is_no",                  "destination": "/index.html" },
+    { "source": "/servis-kayit",                  "destination": "/index.html" },
+    { "source": "/servis-admin",                  "destination": "/index.html" }
   ],
   "crons": [
     { "path": "/api/cron/expire", "schedule": "*/5 * * * *" }

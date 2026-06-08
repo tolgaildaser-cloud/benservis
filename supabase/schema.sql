@@ -227,3 +227,35 @@ CREATE INDEX IF NOT EXISTS servisler_tier_idx         ON servisler(tier);
 CREATE INDEX IF NOT EXISTS servisler_ilce_idx         ON servisler(ilce);
 CREATE INDEX IF NOT EXISTS servisler_kategoriler_idx  ON servisler USING GIN(kategoriler);
 CREATE INDEX IF NOT EXISTS servisler_markalar_idx     ON servisler USING GIN(yetkili_markalar);
+
+-- ──────────────────────────────────────────────────────────────────
+-- Servis kayıt başvuruları
+-- Servisler benservis.com/servis-kayit üzerinden başvurur.
+-- Admin onayladığında Supabase Auth kullanıcısı otomatik açılır.
+-- ──────────────────────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS servis_basvurulari (
+  id                  uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  ad                  text NOT NULL,                  -- Servis/işletme adı
+  sahip_ad            text NOT NULL,                  -- Yetkili kişi adı
+  email               text NOT NULL,                  -- Panel giriş e-postası olacak
+  telefon             text NOT NULL,
+  il                  text NOT NULL,
+  ilce                text NOT NULL,
+  adres               text,
+  kategoriler         text[] DEFAULT '{}',            -- Hizmet verilen cihaz türleri
+  yetkili             boolean DEFAULT false,          -- Yetkili servis mi?
+  tier                text CHECK (tier IS NULL OR tier IN ('platin', 'gold', 'bronz')),
+  yetkili_markalar    text[] DEFAULT '{}',
+  notlar              text,                           -- Başvuran notları
+  durum               text DEFAULT 'bekliyor'
+                        CHECK (durum IN ('bekliyor', 'onaylandi', 'reddedildi')),
+  supabase_user_id    uuid,                           -- Onaylanınca dolar
+  created_at          timestamptz DEFAULT now()
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS basvurular_email_aktif_idx
+  ON servis_basvurulari(email)
+  WHERE durum IN ('bekliyor', 'onaylandi');
+
+CREATE INDEX IF NOT EXISTS basvurular_durum_idx     ON servis_basvurulari(durum);
+CREATE INDEX IF NOT EXISTS basvurular_created_idx   ON servis_basvurulari(created_at DESC);

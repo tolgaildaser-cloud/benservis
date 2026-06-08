@@ -10,12 +10,21 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const {
+  let {
     servis_id, servis_ad,
     musteri_ad, musteri_tel,
     adres, tarih_tercihi,
     cihaz, belirti,
   } = req.body || {};
+
+  // ── Demo modu: tüm talepler tek test hesabına yönlendirilir ─────
+  // Vercel'de DEMO_SERVIS_ID set edilince aktif olur.
+  const DEMO_SERVIS_ID = process.env.DEMO_SERVIS_ID;
+  const DEMO_SERVIS_AD = process.env.DEMO_SERVIS_AD || "Demo Servis";
+  if (DEMO_SERVIS_ID) {
+    servis_id = DEMO_SERVIS_ID;
+    servis_ad = DEMO_SERVIS_AD;
+  }
 
   // Zorunlu alan kontrolü
   if (!servis_id || !servis_ad || !musteri_ad || !musteri_tel || !adres) {
