@@ -17,7 +17,9 @@
     "puan": 5,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=5127560499884503987&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJr9Z8Ni63yhQRo4j82UB-YPk",
@@ -37,7 +39,9 @@
     "puan": 5,
     "yorumSayisi": 143,
     "googleMapsUrl": "https://maps.google.com/?cid=17969501330208491683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJj-HO1v-3yhQRizN_56Rc0RE",
@@ -57,7 +61,9 @@
     "puan": 4.9,
     "yorumSayisi": 184,
     "googleMapsUrl": "https://maps.google.com/?cid=1283909232105567115&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ9y6XgbO3yhQRHdDxqKM2eNs",
@@ -77,7 +83,9 @@
     "puan": 5,
     "yorumSayisi": 28,
     "googleMapsUrl": "https://maps.google.com/?cid=15814450168053485597&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJI9WEHgClyhQRl00a7yeKTcE",
@@ -97,7 +105,9 @@
     "puan": 4.8,
     "yorumSayisi": 100,
     "googleMapsUrl": "https://maps.google.com/?cid=13928941126646648215&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJaw65w71ftRQRyiGJsXBnAZ0",
@@ -117,7 +127,9 @@
     "puan": 4.9,
     "yorumSayisi": 54,
     "googleMapsUrl": "https://maps.google.com/?cid=11313437472643949002&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJLeML9S_HyhQR0hc88uKEubQ",
@@ -137,7 +149,9 @@
     "puan": 5,
     "yorumSayisi": 50,
     "googleMapsUrl": "https://maps.google.com/?cid=13022585907779999698&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJz3GXZ52xyhQR56joRBn6fYA",
@@ -157,7 +171,9 @@
     "puan": 5,
     "yorumSayisi": 25,
     "googleMapsUrl": "https://maps.google.com/?cid=9258831395380832487&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJVfF9dWS5yhQRlZqIwo0zwrM",
@@ -177,7 +193,9 @@
     "puan": 4.8,
     "yorumSayisi": 74,
     "googleMapsUrl": "https://maps.google.com/?cid=12952972162218105493&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJRYstWAC7yhQRaLRMnXIG3Qk",
@@ -197,7 +215,9 @@
     "puan": 3.8,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=710731405529494632&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJDbCrhz26yhQRB1maMXCXVC4",
@@ -217,7 +237,9 @@
     "puan": 4.7,
     "yorumSayisi": 133,
     "googleMapsUrl": "https://maps.google.com/?cid=3338459731912710407&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJszgdEmfJyhQR-lq4-vRLS0Q",
@@ -237,7 +259,9 @@
     "puan": 5,
     "yorumSayisi": 204,
     "googleMapsUrl": "https://maps.google.com/?cid=4921110533382888186&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJE0g8QDmxyhQRkDGMnw3kWW0",
@@ -258,7 +282,9 @@
     "puan": 4.9,
     "yorumSayisi": 456,
     "googleMapsUrl": "https://maps.google.com/?cid=7879579770223866256&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJjcPkuaixyhQRnQp2Tn-3ALY",
@@ -278,7 +304,9 @@
     "puan": 5,
     "yorumSayisi": 44,
     "googleMapsUrl": "https://maps.google.com/?cid=13114683872307972765&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJvx-jA3i3yhQRQuDbR60Cq28",
@@ -298,7 +326,9 @@
     "puan": 5,
     "yorumSayisi": 115,
     "googleMapsUrl": "https://maps.google.com/?cid=8046528102485712962&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJ2RRlSjJyhQRzR3vi9dvnGc",
@@ -318,7 +348,9 @@
     "puan": 4.9,
     "yorumSayisi": 287,
     "googleMapsUrl": "https://maps.google.com/?cid=7465965253829795277&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJz9GCBjKlyhQRK6AxJFpok6I",
@@ -338,7 +370,9 @@
     "puan": 4.9,
     "yorumSayisi": 36,
     "googleMapsUrl": "https://maps.google.com/?cid=11714821792084369451&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJxy3tHzzRyhQRFlDkWtXzPv8",
@@ -358,7 +392,9 @@
     "puan": 4.9,
     "yorumSayisi": 104,
     "googleMapsUrl": "https://maps.google.com/?cid=18392406025906180118&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ64oejKGxyhQRd8k8562QRW4",
@@ -378,7 +414,9 @@
     "puan": 5,
     "yorumSayisi": 25,
     "googleMapsUrl": "https://maps.google.com/?cid=7945916194148370807&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJRcB6ximlyhQRfpM1P1Fq31k",
@@ -398,7 +436,9 @@
     "puan": 4.8,
     "yorumSayisi": 89,
     "googleMapsUrl": "https://maps.google.com/?cid=6476011686367433598&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ0Q4BZ2PPyhQRHHurtVDC0F4",
@@ -418,7 +458,9 @@
     "puan": 5,
     "yorumSayisi": 127,
     "googleMapsUrl": "https://maps.google.com/?cid=6832174286622128924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ9asv-KbHyhQR0pwe0sJMyKE",
@@ -438,7 +480,9 @@
     "puan": 5,
     "yorumSayisi": 33,
     "googleMapsUrl": "https://maps.google.com/?cid=11657652035081116882&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpThfPP6xyhQRNZ3YF_phdlg",
@@ -458,7 +502,9 @@
     "puan": 4.8,
     "yorumSayisi": 22,
     "googleMapsUrl": "https://maps.google.com/?cid=6374390049359306037&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ1XiJX2uhyhQRm0NnySOGIg4",
@@ -478,7 +524,9 @@
     "puan": 4.8,
     "yorumSayisi": 113,
     "googleMapsUrl": "https://maps.google.com/?cid=1018523954000118683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ8SLSsTkpeC8RbCrCE5ou2mo",
@@ -498,7 +546,9 @@
     "puan": 4.8,
     "yorumSayisi": 108,
     "googleMapsUrl": "https://maps.google.com/?cid=7699517752234617452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJFxmK7ea2yhQR8UF5G28UIFQ",
@@ -518,7 +568,9 @@
     "puan": 4.9,
     "yorumSayisi": 55,
     "googleMapsUrl": "https://maps.google.com/?cid=6061867565875544561&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJR1jYLoGnyhQRGVtSqIyQ9Qo",
@@ -538,7 +590,9 @@
     "puan": 5,
     "yorumSayisi": 208,
     "googleMapsUrl": "https://maps.google.com/?cid=789696243467180825&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-WUkCD-1yhQRKmSQwxTYxHc",
@@ -558,7 +612,9 @@
     "puan": 4.8,
     "yorumSayisi": 70,
     "googleMapsUrl": "https://maps.google.com/?cid=8630260369640678442&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJP4nR3bKlyhQRFDJ3bf-pZIQ",
@@ -578,7 +634,9 @@
     "puan": 5,
     "yorumSayisi": 112,
     "googleMapsUrl": "https://maps.google.com/?cid=9539936825195835924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-y05Wq3HyhQRdcjJ1Ar2gP8",
@@ -595,7 +653,9 @@
     "puan": 4.9,
     "yorumSayisi": 312,
     "googleMapsUrl": "https://maps.google.com/?cid=18410985803070687349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJE-PPchG7yhQRxMTGzNtrQ48",
@@ -613,7 +673,9 @@
     "puan": 5,
     "yorumSayisi": 81,
     "googleMapsUrl": "https://maps.google.com/?cid=10323213362640897220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMahqiUOlyhQRhMkDa4NvtX0",
@@ -631,7 +693,9 @@
     "puan": 5,
     "yorumSayisi": 129,
     "googleMapsUrl": "https://maps.google.com/?cid=9058268835752429956&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJgdAkKTilyhQR8a-pwTzvo0g",
@@ -648,7 +712,9 @@
     "puan": 5,
     "yorumSayisi": 273,
     "googleMapsUrl": "https://maps.google.com/?cid=5234290236160847857&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ5_3GKoa2yhQRLG-kvymqOYI",
@@ -665,7 +731,9 @@
     "puan": 4.9,
     "yorumSayisi": 198,
     "googleMapsUrl": "https://maps.google.com/?cid=9383718394888744748&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJqdEVmK6kyhQRbn7gpnxsIGk",
@@ -682,7 +750,9 @@
     "puan": 5,
     "yorumSayisi": 50,
     "googleMapsUrl": "https://maps.google.com/?cid=7575173855868649070&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJN6R_IdClyhQRKxW37WIpH5s",
@@ -700,7 +770,9 @@
     "puan": 4.9,
     "yorumSayisi": 112,
     "googleMapsUrl": "https://maps.google.com/?cid=11177698305028592939&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJNfSSMK_GyhQR8lXukTXvwfw",
@@ -717,7 +789,9 @@
     "puan": 5,
     "yorumSayisi": 505,
     "googleMapsUrl": "https://maps.google.com/?cid=18213101381423617522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJH7-yHSp45ioRMMz1LT7zwT4",
@@ -735,7 +809,9 @@
     "puan": 4.9,
     "yorumSayisi": 228,
     "googleMapsUrl": "https://maps.google.com/?cid=4522162949241293872&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJTUXW5obEjS8RfY4F9QMYoSM",
@@ -752,7 +828,9 @@
     "puan": 4.9,
     "yorumSayisi": 128,
     "googleMapsUrl": "https://maps.google.com/?cid=2567359667852643965&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJB1mSR8bJyhQRszaC4lMCVQ4",
@@ -769,7 +847,9 @@
     "puan": 4.9,
     "yorumSayisi": 28,
     "googleMapsUrl": "https://maps.google.com/?cid=1032734248857122483&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJcVEQM8q3yhQRbpWq0bCzrwU",
@@ -786,7 +866,9 @@
     "puan": 4.9,
     "yorumSayisi": 120,
     "googleMapsUrl": "https://maps.google.com/?cid=409743663127237998&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJv6YFPaHJyhQR_w-FRUFEVB4",
@@ -804,7 +886,9 @@
     "puan": 4.9,
     "yorumSayisi": 276,
     "googleMapsUrl": "https://maps.google.com/?cid=2185446766311444479&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJo-k9H6q7yhQR9aYwYx9-CyA",
@@ -821,7 +905,9 @@
     "puan": 5,
     "yorumSayisi": 57,
     "googleMapsUrl": "https://maps.google.com/?cid=2309077907230729973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJz2L-zD-3yhQRNfLjsbeJ0O8",
@@ -839,7 +925,9 @@
     "puan": 4.9,
     "yorumSayisi": 143,
     "googleMapsUrl": "https://maps.google.com/?cid=17280463192277119541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZ6cbA-a5yhQRme1Ob2pLnCk",
@@ -856,7 +944,9 @@
     "puan": 4.8,
     "yorumSayisi": 185,
     "googleMapsUrl": "https://maps.google.com/?cid=2998354372427967897&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ0-d37ye6yhQRuV0sbaph6ck",
@@ -873,7 +963,9 @@
     "puan": 4.8,
     "yorumSayisi": 182,
     "googleMapsUrl": "https://maps.google.com/?cid=14549267455801056697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-____yO6yhQREl8GKQoFOaU",
@@ -890,7 +982,9 @@
     "puan": 4.9,
     "yorumSayisi": 38,
     "googleMapsUrl": "https://maps.google.com/?cid=11905552631126712082&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJP3WvKte7yhQRUu-USHv2KmY",
@@ -907,7 +1001,9 @@
     "puan": 4.8,
     "yorumSayisi": 147,
     "googleMapsUrl": "https://maps.google.com/?cid=7361967550249627474&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ99coxUuhyhQRV2oDVgwEW6k",
@@ -924,7 +1020,9 @@
     "puan": 4.9,
     "yorumSayisi": 21,
     "googleMapsUrl": "https://maps.google.com/?cid=12203352066319673943&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJt6aX6Ca7yhQRMjDxkfz_SI0",
@@ -941,7 +1039,9 @@
     "puan": 4.9,
     "yorumSayisi": 85,
     "googleMapsUrl": "https://maps.google.com/?cid=10180668417916350514&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJz6C4Tb63yhQRKMqvk0M70ac",
@@ -958,7 +1058,9 @@
     "puan": 4.8,
     "yorumSayisi": 79,
     "googleMapsUrl": "https://maps.google.com/?cid=12092511635893111336&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJl7lGmeKwyhQRCtqVQgt25ac",
@@ -975,7 +1077,9 @@
     "puan": 4.9,
     "yorumSayisi": 41,
     "googleMapsUrl": "https://maps.google.com/?cid=12098205764734540298&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJzZg_iVa6yhQR6TJXObhLnrQ",
@@ -992,7 +1096,9 @@
     "puan": 4.1,
     "yorumSayisi": 65,
     "googleMapsUrl": "https://maps.google.com/?cid=13014923227755393769&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJoc18zRi3yhQR9YTpX4SJ68g",
@@ -1009,7 +1115,9 @@
     "puan": 5,
     "yorumSayisi": 23,
     "googleMapsUrl": "https://maps.google.com/?cid=14477816628750419189&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJB404PhG5yhQRW5ryiFsnl2Q",
@@ -1026,7 +1134,9 @@
     "puan": null,
     "yorumSayisi": 0,
     "googleMapsUrl": "https://maps.google.com/?cid=7248305399369210459&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJAxTNU0e7yhQRyEIOOVEPNp8",
@@ -1043,7 +1153,9 @@
     "puan": 5,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=11472373942296920776&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJR0vWL0G3yhQRXLML-63DnRg",
@@ -1060,7 +1172,9 @@
     "puan": 5,
     "yorumSayisi": 2,
     "googleMapsUrl": "https://maps.google.com/?cid=1773788980262450012&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJSZWBCLilyhQRxpu5Ool43kk",
@@ -1077,7 +1191,9 @@
     "puan": 4.7,
     "yorumSayisi": 68,
     "googleMapsUrl": "https://maps.google.com/?cid=5322824340389600198&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJa3kl_Cq7yhQRPRM_k1pz__g",
@@ -1094,7 +1210,9 @@
     "puan": 5,
     "yorumSayisi": 4,
     "googleMapsUrl": "https://maps.google.com/?cid=17942186273321980733&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJEUveq5O3yhQRpq8OmvoOrZw",
@@ -1111,7 +1229,9 @@
     "puan": 5,
     "yorumSayisi": 2,
     "googleMapsUrl": "https://maps.google.com/?cid=11289696310376968102&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_0eKaKi3yhQRU8eIXbR9Mgw",
@@ -1128,7 +1248,9 @@
     "puan": 4.9,
     "yorumSayisi": 63,
     "googleMapsUrl": "https://maps.google.com/?cid=878903090907498323&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJl2GgEWOxyhQRGuygLgFJ_1w",
@@ -1145,7 +1267,9 @@
     "puan": 5,
     "yorumSayisi": 234,
     "googleMapsUrl": "https://maps.google.com/?cid=6701155039976680474&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJnXCw2q-wyhQRLAxl-Ux3zzw",
@@ -1162,7 +1286,9 @@
     "puan": 5,
     "yorumSayisi": 310,
     "googleMapsUrl": "https://maps.google.com/?cid=4381852134940150828&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJk5tbl2OlyhQRvZ87A7gkF8g",
@@ -1179,7 +1305,9 @@
     "puan": 4.8,
     "yorumSayisi": 162,
     "googleMapsUrl": "https://maps.google.com/?cid=14418033104796753853&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdTIBWhG3yhQRWPPJcMpTRyE",
@@ -1196,7 +1324,9 @@
     "puan": 5,
     "yorumSayisi": 181,
     "googleMapsUrl": "https://maps.google.com/?cid=2397977455538860888&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ7bupr3vCCW0REU0EWfEN2CU",
@@ -1213,7 +1343,9 @@
     "puan": 5,
     "yorumSayisi": 248,
     "googleMapsUrl": "https://maps.google.com/?cid=2726944904604568849&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJi2RICKS7yhQRwES5WJwzHqw",
@@ -1230,7 +1362,9 @@
     "puan": 4.9,
     "yorumSayisi": 225,
     "googleMapsUrl": "https://maps.google.com/?cid=12402407170421376192&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJCWFaO_zPyhQRhLtaE1R4Abo",
@@ -1247,7 +1381,9 @@
     "puan": 4.8,
     "yorumSayisi": 458,
     "googleMapsUrl": "https://maps.google.com/?cid=13403126268528606084&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ5UAcZvTHyhQRPsQZx4XfgWo",
@@ -1264,7 +1400,9 @@
     "puan": 5,
     "yorumSayisi": 189,
     "googleMapsUrl": "https://maps.google.com/?cid=7674661005680034878&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3SteZ9i3yhQR6Lvy6QTfeMg",
@@ -1281,7 +1419,9 @@
     "puan": 5,
     "yorumSayisi": 225,
     "googleMapsUrl": "https://maps.google.com/?cid=14445541016988728296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJh45ggDC7yhQRVHaA6Y75SA4",
@@ -1298,7 +1438,9 @@
     "puan": 5,
     "yorumSayisi": 3,
     "googleMapsUrl": "https://maps.google.com/?cid=1029346907052340820&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJs2ETLwy7yhQRpu9973NfdhU",
@@ -1315,7 +1457,9 @@
     "puan": 5,
     "yorumSayisi": 36,
     "googleMapsUrl": "https://maps.google.com/?cid=1546528473592229798&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJwWLxrmGlyhQRMJU0was5lzA",
@@ -1332,7 +1476,9 @@
     "puan": 5,
     "yorumSayisi": 6,
     "googleMapsUrl": "https://maps.google.com/?cid=3501330645147489584&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQ7kLL1q3yhQR4Dc01xSGF1U",
@@ -1349,7 +1495,9 @@
     "puan": 4.9,
     "yorumSayisi": 46,
     "googleMapsUrl": "https://maps.google.com/?cid=6131516841756211168&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJIRpVHTjDyhQRZr5kNStbBr0",
@@ -1366,7 +1514,9 @@
     "puan": 4.7,
     "yorumSayisi": 291,
     "googleMapsUrl": "https://maps.google.com/?cid=13620674364166159974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJDQXhAJ63yhQRdqpO2ZA3cT4",
@@ -1383,7 +1533,9 @@
     "puan": 5,
     "yorumSayisi": 121,
     "googleMapsUrl": "https://maps.google.com/?cid=4499438597980465782&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJ5UeZYG2yhQRAmAHMjmIHik",
@@ -1400,7 +1552,9 @@
     "puan": 5,
     "yorumSayisi": 106,
     "googleMapsUrl": "https://maps.google.com/?cid=2962955384090222594&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3SdxSoPcyhQRilj18DsQf7s",
@@ -1417,7 +1571,9 @@
     "puan": 4.9,
     "yorumSayisi": 89,
     "googleMapsUrl": "https://maps.google.com/?cid=13510535256766503050&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJFSZ8yIC1yhQR9G-TxPdnwtE",
@@ -1434,7 +1590,9 @@
     "puan": 5,
     "yorumSayisi": 44,
     "googleMapsUrl": "https://maps.google.com/?cid=15114757613261385716&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ825Nq2uxyhQRDQ9vvsjyXkQ",
@@ -1451,7 +1609,9 @@
     "puan": 5,
     "yorumSayisi": 50,
     "googleMapsUrl": "https://maps.google.com/?cid=4926641986392231693&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJteli0UvPyhQRQFDAyp5k0vI",
@@ -1468,7 +1628,9 @@
     "puan": 4.9,
     "yorumSayisi": 187,
     "googleMapsUrl": "https://maps.google.com/?cid=17497158135457009728&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJSdrRhvCgyhQRD2u1KHrM_Uo",
@@ -1491,7 +1653,9 @@
     "puan": 4.9,
     "yorumSayisi": 317,
     "googleMapsUrl": "https://maps.google.com/?cid=5403699952955517711&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJoRFLZMmxyhQRNK0H5adGK0g",
@@ -1514,7 +1678,9 @@
     "puan": 5,
     "yorumSayisi": 343,
     "googleMapsUrl": "https://maps.google.com/?cid=5200327881645337908&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdUtHyH64yhQRzkAeJPfwL6A",
@@ -1531,7 +1697,9 @@
     "puan": 4.6,
     "yorumSayisi": 78,
     "googleMapsUrl": "https://maps.google.com/?cid=11542709314227421390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJqxsX19FZtRQRZUR12Nu8t28",
@@ -1554,7 +1722,9 @@
     "puan": 5,
     "yorumSayisi": 647,
     "googleMapsUrl": "https://maps.google.com/?cid=8050110511363474533&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJl4r0ymvEyhQRCVpGmdXYmwY",
@@ -1571,7 +1741,9 @@
     "puan": 4.8,
     "yorumSayisi": 167,
     "googleMapsUrl": "https://maps.google.com/?cid=476212597528877577&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJfTmwHbOkyhQRT-VtIb3ahAk",
@@ -1588,7 +1760,9 @@
     "puan": 5,
     "yorumSayisi": 12,
     "googleMapsUrl": "https://maps.google.com/?cid=685913549111682383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZ2WFbNrJyhQRztB5A0RAUA0",
@@ -1611,7 +1785,9 @@
     "puan": 4.8,
     "yorumSayisi": 129,
     "googleMapsUrl": "https://maps.google.com/?cid=959337381490184398&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ00TEU5bHyhQRfmp4WKXVSwY",
@@ -1634,7 +1810,9 @@
     "puan": 4.9,
     "yorumSayisi": 65,
     "googleMapsUrl": "https://maps.google.com/?cid=453691093611473534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJmQ92KkfFyhQRG64IxnrNcmM",
@@ -1651,7 +1829,9 @@
     "puan": 4.9,
     "yorumSayisi": 131,
     "googleMapsUrl": "https://maps.google.com/?cid=7166015884292042267&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJs8gCl5m5yhQR_6k5ViRPFZE",
@@ -1668,7 +1848,9 @@
     "puan": 4.7,
     "yorumSayisi": 78,
     "googleMapsUrl": "https://maps.google.com/?cid=10454349127494511103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJDV1ggELGyhQRdKsiTpU6DR8",
@@ -1685,7 +1867,9 @@
     "puan": 4.1,
     "yorumSayisi": 38,
     "googleMapsUrl": "https://maps.google.com/?cid=2237509002808437620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ680BMeKkyhQR1zMA2r9bWio",
@@ -1708,7 +1892,9 @@
     "puan": 4.7,
     "yorumSayisi": 188,
     "googleMapsUrl": "https://maps.google.com/?cid=3051852577051259863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJbVRnk1VftRQRT2lYgiv00KQ",
@@ -1725,7 +1911,9 @@
     "puan": 4.8,
     "yorumSayisi": 546,
     "googleMapsUrl": "https://maps.google.com/?cid=11876260685083601231&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiV7ikbSkyhQRv0ydBxSe9MY",
@@ -1742,7 +1930,9 @@
     "puan": 4.5,
     "yorumSayisi": 94,
     "googleMapsUrl": "https://maps.google.com/?cid=14336257322691415231&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ35IvrYK9yhQRSh-JUZ4-l5s",
@@ -1759,7 +1949,9 @@
     "puan": 4.9,
     "yorumSayisi": 146,
     "googleMapsUrl": "https://maps.google.com/?cid=11211498647055834954&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJwThCCvPDyhQRKwnETg1djso",
@@ -1776,7 +1968,9 @@
     "puan": 4,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=14595705754091784491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ6-xO-BbPyhQR7bPJrxoylGg",
@@ -1793,7 +1987,9 @@
     "puan": 4.8,
     "yorumSayisi": 160,
     "googleMapsUrl": "https://maps.google.com/?cid=7535703166697452525&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZ_2-NSalyhQRRfnTPCcshgo",
@@ -1810,7 +2006,9 @@
     "puan": 5,
     "yorumSayisi": 60,
     "googleMapsUrl": "https://maps.google.com/?cid=758342134294378821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJnZQkvijJyhQRdxzXvvJEc7w",
@@ -1827,7 +2025,9 @@
     "puan": 5,
     "yorumSayisi": 84,
     "googleMapsUrl": "https://maps.google.com/?cid=13579273110826720375&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJAQC0Vm6wyhQRaTjNOmnFqtk",
@@ -1844,7 +2044,9 @@
     "puan": 5,
     "yorumSayisi": 72,
     "googleMapsUrl": "https://maps.google.com/?cid=15684565708019939433&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMbiq38zHyhQRvchJx7SHkK0",
@@ -1867,7 +2069,9 @@
     "puan": 4.9,
     "yorumSayisi": 78,
     "googleMapsUrl": "https://maps.google.com/?cid=12506645375715231933&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJQOJcZHS_WIR4C_gY6Ac3yo",
@@ -1884,7 +2088,9 @@
     "puan": 4.6,
     "yorumSayisi": 9,
     "googleMapsUrl": "https://maps.google.com/?cid=3089219344595431392&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ76t4KM-jyhQRTiHLEmHt1yA",
@@ -1901,7 +2107,9 @@
     "puan": 4.9,
     "yorumSayisi": 81,
     "googleMapsUrl": "https://maps.google.com/?cid=2366621130389397838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJoTvwqyhXtRQR_7_Akh3d0Qc",
@@ -1918,7 +2126,9 @@
     "puan": 4.7,
     "yorumSayisi": 27,
     "googleMapsUrl": "https://maps.google.com/?cid=563474547483918335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJkbdQHVy1yhQRiTQbqhDAIto",
@@ -1935,7 +2145,9 @@
     "puan": 4.6,
     "yorumSayisi": 68,
     "googleMapsUrl": "https://maps.google.com/?cid=15718336827282371721&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT7O6s0LGyhQRE0ES5CcNC7o",
@@ -1952,7 +2164,9 @@
     "puan": 4.9,
     "yorumSayisi": 63,
     "googleMapsUrl": "https://maps.google.com/?cid=13405823180779700499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJYQFzniilyhQRBlxKbb6GqJo",
@@ -1969,7 +2183,9 @@
     "puan": 4.9,
     "yorumSayisi": 100,
     "googleMapsUrl": "https://maps.google.com/?cid=11144305430363790342&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJN9m8lRmlyhQR6H2SgCLiKtY",
@@ -1986,7 +2202,9 @@
     "puan": 4.5,
     "yorumSayisi": 15,
     "googleMapsUrl": "https://maps.google.com/?cid=15432395710952275432&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT746AAHGyhQRcsEce8xH4eY",
@@ -2003,7 +2221,9 @@
     "puan": 3.8,
     "yorumSayisi": 66,
     "googleMapsUrl": "https://maps.google.com/?cid=16636657442047705458&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJUSvLhB-lyhQR3k34M3uBTwU",
@@ -2020,7 +2240,9 @@
     "puan": 4.9,
     "yorumSayisi": 1123,
     "googleMapsUrl": "https://maps.google.com/?cid=382666859502652894&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ2dHfDuaPwxQRviTDvvf25uc",
@@ -2037,7 +2259,9 @@
     "puan": 4.9,
     "yorumSayisi": 77,
     "googleMapsUrl": "https://maps.google.com/?cid=16710315011322619070&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJY4Jj-9mwyhQR1Cu7aObEqxU",
@@ -2054,7 +2278,9 @@
     "puan": 5,
     "yorumSayisi": 147,
     "googleMapsUrl": "https://maps.google.com/?cid=1561558189692627924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJPcwASl7QyhQRcJuTQvgNMyk",
@@ -2071,7 +2297,9 @@
     "puan": 4.3,
     "yorumSayisi": 15,
     "googleMapsUrl": "https://maps.google.com/?cid=2968731939287309168&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJqX3X3Xe7yhQRv-JoNnwL2qM",
@@ -2088,7 +2316,9 @@
     "puan": 4.8,
     "yorumSayisi": 55,
     "googleMapsUrl": "https://maps.google.com/?cid=11806762001221870271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJhSnw_vXIyhQRa-UpCRcCMaE",
@@ -2105,7 +2335,9 @@
     "puan": 4.9,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=11615067211926463851&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJY_BPkK3cyhQR7O_0YKTisc4",
@@ -2122,7 +2354,9 @@
     "puan": 4.6,
     "yorumSayisi": 20,
     "googleMapsUrl": "https://maps.google.com/?cid=14893934638320119788&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMS1F7oi2yhQR7_PRtp431UA",
@@ -2139,7 +2373,9 @@
     "puan": 4.9,
     "yorumSayisi": 29,
     "googleMapsUrl": "https://maps.google.com/?cid=4671701343278330863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJwTKOpojHyhQRqWXI2EtUCxk",
@@ -2156,7 +2392,11 @@
     "puan": 4.4,
     "yorumSayisi": 198,
     "googleMapsUrl": "https://maps.google.com/?cid=1804628760428307881&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "gold",
+    "yetkili_markalar": [
+      "Demirdöküm"
+    ]
   },
   {
     "id": "ChIJp6WA09awyhQRSLXuDRyXYtA",
@@ -2173,7 +2413,9 @@
     "puan": 4.9,
     "yorumSayisi": 273,
     "googleMapsUrl": "https://maps.google.com/?cid=15015730254355281224&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJIWjydgnEyhQRdZRLatfiuuA",
@@ -2190,7 +2432,9 @@
     "puan": 5,
     "yorumSayisi": 479,
     "googleMapsUrl": "https://maps.google.com/?cid=16193504824993223797&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJVYR0aHWkyhQRUw9LtVVop1s",
@@ -2207,7 +2451,9 @@
     "puan": 5,
     "yorumSayisi": 6,
     "googleMapsUrl": "https://maps.google.com/?cid=6604362095885225811&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrXCwAIujyhQRyorQKwVXftE",
@@ -2224,7 +2470,9 @@
     "puan": 4.3,
     "yorumSayisi": 15,
     "googleMapsUrl": "https://maps.google.com/?cid=15095598680714021578&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpxDqCoiwyhQRgtBEl6Oqxnk",
@@ -2241,7 +2489,11 @@
     "puan": 5,
     "yorumSayisi": 143,
     "googleMapsUrl": "https://maps.google.com/?cid=8774888543572250754&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": [
+      "Demirdöküm"
+    ]
   },
   {
     "id": "ChIJcTOSH5DEyhQRhELcgL5ROkg",
@@ -2258,7 +2510,9 @@
     "puan": 4.6,
     "yorumSayisi": 17,
     "googleMapsUrl": "https://maps.google.com/?cid=5204562198027584132&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQXpMOc6lyhQRYiQIht9yUfs",
@@ -2275,7 +2529,11 @@
     "puan": 4.7,
     "yorumSayisi": 36,
     "googleMapsUrl": "https://maps.google.com/?cid=18109381880985429090&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "gold",
+    "yetkili_markalar": [
+      "Demirdöküm"
+    ]
   },
   {
     "id": "ChIJMdBLInK3yhQRPzTCS3Q4rKs",
@@ -2292,7 +2550,11 @@
     "puan": 4.9,
     "yorumSayisi": 95,
     "googleMapsUrl": "https://maps.google.com/?cid=12370324348618290239&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": [
+      "Demirdöküm"
+    ]
   },
   {
     "id": "ChIJVyfLSovIyhQRZaqokLL_8OU",
@@ -2309,7 +2571,9 @@
     "puan": 3.3,
     "yorumSayisi": 104,
     "googleMapsUrl": "https://maps.google.com/?cid=16569024171492289125&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJU-LD-CXJyhQRMoYo8MZgly8",
@@ -2326,7 +2590,9 @@
     "puan": 4.4,
     "yorumSayisi": 17,
     "googleMapsUrl": "https://maps.google.com/?cid=3429316048814900786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiSLT1aHHyhQRLg570lwbhi4",
@@ -2343,7 +2609,9 @@
     "puan": 4.7,
     "yorumSayisi": 13,
     "googleMapsUrl": "https://maps.google.com/?cid=3352397058106134062&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJP-WmkHC4yhQRJOaACy9FSV8",
@@ -2360,7 +2628,9 @@
     "puan": 4.8,
     "yorumSayisi": 3518,
     "googleMapsUrl": "https://maps.google.com/?cid=6866095175261808164&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJVdm_34a5yhQRYE88PpT4hpQ",
@@ -2377,7 +2647,9 @@
     "puan": 4.9,
     "yorumSayisi": 270,
     "googleMapsUrl": "https://maps.google.com/?cid=10702514880075550560&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMwFKJhq5yhQR-v25MNwSVwo",
@@ -2394,7 +2666,9 @@
     "puan": 4.9,
     "yorumSayisi": 1062,
     "googleMapsUrl": "https://maps.google.com/?cid=745085000272707066&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJI4DSDaO5yhQR7CX058_uHD0",
@@ -2411,7 +2685,9 @@
     "puan": 4.8,
     "yorumSayisi": 1223,
     "googleMapsUrl": "https://maps.google.com/?cid=4403657112378680812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZ-2Mo3S4yhQRpgeQO_NpSEs",
@@ -2428,7 +2704,9 @@
     "puan": 4.2,
     "yorumSayisi": 4329,
     "googleMapsUrl": "https://maps.google.com/?cid=5424702244565026726&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJl_J8aVy3yhQR7O7fpJ7T_0U",
@@ -2445,7 +2723,9 @@
     "puan": 4.7,
     "yorumSayisi": 380,
     "googleMapsUrl": "https://maps.google.com/?cid=5043982786002677484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJFZ-YsHfDyhQRuYHhnIJf68k",
@@ -2462,7 +2742,9 @@
     "puan": 4.1,
     "yorumSayisi": 323,
     "googleMapsUrl": "https://maps.google.com/?cid=14549828035732931001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrWo_hHPHyhQRd_XA-aiFQxQ",
@@ -2479,7 +2761,9 @@
     "puan": 4.9,
     "yorumSayisi": 1397,
     "googleMapsUrl": "https://maps.google.com/?cid=1460157664989345143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_8ptIGa4yhQRrX9ah-riDWU",
@@ -2496,7 +2780,9 @@
     "puan": 5,
     "yorumSayisi": 668,
     "googleMapsUrl": "https://maps.google.com/?cid=7281725669449039789&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJbVDnf2mwyhQRk69xGIVO-Z0",
@@ -2513,7 +2799,9 @@
     "puan": 4.3,
     "yorumSayisi": 1322,
     "googleMapsUrl": "https://maps.google.com/?cid=11383215866703359891&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJW0IgEnCxyhQR33o0xlHAC-I",
@@ -2530,7 +2818,9 @@
     "puan": 5,
     "yorumSayisi": 533,
     "googleMapsUrl": "https://maps.google.com/?cid=16288323934765742815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJWd_i7GiwyhQRqckNTUOIy_A",
@@ -2547,7 +2837,9 @@
     "puan": 4.9,
     "yorumSayisi": 1051,
     "googleMapsUrl": "https://maps.google.com/?cid=17351111812011903401&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT7ypriO5yhQR5F4tEUCKGzo",
@@ -2564,7 +2856,9 @@
     "puan": 4.8,
     "yorumSayisi": 17,
     "googleMapsUrl": "https://maps.google.com/?cid=4187092286341734116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJE3r_oDp9uRQRUD_tervfrj0",
@@ -2581,7 +2875,9 @@
     "puan": 4.8,
     "yorumSayisi": 748,
     "googleMapsUrl": "https://maps.google.com/?cid=4444735878575505232&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJtS9NoHfDyhQRoxIVjwSUJBg",
@@ -2598,7 +2894,9 @@
     "puan": 4.4,
     "yorumSayisi": 356,
     "googleMapsUrl": "https://maps.google.com/?cid=1739678103373157027&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ7USClDi5yhQR5nyUlkbpHIU",
@@ -2615,7 +2913,9 @@
     "puan": 4.9,
     "yorumSayisi": 802,
     "googleMapsUrl": "https://maps.google.com/?cid=9591797795775610086&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ0c4YsTiwyhQRMXuWGtBmroo",
@@ -2632,7 +2932,9 @@
     "puan": 4.4,
     "yorumSayisi": 228,
     "googleMapsUrl": "https://maps.google.com/?cid=9993037667167009585&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJc1fXhpi5yhQRuXv78pHI6Q0",
@@ -2649,7 +2951,9 @@
     "puan": 4.9,
     "yorumSayisi": 34,
     "googleMapsUrl": "https://maps.google.com/?cid=1002552921239026617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJIYlDcwC5yhQRY-mcLeOOjbg",
@@ -2666,7 +2970,9 @@
     "puan": 4.9,
     "yorumSayisi": 95,
     "googleMapsUrl": "https://maps.google.com/?cid=13298442381068921187&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJd4iy2HXHyhQRYD_3_d6JFQc",
@@ -2683,7 +2989,9 @@
     "puan": 5,
     "yorumSayisi": 195,
     "googleMapsUrl": "https://maps.google.com/?cid=510465723613003616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJy8Rg5czIyhQRlgwEmWo026A",
@@ -2700,7 +3008,9 @@
     "puan": 5,
     "yorumSayisi": 310,
     "googleMapsUrl": "https://maps.google.com/?cid=11590915698406460566&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJp7flZqCryhQR0qFWlajzETY",
@@ -2717,7 +3027,9 @@
     "puan": 5,
     "yorumSayisi": 12,
     "googleMapsUrl": "https://maps.google.com/?cid=3896163058037727698&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJuXiTfZekyhQR4yimprKgLsM",
@@ -2734,7 +3046,9 @@
     "puan": 3.5,
     "yorumSayisi": 87,
     "googleMapsUrl": "https://maps.google.com/?cid=14064355375485167843&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJgR0Fveq5yhQRjOlXODt3q8o",
@@ -2751,7 +3065,9 @@
     "puan": 4.6,
     "yorumSayisi": 20,
     "googleMapsUrl": "https://maps.google.com/?cid=14603897312911026572&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJLdjDQtu7yhQRBQv7KQmTMWQ",
@@ -2768,7 +3084,9 @@
     "puan": 5,
     "yorumSayisi": 44,
     "googleMapsUrl": "https://maps.google.com/?cid=7219713345219922693&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT4-DOCq5yhQR7vvvrkagfdk",
@@ -2785,7 +3103,9 @@
     "puan": 4.9,
     "yorumSayisi": 73,
     "googleMapsUrl": "https://maps.google.com/?cid=15671858503762312174&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJPeY3bz6xyhQR5BDhbEolRS4",
@@ -2802,7 +3122,9 @@
     "puan": 4.6,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=3334112100722217188&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZbwfkuq5yhQRR5KKhq4KBOI",
@@ -2819,7 +3141,9 @@
     "puan": 4.7,
     "yorumSayisi": 3,
     "googleMapsUrl": "https://maps.google.com/?cid=16286153897176371783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJy96Zd4K5yhQRMu56uuRhY9c",
@@ -2836,7 +3160,9 @@
     "puan": 4.9,
     "yorumSayisi": 322,
     "googleMapsUrl": "https://maps.google.com/?cid=15520356375857917490&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJl_fi8gq3yhQRGXbLBoGLgMM",
@@ -2853,7 +3179,9 @@
     "puan": 4.8,
     "yorumSayisi": 218,
     "googleMapsUrl": "https://maps.google.com/?cid=14087413020695950873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJGbVDl-y5yhQRhDkI7DvPgD0",
@@ -2870,7 +3198,9 @@
     "puan": 4.5,
     "yorumSayisi": 32,
     "googleMapsUrl": "https://maps.google.com/?cid=4431769889602550148&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJX32qXwC5yhQRBT19zMb9rO8",
@@ -2887,7 +3217,9 @@
     "puan": null,
     "yorumSayisi": 0,
     "googleMapsUrl": "https://maps.google.com/?cid=17270457701335121157&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJ_dzHFW6yhQREH94CL8nQGY",
@@ -2904,7 +3236,9 @@
     "puan": 3.9,
     "yorumSayisi": 377,
     "googleMapsUrl": "https://maps.google.com/?cid=7367932691812482832&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ95j3DLO5yhQRSpbBM3jtAtc",
@@ -2921,7 +3255,9 @@
     "puan": 5,
     "yorumSayisi": 136,
     "googleMapsUrl": "https://maps.google.com/?cid=15493206768628110922&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJgY4Nl-y5yhQRNVcfwZwYzkc",
@@ -2938,7 +3274,9 @@
     "puan": 4.1,
     "yorumSayisi": 18,
     "googleMapsUrl": "https://maps.google.com/?cid=5174100083429300021&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpTkqv-y5yhQRXf7IM7Y03FQ",
@@ -2955,7 +3293,9 @@
     "puan": null,
     "yorumSayisi": 0,
     "googleMapsUrl": "https://maps.google.com/?cid=6114820351219793501&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJzcDnZ8yvyhQRi8z6H68C-EM",
@@ -2972,7 +3312,9 @@
     "puan": 5,
     "yorumSayisi": 1,
     "googleMapsUrl": "https://maps.google.com/?cid=4897667545944476811&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_yA8S_-2yhQRyL1ZG7Htwxk",
@@ -2990,7 +3332,9 @@
     "puan": 5,
     "yorumSayisi": 460,
     "googleMapsUrl": "https://maps.google.com/?cid=1856588816330636744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJean9MaS8yhQRX1A5yX-SokQ",
@@ -3008,7 +3352,9 @@
     "puan": 5,
     "yorumSayisi": 206,
     "googleMapsUrl": "https://maps.google.com/?cid=4945676418340704351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJnUjl6TO7yhQREiEV5lvpH_0",
@@ -3026,7 +3372,9 @@
     "puan": 4.7,
     "yorumSayisi": 440,
     "googleMapsUrl": "https://maps.google.com/?cid=18239553596785238290&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJYSrWlGi4yhQRU8KZrHwYCB4",
@@ -3043,7 +3391,9 @@
     "puan": 5,
     "yorumSayisi": 702,
     "googleMapsUrl": "https://maps.google.com/?cid=2164006544702292563&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJOw6XJQq7yhQRhZEkncmD5-I",
@@ -3067,7 +3417,9 @@
     "puan": 5,
     "yorumSayisi": 530,
     "googleMapsUrl": "https://maps.google.com/?cid=16350181874139959685&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJx1Yvufi2yhQRD5EkX9QmaTE",
@@ -3085,7 +3437,9 @@
     "puan": 4.9,
     "yorumSayisi": 261,
     "googleMapsUrl": "https://maps.google.com/?cid=3560419673984241935&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJLRwjWR6hyhQREKZ8F6ivyH4",
@@ -3102,7 +3456,9 @@
     "puan": 4.9,
     "yorumSayisi": 296,
     "googleMapsUrl": "https://maps.google.com/?cid=9135744980604462608&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJfXNjEym5yhQR1iMSn5CPWZc",
@@ -3119,7 +3475,9 @@
     "puan": 4.8,
     "yorumSayisi": 157,
     "googleMapsUrl": "https://maps.google.com/?cid=10905905823961195478&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJBZNfQFijyhQRG_GDRS7212Q",
@@ -3137,7 +3495,9 @@
     "puan": 4.7,
     "yorumSayisi": 365,
     "googleMapsUrl": "https://maps.google.com/?cid=7266547202380787995&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJUafTrxfbyhQRK8nh4tontB4",
@@ -3155,7 +3515,9 @@
     "puan": 4.6,
     "yorumSayisi": 899,
     "googleMapsUrl": "https://maps.google.com/?cid=2212437138008557867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJoWLYVKS7yhQRTnE_yWnvU_k",
@@ -3173,7 +3535,9 @@
     "puan": 5,
     "yorumSayisi": 378,
     "googleMapsUrl": "https://maps.google.com/?cid=17965966576138023246&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ04sVXWi4yhQR9Q7a9OljuKE",
@@ -3190,7 +3554,9 @@
     "puan": 4.9,
     "yorumSayisi": 282,
     "googleMapsUrl": "https://maps.google.com/?cid=11653173892307619573&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJmU1mfem7yhQR1wqzr2HD9BY",
@@ -3207,7 +3573,9 @@
     "puan": 4.7,
     "yorumSayisi": 392,
     "googleMapsUrl": "https://maps.google.com/?cid=1654161787478805207&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJcwPet_i2yhQR5gw6bcVlswg",
@@ -3224,7 +3592,9 @@
     "puan": 4.8,
     "yorumSayisi": 153,
     "googleMapsUrl": "https://maps.google.com/?cid=626956671750114534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZ4186iW3yhQRfWp5-rfBDio",
@@ -3241,7 +3611,9 @@
     "puan": 4.9,
     "yorumSayisi": 738,
     "googleMapsUrl": "https://maps.google.com/?cid=3030572595192359549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJBYioEqS8yhQR0D6jOS68JHU",
@@ -3258,7 +3630,9 @@
     "puan": 5,
     "yorumSayisi": 71,
     "googleMapsUrl": "https://maps.google.com/?cid=8441078508320669392&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJK27v83-4yhQRZPGQCL6-oRs",
@@ -3275,7 +3649,9 @@
     "puan": 4.6,
     "yorumSayisi": 77,
     "googleMapsUrl": "https://maps.google.com/?cid=1991082233671250276&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrc93lzakyhQRdWyC3tewnJ8",
@@ -3292,7 +3668,9 @@
     "puan": 4.7,
     "yorumSayisi": 290,
     "googleMapsUrl": "https://maps.google.com/?cid=11501261989594950773&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJraOiVZi3yhQRl-GqP8POrbY",
@@ -3310,7 +3688,9 @@
     "puan": 5,
     "yorumSayisi": 73,
     "googleMapsUrl": "https://maps.google.com/?cid=13163404623855935895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ8yP7uvi2yhQRm1GojQQ2kPQ",
@@ -3327,7 +3707,9 @@
     "puan": 4.9,
     "yorumSayisi": 109,
     "googleMapsUrl": "https://maps.google.com/?cid=17622644735085138331&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJawSd9PrIyhQRRfbYpfM9hpE",
@@ -3344,7 +3726,9 @@
     "puan": 4.9,
     "yorumSayisi": 476,
     "googleMapsUrl": "https://maps.google.com/?cid=10486136899047585349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJEU6p5v27yhQRt2p74R3YUqk",
@@ -3362,7 +3746,9 @@
     "puan": 4.9,
     "yorumSayisi": 305,
     "googleMapsUrl": "https://maps.google.com/?cid=12201051963348708023&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlx18vO-gyhQRh4A88RhpAf0",
@@ -3380,7 +3766,9 @@
     "puan": 4.6,
     "yorumSayisi": 354,
     "googleMapsUrl": "https://maps.google.com/?cid=18230968322419884167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ8QRMV-bJyhQRQzKJCHkInhU",
@@ -3397,7 +3785,9 @@
     "puan": 5,
     "yorumSayisi": 386,
     "googleMapsUrl": "https://maps.google.com/?cid=1557691837044044355&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJuUFx6y3HyhQRUCnv3k7Q5po",
@@ -3414,7 +3804,9 @@
     "puan": 4.9,
     "yorumSayisi": 357,
     "googleMapsUrl": "https://maps.google.com/?cid=11161837763650595152&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJGw5ILPyvyhQR2E-KaF0RZGQ",
@@ -3431,7 +3823,9 @@
     "puan": 4.9,
     "yorumSayisi": 71,
     "googleMapsUrl": "https://maps.google.com/?cid=7233925994347384792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJR1fDXevHyhQROw-QvQ0dglw",
@@ -3449,7 +3843,9 @@
     "puan": 4.7,
     "yorumSayisi": 370,
     "googleMapsUrl": "https://maps.google.com/?cid=6665922343313870651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ1wAGtfvGyhQRUOp3ynBxzkc",
@@ -3466,7 +3862,9 @@
     "puan": 4.8,
     "yorumSayisi": 174,
     "googleMapsUrl": "https://maps.google.com/?cid=5174197751142410832&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJXQMp86C3yhQRmW5GY7-ojcg",
@@ -3484,7 +3882,9 @@
     "puan": 5,
     "yorumSayisi": 106,
     "googleMapsUrl": "https://maps.google.com/?cid=14451392319259569817&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJi8akEnmwyhQRmHmWHoJ-huY",
@@ -3501,7 +3901,9 @@
     "puan": 4.9,
     "yorumSayisi": 443,
     "googleMapsUrl": "https://maps.google.com/?cid=16611103372926679448&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ98FHtmDPyhQRUZazumZRDJY",
@@ -3518,7 +3920,9 @@
     "puan": 5,
     "yorumSayisi": 462,
     "googleMapsUrl": "https://maps.google.com/?cid=10812106307070563921&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ191s-VqhyhQRiYeIKAEdp2g",
@@ -3535,7 +3939,9 @@
     "puan": 5,
     "yorumSayisi": 355,
     "googleMapsUrl": "https://maps.google.com/?cid=7541027991867393929&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ1Xvwbcu7yhQRwtOBkmogEJ4",
@@ -3552,7 +3958,9 @@
     "puan": 4.9,
     "yorumSayisi": 366,
     "googleMapsUrl": "https://maps.google.com/?cid=11389639099716588482&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJi78FWL3HyhQR60c0Lk1bJbk",
@@ -3569,7 +3977,9 @@
     "puan": 4.9,
     "yorumSayisi": 267,
     "googleMapsUrl": "https://maps.google.com/?cid=13341169858200750059&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJX8_ukCC3yhQR74dCUgqNBFA",
@@ -3586,7 +3996,9 @@
     "puan": 5,
     "yorumSayisi": 201,
     "googleMapsUrl": "https://maps.google.com/?cid=5765888498410358767&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJOx7xY6ewyhQR0JWGj84AW_o",
@@ -3603,7 +4015,9 @@
     "puan": 5,
     "yorumSayisi": 251,
     "googleMapsUrl": "https://maps.google.com/?cid=18040013619533878736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ26m40De6yhQRBh4xqigaNmk",
@@ -3620,7 +4034,9 @@
     "puan": 4.9,
     "yorumSayisi": 255,
     "googleMapsUrl": "https://maps.google.com/?cid=7581275784681168390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3145i3K7yhQRBI3B5JkT1jc",
@@ -3637,7 +4053,9 @@
     "puan": 5,
     "yorumSayisi": 225,
     "googleMapsUrl": "https://maps.google.com/?cid=4023424868790930692&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJIXRhkYqlyhQRpQaiUqV9ZRw",
@@ -3654,7 +4072,9 @@
     "puan": 4.9,
     "yorumSayisi": 130,
     "googleMapsUrl": "https://maps.google.com/?cid=2046179754719184549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJv_1X0nW7yhQR5l2lv6CWv3c",
@@ -3671,7 +4091,9 @@
     "puan": 4.9,
     "yorumSayisi": 69,
     "googleMapsUrl": "https://maps.google.com/?cid=8628781028219379174&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJEwCS92S4yhQRxY9DoxMncMs",
@@ -3688,7 +4110,9 @@
     "puan": 3.9,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=14659259752387940293&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJURY5GB3RuxQRxKWibkjOHrg",
@@ -3705,7 +4129,9 @@
     "puan": 4.9,
     "yorumSayisi": 83,
     "googleMapsUrl": "https://maps.google.com/?cid=13267268362769180100&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJieiC8Ep9uRQRqTiYhwTvo-I",
@@ -3724,7 +4150,9 @@
     "puan": 4.9,
     "yorumSayisi": 267,
     "googleMapsUrl": "https://maps.google.com/?cid=16331159476509358249&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJUzvKZUXfuxQRDSS7sFb_Ss0",
@@ -3741,7 +4169,9 @@
     "puan": 4.8,
     "yorumSayisi": 87,
     "googleMapsUrl": "https://maps.google.com/?cid=14792916673849140237&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJLeUackLZuxQRJi5Z_eRnMfE",
@@ -3759,7 +4189,9 @@
     "puan": 4.9,
     "yorumSayisi": 441,
     "googleMapsUrl": "https://maps.google.com/?cid=17379786670200139302&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_fgLWPDYuxQRyui16_DK3co",
@@ -3777,7 +4209,9 @@
     "puan": 4.9,
     "yorumSayisi": 879,
     "googleMapsUrl": "https://maps.google.com/?cid=14618063101610027210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3UOMnJ_QuxQRXbU_4RuVqA0",
@@ -3795,7 +4229,9 @@
     "puan": 4.9,
     "yorumSayisi": 364,
     "googleMapsUrl": "https://maps.google.com/?cid=984200465556157789&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJnUUtTtLfuxQRE0uQ59D3msk",
@@ -3813,7 +4249,9 @@
     "puan": 4.9,
     "yorumSayisi": 218,
     "googleMapsUrl": "https://maps.google.com/?cid=14527196024647207699&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJSWKSvfYuxQRX2-ijQS5_PE",
@@ -3831,7 +4269,9 @@
     "puan": 5,
     "yorumSayisi": 277,
     "googleMapsUrl": "https://maps.google.com/?cid=17437015286478958431&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlYqMA6zfuxQRPCnKvafK3uE",
@@ -3848,7 +4288,9 @@
     "puan": 4.7,
     "yorumSayisi": 105,
     "googleMapsUrl": "https://maps.google.com/?cid=16275668925156043068&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJNYfhs0vZuxQR3Bn7lz0q1Mc",
@@ -3865,7 +4307,9 @@
     "puan": 4.9,
     "yorumSayisi": 54,
     "googleMapsUrl": "https://maps.google.com/?cid=14399180352641505756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_16FVd_YuxQR9IRYF9GyJ2A",
@@ -3884,7 +4328,9 @@
     "puan": 4.9,
     "yorumSayisi": 458,
     "googleMapsUrl": "https://maps.google.com/?cid=6928703162842383604&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJmYwCmt58uRQR36ZQUJ5yfT4",
@@ -3902,7 +4348,9 @@
     "puan": 4.9,
     "yorumSayisi": 450,
     "googleMapsUrl": "https://maps.google.com/?cid=4502881226718226143&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJSXGABinZuxQRNwP8nsYCAnk",
@@ -3919,7 +4367,9 @@
     "puan": 4.2,
     "yorumSayisi": 398,
     "googleMapsUrl": "https://maps.google.com/?cid=8719534880636797751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJTVDfHETHyhQRQL6qjQu3Noo",
@@ -3936,7 +4386,9 @@
     "puan": 5,
     "yorumSayisi": 82,
     "googleMapsUrl": "https://maps.google.com/?cid=9959348886225731136&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJwR0pfUmlyhQRlSxeplbnAJY",
@@ -3953,7 +4405,9 @@
     "puan": 4.9,
     "yorumSayisi": 60,
     "googleMapsUrl": "https://maps.google.com/?cid=10808893465033583765&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJF35sfp65yhQRIRPaDWxkUYM",
@@ -3970,7 +4424,9 @@
     "puan": 4.9,
     "yorumSayisi": 100,
     "googleMapsUrl": "https://maps.google.com/?cid=9462454707333763873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJTVjQt_zIyhQR-RtNDIvTMyE",
@@ -3987,7 +4443,9 @@
     "puan": 4.9,
     "yorumSayisi": 61,
     "googleMapsUrl": "https://maps.google.com/?cid=2392488421224160249&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpfGx4F27yhQR005efqfvrjI",
@@ -4004,7 +4462,9 @@
     "puan": 4.5,
     "yorumSayisi": 14,
     "googleMapsUrl": "https://maps.google.com/?cid=3652119850502737619&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJXR1p7Aa3yhQREFkbH-ARquI",
@@ -4021,7 +4481,9 @@
     "puan": 5,
     "yorumSayisi": 42,
     "googleMapsUrl": "https://maps.google.com/?cid=16332886652904757520&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJf3CwEDK7yhQRQbhutkWbShU",
@@ -4038,7 +4500,9 @@
     "puan": 5,
     "yorumSayisi": 34,
     "googleMapsUrl": "https://maps.google.com/?cid=1534209346788833345&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJn09M-d67yhQR4aRDOEq0qOA",
@@ -4055,7 +4519,9 @@
     "puan": 5,
     "yorumSayisi": 18,
     "googleMapsUrl": "https://maps.google.com/?cid=16188387091447784673&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJbb_WK1igyhQRi3dTiGASNuo",
@@ -4072,7 +4538,11 @@
     "puan": 4.8,
     "yorumSayisi": 297,
     "googleMapsUrl": "https://maps.google.com/?cid=16876696859430844299&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": [
+      "Epson"
+    ]
   },
   {
     "id": "ChIJKy7r6yXPyhQRbAk1ZHGq6yE",
@@ -4089,7 +4559,9 @@
     "puan": 4.9,
     "yorumSayisi": 18,
     "googleMapsUrl": "https://maps.google.com/?cid=2444234626767849836&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ5Rq_hz7GyhQR5xyCFQwnOXA",
@@ -4106,7 +4578,9 @@
     "puan": 4.6,
     "yorumSayisi": 81,
     "googleMapsUrl": "https://maps.google.com/?cid=8086537538774375655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlcYNfke5yhQRAb7RElkL2oU",
@@ -4123,7 +4597,9 @@
     "puan": 5,
     "yorumSayisi": 23,
     "googleMapsUrl": "https://maps.google.com/?cid=9645034029163068929&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJuVuJUeq3yhQRd8r7j7vfRsw",
@@ -4140,7 +4616,9 @@
     "puan": 5,
     "yorumSayisi": 47,
     "googleMapsUrl": "https://maps.google.com/?cid=14719698428774566519&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ08kzAi_dyhQRS1IjpDPL60Q",
@@ -4157,7 +4635,9 @@
     "puan": 5,
     "yorumSayisi": 126,
     "googleMapsUrl": "https://maps.google.com/?cid=4966286436763652683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJk4jwdpekyhQRgASmdk83LlQ",
@@ -4174,7 +4654,9 @@
     "puan": 4.4,
     "yorumSayisi": 14,
     "googleMapsUrl": "https://maps.google.com/?cid=6065846562547172480&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJOeqGn6zcyhQRyigeoCGjlTo",
@@ -4191,7 +4673,9 @@
     "puan": 4.7,
     "yorumSayisi": 103,
     "googleMapsUrl": "https://maps.google.com/?cid=4221459590545287370&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJA6-wy3ClyhQRAeDCb_crx8g",
@@ -4208,7 +4692,9 @@
     "puan": 4.4,
     "yorumSayisi": 152,
     "googleMapsUrl": "https://maps.google.com/?cid=14467580669682966529&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJgaB11w27yhQRsZv2jw0H0oU",
@@ -4225,7 +4711,9 @@
     "puan": 5,
     "yorumSayisi": 54,
     "googleMapsUrl": "https://maps.google.com/?cid=9642777506984926129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJPZxmyJLdyhQR41yzB9YOmrY",
@@ -4242,7 +4730,9 @@
     "puan": 4.8,
     "yorumSayisi": 37,
     "googleMapsUrl": "https://maps.google.com/?cid=13157845573731310819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJsV311MKjyhQRXO5pSBEGFeg",
@@ -4259,7 +4749,9 @@
     "puan": 4.9,
     "yorumSayisi": 503,
     "googleMapsUrl": "https://maps.google.com/?cid=16723279462609317468&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJw1xu90_JyhQRlOnU2OlHNyg",
@@ -4276,7 +4768,9 @@
     "puan": 5,
     "yorumSayisi": 11,
     "googleMapsUrl": "https://maps.google.com/?cid=2897863954926987668&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJm-o8pk-hyhQRhaeC0AjaSZs",
@@ -4293,7 +4787,11 @@
     "puan": 4.6,
     "yorumSayisi": 23,
     "googleMapsUrl": "https://maps.google.com/?cid=11189714480571524997&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "gold",
+    "yetkili_markalar": [
+      "Brother"
+    ]
   },
   {
     "id": "ChIJ7c69HAfRyhQRRHNaVKiHWOg",
@@ -4310,7 +4808,9 @@
     "puan": 4.9,
     "yorumSayisi": 34,
     "googleMapsUrl": "https://maps.google.com/?cid=16742280771789288260&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdS3nhfS5yhQRncUcx_jmBZg",
@@ -4327,7 +4827,9 @@
     "puan": 4.9,
     "yorumSayisi": 55,
     "googleMapsUrl": "https://maps.google.com/?cid=10954415624815429021&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrzSvGFi2yhQRDqQxrI03ufg",
@@ -4344,7 +4846,9 @@
     "puan": 4.6,
     "yorumSayisi": 327,
     "googleMapsUrl": "https://maps.google.com/?cid=17922417273716450318&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdxcq9yijyhQR9XUmrB4YO88",
@@ -4361,7 +4865,9 @@
     "puan": 4.6,
     "yorumSayisi": 34,
     "googleMapsUrl": "https://maps.google.com/?cid=14932555509493298677&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJkV_0mlW1yhQRp_XCEo85cVw",
@@ -4378,7 +4884,9 @@
     "puan": null,
     "yorumSayisi": 0,
     "googleMapsUrl": "https://maps.google.com/?cid=6661168610515547559&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJR66zLeWlyhQR3D9DMr4NJHw",
@@ -4400,7 +4908,9 @@
     "puan": 4.6,
     "yorumSayisi": 206,
     "googleMapsUrl": "https://maps.google.com/?cid=8945289870402863068&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiSpRjma3yhQRUFkpmrIdlic",
@@ -4422,7 +4932,9 @@
     "puan": 4.5,
     "yorumSayisi": 224,
     "googleMapsUrl": "https://maps.google.com/?cid=2852500066913573200&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJNYq4t-yjyhQRdojqKMaR2yw",
@@ -4444,7 +4956,9 @@
     "puan": 4.9,
     "yorumSayisi": 81,
     "googleMapsUrl": "https://maps.google.com/?cid=3232337437844473974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJX7rsJ0i5yhQRTEPzSYdheJY",
@@ -4466,7 +4980,9 @@
     "puan": 4.1,
     "yorumSayisi": 37,
     "googleMapsUrl": "https://maps.google.com/?cid=10842523336583627596&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiXPDJ0W7yhQRRJcfCDJ3L2c",
@@ -4488,7 +5004,9 @@
     "puan": 3,
     "yorumSayisi": 206,
     "googleMapsUrl": "https://maps.google.com/?cid=7435292566580336452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpViVadTIyhQRfJT4ORyhp20",
@@ -4510,7 +5028,9 @@
     "puan": 4.8,
     "yorumSayisi": 202,
     "googleMapsUrl": "https://maps.google.com/?cid=7901461213848573052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJfTWUYFumyhQR6sTWZoQxNOY",
@@ -4532,7 +5052,9 @@
     "puan": 4.8,
     "yorumSayisi": 24,
     "googleMapsUrl": "https://maps.google.com/?cid=16587937772243174634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpbaTDvawyhQRCfGDGUtHMgo",
@@ -4554,7 +5076,9 @@
     "puan": 4.2,
     "yorumSayisi": 61,
     "googleMapsUrl": "https://maps.google.com/?cid=734728077091008777&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJjXFKponZuxQRFGoG08yA3DQ",
@@ -4576,7 +5100,9 @@
     "puan": 4.8,
     "yorumSayisi": 174,
     "googleMapsUrl": "https://maps.google.com/?cid=3809061002050693652&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlfTeGEVftRQRfyNDs2w-gVs",
@@ -4598,7 +5124,9 @@
     "puan": 5,
     "yorumSayisi": 253,
     "googleMapsUrl": "https://maps.google.com/?cid=6593619966032028543&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJR7BXIfqgyhQRuK41xZtYBVw",
@@ -4620,7 +5148,9 @@
     "puan": 4.8,
     "yorumSayisi": 19,
     "googleMapsUrl": "https://maps.google.com/?cid=6630803452424728248&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlZkqo-q5yhQRAwpc66k4u10",
@@ -4642,7 +5172,9 @@
     "puan": 4.8,
     "yorumSayisi": 93,
     "googleMapsUrl": "https://maps.google.com/?cid=6754054368621496835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJe8GOyTfPyhQRl9y2ljetrB4",
@@ -4664,7 +5196,9 @@
     "puan": 5,
     "yorumSayisi": 100,
     "googleMapsUrl": "https://maps.google.com/?cid=2210331971395443863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJFRxXYT7JyhQRHsXCVsTsB1c",
@@ -4686,7 +5220,9 @@
     "puan": 4.9,
     "yorumSayisi": 72,
     "googleMapsUrl": "https://maps.google.com/?cid=6271241334150055198&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJU78RQ8pdtRQR6Bvpw3Rd8fY",
@@ -4708,7 +5244,9 @@
     "puan": 5,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=17794106358801964008&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJI4RwgFOlyhQRhQ1usIr1WW4",
@@ -4730,7 +5268,9 @@
     "puan": 4.8,
     "yorumSayisi": 20,
     "googleMapsUrl": "https://maps.google.com/?cid=7951656593113615749&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJyZbxYaTqEokRJePE1qIp7us",
@@ -4752,7 +5292,9 @@
     "puan": 5,
     "yorumSayisi": 1,
     "googleMapsUrl": "https://maps.google.com/?cid=17000571422734869285&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJcdg7rO_HyhQRG1ZXR9j8Cnw",
@@ -4774,7 +5316,9 @@
     "puan": 4.7,
     "yorumSayisi": 51,
     "googleMapsUrl": "https://maps.google.com/?cid=8938234416310212123&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZWS1lPi2yhQRjnq1sw2b1wc",
@@ -4796,7 +5340,9 @@
     "puan": 4.3,
     "yorumSayisi": 196,
     "googleMapsUrl": "https://maps.google.com/?cid=565090761410181774&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJi-dwoDO3yhQR2rs6DrsiCrw",
@@ -4818,7 +5364,9 @@
     "puan": 5,
     "yorumSayisi": 205,
     "googleMapsUrl": "https://maps.google.com/?cid=13549680615690517466&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJE6VYfHi3yhQRUBnotAXJJNM",
@@ -4840,7 +5388,9 @@
     "puan": 4.8,
     "yorumSayisi": 226,
     "googleMapsUrl": "https://maps.google.com/?cid=15214506467511507280&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJYRzqlkfJyhQRnLYvlVj-3iE",
@@ -4862,7 +5412,9 @@
     "puan": 5,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=2440667704494896796&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJByvSizNftRQRZd2Et7IGg8g",
@@ -4884,7 +5436,9 @@
     "puan": 4.8,
     "yorumSayisi": 32,
     "googleMapsUrl": "https://maps.google.com/?cid=14448399394187566437&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJp29o0PmxyhQRHYlkvllWlgI",
@@ -4906,7 +5460,9 @@
     "puan": 5,
     "yorumSayisi": 32,
     "googleMapsUrl": "https://maps.google.com/?cid=186431378028792093&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJC4yM9-DRyhQRt7SHVFVNOnk",
@@ -4928,7 +5484,9 @@
     "puan": null,
     "yorumSayisi": 0,
     "googleMapsUrl": "https://maps.google.com/?cid=8735379456124236983&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ2WmzmVbOyhQRM0TuOwIli-Q",
@@ -4950,7 +5508,9 @@
     "puan": 4.5,
     "yorumSayisi": 105,
     "googleMapsUrl": "https://maps.google.com/?cid=16468297153935983667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJj0zMJnDfuxQRatECsT3LEns",
@@ -4972,7 +5532,9 @@
     "puan": 4.2,
     "yorumSayisi": 50,
     "googleMapsUrl": "https://maps.google.com/?cid=8868374082069123434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJm0wyVYjHyhQRIJXgCfG4Up0",
@@ -4994,7 +5556,9 @@
     "puan": 4.8,
     "yorumSayisi": 548,
     "googleMapsUrl": "https://maps.google.com/?cid=11336326557437302048&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpYhCMBylyhQRzsO4C8LbHV4",
@@ -5016,7 +5580,9 @@
     "puan": 4.3,
     "yorumSayisi": 69,
     "googleMapsUrl": "https://maps.google.com/?cid=6781818240356631502&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJcS9-ii_HyhQRhRcjo8HHgyw",
@@ -5038,7 +5604,15 @@
     "puan": 4.9,
     "yorumSayisi": 223,
     "googleMapsUrl": "https://maps.google.com/?cid=3207626994097526661&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": [
+      "Dyson",
+      "Xiaomi",
+      "Roborock",
+      "Karaca",
+      "Nilfisk"
+    ]
   },
   {
     "id": "ChIJ69zl322vyhQRjFiX_nEa-E8",
@@ -5060,7 +5634,9 @@
     "puan": 5,
     "yorumSayisi": 9,
     "googleMapsUrl": "https://maps.google.com/?cid=5762384800125507724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdxEPNXjDyhQRGLpm4T7c87Y",
@@ -5082,7 +5658,9 @@
     "puan": 3.9,
     "yorumSayisi": 278,
     "googleMapsUrl": "https://maps.google.com/?cid=13183122696871262744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQbliq6XXuxQRmMbMfRpUV0g",
@@ -5102,7 +5680,9 @@
     "puan": 5,
     "yorumSayisi": 53,
     "googleMapsUrl": "https://maps.google.com/?cid=5212727566461093528&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJNf1pGux9uRQRLDEdlCUCHeM",
@@ -5122,7 +5702,9 @@
     "puan": 4.8,
     "yorumSayisi": 99,
     "googleMapsUrl": "https://maps.google.com/?cid=16365238981356237100&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMaXBMgDfuxQRo5DeEKUBi54",
@@ -5142,7 +5724,9 @@
     "puan": 5,
     "yorumSayisi": 20,
     "googleMapsUrl": "https://maps.google.com/?cid=11424226688219648163&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ__ukZsveuxQRCm6r44AqmUg",
@@ -5163,7 +5747,9 @@
     "puan": 4.9,
     "yorumSayisi": 386,
     "googleMapsUrl": "https://maps.google.com/?cid=5231259175231385098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT_iwouLZuxQRgqdlb-Ua7Gg",
@@ -5183,7 +5769,9 @@
     "puan": 5,
     "yorumSayisi": 100,
     "googleMapsUrl": "https://maps.google.com/?cid=7560447447166986114&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ49l92ozfuxQRL4VsR13bE2g",
@@ -5203,7 +5791,9 @@
     "puan": 4.9,
     "yorumSayisi": 69,
     "googleMapsUrl": "https://maps.google.com/?cid=7499578998178743599&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJOSqljJLeuxQRfzXXzARnwmY",
@@ -5223,7 +5813,9 @@
     "puan": 5,
     "yorumSayisi": 13,
     "googleMapsUrl": "https://maps.google.com/?cid=7404594007664702847&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ6QbnCr7euxQRtOFqYw23hqA",
@@ -5243,7 +5835,9 @@
     "puan": 5,
     "yorumSayisi": 26,
     "googleMapsUrl": "https://maps.google.com/?cid=11567133961078104500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJk1zCNP5huRQRA3CVGXiXJcc",
@@ -5269,7 +5863,9 @@
     "puan": 4.9,
     "yorumSayisi": 168,
     "googleMapsUrl": "https://maps.google.com/?cid=14350042329767047171&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJZ_6tM_ZuxQRTc4RaBbefrM",
@@ -5289,7 +5885,9 @@
     "puan": 5,
     "yorumSayisi": 70,
     "googleMapsUrl": "https://maps.google.com/?cid=12934019367671287373&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT3udN_xhuRQRWlXXTkphcUU",
@@ -5315,7 +5913,9 @@
     "puan": 4.8,
     "yorumSayisi": 98,
     "googleMapsUrl": "https://maps.google.com/?cid=5003887632763540826&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJK0BFQ8d9uRQR_uShpRbtpQc",
@@ -5336,7 +5936,9 @@
     "puan": 4.8,
     "yorumSayisi": 77,
     "googleMapsUrl": "https://maps.google.com/?cid=551107210946667774&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMwx6pcZjuRQRQUFXihJhrbI",
@@ -5356,7 +5958,9 @@
     "puan": 5,
     "yorumSayisi": 186,
     "googleMapsUrl": "https://maps.google.com/?cid=12875053641980395841&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ5VrRmKh9uRQRJS935QBJuRk",
@@ -5376,7 +5980,9 @@
     "puan": 5,
     "yorumSayisi": 118,
     "googleMapsUrl": "https://maps.google.com/?cid=1853592989838290725&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJc_-h-YLYuxQRO3nZ_gIzxRw",
@@ -5397,7 +6003,9 @@
     "puan": 5,
     "yorumSayisi": 79,
     "googleMapsUrl": "https://maps.google.com/?cid=2073119291432597819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiUaw9QfHm6YRCXMRFDos3Ow",
@@ -5417,7 +6025,9 @@
     "puan": 5,
     "yorumSayisi": 7,
     "googleMapsUrl": "https://maps.google.com/?cid=17067565315783750409&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ8XotrTfZuxQRDjS01NzM2m0",
@@ -5437,7 +6047,9 @@
     "puan": 5,
     "yorumSayisi": 164,
     "googleMapsUrl": "https://maps.google.com/?cid=7915864543890519054&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ9SvwqbfXuxQR4f3piW9vjzU",
@@ -5457,7 +6069,9 @@
     "puan": 4.9,
     "yorumSayisi": 108,
     "googleMapsUrl": "https://maps.google.com/?cid=3859425930525670881&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJe2sMbdfYuxQRV0dGJoFhK-o",
@@ -5478,7 +6092,9 @@
     "puan": 4,
     "yorumSayisi": 4,
     "googleMapsUrl": "https://maps.google.com/?cid=16873687636194510679&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJW9-XdTnfuxQRtN8j-Pra3V4",
@@ -5498,7 +6114,9 @@
     "puan": 4.4,
     "yorumSayisi": 30,
     "googleMapsUrl": "https://maps.google.com/?cid=6835860580858060724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJSyXXFW1huRQRf7lxw5UyxQI",
@@ -5519,7 +6137,9 @@
     "puan": 4.9,
     "yorumSayisi": 246,
     "googleMapsUrl": "https://maps.google.com/?cid=199621377298381183&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJn-1eqRJfuRQR8AGG5L5Ko_8",
@@ -5539,7 +6159,9 @@
     "puan": 4.6,
     "yorumSayisi": 22,
     "googleMapsUrl": "https://maps.google.com/?cid=18420649084613689840&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJeafS5y3ZuxQRU16KnKoAukU",
@@ -5560,7 +6182,9 @@
     "puan": 5,
     "yorumSayisi": 5,
     "googleMapsUrl": "https://maps.google.com/?cid=5024329067055963731&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJvxW11wN9uRQRkkE5x7wfGKg",
@@ -5582,7 +6206,9 @@
     "puan": 5,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=12112466093469680018&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJg8_QkR_fuxQREo--7GfEv1o",
@@ -5602,7 +6228,9 @@
     "puan": 5,
     "yorumSayisi": 59,
     "googleMapsUrl": "https://maps.google.com/?cid=6539161134597836562&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJCXheQcnYuxQRgg8eKfaKFR4",
@@ -5622,7 +6250,9 @@
     "puan": 3.3,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=2167791585505185666&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJAU69HI9huRQRSY_koPacwBA",
@@ -5643,7 +6273,9 @@
     "puan": 4.6,
     "yorumSayisi": 64,
     "googleMapsUrl": "https://maps.google.com/?cid=1207137283210514249&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-RoDT7dhuRQR7G0vjvZv9d4",
@@ -5660,7 +6292,9 @@
     "puan": 5,
     "yorumSayisi": 139,
     "googleMapsUrl": "https://maps.google.com/?cid=16065870350452223468&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJnajMrhPfuxQRxRv4kMjb4Wc",
@@ -5677,7 +6311,9 @@
     "puan": 5,
     "yorumSayisi": 50,
     "googleMapsUrl": "https://maps.google.com/?cid=7485505710138596293&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ4xFAQr_fuxQR5z_WBYvy564",
@@ -5695,7 +6331,9 @@
     "puan": 5,
     "yorumSayisi": 40,
     "googleMapsUrl": "https://maps.google.com/?cid=12603308761131925479&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJi-8vXZ7XuxQRJzQGrT3dcL0",
@@ -5713,7 +6351,9 @@
     "puan": 4.6,
     "yorumSayisi": 264,
     "googleMapsUrl": "https://maps.google.com/?cid=13650653727525581863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJt0U7dY7XuxQRec_Eh-CEUvQ",
@@ -5731,7 +6371,9 @@
     "puan": 5,
     "yorumSayisi": 610,
     "googleMapsUrl": "https://maps.google.com/?cid=17605279993230053241&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ1YiOsOfj448RhbvLMLNZpAg",
@@ -5749,7 +6391,9 @@
     "puan": 5,
     "yorumSayisi": 31,
     "googleMapsUrl": "https://maps.google.com/?cid=622721274636647301&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQbTr9N7YuxQRPuePterpDi4",
@@ -5767,7 +6411,9 @@
     "puan": 4.8,
     "yorumSayisi": 101,
     "googleMapsUrl": "https://maps.google.com/?cid=3318847169696360254&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJS-WLUQDfuxQRHh6zU-Vjc08",
@@ -5785,7 +6431,9 @@
     "puan": 5,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=5725029387920940574&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJhUCBdFzcuxQR4k2UwqXhZBM",
@@ -5802,7 +6450,9 @@
     "puan": 5,
     "yorumSayisi": 94,
     "googleMapsUrl": "https://maps.google.com/?cid=1397489886442048994&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJbQAbfTp9uRQRoL_Q-pWo2ZM",
@@ -5820,7 +6470,9 @@
     "puan": 5,
     "yorumSayisi": 24,
     "googleMapsUrl": "https://maps.google.com/?cid=10653731755633196960&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJc4WG3tHZuxQR0Su-YzMPbKU",
@@ -5837,7 +6489,9 @@
     "puan": 4.7,
     "yorumSayisi": 15,
     "googleMapsUrl": "https://maps.google.com/?cid=11919919027134016465&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJtSlXFBPXuxQRD1m2X8pHq3U",
@@ -5855,7 +6509,9 @@
     "puan": 5,
     "yorumSayisi": 606,
     "googleMapsUrl": "https://maps.google.com/?cid=8478949657969842447&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJg71oqzF9uRQRSYWAU0PqMgY",
@@ -5872,7 +6528,9 @@
     "puan": 4.8,
     "yorumSayisi": 117,
     "googleMapsUrl": "https://maps.google.com/?cid=446676887947740489&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQQlDexXZuxQROOSvNCWq_a8",
@@ -5889,7 +6547,9 @@
     "puan": 5,
     "yorumSayisi": 54,
     "googleMapsUrl": "https://maps.google.com/?cid=12681479202519639096&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJyzo3g-HfuxQRbYmaRONkyUo",
@@ -5907,7 +6567,9 @@
     "puan": 5,
     "yorumSayisi": 5,
     "googleMapsUrl": "https://maps.google.com/?cid=5388949356396841325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJCXiNiT47uRQR0UEexRse_pg",
@@ -5924,7 +6586,9 @@
     "puan": 4.9,
     "yorumSayisi": 58,
     "googleMapsUrl": "https://maps.google.com/?cid=11024282042469597649&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJDSQI3r7ZuxQRX3lBn23j-40",
@@ -5941,7 +6605,9 @@
     "puan": 4.9,
     "yorumSayisi": 139,
     "googleMapsUrl": "https://maps.google.com/?cid=10231021038465022303&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJmTiHz4RjuRQRDaThDvXo2o8",
@@ -5958,7 +6624,9 @@
     "puan": 5,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=10365853631560918029&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJAcAx8zPduxQRDh52X8rAXis",
@@ -5975,7 +6643,9 @@
     "puan": 5,
     "yorumSayisi": 9,
     "googleMapsUrl": "https://maps.google.com/?cid=3125147166859206158&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJTXGBmLliuRQR3ip9IUNxkfk",
@@ -5992,7 +6662,9 @@
     "puan": 4.6,
     "yorumSayisi": 190,
     "googleMapsUrl": "https://maps.google.com/?cid=17983279320205699806&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJa5eOmeXZuxQRBHZmHSqMjbg",
@@ -6009,7 +6681,9 @@
     "puan": 4.6,
     "yorumSayisi": 91,
     "googleMapsUrl": "https://maps.google.com/?cid=13298439387204711940&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ9STp_3zCAAsRWwpA1goKz9k",
@@ -6027,7 +6701,9 @@
     "puan": 5,
     "yorumSayisi": 32,
     "googleMapsUrl": "https://maps.google.com/?cid=15694774268069939803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJs0O3dLliuRQRckBsMwIgf9M",
@@ -6044,7 +6720,9 @@
     "puan": 5,
     "yorumSayisi": 95,
     "googleMapsUrl": "https://maps.google.com/?cid=15239934857869803634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJyw01vG7ZuxQRax20VatM3yk",
@@ -6061,7 +6739,9 @@
     "puan": 5,
     "yorumSayisi": 15,
     "googleMapsUrl": "https://maps.google.com/?cid=3017214574122507627&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJWfoWATLfuxQRk9ZIhVZ0kwk",
@@ -6078,7 +6758,9 @@
     "puan": 4.6,
     "yorumSayisi": 176,
     "googleMapsUrl": "https://maps.google.com/?cid=690023082869970579&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJzUzpQZDfuxQRXTDoVYMmznQ",
@@ -6095,7 +6777,9 @@
     "puan": 4.9,
     "yorumSayisi": 321,
     "googleMapsUrl": "https://maps.google.com/?cid=8416707099125887069&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJDyUU-jd9uRQROThiosEwYDA",
@@ -6112,7 +6796,9 @@
     "puan": 4.8,
     "yorumSayisi": 129,
     "googleMapsUrl": "https://maps.google.com/?cid=3485839719795931193&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlXVeki_fuxQRDbUFtLBdWyg",
@@ -6129,7 +6815,9 @@
     "puan": 3.8,
     "yorumSayisi": 234,
     "googleMapsUrl": "https://maps.google.com/?cid=2908020997913687309&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-XqaAKXfuxQRoHJ3WdQjwmw",
@@ -6146,7 +6834,9 @@
     "puan": 4.6,
     "yorumSayisi": 198,
     "googleMapsUrl": "https://maps.google.com/?cid=7836865696519123616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ9arJgNzfuxQRjN4DNf5YWKo",
@@ -6163,7 +6853,9 @@
     "puan": 4.9,
     "yorumSayisi": 146,
     "googleMapsUrl": "https://maps.google.com/?cid=12274658633232670348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJm4NEqlbfuxQR7cDW2mhTuI8",
@@ -6180,7 +6872,9 @@
     "puan": 5,
     "yorumSayisi": 27,
     "googleMapsUrl": "https://maps.google.com/?cid=10356119052951666925&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJYeOfk4_fuxQR8XKTszqZUsQ",
@@ -6197,7 +6891,9 @@
     "puan": 4.9,
     "yorumSayisi": 116,
     "googleMapsUrl": "https://maps.google.com/?cid=14146537856924087025&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJbZ9Ogut9uRQR_HRGvyzQpeA",
@@ -6214,7 +6910,9 @@
     "puan": 4.6,
     "yorumSayisi": 72,
     "googleMapsUrl": "https://maps.google.com/?cid=16187573326259320060&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQ-Ltc-7ZuxQR9RVi1fkkqLE",
@@ -6231,7 +6929,9 @@
     "puan": 5,
     "yorumSayisi": 27,
     "googleMapsUrl": "https://maps.google.com/?cid=12801522596246066677&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQ0gcc63ZuxQRulAFrYDeZpM",
@@ -6248,7 +6948,9 @@
     "puan": 5,
     "yorumSayisi": 94,
     "googleMapsUrl": "https://maps.google.com/?cid=10621421415439880378&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ7XOaS5bfuxQRy43LgkGoUeI",
@@ -6265,7 +6967,9 @@
     "puan": 5,
     "yorumSayisi": 60,
     "googleMapsUrl": "https://maps.google.com/?cid=16308000725005995467&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJCcsPFeHZuxQR-XNoXr8X4Us",
@@ -6282,7 +6986,9 @@
     "puan": 4.8,
     "yorumSayisi": 214,
     "googleMapsUrl": "https://maps.google.com/?cid=5467677533294588921&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpX0Ot_LfuxQRQQ2bqYnXvys",
@@ -6299,7 +7005,9 @@
     "puan": 5,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=3152475250438638913&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJc3GubGDZuxQRI0sHYIX6R7M",
@@ -6316,7 +7024,9 @@
     "puan": 4.9,
     "yorumSayisi": 44,
     "googleMapsUrl": "https://maps.google.com/?cid=12918569506884242211&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJM_wKH7TYuxQRJSnv_Bm3iWQ",
@@ -6333,7 +7043,9 @@
     "puan": 4.8,
     "yorumSayisi": 73,
     "googleMapsUrl": "https://maps.google.com/?cid=7244522797847750949&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiUmwSXC4nSYRMU5N7n92sNA",
@@ -6350,7 +7062,9 @@
     "puan": 5,
     "yorumSayisi": 4,
     "googleMapsUrl": "https://maps.google.com/?cid=15037649447621054001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJX6ZXYMzfuxQRmoQ1l-FmzuU",
@@ -6373,7 +7087,9 @@
     "puan": 4.9,
     "yorumSayisi": 224,
     "googleMapsUrl": "https://maps.google.com/?cid=16559285998978434202&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdwaKhGthuRQRsRYaHBgz9ao",
@@ -6390,7 +7106,9 @@
     "puan": 5,
     "yorumSayisi": 119,
     "googleMapsUrl": "https://maps.google.com/?cid=12318808534385563313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJc6VGUHzYuxQRSDdqjUGI5Kg",
@@ -6413,7 +7131,9 @@
     "puan": 4.6,
     "yorumSayisi": 400,
     "googleMapsUrl": "https://maps.google.com/?cid=12170001908188723016&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJN_9GMfvZuxQRvI4M_6vGoO4",
@@ -6430,7 +7150,9 @@
     "puan": 5,
     "yorumSayisi": 12,
     "googleMapsUrl": "https://maps.google.com/?cid=17194961819321274044&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJoWWFtwBiuRQRfRwedffQCiE",
@@ -6453,7 +7175,9 @@
     "puan": 4.9,
     "yorumSayisi": 35,
     "googleMapsUrl": "https://maps.google.com/?cid=2380945114259135613&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpfl3_EjZuxQRwkFgnb7MTTE",
@@ -6470,7 +7194,9 @@
     "puan": 4.8,
     "yorumSayisi": 27,
     "googleMapsUrl": "https://maps.google.com/?cid=3552720800121373122&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJxbyWOgdiuRQRJlKfSHQGRyo",
@@ -6493,7 +7219,9 @@
     "puan": 4.5,
     "yorumSayisi": 98,
     "googleMapsUrl": "https://maps.google.com/?cid=3046410769443803686&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJw2muOsbfuxQRfC2Dj0s0Qsc",
@@ -6510,7 +7238,9 @@
     "puan": 5,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=14358096061145492860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJUbTCjv3XuxQRvm8KxIrmE6o",
@@ -6533,7 +7263,9 @@
     "puan": 4.6,
     "yorumSayisi": 72,
     "googleMapsUrl": "https://maps.google.com/?cid=12255392494674145214&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJB8SD9-B9uRQRkgO2zf0L-iQ",
@@ -6550,7 +7282,9 @@
     "puan": 5,
     "yorumSayisi": 25,
     "googleMapsUrl": "https://maps.google.com/?cid=2664455314248958866&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJa73_6rF9uRQRsjLCxhiJ-Bs",
@@ -6573,7 +7307,9 @@
     "puan": 5,
     "yorumSayisi": 237,
     "googleMapsUrl": "https://maps.google.com/?cid=2015511572755133106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ2Z9i18J9uRQRI92TxOBpgq4",
@@ -6590,7 +7326,9 @@
     "puan": 4.7,
     "yorumSayisi": 75,
     "googleMapsUrl": "https://maps.google.com/?cid=12574729523663461667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJU9rRrD3fuxQRLtIO4hADOPo",
@@ -6607,7 +7345,9 @@
     "puan": 5,
     "yorumSayisi": 19,
     "googleMapsUrl": "https://maps.google.com/?cid=18030164479224762926&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJqxrDi7nZuxQRytEODhze1y4",
@@ -6624,7 +7364,9 @@
     "puan": 4.4,
     "yorumSayisi": 70,
     "googleMapsUrl": "https://maps.google.com/?cid=3375410657813778890&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJXa9IA3fuxQR_UvWTl9nWYI",
@@ -6641,7 +7383,9 @@
     "puan": 5,
     "yorumSayisi": 6,
     "googleMapsUrl": "https://maps.google.com/?cid=9392652156900101117&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJGf0Y1SHhuxQRDijjpBtr39E",
@@ -6658,7 +7402,9 @@
     "puan": 4.8,
     "yorumSayisi": 41,
     "googleMapsUrl": "https://maps.google.com/?cid=15122923840208054286&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJBVBoGPLeuxQR3AgvRxQbv8A",
@@ -6675,7 +7421,9 @@
     "puan": 4.9,
     "yorumSayisi": 40,
     "googleMapsUrl": "https://maps.google.com/?cid=13888849549741459676&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrdl-_yTfuxQRaYZhn6dQtnk",
@@ -6692,7 +7440,9 @@
     "puan": 5,
     "yorumSayisi": 42,
     "googleMapsUrl": "https://maps.google.com/?cid=8770286005214348905&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJuVrxnXnZuxQR-nGAK88rwcc",
@@ -6709,7 +7459,9 @@
     "puan": 5,
     "yorumSayisi": 325,
     "googleMapsUrl": "https://maps.google.com/?cid=14393834052840878586&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJh5NWfNjYuxQRBuhlZDZJnRg",
@@ -6732,7 +7484,9 @@
     "puan": 4.8,
     "yorumSayisi": 57,
     "googleMapsUrl": "https://maps.google.com/?cid=1773654326215305222&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJVWWrRErZuxQRRSAW5GpSSJc",
@@ -6749,7 +7503,9 @@
     "puan": 5,
     "yorumSayisi": 21,
     "googleMapsUrl": "https://maps.google.com/?cid=10901053517096951877&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMSMmRS7ZuxQRZlTVuBefM-E",
@@ -6772,7 +7528,9 @@
     "puan": 4.9,
     "yorumSayisi": 223,
     "googleMapsUrl": "https://maps.google.com/?cid=16227488806580081766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZ218bSMv9wkRtfH8Azu1QEE",
@@ -6789,7 +7547,9 @@
     "puan": 5,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=4701957276049404341&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJbdculYfZuxQReGWuV6nhbcY",
@@ -6806,7 +7566,9 @@
     "puan": 4.4,
     "yorumSayisi": 77,
     "googleMapsUrl": "https://maps.google.com/?cid=14298332509407962488&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJKX9wIaDZuxQRNXxcii93EiA",
@@ -6823,7 +7585,9 @@
     "puan": 4.3,
     "yorumSayisi": 12,
     "googleMapsUrl": "https://maps.google.com/?cid=2311040604862970933&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJFTH9fDTfuxQR_zyy7jfj9MM",
@@ -6840,7 +7604,9 @@
     "puan": 4.8,
     "yorumSayisi": 53,
     "googleMapsUrl": "https://maps.google.com/?cid=14120160561080712447&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ6_Vil4PZuxQRwv7HWEJTde4",
@@ -6864,7 +7630,9 @@
     "puan": 3.7,
     "yorumSayisi": 289,
     "googleMapsUrl": "https://maps.google.com/?cid=17182731497724444354&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJsZ4JCE3ZuxQRWYIi7oanIVw",
@@ -6887,7 +7655,9 @@
     "puan": 4.5,
     "yorumSayisi": 12,
     "googleMapsUrl": "https://maps.google.com/?cid=6638771523683517017&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJTQeBiTN9uRQRVSypCUnvKPQ",
@@ -6904,7 +7674,9 @@
     "puan": 3.9,
     "yorumSayisi": 537,
     "googleMapsUrl": "https://maps.google.com/?cid=17593575041296575573&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJd2LoZS7fuxQRxMf5a9O5uk0",
@@ -6921,7 +7693,9 @@
     "puan": 5,
     "yorumSayisi": 2,
     "googleMapsUrl": "https://maps.google.com/?cid=5600993404289402820&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJIY3WuQLfuxQRs_gTjBIzpU4",
@@ -6938,7 +7712,9 @@
     "puan": 4,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=5666991860868184243&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJfalChCbfuxQRyqGZWq_V0DM",
@@ -6955,7 +7731,9 @@
     "puan": 3.5,
     "yorumSayisi": 6,
     "googleMapsUrl": "https://maps.google.com/?cid=3733719040206152138&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJwchmR51juRQRG8Mb_Qzgao8",
@@ -6972,7 +7750,9 @@
     "puan": 5,
     "yorumSayisi": 14,
     "googleMapsUrl": "https://maps.google.com/?cid=10334318641345708827&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrdfev3nYuxQRttl0GeL-yws",
@@ -6989,7 +7769,9 @@
     "puan": 4.6,
     "yorumSayisi": 42,
     "googleMapsUrl": "https://maps.google.com/?cid=850053201732622774&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJC6imtEnfuxQRXI8ixiRae2k",
@@ -7006,7 +7788,9 @@
     "puan": 4.8,
     "yorumSayisi": 237,
     "googleMapsUrl": "https://maps.google.com/?cid=7600767910107320156&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJ-hhW4rquxQRkcDRgCbJhYk",
@@ -7023,7 +7807,9 @@
     "puan": 4.4,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=9909547722305814673&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJteHy7D7fuxQRjQYAwYLZq3o",
@@ -7040,7 +7826,9 @@
     "puan": 4.3,
     "yorumSayisi": 6,
     "googleMapsUrl": "https://maps.google.com/?cid=8839397849251710605&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ55q0xGV6uRQR0WKchSGCc4w",
@@ -7057,7 +7845,9 @@
     "puan": 3.8,
     "yorumSayisi": 182,
     "googleMapsUrl": "https://maps.google.com/?cid=10120575868118786769&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3dMXxTWHxU4RMUXbFExdlkw",
@@ -7074,7 +7864,9 @@
     "puan": 5,
     "yorumSayisi": 50,
     "googleMapsUrl": "https://maps.google.com/?cid=5518700974737933617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJLaLgOcbZuxQRM5yr73mTEi4",
@@ -7091,7 +7883,9 @@
     "puan": 3,
     "yorumSayisi": 74,
     "googleMapsUrl": "https://maps.google.com/?cid=3319878027246804019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJEwAAAHBduRQRMZGidtd3ckY",
@@ -7108,7 +7902,9 @@
     "puan": 4.5,
     "yorumSayisi": 48,
     "googleMapsUrl": "https://maps.google.com/?cid=5076251497292009777&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJSwQGoFHZuxQRtVEDXzAzpy4",
@@ -7125,7 +7921,9 @@
     "puan": 5,
     "yorumSayisi": 160,
     "googleMapsUrl": "https://maps.google.com/?cid=3361711929700864437&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdYaVInnYuxQRwQZTkD1fEJE",
@@ -7142,7 +7940,9 @@
     "puan": 3.3,
     "yorumSayisi": 35,
     "googleMapsUrl": "https://maps.google.com/?cid=10452959453145925313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJvQx4Ag8d8SsRh0Guv1onDfU",
@@ -7159,7 +7959,9 @@
     "puan": 5,
     "yorumSayisi": 80,
     "googleMapsUrl": "https://maps.google.com/?cid=17657812984705991047&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJz06ViwjZuxQRSKA9ft4DwFU",
@@ -7176,7 +7978,9 @@
     "puan": 5,
     "yorumSayisi": 116,
     "googleMapsUrl": "https://maps.google.com/?cid=6178942942887911496&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3RHs-fnZuxQR_Mujr0RNk-c",
@@ -7193,7 +7997,9 @@
     "puan": 4.6,
     "yorumSayisi": 97,
     "googleMapsUrl": "https://maps.google.com/?cid=16686766001737681916&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_aBy8PDYuxQRrbw2Cvnjm8E",
@@ -7210,7 +8016,9 @@
     "puan": 4.8,
     "yorumSayisi": 1120,
     "googleMapsUrl": "https://maps.google.com/?cid=13950994929467964589&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJBwNAm_DYuxQRh8y4MVjysoQ",
@@ -7227,7 +8035,9 @@
     "puan": 4.9,
     "yorumSayisi": 85,
     "googleMapsUrl": "https://maps.google.com/?cid=9561971419466222727&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJ-yupbXYuxQRmSQon2vmr-Y",
@@ -7244,7 +8054,9 @@
     "puan": 5,
     "yorumSayisi": 286,
     "googleMapsUrl": "https://maps.google.com/?cid=16622758099553887385&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQ5sR8_DYuxQRvpL4Tb9Ivdk",
@@ -7261,7 +8073,9 @@
     "puan": 4.9,
     "yorumSayisi": 39,
     "googleMapsUrl": "https://maps.google.com/?cid=15689776663312765630&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ7wdfSPfYuxQRFLBsX_nu5fw",
@@ -7278,7 +8092,9 @@
     "puan": 4.1,
     "yorumSayisi": 370,
     "googleMapsUrl": "https://maps.google.com/?cid=18223234222039805972&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrSxnT8jZuxQROLhBczxTVRQ",
@@ -7295,7 +8111,9 @@
     "puan": 4.3,
     "yorumSayisi": 68,
     "googleMapsUrl": "https://maps.google.com/?cid=1465168772875794488&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJG1AHaF_ZuxQRFo9PE87iWho",
@@ -7312,7 +8130,9 @@
     "puan": 4.9,
     "yorumSayisi": 374,
     "googleMapsUrl": "https://maps.google.com/?cid=1899079567605206806&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ47BYWofZuxQR24mHCZQP78Q",
@@ -7329,7 +8149,9 @@
     "puan": 5,
     "yorumSayisi": 264,
     "googleMapsUrl": "https://maps.google.com/?cid=14190578079357176283&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJVXX1LNDZuxQRRy716kVdMb4",
@@ -7346,7 +8168,9 @@
     "puan": 5,
     "yorumSayisi": 15,
     "googleMapsUrl": "https://maps.google.com/?cid=13704837695941193287&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ0Sx1ECPZuxQRE9wmvjKhcVw",
@@ -7363,7 +8187,9 @@
     "puan": 5,
     "yorumSayisi": 51,
     "googleMapsUrl": "https://maps.google.com/?cid=6661282563168328723&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJqdrXg2fZuxQRJK306x_VjwU",
@@ -7380,7 +8206,9 @@
     "puan": 5,
     "yorumSayisi": 52,
     "googleMapsUrl": "https://maps.google.com/?cid=400773224938646820&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJe218HaLZuxQR80KgCULcS3w",
@@ -7397,7 +8225,9 @@
     "puan": 5,
     "yorumSayisi": 248,
     "googleMapsUrl": "https://maps.google.com/?cid=8956494460143813363&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJsVMMAH5huRQRIIrfdCljHuI",
@@ -7414,7 +8244,9 @@
     "puan": 5,
     "yorumSayisi": 425,
     "googleMapsUrl": "https://maps.google.com/?cid=16293569531578649120&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJfzkQkmLZuxQRD-ZkQqwwZ-U",
@@ -7431,7 +8263,9 @@
     "puan": 5,
     "yorumSayisi": 3,
     "googleMapsUrl": "https://maps.google.com/?cid=16530234473693111823&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ1Sen9El9uRQRXluluTpxa8U",
@@ -7448,7 +8282,9 @@
     "puan": 4.7,
     "yorumSayisi": 118,
     "googleMapsUrl": "https://maps.google.com/?cid=14225588345016507230&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJXWUgkOjZuxQRmXJBgc5TiAA",
@@ -7465,7 +8301,9 @@
     "puan": 5,
     "yorumSayisi": 175,
     "googleMapsUrl": "https://maps.google.com/?cid=38372743229567641&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJaVVVFfrYuxQRjRoeZOty6Fs",
@@ -7482,7 +8320,9 @@
     "puan": 3.9,
     "yorumSayisi": 7,
     "googleMapsUrl": "https://maps.google.com/?cid=6622669607370889869&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJO51e1b3ZuxQRJAx10jDK0Bg",
@@ -7499,7 +8339,9 @@
     "puan": 5,
     "yorumSayisi": 21,
     "googleMapsUrl": "https://maps.google.com/?cid=1788151363104214052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJr22E43XZuxQRhurDpgLzf3g",
@@ -7516,7 +8358,9 @@
     "puan": 5,
     "yorumSayisi": 6,
     "googleMapsUrl": "https://maps.google.com/?cid=8682925799306947206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ1S7SffDYuxQRB5vPqgsodtM",
@@ -7533,7 +8377,9 @@
     "puan": 5,
     "yorumSayisi": 2,
     "googleMapsUrl": "https://maps.google.com/?cid=15237410419830135559&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJD10Zz97YuxQR8zKn5qAWFGI",
@@ -7550,7 +8396,9 @@
     "puan": 4.9,
     "yorumSayisi": 161,
     "googleMapsUrl": "https://maps.google.com/?cid=7067298595571446515&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJf6sjZt_RuxQR7fHHbBjrurw",
@@ -7567,7 +8415,9 @@
     "puan": 4.9,
     "yorumSayisi": 78,
     "googleMapsUrl": "https://maps.google.com/?cid=13599440514935419373&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJqdeceMFiuRQRGwlxzpsZga8",
@@ -7584,7 +8434,9 @@
     "puan": 4.7,
     "yorumSayisi": 7,
     "googleMapsUrl": "https://maps.google.com/?cid=12646417385607203099&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJi_P43_NhuRQRiW_H8n0kwj4",
@@ -7601,7 +8453,9 @@
     "puan": 5,
     "yorumSayisi": 10,
     "googleMapsUrl": "https://maps.google.com/?cid=4522217099196067721&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJLZdVXuDZuxQRtKZ787yLTGc",
@@ -7618,7 +8472,9 @@
     "puan": 4.9,
     "yorumSayisi": 19,
     "googleMapsUrl": "https://maps.google.com/?cid=7443477927791666868&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJzzeVl-TZuxQRaYsoBWfPHMQ",
@@ -7635,7 +8491,9 @@
     "puan": 4.3,
     "yorumSayisi": 24,
     "googleMapsUrl": "https://maps.google.com/?cid=14131397772156898153&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJb17k1djYuxQRdV2inr5VlCQ",
@@ -7652,7 +8510,9 @@
     "puan": 4.8,
     "yorumSayisi": 20,
     "googleMapsUrl": "https://maps.google.com/?cid=2635825959112170869&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJRQqBU5rZuxQR-mCnx4yubvc",
@@ -7669,7 +8529,9 @@
     "puan": 4.2,
     "yorumSayisi": 56,
     "googleMapsUrl": "https://maps.google.com/?cid=17829379894474662138&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_9pYBodjuRQRYnJNfap4ho4",
@@ -7686,7 +8548,9 @@
     "puan": 5,
     "yorumSayisi": 5,
     "googleMapsUrl": "https://maps.google.com/?cid=10270028673906995810&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJyzfvpPfZuxQR1EHTZ7ErwQg",
@@ -7703,7 +8567,9 @@
     "puan": 5,
     "yorumSayisi": 7,
     "googleMapsUrl": "https://maps.google.com/?cid=630833463759684052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ06MfR_HYuxQRnJOQxK_57xY",
@@ -7721,7 +8587,9 @@
     "puan": 4.9,
     "yorumSayisi": 358,
     "googleMapsUrl": "https://maps.google.com/?cid=1652814121580663708&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJU1lIG6rYuxQRbgwbBKQe55A",
@@ -7739,7 +8607,9 @@
     "puan": 4.8,
     "yorumSayisi": 233,
     "googleMapsUrl": "https://maps.google.com/?cid=10441347950874135662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJkUdwgvhhuRQRIgPPstNAyd0",
@@ -7757,7 +8627,9 @@
     "puan": 4.9,
     "yorumSayisi": 455,
     "googleMapsUrl": "https://maps.google.com/?cid=15981376030683104034&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJx9iozPDYuxQREKWJ86qeOAI",
@@ -7775,7 +8647,9 @@
     "puan": 4.9,
     "yorumSayisi": 179,
     "googleMapsUrl": "https://maps.google.com/?cid=160052243839165712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-6YRqALcuxQRYertgBl9JGI",
@@ -7793,7 +8667,9 @@
     "puan": 4.9,
     "yorumSayisi": 358,
     "googleMapsUrl": "https://maps.google.com/?cid=7071914863369251425&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJiXJXAfrYuxQRxsXoIK6FU-c",
@@ -7810,7 +8686,9 @@
     "puan": 4.9,
     "yorumSayisi": 77,
     "googleMapsUrl": "https://maps.google.com/?cid=16668813628751267270&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJs8NuOQNiuRQRO_2t5AvH-oY",
@@ -7828,7 +8706,9 @@
     "puan": 4.9,
     "yorumSayisi": 100,
     "googleMapsUrl": "https://maps.google.com/?cid=9726305199155182907&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJy0ePpgHZuxQRNcVC-fY8EmQ",
@@ -7846,7 +8726,9 @@
     "puan": 5,
     "yorumSayisi": 70,
     "googleMapsUrl": "https://maps.google.com/?cid=7210892984815109429&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJoa0jmmPfuxQRayGz_EXaAcg",
@@ -7864,7 +8746,9 @@
     "puan": 4.9,
     "yorumSayisi": 462,
     "googleMapsUrl": "https://maps.google.com/?cid=14412040276689494379&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ60GuM1TZuxQR_lN2hgKfSCk",
@@ -7882,7 +8766,9 @@
     "puan": 4.5,
     "yorumSayisi": 130,
     "googleMapsUrl": "https://maps.google.com/?cid=2974802387072865278&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJQ_fGBSLfuxQRTW8szK9eMeM",
@@ -7900,7 +8786,9 @@
     "puan": 5,
     "yorumSayisi": 137,
     "googleMapsUrl": "https://maps.google.com/?cid=16370970229606215501&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMYi5zPDYuxQRRumUvFKwW64",
@@ -7917,7 +8805,9 @@
     "puan": 5,
     "yorumSayisi": 76,
     "googleMapsUrl": "https://maps.google.com/?cid=12563829454877813062&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ39Tv5fDYuxQRyGtyBTNq4gU",
@@ -7935,7 +8825,9 @@
     "puan": 4.2,
     "yorumSayisi": 116,
     "googleMapsUrl": "https://maps.google.com/?cid=424018082293509064&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJG9xXLVvfuxQRz56x8fTczv0",
@@ -7952,7 +8844,9 @@
     "puan": 5,
     "yorumSayisi": 30,
     "googleMapsUrl": "https://maps.google.com/?cid=18288798081383243471&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJdYw4dgPZuxQR-VNjCU-C4wg",
@@ -7969,7 +8863,9 @@
     "puan": 5,
     "yorumSayisi": 83,
     "googleMapsUrl": "https://maps.google.com/?cid=640498847988274169&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJuVuMS_fYuxQRBGelVida9uM",
@@ -7986,7 +8882,9 @@
     "puan": 4.8,
     "yorumSayisi": 47,
     "googleMapsUrl": "https://maps.google.com/?cid=16426415815884367620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJyTBAgdrYuxQRWCt4Zz6DOrs",
@@ -8003,7 +8901,9 @@
     "puan": 4.7,
     "yorumSayisi": 302,
     "googleMapsUrl": "https://maps.google.com/?cid=13491239937788881752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZyJXbsnZuxQR39EyXA8Po6w",
@@ -8020,7 +8920,9 @@
     "puan": 4.5,
     "yorumSayisi": 227,
     "googleMapsUrl": "https://maps.google.com/?cid=12439803154373202399&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ2YOvRkRjuRQRdyXahDWfFg0",
@@ -8037,7 +8939,9 @@
     "puan": 5,
     "yorumSayisi": 29,
     "googleMapsUrl": "https://maps.google.com/?cid=943116224191669623&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_SGkdd98uRQR98tCbqvHEH8",
@@ -8054,7 +8958,9 @@
     "puan": 5,
     "yorumSayisi": 92,
     "googleMapsUrl": "https://maps.google.com/?cid=9156037581547424759&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJKS5dRC_ZuxQRs52RkvOJ9e0",
@@ -8071,7 +8977,9 @@
     "puan": 4.9,
     "yorumSayisi": 99,
     "googleMapsUrl": "https://maps.google.com/?cid=17146762835512106419&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJkV-qUdPeuxQR01oMQ6H1Dwo",
@@ -8088,7 +8996,9 @@
     "puan": 4.1,
     "yorumSayisi": 61,
     "googleMapsUrl": "https://maps.google.com/?cid=725068137993362131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ8w5K3IFjuRQR4eQNPoo_JII",
@@ -8105,7 +9015,9 @@
     "puan": 5,
     "yorumSayisi": 87,
     "googleMapsUrl": "https://maps.google.com/?cid=9377690187071349985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJY3tg-M3euxQR4FsNp1pigTA",
@@ -8122,7 +9034,9 @@
     "puan": 4.9,
     "yorumSayisi": 132,
     "googleMapsUrl": "https://maps.google.com/?cid=3495182927305464800&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJARPymvHYuxQRnBvLqF95WCU",
@@ -8139,7 +9053,9 @@
     "puan": 4.9,
     "yorumSayisi": 189,
     "googleMapsUrl": "https://maps.google.com/?cid=2691034229114608540&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJY1WuFN98uRQRotPI26cE4xU",
@@ -8156,7 +9072,9 @@
     "puan": 4.7,
     "yorumSayisi": 58,
     "googleMapsUrl": "https://maps.google.com/?cid=1577109413503226786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJJyZj9PTYuxQR8p3XuSOdLdM",
@@ -8173,7 +9091,9 @@
     "puan": 5,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=15216991492722105842&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpwyMlUfcuxQRJMdCWkCXz44",
@@ -8190,7 +9110,9 @@
     "puan": 5,
     "yorumSayisi": 20,
     "googleMapsUrl": "https://maps.google.com/?cid=10290609976212899620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJWQucSi3ZuxQRc-oIP9Pze1U",
@@ -8207,7 +9129,9 @@
     "puan": 4.6,
     "yorumSayisi": 171,
     "googleMapsUrl": "https://maps.google.com/?cid=6159785003980483187&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ7wdfSPfYuxQRXdUJVP1efUs",
@@ -8224,7 +9148,9 @@
     "puan": 4.2,
     "yorumSayisi": 5,
     "googleMapsUrl": "https://maps.google.com/?cid=5439608367063094621&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJS8eOh1zYuxQRNRNPCMLjsgE",
@@ -8241,7 +9167,9 @@
     "puan": 5,
     "yorumSayisi": 95,
     "googleMapsUrl": "https://maps.google.com/?cid=122410562394985269&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJA4mgWUHcuxQR-Pg-wTJX3aw",
@@ -8258,7 +9186,9 @@
     "puan": 4.8,
     "yorumSayisi": 259,
     "googleMapsUrl": "https://maps.google.com/?cid=12456208019878770936&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJnYQcTffYuxQRRQn8gtvDghg",
@@ -8275,7 +9205,9 @@
     "puan": 4.6,
     "yorumSayisi": 300,
     "googleMapsUrl": "https://maps.google.com/?cid=1766189351445465413&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJaVVVFfrYuxQRhSwO51oyIEY",
@@ -8292,7 +9224,9 @@
     "puan": 4.6,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=5053094147914607749&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJT3Cz-bjZuxQRqGVbT-HBOxA",
@@ -8309,7 +9243,9 @@
     "puan": 5,
     "yorumSayisi": 522,
     "googleMapsUrl": "https://maps.google.com/?cid=1169741701675967912&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJb6WLoPBhuRQR_ZBffI7P3TU",
@@ -8326,7 +9262,9 @@
     "puan": 4.5,
     "yorumSayisi": 35,
     "googleMapsUrl": "https://maps.google.com/?cid=3881486664742179069&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJDynoqybZuxQRM7MnV2EmlGc",
@@ -8343,7 +9281,9 @@
     "puan": 4.7,
     "yorumSayisi": 31,
     "googleMapsUrl": "https://maps.google.com/?cid=7463632681975657267&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJOVQLklPZuxQRA6c4GiwI-_0",
@@ -8360,7 +9300,9 @@
     "puan": 5,
     "yorumSayisi": 32,
     "googleMapsUrl": "https://maps.google.com/?cid=18301230496261646083&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJsTTLRvrYuxQRBYWO0WVqvts",
@@ -8377,7 +9319,9 @@
     "puan": 5,
     "yorumSayisi": 16,
     "googleMapsUrl": "https://maps.google.com/?cid=15834210325421262085&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJOXus2PPYuxQRgAOxvjaR2-U",
@@ -8394,7 +9338,9 @@
     "puan": 4.6,
     "yorumSayisi": 99,
     "googleMapsUrl": "https://maps.google.com/?cid=16562991718898664320&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJlxNvxc3fuxQRPTE0Cu3nMPk",
@@ -8411,7 +9357,9 @@
     "puan": 4.9,
     "yorumSayisi": 17,
     "googleMapsUrl": "https://maps.google.com/?cid=17956106719590625597&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJZbPufh_fuxQRhzqZMWZhG6Y",
@@ -8428,7 +9376,9 @@
     "puan": 4.9,
     "yorumSayisi": 21,
     "googleMapsUrl": "https://maps.google.com/?cid=11969267526213909127&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ_a_2h_TYuxQR5mkFj768228",
@@ -8445,7 +9395,11 @@
     "puan": 4.8,
     "yorumSayisi": 214,
     "googleMapsUrl": "https://maps.google.com/?cid=8060243484738939366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": [
+      "Epson"
+    ]
   },
   {
     "id": "ChIJgZKrF6PYuxQRaP3ywJbHPB8",
@@ -8462,7 +9416,11 @@
     "puan": 4.9,
     "yorumSayisi": 141,
     "googleMapsUrl": "https://maps.google.com/?cid=2250893364074577256&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "platin",
+    "yetkili_markalar": [
+      "Epson"
+    ]
   },
   {
     "id": "ChIJ_VigTdRjuRQR75wde7ZSDi8",
@@ -8479,7 +9437,9 @@
     "puan": 4.4,
     "yorumSayisi": 7,
     "googleMapsUrl": "https://maps.google.com/?cid=3390738513159625967&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJu4UX1DXXuxQREWlS2J3Hrnw",
@@ -8496,7 +9456,9 @@
     "puan": 5,
     "yorumSayisi": 13,
     "googleMapsUrl": "https://maps.google.com/?cid=8984337787403790609&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJIw2ebjXZuxQRwharA_qvd7k",
@@ -8513,7 +9475,9 @@
     "puan": 5,
     "yorumSayisi": 2,
     "googleMapsUrl": "https://maps.google.com/?cid=13364343907583465154&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJrXV4QGtjuRQRj16dnpUAk-M",
@@ -8530,7 +9494,9 @@
     "puan": null,
     "yorumSayisi": 0,
     "googleMapsUrl": "https://maps.google.com/?cid=16398451310797348495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJgzeTCHlhuRQRRr2MrriAmZU",
@@ -8547,7 +9513,9 @@
     "puan": 4.8,
     "yorumSayisi": 24,
     "googleMapsUrl": "https://maps.google.com/?cid=10779788713778789702&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ3-ASpbrYuxQR3efjDfJFgYU",
@@ -8564,7 +9532,11 @@
     "puan": 4.9,
     "yorumSayisi": 23,
     "googleMapsUrl": "https://maps.google.com/?cid=9620047184957532125&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "gold",
+    "yetkili_markalar": [
+      "Epson"
+    ]
   },
   {
     "id": "ChIJS513m3nYuxQR54u8BPOJPl8",
@@ -8586,7 +9558,9 @@
     "puan": 4.1,
     "yorumSayisi": 61,
     "googleMapsUrl": "https://maps.google.com/?cid=6863074559008738279&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ9a4UZn7YuxQR-HAQAxJTzeI",
@@ -8608,7 +9582,9 @@
     "puan": 4.6,
     "yorumSayisi": 65,
     "googleMapsUrl": "https://maps.google.com/?cid=16342809959623323896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ57EasmPZuxQRKSvwgXpEk3w",
@@ -8630,7 +9606,9 @@
     "puan": 4.6,
     "yorumSayisi": 228,
     "googleMapsUrl": "https://maps.google.com/?cid=8976593775236229929&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJY6ylJtDZuxQRI-h5FXhjQQk",
@@ -8652,7 +9630,9 @@
     "puan": 4.6,
     "yorumSayisi": 296,
     "googleMapsUrl": "https://maps.google.com/?cid=666923587235080227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-bOXmFzYuxQR7iNIIXb9NOs",
@@ -8674,7 +9654,9 @@
     "puan": 4.9,
     "yorumSayisi": 41,
     "googleMapsUrl": "https://maps.google.com/?cid=16948449981508363246&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJNw9DjfDYuxQR4g8igg-9i1A",
@@ -8696,7 +9678,9 @@
     "puan": 5,
     "yorumSayisi": 4,
     "googleMapsUrl": "https://maps.google.com/?cid=5803940419102445538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJjbXTZPrYuxQR4G6-H7hcPvU",
@@ -8718,7 +9702,9 @@
     "puan": 4.3,
     "yorumSayisi": 21,
     "googleMapsUrl": "https://maps.google.com/?cid=17671663933724716768&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJSajSnyFjuRQRwetqcR8NHj0",
@@ -8740,7 +9726,9 @@
     "puan": 5,
     "yorumSayisi": 14,
     "googleMapsUrl": "https://maps.google.com/?cid=4403971914312903617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ4_4wOFnYuxQR5o69LqUFb8I",
@@ -8762,7 +9750,9 @@
     "puan": 4.5,
     "yorumSayisi": 8,
     "googleMapsUrl": "https://maps.google.com/?cid=14010423172784819942&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ6zpnJ1N9uRQRI2VRMrT2CxQ",
@@ -8784,7 +9774,9 @@
     "puan": 4.9,
     "yorumSayisi": 175,
     "googleMapsUrl": "https://maps.google.com/?cid=1444519359301117219&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ-0iPPzLZuxQRJp9iTAlNNX4",
@@ -8806,7 +9798,9 @@
     "puan": 4.5,
     "yorumSayisi": 41,
     "googleMapsUrl": "https://maps.google.com/?cid=9094259724876160806&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJvyp7SvnfuxQRhKEvx5pgMh4",
@@ -8828,7 +9822,9 @@
     "puan": 5,
     "yorumSayisi": 32,
     "googleMapsUrl": "https://maps.google.com/?cid=2175907787856388484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJVd_q2998uRQR6vFJtweEpTM",
@@ -8850,7 +9846,9 @@
     "puan": 4.1,
     "yorumSayisi": 261,
     "googleMapsUrl": "https://maps.google.com/?cid=3721525835766297066&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ7a_DSABjuRQRFysnECjx9cw",
@@ -8872,7 +9870,9 @@
     "puan": 5,
     "yorumSayisi": 34,
     "googleMapsUrl": "https://maps.google.com/?cid=14768975707403397911&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJd6ua4PjZuxQRYRFnfCKjr0k",
@@ -8894,7 +9894,15 @@
     "puan": 4.6,
     "yorumSayisi": 127,
     "googleMapsUrl": "https://maps.google.com/?cid=5309641854204449121&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": true
+    "yetkili": true,
+    "tier": "gold",
+    "yetkili_markalar": [
+      "Arzum",
+      "Korkmaz",
+      "Fakir",
+      "Fantom",
+      "Stilevs"
+    ]
   },
   {
     "id": "ChIJ-XbRwjjcuxQRIhjsEAjRLL4",
@@ -8916,7 +9924,9 @@
     "puan": 4.9,
     "yorumSayisi": 13,
     "googleMapsUrl": "https://maps.google.com/?cid=13703557598755428386&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJD_z5OMrfuxQRd508j5V1rpw",
@@ -8938,7 +9948,9 @@
     "puan": 4.9,
     "yorumSayisi": 346,
     "googleMapsUrl": "https://maps.google.com/?cid=11290090601078103415&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "platin",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ74TLZP7ZuxQRnHOLsiVe_gY",
@@ -8960,7 +9972,9 @@
     "puan": 4.9,
     "yorumSayisi": 22,
     "googleMapsUrl": "https://maps.google.com/?cid=503943724314358684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJMZeMc-PYuxQRv3ujoYknyMo",
@@ -8982,7 +9996,9 @@
     "puan": 3.7,
     "yorumSayisi": 3,
     "googleMapsUrl": "https://maps.google.com/?cid=14611972463079422911&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJjeUluPDYuxQRkVa2uT5HZhs",
@@ -9004,7 +10020,9 @@
     "puan": 3.9,
     "yorumSayisi": 177,
     "googleMapsUrl": "https://maps.google.com/?cid=1974343821377820305&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJpSoJhTPZuxQR-Uf72NRjhio",
@@ -9026,7 +10044,9 @@
     "puan": 5,
     "yorumSayisi": 1,
     "googleMapsUrl": "https://maps.google.com/?cid=3064246362296764409&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ14RlAa7euxQR7tPUYMOzJI8",
@@ -9048,7 +10068,9 @@
     "puan": 3.8,
     "yorumSayisi": 105,
     "googleMapsUrl": "https://maps.google.com/?cid=10314566698309833710&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJvUkmp8zZuxQRAvVigdohySA",
@@ -9070,7 +10092,9 @@
     "puan": 4.4,
     "yorumSayisi": 188,
     "googleMapsUrl": "https://maps.google.com/?cid=2362456701889869058&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "gold",
+    "yetkili_markalar": []
   },
   {
     "id": "ChIJ4ecvNETZuxQRLbmqxqkh7BA",
@@ -9092,6 +10116,8 @@
     "puan": 4.1,
     "yorumSayisi": 130,
     "googleMapsUrl": "https://maps.google.com/?cid=1219386612176828717&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "yetkili": false
+    "yetkili": false,
+    "tier": "bronz",
+    "yetkili_markalar": []
   }
 ]

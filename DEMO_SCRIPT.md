@@ -21,9 +21,14 @@
 
 > "Kullanıcı buzdolabının soğutmadığını bildiriyor.
 > Cihazını seçiyor — Buzdolabı.
-> Belirtiyi yazıyor: 'Motor çalışıyor ama soğutmuyor.'"
+> Markayı seçiyor — Arçelik. Bu adım zorunlu."
 
-**Ekran:** Teşhis butonu tıklanıyor, yükleniyor...
+**Ekran:** Marka dropdown açılıyor, 56 marka listesi görünüyor, "Arçelik" seçiliyor
+
+> "Marka seçimi rastgele değil.
+> Cihaz garantiliyse sisteme söylemek için gereken ilk bilgi bu."
+
+**Ekran:** Belirti yazılıyor: 'Motor çalışıyor ama soğutmuyor.' → Teşhis butonu
 
 > "Sunucu bu isteği alıyor ve Anthropic'in Claude modeline iletiyor.
 > Model, gerçek tamir verilerinden beslenmiş fiyat matrisiyle cevap üretiyor."
@@ -36,6 +41,42 @@
 > Yapay zeka fiyatı havadan söylemiyor — yerel tamir verilerine dayanıyor."
 
 **Alt yazı / Callout:** `⚡ Vercel Serverless Function — /api/diagnose`
+
+---
+
+## 🎬 SAHNE 2B — Faz 2: Servis Kademeleri + Garanti Yönlendirmesi
+
+**Ekran:** Teşhis sonucu ekranında "Servis Bul" butonu — kullanıcı tıklamadan önce
+**Araç:** `React` (frontend filtre), `services-data` (498 servis, puanlı)
+
+> "Kullanıcı buzdolabının hâlâ garantili olduğunu biliyor.
+> 'Cihazım garantili' kutusunu işaretliyor."
+
+**Ekran:** Checkbox işaretleniyor → "Servis Bul" tıklanıyor
+
+> "Sistem devreye giriyor.
+> Garantili cihaz için yalnızca Yetkili Servisler listeleniyor.
+> Ekranın üstünde yeşil şerit: 'Arçelik Yetkili Servisine yönlendiriliyorsunuz.'"
+
+**Ekran:** Servis listesi açılıyor — 4 servis kademesi görünüyor
+
+> "Her servisin yanında rozeti var.
+> Yeşil 'YETKİLİ' — üretici onaylı, garanti tamirini karşılar.
+> Mor 'PLATİN' — en yüksek kalite kademesi.
+> Sarı 'GOLD', turuncu 'BRONZ'.
+> Bir servis hem Yetkili hem Platin olabilir."
+
+**Ekran:** Garanti kutusunun işareti kaldırılıyor → liste anında değişiyor, tüm kademeler görünüyor
+
+> "Garanti yoksa tüm servisler açılır.
+> Kullanıcı puana, mesafeye ve kademeye göre seçim yapıyor."
+
+**Alt yazı / Callout:**
+```
+Garanti → sadece yetkili servisler
+Kademe: YETKİLİ · PLATİN · GOLD · BRONZ
+Puan + mesafe + kademe sıralaması
+```
 
 ---
 
@@ -279,9 +320,9 @@ Entegrasyon Seçenekleri:
 **Ekran:** Tüm fazları gösteren dairesel akış şeması
 **Araç:** Tümü bir arada
 
-> "Faz 0: Satın al — DPP otomatik oluşur.
-> Faz 1: Arızalan — AI teşhis eder.
-> Faz 2: Tamir et — doğrulanmış servis gelir.
+> "Faz 0: Satın al — DPP otomatik oluşur, garanti takibi başlar.
+> Faz 1: Arızalan — AI teşhis eder, marka bilir.
+> Faz 2: Tamir et — garanti varsa Yetkili Servis, yoksa Platin / Gold / Bronz.
 > Faz 3: Kayıt — her tamir pasaporta işlenir.
 > Faz 4: Sat — alıcı tam geçmişi görür.
 > Yeni sahibiyle döngü yeniden başlar."
