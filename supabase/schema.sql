@@ -90,6 +90,11 @@ ALTER TABLE is_talepleri
   ADD COLUMN IF NOT EXISTS seri_no      text,
   ADD COLUMN IF NOT EXISTS dpp_tamir_id uuid REFERENCES tamir_kayitlari(id) ON DELETE SET NULL;
 
+-- Puan/Yorum sistemi — yalnız tamamlandi statüsündeki işe yazılabilir
+ALTER TABLE is_talepleri
+  ADD COLUMN IF NOT EXISTS yorum text;
+-- Not: puan int CHECK (puan BETWEEN 1 AND 5) zaten tanımlı (tablo oluşturulurken eklenmiş)
+
 -- Garanti tarihlerinin tanımları:
 -- garanti_baslangic_tarihi: ürün ilk alındığında garanti başlangıç tarihi
 -- garanti_bitis_tarihi (mevcut): standart garanti bitiş tarihi

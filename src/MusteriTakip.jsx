@@ -41,10 +41,84 @@ function AdimNoktasi({ aktif, tamamlandi, renk, label, alt }) {
   );
 }
 
+function YildizFormu({ isNo, mevcutPuan, onBitti }) {
+  const [secili, setSecili]   = useState(mevcutPuan || 0);
+  const [hover, setHover]     = useState(0);
+  const [yorum, setYorum]     = useState("");
+  const [gonderiyor, setGonderiyor] = useState(false);
+  const [hata, setHata]       = useState("");
+
+  const gonder = async () => {
+    if (!secili) { setHata("Lütfen bir puan seç."); return; }
+    setGonderiyor(true); setHata("");
+    try {
+      const res = await fetch("/api/is/puan", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ is_no: isNo, puan: secili, yorum: yorum.trim() || null }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+      onBitti(secili);
+    } catch (e) { setHata(e.message); }
+    setGonderiyor(false);
+  };
+
+  const aktif = hover || secili;
+
+  return (
+    <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "18px 18px", marginTop: 16 }}>
+      <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 12 }}>
+        Bu servisi nasıl buldunuz?
+      </div>
+      {/* Yıldızlar */}
+      <div style={{ display: "flex", gap: 6, marginBottom: 14 }}>
+        {[1, 2, 3, 4, 5].map((n) => (
+          <button
+            key={n}
+            onClick={() => setSecili(n)}
+            onMouseEnter={() => setHover(n)}
+            onMouseLeave={() => setHover(0)}
+            style={{
+              fontSize: 32, background: "none", border: "none", cursor: "pointer",
+              lineHeight: 1, padding: 2,
+              filter: n <= aktif ? "none" : "grayscale(1) opacity(0.35)",
+              transform: n <= aktif ? "scale(1.1)" : "scale(1)",
+              transition: "all .12s",
+            }}
+          >⭐</button>
+        ))}
+      </div>
+      {secili > 0 && (
+        <div style={{ fontSize: 12, color: GRAY, marginBottom: 12, fontWeight: 600 }}>
+          {["", "Çok Kötü", "Kötü", "Orta", "İyi", "Harika!"][secili]}
+        </div>
+      )}
+      <textarea
+        value={yorum}
+        onChange={(e) => setYorum(e.target.value)}
+        placeholder="Yorumunuz (opsiyonel)"
+        rows={2}
+        style={{ width: "100%", padding: "10px 12px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", resize: "vertical", boxSizing: "border-box", marginBottom: 12 }}
+      />
+      {hata && <div style={{ color: RED, fontSize: 13, marginBottom: 8 }}>{hata}</div>}
+      <button
+        onClick={gonder}
+        disabled={!secili || gonderiyor}
+        style={{ width: "100%", padding: 12, borderRadius: 11, border: "none", background: secili ? AMBER : "#CCC", color: "white", fontWeight: 700, fontSize: 14, cursor: secili ? "pointer" : "not-allowed" }}
+      >
+        {gonderiyor ? "Kaydediliyor…" : "Değerlendirmeyi Gönder"}
+      </button>
+    </div>
+  );
+}
+
 export default function MusteriTakip({ isNo }) {
   const [is, setIs] = useState(null);
   const [hata, setHata] = useState("");
   const [yukleniyor, setYukleniyor] = useState(true);
+  const [puanVerildi, setPuanVerildi] = useState(false);
+  const [verilen, setVerilen] = useState(null);
 
   const getir = async () => {
     if (!isNo) { setHata("Geçersiz link"); setYukleniyor(false); return; }
@@ -215,10 +289,31 @@ export default function MusteriTakip({ isNo }) {
               </p>
             )}
 
+            {/* Puan/yorum — tamamlandi, henüz değerlendirilmemiş */}
+            {is.durum === "tamamlandi" && !puanVerildi && is.puan === null && (
+              <YildizFormu
+                isNo={isNo}
+                mevcutPuan={null}
+                onBitti={(p) => { setPuanVerildi(true); setVerilen(p); }}
+              />
+            )}
+
+            {/* Değerlendirme yapılmışsa teşekkür */}
+            {is.durum === "tamamlandi" && (puanVerildi || is.puan !== null) && (
+              <div style={{ background: GREEN + "12", borderRadius: 16, border: `1px solid ${GREEN}33`, padding: "14px 16px", marginTop: 16, textAlign: "center" }}>
+                <div style={{ fontSize: 22, marginBottom: 6 }}>
+                  {"⭐".repeat(verilen || is.puan || 0)}
+                </div>
+                <div style={{ fontWeight: 700, color: GREEN, fontSize: 14 }}>
+                  {puanVerildi ? "Teşekkürler! Değerlendirmeniz kaydedildi." : "Bu işi değerlendirdiniz."}
+                </div>
+              </div>
+            )}
+
             {is.durum === "tamamlandi" && is.cihaz && (
               <a
                 href={`/ikinci-el`}
-                style={{ display: "block", textAlign: "center", marginTop: 20, padding: "13px", borderRadius: 12, border: `1.5px solid ${INK}`, background: "transparent", color: INK, fontWeight: 700, fontSize: 14, textDecoration: "none" }}
+                style={{ display: "block", textAlign: "center", marginTop: 14, padding: "13px", borderRadius: 12, border: `1.5px solid ${INK}`, background: "transparent", color: INK, fontWeight: 700, fontSize: 14, textDecoration: "none" }}
               >
                 🛒 Cihazı Satmak İster misin? → İkinci El Pazaryeri
               </a>

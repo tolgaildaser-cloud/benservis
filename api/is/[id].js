@@ -153,7 +153,7 @@ export default async function handler(req, res) {
     try {
       await sendSMS(
         is.musteri_tel,
-        `İşiniz tamamlandı! ${is.servis_ad} tamir kaydınızı oluşturdu. İş No: #${is.is_no}`
+        `İşiniz tamamlandı! Memnun kaldınız mı? Değerlendirin: benservis.com/takip/${is.is_no}`
       );
     } catch (e) { console.error("SMS hatası (tamamla):", e.message); }
 

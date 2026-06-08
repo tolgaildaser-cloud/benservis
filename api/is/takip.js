@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   const { data: is, error } = await supabase
     .from("is_talepleri")
-    .select("is_no, durum, servis_ad, gelis_penceresi, son_kabul_tarihi, created_at, cihaz")
+    .select("is_no, durum, servis_ad, gelis_penceresi, son_kabul_tarihi, created_at, cihaz, puan")
     .eq("is_no", is_no)
     .single();
 

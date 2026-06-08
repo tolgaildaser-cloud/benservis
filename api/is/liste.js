@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
   const { data: isler, error } = await supabase
     .from("is_talepleri")
-    .select("id, is_no, servis_id, servis_ad, musteri_ad, adres, tarih_tercihi, cihaz, belirti, durum, son_kabul_tarihi, gelis_penceresi, twilio_numara, seri_no, dpp_tamir_id, created_at")
+    .select("id, is_no, servis_id, servis_ad, musteri_ad, adres, tarih_tercihi, cihaz, belirti, durum, son_kabul_tarihi, gelis_penceresi, twilio_numara, seri_no, dpp_tamir_id, puan, yorum, created_at")
     .eq("servis_id", servis_id)
     .order("created_at", { ascending: false })
     .limit(50);

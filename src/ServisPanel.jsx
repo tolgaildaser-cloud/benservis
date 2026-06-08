@@ -506,6 +506,17 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
                 {durumKaydedildi && <span style={{ fontSize: 11, color: GREEN, fontWeight: 700 }}>✓ Güncellendi</span>}
               </div>
             )}
+            {/* Müşteri puanı */}
+            {is.puan !== null && is.puan !== undefined && (
+              <div style={{ marginTop: 8, borderTop: "1px solid #E5DCC9", paddingTop: 8 }}>
+                <div style={{ fontSize: 11, color: "#888", marginBottom: 2 }}>Müşteri Değerlendirmesi</div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <span style={{ fontSize: 16 }}>{"⭐".repeat(is.puan)}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: GREEN }}>{is.puan}/5</span>
+                </div>
+                {is.yorum && <div style={{ fontSize: 12, color: "#555", marginTop: 4, fontStyle: "italic" }}>"{is.yorum}"</div>}
+              </div>
+            )}
           </div>
         )}
       </div>
