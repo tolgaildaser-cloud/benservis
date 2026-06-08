@@ -3,7 +3,7 @@
 // Header: Authorization: Bearer <supabase-jwt>
 // Servisin kendi is_talepleri kayıtlarını döndürür. musteri_tel dahil edilmez.
 import supabase from "../_supabase.js";
-import { setCorsHeaders } from "../_twilio.js";
+import { setCorsHeaders } from "../_verimor.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);

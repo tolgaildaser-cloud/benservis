@@ -3,7 +3,7 @@
 // Ödeme doğrulanır, talep güncellenir, satıcıya SMS, alıcı paneline yönlendirilir.
 import Iyzipay from "iyzipay";
 import supabase from "../_supabase.js";
-import { sendSMS } from "../_twilio.js";
+import { sendSMS } from "../_verimor.js";
 
 const BASE_URL = process.env.VERCEL_ENV === "production"
   ? "https://benservis.com"

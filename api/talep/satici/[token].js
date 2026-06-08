@@ -4,7 +4,7 @@
 // GET  (no param)  — tüm talepler listesi
 // POST { action:'mesaj', talep_id, icerik } — mesaj gönder
 import supabase from "../../_supabase.js";
-import { sendSMS } from "../../_twilio.js";
+import { sendSMS } from "../../_verimor.js";
 
 const BASE_URL = "https://benservis.com";
 

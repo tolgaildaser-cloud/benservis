@@ -3,7 +3,7 @@
 // Header: Authorization: Bearer <supabase-jwt>
 // Body: { action: "kabul" | "ret" | "tamamla", gelis_penceresi?: string }
 import supabase from "../_supabase.js";
-import { sendSMS, setCorsHeaders } from "../_twilio.js";
+import { sendSMS, setCorsHeaders } from "../_verimor.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -50,7 +50,7 @@ export default async function handler(req, res) {
       .update({
         durum: "onaylandi",
         gelis_penceresi,
-        twilio_numara: process.env.TWILIO_PHONE_NUMBER,
+        verimor_source: process.env.VERIMOR_SOURCE,
       })
       .eq("id", id);
 
@@ -61,7 +61,7 @@ export default async function handler(req, res) {
         is.musteri_tel,
         `İyi haber! ${is.servis_ad} talebinizi kabul etti. ` +
         `Geliş: ${gelis_penceresi}. ` +
-        `Aramak için: ${process.env.TWILIO_PHONE_NUMBER}. İş No: #${is.is_no}`
+        `İş No: #${is.is_no}`
       );
     } catch (e) { console.error("SMS hatası (kabul):", e.message); }
 

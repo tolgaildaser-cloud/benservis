@@ -2,7 +2,7 @@
 // PATCH /api/dpp/tamir/:id — Tamir kaydını zenginleştir
 // Yetki: JWT'deki servis_id === tamir_kayitlari.servis_id
 import supabase from "../../_supabase.js";
-import { setCorsHeaders } from "../../_twilio.js";
+import { setCorsHeaders } from "../../_verimor.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);

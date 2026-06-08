@@ -3,7 +3,7 @@
 // Authorization: Bearer CRON_SECRET
 // 30dk yanıt vermeyen işleri kapatır, servis puanını düşürür, müşteriye SMS gönderir.
 import supabase from "../_supabase.js";
-import { sendSMS } from "../_twilio.js";
+import { sendSMS } from "../_verimor.js";
 
 export default async function handler(req, res) {
   // Cron güvenliği

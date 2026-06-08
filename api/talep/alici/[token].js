@@ -3,7 +3,7 @@
 // POST /api/talep/alici/:token { action: 'mesaj', icerik }  → mesaj gönder
 // POST /api/talep/alici/:token { action: 'teslim_onayla' }  → teslim onayı
 import supabase from "../../_supabase.js";
-import { sendSMS } from "../../_twilio.js";
+import { sendSMS } from "../../_verimor.js";
 
 const BASE_URL = "https://benservis.com";
 

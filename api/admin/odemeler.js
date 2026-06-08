@@ -4,7 +4,7 @@
 //
 // Güvenlik: Authorization: Bearer $ADMIN_TOKEN header'ı gerekli
 import supabase from "../_supabase.js";
-import { sendSMS } from "../_twilio.js";
+import { sendSMS } from "../_verimor.js";
 
 const BASE_URL = "https://benservis.com";
 

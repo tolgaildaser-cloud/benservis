@@ -3,7 +3,7 @@
 // Body: { ilan_id, alici_ad, alici_tel, ilk_mesaj? }
 // Alıcı talebi oluşturur, satıcıya SMS gönderir, alici_token döndürür.
 import supabase from "../_supabase.js";
-import { sendSMS } from "../_twilio.js";
+import { sendSMS } from "../_verimor.js";
 import crypto from "crypto";
 
 const BASE_URL = "https://benservis.com";

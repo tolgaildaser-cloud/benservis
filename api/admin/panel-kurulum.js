@@ -4,7 +4,7 @@
 // Body: { servis_id, servis_ad }
 // Giriş yapmış kullanıcının user_metadata.servis_id alanını günceller.
 import supabase from "../_supabase.js";
-import { setCorsHeaders } from "../_twilio.js";
+import { setCorsHeaders } from "../_verimor.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);

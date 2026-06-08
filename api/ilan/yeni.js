@@ -3,7 +3,7 @@
 // Body: { seri_no, baslik, aciklama?, fiyat, konum?, satici_ad, satici_tel, satici_iban?, fotograflar? }
 // DPP pasaportunu otomatik çeker, ilan oluşturur. satici_token üretir.
 import supabase from "../_supabase.js";
-import { sendSMS } from "../_twilio.js";
+import { sendSMS } from "../_verimor.js";
 import crypto from "crypto";
 
 const BASE_URL = "https://benservis.com";

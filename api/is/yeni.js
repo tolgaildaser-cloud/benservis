@@ -3,7 +3,7 @@
 // Body: { servis_id, servis_ad, musteri_ad, musteri_tel, adres, tarih_tercihi?, cihaz?, belirti? }
 // Yeni is_talepleri kaydı oluşturur, müşteriye SMS gönderir.
 import supabase from "../_supabase.js";
-import { sendSMS, setCorsHeaders } from "../_twilio.js";
+import { sendSMS, setCorsHeaders } from "../_verimor.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
