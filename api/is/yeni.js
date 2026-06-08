@@ -54,7 +54,7 @@ export default async function handler(req, res) {
     await sendSMS(
       tel,
       `Talebiniz ${servis_ad}'e iletildi. İş No: #${is.is_no}. ` +
-      `30 dakika içinde yanıt gelecek, SMS ile bildirileceksiniz.`
+      `Takip: benservis.com/takip/${is.is_no}`
     );
   } catch (smsErr) {
     console.error("SMS gönderilemedi:", smsErr.message);
