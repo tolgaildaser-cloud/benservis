@@ -23,6 +23,30 @@ function haversine(lat1, lng1, lat2, lng2) {
  *   servisler  {Array}    services-data.json içeriği
  *   onKapat    {Function} Geri dön butonu callback'i
  */
+// Tier renk + etiket tanımları — yetkili her zaman yeşil, tier'lar ayrı
+const TIER_STYLE = {
+  platin: { background: "#F0EAF8", color: "#6B3FA0", label: "PLATİN" },
+  gold:   { background: "#FEF3C7", color: "#92400E", label: "GOLD"   },
+  bronz:  { background: "#FDF0E8", color: "#9A3412", label: "BRONZ"  },
+};
+
+function TierRozetleri({ servis }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 4, flexWrap: "wrap" }}>
+      {servis.yetkili && (
+        <span style={{ background: "#3A7D44", color: "white", fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700 }}>
+          YETKİLİ
+        </span>
+      )}
+      {servis.tier && TIER_STYLE[servis.tier] && (
+        <span style={{ background: TIER_STYLE[servis.tier].background, color: TIER_STYLE[servis.tier].color, fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700 }}>
+          {TIER_STYLE[servis.tier].label}
+        </span>
+      )}
+    </div>
+  );
+}
+
 function ServisKarti({ servis, onSec, onCaldir }) {
   return (
     <div
@@ -36,16 +60,11 @@ function ServisKarti({ servis, onSec, onCaldir }) {
       }}
     >
       <div style={{ flex: 1, minWidth: 0, marginRight: 12 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", marginBottom: 3 }}>
           <span style={{ fontWeight: 600, fontSize: 14, color: "#22302A" }}>
             {servis.ad}
           </span>
-          {servis.yetkili && (
-            <span style={{
-              background: "#3A7D44", color: "white",
-              fontSize: 9, padding: "2px 5px", borderRadius: 3, fontWeight: 700,
-            }}>YETKİLİ</span>
-          )}
+          <TierRozetleri servis={servis} />
         </div>
         <div style={{ fontSize: 12, color: "#888", marginTop: 3 }}>
           {[
@@ -102,12 +121,7 @@ function ServisProfil({ servis, onGeri }) {
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600, flex: 1 }}>
           {servis.ad}
         </span>
-        {servis.yetkili && (
-          <span style={{
-            background: "#3A7D44", color: "white",
-            fontSize: 9, padding: "3px 7px", borderRadius: 3, fontWeight: 700,
-          }}>YETKİLİ</span>
-        )}
+        <TierRozetleri servis={servis} />
       </div>
 
       <div style={{ padding: "20px 16px" }}>
@@ -212,7 +226,7 @@ function FallbackIlce({ ilceler, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, belirti, servisler, onKapat }) {
+export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, servisler, onKapat }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
@@ -231,6 +245,7 @@ export default function ServisEkrani({ cihaz, belirti, servisler, onKapat }) {
         const { latitude: lat, longitude: lng } = pos.coords;
         const eslesmis = servisler
           .filter((s) => s.kategoriler?.includes(cihaz))
+          .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
           .map((s) => ({ ...s, km: haversine(lat, lng, s.lat, s.lng) }))
           .sort((a, b) =>
             a.yetkili !== b.yetkili
@@ -286,10 +301,32 @@ export default function ServisEkrani({ cihaz, belirti, servisler, onKapat }) {
           onClick={onKapat}
           style={{ background: "none", border: "none", color: "#F5EFE2", fontSize: 20, cursor: "pointer" }}
         >←</button>
-        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600 }}>
-          {cihaz} Servisleri
-        </span>
+        <div style={{ flex: 1 }}>
+          <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600 }}>
+            {marka ? `${marka} — ` : ""}{cihaz} Servisleri
+          </span>
+          {garantiAltinda && (
+            <div style={{ fontSize: 11, color: "#A8D5B5", marginTop: 2, fontWeight: 600 }}>
+              🛡 Garantili cihaz · Yalnızca YETKİLİ servisler
+            </div>
+          )}
+        </div>
       </div>
+
+      {/* Garanti uyarı bandı */}
+      {garantiAltinda && (
+        <div style={{
+          background: "#EDF7F0", borderBottom: "1px solid #B8DFC6",
+          padding: "10px 16px", display: "flex", alignItems: "center", gap: 8,
+          fontSize: 13, color: "#1E5631", fontWeight: 600,
+        }}>
+          <span style={{ fontSize: 16 }}>🛡</span>
+          <span>
+            Cihazınız garanti kapsamında — yalnızca <strong>Yetkili Servisler</strong> listeleniyor.
+            {marka && marka !== "Diğer" && ` ${marka} yetkili servisine yönlendiriliyorsunuz.`}
+          </span>
+        </div>
+      )}
 
       <div style={{ padding: "16px" }}>
         {/* Yükleniyor */}
@@ -325,6 +362,7 @@ export default function ServisEkrani({ cihaz, belirti, servisler, onKapat }) {
               setFallbackIlce(ilce);
               const eslesmis = servisler
                 .filter((s) => s.kategoriler?.includes(cihaz) && s.ilce === ilce)
+                .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
                 .sort((a, b) =>
                   a.yetkili !== b.yetkili
                     ? b.yetkili ? 1 : -1

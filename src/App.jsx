@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 import DPPEkrani from "./DPPEkrani.jsx";
 import SERVISLER from "./services-data.json";
-import { CIHAZLAR } from "./constants.js";
+import { CIHAZLAR, MARKALAR } from "./constants.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -67,6 +67,7 @@ export default function App() {
   const [adim, setAdim] = useState("form");
   const [cihaz, setCihaz] = useState("");
   const [marka, setMarka] = useState("");
+  const [garantiAltinda, setGarantiAltinda] = useState(false);
   const [hataKodu, setHataKodu] = useState("");
   const [yas, setYas] = useState("");
   const [belirti, setBelirti] = useState("");
@@ -86,17 +87,16 @@ export default function App() {
   };
 
   const tesisEt = async () => {
-    if (!cihaz || belirti.trim().length < 4) {
-      setHataMsg("Cihaz türünü seç ve arıza belirtisini birkaç kelimeyle yaz.");
-      return;
-    }
+    if (!cihaz) { setHataMsg("Cihaz türünü seç."); return; }
+    if (!marka) { setHataMsg("Marka seçimi zorunludur — garanti yönlendirmesi için gerekli."); return; }
+    if (belirti.trim().length < 4) { setHataMsg("Arıza belirtisini birkaç kelimeyle yaz."); return; }
     setHataMsg("");
     setAdim("loading");
 
     const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
 
 Cihaz: ${cihaz}
-Marka/Model: ${marka || "belirtilmedi"}
+Marka: ${marka}
 Ekrandaki hata kodu: ${hataKodu || "yok"}
 Cihaz yaşı: ${yas || "belirtilmedi"}
 Belirti: "${belirti}"
@@ -159,7 +159,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#3A7D44", "orta": "#C8632B", "yüksek": "#B23A2E" };
@@ -172,6 +172,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       {showServisler && (
         <ServisEkrani
           cihaz={cihaz}
+          marka={marka}
+          garantiAltinda={garantiAltinda}
           belirti={belirti}
           servisler={SERVISLER}
           onKapat={() => setShowServisler(false)}
@@ -237,14 +239,38 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
           <div style={s.row}>
             <div style={{ flex: 1 }}>
-              <label style={s.label}>Marka / Model <span style={s.opt}>(opsiyonel)</span></label>
-              <input style={s.input} value={marka} onChange={(e) => setMarka(e.target.value)} placeholder="örn. Arçelik 9 kg" />
+              <label style={s.label}>
+                Marka <span style={{ color: "#B23A2E", fontWeight: 700 }}>*</span>
+              </label>
+              <select
+                style={{ ...s.input, cursor: "pointer" }}
+                value={marka}
+                onChange={(e) => setMarka(e.target.value)}
+              >
+                <option value="">Seç…</option>
+                {MARKALAR.map((m) => <option key={m} value={m}>{m}</option>)}
+                <option value="Diğer">Diğer / Listede yok</option>
+              </select>
             </div>
-            <div style={{ width: 120 }}>
+            <div style={{ width: 110 }}>
               <label style={s.label}>Hata kodu <span style={s.opt}>(varsa)</span></label>
               <input style={s.input} value={hataKodu} onChange={(e) => setHataKodu(e.target.value)} placeholder="E3" />
             </div>
           </div>
+
+          {/* Garanti checkbox — yetkili servis yönlendirmesini tetikler */}
+          <label style={s.garantiRow}>
+            <input
+              type="checkbox"
+              checked={garantiAltinda}
+              onChange={(e) => setGarantiAltinda(e.target.checked)}
+              style={{ width: 16, height: 16, cursor: "pointer", accentColor: "#3A7D44" }}
+            />
+            <span>
+              Cihazım garantili{" "}
+              <span style={s.opt}>(yalnızca yetkili servisler gösterilir)</span>
+            </span>
+          </label>
 
           <label style={s.label}>Cihaz kaç yaşında? <span style={s.opt}>(opsiyonel)</span></label>
           <input style={s.input} value={yas} onChange={(e) => setYas(e.target.value)} placeholder="örn. 6 yıl" />
@@ -362,7 +388,7 @@ const CSS = `
 * { box-sizing: border-box; }
 @keyframes anspin { to { transform: rotate(360deg); } }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
-input:focus, textarea:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(200,99,43,.13); }
+input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(200,99,43,.13); }
 button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
 `;
 
@@ -389,6 +415,7 @@ const s = {
   oneriWrap: { display: "flex", flexWrap: "wrap", gap: 7, marginTop: 8 },
   oneriChip: { fontSize: 12.5, padding: "6px 11px", borderRadius: 999, border: `1.5px solid ${AMBER}`, background: "#FFFDF8", color: AMBER, fontWeight: 600 },
   row: { display: "flex", gap: 12 },
+  garantiRow: { display: "flex", alignItems: "center", gap: 9, margin: "13px 0 0", cursor: "pointer", fontSize: 13.5, color: "#3A7D44", fontWeight: 600, userSelect: "none" },
   input: { width: "100%", padding: "11px 13px", borderRadius: 11, border: "1.5px solid #DDD3BE", background: "#FFFDF8", fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s" },
   textarea: { width: "100%", padding: "12px 13px", borderRadius: 11, border: "1.5px solid #DDD3BE", background: "#FFFDF8", fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "vertical", lineHeight: 1.5 },
   err: { marginTop: 12, color: "#B23A2E", fontSize: 13.5, fontWeight: 600 },

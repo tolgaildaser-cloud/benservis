@@ -186,3 +186,39 @@ ALTER TABLE talepler
   ADD COLUMN IF NOT EXISTS satici_odeme_durumu text DEFAULT NULL
     CHECK (satici_odeme_durumu IN ('bekliyor', 'yapildi')),
   ADD COLUMN IF NOT EXISTS satici_odeme_tarihi timestamptz;
+
+-- Faz 2 Servis Tier Sistemi
+-- Servisler şu an services-data.json'da tutulmaktadır.
+-- DB'ye geçişte bu tablo kullanılacak.
+--
+-- Tier hiyerarşisi:
+--   yetkili  → üretici onaylı yetkili servis (garanti tamirlerini karşılar)
+--   tier     → kalite kademesi: platin > gold > bronz
+--   Bir servis hem yetkili=true hem tier='platin' olabilir.
+--   Garanti kapsamındaki cihazlar → yalnızca yetkili=true servisler gösterilir.
+CREATE TABLE IF NOT EXISTS servisler (
+  id                    uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  places_id             text UNIQUE,         -- services-data.json Google Places ID
+  ad                    text NOT NULL,
+  yetkili               boolean NOT NULL DEFAULT false,
+  tier                  text NOT NULL DEFAULT 'bronz'
+                        CHECK (tier IN ('platin', 'gold', 'bronz')),
+  yetkili_markalar      text[] DEFAULT '{}', -- hangi markalar için yetkili (örn. ['Arçelik','Beko'])
+  kategoriler           text[] DEFAULT '{}',
+  il                    text,
+  ilce                  text,
+  adres                 text,
+  telefon               text,
+  puan                  numeric(3,2),
+  yorum_sayisi          int DEFAULT 0,
+  komisyon_kabul        boolean DEFAULT false,
+  komisyon_oran         numeric(4,2),
+  aktif                 boolean DEFAULT true,
+  created_at            timestamptz DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS servisler_yetkili_idx      ON servisler(yetkili) WHERE yetkili = true;
+CREATE INDEX IF NOT EXISTS servisler_tier_idx         ON servisler(tier);
+CREATE INDEX IF NOT EXISTS servisler_ilce_idx         ON servisler(ilce);
+CREATE INDEX IF NOT EXISTS servisler_kategoriler_idx  ON servisler USING GIN(kategoriler);
+CREATE INDEX IF NOT EXISTS servisler_markalar_idx     ON servisler USING GIN(yetkili_markalar);
