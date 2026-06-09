@@ -35,9 +35,12 @@ export default async function handler(req, res) {
 
     // Atomik claim: servis_id NULL ve durum=havuzda ise güncelle
     // Aynı anda iki servis talep ederse sadece biri başarılı olur
+    const updateData = { servis_id, servis_ad: servis_ad_meta, durum: "bekliyor" };
+    if (gelis_penceresi) updateData.gelis_penceresi = gelis_penceresi;
+
     const { data: claimed, error: claimErr } = await supabase
       .from("is_talepleri")
-      .update({ servis_id, servis_ad: servis_ad_meta, durum: "bekliyor" })
+      .update(updateData)
       .eq("id", id)
       .is("servis_id", null)
       .eq("durum", "havuzda")
