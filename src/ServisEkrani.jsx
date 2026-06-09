@@ -226,7 +226,7 @@ function FallbackIlce({ ilceler, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, servisler, onKapat }) {
+export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, servisler: servislerProp, onKapat }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
@@ -235,7 +235,23 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
   const [caldirServis, setCaldirServis] = useState(null);
   const [otomatikCaldir, setOtomatikCaldir] = useState(false);
+  const [tumServisler, setTumServisler] = useState(servislerProp || []);
 
+  // JSON + DB servislerini birleştir
+  useEffect(() => {
+    fetch(`/api/servis/liste${cihaz ? `?cihaz=${encodeURIComponent(cihaz)}` : ""}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data?.servisler) return;
+        // DB servislerini JSON listesiyle birleştir (ID'ye göre dedüp)
+        const jsonIds = new Set((servislerProp || []).map(s => s.id));
+        const sadeceDbn = data.servisler.filter(s => !jsonIds.has(s.id));
+        setTumServisler([...(servislerProp || []), ...sadeceDbn]);
+      })
+      .catch(() => {}); // fetch hata → sadece JSON ile devam
+  }, [cihaz]);
+
+  // Konum → sıralama
   useEffect(() => {
     if (!navigator.geolocation) {
       setLocationState("denied");
@@ -244,27 +260,33 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
-        const eslesmis = servisler
+        const eslesmis = tumServisler
           .filter((s) => s.kategoriler?.includes(cihaz))
-          .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
-          .map((s) => ({ ...s, km: haversine(lat, lng, s.lat, s.lng) }))
-          .sort((a, b) =>
-            a.yetkili !== b.yetkili
-              ? b.yetkili ? 1 : -1
-              : a.km - b.km
-          )
-          .slice(0, 10);
+          .filter((s) => !garantiAltinda || s.yetkili)
+          .map((s) => ({
+            ...s,
+            // lat/lng null olan DB servisleri km hesaplanamaz → sona koy
+            km: s.lat && s.lng ? haversine(lat, lng, s.lat, s.lng) : null,
+          }))
+          .sort((a, b) => {
+            if (a.yetkili !== b.yetkili) return b.yetkili ? 1 : -1;
+            if (a.km == null && b.km == null) return 0;
+            if (a.km == null) return 1;
+            if (b.km == null) return -1;
+            return a.km - b.km;
+          })
+          .slice(0, 15);
         setSiraliServisler(eslesmis);
         setLocationState("success");
       },
       () => setLocationState("denied"),
       { timeout: 10000 }
     );
-  }, [cihaz, servisler]);
+  }, [cihaz, tumServisler]);
 
   const ilceler = useMemo(
     () => [...new Set(
-      servisler.filter((s) => s.kategoriler?.includes(cihaz)).map((s) => s.ilce)
+      tumServisler.filter((s) => s.kategoriler?.includes(cihaz)).map((s) => s.ilce)
     )].sort(),
     [servisler, cihaz]
   );
@@ -378,7 +400,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             onSec={(ilce) => {
               if (!ilce) return;
               setFallbackIlce(ilce);
-              const eslesmis = servisler
+              const eslesmis = tumServisler
                 .filter((s) => s.kategoriler?.includes(cihaz) && s.ilce === ilce)
                 .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
                 .sort((a, b) =>

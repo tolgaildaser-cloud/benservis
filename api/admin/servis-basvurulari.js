@@ -92,10 +92,11 @@ export default async function handler(req, res) {
       password:      sifre,
       email_confirm: true,   // E-posta doğrulaması gerekmeden giriş yapabilsin
       user_metadata: {
-        servis_id: bav.id,   // ServisPanel.jsx bu alan ile filtre yapar
-        servis_ad: bav.ad,
-        il:        bav.il,
-        ilce:      bav.ilce,
+        servis_id:   bav.id,   // ServisPanel.jsx bu alan ile filtre yapar
+        servis_ad:   bav.ad,
+        il:          bav.il,
+        ilce:        bav.ilce,
+        servis_ilce: bav.ilce, // api/is/havuz.js — havuz ilçe eşleştirmesi için
       },
     });
 
