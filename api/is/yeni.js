@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     servis_id, servis_ad,
     musteri_ad, musteri_tel,
     adres, tarih_tercihi,
-    cihaz, belirti,
+    cihaz, belirti, seri_no,
   } = req.body || {};
 
   // ── Demo modu: tüm talepler tek test hesabına yönlendirilir ─────
@@ -58,6 +58,7 @@ export default async function handler(req, res) {
     tarih_tercihi: tarih_tercihi || null,
     cihaz: cihaz || null,
     belirti: belirti || null,
+    seri_no: seri_no?.trim() || null,
     son_kabul_tarihi,
   };
 
