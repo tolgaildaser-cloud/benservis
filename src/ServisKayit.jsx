@@ -71,17 +71,34 @@ export default function ServisKayit() {
   const [form, setForm] = useState({
     ad: "", sahip_ad: "", email: "", telefon: "",
     il: "", ilce: "", adres: "",
+    lat: null, lng: null,
     kategoriler: [],
     yetkili: false,
     tier: "",
     yetkili_markalar: [],
     notlar: "",
   });
-  const [gonderiyor, setGonderiyor] = useState(false);
-  const [hata, setHata]             = useState("");
-  const [basarili, setBasarili]     = useState(false);
+  const [gonderiyor, setGonderiyor]   = useState(false);
+  const [hata, setHata]               = useState("");
+  const [basarili, setBasarili]       = useState(false);
+  const [konumAlinıyor, setKonumAl]  = useState(false);
+  const [konumAlindi, setKonumAlindi] = useState(false);
 
   const guncelle = (alan, deger) => setForm(f => ({ ...f, [alan]: deger }));
+
+  const konumuAl = () => {
+    if (!navigator.geolocation) { setHata("Tarayıcınız konum desteklemiyor."); return; }
+    setKonumAl(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setForm(f => ({ ...f, lat: pos.coords.latitude, lng: pos.coords.longitude }));
+        setKonumAlindi(true);
+        setKonumAl(false);
+      },
+      () => { setHata("Konum alınamadı. Tarayıcı iznini kontrol edin."); setKonumAl(false); },
+      { timeout: 10000 }
+    );
+  };
 
   const kategoriToggle = (k) => {
     setForm(f => ({
@@ -288,6 +305,38 @@ export default function ServisKayit() {
                 placeholder="Mahalle, cadde, bina no"
                 autoComplete="street-address"
               />
+            </div>
+
+            {/* Konum butonu */}
+            <div>
+              <button
+                type="button"
+                onClick={konumuAl}
+                disabled={konumAlinıyor || konumAlindi}
+                style={{
+                  width: "100%", padding: "11px 14px", borderRadius: 10,
+                  border: konumAlindi ? `1.5px solid ${GREEN}` : "1.5px solid #DDD3BE",
+                  background: konumAlindi ? GREEN + "14" : "#FFFDF8",
+                  color: konumAlindi ? GREEN : INK,
+                  fontWeight: 600, fontSize: 13.5,
+                  fontFamily: "'Hanken Grotesk', sans-serif",
+                  cursor: konumAlinıyor || konumAlindi ? "default" : "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  transition: "all .15s",
+                }}
+              >
+                {konumAlindi
+                  ? <><span>✅</span> Konum alındı ({form.lat?.toFixed(4)}, {form.lng?.toFixed(4)})</>
+                  : konumAlinıyor
+                  ? <><span>⏳</span> Konum alınıyor…</>
+                  : <><span>📍</span> Dükkanımın Konumunu Al</>
+                }
+              </button>
+              <div style={{ fontSize: 11.5, color: GRAY, marginTop: 5 }}>
+                {konumAlindi
+                  ? "Müşterilere uzaklık hesaplamak için kullanılacak."
+                  : "Şu an dükkanınızdaysanız tıklayın. Mesafe sıralaması için kullanılır."}
+              </div>
             </div>
           </div>
 

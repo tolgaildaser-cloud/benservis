@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
   let query = supabase
     .from("servis_basvurulari")
-    .select("id, ad, il, ilce, adres, telefon, kategoriler, yetkili, tier, yetkili_markalar")
+    .select("id, ad, il, ilce, adres, telefon, kategoriler, yetkili, tier, yetkili_markalar, lat, lng")
     .eq("durum", "onaylandi")
     .order("created_at", { ascending: false })
     .limit(100);
@@ -82,8 +82,8 @@ export default async function handler(req, res) {
         puan,
         yorumSayisi:  po?.sayi || 0,
         // lat/lng henüz yok → km hesaplanamaz, frontend null kabul eder
-        lat:          null,
-        lng:          null,
+        lat:          s.lat  ?? null,
+        lng:          s.lng  ?? null,
         kaynak:       "db",  // JSON servislerden ayırt etmek için
       };
     });

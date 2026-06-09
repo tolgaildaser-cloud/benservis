@@ -18,6 +18,7 @@ export default async function handler(req, res) {
   const {
     ad, sahip_ad, email, telefon, il, ilce, adres,
     kategoriler, yetkili, tier, yetkili_markalar, notlar,
+    lat, lng,
   } = req.body || {};
 
   // ── Zorunlu alan kontrolleri ────────────────────────────────────
@@ -69,6 +70,8 @@ export default async function handler(req, res) {
       tier:             tier || null,
       yetkili_markalar: Array.isArray(yetkili_markalar) ? yetkili_markalar : [],
       notlar:           notlar?.trim() || null,
+      lat:              (lat != null && !isNaN(Number(lat))) ? Number(lat) : null,
+      lng:              (lng != null && !isNaN(Number(lng))) ? Number(lng) : null,
     })
     .select("id, created_at")
     .single();
