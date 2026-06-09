@@ -25,8 +25,38 @@ export default async function handler(req, res) {
 
   const { action, gelis_penceresi } = req.body || {};
 
-  if (!["kabul", "ret", "tamamla"].includes(action)) {
-    return res.status(400).json({ error: "action: kabul | ret | tamamla" });
+  if (!["kabul", "ret", "tamamla", "havuz_kabul"].includes(action)) {
+    return res.status(400).json({ error: "action: kabul | ret | tamamla | havuz_kabul" });
+  }
+
+  // ── Havuz kabul: henüz servis_id atanmamış talep, ilk kabul eden alır ──────────
+  if (action === "havuz_kabul") {
+    const servis_ad_meta = user.user_metadata?.servis_ad || "Servis";
+
+    // Atomik claim: servis_id NULL ve durum=havuzda ise güncelle
+    // Aynı anda iki servis talep ederse sadece biri başarılı olur
+    const { data: claimed, error: claimErr } = await supabase
+      .from("is_talepleri")
+      .update({ servis_id, servis_ad: servis_ad_meta, durum: "bekliyor" })
+      .eq("id", id)
+      .is("servis_id", null)
+      .eq("durum", "havuzda")
+      .select("id, musteri_tel, is_no, servis_ad")
+      .single();
+
+    if (claimErr || !claimed) {
+      return res.status(409).json({ error: "Bu talep başka bir servis tarafından alındı veya bulunamadı" });
+    }
+
+    try {
+      await sendSMS(
+        claimed.musteri_tel,
+        `İyi haber! Talebiniz ${claimed.servis_ad} tarafından alındı. ` +
+        `İş No: #${claimed.is_no}. Takip: benservis.com/takip/${claimed.is_no}`
+      );
+    } catch (e) { console.error("SMS hatası (havuz_kabul):", e.message); }
+
+    return res.status(200).json({ durum: "bekliyor" });
   }
 
   // İşin bu servise ait olduğunu doğrula

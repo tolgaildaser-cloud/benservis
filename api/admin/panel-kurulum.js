@@ -1,8 +1,8 @@
 // api/admin/panel-kurulum.js
 // PATCH /api/admin/panel-kurulum
 // Header: Authorization: Bearer <supabase-jwt>
-// Body: { servis_id, servis_ad }
-// Giriş yapmış kullanıcının user_metadata.servis_id alanını günceller.
+// Body: { servis_id, servis_ad, ilce? }
+// Giriş yapmış kullanıcının user_metadata'sını günceller (servis_id, servis_ad, servis_ilce).
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
 
@@ -18,14 +18,17 @@ export default async function handler(req, res) {
   const { data: { user }, error: authErr } = await supabase.auth.getUser(token);
   if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
 
-  const { servis_id, servis_ad } = req.body || {};
+  const { servis_id, servis_ad, ilce } = req.body || {};
   if (!servis_id || !servis_ad) {
     return res.status(400).json({ error: "servis_id ve servis_ad zorunludur" });
   }
 
-  // Admin API ile user_metadata güncelle
+  // Admin API ile user_metadata güncelle (ilce varsa servis_ilce olarak ekle)
+  const yeniMeta = { ...user.user_metadata, servis_id, servis_ad };
+  if (ilce) yeniMeta.servis_ilce = ilce;
+
   const { data, error } = await supabase.auth.admin.updateUserById(user.id, {
-    user_metadata: { ...user.user_metadata, servis_id, servis_ad },
+    user_metadata: yeniMeta,
   });
 
   if (error) return res.status(500).json({ error: error.message });
@@ -35,5 +38,6 @@ export default async function handler(req, res) {
     user_id: user.id,
     servis_id,
     servis_ad,
+    servis_ilce: ilce || null,
   });
 }

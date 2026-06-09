@@ -234,6 +234,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [seciliServis, setSeciliServis] = useState(null);
   const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
   const [caldirServis, setCaldirServis] = useState(null);
+  const [otomatikCaldir, setOtomatikCaldir] = useState(false);
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -283,12 +284,12 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       position: "fixed", inset: 0, background: "#F5EFE2",
       overflowY: "auto", zIndex: 100, fontFamily: "'Hanken Grotesk', sans-serif",
     }}>
-        {caldirServis && (
+        {(caldirServis || otomatikCaldir) && (
           <ServisCaldir
-            servis={caldirServis}
+            servis={otomatikCaldir ? null : caldirServis}
             cihaz={cihaz}
             belirti={belirti}
-            onKapat={() => setCaldirServis(null)}
+            onKapat={() => { setCaldirServis(null); setOtomatikCaldir(false); }}
           />
         )}
       {/* Üst bar */}
@@ -341,6 +342,23 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           <p style={{ textAlign: "center", color: "#888", marginTop: 40 }}>
             Bu cihaz için yakında kayıtlı servis bulunamadı.
           </p>
+        )}
+
+        {locationState === "success" && siraliServisler.length > 0 && (
+          <div style={{ marginBottom: 16 }}>
+            <button
+              onClick={() => setOtomatikCaldir(true)}
+              style={{
+                width: "100%", padding: "14px 16px", borderRadius: 12,
+                background: "#C8632B", color: "white", border: "none",
+                fontWeight: 700, fontSize: 15, cursor: "pointer",
+              }}>
+              ⚡ Bölgemdeki İlk Müsait Servise Gönder
+            </button>
+            <div style={{ fontSize: 11, color: "#888", textAlign: "center", marginTop: 4 }}>
+              Ya da aşağıdan belirli bir servis seç
+            </div>
+          </div>
         )}
 
         {locationState === "success" && siraliServisler.map((servis) => (

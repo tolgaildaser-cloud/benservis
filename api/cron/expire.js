@@ -12,6 +12,31 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
+  // ── Havuzda bekleyip süresi dolanları kapat ─────────────────────────────
+  const { data: havuzDolmus } = await supabase
+    .from("is_talepleri")
+    .select("id, is_no, musteri_tel")
+    .eq("durum", "havuzda")
+    .is("servis_id", null)
+    .lt("son_kabul_tarihi", new Date().toISOString())
+    .limit(20);
+
+  for (const is of (havuzDolmus || [])) {
+    await supabase
+      .from("is_talepleri")
+      .update({ durum: "suresi_doldu" })
+      .eq("id", is.id);
+
+    try {
+      await sendSMS(
+        is.musteri_tel,
+        `Üzgünüz, bölgenizde şu an müsait servis bulunamadı. İş No: #${is.is_no}. ` +
+        `Listeden servis seçmek için: benservis.com/takip/${is.is_no}`
+      );
+    } catch (e) { console.error("SMS hatası (havuz expire):", e.message); }
+  }
+
+  // ── Servise atanmış ama yanıt verilmeyenleri kapat ───────────────────────
   // Süresi dolan işleri bul
   const { data: dolmus, error: fetchErr } = await supabase
     .from("is_talepleri")

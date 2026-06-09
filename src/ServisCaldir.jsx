@@ -10,7 +10,9 @@ import React, { useState } from "react";
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
+// servis = null → havuz modu ("En Yakın Servis" otomatik eşleştir)
 export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
+  const isOtomatik = !servis;
   const [ad, setAd] = useState("");
   const [tel, setTel] = useState("");
   const [adres, setAdres] = useState("");
@@ -35,20 +37,25 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
 
     setYukleniyor(true);
     try {
+      const body = {
+        musteri_ad: ad.trim(),
+        musteri_tel: tel.trim(),
+        adres: adres.trim(),
+        tarih_tercihi: tarih.trim() || null,
+        seri_no: seriNo.trim() || null,
+        cihaz: cihaz || null,
+        belirti: belirti || null,
+      };
+      // Belirli servis seçildiyse ekle, otomatik modda boş bırak (havuza düşer)
+      if (!isOtomatik) {
+        body.servis_id = servis.id;
+        body.servis_ad = servis.ad;
+      }
+
       const res = await fetch("/api/is/yeni", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          servis_id: servis.id,
-          servis_ad: servis.ad,
-          musteri_ad: ad.trim(),
-          musteri_tel: tel.trim(),
-          adres: adres.trim(),
-          tarih_tercihi: tarih.trim() || null,
-          seri_no: seriNo.trim() || null,
-          cihaz: cihaz || null,
-          belirti: belirti || null,
-        }),
+        body: JSON.stringify(body),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Bir hata oluştu");
@@ -73,7 +80,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
           <button onClick={onKapat} style={{ background: "none", border: "none", color: INK, fontSize: 20, cursor: "pointer", lineHeight: 1 }}>←</button>
           <span style={{ fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600, color: INK }}>
-            {servis.ad}
+            {isOtomatik ? "⚡ En Yakın Servise Gönder" : servis.ad}
           </span>
         </div>
 
@@ -85,8 +92,10 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
               Talebiniz İletildi
             </div>
             <div style={{ fontSize: 14, color: "#666", lineHeight: 1.6, marginBottom: 24 }}>
-              {servis.ad} talebinizi inceliyor.<br />
-              30 dakika içinde SMS ile bildirim alacaksınız.
+              {isOtomatik
+                ? <>Talebiniz bölgenizdeki servislere iletildi.<br />Bir servis kabul ettiğinde SMS alacaksınız.</>
+                : <>{servis.ad} talebinizi inceliyor.<br />30 dakika içinde SMS ile bildirim alacaksınız.</>
+              }
             </div>
             <div style={{ background: "white", borderRadius: 10, padding: "12px 16px", display: "inline-block", marginBottom: 24 }}>
               <div style={{ fontSize: 12, color: "#888" }}>İş No</div>

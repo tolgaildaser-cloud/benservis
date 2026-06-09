@@ -28,7 +28,8 @@ function ServisKurulum({ session, onTamamlandi }) {
     s.ad?.toLowerCase().includes(aramaMetni.toLowerCase())
   ).slice(0, 30);
 
-  const sec = (s) => { setSecilenId(s.id); setSecilenAd(s.ad); setAramaMetni(s.ad); };
+  const [secilenIlce, setSecilenIlce] = useState("");
+  const sec = (s) => { setSecilenId(s.id); setSecilenAd(s.ad); setSecilenIlce(s.ilce || ""); setAramaMetni(s.ad); };
 
   const kaydet = async () => {
     if (!secilenId) { setHata("Lütfen listeden bir servis seç."); return; }
@@ -37,7 +38,7 @@ function ServisKurulum({ session, onTamamlandi }) {
       const res = await fetch("/api/admin/panel-kurulum", {
         method: "PATCH",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
-        body: JSON.stringify({ servis_id: secilenId, servis_ad: secilenAd }),
+        body: JSON.stringify({ servis_id: secilenId, servis_ad: secilenAd, ilce: secilenIlce || undefined }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
@@ -363,6 +364,37 @@ function KabulModal({ is, onKapat, onKabul }) {
   );
 }
 
+function HavuzKarti({ is, onAl, yukleniyor }) {
+  const kalan = is.son_kabul_tarihi
+    ? Math.max(0, Math.round((new Date(is.son_kabul_tarihi) - Date.now()) / 60000))
+    : null;
+
+  return (
+    <div style={{ background: "white", border: `1.5px solid ${AMBER}`, borderRadius: 12, padding: 14, marginBottom: 10 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+        <span style={{ fontWeight: 700, fontSize: 13, color: INK }}>#{is.is_no}</span>
+        {kalan !== null && (
+          <span style={{ fontSize: 11, color: kalan < 5 ? "#B23A2E" : AMBER, fontWeight: 700 }}>
+            ⏱ {kalan} dk kaldı
+          </span>
+        )}
+      </div>
+      <div style={{ fontSize: 13, color: "#555", lineHeight: 1.6, marginBottom: 10 }}>
+        👤 {is.musteri_ad}<br />
+        📍 {is.adres}<br />
+        {is.cihaz && <>{is.cihaz}{is.belirti ? ` · ${is.belirti}` : ""}<br /></>}
+        {is.tarih_tercihi && <>📅 {is.tarih_tercihi}<br /></>}
+      </div>
+      <button
+        onClick={() => onAl(is.id)}
+        disabled={yukleniyor}
+        style={{ width: "100%", padding: 9, borderRadius: 8, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 13, cursor: yukleniyor ? "not-allowed" : "pointer", opacity: yukleniyor ? 0.7 : 1 }}>
+        ⚡ Talebi Al
+      </button>
+    </div>
+  );
+}
+
 function IsKarti({ is, jwtToken, onGuncelle }) {
   const [kabulModal, setKabulModal] = useState(false);
   const [yukleniyor, setYukleniyor] = useState(false);
@@ -530,6 +562,8 @@ export default function ServisPanel() {
   const [yukleniyor, setYukleniyor] = useState(false);
   const [sonYenileme, setSonYenileme] = useState(null);
   const [listeHata, setListeHata] = useState("");
+  const [havuzIsler, setHavuzIsler] = useState([]);
+  const [havuzYukleniyor, setHavuzYukleniyor] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -558,18 +592,53 @@ export default function ServisPanel() {
       .finally(() => setYukleniyor(false));
   }, []);
 
+  const havuzGetir = React.useCallback((token) => {
+    setHavuzYukleniyor(true);
+    fetch("/api/is/havuz", { headers: { "Authorization": `Bearer ${token}` } })
+      .then(r => r.json())
+      .then(d => setHavuzIsler(d.isler || []))
+      .catch(() => {})
+      .finally(() => setHavuzYukleniyor(false));
+  }, []);
+
   useEffect(() => {
     if (!session) return;
     isleriGetir(session.access_token);
+    havuzGetir(session.access_token);
     // 30 saniyede bir otomatik yenile
-    const interval = setInterval(() => isleriGetir(session.access_token), 30000);
+    const interval = setInterval(() => {
+      isleriGetir(session.access_token);
+      havuzGetir(session.access_token);
+    }, 30000);
     return () => clearInterval(interval);
-  }, [session, isleriGetir]);
+  }, [session, isleriGetir, havuzGetir]);
 
   const cikisYap = async () => { await supabase.auth.signOut(); setSession(null); setIsler([]); };
 
   const onGuncelle = (id, yeniDurum) => {
     setIsler(prev => prev.map(is => is.id === id ? { ...is, durum: yeniDurum } : is));
+  };
+
+  const havuzTalepAl = async (isId) => {
+    setHavuzYukleniyor(true);
+    try {
+      const res = await fetch(`/api/is/${isId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
+        body: JSON.stringify({ action: "havuz_kabul" }),
+      });
+      if (res.ok) {
+        // Havuzdan kaldır, iş listesini yenile
+        setHavuzIsler(prev => prev.filter(i => i.id !== isId));
+        await isleriGetir(session.access_token);
+      } else {
+        const d = await res.json();
+        alert(d.error || "Talep alınamadı");
+      }
+    } catch (e) {
+      alert("Bağlantı hatası: " + e.message);
+    }
+    setHavuzYukleniyor(false);
   };
 
   if (!session) return <GirisFormu onGiris={setSession} />;
@@ -608,7 +677,7 @@ export default function ServisPanel() {
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>🔧 Benservis Panel</span>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           <button
-            onClick={() => isleriGetir(session.access_token)}
+            onClick={() => { isleriGetir(session.access_token); havuzGetir(session.access_token); }}
             disabled={yukleniyor}
             style={{ background: "none", border: "1px solid #ffffff44", color: CREAM, borderRadius: 8, padding: "6px 12px", fontSize: 12, cursor: "pointer", opacity: yukleniyor ? 0.5 : 1 }}>
             {yukleniyor ? "⟳" : "↻ Yenile"}
@@ -634,6 +703,20 @@ export default function ServisPanel() {
           <div style={{ background: "#FEE2E2", border: "1px solid #FCA5A5", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 13, color: "#991B1B", fontFamily: "monospace" }}>
             ⚠️ {listeHata}
           </div>
+        )}
+
+        {/* Havuz — bölgedeki atanmamış talepler */}
+        {havuzIsler.length > 0 && (
+          <>
+            <div style={{ fontSize: 13, fontWeight: 700, color: AMBER, marginBottom: 8, display: "flex", alignItems: "center", gap: 6 }}>
+              ⚡ Bölgenizdeki Talepler
+              <span style={{ background: AMBER, color: "white", borderRadius: 99, padding: "1px 7px", fontSize: 11 }}>{havuzIsler.length}</span>
+            </div>
+            {havuzIsler.map(is => (
+              <HavuzKarti key={is.id} is={is} onAl={havuzTalepAl} yukleniyor={havuzYukleniyor} />
+            ))}
+            <div style={{ borderBottom: "1px solid #E5DCC9", margin: "14px 0" }} />
+          </>
         )}
 
         {bekleyenler.length > 0 && (
