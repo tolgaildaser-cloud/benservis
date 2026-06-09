@@ -556,6 +556,177 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
   );
 }
 
+function UrunlerTab({ session }) {
+  const servisId = session.user?.user_metadata?.servis_id;
+  const jwtToken = session.access_token;
+  const [urunler, setUrunler] = useState([]);
+  const [yukleniyor, setYukleniyor] = useState(true);
+  const [formAcik, setFormAcik] = useState(false);
+  const [form, setForm] = useState({ baslik: "", aciklama: "", fiyat: "", dpp_seri_no: "" });
+  const [kaydetYuk, setKaydetYuk] = useState(false);
+  const [hata, setHata] = useState("");
+
+  const getir = () => {
+    setYukleniyor(true);
+    fetch(`/api/servis/urunler?servis_id=${encodeURIComponent(servisId)}&durum=aktif`)
+      .then(r => r.ok ? r.json() : { urunler: [] })
+      .then(d => setUrunler(d.urunler || []))
+      .catch(() => {})
+      .finally(() => setYukleniyor(false));
+  };
+
+  useEffect(() => { if (servisId) getir(); }, [servisId]);
+
+  const ekle = async (e) => {
+    e.preventDefault();
+    setHata("");
+    if (!form.baslik.trim()) { setHata("Başlık zorunludur."); return; }
+    if (!form.fiyat || isNaN(Number(form.fiyat))) { setHata("Geçerli fiyat girin."); return; }
+    setKaydetYuk(true);
+    try {
+      const res = await fetch("/api/servis/urunler", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${jwtToken}` },
+        body: JSON.stringify({
+          tip: "ikinci_el",
+          baslik: form.baslik.trim(),
+          aciklama: form.aciklama.trim() || null,
+          fiyat: Number(form.fiyat),
+          dpp_seri_no: form.dpp_seri_no.trim().toUpperCase() || null,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+      setUrunler(prev => [data, ...prev]);
+      setForm({ baslik: "", aciklama: "", fiyat: "", dpp_seri_no: "" });
+      setFormAcik(false);
+    } catch (err) { setHata(err.message); }
+    setKaydetYuk(false);
+  };
+
+  const durumDegistir = async (id, durum) => {
+    const res = await fetch(`/api/servis/urunler/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${jwtToken}` },
+      body: JSON.stringify({ durum }),
+    });
+    if (res.ok) setUrunler(prev => prev.filter(u => u.id !== id));
+  };
+
+  const sil = async (id) => {
+    if (!window.confirm("Bu ürünü silmek istiyor musunuz?")) return;
+    const res = await fetch(`/api/servis/urunler/${id}`, {
+      method: "DELETE",
+      headers: { "Authorization": `Bearer ${jwtToken}` },
+    });
+    if (res.ok) setUrunler(prev => prev.filter(u => u.id !== id));
+  };
+
+  const inp = { width: "100%", padding: "10px 12px", borderRadius: 8, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", boxSizing: "border-box", marginBottom: 12 };
+
+  return (
+    <div>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+        <span style={{ fontSize: 13, fontWeight: 700, color: INK }}>
+          İkinci El Ürünlerim
+          {urunler.length > 0 && <span style={{ background: AMBER, color: "white", borderRadius: 99, padding: "1px 7px", fontSize: 11, marginLeft: 6 }}>{urunler.length}</span>}
+        </span>
+        <button
+          onClick={() => setFormAcik(f => !f)}
+          style={{ padding: "7px 14px", borderRadius: 8, border: "none", background: formAcik ? "#DDD3BE" : AMBER, color: formAcik ? INK : "white", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+          {formAcik ? "İptal" : "+ Yeni Ürün"}
+        </button>
+      </div>
+
+      {/* Ürün ekleme formu */}
+      {formAcik && (
+        <form onSubmit={ekle} style={{ background: "white", borderRadius: 12, padding: 16, marginBottom: 16, border: "1.5px solid #DDD3BE" }}>
+          <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 600, color: INK, marginBottom: 12 }}>Yeni İkinci El Ürün</div>
+
+          <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 4 }}>Başlık *</label>
+          <input value={form.baslik} onChange={e => setForm(f => ({ ...f, baslik: e.target.value }))}
+            placeholder="Samsung 55' 4K QLED TV" style={inp} />
+
+          <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 4 }}>Açıklama</label>
+          <textarea value={form.aciklama} onChange={e => setForm(f => ({ ...f, aciklama: e.target.value }))}
+            placeholder="Cihaz hakkında kısa bilgi..." rows={2}
+            style={{ ...inp, resize: "vertical", fontFamily: "'Hanken Grotesk', sans-serif" }} />
+
+          <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 4 }}>Fiyat (₺) *</label>
+          <input type="number" min="0" value={form.fiyat} onChange={e => setForm(f => ({ ...f, fiyat: e.target.value }))}
+            placeholder="3500" style={inp} />
+
+          <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 4 }}>
+            Seri No <span style={{ fontWeight: 400, color: "#888" }}>(opsiyonel — DPP bağlantısı için)</span>
+          </label>
+          <input value={form.dpp_seri_no} onChange={e => setForm(f => ({ ...f, dpp_seri_no: e.target.value }))}
+            placeholder="SN1234567890" style={{ ...inp, marginBottom: 4 }} />
+          <div style={{ fontSize: 11, color: "#aaa", marginBottom: 14 }}>Seri no girilirse alıcı DPP tamir geçmişini görebilir.</div>
+
+          {hata && <div style={{ color: "#B23A2E", fontSize: 13, marginBottom: 10 }}>{hata}</div>}
+          <button type="submit" disabled={kaydetYuk}
+            style={{ width: "100%", padding: 11, borderRadius: 10, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 14, cursor: "pointer", opacity: kaydetYuk ? 0.7 : 1 }}>
+            {kaydetYuk ? "Ekleniyor..." : "Ürünü Yayınla →"}
+          </button>
+        </form>
+      )}
+
+      {/* Mağaza linki */}
+      {servisId && (
+        <a
+          href={`/servis/${servisId}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: "block", padding: "9px 14px", borderRadius: 9, border: `1px solid ${INK}`, color: INK, fontSize: 13, fontWeight: 700, textDecoration: "none", textAlign: "center", marginBottom: 14 }}>
+          🏪 Mağaza Sayfamı Gör →
+        </a>
+      )}
+
+      {/* Ürün listesi */}
+      {yukleniyor ? (
+        <p style={{ textAlign: "center", color: "#888", fontSize: 13 }}>Yükleniyor...</p>
+      ) : urunler.length === 0 ? (
+        <div style={{ textAlign: "center", padding: "32px 0", color: "#9A9384" }}>
+          <div style={{ fontSize: 32, marginBottom: 8 }}>🏷️</div>
+          <div style={{ fontSize: 14 }}>Henüz ürün eklenmedi.</div>
+        </div>
+      ) : (
+        urunler.map(u => (
+          <div key={u.id} style={{ background: "white", borderRadius: 12, padding: 14, marginBottom: 10, border: "1px solid #E5DCC9" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 700, fontSize: 14, color: INK }}>{u.baslik}</div>
+                <div style={{ fontSize: 15, fontWeight: 700, color: AMBER, marginTop: 2 }}>{u.fiyat.toLocaleString("tr-TR")} ₺</div>
+                {u.aciklama && <div style={{ fontSize: 12, color: "#666", marginTop: 4 }}>{u.aciklama}</div>}
+                {u.dpp_seri_no && (
+                  <div style={{ fontSize: 11, color: GREEN, marginTop: 4 }}>📋 DPP: {u.dpp_seri_no}</div>
+                )}
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
+              <button
+                onClick={() => durumDegistir(u.id, "satildi")}
+                style={{ flex: 1, padding: 8, borderRadius: 8, border: `1.5px solid ${GREEN}`, background: "white", color: GREEN, fontWeight: 700, fontSize: 12, cursor: "pointer" }}>
+                ✓ Satıldı
+              </button>
+              <button
+                onClick={() => durumDegistir(u.id, "pasif")}
+                style={{ flex: 1, padding: 8, borderRadius: 8, border: "1.5px solid #888", background: "white", color: "#888", fontWeight: 700, fontSize: 12, cursor: "pointer" }}>
+                Pasife Al
+              </button>
+              <button
+                onClick={() => sil(u.id)}
+                style={{ padding: "8px 12px", borderRadius: 8, border: "1.5px solid #B23A2E", background: "white", color: "#B23A2E", fontWeight: 700, fontSize: 12, cursor: "pointer" }}>
+                ✕
+              </button>
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+  );
+}
+
 export default function ServisPanel() {
   const [session, setSession] = useState(null);
   const [isler, setIsler] = useState([]);
@@ -564,6 +735,7 @@ export default function ServisPanel() {
   const [listeHata, setListeHata] = useState("");
   const [havuzIsler, setHavuzIsler] = useState([]);
   const [havuzYukleniyor, setHavuzYukleniyor] = useState(false);
+  const [aktifTab, setAktifTab] = useState("isler");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -688,60 +860,80 @@ export default function ServisPanel() {
         </div>
       </div>
       <div style={{ padding: 16, maxWidth: 600, margin: "0 auto" }}>
-        {/* Servis kimlik bilgisi — hangi servis_id ile filtrelendiği görülsün */}
+        {/* Servis kimlik bilgisi */}
         <div style={{ fontSize: 11, color: "#A59E8E", background: "#EDE5D3", borderRadius: 8, padding: "6px 10px", marginBottom: 10, wordBreak: "break-all" }}>
           🔑 Servis ID: <strong>{session.user?.user_metadata?.servis_id || "— metadata'da yok"}</strong>
           {session.user?.email && <span style={{ marginLeft: 8 }}>· {session.user.email}</span>}
+        </div>
+
+        {/* Tab bar */}
+        <div style={{ display: "flex", gap: 4, marginBottom: 16, background: "#EDE5D3", borderRadius: 10, padding: 4 }}>
+          {[["isler", "🔧 İşlerim"], ["urunler", "🏪 Ürünlerim"]].map(([key, label]) => (
+            <button key={key} onClick={() => setAktifTab(key)}
+              style={{
+                flex: 1, padding: "8px 0", borderRadius: 8, border: "none",
+                background: aktifTab === key ? "white" : "transparent",
+                color: aktifTab === key ? INK : "#888",
+                fontWeight: aktifTab === key ? 700 : 500,
+                fontSize: 13, cursor: "pointer",
+                boxShadow: aktifTab === key ? "0 1px 3px rgba(0,0,0,0.1)" : "none",
+                fontFamily: "'Hanken Grotesk', sans-serif",
+              }}>
+              {label}
+            </button>
+          ))}
         </div>
         {saatStr && (
           <p style={{ textAlign: "right", fontSize: 11, color: "#A59E8E", margin: "0 0 10px" }}>
             Son güncelleme: {saatStr} · otomatik 30 sn
           </p>
         )}
-        {yukleniyor && isler.length === 0 && <p style={{ textAlign: "center", color: "#888" }}>Yükleniyor...</p>}
-        {listeHata && (
-          <div style={{ background: "#FEE2E2", border: "1px solid #FCA5A5", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 13, color: "#991B1B", fontFamily: "monospace" }}>
-            ⚠️ {listeHata}
-          </div>
-        )}
-
-        {/* Havuz — bölgedeki atanmamış talepler */}
-        {havuzIsler.length > 0 && (
+        {/* Tab içerikleri */}
+        {aktifTab === "isler" && (
           <>
-            <div style={{ fontSize: 13, fontWeight: 700, color: AMBER, marginBottom: 8, display: "flex", alignItems: "center", gap: 6 }}>
-              ⚡ Bölgenizdeki Talepler
-              <span style={{ background: AMBER, color: "white", borderRadius: 99, padding: "1px 7px", fontSize: 11 }}>{havuzIsler.length}</span>
-            </div>
-            {havuzIsler.map(is => (
-              <HavuzKarti key={is.id} is={is} onAl={havuzTalepAl} yukleniyor={havuzYukleniyor} />
-            ))}
-            <div style={{ borderBottom: "1px solid #E5DCC9", margin: "14px 0" }} />
+            {yukleniyor && isler.length === 0 && <p style={{ textAlign: "center", color: "#888" }}>Yükleniyor...</p>}
+            {listeHata && (
+              <div style={{ background: "#FEE2E2", border: "1px solid #FCA5A5", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 13, color: "#991B1B", fontFamily: "monospace" }}>
+                ⚠️ {listeHata}
+              </div>
+            )}
+            {havuzIsler.length > 0 && (
+              <>
+                <div style={{ fontSize: 13, fontWeight: 700, color: AMBER, marginBottom: 8, display: "flex", alignItems: "center", gap: 6 }}>
+                  ⚡ Bölgenizdeki Talepler
+                  <span style={{ background: AMBER, color: "white", borderRadius: 99, padding: "1px 7px", fontSize: 11 }}>{havuzIsler.length}</span>
+                </div>
+                {havuzIsler.map(is => (
+                  <HavuzKarti key={is.id} is={is} onAl={havuzTalepAl} yukleniyor={havuzYukleniyor} />
+                ))}
+                <div style={{ borderBottom: "1px solid #E5DCC9", margin: "14px 0" }} />
+              </>
+            )}
+            {bekleyenler.length > 0 && (
+              <>
+                <div style={{ fontSize: 13, fontWeight: 700, color: INK, marginBottom: 8 }}>
+                  Yeni Talepler <span style={{ background: AMBER, color: "white", borderRadius: 99, padding: "1px 7px", fontSize: 11 }}>{bekleyenler.length}</span>
+                </div>
+                {bekleyenler.map(is => (
+                  <IsKarti key={is.id} is={is} jwtToken={session.access_token} onGuncelle={onGuncelle} />
+                ))}
+              </>
+            )}
+            {digerler.length > 0 && (
+              <>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#888", margin: "16px 0 8px" }}>Geçmiş</div>
+                {digerler.map(is => (
+                  <IsKarti key={is.id} is={is} jwtToken={session.access_token} onGuncelle={onGuncelle} />
+                ))}
+              </>
+            )}
+            {!yukleniyor && isler.length === 0 && (
+              <p style={{ textAlign: "center", color: "#888", marginTop: 40 }}>Henüz talep yok.</p>
+            )}
           </>
         )}
 
-        {bekleyenler.length > 0 && (
-          <>
-            <div style={{ fontSize: 13, fontWeight: 700, color: INK, marginBottom: 8 }}>
-              Yeni Talepler <span style={{ background: AMBER, color: "white", borderRadius: 99, padding: "1px 7px", fontSize: 11 }}>{bekleyenler.length}</span>
-            </div>
-            {bekleyenler.map(is => (
-              <IsKarti key={is.id} is={is} jwtToken={session.access_token} onGuncelle={onGuncelle} />
-            ))}
-          </>
-        )}
-
-        {digerler.length > 0 && (
-          <>
-            <div style={{ fontSize: 13, fontWeight: 700, color: "#888", margin: "16px 0 8px" }}>Geçmiş</div>
-            {digerler.map(is => (
-              <IsKarti key={is.id} is={is} jwtToken={session.access_token} onGuncelle={onGuncelle} />
-            ))}
-          </>
-        )}
-
-        {!yukleniyor && isler.length === 0 && (
-          <p style={{ textAlign: "center", color: "#888", marginTop: 40 }}>Henüz talep yok.</p>
-        )}
+        {aktifTab === "urunler" && <UrunlerTab session={session} />}
       </div>
     </div>
   );
