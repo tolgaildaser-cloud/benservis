@@ -13,24 +13,30 @@ function toVerimorNo(tel) {
  * Verimor üzerinden SMS gönder.
  * @param {string} to   E.164 veya düz formatta telefon numarası
  * @param {string} body Mesaj metni (Türkçe karakter desteklenir)
+ * @param {string} [sourceOverride] Başlık override (test/teşhis için)
+ *
+ * source_addr boşsa payload'a hiç konmaz — Verimor hesaptaki
+ * varsayılan onaylı başlığı kullanır (INVALID_SOURCE_ADDRESS önlenir).
  */
-export async function sendSMS(to, body) {
+export async function sendSMS(to, body, sourceOverride) {
   const username = process.env.VERIMOR_USERNAME;
   const password = process.env.VERIMOR_PASSWORD;
-  const source   = process.env.VERIMOR_SOURCE || "BENSERVIS";
+  const source   = sourceOverride !== undefined ? sourceOverride : (process.env.VERIMOR_SOURCE || "");
 
   if (!username) throw new Error("VERIMOR_USERNAME eksik");
   if (!password) throw new Error("VERIMOR_PASSWORD eksik");
 
+  const payload = {
+    username,
+    password,
+    messages: [{ msg: body, dest: toVerimorNo(to) }],
+  };
+  if (source) payload.source_addr = source;
+
   const res = await fetch(VERIMOR_API, {
     method:  "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username,
-      password,
-      source_addr: source,
-      messages: [{ msg: body, dest: toVerimorNo(to) }],
-    }),
+    body: JSON.stringify(payload),
   });
 
   if (!res.ok) {

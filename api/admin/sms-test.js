@@ -14,17 +14,20 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: "Yetkisiz" });
   }
 
-  const { tel } = req.body || {};
+  // source: opsiyonel başlık override — "" gönderilirse source_addr payload'a
+  // hiç konmaz, Verimor hesabın varsayılan başlığını kullanır.
+  const { tel, source } = req.body || {};
   if (!tel) return res.status(400).json({ error: "tel gerekli" });
 
   const env_durum = {
     VERIMOR_USERNAME: process.env.VERIMOR_USERNAME ? "✓ set" : "✗ EKSİK",
     VERIMOR_PASSWORD: process.env.VERIMOR_PASSWORD ? "✓ set" : "✗ EKSİK",
-    VERIMOR_SOURCE:   process.env.VERIMOR_SOURCE || "(boş — default BENSERVIS kullanılır)",
+    VERIMOR_SOURCE:   process.env.VERIMOR_SOURCE || "(boş — source_addr gönderilmez)",
+    kullanilan_source: source !== undefined ? (source || "(omit — hesap defaultu)") : "(env)",
   };
 
   try {
-    const sonuc = await sendSMS(tel, "Benservis SMS testi — entegrasyon çalışıyor ✓");
+    const sonuc = await sendSMS(tel, "Benservis SMS testi — entegrasyon çalışıyor ✓", source);
     return res.status(200).json({ ok: true, env_durum, verimor_yanit: sonuc });
   } catch (e) {
     return res.status(500).json({ ok: false, env_durum, hata: e.message });
