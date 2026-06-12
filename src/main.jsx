@@ -9,9 +9,13 @@ import MusteriTakip from "./MusteriTakip.jsx";
 import ServisKayit from "./ServisKayit.jsx";
 import ServisAdmin from "./ServisAdmin.jsx";
 import ServisMagaza from "./ServisMagaza.jsx";
+import UrunDetay from "./UrunDetay.jsx";
+import Sepet from "./Sepet.jsx";
 
 const path = window.location.pathname;
 const isAriza       = path.startsWith("/ariza");
+const isUrun        = path.startsWith("/urun/");
+const isSepet       = path === "/sepet";
 const isPanel       = path.startsWith("/panel");
 const isDPP         = path.startsWith("/dpp/");
 const isIkinci      = path.startsWith("/ikinci-el");
@@ -24,6 +28,8 @@ const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : n
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {isAriza        ? <App />                           :
+     isUrun         ? <UrunDetay />                     :
+     isSepet        ? <Sepet />                         :
      isPanel        ? <ServisPanel />                   :
      isDPP          ? <DPPPublicPage />                 :
      isIkinci       ? <IkinciElApp />                   :

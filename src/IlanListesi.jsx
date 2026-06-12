@@ -3,6 +3,7 @@
 // sahibinden.com formatı: sol kategori menüsü + satır-liste (foto | başlık | konum | tarih | fiyat)
 import React, { useState, useEffect } from "react";
 import { CIHAZLAR } from "./constants.js";
+import { sepetAdet } from "./sepet.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 const INK = "#22302A", AMBER = "#C8632B", GREEN = "#3A7D44";
@@ -58,7 +59,13 @@ function IlanSatir({ ilan, onClick }) {
         <div className="srow-baslik">{ilan.baslik}</div>
         <div className="srow-rozetler">
           {ilan.kaynak === "servis" && (
-            <span className="rozet" style={{ background: "#EBF1FB", color: LINK }}>🏪 {ilan.servis_ad}</span>
+            <span
+              className="rozet rozet-firma"
+              style={{ background: "#EBF1FB", color: LINK, cursor: "pointer" }}
+              title={`${ilan.servis_ad} mağazasını aç`}
+              onClick={e => { e.stopPropagation(); window.location.href = `/servis/${ilan.servis_id}`; }}>
+              🏪 {ilan.servis_ad}
+            </span>
           )}
           {dpp?.benservis_dogrulanmis && (
             <span className="rozet" style={{ background: "#E6F4EC", color: GREEN }}>✓ Benservis Doğrulandı</span>
@@ -128,9 +135,11 @@ export default function IlanListesi() {
   const sayilar = {};
   ilanlar.forEach(i => { if (i.kategori) sayilar[i.kategori] = (sayilar[i.kategori] || 0) + 1; });
 
+  // Servis ürünü → ürün detayı (satın al/sepet); müşteri ilanı → ilan detayı.
+  // Firma rozetine tıklanırsa (IlanSatir içinde) mağaza sayfası açılır.
   const goster = ilan => {
     window.location.href = ilan.kaynak === "servis"
-      ? `/servis/${ilan.servis_id}`
+      ? `/urun/${ilan.id}`
       : `/ikinci-el/${ilan.id}`;
   };
 
@@ -155,6 +164,9 @@ export default function IlanListesi() {
             />
             <button type="button">Ara</button>
           </div>
+          <a href="/sepet" className="sah-sepet" title="Sepetim">
+            🛒{sepetAdet() > 0 && <span className="sah-sepet-adet">{sepetAdet()}</span>}
+          </a>
           <a href="/ikinci-el/yeni" className="sah-ilanver">Ücretsiz İlan Ver</a>
         </div>
       </header>
@@ -261,6 +273,8 @@ const CSS = `
 .sah-arama input:focus { border-color: ${AMBER}; }
 .sah-arama button { border: none; background: ${INK}; color: #fff; font-weight: 700; font-size: 13.5px; padding: 0 20px; border-radius: 0 6px 6px 0; cursor: pointer; font-family: inherit; }
 .sah-ilanver { background: ${AMBER}; color: #fff; font-weight: 700; font-size: 13.5px; padding: 10px 16px; border-radius: 6px; text-decoration: none; white-space: nowrap; }
+.sah-sepet { position: relative; font-size: 21px; text-decoration: none; padding: 4px 6px; }
+.sah-sepet-adet { position: absolute; top: -4px; right: -6px; background: ${AMBER}; color: #fff; border-radius: 99px; font-size: 10px; font-weight: 700; padding: 1px 5px; }
 
 /* GÖVDE */
 .sah-govde { max-width: 1150px; margin: 14px auto 0; padding: 0 16px 30px; display: flex; gap: 16px; align-items: flex-start; }

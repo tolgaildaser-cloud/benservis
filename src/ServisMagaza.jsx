@@ -94,18 +94,18 @@ function UrunKarti({ urun }) {
                 color: INK, fontWeight: 700, fontSize: 13,
                 textDecoration: "none", textAlign: "center",
               }}>
-              📋 DPP Geçmişi
+              📋 DPP
             </a>
           )}
           <a
-            href={`/ikinci-el/yeni?seri_no=${encodeURIComponent(urun.dpp_seri_no || "")}&baslik=${encodeURIComponent(urun.baslik)}`}
+            href={`/urun/${urun.id}`}
             style={{
               flex: 2, padding: "9px 0", borderRadius: 9,
               border: "none", background: AMBER, color: "white",
               fontWeight: 700, fontSize: 13,
               textDecoration: "none", textAlign: "center",
             }}>
-            İletişime Geç →
+            🛒 Satın Al →
           </a>
         </div>
       </div>

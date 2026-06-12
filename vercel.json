@@ -13,7 +13,9 @@
     { "source": "/takip/:is_no",                  "destination": "/index.html" },
     { "source": "/servis-kayit",                  "destination": "/index.html" },
     { "source": "/servis-admin",                  "destination": "/index.html" },
-    { "source": "/servis/:id",                    "destination": "/index.html" }
+    { "source": "/servis/:id",                    "destination": "/index.html" },
+    { "source": "/urun/:id",                      "destination": "/index.html" },
+    { "source": "/sepet",                         "destination": "/index.html" }
   ],
   "crons": [
     { "path": "/api/cron/expire", "schedule": "*/5 * * * *" }
