@@ -398,7 +398,9 @@ function ZenginleştirModal({ is, dppTamirId, jwtToken, onKapat, onZenginlesti }
 }
 
 function KabulModal({ is, onKapat, onKabul }) {
-  const [pencere, setPencere] = useState("");
+  // Müşteri tarih tercihi varsa pencere alanı onunla dolu başlar —
+  // servis tercihi dikkate alır, gerekirse düzenler.
+  const [pencere, setPencere] = useState(is.tarih_tercihi || "");
   const [yukleniyor, setYukleniyor] = useState(false);
 
   const kabul = async () => {
@@ -418,6 +420,11 @@ function KabulModal({ is, onKapat, onKabul }) {
           <strong>{is.musteri_ad}</strong> — {is.adres}<br />
           {is.cihaz && <>{is.cihaz} · {is.belirti}</>}
         </div>
+        {is.tarih_tercihi && (
+          <div style={{ background: "#FEF3C7", border: "1px solid #F59E0B", borderRadius: 8, padding: "8px 12px", marginBottom: 14, fontSize: 13, color: "#92400E" }}>
+            📅 <strong>Müşteri tercihi:</strong> {is.tarih_tercihi}
+          </div>
+        )}
         <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 6 }}>
           Geliş Saati Penceresi
         </label>
