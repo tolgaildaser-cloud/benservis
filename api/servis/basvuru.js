@@ -15,9 +15,11 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST")   return res.status(405).json({ error: "Method not allowed" });
 
+  // tier body'den alınmaz — kademe Benservis tarafından aylık tamamlanan
+  // iş hacmine göre otomatik hesaplanır (api/servis/liste.js).
   const {
     ad, sahip_ad, email, telefon, il, ilce, adres,
-    kategoriler, yetkili, tier, yetkili_markalar, notlar,
+    kategoriler, yetkili, yetkili_markalar, notlar,
     lat, lng,
   } = req.body || {};
 
@@ -48,12 +50,6 @@ export default async function handler(req, res) {
     if (mevcut.durum === "onaylandi") return res.status(409).json({ error: "Bu e-posta adresi zaten kayıtlı bir servise ait." });
   }
 
-  // Geçerli tier değerleri
-  const gecerliTier = ["platin", "gold", "bronz", null, undefined, ""];
-  if (!gecerliTier.includes(tier)) {
-    return res.status(400).json({ error: "Geçersiz tier değeri." });
-  }
-
   // ── Kaydet ─────────────────────────────────────────────────────
   const { data, error } = await supabase
     .from("servis_basvurulari")
@@ -67,7 +63,7 @@ export default async function handler(req, res) {
       adres:            adres?.trim() || null,
       kategoriler:      Array.isArray(kategoriler) ? kategoriler : [],
       yetkili:          Boolean(yetkili),
-      tier:             tier || null,
+      tier:             null, // kademe otomatik hesaplanır, başvuruda seçilmez
       yetkili_markalar: Array.isArray(yetkili_markalar) ? yetkili_markalar : [],
       notlar:           notlar?.trim() || null,
       lat:              (lat != null && !isNaN(Number(lat))) ? Number(lat) : null,

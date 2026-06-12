@@ -103,11 +103,13 @@ function GirisFormu({ onGiris }) {
   const [email, setEmail] = useState("");
   const [sifre, setSifre] = useState("");
   const [hata, setHata] = useState("");
+  const [bilgi, setBilgi] = useState("");
   const [yukleniyor, setYukleniyor] = useState(false);
 
   const girisYap = async (e) => {
     e.preventDefault();
     setHata("");
+    setBilgi("");
     setYukleniyor(true);
     const { data, error } = await supabase.auth.signInWithPassword({ email, password: sifre });
     setYukleniyor(false);
@@ -118,6 +120,19 @@ function GirisFormu({ onGiris }) {
       return;
     }
     onGiris(data.session);
+  };
+
+  const sifremiUnuttum = async () => {
+    setHata("");
+    setBilgi("");
+    if (!email.trim()) { setHata("Önce e-posta adresinizi yazın, sonra 'Şifremi unuttum'a tıklayın."); return; }
+    setYukleniyor(true);
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
+      redirectTo: window.location.origin + "/panel",
+    });
+    setYukleniyor(false);
+    if (error) { setHata(error.message); return; }
+    setBilgi("Şifre sıfırlama bağlantısı e-postanıza gönderildi. Gelen kutunuzu (ve spam klasörünü) kontrol edin.");
   };
 
   return (
@@ -139,11 +154,72 @@ function GirisFormu({ onGiris }) {
             style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#22302A", color: CREAM, fontSize: 14, marginBottom: 20, boxSizing: "border-box" }}
           />
           {hata && <div style={{ color: "#F87171", fontSize: 13, marginBottom: 14 }}>{hata}</div>}
+          {bilgi && <div style={{ color: "#6EE7B7", fontSize: 13, marginBottom: 14 }}>{bilgi}</div>}
           <button
             type="submit" disabled={yukleniyor}
             style={{ width: "100%", padding: 12, borderRadius: 10, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 15, cursor: "pointer" }}
           >
-            {yukleniyor ? "Giriş yapılıyor..." : "Giriş Yap"}
+            {yukleniyor ? "Lütfen bekleyin..." : "Giriş Yap"}
+          </button>
+          <button
+            type="button"
+            onClick={sifremiUnuttum}
+            disabled={yukleniyor}
+            style={{ width: "100%", marginTop: 10, padding: 8, borderRadius: 8, border: "none", background: "none", color: "#B8BEB6", fontSize: 12.5, cursor: "pointer", textDecoration: "underline" }}
+          >
+            Şifremi unuttum
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+function YeniSifreFormu({ onTamam }) {
+  const [s1, setS1] = useState("");
+  const [s2, setS2] = useState("");
+  const [hata, setHata] = useState("");
+  const [yukleniyor, setYukleniyor] = useState(false);
+
+  const kaydet = async (e) => {
+    e.preventDefault();
+    setHata("");
+    if (s1.length < 8) { setHata("Şifre en az 8 karakter olmalı."); return; }
+    if (s1 !== s2) { setHata("Şifreler eşleşmiyor."); return; }
+    setYukleniyor(true);
+    const { error } = await supabase.auth.updateUser({ password: s1 });
+    setYukleniyor(false);
+    if (error) { setHata(error.message); return; }
+    onTamam();
+  };
+
+  return (
+    <div style={{ minHeight: "100vh", background: INK, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
+      <style>{FONT}</style>
+      <div style={{ background: "#2d3e35", borderRadius: 18, padding: 32, width: "100%", maxWidth: 360 }}>
+        <div style={{ fontFamily: "'Fraunces', serif", color: CREAM, fontSize: 20, fontWeight: 700, marginBottom: 8, textAlign: "center" }}>
+          🔑 Yeni Şifre Belirle
+        </div>
+        <p style={{ color: "#B8BEB6", fontSize: 13, textAlign: "center", marginBottom: 20 }}>
+          Hesabınız için yeni bir şifre oluşturun.
+        </p>
+        <form onSubmit={kaydet}>
+          <label style={{ color: "#aaa", fontSize: 12, display: "block", marginBottom: 4 }}>Yeni şifre (en az 8 karakter)</label>
+          <input
+            type="password" value={s1} onChange={e => setS1(e.target.value)} required
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#22302A", color: CREAM, fontSize: 14, marginBottom: 14, boxSizing: "border-box" }}
+          />
+          <label style={{ color: "#aaa", fontSize: 12, display: "block", marginBottom: 4 }}>Yeni şifre (tekrar)</label>
+          <input
+            type="password" value={s2} onChange={e => setS2(e.target.value)} required
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#22302A", color: CREAM, fontSize: 14, marginBottom: 20, boxSizing: "border-box" }}
+          />
+          {hata && <div style={{ color: "#F87171", fontSize: 13, marginBottom: 14 }}>{hata}</div>}
+          <button
+            type="submit" disabled={yukleniyor}
+            style={{ width: "100%", padding: 12, borderRadius: 10, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 15, cursor: "pointer" }}
+          >
+            {yukleniyor ? "Kaydediliyor..." : "Şifreyi Kaydet"}
           </button>
         </form>
       </div>
@@ -737,10 +813,21 @@ export default function ServisPanel() {
   const [havuzYukleniyor, setHavuzYukleniyor] = useState(false);
   const [aktifTab, setAktifTab] = useState("isler");
 
+  const [recoveryMode, setRecoveryMode] = useState(false);
+
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       if (data.session) setSession(data.session);
     });
+    // "Şifremi unuttum" e-postasındaki link buraya döner —
+    // supabase-js URL'deki recovery token'ı işleyip bu eventi atar.
+    const { data: sub } = supabase.auth.onAuthStateChange((event, sess) => {
+      if (event === "PASSWORD_RECOVERY") {
+        setSession(sess);
+        setRecoveryMode(true);
+      }
+    });
+    return () => sub.subscription.unsubscribe();
   }, []);
 
   const isleriGetir = React.useCallback((token) => {
@@ -812,6 +899,8 @@ export default function ServisPanel() {
     }
     setHavuzYukleniyor(false);
   };
+
+  if (recoveryMode) return <YeniSifreFormu onTamam={() => setRecoveryMode(false)} />;
 
   if (!session) return <GirisFormu onGiris={setSession} />;
 

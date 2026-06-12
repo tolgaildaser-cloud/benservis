@@ -37,13 +37,6 @@ const sLabel = {
 
 const sGrup = { marginBottom: 16 };
 
-const TIER_OPTS = [
-  { val: "",       label: "Belirtmek istemiyorum" },
-  { val: "bronz",  label: "Bronz",  aciklama: "Standart kayıt" },
-  { val: "gold",   label: "Gold",   aciklama: "Yüksek puan/yorumlu servisler" },
-  { val: "platin", label: "Platin", aciklama: "En yüksek segment" },
-];
-
 function Chip({ label, aktif, onClick }) {
   return (
     <button
@@ -74,7 +67,6 @@ export default function ServisKayit() {
     lat: null, lng: null,
     kategoriler: [],
     yetkili: false,
-    tier: "",
     yetkili_markalar: [],
     notlar: "",
   });
@@ -137,7 +129,6 @@ export default function ServisKayit() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          tier: form.tier || null,
           yetkili_markalar: form.yetkili ? form.yetkili_markalar : [],
         }),
       });
@@ -167,7 +158,7 @@ export default function ServisKayit() {
             <strong style={{ color: INK }}> {form.telefon}</strong> numarasına giriş bilgileriniz SMS ile gönderilecektir.
           </p>
           <a
-            href="/"
+            href="/panel"
             style={{
               display: "inline-block",
               padding: "13px 28px",
@@ -179,7 +170,7 @@ export default function ServisKayit() {
               textDecoration: "none",
             }}
           >
-            Ana Sayfaya Dön
+            Servis Paneline Git
           </a>
         </div>
       </div>
@@ -361,50 +352,18 @@ export default function ServisKayit() {
             </div>
           </div>
 
-          {/* ─── Bölüm 4: Tier + Yetkili ────────────────────────────── */}
+          {/* ─── Bölüm 4: Yetkili Servis ────────────────────────────── */}
           <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "20px 18px", marginBottom: 16 }}>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 16 }}>
-              Servis Kademesi
+              Servis Türü
             </div>
 
-            {/* Tier seçimi */}
-            <div style={sGrup}>
-              <label style={sLabel}>Tier</label>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {TIER_OPTS.map(t => (
-                  <label
-                    key={t.val}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 10,
-                      cursor: "pointer",
-                      padding: "10px 12px",
-                      borderRadius: 10,
-                      border: form.tier === t.val ? `1.5px solid ${AMBER}` : "1.5px solid #E5DCC9",
-                      background: form.tier === t.val ? AMBER + "10" : "transparent",
-                      transition: "all .12s",
-                    }}
-                  >
-                    <input
-                      type="radio"
-                      name="tier"
-                      value={t.val}
-                      checked={form.tier === t.val}
-                      onChange={() => guncelle("tier", t.val)}
-                      style={{ accentColor: AMBER }}
-                    />
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: 13.5, color: INK }}>
-                        {t.val ? t.val.charAt(0).toUpperCase() + t.val.slice(1) : "—"}
-                        {!t.val && <span style={{ color: GRAY, fontWeight: 400 }}> (Belirtmek istemiyorum)</span>}
-                      </div>
-                      {t.aciklama && (
-                        <div style={{ fontSize: 11.5, color: GRAY }}>{t.aciklama}</div>
-                      )}
-                    </div>
-                  </label>
-                ))}
+            {/* Kademe bilgi notu — tier seçilmez, Benservis iş hacmine göre atar */}
+            <div style={{ background: "#F0EAD8", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 12.5, color: "#5C6660", lineHeight: 1.6 }}>
+              ℹ️ <strong style={{ color: INK }}>Servis kademeniz</strong> (Bronz / Gold / Platin), Benservis
+              üzerinden aldığınız aylık iş hacmine göre otomatik belirlenir:
+              <div style={{ marginTop: 6 }}>
+                🥉 Bronz: 10–25 iş/ay · 🥇 Gold: 26–60 iş/ay · 💎 Platin: 61+ iş/ay
               </div>
             </div>
 

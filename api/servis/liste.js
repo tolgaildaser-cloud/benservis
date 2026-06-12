@@ -42,21 +42,37 @@ export default async function handler(req, res) {
     (perfData || []).forEach(p => { puanMap[p.servis_id] = p; });
   }
 
-  // Tamamlanan işlerden puan ortalamasını hesapla
+  // Tamamlanan işlerden puan ortalaması + son 30 gün iş hacmi (kademe için)
   let puanOrtalama = {};
+  let aylikIsSayisi = {};
   if (servisIdler.length > 0) {
-    const { data: puanlar } = await supabase
+    const { data: tamamlananlar } = await supabase
       .from("is_talepleri")
-      .select("servis_id, puan")
+      .select("servis_id, puan, created_at")
       .in("servis_id", servisIdler)
-      .eq("durum", "tamamlandi")
-      .not("puan", "is", null);
+      .eq("durum", "tamamlandi");
 
-    (puanlar || []).forEach(p => {
-      if (!puanOrtalama[p.servis_id]) puanOrtalama[p.servis_id] = { toplam: 0, sayi: 0 };
-      puanOrtalama[p.servis_id].toplam += p.puan;
-      puanOrtalama[p.servis_id].sayi   += 1;
+    const otuzGunOnce = Date.now() - 30 * 24 * 60 * 60 * 1000;
+
+    (tamamlananlar || []).forEach(p => {
+      if (p.puan != null) {
+        if (!puanOrtalama[p.servis_id]) puanOrtalama[p.servis_id] = { toplam: 0, sayi: 0 };
+        puanOrtalama[p.servis_id].toplam += p.puan;
+        puanOrtalama[p.servis_id].sayi   += 1;
+      }
+      if (new Date(p.created_at).getTime() >= otuzGunOnce) {
+        aylikIsSayisi[p.servis_id] = (aylikIsSayisi[p.servis_id] || 0) + 1;
+      }
     });
+  }
+
+  // Kademe aylık tamamlanan iş hacmine göre otomatik atanır:
+  // 10–25 → bronz · 26–60 → gold · 61+ → platin · <10 → kademe yok
+  function tierHesapla(aylikIs) {
+    if (aylikIs >= 61) return "platin";
+    if (aylikIs >= 26) return "gold";
+    if (aylikIs >= 10) return "bronz";
+    return null;
   }
 
   // Cihaz filtresi + formatlama
@@ -77,7 +93,7 @@ export default async function handler(req, res) {
         telefon:      s.telefon || null,
         kategoriler:  s.kategoriler || [],
         yetkili:      s.yetkili || false,
-        tier:         s.tier || null,
+        tier:         tierHesapla(aylikIsSayisi[s.id] || 0),
         yetkili_markalar: s.yetkili_markalar || [],
         puan,
         yorumSayisi:  po?.sayi || 0,
