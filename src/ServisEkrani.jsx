@@ -288,7 +288,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     () => [...new Set(
       tumServisler.filter((s) => s.kategoriler?.includes(cihaz)).map((s) => s.ilce)
     )].sort(),
-    [servisler, cihaz]
+    [tumServisler, cihaz]
   );
 
   // Profil ekranı
