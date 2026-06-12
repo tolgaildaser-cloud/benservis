@@ -272,7 +272,7 @@ export default function MusteriTakip({ isNo }) {
 
             {/* Aksiyon butonu — reddedildiyse yeni servis bul */}
             {is.durum === "reddedildi" && (
-              <a href="/" style={{
+              <a href="/ariza" style={{
                 display: "block", textAlign: "center", marginTop: 20,
                 padding: "14px", borderRadius: 12, border: "none",
                 background: AMBER, color: "white", fontWeight: 700, fontSize: 15,

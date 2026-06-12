@@ -71,6 +71,17 @@ Veri modeli (DPP kaydı):
 **Stratejik değer:** Benservis, Faz 2'de zaten bu verinin doğal üretim noktasıdır.
 Ekstra maliyet sıfır; sadece her tamamlanan iş DPP'ye yazılır. Veri birikince moat oluşur.
 
+### Faz 3.5 — Servis Mağaza Sayfası (Yemeksepeti modeli)  🛒 PLANLANMAKTA
+Her servisin public bir mağaza sayfası olur. BiTaksi akışına ek katman — çakışmaz, tamamlar.
+
+**Kapsam (Faz 3/4 ile birlikte yapılacak):**
+- Servis panelinden ikinci el cihaz ilanı açma (fotoğraf, fiyat, açıklama, DPP bağlantısı)
+- Public servis sayfasında ürün listeleme (şu an `ServisProfil` bileşeninde "Yakında" yazıyor)
+- İleride: yedek parça listesi, müşteri sepet + iyzico ödeme
+
+**Mimari not:** `ServisProfil` bileşeni zaten var; "Ürünler & Parçalar" bölümü boş placeholder.
+Ürünler için `servis_urunler` tablosu yeterli: `servis_id, tip(yedek_parca|ikinci_el), baslik, aciklama, fiyat, gorsel_url, durum, dpp_seri_no`.
+
 ### Faz 4 — DPP Destekli İkinci El Pazaryeri  🛒 PLANLANMAKTA
 **"Cihazların Tramer'i"**: Satıcı seri numarasını girer → DPP'den tüm geçmiş otomatik
 çekilir → alıcı şeffaf servis kaydıyla ürünü değerlendirir.

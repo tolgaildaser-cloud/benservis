@@ -219,7 +219,7 @@ export default function ServisMagaza() {
               {servis.adres && <div>📍 {servis.adres}</div>}
             </div>
             <a
-              href="/"
+              href="/ariza"
               style={{ display: "block", marginTop: 12, padding: "10px 0", borderRadius: 9, border: "none", background: AMBER, color: "white", fontWeight: 700, fontSize: 14, textDecoration: "none", textAlign: "center" }}>
               Servis Çağır →
             </a>

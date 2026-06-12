@@ -261,7 +261,7 @@ export default function IlanListesi() {
         )}
 
         {/* ── BOTTOM CTA ── */}
-        <a href="/" style={s.anaLink}>◑ Benservis — Ücretsiz Arıza Teşhisi</a>
+        <a href="/ariza" style={s.anaLink}>◑ Benservis — Ücretsiz Arıza Teşhisi</a>
       </div>
 
       <footer style={s.footer}>© 2025 Benservis · İkinci El Pazaryeri</footer>

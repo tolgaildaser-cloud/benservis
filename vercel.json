@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/ariza",       "destination": "/index.html" },
     { "source": "/panel",       "destination": "/index.html" },
     { "source": "/panel/(.*)", "destination": "/index.html" },
     { "source": "/dpp/:seri_no", "destination": "/index.html" },

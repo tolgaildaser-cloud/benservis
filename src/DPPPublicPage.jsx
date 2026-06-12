@@ -133,7 +133,7 @@ export default function DPPPublicPage() {
           <p style={s.uyariAcik}>
             <strong>{seriNo || "Bu seri no"}</strong> için kayıtlı bir DPP pasaportu yok.
           </p>
-          <a href="/" style={s.anaBtn}>Arızam Ne?'ye Git</a>
+          <a href="/ariza" style={s.anaBtn}>Arızam Ne?'ye Git</a>
         </div>
       )}
 
@@ -298,7 +298,7 @@ export default function DPPPublicPage() {
             </div>
           </div>
 
-          <a href="/" style={s.anaBtnAlt}>
+          <a href="/ariza" style={s.anaBtnAlt}>
             ◑ Benservis — Arıza Teşhisi →
           </a>
         </>

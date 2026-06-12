@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
+import LandingPage from "./LandingPage.jsx";
 import ServisPanel from "./ServisPanel.jsx";
 import DPPPublicPage from "./DPPPublicPage.jsx";
 import IkinciElApp from "./IkinciElApp.jsx";
@@ -10,6 +11,7 @@ import ServisAdmin from "./ServisAdmin.jsx";
 import ServisMagaza from "./ServisMagaza.jsx";
 
 const path = window.location.pathname;
+const isAriza       = path.startsWith("/ariza");
 const isPanel       = path.startsWith("/panel");
 const isDPP         = path.startsWith("/dpp/");
 const isIkinci      = path.startsWith("/ikinci-el");
@@ -21,13 +23,14 @@ const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : n
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {isPanel        ? <ServisPanel />                   :
+    {isAriza        ? <App />                           :
+     isPanel        ? <ServisPanel />                   :
      isDPP          ? <DPPPublicPage />                 :
      isIkinci       ? <IkinciElApp />                   :
      isTakip        ? <MusteriTakip isNo={takipIsNo} /> :
      isServisKayit  ? <ServisKayit />                   :
      isServisAdmin  ? <ServisAdmin />                   :
      isServisMagaza ? <ServisMagaza />                  :
-     <App />}
+     <LandingPage />}
   </React.StrictMode>
 );
