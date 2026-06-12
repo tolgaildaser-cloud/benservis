@@ -80,12 +80,14 @@ export default function ServisKayit() {
 
   const konumuAl = () => {
     if (!navigator.geolocation) { setHata("Tarayıcınız konum desteklemiyor."); return; }
+    setHata(""); // önceki başarısız denemenin mesajı kalmasın
     setKonumAl(true);
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setForm(f => ({ ...f, lat: pos.coords.latitude, lng: pos.coords.longitude }));
         setKonumAlindi(true);
         setKonumAl(false);
+        setHata("");
       },
       () => { setHata("Konum alınamadı. Tarayıcı iznini kontrol edin."); setKonumAl(false); },
       { timeout: 10000 }
