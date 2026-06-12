@@ -83,14 +83,38 @@ export default function ServisKayit() {
     setHata(""); // önceki başarısız denemenin mesajı kalmasın
     setKonumAl(true);
     navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setForm(f => ({ ...f, lat: pos.coords.latitude, lng: pos.coords.longitude }));
+      async (pos) => {
+        const lat = pos.coords.latitude, lng = pos.coords.longitude;
+        setForm(f => ({ ...f, lat, lng }));
         setKonumAlindi(true);
-        setKonumAl(false);
         setHata("");
+        // Ters geokodlama (OSM Nominatim) — il/ilçe/adres otomatik doldurulur.
+        // Hata olursa sessiz geçilir; koordinatlar zaten alındı.
+        try {
+          const r = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=18`
+          );
+          if (r.ok) {
+            const a = (await r.json()).address || {};
+            const il   = a.province || a.state || a.city || "";
+            const ilce = a.town || a.city_district || a.county || a.district || a.suburb || "";
+            const adresParca = [
+              a.neighbourhood || a.suburb,
+              a.road,
+              a.house_number ? `No:${a.house_number}` : null,
+            ].filter(Boolean);
+            setForm(f => ({
+              ...f,
+              il:    il   || f.il,
+              ilce:  ilce || f.ilce,
+              adres: adresParca.length ? adresParca.join(", ") : f.adres,
+            }));
+          }
+        } catch { /* geokod başarısızlığı konumu iptal etmez */ }
+        setKonumAl(false);
       },
       () => { setHata("Konum alınamadı. Tarayıcı iznini kontrol edin."); setKonumAl(false); },
-      { timeout: 10000 }
+      { timeout: 10000, enableHighAccuracy: true }
     );
   };
 
@@ -268,6 +292,38 @@ export default function ServisKayit() {
               Konum
             </div>
 
+            {/* Konum butonu — başlığın hemen altında: tıklayınca il/ilçe/adres otomatik dolar */}
+            <div style={{ marginBottom: 16 }}>
+              <button
+                type="button"
+                onClick={konumuAl}
+                disabled={konumAlinıyor || konumAlindi}
+                style={{
+                  width: "100%", padding: "11px 14px", borderRadius: 10,
+                  border: konumAlindi ? `1.5px solid ${GREEN}` : "1.5px solid #DDD3BE",
+                  background: konumAlindi ? GREEN + "14" : "#FFFDF8",
+                  color: konumAlindi ? GREEN : INK,
+                  fontWeight: 600, fontSize: 13.5,
+                  fontFamily: "'Hanken Grotesk', sans-serif",
+                  cursor: konumAlinıyor || konumAlindi ? "default" : "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  transition: "all .15s",
+                }}
+              >
+                {konumAlindi
+                  ? <><span>✅</span> Konum alındı ({form.lat?.toFixed(4)}, {form.lng?.toFixed(4)})</>
+                  : konumAlinıyor
+                  ? <><span>⏳</span> Konum alınıyor…</>
+                  : <><span>📍</span> Dükkanımın Konumunu Al</>
+                }
+              </button>
+              <div style={{ fontSize: 11.5, color: GRAY, marginTop: 5 }}>
+                {konumAlindi
+                  ? "İl, ilçe ve adres aşağıya otomatik dolduruldu — kontrol edip düzeltebilirsiniz."
+                  : "Şu an dükkanınızdaysanız tıklayın — il, ilçe ve adres otomatik doldurulur."}
+              </div>
+            </div>
+
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
               <div>
                 <label style={sLabel}>İl *</label>
@@ -298,38 +354,6 @@ export default function ServisKayit() {
                 placeholder="Mahalle, cadde, bina no"
                 autoComplete="street-address"
               />
-            </div>
-
-            {/* Konum butonu */}
-            <div>
-              <button
-                type="button"
-                onClick={konumuAl}
-                disabled={konumAlinıyor || konumAlindi}
-                style={{
-                  width: "100%", padding: "11px 14px", borderRadius: 10,
-                  border: konumAlindi ? `1.5px solid ${GREEN}` : "1.5px solid #DDD3BE",
-                  background: konumAlindi ? GREEN + "14" : "#FFFDF8",
-                  color: konumAlindi ? GREEN : INK,
-                  fontWeight: 600, fontSize: 13.5,
-                  fontFamily: "'Hanken Grotesk', sans-serif",
-                  cursor: konumAlinıyor || konumAlindi ? "default" : "pointer",
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  transition: "all .15s",
-                }}
-              >
-                {konumAlindi
-                  ? <><span>✅</span> Konum alındı ({form.lat?.toFixed(4)}, {form.lng?.toFixed(4)})</>
-                  : konumAlinıyor
-                  ? <><span>⏳</span> Konum alınıyor…</>
-                  : <><span>📍</span> Dükkanımın Konumunu Al</>
-                }
-              </button>
-              <div style={{ fontSize: 11.5, color: GRAY, marginTop: 5 }}>
-                {konumAlindi
-                  ? "Müşterilere uzaklık hesaplamak için kullanılacak."
-                  : "Şu an dükkanınızdaysanız tıklayın. Mesafe sıralaması için kullanılır."}
-              </div>
             </div>
           </div>
 
