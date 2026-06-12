@@ -25,8 +25,53 @@ export default async function handler(req, res) {
 
   if (error) return res.status(500).json({ error: error.message });
 
+  // ── Servis mağaza ürünleri — pazaryeri birleşimi ────────────────
+  // Kategori filtresi yokken servis ürünleri de listeye karışır
+  // (servis_urunler'de cihaz kategorisi alanı yok).
+  let servisUrunleri = [];
+  if (!kategori && durum === "aktif" && offset === 0) {
+    const { data: urunler } = await supabase
+      .from("servis_urunler")
+      .select("id, servis_id, baslik, aciklama, fiyat, gorsel_url, dpp_seri_no, created_at")
+      .eq("durum", "aktif")
+      .order("created_at", { ascending: false })
+      .limit(30);
+
+    if (urunler?.length) {
+      // Servis ad/konum bilgisi
+      const servisIdler = [...new Set(urunler.map(u => u.servis_id))];
+      const { data: servisler } = await supabase
+        .from("servis_basvurulari")
+        .select("id, ad, il, ilce")
+        .in("id", servisIdler);
+      const servisMap = {};
+      (servisler || []).forEach(sv => { servisMap[sv.id] = sv; });
+
+      servisUrunleri = urunler.map(u => {
+        const sv = servisMap[u.servis_id];
+        return {
+          id:          u.id,
+          kaynak:      "servis",          // frontend ayrımı için
+          servis_id:   u.servis_id,
+          servis_ad:   sv?.ad || "Servis",
+          seri_no:     u.dpp_seri_no || null,
+          kategori:    null,
+          baslik:      u.baslik,
+          fiyat:       u.fiyat,
+          konum:       sv ? `${sv.ilce}, ${sv.il}` : null,
+          satici_ad:   sv?.ad || null,
+          fotograflar: u.gorsel_url ? [u.gorsel_url] : [],
+          durum:       "aktif",
+          created_at:  u.created_at,
+        };
+      });
+    }
+  }
+
   // DPP bilgisi: cihazlar + benservis doğrulama (toplu sorgu)
-  const seriNolar = [...new Set((ilanlar || []).map(i => i.seri_no).filter(Boolean))];
+  const seriNolar = [...new Set(
+    [...(ilanlar || []), ...servisUrunleri].map(i => i.seri_no).filter(Boolean)
+  )];
   const dppMap = {};
 
   if (seriNolar.length > 0) {
@@ -56,10 +101,12 @@ export default async function handler(req, res) {
     }
   }
 
-  const result = (ilanlar || []).map(ilan => ({
-    ...ilan,
-    dpp: dppMap[ilan.seri_no] || null,
-  }));
+  const result = [...(ilanlar || []), ...servisUrunleri]
+    .map(ilan => ({
+      ...ilan,
+      dpp: dppMap[ilan.seri_no] || null,
+    }))
+    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
-  return res.status(200).json({ ilanlar: result, toplam: count || 0 });
+  return res.status(200).json({ ilanlar: result, toplam: (count || 0) + servisUrunleri.length });
 }
