@@ -645,9 +645,33 @@ function UrunlerTab({ session }) {
   const [urunler, setUrunler] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(true);
   const [formAcik, setFormAcik] = useState(false);
-  const [form, setForm] = useState({ baslik: "", aciklama: "", fiyat: "", dpp_seri_no: "" });
+  const [form, setForm] = useState({ baslik: "", aciklama: "", fiyat: "", dpp_seri_no: "", gorsel_url: "" });
   const [kaydetYuk, setKaydetYuk] = useState(false);
+  const [fotoYuk, setFotoYuk] = useState(false);
   const [hata, setHata] = useState("");
+  const fotoInputRef = React.useRef(null);
+
+  const fotoSec = async (e) => {
+    const f = (e.target.files || [])[0];
+    if (!f) return;
+    const IZINLI = ["image/jpeg", "image/png", "image/webp"];
+    if (!IZINLI.includes(f.type)) { setHata("Yalnız JPG, PNG veya WebP yükleyin."); return; }
+    setFotoYuk(true);
+    setHata("");
+    try {
+      const ext = f.name.split(".").pop().toLowerCase();
+      const path = `urunler/${servisId}/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+      const { error } = await supabase.storage.from("DPP Foto").upload(path, f, { contentType: f.type });
+      if (error) throw new Error(error.message);
+      const url = supabase.storage.from("DPP Foto").getPublicUrl(path).data.publicUrl;
+      setForm(prev => ({ ...prev, gorsel_url: url }));
+    } catch (err) {
+      setHata("Fotoğraf yüklenemedi: " + err.message);
+    } finally {
+      setFotoYuk(false);
+      if (fotoInputRef.current) fotoInputRef.current.value = "";
+    }
+  };
 
   const getir = () => {
     setYukleniyor(true);
@@ -676,12 +700,13 @@ function UrunlerTab({ session }) {
           aciklama: form.aciklama.trim() || null,
           fiyat: Number(form.fiyat),
           dpp_seri_no: form.dpp_seri_no.trim().toUpperCase() || null,
+          gorsel_url: form.gorsel_url || null,
         }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
       setUrunler(prev => [data, ...prev]);
-      setForm({ baslik: "", aciklama: "", fiyat: "", dpp_seri_no: "" });
+      setForm({ baslik: "", aciklama: "", fiyat: "", dpp_seri_no: "", gorsel_url: "" });
       setFormAcik(false);
     } catch (err) { setHata(err.message); }
     setKaydetYuk(false);
@@ -740,6 +765,25 @@ function UrunlerTab({ session }) {
             placeholder="3500" style={inp} />
 
           <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 4 }}>
+            Ürün Fotoğrafı <span style={{ fontWeight: 400, color: "#888" }}>(önerilir)</span>
+          </label>
+          <div style={{ marginBottom: 12 }}>
+            {form.gorsel_url ? (
+              <div style={{ position: "relative", display: "inline-block" }}>
+                <img src={form.gorsel_url} alt="ürün" style={{ width: 96, height: 96, objectFit: "cover", borderRadius: 10, border: "1.5px solid #DDD3BE" }} />
+                <button type="button" onClick={() => setForm(f => ({ ...f, gorsel_url: "" }))}
+                  style={{ position: "absolute", top: -8, right: -8, background: "#B23A2E", color: "#fff", border: "none", borderRadius: "50%", width: 20, height: 20, fontSize: 10, cursor: "pointer" }}>✕</button>
+              </div>
+            ) : (
+              <button type="button" onClick={() => fotoInputRef.current?.click()} disabled={fotoYuk}
+                style={{ width: 96, height: 96, border: "1.5px dashed #DDD3BE", borderRadius: 10, background: "#FFFDF8", color: "#9A9384", fontSize: 12, cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4, fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                {fotoYuk ? "⏳" : <><span style={{ fontSize: 22 }}>📷</span>Fotoğraf Ekle</>}
+              </button>
+            )}
+            <input ref={fotoInputRef} type="file" accept="image/jpeg,image/png,image/webp" style={{ display: "none" }} onChange={fotoSec} />
+          </div>
+
+          <label style={{ fontSize: 12, fontWeight: 700, color: INK, display: "block", marginBottom: 4 }}>
             Seri No <span style={{ fontWeight: 400, color: "#888" }}>(opsiyonel — DPP bağlantısı için)</span>
           </label>
           <input value={form.dpp_seri_no} onChange={e => setForm(f => ({ ...f, dpp_seri_no: e.target.value }))}
@@ -776,7 +820,10 @@ function UrunlerTab({ session }) {
       ) : (
         urunler.map(u => (
           <div key={u.id} style={{ background: "white", borderRadius: 12, padding: 14, marginBottom: 10, border: "1px solid #E5DCC9" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+            <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+              {u.gorsel_url && (
+                <img src={u.gorsel_url} alt={u.baslik} style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 8, border: "1px solid #E5DCC9", flexShrink: 0 }} />
+              )}
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 700, fontSize: 14, color: INK }}>{u.baslik}</div>
                 <div style={{ fontSize: 15, fontWeight: 700, color: AMBER, marginTop: 2 }}>{u.fiyat.toLocaleString("tr-TR")} ₺</div>
