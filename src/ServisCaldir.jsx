@@ -11,7 +11,8 @@ const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 // servis = null → havuz modu ("En Yakın Servis" otomatik eşleştir)
-export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
+// ilce → havuz modunda müşterinin ilçesi (GPS/seçim); backend eşleştirmesi için
+export default function ServisCaldir({ servis, cihaz, belirti, ilce, onKapat }) {
   const isOtomatik = !servis;
   const [ad, setAd] = useState("");
   const [tel, setTel] = useState("");
@@ -50,6 +51,9 @@ export default function ServisCaldir({ servis, cihaz, belirti, onKapat }) {
       if (!isOtomatik) {
         body.servis_id = servis.id;
         body.servis_ad = servis.ad;
+      } else if (ilce) {
+        // Havuz modu: GPS/seçimden gelen ilçe — adres parse'ından güvenilir
+        body.ilce = ilce;
       }
 
       const res = await fetch("/api/is/yeni", {

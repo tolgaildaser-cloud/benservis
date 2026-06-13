@@ -236,6 +236,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [caldirServis, setCaldirServis] = useState(null);
   const [otomatikCaldir, setOtomatikCaldir] = useState(false);
   const [tumServisler, setTumServisler] = useState(servislerProp || []);
+  // Müşterinin ilçesi — havuz eşleştirmesi için. GPS ters geokodundan
+  // veya fallback ilçe seçiminden gelir. Adres metni parse'ından güvenilir.
+  const [konumIlce, setKonumIlce] = useState(null);
 
   // JSON + DB servislerini birleştir
   useEffect(() => {
@@ -278,6 +281,17 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           .slice(0, 15);
         setSiraliServisler(eslesmis);
         setLocationState("success");
+
+        // Ters geokodlama — müşterinin ilçesini GPS'ten çıkar (havuz eşleşmesi).
+        // Hata olursa null kalır, backend adres metninden parse eder.
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=14`)
+          .then(r => r.ok ? r.json() : null)
+          .then(d => {
+            const a = d?.address || {};
+            const ilce = a.town || a.city_district || a.county || a.district || a.suburb || null;
+            if (ilce) setKonumIlce(ilce);
+          })
+          .catch(() => {});
       },
       () => setLocationState("denied"),
       { timeout: 10000 }
@@ -311,6 +325,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             servis={otomatikCaldir ? null : caldirServis}
             cihaz={cihaz}
             belirti={belirti}
+            ilce={konumIlce}
             onKapat={() => { setCaldirServis(null); setOtomatikCaldir(false); }}
           />
         )}
@@ -400,6 +415,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             onSec={(ilce) => {
               if (!ilce) return;
               setFallbackIlce(ilce);
+              setKonumIlce(ilce); // havuz eşleşmesi — seçilen ilçe kesin doğru
               const eslesmis = tumServisler
                 .filter((s) => s.kategoriler?.includes(cihaz) && s.ilce === ilce)
                 .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili

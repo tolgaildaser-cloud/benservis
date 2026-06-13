@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     servis_id, servis_ad,
     musteri_ad, musteri_tel,
     adres, tarih_tercihi,
-    cihaz, belirti, seri_no,
+    cihaz, belirti, seri_no, ilce,
   } = req.body || {};
 
   // ── Demo modu: tüm talepler tek test hesabına yönlendirilir ─────
@@ -63,8 +63,9 @@ export default async function handler(req, res) {
   };
 
   if (isHavuz) {
-    // Havuz: servis_id null, ilçe parse edilir
-    kayit.ilce = ilcedenAdres(adres);
+    // Havuz: servis_id null. İlçe önce body'den (GPS/seçim — güvenilir),
+    // yoksa adres metninden parse edilir (geri uyumluluk).
+    kayit.ilce = (ilce && ilce.trim()) ? ilce.trim() : ilcedenAdres(adres);
     kayit.durum = "havuzda";
   } else {
     kayit.servis_id = servis_id;
