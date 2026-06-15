@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import ServisCaldir from "./ServisCaldir.jsx";
+import { TR_IL_ILCE } from "./tr-iller.js";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -202,20 +203,14 @@ function ServisProfil({ servis, onGeri }) {
   );
 }
 
-// İl adı Türkçe başlık biçimine getirilir ("istanbul" → "İstanbul").
-// JSON servisler sehir küçük harf, DB servisler il büyük harf tutuyor.
-function ilDisplay(raw) {
-  const t = (raw || "").trim();
-  if (!t) return "";
-  return t.charAt(0).toLocaleUpperCase("tr") + t.slice(1).toLocaleLowerCase("tr");
-}
-
 // İki kademeli konum seçimi: önce il, sonra o ile ait ilçeler.
-// ilIlceMap: { "İstanbul": ["Kadıköy", ...], "İzmir": [...] }
+// ilIlceMap: tüm Türkiye (TR_IL_ILCE) — { "İstanbul": ["Kadıköy", ...], ... }
 function FallbackIlce({ ilIlceMap, secili, onSec }) {
   const [il, setIl] = useState("");
-  const iller = Object.keys(ilIlceMap);
-  const ilceler = il ? (ilIlceMap[il] || []) : [];
+  const iller = Object.keys(ilIlceMap).sort((a, b) => a.localeCompare(b, "tr"));
+  const ilceler = il
+    ? [...(ilIlceMap[il] || [])].sort((a, b) => a.localeCompare(b, "tr"))
+    : [];
 
   const selStyle = {
     padding: "11px 14px", fontSize: 14, borderRadius: 8,
@@ -327,24 +322,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     );
   }, [cihaz, tumServisler]);
 
-  // İl → ilçe haritası (kademeli seçim için), mevcut servislerden türetilir.
-  // JSON'da sehir, DB'de il alanı; ilDisplay ile tek biçime normalize edilir.
-  const ilIlceMap = useMemo(() => {
-    const m = {};
-    tumServisler
-      .filter((s) => s.kategoriler?.includes(cihaz))
-      .forEach((s) => {
-        const ilAdi = ilDisplay(s.il || s.sehir);
-        if (!ilAdi || !s.ilce) return;
-        if (!m[ilAdi]) m[ilAdi] = new Set();
-        m[ilAdi].add(s.ilce);
-      });
-    const out = {};
-    Object.keys(m).sort((a, b) => a.localeCompare(b, "tr")).forEach((il) => {
-      out[il] = [...m[il]].sort((a, b) => a.localeCompare(b, "tr"));
-    });
-    return out;
-  }, [tumServisler, cihaz]);
+  // İl → ilçe haritası: tüm Türkiye (free lansman — her bölgeden talep alınır,
+  // servis olmasa bile talep o ilçenin havuzuna düşer).
+  const ilIlceMap = TR_IL_ILCE;
 
   // Profil ekranı
   if (ekran === "profil" && seciliServis) {
@@ -415,11 +395,26 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           </p>
         )}
 
-        {/* Başarılı — liste */}
+        {/* Başarılı ama bu bölgede listeli servis yok — yine de havuza gönder */}
         {locationState === "success" && siraliServisler.length === 0 && (
-          <p style={{ textAlign: "center", color: "#888", marginTop: 40 }}>
-            Bu cihaz için yakında kayıtlı servis bulunamadı.
-          </p>
+          <div style={{ textAlign: "center", marginTop: 32 }}>
+            <div style={{ fontSize: 36, marginBottom: 10 }}>📍</div>
+            <p style={{ color: "#22302A", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
+              Bu bölgede henüz listeli servis yok
+            </p>
+            <p style={{ color: "#888", fontSize: 12.5, marginBottom: 18, lineHeight: 1.5 }}>
+              Talebinizi bölge havuzuna gönderin — bölgenizdeki<br />servisler ulaştığında size bildirim göndeririz.
+            </p>
+            <button
+              onClick={() => setOtomatikCaldir(true)}
+              style={{
+                padding: "13px 24px", borderRadius: 12,
+                background: "#C8632B", color: "white", border: "none",
+                fontWeight: 700, fontSize: 14.5, cursor: "pointer",
+              }}>
+              ⚡ Talebimi Bölge Havuzuna Gönder
+            </button>
+          </div>
         )}
 
         {locationState === "success" && siraliServisler.length > 0 && (
