@@ -202,26 +202,55 @@ function ServisProfil({ servis, onGeri }) {
   );
 }
 
-function FallbackIlce({ ilceler, secili, onSec }) {
+// İl adı Türkçe başlık biçimine getirilir ("istanbul" → "İstanbul").
+// JSON servisler sehir küçük harf, DB servisler il büyük harf tutuyor.
+function ilDisplay(raw) {
+  const t = (raw || "").trim();
+  if (!t) return "";
+  return t.charAt(0).toLocaleUpperCase("tr") + t.slice(1).toLocaleLowerCase("tr");
+}
+
+// İki kademeli konum seçimi: önce il, sonra o ile ait ilçeler.
+// ilIlceMap: { "İstanbul": ["Kadıköy", ...], "İzmir": [...] }
+function FallbackIlce({ ilIlceMap, secili, onSec }) {
+  const [il, setIl] = useState("");
+  const iller = Object.keys(ilIlceMap);
+  const ilceler = il ? (ilIlceMap[il] || []) : [];
+
+  const selStyle = {
+    padding: "11px 14px", fontSize: 14, borderRadius: 8,
+    border: "2px solid #22302A", background: "#F5EFE2",
+    color: "#22302A", cursor: "pointer", fontFamily: "inherit",
+    minWidth: 180,
+  };
+
   return (
     <div style={{ textAlign: "center", marginTop: 40 }}>
       <p style={{ color: "#22302A", marginBottom: 16, fontSize: 14 }}>
-        Konum iznine gerek kalmadan ilçenizi seçin:
+        Konum iznine gerek kalmadan bölgenizi seçin:
       </p>
-      <select
-        value={secili}
-        onChange={(e) => onSec(e.target.value)}
-        style={{
-          padding: "10px 14px", fontSize: 14, borderRadius: 8,
-          border: "2px solid #22302A", background: "#F5EFE2",
-          color: "#22302A", cursor: "pointer",
-        }}
-      >
-        <option value="">İlçe seçin...</option>
-        {ilceler.map((ilce) => (
-          <option key={ilce} value={ilce}>{ilce}</option>
-        ))}
-      </select>
+      <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+        {/* İl */}
+        <select
+          value={il}
+          onChange={(e) => { setIl(e.target.value); onSec(""); }}
+          style={selStyle}
+        >
+          <option value="">İl seçin...</option>
+          {iller.map((x) => <option key={x} value={x}>{x}</option>)}
+        </select>
+
+        {/* İlçe — yalnız il seçilince aktif */}
+        <select
+          value={secili}
+          onChange={(e) => onSec(e.target.value)}
+          disabled={!il}
+          style={{ ...selStyle, opacity: il ? 1 : 0.5, cursor: il ? "pointer" : "not-allowed" }}
+        >
+          <option value="">{il ? "İlçe seçin..." : "Önce il seçin"}</option>
+          {ilceler.map((x) => <option key={x} value={x}>{x}</option>)}
+        </select>
+      </div>
     </div>
   );
 }
@@ -298,12 +327,24 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     );
   }, [cihaz, tumServisler]);
 
-  const ilceler = useMemo(
-    () => [...new Set(
-      tumServisler.filter((s) => s.kategoriler?.includes(cihaz)).map((s) => s.ilce)
-    )].sort(),
-    [tumServisler, cihaz]
-  );
+  // İl → ilçe haritası (kademeli seçim için), mevcut servislerden türetilir.
+  // JSON'da sehir, DB'de il alanı; ilDisplay ile tek biçime normalize edilir.
+  const ilIlceMap = useMemo(() => {
+    const m = {};
+    tumServisler
+      .filter((s) => s.kategoriler?.includes(cihaz))
+      .forEach((s) => {
+        const ilAdi = ilDisplay(s.il || s.sehir);
+        if (!ilAdi || !s.ilce) return;
+        if (!m[ilAdi]) m[ilAdi] = new Set();
+        m[ilAdi].add(s.ilce);
+      });
+    const out = {};
+    Object.keys(m).sort((a, b) => a.localeCompare(b, "tr")).forEach((il) => {
+      out[il] = [...m[il]].sort((a, b) => a.localeCompare(b, "tr"));
+    });
+    return out;
+  }, [tumServisler, cihaz]);
 
   // Profil ekranı
   if (ekran === "profil" && seciliServis) {
@@ -410,7 +451,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         {/* Konum izni reddedildi — ilçe fallback */}
         {locationState === "denied" && (
           <FallbackIlce
-            ilceler={ilceler}
+            ilIlceMap={ilIlceMap}
             secili={fallbackIlce}
             onSec={(ilce) => {
               if (!ilce) return;
