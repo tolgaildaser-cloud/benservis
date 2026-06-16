@@ -21,3 +21,61 @@ export const MARKALAR = [
   "Thomson", "Toshiba", "Vaillant", "Vestel", "Vivo", "Whirlpool",
   "Xiaomi", "Zanussi",
 ];
+
+// Cihaza göre ilgili markalar — kullanıcı cihaz seçince yalnız o cihazda
+// satılan markalar listelenir. Haritada olmayan cihaz (veya "Diğer") → tüm MARKALAR.
+const BEYAZ_ESYA = [
+  "AEG", "Altus", "Arçelik", "Bauknecht", "Beko", "Bosch", "Candy", "Daewoo",
+  "Electrolux", "Grundig", "Haier", "Hisense", "Hoover", "Hotpoint", "Indesit",
+  "LG", "Midea", "Miele", "Profilo", "Regal", "Samsung", "Siemens", "Vestel",
+  "Whirlpool", "Zanussi",
+];
+const ISITMA_SOGUTMA = [
+  "Airfel", "Alarko", "Arçelik", "Baymak", "Beko", "Bosch", "Buderus", "Daikin",
+  "Demirdöküm", "ECA", "Ferroli", "Gree", "Haier", "Hisense", "Hitachi", "LG",
+  "Midea", "Mitsubishi", "Panasonic", "Samsung", "Toshiba", "Vaillant", "Vestel",
+];
+const KUCUK_EV = [
+  "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "Fakir", "Goldmaster", "Karaca",
+  "King", "Korkmaz", "Kumtel", "Philips", "Rowenta", "Sinbo", "Tefal", "Vestel",
+];
+const SUPURGE = [
+  "Arçelik", "Arzum", "Beko", "Bosch", "Dreame", "Dyson", "Electrolux", "Fakir",
+  "Fantom", "Karcher", "LG", "Philips", "Roborock", "Rowenta", "Samsung", "Tefal",
+  "Vestel", "Xiaomi", "iRobot",
+];
+const TELEFON = [
+  "Apple", "Asus", "Casper", "General Mobile", "Honor", "Huawei", "Nokia",
+  "OnePlus", "Oppo", "Realme", "Reeder", "Samsung", "TCL", "Tecno", "Vivo", "Xiaomi",
+];
+const BILGISAYAR = [
+  "Acer", "Apple", "Asus", "Casper", "Dell", "Gigabyte", "HP", "Huawei", "Lenovo",
+  "LG", "Microsoft", "Monster", "MSI", "Samsung", "Sony", "Toshiba",
+];
+
+export const CIHAZ_MARKALARI = {
+  "Buzdolabı": BEYAZ_ESYA,
+  "Çamaşır Makinesi": BEYAZ_ESYA,
+  "Bulaşık Makinesi": BEYAZ_ESYA,
+  "Fırın / Ocak": [...BEYAZ_ESYA, "Franke", "Silverline", "Simfer", "Kumtel", "ECA"].sort((a, b) => a.localeCompare(b, "tr")),
+  "Mikrodalga": [...BEYAZ_ESYA, "Arzum", "Goldmaster", "Kumtel"].sort((a, b) => a.localeCompare(b, "tr")),
+  "Klima": ISITMA_SOGUTMA,
+  "Kombi": ISITMA_SOGUTMA,
+  "Termosifon / Şofben": ISITMA_SOGUTMA,
+  "Televizyon": ["Arçelik", "Awox", "Beko", "Grundig", "Hisense", "LG", "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Sony", "TCL", "Thomson", "Toshiba", "Vestel"],
+  "Cep Telefonu": TELEFON,
+  "Elektrik Süpürgesi": SUPURGE,
+  "Robot Süpürge": ["Arçelik", "Dreame", "Dyson", "Fakir", "Fantom", "iRobot", "LG", "Philips", "Roborock", "Samsung", "Xiaomi"],
+  "Air Fryer": KUCUK_EV,
+  "Su Sebili / Arıtma": ["Arçelik", "Aqua", "Beko", "Coway", "Homefil", "Samsung", "Vestel", "Waterlife"],
+  "Masaüstü Bilgisayar": BILGISAYAR,
+  "Notebook": BILGISAYAR,
+  "Yazıcı": ["Brother", "Canon", "Epson", "HP", "Lexmark", "Pantum", "Ricoh", "Samsung", "Xerox"],
+  // "Diğer" ve haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
+};
+
+// Bir cihaz için marka listesi döndürür — yoksa tüm MARKALAR.
+export function markalarForCihaz(cihaz) {
+  const liste = CIHAZ_MARKALARI[cihaz];
+  return liste && liste.length ? liste : MARKALAR;
+}

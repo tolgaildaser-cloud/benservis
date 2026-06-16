@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 import DPPEkrani from "./DPPEkrani.jsx";
 import SERVISLER from "./services-data.json";
-import { CIHAZLAR, MARKALAR } from "./constants.js";
+import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -222,7 +222,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <label style={s.label}>Hangi cihaz?</label>
           <div style={s.chipWrap}>
             {CIHAZLAR.map((c) => (
-              <button key={c} onClick={() => setCihaz(c)} style={{ ...s.chip, ...(cihaz === c ? s.chipActive : {}) }}>{c}</button>
+              <button key={c} onClick={() => {
+                setCihaz(c);
+                // Cihaz değişince seçili marka yeni listede yoksa sıfırla
+                if (marka && !markalarForCihaz(c).includes(marka)) setMarka("");
+              }} style={{ ...s.chip, ...(cihaz === c ? s.chipActive : {}) }}>{c}</button>
             ))}
           </div>
 
@@ -243,12 +247,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                 Marka <span style={{ color: "#B23A2E", fontWeight: 700 }}>*</span>
               </label>
               <select
-                style={{ ...s.input, cursor: "pointer" }}
+                style={{ ...s.input, cursor: cihaz ? "pointer" : "not-allowed" }}
                 value={marka}
                 onChange={(e) => setMarka(e.target.value)}
+                disabled={!cihaz}
               >
-                <option value="">Seç…</option>
-                {MARKALAR.map((m) => <option key={m} value={m}>{m}</option>)}
+                <option value="">{cihaz ? "Seç…" : "Önce cihaz seç"}</option>
+                {markalarForCihaz(cihaz).map((m) => <option key={m} value={m}>{m}</option>)}
                 <option value="Diğer">Diğer / Listede yok</option>
               </select>
             </div>

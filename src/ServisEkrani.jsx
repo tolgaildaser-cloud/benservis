@@ -298,12 +298,16 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             // lat/lng null olan DB servisleri km hesaplanamaz → sona koy
             km: s.lat && s.lng ? haversine(lat, lng, s.lat, s.lng) : null,
           }))
+          // MESAFE birincil — en yakın üstte (BiTaksi mantığı). Yetkili artık
+          // sabitlenmez, yalnızca rozet olarak gösterilir. (Garanti seçiliyse
+          // zaten yukarıda yalnız yetkili'ye filtrelendi.) Eşit km'de puan.
           .sort((a, b) => {
-            if (a.yetkili !== b.yetkili) return b.yetkili ? 1 : -1;
-            if (a.km == null && b.km == null) return 0;
-            if (a.km == null) return 1;
-            if (b.km == null) return -1;
-            return a.km - b.km;
+            if (a.km != null && b.km != null) {
+              if (a.km !== b.km) return a.km - b.km;
+              return (b.puan || 0) - (a.puan || 0);
+            }
+            if (a.km == null && b.km == null) return (b.puan || 0) - (a.puan || 0);
+            return a.km == null ? 1 : -1;
           })
           .slice(0, 15);
         setSiraliServisler(eslesmis);
@@ -474,11 +478,8 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
               const eslesmis = tumServisler
                 .filter((s) => s.kategoriler?.includes(cihaz) && s.ilce === ilce)
                 .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
-                .sort((a, b) =>
-                  a.yetkili !== b.yetkili
-                    ? b.yetkili ? 1 : -1
-                    : 0
-                )
+                // Konum yok → puana göre sırala (yetkili sabitlenmez, rozet kalır)
+                .sort((a, b) => (b.puan || 0) - (a.puan || 0))
                 .slice(0, 10);
               setSiraliServisler(eslesmis);
               setLocationState("success");
