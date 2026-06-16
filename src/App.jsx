@@ -17,10 +17,9 @@ const BELIRTILER = {
   "Kombi": ["Sıcak su gelmiyor", "Petekler ısınmıyor", "Basınç düşüyor", "Arıza kodu veriyor"],
   "Televizyon": ["Açılmıyor", "Görüntü yok ses var", "Ekranda çizgiler", "Uygulama/bağlantı sorunu"],
   "Termosifon / Şofben": ["Su ısıtmıyor", "Su akıtıyor", "Yetersiz ısınıyor", "Hiç çalışmıyor"],
-  "Mikrodalga": ["Isıtmıyor", "Çalışmıyor", "Kıvılcım/ses", "Tabla dönmüyor"],
+  "Mikrodalga / Air Fryer": ["Isıtmıyor / pişirmiyor", "Çalışmıyor", "Fan sesi/koku", "Düğme/ekran sorunu"],
   "Süpürge": ["Çekiş zayıf", "Çalışmıyor", "Şarj tutmuyor", "Ses/koku var"],
   "Su Sebili / Arıtma": ["Su gelmiyor", "Su akıtıyor", "Soğutmuyor/ısıtmıyor", "Tat/koku sorunu"],
-  "Air Fryer": ["Isınmıyor", "Çalışmıyor", "Fan sesi/koku", "Düğme/ekran sorunu"],
   "Bilgisayar": ["Açılmıyor", "Görüntü gelmiyor", "Donma / yavaşlama", "Aşırı ısınma / ses"],
   "Yazıcı": ["Yazdırmıyor", "Kağıt sıkışması", "Baskı kalitesi bozuk", "Bağlantı sorunu"],
   "Diğer": [],
@@ -36,7 +35,7 @@ const SEED = {
   "Kombi": [["3 yollu vana",700,1400,800],["Sirkülasyon pompası",1200,2500,900],["Eşanjör",1500,4000,1200]],
   "Televizyon": [["Backlight LED bar",700,1800,900],["Besleme kartı",600,1500,800],["Panel",3000,8000,1500]],
   "Termosifon / Şofben": [["Rezistans",400,900,500],["Termostat",300,600,400],["Anot/temizlik",300,700,500]],
-  "Mikrodalga": [["Magnetron",700,1500,600],["Sigorta/diyot",200,500,400]],
+  "Mikrodalga / Air Fryer": [["Magnetron (mikrodalga)",700,1500,600],["Rezistans (air fryer)",300,700,400],["Fan/termostat/kart",300,900,400]],
   "Süpürge": [["Motor",600,1500,500],["Batarya (şarjlı)",500,1500,400],["Fırça/sensör/anakart",400,2500,500]],
   "Su Sebili / Arıtma": [["Filtre seti",400,1200,300],["Pompa/membran",700,1800,600]],
   "Air Fryer": [["Rezistans",300,700,400],["Fan motoru",300,800,400],["Termostat/kart",300,900,400]],
@@ -258,8 +257,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                 <option value="Diğer">Diğer / Listede yok</option>
               </select>
             </div>
-            <div style={{ width: 110 }}>
-              <label style={s.label}>Hata kodu <span style={s.opt}>(varsa)</span></label>
+            <div style={{ width: 128, flexShrink: 0 }}>
+              <label style={{ ...s.label, whiteSpace: "nowrap" }}>Hata kodu <span style={s.opt}>(varsa)</span></label>
               <input style={s.input} value={hataKodu} onChange={(e) => setHataKodu(e.target.value)} placeholder="E3" />
             </div>
           </div>
@@ -427,7 +426,7 @@ const s = {
   oneriLabel: { fontSize: 12.5, fontWeight: 700, color: MUTED },
   oneriWrap: { display: "flex", flexWrap: "wrap", gap: 7, marginTop: 9 },
   oneriChip: { fontSize: 12.5, padding: "6px 12px", borderRadius: 8, border: `1px solid ${HAIR}`, background: SURFACE, color: AMBER, fontWeight: 600 },
-  row: { display: "flex", gap: 12 },
+  row: { display: "flex", gap: 12, alignItems: "flex-end" },
   garantiRow: { display: "flex", alignItems: "center", gap: 10, margin: "18px 0 0", cursor: "pointer", fontSize: 13.5, color: GREEN, fontWeight: 600, userSelect: "none" },
   input: { width: "100%", padding: "12px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s" },
   textarea: { width: "100%", padding: "13px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "vertical", lineHeight: 1.55 },

@@ -1,8 +1,8 @@
 // src/constants.js
 export const CIHAZLAR = [
   "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Fırın / Ocak", "Klima",
-  "Kombi", "Televizyon", "Termosifon / Şofben", "Mikrodalga", "Süpürge",
-  "Su Sebili / Arıtma", "Air Fryer", "Bilgisayar", "Yazıcı", "Diğer",
+  "Kombi", "Televizyon", "Termosifon / Şofben", "Mikrodalga / Air Fryer", "Süpürge",
+  "Su Sebili / Arıtma", "Bilgisayar", "Yazıcı", "Diğer",
 ];
 
 // Birleştirilen cihazların eski kategori adlarıyla eşleştirilmesi —
@@ -11,6 +11,7 @@ export const CIHAZLAR = [
 export const KATEGORI_ESLES = {
   "Süpürge": ["Süpürge", "Elektrik Süpürgesi", "Robot Süpürge"],
   "Bilgisayar": ["Bilgisayar", "Masaüstü Bilgisayar", "Notebook"],
+  "Mikrodalga / Air Fryer": ["Mikrodalga / Air Fryer", "Mikrodalga", "Air Fryer"],
 };
 
 // Bir cihaz için eşleşecek tüm kategori adları (birleştirme dahil).
@@ -70,13 +71,12 @@ export const CIHAZ_MARKALARI = {
   "Çamaşır Makinesi": BEYAZ_ESYA,
   "Bulaşık Makinesi": BEYAZ_ESYA,
   "Fırın / Ocak": [...BEYAZ_ESYA, "Franke", "Silverline", "Simfer", "Kumtel", "ECA"].sort((a, b) => a.localeCompare(b, "tr")),
-  "Mikrodalga": [...BEYAZ_ESYA, "Arzum", "Goldmaster", "Kumtel"].sort((a, b) => a.localeCompare(b, "tr")),
+  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort((a, b) => a.localeCompare(b, "tr")),
   "Klima": ISITMA_SOGUTMA,
   "Kombi": ISITMA_SOGUTMA,
   "Termosifon / Şofben": ISITMA_SOGUTMA,
   "Televizyon": ["Arçelik", "Awox", "Beko", "Grundig", "Hisense", "LG", "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Sony", "TCL", "Thomson", "Toshiba", "Vestel"],
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort((a, b) => a.localeCompare(b, "tr")),
-  "Air Fryer": KUCUK_EV,
   "Su Sebili / Arıtma": ["Arçelik", "Aqua", "Beko", "Coway", "Homefil", "Samsung", "Vestel", "Waterlife"],
   "Bilgisayar": BILGISAYAR,
   "Yazıcı": ["Brother", "Canon", "Epson", "HP", "Lexmark", "Pantum", "Ricoh", "Samsung", "Xerox"],

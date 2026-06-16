@@ -33,6 +33,9 @@ const IKONLAR = {
   "Mikrodalga": (
     <g {...P}><rect x="3" y="5" width="18" height="13" rx="2" /><rect x="6" y="8" width="9" height="7" rx="1" /><line x1="18" y1="9" x2="18" y2="11" /><line x1="18" y1="13" x2="18" y2="14" /></g>
   ),
+  "Mikrodalga / Air Fryer": (
+    <g {...P}><rect x="3" y="5" width="18" height="13" rx="2" /><rect x="6" y="8" width="9" height="7" rx="1" /><line x1="18" y1="9" x2="18" y2="11" /><line x1="18" y1="13" x2="18" y2="14" /></g>
+  ),
   "Elektrik Süpürgesi": (
     <g {...P}><circle cx="8" cy="15" r="4" /><circle cx="8" cy="15" r="1" fill="currentColor" /><path d="M11 13l6-8" /><path d="M15 4h3v3" /></g>
   ),
