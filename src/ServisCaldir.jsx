@@ -10,6 +10,22 @@ import React, { useState } from "react";
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
+const GUNLER = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+const AYLAR = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"];
+// Bugünden itibaren 7 günlük tarih seçenekleri (elle yazma yok)
+function tarihSecenekleri() {
+  const out = [];
+  const bugun = new Date();
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(bugun);
+    d.setDate(bugun.getDate() + i);
+    const etiket = i === 0 ? "Bugün" : i === 1 ? "Yarın" : GUNLER[d.getDay()];
+    out.push(`${etiket}, ${d.getDate()} ${AYLAR[d.getMonth()]}`);
+  }
+  return out;
+}
+const SAAT_PENCERELERI = ["09:00 – 13:00", "13:00 – 18:00"];
+
 // servis = null → havuz modu ("En Yakın Servis" otomatik eşleştir)
 // ilce  → havuz fallback eşleştirmesi (koordinat yoksa)
 // konum → {lat,lng} müşteri GPS — havuz MESAFE eşleştirmesi (asıl yöntem)
@@ -18,8 +34,10 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
   const [ad, setAd] = useState("");
   const [tel, setTel] = useState("");
   const [adres, setAdres] = useState("");
-  const [tarih, setTarih] = useState("");
+  const [tarihGun, setTarihGun] = useState("");
+  const [pencere, setPencere] = useState("");
   const [seriNo, setSeriNo] = useState("");
+  const TARIHLER = tarihSecenekleri();
   const [hata, setHata] = useState("");
   const [yukleniyor, setYukleniyor] = useState(false);
   const [tamamlandi, setTamamlandi] = useState(null); // { is_no }
@@ -43,7 +61,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
         musteri_ad: ad.trim(),
         musteri_tel: tel.trim(),
         adres: adres.trim(),
-        tarih_tercihi: tarih.trim() || null,
+        tarih_tercihi: [tarihGun, pencere].filter(Boolean).join(" · ") || null,
         seri_no: seriNo.trim() || null,
         cihaz: cihaz || null,
         belirti: belirti || null,
@@ -72,7 +90,8 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
       setAd("");
       setTel("");
       setAdres("");
-      setTarih("");
+      setTarihGun("");
+      setPencere("");
       setSeriNo("");
     } catch (err) {
       setHata(err.message);
@@ -139,10 +158,33 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
               style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 14, boxSizing: "border-box" }} />
 
             <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: INK, marginBottom: 6 }}>
-              Tarih Tercihi <span style={{ fontWeight: 400, color: "#888", fontSize: 12 }}>(opsiyonel)</span>
+              Ne zaman gelelim? <span style={{ fontWeight: 400, color: "#888", fontSize: 12 }}>(opsiyonel)</span>
             </label>
-            <input value={tarih} onChange={e => setTarih(e.target.value)} placeholder="örn. Yarın öğleden sonra"
-              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 20, boxSizing: "border-box" }} />
+            {/* Tarih dropdown */}
+            <select value={tarihGun} onChange={e => setTarihGun(e.target.value)}
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 8, boxSizing: "border-box", background: "#fff", cursor: "pointer", color: tarihGun ? INK : "#888" }}>
+              <option value="">Gün seçin…</option>
+              {TARIHLER.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+            {/* Saat aralığı — 2 buton */}
+            <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+              {SAAT_PENCERELERI.map(p => {
+                const aktif = pencere === p;
+                return (
+                  <button key={p} type="button" onClick={() => setPencere(aktif ? "" : p)}
+                    style={{
+                      flex: 1, padding: "11px 8px", borderRadius: 10,
+                      border: aktif ? `1.5px solid ${AMBER}` : "1.5px solid #DDD3BE",
+                      background: aktif ? AMBER : "#fff",
+                      color: aktif ? "#fff" : INK,
+                      fontSize: 13.5, fontWeight: 700, cursor: "pointer",
+                      fontFamily: "'Hanken Grotesk', sans-serif", transition: "all .12s",
+                    }}>
+                    {p}
+                  </button>
+                );
+              })}
+            </div>
 
             <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#22302A", marginBottom: 6 }}>
               Seri No <span style={{ fontWeight: 400, color: "#888", fontSize: 12 }}>(opsiyonel)</span>
