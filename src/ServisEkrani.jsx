@@ -260,9 +260,11 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [caldirServis, setCaldirServis] = useState(null);
   const [otomatikCaldir, setOtomatikCaldir] = useState(false);
   const [tumServisler, setTumServisler] = useState(servislerProp || []);
-  // Müşterinin ilçesi — havuz eşleştirmesi için. GPS ters geokodundan
-  // veya fallback ilçe seçiminden gelir. Adres metni parse'ından güvenilir.
+  // Müşterinin ilçesi — havuz eşleştirmesinde fallback (koordinat yoksa).
   const [konumIlce, setKonumIlce] = useState(null);
+  // Müşterinin GPS koordinatı — havuz MESAFE eşleştirmesi için (asıl yöntem).
+  // Servis kendi konumunun yarıçapındaki talepleri görür; ilçe sınırı yok.
+  const [musteriKonum, setMusteriKonum] = useState(null);
 
   // JSON + DB servislerini birleştir
   useEffect(() => {
@@ -287,6 +289,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
+        setMusteriKonum({ lat, lng }); // havuz mesafe eşleştirmesi için
         const eslesmis = tumServisler
           .filter((s) => s.kategoriler?.includes(cihaz))
           .filter((s) => !garantiAltinda || s.yetkili)
@@ -362,6 +365,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             cihaz={cihaz}
             belirti={belirti}
             ilce={konumIlce}
+            konum={musteriKonum}
             onKapat={() => { setCaldirServis(null); setOtomatikCaldir(false); }}
           />
         )}

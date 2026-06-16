@@ -455,7 +455,12 @@ function HavuzKarti({ is, onAl, yukleniyor }) {
   return (
     <div style={{ background: "white", border: `1.5px solid ${AMBER}`, borderRadius: 12, padding: 14, marginBottom: 10 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-        <span style={{ fontWeight: 700, fontSize: 13, color: INK }}>#{is.is_no}</span>
+        <span style={{ fontWeight: 700, fontSize: 13, color: INK }}>
+          #{is.is_no}
+          {is.km != null && (
+            <span style={{ marginLeft: 8, fontWeight: 700, color: GREEN, fontSize: 12 }}>📍 {is.km} km</span>
+          )}
+        </span>
         {kalan !== null && (
           <span style={{ fontSize: 11, color: kalan < 5 ? "#B23A2E" : AMBER, fontWeight: 700 }}>
             ⏱ {kalan} dk kaldı

@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     musteri_ad, musteri_tel,
     adres, tarih_tercihi,
     cihaz, belirti, seri_no, ilce,
+    lat, lng,
   } = req.body || {};
 
   // ── Demo modu: tüm talepler tek test hesabına yönlendirilir ─────
@@ -63,9 +64,11 @@ export default async function handler(req, res) {
   };
 
   if (isHavuz) {
-    // Havuz: servis_id null. İlçe önce body'den (GPS/seçim — güvenilir),
-    // yoksa adres metninden parse edilir (geri uyumluluk).
+    // Havuz: servis_id null. Mesafe eşleştirmesi için müşteri koordinatı
+    // (asıl yöntem); ilçe fallback olarak da saklanır (koordinat yoksa).
     kayit.ilce = (ilce && ilce.trim()) ? ilce.trim() : ilcedenAdres(adres);
+    if (lat != null && !isNaN(Number(lat))) kayit.lat = Number(lat);
+    if (lng != null && !isNaN(Number(lng))) kayit.lng = Number(lng);
     kayit.durum = "havuzda";
   } else {
     kayit.servis_id = servis_id;
