@@ -72,11 +72,18 @@ export default function App() {
   const [showDPP, setShowDPP] = useState(false);
   const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
 
-  const ekleBelirti = (b) => {
+  // Belirti, ". " ile ayrılmış parçalardan oluşur; chip'ler bu parçaları
+  // toggle eder. Seçili durum belirti metninden türetilir (tek kaynak).
+  const belirtiAktif = (b) =>
+    belirti.split(/\.\s*/).some((p) => p.trim().toLocaleLowerCase("tr") === b.toLocaleLowerCase("tr"));
+
+  const belirtiToggle = (b) => {
     setBelirti((prev) => {
-      const t = prev.trim();
-      if (t.toLowerCase().includes(b.toLowerCase())) return prev;
-      return t ? `${t}. ${b}` : b;
+      const parts = prev.split(/\.\s*/).map((s) => s.trim()).filter(Boolean);
+      const idx = parts.findIndex((p) => p.toLocaleLowerCase("tr") === b.toLocaleLowerCase("tr"));
+      if (idx >= 0) parts.splice(idx, 1);
+      else parts.push(b);
+      return parts.join(". ");
     });
   };
 
@@ -232,11 +239,22 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
           {oneriler.length > 0 && (
             <div style={s.oneriBox}>
-              <span style={s.oneriLabel}>Sık görülenler:</span>
+              <span style={s.oneriLabel}>Sık görülen belirtiler <span style={s.opt}>· dokunarak ekle</span></span>
               <div style={s.oneriWrap}>
-                {oneriler.map((b) => (
-                  <button key={b} onClick={() => ekleBelirti(b)} style={s.oneriChip}>+ {b}</button>
-                ))}
+                {oneriler.map((b) => {
+                  const aktif = belirtiAktif(b);
+                  return (
+                    <button
+                      key={b}
+                      type="button"
+                      onClick={() => belirtiToggle(b)}
+                      style={{ ...s.oneriChip, ...(aktif ? s.oneriChipActive : {}) }}
+                    >
+                      <span style={s.oneriChipIkon}>{aktif ? "✓" : "+"}</span>
+                      {b}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -422,10 +440,12 @@ const s = {
   cihazTile: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 6, padding: "12px 4px", minHeight: 80, borderRadius: 13, border: `1px solid ${HAIR}`, background: SURFACE, color: MUTED, transition: "all .15s", textAlign: "center" },
   cihazTileActive: { border: `1px solid ${INK}`, background: INK, color: "#fff", boxShadow: "0 8px 20px -12px rgba(34,48,42,.5)" },
   cihazTileText: { fontSize: 11.5, fontWeight: 600, lineHeight: 1.25 },
-  oneriBox: { marginTop: 16, padding: "13px 14px", background: "#F6F4EF", borderRadius: 12 },
+  oneriBox: { marginTop: 16, padding: "14px 15px", background: "#F6F4EF", borderRadius: 14 },
   oneriLabel: { fontSize: 12.5, fontWeight: 700, color: MUTED },
-  oneriWrap: { display: "flex", flexWrap: "wrap", gap: 7, marginTop: 9 },
-  oneriChip: { fontSize: 12.5, padding: "6px 12px", borderRadius: 8, border: `1px solid ${HAIR}`, background: SURFACE, color: AMBER, fontWeight: 600 },
+  oneriWrap: { display: "flex", flexWrap: "wrap", gap: 8, marginTop: 11 },
+  oneriChip: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, padding: "8px 14px", borderRadius: 999, border: `1px solid ${HAIR}`, background: SURFACE, color: INK, fontWeight: 600, transition: "all .15s", boxShadow: "0 1px 1px rgba(34,48,42,.03)" },
+  oneriChipActive: { background: AMBER, color: "#fff", border: `1px solid ${AMBER}`, boxShadow: "0 6px 14px -6px rgba(200,99,43,.55)" },
+  oneriChipIkon: { fontSize: 13, fontWeight: 800, opacity: 0.85, lineHeight: 1 },
   row: { display: "flex", gap: 12, alignItems: "flex-end" },
   garantiRow: { display: "flex", alignItems: "center", gap: 10, margin: "18px 0 0", cursor: "pointer", fontSize: 13.5, color: GREEN, fontWeight: 600, userSelect: "none" },
   input: { width: "100%", padding: "12px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s" },
