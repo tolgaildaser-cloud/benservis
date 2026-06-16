@@ -306,15 +306,17 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         setSiraliServisler(eslesmis);
         setLocationState("success");
 
-        // Havuz ilçesi: EN YAKIN servisin ilçesi (km hesaplanabilen ilk servis).
-        // GPS ters geokodundan daha güvenilir — Nominatim sınır bölgelerinde
-        // yanlış ilçe dönebiliyor (örn. Seyrantepe'yi Sarıyer sanıyor), oysa
-        // ⚡ "bölgemdeki ilk müsait servis" zaten en yakın servisin bölgesi demek.
-        const enYakin = eslesmis.find((s) => s.km != null && s.ilce);
-        if (enYakin) {
-          setKonumIlce(enYakin.ilce);
+        // Havuz ilçesi: havuzu YALNIZCA platforma kayıtlı (DB) servisler kapabilir
+        // — JSON servislerin paneli yok. Bu yüzden ilçeyi en yakın DB servisinden
+        // alıyoruz; talep mutlaka onu kapabilecek bir servisin bölgesine düşsün.
+        // (GPS ters geokod sınır bölgelerinde yanıltıcı: Seyrantepe'yi Sarıyer sanıyor.)
+        const enYakinDb  = eslesmis.find((s) => s.km != null && s.ilce && s.kaynak === "db");
+        const enYakinAny = eslesmis.find((s) => s.km != null && s.ilce);
+        const havuzIlce  = (enYakinDb || enYakinAny)?.ilce;
+        if (havuzIlce) {
+          setKonumIlce(havuzIlce);
         } else {
-          // Yakında km'li servis yok → demand capture için ters geokod
+          // Yakında hiç km'li servis yok → demand capture için ters geokod
           fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=12`)
             .then((r) => (r.ok ? r.json() : null))
             .then((d) => {
