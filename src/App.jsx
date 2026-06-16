@@ -3,6 +3,7 @@ import ServisEkrani from "./ServisEkrani.jsx";
 import DPPEkrani from "./DPPEkrani.jsx";
 import SERVISLER from "./services-data.json";
 import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
+import CihazIkon from "./cihaz-ikonlari.jsx";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -220,14 +221,20 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       {(adim === "form" || adim === "hata") && (
         <div style={s.card}>
           <label style={s.label}>Hangi cihaz?</label>
-          <div style={s.chipWrap}>
-            {CIHAZLAR.map((c) => (
-              <button key={c} onClick={() => {
-                setCihaz(c);
-                // Cihaz değişince seçili marka yeni listede yoksa sıfırla
-                if (marka && !markalarForCihaz(c).includes(marka)) setMarka("");
-              }} style={{ ...s.chip, ...(cihaz === c ? s.chipActive : {}) }}>{c}</button>
-            ))}
+          <div style={s.cihazGrid}>
+            {CIHAZLAR.map((c) => {
+              const aktif = cihaz === c;
+              return (
+                <button key={c} onClick={() => {
+                  setCihaz(c);
+                  // Cihaz değişince seçili marka yeni listede yoksa sıfırla
+                  if (marka && !markalarForCihaz(c).includes(marka)) setMarka("");
+                }} style={{ ...s.cihazTile, ...(aktif ? s.cihazTileActive : {}) }}>
+                  <CihazIkon cihaz={c} size={26} />
+                  <span style={s.cihazTileText}>{c}</span>
+                </button>
+              );
+            })}
           </div>
 
           {oneriler.length > 0 && (
@@ -417,6 +424,11 @@ const s = {
   chipWrap: { display: "flex", flexWrap: "wrap", gap: 8 },
   chip: { fontSize: 13, padding: "9px 14px", borderRadius: 10, border: `1px solid ${HAIR}`, background: SURFACE, color: MUTED, fontWeight: 600, transition: "all .15s" },
   chipActive: { background: INK, color: "#fff", border: `1px solid ${INK}` },
+  // Cihaz seçimi — ikon + etiket grid (minimal & premium)
+  cihazGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(84px, 1fr))", gap: 8 },
+  cihazTile: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 6, padding: "12px 4px", minHeight: 80, borderRadius: 13, border: `1px solid ${HAIR}`, background: SURFACE, color: MUTED, transition: "all .15s", textAlign: "center" },
+  cihazTileActive: { borderColor: INK, background: INK, color: "#fff", boxShadow: "0 8px 20px -12px rgba(34,48,42,.5)" },
+  cihazTileText: { fontSize: 11.5, fontWeight: 600, lineHeight: 1.25 },
   oneriBox: { marginTop: 16, padding: "13px 14px", background: "#F6F4EF", borderRadius: 12 },
   oneriLabel: { fontSize: 12.5, fontWeight: 700, color: MUTED },
   oneriWrap: { display: "flex", flexWrap: "wrap", gap: 7, marginTop: 9 },
