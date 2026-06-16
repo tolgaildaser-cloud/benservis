@@ -310,8 +310,13 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         // — JSON servislerin paneli yok. Bu yüzden ilçeyi en yakın DB servisinden
         // alıyoruz; talep mutlaka onu kapabilecek bir servisin bölgesine düşsün.
         // (GPS ters geokod sınır bölgelerinde yanıltıcı: Seyrantepe'yi Sarıyer sanıyor.)
-        const enYakinDb  = eslesmis.find((s) => s.km != null && s.ilce && s.kaynak === "db");
-        const enYakinAny = eslesmis.find((s) => s.km != null && s.ilce);
+        // DİKKAT: liste önce yetkili'yi sıralar, bu yüzden dizi sırası ≠ en yakın.
+        // İlçeyi MESAFEYE göre en yakın DB servisinden seç (yoksa en yakın herhangi).
+        const kmSirali = (filtre) =>
+          eslesmis.filter((s) => s.km != null && s.ilce && filtre(s))
+                  .sort((a, b) => a.km - b.km)[0];
+        const enYakinDb  = kmSirali((s) => s.kaynak === "db");
+        const enYakinAny = kmSirali(() => true);
         const havuzIlce  = (enYakinDb || enYakinAny)?.ilce;
         if (havuzIlce) {
           setKonumIlce(havuzIlce);
