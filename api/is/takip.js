@@ -13,10 +13,13 @@ export default async function handler(req, res) {
   const { is_no } = req.query;
   if (!is_no) return res.status(400).json({ error: "is_no gerekli" });
 
+  // is_no büyük harfe normalize edilir — müşteri "bs-0149" yazsa da bulunur.
+  const isNoTemiz = String(is_no).trim().toUpperCase();
+
   const { data: is, error } = await supabase
     .from("is_talepleri")
     .select("is_no, durum, servis_ad, gelis_penceresi, son_kabul_tarihi, created_at, cihaz, puan")
-    .eq("is_no", is_no)
+    .eq("is_no", isNoTemiz)
     .single();
 
   if (error || !is) return res.status(404).json({ error: "İş bulunamadı" });

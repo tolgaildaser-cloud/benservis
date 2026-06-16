@@ -15,11 +15,13 @@ export default async function handler(req, res) {
   if (!is_no) return res.status(400).json({ error: "is_no gerekli" });
   if (!puan || puan < 1 || puan > 5) return res.status(400).json({ error: "puan 1–5 arası olmalı" });
 
+  const isNoTemiz = String(is_no).trim().toUpperCase();
+
   // İşi bul, durum + mevcut puan kontrol et
   const { data: is, error: fetchErr } = await supabase
     .from("is_talepleri")
     .select("id, durum, puan")
-    .eq("is_no", is_no)
+    .eq("is_no", isNoTemiz)
     .single();
 
   if (fetchErr || !is) return res.status(404).json({ error: "İş bulunamadı" });
