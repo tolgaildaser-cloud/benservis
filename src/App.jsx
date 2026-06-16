@@ -57,6 +57,23 @@ function extractJSON(text) {
   return JSON.parse(t);
 }
 
+// Maliyet aralığını beklenen nokta tahminin ±%10'una sabitler (kullanıcı kuralı).
+// AI tek "beklenen" döndürür; eski min/max gelirse orta nokta kullanılır.
+// 10'a yuvarlanır: beklenen 5000 → 4500–5500.
+function normalizeMaliyet(sonuc) {
+  const m = sonuc?.tahminiMaliyet;
+  if (!m) return sonuc;
+  let beklenen = m.beklenen;
+  if (beklenen == null && m.min != null && m.max != null) beklenen = (Number(m.min) + Number(m.max)) / 2;
+  beklenen = Number(beklenen);
+  if (!beklenen || isNaN(beklenen)) return sonuc;
+  const r10 = (x) => Math.round(x / 10) * 10;
+  return {
+    ...sonuc,
+    tahminiMaliyet: { ...m, beklenen: r10(beklenen), min: r10(beklenen * 0.9), max: r10(beklenen * 1.1) },
+  };
+}
+
 export default function App() {
   const [adim, setAdim] = useState("form");
   const [cihaz, setCihaz] = useState("");
@@ -110,11 +127,11 @@ ACİLİYET ÖLÇÜTÜ (belirtiye göre değerlendir, varsayılan "orta"ya KAÇMA
 - "orta": cihaz kısmen çalışıyor, sorun zamanla büyüyebilir, birkaç gün içinde ele alınmalı.
 - "düşük": kozmetik/konfor sorunu, risk yok, beklemeye dayanır.
 
-Teşhis yap. Maliyet = parça + işçilik, TL, gerçekçi aralık. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
+Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
 {
  "olasiArizalar":[{"ad":"kısa arıza adı","olasilik":70,"aciklama":"tek cümle sade açıklama"}],
- "tahminiMaliyet":{"min":800,"max":1500,"not":"kısa not"},
+ "tahminiMaliyet":{"beklenen":1200,"not":"kısa not"},
  "kararOnerisi":"tamir",
  "kararAciklama":"tek cümle gerekçe",
  "kendinCozebilirMi":{"mumkun":true,"ipuclari":["kısa adım"]},
@@ -122,6 +139,8 @@ Teşhis yap. Maliyet = parça + işçilik, TL, gerçekçi aralık. SADECE şu JS
  "aciliyetNot":"tek cümle: bu aciliyetin somut gerekçesi",
  "ekSorular":["teşhisi netleştirecek kısa soru"]
 }
+
+MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi beklenen toplam tutar (parça + işçilik, TL). Referans tarifeye çıpala, abartma/küçümseme. Aralık verme — sadece tek bir sayı. (Aralığı sistem otomatik ±%10 hesaplar.)
 
 Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz", aciliyet sadece "düşük"/"orta"/"yüksek" ve mutlaka yukarıdaki ölçüte göre, aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
 
@@ -133,7 +152,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       });
       const data = await res.json();
       if (data.error) throw new Error(data.error);
-      setSonuc(extractJSON(data.text || ""));
+      setSonuc(normalizeMaliyet(extractJSON(data.text || "")));
       setAdim("sonuc");
     } catch (e) {
       setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
