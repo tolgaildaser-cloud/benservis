@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ServisCaldir from "./ServisCaldir.jsx";
 import { TR_IL_ILCE } from "./tr-iller.js";
+import { eslesenKategoriler } from "./constants.js";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -268,7 +269,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
 
   // JSON + DB servislerini birleştir
   useEffect(() => {
-    fetch(`/api/servis/liste${cihaz ? `?cihaz=${encodeURIComponent(cihaz)}` : ""}`)
+    // cihaz parametresi gönderilmez — birleşik kategoriler (Süpürge/Bilgisayar)
+    // eski kategori adlı servislerle de eşleşsin diye filtre client'ta yapılır.
+    fetch(`/api/servis/liste`)
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (!data?.servisler) return;
@@ -290,8 +293,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
         setMusteriKonum({ lat, lng }); // havuz mesafe eşleştirmesi için
+        const kat = eslesenKategoriler(cihaz);
         const eslesmis = tumServisler
-          .filter((s) => s.kategoriler?.includes(cihaz))
+          .filter((s) => s.kategoriler?.some((k) => kat.includes(k)))
           .filter((s) => !garantiAltinda || s.yetkili)
           .map((s) => ({
             ...s,
@@ -475,8 +479,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
               if (!ilce) return;
               setFallbackIlce(ilce);
               setKonumIlce(ilce); // havuz eşleşmesi — seçilen ilçe kesin doğru
+              const kat = eslesenKategoriler(cihaz);
               const eslesmis = tumServisler
-                .filter((s) => s.kategoriler?.includes(cihaz) && s.ilce === ilce)
+                .filter((s) => s.kategoriler?.some((k) => kat.includes(k)) && s.ilce === ilce)
                 .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
                 // Konum yok → puana göre sırala (yetkili sabitlenmez, rozet kalır)
                 .sort((a, b) => (b.puan || 0) - (a.puan || 0))

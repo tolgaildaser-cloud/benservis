@@ -36,6 +36,12 @@ const IKONLAR = {
   "Elektrik Süpürgesi": (
     <g {...P}><circle cx="8" cy="15" r="4" /><circle cx="8" cy="15" r="1" fill="currentColor" /><path d="M11 13l6-8" /><path d="M15 4h3v3" /></g>
   ),
+  "Süpürge": (
+    <g {...P}><circle cx="8" cy="15" r="4" /><circle cx="8" cy="15" r="1" fill="currentColor" /><path d="M11 13l6-8" /><path d="M15 4h3v3" /></g>
+  ),
+  "Bilgisayar": (
+    <g {...P}><path d="M5 5h14v10H5z" /><path d="M3 19h18l-1.5-4H4.5Z" /></g>
+  ),
   "Su Sebili / Arıtma": (
     <g {...P}><path d="M9 6c0-1.5 1.5-3 3-3s3 1.5 3 3" /><rect x="7" y="6" width="10" height="15" rx="2" /><line x1="7" y1="11" x2="17" y2="11" /><line x1="11" y1="15" x2="13" y2="15" /></g>
   ),

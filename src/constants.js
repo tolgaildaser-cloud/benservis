@@ -1,10 +1,22 @@
 // src/constants.js
 export const CIHAZLAR = [
   "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Fırın / Ocak", "Klima",
-  "Kombi", "Televizyon", "Termosifon / Şofben", "Mikrodalga", "Elektrik Süpürgesi",
-  "Su Sebili / Arıtma", "Cep Telefonu", "Robot Süpürge", "Air Fryer",
-  "Masaüstü Bilgisayar", "Notebook", "Yazıcı", "Diğer",
+  "Kombi", "Televizyon", "Termosifon / Şofben", "Mikrodalga", "Süpürge",
+  "Su Sebili / Arıtma", "Air Fryer", "Bilgisayar", "Yazıcı", "Diğer",
 ];
+
+// Birleştirilen cihazların eski kategori adlarıyla eşleştirilmesi —
+// eski servis kayıtları (services-data.json + DB) "Notebook", "Elektrik Süpürgesi"
+// gibi adlar tutuyor; birleştirme sonrası eşleşme kopmasın diye genişletilir.
+export const KATEGORI_ESLES = {
+  "Süpürge": ["Süpürge", "Elektrik Süpürgesi", "Robot Süpürge"],
+  "Bilgisayar": ["Bilgisayar", "Masaüstü Bilgisayar", "Notebook"],
+};
+
+// Bir cihaz için eşleşecek tüm kategori adları (birleştirme dahil).
+export function eslesenKategoriler(cihaz) {
+  return KATEGORI_ESLES[cihaz] || [cihaz];
+}
 
 // Garanti yönlendirmesi ve teşhis kalitesi için — yetkili servis eşleştirmesinde kullanılır
 export const MARKALAR = [
@@ -63,13 +75,10 @@ export const CIHAZ_MARKALARI = {
   "Kombi": ISITMA_SOGUTMA,
   "Termosifon / Şofben": ISITMA_SOGUTMA,
   "Televizyon": ["Arçelik", "Awox", "Beko", "Grundig", "Hisense", "LG", "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Sony", "TCL", "Thomson", "Toshiba", "Vestel"],
-  "Cep Telefonu": TELEFON,
-  "Elektrik Süpürgesi": SUPURGE,
-  "Robot Süpürge": ["Arçelik", "Dreame", "Dyson", "Fakir", "Fantom", "iRobot", "LG", "Philips", "Roborock", "Samsung", "Xiaomi"],
+  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort((a, b) => a.localeCompare(b, "tr")),
   "Air Fryer": KUCUK_EV,
   "Su Sebili / Arıtma": ["Arçelik", "Aqua", "Beko", "Coway", "Homefil", "Samsung", "Vestel", "Waterlife"],
-  "Masaüstü Bilgisayar": BILGISAYAR,
-  "Notebook": BILGISAYAR,
+  "Bilgisayar": BILGISAYAR,
   "Yazıcı": ["Brother", "Canon", "Epson", "HP", "Lexmark", "Pantum", "Ricoh", "Samsung", "Xerox"],
   // "Diğer" ve haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
