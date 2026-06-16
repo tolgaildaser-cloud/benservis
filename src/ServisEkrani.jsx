@@ -306,16 +306,24 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         setSiraliServisler(eslesmis);
         setLocationState("success");
 
-        // Ters geokodlama — müşterinin ilçesini GPS'ten çıkar (havuz eşleşmesi).
-        // Hata olursa null kalır, backend adres metninden parse eder.
-        fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=14`)
-          .then(r => r.ok ? r.json() : null)
-          .then(d => {
-            const a = d?.address || {};
-            const ilce = a.town || a.city_district || a.county || a.district || a.suburb || null;
-            if (ilce) setKonumIlce(ilce);
-          })
-          .catch(() => {});
+        // Havuz ilçesi: EN YAKIN servisin ilçesi (km hesaplanabilen ilk servis).
+        // GPS ters geokodundan daha güvenilir — Nominatim sınır bölgelerinde
+        // yanlış ilçe dönebiliyor (örn. Seyrantepe'yi Sarıyer sanıyor), oysa
+        // ⚡ "bölgemdeki ilk müsait servis" zaten en yakın servisin bölgesi demek.
+        const enYakin = eslesmis.find((s) => s.km != null && s.ilce);
+        if (enYakin) {
+          setKonumIlce(enYakin.ilce);
+        } else {
+          // Yakında km'li servis yok → demand capture için ters geokod
+          fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=12`)
+            .then((r) => (r.ok ? r.json() : null))
+            .then((d) => {
+              const a = d?.address || {};
+              const ilce = a.city_district || a.town || a.county || a.district || a.suburb || null;
+              if (ilce) setKonumIlce(ilce);
+            })
+            .catch(() => {});
+        }
       },
       () => setLocationState("denied"),
       { timeout: 10000 }
