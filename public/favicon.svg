@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<g transform="scale(4.266667)">
+<rect width="120" height="120" rx="26" fill="#2563EB"/>
+<g transform="translate(60 51) scale(1.12) translate(-60 -51)">
+<path d="M60 22 C42 22 28 36 28 53 C28 75 60 98 60 98 C60 98 92 75 92 53 C92 36 78 22 60 22 Z" fill="#ffffff"/>
+<g fill="#2563EB">
+<circle cx="60" cy="51" r="15"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(0 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(45 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(90 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(135 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(180 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(225 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(270 60 51)"/>
+<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(315 60 51)"/>
+</g>
+<circle cx="60" cy="51" r="6" fill="#ffffff"/>
+</g>
+</g>
+</svg>
