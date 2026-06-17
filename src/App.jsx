@@ -251,6 +251,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         {/* Kurumsal logo + motto — en üstte */}
         <BenservisLogo style={s.brandLogo} />
         <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>
+        <a href="/blog/" style={{ display: "inline-block", marginTop: 12, color: "#2563EB", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>Cihaz arıza rehberi →</a>
       </header>
 
       {(adim === "form" || adim === "hata") && (
