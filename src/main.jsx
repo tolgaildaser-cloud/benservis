@@ -1,7 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import LandingPage from "./LandingPage.jsx";
 import ServisPanel from "./ServisPanel.jsx";
 import DPPPublicPage from "./DPPPublicPage.jsx";
 import IkinciElApp from "./IkinciElApp.jsx";
@@ -37,6 +36,6 @@ createRoot(document.getElementById("root")).render(
      isServisKayit  ? <ServisKayit />                   :
      isServisAdmin  ? <ServisAdmin />                   :
      isServisMagaza ? <ServisMagaza />                  :
-     <LandingPage />}
+     <App />}
   </React.StrictMode>
 );

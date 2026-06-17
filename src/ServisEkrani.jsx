@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ServisCaldir from "./ServisCaldir.jsx";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import { eslesenKategoriler } from "./constants.js";
 
@@ -19,6 +18,9 @@ function haversine(lat1, lng1, lat2, lng2) {
 
 /**
  * ServisEkrani — Faz 1 teşhis sonrası servis eşleştirme ekranı.
+ *
+ * PİVOT (17 Haz): sade dizin + direkt arama. Havuz/SMS/ServisCaldir yok;
+ * her kartın birincil aksiyonu telefonla direkt arama. Puan/yorum belirgin.
  *
  * Props:
  *   cihaz      {string}   Faz 1'den gelen cihaz kategorisi (örn. "Klima")
@@ -49,7 +51,7 @@ function TierRozetleri({ servis }) {
   );
 }
 
-function ServisKarti({ servis, onSec, onCaldir }) {
+function ServisKarti({ servis, onSec }) {
   return (
     <div
       onClick={() => onSec(servis)}
@@ -68,16 +70,33 @@ function ServisKarti({ servis, onSec, onCaldir }) {
           </span>
           <TierRozetleri servis={servis} />
         </div>
-        <div style={{ fontSize: 12, color: "#888", marginTop: 3 }}>
-          {[
-            servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`,
-            servis.yorumSayisi > 0 && `${servis.yorumSayisi} yorum`,
-            servis.ilce,
-          ].filter(Boolean).join(" · ")}
+
+        {/* Puan — belirgin: amber yıldız + kalın not + yorum sayısı */}
+        {servis.puan != null ? (
+          <div style={{ display: "flex", alignItems: "center", gap: 5, marginTop: 4, marginBottom: 2 }}>
+            <span style={{ fontSize: 15, color: "#F5A623", lineHeight: 1 }}>★</span>
+            <span style={{ fontWeight: 700, fontSize: 15, color: "#22302A", lineHeight: 1 }}>
+              {servis.puan.toFixed(1)}
+            </span>
+            {servis.yorumSayisi > 0 && (
+              <span style={{ fontSize: 12, color: "#888" }}>
+                ({servis.yorumSayisi} yorum)
+              </span>
+            )}
+          </div>
+        ) : (
+          <div style={{ fontSize: 12, color: "#aaa", marginTop: 4, marginBottom: 2 }}>
+            Henüz puanlanmamış
+          </div>
+        )}
+
+        <div style={{ fontSize: 12, color: "#888" }}>
+          {servis.ilce}
           {servis.km != null && (
             <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
           )}
         </div>
+
         {servis.googleMapsUrl && (
           <a
             href={servis.googleMapsUrl}
@@ -91,15 +110,20 @@ function ServisKarti({ servis, onSec, onCaldir }) {
         )}
       </div>
 
-        <button
-          onClick={(e) => { e.stopPropagation(); onCaldir(servis); }}
+      {/* PİVOT: birincil aksiyon = direkt arama (havuz yok) */}
+      {servis.telefon && (
+        <a
+          href={`tel:${servis.telefon}`}
+          onClick={(e) => e.stopPropagation()}
           style={{
-            background: "#22302A", color: "#F5EFE2",
-            borderRadius: 10, padding: "10px 14px",
-            fontSize: 13, border: "none", fontWeight: 700,
+            background: "#C8632B", color: "white",
+            borderRadius: 10, padding: "11px 18px",
+            fontSize: 14, fontWeight: 700, textDecoration: "none",
             whiteSpace: "nowrap", flexShrink: 0, cursor: "pointer",
+            display: "inline-flex", alignItems: "center", gap: 6,
           }}
-        >🔧 Servis Çağır</button>
+        >📞 Ara</a>
+      )}
     </div>
   );
 }
@@ -258,13 +282,10 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [fallbackIlce, setFallbackIlce] = useState("");
   const [seciliServis, setSeciliServis] = useState(null);
   const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
-  const [caldirServis, setCaldirServis] = useState(null);
-  const [otomatikCaldir, setOtomatikCaldir] = useState(false);
   const [tumServisler, setTumServisler] = useState(servislerProp || []);
-  // Müşterinin ilçesi — havuz eşleştirmesinde fallback (koordinat yoksa).
+  // Müşterinin ilçesi — ileride talep/veri toplama için bölge bilgisi (koordinat yoksa).
   const [konumIlce, setKonumIlce] = useState(null);
-  // Müşterinin GPS koordinatı — havuz MESAFE eşleştirmesi için (asıl yöntem).
-  // Servis kendi konumunun yarıçapındaki talepleri görür; ilçe sınırı yok.
+  // Müşterinin GPS koordinatı — mesafe sıralaması için.
   const [musteriKonum, setMusteriKonum] = useState(null);
 
   // JSON + DB servislerini birleştir
@@ -292,7 +313,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
-        setMusteriKonum({ lat, lng }); // havuz mesafe eşleştirmesi için
+        setMusteriKonum({ lat, lng }); // mesafe sıralaması için
         const kat = eslesenKategoriler(cihaz);
         const eslesmis = tumServisler
           .filter((s) => s.kategoriler?.some((k) => kat.includes(k)))
@@ -302,9 +323,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             // lat/lng null olan DB servisleri km hesaplanamaz → sona koy
             km: s.lat && s.lng ? haversine(lat, lng, s.lat, s.lng) : null,
           }))
-          // MESAFE birincil — en yakın üstte (BiTaksi mantığı). Yetkili artık
-          // sabitlenmez, yalnızca rozet olarak gösterilir. (Garanti seçiliyse
-          // zaten yukarıda yalnız yetkili'ye filtrelendi.) Eşit km'de puan.
+          // MESAFE birincil — en yakın üstte. Yetkili sabitlenmez, yalnızca
+          // rozet olarak gösterilir. (Garanti seçiliyse zaten yukarıda yalnız
+          // yetkili'ye filtrelendi.) Eşit km'de puan.
           .sort((a, b) => {
             if (a.km != null && b.km != null) {
               if (a.km !== b.km) return a.km - b.km;
@@ -317,22 +338,17 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         setSiraliServisler(eslesmis);
         setLocationState("success");
 
-        // Havuz ilçesi: havuzu YALNIZCA platforma kayıtlı (DB) servisler kapabilir
-        // — JSON servislerin paneli yok. Bu yüzden ilçeyi en yakın DB servisinden
-        // alıyoruz; talep mutlaka onu kapabilecek bir servisin bölgesine düşsün.
-        // (GPS ters geokod sınır bölgelerinde yanıltıcı: Seyrantepe'yi Sarıyer sanıyor.)
-        // DİKKAT: liste önce yetkili'yi sıralar, bu yüzden dizi sırası ≠ en yakın.
-        // İlçeyi MESAFEYE göre en yakın DB servisinden seç (yoksa en yakın herhangi).
+        // Bölge bilgisi (konumIlce) — ileride talep/veri toplama için saklanır.
+        // En yakın DB servisinin ilçesini al; yoksa ters geokod.
         const kmSirali = (filtre) =>
           eslesmis.filter((s) => s.km != null && s.ilce && filtre(s))
                   .sort((a, b) => a.km - b.km)[0];
         const enYakinDb  = kmSirali((s) => s.kaynak === "db");
         const enYakinAny = kmSirali(() => true);
-        const havuzIlce  = (enYakinDb || enYakinAny)?.ilce;
-        if (havuzIlce) {
-          setKonumIlce(havuzIlce);
+        const bolgeIlce  = (enYakinDb || enYakinAny)?.ilce;
+        if (bolgeIlce) {
+          setKonumIlce(bolgeIlce);
         } else {
-          // Yakında hiç km'li servis yok → demand capture için ters geokod
           fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=12`)
             .then((r) => (r.ok ? r.json() : null))
             .then((d) => {
@@ -348,8 +364,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     );
   }, [cihaz, tumServisler]);
 
-  // İl → ilçe haritası: tüm Türkiye (free lansman — her bölgeden talep alınır,
-  // servis olmasa bile talep o ilçenin havuzuna düşer).
+  // İl → ilçe haritası: tüm Türkiye
   const ilIlceMap = TR_IL_ILCE;
 
   // Profil ekranı
@@ -367,16 +382,6 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       position: "fixed", inset: 0, background: "#F5EFE2",
       overflowY: "auto", zIndex: 100, fontFamily: "'Hanken Grotesk', sans-serif",
     }}>
-        {(caldirServis || otomatikCaldir) && (
-          <ServisCaldir
-            servis={otomatikCaldir ? null : caldirServis}
-            cihaz={cihaz}
-            belirti={belirti}
-            ilce={konumIlce}
-            konum={musteriKonum}
-            onKapat={() => { setCaldirServis(null); setOtomatikCaldir(false); }}
-          />
-        )}
       {/* Üst bar */}
       <div style={{
         background: "#22302A", color: "#F5EFE2",
@@ -422,42 +427,16 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           </p>
         )}
 
-        {/* Başarılı ama bu bölgede listeli servis yok — yine de havuza gönder */}
+        {/* Başarılı ama bu bölgede listeli servis yok */}
         {locationState === "success" && siraliServisler.length === 0 && (
           <div style={{ textAlign: "center", marginTop: 32 }}>
             <div style={{ fontSize: 36, marginBottom: 10 }}>📍</div>
             <p style={{ color: "#22302A", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
               Bu bölgede henüz listeli servis yok
             </p>
-            <p style={{ color: "#888", fontSize: 12.5, marginBottom: 18, lineHeight: 1.5 }}>
-              Talebinizi bölge havuzuna gönderin — bölgenizdeki<br />servisler ulaştığında size bildirim göndeririz.
+            <p style={{ color: "#888", fontSize: 12.5, lineHeight: 1.5 }}>
+              Yakındaki servisleri görmek için konum izni verin<br />veya farklı bir bölge seçin.
             </p>
-            <button
-              onClick={() => setOtomatikCaldir(true)}
-              style={{
-                padding: "13px 24px", borderRadius: 12,
-                background: "#C8632B", color: "white", border: "none",
-                fontWeight: 700, fontSize: 14.5, cursor: "pointer",
-              }}>
-              ⚡ Talebimi Bölge Havuzuna Gönder
-            </button>
-          </div>
-        )}
-
-        {locationState === "success" && siraliServisler.length > 0 && (
-          <div style={{ marginBottom: 16 }}>
-            <button
-              onClick={() => setOtomatikCaldir(true)}
-              style={{
-                width: "100%", padding: "14px 16px", borderRadius: 12,
-                background: "#C8632B", color: "white", border: "none",
-                fontWeight: 700, fontSize: 15, cursor: "pointer",
-              }}>
-              ⚡ Bölgemdeki İlk Müsait Servise Gönder
-            </button>
-            <div style={{ fontSize: 11, color: "#888", textAlign: "center", marginTop: 4 }}>
-              Ya da aşağıdan belirli bir servis seç
-            </div>
           </div>
         )}
 
@@ -466,7 +445,6 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             key={servis.id}
             servis={servis}
             onSec={(s) => { setSeciliServis(s); setEkran("profil"); }}
-            onCaldir={setCaldirServis}
           />
         ))}
 
@@ -478,7 +456,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             onSec={(ilce) => {
               if (!ilce) return;
               setFallbackIlce(ilce);
-              setKonumIlce(ilce); // havuz eşleşmesi — seçilen ilçe kesin doğru
+              setKonumIlce(ilce); // bölge bilgisi — seçilen ilçe kesin doğru
               const kat = eslesenKategoriler(cihaz);
               const eslesmis = tumServisler
                 .filter((s) => s.kategoriler?.some((k) => kat.includes(k)) && s.ilce === ilce)

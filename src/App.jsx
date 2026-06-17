@@ -215,28 +215,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         <div style={s.trustBadge}>Tamirde sürpriz fiyat yok</div>
       </header>
 
-      {/* DPP Banner — ana ekranda her zaman görünür */}
-      {adim === "form" && (
-        <div style={s.dppBanner}>
-          <span style={s.dppBannerText}>📋 Cihaz Pasaportu</span>
-          <div style={s.dppBannerSag}>
-            <input
-              style={s.dppBannerInput}
-              value={dppInitialSeriNo}
-              onChange={(e) => setDppInitialSeriNo(e.target.value.toUpperCase())}
-              onKeyDown={(e) => e.key === "Enter" && setShowDPP(true)}
-              placeholder="Seri no ile ara"
-            />
-            <button
-              style={s.dppBannerBtn}
-              onClick={() => setShowDPP(true)}
-            >
-              Ara
-            </button>
-          </div>
-        </div>
-      )}
-
       {(adim === "form" || adim === "hata") && (
         <div style={s.card}>
           <label style={s.label}>Hangi cihaz?</label>
@@ -398,12 +376,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => setShowServisler(true)}>
                 📍 Servis Bul
               </button>
-              <button
-                style={{ ...s.faz2Btn, background: "rgba(255,255,255,.15)", fontSize: 12.5 }}
-                onClick={() => { setDppInitialSeriNo(""); setShowDPP(true); }}
-              >
-                📋 Cihazı Kaydet
-              </button>
             </div>
           </div>
 
@@ -413,11 +385,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           </div>
         </div>
       )}
-
-      <a href="/ikinci-el" style={s.ikinciElBanner}>
-        🛒 <strong>İkinci El Pazaryeri</strong> — DPP pasaportlu güvenli alışveriş
-        <span style={s.ikinciElOk}>→</span>
-      </a>
 
       <footer style={s.footer}>Faz 1 — AI teşhis & tahmini maliyet · prototip</footer>
     </div>
