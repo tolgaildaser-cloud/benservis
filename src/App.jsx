@@ -57,9 +57,16 @@ function extractJSON(text) {
   return JSON.parse(t);
 }
 
-// Maliyet aralığını beklenen nokta tahminin ±%10'una sabitler (kullanıcı kuralı).
+// Türkiye'de servisin eve gidiş/keşif MİNİMUM bedeli — tüm maliyet tahminlerine
+// sabit eklenir (sonuç ne olursa olsun). 2026 sonuna kadar 1000 TL.
+// PLAN: 1 Ocak 2027'de (2027-01-01) 1500 TL'ye çıkarılacak — ANCAK önce kullanıcı
+// ONAYI; bu sabiti değiştirmeden ÖNCE sor (otomatik tarih geçişi bilinçli olarak YOK).
+const SERVIS_GIDIS_BEDELI = 1000;
+
+// Maliyet aralığını beklenen nokta tahminin ±%10'una sabitler (kullanıcı kuralı),
+// sonra servis gidiş bedelini (SERVIS_GIDIS_BEDELI) SABİT ekler — bedel ±%10'a tabi değil.
 // AI tek "beklenen" döndürür; eski min/max gelirse orta nokta kullanılır.
-// 10'a yuvarlanır: beklenen 5000 → 4500–5500.
+// 10'a yuvarlanır + gidiş bedeli. Örn (gidiş 1000): beklenen 1200 → 2080–2320 (orta 2200).
 function normalizeMaliyet(sonuc) {
   const m = sonuc?.tahminiMaliyet;
   if (!m) return sonuc;
@@ -68,9 +75,15 @@ function normalizeMaliyet(sonuc) {
   beklenen = Number(beklenen);
   if (!beklenen || isNaN(beklenen)) return sonuc;
   const r10 = (x) => Math.round(x / 10) * 10;
+  const f = SERVIS_GIDIS_BEDELI; // sabit gidiş bedeli (±%10 dışı, düz eklenir)
   return {
     ...sonuc,
-    tahminiMaliyet: { ...m, beklenen: r10(beklenen), min: r10(beklenen * 0.9), max: r10(beklenen * 1.1) },
+    tahminiMaliyet: {
+      ...m,
+      beklenen: r10(beklenen) + f,
+      min: r10(beklenen * 0.9) + f,
+      max: r10(beklenen * 1.1) + f,
+    },
   };
 }
 
