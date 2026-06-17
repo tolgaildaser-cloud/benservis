@@ -4,10 +4,10 @@
 //   size    "sm" | "md" | "lg"   (varsayılan: "sm")
 //   tarih   string | null         ISO tarih, sm'de gizlenir
 
-const AMBER = "#C8632B";
-const GREEN = "#3A7D44";
-const CREAM = "#F5EFE2";
-const INK   = "#22302A";
+const AMBER = "#2563EB";
+const GREEN = "#22C55E";
+const CREAM = "#F1F5F9";
+const INK   = "#1E293B";
 
 const BOYUTLAR = {
   sm: { w: 72,  h: 72,  r: 30, checkSize: 14, titleSize: 7,  subSize: 5.5, tarihSize: 5  },
@@ -105,7 +105,7 @@ export default function BenservisRozet({ size = "sm", tarih = null }) {
           textAnchor="middle"
           dominantBaseline="middle"
           fontSize={d.tarihSize}
-          fill="#9A9384"
+          fill="#94A3B8"
           fontFamily="'Hanken Grotesk', sans-serif"
         >
           {tarihStr}

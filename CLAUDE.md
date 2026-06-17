@@ -230,8 +230,12 @@ tamamlandi/iptal) · atanan_servis · gercek_tutar · komisyon · puan · yorum 
 ## 10. Claude Code için kurallar / notlar
 
 - **Marka:** Benservis. **Dil:** Türkçe arayüz.
-- **Tasarım token'ları:** cream `#F5EFE2`, ink `#22302A`, amber `#C8632B`, green `#3A7D44`;
-  fontlar **Fraunces** (başlık) + **Hanken Grotesk** (gövde).
+- **Tasarım token'ları (KURUMSAL marka paleti — logo, 17 Haz 2026):** mavi `#2563EB` (ana aksan/CTA),
+  lacivert `#1E293B` (ink/koyu yüzey), kâğıt `#F8FAFC` (zemin), beyaz `#fff` (kart), güven yeşili
+  `#16A34A` (onay/başarı), slate `#475569`/`#64748B`/`#94A3B8` (metin kademeleri), `#E2E8F0` (hairline).
+  Semantik (marka dışı, korunur): hata `#DC2626`, aciliyet-orta `#EA580C`, tier rozetleri
+  (platin mor/gold/bronz), rating yıldızı `#F5A623`. Eski sıcak palet (cream/ink/amber) BIRAKILDI.
+  Fontlar **Fraunces** (başlık) + **Hanken Grotesk** (gövde). Logo varlıkları: `~/Desktop/benservis-marka/`.
 - **API anahtarı asla** koda/git'e/tarayıcıya girmez — yalnız Vercel/sunucu ortam değişkeni.
 - **Model:** `claude-sonnet-4-6` (kalite/maliyet); ucuz gerekirse `claude-haiku-4-5-20251001`.
 - Web verisi matrise hep **Taslak** girer; uygulama yalnız **Onaylı** kullanır.

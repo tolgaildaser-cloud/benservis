@@ -6,10 +6,10 @@ import { CIHAZLAR } from "./constants.js";
 import { sepetAdet } from "./sepet.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
-const INK = "#22302A", AMBER = "#C8632B", GREEN = "#3A7D44";
-const LINK = "#1A4FB4";          // sahibinden alışkanlığı: mavi ilan başlığı
+const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E";
+const LINK = "#2563EB";          // sahibinden alışkanlığı: mavi ilan başlığı
 const HOVER_BG = "#FFF8DF";      // satır hover — sarımsı
-const BORDER = "#E0DCD2";
+const BORDER = "#E2E8F0";
 
 const CIHAZ_EMOJI = {
   "Buzdolabı": "🧊", "Çamaşır Makinesi": "🫧", "Bulaşık Makinesi": "🍽️",
@@ -21,9 +21,9 @@ const CIHAZ_EMOJI = {
 };
 
 const DURUM_CFG = {
-  "çalışıyor": { bg: "#E6F4EC", color: "#2A7040", label: "Çalışıyor" },
-  "arızalı":   { bg: "#FEF3E2", color: "#A85B0E", label: "Arızalı"   },
-  "hurda":     { bg: "#FDECEA", color: "#B23A2E", label: "Hurda"     },
+  "çalışıyor": { bg: "#DCFCE7", color: "#22C55E", label: "Çalışıyor" },
+  "arızalı":   { bg: "#EFF6FF", color: "#A85B0E", label: "Arızalı"   },
+  "hurda":     { bg: "#FEE2E2", color: "#DC2626", label: "Hurda"     },
 };
 
 const SIRALAMA = [
@@ -61,17 +61,17 @@ function IlanSatir({ ilan, onClick }) {
           {ilan.kaynak === "servis" && (
             <span
               className="rozet rozet-firma"
-              style={{ background: "#EBF1FB", color: LINK, cursor: "pointer" }}
+              style={{ background: "#EFF6FF", color: LINK, cursor: "pointer" }}
               title={`${ilan.servis_ad} mağazasını aç`}
               onClick={e => { e.stopPropagation(); window.location.href = `/servis/${ilan.servis_id}`; }}>
               🏪 {ilan.servis_ad}
             </span>
           )}
           {dpp?.benservis_dogrulanmis && (
-            <span className="rozet" style={{ background: "#E6F4EC", color: GREEN }}>✓ Benservis Doğrulandı</span>
+            <span className="rozet" style={{ background: "#DCFCE7", color: GREEN }}>✓ Benservis Doğrulandı</span>
           )}
           {dpp && !dpp.benservis_dogrulanmis && ilan.seri_no && (
-            <span className="rozet" style={{ background: "#F0EAD8", color: "#6E6450" }}>📋 DPP'li</span>
+            <span className="rozet" style={{ background: "#F1F5F9", color: "#64748B" }}>📋 DPP'li</span>
           )}
           {dc && <span className="rozet" style={{ background: dc.bg, color: dc.color }}>{dc.label}</span>}
         </div>
@@ -260,14 +260,14 @@ export default function IlanListesi() {
 /* ───────────── sahibinden-tarzı CSS ───────────── */
 const CSS = `
 * { box-sizing: border-box; }
-.sah-wrap { min-height: 100vh; background: #F5F3EE; font-family: 'Hanken Grotesk', sans-serif; color: ${INK}; }
+.sah-wrap { min-height: 100vh; background: #F8FAFC; font-family: 'Hanken Grotesk', sans-serif; color: ${INK}; }
 
 /* HEADER */
 .sah-header { background: #fff; border-bottom: 3px solid ${AMBER}; position: sticky; top: 0; z-index: 100; }
 .sah-header-ic { max-width: 1150px; margin: 0 auto; display: flex; align-items: center; gap: 14px; padding: 12px 16px; }
 .sah-logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; color: ${INK}; text-decoration: none; white-space: nowrap; display: flex; align-items: baseline; gap: 6px; }
 .sah-logo-mark { color: ${AMBER}; }
-.sah-logo-alt { font-family: 'Hanken Grotesk', sans-serif; font-size: 11px; font-weight: 700; color: #9A9384; text-transform: uppercase; letter-spacing: .06em; }
+.sah-logo-alt { font-family: 'Hanken Grotesk', sans-serif; font-size: 11px; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: .06em; }
 .sah-arama { flex: 1; display: flex; max-width: 560px; }
 .sah-arama input { flex: 1; min-width: 0; border: 2px solid ${BORDER}; border-right: none; border-radius: 6px 0 0 6px; padding: 9px 12px; font-size: 13.5px; font-family: inherit; outline: none; }
 .sah-arama input:focus { border-color: ${AMBER}; }
@@ -285,33 +285,33 @@ const CSS = `
 .sah-kat { display: block; width: 100%; text-align: left; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 12.5px; color: ${LINK}; padding: 5px 14px; line-height: 1.45; }
 .sah-kat:hover { text-decoration: underline; }
 .sah-kat.aktif { color: ${INK}; font-weight: 700; background: ${HOVER_BG}; }
-.sah-kat-sayi { color: #9A9384; font-size: 11.5px; }
+.sah-kat-sayi { color: #94A3B8; font-size: 11.5px; }
 .sah-sol-ayrac { border-top: 1px solid ${BORDER}; margin: 10px 0; }
 .sah-check { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: ${GREEN}; padding: 2px 14px; cursor: pointer; }
 
 /* ANA ALAN */
 .sah-ana { flex: 1; min-width: 0; }
 .sah-ust { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-.sah-crumb { font-size: 12.5px; color: #6E6450; }
+.sah-crumb { font-size: 12.5px; color: #64748B; }
 .sah-crumb a { color: ${LINK}; text-decoration: none; }
-.sah-adet { color: #9A9384; }
+.sah-adet { color: #94A3B8; }
 .sah-sira { font-size: 12.5px; font-family: inherit; padding: 7px 10px; border: 1px solid ${BORDER}; border-radius: 6px; background: #fff; cursor: pointer; color: ${INK}; }
 
 /* MOBİL KATEGORİ ŞERİDİ */
 .sah-mobilkat { display: none; gap: 6px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 8px; scrollbar-width: none; }
 .sah-mobilkat::-webkit-scrollbar { display: none; }
-.sah-mobilkat .mk { flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1.5px solid ${BORDER}; background: #fff; color: #5C6660; cursor: pointer; font-family: inherit; white-space: nowrap; }
+.sah-mobilkat .mk { flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1.5px solid ${BORDER}; background: #fff; color: #475569; cursor: pointer; font-family: inherit; white-space: nowrap; }
 .sah-mobilkat .mk.aktif { background: ${AMBER}; border-color: ${AMBER}; color: #fff; }
 
 /* LİSTE */
-.sah-liste-baslik { display: grid; grid-template-columns: 110px 1fr 130px 120px 120px; gap: 12px; align-items: center; background: #EFEBE2; border: 1px solid ${BORDER}; border-bottom: none; border-radius: 6px 6px 0 0; padding: 8px 12px; font-size: 11.5px; font-weight: 700; color: #6E6450; }
+.sah-liste-baslik { display: grid; grid-template-columns: 110px 1fr 130px 120px 120px; gap: 12px; align-items: center; background: #F8FAFC; border: 1px solid ${BORDER}; border-bottom: none; border-radius: 6px 6px 0 0; padding: 8px 12px; font-size: 11.5px; font-weight: 700; color: #64748B; }
 .lb-fiyat { text-align: right; }
 .sah-liste { background: #fff; border: 1px solid ${BORDER}; border-radius: 0 0 6px 6px; overflow: hidden; }
 
-.srow { display: grid; grid-template-columns: 110px 1fr 130px 120px 120px; gap: 12px; align-items: center; padding: 10px 12px; border-bottom: 1px solid #ECE8DE; cursor: pointer; background: #fff; }
+.srow { display: grid; grid-template-columns: 110px 1fr 130px 120px 120px; gap: 12px; align-items: center; padding: 10px 12px; border-bottom: 1px solid #F1F5F9; cursor: pointer; background: #fff; }
 .srow:last-child { border-bottom: none; }
 .srow:hover { background: ${HOVER_BG}; }
-.srow-foto { width: 110px; height: 82px; border-radius: 4px; overflow: hidden; background: #EDE6D6; flex-shrink: 0; }
+.srow-foto { width: 110px; height: 82px; border-radius: 4px; overflow: hidden; background: #F1F5F9; flex-shrink: 0; }
 .srow-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .srow-foto-bos { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 30px; }
 .srow-orta { min-width: 0; }
@@ -319,16 +319,16 @@ const CSS = `
 .srow:hover .srow-baslik { text-decoration: underline; }
 .srow-rozetler { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px; }
 .rozet { font-size: 10.5px; font-weight: 700; border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
-.srow-mobilalt { display: none; font-size: 11.5px; color: #8A7B6A; margin-top: 5px; }
+.srow-mobilalt { display: none; font-size: 11.5px; color: #64748B; margin-top: 5px; }
 .srow-konum { font-size: 12.5px; color: ${INK}; }
-.srow-konum-alt { color: #8A7B6A; font-size: 12px; }
-.srow-tarih { font-size: 12px; color: #6E6450; }
+.srow-konum-alt { color: #64748B; font-size: 12px; }
+.srow-tarih { font-size: 12px; color: #64748B; }
 .srow-fiyat { font-size: 14.5px; font-weight: 700; color: ${INK}; text-align: right; white-space: nowrap; }
 
 /* DİĞER */
-.sah-bos { background: #fff; border: 1px solid ${BORDER}; border-radius: 6px; text-align: center; padding: 50px 16px; font-size: 14px; color: #6E6450; }
-.sah-cta { display: block; text-align: center; margin-top: 16px; padding: 13px; border-radius: 8px; background: ${INK}; color: #F5EFE2; font-weight: 700; font-size: 13.5px; text-decoration: none; }
-.sah-footer { text-align: center; font-size: 11.5px; color: #A59E8E; padding: 10px 16px 26px; }
+.sah-bos { background: #fff; border: 1px solid ${BORDER}; border-radius: 6px; text-align: center; padding: 50px 16px; font-size: 14px; color: #64748B; }
+.sah-cta { display: block; text-align: center; margin-top: 16px; padding: 13px; border-radius: 8px; background: ${INK}; color: #F1F5F9; font-weight: 700; font-size: 13.5px; text-decoration: none; }
+.sah-footer { text-align: center; font-size: 11.5px; color: #94A3B8; padding: 10px 16px 26px; }
 
 /* ── MOBİL ── */
 @media (max-width: 900px) {

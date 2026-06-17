@@ -4,21 +4,21 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CSS = `
 * { box-sizing:border-box; }
 @keyframes spin { to { transform:rotate(360deg); } }
-input:focus, textarea:focus { outline:none; border-color:${AMBER}!important; box-shadow:0 0 0 3px rgba(200,99,43,.13); }
+input:focus, textarea:focus { outline:none; border-color:${AMBER}!important; box-shadow:0 0 0 3px rgba(37,99,235,.13); }
 button { cursor:pointer; font-family:'Hanken Grotesk',sans-serif; }
 `;
 
 const DURUM_LABEL = {
-  ilgileniliyor:    { label: "İlgileniyor",       renk: "#8A7B6A", bg: "#F0EAD8" },
-  odeme_bekleniyor: { label: "Ödeme bekleniyor",  renk: AMBER,     bg: "rgba(200,99,43,.08)" },
-  odendi:           { label: "✓ Ödendi",          renk: GREEN,     bg: "#E8F0E8" },
-  teslim_onaylandi: { label: "✓✓ Tamamlandı",     renk: GREEN,     bg: "#E8F0E8" },
-  iptal:            { label: "✕ İptal",           renk: "#B23A2E", bg: "#FDECEA" },
+  ilgileniliyor:    { label: "İlgileniyor",       renk: "#64748B", bg: "#F1F5F9" },
+  odeme_bekleniyor: { label: "Ödeme bekleniyor",  renk: AMBER,     bg: "rgba(37,99,235,.08)" },
+  odendi:           { label: "✓ Ödendi",          renk: GREEN,     bg: "#F1F5F9" },
+  teslim_onaylandi: { label: "✓✓ Tamamlandı",     renk: GREEN,     bg: "#F1F5F9" },
+  iptal:            { label: "✕ İptal",           renk: "#DC2626", bg: "#FEE2E2" },
 };
 
 export default function SaticiPaneli({ saticiToken }) {
@@ -244,11 +244,11 @@ const sWrap = {
 };
 
 const st = {
-  grain: { position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4, backgroundImage: "radial-gradient(rgba(34,48,42,.05) 1px, transparent 1px)", backgroundSize: "4px 4px", zIndex: 0 },
+  grain: { position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4, backgroundImage: "radial-gradient(rgba(30,41,59,.05) 1px, transparent 1px)", backgroundSize: "4px 4px", zIndex: 0 },
   merkez: { textAlign: "center", paddingTop: 60, position: "relative", zIndex: 1 },
-  spinner: { width: 36, height: 36, borderRadius: "50%", border: "4px solid #E5DCC9", borderTopColor: AMBER, margin: "0 auto 16px", animation: "spin 1s linear infinite" },
-  spinnerKucuk: { width: 24, height: 24, borderRadius: "50%", border: "3px solid #E5DCC9", borderTopColor: AMBER, animation: "spin 1s linear infinite", margin: "24px auto" },
-  yukMetin: { fontFamily: "'Fraunces', serif", fontSize: 16, color: "#5C6660" },
+  spinner: { width: 36, height: 36, borderRadius: "50%", border: "4px solid #E2E8F0", borderTopColor: AMBER, margin: "0 auto 16px", animation: "spin 1s linear infinite" },
+  spinnerKucuk: { width: 24, height: 24, borderRadius: "50%", border: "3px solid #E2E8F0", borderTopColor: AMBER, animation: "spin 1s linear infinite", margin: "24px auto" },
+  yukMetin: { fontFamily: "'Fraunces', serif", fontSize: 16, color: "#475569" },
   baslik404: { fontFamily: "'Fraunces', serif", fontSize: 22, fontWeight: 700, marginBottom: 16 },
   geriBtn: { display: "inline-block", padding: "11px 22px", borderRadius: 10, background: AMBER, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" },
 
@@ -256,48 +256,48 @@ const st = {
   logoRow: { display: "flex", alignItems: "center", justifyContent: "center", gap: 10 },
   logoMark: { color: AMBER, fontSize: 28, transform: "rotate(-20deg)", display: "inline-block" },
   logo: { fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 30, margin: 0, letterSpacing: "-.02em" },
-  altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#8A7B6A", textTransform: "uppercase", marginTop: 4 },
+  altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#64748B", textTransform: "uppercase", marginTop: 4 },
 
-  ilanKart: { position: "relative", zIndex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14, padding: "14px 18px", marginBottom: 16 },
+  ilanKart: { position: "relative", zIndex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 14, padding: "14px 18px", marginBottom: 16 },
   ilanBaslik: { fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700, marginBottom: 4 },
   ilanFiyat: { fontSize: 22, fontWeight: 700, color: AMBER, fontFamily: "'Fraunces', serif", marginBottom: 6 },
-  ibanSatir: { fontSize: 13, color: "#5C6660" },
-  ibanNot: { marginLeft: 8, color: "#9A9384", fontSize: 12 },
+  ibanSatir: { fontSize: 13, color: "#475569" },
+  ibanNot: { marginLeft: 8, color: "#94A3B8", fontSize: 12 },
   ibanUyari: { fontSize: 13, color: AMBER, fontWeight: 600 },
 
   split: { position: "relative", zIndex: 1, display: "flex", gap: 14, alignItems: "flex-start" },
 
   talepListe: { width: 200, flexShrink: 0 },
-  listeBolumBaslik: { fontSize: 12, fontWeight: 700, color: "#8A7B6A", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 10, display: "flex", alignItems: "center", justifyContent: "space-between" },
-  yenileBtn: { background: "none", border: "none", fontSize: 15, color: "#8A7B6A", padding: "2px 6px" },
-  bosMetin: { fontSize: 13, color: "#9A9384" },
-  talepBtn: { display: "block", width: "100%", marginBottom: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid #E5DCC9", background: "#FFFDF8", textAlign: "left", cursor: "pointer" },
-  talepBtnSecili: { border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.06)" },
+  listeBolumBaslik: { fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 10, display: "flex", alignItems: "center", justifyContent: "space-between" },
+  yenileBtn: { background: "none", border: "none", fontSize: 15, color: "#64748B", padding: "2px 6px" },
+  bosMetin: { fontSize: 13, color: "#94A3B8" },
+  talepBtn: { display: "block", width: "100%", marginBottom: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid #E2E8F0", background: "#F8FAFC", textAlign: "left", cursor: "pointer" },
+  talepBtnSecili: { border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)" },
   talepBtnAd: { fontWeight: 700, fontSize: 13, marginBottom: 3, display: "flex", alignItems: "center", gap: 6 },
   okunmamisBadge: { background: AMBER, color: "#fff", borderRadius: "50%", width: 18, height: 18, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700 },
   talepBtnDurum: { fontSize: 11, fontWeight: 700 },
-  talepBtnTarih: { fontSize: 11, color: "#9A9384", marginTop: 2 },
+  talepBtnTarih: { fontSize: 11, color: "#94A3B8", marginTop: 2 },
 
-  talepDetay: { flex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14, overflow: "hidden", minHeight: 300 },
-  secimBekle: { display: "flex", alignItems: "center", justifyContent: "center", height: 200, fontSize: 13.5, color: "#9A9384" },
+  talepDetay: { flex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 14, overflow: "hidden", minHeight: 300 },
+  secimBekle: { display: "flex", alignItems: "center", justifyContent: "center", height: 200, fontSize: 13.5, color: "#94A3B8" },
   detayYuk: { display: "flex", alignItems: "center", justifyContent: "center", height: 200 },
-  detayHeader: { padding: "13px 16px", borderBottom: "1px solid #EDE5D3", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 },
+  detayHeader: { padding: "13px 16px", borderBottom: "1px solid #F1F5F9", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 },
   detayAd: { fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700 },
   durumBadge: { fontSize: 11.5, fontWeight: 700, borderRadius: 999, padding: "3px 10px" },
-  gonderUyari: { margin: "10px 14px 0", padding: "10px 13px", background: "#E8F0E8", borderRadius: 9, fontSize: 13, fontWeight: 600, color: GREEN, lineHeight: 1.4 },
+  gonderUyari: { margin: "10px 14px 0", padding: "10px 13px", background: "#F1F5F9", borderRadius: 9, fontSize: 13, fontWeight: 600, color: GREEN, lineHeight: 1.4 },
 
   mesajList: { padding: "12px 14px", minHeight: 120, maxHeight: 300, overflowY: "auto", display: "flex", flexDirection: "column", gap: 9 },
-  mesajYok: { fontSize: 13, color: "#9A9384", textAlign: "center", paddingTop: 16 },
+  mesajYok: { fontSize: 13, color: "#94A3B8", textAlign: "center", paddingTop: 16 },
   bubble: { maxWidth: "78%", borderRadius: 14, padding: "9px 13px" },
   bubbleSatici: { alignSelf: "flex-end", background: AMBER, color: "#fff", borderBottomRightRadius: 4 },
-  bubbleAlici: { alignSelf: "flex-start", background: "#F0EAD8", color: INK, borderBottomLeftRadius: 4 },
+  bubbleAlici: { alignSelf: "flex-start", background: "#F1F5F9", color: INK, borderBottomLeftRadius: 4 },
   bubbleIcerik: { fontSize: 13.5, lineHeight: 1.45 },
   bubbleTarih: { fontSize: 10.5, opacity: 0.7, marginTop: 3 },
-  mesajGiris: { padding: "10px 12px", borderTop: "1px solid #EDE5D3", display: "flex", gap: 8, alignItems: "flex-end" },
-  mesajInput: { flex: 1, padding: "9px 12px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", resize: "none", background: "#FFFDF8", color: INK },
+  mesajGiris: { padding: "10px 12px", borderTop: "1px solid #F1F5F9", display: "flex", gap: 8, alignItems: "flex-end" },
+  mesajInput: { flex: 1, padding: "9px 12px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", resize: "none", background: "#F8FAFC", color: INK },
   mesajBtn: { padding: "9px 14px", borderRadius: 10, border: "none", background: AMBER, color: "#fff", fontWeight: 700, fontSize: 16 },
-  kapaliMetin: { padding: "10px 14px", fontSize: 13, color: "#9A9384", borderTop: "1px solid #EDE5D3", textAlign: "center" },
+  kapaliMetin: { padding: "10px 14px", fontSize: 13, color: "#94A3B8", borderTop: "1px solid #F1F5F9", textAlign: "center" },
 
-  altLink: { position: "relative", zIndex: 1, display: "block", textAlign: "center", marginTop: 20, fontSize: 13, color: "#8A7B6A", fontWeight: 600, textDecoration: "none" },
-  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#A59E8E", marginTop: 10 },
+  altLink: { position: "relative", zIndex: 1, display: "block", textAlign: "center", marginTop: 20, fontSize: 13, color: "#64748B", fontWeight: 600, textDecoration: "none" },
+  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#94A3B8", marginTop: 10 },
 };

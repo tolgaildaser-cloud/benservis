@@ -46,7 +46,7 @@ async function uploadFatura(file, cihazId) {
 }
 
 // Tasarım token'ları (App.jsx ile tutarlı)
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 // ─── Fotoğraf Yükleme ────────────────────────────────────────────────────────
 function FotoYukle({ urls, onUrls, maxAdet = 3 }) {
@@ -88,7 +88,7 @@ function FotoYukle({ urls, onUrls, maxAdet = 3 }) {
               onClick={() => kaldir(url)}
               style={{
                 position: "absolute", top: -6, right: -6,
-                background: "#B23A2E", color: "#fff", border: "none",
+                background: "#DC2626", color: "#fff", border: "none",
                 borderRadius: "50%", width: 18, height: 18, fontSize: 10,
                 cursor: "pointer", display: "flex", alignItems: "center",
                 justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif",
@@ -102,8 +102,8 @@ function FotoYukle({ urls, onUrls, maxAdet = 3 }) {
             onClick={() => inputRef.current?.click()}
             disabled={yukleniyor}
             style={{
-              width: 64, height: 64, border: "1.5px dashed #DDD3BE", borderRadius: 8,
-              background: "#FFFDF8", color: "#9A9384", fontSize: 22, cursor: "pointer",
+              width: 64, height: 64, border: "1.5px dashed #E2E8F0", borderRadius: 8,
+              background: "#F8FAFC", color: "#94A3B8", fontSize: 22, cursor: "pointer",
               display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
             }}
           >
@@ -254,7 +254,7 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
       <p style={{ ...s.aciklama, marginBottom: 4 }}>
         Seri no: <strong style={{ color: INK, letterSpacing: "0.05em" }}>{seriNo}</strong>
       </p>
-      <p style={{ ...s.aciklama, fontSize: 13, color: "#9A9384" }}>
+      <p style={{ ...s.aciklama, fontSize: 13, color: "#94A3B8" }}>
         Kayıtlı pasaport bulunamadı. Cihaz bilgilerini gir.
       </p>
 
@@ -336,12 +336,12 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
           <a href={faturaUrl} target="_blank" rel="noopener noreferrer"
             style={{ fontSize: 13, color: AMBER, fontWeight: 600 }}>📄 Fatura Görüntüle</a>
           <button type="button" onClick={() => setFaturaUrl(null)}
-            style={{ fontSize: 11, color: "#B23A2E", background: "none", border: "none", cursor: "pointer" }}>Kaldır</button>
+            style={{ fontSize: 11, color: "#DC2626", background: "none", border: "none", cursor: "pointer" }}>Kaldır</button>
         </div>
       ) : (
         <div style={{ marginBottom: 14 }}>
           <button type="button" onClick={() => faturaRef.current?.click()} disabled={faturaYukleniyor}
-            style={{ padding: "9px 16px", borderRadius: 8, border: "1.5px dashed #DDD3BE", background: "#FFFDF8", color: "#5C6660", fontSize: 13, cursor: "pointer" }}>
+            style={{ padding: "9px 16px", borderRadius: 8, border: "1.5px dashed #E2E8F0", background: "#F8FAFC", color: "#475569", fontSize: 13, cursor: "pointer" }}>
             {faturaYukleniyor ? "⏳ Yükleniyor..." : "📎 Fatura Yükle"}
           </button>
           {faturaHata && <p style={s.hata}>{faturaHata}</p>}
@@ -406,18 +406,18 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
           )}
         </div>
         {garantiBilgileri.length > 0 && (
-          <div style={{ marginTop: 10, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 8, padding: "10px 12px", fontSize: 12 }}>
+          <div style={{ marginTop: 10, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 8, padding: "10px 12px", fontSize: 12 }}>
             {garantiBilgileri.map((g, i) => (
-              <div key={g.tip} style={{ marginBottom: i < garantiBilgileri.length - 1 ? 4 : 0, color: "#5C6660" }}>
+              <div key={g.tip} style={{ marginBottom: i < garantiBilgileri.length - 1 ? 4 : 0, color: "#475569" }}>
                 {g.tip === "baslangic" && `📅 Alındı: ${new Date(g.tarih).toLocaleDateString("tr-TR")}`}
                 {g.tip === "bitis" && (
-                  <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
+                  <span style={{ color: g.aktif ? GREEN : "#DC2626", fontWeight: 600 }}>
                     🛡️ Garanti: {new Date(g.tarih).toLocaleDateString("tr-TR")}
                     {g.aktif ? ` (${g.kalan} gün kaldı)` : " (süresi doldu)"}
                   </span>
                 )}
                 {g.tip === "uzatilmis" && (
-                  <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
+                  <span style={{ color: g.aktif ? GREEN : "#DC2626", fontWeight: 600 }}>
                     ➕ Uzatılmış: {new Date(g.tarih).toLocaleDateString("tr-TR")}
                     {g.aktif ? ` (${g.kalan} gün kaldı)` : " (süresi doldu)"}
                   </span>
@@ -610,7 +610,7 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
         <div style={{ ...s.parcalar, marginTop: 8 }}>
           {form.degistirilen_parcalar.map((p) => (
             <button key={p} type="button" onClick={() => parcaKaldir(p)}
-              style={{ ...s.parcaChip, cursor: "pointer", background: "#DDD3BE", border: "none" }}>
+              style={{ ...s.parcaChip, cursor: "pointer", background: "#E2E8F0", border: "none" }}>
               {p} ✕
             </button>
           ))}
@@ -730,7 +730,7 @@ export default function DPPEkrani({ initialSeriNo, teshisContext, onKapat }) {
 // ─── Stiller ──────────────────────────────────────────────────────────────────
 const s = {
   overlay: {
-    position: "fixed", inset: 0, background: "rgba(34,48,42,.55)",
+    position: "fixed", inset: 0, background: "rgba(30,41,59,.55)",
     zIndex: 100, display: "flex", alignItems: "flex-end",
     justifyContent: "center",
   },
@@ -741,25 +741,25 @@ const s = {
   },
   header: {
     display: "flex", justifyContent: "space-between", alignItems: "center",
-    padding: "16px 20px", borderBottom: "1px solid #E5DCC9",
-    background: "#FFFDF8", flexShrink: 0,
+    padding: "16px 20px", borderBottom: "1px solid #E2E8F0",
+    background: "#F8FAFC", flexShrink: 0,
   },
   headerTitle: { fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600, color: INK },
   kapat: {
-    background: "none", border: "none", fontSize: 18, color: "#9A9384",
+    background: "none", border: "none", fontSize: 18, color: "#94A3B8",
     padding: "4px 8px", borderRadius: 6, cursor: "pointer",
   },
   icerik: { overflowY: "auto", flex: 1, padding: "20px" },
   ekran: {},
   baslik: { fontFamily: "'Fraunces', serif", fontSize: 22, fontWeight: 700, margin: "0 0 8px", color: INK },
-  aciklama: { fontSize: 14, color: "#5C6660", margin: "0 0 18px", lineHeight: 1.5 },
+  aciklama: { fontSize: 14, color: "#475569", margin: "0 0 18px", lineHeight: 1.5 },
   input: {
     width: "100%", padding: "12px 14px", borderRadius: 11,
-    border: "1.5px solid #DDD3BE", background: "#FFFDF8",
+    border: "1.5px solid #E2E8F0", background: "#F8FAFC",
     fontSize: 15, fontFamily: "'Hanken Grotesk', sans-serif", color: INK,
     letterSpacing: "0.05em", boxSizing: "border-box",
   },
-  hata: { color: "#B23A2E", fontSize: 13, margin: "8px 0 0" },
+  hata: { color: "#DC2626", fontSize: 13, margin: "8px 0 0" },
   cta: {
     marginTop: 14, width: "100%", padding: "13px", borderRadius: 12,
     border: "none", background: AMBER, color: "#fff",
@@ -767,51 +767,51 @@ const s = {
     cursor: "pointer",
   },
   label: { display: "block", fontSize: 13.5, fontWeight: 700, margin: "14px 0 7px", color: INK },
-  opt: { fontWeight: 500, color: "#9A9384", fontSize: 12 },
+  opt: { fontWeight: 500, color: "#94A3B8", fontSize: 12 },
   chipWrap: { display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 4 },
-  chip: { fontSize: 12.5, padding: "7px 12px", borderRadius: 999, border: "1.5px solid #DDD3BE", background: "#FFFDF8", color: "#5C6660", fontWeight: 600, cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif" },
+  chip: { fontSize: 12.5, padding: "7px 12px", borderRadius: 999, border: "1.5px solid #E2E8F0", background: "#F8FAFC", color: "#475569", fontWeight: 600, cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif" },
   chipActive: { background: INK, color: CREAM, borderColor: INK },
   row: { display: "flex", gap: 12 },
   pasaportKart: {
-    background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14,
+    background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 14,
     padding: "16px 18px", marginBottom: 18,
   },
   pasaportBaslik: { fontFamily: "'Fraunces', serif", fontSize: 20, fontWeight: 700, color: INK },
   pasaportAlt: { display: "flex", gap: 8, flexWrap: "wrap", marginTop: 6, alignItems: "center" },
   rozet: { fontSize: 12, fontWeight: 700, background: INK, color: CREAM, padding: "3px 9px", borderRadius: 999 },
-  metaBilgi: { fontSize: 12.5, color: "#5C6660" },
-  seriNo: { fontSize: 12, color: "#9A9384", marginTop: 8, letterSpacing: "0.05em" },
-  toplamMaliyet: { fontSize: 13, color: "#5C6660", marginTop: 6 },
+  metaBilgi: { fontSize: 12.5, color: "#475569" },
+  seriNo: { fontSize: 12, color: "#94A3B8", marginTop: 8, letterSpacing: "0.05em" },
+  toplamMaliyet: { fontSize: 13, color: "#475569", marginTop: 6 },
   fotoGaleri: { display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 },
-  fotoKucuk: { width: 64, height: 64, objectFit: "cover", borderRadius: 8, border: "1px solid #E5DCC9" },
+  fotoKucuk: { width: 64, height: 64, objectFit: "cover", borderRadius: 8, border: "1px solid #E2E8F0" },
   secBaslik: {
     fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 600,
     color: INK, marginBottom: 12, display: "flex", justifyContent: "space-between", alignItems: "center",
   },
-  tamirSayisi: { fontSize: 12, color: "#9A9384", fontFamily: "'Hanken Grotesk', sans-serif", fontWeight: 400 },
-  bosMetin: { fontSize: 14, color: "#9A9384", textAlign: "center", padding: "24px 0" },
+  tamirSayisi: { fontSize: 12, color: "#94A3B8", fontFamily: "'Hanken Grotesk', sans-serif", fontWeight: 400 },
+  bosMetin: { fontSize: 14, color: "#94A3B8", textAlign: "center", padding: "24px 0" },
   tamirKart: {
-    background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 12,
+    background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 12,
     padding: "12px 14px", marginBottom: 10,
   },
   tamirUst: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 },
-  tamirTarih: { fontSize: 12.5, color: "#9A9384" },
-  dogrulanmisRozet: { fontSize: 11, fontWeight: 700, color: GREEN, background: "rgba(58,125,68,.1)", padding: "2px 8px", borderRadius: 999 },
-  hariciRozet: { fontSize: 11, color: "#5C6660", background: "#F0EAD8", padding: "2px 8px", borderRadius: 999 },
-  sahipRozet: { fontSize: 11, color: AMBER, background: "rgba(200,99,43,.1)", padding: "2px 8px", borderRadius: 999 },
+  tamirTarih: { fontSize: 12.5, color: "#94A3B8" },
+  dogrulanmisRozet: { fontSize: 11, fontWeight: 700, color: GREEN, background: "rgba(34,197,94,.1)", padding: "2px 8px", borderRadius: 999 },
+  hariciRozet: { fontSize: 11, color: "#475569", background: "#F1F5F9", padding: "2px 8px", borderRadius: 999 },
+  sahipRozet: { fontSize: 11, color: AMBER, background: "rgba(37,99,235,.1)", padding: "2px 8px", borderRadius: 999 },
   tamirIslem: { fontSize: 14.5, fontWeight: 700, color: INK },
-  tamirServis: { fontSize: 12.5, color: "#5C6660", marginTop: 2 },
+  tamirServis: { fontSize: 12.5, color: "#475569", marginTop: 2 },
   parcalar: { display: "flex", gap: 6, flexWrap: "wrap", marginTop: 6 },
-  parcaChip: { fontSize: 11.5, background: "#F0EAD8", color: "#6E6450", padding: "3px 8px", borderRadius: 6 },
+  parcaChip: { fontSize: 11.5, background: "#F1F5F9", color: "#64748B", padding: "3px 8px", borderRadius: 6 },
   tamirMaliyet: { fontSize: 13, fontWeight: 700, color: AMBER, marginTop: 6 },
   parcaEkleBtn: {
     padding: "0 14px", borderRadius: 11, border: `1.5px solid ${AMBER}`,
-    background: "rgba(200,99,43,.06)", color: AMBER, fontWeight: 700, fontSize: 13,
+    background: "rgba(37,99,235,.06)", color: AMBER, fontWeight: 700, fontSize: 13,
     whiteSpace: "nowrap", fontFamily: "'Hanken Grotesk', sans-serif", cursor: "pointer",
     flexShrink: 0,
   },
   iptalBtn: {
-    padding: "13px 20px", borderRadius: 12, border: "1.5px solid #DDD3BE",
+    padding: "13px 20px", borderRadius: 12, border: "1.5px solid #E2E8F0",
     background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600,
     fontFamily: "'Hanken Grotesk', sans-serif", cursor: "pointer",
   },

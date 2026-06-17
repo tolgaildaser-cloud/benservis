@@ -3,8 +3,8 @@
 // SMS'teki link buraya gelir. Auth yok, sadece is_no ile çalışır.
 import React, { useState, useEffect } from "react";
 
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
-const RED = "#B23A2E", GRAY = "#9A9384";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
+const RED = "#DC2626", GRAY = "#94A3B8";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 const DURUM_ADI = {
@@ -22,7 +22,7 @@ function Zaman({ iso }) {
 }
 
 function AdimNoktasi({ aktif, tamamlandi, renk, label, alt }) {
-  const bg = tamamlandi ? renk : aktif ? renk + "33" : "#E5DCC9";
+  const bg = tamamlandi ? renk : aktif ? renk + "33" : "#E2E8F0";
   const fg = tamamlandi ? "white" : aktif ? renk : GRAY;
   return (
     <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 20 }}>
@@ -67,7 +67,7 @@ function YildizFormu({ isNo, mevcutPuan, onBitti }) {
   const aktif = hover || secili;
 
   return (
-    <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "18px 18px", marginTop: 16 }}>
+    <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "18px 18px", marginTop: 16 }}>
       <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 12 }}>
         Bu servisi nasıl buldunuz?
       </div>
@@ -99,13 +99,13 @@ function YildizFormu({ isNo, mevcutPuan, onBitti }) {
         onChange={(e) => setYorum(e.target.value)}
         placeholder="Yorumunuz (opsiyonel)"
         rows={2}
-        style={{ width: "100%", padding: "10px 12px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", resize: "vertical", boxSizing: "border-box", marginBottom: 12 }}
+        style={{ width: "100%", padding: "10px 12px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", resize: "vertical", boxSizing: "border-box", marginBottom: 12 }}
       />
       {hata && <div style={{ color: RED, fontSize: 13, marginBottom: 8 }}>{hata}</div>}
       <button
         onClick={gonder}
         disabled={!secili || gonderiyor}
-        style={{ width: "100%", padding: 12, borderRadius: 11, border: "none", background: secili ? AMBER : "#CCC", color: "white", fontWeight: 700, fontSize: 14, cursor: secili ? "pointer" : "not-allowed" }}
+        style={{ width: "100%", padding: 12, borderRadius: 11, border: "none", background: secili ? AMBER : "#CBD5E1", color: "white", fontWeight: 700, fontSize: 14, cursor: secili ? "pointer" : "not-allowed" }}
       >
         {gonderiyor ? "Kaydediliyor…" : "Değerlendirmeyi Gönder"}
       </button>
@@ -153,7 +153,7 @@ export default function MusteriTakip({ isNo }) {
       <div style={{ background: INK, color: CREAM, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10 }}>
         <a href="/" style={{ color: CREAM, textDecoration: "none", fontSize: 20 }}>◑</a>
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 700 }}>Benservis</span>
-        <span style={{ marginLeft: "auto", fontSize: 12, color: "#B8BEB6" }}>İş Takip</span>
+        <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>İş Takip</span>
       </div>
 
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "24px 16px 48px" }}>
@@ -201,7 +201,7 @@ export default function MusteriTakip({ isNo }) {
             </div>
 
             {/* Servis + cihaz bilgisi */}
-            <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "16px 18px", marginBottom: 20 }}>
+            <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "16px 18px", marginBottom: 20 }}>
               <div style={{ fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, color: INK, marginBottom: 8 }}>
                 {is.servis_ad}
               </div>
@@ -220,7 +220,7 @@ export default function MusteriTakip({ isNo }) {
             </div>
 
             {/* Timeline */}
-            <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "18px 18px 4px" }}>
+            <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "18px 18px 4px" }}>
               <div style={{ fontFamily: "'Fraunces', serif", fontSize: 14, fontWeight: 700, color: INK, marginBottom: 18 }}>
                 Durum Akışı
               </div>

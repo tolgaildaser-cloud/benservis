@@ -4,12 +4,12 @@
 import React, { useState } from "react";
 import { CIHAZLAR, MARKALAR } from "./constants.js";
 
-const INK   = "#22302A";
-const CREAM = "#F5EFE2";
-const AMBER = "#C8632B";
-const GREEN = "#3A7D44";
-const GRAY  = "#9A9384";
-const RED   = "#B23A2E";
+const INK   = "#1E293B";
+const CREAM = "#F1F5F9";
+const AMBER = "#2563EB";
+const GREEN = "#22C55E";
+const GRAY  = "#94A3B8";
+const RED   = "#DC2626";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -17,11 +17,11 @@ const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ita
 const sInput = {
   width: "100%",
   padding: "11px 13px",
-  border: "1.5px solid #DDD3BE",
+  border: "1.5px solid #E2E8F0",
   borderRadius: 10,
   fontSize: 14,
   fontFamily: "'Hanken Grotesk', sans-serif",
-  background: "#FFFDF8",
+  background: "#F8FAFC",
   color: INK,
   outline: "none",
   boxSizing: "border-box",
@@ -50,8 +50,8 @@ function Chip({ label, aktif, onClick }) {
         fontFamily: "'Hanken Grotesk', sans-serif",
         cursor: "pointer",
         transition: "all .12s",
-        border: aktif ? `1.5px solid ${GREEN}` : "1.5px solid #DDD3BE",
-        background: aktif ? GREEN : "#FFFDF8",
+        border: aktif ? `1.5px solid ${GREEN}` : "1.5px solid #E2E8F0",
+        background: aktif ? GREEN : "#F8FAFC",
         color: aktif ? "white" : GRAY,
       }}
     >
@@ -212,7 +212,7 @@ export default function ServisKayit() {
       <div style={{ background: INK, color: CREAM, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10 }}>
         <a href="/" style={{ color: CREAM, textDecoration: "none", fontSize: 20 }}>◑</a>
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>Benservis</span>
-        <span style={{ marginLeft: "auto", fontSize: 12, color: "#B8BEB6" }}>Servis Kaydı</span>
+        <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>Servis Kaydı</span>
       </div>
 
       <div style={{ maxWidth: 540, margin: "0 auto", padding: "28px 20px 60px" }}>
@@ -230,7 +230,7 @@ export default function ServisKayit() {
         <form onSubmit={gonder} noValidate>
 
           {/* ─── Bölüm 1: İşletme bilgileri ─────────────────────────── */}
-          <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "20px 18px", marginBottom: 16 }}>
+          <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "20px 18px", marginBottom: 16 }}>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 16 }}>
               İşletme Bilgileri
             </div>
@@ -287,7 +287,7 @@ export default function ServisKayit() {
           </div>
 
           {/* ─── Bölüm 2: Konum ─────────────────────────────────────── */}
-          <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "20px 18px", marginBottom: 16 }}>
+          <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "20px 18px", marginBottom: 16 }}>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 16 }}>
               Konum
             </div>
@@ -300,8 +300,8 @@ export default function ServisKayit() {
                 disabled={konumAlinıyor || konumAlindi}
                 style={{
                   width: "100%", padding: "11px 14px", borderRadius: 10,
-                  border: konumAlindi ? `1.5px solid ${GREEN}` : "1.5px solid #DDD3BE",
-                  background: konumAlindi ? GREEN + "14" : "#FFFDF8",
+                  border: konumAlindi ? `1.5px solid ${GREEN}` : "1.5px solid #E2E8F0",
+                  background: konumAlindi ? GREEN + "14" : "#F8FAFC",
                   color: konumAlindi ? GREEN : INK,
                   fontWeight: 600, fontSize: 13.5,
                   fontFamily: "'Hanken Grotesk', sans-serif",
@@ -358,7 +358,7 @@ export default function ServisKayit() {
           </div>
 
           {/* ─── Bölüm 3: Hizmetler ─────────────────────────────────── */}
-          <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "20px 18px", marginBottom: 16 }}>
+          <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "20px 18px", marginBottom: 16 }}>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 6 }}>
               Hizmet Verilen Cihazlar
             </div>
@@ -379,13 +379,13 @@ export default function ServisKayit() {
           </div>
 
           {/* ─── Bölüm 4: Yetkili Servis ────────────────────────────── */}
-          <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "20px 18px", marginBottom: 16 }}>
+          <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "20px 18px", marginBottom: 16 }}>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 16 }}>
               Servis Türü
             </div>
 
             {/* Kademe bilgi notu — tier seçilmez, Benservis iş hacmine göre atar */}
-            <div style={{ background: "#F0EAD8", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 12.5, color: "#5C6660", lineHeight: 1.6 }}>
+            <div style={{ background: "#F1F5F9", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 12.5, color: "#475569", lineHeight: 1.6 }}>
               ℹ️ <strong style={{ color: INK }}>Servis kademeniz</strong> (Bronz / Gold / Platin), Benservis
               üzerinden aldığınız aylık iş hacmine göre otomatik belirlenir:
               <div style={{ marginTop: 6 }}>
@@ -432,7 +432,7 @@ export default function ServisKayit() {
           </div>
 
           {/* ─── Bölüm 5: Notlar ────────────────────────────────────── */}
-          <div style={{ background: "#FFFDF8", borderRadius: 16, border: "1px solid #E5DCC9", padding: "20px 18px", marginBottom: 20 }}>
+          <div style={{ background: "#F8FAFC", borderRadius: 16, border: "1px solid #E2E8F0", padding: "20px 18px", marginBottom: 20 }}>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 15, fontWeight: 700, color: INK, marginBottom: 12 }}>
               Notlar <span style={{ fontFamily: "'Hanken Grotesk', sans-serif", fontWeight: 400, fontSize: 13, color: GRAY }}>(opsiyonel)</span>
             </div>
@@ -465,7 +465,7 @@ export default function ServisKayit() {
               padding: "15px",
               borderRadius: 13,
               border: "none",
-              background: gonderiyor ? "#CCC" : AMBER,
+              background: gonderiyor ? "#CBD5E1" : AMBER,
               color: "white",
               fontWeight: 700,
               fontSize: 15,

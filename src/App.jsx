@@ -195,8 +195,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
   const detayEkle = () => setAdim("form");
 
-  const acilRenk = { "düşük": "#3A7D44", "orta": "#C8632B", "yüksek": "#B23A2E" };
-  const kararRenk = { tamir: "#3A7D44", yenisi: "#B23A2E", belirsiz: "#8A6D3B" };
+  const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626" };
+  const kararRenk = { tamir: "#22C55E", yenisi: "#DC2626", belirsiz: "#64748B" };
   const kararEtiket = { tamir: "TAMİR ETTİR", yenisi: "YENİSİNİ AL", belirsiz: "BELİRSİZ" };
   const oneriler = BELIRTILER[cihaz] || [];
 
@@ -272,7 +272,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <div style={s.row}>
             <div style={{ flex: 1 }}>
               <label style={s.label}>
-                Marka <span style={{ color: "#B23A2E", fontWeight: 700 }}>*</span>
+                Marka <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span>
               </label>
               <select
                 style={{ ...s.input, cursor: cihaz ? "pointer" : "not-allowed" }}
@@ -297,7 +297,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               type="checkbox"
               checked={garantiAltinda}
               onChange={(e) => setGarantiAltinda(e.target.checked)}
-              style={{ width: 16, height: 16, cursor: "pointer", accentColor: "#3A7D44" }}
+              style={{ width: 16, height: 16, cursor: "pointer", accentColor: "#22C55E" }}
             />
             <span>
               Cihazım garantili{" "}
@@ -350,7 +350,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             <div style={s.divider} />
             <div style={{ flex: 1 }}>
               <div style={s.secHead}>Karar</div>
-              <span style={{ ...s.kararBadge, background: kararRenk[sonuc.kararOnerisi] || "#8A6D3B" }}>{kararEtiket[sonuc.kararOnerisi] || "BELİRSİZ"}</span>
+              <span style={{ ...s.kararBadge, background: kararRenk[sonuc.kararOnerisi] || "#64748B" }}>{kararEtiket[sonuc.kararOnerisi] || "BELİRSİZ"}</span>
               <p style={s.fiyatNot}>{sonuc.kararAciklama}</p>
             </div>
           </div>
@@ -404,15 +404,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   );
 }
 
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F8FAFC", AMBER = "#2563EB", GREEN = "#22C55E";
 // Minimal & premium paleti
-const BG = "#FBFAF8", SURFACE = "#FFFFFF", MUTED = "#6E7771", FAINT = "#9AA29C", HAIR = "#ECEAE3";
+const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 
 const CSS = `
 * { box-sizing: border-box; }
 @keyframes anspin { to { transform: rotate(360deg); } }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
-input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(200,99,43,.13); }
+input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }
 button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
 `;
 
@@ -425,9 +425,9 @@ const s = {
   logo: { fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 34, margin: 0, letterSpacing: "-0.025em" },
   tagline: { fontSize: 16, color: MUTED, maxWidth: 400, margin: "12px auto 16px", lineHeight: 1.5 },
   trustBadge: { display: "inline-block", fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
-  card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(34,48,42,.04), 0 16px 40px -28px rgba(34,48,42,.30)", animation: "anrise .4s ease both" },
-  cardSplit: { position: "relative", zIndex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", animation: "anrise .4s ease both" },
-  cardSoft: { position: "relative", zIndex: 1, background: "#F0EAD8", border: "1px dashed #C9BD9E", borderRadius: 18, padding: 20, marginTop: 14 },
+  card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 16px 40px -28px rgba(30,41,59,.30)", animation: "anrise .4s ease both" },
+  cardSplit: { position: "relative", zIndex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", animation: "anrise .4s ease both" },
+  cardSoft: { position: "relative", zIndex: 1, background: "#F1F5F9", border: "1px dashed #CBD5E1", borderRadius: 18, padding: 20, marginTop: 14 },
   results: { position: "relative", zIndex: 1 },
   label: { display: "block", fontSize: 13, fontWeight: 700, margin: "18px 0 8px", color: INK, letterSpacing: "-0.01em" },
   opt: { fontWeight: 500, color: FAINT, fontSize: 12 },
@@ -437,53 +437,53 @@ const s = {
   // Cihaz seçimi — ikon + etiket grid (minimal & premium)
   cihazGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(84px, 1fr))", gap: 8 },
   cihazTile: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 6, padding: "12px 4px", minHeight: 80, borderRadius: 13, border: `1px solid ${HAIR}`, background: SURFACE, color: MUTED, transition: "all .15s", textAlign: "center" },
-  cihazTileActive: { border: `1px solid ${INK}`, background: INK, color: "#fff", boxShadow: "0 8px 20px -12px rgba(34,48,42,.5)" },
+  cihazTileActive: { border: `1px solid ${INK}`, background: INK, color: "#fff", boxShadow: "0 8px 20px -12px rgba(30,41,59,.5)" },
   cihazTileText: { fontSize: 11.5, fontWeight: 600, lineHeight: 1.25 },
-  oneriBox: { marginTop: 16, padding: "14px 15px", background: "#F6F4EF", borderRadius: 14 },
+  oneriBox: { marginTop: 16, padding: "14px 15px", background: "#F1F5F9", borderRadius: 14 },
   oneriLabel: { fontSize: 12.5, fontWeight: 700, color: MUTED },
   oneriWrap: { display: "flex", flexWrap: "wrap", gap: 8, marginTop: 11 },
-  oneriChip: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, padding: "8px 14px", borderRadius: 999, border: `1px solid ${HAIR}`, background: SURFACE, color: INK, fontWeight: 600, transition: "all .15s", boxShadow: "0 1px 1px rgba(34,48,42,.03)" },
-  oneriChipActive: { background: AMBER, color: "#fff", border: `1px solid ${AMBER}`, boxShadow: "0 6px 14px -6px rgba(200,99,43,.55)" },
+  oneriChip: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, padding: "8px 14px", borderRadius: 999, border: `1px solid ${HAIR}`, background: SURFACE, color: INK, fontWeight: 600, transition: "all .15s", boxShadow: "0 1px 1px rgba(30,41,59,.03)" },
+  oneriChipActive: { background: AMBER, color: "#fff", border: `1px solid ${AMBER}`, boxShadow: "0 6px 14px -6px rgba(37,99,235,.55)" },
   oneriChipIkon: { fontSize: 13, fontWeight: 800, opacity: 0.85, lineHeight: 1 },
   row: { display: "flex", gap: 12, alignItems: "flex-start" },
   garantiRow: { display: "flex", alignItems: "center", gap: 10, margin: "18px 0 0", cursor: "pointer", fontSize: 13.5, color: GREEN, fontWeight: 600, userSelect: "none" },
   input: { width: "100%", height: 46, padding: "0 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s", boxSizing: "border-box" },
   textarea: { width: "100%", padding: "13px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "vertical", lineHeight: 1.55 },
-  err: { marginTop: 14, color: "#B23A2E", fontSize: 13.5, fontWeight: 600 },
-  cta: { marginTop: 22, width: "100%", padding: "15px", borderRadius: 13, border: "none", background: AMBER, color: "#fff", fontSize: 15.5, fontWeight: 700, letterSpacing: ".01em", boxShadow: "0 10px 24px -12px rgba(200,99,43,.55)", transition: "transform .15s ease, box-shadow .15s ease" },
+  err: { marginTop: 14, color: "#DC2626", fontSize: 13.5, fontWeight: 600 },
+  cta: { marginTop: 22, width: "100%", padding: "15px", borderRadius: 13, border: "none", background: AMBER, color: "#fff", fontSize: 15.5, fontWeight: 700, letterSpacing: ".01em", boxShadow: "0 10px 24px -12px rgba(37,99,235,.55)", transition: "transform .15s ease, box-shadow .15s ease" },
   disclaimer: { fontSize: 11.5, color: FAINT, textAlign: "center", marginTop: 14, marginBottom: 0, lineHeight: 1.5 },
   loaderWrap: { textAlign: "center", padding: "26px 0" },
-  loader: { width: 38, height: 38, borderRadius: "50%", border: "4px solid #E5DCC9", borderTopColor: AMBER, margin: "0 auto 16px", animation: "anspin 1s linear infinite" },
+  loader: { width: 38, height: 38, borderRadius: "50%", border: "4px solid #E2E8F0", borderTopColor: AMBER, margin: "0 auto 16px", animation: "anspin 1s linear infinite" },
   loaderText: { fontFamily: "'Fraunces', serif", fontSize: 19, fontWeight: 600, margin: 0 },
-  loaderSub: { fontSize: 13, color: "#9A9384", marginTop: 6 },
+  loaderSub: { fontSize: 13, color: "#94A3B8", marginTop: 6 },
   secHead: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600, marginBottom: 12 },
-  secHeadSoft: { fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 600, marginBottom: 10, color: "#6E6450" },
+  secHeadSoft: { fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 600, marginBottom: 10, color: "#64748B" },
   ariza: { marginBottom: 15 },
   arizaTop: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 5 },
   arizaAd: { fontWeight: 700, fontSize: 15 },
   arizaPct: { fontWeight: 700, fontSize: 14, color: AMBER, fontFamily: "'Fraunces', serif" },
-  barTrack: { height: 7, background: "#EDE5D3", borderRadius: 99, overflow: "hidden" },
-  barFill: { height: "100%", background: `linear-gradient(90deg, ${AMBER}, #E0894F)`, borderRadius: 99 },
-  arizaAcik: { fontSize: 13.5, color: "#5C6660", margin: "6px 0 0", lineHeight: 1.45 },
+  barTrack: { height: 7, background: "#E2E8F0", borderRadius: 99, overflow: "hidden" },
+  barFill: { height: "100%", background: `linear-gradient(90deg, ${AMBER}, #60A5FA)`, borderRadius: 99 },
+  arizaAcik: { fontSize: 13.5, color: "#475569", margin: "6px 0 0", lineHeight: 1.45 },
   fiyat: { fontFamily: "'Fraunces', serif", fontSize: 30, fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em" },
-  tl: { fontSize: 16, color: "#9A9384" },
-  fiyatNot: { fontSize: 13, color: "#5C6660", marginTop: 8, lineHeight: 1.45 },
-  divider: { width: 1, alignSelf: "stretch", background: "#EAE1CE" },
+  tl: { fontSize: 16, color: "#94A3B8" },
+  fiyatNot: { fontSize: 13, color: "#475569", marginTop: 8, lineHeight: 1.45 },
+  divider: { width: 1, alignSelf: "stretch", background: "#E2E8F0" },
   kararBadge: { display: "inline-block", color: "#fff", fontSize: 12.5, fontWeight: 700, letterSpacing: ".04em", padding: "6px 12px", borderRadius: 8 },
   acilBadge: { display: "inline-block", fontSize: 13, fontWeight: 700, letterSpacing: ".05em", padding: "6px 12px", borderRadius: 8, borderWidth: "1.5px", borderStyle: "solid", background: SURFACE },
   ipucuList: { listStyle: "none", padding: 0, margin: 0 },
-  ipucu: { fontSize: 13.5, color: "#3F4843", display: "flex", gap: 8, marginBottom: 7, lineHeight: 1.4 },
+  ipucu: { fontSize: 13.5, color: "#334155", display: "flex", gap: 8, marginBottom: 7, lineHeight: 1.4 },
   tick: { color: GREEN, fontWeight: 800 },
-  soru: { fontSize: 13.5, color: "#6E6450", margin: "0 0 6px", lineHeight: 1.4 },
+  soru: { fontSize: 13.5, color: "#64748B", margin: "0 0 6px", lineHeight: 1.4 },
   linkBtn: { marginTop: 8, background: "none", border: "none", color: AMBER, fontWeight: 700, fontSize: 13.5, padding: 0, textDecoration: "underline" },
   faz2: { position: "relative", zIndex: 1, marginTop: 16, background: INK, color: CREAM, borderRadius: 18, padding: "18px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 },
   faz2Head: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600 },
-  faz2Sub: { fontSize: 13, color: "#B8BEB6", marginTop: 3 },
+  faz2Sub: { fontSize: 13, color: "#94A3B8", marginTop: 3 },
   faz2Btn: { background: AMBER, color: "#fff", border: "none", borderRadius: 11, padding: "11px 15px", fontWeight: 700, fontSize: 14, opacity: .85, whiteSpace: "nowrap" },
   altBtns: { display: "flex", gap: 10, marginTop: 16 },
-  copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
-  reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #DDD3BE", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
-  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#A59E8E", marginTop: 26 },
+  copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
+  reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #CBD5E1", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
+  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#94A3B8", marginTop: 26 },
   dppBanner: {
     position: "relative", zIndex: 1, marginBottom: 14,
     background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 14,
@@ -506,7 +506,7 @@ const s = {
     position: "relative", zIndex: 1,
     display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10,
     marginTop: 18, padding: "13px 18px", borderRadius: 14,
-    background: "#FFFDF8", border: "1.5px solid #E5DCC9",
+    background: "#F8FAFC", border: "1.5px solid #E2E8F0",
     color: INK, textDecoration: "none", fontSize: 14, lineHeight: 1.4,
   },
   ikinciElOk: { fontSize: 18, color: AMBER, flexShrink: 0 },

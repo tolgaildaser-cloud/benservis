@@ -3,9 +3,9 @@
 // 1) Arıza Kaydı → /ariza  2) İkinci El → /ikinci-el  3) Ben Tamir Ederim → tr.ifixit.com
 import React from "react";
 
-const INK = "#22302A", AMBER = "#C8632B", GREEN = "#3A7D44";
-const BG = "#FBFAF8", SURFACE = "#FFFFFF";
-const MUTED = "#6E7771", FAINT = "#9AA29C", HAIR = "#ECEAE3";
+const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E";
+const BG = "#F8FAFC", SURFACE = "#FFFFFF";
+const MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 function Kart({ href, harici, no, baslik, aciklama, etiket, ikon, tint, accent }) {
@@ -50,7 +50,7 @@ export default function LandingPage() {
       <style>{FONT}</style>
       <style>{`
         .lp-kart { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-        .lp-kart:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(34,48,42,.30); border-color: #DAD6CC; }
+        .lp-kart:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(30,41,59,.30); border-color: #E2E8F0; }
         .lp-kart:hover .lp-arrow { transform: translateX(4px); }
       `}</style>
 
@@ -87,19 +87,19 @@ export default function LandingPage() {
           href="/ariza" no={1}
           baslik="Arıza Kaydı"
           aciklama="Cihazının belirtisini yaz; yapay zekâ olası arızayı ve tahmini maliyeti söylesin, bölgendeki en uygun servisi çağır."
-          etiket="Teşhise başla" ikon="🔧" tint="#F6E9DF" accent={AMBER}
+          etiket="Teşhise başla" ikon="🔧" tint="#F8FAFC" accent={AMBER}
         />
         <Kart
           href="/ikinci-el" no={2}
           baslik="İkinci El Ürün"
           aciklama="Servislerin yenilediği, tamir geçmişi belgeli cihazları güvenle al — ya da kendi cihazını dakikalar içinde satışa çıkar."
-          etiket="Ürünlere bak" ikon="🛒" tint="#E4F0E8" accent={GREEN}
+          etiket="Ürünlere bak" ikon="🛒" tint="#DCFCE7" accent={GREEN}
         />
         <Kart
           href="https://tr.ifixit.com" harici no={3}
           baslik="Ben Tamir Ederim"
           aciklama="Elin yatkınsa kendin onar — binlerce cihaz için adım adım, fotoğraflı tamir rehberleri."
-          etiket="Rehberlere git" ikon="🛠️" tint="#ECEEF0" accent={INK}
+          etiket="Rehberlere git" ikon="🛠️" tint="#F1F5F9" accent={INK}
         />
       </div>
 

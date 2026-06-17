@@ -7,7 +7,7 @@
 //   onKapat  {Function} Formu kapat
 import React, { useState } from "react";
 
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 const GUNLER = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
@@ -119,14 +119,14 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 20, fontWeight: 700, color: INK, marginBottom: 8 }}>
               Talebiniz İletildi
             </div>
-            <div style={{ fontSize: 14, color: "#666", lineHeight: 1.6, marginBottom: 24 }}>
+            <div style={{ fontSize: 14, color: "#475569", lineHeight: 1.6, marginBottom: 24 }}>
               {isOtomatik
                 ? <>Talebiniz bölgenizdeki servislere iletildi.<br />Bir servis kabul ettiğinde SMS alacaksınız.</>
                 : <>{servis.ad} talebinizi inceliyor.<br />30 dakika içinde SMS ile bildirim alacaksınız.</>
               }
             </div>
             <div style={{ background: "white", borderRadius: 10, padding: "12px 16px", display: "inline-block", marginBottom: 24 }}>
-              <div style={{ fontSize: 12, color: "#888" }}>İş No</div>
+              <div style={{ fontSize: 12, color: "#64748B" }}>İş No</div>
               <div style={{ fontWeight: 700, fontSize: 18, color: INK }}>#{tamamlandi.is_no}</div>
             </div>
             <br />
@@ -138,31 +138,31 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
           /* Form */
           <form onSubmit={gonder}>
             {cihaz && (
-              <div style={{ background: "#F0EAD8", borderRadius: 8, padding: "8px 12px", marginBottom: 16, fontSize: 12, color: "#666" }}>
+              <div style={{ background: "#F1F5F9", borderRadius: 8, padding: "8px 12px", marginBottom: 16, fontSize: 12, color: "#475569" }}>
                 📋 <strong>{cihaz}</strong>{belirti ? ` — ${belirti.slice(0, 60)}${belirti.length > 60 ? "…" : ""}` : ""}
-                <div style={{ fontSize: 10, color: "#aaa", marginTop: 2 }}>Teşhisten otomatik aktarıldı</div>
+                <div style={{ fontSize: 10, color: "#94A3B8", marginTop: 2 }}>Teşhisten otomatik aktarıldı</div>
               </div>
             )}
 
             <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: INK, marginBottom: 6 }}>Ad Soyad</label>
             <input value={ad} onChange={e => setAd(e.target.value)} placeholder="Adınız Soyadınız" required
-              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 14, boxSizing: "border-box" }} />
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 14, boxSizing: "border-box" }} />
 
             <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: INK, marginBottom: 6 }}>Telefon</label>
             <input value={tel} onChange={e => setTel(e.target.value)} placeholder="0555 123 45 67" type="tel" required
-              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 2, boxSizing: "border-box" }} />
-            <div style={{ fontSize: 11, color: "#aaa", marginBottom: 14 }}>Servis numaranızı görmez. Yalnızca SMS bildirimi için.</div>
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 2, boxSizing: "border-box" }} />
+            <div style={{ fontSize: 11, color: "#94A3B8", marginBottom: 14 }}>Servis numaranızı görmez. Yalnızca SMS bildirimi için.</div>
 
             <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: INK, marginBottom: 6 }}>Adres / Semt</label>
             <input value={adres} onChange={e => setAdres(e.target.value)} placeholder="Kadıköy, Moda Cad. 12/3" required
-              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 14, boxSizing: "border-box" }} />
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 14, boxSizing: "border-box" }} />
 
             <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: INK, marginBottom: 6 }}>
-              Ne zaman gelelim? <span style={{ fontWeight: 400, color: "#888", fontSize: 12 }}>(opsiyonel)</span>
+              Ne zaman gelelim? <span style={{ fontWeight: 400, color: "#64748B", fontSize: 12 }}>(opsiyonel)</span>
             </label>
             {/* Tarih dropdown */}
             <select value={tarihGun} onChange={e => setTarihGun(e.target.value)}
-              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 8, boxSizing: "border-box", background: "#fff", cursor: "pointer", color: tarihGun ? INK : "#888" }}>
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 8, boxSizing: "border-box", background: "#fff", cursor: "pointer", color: tarihGun ? INK : "#64748B" }}>
               <option value="">Gün seçin…</option>
               {TARIHLER.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
@@ -174,7 +174,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
                   <button key={p} type="button" onClick={() => setPencere(aktif ? "" : p)}
                     style={{
                       flex: 1, padding: "11px 8px", borderRadius: 10,
-                      border: aktif ? `1.5px solid ${AMBER}` : "1.5px solid #DDD3BE",
+                      border: aktif ? `1.5px solid ${AMBER}` : "1.5px solid #E2E8F0",
                       background: aktif ? AMBER : "#fff",
                       color: aktif ? "#fff" : INK,
                       fontSize: 13.5, fontWeight: 700, cursor: "pointer",
@@ -186,20 +186,20 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
               })}
             </div>
 
-            <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#22302A", marginBottom: 6 }}>
-              Seri No <span style={{ fontWeight: 400, color: "#888", fontSize: 12 }}>(opsiyonel)</span>
+            <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#1E293B", marginBottom: 6 }}>
+              Seri No <span style={{ fontWeight: 400, color: "#64748B", fontSize: 12 }}>(opsiyonel)</span>
             </label>
             <input
               value={seriNo}
               onChange={e => setSeriNo(e.target.value)}
               placeholder="SN1234567890"
-              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #DDD3BE", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 2, boxSizing: "border-box" }}
+              style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: "1.5px solid #E2E8F0", fontSize: 14, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 2, boxSizing: "border-box" }}
             />
-            <div style={{ fontSize: 11, color: "#aaa", marginBottom: 20 }}>
+            <div style={{ fontSize: 11, color: "#94A3B8", marginBottom: 20 }}>
               Cihazın arkasında veya faturasında yazar. Tamir geçmişi için kullanılır.
             </div>
 
-            {hata && <div style={{ color: "#B23A2E", fontSize: 13, fontWeight: 600, marginBottom: 14 }}>{hata}</div>}
+            {hata && <div style={{ color: "#DC2626", fontSize: 13, fontWeight: 600, marginBottom: 14 }}>{hata}</div>}
 
             <button type="submit" disabled={yukleniyor}
               style={{ width: "100%", padding: 14, borderRadius: 12, border: "none", background: AMBER, color: "white", fontSize: 16, fontWeight: 700, cursor: yukleniyor ? "not-allowed" : "pointer", opacity: yukleniyor ? 0.7 : 1 }}>

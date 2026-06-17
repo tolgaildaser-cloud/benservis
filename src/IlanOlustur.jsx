@@ -7,13 +7,13 @@ import BenservisRozet from "./BenservisRozet.jsx";
 import { CIHAZLAR } from "./constants.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CSS = `
 * { box-sizing: border-box; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
-input:focus, textarea:focus, select:focus { outline:none; border-color:${AMBER} !important; box-shadow:0 0 0 3px rgba(200,99,43,.13); }
+input:focus, textarea:focus, select:focus { outline:none; border-color:${AMBER} !important; box-shadow:0 0 0 3px rgba(37,99,235,.13); }
 button { cursor:pointer; font-family:'Hanken Grotesk',sans-serif; }
 `;
 
@@ -130,8 +130,8 @@ export default function IlanOlustur() {
       {/* Adım gösterge */}
       <div style={s.adimlar}>
         <div style={{ ...s.adimDot, background: AMBER, color: "#fff" }}>1</div>
-        <div style={{ ...s.adimCizgi, background: adim >= 2 ? AMBER : "#DDD3BE" }} />
-        <div style={{ ...s.adimDot, background: adim >= 2 ? AMBER : "#EDE5D3", color: adim >= 2 ? "#fff" : "#9A9384" }}>2</div>
+        <div style={{ ...s.adimCizgi, background: adim >= 2 ? AMBER : "#E2E8F0" }} />
+        <div style={{ ...s.adimDot, background: adim >= 2 ? AMBER : "#F1F5F9", color: adim >= 2 ? "#fff" : "#94A3B8" }}>2</div>
         <div style={s.adimEtiket}>
           <span style={adim === 1 ? s.adimEtiketAktif : s.adimEtiketPasif}>Cihaz</span>
           <span style={{ flex: 1 }} />
@@ -331,50 +331,50 @@ export default function IlanOlustur() {
 
 const s = {
   wrap: { position: "relative", minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, padding: "28px 18px 48px", maxWidth: 600, margin: "0 auto" },
-  grain: { position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4, backgroundImage: "radial-gradient(rgba(34,48,42,.05) 1px, transparent 1px)", backgroundSize: "4px 4px", zIndex: 0 },
+  grain: { position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4, backgroundImage: "radial-gradient(rgba(30,41,59,.05) 1px, transparent 1px)", backgroundSize: "4px 4px", zIndex: 0 },
   header: { position: "relative", zIndex: 1, textAlign: "center", marginBottom: 20 },
   logoRow: { display: "flex", alignItems: "center", justifyContent: "center", gap: 10 },
   logoMark: { color: AMBER, fontSize: 28, transform: "rotate(-20deg)", display: "inline-block" },
   logo: { fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 30, margin: 0, letterSpacing: "-.02em" },
-  altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#8A7B6A", textTransform: "uppercase", marginTop: 4 },
+  altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#64748B", textTransform: "uppercase", marginTop: 4 },
 
   adimlar: { position: "relative", zIndex: 1, display: "flex", alignItems: "center", marginBottom: 20, gap: 0 },
   adimDot: { width: 28, height: 28, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, flexShrink: 0, zIndex: 1 },
   adimCizgi: { flex: 1, height: 2, transition: "background .3s" },
-  adimEtiket: { position: "absolute", top: 34, left: 0, right: 0, display: "flex", fontSize: 11, fontWeight: 700, color: "#9A9384" },
+  adimEtiket: { position: "absolute", top: 34, left: 0, right: 0, display: "flex", fontSize: 11, fontWeight: 700, color: "#94A3B8" },
   adimEtiketAktif: { color: AMBER },
-  adimEtiketPasif: { color: "#C9C0B2" },
+  adimEtiketPasif: { color: "#CBD5E1" },
 
-  kart: { position: "relative", zIndex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 18, padding: 22, boxShadow: "0 10px 30px -18px rgba(34,48,42,.2)", marginTop: 8 },
+  kart: { position: "relative", zIndex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 18, padding: 22, boxShadow: "0 10px 30px -18px rgba(30,41,59,.2)", marginTop: 8 },
   kartBaslik: { fontFamily: "'Fraunces', serif", fontSize: 20, fontWeight: 700, marginBottom: 8 },
-  kartAcik: { fontSize: 13.5, color: "#5C6660", marginBottom: 0, lineHeight: 1.5 },
+  kartAcik: { fontSize: 13.5, color: "#475569", marginBottom: 0, lineHeight: 1.5 },
 
   label: { display: "block", fontSize: 13, fontWeight: 700, margin: "16px 0 6px", color: INK },
   zorunlu: { color: AMBER, fontSize: 14 },
-  opsiyonel: { fontWeight: 500, color: "#9A9384", fontSize: 12 },
-  input: { width: "100%", padding: "11px 13px", borderRadius: 11, border: "1.5px solid #DDD3BE", background: "#FFFDF8", fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s" },
-  textarea: { width: "100%", padding: "11px 13px", borderRadius: 11, border: "1.5px solid #DDD3BE", background: "#FFFDF8", fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "vertical", lineHeight: 1.5 },
+  opsiyonel: { fontWeight: 500, color: "#94A3B8", fontSize: 12 },
+  input: { width: "100%", padding: "11px 13px", borderRadius: 11, border: "1.5px solid #E2E8F0", background: "#F8FAFC", fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s" },
+  textarea: { width: "100%", padding: "11px 13px", borderRadius: 11, border: "1.5px solid #E2E8F0", background: "#F8FAFC", fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "vertical", lineHeight: 1.5 },
 
-  hata: { marginTop: 10, fontSize: 13.5, fontWeight: 600, color: "#B23A2E" },
-  telUyari: { marginTop: 10, fontSize: 12, color: "#8A7B6A", padding: "8px 12px", background: "#F0EAD8", borderRadius: 8 },
+  hata: { marginTop: 10, fontSize: 13.5, fontWeight: 600, color: "#DC2626" },
+  telUyari: { marginTop: 10, fontSize: 12, color: "#64748B", padding: "8px 12px", background: "#F1F5F9", borderRadius: 8 },
 
-  cta: { marginTop: 18, width: "100%", padding: 14, borderRadius: 12, border: "none", background: AMBER, color: "#fff", fontSize: 15.5, fontWeight: 700, boxShadow: "0 8px 20px -8px rgba(200,99,43,.6)" },
-  atlaBtnText: { display: "block", width: "100%", marginTop: 12, padding: "10px", borderRadius: 10, border: "1.5px solid #DDD3BE", background: "transparent", fontSize: 13, color: "#8A7B6A", fontWeight: 600 },
-  geriBtn: { display: "block", width: "100%", marginTop: 12, padding: "10px", borderRadius: 10, border: "1.5px solid #DDD3BE", background: "transparent", fontSize: 13, color: "#8A7B6A", fontWeight: 600 },
+  cta: { marginTop: 18, width: "100%", padding: 14, borderRadius: 12, border: "none", background: AMBER, color: "#fff", fontSize: 15.5, fontWeight: 700, boxShadow: "0 8px 20px -8px rgba(37,99,235,.6)" },
+  atlaBtnText: { display: "block", width: "100%", marginTop: 12, padding: "10px", borderRadius: 10, border: "1.5px solid #E2E8F0", background: "transparent", fontSize: 13, color: "#64748B", fontWeight: 600 },
+  geriBtn: { display: "block", width: "100%", marginTop: 12, padding: "10px", borderRadius: 10, border: "1.5px solid #E2E8F0", background: "transparent", fontSize: 13, color: "#64748B", fontWeight: 600 },
 
   spinnerKucuk: { width: 16, height: 16, borderRadius: "50%", border: "2.5px solid rgba(255,255,255,.4)", borderTopColor: "#fff", display: "inline-block", animation: "spin 1s linear infinite", flexShrink: 0 },
 
-  dppOnizleme: { position: "relative", zIndex: 1, background: "#FFFDF8", border: `1.5px solid ${AMBER}`, borderRadius: 14, padding: 16, marginTop: 8, marginBottom: 12 },
+  dppOnizleme: { position: "relative", zIndex: 1, background: "#F8FAFC", border: `1.5px solid ${AMBER}`, borderRadius: 14, padding: 16, marginTop: 8, marginBottom: 12 },
   dppOnizlemeBaslik: { display: "flex", alignItems: "center", gap: 8, fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, marginBottom: 12, flexWrap: "wrap" },
   dppIkon: { fontSize: 18 },
   dppSatirlar: { display: "flex", flexDirection: "column", gap: 6 },
   dppSatir: { display: "flex", justifyContent: "space-between", fontSize: 13 },
-  dppEtiket: { color: "#8A7B6A", fontWeight: 600 },
+  dppEtiket: { color: "#64748B", fontWeight: 600 },
   dppDeger: { fontWeight: 700, textAlign: "right" },
-  dogrulanmisBant: { marginTop: 12, fontSize: 12, fontWeight: 700, color: AMBER, background: "rgba(200,99,43,.08)", borderRadius: 8, padding: "7px 12px" },
+  dogrulanmisBant: { marginTop: 12, fontSize: 12, fontWeight: 700, color: AMBER, background: "rgba(37,99,235,.08)", borderRadius: 8, padding: "7px 12px" },
 
-  dppYok: { position: "relative", zIndex: 1, display: "flex", gap: 8, alignItems: "flex-start", fontSize: 13, color: "#6E6450", background: "#F7F1E3", border: "1px solid #EBE1CA", borderRadius: 12, padding: "12px 14px", marginTop: 8, marginBottom: 12, lineHeight: 1.5 },
+  dppYok: { position: "relative", zIndex: 1, display: "flex", gap: 8, alignItems: "flex-start", fontSize: 13, color: "#64748B", background: "#F8FAFC", border: "1px solid #F1F5F9", borderRadius: 12, padding: "12px 14px", marginTop: 8, marginBottom: 12, lineHeight: 1.5 },
 
-  geriLink: { display: "block", position: "relative", zIndex: 1, textAlign: "center", marginTop: 20, fontSize: 13, color: "#8A7B6A", fontWeight: 600, textDecoration: "none" },
-  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#A59E8E", marginTop: 20 },
+  geriLink: { display: "block", position: "relative", zIndex: 1, textAlign: "center", marginTop: 20, fontSize: 13, color: "#64748B", fontWeight: 600, textDecoration: "none" },
+  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#94A3B8", marginTop: 20 },
 };

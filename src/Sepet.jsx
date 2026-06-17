@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
-const INK = "#22302A", AMBER = "#C8632B", GREEN = "#3A7D44", LINK = "#1A4FB4", BORDER = "#E0DCD2";
+const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E", LINK = "#2563EB", BORDER = "#E2E8F0";
 
 export default function Sepet() {
   const [kalemler, setKalemler] = useState(sepetOku());
@@ -56,7 +56,7 @@ export default function Sepet() {
   const inp = { width: "100%", padding: "11px 13px", borderRadius: 8, border: `1.5px solid ${BORDER}`, fontSize: 14, fontFamily: "inherit", boxSizing: "border-box", marginBottom: 13, background: "#fff" };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F3EE", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
+    <div style={{ minHeight: "100vh", background: "#F8FAFC", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
       <style>{FONT}</style>
 
       {/* Header */}
@@ -65,7 +65,7 @@ export default function Sepet() {
           <a href="/ikinci-el" style={{ fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 20, color: INK, textDecoration: "none" }}>
             <span style={{ color: AMBER }}>◑</span> Benservis
           </a>
-          <span style={{ fontSize: 13, fontWeight: 700, color: "#6E6450" }}>🛒 Sepet & Ödeme</span>
+          <span style={{ fontSize: 13, fontWeight: 700, color: "#64748B" }}>🛒 Sepet & Ödeme</span>
         </div>
       </header>
 
@@ -76,8 +76,8 @@ export default function Sepet() {
           {["Sepet", "Bilgiler", "Ödeme"].map((t, i) => (
             <div key={t} style={{
               flex: 1, textAlign: "center", padding: "8px 0", borderRadius: 7,
-              background: adim === i + 1 ? INK : adim > i + 1 ? "#DDE8DF" : "#ECE8DE",
-              color: adim === i + 1 ? "#F5EFE2" : adim > i + 1 ? GREEN : "#9A9384",
+              background: adim === i + 1 ? INK : adim > i + 1 ? "#F1F5F9" : "#F1F5F9",
+              color: adim === i + 1 ? "#F1F5F9" : adim > i + 1 ? GREEN : "#94A3B8",
             }}>
               {adim > i + 1 ? "✓ " : `${i + 1}. `}{t}
             </div>
@@ -90,7 +90,7 @@ export default function Sepet() {
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, textAlign: "center", padding: "54px 16px" }}>
               <div style={{ fontSize: 44, marginBottom: 12 }}>🛒</div>
               <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>Sepetiniz boş</div>
-              <div style={{ fontSize: 13, color: "#8A7B6A", marginBottom: 18 }}>İkinci el ürünlere göz atın, beğendiğinizi sepete ekleyin.</div>
+              <div style={{ fontSize: 13, color: "#64748B", marginBottom: 18 }}>İkinci el ürünlere göz atın, beğendiğinizi sepete ekleyin.</div>
               <a href="/ikinci-el" style={{ display: "inline-block", padding: "11px 22px", borderRadius: 8, background: AMBER, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
                 Ürünlere Göz At →
               </a>
@@ -99,17 +99,17 @@ export default function Sepet() {
             <>
               <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, overflow: "hidden", marginBottom: 14 }}>
                 {kalemler.map(k => (
-                  <div key={k.id} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderBottom: "1px solid #ECE8DE" }}>
+                  <div key={k.id} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderBottom: "1px solid #F1F5F9" }}>
                     {k.gorsel_url
                       ? <img src={k.gorsel_url} alt={k.baslik} style={{ width: 64, height: 50, objectFit: "cover", borderRadius: 5, flexShrink: 0 }} />
-                      : <div style={{ width: 64, height: 50, borderRadius: 5, background: "#EDE6D6", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>📦</div>}
+                      : <div style={{ width: 64, height: 50, borderRadius: 5, background: "#F1F5F9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>📦</div>}
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 13.5, color: LINK }}>{k.baslik}</div>
-                      {k.servis_ad && <div style={{ fontSize: 11.5, color: "#8A7B6A" }}>🏪 {k.servis_ad}</div>}
+                      {k.servis_ad && <div style={{ fontSize: 11.5, color: "#64748B" }}>🏪 {k.servis_ad}</div>}
                     </div>
                     <div style={{ fontWeight: 700, fontSize: 14, whiteSpace: "nowrap" }}>{k.fiyat.toLocaleString("tr-TR")} TL</div>
                     <button onClick={() => sepettenCikar(k.id)}
-                      style={{ border: "none", background: "none", color: "#B23A2E", fontSize: 15, cursor: "pointer", padding: 4 }}>✕</button>
+                      style={{ border: "none", background: "none", color: "#DC2626", fontSize: 15, cursor: "pointer", padding: 4 }}>✕</button>
                   </div>
                 ))}
                 <div style={{ display: "flex", justifyContent: "space-between", padding: "13px 16px", fontWeight: 700, fontSize: 15 }}>
@@ -135,7 +135,7 @@ export default function Sepet() {
               <input style={inp} value={form.ad} onChange={e => setForm(f => ({ ...f, ad: e.target.value }))} placeholder="Adınız Soyadınız" />
               <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Telefon *</label>
               <input style={inp} type="tel" value={form.tel} onChange={e => setForm(f => ({ ...f, tel: e.target.value }))} placeholder="0555 123 45 67" />
-              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres <span style={{ fontWeight: 400, color: "#9A9384" }}>(teslimat / randevu için)</span></label>
+              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres <span style={{ fontWeight: 400, color: "#94A3B8" }}>(teslimat / randevu için)</span></label>
               <input style={inp} value={form.adres} onChange={e => setForm(f => ({ ...f, adres: e.target.value }))} placeholder="İlçe, mahalle, sokak…" />
             </div>
 
@@ -144,13 +144,13 @@ export default function Sepet() {
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 
-            {hata && <div style={{ color: "#B23A2E", fontSize: 13, fontWeight: 600, marginBottom: 12 }}>{hata}</div>}
+            {hata && <div style={{ color: "#DC2626", fontSize: 13, fontWeight: 600, marginBottom: 12 }}>{hata}</div>}
 
             <button type="submit" disabled={gonderiyor}
               style={{ width: "100%", padding: 14, borderRadius: 8, border: "none", background: GREEN, color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "inherit", opacity: gonderiyor ? 0.7 : 1 }}>
               {gonderiyor ? "Sipariş oluşturuluyor…" : "🔒 Güvenli Ödemeye Geç"}
             </button>
-            <div style={{ fontSize: 11.5, color: "#8A7B6A", textAlign: "center", marginTop: 9 }}>
+            <div style={{ fontSize: 11.5, color: "#64748B", textAlign: "center", marginTop: 9 }}>
               Ödemeniz Benservis güvencesiyle platform üzerinden alınır, ürünü teslim aldığınızda satıcıya aktarılır.
             </div>
             <button type="button" onClick={() => setAdim(1)}
@@ -167,11 +167,11 @@ export default function Sepet() {
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 21, fontWeight: 700, marginBottom: 8 }}>
               Siparişiniz Alındı
             </div>
-            <div style={{ display: "inline-block", background: "#F0EAD8", borderRadius: 8, padding: "8px 18px", marginBottom: 16 }}>
-              <span style={{ fontSize: 11.5, color: "#8A7B6A" }}>Sipariş No</span><br />
+            <div style={{ display: "inline-block", background: "#F1F5F9", borderRadius: 8, padding: "8px 18px", marginBottom: 16 }}>
+              <span style={{ fontSize: 11.5, color: "#64748B" }}>Sipariş No</span><br />
               <strong style={{ fontSize: 17 }}>{sonuc.siparis.siparis_no}</strong>
             </div>
-            <div style={{ fontSize: 14, color: "#555", lineHeight: 1.7, maxWidth: 420, margin: "0 auto 22px" }}>
+            <div style={{ fontSize: 14, color: "#475569", lineHeight: 1.7, maxWidth: 420, margin: "0 auto 22px" }}>
               {sonuc.odeme === "yakinda" ? (
                 <>Kart ile güvenli ödeme <strong>çok yakında</strong> aktif oluyor.
                 Siparişiniz kaydedildi — Benservis ekibi ödeme ve teslimat için
@@ -183,7 +183,7 @@ export default function Sepet() {
             <div style={{ fontSize: 13, fontWeight: 700, color: AMBER, marginBottom: 22 }}>
               Toplam: {sonuc.siparis.tutar.toLocaleString("tr-TR")} TL
             </div>
-            <a href="/ikinci-el" style={{ display: "inline-block", padding: "12px 26px", borderRadius: 8, background: INK, color: "#F5EFE2", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+            <a href="/ikinci-el" style={{ display: "inline-block", padding: "12px 26px", borderRadius: 8, background: INK, color: "#F1F5F9", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
               Alışverişe Devam Et
             </a>
           </div>

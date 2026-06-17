@@ -3,7 +3,7 @@ import QRCode from "qrcode";
 import BenservisRozet from "./BenservisRozet.jsx";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 function garantiDurumu(cihaz) {
   const bugun = new Date();
@@ -161,9 +161,9 @@ export default function DPPPublicPage() {
               {(() => {
                 const d = pasaport.cihaz.mevcut_durum || "çalışıyor";
                 const cfg = {
-                  "çalışıyor": { bg: "#E8F0E8", color: GREEN, label: "✓ Çalışıyor" },
-                  "arızalı":   { bg: "#FEF3E2", color: AMBER,  label: "⚠ Arızalı" },
-                  "hurda":     { bg: "#FDECEA", color: "#B23A2E", label: "✕ Hurda" },
+                  "çalışıyor": { bg: "#F1F5F9", color: GREEN, label: "✓ Çalışıyor" },
+                  "arızalı":   { bg: "#EFF6FF", color: AMBER,  label: "⚠ Arızalı" },
+                  "hurda":     { bg: "#FEE2E2", color: "#DC2626", label: "✕ Hurda" },
                 };
                 const c = cfg[d] || cfg["çalışıyor"];
                 return (
@@ -188,18 +188,18 @@ export default function DPPPublicPage() {
                 {garantiDurumu(pasaport.cihaz).map((g) => (
                   <div key={g.tip} style={{ fontSize: 13, marginBottom: 4 }}>
                     {g.tip === "baslangic" && (
-                      <span style={{ color: "#5C6660" }}>
+                      <span style={{ color: "#475569" }}>
                         📅 Alındı: {new Date(g.tarih).toLocaleDateString("tr-TR")}
                       </span>
                     )}
                     {g.tip === "bitis" && (
-                      <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
+                      <span style={{ color: g.aktif ? GREEN : "#DC2626", fontWeight: 600 }}>
                         🛡️ Garanti: {new Date(g.tarih).toLocaleDateString("tr-TR")}
                         {g.aktif ? ` (${g.kalan} gün kaldı)` : " (süresi doldu)"}
                       </span>
                     )}
                     {g.tip === "uzatilmis" && (
-                      <span style={{ color: g.aktif ? GREEN : "#B23A2E", fontWeight: 600 }}>
+                      <span style={{ color: g.aktif ? GREEN : "#DC2626", fontWeight: 600 }}>
                         ➕ Uzatılmış: {new Date(g.tarih).toLocaleDateString("tr-TR")}
                         {g.aktif ? ` (${g.kalan} gün kaldı)` : " (süresi doldu)"}
                       </span>
@@ -331,7 +331,7 @@ const s = {
   },
   grain: {
     position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4,
-    backgroundImage: "radial-gradient(rgba(34,48,42,.05) 1px, transparent 1px)",
+    backgroundImage: "radial-gradient(rgba(30,41,59,.05) 1px, transparent 1px)",
     backgroundSize: "4px 4px", zIndex: 0,
   },
   header: { position: "relative", zIndex: 1, marginBottom: 22, textAlign: "center" },
@@ -342,32 +342,32 @@ const s = {
     margin: 0, letterSpacing: "-0.02em",
   },
   baslikAlt: {
-    fontSize: 13, fontWeight: 700, letterSpacing: ".06em", color: "#8A7B6A",
+    fontSize: 13, fontWeight: 700, letterSpacing: ".06em", color: "#64748B",
     textTransform: "uppercase", marginTop: 4,
   },
   card: {
-    position: "relative", zIndex: 1, background: "#FFFDF8",
-    border: "1px solid #E5DCC9", borderRadius: 18, padding: 22,
-    boxShadow: "0 10px 30px -18px rgba(34,48,42,.25)", animation: "rise .4s ease both",
+    position: "relative", zIndex: 1, background: "#F8FAFC",
+    border: "1px solid #E2E8F0", borderRadius: 18, padding: 22,
+    boxShadow: "0 10px 30px -18px rgba(30,41,59,.25)", animation: "rise .4s ease both",
     marginBottom: 14,
   },
   merkez: { position: "relative", zIndex: 1, textAlign: "center", paddingTop: 60 },
   spinner: {
     width: 38, height: 38, borderRadius: "50%",
-    border: "4px solid #E5DCC9", borderTopColor: AMBER,
+    border: "4px solid #E2E8F0", borderTopColor: AMBER,
     margin: "0 auto 16px", animation: "spin 1s linear infinite",
   },
-  yuklMetin: { fontFamily: "'Fraunces', serif", fontSize: 18, color: "#5C6660" },
+  yuklMetin: { fontFamily: "'Fraunces', serif", fontSize: 18, color: "#475569" },
   uyari: { fontSize: 48, textAlign: "center", marginBottom: 12 },
   uyariBaslik: {
     fontFamily: "'Fraunces', serif", fontSize: 22, fontWeight: 700,
     textAlign: "center", marginBottom: 8,
   },
-  uyariAcik: { fontSize: 14.5, color: "#5C6660", textAlign: "center", lineHeight: 1.5, marginBottom: 16 },
+  uyariAcik: { fontSize: 14.5, color: "#475569", textAlign: "center", lineHeight: 1.5, marginBottom: 16 },
   anaBtn: {
     display: "block", textAlign: "center", padding: "13px 20px",
     borderRadius: 12, background: AMBER, color: "#fff", fontWeight: 700,
-    fontSize: 15, boxShadow: "0 8px 20px -8px rgba(200,99,43,.5)",
+    fontSize: 15, boxShadow: "0 8px 20px -8px rgba(37,99,235,.5)",
   },
   cihazBaslik: {
     fontFamily: "'Fraunces', serif", fontSize: 26, fontWeight: 700,
@@ -376,68 +376,68 @@ const s = {
   cihazAlt: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 12 },
   rozet: {
     fontSize: 12, fontWeight: 700, letterSpacing: ".03em",
-    background: "#EDE5D3", color: "#6E6450", borderRadius: 999, padding: "4px 10px",
+    background: "#F1F5F9", color: "#64748B", borderRadius: 999, padding: "4px 10px",
   },
-  metaBilgi: { fontSize: 13, color: "#9A9384" },
+  metaBilgi: { fontSize: 13, color: "#94A3B8" },
   garantiBox: {
-    marginTop: 4, marginBottom: 10, background: "#F7F1E3",
-    border: "1px solid #EBE1CA", borderRadius: 10, padding: "10px 12px",
+    marginTop: 4, marginBottom: 10, background: "#F8FAFC",
+    border: "1px solid #F1F5F9", borderRadius: 10, padding: "10px 12px",
   },
   seriNo: {
     marginTop: 10, fontSize: 12.5, fontWeight: 700, letterSpacing: ".08em",
-    color: "#8A7B6A", fontFamily: "monospace",
+    color: "#64748B", fontFamily: "monospace",
   },
   toplamMaliyet: {
-    marginTop: 8, fontSize: 14, color: "#5C6660",
-    background: "#F0EAD8", borderRadius: 8, padding: "8px 12px", display: "inline-block",
+    marginTop: 8, fontSize: 14, color: "#475569",
+    background: "#F1F5F9", borderRadius: 8, padding: "8px 12px", display: "inline-block",
   },
   fotoGaleri: { display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 },
-  fotoKucuk: { width: 80, height: 80, objectFit: "cover", borderRadius: 8, border: "1px solid #E5DCC9" },
+  fotoKucuk: { width: 80, height: 80, objectFit: "cover", borderRadius: 8, border: "1px solid #E2E8F0" },
   secBaslik: {
     position: "relative", zIndex: 1, fontFamily: "'Fraunces', serif",
     fontSize: 19, fontWeight: 600, margin: "8px 0 12px",
     display: "flex", alignItems: "center", gap: 10,
   },
   tamirSayisi: {
-    fontSize: 12.5, fontWeight: 700, background: "#EDE5D3",
-    color: "#6E6450", borderRadius: 999, padding: "3px 10px",
+    fontSize: 12.5, fontWeight: 700, background: "#F1F5F9",
+    color: "#64748B", borderRadius: 999, padding: "3px 10px",
   },
   bosMetin: {
-    position: "relative", zIndex: 1, fontSize: 14, color: "#9A9384",
+    position: "relative", zIndex: 1, fontSize: 14, color: "#94A3B8",
     textAlign: "center", padding: "20px 0",
   },
   tamirKart: {
-    position: "relative", zIndex: 1, background: "#FFFDF8",
-    border: "1px solid #E5DCC9", borderRadius: 14, padding: "16px 18px",
+    position: "relative", zIndex: 1, background: "#F8FAFC",
+    border: "1px solid #E2E8F0", borderRadius: 14, padding: "16px 18px",
     marginBottom: 10, animation: "rise .3s ease both",
   },
   tamirUst: {
     display: "flex", alignItems: "center", justifyContent: "space-between",
     gap: 8, marginBottom: 8, flexWrap: "wrap",
   },
-  tamirTarih: { fontSize: 13, fontWeight: 700, color: "#5C6660" },
+  tamirTarih: { fontSize: 13, fontWeight: 700, color: "#475569" },
   hariciRozet: {
-    fontSize: 11.5, fontWeight: 700, background: "#EDE5D3",
-    color: "#6E6450", borderRadius: 999, padding: "3px 9px",
+    fontSize: 11.5, fontWeight: 700, background: "#F1F5F9",
+    color: "#64748B", borderRadius: 999, padding: "3px 9px",
   },
   sahipRozet: {
-    fontSize: 11.5, fontWeight: 700, background: "#E8F0E8",
+    fontSize: 11.5, fontWeight: 700, background: "#F1F5F9",
     color: GREEN, borderRadius: 999, padding: "3px 9px",
   },
   tamirIslem: { fontSize: 15, fontWeight: 600, lineHeight: 1.4, marginBottom: 6 },
-  tamirServis: { fontSize: 13, color: "#8A7B6A", marginBottom: 6 },
+  tamirServis: { fontSize: 13, color: "#64748B", marginBottom: 6 },
   parcalar: { display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 6 },
   parcaChip: {
-    fontSize: 12, fontWeight: 600, background: "#F0EAD8",
-    color: "#6E6450", borderRadius: 999, padding: "3px 9px",
+    fontSize: 12, fontWeight: 600, background: "#F1F5F9",
+    color: "#64748B", borderRadius: 999, padding: "3px 9px",
   },
   tamirMaliyet: {
     fontSize: 14, fontWeight: 700, color: AMBER,
     fontFamily: "'Fraunces', serif", marginTop: 4,
   },
   paylasimBox: {
-    position: "relative", zIndex: 1, background: "#FFFDF8",
-    border: "1px solid #E5DCC9", borderRadius: 18, padding: "20px",
+    position: "relative", zIndex: 1, background: "#F8FAFC",
+    border: "1px solid #E2E8F0", borderRadius: 18, padding: "20px",
     marginTop: 8, marginBottom: 14,
   },
   paylasimBaslik: {
@@ -446,33 +446,33 @@ const s = {
   paylasimBtnler: { display: "flex", gap: 8, flexWrap: "wrap" },
   paylasimBtn: {
     flex: 1, minWidth: 120, padding: "11px 14px", borderRadius: 11,
-    border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.06)",
+    border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)",
     color: AMBER, fontSize: 13.5, fontWeight: 700,
   },
   anaBtnAlt: {
     position: "relative", zIndex: 1, display: "block", textAlign: "center",
     padding: "14px", borderRadius: 14, background: INK, color: CREAM,
     fontWeight: 700, fontSize: 15, marginBottom: 14,
-    boxShadow: "0 8px 24px -12px rgba(34,48,42,.4)",
+    boxShadow: "0 8px 24px -12px rgba(30,41,59,.4)",
   },
   footer: {
     position: "relative", zIndex: 1, textAlign: "center",
-    fontSize: 11.5, color: "#A59E8E", marginTop: 12,
+    fontSize: 11.5, color: "#94A3B8", marginTop: 12,
   },
   overlay: {
-    position: "fixed", inset: 0, background: "rgba(34,48,42,.55)",
+    position: "fixed", inset: 0, background: "rgba(30,41,59,.55)",
     display: "flex", alignItems: "center", justifyContent: "center",
     zIndex: 100, padding: 20,
   },
   qrModal: {
     background: CREAM, borderRadius: 20, padding: "28px 24px",
     textAlign: "center", maxWidth: 300, width: "100%",
-    boxShadow: "0 20px 60px -12px rgba(34,48,42,.4)",
+    boxShadow: "0 20px 60px -12px rgba(30,41,59,.4)",
   },
   qrBaslik: {
     fontFamily: "'Fraunces', serif", fontSize: 19, fontWeight: 700, marginBottom: 8,
   },
-  qrAcik: { fontSize: 13, color: "#5C6660", marginBottom: 16 },
+  qrAcik: { fontSize: 13, color: "#475569", marginBottom: 16 },
   qrIndirBtn: {
     display: "block", width: "100%", marginTop: 16, padding: "11px",
     borderRadius: 11, border: "none", background: AMBER, color: "#fff",
@@ -480,7 +480,7 @@ const s = {
   },
   kapat: {
     display: "block", width: "100%", marginTop: 8, padding: "11px",
-    borderRadius: 11, border: `1.5px solid #DDD3BE`, background: "transparent",
+    borderRadius: 11, border: `1.5px solid #E2E8F0`, background: "transparent",
     color: INK, fontWeight: 600, fontSize: 14,
   },
 };

@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CSS = `
 * { box-sizing:border-box; }
@@ -146,7 +146,7 @@ export default function AdminOdemePaneli() {
             <div style={st.ibanKutu}>
               <span style={st.ibanEtiket}>IBAN</span>
               <span style={st.ibanDeger}>
-                {o.ilanlar?.satici_iban || <span style={{ color: "#B23A2E", fontWeight: 700 }}>⚠ IBAN yok — satıcıyla iletişime geç</span>}
+                {o.ilanlar?.satici_iban || <span style={{ color: "#DC2626", fontWeight: 700 }}>⚠ IBAN yok — satıcıyla iletişime geç</span>}
               </span>
               {o.ilanlar?.satici_iban && (
                 <button
@@ -204,53 +204,53 @@ const sWrap = {
 };
 
 const st = {
-  grain: { position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4, backgroundImage: "radial-gradient(rgba(34,48,42,.05) 1px, transparent 1px)", backgroundSize: "4px 4px", zIndex: 0 },
+  grain: { position: "fixed", inset: 0, pointerEvents: "none", opacity: 0.4, backgroundImage: "radial-gradient(rgba(30,41,59,.05) 1px, transparent 1px)", backgroundSize: "4px 4px", zIndex: 0 },
   merkez: { textAlign: "center", padding: "40px 0", position: "relative", zIndex: 1 },
-  spinner: { width: 36, height: 36, borderRadius: "50%", border: "4px solid #E5DCC9", borderTopColor: AMBER, margin: "0 auto", animation: "spin 1s linear infinite" },
+  spinner: { width: 36, height: 36, borderRadius: "50%", border: "4px solid #E2E8F0", borderTopColor: AMBER, margin: "0 auto", animation: "spin 1s linear infinite" },
 
   header: { position: "relative", zIndex: 1, textAlign: "center", marginBottom: 20 },
   logoRow: { display: "flex", alignItems: "center", justifyContent: "center", gap: 10 },
   logoMark: { color: AMBER, fontSize: 28, transform: "rotate(-20deg)", display: "inline-block" },
   logo: { fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 30, margin: 0, letterSpacing: "-.02em" },
-  altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#8A7B6A", textTransform: "uppercase", marginTop: 4 },
+  altBaslik: { fontSize: 12, fontWeight: 700, letterSpacing: ".06em", color: "#64748B", textTransform: "uppercase", marginTop: 4 },
 
-  uyari: { position: "relative", zIndex: 1, background: "#FEF3E2", border: "1.5px solid #F0C88A", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 13.5, fontWeight: 600, color: AMBER },
-  hata: { position: "relative", zIndex: 1, background: "#FDECEA", borderRadius: 10, padding: "10px 14px", marginBottom: 14, fontSize: 13.5, fontWeight: 600, color: "#B23A2E" },
+  uyari: { position: "relative", zIndex: 1, background: "#EFF6FF", border: "1.5px solid #F0C88A", borderRadius: 10, padding: "12px 14px", marginBottom: 16, fontSize: 13.5, fontWeight: 600, color: AMBER },
+  hata: { position: "relative", zIndex: 1, background: "#FEE2E2", borderRadius: 10, padding: "10px 14px", marginBottom: 14, fontSize: 13.5, fontWeight: 600, color: "#DC2626" },
 
   ozet: { position: "relative", zIndex: 1, display: "flex", gap: 10, marginBottom: 16 },
-  ozetKart: { flex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 12, padding: "14px 16px", textAlign: "center" },
+  ozetKart: { flex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 12, padding: "14px 16px", textAlign: "center" },
   ozetSayi: { fontFamily: "'Fraunces', serif", fontSize: 26, fontWeight: 700, color: INK },
-  ozetLabel: { fontSize: 12, color: "#8A7B6A", marginTop: 4, fontWeight: 600 },
+  ozetLabel: { fontSize: 12, color: "#64748B", marginTop: 4, fontWeight: 600 },
 
   sekmeler: { position: "relative", zIndex: 1, display: "flex", gap: 8, marginBottom: 14, alignItems: "center" },
-  sekme: { padding: "8px 14px", borderRadius: 9, border: "1.5px solid #DDD3BE", background: "#FFFDF8", fontSize: 13, fontWeight: 600, color: "#6E6450" },
-  sekmeAktif: { border: `1.5px solid ${AMBER}`, background: "rgba(200,99,43,.08)", color: AMBER },
-  yenileBtn: { marginLeft: "auto", padding: "6px 12px", borderRadius: 8, border: "1px solid #E5DCC9", background: "transparent", fontSize: 13, color: "#8A7B6A" },
+  sekme: { padding: "8px 14px", borderRadius: 9, border: "1.5px solid #E2E8F0", background: "#F8FAFC", fontSize: 13, fontWeight: 600, color: "#64748B" },
+  sekmeAktif: { border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.08)", color: AMBER },
+  yenileBtn: { marginLeft: "auto", padding: "6px 12px", borderRadius: 8, border: "1px solid #E2E8F0", background: "transparent", fontSize: 13, color: "#64748B" },
 
-  bos: { position: "relative", zIndex: 1, textAlign: "center", padding: "40px 0", fontSize: 15, color: "#9A9384" },
+  bos: { position: "relative", zIndex: 1, textAlign: "center", padding: "40px 0", fontSize: 15, color: "#94A3B8" },
 
-  satir: { position: "relative", zIndex: 1, background: "#FFFDF8", border: "1px solid #E5DCC9", borderRadius: 14, padding: "16px 18px", marginBottom: 10 },
+  satir: { position: "relative", zIndex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 14, padding: "16px 18px", marginBottom: 10 },
   satirYapildi: { opacity: 0.7 },
   satirUst: { display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 12 },
   satirBaslik: { fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, marginBottom: 4 },
-  satirAlt: { fontSize: 12.5, color: "#5C6660", marginBottom: 2 },
+  satirAlt: { fontSize: 12.5, color: "#475569", marginBottom: 2 },
   satirTutar: { fontFamily: "'Fraunces', serif", fontSize: 22, fontWeight: 700, color: AMBER },
-  iyzicoid: { fontSize: 11, color: "#9A9384", marginTop: 3, fontFamily: "monospace" },
+  iyzicoid: { fontSize: 11, color: "#94A3B8", marginTop: 3, fontFamily: "monospace" },
 
-  ibanKutu: { background: "#F0EAD8", borderRadius: 9, padding: "10px 13px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 12 },
-  ibanEtiket: { fontSize: 11, fontWeight: 700, color: "#8A7B6A", textTransform: "uppercase" },
+  ibanKutu: { background: "#F1F5F9", borderRadius: 9, padding: "10px 13px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 12 },
+  ibanEtiket: { fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase" },
   ibanDeger: { flex: 1, fontSize: 13.5, fontWeight: 700, fontFamily: "monospace", letterSpacing: ".03em" },
-  kopyalaBtn: { padding: "4px 10px", borderRadius: 7, border: "1px solid #C9BD9E", background: "#FFFDF8", fontSize: 12, fontWeight: 600, color: "#6E6450" },
+  kopyalaBtn: { padding: "4px 10px", borderRadius: 7, border: "1px solid #CBD5E1", background: "#F8FAFC", fontSize: 12, fontWeight: 600, color: "#64748B" },
 
   odemeYapBtn: { width: "100%", padding: "12px", borderRadius: 11, border: "none", background: GREEN, color: "#fff", fontWeight: 700, fontSize: 14 },
 
   konfirmDiv: { marginTop: 2 },
-  notInput: { width: "100%", padding: "9px 12px", borderRadius: 9, border: "1.5px solid #DDD3BE", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 10, background: "#FFFDF8" },
+  notInput: { width: "100%", padding: "9px 12px", borderRadius: 9, border: "1.5px solid #E2E8F0", fontSize: 13.5, fontFamily: "'Hanken Grotesk', sans-serif", marginBottom: 10, background: "#F8FAFC" },
   konfirmBtnlar: { display: "flex", gap: 8 },
-  vazgecBtn: { flex: 1, padding: "11px", borderRadius: 10, border: "1.5px solid #DDD3BE", background: "transparent", fontSize: 13.5, fontWeight: 600, color: "#8A7B6A" },
+  vazgecBtn: { flex: 1, padding: "11px", borderRadius: 10, border: "1.5px solid #E2E8F0", background: "transparent", fontSize: 13.5, fontWeight: 600, color: "#64748B" },
   onaylaBtn: { flex: 2, padding: "11px", borderRadius: 10, border: "none", background: GREEN, color: "#fff", fontWeight: 700, fontSize: 13.5 },
 
   yapildiSatir: { fontSize: 13, color: GREEN, fontWeight: 600 },
 
-  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#A59E8E", marginTop: 24 },
+  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#94A3B8", marginTop: 24 },
 };

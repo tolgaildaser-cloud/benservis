@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
-const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44", LINK = "#1A4FB4";
+const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E", LINK = "#2563EB";
 
 export default function UrunDetay() {
   const urunId = window.location.pathname.split("/")[2] || "";
@@ -43,20 +43,20 @@ export default function UrunDetay() {
   };
 
   if (yukleniyor) return <Merkez><style>{FONT}</style>Yükleniyor…</Merkez>;
-  if (hata)       return <Merkez><style>{FONT}</style><span style={{ color: "#B23A2E" }}>{hata}</span></Merkez>;
+  if (hata)       return <Merkez><style>{FONT}</style><span style={{ color: "#DC2626" }}>{hata}</span></Merkez>;
 
   const { urun, servis, dpp } = data;
   const sepette = !eklendi && sepetAdet() > 0 && JSON.parse(localStorage.getItem("bs_sepet") || "[]").some(u => u.id === urun.id);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F3EE", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
+    <div style={{ minHeight: "100vh", background: "#F8FAFC", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
       <style>{FONT}</style>
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 16px" }}>
           <a href="/ikinci-el" style={{ fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 20, color: INK, textDecoration: "none" }}>
-            <span style={{ color: AMBER }}>◑</span> Benservis <span style={{ fontFamily: "'Hanken Grotesk', sans-serif", fontSize: 11, fontWeight: 700, color: "#9A9384", textTransform: "uppercase" }}>ikinci el</span>
+            <span style={{ color: AMBER }}>◑</span> Benservis <span style={{ fontFamily: "'Hanken Grotesk', sans-serif", fontSize: 11, fontWeight: 700, color: "#94A3B8", textTransform: "uppercase" }}>ikinci el</span>
           </a>
           <a href="/sepet" style={{ position: "relative", textDecoration: "none", fontSize: 22 }}>
             🛒
@@ -69,16 +69,16 @@ export default function UrunDetay() {
 
       <div style={{ maxWidth: 1000, margin: "0 auto", padding: "16px 16px 50px" }}>
         {/* breadcrumb */}
-        <div style={{ fontSize: 12.5, color: "#6E6450", marginBottom: 12 }}>
+        <div style={{ fontSize: 12.5, color: "#64748B", marginBottom: 12 }}>
           <a href="/ikinci-el" style={{ color: LINK, textDecoration: "none" }}>İkinci El</a> › <strong>{urun.baslik}</strong>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 18, alignItems: "start" }}>
           {/* SOL: görsel */}
-          <div style={{ background: "#fff", border: "1px solid #E0DCD2", borderRadius: 8, overflow: "hidden" }}>
+          <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, overflow: "hidden" }}>
             {urun.gorsel_url
               ? <img src={urun.gorsel_url} alt={urun.baslik} style={{ width: "100%", display: "block", aspectRatio: "4/3", objectFit: "cover" }} />
-              : <div style={{ aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 72, background: "#EDE6D6" }}>📦</div>}
+              : <div style={{ aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 72, background: "#F1F5F9" }}>📦</div>}
           </div>
 
           {/* SAĞ: bilgi + aksiyonlar */}
@@ -88,11 +88,11 @@ export default function UrunDetay() {
             {/* rozetler */}
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 14 }}>
               {dpp?.benservis_dogrulanmis && (
-                <span style={{ fontSize: 11.5, fontWeight: 700, background: "#E6F4EC", color: GREEN, borderRadius: 5, padding: "3px 9px" }}>✓ Benservis Doğrulandı</span>
+                <span style={{ fontSize: 11.5, fontWeight: 700, background: "#DCFCE7", color: GREEN, borderRadius: 5, padding: "3px 9px" }}>✓ Benservis Doğrulandı</span>
               )}
               {dpp && (
                 <a href={`/dpp/${encodeURIComponent(urun.dpp_seri_no)}`} target="_blank" rel="noopener noreferrer"
-                  style={{ fontSize: 11.5, fontWeight: 700, background: "#F0EAD8", color: "#6E6450", borderRadius: 5, padding: "3px 9px", textDecoration: "none" }}>
+                  style={{ fontSize: 11.5, fontWeight: 700, background: "#F1F5F9", color: "#64748B", borderRadius: 5, padding: "3px 9px", textDecoration: "none" }}>
                   📋 {dpp.tamir_sayisi} tamir kaydı — DPP geçmişini gör
                 </a>
               )}
@@ -113,12 +113,12 @@ export default function UrunDetay() {
                 {eklendi ? "✓ Eklendi" : sepette ? "Sepette" : "🛒 Sepete Ekle"}
               </button>
             </div>
-            <div style={{ fontSize: 11.5, color: "#8A7B6A", marginBottom: 18 }}>
+            <div style={{ fontSize: 11.5, color: "#64748B", marginBottom: 18 }}>
               🔒 Ödeme Benservis güvencesiyle platform üzerinden yapılır — satıcıya elden ödeme yapmayın.
             </div>
 
             {urun.aciklama && (
-              <div style={{ background: "#fff", border: "1px solid #E0DCD2", borderRadius: 8, padding: "14px 16px", fontSize: 13.5, lineHeight: 1.65, color: "#444", marginBottom: 14 }}>
+              <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, padding: "14px 16px", fontSize: 13.5, lineHeight: 1.65, color: "#334155", marginBottom: 14 }}>
                 {urun.aciklama}
               </div>
             )}
@@ -126,11 +126,11 @@ export default function UrunDetay() {
             {/* Satıcı firma kartı → mağaza */}
             {servis && (
               <a href={`/servis/${servis.id}`}
-                style={{ display: "flex", alignItems: "center", gap: 12, background: "#fff", border: "1px solid #E0DCD2", borderRadius: 8, padding: "13px 16px", textDecoration: "none", color: INK }}>
+                style={{ display: "flex", alignItems: "center", gap: 12, background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, padding: "13px 16px", textDecoration: "none", color: INK }}>
                 <span style={{ fontSize: 26 }}>🏪</span>
                 <span style={{ flex: 1 }}>
                   <span style={{ display: "block", fontWeight: 700, fontSize: 14, color: LINK }}>{servis.ad}</span>
-                  <span style={{ display: "block", fontSize: 12, color: "#8A7B6A", marginTop: 2 }}>
+                  <span style={{ display: "block", fontSize: 12, color: "#64748B", marginTop: 2 }}>
                     📍 {servis.ilce}, {servis.il} · Tüm ürünlerini gör →
                   </span>
                 </span>
@@ -145,7 +145,7 @@ export default function UrunDetay() {
 
 function Merkez({ children }) {
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F3EE", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif", color: "#888" }}>
+    <div style={{ minHeight: "100vh", background: "#F8FAFC", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif", color: "#64748B" }}>
       {children}
     </div>
   );

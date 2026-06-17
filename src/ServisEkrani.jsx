@@ -38,7 +38,7 @@ function TierRozetleri({ servis }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 4, flexWrap: "wrap" }}>
       {servis.yetkili && (
-        <span style={{ background: "#3A7D44", color: "white", fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700 }}>
+        <span style={{ background: "#22C55E", color: "white", fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700 }}>
           YETKİLİ
         </span>
       )}
@@ -65,7 +65,7 @@ function ServisKarti({ servis, onSec }) {
     >
       <div style={{ flex: 1, minWidth: 0, marginRight: 12 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", marginBottom: 3 }}>
-          <span style={{ fontWeight: 600, fontSize: 14, color: "#22302A" }}>
+          <span style={{ fontWeight: 600, fontSize: 14, color: "#1E293B" }}>
             {servis.ad}
           </span>
           <TierRozetleri servis={servis} />
@@ -75,25 +75,25 @@ function ServisKarti({ servis, onSec }) {
         {servis.puan != null ? (
           <div style={{ display: "flex", alignItems: "center", gap: 5, marginTop: 4, marginBottom: 2 }}>
             <span style={{ fontSize: 15, color: "#F5A623", lineHeight: 1 }}>★</span>
-            <span style={{ fontWeight: 700, fontSize: 15, color: "#22302A", lineHeight: 1 }}>
+            <span style={{ fontWeight: 700, fontSize: 15, color: "#1E293B", lineHeight: 1 }}>
               {servis.puan.toFixed(1)}
             </span>
             {servis.yorumSayisi > 0 && (
-              <span style={{ fontSize: 12, color: "#888" }}>
+              <span style={{ fontSize: 12, color: "#64748B" }}>
                 ({servis.yorumSayisi} yorum)
               </span>
             )}
           </div>
         ) : (
-          <div style={{ fontSize: 12, color: "#aaa", marginTop: 4, marginBottom: 2 }}>
+          <div style={{ fontSize: 12, color: "#94A3B8", marginTop: 4, marginBottom: 2 }}>
             Henüz puanlanmamış
           </div>
         )}
 
-        <div style={{ fontSize: 12, color: "#888" }}>
+        <div style={{ fontSize: 12, color: "#64748B" }}>
           {servis.ilce}
           {servis.km != null && (
-            <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
+            <> · <strong style={{ color: "#1E293B" }}>{servis.km.toFixed(1)} km</strong></>
           )}
         </div>
 
@@ -103,7 +103,7 @@ function ServisKarti({ servis, onSec }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            style={{ fontSize: 11, color: "#C8632B", textDecoration: "none", marginTop: 2, display: "inline-block" }}
+            style={{ fontSize: 11, color: "#2563EB", textDecoration: "none", marginTop: 2, display: "inline-block" }}
           >
             🗺 Haritada Gör
           </a>
@@ -116,7 +116,7 @@ function ServisKarti({ servis, onSec }) {
           href={`tel:${servis.telefon}`}
           onClick={(e) => e.stopPropagation()}
           style={{
-            background: "#C8632B", color: "white",
+            background: "#2563EB", color: "white",
             borderRadius: 10, padding: "11px 18px",
             fontSize: 14, fontWeight: 700, textDecoration: "none",
             whiteSpace: "nowrap", flexShrink: 0, cursor: "pointer",
@@ -131,18 +131,18 @@ function ServisKarti({ servis, onSec }) {
 function ServisProfil({ servis, onGeri }) {
   return (
     <div style={{
-      position: "fixed", inset: 0, background: "#F5EFE2",
+      position: "fixed", inset: 0, background: "#F8FAFC",
       overflowY: "auto", zIndex: 100, fontFamily: "'Hanken Grotesk', sans-serif",
     }}>
       {/* Üst bar */}
       <div style={{
-        background: "#22302A", color: "#F5EFE2",
+        background: "#1E293B", color: "#F8FAFC",
         padding: "14px 16px", display: "flex", alignItems: "center", gap: 12,
         position: "sticky", top: 0, zIndex: 10,
       }}>
         <button
           onClick={onGeri}
-          style={{ background: "none", border: "none", color: "#F5EFE2", fontSize: 20, cursor: "pointer" }}
+          style={{ background: "none", border: "none", color: "#F8FAFC", fontSize: 20, cursor: "pointer" }}
         >←</button>
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600, flex: 1 }}>
           {servis.ad}
@@ -152,14 +152,14 @@ function ServisProfil({ servis, onGeri }) {
 
       <div style={{ padding: "20px 16px" }}>
         {/* Puan & konum */}
-        <div style={{ fontSize: 13, color: "#666", marginBottom: 20 }}>
+        <div style={{ fontSize: 13, color: "#475569", marginBottom: 20 }}>
           {[
             servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`,
             servis.yorumSayisi > 0 && `${servis.yorumSayisi} yorum`,
             servis.ilce && (servis.sehir ? `${servis.ilce}, ${servis.sehir}` : servis.ilce),
           ].filter(Boolean).join(" · ")}
           {servis.km != null && (
-            <> · <strong style={{ color: "#22302A" }}>{servis.km.toFixed(1)} km</strong></>
+            <> · <strong style={{ color: "#1E293B" }}>{servis.km.toFixed(1)} km</strong></>
           )}
         </div>
 
@@ -169,7 +169,7 @@ function ServisProfil({ servis, onGeri }) {
             <a
               href={`tel:${servis.telefon}`}
               style={{
-                background: "#C8632B", color: "white",
+                background: "#2563EB", color: "white",
                 borderRadius: 10, padding: "12px 20px",
                 fontSize: 15, textDecoration: "none", fontWeight: 700,
                 display: "inline-flex", alignItems: "center", gap: 6,
@@ -182,10 +182,10 @@ function ServisProfil({ servis, onGeri }) {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                background: "white", color: "#22302A",
+                background: "white", color: "#1E293B",
                 borderRadius: 10, padding: "12px 20px",
                 fontSize: 14, textDecoration: "none", fontWeight: 600,
-                border: "1.5px solid #22302A",
+                border: "1.5px solid #1E293B",
                 display: "inline-flex", alignItems: "center", gap: 6,
               }}
             >🗺 Haritada Gör</a>
@@ -195,13 +195,13 @@ function ServisProfil({ servis, onGeri }) {
         {/* Hizmet kategorileri */}
         <div style={{ marginBottom: 28 }}>
           <h3 style={{
-            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#22302A",
+            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#1E293B",
             margin: "0 0 12px 0", fontWeight: 600,
           }}>Hizmet Kategorileri</h3>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {(servis.kategoriler ?? []).map((k) => (
               <span key={k} style={{
-                background: "rgba(58,125,68,0.12)", color: "#3A7D44",
+                background: "rgba(22,163,74,0.12)", color: "#22C55E",
                 padding: "5px 12px", borderRadius: 20, fontSize: 13, fontWeight: 500,
               }}>{k}</span>
             ))}
@@ -211,13 +211,13 @@ function ServisProfil({ servis, onGeri }) {
         {/* Ürünler & parçalar */}
         <div>
           <h3 style={{
-            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#22302A",
+            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#1E293B",
             margin: "0 0 12px 0", fontWeight: 600,
           }}>Ürünler & Parçalar</h3>
           <div style={{
             background: "white", borderRadius: 10, padding: "20px 16px",
-            textAlign: "center", color: "#aaa", fontSize: 13,
-            border: "1.5px dashed #ddd",
+            textAlign: "center", color: "#94A3B8", fontSize: 13,
+            border: "1.5px dashed #E2E8F0",
           }}>
             <div style={{ fontSize: 24, marginBottom: 8 }}>🔧</div>
             <div>Yakında — bu servis henüz ürün eklemedi</div>
@@ -239,14 +239,14 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
 
   const selStyle = {
     padding: "11px 14px", fontSize: 14, borderRadius: 8,
-    border: "2px solid #22302A", background: "#F5EFE2",
-    color: "#22302A", cursor: "pointer", fontFamily: "inherit",
+    border: "2px solid #1E293B", background: "#F8FAFC",
+    color: "#1E293B", cursor: "pointer", fontFamily: "inherit",
     minWidth: 180,
   };
 
   return (
     <div style={{ textAlign: "center", marginTop: 40 }}>
-      <p style={{ color: "#22302A", marginBottom: 16, fontSize: 14 }}>
+      <p style={{ color: "#1E293B", marginBottom: 16, fontSize: 14 }}>
         Konum iznine gerek kalmadan bölgenizi seçin:
       </p>
       <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
@@ -379,25 +379,25 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
 
   return (
     <div style={{
-      position: "fixed", inset: 0, background: "#F5EFE2",
+      position: "fixed", inset: 0, background: "#F8FAFC",
       overflowY: "auto", zIndex: 100, fontFamily: "'Hanken Grotesk', sans-serif",
     }}>
       {/* Üst bar */}
       <div style={{
-        background: "#22302A", color: "#F5EFE2",
+        background: "#1E293B", color: "#F8FAFC",
         padding: "14px 16px", display: "flex", alignItems: "center", gap: 12,
         position: "sticky", top: 0, zIndex: 10,
       }}>
         <button
           onClick={onKapat}
-          style={{ background: "none", border: "none", color: "#F5EFE2", fontSize: 20, cursor: "pointer" }}
+          style={{ background: "none", border: "none", color: "#F8FAFC", fontSize: 20, cursor: "pointer" }}
         >←</button>
         <div style={{ flex: 1 }}>
           <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600 }}>
             {marka ? `${marka} — ` : ""}{cihaz} Servisleri
           </span>
           {garantiAltinda && (
-            <div style={{ fontSize: 11, color: "#A8D5B5", marginTop: 2, fontWeight: 600 }}>
+            <div style={{ fontSize: 11, color: "#86EFAC", marginTop: 2, fontWeight: 600 }}>
               🛡 Garantili cihaz · Yalnızca YETKİLİ servisler
             </div>
           )}
@@ -407,9 +407,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       {/* Garanti uyarı bandı */}
       {garantiAltinda && (
         <div style={{
-          background: "#EDF7F0", borderBottom: "1px solid #B8DFC6",
+          background: "#ECFDF5", borderBottom: "1px solid #A7F3D0",
           padding: "10px 16px", display: "flex", alignItems: "center", gap: 8,
-          fontSize: 13, color: "#1E5631", fontWeight: 600,
+          fontSize: 13, color: "#166534", fontWeight: 600,
         }}>
           <span style={{ fontSize: 16 }}>🛡</span>
           <span>
@@ -422,7 +422,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       <div style={{ padding: "16px" }}>
         {/* Yükleniyor */}
         {locationState === "loading" && (
-          <p style={{ textAlign: "center", color: "#22302A", marginTop: 40 }}>
+          <p style={{ textAlign: "center", color: "#1E293B", marginTop: 40 }}>
             Konumunuz alınıyor...
           </p>
         )}
@@ -431,10 +431,10 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         {locationState === "success" && siraliServisler.length === 0 && (
           <div style={{ textAlign: "center", marginTop: 32 }}>
             <div style={{ fontSize: 36, marginBottom: 10 }}>📍</div>
-            <p style={{ color: "#22302A", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
+            <p style={{ color: "#1E293B", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
               Bu bölgede henüz listeli servis yok
             </p>
-            <p style={{ color: "#888", fontSize: 12.5, lineHeight: 1.5 }}>
+            <p style={{ color: "#64748B", fontSize: 12.5, lineHeight: 1.5 }}>
               Yakındaki servisleri görmek için konum izni verin<br />veya farklı bir bölge seçin.
             </p>
           </div>

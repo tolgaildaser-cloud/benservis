@@ -4,12 +4,12 @@
 // Onayda geçici şifre modal'da gösterilir (tek sefer!).
 import React, { useState, useEffect } from "react";
 
-const INK   = "#22302A";
-const CREAM = "#F5EFE2";
-const AMBER = "#C8632B";
-const GREEN = "#3A7D44";
-const RED   = "#B23A2E";
-const GRAY  = "#9A9384";
+const INK   = "#1E293B";
+const CREAM = "#F1F5F9";
+const AMBER = "#2563EB";
+const GREEN = "#22C55E";
+const RED   = "#DC2626";
+const GRAY  = "#94A3B8";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -95,12 +95,12 @@ function BasvuruKart({ bav, adminToken, onGuncelle }) {
             <p style={{ fontSize: 13.5, color: GRAY, marginBottom: 16 }}>
               SMS gönderildi. Bu bilgileri kaydedin — şifre bir daha gösterilmez.
             </p>
-            <div style={{ background: "#22302A", borderRadius: 10, padding: "14px 16px", marginBottom: 20, fontFamily: "monospace" }}>
+            <div style={{ background: "#1E293B", borderRadius: 10, padding: "14px 16px", marginBottom: 20, fontFamily: "monospace" }}>
               <div style={{ color: CREAM, fontSize: 13, marginBottom: 6 }}>
-                <span style={{ color: "#B8BEB6" }}>E-posta:</span> {sifreModal.email}
+                <span style={{ color: "#94A3B8" }}>E-posta:</span> {sifreModal.email}
               </div>
               <div style={{ color: AMBER, fontSize: 15, fontWeight: 700, letterSpacing: ".05em" }}>
-                <span style={{ color: "#B8BEB6", fontWeight: 400 }}>Şifre:   </span> {sifreModal.sifre}
+                <span style={{ color: "#94A3B8", fontWeight: 400 }}>Şifre:   </span> {sifreModal.sifre}
               </div>
             </div>
             <button
@@ -119,9 +119,9 @@ function BasvuruKart({ bav, adminToken, onGuncelle }) {
       )}
 
       <div style={{
-        background: "#FFFDF8",
+        background: "#F8FAFC",
         borderRadius: 14,
-        border: "1px solid #E5DCC9",
+        border: "1px solid #E2E8F0",
         marginBottom: 10,
         overflow: "hidden",
       }}>
@@ -152,7 +152,7 @@ function BasvuruKart({ bav, adminToken, onGuncelle }) {
 
           {/* Rozet grubu */}
           <div style={{ display: "flex", gap: 5, flexShrink: 0 }}>
-            {bav.yetkili && <Rozet label="YETKİLİ" bg="#EDF7F0" fg={GREEN} />}
+            {bav.yetkili && <Rozet label="YETKİLİ" bg="#ECFDF5" fg={GREEN} />}
             {tierInfo && <Rozet label={bav.tier.toUpperCase()} bg={tierInfo.bg} fg={tierInfo.fg} />}
           </div>
 
@@ -161,7 +161,7 @@ function BasvuruKart({ bav, adminToken, onGuncelle }) {
 
         {/* Detay paneli */}
         {acik && (
-          <div style={{ padding: "0 16px 16px", borderTop: "1px solid #F0EAD8" }}>
+          <div style={{ padding: "0 16px 16px", borderTop: "1px solid #F1F5F9" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 16px", marginTop: 12, fontSize: 13 }}>
               <div><span style={{ color: GRAY }}>E-posta:</span> <strong>{bav.email}</strong></div>
               <div><span style={{ color: GRAY }}>Tel:</span> <strong>{bav.telefon}</strong></div>
@@ -201,7 +201,7 @@ function BasvuruKart({ bav, adminToken, onGuncelle }) {
                   disabled={islem}
                   style={{
                     flex: 1, padding: "11px", borderRadius: 10, border: "none",
-                    background: islem ? "#CCC" : GREEN, color: "white",
+                    background: islem ? "#CBD5E1" : GREEN, color: "white",
                     fontWeight: 700, fontSize: 13.5, cursor: islem ? "not-allowed" : "pointer",
                     fontFamily: "'Hanken Grotesk', sans-serif",
                   }}
@@ -290,7 +290,7 @@ export default function ServisAdmin() {
       <div style={{ background: INK, color: CREAM, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10 }}>
         <a href="/" style={{ color: CREAM, textDecoration: "none", fontSize: 20 }}>◑</a>
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>Benservis</span>
-        <span style={{ marginLeft: "auto", fontSize: 12, color: "#B8BEB6" }}>Admin — Servis Başvuruları</span>
+        <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>Admin — Servis Başvuruları</span>
       </div>
 
       <div style={{ maxWidth: 680, margin: "0 auto", padding: "24px 16px 48px" }}>
@@ -315,7 +315,7 @@ export default function ServisAdmin() {
           <button
             onClick={() => yukle(sekme)}
             style={{
-              padding: "8px 14px", borderRadius: 8, border: `1px solid #DDD3BE`,
+              padding: "8px 14px", borderRadius: 8, border: `1px solid #E2E8F0`,
               background: "transparent", color: GRAY, fontSize: 13, fontWeight: 700,
               cursor: "pointer", fontFamily: "'Hanken Grotesk', sans-serif",
             }}
@@ -332,8 +332,8 @@ export default function ServisAdmin() {
               onClick={() => setSekme(s.val)}
               style={{
                 padding: "9px 16px", borderRadius: 10,
-                border: sekme === s.val ? `1.5px solid ${AMBER}` : "1.5px solid #DDD3BE",
-                background: sekme === s.val ? AMBER : "#FFFDF8",
+                border: sekme === s.val ? `1.5px solid ${AMBER}` : "1.5px solid #E2E8F0",
+                background: sekme === s.val ? AMBER : "#F8FAFC",
                 color: sekme === s.val ? "white" : GRAY,
                 fontWeight: 700, fontSize: 13, cursor: "pointer",
                 fontFamily: "'Hanken Grotesk', sans-serif",
