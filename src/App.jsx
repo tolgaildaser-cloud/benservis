@@ -87,6 +87,31 @@ function normalizeMaliyet(sonuc) {
   };
 }
 
+// Kurumsal logo (yatay lockup + "Bil, gör, çağır." mottosu) — kaynak:
+// ~/Desktop/benservis-marka/logo-yatay.svg (sistem-font wordmark, viewBox 540×158)
+function BenservisLogo({ style }) {
+  return (
+    <svg viewBox="0 0 477 158" style={style} xmlns="http://www.w3.org/2000/svg"
+      role="img" aria-label="Benservis — Bil, gör, çağır.">
+      <g transform="translate(12,14) scale(1.083333)">
+        <rect width="120" height="120" rx="28" fill="#2563EB" />
+        <path d="M60 22 C42 22 28 36 28 53 C28 75 60 98 60 98 C60 98 92 75 92 53 C92 36 78 22 60 22 Z" fill="#ffffff" />
+        <g fill="#2563EB">
+          <circle cx="60" cy="51" r="15" />
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
+            <rect key={deg} x="55.5" y="27" width="9" height="15" rx="3" transform={`rotate(${deg} 60 51)`} />
+          ))}
+        </g>
+        <circle cx="60" cy="51" r="6" fill="#ffffff" />
+      </g>
+      <text x="162" y="92" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="69" fontWeight="600" letterSpacing="-1.5">
+        <tspan fill="#1E293B">ben</tspan><tspan fill="#2563EB">servis</tspan>
+      </text>
+      <text x="314" y="127" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="21" fill="#475569" textAnchor="middle">Bil, gör, çağır.</text>
+    </svg>
+  );
+}
+
 export default function App() {
   const [adim, setAdim] = useState("form");
   const [cihaz, setCihaz] = useState("");
@@ -223,9 +248,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       <div style={s.grain} />
 
       <header style={s.header}>
-        <div style={s.logoRow}><span style={s.logoMark}>◑</span><h1 style={s.logo}>Arızam Ne?</h1></div>
+        {/* Kurumsal logo + motto — en üstte */}
+        <BenservisLogo style={s.brandLogo} />
         <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>
-        <div style={s.trustBadge}>Tamirde sürpriz fiyat yok</div>
       </header>
 
       {(adim === "form" || adim === "hata") && (
@@ -419,12 +444,11 @@ button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
 const s = {
   wrap: { position: "relative", minHeight: "100%", background: BG, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, padding: "40px 20px 48px", maxWidth: 600, margin: "0 auto" },
   grain: { display: "none" },
-  header: { position: "relative", zIndex: 1, marginBottom: 32, textAlign: "center" },
-  logoRow: { display: "flex", alignItems: "center", justifyContent: "center", gap: 9 },
-  logoMark: { color: AMBER, fontSize: 26 },
-  logo: { fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 34, margin: 0, letterSpacing: "-0.025em" },
-  tagline: { fontSize: 16, color: MUTED, maxWidth: 400, margin: "12px auto 16px", lineHeight: 1.5 },
-  trustBadge: { display: "inline-block", fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
+  header: { position: "relative", zIndex: 1, marginBottom: 28, textAlign: "center" },
+  brandLogo: { display: "block", width: "min(264px, 80%)", height: "auto", margin: "0 auto 18px" },
+  appName: { fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 20, margin: 0, letterSpacing: "-0.02em", color: INK },
+  tagline: { fontSize: "clamp(8px, 2.5vw, 11px)", color: MUTED, margin: "10px auto 0", whiteSpace: "nowrap", lineHeight: 1.4 },
+  trustBadge: { display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
   card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 16px 40px -28px rgba(30,41,59,.30)", animation: "anrise .4s ease both" },
   cardSplit: { position: "relative", zIndex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", animation: "anrise .4s ease both" },
   cardSoft: { position: "relative", zIndex: 1, background: "#F1F5F9", border: "1px dashed #CBD5E1", borderRadius: 18, padding: 20, marginTop: 14 },
