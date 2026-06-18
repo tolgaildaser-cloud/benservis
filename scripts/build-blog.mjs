@@ -77,6 +77,8 @@ function page({ title, desc, canonical, head = "", body }) {
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="summary">
 <style>${CSS}</style>${head}
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head><body>
 <header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}<span>Benservis</span></a><a class="nav" href="/blog/">Rehber</a></div></header>
 <main><div class="wrap">${body}</div></main>

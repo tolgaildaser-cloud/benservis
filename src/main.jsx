@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { inject } from "@vercel/analytics";
 import App from "./App.jsx";
 import ServisPanel from "./ServisPanel.jsx";
 import DPPPublicPage from "./DPPPublicPage.jsx";
@@ -23,6 +24,8 @@ const isServisKayit = path === "/servis-kayit";
 const isServisAdmin = path === "/servis-admin";
 const isServisMagaza = path.startsWith("/servis/");
 const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : null;
+
+inject(); // Vercel Web Analytics (ziyaret/görüntüleme ölçümü)
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
