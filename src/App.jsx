@@ -435,7 +435,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      <footer style={s.footer}>Faz 1 — AI teşhis & tahmini maliyet · prototip</footer>
+      <footer style={s.footer}>AI Teşhis & Tahmini Maliyet</footer>
     </div>
   );
 }
