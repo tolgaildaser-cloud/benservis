@@ -339,7 +339,17 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor." />
 
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
-          <button style={s.cta} onClick={tesisEt}>Teşhis et →</button>
+          {/* Cihaz seçimi ZORUNLU — seçilmeden teşhis yapılamaz (buton kilitli + tesisEt guard'ı) */}
+          <button
+            style={{ ...s.cta, ...(cihaz ? {} : { opacity: 0.45, cursor: "not-allowed", boxShadow: "none" }) }}
+            onClick={tesisEt}
+            disabled={!cihaz}
+          >Teşhis et →</button>
+          {!cihaz && (
+            <p style={{ fontSize: 12.5, color: "#94A3B8", textAlign: "center", margin: "8px 0 0" }}>
+              Devam etmek için önce bir cihaz seçin.
+            </p>
+          )}
           <p style={s.disclaimer}>Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>
         </div>
       )}
