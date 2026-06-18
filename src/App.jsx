@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 import DPPEkrani from "./DPPEkrani.jsx";
 import SERVISLER from "./services-data.json";
@@ -126,6 +126,17 @@ export default function App() {
   const [showServisler, setShowServisler] = useState(false);
   const [showDPP, setShowDPP] = useState(false);
   const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
+
+  // Belirti textarea: elle (mouse) resize kapalı; yazdıkça veya chip ile içerik
+  // değiştikçe otomatik uzar (min ~4 satır).
+  const belirtiRef = useRef(null);
+  useEffect(() => {
+    const el = belirtiRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    const kenarlik = el.offsetHeight - el.clientHeight; // border-box: kenarlık payı (içerik kırpılmasın)
+    el.style.height = Math.max(el.scrollHeight + kenarlik, 116) + "px";
+  }, [belirti]);
 
   // Belirti, ". " ile ayrılmış parçalardan oluşur; chip'ler bu parçaları
   // toggle eder. Seçili durum belirti metninden türetilir (tek kaynak).
@@ -335,7 +346,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <input style={s.input} value={yas} onChange={(e) => setYas(e.target.value)} placeholder="örn. 6 yıl" />
 
           <label style={s.label}>Ne oluyor? Belirtiyi anlat</label>
-          <textarea style={s.textarea} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
+          <textarea ref={belirtiRef} style={s.textarea} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
             placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor." />
 
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
@@ -483,7 +494,7 @@ const s = {
   row: { display: "flex", gap: 12, alignItems: "flex-start" },
   garantiRow: { display: "flex", alignItems: "center", gap: 10, margin: "18px 0 0", cursor: "pointer", fontSize: 13.5, color: GREEN, fontWeight: 600, userSelect: "none" },
   input: { width: "100%", height: 46, padding: "0 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s", boxSizing: "border-box" },
-  textarea: { width: "100%", padding: "13px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "vertical", lineHeight: 1.55 },
+  textarea: { width: "100%", padding: "13px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 14.5, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "none", overflow: "hidden", boxSizing: "border-box", minHeight: 116, lineHeight: 1.55 },
   err: { marginTop: 14, color: "#DC2626", fontSize: 13.5, fontWeight: 600 },
   cta: { marginTop: 22, width: "100%", padding: "15px", borderRadius: 13, border: "none", background: AMBER, color: "#fff", fontSize: 15.5, fontWeight: 700, letterSpacing: ".01em", boxShadow: "0 10px 24px -12px rgba(37,99,235,.55)", transition: "transform .15s ease, box-shadow .15s ease" },
   disclaimer: { fontSize: 11.5, color: FAINT, textAlign: "center", marginTop: 14, marginBottom: 0, lineHeight: 1.5 },
