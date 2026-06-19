@@ -78,7 +78,8 @@ th,td{border:1px solid ${T.HAIR};padding:10px 12px;text-align:left}
 th{background:${T.BG}}
 blockquote{margin:18px 0;padding:12px 16px;background:#EFF4FF;border-left:3px solid ${T.BLUE};color:${T.NAVY}}
 blockquote p{margin:0}
-.cta{margin:36px 0 8px;padding:24px;border-radius:16px;background:${T.BLUE};color:#fff}
+.cta{display:block;margin:36px 0 8px;padding:24px;border-radius:16px;background:${T.BLUE};color:#fff;text-decoration:none;transition:background .15s,transform .15s}
+.cta:hover{background:#1D4ED8;transform:translateY(-1px)}
 .cta h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 8px;color:#fff;font-size:20px}
 .cta p{margin:0 0 4px;opacity:.96}
 .cta .tag{font-weight:600;opacity:1}
@@ -102,7 +103,7 @@ const TEETH = [0, 45, 90, 135, 180, 225, 270, 315]
 const LOGO = `<svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" fill="${T.BLUE}"/><path d="M60 22C42 22 28 36 28 53c0 22 32 45 32 45s32-23 32-45C92 36 78 22 60 22Z" fill="#fff"/><g fill="${T.BLUE}"><circle cx="60" cy="51" r="15"/>${TEETH}</g><circle cx="60" cy="51" r="6" fill="#fff"/></svg>`;
 const WORDMARK = `<span class="brand-text"><span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span><span class="brand-motto">Bil, gör, çağır.</span></span>`;
 
-const CTA = `<div class="cta"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır.</p></div>`;
+const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
 
 function page({ title, desc, canonical, head = "", body }) {
   return `<!doctype html><html lang="tr"><head>
