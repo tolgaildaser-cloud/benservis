@@ -283,6 +283,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [fallbackIlce, setFallbackIlce] = useState("");
   const [seciliServis, setSeciliServis] = useState(null);
   const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
+  const [siralama, setSiralama] = useState("mesafe"); // "mesafe" (default) | "puan"
   const [tumServisler, setTumServisler] = useState(servislerProp || []);
   // Müşterinin ilçesi — ileride talep/veri toplama için bölge bilgisi (koordinat yoksa).
   const [konumIlce, setKonumIlce] = useState(null);
@@ -390,6 +391,23 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
     );
   }
 
+  // Sıralama tercihine göre liste: "mesafe" = km birincil + puan ikincil;
+  // "puan" = puan birincil + mesafe ikincil (kullanıcı kuralı).
+  const gosterilenServisler = [...siraliServisler].sort((a, b) => {
+    if (siralama === "puan") {
+      const pf = (b.puan || 0) - (a.puan || 0);
+      if (pf !== 0) return pf;
+      if (a.km != null && b.km != null) return a.km - b.km;
+      return a.km == null ? 1 : -1;
+    }
+    if (a.km != null && b.km != null) {
+      if (a.km !== b.km) return a.km - b.km;
+      return (b.puan || 0) - (a.puan || 0);
+    }
+    if (a.km == null && b.km == null) return (b.puan || 0) - (a.puan || 0);
+    return a.km == null ? 1 : -1;
+  });
+
   return (
     <div style={{
       position: "fixed", inset: 0, background: "#F8FAFC",
@@ -433,6 +451,27 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       )}
 
       <div style={{ padding: "16px" }}>
+        {/* Sıralama — sağ üst: Mesafe (default) / Puan */}
+        {locationState === "success" && siraliServisler.length > 0 && (
+          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 8, marginBottom: 12 }}>
+            <span style={{ fontSize: 12, color: "#64748B", fontWeight: 600 }}>Sırala:</span>
+            <div style={{ display: "inline-flex", background: "#F1F5F9", borderRadius: 9, padding: 3, gap: 2 }}>
+              {[["mesafe", "📍 Mesafe"], ["puan", "★ Puan"]].map(([key, label]) => (
+                <button
+                  key={key}
+                  onClick={() => setSiralama(key)}
+                  style={{
+                    border: "none", cursor: "pointer", borderRadius: 7, padding: "6px 12px",
+                    fontSize: 12.5, fontWeight: 700, fontFamily: "inherit",
+                    background: siralama === key ? "#fff" : "transparent",
+                    color: siralama === key ? "#2563EB" : "#64748B",
+                    boxShadow: siralama === key ? "0 1px 2px rgba(30,41,59,.12)" : "none",
+                  }}
+                >{label}</button>
+              ))}
+            </div>
+          </div>
+        )}
         {/* Yükleniyor */}
         {locationState === "loading" && (
           <p style={{ textAlign: "center", color: "#1E293B", marginTop: 40 }}>
@@ -453,7 +492,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           </div>
         )}
 
-        {locationState === "success" && siraliServisler.map((servis) => (
+        {locationState === "success" && gosterilenServisler.map((servis) => (
           <ServisKarti
             key={servis.id}
             servis={servis}
