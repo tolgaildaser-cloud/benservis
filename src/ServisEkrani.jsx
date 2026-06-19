@@ -316,17 +316,17 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         const { latitude: lat, longitude: lng } = pos.coords;
         setMusteriKonum({ lat, lng }); // mesafe sıralaması için
         const kat = eslesenKategoriler(cihaz);
-        const eslesmis = tumServisler
+        // Kategori eşleşen servisleri km ile işaretle + MESAFE birincil sırala.
+        // Filtre ÖNCESİ tam liste — kullanıcının ilini bundan çıkarırız.
+        const kmSiraliTum = tumServisler
           .filter((s) => s.kategoriler?.some((k) => kat.includes(k)))
-          .filter((s) => !garantiAltinda || s.yetkili)
           .map((s) => ({
             ...s,
             // lat/lng null olan DB servisleri km hesaplanamaz → sona koy
             km: s.lat && s.lng ? haversine(lat, lng, s.lat, s.lng) : null,
           }))
           // MESAFE birincil — en yakın üstte. Yetkili sabitlenmez, yalnızca
-          // rozet olarak gösterilir. (Garanti seçiliyse zaten yukarıda yalnız
-          // yetkili'ye filtrelendi.) Eşit km'de puan.
+          // rozet olarak gösterilir. Eşit km'de puan.
           .sort((a, b) => {
             if (a.km != null && b.km != null) {
               if (a.km !== b.km) return a.km - b.km;
@@ -334,7 +334,19 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             }
             if (a.km == null && b.km == null) return (b.puan || 0) - (a.puan || 0);
             return a.km == null ? 1 : -1;
-          })
+          });
+
+        // Garanti (yalnız-yetkili) modunda: BAŞKA İLDEN servis gösterme.
+        // Servisin ili: JSON'da "sehir", DB'de "il". Kullanıcının ili = en yakın
+        // (herhangi) servisin ili. Türkçe İ/I/ı varyantlarına dayanıklı karşılaştırma.
+        const ilAdi = (s) => s.sehir || s.il;
+        const normIl = (x) => (x || "").replace(/[İI]/g, "i").replace(/ı/g, "i").toLowerCase().trim();
+        const enYakinIlli = kmSiraliTum.find((s) => s.km != null && ilAdi(s));
+        const kullaniciIl = garantiAltinda && enYakinIlli ? ilAdi(enYakinIlli) : null;
+
+        const eslesmis = kmSiraliTum
+          .filter((s) => !garantiAltinda || s.yetkili)
+          .filter((s) => !garantiAltinda || !kullaniciIl || normIl(ilAdi(s)) === normIl(kullaniciIl))
           .slice(0, 15);
         setSiraliServisler(eslesmis);
         setLocationState("success");
@@ -342,7 +354,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
         // Bölge bilgisi (konumIlce) — ileride talep/veri toplama için saklanır.
         // En yakın DB servisinin ilçesini al; yoksa ters geokod.
         const kmSirali = (filtre) =>
-          eslesmis.filter((s) => s.km != null && s.ilce && filtre(s))
+          kmSiraliTum.filter((s) => s.km != null && s.ilce && filtre(s))
                   .sort((a, b) => a.km - b.km)[0];
         const enYakinDb  = kmSirali((s) => s.kaynak === "db");
         const enYakinAny = kmSirali(() => true);
