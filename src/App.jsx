@@ -171,6 +171,8 @@ MARKA KADEMESİ (parça maliyetini markaya göre ayarla — yukarıdaki parça m
 - Ekonomik / küçük marka (ör. Regal, Hisense, Midea, Daewoo, Candy, Indesit): aralığın ALT bandı.
 - "Diğer / Listede yok" veya emin değilsen: ORTA band (nötr — düşük tahmin etme).
 - İŞÇİLİK markadan BAĞIMSIZDIR; kademeye göre değiştirme.
+- KADEMEYİ KULLANICIYA ASLA YANSITMA. not, kararAciklama ve TÜM alanlarda şunlar YASAK: marka kademesi/segment; "premium/orta/ekonomik"; "kademe"; "üst/alt bant" veya "band"; markaya dayalı fiyat gerekçesi (ör. "Bosch parçası pahalı", "X markası üst bantta"); ve parça/işçilik kırılımı (ör. "~5000 TL parça + 1300 TL işçilik"). Bunların HEPSİ içsel mantık.
+- "not" alanı KISA, NÖTR ve markadan bağımsız olsun. Örnek doğru not: "Parça ve işçilik dahil tahmini tutar; kesin fiyat arıza tespitinde netleşir." Markayı, kademeyi, kırılımı YAZMA.
 
 YAŞ ETKİSİ (kararOnerisi'ni buna göre ver — "Cihaz yaşı" yukarıda verildi):
 - Yeni/orta yaş (≈0-7 yıl): arıza tamir edilebilirse "tamir".
