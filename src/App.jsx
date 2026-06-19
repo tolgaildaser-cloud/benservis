@@ -22,19 +22,21 @@ const BELIRTILER = {
   "Bilgisayar / Yazıcı": ["Açılmıyor", "Yazdırmıyor", "Donma / yavaşlama", "Kağıt sıkışması", "Aşırı ısınma / ses", "Bağlantı sorunu"],
 };
 
-// Gömülü referans tarife (matristen türetilmiş, TR 2026 tahmini) — AI maliyeti buna göre çıpalar
+// Gömülü referans tarife — AI maliyeti buna göre çıpalar. 19 Haz 2026'da gerçek
+// 2026 TR piyasasıyla (yedek parça siteleri, servis fiyat listeleri, Armut, şikayetvar)
+// kalibre edildi; işçilik = SADECE tamir işçiliği (1000 TL gidiş bedeli AYRI tutulur).
 const SEED = {
-  "Buzdolabı": [["Termostat/sensör",250,600,500],["Gaz kaçağı/dolum",800,1500,900],["Kompresör değişimi",2500,5000,1200]],
-  "Çamaşır Makinesi": [["Su giriş valfi",350,700,600],["Tahliye pompası",400,900,600],["Rulman/keçe",600,1500,1200],["Elektronik kart",1000,2500,800]],
-  "Bulaşık Makinesi": [["Tahliye pompası",400,900,700],["Su giriş valfi",350,700,600],["Rezistans/ısıtıcı",600,1400,800]],
-  "Fırın / Ocak / Aspiratör": [["Rezistans",350,800,600],["Termostat",300,700,500],["Fan motoru",500,1200,700],["Aspiratör motoru",500,1300,600],["Aspiratör anahtar/kart/lamba",200,700,400]],
-  "Klima": [["Gaz dolumu",600,1200,700],["Kapasitör",300,700,500],["Kompresör",2500,5500,1500]],
-  "Kombi / Termosifon": [["3 yollu vana",700,1400,800],["Sirkülasyon pompası",1200,2500,900],["Eşanjör",1500,4000,1200],["Rezistans (termosifon)",400,900,500],["Termostat",300,600,400]],
-  "Televizyon": [["Backlight LED bar",700,1800,900],["Besleme kartı",600,1500,800],["Panel",3000,8000,1500]],
-  "Mikrodalga / Air Fryer": [["Magnetron (mikrodalga)",700,1500,600],["Rezistans (air fryer)",300,700,400],["Fan/termostat/kart",300,900,400]],
-  "Süpürge": [["Motor",600,1500,500],["Batarya (şarjlı)",500,1500,400],["Fırça/sensör/anakart",400,2500,500]],
-  "Su Sebili / Arıtma": [["Filtre seti",400,1200,300],["Pompa/membran",700,1800,600]],
-  "Bilgisayar / Yazıcı": [["Güç kaynağı / şarj soketi",300,2000,400],["Ekran kartı/RAM/disk",1000,6000,400],["Anakart",1500,5000,600],["Ekran/menteşe (laptop)",1200,4000,600],["Yazıcı kafa/kartuş",400,1500,400],["Kağıt besleme/merdane",300,900,500]],
+  "Buzdolabı": [["Termostat/sensör",250,1200,600],["Gaz kaçağı/dolum",900,2000,1400],["Kompresör değişimi",2500,5500,2400],["Fan motoru (no-frost)",400,1200,600]],
+  "Çamaşır Makinesi": [["Su giriş valfi",200,1500,600],["Tahliye pompası",200,1200,600],["Rulman/keçe",600,3500,2000],["Elektronik kart",1000,5000,1300],["Kapı kilidi",250,900,500]],
+  "Bulaşık Makinesi": [["Tahliye pompası",300,1100,600],["Su giriş valfi",230,1100,600],["Rezistans/ısıtıcı",350,1400,800],["Sirkülasyon (yıkama) motoru",700,2500,900]],
+  "Fırın / Ocak / Aspiratör": [["Rezistans",300,800,500],["Termostat",250,500,450],["Fan motoru",350,900,500],["Aspiratör motoru",450,2200,600],["Aspiratör anahtar/kart/lamba",200,700,400]],
+  "Klima": [["Gaz dolumu",900,2200,700],["Kapasitör",150,400,350],["Kompresör",2500,6000,2000]],
+  "Kombi / Termosifon": [["3 yollu vana",700,1400,800],["Sirkülasyon pompası",1750,4600,900],["Eşanjör",2000,6000,1200],["Rezistans (termosifon)",400,1100,600],["Termostat",300,900,400]],
+  "Televizyon": [["Backlight LED bar",200,1500,700],["Besleme kartı",400,1500,500],["Anakart",500,3000,700],["Panel",3000,20000,1500]],
+  "Mikrodalga / Air Fryer": [["Magnetron (mikrodalga)",700,1500,600],["Rezistans (air fryer)",250,700,400],["Fan/termostat/kart",300,900,400]],
+  "Süpürge": [["Motor",600,2000,500],["Batarya (şarjlı)",500,3000,400],["Fırça/sensör/anakart",200,2500,500]],
+  "Su Sebili / Arıtma": [["Filtre seti",350,1200,300],["Pompa/membran",600,1800,600]],
+  "Bilgisayar / Yazıcı": [["Güç kaynağı / şarj soketi",50,2700,900],["Ekran kartı/RAM/disk",1000,6000,400],["Anakart",1500,5000,1300],["Ekran/menteşe (laptop)",1200,6000,850],["Yazıcı kafa/kartuş",100,4000,500],["Kağıt besleme/merdane",100,500,500]],
 };
 
 function refMetni(cihaz) {
@@ -167,6 +169,7 @@ ACİLİYET ÖLÇÜTÜ (belirtiye göre değerlendir, varsayılan "orta"ya KAÇMA
 - "yüksek": güvenlik riski (su+elektrik teması, gaz, yanık/duman/kıvılcım kokusu) VEYA süregelen aktif hasar (su taşması/sızıntı yayılıyor) VEYA cihaz tamamen kullanılamaz ve temel ihtiyaç (buzdolabı hiç soğutmuyor → gıda bozulur).
 - "orta": cihaz kısmen çalışıyor, sorun zamanla büyüyebilir, birkaç gün içinde ele alınmalı.
 - "düşük": kozmetik/konfor sorunu, risk yok, beklemeye dayanır.
+- "belirsiz": belirti teşhis için yetersiz / arıza netleşmiyor. kararOnerisi "belirsiz" ise aciliyet de MUTLAKA "belirsiz" olmalı — uydurma aciliyet verme, ek soru iste.
 
 Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
@@ -183,7 +186,7 @@ Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
 MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi beklenen toplam tutar (parça + işçilik, TL). Referans tarifeye çıpala, abartma/küçümseme. Aralık verme — sadece tek bir sayı. (Aralığı sistem otomatik ±%10 hesaplar.)
 
-Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz", aciliyet sadece "düşük"/"orta"/"yüksek" ve mutlaka yukarıdaki ölçüte göre, aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
+Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz", aciliyet sadece "düşük"/"orta"/"yüksek"/"belirsiz" ve mutlaka yukarıdaki ölçüte göre (kararOnerisi "belirsiz" ise aciliyet de "belirsiz"), aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
 
     try {
       const res = await fetch("/api/diagnose", {
@@ -193,7 +196,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       });
       const data = await res.json();
       if (data.error) throw new Error(data.error);
-      setSonuc(normalizeMaliyet(extractJSON(data.text || "")));
+      const teshis = normalizeMaliyet(extractJSON(data.text || ""));
+      // Karar belirsizse aciliyet de belirsiz (kullanıcı kuralı) — AI kaçırsa bile garanti.
+      if (teshis && teshis.kararOnerisi === "belirsiz") teshis.aciliyet = "belirsiz";
+      setSonuc(teshis);
       setAdim("sonuc");
     } catch (e) {
       setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
@@ -223,7 +229,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
   const detayEkle = () => setAdim("form");
 
-  const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626" };
+  const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
   const kararRenk = { tamir: "#22C55E", yenisi: "#DC2626", belirsiz: "#64748B" };
   const kararEtiket = { tamir: "TAMİR ETTİR", yenisi: "YENİSİNİ AL", belirsiz: "BELİRSİZ" };
   const oneriler = BELIRTILER[cihaz] || [];
@@ -425,7 +431,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <div style={s.cardSplit}>
             <div style={{ flex: 1 }}>
               <div style={s.secHead}>Aciliyet</div>
-              <span style={{ ...s.acilBadge, color: acilRenk[sonuc.aciliyet], borderColor: acilRenk[sonuc.aciliyet] }}>{(sonuc.aciliyet || "orta").toUpperCase()}</span>
+              <span style={{ ...s.acilBadge, color: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz, borderColor: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz }}>{(sonuc.aciliyet || "belirsiz").toUpperCase()}</span>
               {sonuc.aciliyetNot && <p style={s.fiyatNot}>{sonuc.aciliyetNot}</p>}
             </div>
             <div style={s.divider} />
