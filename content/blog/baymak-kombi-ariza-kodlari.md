@@ -62,7 +62,7 @@ Reset tuşuna birkaç saniye bas; önce su basıncını (1–1.5 bar) kontrol et
 ## Tahmini maliyet
 Baymak modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler; sonra yakınındaki yüksek puanlı servisi ara.
 
-İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Vaillant kombi arıza kodları](/blog/vaillant-kombi-ariza-kodlari/) · [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/)
+İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Vaillant kombi arıza kodları](/blog/vaillant-kombi-ariza-kodlari/) · [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) · [Kombi yanmıyor](/blog/kombi-yanmiyor/) · [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 

@@ -64,7 +64,7 @@ Pompa çalışırken basınç farkı algılanmıyor; pompa ya da su basıncı se
 ## Tahmini maliyet
 Vaillant modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler; sonra yakınındaki yüksek puanlı kombi servisini ara.
 
-İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) · [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/)
+İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) · [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/) · [Kombi yanmıyor](/blog/kombi-yanmiyor/) · [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 
