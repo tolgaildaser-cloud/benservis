@@ -117,7 +117,6 @@ export default function App() {
   const [cihaz, setCihaz] = useState("");
   const [marka, setMarka] = useState("");
   const [garantiAltinda, setGarantiAltinda] = useState(false);
-  const [hataKodu, setHataKodu] = useState("");
   const [yas, setYas] = useState("");
   const [belirti, setBelirti] = useState("");
   const [sonuc, setSonuc] = useState(null);
@@ -164,7 +163,6 @@ export default function App() {
 
 Cihaz: ${cihaz}
 Marka: ${marka}
-Ekrandaki hata kodu: ${hataKodu || "yok"}
 Cihaz yaşı: ${yas || "belirtilmedi"}
 Belirti: "${belirti}"
 
@@ -228,7 +226,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setHataKodu(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626" };
@@ -312,7 +310,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           )}
 
           <div style={s.row}>
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1.5, minWidth: 0 }}>
               <label style={s.label}>
                 Marka <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span>
               </label>
@@ -327,9 +325,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                 <option value="Diğer">Diğer / Listede yok</option>
               </select>
             </div>
-            <div style={{ width: 128, flexShrink: 0 }}>
-              <label style={{ ...s.label, whiteSpace: "nowrap" }}>Hata kodu <span style={s.opt}>(varsa)</span></label>
-              <input style={s.input} value={hataKodu} onChange={(e) => setHataKodu(e.target.value)} placeholder="E3" />
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <label style={{ ...s.label, whiteSpace: "nowrap" }}>Cihaz yaşı <span style={s.opt}>(ops.)</span></label>
+              <select style={{ ...s.input, cursor: "pointer" }} value={yas} onChange={(e) => setYas(e.target.value)}>
+                <option value="">Seç…</option>
+                <option value="0-2 yıl">0-2 yıl</option>
+                <option value="3-5 yıl">3-5 yıl</option>
+                <option value="6-10 yıl">6-10 yıl</option>
+                <option value="10+ yıl">10+ yıl</option>
+              </select>
             </div>
           </div>
 
@@ -347,12 +351,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             </span>
           </label>
 
-          <label style={s.label}>Cihaz kaç yaşında? <span style={s.opt}>(opsiyonel)</span></label>
-          <input style={s.input} value={yas} onChange={(e) => setYas(e.target.value)} placeholder="örn. 6 yıl" />
-
-          <label style={s.label}>Ne oluyor? Belirtiyi anlat</label>
+          <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
           <textarea ref={belirtiRef} style={s.textarea} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
-            placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor." />
+            placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
 
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
           {/* Cihaz seçimi ZORUNLU — seçilmeden teşhis yapılamaz (buton kilitli + tesisEt guard'ı) */}
