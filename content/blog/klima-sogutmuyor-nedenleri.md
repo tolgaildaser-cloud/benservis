@@ -63,6 +63,8 @@ Aşağıdakiler uzmanlık ve özel ekipman ister — kendin müdahale etme:
 | Elektronik kart tamiri | 1.500 – 3.500 ₺ |
 | Kompresör değişimi | 4.000 – 9.000 ₺ |
 
+İlgili rehberler: [Klima gazı dolumu 2026 fiyatları](/blog/klima-gazi-dolumu-fiyat/) · [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/)
+
 ## Sık sorulan sorular
 
 **Klima dışarı hava üflüyor ama soğutmuyor, neden?**

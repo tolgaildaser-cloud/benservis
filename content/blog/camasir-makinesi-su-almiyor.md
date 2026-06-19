@@ -17,7 +17,7 @@ faq:
 
 Çamaşırları koydun, programı başlattın ama makine su almıyor — ya hiç, ya da yarım. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin 5 kontrolü** ve 2026 için tahmini tamir fiyatlarını bulacaksın.
 
-## Çamaşır makinesi neden su almaz? Olası nedenler
+## Çamaşır makinesi neden su almaz? 6 olası neden
 
 **1. Su musluğu kapalı veya yarı açık (en sık, ücretsiz).** Musluk tam açık değilse makineye yeterli su gitmez.
 
