@@ -104,10 +104,10 @@ function BenservisLogo({ style }) {
         </g>
         <circle cx="60" cy="51" r="6" fill="#ffffff" />
       </g>
-      <text x="162" y="94" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="83" fontWeight="600" letterSpacing="-1.8">
+      <text x="162" y="89" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="83" fontWeight="600" letterSpacing="-1.8">
         <tspan fill="#1E293B">ben</tspan><tspan fill="#2563EB">servis</tspan>
       </text>
-      <text x="347" y="140" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="31.5" fill="#475569" textAnchor="middle">Bil, gör, çağır.</text>
+      <text x="347" y="122" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="31.5" fill="#475569" textAnchor="middle">Bil, gör, çağır.</text>
     </svg>
   );
 }
