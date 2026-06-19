@@ -117,7 +117,7 @@ function page({ title, desc, canonical, head = "", body }) {
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body>
-<header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Cihaz Arıza Rehberi</a></div></header>
+<header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Bilgi Merkezi</a></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer class="site"><span class="wm-b">ben</span><span class="wm-s">servis</span> · Bil, gör, çağır. · <a href="/" style="color:${T.MUTED}">benservis.com</a></footer>
 </body></html>`;
@@ -193,10 +193,10 @@ const cards = posts
 fs.writeFileSync(
   path.join(OUT, "index.html"),
   page({
-    title: "Benservis Rehber — cihaz arızaları ve tamir maliyetleri",
+    title: "Benservis Bilgi Merkezi — cihaz arızaları ve tamir maliyetleri",
     desc: "Cihaz arızalarının nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları.",
     canonical: `${SITE}/blog/`,
-    body: `<h1>Cihaz Arıza Rehberi</h1><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="bloglist">${cards}</div>`,
+    body: `<h1>Bilgi Merkezi</h1><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="bloglist">${cards}</div>`,
   })
 );
 

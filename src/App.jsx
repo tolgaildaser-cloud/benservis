@@ -265,7 +265,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✦</span> AI destekli</span>
           <span style={s.trustItem}><span style={{ color: "#F5A623" }}>★</span> Google puanlı servisler</span>
         </div>
-        <a href="/blog/" className="rehber-btn" style={s.rehberBtn}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>Cihaz arıza rehberi →</a>
+        <a href="/blog/" className="rehber-btn" style={s.rehberBtn}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>Bilgi Merkezi →</a>
       </header>
 
       {(adim === "form" || adim === "hata") && (
@@ -470,7 +470,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
       <footer style={s.footer}>
         <div style={s.footBrand}>Benservis · Bil, gör, çağır.</div>
-        <div style={s.footSub}><a href="/blog/" style={s.footLink}>Rehber</a> · AI destekli teşhis · tahmini maliyet</div>
+        <div style={s.footSub}><a href="/blog/" style={s.footLink}>Bilgi Merkezi</a> · AI destekli teşhis · tahmini maliyet</div>
       </footer>
     </div>
   );
