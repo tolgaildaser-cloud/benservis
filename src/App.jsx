@@ -91,7 +91,7 @@ function normalizeMaliyet(sonuc) {
 // ~/Desktop/benservis-marka/logo-yatay.svg (sistem-font wordmark, viewBox 540×158)
 function BenservisLogo({ style }) {
   return (
-    <svg viewBox="0 0 477 158" style={style} xmlns="http://www.w3.org/2000/svg"
+    <svg viewBox="0 0 547 162" style={style} xmlns="http://www.w3.org/2000/svg"
       role="img" aria-label="Benservis — Bil, gör, çağır.">
       <g transform="translate(12,14) scale(1.083333)">
         <rect width="120" height="120" rx="28" fill="#2563EB" />
@@ -104,10 +104,10 @@ function BenservisLogo({ style }) {
         </g>
         <circle cx="60" cy="51" r="6" fill="#ffffff" />
       </g>
-      <text x="162" y="92" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="69" fontWeight="600" letterSpacing="-1.5">
+      <text x="162" y="94" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="83" fontWeight="600" letterSpacing="-1.8">
         <tspan fill="#1E293B">ben</tspan><tspan fill="#2563EB">servis</tspan>
       </text>
-      <text x="314" y="127" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="21" fill="#475569" textAnchor="middle">Bil, gör, çağır.</text>
+      <text x="347" y="140" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="31.5" fill="#475569" textAnchor="middle">Bil, gör, çağır.</text>
     </svg>
   );
 }
@@ -491,7 +491,7 @@ const s = {
   wrap: { position: "relative", minHeight: "100%", background: BG, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, padding: "40px 20px 48px", maxWidth: 600, margin: "0 auto" },
   grain: { display: "none" },
   header: { position: "relative", zIndex: 1, marginBottom: 28, textAlign: "center" },
-  brandLogo: { display: "block", width: "min(264px, 80%)", height: "auto", margin: "0 auto 18px" },
+  brandLogo: { display: "block", width: "min(304px, 86%)", height: "auto", margin: "0 auto 18px" },
   appName: { fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 20, margin: 0, letterSpacing: "-0.02em", color: INK },
   tagline: { fontSize: "clamp(8px, 2.5vw, 11px)", color: MUTED, margin: "10px auto 0", whiteSpace: "nowrap", lineHeight: 1.4 },
   trustBadge: { display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
