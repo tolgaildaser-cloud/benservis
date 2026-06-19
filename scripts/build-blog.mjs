@@ -73,6 +73,7 @@ article p{margin:0 0 16px}
 article ul,article ol{margin:0 0 16px;padding-left:22px}
 article li{margin:6px 0}
 strong{font-weight:600}
+article .lead{display:block;margin-bottom:3px}
 table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
 th,td{border:1px solid ${T.HAIR};padding:10px 12px;text-align:left}
 th{background:${T.BG}}
@@ -155,7 +156,10 @@ const posts = serpistir(
     .filter((f) => f.endsWith(".md"))
     .map((f) => {
       const { data, content } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"));
-      return { ...data, html: marked.parse(content) };
+      // Paragraf/madde BAŞINDAKİ bold lead-in'e .lead sınıfı ver (blok yapılacak); cümle
+      // ORTASINDAKİ bold (<p>metin <strong>) eşleşmez → inline kalır.
+      const html = marked.parse(content).replace(/<(p|li)><strong>/g, '<$1><strong class="lead">');
+      return { ...data, html };
     })
     .filter((p) => p.slug && p.title)
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
