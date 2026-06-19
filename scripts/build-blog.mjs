@@ -57,6 +57,8 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .brand .wm{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:21px;letter-spacing:-.5px;line-height:1}
 .brand .wm-b{color:${T.NAVY}}
 .brand .wm-s{color:${T.BLUE}}
+.brand-text{display:flex;flex-direction:column;justify-content:center;line-height:1.05}
+.brand-motto{font-size:11px;font-weight:500;color:${T.MUTED};margin-top:2px}
 .nav{color:${T.MUTED};text-decoration:none;font-weight:600;font-size:14px}
 main{padding:40px 0 64px}
 .hero{position:relative;overflow:hidden;border-radius:18px;background:${T.BLUE};height:188px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;margin:0 0 30px}
@@ -98,7 +100,7 @@ const TEETH = [0, 45, 90, 135, 180, 225, 270, 315]
   .map((a) => `<rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(${a} 60 51)"/>`)
   .join("");
 const LOGO = `<svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" fill="${T.BLUE}"/><path d="M60 22C42 22 28 36 28 53c0 22 32 45 32 45s32-23 32-45C92 36 78 22 60 22Z" fill="#fff"/><g fill="${T.BLUE}"><circle cx="60" cy="51" r="15"/>${TEETH}</g><circle cx="60" cy="51" r="6" fill="#fff"/></svg>`;
-const WORDMARK = `<span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span>`;
+const WORDMARK = `<span class="brand-text"><span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span><span class="brand-motto">Bil, gör, çağır.</span></span>`;
 
 const CTA = `<div class="cta"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır.</p></div>`;
 
