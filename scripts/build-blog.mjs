@@ -57,7 +57,7 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .brand .wm{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:21px;letter-spacing:-.5px;line-height:1}
 .brand .wm-b{color:${T.NAVY}}
 .brand .wm-s{color:${T.BLUE}}
-.brand-text{display:flex;flex-direction:column;justify-content:center;line-height:1.05}
+.brand-text{display:flex;flex-direction:column;justify-content:center;align-items:center;line-height:1.05}
 .brand-motto{font-size:11px;font-weight:500;color:${T.MUTED};margin-top:2px}
 .nav{color:${T.MUTED};text-decoration:none;font-weight:600;font-size:14px}
 main{padding:40px 0 64px}
