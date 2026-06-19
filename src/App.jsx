@@ -262,7 +262,12 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         {/* Kurumsal logo + motto — en üstte */}
         <BenservisLogo style={s.brandLogo} />
         <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>
-        <a href="/blog/" style={{ display: "inline-block", marginTop: 12, color: "#2563EB", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>Cihaz arıza rehberi →</a>
+        <div style={s.trustRow}>
+          <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✓</span> Ücretsiz</span>
+          <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✦</span> AI destekli</span>
+          <span style={s.trustItem}><span style={{ color: "#F5A623" }}>★</span> Google puanlı servisler</span>
+        </div>
+        <a href="/blog/" style={{ display: "inline-block", marginTop: 14, color: "#2563EB", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>Cihaz arıza rehberi →</a>
       </header>
 
       {(adim === "form" || adim === "hata") && (
@@ -446,7 +451,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      <footer style={s.footer}>AI Teşhis & Tahmini Maliyet</footer>
+      <footer style={s.footer}>
+        <div style={s.footBrand}>Benservis · Bil, gör, çağır.</div>
+        <div style={s.footSub}><a href="/blog/" style={s.footLink}>Rehber</a> · AI destekli teşhis · tahmini maliyet</div>
+      </footer>
     </div>
   );
 }
@@ -471,8 +479,10 @@ const s = {
   appName: { fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 20, margin: 0, letterSpacing: "-0.02em", color: INK },
   tagline: { fontSize: "clamp(8px, 2.5vw, 11px)", color: MUTED, margin: "10px auto 0", whiteSpace: "nowrap", lineHeight: 1.4 },
   trustBadge: { display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
+  trustRow: { display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 8, marginTop: 14 },
+  trustItem: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: MUTED, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 999, padding: "6px 12px" },
   card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 16px 40px -28px rgba(30,41,59,.30)", animation: "anrise .4s ease both" },
-  cardSplit: { position: "relative", zIndex: 1, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", animation: "anrise .4s ease both" },
+  cardSplit: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 12px 28px -22px rgba(30,41,59,.22)", animation: "anrise .4s ease both" },
   cardSoft: { position: "relative", zIndex: 1, background: "#F1F5F9", border: "1px dashed #CBD5E1", borderRadius: 18, padding: 20, marginTop: 14 },
   results: { position: "relative", zIndex: 1 },
   label: { display: "block", fontSize: 13, fontWeight: 700, margin: "18px 0 8px", color: INK, letterSpacing: "-0.01em" },
@@ -511,7 +521,7 @@ const s = {
   barTrack: { height: 7, background: "#E2E8F0", borderRadius: 99, overflow: "hidden" },
   barFill: { height: "100%", background: `linear-gradient(90deg, ${AMBER}, #60A5FA)`, borderRadius: 99 },
   arizaAcik: { fontSize: 13.5, color: "#475569", margin: "6px 0 0", lineHeight: 1.45 },
-  fiyat: { fontFamily: "'Fraunces', serif", fontSize: 30, fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em" },
+  fiyat: { fontFamily: "'Fraunces', serif", fontSize: 35, fontWeight: 700, lineHeight: 1, letterSpacing: "-0.02em", color: INK },
   tl: { fontSize: 16, color: "#94A3B8" },
   fiyatNot: { fontSize: 13, color: "#475569", marginTop: 8, lineHeight: 1.45 },
   divider: { width: 1, alignSelf: "stretch", background: "#E2E8F0" },
@@ -529,7 +539,10 @@ const s = {
   altBtns: { display: "flex", gap: 10, marginTop: 16 },
   copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
   reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #CBD5E1", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
-  footer: { position: "relative", zIndex: 1, textAlign: "center", fontSize: 11.5, color: "#94A3B8", marginTop: 26 },
+  footer: { position: "relative", zIndex: 1, textAlign: "center", marginTop: 30, paddingTop: 22, borderTop: `1px solid ${HAIR}` },
+  footBrand: { fontFamily: "'Fraunces', serif", fontSize: 14, fontWeight: 600, color: MUTED },
+  footSub: { fontSize: 12, color: FAINT, marginTop: 6 },
+  footLink: { color: "#2563EB", textDecoration: "none", fontWeight: 600 },
   dppBanner: {
     position: "relative", zIndex: 1, marginBottom: 14,
     background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 14,
