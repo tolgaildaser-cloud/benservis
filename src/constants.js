@@ -1,7 +1,7 @@
 // src/constants.js
 export const CIHAZLAR = [
-  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Fırın / Ocak / Aspiratör", "Klima",
-  "Kombi / Şofben", "Televizyon", "Mikrodalga / Air Fryer", "Süpürge",
+  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon", "Fırın / Ocak / Aspiratör", "Klima",
+  "Kombi / Termosifon", "Mikrodalga / Air Fryer", "Süpürge",
   "Su Sebili / Arıtma", "Bilgisayar / Yazıcı",
 ];
 
@@ -14,8 +14,9 @@ export const KATEGORI_ESLES = {
   // Aspiratör/davlumbaz, "Fırın / Ocak" mutfak ankastre segmentine katıldı; eski servis
   // kayıtları "Fırın / Ocak" tuttuğu için eşleşme kopmasın diye genişletildi.
   "Fırın / Ocak / Aspiratör": ["Fırın / Ocak / Aspiratör", "Fırın / Ocak", "Fırın", "Ocak", "Aspiratör", "Davlumbaz"],
-  // Kombi + Termosifon/Şofben birleşti; eski servis kayıtları ayrı adlar tuttuğu için genişletildi.
-  "Kombi / Şofben": ["Kombi / Şofben", "Kombi", "Termosifon / Şofben", "Termosifon", "Şofben"],
+  // Kombi + Termosifon birleşti (etikette "Şofben" YOK — kullanımı azaldı); eski servis kayıtları
+  // "Kombi"/"Termosifon / Şofben"/"Şofben" tuttuğu için eşleşmede alias olarak kalır (arıza tespiti eşleşsin).
+  "Kombi / Termosifon": ["Kombi / Termosifon", "Kombi", "Termosifon / Şofben", "Termosifon", "Şofben"],
   // Bilgisayar + Yazıcı birleşti.
   "Bilgisayar / Yazıcı": ["Bilgisayar / Yazıcı", "Bilgisayar", "Masaüstü Bilgisayar", "Notebook", "Yazıcı"],
 };
@@ -79,7 +80,7 @@ export const CIHAZ_MARKALARI = {
   "Fırın / Ocak / Aspiratör": [...BEYAZ_ESYA, "Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica"].sort((a, b) => a.localeCompare(b, "tr")),
   "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort((a, b) => a.localeCompare(b, "tr")),
   "Klima": ISITMA_SOGUTMA,
-  "Kombi / Şofben": ISITMA_SOGUTMA,
+  "Kombi / Termosifon": ISITMA_SOGUTMA,
   "Televizyon": ["Arçelik", "Awox", "Beko", "Grundig", "Hisense", "LG", "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Sony", "TCL", "Thomson", "Toshiba", "Vestel"],
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort((a, b) => a.localeCompare(b, "tr")),
   "Su Sebili / Arıtma": ["Arçelik", "Aqua", "Beko", "Coway", "Homefil", "Samsung", "Vestel", "Waterlife"],

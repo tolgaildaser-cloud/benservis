@@ -66,7 +66,7 @@ const IKONLAR = {
   "Yazıcı": (
     <g {...P}><rect x="6" y="3" width="12" height="5" rx="1" /><rect x="3" y="8" width="18" height="8" rx="2" /><rect x="7" y="14" width="10" height="6" rx="1" /><circle cx="17" cy="11" r="0.6" fill="currentColor" /></g>
   ),
-  "Kombi / Şofben": (
+  "Kombi / Termosifon": (
     <g {...P}><rect x="5" y="3" width="14" height="13" rx="2" /><rect x="8" y="6" width="8" height="3.5" rx="0.8" /><line x1="9" y1="16" x2="9" y2="20" /><line x1="15" y1="16" x2="15" y2="20" /></g>
   ),
   "Bilgisayar / Yazıcı": (
