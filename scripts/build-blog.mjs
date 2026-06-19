@@ -117,7 +117,7 @@ function page({ title, desc, canonical, head = "", body }) {
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body>
-<header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Rehber</a></div></header>
+<header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Cihaz Arıza Rehberi</a></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer class="site"><span class="wm-b">ben</span><span class="wm-s">servis</span> · Bil, gör, çağır. · <a href="/" style="color:${T.MUTED}">benservis.com</a></footer>
 </body></html>`;
