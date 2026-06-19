@@ -373,9 +373,25 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       {adim === "loading" && (
         <div style={s.card}>
           <div style={s.loaderWrap}>
-            <div style={s.loader} />
-            <p style={s.loaderText}>Belirtiler inceleniyor…</p>
-            <p style={s.loaderSub}>{cihaz} • olası arızalar eşleştiriliyor</p>
+            <svg width="58" height="58" viewBox="0 0 120 120" style={{ display: "block", margin: "0 auto 18px" }} aria-hidden="true">
+              <rect width="120" height="120" rx="28" fill="#2563EB" />
+              <path d="M60 22C42 22 28 36 28 53c0 22 32 45 32 45s32-23 32-45C92 36 78 22 60 22Z" fill="#fff" />
+              <g fill="#2563EB">
+                <circle cx="60" cy="51" r="15" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(0 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(45 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(90 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(135 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(180 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(225 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(270 60 51)" />
+                <rect x="55.5" y="27" width="9" height="15" rx="3" transform="rotate(315 60 51)" />
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 60 51" to="360 60 51" dur="2.4s" repeatCount="indefinite" />
+              </g>
+              <circle cx="60" cy="51" r="6" fill="#fff" />
+            </svg>
+            <p style={s.loaderText}>Arıza analiz ediliyor…</p>
+            <p style={s.loaderSub}>{cihaz || "Cihaz"} · belirtiler eşleştiriliyor, maliyet hesaplanıyor</p>
           </div>
         </div>
       )}

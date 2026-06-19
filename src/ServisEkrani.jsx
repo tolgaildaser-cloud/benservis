@@ -56,10 +56,11 @@ function ServisKarti({ servis, onSec }) {
     <div
       onClick={() => onSec(servis)}
       style={{
-        background: "white", borderRadius: 10,
-        padding: "12px 14px", marginBottom: 10,
+        background: "white", borderRadius: 14,
+        padding: "14px 16px", marginBottom: 10,
         display: "flex", justifyContent: "space-between", alignItems: "center",
-        boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+        border: "1px solid #E2E8F0",
+        boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 10px 24px -20px rgba(30,41,59,.25)",
         cursor: "pointer",
       }}
     >
