@@ -165,6 +165,13 @@ Belirti: "${belirti}"
 REFERANS TARİFE (maliyeti BUNLARA göre çıpala; görmediğin arıza için bu seviyeye göre makul tahmin yürüt, uydurma):
 ${refMetni(cihaz)}
 
+MARKA KADEMESİ (parça maliyetini markaya göre ayarla — yukarıdaki parça min–max aralığı ekonomik→premium markayı kapsar; listede olmayan markayı bilgine göre sınıfla):
+- Premium (ör. Bosch, Siemens, Miele, Liebherr, AEG, Bauknecht, Electrolux): parçada aralığın ÜST bandı.
+- Orta segment (ör. Arçelik, Beko, Samsung, LG, Vestel, Grundig, Profilo, Whirlpool): aralığın ORTASI.
+- Ekonomik / küçük marka (ör. Regal, Hisense, Midea, Daewoo, Candy, Indesit): aralığın ALT bandı.
+- "Diğer / Listede yok" veya emin değilsen: ORTA band (nötr — düşük tahmin etme).
+- İŞÇİLİK markadan BAĞIMSIZDIR; kademeye göre değiştirme.
+
 ACİLİYET ÖLÇÜTÜ (belirtiye göre değerlendir, varsayılan "orta"ya KAÇMA):
 - "yüksek": güvenlik riski (su+elektrik teması, gaz, yanık/duman/kıvılcım kokusu) VEYA süregelen aktif hasar (su taşması/sızıntı yayılıyor) VEYA cihaz tamamen kullanılamaz ve temel ihtiyaç (buzdolabı hiç soğutmuyor → gıda bozulur).
 - "orta": cihaz kısmen çalışıyor, sorun zamanla büyüyebilir, birkaç gün içinde ele alınmalı.
