@@ -57,9 +57,10 @@ function extractJSON(text) {
 const SERVIS_GIDIS_BEDELI = 1000;
 
 // Maliyet aralığını beklenen nokta tahminin ±%10'una sabitler (kullanıcı kuralı),
-// sonra servis gidiş bedelini (SERVIS_GIDIS_BEDELI) SABİT ekler — bedel ±%10'a tabi değil.
-// AI tek "beklenen" döndürür; eski min/max gelirse orta nokta kullanılır.
-// 10'a yuvarlanır + gidiş bedeli. Örn (gidiş 1000): beklenen 1200 → 2080–2320 (orta 2200).
+// servis gidiş bedelini (SERVIS_GIDIS_BEDELI) SABİT ekler (bedel ±%10'a tabi değil),
+// sonra gösterilen tutarı YUKARI doğru en yakın 100'e yuvarlar (kullanıcı kuralı:
+// 1990 → 2000, 2210 → 2300). AI tek "beklenen" döndürür; eski min/max gelirse orta nokta.
+// Örn (gidiş 1000): beklenen 1200 → 2100–2400 (ham 2080–2320, yukarı 100'e).
 function normalizeMaliyet(sonuc) {
   const m = sonuc?.tahminiMaliyet;
   if (!m) return sonuc;
@@ -67,15 +68,15 @@ function normalizeMaliyet(sonuc) {
   if (beklenen == null && m.min != null && m.max != null) beklenen = (Number(m.min) + Number(m.max)) / 2;
   beklenen = Number(beklenen);
   if (!beklenen || isNaN(beklenen)) return sonuc;
-  const r10 = (x) => Math.round(x / 10) * 10;
   const f = SERVIS_GIDIS_BEDELI; // sabit gidiş bedeli (±%10 dışı, düz eklenir)
+  const yukari100 = (x) => Math.ceil(x / 100) * 100; // gösterilen tutarı yukarı 100'e yuvarla
   return {
     ...sonuc,
     tahminiMaliyet: {
       ...m,
-      beklenen: r10(beklenen) + f,
-      min: r10(beklenen * 0.9) + f,
-      max: r10(beklenen * 1.1) + f,
+      beklenen: yukari100(beklenen + f),
+      min: yukari100(beklenen * 0.9 + f),
+      max: yukari100(beklenen * 1.1 + f),
     },
   };
 }
@@ -252,8 +253,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       <div style={s.grain} />
 
       <header style={s.header}>
-        {/* Kurumsal logo + motto — en üstte */}
-        <BenservisLogo style={s.brandLogo} />
+        {/* Kurumsal logo + motto — en üstte. Logoya tıkla → ana sayfa (sıfırla). */}
+        <button onClick={sifirla} aria-label="Ana sayfaya dön" style={s.logoBtn}>
+          <BenservisLogo style={s.brandLogo} />
+        </button>
         <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>
         <div style={s.trustRow}>
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✓</span> Ücretsiz</span>
@@ -489,6 +492,7 @@ const s = {
   wrap: { position: "relative", minHeight: "100%", background: BG, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, padding: "40px 20px 48px", maxWidth: 600, margin: "0 auto" },
   grain: { display: "none" },
   header: { position: "relative", zIndex: 1, marginBottom: 28, textAlign: "center" },
+  logoBtn: { display: "block", width: "100%", background: "none", border: "none", padding: 0, cursor: "pointer" },
   brandLogo: { display: "block", width: "min(304px, 86%)", height: "auto", margin: "0 auto 18px" },
   appName: { fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 20, margin: 0, letterSpacing: "-0.02em", color: INK },
   tagline: { fontSize: "clamp(8px, 2.5vw, 11px)", color: MUTED, margin: "10px auto 0", whiteSpace: "nowrap", lineHeight: 1.4 },
