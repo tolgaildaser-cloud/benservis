@@ -15,7 +15,7 @@ const IKONLAR = {
   "Bulaşık Makinesi": (
     <g {...P}><rect x="4" y="3" width="16" height="18" rx="2" /><line x1="4" y1="7" x2="20" y2="7" /><line x1="16.5" y1="5" x2="17.5" y2="5" /><line x1="8" y1="11" x2="8" y2="17" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="16" y1="11" x2="16" y2="17" /></g>
   ),
-  "Fırın / Ocak": (
+  "Fırın / Ocak / Aspiratör": (
     <g {...P}><rect x="4" y="4" width="16" height="16" rx="2" /><line x1="4" y1="9" x2="20" y2="9" /><circle cx="8" cy="6.5" r="0.6" fill="currentColor" /><circle cx="12" cy="6.5" r="0.6" fill="currentColor" /><rect x="7" y="12" width="10" height="5" rx="1" /></g>
   ),
   "Klima": (
