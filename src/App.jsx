@@ -267,7 +267,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✦</span> AI destekli</span>
           <span style={s.trustItem}><span style={{ color: "#F5A623" }}>★</span> Google puanlı servisler</span>
         </div>
-        <a href="/blog/" style={{ display: "inline-block", marginTop: 14, color: "#2563EB", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>Cihaz arıza rehberi →</a>
+        <a href="/blog/" className="rehber-btn" style={s.rehberBtn}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>Cihaz arıza rehberi →</a>
       </header>
 
       {(adim === "form" || adim === "hata") && (
@@ -485,6 +485,7 @@ const CSS = `
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
 input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }
 button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
+.rehber-btn:hover { background: rgba(37,99,235,.13) !important; transform: translateY(-1px); }
 `;
 
 const s = {
@@ -497,6 +498,7 @@ const s = {
   trustBadge: { display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
   trustRow: { display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 8, marginTop: 14 },
   trustItem: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: MUTED, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 999, padding: "6px 12px" },
+  rehberBtn: { display: "inline-flex", alignItems: "center", gap: 7, marginTop: 16, padding: "10px 20px", borderRadius: 12, background: "rgba(37,99,235,.07)", color: AMBER, fontSize: 14, fontWeight: 700, textDecoration: "none", border: "1.5px solid rgba(37,99,235,.25)", transition: "background .15s ease, transform .15s ease" },
   card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 16px 40px -28px rgba(30,41,59,.30)", animation: "anrise .4s ease both" },
   cardSplit: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 12px 28px -22px rgba(30,41,59,.22)", animation: "anrise .4s ease both" },
   cardSoft: { position: "relative", zIndex: 1, background: "#F1F5F9", border: "1px dashed #CBD5E1", borderRadius: 18, padding: 20, marginTop: 14 },
