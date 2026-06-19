@@ -129,15 +129,36 @@ if (!fs.existsSync(CONTENT)) {
 }
 fs.mkdirSync(OUT, { recursive: true });
 
-const posts = fs
-  .readdirSync(CONTENT)
-  .filter((f) => f.endsWith(".md"))
-  .map((f) => {
-    const { data, content } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"));
-    return { ...data, html: marked.parse(content) };
-  })
-  .filter((p) => p.slug && p.title)
-  .sort((a, b) => (a.date < b.date ? 1 : -1));
+// Aynı kategori art arda gelmesin: tarih-desc sırala, sonra kategoriye göre serpiştir
+// (her adımda, en çok kalanı olan + son eklenenden FARKLI kategoriyi seç).
+function serpistir(list) {
+  const gruplar = {};
+  for (const p of list) { const k = p.category || "Rehber"; (gruplar[k] ||= []).push(p); }
+  const out = [];
+  let son = null;
+  while (out.length < list.length) {
+    let secCat = null, secLen = 0;
+    for (const [cat, arr] of Object.entries(gruplar)) {
+      if (!arr.length || cat === son) continue;
+      if (arr.length > secLen) { secLen = arr.length; secCat = cat; }
+    }
+    if (!secCat) for (const [cat, arr] of Object.entries(gruplar)) { if (arr.length) { secCat = cat; break; } }
+    out.push(gruplar[secCat].shift());
+    son = secCat;
+  }
+  return out;
+}
+
+const posts = serpistir(
+  fs.readdirSync(CONTENT)
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => {
+      const { data, content } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"));
+      return { ...data, html: marked.parse(content) };
+    })
+    .filter((p) => p.slug && p.title)
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+);
 
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
