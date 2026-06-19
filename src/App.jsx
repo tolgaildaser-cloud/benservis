@@ -172,6 +172,12 @@ MARKA KADEMESİ (parça maliyetini markaya göre ayarla — yukarıdaki parça m
 - "Diğer / Listede yok" veya emin değilsen: ORTA band (nötr — düşük tahmin etme).
 - İŞÇİLİK markadan BAĞIMSIZDIR; kademeye göre değiştirme.
 
+YAŞ ETKİSİ (kararOnerisi'ni buna göre ver — "Cihaz yaşı" yukarıda verildi):
+- Yeni/orta yaş (≈0-7 yıl): arıza tamir edilebilirse "tamir".
+- Eski (≈8+ yıl, özellikle "10+ yıl") VE tahmini tamir bedeli yeni bir muadilin fiyatının kabaca yarısına yaklaşıyor/aşıyorsa → "yenisini al" ("yenisi"); kararAciklama'da yaş + maliyet gerekçesini belirt (ör. "12 yıllık cihaza bu tamir ekonomik değil, yenisi mantıklı").
+- Beyaz eşya ömrü ~10-15 yıl, küçük ev aleti/elektronik daha kısa — buna göre yorumla.
+- Yaş "belirtilmedi" ise yaşa göre ceza verme; kararı arızaya göre ver.
+
 ACİLİYET ÖLÇÜTÜ (belirtiye göre değerlendir, varsayılan "orta"ya KAÇMA):
 - "yüksek": güvenlik riski (su+elektrik teması, gaz, yanık/duman/kıvılcım kokusu) VEYA süregelen aktif hasar (su taşması/sızıntı yayılıyor) VEYA cihaz tamamen kullanılamaz ve temel ihtiyaç (buzdolabı hiç soğutmuyor → gıda bozulur).
 - "orta": cihaz kısmen çalışıyor, sorun zamanla büyüyebilir, birkaç gün içinde ele alınmalı.
