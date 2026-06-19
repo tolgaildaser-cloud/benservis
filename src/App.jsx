@@ -263,7 +263,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
       {(adim === "form" || adim === "hata") && (
         <div style={s.card}>
-          <label style={s.label}>Hangi cihaz?</label>
+          <label style={s.label}>Hangi cihaz? <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span></label>
           <div style={s.cihazGrid}>
             {CIHAZLAR.map((c) => {
               const aktif = cihaz === c;
@@ -344,7 +344,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             </span>
           </label>
 
-          <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
+          <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
           <textarea ref={belirtiRef} style={s.textarea} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
             placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
 
