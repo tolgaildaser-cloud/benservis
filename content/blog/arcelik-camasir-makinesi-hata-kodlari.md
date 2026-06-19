@@ -1,60 +1,76 @@
 ---
 title: "Arçelik çamaşır makinesi hata kodları ve anlamları"
-description: "Arçelik çamaşır makinende E01, E02, E03 gibi bir hata kodu mu çıktı? Kodların anlamı, kendin çözebileceklerin ve 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+description: "Arçelik (ve Beko/Grundig) çamaşır makinesi hata kodları: su alma, tahliye, ısıtma, kapı ve motor arızalarının kodları, kendin çözebilecekleri ve 2026 tamir fiyatları. Bil, gör, çağır."
 slug: "arcelik-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
 category: "Çamaşır makinesi"
 faq:
-  - q: "Arçelik çamaşır makinesi E03 ne demek?"
-    a: "E03 tahliye (su atma) sorununu gösterir: makine suyu boşaltamıyordur. En sık sebep tıkalı tahliye filtresi veya bükük/tıkalı tahliye hortumudur — çoğu zaman evde ücretsiz çözülür."
-  - q: "Arçelik E02 hatası nedir?"
-    a: "E02 makinenin su alamadığını gösterir. Musluğun açık olduğunu, giriş süzgecinin tıkalı olmadığını ve hortumun bükülmediğini kontrol et."
+  - q: "Arçelik çamaşır makinesi hata kodları neden modele göre değişiyor?"
+    a: "Arçelik (ve aynı çatıdaki Beko, Grundig) yıllar içinde farklı elektronik platformlar kullandı; bu yüzden aynı kod (örneğin E01) bir modelde kapı, başka bir modelde ısıtma anlamına gelebilir. Bu yüzden kodu arıza türüyle birlikte değerlendirmek gerekir."
+  - q: "Arçelik makinesi su atmıyor, hangi kodu verir?"
+    a: "Tahliye sorununda genelde 'su atma/pompa' grubu bir kod (sık olarak E03 veya E05) çıkar. En sık sebep tıkalı tahliye filtresidir — alt kapaktaki filtreyi temizlemek çoğu zaman ücretsiz çözer."
+  - q: "Kod yerine ışıklar yanıp sönüyorsa?"
+    a: "Bazı Arçelik/Beko modelleri kod yerine yanıp sönen ışık deseni gösterir. Hangi ışığın kaç kez yandığı arızayı işaret eder; kılavuzdaki tabloya bak ya da belirtiyi Benservis'e yaz."
   - q: "Beko ve Grundig'te de aynı kodlar mı?"
-    a: "Büyük ölçüde evet. Arçelik, Beko ve Grundig aynı çatı altında benzer platformu kullanır; kodlar yakındır, ancak bazı modellerde önek 'E' yerine 'H' olabilir."
-  - q: "Kod tekrar tekrar çıkıyorsa ne yapmalıyım?"
-    a: "Reset sonrası kod hemen geri geliyorsa arızanın kaynağı sürüyordur. Modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti gör."
+    a: "Büyük ölçüde evet; Arçelik, Beko ve Grundig benzer platform kullanır. Yine de kod öneki (E ya da H) ve numaralandırma model serisine göre değişebilir."
 ---
 
-Arçelik çamaşır makinen ekranında **E** (bazı modellerde H) ile başlayan bir hata kodu gösteriyor (E01, E02, E03…). Arçelik (ve aynı çatıdaki **Beko, Grundig**) bu kodlarla arızayı işaret eder. İyi haber: en sık çıkan kodların bir kısmı basit, **evde ücretsiz** çözülebilen sorunlardır. Bu rehberde kodların anlamını, **kendin çözebileceklerini** ve 2026 tahmini fiyatları paylaşıyoruz.
+Arçelik çamaşır makinen ekranında bir hata kodu (E01, E03, H1…) ya da yanıp sönen ışık deseni gösteriyor. Arçelik (ve aynı çatıdaki **Beko, Grundig**) bu kodlarla arızayı bildirir. Ancak önemli bir nokta var: **Arçelik/Beko kod şeması model serisine göre belirgin biçimde değişir** — aynı numara farklı modelde farklı anlama gelebilir. Bu yüzden bu rehberde kodları **arıza türüyle birlikte** topladık; en güvenilir yaklaşım budur.
 
-> ⚠️ Kodların anlamı model/seriye göre değişebilir; bazı modellerde önek "E" yerine "H"dır. Kesin teşhis için kılavuzuna bak ya da kodu Benservis'e yaz.
+> ⚠️ Aynı kod modele göre farklı anlama gelebilir. Aşağıdakiler en yaygın eşleşmelerdir; kesin teşhis için modelini ve kodu [Benservis'e](/) yaz.
 
-## Arçelik çamaşır makinesi en sık hata kodları
+## ⚡ En sık karşılaşılan arızalar
+> **Su atamıyor (tahliye)** — genelde tıkalı filtre → 🛠️ kendin
+>
+> **Su alamıyor** — musluk/giriş filtresi → 🛠️ kendin
+>
+> **Kapı kilidi kapanmadı** → 🛠️ kapağı tam kapat
 
-| Kod | Anlamı | Olası neden | Ne yapmalı |
-|-----|--------|-------------|------------|
-| E01 | Kapı kilidi kapanmadı | Kapı tam kapanmamış, kilit arızası | Kapağı "klik" sesiyle kapat; geçmezse servis |
-| E02 | Su alamıyor | Musluk kapalı, giriş süzgeci/hortum tıkalı | Musluğu aç, süzgeci temizle, hortumu kontrol et |
-| E03 | Su atamıyor (tahliye) | Tahliye filtresi/pompası tıkalı, hortum bükük | Tahliye filtresini temizle, hortumu kontrol et |
-| E07 | Su seviye sensörü (basınç anahtarı) | Hava hortumu/sensör arızası | Genelde servis |
-| H1 | Isıtma sensörü (NTC) | Sensör/rezistans | Servis |
+## Arçelik / Beko çamaşır makinesi kodları (arıza türüne göre)
+🛠️ = çoğu zaman kendin çözebilirsin · 🔧 = servis gerekir
 
-## Kendin çözebileceğin kodlar (E02, E03)
-Su alma ve tahliye kodları en sık ve en kolay çözülenlerdir:
-1. **Musluğu sonuna kadar aç.**
-2. **Giriş süzgecini temizle** (musluk–hortum bağlantısındaki küçük süzgeç).
-3. **Tahliye filtresini temizle** — alt ön kapağı aç (havlu hazırla), filtreyi çıkar, tüy/parçayı temizle.
-4. **Hortumları düzelt**, bükük/ezik olmasın.
-5. **Resetle:** program "Kapalı", fişi 1 dakika çek; çocuk kilidi açık mı bak.
+| Arıza türü | Sık görülen kod(lar) | Ne yapmalı |
+|------------|----------------------|------------|
+| Kapı kilidi kapanmadı | E01 / E09 / E10 (seriye göre) | 🛠️ Kapağı "klik" sesiyle kapat; geçmezse 🔧 |
+| Su alamıyor | E02 / E04 | 🛠️ Musluğu aç, giriş süzgecini temizle, hortumu kontrol et |
+| Su atamıyor (tahliye) | E03 / E05 | 🛠️ Tahliye filtresini ve hortumu temizle |
+| Su seviye sensörü (basınç anahtarı) | E07 | 🔧 Servis (hava hortumu/sensör) |
+| Motor / tako (kömür) | E06 / E11 | 🔧 Servis |
+| Isıtma (NTC / rezistans) | E01 / E02 / E03 veya **H1** (seriye göre) | 🔧 Servis |
+| Aşırı köpük | E17 | 🛠️ Daha az deterjan kullan |
+| Dengesiz yük / sıkamıyor | E18 | 🛠️ Yükü dağıt, tek ağır parçayı böl |
 
-## Servis gerektiren kodlar (E07, H1, kilit)
-Su seviye sensörü (E07), ısıtma (H1) ve düzelmeyen kapı kilidi (E01) kodları servis ister.
+> Not: Tabloda bazı numaralar birden çok arızada görünür — çünkü kod anlamı modele göre değişir. Kodun **kendisinden** çok, makinenin **ne yapmadığına** (su almıyor mu, atmıyor mu, ısıtmıyor mu) bakmak daha güvenilirdir.
+
+## Öne çıkan arızalar
+
+### Su atamıyor / sıkmıyor (en sık)
+En sık sebep **tıkalı tahliye filtresi**. Alt ön kapağı aç (havlu hazırla, su gelir), filtreyi çevirip çıkar, tüy/parçayı temizle, tak. Tahliye hortumunu da kontrol et. Çoğu zaman ücretsiz.
+
+### Su alamıyor
+Musluğu sonuna kadar aç, giriş hortumundaki küçük süzgeci temizle, hortumun bükük olmadığını kontrol et.
+
+### Isıtma / sensör kodları
+Isıtma (NTC/rezistans) ve su seviye sensörü (basınç anahtarı) kodları uzmanlık ister; kendin müdahale etme, servis çağır.
+
+## Hata kodu nasıl sıfırlanır?
+Program düğmesini **"Kapalı"ya** al, makineyi **fişten 1 dakika** çek, çocuk kilidi açık mı bak. Arıza sürüyorsa kod tekrar çıkar.
 
 ## Tahmini tamir maliyeti
 Arçelik dâhil parça parça 2026 İstanbul tahminleri: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/).
 
-İlgili rehberler: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
+İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Sıkmıyor / su atmıyor](/blog/camasir-makinesi-sikmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
 
 ## Sık sorulan sorular
 
-**E03 ne demek?**
-Tahliye sorunu; makine su atamıyor. En sık sebep tıkalı filtre/hortum — çoğu zaman ücretsiz.
+**Kodlar neden modele göre değişiyor?**
+Arçelik/Beko yıllar içinde farklı platformlar kullandı; aynı kod farklı modelde farklı anlama gelebilir.
 
-**E02 nedir?**
-Makine su alamıyor; musluk, süzgeç ve hortumu kontrol et.
+**Su atmıyor, hangi kod?**
+Genelde tahliye/pompa grubu (sık olarak E03/E05); en sık sebep tıkalı filtredir, ücretsiz çözülür.
+
+**Işıklar yanıp sönüyorsa?**
+Bazı modeller kod yerine ışık deseni gösterir; kılavuza bak ya da belirtiyi Benservis'e yaz.
 
 **Beko/Grundig'te aynı mı?**
-Büyük ölçüde evet; kodlar yakındır, önek bazı modellerde "H" olabilir.
-
-**Kod tekrar çıkıyorsa?**
-Arıza sürüyordur; modelini ve kodu Benservis'e yaz, tahmini maliyeti gör.
+Büyük ölçüde evet; önek (E/H) ve numara seriye göre değişebilir.
