@@ -14,15 +14,12 @@ const BELIRTILER = {
   "Bulaşık Makinesi": ["Su tahliye etmiyor", "Temiz yıkamıyor", "Su almıyor", "Hata kodu veriyor"],
   "Fırın / Ocak / Aspiratör": ["Isınmıyor", "Ocak gözü yanmıyor", "Aspiratör çekmiyor / koku", "Fan çalışmıyor", "Kapı/cam sorunu"],
   "Klima": ["Soğutmuyor", "Su damlatıyor", "Koku yapıyor", "Hiç çalışmıyor"],
-  "Kombi": ["Sıcak su gelmiyor", "Petekler ısınmıyor", "Basınç düşüyor", "Arıza kodu veriyor"],
+  "Kombi / Şofben": ["Sıcak su gelmiyor", "Petekler ısınmıyor", "Su ısıtmıyor", "Basınç düşüyor", "Su akıtıyor", "Arıza kodu veriyor"],
   "Televizyon": ["Açılmıyor", "Görüntü yok ses var", "Ekranda çizgiler", "Uygulama/bağlantı sorunu"],
-  "Termosifon / Şofben": ["Su ısıtmıyor", "Su akıtıyor", "Yetersiz ısınıyor", "Hiç çalışmıyor"],
   "Mikrodalga / Air Fryer": ["Isıtmıyor / pişirmiyor", "Çalışmıyor", "Fan sesi/koku", "Düğme/ekran sorunu"],
   "Süpürge": ["Çekiş zayıf", "Çalışmıyor", "Şarj tutmuyor", "Ses/koku var"],
   "Su Sebili / Arıtma": ["Su gelmiyor", "Su akıtıyor", "Soğutmuyor/ısıtmıyor", "Tat/koku sorunu"],
-  "Bilgisayar": ["Açılmıyor", "Görüntü gelmiyor", "Donma / yavaşlama", "Aşırı ısınma / ses"],
-  "Yazıcı": ["Yazdırmıyor", "Kağıt sıkışması", "Baskı kalitesi bozuk", "Bağlantı sorunu"],
-  "Diğer": [],
+  "Bilgisayar / Yazıcı": ["Açılmıyor", "Yazdırmıyor", "Donma / yavaşlama", "Kağıt sıkışması", "Aşırı ısınma / ses", "Bağlantı sorunu"],
 };
 
 // Gömülü referans tarife (matristen türetilmiş, TR 2026 tahmini) — AI maliyeti buna göre çıpalar
@@ -32,16 +29,12 @@ const SEED = {
   "Bulaşık Makinesi": [["Tahliye pompası",400,900,700],["Su giriş valfi",350,700,600],["Rezistans/ısıtıcı",600,1400,800]],
   "Fırın / Ocak / Aspiratör": [["Rezistans",350,800,600],["Termostat",300,700,500],["Fan motoru",500,1200,700],["Aspiratör motoru",500,1300,600],["Aspiratör anahtar/kart/lamba",200,700,400]],
   "Klima": [["Gaz dolumu",600,1200,700],["Kapasitör",300,700,500],["Kompresör",2500,5500,1500]],
-  "Kombi": [["3 yollu vana",700,1400,800],["Sirkülasyon pompası",1200,2500,900],["Eşanjör",1500,4000,1200]],
+  "Kombi / Şofben": [["3 yollu vana",700,1400,800],["Sirkülasyon pompası",1200,2500,900],["Eşanjör",1500,4000,1200],["Rezistans (şofben)",400,900,500],["Termostat",300,600,400]],
   "Televizyon": [["Backlight LED bar",700,1800,900],["Besleme kartı",600,1500,800],["Panel",3000,8000,1500]],
-  "Termosifon / Şofben": [["Rezistans",400,900,500],["Termostat",300,600,400],["Anot/temizlik",300,700,500]],
   "Mikrodalga / Air Fryer": [["Magnetron (mikrodalga)",700,1500,600],["Rezistans (air fryer)",300,700,400],["Fan/termostat/kart",300,900,400]],
   "Süpürge": [["Motor",600,1500,500],["Batarya (şarjlı)",500,1500,400],["Fırça/sensör/anakart",400,2500,500]],
   "Su Sebili / Arıtma": [["Filtre seti",400,1200,300],["Pompa/membran",700,1800,600]],
-  "Air Fryer": [["Rezistans",300,700,400],["Fan motoru",300,800,400],["Termostat/kart",300,900,400]],
-  "Bilgisayar": [["Güç kaynağı / şarj soketi",300,2000,400],["Ekran kartı/RAM/disk",1000,6000,400],["Anakart",1500,5000,600],["Ekran/menteşe (laptop)",1200,4000,600]],
-  "Yazıcı": [["Kafa/kartuş sistemi",400,1500,400],["Kağıt besleme/merdane",300,900,500],["Anakart/elektronik",500,1500,600]],
-  "Diğer": [],
+  "Bilgisayar / Yazıcı": [["Güç kaynağı / şarj soketi",300,2000,400],["Ekran kartı/RAM/disk",1000,6000,400],["Anakart",1500,5000,600],["Ekran/menteşe (laptop)",1200,4000,600],["Yazıcı kafa/kartuş",400,1500,400],["Kağıt besleme/merdane",300,900,500]],
 };
 
 function refMetni(cihaz) {
@@ -482,6 +475,7 @@ const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8",
 
 const CSS = `
 * { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: hidden; }
 @keyframes anspin { to { transform: rotate(360deg); } }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
 input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }
@@ -517,7 +511,7 @@ const s = {
   oneriBox: { marginTop: 16, padding: "14px 15px", background: "#F1F5F9", borderRadius: 14 },
   oneriLabel: { fontSize: 12.5, fontWeight: 700, color: MUTED },
   oneriWrap: { display: "flex", flexWrap: "wrap", gap: 8, marginTop: 11 },
-  oneriChip: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, padding: "8px 14px", borderRadius: 999, border: `1px solid ${HAIR}`, background: SURFACE, color: INK, fontWeight: 600, transition: "all .15s", boxShadow: "0 1px 1px rgba(30,41,59,.03)" },
+  oneriChip: { flex: "1 1 auto", justifyContent: "center", display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, padding: "8px 14px", borderRadius: 999, border: `1px solid ${HAIR}`, background: SURFACE, color: INK, fontWeight: 600, transition: "all .15s", boxShadow: "0 1px 1px rgba(30,41,59,.03)" },
   oneriChipActive: { background: AMBER, color: "#fff", border: `1px solid ${AMBER}`, boxShadow: "0 6px 14px -6px rgba(37,99,235,.55)" },
   oneriChipIkon: { fontSize: 13, fontWeight: 800, opacity: 0.85, lineHeight: 1 },
   row: { display: "flex", gap: 12, alignItems: "flex-start" },

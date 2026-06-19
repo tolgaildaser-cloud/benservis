@@ -1,8 +1,8 @@
 // src/constants.js
 export const CIHAZLAR = [
   "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Fırın / Ocak / Aspiratör", "Klima",
-  "Kombi", "Televizyon", "Termosifon / Şofben", "Mikrodalga / Air Fryer", "Süpürge",
-  "Su Sebili / Arıtma", "Bilgisayar", "Yazıcı", "Diğer",
+  "Kombi / Şofben", "Televizyon", "Mikrodalga / Air Fryer", "Süpürge",
+  "Su Sebili / Arıtma", "Bilgisayar / Yazıcı",
 ];
 
 // Birleştirilen cihazların eski kategori adlarıyla eşleştirilmesi —
@@ -10,11 +10,14 @@ export const CIHAZLAR = [
 // gibi adlar tutuyor; birleştirme sonrası eşleşme kopmasın diye genişletilir.
 export const KATEGORI_ESLES = {
   "Süpürge": ["Süpürge", "Elektrik Süpürgesi", "Robot Süpürge"],
-  "Bilgisayar": ["Bilgisayar", "Masaüstü Bilgisayar", "Notebook"],
   "Mikrodalga / Air Fryer": ["Mikrodalga / Air Fryer", "Mikrodalga", "Air Fryer"],
   // Aspiratör/davlumbaz, "Fırın / Ocak" mutfak ankastre segmentine katıldı; eski servis
   // kayıtları "Fırın / Ocak" tuttuğu için eşleşme kopmasın diye genişletildi.
   "Fırın / Ocak / Aspiratör": ["Fırın / Ocak / Aspiratör", "Fırın / Ocak", "Fırın", "Ocak", "Aspiratör", "Davlumbaz"],
+  // Kombi + Termosifon/Şofben birleşti; eski servis kayıtları ayrı adlar tuttuğu için genişletildi.
+  "Kombi / Şofben": ["Kombi / Şofben", "Kombi", "Termosifon / Şofben", "Termosifon", "Şofben"],
+  // Bilgisayar + Yazıcı birleşti.
+  "Bilgisayar / Yazıcı": ["Bilgisayar / Yazıcı", "Bilgisayar", "Masaüstü Bilgisayar", "Notebook", "Yazıcı"],
 };
 
 // Bir cihaz için eşleşecek tüm kategori adları (birleştirme dahil).
@@ -76,14 +79,12 @@ export const CIHAZ_MARKALARI = {
   "Fırın / Ocak / Aspiratör": [...BEYAZ_ESYA, "Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica"].sort((a, b) => a.localeCompare(b, "tr")),
   "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort((a, b) => a.localeCompare(b, "tr")),
   "Klima": ISITMA_SOGUTMA,
-  "Kombi": ISITMA_SOGUTMA,
-  "Termosifon / Şofben": ISITMA_SOGUTMA,
+  "Kombi / Şofben": ISITMA_SOGUTMA,
   "Televizyon": ["Arçelik", "Awox", "Beko", "Grundig", "Hisense", "LG", "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Sony", "TCL", "Thomson", "Toshiba", "Vestel"],
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort((a, b) => a.localeCompare(b, "tr")),
   "Su Sebili / Arıtma": ["Arçelik", "Aqua", "Beko", "Coway", "Homefil", "Samsung", "Vestel", "Waterlife"],
-  "Bilgisayar": BILGISAYAR,
-  "Yazıcı": ["Brother", "Canon", "Epson", "HP", "Lexmark", "Pantum", "Ricoh", "Samsung", "Xerox"],
-  // "Diğer" ve haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
+  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, "Brother", "Canon", "Epson", "Lexmark", "Pantum", "Ricoh", "Xerox"])].sort((a, b) => a.localeCompare(b, "tr")),
+  // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
 
 // Bir cihaz için marka listesi döndürür — yoksa tüm MARKALAR.
