@@ -17,6 +17,8 @@ faq:
 
 Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve 2026 için tahmini fiyatları bulacaksın.
 
+**Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
+
 ## Bulaşık makinesi neden su almaz? Olası nedenler
 
 **1. Su musluğu kapalı veya yarı açık (en sık, ücretsiz).** Musluk tam açık değilse makineye yeterli su gitmez.

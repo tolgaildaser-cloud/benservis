@@ -17,6 +17,8 @@ faq:
 
 Klimayı yazın ilk açtığında kötü koku, zayıf soğutma ya da damlama yaşıyorsan, cihaz büyük ihtimalle **bakım istiyor**. Klima bakımı; hem faturanı düşüren hem de pahalı arızaları önleyen, küçük ama önemli bir yatırımdır. Bu yazıda bakımın ne sıklıkla ve kaça yapıldığını, içinde neler olduğunu ve atlanırsa ne olacağını anlatıyoruz.
 
+**Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda bakım kapsamı ve maliyet büyük ölçüde benzerdir.
+
 ## Klima bakımı ne sıklıkla yapılmalı?
 
 - **Yılda en az 1 kez** — ideali **yaz sezonu başlamadan** (Mayıs–Haziran).

@@ -17,6 +17,8 @@ faq:
 
 Çamaşır makinesi bozulunca ilk merak edilen şey **fiyat**. Cevap arızaya bağlı: tıkalı bir filtre neredeyse bedava çözülürken, rulman değişimi işçilik nedeniyle epey tutabilir. Bu yazıda 2026 İstanbul için **parça parça tahmini fiyatları**, fiyatı neyin belirlediğini ve "tamir mi yenisi mi" kararını netleştiriyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi markalarda fiyatlar benzer aralıktadır. Ekranda hata kodu varsa markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
+
 ## Çamaşır makinesi tamir fiyatını ne belirler?
 
 - **Arızanın türü:** Filtre/valf ucuz; rulman ve kart pahalı (özellikle işçilik).

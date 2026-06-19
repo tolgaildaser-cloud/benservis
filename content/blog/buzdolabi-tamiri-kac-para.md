@@ -17,6 +17,8 @@ faq:
 
 Buzdolabı bozulunca akla gelen ilk soru: **"Acaba ne kadar tutar?"** Cevap tamamen arızaya bağlı — basit bir conta değişimi ile kompresör değişimi arasında ciddi fark var. Bu yazıda 2026 İstanbul için **parça parça tahmini fiyatları**, fiyatı neyin belirlediğini ve "tamir mi yenisi mi" kararını netleştiriyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi markalarda fiyatlar benzer aralıktadır; ankastre ve ithal modellerde parça biraz daha pahalıdır.
+
 ## Buzdolabı tamir fiyatını ne belirler?
 
 - **Arızanın türü:** Conta/termostat ucuz; kompresör/gaz pahalı.

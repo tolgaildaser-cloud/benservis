@@ -17,6 +17,8 @@ faq:
 
 Çamaşır makinesi özellikle **sıkma** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve 2026 tahmini fiyatları anlatıyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler ve maliyet benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
+
 ## Gürültü ve titreşimin nedenleri
 
 **1. Takılı nakliye cıvataları (yeni kurulumda).** Makinenin arkasındaki transport cıvataları kurulumda sökülmezse şiddetli titreşim olur. İlk bakılacak yer burasıdır.

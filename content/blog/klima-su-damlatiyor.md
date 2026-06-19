@@ -17,6 +17,8 @@ faq:
 
 Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğu zaman ciddi bir arıza değil — ama **ihmal edilirse** duvarına, elektroniğe ve eşyana zarar verebilir. İyi haber: en sık sebep basit bir tıkanıklık. Bu yazıda klimanın neden su damlattığını, **servisi aramadan önce kendin kontrol edebileceklerini** ve 2026 için tahmini fiyatları paylaşıyoruz.
 
+**Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve maliyet büyük ölçüde benzerdir.
+
 ## Klima neden su damlatır? Olası nedenler
 
 **1. Tıkalı tahliye (drenaj) hattı (en sık sebep).** Klima soğuturken oluşan yoğuşma suyu bir hortumla dışarı atılır. Bu hat toz, küf ya da böcekle tıkanırsa su dışarı akamaz ve iç üniteden taşar.

@@ -17,6 +17,8 @@ faq:
 
 Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve 2026 tahmini fiyatları paylaşıyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler benzerdir. Yanıp sönen ışık bir hata kodu olabilir — markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
+
 ## Işık yanıp sönmesi ne anlama gelir? Olası nedenler
 
 **1. Kapı/kapak tam kapanmadı (en sık ve en kolay).** Kapı kilidi "klik" yapmazsa makine programı başlatmaz, çoğu modelde uyarı ışığı yanıp söner.

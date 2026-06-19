@@ -17,6 +17,8 @@ faq:
 
 Program bitti ama bulaşık makinesinin **tabanında su kaldı** — makine suyu boşaltamamış. Sık görülen bu sorun çoğu zaman basit bir tıkanıklık ve evde çözülebiliyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve 2026 tahmini fiyatları anlatıyoruz.
 
+**Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
+
 ## Bulaşık makinesi neden su atmaz? Olası nedenler
 
 **1. Tıkalı filtre (en sık).** Tabandaki filtre yemek artığı, cam kırığı ya da çekirdekle tıkanırsa su gidemez.

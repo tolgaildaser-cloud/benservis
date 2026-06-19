@@ -17,6 +17,8 @@ faq:
 
 Bulaşık makinesi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: tıkalı bir filtre ya da yanlış kullanım çoğu zaman bedava çözülürken, pompa ya da kart arızası daha maliyetlidir. Bu yazıda 2026 İstanbul için **parça parça tahmini fiyatları**, fiyatı neyin belirlediğini ve "tamir mi yenisi mi" kararını netleştiriyoruz.
 
+**Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi markalarda fiyatlar benzer aralıktadır. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
+
 ## Bulaşık makinesi tamir fiyatını ne belirler?
 
 - **Arızanın türü:** Filtre/valf ucuz; pompa, rezistans ve kart pahalı.

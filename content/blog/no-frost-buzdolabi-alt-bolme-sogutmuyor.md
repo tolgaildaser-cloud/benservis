@@ -17,6 +17,8 @@ faq:
 
 No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olması en sık görülen ve en kafa karıştırıcı arızalardan biridir. Sebebi aslında mantıklı: bu modellerde tek bir soğutucu (evaporatör) buzlukta durur ve soğuk havayı **fanla** alt bölmeye üfler. Bu zincirin bir halkası kopunca buzluk soğur, dolap soğumaz. Bu yazıda nedenleri, **kendi yapabileceğin testi** ve 2026 fiyatlarını anlatıyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi no-frost buzdolaplarında nedenler ve maliyet büyük ölçüde benzerdir.
+
 ## Alt bölme neden soğumaz? Olası nedenler
 
 **1. Fan motoru arızası (en sık).** Soğuk havayı alt bölmeye üfleyen fan dönmezse, buzluk soğur ama dolaba hava gitmez. Çoğu zaman fandan önce uğultu/çığlık sesi gelir.

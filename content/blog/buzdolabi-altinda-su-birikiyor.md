@@ -17,6 +17,8 @@ faq:
 
 Buzdolabının altında, sebze gözünde ya da önünde su birikmesi sık görülen ve çoğu zaman **evde, ücretsiz çözülebilen** bir sorundur. En yaygın sebep küçük bir tıkanıklık. Bu yazıda suyun nereden geldiğini, **kendin nasıl temizleyeceğini** ve servis gerekirse 2026 tahmini fiyatları anlatıyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi buzdolaplarında nedenler ve çözüm büyük ölçüde benzerdir.
+
 ## Su nereden geliyor? Olası nedenler
 
 **1. Tıkalı tahliye deliği (en sık).** Buz çözme (defrost) sırasında oluşan su, dolabın arka iç duvarındaki küçük delikten arkadaki tavaya akar. Bu delik yiyecek artığı veya buzla tıkanırsa su içeride birikir.

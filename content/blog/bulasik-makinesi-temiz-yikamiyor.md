@@ -17,6 +17,8 @@ faq:
 
 Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıktı. İyi haber: "temiz yıkamama" sorunlarının büyük kısmı arıza değil, **bakım ve kullanım** kaynaklı — yani evde, ücretsiz çözülüyor. Bu yazıda 6 olası nedeni, **kendi yapabileceğin çözümleri** ve servis gerekirse 2026 tahmini fiyatları anlatıyoruz.
 
+**Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler ve çözüm benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
+
 ## Bulaşık makinesi neden temiz yıkamaz? 6 olası neden
 
 **1. Tıkalı veya dönmeyen püskürtme kolları (en sık).** Alt ve üst dönen kolların delikleri yemek artığı/kireçle tıkanırsa su bulaşıklara ulaşmaz.

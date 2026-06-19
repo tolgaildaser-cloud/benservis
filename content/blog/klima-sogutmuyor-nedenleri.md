@@ -17,6 +17,8 @@ faq:
 
 Yaz geldi, klimayı açtın ama oda bir türlü serinlemiyor. Panikleyip hemen servise koşmadan önce iyi haber: klima soğutmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden soğutmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda 2026 için tahmini fiyatları paylaşıyoruz.
 
+**Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve maliyet büyük ölçüde benzerdir.
+
 ## Klima neden soğutmaz? 6 olası neden
 
 **1. Kirli hava filtresi (en sık sebep).** Tıkalı filtre hava akışını boğar; klima çalışır ama oda soğumaz. Çoğu "soğutmuyor" şikâyetinin altından bu çıkar.

@@ -17,6 +17,8 @@ faq:
 
 Buzdolabını açtın, ışık yanıyor, motor sesi de geliyor — ama içerisi soğuk değil. Bu kafa karıştırıcı bir durum: cihaz "çalışıyor" gibi görünür ama soğutmaz. İyi haber, sebeplerin bir kısmı basit ve evde çözülebilir. Bu yazıda 6 olası nedeni, **servis çağırmadan önce kendin kontrol edebileceklerini** ve 2026 için tahmini tamir fiyatlarını paylaşıyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi buzdolaplarında nedenler ve maliyet büyük ölçüde benzerdir.
+
 ## Buzdolabı neden soğutmaz? 6 olası neden
 
 **1. Kapı contası bozuk (en sık ve en ucuz).** Conta esnekliğini yitirince kapı tam sızdırmaz; soğuk dışarı kaçar, motor sürekli çalışır ama içerisi soğumaz.

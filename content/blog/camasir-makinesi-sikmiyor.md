@@ -17,6 +17,8 @@ faq:
 
 Yıkama bitti ama çamaşırlar sırılsıklam — makine sıkmamış ya da suyu atmamış. Sinir bozucu ama çoğu zaman sebep basit ve evde, dakikalar içinde çözülüyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve 2026 tahmini tamir fiyatlarını bulacaksın.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler benzerdir. Ekranda hata kodu varsa markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
+
 ## Çamaşır makinesi neden sıkmaz / su atmaz?
 
 **1. Tıkalı tahliye filtresi (en sık).** Alt ön kapaktaki filtre tüy, bozuk para, düğme ile tıkanır; makine suyu atamayınca sıkmaya geçmez.

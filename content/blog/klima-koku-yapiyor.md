@@ -17,6 +17,8 @@ faq:
 
 Klimayı açtığın anda odaya yayılan küf, rutubet ya da kötü koku hem rahatsız edici hem de çoğu zaman **sağlıksız bir havanın işareti**. İyi haber: kokuların büyük kısmı temizlikle çözülür. Ama bazı kokular (özellikle yanık) ciddi uyarıdır. Bu yazıda hangi kokunun neyi gösterdiğini, **kendin neyi çözebileceğini** ve ne zaman servis gerektiğini anlatıyoruz.
 
+**Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve çözüm büyük ölçüde benzerdir.
+
 ## Klimadan koku gelmesinin sebepleri
 
 **1. İç ünitede küf ve bakteri (en sık).** Soğutma sırasında oluşan nem, evaporatör ve tavada küf/bakteri üretir. Klima açılınca bu koku odaya üflenir — tipik "rutubet / bayat" kokusu.

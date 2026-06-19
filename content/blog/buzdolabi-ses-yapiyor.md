@@ -17,6 +17,8 @@ faq:
 
 Buzdolabı sessiz bir cihaz değildir — ama **sesin türü** çoğu zaman neyin olup bittiğini söyler. Bazı sesler tamamen normaldir; bazıları ise basit bir ayar ya da yaklaşan bir arıza işaretidir. Bu yazıda hangi sesin ne anlama geldiğini, **kendin neyi çözebileceğini** ve 2026 tahmini fiyatları paylaşıyoruz.
 
+**Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi buzdolaplarında sesler ve nedenleri büyük ölçüde benzerdir.
+
 ## Hangi ses neyin habercisi?
 
 **Mırıltı / hafif vızıltı — genelde NORMAL.** Kompresörün çalışma sesidir. Yeni nesil dolaplarda bazen daha belirgindir.
