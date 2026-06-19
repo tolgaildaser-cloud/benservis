@@ -196,7 +196,7 @@ fs.writeFileSync(
     title: "Benservis Rehber — cihaz arızaları ve tamir maliyetleri",
     desc: "Cihaz arızalarının nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları.",
     canonical: `${SITE}/blog/`,
-    body: `<h1>Rehber</h1><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="bloglist">${cards}</div>`,
+    body: `<h1>Cihaz Arıza Rehberi</h1><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="bloglist">${cards}</div>`,
   })
 );
 
