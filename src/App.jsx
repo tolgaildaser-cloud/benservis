@@ -226,6 +226,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const kararRenk = { tamir: "#22C55E", yenisi: "#DC2626", belirsiz: "#64748B" };
   const kararEtiket = { tamir: "TAMİR ETTİR", yenisi: "YENİSİNİ AL", belirsiz: "BELİRSİZ" };
   const oneriler = BELIRTILER[cihaz] || [];
+  // "Teşhis et" yalnız üç zorunlu alan (cihaz + marka + belirti) dolunca aktif görünür.
+  const formHazir = !!cihaz && !!marka && belirti.trim().length >= 4;
 
   return (
     <div style={s.wrap}>
@@ -349,15 +351,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
 
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
-          {/* Cihaz seçimi ZORUNLU — seçilmeden teşhis yapılamaz (buton kilitli + tesisEt guard'ı) */}
+          {/* ZORUNLU alanlar (cihaz + marka + belirti) dolmadan buton aktif görünmez (tesisEt guard'ı da var) */}
           <button
-            style={{ ...s.cta, ...(cihaz ? {} : { opacity: 0.45, cursor: "not-allowed", boxShadow: "none" }) }}
+            style={{ ...s.cta, ...(formHazir ? {} : { opacity: 0.45, cursor: "not-allowed", boxShadow: "none" }) }}
             onClick={tesisEt}
-            disabled={!cihaz}
+            disabled={!formHazir}
           >Teşhis et →</button>
-          {!cihaz && (
+          {!formHazir && (
             <p style={{ fontSize: 12.5, color: "#94A3B8", textAlign: "center", margin: "8px 0 0" }}>
-              Devam etmek için önce bir cihaz seçin.
+              {!cihaz ? "Önce bir cihaz seçin." : !marka ? "Marka seçin." : "Arıza belirtisini yazın."}
             </p>
           )}
           <p style={s.disclaimer}>Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>
