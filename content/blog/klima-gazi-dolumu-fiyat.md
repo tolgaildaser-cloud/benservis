@@ -15,7 +15,7 @@ faq:
     a: "Hayır. Gaz azaldıysa kaçak vardır; kaçak bulunup onarılmadan yapılan dolum kısa sürede yine biter."
 ---
 
-"Klima gaz mı bitirdi?" — yazın en çok duyulan cümlelerden. Aslında klima gazı normalde **bitmez**; azalıyorsa bir kaçak vardır. Bu yazıda gazın ne zaman gerçekten gerektiğini, gaz tiplerini, 2026 tahmini fiyatları ve "kazık yememek" için dikkat edilecekleri anlatıyoruz.
+"Klima gaz mı bitirdi?" — yazın en çok duyulan cümlelerden. Aslında klima gazı normalde **bitmez**; azalıyorsa bir kaçak vardır. Bu yazıda gazın ne zaman gerçekten gerektiğini, gaz tiplerini, 2026 tahmini fiyatları ve doğru maliyeti ödemek için dikkat edilecekleri anlatıyoruz.
 
 **Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve maliyet büyük ölçüde benzerdir.
 

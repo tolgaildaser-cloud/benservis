@@ -33,7 +33,7 @@ Maliyet tahminimiz havadan değil; **gerçek ve güncel tarife verisine** çıpa
 - **Şeffaflık:** Verdiğimiz rakam bir **ön tahmindir**, kesin değildir; kesin fiyatı işi yapan servis belirler. Amacımız seni bilgilendirmek, korkutmak değil.
 
 ## Kimin için?
-Cihazı bozulan, "kazık yememek" ve **önce öğrenip sonra çağırmak** isteyen herkes için. Bilinçli müşteri = hem senin için hem iyi servis için kazançlı bir başlangıç.
+Cihazı bozulan, **doğru maliyeti ödemek** ve **önce öğrenip sonra çağırmak** isteyen herkes için. Bilinçli müşteri = hem senin için hem iyi servis için kazançlı bir başlangıç.
 
 ## İletişim
 Soru, öneri ya da iş birliği için: **benservis.app@gmail.com**
