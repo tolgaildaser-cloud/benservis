@@ -15,7 +15,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONTENT = path.join(ROOT, "content", "blog");
 const DIST = path.join(ROOT, "dist");
 const OUT = path.join(DIST, "blog");
-const SITE = "https://benservis.com";
+const SITE = "https://www.benservis.com";
 
 const esc = (s) =>
   String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
