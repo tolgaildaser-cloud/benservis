@@ -53,6 +53,17 @@ const iconSvg = (cat, cls) =>
 const heroFor = (cat) =>
   `<div class="hero">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
 
+// iFixit-tarzı rehber meta kutusu (zorluk · süre · maliyet · gerekenler) — frontmatter `guide` varsa.
+function guideMeta(g) {
+  if (!g) return "";
+  const it = [];
+  if (g.difficulty) it.push(`<span class="gm"><b>Zorluk</b>${esc(g.difficulty)}</span>`);
+  if (g.time) it.push(`<span class="gm"><b>Süre</b>${esc(g.time)}</span>`);
+  if (g.cost) it.push(`<span class="gm"><b>Maliyet</b>${esc(g.cost)}</span>`);
+  if (Array.isArray(g.tools) && g.tools.length) it.push(`<span class="gm"><b>Gerekenler</b>${g.tools.map(esc).join(", ")}</span>`);
+  return `<div class="guide-meta">${it.join("")}</div>`;
+}
+
 const CSS = `
 ${T.FONT_IMPORT}
 *{box-sizing:border-box}
@@ -76,6 +87,9 @@ main{padding:40px 0 64px}
 .hero-cat{position:relative;z-index:1;color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.92}
 h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 8px}
 .meta{color:${T.FAINT};font-size:14px;margin:0 0 28px}
+.guide-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 26px;padding:14px 18px;background:#EFF4FF;border:1px solid ${T.HAIR};border-radius:14px}
+.guide-meta .gm{display:flex;flex-direction:column;font-size:14.5px;color:${T.NAVY};font-weight:600}
+.guide-meta .gm b{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:${T.BLUE};margin-bottom:3px}
 article h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:36px 0 12px;letter-spacing:-.01em}
 article p{margin:0 0 16px}
 article ul,article ol{margin:0 0 16px;padding-left:22px}
@@ -230,7 +244,17 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(faqLd)}</script>`;
   }
-  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${p.html}${CTA}</article>`;
+  if (p.guide) {
+    const howto = {
+      "@context": "https://schema.org", "@type": "HowTo",
+      name: p.title, description: p.description, inLanguage: "tr-TR",
+      ...(p.guide.totalTime ? { totalTime: p.guide.totalTime } : {}),
+      tool: (p.guide.tools || []).map((t) => ({ "@type": "HowToTool", name: t })),
+      step: (p.steps || []).map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s, text: s })),
+    };
+    head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
+  }
+  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${p.html}${CTA}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: `${p.title} | Benservis`, desc: p.description, canonical, head, body }));
