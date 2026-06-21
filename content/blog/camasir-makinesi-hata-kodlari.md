@@ -55,7 +55,7 @@ Motor (F21/F43), su kaçağı (F23), basınç anahtarı (E07) ve ısıtma (H1) k
 ## Tahmini tamir maliyeti
 Arızaya göre değişir; parça parça 2026 İstanbul tahminleri için: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/).
 
-İlgili marka rehberleri: [Bosch çamaşır makinesi hata kodları](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik çamaşır makinesi hata kodları](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/)
+İlgili marka rehberleri: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [Samsung](/blog/samsung-camasir-makinesi-hata-kodlari/) · [LG](/blog/lg-camasir-makinesi-hata-kodlari/) çamaşır hata kodları · [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/)
 
 ## Sık sorulan sorular
 
