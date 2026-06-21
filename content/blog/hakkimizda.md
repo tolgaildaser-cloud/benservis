@@ -15,7 +15,7 @@ faq:
     a: "Puan, mesafe ve fiyat üçlüsüne göre. Komisyon sıralamaya GİRMEZ — yani bir servis bize daha çok ödediği için üste çıkmaz. Bu, tavsiyemizin tarafsız kalması içindir."
 ---
 
-**Benservis**, cihazın bozulduğunda yaşadığın o en sinir bozucu anı — *"ne olmuş olabilir, ne kadar tutar, kime güveneyim?"* — basit ve şeffaf hale getirmek için kurulduk. Düşmanımız tamirciler değil; **belirsizlik.**
+Benservis, cihazın bozulduğunda yaşadığın o en sinir bozucu anı — *"ne olmuş olabilir, ne kadar tutar, kime güveneyim?"* — basit ve şeffaf hale getirmek için kurulduk. Düşmanımız tamirciler değil; **belirsizlik.**
 
 ## Benservis nedir?
 Teknik bilmene gerek yok. Cihazını ve belirtini yazarsın; Benservis sana **olası arızayı, olasılığını ve tahmini tamir maliyetini** saniyede söyler. Ardından **yakınındaki en yüksek puanlı servisi** bulur. Teşhis tamamen **ücretsizdir**.
