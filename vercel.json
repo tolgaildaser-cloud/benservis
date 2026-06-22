@@ -1,6 +1,7 @@
 {
   "redirects": [
-    { "source": "/blog/camasir-makinesi-sikmiyor", "destination": "/blog/camasir-makinesi-su-atmiyor/", "permanent": true }
+    { "source": "/blog/camasir-makinesi-sikmiyor", "destination": "/blog/camasir-makinesi-su-atmiyor/", "permanent": true },
+    { "source": "/blog/camasir-makinesi-sikmiyor/", "destination": "/blog/camasir-makinesi-su-atmiyor/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/ariza",       "destination": "/index.html" },
