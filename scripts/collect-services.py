@@ -22,7 +22,8 @@ FIELD_MASK = (
     "places.rating,"
     "places.userRatingCount,"
     "places.location,"
-    "places.googleMapsUri"
+    "places.googleMapsUri,"
+    "places.regularOpeningHours"
 )
 
 # Kapsanan şehirler — yeni şehir eklemek için buraya isim + ilçeler yeter
@@ -132,6 +133,17 @@ def normalize_phone(place: dict):
     return raw.replace(" ", "").replace("-", "")
 
 
+def parse_hours(place: dict):
+    """Google regularOpeningHours → {periods, gunler}; yoksa None."""
+    oh = place.get("regularOpeningHours") or {}
+    if not oh:
+        return None
+    return {
+        "periods": oh.get("periods", []),
+        "gunler": oh.get("weekdayDescriptions", []),
+    }
+
+
 def parse_place(place: dict, kategoriler: list, sehir: str) -> dict:
     """Places API ham objesini uygulama formatına dönüştür."""
     name = place.get("displayName", {}).get("text", "")
@@ -150,6 +162,7 @@ def parse_place(place: dict, kategoriler: list, sehir: str) -> dict:
         "yorumSayisi": place.get("userRatingCount", 0),
         "googleMapsUrl": place.get("googleMapsUri", ""),
         "yetkili": "yetkili" in name.lower() or "authorized" in name.lower(),
+        "calismaSaatleri": parse_hours(place),
     }
 
 

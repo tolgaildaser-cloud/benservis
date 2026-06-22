@@ -16,6 +16,38 @@ function haversine(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+const TR_GUNLER = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+
+// Türkiye saatine göre "şu an" (tarayıcı saat dilimi ne olursa olsun).
+function trSimdi() {
+  return new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Istanbul" }));
+}
+function trBugun() {
+  return TR_GUNLER[trSimdi().getDay()];
+}
+
+/**
+ * Google regularOpeningHours.periods'tan ŞU AN açık mı? (TR saati).
+ * Veri yoksa null. periods: [{open:{day,hour,minute}, close:{day,hour,minute}}]
+ * gün: 0=Pazar … 6=Cumartesi (Google ile aynı).
+ */
+function acikMi(periods) {
+  if (!Array.isArray(periods) || !periods.length) return null;
+  const tr = trSimdi();
+  const gun = tr.getDay();
+  const dk = tr.getHours() * 60 + tr.getMinutes();
+  for (const p of periods) {
+    const o = p && p.open;
+    if (!o) continue;
+    const oDk = (o.hour || 0) * 60 + (o.minute || 0);
+    if (!p.close) return true; // close yok = 7/24 açık (Google: tek period, day0/00:00, close yok)
+    const c = p.close, cDk = (c.hour || 0) * 60 + (c.minute || 0);
+    if (o.day === c.day) { if (gun === o.day && dk >= oDk && dk < cDk) return true; }
+    else { if (gun === o.day && dk >= oDk) return true; if (gun === c.day && dk < cDk) return true; }
+  }
+  return false;
+}
+
 /**
  * ServisEkrani — Faz 1 teşhis sonrası servis eşleştirme ekranı.
  *
@@ -130,6 +162,8 @@ function ServisKarti({ servis, onSec }) {
 }
 
 function ServisProfil({ servis, onGeri }) {
+  const acik = acikMi(servis.calismaSaatleri?.periods);
+  const buGun = trBugun();
   return (
     <div style={{
       position: "fixed", inset: 0, background: "#F8FAFC",
@@ -151,16 +185,35 @@ function ServisProfil({ servis, onGeri }) {
         <TierRozetleri servis={servis} />
       </div>
 
-      <div style={{ padding: "20px 16px" }}>
-        {/* Puan & konum */}
-        <div style={{ fontSize: 13, color: "#475569", marginBottom: 20 }}>
-          {[
-            servis.puan != null && `⭐ ${servis.puan.toFixed(1)}`,
-            servis.yorumSayisi > 0 && `${servis.yorumSayisi} yorum`,
-            servis.ilce && (servis.sehir ? `${servis.ilce}, ${servis.sehir}` : servis.ilce),
-          ].filter(Boolean).join(" · ")}
+      {/* Hero — basit markalı görsel (gerçek dükkân fotoğrafı yok; ileride Places API ile eklenebilir) */}
+      <div style={{ position: "relative", overflow: "hidden", background: "#2563EB", height: 150, display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ position: "absolute", right: -50, top: -60, width: 200, height: 200, borderRadius: "50%", background: "rgba(255,255,255,.08)" }} />
+        <div style={{ position: "absolute", left: -45, bottom: -65, width: 175, height: 175, borderRadius: "50%", background: "rgba(255,255,255,.06)" }} />
+        <svg width="62" height="62" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ position: "relative", zIndex: 1 }} aria-hidden="true"><path d="M14.5 6.5a3.5 3.5 0 0 0-4.9 4.4l-4.8 4.8a1.5 1.5 0 0 0 2.1 2.1l4.8-4.8a3.5 3.5 0 0 0 4.4-4.9l-2 2-1.7-1.7Z" /></svg>
+      </div>
+
+      <div style={{ padding: "18px 16px 28px" }}>
+        {/* Puan + yorum (tıklanınca Google) + konum */}
+        {servis.puan != null ? (
+          <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 5, flexWrap: "wrap" }}>
+            <span style={{ fontWeight: 800, fontSize: 22, color: "#1E293B", lineHeight: 1 }}>{servis.puan.toFixed(1)}</span>
+            <span style={{ fontSize: 16, letterSpacing: 1 }}><span style={{ color: "#F5A623" }}>{"★".repeat(Math.round(servis.puan))}</span><span style={{ color: "#E2E8F0" }}>{"★".repeat(5 - Math.round(servis.puan))}</span></span>
+            {servis.yorumSayisi > 0 && (servis.googleMapsUrl ? (
+              <a href={servis.googleMapsUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#2563EB", fontSize: 14, fontWeight: 600 }}>{servis.yorumSayisi} yorum</a>
+            ) : (
+              <span style={{ color: "#64748B", fontSize: 14 }}>{servis.yorumSayisi} yorum</span>
+            ))}
+          </div>
+        ) : (
+          <div style={{ color: "#94A3B8", fontSize: 14, marginBottom: 5 }}>Henüz puanlanmamış</div>
+        )}
+        <div style={{ fontSize: 13.5, color: "#64748B", marginBottom: 18 }}>
+          {servis.ilce && (servis.sehir ? `${servis.ilce}, ${servis.sehir}` : servis.ilce)}
           {servis.km != null && (
             <> · <strong style={{ color: "#1E293B" }}>{servis.km.toFixed(1)} km</strong></>
+          )}
+          {acik !== null && (
+            <> · <span style={{ color: acik ? "#22C55E" : "#DC2626", fontWeight: 700 }}>{acik ? "● Açık" : "● Kapalı"}</span></>
           )}
         </div>
 
@@ -193,6 +246,26 @@ function ServisProfil({ servis, onGeri }) {
           )}
         </div>
 
+        {/* Adres */}
+        {servis.adres && (
+          <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: 22, fontSize: 14, color: "#475569", lineHeight: 1.5 }}>
+            <span style={{ flexShrink: 0 }}>📍</span><span>{servis.adres}</span>
+          </div>
+        )}
+
+        {/* Çalışma saatleri */}
+        {servis.calismaSaatleri?.gunler?.length > 0 && (
+          <div style={{ marginBottom: 24 }}>
+            <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: 16, color: "#1E293B", margin: "0 0 10px 0", fontWeight: 600 }}>Çalışma Saatleri</h3>
+            <div style={{ background: "white", border: "1px solid #E2E8F0", borderRadius: 12, padding: "10px 16px" }}>
+              {servis.calismaSaatleri.gunler.map((g, i) => {
+                const bg = g.startsWith(buGun);
+                return <div key={i} style={{ fontSize: 13.5, padding: "3px 0", color: bg ? "#1E293B" : "#64748B", fontWeight: bg ? 700 : 400 }}>{g}</div>;
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Hizmet kategorileri */}
         <div style={{ marginBottom: 28 }}>
           <h3 style={{
@@ -209,21 +282,19 @@ function ServisProfil({ servis, onGeri }) {
           </div>
         </div>
 
-        {/* Ürünler & parçalar */}
-        <div>
-          <h3 style={{
-            fontFamily: "'Fraunces', serif", fontSize: 16, color: "#1E293B",
-            margin: "0 0 12px 0", fontWeight: 600,
-          }}>Ürünler & Parçalar</h3>
-          <div style={{
-            background: "white", borderRadius: 10, padding: "20px 16px",
-            textAlign: "center", color: "#94A3B8", fontSize: 13,
-            border: "1.5px dashed #E2E8F0",
-          }}>
-            <div style={{ fontSize: 24, marginBottom: 8 }}>🔧</div>
-            <div>Yakında — bu servis henüz ürün eklemedi</div>
+        {/* Yorumlar — gerçek yorumlar Google'da; oraya yönlendir (yorum metnini saklamıyoruz) */}
+        {servis.yorumSayisi > 0 && servis.googleMapsUrl && (
+          <div>
+            <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: 16, color: "#1E293B", margin: "0 0 12px 0", fontWeight: 600 }}>Yorumlar</h3>
+            <a href={servis.googleMapsUrl} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, background: "white", border: "1px solid #E2E8F0", borderRadius: 12, padding: "16px", textDecoration: "none", color: "#1E293B" }}>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: 15 }}><span style={{ color: "#F5A623" }}>★</span> {servis.puan?.toFixed(1)} · {servis.yorumSayisi} Google değerlendirmesi</div>
+                <div style={{ fontSize: 13, color: "#64748B", marginTop: 3 }}>Tüm yorumları Google'da oku →</div>
+              </div>
+              <span style={{ color: "#2563EB", fontWeight: 700, fontSize: 20, flexShrink: 0 }}>›</span>
+            </a>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
