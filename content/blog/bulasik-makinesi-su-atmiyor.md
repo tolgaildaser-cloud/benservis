@@ -60,7 +60,7 @@ Program bitti ama bulaşık makinesinin **tabanında su kaldı** — makine suyu
 | Tahliye hortumu değişimi | 500 – 1.100 ₺ |
 | Elektronik kart tamiri | 1.200 – 3.000 ₺ |
 
-İlgili rehberler: [Bulaşık makinesi su almıyor](/blog/bulasik-makinesi-su-almiyor/) · [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/) · [Çamaşır makinesi sıkmıyor / su atmıyor](/blog/camasir-makinesi-sikmiyor/)
+İlgili rehberler: [Bulaşık makinesi su almıyor](/blog/bulasik-makinesi-su-almiyor/) · [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/) · [Çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/)
 
 ## Sık sorulan sorular
 

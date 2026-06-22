@@ -29,7 +29,7 @@ faq:
 
 **4. Isıtma arızası.** Rezistans veya sensör arızasında ısıtma adımında takılır, hata gösterir.
 
-**5. Dengesiz yük.** Tek ağır parça topaklanınca sıkmaya geçemez, uyarı verir.
+**5. Dengesiz yük.** Tek ağır parça topaklanınca su atma adımına geçemez, uyarı verir.
 
 **6. Elektronik kart arızası.** Yukarıdakiler yokken sürekli/anlamsız yanıp sönme karta işaret edebilir.
 

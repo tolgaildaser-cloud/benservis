@@ -51,7 +51,7 @@ En sık Samsung kodlarından. Musluğu sonuna kadar aç, musluk–hortum bağlan
 Alt ön kapaktaki **tahliye filtresini** çıkarıp temizle (havlu hazırla, su gelir), tahliye hortumunu kontrol et.
 
 ### UE — Dengesiz yük
-Tek ağır parça (battaniye, halı) topaklanınca makine güvenlik için sıkmaya geçmez. Yükü dağıt ya da yanına birkaç parça ekle.
+Tek ağır parça (battaniye, halı) topaklanınca makine güvenlik için su atma adımına geçmez. Yükü dağıt ya da yanına birkaç parça ekle.
 
 ## Hata kodu nasıl sıfırlanır?
 Çoğu modelde: makineyi **kapat**, **fişten 1 dakika** çek, tekrar tak. Arızanın kaynağı düzelmediyse kod tekrar çıkar.

@@ -44,7 +44,7 @@ Arçelik çamaşır makinen ekranında bir hata kodu (E01, E03, H1…) ya da yan
 
 ## Öne çıkan arızalar
 
-### Su atamıyor / sıkmıyor (en sık)
+### Su atamıyor / ıslak çıkıyor (en sık)
 En sık sebep **tıkalı tahliye filtresi**. Alt ön kapağı aç (havlu hazırla, su gelir), filtreyi çevirip çıkar, tüy/parçayı temizle, tak. Tahliye hortumunu da kontrol et. Çoğu zaman ücretsiz.
 
 ### Su alamıyor
@@ -59,7 +59,7 @@ Program düğmesini **"Kapalı"ya** al, makineyi **fişten 1 dakika** çek, çoc
 ## Tahmini tamir maliyeti
 Arçelik dâhil parça parça 2026 İstanbul tahminleri: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/).
 
-İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Sıkmıyor / su atmıyor](/blog/camasir-makinesi-sikmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
+İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor / ıslak çıkıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
 
 ## Sık sorulan sorular
 

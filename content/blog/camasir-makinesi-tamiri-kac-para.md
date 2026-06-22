@@ -53,7 +53,7 @@ faq:
 - Tahliye filtresini düzenli temizle (en sık ve ücretsiz bakım).
 - Birden çok **puanlı servisten** tahmini al; sadece yıldıza değil yorum sayısına bak.
 
-İlgili rehberler: [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Çamaşır makinesi sıkmıyor](/blog/camasir-makinesi-sikmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
+İlgili rehberler: [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
 
 ## Sık sorulan sorular
 
