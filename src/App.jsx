@@ -506,7 +506,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
       <footer style={s.footer}>
         <div style={s.footBrand}>Benservis · Bil, gör, çağır.</div>
-        <div style={s.footSub}><a href="/blog/" style={s.footLink}>Bilgi Merkezi</a> · <a href="/blog/hakkimizda/" style={s.footLink}>Hakkımızda</a> · <a href="https://www.servis.gov.tr" target="_blank" rel="noopener noreferrer" style={s.footLink}>SERBİS'te Doğrula</a></div>
+        <div style={s.footSub}><a href="/blog/" style={s.footLink}>Bilgi Merkezi</a> · <a href="/blog/hakkimizda/" style={s.footLink}>Hakkımızda</a> · <a href="https://www.servis.gov.tr/Genel/Sorgu" target="_blank" rel="noopener noreferrer" style={s.footLink}>SERBİS'te Doğrula</a></div>
         <div style={{ ...s.footSub, marginTop: 3 }}>AI destekli teşhis · tahmini maliyet</div>
         <div style={s.footSocial}>
           <a href="https://www.instagram.com/benservis.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="foot-social" style={s.footSocialLink}><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg></a>
