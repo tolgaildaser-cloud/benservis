@@ -189,6 +189,7 @@ ACİLİYET ÖLÇÜTÜ (belirtiye göre değerlendir, varsayılan "orta"ya KAÇMA
 Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
 {
+ "gecerliAriza":true,
  "olasiArizalar":[{"ad":"kısa arıza adı","olasilik":70,"aciklama":"tek cümle sade açıklama"}],
  "tahminiMaliyet":{"beklenen":1200,"not":"kısa not"},
  "kararOnerisi":"tamir",
@@ -198,6 +199,8 @@ Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
  "aciliyetNot":"tek cümle: bu aciliyetin somut gerekçesi",
  "ekSorular":["teşhisi netleştirecek kısa soru"]
 }
+
+GEÇERLİLİK: gecerliAriza = kullanıcının yazdığı belirti, seçilen cihaz için GERÇEK bir arıza tarifi mi? Anlamsız metin (ör. "asdfgh"), selamlama/sohbet, cihazla alakasız ya da hiç arıza içermeyen girdi → false. Gerçek bir belirti (yetersiz/belirsiz olsa bile, ör. "bazen duruyor", "ara sıra ses") → true. false ise olasiArizalar [] olabilir; diğer alanları sistem kullanmaz.
 
 MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi beklenen toplam tutar (parça + işçilik, TL). Referans tarifeye çıpala, abartma/küçümseme. Aralık verme — sadece tek bir sayı. (Aralığı sistem otomatik ±%10 hesaplar.)
 
@@ -215,7 +218,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       // Karar belirsizse aciliyet de belirsiz (kullanıcı kuralı) — AI kaçırsa bile garanti.
       if (teshis && teshis.kararOnerisi === "belirsiz") teshis.aciliyet = "belirsiz";
       setSonuc(teshis);
-      setAdim("sonuc");
+      // Girdi geçerli bir arıza tarifi değilse (anlamsız/alakasız) → teşhis/fiyat/Servis Bul GÖSTERME.
+      setAdim(teshis && teshis.gecerliAriza === false ? "gecersiz" : "sonuc");
     } catch (e) {
       setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
       setAdim("hata");
@@ -416,6 +420,17 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
+      {adim === "gecersiz" && (
+        <div style={s.card}>
+          <div style={{ textAlign: "center", padding: "8px 4px" }}>
+            <div style={{ fontSize: 40, marginBottom: 10 }}>🤔</div>
+            <h2 style={{ fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 20, color: "#1E293B", margin: "0 0 8px" }}>Belirtiyi tam anlayamadım</h2>
+            <p style={{ color: "#64748B", fontSize: 14.5, lineHeight: 1.6, margin: "0 0 20px" }}>Cihazında ne olduğunu birkaç kelimeyle anlat — örn. <strong style={{ color: "#1E293B" }}>"soğutmuyor"</strong>, <strong style={{ color: "#1E293B" }}>"su akıtıyor"</strong>, <strong style={{ color: "#1E293B" }}>"çalışmıyor"</strong>.</p>
+            <button style={s.cta} onClick={detayEkle}>← Belirtiyi düzelt</button>
+          </div>
+        </div>
+      )}
+
       {adim === "sonuc" && sonuc && (
         <div style={s.results}>
           <div style={s.card}>
@@ -472,6 +487,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             <div>
               <div style={s.faz2Head}>Tamir ettirmek ister misin?</div>
               <div style={s.faz2Sub}>Konumuna göre sıralar · Direkt arama</div>
+              {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => setShowServisler(true)}>
