@@ -31,6 +31,7 @@ Maliyet tahminimiz havadan değil; **gerçek ve güncel tarife verisine** çıpa
 - **Tarafsız sıralama:** Servisleri **puan + mesafe + fiyat**'a göre sıralarız. Komisyon sıralamaya girmez — kimse bize daha çok ödediği için öne çıkmaz.
 - **Gerçek yorum:** Yorum yalnızca **tamamlanan işe** yazılabilir; sahte değerlendirme barınmaz.
 - **Şeffaflık:** Verdiğimiz rakam bir **ön tahmindir**, kesin değildir; kesin fiyatı işi yapan servis belirler. Amacımız seni bilgilendirmek, korkutmak değil.
+- **Resmî doğrulama:** Bir servisin gerçekten yetkili olup olmadığını [SERBİS — Ticaret Bakanlığı Servis Bilgi Sistemi](/blog/serbis-yetkili-servis-sorgulama/) ile teyit edebilirsin; sahte servise düşmezsin.
 
 ## Kimin için?
 Cihazı bozulan, **doğru maliyeti ödemek** ve **önce öğrenip sonra çağırmak** isteyen herkes için. Bilinçli müşteri = hem senin için hem iyi servis için kazançlı bir başlangıç.
@@ -39,7 +40,7 @@ Cihazı bozulan, **doğru maliyeti ödemek** ve **önce öğrenip sonra çağır
 Soru, öneri ya da iş birliği için: **benservis.app@gmail.com**
 Sosyal: [Instagram](https://www.instagram.com/benservis.app/) · [TikTok](https://www.tiktok.com/@benservis.app)
 
-İlgili: [Bilgi Merkezi (arıza rehberleri)](/blog/) · [Cihaz arıza kodları, fiyatlar ve daha fazlası](/blog/)
+İlgili: [Bilgi Merkezi (arıza rehberleri)](/blog/) · [SERBİS'te yetkili servisi nasıl doğrularsın?](/blog/serbis-yetkili-servis-sorgulama/)
 
 ## Sık sorulan sorular
 
