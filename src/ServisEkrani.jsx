@@ -355,6 +355,8 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [seciliServis, setSeciliServis] = useState(null);
   const [ekran, setEkran] = useState("liste"); // "liste" | "profil"
   const [siralama, setSiralama] = useState("mesafe"); // "mesafe" (default) | "puan"
+  const [yetkiliGevset, setYetkiliGevset] = useState(false); // garanti boş çıkınca "tüm yakın servisleri göster"
+  const [tumYakin, setTumYakin] = useState([]); // garanti filtresi UYGULANMAMIŞ yakın liste (gevşetme için)
   const [tumServisler, setTumServisler] = useState(servislerProp || []);
   // Müşterinin ilçesi — ileride talep/veri toplama için bölge bilgisi (koordinat yoksa).
   const [konumIlce, setKonumIlce] = useState(null);
@@ -421,6 +423,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           .filter((s) => !garantiAltinda || !kullaniciIl || normIl(ilAdi(s)) === normIl(kullaniciIl))
           .slice(0, 15);
         setSiraliServisler(eslesmis);
+        setTumYakin(kmSiraliTum.slice(0, 15)); // garanti filtresi olmadan yakın servisler (gevşetme için)
         setLocationState("success");
 
         // Bölge bilgisi (konumIlce) — ileride talep/veri toplama için saklanır.
@@ -464,7 +467,9 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
 
   // Sıralama tercihine göre liste: "mesafe" = km birincil + puan ikincil;
   // "puan" = puan birincil + mesafe ikincil (kullanıcı kuralı).
-  const gosterilenServisler = [...siraliServisler].sort((a, b) => {
+  // Garanti boş çıkıp kullanıcı "tüm servisleri göster" dediyse filtresiz yakın listeyi kullan.
+  const _liste = (garantiAltinda && yetkiliGevset) ? tumYakin : siraliServisler;
+  const gosterilenServisler = [..._liste].sort((a, b) => {
     if (siralama === "puan") {
       const pf = (b.puan || 0) - (a.puan || 0);
       if (pf !== 0) return pf;
@@ -500,7 +505,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           </span>
           {garantiAltinda && (
             <div style={{ fontSize: 11, color: "#86EFAC", marginTop: 2, fontWeight: 600 }}>
-              🛡 Garantili cihaz · Yalnızca YETKİLİ servisler
+              🛡 Garantili cihaz · {yetkiliGevset ? "Tüm yakın servisler" : "Yalnızca YETKİLİ servisler"}
             </div>
           )}
         </div>
@@ -509,21 +514,26 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       {/* Garanti uyarı bandı */}
       {garantiAltinda && (
         <div style={{
-          background: "#ECFDF5", borderBottom: "1px solid #A7F3D0",
+          background: yetkiliGevset ? "#FFF7ED" : "#ECFDF5",
+          borderBottom: `1px solid ${yetkiliGevset ? "#FED7AA" : "#A7F3D0"}`,
           padding: "10px 16px", display: "flex", alignItems: "center", gap: 8,
-          fontSize: 13, color: "#166534", fontWeight: 600,
+          fontSize: 13, color: yetkiliGevset ? "#9A3412" : "#166534", fontWeight: 600,
         }}>
           <span style={{ fontSize: 16 }}>🛡</span>
-          <span>
-            Cihazınız garanti kapsamında — yalnızca <strong>Yetkili Servisler</strong> listeleniyor.
-            {marka && marka !== "Diğer" && ` ${marka} yetkili servisine yönlendiriliyorsunuz.`}
-          </span>
+          {yetkiliGevset ? (
+            <span>Yakındaki <strong>tüm servisler</strong> gösteriliyor. Garantili cihazda yetkili servis önerilir — yetkili dışı servis garantiyi etkileyebilir.</span>
+          ) : (
+            <span>
+              Cihazınız garanti kapsamında — yalnızca <strong>Yetkili Servisler</strong> listeleniyor.
+              {marka && marka !== "Diğer" && ` ${marka} yetkili servisine yönlendiriliyorsunuz.`}
+            </span>
+          )}
         </div>
       )}
 
       <div style={{ padding: "16px" }}>
         {/* Sıralama — sağ üst: Mesafe (default) / Puan */}
-        {locationState === "success" && siraliServisler.length > 0 && (
+        {locationState === "success" && gosterilenServisler.length > 0 && (
           <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 8, marginBottom: 12 }}>
             <span style={{ fontSize: 12, color: "#64748B", fontWeight: 600 }}>Sırala:</span>
             <div style={{ display: "inline-flex", background: "#F1F5F9", borderRadius: 9, padding: 3, gap: 2 }}>
@@ -550,16 +560,36 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           </p>
         )}
 
-        {/* Başarılı ama bu bölgede listeli servis yok */}
-        {locationState === "success" && siraliServisler.length === 0 && (
+        {/* Başarılı ama (filtre sonrası) gösterilecek servis yok */}
+        {locationState === "success" && gosterilenServisler.length === 0 && (
           <div style={{ textAlign: "center", marginTop: 32 }}>
             <div style={{ fontSize: 36, marginBottom: 10 }}>📍</div>
-            <p style={{ color: "#1E293B", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
-              Bu bölgede henüz listeli servis yok
-            </p>
-            <p style={{ color: "#64748B", fontSize: 12.5, lineHeight: 1.5 }}>
-              Yakındaki servisleri görmek için konum izni verin<br />veya farklı bir bölge seçin.
-            </p>
+            {garantiAltinda && tumYakin.length > 0 ? (
+              <>
+                <p style={{ color: "#1E293B", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
+                  Bu bölgede kayıtlı yetkili servis bulunamadı
+                </p>
+                <p style={{ color: "#64748B", fontSize: 12.5, lineHeight: 1.5, marginBottom: 16 }}>
+                  Yakında {tumYakin.length} servis var ama "yetkili" olarak işaretli değil.
+                </p>
+                <button
+                  onClick={() => setYetkiliGevset(true)}
+                  style={{ background: "#2563EB", color: "#fff", border: "none", borderRadius: 10, padding: "11px 20px", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
+                >Tüm yakın servisleri göster</button>
+                <p style={{ color: "#94A3B8", fontSize: 11.5, lineHeight: 1.5, marginTop: 12 }}>
+                  Garantili cihazda yetkili dışı servis garantiyi etkileyebilir.
+                </p>
+              </>
+            ) : (
+              <>
+                <p style={{ color: "#1E293B", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
+                  Bu bölgede henüz listeli servis yok
+                </p>
+                <p style={{ color: "#64748B", fontSize: 12.5, lineHeight: 1.5 }}>
+                  Yakındaki servisleri görmek için konum izni verin<br />veya farklı bir bölge seçin.
+                </p>
+              </>
+            )}
           </div>
         )}
 
@@ -581,13 +611,15 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
               setFallbackIlce(ilce);
               setKonumIlce(ilce); // bölge bilgisi — seçilen ilçe kesin doğru
               const kat = eslesenKategoriler(cihaz);
-              const eslesmis = tumServisler
+              const ilceListe = tumServisler
                 .filter((s) => s.kategoriler?.some((k) => kat.includes(k)) && s.ilce === ilce)
-                .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
                 // Konum yok → puana göre sırala (yetkili sabitlenmez, rozet kalır)
-                .sort((a, b) => (b.puan || 0) - (a.puan || 0))
+                .sort((a, b) => (b.puan || 0) - (a.puan || 0));
+              const eslesmis = ilceListe
+                .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
                 .slice(0, 10);
               setSiraliServisler(eslesmis);
+              setTumYakin(ilceListe.slice(0, 10)); // garanti filtresi olmadan (gevşetme için)
               setLocationState("success");
             }}
           />
