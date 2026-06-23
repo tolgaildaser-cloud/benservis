@@ -23,6 +23,9 @@ export default async function handler(req, res) {
         // Varsayılan: kalite/maliyet dengesi. Daha ucuz istersen: "claude-haiku-4-5-20251001"
         model: "claude-sonnet-4-6",
         max_tokens: 1000,
+        // temperature 0 → aynı girdi TUTARLI sonuç verir (cihazdan/çağrıdan bağımsız aynı fiyat).
+        // Önceden varsayılan (~1.0) olduğundan her çağrı biraz farklı fiyat üretiyordu.
+        temperature: 0,
         messages: [{ role: "user", content: prompt }],
       }),
     });
