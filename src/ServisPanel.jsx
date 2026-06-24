@@ -138,7 +138,7 @@ function GirisFormu({ onGiris }) {
   return (
     <div style={{ minHeight: "100vh", background: INK, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
       <style>{FONT}</style>
-      <div style={{ background: "#1E293B", borderRadius: 18, padding: 32, width: "100%", maxWidth: 360 }}>
+      <div style={{ background: "#1E293B", borderRadius: 18, padding: 32, border: "1px solid #334155", boxShadow: "0 18px 48px -24px rgba(0,0,0,.55)", width: "100%", maxWidth: 360 }}>
         <div style={{ fontFamily: "'Fraunces', serif", color: CREAM, fontSize: 22, fontWeight: 700, marginBottom: 24, textAlign: "center" }}>
           🔧 Benservis Panel
         </div>
@@ -146,12 +146,12 @@ function GirisFormu({ onGiris }) {
           <label style={{ color: "#94A3B8", fontSize: 12, display: "block", marginBottom: 4 }}>E-posta</label>
           <input
             type="email" value={email} onChange={e => setEmail(e.target.value)} required
-            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#1E293B", color: CREAM, fontSize: 14, marginBottom: 14, boxSizing: "border-box" }}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #334155", background: "#0F172A", color: CREAM, fontSize: 14, marginBottom: 14, boxSizing: "border-box" }}
           />
           <label style={{ color: "#94A3B8", fontSize: 12, display: "block", marginBottom: 4 }}>Şifre</label>
           <input
             type="password" value={sifre} onChange={e => setSifre(e.target.value)} required
-            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#1E293B", color: CREAM, fontSize: 14, marginBottom: 20, boxSizing: "border-box" }}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #334155", background: "#0F172A", color: CREAM, fontSize: 14, marginBottom: 20, boxSizing: "border-box" }}
           />
           {hata && <div style={{ color: "#F87171", fontSize: 13, marginBottom: 14 }}>{hata}</div>}
           {bilgi && <div style={{ color: "#86EFAC", fontSize: 13, marginBottom: 14 }}>{bilgi}</div>}
@@ -196,7 +196,7 @@ function YeniSifreFormu({ onTamam }) {
   return (
     <div style={{ minHeight: "100vh", background: INK, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
       <style>{FONT}</style>
-      <div style={{ background: "#1E293B", borderRadius: 18, padding: 32, width: "100%", maxWidth: 360 }}>
+      <div style={{ background: "#1E293B", borderRadius: 18, padding: 32, border: "1px solid #334155", boxShadow: "0 18px 48px -24px rgba(0,0,0,.55)", width: "100%", maxWidth: 360 }}>
         <div style={{ fontFamily: "'Fraunces', serif", color: CREAM, fontSize: 20, fontWeight: 700, marginBottom: 8, textAlign: "center" }}>
           🔑 Yeni Şifre Belirle
         </div>
@@ -207,12 +207,12 @@ function YeniSifreFormu({ onTamam }) {
           <label style={{ color: "#94A3B8", fontSize: 12, display: "block", marginBottom: 4 }}>Yeni şifre (en az 8 karakter)</label>
           <input
             type="password" value={s1} onChange={e => setS1(e.target.value)} required
-            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#1E293B", color: CREAM, fontSize: 14, marginBottom: 14, boxSizing: "border-box" }}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #334155", background: "#0F172A", color: CREAM, fontSize: 14, marginBottom: 14, boxSizing: "border-box" }}
           />
           <label style={{ color: "#94A3B8", fontSize: 12, display: "block", marginBottom: 4 }}>Yeni şifre (tekrar)</label>
           <input
             type="password" value={s2} onChange={e => setS2(e.target.value)} required
-            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "none", background: "#1E293B", color: CREAM, fontSize: 14, marginBottom: 20, boxSizing: "border-box" }}
+            style={{ width: "100%", padding: "10px 12px", borderRadius: 8, border: "1px solid #334155", background: "#0F172A", color: CREAM, fontSize: 14, marginBottom: 20, boxSizing: "border-box" }}
           />
           {hata && <div style={{ color: "#F87171", fontSize: 13, marginBottom: 14 }}>{hata}</div>}
           <button
