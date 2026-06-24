@@ -4,6 +4,7 @@ import DPPEkrani from "./DPPEkrani.jsx";
 import SERVISLER from "./services-data.json";
 import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
+import BenservisLogo from "./BenservisLogo.jsx";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -83,30 +84,7 @@ function normalizeMaliyet(sonuc) {
   };
 }
 
-// Kurumsal logo (yatay lockup + "Bil, gör, çağır." mottosu) — kaynak:
-// ~/Desktop/benservis-marka/logo-yatay.svg (sistem-font wordmark, viewBox 540×158)
-function BenservisLogo({ style }) {
-  return (
-    <svg viewBox="0 0 547 162" style={style} xmlns="http://www.w3.org/2000/svg"
-      role="img" aria-label="Benservis — Bil, gör, çağır.">
-      <g transform="translate(12,14) scale(1.083333)">
-        <rect width="120" height="120" rx="28" fill="#2563EB" />
-        <path d="M60 22 C42 22 28 36 28 53 C28 75 60 98 60 98 C60 98 92 75 92 53 C92 36 78 22 60 22 Z" fill="#ffffff" />
-        <g fill="#2563EB">
-          <circle cx="60" cy="51" r="15" />
-          {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
-            <rect key={deg} x="55.5" y="27" width="9" height="15" rx="3" transform={`rotate(${deg} 60 51)`} />
-          ))}
-        </g>
-        <circle cx="60" cy="51" r="6" fill="#ffffff" />
-      </g>
-      <text x="162" y="89" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="83" fontWeight="600" letterSpacing="-1.8">
-        <tspan fill="#1E293B">ben</tspan><tspan fill="#2563EB">servis</tspan>
-      </text>
-      <text x="347" y="122" fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif" fontSize="31.5" fill="#475569" textAnchor="middle">Bil, gör, çağır.</text>
-    </svg>
-  );
-}
+// BenservisLogo → src/BenservisLogo.jsx (ana sayfa + ServisEkrani header ortak kullanır)
 
 export default function App() {
   const [adim, setAdim] = useState("form");
@@ -291,6 +269,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           belirti={belirti}
           servisler={SERVISLER}
           onKapat={() => setShowServisler(false)}
+          onAnaSayfa={sifirla}
         />
       )}
       {showDPP && (

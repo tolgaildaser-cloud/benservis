@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import { eslesenKategoriler } from "./constants.js";
+import BenservisLogo from "./BenservisLogo.jsx";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -347,7 +348,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, servisler: servislerProp, onKapat }) {
+export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, servisler: servislerProp, onKapat, onAnaSayfa }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
@@ -509,6 +510,19 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
             </div>
           )}
         </div>
+        {/* Sağ üst: Benservis logosu — tıklayınca ana sayfa (koyu zemin varyantı) */}
+        <button
+          onClick={onAnaSayfa || onKapat}
+          aria-label="Ana sayfaya dön"
+          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", flexShrink: 0, display: "flex", alignItems: "center" }}
+        >
+          <BenservisLogo
+            style={{ height: 28, width: "auto", display: "block" }}
+            benColor="#fff"
+            servisColor="#60A5FA"
+            showMotto={false}
+          />
+        </button>
       </div>
 
       {/* Garanti uyarı bandı */}
