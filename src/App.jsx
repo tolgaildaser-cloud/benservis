@@ -198,11 +198,14 @@ MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi
 
 Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz"/"gerek_yok", aciliyet sadece "düşük"/"orta"/"yüksek"/"belirsiz" ve mutlaka yukarıdaki ölçüte göre (kararOnerisi "belirsiz" ise aciliyet de "belirsiz"), aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
 
+    const ctrl = new AbortController();
+    const zamanAsimi = setTimeout(() => ctrl.abort(), 28000); // 28sn sonra iptal → istek asılı kalmasın
     try {
       const res = await fetch("/api/diagnose", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
+        signal: ctrl.signal,
       });
       const data = await res.json();
       if (data.error) throw new Error(data.error);
@@ -230,6 +233,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     } catch (e) {
       setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
       setAdim("hata");
+    } finally {
+      clearTimeout(zamanAsimi);
     }
   };
 
