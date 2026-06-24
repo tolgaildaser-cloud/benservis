@@ -517,7 +517,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           style={{ background: "none", border: "none", padding: 0, cursor: "pointer", flexShrink: 0, display: "flex", alignItems: "center" }}
         >
           <BenservisLogo
-            style={{ height: 28, width: "auto", display: "block" }}
+            style={{ height: 42, width: "auto", display: "block" }}
             benColor="#fff"
             servisColor="#60A5FA"
             showMotto={false}
