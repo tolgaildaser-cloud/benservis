@@ -16,9 +16,16 @@ const hasEnv = () =>
 
 // prefix bazlı önbellek (serverless instance ömrü boyunca tekrar kurma)
 const cache = {};
+let warnedNoEnv = false;
 function buildLimiters(prefix, limits) {
   if (cache[prefix]) return cache[prefix];
-  if (!hasEnv()) return null;
+  if (!hasEnv()) {
+    if (!warnedNoEnv) {
+      console.warn("[ratelimit] UPSTASH env yok (URL/TOKEN okunamadı) — fail-open, per-IP limit PASİF");
+      warnedNoEnv = true;
+    }
+    return null;
+  }
   const redis = Redis.fromEnv();
   cache[prefix] = limits.map(
     (l, i) =>
