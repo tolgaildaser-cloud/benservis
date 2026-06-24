@@ -174,7 +174,13 @@ MARKA KADEMESİ (parça maliyetini markaya göre ayarla — yukarıdaki parça m
 - KADEMEYİ KULLANICIYA ASLA YANSITMA. not, kararAciklama ve TÜM alanlarda şunlar YASAK: marka kademesi/segment; "premium/orta/ekonomik"; "kademe"; "üst/alt bant" veya "band"; markaya dayalı fiyat gerekçesi (ör. "Bosch parçası pahalı", "X markası üst bantta"); ve parça/işçilik kırılımı (ör. "~5000 TL parça + 1300 TL işçilik"). Bunların HEPSİ içsel mantık.
 - "not" alanı KISA, NÖTR ve markadan bağımsız olsun. Örnek doğru not: "Parça ve işçilik dahil tahmini tutar; kesin fiyat arıza tespitinde netleşir." Markayı, kademeyi, kırılımı YAZMA.
 
-YAŞ ETKİSİ (kararOnerisi'ni İÇSEL olarak buna göre ver — "Cihaz yaşı" yukarıda verildi):
+KARAR ÖNERİSİ (kararOnerisi) — şu 4 değerden TAM BİRİ:
+- "gerek_yok": belirti tamamen KOZMETİK/görsel (dış yüzey/plastik sararması, çizik, soluk/solmuş renk, leke) VEYA cihaz işlevsel olarak sorunsuz çalışıyor; onarılacak teknik arıza YOK. Bu durumda tahminiMaliyet.beklenen = 0, aciliyet = "düşük", ve YAŞ ETKİSİNİ UYGULAMA (asla "yenisi" deme, tamir bedeli UYDURMA). kararAciklama: kozmetik olduğunu ve cihaz çalışıyorsa müdahale gerekmediğini sade söyle.
+- "tamir": gerçek işlevsel arıza var, tamir mantıklı.
+- "yenisi": gerçek arıza var AMA aşağıdaki YAŞ ETKİSİ gereği yenisini almak daha mantıklı.
+- "belirsiz": belirti teşhis için yetersiz, arıza netleşmiyor.
+
+YAŞ ETKİSİ (yalnız GERÇEK işlevsel arızada; "gerek_yok"ta UYGULANMAZ — "Cihaz yaşı" yukarıda verildi):
 - Yeni/orta yaş (≈0-7 yıl): arıza tamir edilebilirse "tamir".
 - Eski (≈8+ yıl, özellikle "10+ yıl") VE tahmini tamir bedeli yeni bir muadilin fiyatının kabaca yarısına yaklaşıyor/aşıyorsa → "yenisini al" ("yenisi").
 - Beyaz eşya ömrü ~10-15 yıl, küçük ev aleti/elektronik daha kısa.
@@ -203,9 +209,9 @@ Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
 GEÇERLİLİK: gecerliAriza = kullanıcının yazdığı belirti, seçilen cihaz için GERÇEK bir arıza tarifi mi? Anlamsız metin (ör. "asdfgh"), selamlama/sohbet, cihazla alakasız ya da hiç arıza içermeyen girdi → false. Gerçek bir belirti (yetersiz/belirsiz olsa bile, ör. "bazen duruyor", "ara sıra ses") → true. false ise olasiArizalar [] olabilir; diğer alanları sistem kullanmaz.
 
-MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi beklenen toplam tutar (parça + işçilik, TL). Referans tarifeye çıpala, abartma/küçümseme. Aralık verme — sadece tek bir sayı. (Aralığı sistem otomatik ±%10 hesaplar.)
+MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi beklenen toplam tutar (parça + işçilik, TL). Referans tarifeye çıpala, abartma/küçümseme. Aralık verme — sadece tek bir sayı. (Aralığı sistem otomatik ±%10 hesaplar.) kararOnerisi "gerek_yok" ise beklenen = 0 (kozmetik/işlevsel sorun yok → tamir bedeli yoktur, UYDURMA).
 
-Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz", aciliyet sadece "düşük"/"orta"/"yüksek"/"belirsiz" ve mutlaka yukarıdaki ölçüte göre (kararOnerisi "belirsiz" ise aciliyet de "belirsiz"), aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
+Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz"/"gerek_yok", aciliyet sadece "düşük"/"orta"/"yüksek"/"belirsiz" ve mutlaka yukarıdaki ölçüte göre (kararOnerisi "belirsiz" ise aciliyet de "belirsiz"), aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
 
     try {
       const res = await fetch("/api/diagnose", {
@@ -215,7 +221,22 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       });
       const data = await res.json();
       if (data.error) throw new Error(data.error);
-      const teshis = normalizeMaliyet(extractJSON(data.text || ""));
+      const parsed = extractJSON(data.text || "");
+      // Savunma: beklenen 0/yok iken karar "tamir"/"yenisi" geldiyse bu bir çelişkidir
+      // (model kozmetik olduğunu anladı ama yanlış badge verdi) → "gerek_yok" say.
+      if (parsed) {
+        const ham = parsed.tahminiMaliyet?.beklenen;
+        const beklenenYok = ham == null || Number(ham) === 0;
+        if (beklenenYok && (parsed.kararOnerisi === "tamir" || parsed.kararOnerisi === "yenisi")) {
+          parsed.kararOnerisi = "gerek_yok";
+        }
+        // gerek_yok → maliyet sıfır, aciliyet düşük (model kaçırsa bile garanti).
+        if (parsed.kararOnerisi === "gerek_yok") {
+          parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: 0 };
+          if (!parsed.aciliyet || parsed.aciliyet === "belirsiz") parsed.aciliyet = "düşük";
+        }
+      }
+      const teshis = normalizeMaliyet(parsed);
       // Karar belirsizse aciliyet de belirsiz (kullanıcı kuralı) — AI kaçırsa bile garanti.
       if (teshis && teshis.kararOnerisi === "belirsiz") teshis.aciliyet = "belirsiz";
       setSonuc(teshis);
@@ -231,7 +252,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     if (!sonuc) return "";
     const ar = (sonuc.olasiArizalar || []).map((a) => `• ${a.ad} (%${a.olasilik})`).join("\n");
     const m = sonuc.tahminiMaliyet || {};
-    return `Arızam Ne? — Teşhis\nCihaz: ${cihaz}${marka ? " / " + marka : ""}\nBelirti: ${belirti}\n\nOlası arızalar:\n${ar}\n\nTahmini maliyet: ${m.min}-${m.max} TL\nKarar: ${sonuc.kararOnerisi} — ${sonuc.kararAciklama}\nAciliyet: ${sonuc.aciliyet}${sonuc.aciliyetNot ? " — " + sonuc.aciliyetNot : ""}`;
+    const etiket = { tamir: "Tamir ettir", yenisi: "Yenisini al", belirsiz: "Belirsiz", gerek_yok: "Tamir gerekmez" };
+    const maliyetSatiri = sonuc.kararOnerisi === "gerek_yok" || m.min == null
+      ? "Tahmini maliyet: Tamir gerekmez"
+      : `Tahmini maliyet: ${m.min}-${m.max} TL`;
+    return `Arızam Ne? — Teşhis\nCihaz: ${cihaz}${marka ? " / " + marka : ""}\nBelirti: ${belirti}\n\nOlası arızalar:\n${ar}\n\n${maliyetSatiri}\nKarar: ${etiket[sonuc.kararOnerisi] || sonuc.kararOnerisi} — ${sonuc.kararAciklama}\nAciliyet: ${sonuc.aciliyet}${sonuc.aciliyetNot ? " — " + sonuc.aciliyetNot : ""}`;
   };
 
   const kopyala = async () => {
@@ -250,8 +275,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
-  const kararRenk = { tamir: "#22C55E", yenisi: "#DC2626", belirsiz: "#64748B" };
-  const kararEtiket = { tamir: "TAMİR ETTİR", yenisi: "YENİSİNİ AL", belirsiz: "BELİRSİZ" };
+  const kararRenk = { tamir: "#22C55E", yenisi: "#DC2626", belirsiz: "#64748B", gerek_yok: "#0D9488" };
+  const kararEtiket = { tamir: "TAMİR ETTİR", yenisi: "YENİSİNİ AL", belirsiz: "BELİRSİZ", gerek_yok: "TAMİR GEREKMEZ" };
   const oneriler = BELIRTILER[cihaz] || [];
   // "Teşhis et" yalnız üç zorunlu alan (cihaz + marka + belirti) dolunca aktif görünür.
   const formHazir = !!cihaz && !!marka && belirti.trim().length >= 4;
@@ -448,7 +473,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <div style={s.cardSplit}>
             <div style={{ flex: 1.2 }}>
               <div style={s.secHead}>Tahmini maliyet</div>
-              <div style={s.fiyat}>{sonuc.tahminiMaliyet?.min?.toLocaleString("tr-TR")}–{sonuc.tahminiMaliyet?.max?.toLocaleString("tr-TR")} <span style={s.tl}>TL</span></div>
+              {sonuc.kararOnerisi === "gerek_yok" || sonuc.tahminiMaliyet?.min == null ? (
+                <div style={{ ...s.fiyat, fontSize: 23, lineHeight: 1.15 }}>Tamir gerekmez</div>
+              ) : (
+                <div style={s.fiyat}>{sonuc.tahminiMaliyet?.min?.toLocaleString("tr-TR")}–{sonuc.tahminiMaliyet?.max?.toLocaleString("tr-TR")} <span style={s.tl}>TL</span></div>
+              )}
               <p style={s.fiyatNot}>{sonuc.tahminiMaliyet?.not}</p>
             </div>
             <div style={s.divider} />
@@ -486,7 +515,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
           <div style={s.faz2}>
             <div>
-              <div style={s.faz2Head}>Tamir ettirmek ister misin?</div>
+              <div style={s.faz2Head}>{sonuc.kararOnerisi === "gerek_yok" ? "Yine de kontrol ettirmek istersen" : "Tamir ettirmek ister misin?"}</div>
               <div style={s.faz2Sub}>Konumuna göre sıralar · Direkt arama</div>
               {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
             </div>
