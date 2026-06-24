@@ -576,8 +576,17 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
                   onClick={() => setYetkiliGevset(true)}
                   style={{ background: "#2563EB", color: "#fff", border: "none", borderRadius: 10, padding: "11px 20px", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
                 >Tüm yakın servisleri göster</button>
+                <div style={{ marginTop: 10 }}>
+                  <a
+                    href="https://www.servis.gov.tr/Genel/Sorgu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: "inline-block", background: "transparent", color: "#2563EB", border: "1.5px solid #2563EB", borderRadius: 10, padding: "10px 20px", fontSize: 13.5, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", textDecoration: "none" }}
+                  >🔍 SERBİS'te Ara</a>
+                </div>
                 <p style={{ color: "#94A3B8", fontSize: 11.5, lineHeight: 1.5, marginTop: 12 }}>
-                  Garantili cihazda yetkili dışı servis garantiyi etkileyebilir.
+                  Garantili cihazda yetkili dışı servis garantiyi etkileyebilir.<br />
+                  SERBİS (Ticaret Bakanlığı) resmî yetkili servis kaydını sorgular.
                 </p>
               </>
             ) : (
