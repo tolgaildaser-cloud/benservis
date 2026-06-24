@@ -111,6 +111,13 @@ export default function App() {
     el.style.height = Math.max(el.scrollHeight + kenarlik, 116) + "px";
   }, [belirti]);
 
+  // Teşhis sonucu / geçersiz ekranı geldiğinde sayfayı başa al — cihazdan bağımsız
+  // tutarlı davranış. (detayEkle ile aşağıda kalınıp tekrar teşhis edilince masaüstünde
+  // sonuç en alttan açılıyordu; mobilde fiyata düşüyordu.) Form/loading'e dokunmaz.
+  useEffect(() => {
+    if (adim === "sonuc" || adim === "gecersiz") window.scrollTo(0, 0);
+  }, [adim]);
+
   // Belirti, ". " ile ayrılmış parçalardan oluşur; chip'ler bu parçaları
   // toggle eder. Seçili durum belirti metninden türetilir (tek kaynak).
   const belirtiAktif = (b) =>
