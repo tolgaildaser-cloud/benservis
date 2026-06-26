@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 import DPPEkrani from "./DPPEkrani.jsx";
-import SERVISLER from "./services-data.json";
 import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
@@ -279,7 +278,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           marka={marka}
           garantiAltinda={garantiAltinda}
           belirti={belirti}
-          servisler={SERVISLER}
           onKapat={() => setShowServisler(false)}
           onAnaSayfa={sifirla}
         />

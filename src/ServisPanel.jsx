@@ -4,7 +4,6 @@
 import React, { useState, useEffect } from "react";
 import QRCode from "qrcode";
 import { supabase } from "./lib/supabase.js";
-import SERVISLER from "./services-data.json";
 
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
@@ -24,9 +23,19 @@ function ServisKurulum({ session, onTamamlandi }) {
   const [yukleniyor, setYukleniyor] = useState(false);
   const [hata, setHata] = useState("");
 
-  const filtreliServisler = SERVISLER.filter(s =>
-    s.ad?.toLowerCase().includes(aramaMetni.toLowerCase())
-  ).slice(0, 30);
+  // İsim araması sunucuda (16MB direktori client'a inmez — /api/servis/yakin?q=).
+  const [filtreliServisler, setFiltreliServisler] = useState([]);
+  useEffect(() => {
+    const q = aramaMetni.trim();
+    if (q.length < 2) { setFiltreliServisler([]); return; }
+    const t = setTimeout(() => {
+      fetch(`/api/servis/yakin?q=${encodeURIComponent(q)}`)
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => setFiltreliServisler(d?.servisler || []))
+        .catch(() => {});
+    }, 250);
+    return () => clearTimeout(t);
+  }, [aramaMetni]);
 
   const [secilenIlce, setSecilenIlce] = useState("");
   const sec = (s) => { setSecilenId(s.id); setSecilenAd(s.ad); setSecilenIlce(s.ilce || ""); setAramaMetni(s.ad); };

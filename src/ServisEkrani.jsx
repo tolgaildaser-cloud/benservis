@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { TR_IL_ILCE } from "./tr-iller.js";
-import { eslesenKategoriler } from "./constants.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 
 /**
@@ -348,7 +347,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, servisler: servislerProp, onKapat, onAnaSayfa }) {
+export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, onKapat, onAnaSayfa }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
@@ -358,50 +357,32 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
   const [siralama, setSiralama] = useState("mesafe"); // "mesafe" (default) | "puan"
   const [yetkiliGevset, setYetkiliGevset] = useState(false); // garanti boş çıkınca "tüm yakın servisleri göster"
   const [tumYakin, setTumYakin] = useState([]); // garanti filtresi UYGULANMAMIŞ yakın liste (gevşetme için)
-  const [tumServisler, setTumServisler] = useState(servislerProp || []);
   // Müşterinin ilçesi — ileride talep/veri toplama için bölge bilgisi (koordinat yoksa).
   const [konumIlce, setKonumIlce] = useState(null);
   // Müşterinin GPS koordinatı — mesafe sıralaması için.
   const [musteriKonum, setMusteriKonum] = useState(null);
 
-  // JSON + DB servislerini birleştir
-  useEffect(() => {
-    // cihaz parametresi gönderilmez — birleşik kategoriler (Süpürge/Bilgisayar)
-    // eski kategori adlı servislerle de eşleşsin diye filtre client'ta yapılır.
-    fetch(`/api/servis/liste`)
-      .then(r => r.ok ? r.json() : null)
-      .then(data => {
-        if (!data?.servisler) return;
-        // DB servislerini JSON listesiyle birleştir (ID'ye göre dedüp)
-        const jsonIds = new Set((servislerProp || []).map(s => s.id));
-        const sadeceDbn = data.servisler.filter(s => !jsonIds.has(s.id));
-        setTumServisler([...(servislerProp || []), ...sadeceDbn]);
-      })
-      .catch(() => {}); // fetch hata → sadece JSON ile devam
-  }, [cihaz]);
-
-  // Konum → sıralama
+  // Konum → /api/servis/yakin (sunucu kategori+telefon+EN YAKIN 150 ön-filtre yapar →
+  // 16MB direktori client'a inmez). İnce filtre/sıralama burada (mevcut mantık korundu).
   useEffect(() => {
     if (!navigator.geolocation) {
       setLocationState("denied");
       return;
     }
     navigator.geolocation.getCurrentPosition(
-      (pos) => {
+      async (pos) => {
         const { latitude: lat, longitude: lng } = pos.coords;
-        setMusteriKonum({ lat, lng }); // mesafe sıralaması için
-        const kat = eslesenKategoriler(cihaz);
-        // Kategori eşleşen servisleri km ile işaretle + MESAFE birincil sırala.
-        // Filtre ÖNCESİ tam liste — kullanıcının ilini bundan çıkarırız.
-        const kmSiraliTum = tumServisler
-          .filter((s) => s.kategoriler?.some((k) => kat.includes(k)))
-          .map((s) => ({
-            ...s,
-            // lat/lng null olan DB servisleri km hesaplanamaz → sona koy
-            km: s.lat && s.lng ? haversine(lat, lng, s.lat, s.lng) : null,
-          }))
-          // MESAFE birincil — en yakın üstte. Yetkili sabitlenmez, yalnızca
-          // rozet olarak gösterilir. Eşit km'de puan.
+        setMusteriKonum({ lat, lng });
+        let liste = [];
+        try {
+          const r = await fetch(`/api/servis/yakin?cihaz=${encodeURIComponent(cihaz)}&lat=${lat}&lng=${lng}`);
+          const d = await r.json();
+          liste = d?.servisler || [];
+        } catch { liste = []; }
+
+        // Kategori sunucuda eşleşti; burada km hesapla + MESAFE birincil sırala.
+        const kmSiraliTum = liste
+          .map((s) => ({ ...s, km: s.lat && s.lng ? haversine(lat, lng, s.lat, s.lng) : null }))
           .sort((a, b) => {
             if (a.km != null && b.km != null) {
               if (a.km !== b.km) return a.km - b.km;
@@ -412,8 +393,6 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           });
 
         // Garanti (yalnız-yetkili) modunda: BAŞKA İLDEN servis gösterme.
-        // Servisin ili: JSON'da "sehir", DB'de "il". Kullanıcının ili = en yakın
-        // (herhangi) servisin ili. Türkçe İ/I/ı varyantlarına dayanıklı karşılaştırma.
         const ilAdi = (s) => s.sehir || s.il;
         const normIl = (x) => (x || "").replace(/[İI]/g, "i").replace(/ı/g, "i").toLowerCase().trim();
         const enYakinIlli = kmSiraliTum.find((s) => s.km != null && ilAdi(s));
@@ -424,17 +403,11 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           .filter((s) => !garantiAltinda || !kullaniciIl || normIl(ilAdi(s)) === normIl(kullaniciIl))
           .slice(0, 15);
         setSiraliServisler(eslesmis);
-        setTumYakin(kmSiraliTum.slice(0, 15)); // garanti filtresi olmadan yakın servisler (gevşetme için)
+        setTumYakin(kmSiraliTum.slice(0, 15)); // garanti filtresi olmadan (gevşetme için)
         setLocationState("success");
 
-        // Bölge bilgisi (konumIlce) — ileride talep/veri toplama için saklanır.
-        // En yakın DB servisinin ilçesini al; yoksa ters geokod.
-        const kmSirali = (filtre) =>
-          kmSiraliTum.filter((s) => s.km != null && s.ilce && filtre(s))
-                  .sort((a, b) => a.km - b.km)[0];
-        const enYakinDb  = kmSirali((s) => s.kaynak === "db");
-        const enYakinAny = kmSirali(() => true);
-        const bolgeIlce  = (enYakinDb || enYakinAny)?.ilce;
+        // Bölge bilgisi (konumIlce): en yakın servisin ilçesi; yoksa ters geokod.
+        const bolgeIlce = kmSiraliTum.find((s) => s.km != null && s.ilce)?.ilce;
         if (bolgeIlce) {
           setKonumIlce(bolgeIlce);
         } else {
@@ -451,7 +424,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
       () => setLocationState("denied"),
       { timeout: 10000 }
     );
-  }, [cihaz, tumServisler]);
+  }, [cihaz]);
 
   // İl → ilçe haritası: tüm Türkiye
   const ilIlceMap = TR_IL_ILCE;
@@ -629,15 +602,18 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, se
           <FallbackIlce
             ilIlceMap={ilIlceMap}
             secili={fallbackIlce}
-            onSec={(ilce) => {
+            onSec={async (ilce) => {
               if (!ilce) return;
               setFallbackIlce(ilce);
               setKonumIlce(ilce); // bölge bilgisi — seçilen ilçe kesin doğru
-              const kat = eslesenKategoriler(cihaz);
-              const ilceListe = tumServisler
-                .filter((s) => s.kategoriler?.some((k) => kat.includes(k)) && s.ilce === ilce)
-                // Konum yok → puana göre sırala (yetkili sabitlenmez, rozet kalır)
-                .sort((a, b) => (b.puan || 0) - (a.puan || 0));
+              let liste = [];
+              try {
+                const r = await fetch(`/api/servis/yakin?cihaz=${encodeURIComponent(cihaz)}&ilce=${encodeURIComponent(ilce)}`);
+                const d = await r.json();
+                liste = d?.servisler || [];
+              } catch { liste = []; }
+              // Konum yok → puana göre sırala (yetkili sabitlenmez, rozet kalır)
+              const ilceListe = [...liste].sort((a, b) => (b.puan || 0) - (a.puan || 0));
               const eslesmis = ilceListe
                 .filter((s) => !garantiAltinda || s.yetkili)   // garanti → sadece yetkili
                 .slice(0, 10);

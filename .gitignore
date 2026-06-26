@@ -7,3 +7,6 @@ dist
 .env.local
 .superpowers/
 .claude/
+
+*.bak
+scripts/.collect-progress.json
