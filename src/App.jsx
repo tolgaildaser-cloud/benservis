@@ -99,6 +99,64 @@ export default function App() {
   const [showDPP, setShowDPP] = useState(false);
   const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
 
+  // --- Sesli girdi (STT) — ses SAKLANMAZ: kaydet → /api/stt (Whisper) → belirtiye ekle ---
+  const [sesDurumu, setSesDurumu] = useState("bosta"); // "bosta" | "kaydediyor" | "isliyor"
+  const mediaRecRef = useRef(null);
+  const sesChunksRef = useRef([]);
+  const sesStreamRef = useRef(null);
+  const sesTimerRef = useRef(null);
+
+  const sesBaslat = async () => {
+    if (sesDurumu !== "bosta") return;
+    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+      setHataMsg("Bu tarayıcı ses kaydını desteklemiyor — yazarak anlatabilirsin.");
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      sesStreamRef.current = stream;
+      const mime = MediaRecorder.isTypeSupported("audio/webm;codecs=opus") ? "audio/webm;codecs=opus"
+        : MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm"
+        : MediaRecorder.isTypeSupported("audio/mp4") ? "audio/mp4" : "";
+      const rec = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+      sesChunksRef.current = [];
+      rec.ondataavailable = (e) => { if (e.data && e.data.size) sesChunksRef.current.push(e.data); };
+      rec.onstop = () => sesGonder(rec.mimeType);
+      mediaRecRef.current = rec;
+      rec.start();
+      setSesDurumu("kaydediyor");
+      setHataMsg("");
+      sesTimerRef.current = setTimeout(() => sesDurdur(), 60000); // 60sn otomatik durdur
+    } catch (e) {
+      setHataMsg("Mikrofon izni gerekli — yazarak da anlatabilirsin.");
+      setSesDurumu("bosta");
+    }
+  };
+
+  const sesDurdur = () => {
+    if (mediaRecRef.current && mediaRecRef.current.state === "recording") {
+      clearTimeout(sesTimerRef.current);
+      setSesDurumu("isliyor");
+      try { mediaRecRef.current.stop(); } catch { setSesDurumu("bosta"); }
+    }
+  };
+
+  const sesGonder = async (mime) => {
+    if (sesStreamRef.current) sesStreamRef.current.getTracks().forEach((t) => t.stop()); // mikrofonu kapat
+    const blob = new Blob(sesChunksRef.current, { type: mime || "audio/webm" });
+    if (blob.size < 1000) { setSesDurumu("bosta"); return; }
+    try {
+      const res = await fetch("/api/stt", { method: "POST", headers: { "Content-Type": blob.type }, body: blob });
+      const data = await res.json();
+      if (!res.ok || !data.text) throw new Error(data.error || "bos");
+      setBelirti((prev) => (prev.trim() ? prev.trim() + ". " + data.text : data.text));
+    } catch (e) {
+      setHataMsg("Sesi anlayamadım — tekrar dene ya da yazarak anlat.");
+    } finally {
+      setSesDurumu("bosta");
+    }
+  };
+
   // Belirti textarea: elle (mouse) resize kapalı; yazdıkça veya chip ile içerik
   // değiştikçe otomatik uzar (min ~4 satır).
   const belirtiRef = useRef(null);
@@ -392,6 +450,25 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
           <textarea ref={belirtiRef} style={s.textarea} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
             placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
+
+          {/* Sesli girdi — konuş, otomatik yazıya dökülüp belirtiye eklenir (ses saklanmaz) */}
+          <button
+            type="button"
+            onClick={sesDurumu === "kaydediyor" ? sesDurdur : sesBaslat}
+            disabled={sesDurumu === "isliyor"}
+            style={{
+              marginTop: 10, width: "100%", padding: "11px", borderRadius: 12,
+              border: `1.5px solid ${sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB"}`,
+              background: sesDurumu === "kaydediyor" ? "rgba(220,38,38,.06)" : "rgba(37,99,235,.06)",
+              color: sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB",
+              fontSize: 14.5, fontWeight: 700, cursor: sesDurumu === "isliyor" ? "default" : "pointer",
+              fontFamily: "inherit", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
+            }}
+          >
+            {sesDurumu === "bosta" && "🎤 Sesle anlat"}
+            {sesDurumu === "kaydediyor" && "● Dinliyorum… durdurmak için dokun"}
+            {sesDurumu === "isliyor" && "Yazıya çevriliyor…"}
+          </button>
 
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
           {/* ZORUNLU alanlar (cihaz + marka + belirti) dolmadan buton aktif görünmez (tesisEt guard'ı da var) */}
