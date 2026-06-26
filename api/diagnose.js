@@ -69,11 +69,10 @@ async function handler(req, res) {
   }
 }
 
-// IP başına: 10/dk + 50/saat (gerçek kullanıcıya bol, bombing'i keser; ~$1/saat tavan).
+// IP başına: 10/saat (kullanıcı direktifi — sıkı maliyet kontrolü; ~$0.20/saat tavan).
+// NOT: tek window. Ortak/mobil-operatör (CGNAT) IP'sinde aynı IP'yi paylaşan meşru
+// kullanıcılar erken 429 alabilir — gerekirse sayıyı yükselt ya da akıllı anahtarla.
 export default withRateLimit(handler, {
   prefix: "diagnose",
-  limits: [
-    { tokens: 10, window: "60 s" },
-    { tokens: 50, window: "1 h" },
-  ],
+  limits: [{ tokens: 10, window: "1 h" }],
 });
