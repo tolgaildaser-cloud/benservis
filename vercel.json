@@ -21,6 +21,9 @@
     { "source": "/urun/:id",                      "destination": "/index.html" },
     { "source": "/sepet",                         "destination": "/index.html" }
   ],
+  "functions": {
+    "api/servis/yakin.js": { "includeFiles": "src/services-data.json" }
+  },
   "crons": [
     { "path": "/api/cron/expire", "schedule": "*/5 * * * *" }
   ]
