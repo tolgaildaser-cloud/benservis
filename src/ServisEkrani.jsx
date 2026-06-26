@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 
@@ -325,7 +325,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
         {/* İl */}
         <select
           value={il}
-          onChange={(e) => { setIl(e.target.value); onSec(""); }}
+          onChange={(e) => { setIl(e.target.value); onSec("", e.target.value); }}
           style={selStyle}
         >
           <option value="">İl seçin...</option>
@@ -335,7 +335,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
         {/* İlçe — yalnız il seçilince aktif */}
         <select
           value={secili}
-          onChange={(e) => onSec(e.target.value)}
+          onChange={(e) => onSec(e.target.value, il)}
           disabled={!il}
           style={{ ...selStyle, opacity: il ? 1 : 0.5, cursor: il ? "pointer" : "not-allowed" }}
         >
@@ -347,7 +347,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, onKapat, onAnaSayfa }) {
+export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, onKapat, onAnaSayfa, teshisLogId }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
@@ -359,6 +359,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, on
   const [tumYakin, setTumYakin] = useState([]); // garanti filtresi UYGULANMAMIŞ yakın liste (gevşetme için)
   // Müşterinin ilçesi — ileride talep/veri toplama için bölge bilgisi (koordinat yoksa).
   const [konumIlce, setKonumIlce] = useState(null);
+  const [konumIl, setKonumIl] = useState(null); // rapor için il (anonim log'a iliştirilir)
   // Müşterinin GPS koordinatı — mesafe sıralaması için.
   const [musteriKonum, setMusteriKonum] = useState(null);
 
@@ -406,17 +407,21 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, on
         setTumYakin(kmSiraliTum.slice(0, 15)); // garanti filtresi olmadan (gevşetme için)
         setLocationState("success");
 
-        // Bölge bilgisi (konumIlce): en yakın servisin ilçesi; yoksa ters geokod.
-        const bolgeIlce = kmSiraliTum.find((s) => s.km != null && s.ilce)?.ilce;
-        if (bolgeIlce) {
-          setKonumIlce(bolgeIlce);
+        // Bölge bilgisi: en yakın servisin il/ilçesi; yoksa ters geokod. (konumIl/konumIlce → anonim log)
+        const bolgeServis = kmSiraliTum.find((s) => s.km != null && s.ilce);
+        const bolgeIl = kmSiraliTum.find((s) => s.km != null && (s.sehir || s.il)) || {};
+        if (bolgeIl.sehir || bolgeIl.il) setKonumIl(bolgeIl.sehir || bolgeIl.il);
+        if (bolgeServis?.ilce) {
+          setKonumIlce(bolgeServis.ilce);
         } else {
           fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}&accept-language=tr&zoom=12`)
             .then((r) => (r.ok ? r.json() : null))
             .then((d) => {
               const a = d?.address || {};
               const ilce = a.city_district || a.town || a.county || a.district || a.suburb || null;
+              const il = a.province || a.state || a.city || null;
               if (ilce) setKonumIlce(ilce);
+              if (il) setKonumIl(il);
             })
             .catch(() => {});
         }
@@ -425,6 +430,17 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, on
       { timeout: 10000 }
     );
   }, [cihaz]);
+
+  // Servis arama konumu belli olunca anonim teşhis loguna il/ilçe iliştir (BİR KEZ, best-effort).
+  const konumPostRef = useRef(false);
+  useEffect(() => {
+    if (konumPostRef.current || !teshisLogId || (!konumIl && !konumIlce)) return;
+    konumPostRef.current = true;
+    fetch("/api/teshis/log", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: teshisLogId, il: konumIl, ilce: konumIlce }),
+    }).catch(() => {});
+  }, [teshisLogId, konumIl, konumIlce]);
 
   // İl → ilçe haritası: tüm Türkiye
   const ilIlceMap = TR_IL_ILCE;
@@ -602,10 +618,11 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, on
           <FallbackIlce
             ilIlceMap={ilIlceMap}
             secili={fallbackIlce}
-            onSec={async (ilce) => {
+            onSec={async (ilce, il) => {
               if (!ilce) return;
               setFallbackIlce(ilce);
               setKonumIlce(ilce); // bölge bilgisi — seçilen ilçe kesin doğru
+              if (il) setKonumIl(il); // rapor için il (anonim log)
               let liste = [];
               try {
                 const r = await fetch(`/api/servis/yakin?cihaz=${encodeURIComponent(cihaz)}&ilce=${encodeURIComponent(ilce)}`);
