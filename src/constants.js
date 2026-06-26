@@ -26,65 +26,81 @@ export function eslesenKategoriler(cihaz) {
   return KATEGORI_ESLES[cihaz] || [cihaz];
 }
 
-// Garanti yönlendirmesi ve teşhis kalitesi için — yetkili servis eşleştirmesinde kullanılır
-export const MARKALAR = [
-  "AEG", "Airfel", "Alarko", "Apple", "Arçelik", "Arzum", "Asus", "Balay",
-  "Bauknecht", "Baymak", "Beko", "Bosch", "Braun", "Brother", "Canon",
-  "Candy", "Comfee", "Daikin", "Daewoo", "Demirdöküm", "Dreame", "Dyson",
-  "ECA", "Electrolux", "Epson", "Fakir", "Fantom", "Ferroli", "Franke",
-  "Gree", "Grundig", "Haier", "Hisense", "Hitachi", "Honor", "Hoover",
-  "Hotpoint", "HP", "Huawei", "Indesit", "Karaca", "Korkmaz", "Kumtel",
-  "Lenovo", "LG", "MediaTek", "Midea", "Miele", "Mitsubishi", "MSI",
-  "Nokia", "OnePlus", "Oppo", "Panasonic", "Philips", "Profilo", "Realme",
-  "Regal", "Roborock", "Rowenta", "Samsung", "Sharp", "Siemens",
-  "Silverline", "Simfer", "Sinbo", "Singer", "Sony", "TCL", "Tefal",
-  "Thomson", "Toshiba", "Vaillant", "Vestel", "Vivo", "Whirlpool",
-  "Xiaomi", "Zanussi",
-];
+const trSort = (a, b) => a.localeCompare(b, "tr");
 
-// Cihaza göre ilgili markalar — kullanıcı cihaz seçince yalnız o cihazda
-// satılan markalar listelenir. Haritada olmayan cihaz (veya "Diğer") → tüm MARKALAR.
+// Cihaza göre marka grupları — Türkiye piyasası (hepsiburada/mediamarkt marka filtreleri,
+// 2026) ile karşılaştırılarak güncellendi. Kullanıcı cihaz seçince yalnız o cihazda satılan
+// markalar listelenir; markası listede olmayan "Diğer / Listede yok" ile devam eder (App.jsx).
 const BEYAZ_ESYA = [
   "AEG", "Altus", "Arçelik", "Bauknecht", "Beko", "Bosch", "Candy", "Daewoo",
   "Electrolux", "Grundig", "Haier", "Hisense", "Hoover", "Hotpoint", "Indesit",
-  "LG", "Midea", "Miele", "Profilo", "Regal", "Samsung", "Siemens", "Vestel",
-  "Whirlpool", "Zanussi",
+  "Liebherr", "LG", "Midea", "Miele", "Profilo", "Regal", "Samsung", "Sharp",
+  "Siemens", "Smeg", "Uğur", "Vestel", "Vestfrost", "Whirlpool", "Zanussi",
 ];
-const ISITMA_SOGUTMA = [
-  "Airfel", "Alarko", "Arçelik", "Baymak", "Beko", "Bosch", "Buderus", "Daikin",
-  "Demirdöküm", "ECA", "Ferroli", "Gree", "Haier", "Hisense", "Hitachi", "LG",
-  "Midea", "Mitsubishi", "Panasonic", "Samsung", "Toshiba", "Vaillant", "Vestel",
+// Klima ve Kombi farklı marka setleri taşır → ayrı listeler (eskiden tek ISITMA_SOGUTMA idi;
+// klima kullanıcısı kombi-markası, kombi kullanıcısı klima-markası görüyordu).
+const KLIMA = [
+  "Arçelik", "Aux", "Baymak", "Beko", "Bosch", "Carrier", "Daikin", "Fujitsu",
+  "Gree", "Haier", "Hisense", "Hitachi", "LG", "Midea", "Mitsubishi", "Panasonic",
+  "Samsung", "Toshiba", "Vestel",
+];
+const KOMBI = [
+  "Airfel", "Alarko", "Arçelik", "Baxi", "Baymak", "Beko", "Bosch", "Buderus",
+  "Demirdöküm", "ECA", "Ferroli", "Immergas", "Protherm", "Vaillant", "Viessmann",
+  "Warmhaus",
 ];
 const KUCUK_EV = [
-  "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "Fakir", "Goldmaster", "Karaca",
-  "King", "Korkmaz", "Kumtel", "Philips", "Rowenta", "Sinbo", "Tefal", "Vestel",
+  "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "Cosori", "Fakir", "Goldmaster",
+  "Karaca", "Kenwood", "King", "Korkmaz", "Kumtel", "Luxell", "Ninja", "Philips",
+  "Rowenta", "Russell Hobbs", "Sinbo", "Tefal", "Vestel", "Xiaomi",
 ];
 const SUPURGE = [
-  "Arçelik", "Arzum", "Beko", "Bosch", "Dreame", "Dyson", "Electrolux", "Fakir",
-  "Fantom", "Karcher", "LG", "Philips", "Roborock", "Rowenta", "Samsung", "Tefal",
-  "Vestel", "Xiaomi", "iRobot",
+  "Arçelik", "Arzum", "Beko", "Bosch", "Dreame", "Dyson", "Ecovacs", "Electrolux",
+  "Eufy", "Fakir", "Fantom", "Karcher", "LG", "Philips", "Roborock", "Rowenta",
+  "Samsung", "Tefal", "Vestel", "Xiaomi", "iRobot",
+];
+const TELEVIZYON = [
+  "Arçelik", "Awox", "Axen", "Beko", "Finlux", "Grundig", "Hisense", "LG", "Onvo",
+  "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Skyworth",
+  "Sony", "Sunny", "TCL", "Telefunken", "Thomson", "Toshiba", "Vestel", "Xiaomi",
+];
+const SU_ARITMA = [
+  "A.O. Smith", "Aqua", "Aquapro", "Aquatech", "Arçelik", "Aura (İhlas)", "Beko",
+  "Brita", "Conti", "Coway", "Cuckoo", "Elit", "Fakir", "Homefil", "Puretech",
+  "Samsung", "Sumosu", "Tunçmatik", "Vestel", "Waterlife",
+];
+const BILGISAYAR = [
+  "Acer", "Apple", "Asus", "Casper", "Dell", "Exper", "Gigabyte", "Hometech",
+  "Honor", "HP", "Huawei", "Lenovo", "LG", "Microsoft", "Monster", "MSI",
+  "Samsung", "Sony", "Toshiba", "Xiaomi",
 ];
 const TELEFON = [
   "Apple", "Asus", "Casper", "General Mobile", "Honor", "Huawei", "Nokia",
   "OnePlus", "Oppo", "Realme", "Reeder", "Samsung", "TCL", "Tecno", "Vivo", "Xiaomi",
 ];
-const BILGISAYAR = [
-  "Acer", "Apple", "Asus", "Casper", "Dell", "Gigabyte", "HP", "Huawei", "Lenovo",
-  "LG", "Microsoft", "Monster", "MSI", "Samsung", "Sony", "Toshiba",
-];
+const ANKASTRE_EK = ["Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica", "Teka", "Luxell"];
+const YAZICI = ["Brother", "Canon", "Epson", "Lexmark", "Pantum", "Ricoh", "Xerox"];
+
+// Garanti yönlendirmesi ve teşhis kalitesi için master liste — tüm grupların birleşimi
+// (haritada olmayan cihaz veya "Diğer" → bu liste). Süperset garantisi için üretilir.
+export const MARKALAR = [...new Set([
+  ...BEYAZ_ESYA, ...KLIMA, ...KOMBI, ...KUCUK_EV, ...SUPURGE, ...TELEVIZYON,
+  ...SU_ARITMA, ...BILGISAYAR, ...TELEFON, ...ANKASTRE_EK, ...YAZICI,
+  "Balay", "Comfee", "Singer",
+])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
   "Buzdolabı": BEYAZ_ESYA,
   "Çamaşır Makinesi": BEYAZ_ESYA,
   "Bulaşık Makinesi": BEYAZ_ESYA,
-  "Fırın / Ocak / Aspiratör": [...BEYAZ_ESYA, "Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica"].sort((a, b) => a.localeCompare(b, "tr")),
-  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort((a, b) => a.localeCompare(b, "tr")),
-  "Klima": ISITMA_SOGUTMA,
-  "Kombi / Termosifon": ISITMA_SOGUTMA,
-  "Televizyon": ["Arçelik", "Awox", "Beko", "Grundig", "Hisense", "LG", "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Sony", "TCL", "Thomson", "Toshiba", "Vestel"],
-  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort((a, b) => a.localeCompare(b, "tr")),
-  "Su Sebili / Arıtma": ["Arçelik", "Aqua", "Beko", "Coway", "Homefil", "Samsung", "Vestel", "Waterlife"],
-  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, "Brother", "Canon", "Epson", "Lexmark", "Pantum", "Ricoh", "Xerox"])].sort((a, b) => a.localeCompare(b, "tr")),
+  "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK])].sort(trSort),
+  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort(trSort),
+  "Klima": KLIMA,
+  "Kombi / Termosifon": KOMBI,
+  "Televizyon": TELEVIZYON,
+  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort(trSort),
+  "Su Sebili / Arıtma": SU_ARITMA,
+  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI])].sort(trSort),
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
 
