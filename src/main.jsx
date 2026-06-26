@@ -8,6 +8,7 @@ import IkinciElApp from "./IkinciElApp.jsx";
 import MusteriTakip from "./MusteriTakip.jsx";
 import ServisKayit from "./ServisKayit.jsx";
 import ServisAdmin from "./ServisAdmin.jsx";
+import RaporPaneli from "./RaporPaneli.jsx";
 import ServisMagaza from "./ServisMagaza.jsx";
 import UrunDetay from "./UrunDetay.jsx";
 import Sepet from "./Sepet.jsx";
@@ -22,6 +23,7 @@ const isIkinci      = path.startsWith("/ikinci-el");
 const isTakip       = path.startsWith("/takip/");
 const isServisKayit = path === "/servis-kayit";
 const isServisAdmin = path === "/servis-admin";
+const isAdmin       = path === "/admin";
 const isServisMagaza = path.startsWith("/servis/");
 const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : null;
 
@@ -38,6 +40,7 @@ createRoot(document.getElementById("root")).render(
      isTakip        ? <MusteriTakip isNo={takipIsNo} /> :
      isServisKayit  ? <ServisKayit />                   :
      isServisAdmin  ? <ServisAdmin />                   :
+     isAdmin        ? <RaporPaneli />                   :
      isServisMagaza ? <ServisMagaza />                  :
      <App />}
   </React.StrictMode>
