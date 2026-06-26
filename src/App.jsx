@@ -96,6 +96,7 @@ export default function App() {
   const [hataMsg, setHataMsg] = useState("");
   const [kopyalandi, setKopyalandi] = useState(false);
   const [showServisler, setShowServisler] = useState(false);
+  const [teshisLogId, setTeshisLogId] = useState(null); // anonim teşhis log id (konum iliştirmek için)
   const [showDPP, setShowDPP] = useState(false);
   const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
 
@@ -286,7 +287,24 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       if (teshis && teshis.kararOnerisi === "belirsiz") teshis.aciliyet = "belirsiz";
       setSonuc(teshis);
       // Girdi geçerli bir arıza tarifi değilse (anlamsız/alakasız) → teşhis/fiyat/Servis Bul GÖSTERME.
-      setAdim(teshis && teshis.gecerliAriza === false ? "gecersiz" : "sonuc");
+      const gecerli = !(teshis && teshis.gecerliAriza === false);
+      setAdim(gecerli ? "sonuc" : "gecersiz");
+      // Anonim istatistik logu (best-effort; akışı ASLA bloklamaz; PII yok)
+      if (gecerli && teshis) {
+        fetch("/api/teshis/log", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            cihaz, marka,
+            ariza: teshis.olasiArizalar?.[0]?.ad || null,
+            maliyet_min: teshis.tahminiMaliyet?.min ?? null,
+            maliyet_max: teshis.tahminiMaliyet?.max ?? null,
+            karar: teshis.kararOnerisi || null,
+            aciliyet: teshis.aciliyet || null,
+            yas: yas || null,
+            garanti: !!garantiAltinda,
+          }),
+        }).then((r) => (r.ok ? r.json() : null)).then((d) => { if (d?.id) setTeshisLogId(d.id); }).catch(() => {});
+      }
     } catch (e) {
       setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
       setAdim("hata");
@@ -318,7 +336,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
@@ -338,6 +356,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           belirti={belirti}
           onKapat={() => setShowServisler(false)}
           onAnaSayfa={sifirla}
+          teshisLogId={teshisLogId}
         />
       )}
       {showDPP && (
