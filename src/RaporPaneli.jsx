@@ -1,6 +1,6 @@
 // src/RaporPaneli.jsx — Teşhis raporu paneli — /admin
-// Şifre ile giriş (localStorage hatırlar) → tarih aralığı → "Raporu çek" → tablolar.
-// Sır = localStorage ya da ?token= (geriye uyumlu). Sunucu Bearer (ADMIN_TOKEN/ADMIN_PASSWORD) kontrol eder.
+// Şifre ile giriş (localStorage hatırlar) → tarih aralığı → "Raporu çek" → HAM VERİ MATRİSİ (Excel benzeri) + CSV.
+// Sır = localStorage ya da ?token=. Sunucu Bearer (ADMIN_TOKEN/ADMIN_PASSWORD) kontrol eder.
 import React, { useState, useEffect } from "react";
 
 const INK = "#1E293B", PAPER = "#F8FAFC", BLUE = "#2563EB", SLATE = "#64748B", LINE = "#E2E8F0";
@@ -8,29 +8,7 @@ const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ops
 const LS_KEY = "benservis_admin";
 const bugun = () => new Date().toISOString().slice(0, 10);
 const gunOnce = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
-
-function Tablo({ baslik, satirlar, toplam }) {
-  const max = Math.max(1, ...satirlar.map((s) => s.adet));
-  return (
-    <div style={{ background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, padding: 16, marginBottom: 14 }}>
-      <h3 style={{ fontFamily: "'Fraunces',serif", fontSize: 16, color: INK, margin: "0 0 10px" }}>{baslik}</h3>
-      {satirlar.length === 0 ? <div style={{ color: SLATE, fontSize: 13 }}>—</div> :
-        satirlar.map((s) => (
-          <div key={s.ad} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ fontSize: 13.5, color: INK, fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{s.ad}</div>
-              <div style={{ height: 5, background: "#EFF6FF", borderRadius: 3, marginTop: 3 }}>
-                <div style={{ height: "100%", width: `${(s.adet / max) * 100}%`, background: BLUE, borderRadius: 3 }} />
-              </div>
-            </div>
-            <div style={{ fontSize: 13, fontWeight: 700, color: BLUE, minWidth: 44, textAlign: "right" }}>
-              {s.adet}{toplam ? <span style={{ color: SLATE, fontWeight: 400, fontSize: 11 }}> ·%{Math.round((s.adet / toplam) * 100)}</span> : null}
-            </div>
-          </div>
-        ))}
-    </div>
-  );
-}
+const trTarih = (iso) => { if (!iso) return ""; const d = new Date(iso); return `${d.toLocaleDateString("tr-TR")} ${d.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" })}`; };
 
 export default function RaporPaneli() {
   const urlToken = new URLSearchParams(window.location.search).get("token") || "";
@@ -42,7 +20,6 @@ export default function RaporPaneli() {
   const [durum, setDurum] = useState("bosta"); // bosta | yukleniyor | hata
   const [hata, setHata] = useState("");
 
-  // Verilen sırla rapor çek; 401 → çıkış (sırrı temizle). Başarı → true.
   const cek = async (token = sir, f = from, t = to) => {
     if (!token) return false;
     setDurum("yukleniyor"); setHata("");
@@ -58,22 +35,32 @@ export default function RaporPaneli() {
     } catch (e) { setHata(e.message); setDurum("hata"); return false; }
   };
 
-  // Açılışta sır varsa otomatik çek (hatırlanan giriş)
   useEffect(() => { if (sir) cek(sir); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const giris = async () => {
-    const t = girisInput.trim();
-    if (!t) return;
-    setSir(t);
-    const ok = await cek(t);
-    if (ok) localStorage.setItem(LS_KEY, t);
+    const t = girisInput.trim(); if (!t) return;
+    setSir(t); const ok = await cek(t); if (ok) localStorage.setItem(LS_KEY, t);
   };
   const cikis = () => { localStorage.removeItem(LS_KEY); setSir(""); setRapor(null); setGirisInput(""); setHata(""); setDurum("bosta"); };
 
+  const csvIndir = () => {
+    if (!rapor?.satirlar?.length) return;
+    const esc = (v) => { const s = v == null ? "" : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+    const head = ["Tarih", "Cihaz", "Marka", "Arıza", "İl", "İlçe", "MaliyetMin", "MaliyetMax", "Karar", "Aciliyet"];
+    const lines = [head.join(",")];
+    for (const s of rapor.satirlar) lines.push([trTarih(s.created_at), s.cihaz, s.marka, s.ariza, s.il, s.ilce, s.maliyet_min, s.maliyet_max, s.karar, s.aciliyet].map(esc).join(","));
+    const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `teshis-raporu_${rapor.aralik.from}_${rapor.aralik.to}.csv`;
+    a.click(); URL.revokeObjectURL(a.href);
+  };
+
   const inputS = { padding: "8px 10px", border: `1px solid ${LINE}`, borderRadius: 8, fontSize: 14, fontFamily: "inherit", marginTop: 3 };
   const btnS = { padding: "9px 18px", background: BLUE, color: "#fff", border: "none", borderRadius: 9, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" };
-  const dagitSatir = (obj) => Object.entries(obj || {}).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}: ${v}`).join("  ·  ") || "—";
+  const thS = { padding: "8px 10px", color: SLATE, fontWeight: 700, whiteSpace: "nowrap", borderBottom: `1px solid ${LINE}`, textAlign: "left" };
+  const tdS = { padding: "7px 10px", color: INK, whiteSpace: "nowrap", borderBottom: "1px solid #F1F5F9" };
 
   // ── GİRİŞ EKRANI (sır yok) ──
   if (!sir) {
@@ -83,13 +70,11 @@ export default function RaporPaneli() {
         <div style={{ maxWidth: 340, margin: "70px auto 0", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 14, padding: 24 }}>
           <h1 style={{ fontFamily: "'Fraunces',serif", fontSize: 22, color: INK, margin: "0 0 4px" }}>Teşhis Raporu</h1>
           <p style={{ color: SLATE, fontSize: 13, margin: "0 0 16px" }}>Giriş için şifre.</p>
-          <input
-            type="password" value={girisInput} autoFocus
+          <input type="password" value={girisInput} autoFocus
             onChange={(e) => setGirisInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && giris()}
             placeholder="Şifre"
-            style={{ ...inputS, width: "100%", boxSizing: "border-box", marginTop: 0, marginBottom: 12 }}
-          />
+            style={{ ...inputS, width: "100%", boxSizing: "border-box", marginTop: 0, marginBottom: 12 }} />
           <button onClick={giris} disabled={durum === "yukleniyor"} style={{ ...btnS, width: "100%" }}>
             {durum === "yukleniyor" ? "Kontrol ediliyor…" : "Giriş"}
           </button>
@@ -100,19 +85,20 @@ export default function RaporPaneli() {
   }
 
   // ── RAPOR EKRANI (sır var) ──
+  const basliklar = ["Tarih", "Cihaz", "Marka", "Arıza", "İl", "İlçe", "Maliyet", "Karar", "Aciliyet"];
   return (
     <div style={{ minHeight: "100vh", background: PAPER, fontFamily: "'Hanken Grotesk',sans-serif", padding: "20px 16px" }}>
       <style>{FONT}</style>
-      <div style={{ maxWidth: 760, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div>
             <h1 style={{ fontFamily: "'Fraunces',serif", fontSize: 24, color: INK, margin: "0 0 4px" }}>Teşhis Raporu</h1>
-            <p style={{ color: SLATE, fontSize: 13, marginTop: 0 }}>Anonim teşhis istatistikleri · tarih aralığı seç, çek.</p>
+            <p style={{ color: SLATE, fontSize: 13, marginTop: 0 }}>Ham veri matrisi · tarih aralığı seç, çek, Excel'e aktar.</p>
           </div>
           <button onClick={cikis} style={{ background: "none", border: `1px solid ${LINE}`, borderRadius: 8, padding: "6px 12px", fontSize: 12.5, fontWeight: 600, color: SLATE, cursor: "pointer", fontFamily: "inherit", flexShrink: 0 }}>Çıkış</button>
         </div>
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "flex-end", margin: "14px 0 18px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "flex-end", margin: "14px 0 16px" }}>
           <label style={{ fontSize: 12, color: SLATE, fontWeight: 600, display: "flex", flexDirection: "column" }}>Başlangıç
             <input type="date" value={from} onChange={(e) => setFrom(e.target.value)} style={inputS} /></label>
           <label style={{ fontSize: 12, color: SLATE, fontWeight: 600, display: "flex", flexDirection: "column" }}>Bitiş
@@ -126,26 +112,38 @@ export default function RaporPaneli() {
 
         {rapor && (
           <>
-            <div style={{ background: INK, color: "#fff", borderRadius: 12, padding: "14px 16px", marginBottom: 14 }}>
-              <div style={{ fontSize: 13, opacity: .8 }}>{rapor.aralik.from} → {rapor.aralik.to}</div>
-              <div style={{ fontFamily: "'Fraunces',serif", fontSize: 28, fontWeight: 700 }}>{rapor.toplam} <span style={{ fontSize: 14, fontWeight: 400, opacity: .8 }}>teşhis</span></div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>
+              <div style={{ fontSize: 14, color: INK }}><b>{rapor.toplam}</b> teşhis · <span style={{ color: SLATE }}>{rapor.aralik.from} → {rapor.aralik.to}</span></div>
+              {rapor.toplam > 0 && (
+                <button onClick={csvIndir} style={{ ...btnS, background: "#fff", color: BLUE, border: `1.5px solid ${BLUE}` }}>📥 Excel'e aktar (CSV)</button>
+              )}
             </div>
+            {rapor.kismi && <div style={{ fontSize: 12.5, color: "#9A3412", marginBottom: 10 }}>İlk 5000 satır gösteriliyor — daha fazlası için tarih aralığını daralt.</div>}
             {rapor.toplam === 0 ? (
-              <div style={{ color: SLATE, fontSize: 14, textAlign: "center", padding: 24 }}>Bu aralıkta kayıt yok.</div>
+              <div style={{ color: SLATE, fontSize: 14, textAlign: "center", padding: 24, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12 }}>Bu aralıkta kayıt yok.</div>
             ) : (
-              <>
-                <Tablo baslik="En çok marka" satirlar={rapor.marka} toplam={rapor.toplam} />
-                <Tablo baslik="En çok arıza" satirlar={rapor.ariza} toplam={rapor.toplam} />
-                <Tablo baslik="Cihaz dağılımı" satirlar={rapor.cihaz} toplam={rapor.toplam} />
-                <Tablo baslik="En çok il" satirlar={rapor.il} toplam={rapor.toplam} />
-                <Tablo baslik="En çok ilçe" satirlar={rapor.ilce} toplam={rapor.toplam} />
-                <div style={{ background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, padding: 16, marginBottom: 14 }}>
-                  <h3 style={{ fontFamily: "'Fraunces',serif", fontSize: 16, color: INK, margin: "0 0 8px" }}>Karar / Aciliyet / Maliyet</h3>
-                  <div style={{ fontSize: 13.5, color: INK, marginBottom: 6 }}><b>Karar:</b> {dagitSatir(rapor.karar)}</div>
-                  <div style={{ fontSize: 13.5, color: INK, marginBottom: 6 }}><b>Aciliyet:</b> {dagitSatir(rapor.aciliyet)}</div>
-                  <div style={{ fontSize: 13.5, color: INK }}><b>Maliyet:</b> {rapor.maliyet ? `ort. ${rapor.maliyet.ortMin}–${rapor.maliyet.ortMax} TL · genel ${rapor.maliyet.min}–${rapor.maliyet.max} TL` : "—"}</div>
-                </div>
-              </>
+              <div style={{ overflowX: "auto", border: `1px solid ${LINE}`, borderRadius: 12, background: "#fff" }}>
+                <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 13 }}>
+                  <thead>
+                    <tr style={{ background: "#F1F5F9" }}>{basliklar.map((h) => <th key={h} style={thS}>{h}</th>)}</tr>
+                  </thead>
+                  <tbody>
+                    {rapor.satirlar.map((s, i) => (
+                      <tr key={i}>
+                        <td style={tdS}>{trTarih(s.created_at)}</td>
+                        <td style={tdS}>{s.cihaz || "—"}</td>
+                        <td style={tdS}>{s.marka || "—"}</td>
+                        <td style={tdS}>{s.ariza || "—"}</td>
+                        <td style={tdS}>{s.il || "—"}</td>
+                        <td style={tdS}>{s.ilce || "—"}</td>
+                        <td style={tdS}>{s.maliyet_min != null ? `${s.maliyet_min}–${s.maliyet_max}` : "—"}</td>
+                        <td style={tdS}>{s.karar || "—"}</td>
+                        <td style={tdS}>{s.aciliyet || "—"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             )}
           </>
         )}
