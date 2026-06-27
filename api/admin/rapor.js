@@ -3,8 +3,9 @@
 import supabase from "../_supabase.js";
 
 function yetkiKontrol(req) {
-  const t = process.env.ADMIN_TOKEN;
-  return !!t && (req.headers["authorization"] || "") === `Bearer ${t}`;
+  const auth = req.headers["authorization"] || "";
+  const t = process.env.ADMIN_TOKEN, p = process.env.ADMIN_PASSWORD;
+  return (!!t && auth === `Bearer ${t}`) || (!!p && auth === `Bearer ${p}`);
 }
 const top = (rows, key, n = 15) => {
   const m = {};
