@@ -1,5 +1,5 @@
-// api/admin/rapor.js — Teşhis raporu (tarih aralıklı toplamlar). ADMIN_TOKEN korumalı.
-// GET ?from=YYYY-MM-DD&to=YYYY-MM-DD (yoksa son 30 gün). Anonim teshis_log üzerinden JS-aggregate (v1).
+// api/admin/rapor.js — Teşhis raporu HAM VERİ matrisi (tarih aralıklı satırlar). ADMIN_TOKEN/ADMIN_PASSWORD korumalı.
+// GET ?from=YYYY-MM-DD&to=YYYY-MM-DD (yoksa son 30 gün). Her teşhis = 1 satır, tarihe göre (yeni→eski), tavan 5000.
 import supabase from "../_supabase.js";
 
 function yetkiKontrol(req) {
@@ -7,11 +7,6 @@ function yetkiKontrol(req) {
   const t = process.env.ADMIN_TOKEN, p = process.env.ADMIN_PASSWORD;
   return (!!t && auth === `Bearer ${t}`) || (!!p && auth === `Bearer ${p}`);
 }
-const top = (rows, key, n = 15) => {
-  const m = {};
-  for (const r of rows) { const v = r[key]; if (v) m[v] = (m[v] || 0) + 1; }
-  return Object.entries(m).map(([ad, adet]) => ({ ad, adet })).sort((a, b) => b.adet - a.adet).slice(0, n);
-};
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Yalnızca GET" });
@@ -27,34 +22,19 @@ export default async function handler(req, res) {
   try {
     const { data, error } = await supabase
       .from("teshis_log")
-      .select("cihaz,marka,ariza,maliyet_min,maliyet_max,karar,aciliyet,il,ilce")
+      .select("created_at,cihaz,marka,ariza,il,ilce,maliyet_min,maliyet_max,karar,aciliyet")
       .gte("created_at", `${fromQ}T00:00:00.000Z`)
       .lte("created_at", `${toQ}T23:59:59.999Z`)
-      .limit(50000);
+      .order("created_at", { ascending: false })
+      .limit(5000);
     if (error) return res.status(500).json({ ok: false, error: error.message });
-    const rows = data || [];
-
-    const dagit = (key) => rows.reduce((a, r) => { const v = r[key] || "—"; a[v] = (a[v] || 0) + 1; return a; }, {});
-    const mins = rows.map((r) => r.maliyet_min).filter((x) => x != null);
-    const maxs = rows.map((r) => r.maliyet_max).filter((x) => x != null);
-    const ort = (a) => (a.length ? Math.round(a.reduce((s, x) => s + x, 0) / a.length) : null);
-    const maliyet = mins.length
-      ? { ortMin: ort(mins), ortMax: ort(maxs), min: Math.min(...mins), max: Math.max(...maxs) }
-      : null;
-
+    const satirlar = data || [];
     return res.status(200).json({
       ok: true,
       aralik: { from: fromQ, to: toQ },
-      toplam: rows.length,
-      marka: top(rows, "marka"),
-      ariza: top(rows, "ariza"),
-      cihaz: top(rows, "cihaz", 20),
-      il: top(rows, "il"),
-      ilce: top(rows, "ilce"),
-      karar: dagit("karar"),
-      aciliyet: dagit("aciliyet"),
-      maliyet,
-      kismi: rows.length >= 50000,
+      toplam: satirlar.length,
+      satirlar,
+      kismi: satirlar.length >= 5000,
     });
   } catch (e) {
     return res.status(500).json({ ok: false, error: String(e) });
