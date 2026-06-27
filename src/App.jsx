@@ -4,6 +4,7 @@ import DPPEkrani from "./DPPEkrani.jsx";
 import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
+import { track } from "@vercel/analytics";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
@@ -197,6 +198,7 @@ export default function App() {
     if (belirti.trim().length < 4) { setHataMsg("Arıza belirtisini birkaç kelimeyle yaz."); return; }
     setHataMsg("");
     setAdim("loading");
+    track("diagnose_start", { cihaz, marka }); // funnel: kullanıcı teşhis istedi
 
     const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
 
@@ -289,6 +291,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       // Girdi geçerli bir arıza tarifi değilse (anlamsız/alakasız) → teşhis/fiyat/Servis Bul GÖSTERME.
       const gecerli = !(teshis && teshis.gecerliAriza === false);
       setAdim(gecerli ? "sonuc" : "gecersiz");
+      track("diagnose_result", { gecerli, karar: teshis?.kararOnerisi || null }); // funnel: sonuç ekranı gösterildi
       // Anonim istatistik logu (best-effort; akışı ASLA bloklamaz; PII yok)
       if (gecerli && teshis) {
         fetch("/api/teshis/log", {
@@ -605,7 +608,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => setShowServisler(true)}>
+              <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => { track("servis_click", { cihaz, marka }); setShowServisler(true); }}>
                 📍 Servis Bul
               </button>
             </div>

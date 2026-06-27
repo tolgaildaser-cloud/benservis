@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import BenservisLogo from "./BenservisLogo.jsx";
+import { track } from "@vercel/analytics";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -147,7 +148,7 @@ function ServisKarti({ servis, onSec }) {
       {servis.telefon && (
         <a
           href={`tel:${servis.telefon}`}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => { e.stopPropagation(); track("call_click", { kaynak: "kart" }); }}
           style={{
             background: "#2563EB", color: "white",
             borderRadius: 10, padding: "11px 18px",
@@ -222,6 +223,7 @@ function ServisProfil({ servis, onGeri }) {
           {servis.telefon && (
             <a
               href={`tel:${servis.telefon}`}
+              onClick={() => track("call_click", { kaynak: "detay" })}
               style={{
                 background: "#2563EB", color: "white",
                 borderRadius: 10, padding: "12px 20px",
