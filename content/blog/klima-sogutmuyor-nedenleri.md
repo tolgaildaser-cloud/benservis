@@ -3,6 +3,7 @@ title: "Klima soğutmuyor: 6 olası neden ve 2026 servis fiyatları"
 description: "Klima soğutmuyorsa nedeni kirli filtreden gaz kaçağına kadar uzanır. 6 olası neden, kendin yapabileceğin kontroller ve 2026 İstanbul servis fiyatlarını öğren."
 slug: "klima-sogutmuyor-nedenleri"
 date: "2026-06-17"
+updated: "2026-06-29"
 category: "Klima"
 faq:
   - q: "Klima dışarı hava üflüyor ama soğutmuyor, neden?"
@@ -65,7 +66,7 @@ Aşağıdakiler uzmanlık ve özel ekipman ister — kendin müdahale etme:
 | Elektronik kart tamiri | 1.500 – 3.500 ₺ |
 | Kompresör değişimi | 4.000 – 9.000 ₺ |
 
-İlgili rehberler: [Klima gazı dolumu 2026 fiyatları](/blog/klima-gazi-dolumu-fiyat/) · [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/)
+İlgili rehberler: [Klima hiç açılmıyor / çalışmıyor mu?](/blog/klima-calismiyor/) · [Klima gazı dolumu 2026 fiyatları](/blog/klima-gazi-dolumu-fiyat/) · [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/)
 
 ## Sık sorulan sorular
 
