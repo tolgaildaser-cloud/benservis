@@ -312,7 +312,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
     : [];
 
   const selStyle = {
-    padding: "11px 14px", fontSize: 14, borderRadius: 8,
+    padding: "11px 14px", fontSize: 16, borderRadius: 8,
     border: "2px solid #1E293B", background: "#F8FAFC",
     color: "#1E293B", cursor: "pointer", fontFamily: "inherit",
     minWidth: 180,
