@@ -7,6 +7,18 @@ export const config = { api: { bodyParser: false } }; // ham binary gövde
 
 const MAX_BYTES = 4 * 1024 * 1024; // Vercel istek limiti ~4.5MB altı; 60sn opus ~<1MB
 
+// Whisper SESSİZ/konuşmasız seste eğitim verisinden altyazı-jeneriği uydurur (ör. "Altyazı M.K.",
+// "Abone olmayı unutmayın", "İzlediğiniz için teşekkürler"). temperature/prompt çözmüyor → bilinen
+// halüsinasyon kalıplarını ele, boş döndür (istemci boşta "Sesi anlayamadım" gösterir).
+const HALU_RE = /alt[ıi]?yaz|abone ol|izlediğiniz için|görüşmek üzere|kanal[ıa].*abone|thanks for watching|subtitle|amara\.org/i;
+const HALU_TAM = new Set(["teşekkürler", "teşekkür ederim", "teşekkür ederiz", "iyi seyirler", "sağ olun", "sağolun"]);
+function sesTemiz(raw) {
+  const t = (raw || "").trim();
+  const n = t.toLowerCase().replace(/[.!?]+$/g, "").trim();
+  if (!n || HALU_RE.test(n) || HALU_TAM.has(n)) return "";
+  return t;
+}
+
 function readRawBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
@@ -41,9 +53,9 @@ async function handler(req, res) {
     const ext = ct.includes("mp4") ? "mp4" : ct.includes("mpeg") ? "mp3" : "webm";
     const file = await toFile(buf, `ses.${ext}`, { type: ct });
     const r = await openai.audio.transcriptions.create({
-      file, model: "whisper-1", language: "tr",
+      file, model: "whisper-1", language: "tr", temperature: 0,
     });
-    return res.status(200).json({ text: (r.text || "").trim() });
+    return res.status(200).json({ text: sesTemiz(r.text) }); // halüsinasyon → "" → istemci "anlayamadım"
   } catch (e) {
     console.error("[stt] hata:", e?.message || e); // SADECE hata mesajı; ses ASLA log'lanmaz
     return res.status(502).json({ error: "Ses çevrilemedi, tekrar dene" });
