@@ -3,6 +3,7 @@ title: "Bosch çamaşır makinesi hata kodları: tam liste ve anlamları"
 description: "Bosch çamaşır makinesi hata kodları tam liste: E16/F16, E17/F17, E18/F18, F21, F23, F43, F63 ve daha fazlasının anlamı, kendin çözebilecekleri ve 2026 tamir fiyatları. Bil, gör, çağır."
 slug: "bosch-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
+updated: "2026-06-29"
 category: "Çamaşır makinesi"
 faq:
   - q: "Bosch çamaşır makinesi F18 (E18) ne demek?"

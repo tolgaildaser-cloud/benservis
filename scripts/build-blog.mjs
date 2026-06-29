@@ -274,10 +274,22 @@ fs.writeFileSync(
   })
 );
 
-const urls = [`${SITE}/`, `${SITE}/blog/`, ...posts.map((p) => `${SITE}/blog/${p.slug}/`)];
+// lastmod = frontmatter `updated` varsa onu, yoksa `date`'i kullan (Vercel checkout dosya
+// mtime'ını sıfırladığı için frontmatter sabit/güvenilir kaynaktır). Date objesi gelirse ISO'ya çevir.
+const isoDate = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d).slice(0, 10));
+const postLastmod = (p) => isoDate(p.updated || p.date);
+const newest = posts.map(postLastmod).filter(Boolean).sort().reverse()[0];
+const urlEntries = [
+  { loc: `${SITE}/`, lastmod: newest },
+  { loc: `${SITE}/blog/`, lastmod: newest },
+  { loc: `${SITE}/ikinci-el`, lastmod: newest },
+  ...posts.map((p) => ({ loc: `${SITE}/blog/${p.slug}/`, lastmod: postLastmod(p) })),
+];
 fs.writeFileSync(
   path.join(DIST, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}\n</urlset>\n`
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlEntries
+    .map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`)
+    .join("\n")}\n</urlset>\n`
 );
 fs.writeFileSync(path.join(DIST, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
