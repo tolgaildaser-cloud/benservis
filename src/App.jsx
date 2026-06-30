@@ -90,6 +90,8 @@ export default function App() {
   const [adim, setAdim] = useState("form");
   const [cihaz, setCihaz] = useState("");
   const [marka, setMarka] = useState("");
+  const [markaDiger, setMarkaDiger] = useState(""); // "Diğer" seçilince elle yazılan marka (veri toplama)
+  const efektifMarka = (marka === "Diğer" && markaDiger.trim()) ? markaDiger.trim() : marka;
   const [garantiAltinda, setGarantiAltinda] = useState(false);
   const [yas, setYas] = useState("");
   const [belirti, setBelirti] = useState("");
@@ -203,7 +205,7 @@ export default function App() {
     const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
 
 Cihaz: ${cihaz}
-Marka: ${marka}
+Marka: ${efektifMarka}
 Cihaz yaşı: ${yas || "belirtilmedi"}
 Belirti: "${belirti}"
 
@@ -297,7 +299,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         fetch("/api/teshis/log", {
           method: "POST", headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            cihaz, marka,
+            cihaz, marka: efektifMarka,
             ariza: teshis.olasiArizalar?.[0]?.ad || null,
             maliyet_min: teshis.tahminiMaliyet?.min ?? null,
             maliyet_max: teshis.tahminiMaliyet?.max ?? null,
@@ -324,7 +326,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     const maliyetSatiri = sonuc.kararOnerisi === "gerek_yok" || m.min == null
       ? "Tahmini maliyet: Tamir gerekmez"
       : `Tahmini maliyet: ${m.min}-${m.max} TL`;
-    return `Arızam Ne? — Teşhis\nCihaz: ${cihaz}${marka ? " / " + marka : ""}\nBelirti: ${belirti}\n\nOlası arızalar:\n${ar}\n\n${maliyetSatiri}\nKarar: ${etiket[sonuc.kararOnerisi] || sonuc.kararOnerisi} — ${sonuc.kararAciklama}\nAciliyet: ${sonuc.aciliyet}${sonuc.aciliyetNot ? " — " + sonuc.aciliyetNot : ""}`;
+    return `Arızam Ne? — Teşhis\nCihaz: ${cihaz}${efektifMarka ? " / " + efektifMarka : ""}\nBelirti: ${belirti}\n\nOlası arızalar:\n${ar}\n\n${maliyetSatiri}\nKarar: ${etiket[sonuc.kararOnerisi] || sonuc.kararOnerisi} — ${sonuc.kararAciklama}\nAciliyet: ${sonuc.aciliyet}${sonuc.aciliyetNot ? " — " + sonuc.aciliyetNot : ""}`;
   };
 
   const kopyala = async () => {
@@ -339,7 +341,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
@@ -354,7 +356,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       {showServisler && (
         <ServisEkrani
           cihaz={cihaz}
-          marka={marka}
+          marka={efektifMarka}
           garantiAltinda={garantiAltinda}
           belirti={belirti}
           onKapat={() => setShowServisler(false)}
@@ -365,7 +367,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       {showDPP && (
         <DPPEkrani
           initialSeriNo={dppInitialSeriNo}
-          teshisContext={adim === "sonuc" ? { cihaz, marka } : null}
+          teshisContext={adim === "sonuc" ? { cihaz, marka: efektifMarka } : null}
           onKapat={() => { setShowDPP(false); setDppInitialSeriNo(""); }}
         />
       )}
@@ -396,7 +398,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                 <button key={c} onClick={() => {
                   setCihaz(c);
                   // Cihaz değişince seçili marka yeni listede yoksa sıfırla
-                  if (marka && !markalarForCihaz(c).includes(marka)) setMarka("");
+                  if (marka && marka !== "Diğer" && !markalarForCihaz(c).includes(marka)) setMarka("");
                 }} style={{ ...s.cihazTile, ...(aktif ? s.cihazTileActive : {}) }}>
                   <CihazIkon cihaz={c} size={26} />
                   <span style={s.cihazTileText}>{c}</span>
@@ -435,7 +437,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <select
                 style={{ ...s.input, cursor: cihaz ? "pointer" : "not-allowed" }}
                 value={marka}
-                onChange={(e) => setMarka(e.target.value)}
+                onChange={(e) => { setMarka(e.target.value); if (e.target.value !== "Diğer") setMarkaDiger(""); }}
                 disabled={!cihaz}
               >
                 <option value="">{cihaz ? "Seç…" : "Önce cihaz seç"}</option>
@@ -454,6 +456,18 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               </select>
             </div>
           </div>
+
+          {/* "Diğer" seçilince markayı elle yaz — veri toplama + daha iyi teşhis (isteğe bağlı) */}
+          {marka === "Diğer" && (
+            <input
+              type="text"
+              value={markaDiger}
+              onChange={(e) => setMarkaDiger(e.target.value)}
+              placeholder="Marka adını yaz (örn. Vestfrost) — opsiyonel"
+              maxLength={40}
+              style={{ ...s.input, marginTop: 10 }}
+            />
+          )}
 
           {/* Garanti checkbox — yetkili servis yönlendirmesini tetikler */}
           <label style={s.garantiRow}>
