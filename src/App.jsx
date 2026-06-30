@@ -217,7 +217,7 @@ MARKA KADEMESİ (parça maliyetini markaya göre ayarla — yukarıdaki parça m
 - "Diğer / Listede yok" veya emin değilsen: ORTA band (nötr — düşük tahmin etme).
 - İŞÇİLİK markadan BAĞIMSIZDIR; kademeye göre değiştirme.
 - KADEMEYİ KULLANICIYA ASLA YANSITMA. not, kararAciklama ve TÜM alanlarda şunlar YASAK: marka kademesi/segment; "premium/orta/ekonomik"; "kademe"; "üst/alt bant" veya "band"; markaya dayalı fiyat gerekçesi (ör. "Bosch parçası pahalı", "X markası üst bantta"); ve parça/işçilik kırılımı (ör. "~5000 TL parça + 1300 TL işçilik"). Bunların HEPSİ içsel mantık.
-- "not" alanı KISA, NÖTR ve markadan bağımsız olsun. Örnek doğru not: "Parça ve işçilik dahil tahmini tutar; kesin fiyat arıza tespitinde netleşir." Markayı, kademeyi, kırılımı YAZMA.
+- "not" alanı KISA, NÖTR ve markadan bağımsız olsun (sistem fiyat notunu sabit gösterir; yine de kısa tut). Örnek: "En olası arızaya göre tahmini tutar (parça + işçilik dahil); kesin fiyat yerinde tespitte netleşir." Markayı, kademeyi, kırılımı YAZMA.
 
 KARAR ÖNERİSİ (kararOnerisi) — şu 4 değerden TAM BİRİ:
 - "gerek_yok": belirti tamamen KOZMETİK/görsel (dış yüzey/plastik sararması, çizik, soluk/solmuş renk, leke) VEYA cihaz işlevsel olarak sorunsuz çalışıyor; onarılacak teknik arıza YOK. Bu durumda tahminiMaliyet.beklenen = 0, aciliyet = "düşük", ve YAŞ ETKİSİNİ UYGULAMA (asla "yenisi" deme, tamir bedeli UYDURMA). kararAciklama: kozmetik olduğunu ve cihaz çalışıyorsa müdahale gerekmediğini sade söyle.
@@ -566,7 +566,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               ) : (
                 <div style={s.fiyat}>{sonuc.tahminiMaliyet?.min?.toLocaleString("tr-TR")}–{sonuc.tahminiMaliyet?.max?.toLocaleString("tr-TR")} <span style={s.tl}>TL</span></div>
               )}
-              <p style={s.fiyatNot}>{sonuc.tahminiMaliyet?.not}</p>
+              <p style={s.fiyatNot}>En olası arızaya göre tahmini tutar (parça + işçilik dahil); kesin fiyat yerinde tespitte netleşir.</p>
             </div>
             <div style={s.divider} />
             <div style={{ flex: 1 }}>
