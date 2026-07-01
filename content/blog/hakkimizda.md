@@ -3,6 +3,7 @@ title: "Benservis hakkında: biz kimiz, nasıl çalışır?"
 description: "Benservis nedir, nasıl çalışır ve neden güvenilir? AI destekli arıza teşhisi + tahmini tamir maliyeti + yakınındaki en yüksek puanlı servis. Bil, gör, çağır."
 slug: "hakkimizda"
 date: "2026-06-21"
+updated: "2026-07-01"
 category: "Kurumsal"
 faq:
   - q: "Benservis nedir?"
@@ -38,7 +39,7 @@ Cihazı bozulan, **doğru maliyeti ödemek** ve **önce öğrenip sonra çağır
 
 ## İletişim
 Soru, öneri ya da iş birliği için: **benservis.app@gmail.com**
-Sosyal: [Instagram](https://www.instagram.com/benservis.app/) · [TikTok](https://www.tiktok.com/@benservis.app)
+Sosyal: [Instagram](https://www.instagram.com/benservis.app/) · [TikTok](https://www.tiktok.com/@benservis.app) · [LinkedIn](https://www.linkedin.com/company/134824266/) · [YouTube](https://www.youtube.com/@benservisapp)
 
 İlgili: [Bilgi Merkezi (arıza rehberleri)](/blog/) · [SERBİS'te yetkili servisi nasıl doğrularsın?](/blog/serbis-yetkili-servis-sorgulama/)
 
