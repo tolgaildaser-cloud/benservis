@@ -3,6 +3,7 @@ title: "SERBİS nedir, nasıl sorgulanır? Yetkili servisi doğrulama rehberi"
 description: "SERBİS (Servis Bilgi Sistemi) nedir, servis.gov.tr'de yetkili servis nasıl sorgulanır, sahte servisten nasıl korunursun? Adım adım resmî doğrulama rehberi. Bil, gör, çağır."
 slug: "serbis-yetkili-servis-sorgulama"
 date: "2026-06-22"
+updated: "2026-07-03"
 category: "Güvenli servis"
 faq:
   - q: "SERBİS nedir?"
@@ -75,7 +76,7 @@ Benservis, cihazının **olası arızasını ve tahmini maliyetini** saniyede g�
 2. Garanti kapsamındaki bir iş yaptıracaksan, servisin **yetkili olduğunu [SERBİS'te doğrula](https://www.servis.gov.tr/Genel/Sorgu)**.
 3. Önce öğren, sonra çağır — **doğru maliyeti** öde, sahte servise düşme.
 
-İlgili: [Hakkımızda](/blog/hakkimizda/) · [Bilgi Merkezi](/blog/)
+İlgili: [Beyaz eşya servisi çağırırken dikkat edilecekler](/blog/beyaz-esya-servisi-cagirirken-dikkat/) · [Yetkili servis mi özel servis mi?](/blog/yetkili-servis-mi-ozel-servis-mi/) · [Beyaz eşya servis ücreti 2026](/blog/beyaz-esya-servis-ucreti/) · [Hakkımızda](/blog/hakkimizda/) · [Bilgi Merkezi](/blog/)
 
 ## Sık sorulan sorular
 
