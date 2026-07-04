@@ -1,8 +1,9 @@
 ---
 title: "Bosch bulaşık makinesi hata kodları: tam liste (E15, E22, E24…)"
-description: "Bosch bulaşık makinesi hata kodları tam liste: E15, E22, E24, E09, E25 ve daha fazlasının anlamı, E15 için yana yatırma çözümü ve 2026 tamir fiyatları. Bil, gör, çağır."
+description: "Bosch bulaşık makinesi hata kodları tam liste: E15 (musluk işareti), E22, E24, E09, E25 anlamı ve çözümü, E15 için yana yatırma yöntemi, 2026 tamir fiyatları. Siemens/Profilo/Neff'te de geçerli. Bil, gör, çağır."
 slug: "bosch-bulasik-makinesi-hata-kodlari"
 date: "2026-06-19"
+updated: "2026-07-04"
 category: "Bulaşık makinesi"
 faq:
   - q: "Bosch bulaşık makinesi E15 ne demek ve nasıl çözülür?"
@@ -11,11 +12,13 @@ faq:
     a: "E22 iç filtrenin tıkalı olduğunu gösterir (taban filtresini temizle). E24 ise makinenin suyu boşaltamadığını (tahliye) gösterir; genelde tıkalı filtre ya da bükük/tıkalı tahliye hortumu sebeptir. İkisi de çoğu zaman evde çözülür."
   - q: "Bosch bulaşık E09 ne anlama gelir?"
     a: "E09 ısıtıcı (rezistans) arızasını gösterir: su ısınmaz, bulaşıklar yağlı/soğuk kalır. Bu bir servis işidir (rezistans veya kontrol kartı)."
-  - q: "Siemens'te de aynı kodlar mı?"
-    a: "Evet. Bosch ve Siemens aynı platformu kullandığı için E15, E22, E24, E09, E25 gibi kodlar her ikisinde de aynı anlama gelir."
+  - q: "Siemens, Profilo, Neff'te de aynı kodlar mı?"
+    a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) aynı platformunu kullandığı için E15, E22, E24, E09, E25 gibi kodlar bu markaların hepsinde aynı anlama gelir. Örneğin Profilo bulaşık makinesindeki E24 ile Bosch'taki E24 aynı arızadır."
+  - q: "E15 ile birlikte musluk (çeşme) işareti yanıyor, ne demek?"
+    a: "E15 hatasında genelde ekranda musluk/çeşme sembolü de yanıp söner; bu, makinenin su ile ilgili bir güvenlik durumu (taban tavasında su + taşma şamandırası) algıladığını gösterir. Makineyi yana yatırıp taban suyunu boşaltmak çoğu zaman çözer; su tekrar birikiyorsa sızıntı vardır, servis gerekir."
 ---
 
-Bosch bulaşık makinen **E** ile başlayan bir hata kodu gösteriyor (E15, E22, E24…). Bosch (ve aynı platformu kullanan **Siemens**) arızayı bu kodlarla bildirir. İyi haber: en sık çıkan kodlar genelde **filtre, tahliye ve taban suyu** gibi basit sebepleri işaret eder ve bir kısmı evde ücretsiz çözülür. Bu rehberde Bosch bulaşık makinesinin **tüm sık kodlarını**, anlamlarını ve çözümlerini topladık.
+Bosch bulaşık makinen **E** ile başlayan bir hata kodu gösteriyor (E15, E22, E24…). Bosch (ve aynı BSH platformunu kullanan **Siemens, Profilo, Neff, Gaggenau**) arızayı bu kodlarla bildirir — yani bu markaların hepsinde kodlar aynı anlama gelir. İyi haber: en sık çıkan kodlar genelde **filtre, tahliye ve taban suyu** gibi basit sebepleri işaret eder ve bir kısmı evde ücretsiz çözülür. Bu rehberde Bosch bulaşık makinesinin **tüm sık kodlarını**, anlamlarını ve çözümlerini topladık.
 
 > ⚠️ Kodların anlamı model ve seriye göre değişebilir; aşağıdakiler en yaygın anlamlardır. Kesin teşhis için modelini ve kodu [Benservis'e](/) yaz.
 
@@ -47,7 +50,7 @@ Bosch bulaşık makinen **E** ile başlayan bir hata kodu gösteriyor (E15, E22,
 ## Öne çıkan kodlar
 
 ### E15 — Tabanda su (en sık Bosch kodu)
-Tabandaki tavaya su kaçmış, taşma şamandırası güvenliği devreye girmiştir. Adım adım:
+Tabandaki tavaya su kaçmış, taşma şamandırası güvenliği devreye girmiştir. Ekranda genelde **E15 ile birlikte musluk/çeşme sembolü** yanıp söner — ikisi aynı durumu anlatır. Adım adım:
 1. Makineyi **kapat**, fişini çek.
 2. **~30° geriye/yana yatır**; tabandaki su akar (altına havlu koy).
 3. **Suyu boşalt, tabanı kurula.**
@@ -62,6 +65,9 @@ Su ısınmaz, bulaşıklar yağlı/soğuk kalır. Rezistans ya da kontrol kartı
 
 ## Hata kodu nasıl sıfırlanır?
 Çoğu modelde: **başlat (Start) tuşunu birkaç saniye basılı tut** ya da makineyi **fişten 1 dakika** çek. Arıza sürüyorsa kod tekrar çıkar.
+
+## Kodun listede yok mu?
+Bosch (ve Siemens/Profilo/Neff) yüzlerce model üretir; bazı kodlar (ör. **E01, E34, H24, F kodları**) yalnız belirli serilerde çıkar ve anlamı modele göre değişir. **Uydurma bir anlam vermeyiz** — yanlış teşhis pahalıya patlar. Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
 
 ## Tahmini tamir maliyeti
 Parça parça 2026 İstanbul tahminleri: [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/).
