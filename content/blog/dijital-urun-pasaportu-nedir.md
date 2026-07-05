@@ -17,6 +17,8 @@ faq:
 
 Yakın gelecekte satın aldığın her cihazın bir **dijital kimliği** olacak: nasıl üretildiği, nelerden yapıldığı, kaç tamir gördüğü ve nasıl geri dönüştürüleceği tek bir dijital kayıtta. Buna **Dijital Ürün Pasaportu (DPP)** deniyor ve döngüsel ekonominin en önemli araçlarından biri. Bu yazıda DPP'nin ne olduğunu, AB'de ne zaman zorunlu olacağını ve Türkiye'yi nasıl etkileyeceğini sade bir dille anlatıyoruz.
 
+> 🌍 **COP31 notu:** Türkiye'nin 2026'da ev sahipliği yaptığı BM İklim Zirvesi **COP31'in** (Antalya, Kasım 2026) öne çıkan temalarından biri **döngüsel ekonomi ve sıfır atık.** Dijital Ürün Pasaportu, bu dönüşümün en önemli araçlarından — cihazların ömrünü ve izlenebilirliğini artırır.
+
 ## DPP nedir?
 
 Dijital Ürün Pasaportu, bir ürünün **tüm yaşam döngüsü bilgisini** taşıyan dijital bir kimliktir:

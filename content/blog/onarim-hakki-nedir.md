@@ -17,6 +17,8 @@ faq:
 
 Bir cihazın küçük bir arızası çıktığında çoğu zaman "tamir edilmez, yenisini al" deniyor. **Onarım Hakkı** (İngilizce *Right to Repair*) hareketi tam da buna karşı çıkıyor: cihazlar **onarılabilir olmalı**, tüketici de onları atmak yerine makul şekilde tamir edebilmeli. Bu yazıda Onarım Hakkı'nın ne olduğunu, AB yasasının ne getirdiğini ve Türkiye için ne anlama geldiğini anlatıyoruz.
 
+> 🌍 **COP31 notu:** Türkiye 2026'da BM İklim Zirvesi **COP31'e ev sahipliği** yapıyor (Antalya, Kasım 2026) ve **sıfır atık** bu sürecin imza teması. "Onar > değiştir" ilkesi — atığı kaynağında azalttığı için — bu iklim hedeflerinin tam kalbinde.
+
 ## Onarım Hakkı nedir?
 
 Onarım Hakkı, tüketicilerin cihazlarını **atmak yerine onarabilmesini** sağlayan yasal ve toplumsal bir yaklaşımdır. Temel fikir basit: bir cihaz küçük bir parça yüzünden çöpe gitmemeli. Bunun için üreticilerden beklenenler:

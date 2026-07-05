@@ -17,6 +17,8 @@ faq:
 
 Her yıl milyonlarca cihaz, aslında **onarılabilecekken** çöpe atılıyor. Bunlara elektronik atık — kısaca **e-atık** — deniyor ve dünyanın en hızlı büyüyen atık türü. İyi haber şu: bir cihazı atmak yerine onarmak, hem cüzdanın hem de gezegen için en etkili adımlardan biri. Bu yazıda e-atığın ne olduğunu, Türkiye'deki tablonun boyutunu ve onarmanın çevreye somut faydasını anlatıyoruz.
 
+> 🌍 **COP31 notu:** Türkiye, 2026'da BM İklim Zirvesi **COP31'e ev sahipliği** yapıyor (Antalya, Kasım 2026) ve **sıfır atık** bu sürecin öne çıkan temalarından. Cihazını onarmak — atık ve karbonu azaltarak — bu hedeflerin en somut, en bireysel adımlarından biri.
+
 ## E-atık nedir?
 
 E-atık; ömrünü tamamladığı düşünülüp atılan **buzdolabı, çamaşır makinesi, bulaşık makinesi, televizyon, telefon** gibi elektrikli ve elektronik cihazlardır. İçlerinde bakır, alüminyum gibi **değerli metaller**, aynı zamanda doğru işlenmezse toprağa ve suya karışan **zararlı maddeler** bulunur.
