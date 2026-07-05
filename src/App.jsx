@@ -25,7 +25,7 @@ const BELIRTILER = {
 
 // Gömülü referans tarife — AI maliyeti buna göre çıpalar. 19 Haz 2026'da gerçek
 // 2026 TR piyasasıyla (yedek parça siteleri, servis fiyat listeleri, Armut, şikayetvar)
-// kalibre edildi; işçilik = SADECE tamir işçiliği (1000 TL gidiş bedeli AYRI tutulur).
+// kalibre edildi; işçilik = SADECE tamir işçiliği (1500 TL gidiş bedeli AYRI tutulur).
 const SEED = {
   "Buzdolabı": [["Termostat/sensör",250,1200,600],["Gaz kaçağı/dolum",900,2000,1400],["Kompresör değişimi",2500,5500,2400],["Fan motoru (no-frost)",400,1200,600]],
   "Çamaşır Makinesi": [["Su giriş valfi",200,1500,600],["Tahliye pompası",200,1200,600],["Rulman/keçe",600,3500,2000],["Elektronik kart",1000,5000,1300],["Kapı kilidi",250,900,500]],
@@ -54,16 +54,15 @@ function extractJSON(text) {
 }
 
 // Türkiye'de servisin eve gidiş/keşif MİNİMUM bedeli — tüm maliyet tahminlerine
-// sabit eklenir (sonuç ne olursa olsun). 2026 sonuna kadar 1000 TL.
-// PLAN: 1 Ocak 2027'de (2027-01-01) 1500 TL'ye çıkarılacak — ANCAK önce kullanıcı
-// ONAYI; bu sabiti değiştirmeden ÖNCE sor (otomatik tarih geçişi bilinçli olarak YOK).
-const SERVIS_GIDIS_BEDELI = 1000;
+// sabit eklenir (sonuç ne olursa olsun). Kullanıcı onayıyla 1500 TL'ye çıkarıldı
+// (5 Tem 2026). Değiştirmeden ÖNCE yine kullanıcıya sor (otomatik geçiş YOK).
+const SERVIS_GIDIS_BEDELI = 1500;
 
 // Maliyet aralığını beklenen nokta tahminin ±%10'una sabitler (kullanıcı kuralı),
 // servis gidiş bedelini (SERVIS_GIDIS_BEDELI) SABİT ekler (bedel ±%10'a tabi değil),
 // sonra gösterilen tutarı YUKARI doğru en yakın 100'e yuvarlar (kullanıcı kuralı:
 // 1990 → 2000, 2210 → 2300). AI tek "beklenen" döndürür; eski min/max gelirse orta nokta.
-// Örn (gidiş 1000): beklenen 1200 → 2100–2400 (ham 2080–2320, yukarı 100'e).
+// Örn (gidiş 1500): beklenen 1200 → 2600–2900 (ham 2580–2820, yukarı 100'e).
 function normalizeMaliyet(sonuc) {
   const m = sonuc?.tahminiMaliyet;
   if (!m) return sonuc;
