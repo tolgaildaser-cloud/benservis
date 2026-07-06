@@ -3,7 +3,7 @@ title: "Ümraniye'de güvenilir beyaz eşya servisi nasıl bulunur?"
 description: "Ümraniye'de buzdolabı, çamaşır veya bulaşık makinesi servisi mi arıyorsun? Güvenilir servisi seçmenin kuralları + fiyatı çağırmadan önce öğrenme. Bil, gör, çağır."
 slug: "umraniye-beyaz-esya-servisi"
 date: "2026-06-19"
-category: "Yerel rehber"
+category: "Genel"
 faq:
   - q: "Ümraniye'de beyaz eşya servisi nasıl seçilir?"
     a: "Yıldız sayısına değil; yorum sayısına, güncelliğine ve 'geldi, fiyat uygundu' diyen gerçek yorumlara bak. Mümkünse fiyatı önceden öğren."

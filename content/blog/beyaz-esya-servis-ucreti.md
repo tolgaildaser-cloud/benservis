@@ -3,7 +3,7 @@ title: "Beyaz eşya servis ücreti ve keşif bedeli 2026: ne kadar, nasıl hesap
 description: "Beyaz eşya servis ücreti neyden oluşur? Keşif/çağırma bedeli, işçilik ve parça nasıl hesaplanır, onarımda düşülür mü? 2026 mantığı ve fazla ödememenin yolu. Bil, gör, çağır."
 slug: "beyaz-esya-servis-ucreti"
 date: "2026-07-03"
-category: "Güvenli servis"
+category: "Genel"
 faq:
   - q: "Beyaz eşya servis ücreti neyden oluşur?"
     a: "Üç kalemden: keşif/çağırma (arıza tespiti) bedeli, işçilik ve varsa yedek parça. Toplam; arızanın türüne, değişen parçaya, cihaz tipine ve servisin uzaklığına göre değişir."

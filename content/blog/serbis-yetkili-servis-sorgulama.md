@@ -4,7 +4,7 @@ description: "SERBİS (Servis Bilgi Sistemi) nedir, servis.gov.tr'de yetkili ser
 slug: "serbis-yetkili-servis-sorgulama"
 date: "2026-06-22"
 updated: "2026-07-03"
-category: "Güvenli servis"
+category: "Genel"
 faq:
   - q: "SERBİS nedir?"
     a: "SERBİS (Servis Bilgi Sistemi), T.C. Ticaret Bakanlığı'nın www.servis.gov.tr adresinde sunduğu resmî ve ücretsiz sistemdir. Üretici ve ithalatçıların bildirdiği yetkili servis istasyonlarını tek bir güvenilir kaynaktan sorgulamanı sağlar."

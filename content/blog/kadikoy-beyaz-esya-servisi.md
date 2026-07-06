@@ -3,7 +3,7 @@ title: "Kadıköy'de güvenilir beyaz eşya servisi nasıl bulunur?"
 description: "Kadıköy'de buzdolabı, çamaşır veya bulaşık makinesi servisi mi arıyorsun? Güvenilir servisi seçmenin yolları + fiyatı önceden öğrenme. Bil, gör, çağır."
 slug: "kadikoy-beyaz-esya-servisi"
 date: "2026-06-17"
-category: "Yerel rehber"
+category: "Genel"
 faq:
   - q: "Kadıköy'de beyaz eşya servisi nasıl seçilir?"
     a: "Sadece yıldız sayısına bakma. Yorum sayısına, yorumların güncelliğine ve 'geldi, fiyat uygundu' diyen gerçek yorumlara bak. Mümkünse fiyatı önceden öğren."

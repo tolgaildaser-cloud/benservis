@@ -3,7 +3,7 @@ title: "Beyaz eşya servisi çağırırken dikkat edilecek 7 şey (2026)"
 description: "Beyaz eşya servisi çağırırken nelere dikkat etmeli? Güvenli servis seçimi, sahte servisten korunma, şeffaf fiyat ve servis teslim fişi — 7 pratik kural. Bil, gör, çağır."
 slug: "beyaz-esya-servisi-cagirirken-dikkat"
 date: "2026-07-03"
-category: "Güvenli servis"
+category: "Genel"
 faq:
   - q: "Beyaz eşya servisi çağırırken en önemli şey nedir?"
     a: "Servisin gerçekten yetkili/güvenilir olduğunu doğrulamak ve fiyatı önceden şeffaf konuşmak. Yetkiliyi SERBİS (servis.gov.tr) üzerinden teyit edebilir, tahmini maliyeti önceden öğrenip gelen teklifle kıyaslayabilirsin."

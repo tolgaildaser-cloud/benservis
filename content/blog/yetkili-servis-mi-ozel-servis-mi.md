@@ -3,7 +3,7 @@ title: "Yetkili servis mi özel servis mi? Beyaz eşyada fark ve hangisi ne zama
 description: "Beyaz eşyada yetkili servis mi özel servis mi seçmeli? Garanti, fiyat, parça ve uzmanlık farkları + hangi durumda hangisi mantıklı. Bil, gör, çağır."
 slug: "yetkili-servis-mi-ozel-servis-mi"
 date: "2026-07-03"
-category: "Güvenli servis"
+category: "Genel"
 faq:
   - q: "Beyaz eşyada yetkili servis mi özel servis mi daha iyi?"
     a: "Duruma göre değişir. Cihazın garanti kapsamındaysa mutlaka yetkili servis kullan (aksi hâlde garanti düşebilir). Garanti bittiyse, iyi puanlı ve şeffaf fiyatlı bir özel servis çoğu arıza için daha uygun maliyetli olabilir."
