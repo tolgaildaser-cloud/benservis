@@ -127,6 +127,10 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .blogsearch:focus{border-color:${T.BLUE};box-shadow:0 0 0 3px rgba(37,99,235,.12)}
 .blogsearch::placeholder{color:${T.FAINT}}
 .blogbos{color:${T.MUTED};text-align:center;padding:26px 0;font-size:15px}
+.blogcats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.blogcats .chip{font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13.5px;font-weight:600;color:${T.MUTED};background:${T.SURFACE};border:1px solid ${T.HAIR};border-radius:999px;padding:8px 15px;cursor:pointer;white-space:nowrap;transition:border-color .15s,color .15s,background .15s}
+.blogcats .chip:hover{border-color:${T.BLUE};color:${T.BLUE}}
+.blogcats .chip.on{background:${T.BLUE};border-color:${T.BLUE};color:#fff}
 `;
 
 const TEETH = [0, 45, 90, 135, 180, 225, 270, 315]
@@ -140,19 +144,28 @@ const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını sa
 // Bilgi Merkezi listesi için client-side arama (statik, backend yok).
 // Kart metnini (kategori+başlık+özet) Türkçe-duyarlı + aksan toleranslı normalize eder,
 // çok kelimeli sorguda HEPSİ eşleşen kartları gösterir.
+// Bilgi Merkezi listesi: kategori düğmeleri + serbest arama (ikisi BİRLİKTE filtreler).
 const SEARCH_JS = `(function(){
   var norm=function(s){return (s||"").toLocaleLowerCase("tr").replace(/[ıİ]/g,"i").replace(/ş/g,"s").replace(/ç/g,"c").replace(/ğ/g,"g").replace(/ü/g,"u").replace(/ö/g,"o").replace(/\\s+/g," ").trim();};
   var inp=document.getElementById("blogSearch"),bos=document.getElementById("blogBos");
-  if(!inp)return;
   var cards=[].slice.call(document.querySelectorAll(".bloglist .card"));
-  inp.addEventListener("input",function(){
-    var toks=norm(inp.value).split(" ").filter(Boolean),n=0;
+  var chips=[].slice.call(document.querySelectorAll(".blogcats .chip"));
+  var aktifCat="";
+  function uygula(){
+    var toks=inp?norm(inp.value).split(" ").filter(Boolean):[],n=0;
     cards.forEach(function(c){
-      var hay=norm(c.textContent),hit=toks.every(function(t){return hay.indexOf(t)!==-1;});
-      c.style.display=hit?"":"none";if(hit)n++;
+      var catOk=!aktifCat||c.getAttribute("data-cat")===aktifCat;
+      var hay=norm(c.textContent),aramaOk=toks.every(function(t){return hay.indexOf(t)!==-1;});
+      var hit=catOk&&aramaOk;c.style.display=hit?"":"none";if(hit)n++;
     });
-    if(bos)bos.style.display=(toks.length&&n===0)?"":"none";
-  });
+    if(bos)bos.style.display=(n===0)?"":"none";
+  }
+  if(inp)inp.addEventListener("input",uygula);
+  chips.forEach(function(ch){ch.addEventListener("click",function(){
+    aktifCat=ch.getAttribute("data-cat")||"";
+    chips.forEach(function(x){x.classList.toggle("on",x===ch);});
+    uygula();
+  });});
 })();`;
 
 function page({ title, desc, canonical, head = "", body }) {
@@ -262,15 +275,28 @@ for (const p of posts) {
 
 const cards = posts
   .filter((p) => p.slug !== "hakkimizda")
-  .map((p) => `<a class="card" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p></div></a>`)
+  .map((p) => `<a class="card" data-cat="${esc(p.category || "Rehber")}" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p></div></a>`)
   .join("");
+
+// Kategori düğmeleri: kartlarda görünen kategorilerden (hakkımızda hariç), yazı sayısı
+// çok olan önce. "Tümü" başta ve varsayılan aktif. Yeni kategori eklenince kendiliğinden gelir.
+const catSay = {};
+for (const p of posts) {
+  if (p.slug === "hakkimizda") continue;
+  const k = p.category || "Rehber";
+  catSay[k] = (catSay[k] || 0) + 1;
+}
+const katSirali = Object.keys(catSay).sort((a, b) => catSay[b] - catSay[a] || a.localeCompare(b, "tr"));
+const chips =
+  `<button type="button" class="chip on" data-cat="">Tümü</button>` +
+  katSirali.map((c) => `<button type="button" class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
 fs.writeFileSync(
   path.join(OUT, "index.html"),
   page({
     title: "Benservis Bilgi Merkezi — cihaz arızaları ve tamir maliyetleri",
     desc: "Cihaz arızalarının nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları.",
     canonical: `${SITE}/blog/`,
-    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
+    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="blogcats">${chips}</div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
   })
 );
 
