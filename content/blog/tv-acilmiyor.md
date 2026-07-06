@@ -3,6 +3,7 @@ title: "TV açılmıyor: nedenleri ve tamir maliyeti"
 description: "Televizyon açılmıyor, standby ışığı yanıp sönüyor ya da hiç tepki vermiyor mu? Güç kaynağı, kondansatör, anakart + kendin kontroller + 2026 tahmini fiyatlar. Bil, gör, çağır."
 slug: "tv-acilmiyor"
 date: "2026-06-23"
+updated: "2026-07-06"
 category: "Televizyon"
 faq:
   - q: "TV neden açılmıyor?"
@@ -57,7 +58,7 @@ Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönü
 | Anakart (main board) | 1.000 – 2.500 ₺ |
 | Panel arızası | Genelde yüksek → yenisi değerlendirilebilir |
 
-İlgili: [Bilgi Merkezi](/blog/) · [İyi servisi nasıl seçersin](/blog/serbis-yetkili-servis-sorgulama/)
+İlgili: [Görüntü gelmiyor / ses var görüntü yok](/blog/televizyon-goruntu-gelmiyor/) · [Bilgi Merkezi](/blog/) · [İyi servisi nasıl seçersin](/blog/serbis-yetkili-servis-sorgulama/)
 
 ## Sık sorulan sorular
 
