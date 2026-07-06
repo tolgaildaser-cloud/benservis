@@ -278,15 +278,20 @@ const cards = posts
   .map((p) => `<a class="card" data-cat="${esc(p.category || "Rehber")}" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p></div></a>`)
   .join("");
 
-// Kategori düğmeleri: kartlarda görünen kategorilerden (hakkımızda hariç), yazı sayısı
-// çok olan önce. "Tümü" başta ve varsayılan aktif. Yeni kategori eklenince kendiliğinden gelir.
+// Kategori düğmeleri: kartlarda görünen kategorilerden (hakkımızda hariç). "Tümü" başta ve
+// varsayılan aktif; sonra ÖNCELIK listesi (Genel → Sürdürülebilirlik → Buzdolabı), kalanı yazı
+// sayısı çok olan önce. Yeni kategori eklenince (öncelik dışıysa) sayıya göre kendiliğinden gelir.
 const catSay = {};
 for (const p of posts) {
   if (p.slug === "hakkimizda") continue;
   const k = p.category || "Rehber";
   catSay[k] = (catSay[k] || 0) + 1;
 }
-const katSirali = Object.keys(catSay).sort((a, b) => catSay[b] - catSay[a] || a.localeCompare(b, "tr"));
+const ONCELIK = ["Genel", "Sürdürülebilirlik", "Buzdolabı"]; // Tümü'den sonra bu sırayla sabit
+const rank = (c) => { const i = ONCELIK.indexOf(c); return i === -1 ? 99 : i; };
+const katSirali = Object.keys(catSay).sort(
+  (a, b) => rank(a) - rank(b) || catSay[b] - catSay[a] || a.localeCompare(b, "tr")
+);
 const chips =
   `<button type="button" class="chip on" data-cat="">Tümü</button>` +
   katSirali.map((c) => `<button type="button" class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
