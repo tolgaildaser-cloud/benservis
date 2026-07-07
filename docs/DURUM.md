@@ -1,5 +1,9 @@
 # Benservis — Faz Durumu
 
+> ⚠️ **Bu dosya eskidir (17 Haziran 2026 pivotu ÖNCESİ).** Güncel iş planı, faz durumu ve
+> strateji tek yerde: **[`docs/IS-PLANI.md`](./IS-PLANI.md)**. Aşağıdaki "Faz 3 Canlıda" gibi
+> ifadeler pivot öncesidir (DPP/ikinci el artık ana akıştan çekildi = dormant).
+
 Son güncelleme: 2026-06-05
 
 ## Tamamlanan Fazlar
