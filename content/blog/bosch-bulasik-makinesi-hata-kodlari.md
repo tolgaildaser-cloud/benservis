@@ -57,6 +57,8 @@ Tabandaki tavaya su kaçmış, taşma şamandırası güvenliği devreye girmiş
 4. Fişi tak, kısa program dene.
 5. **Su tekrar birikiyorsa** sızıntı vardır (conta/hortum/pompa) → servis.
 
+E15'i sebep sebep, güvenlik sınırlarıyla anlattığımız ayrıntılı rehber: [Bosch bulaşık makinesi E15 hatası: nedeni ve adım adım çözümü](/blog/bosch-bulasik-makinesi-e15-hatasi/)
+
 ### E22 / E24 — Filtre ve tahliye
 E22'de taban filtresini çıkarıp temizlemek genelde yeter. E24'te ek olarak tahliye hortumunu (bükük/tıkalı mı) ve pompa kapağını kontrol et. İkisi de çoğu zaman ücretsiz.
 

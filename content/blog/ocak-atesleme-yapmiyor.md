@@ -1,9 +1,9 @@
 ---
-title: "Ocak ateşleme yapmıyor / yanmıyor: nedenleri ve çözüm"
-description: "Gazlı ocağın çakmağı ateşleme yapmıyor, ocak yanmıyor mu? Kirli başlık, ateşleme bujisi, gaz akışı + kendin yapabileceklerin + 2026 tahmini fiyatlar. Bil, gör, çağır."
+title: "Ocak ateşleme yapmıyor: ateşleme bujisi tamiri ve fiyatı (2026)"
+description: "Gazlı ocak ateşleme yapmıyor, çakmak çakmıyor mu? Ateşleme bujisi tamiri gerçekten gerekli mi, fiyatı ne kadar? Kirli başlık, buji, gaz akışı — kendin yapabileceklerin + 2026 tahmini tamir fiyatları. Bil, gör, çağır."
 slug: "ocak-atesleme-yapmiyor"
 date: "2026-06-23"
-updated: "2026-07-04"
+updated: "2026-07-09"
 category: "Fırın / Ocak"
 faq:
   - q: "Ocak neden ateşleme yapmıyor?"
