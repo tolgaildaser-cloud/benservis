@@ -306,12 +306,20 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       const parsed = extractJSON(data.text || "");
-      // FİYAT DETERMİNİSTİK (guard'lardan ÖNCE): EN OLASI arıza SEED'de eşleşiyorsa beklenen'i
-      // tarifeden hesapla (marka kademesi + işçilik) — AI'ın oynak sayısını KULLANMA. Eşleşmezse
-      // AI beklenen'ine düşülür (liste dışı arıza). gerek_yok'ta atla (kozmetik → beklenen 0).
-      if (parsed && parsed.kararOnerisi !== "gerek_yok") {
-        const seedBek = seedBeklenen(cihaz, parsed.seedRef, markaKademe(efektifMarka));
-        if (seedBek != null) parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: seedBek };
+      // FİYAT DETERMİNİSTİK + SIRA/JITTER-BAĞIMSIZ (guard'lardan ÖNCE): beklenen'i SEED'den hesapla.
+      // En olası İKİ arıza olasılıkça YAKINSA (≤15 puan) ve #2 daha UCUZ/yaygınsa onu fiyatla —
+      // böylece AI en-olasıyı gaz↔kompresör arasında çevirse bile fiyat SIÇRAMAZ (tutarlı). Net
+      // baskın arızada (>15 puan fark) #1 kalır. #1 için seedRef (güvenilir), #2 için arıza adı
+      // (fuzzy eşleşir). Eşleşme yoksa AI beklenen'ine düşülür. gerek_yok'ta atla.
+      if (parsed && parsed.kararOnerisi !== "gerek_yok" && Array.isArray(parsed.olasiArizalar) && parsed.olasiArizalar.length) {
+        const kademe = markaKademe(efektifMarka);
+        const f = parsed.olasiArizalar;
+        const p1 = seedBeklenen(cihaz, parsed.seedRef || f[0]?.ad, kademe);
+        const p2 = f[1] ? seedBeklenen(cihaz, f[1].ad, kademe) : null;
+        const w1 = Number(f[0]?.olasilik) || 0, w2 = Number(f[1]?.olasilik) || 0;
+        let sec = p1;
+        if (p1 != null && p2 != null && w1 - w2 <= 15 && p2 < p1) sec = p2; // yakın + daha ucuz kök neden
+        if (sec != null) parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: sec };
       }
       // Savunma: beklenen 0/yok iken karar "tamir"/"yenisi" geldiyse bu bir çelişkidir
       // (model kozmetik olduğunu anladı ama yanlış badge verdi) → "gerek_yok" say.
