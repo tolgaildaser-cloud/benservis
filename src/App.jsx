@@ -236,6 +236,8 @@ Marka: ${efektifMarka}
 Cihaz yaşı: ${yas || "belirtilmedi"}
 Belirti: "${belirti}"
 
+BELİRTİ DEĞERLENDİRME (ÖNEMLİ — fiyat en olası arızaya bağlı): Birden çok belirti verildiyse YAZILMA SIRALARI ÖNEMSİZDİR — hepsini bir BÜTÜN olarak değerlendir; en olası TEK arızayı belirtilerin tümüne göre seç (sıra sonucu ASLA değiştirmemeli; "soğutmuyor + buzluk çalışmıyor" ile "buzluk çalışmıyor + soğutmuyor" AYNI sonucu vermeli). İki arıza olasılıkça yakınsa istatistiksel olarak daha YAYGIN/olası olanı en olası yap; pahalı ve NADİR arızayı (ör. kompresör/anakart komple değişimi) yalnızca belirtiler onu NET işaret ediyorsa (ör. yaş/koku/ses) en olası seç — şüphede daha yaygın ve ucuz kök nedeni tercih et.
+
 REFERANS TARİFE (maliyeti BUNLARA göre çıpala; görmediğin arıza için bu seviyeye göre makul tahmin yürüt, uydurma):
 ${refMetni(cihaz)}
 
