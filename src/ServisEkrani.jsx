@@ -70,11 +70,15 @@ const TIER_STYLE = {
 function TierRozetleri({ servis }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 4, flexWrap: "wrap" }}>
-      {servis.yetkili && (
+      {servis.serbis ? (
+        <span title="T.C. Ticaret Bakanlığı SERBİS'te kayıtlı yetkili servis" style={{ background: "#2563EB", color: "white", fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700, whiteSpace: "nowrap" }}>
+          ✓ SERBİS Yetkili
+        </span>
+      ) : servis.yetkili ? (
         <span style={{ background: "#22C55E", color: "white", fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700 }}>
           YETKİLİ
         </span>
-      )}
+      ) : null}
       {servis.tier && TIER_STYLE[servis.tier] && (
         <span style={{ background: TIER_STYLE[servis.tier].background, color: TIER_STYLE[servis.tier].color, fontSize: 9, padding: "2px 6px", borderRadius: 3, fontWeight: 700 }}>
           {TIER_STYLE[servis.tier].label}
@@ -494,6 +498,7 @@ export default function ServisEkrani({ cihaz, marka, garantiAltinda, belirti, on
   // Garanti boş çıkıp kullanıcı "tüm servisleri göster" dediyse filtresiz yakın listeyi kullan.
   const _liste = (garantiAltinda && yetkiliGevset) ? tumYakin : siraliServisler;
   const gosterilenServisler = [..._liste].sort((a, b) => {
+    if (!!a.serbis !== !!b.serbis) return a.serbis ? -1 : 1; // SERBİS kayıtlı yetkili → EN ÜSTE
     if (siralama === "puan") {
       const pf = (b.puan || 0) - (a.puan || 0);
       if (pf !== 0) return pf;
