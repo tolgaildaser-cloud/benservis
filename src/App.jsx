@@ -522,27 +522,30 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           </label>
 
           <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
-          <textarea ref={belirtiRef} style={s.textarea} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
-            placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
-
-          {/* Sesli girdi — konuş, otomatik yazıya dökülüp belirtiye eklenir (ses saklanmaz) */}
-          <button
-            type="button"
-            onClick={sesDurumu === "kaydediyor" ? sesDurdur : sesBaslat}
-            disabled={sesDurumu === "isliyor"}
-            style={{
-              marginTop: 10, width: "100%", padding: "11px", borderRadius: 12,
-              border: `1.5px solid ${sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB"}`,
-              background: sesDurumu === "kaydediyor" ? "rgba(220,38,38,.06)" : "rgba(37,99,235,.06)",
-              color: sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB",
-              fontSize: 14.5, fontWeight: 700, cursor: sesDurumu === "isliyor" ? "default" : "pointer",
-              fontFamily: "inherit", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-            }}
-          >
-            {sesDurumu === "bosta" && "🎤 Sesle anlat"}
-            {sesDurumu === "kaydediyor" && "● Dinliyorum… durdurmak için dokun"}
-            {sesDurumu === "isliyor" && "Yazıya çevriliyor…"}
-          </button>
+          {/* Belirti textarea (sol, esnek) + Sesle anlat butonu (sağ, kutu boyunda) YAN YANA */}
+          <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+            <textarea ref={belirtiRef} style={{ ...s.textarea, flex: 1, minWidth: 0 }} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
+              placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
+            {/* Sesli girdi — konuş, otomatik yazıya dökülüp belirtiye eklenir (ses saklanmaz) */}
+            <button
+              type="button"
+              onClick={sesDurumu === "kaydediyor" ? sesDurdur : sesBaslat}
+              disabled={sesDurumu === "isliyor"}
+              style={{
+                flex: "0 0 116px", width: 116, alignSelf: "stretch", padding: "10px 8px", borderRadius: 12,
+                border: `1.5px solid ${sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB"}`,
+                background: sesDurumu === "kaydediyor" ? "rgba(220,38,38,.06)" : "rgba(37,99,235,.06)",
+                color: sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB",
+                fontSize: 13.5, fontWeight: 700, cursor: sesDurumu === "isliyor" ? "default" : "pointer",
+                fontFamily: "inherit", display: "flex", flexDirection: "column", alignItems: "center",
+                justifyContent: "center", gap: 6, textAlign: "center", lineHeight: 1.25,
+              }}
+            >
+              {sesDurumu === "bosta" && (<><span style={{ fontSize: 22, lineHeight: 1 }}>🎤</span><span>Sesle anlat</span></>)}
+              {sesDurumu === "kaydediyor" && (<span>● Dinliyorum…<br />durdurmak için dokun</span>)}
+              {sesDurumu === "isliyor" && (<span>Yazıya<br />çevriliyor…</span>)}
+            </button>
+          </div>
 
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
           {/* ZORUNLU alanlar (cihaz + marka + belirti) dolmadan buton aktif görünmez (tesisEt guard'ı da var) */}
