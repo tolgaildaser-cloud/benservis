@@ -122,6 +122,7 @@ export default function App() {
   const [garantiAltinda, setGarantiAltinda] = useState(false);
   const [yas, setYas] = useState("");
   const [belirti, setBelirti] = useState("");
+  const BELIRTI_MAX = 300; // belirti karakter limiti (maxLength + sayaç + ses kırpma tek kaynak)
   const [sonuc, setSonuc] = useState(null);
   const [hataMsg, setHataMsg] = useState("");
   const [kopyalandi, setKopyalandi] = useState(false);
@@ -180,7 +181,7 @@ export default function App() {
       const res = await fetch("/api/stt", { method: "POST", headers: { "Content-Type": blob.type }, body: blob });
       const data = await res.json();
       if (!res.ok || !data.text) throw new Error(data.error || "bos");
-      setBelirti((prev) => (prev.trim() ? prev.trim() + ". " + data.text : data.text));
+      setBelirti((prev) => { const y = prev.trim() ? prev.trim() + ". " + data.text : data.text; return y.slice(0, BELIRTI_MAX); });
     } catch (e) {
       setHataMsg("Sesi anlayamadım — tekrar dene ya da yazarak anlat.");
     } finally {
@@ -526,8 +527,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
           {/* Belirti textarea (sol, esnek) + Sesle anlat butonu (sağ, kutu boyunda) YAN YANA */}
           <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-            <textarea ref={belirtiRef} style={{ ...s.textarea, flex: 1, minWidth: 0 }} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4}
-              placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
+            <div style={{ flex: 1, minWidth: 0, position: "relative" }}>
+              <textarea ref={belirtiRef} style={{ ...s.textarea, width: "100%", padding: "13px 14px 24px" }} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4} maxLength={BELIRTI_MAX}
+                placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
+              <span style={{ position: "absolute", bottom: 8, right: 12, fontSize: 11, fontWeight: 600, fontVariantNumeric: "tabular-nums", background: SURFACE, padding: "0 3px", pointerEvents: "none", color: belirti.length >= BELIRTI_MAX ? "#DC2626" : belirti.length >= BELIRTI_MAX - 25 ? "#EA580C" : FAINT }}>{belirti.length}/{BELIRTI_MAX}</span>
+            </div>
             {/* Sesli girdi — konuş, otomatik yazıya dökülüp belirtiye eklenir (ses saklanmaz) */}
             <button
               type="button"
