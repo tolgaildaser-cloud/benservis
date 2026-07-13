@@ -46,6 +46,34 @@ function refMetni(cihaz) {
   return arr.map(([ad, pmin, pmax, isc]) => `- ${ad}: parça ${pmin}-${pmax} TL, işçilik ~${isc} TL`).join("\n");
 }
 
+// Marka kademesi SİSTEM tarafından belirlenir (AI'a bırakılmaz → fiyat tutarlı). Premium→parça
+// üst band, ekonomik→alt band; gerisi (Arçelik/Beko/Samsung/LG… ve "Diğer"/bilinmeyen)→orta.
+const KADEME_PREMIUM = ["bosch", "siemens", "miele", "liebherr", "aeg", "bauknecht", "electrolux", "gaggenau", "neff", "smeg", "vestfrost"];
+const KADEME_EKONOMIK = ["regal", "hisense", "midea", "daewoo", "candy", "indesit", "sunny", "onvo", "axen", "hometech", "exper", "dijitsu", "altus", "seg", "telefunken", "finlux"];
+function markaKademe(marka) {
+  const m = (marka || "").toLocaleLowerCase("tr").trim();
+  if (KADEME_PREMIUM.includes(m)) return "premium";
+  if (KADEME_EKONOMIK.includes(m)) return "ekonomik";
+  return "orta";
+}
+
+// EN OLASI arızanın SEED satırından beklenen tutarı DETERMİNİSTİK hesaplar: parça bandı kademeye
+// göre (premium=üst, ekonomik=alt, orta=orta) + işçilik. seedRef SEED'de yoksa null → çağıran
+// AI'ın (fallback) beklenen'ini kullanır. Böylece aynı cihaz+arıza+marka HER ZAMAN aynı fiyat.
+function seedBeklenen(cihaz, seedRef, kademe) {
+  const arr = SEED[cihaz] || [];
+  if (!seedRef) return null;
+  const norm = (s) => String(s).toLocaleLowerCase("tr").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  const hedef = norm(String(seedRef).split(":")[0]); // AI ": parça…" eklerse kes, ad kalsın
+  if (!hedef) return null;
+  let row = arr.find((r) => norm(r[0]) === hedef);
+  if (!row) row = arr.find((r) => { const n = norm(r[0]); return n.includes(hedef) || hedef.includes(n.split(" ")[0]); });
+  if (!row) return null;
+  const [, pmin, pmax, isc] = row;
+  const parca = kademe === "premium" ? pmax : kademe === "ekonomik" ? pmin : Math.round((pmin + pmax) / 2);
+  return parca + isc;
+}
+
 function extractJSON(text) {
   let t = text.replace(/```json/gi, "").replace(/```/g, "").trim();
   const a = t.indexOf("{"), b = t.lastIndexOf("}");
@@ -244,6 +272,7 @@ Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 {
  "gecerliAriza":true,
  "olasiArizalar":[{"ad":"kısa arıza adı","olasilik":70,"aciklama":"tek cümle sade açıklama"}],
+ "seedRef":"EN OLASI arızanın REFERANS TARİFE'deki satır adı (birebir kopya); liste dışıysa \"\"",
  "tahminiMaliyet":{"beklenen":1200,"not":"kısa not"},
  "kararOnerisi":"tamir",
  "kararAciklama":"tek cümle gerekçe",
@@ -255,7 +284,10 @@ Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
 GEÇERLİLİK: gecerliAriza = kullanıcının yazdığı belirti, seçilen cihaz için GERÇEK bir arıza tarifi mi? Anlamsız metin (ör. "asdfgh"), selamlama/sohbet, cihazla alakasız ya da hiç arıza içermeyen girdi → false. Gerçek bir belirti (yetersiz/belirsiz olsa bile, ör. "bazen duruyor", "ara sıra ses") → true. false ise olasiArizalar [] olabilir; diğer alanları sistem kullanmaz.
 
-MALİYET KURALI: tahminiMaliyet.beklenen = EN OLASI arıza için TEK, gerçekçi beklenen toplam tutar (parça + işçilik, TL). Referans tarifeye çıpala, abartma/küçümseme. Aralık verme — sadece tek bir sayı. (Aralığı sistem otomatik ±%10 hesaplar.) kararOnerisi "gerek_yok" ise beklenen = 0 (kozmetik/işlevsel sorun yok → tamir bedeli yoktur, UYDURMA).
+MALİYET KURALI (fiyatı SİSTEM hesaplar — sen sadece doğru satırı seç):
+- seedRef = EN OLASI arıza, REFERANS TARİFE listesindeki hangi satıra en yakınsa o satırın adını BİREBİR kopyala (ör. "Gaz kaçağı/dolum"). Sistem tutarı bu satırdan (marka + işçilik) hesaplar. Listede karşılığı yoksa "" bırak.
+- tahminiMaliyet.beklenen = EN OLASI arıza için tahmini toplam tutar (parça + işçilik, TL, tek sayı) — YALNIZ seedRef boşsa (liste dışı arıza) kullanılır; referans tarifeye çıpala, abartma. (Aralığı sistem otomatik ±%10 hesaplar.)
+- kararOnerisi "gerek_yok" ise beklenen = 0 ve seedRef "".
 
 Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz"/"gerek_yok", aciliyet sadece "düşük"/"orta"/"yüksek"/"belirsiz" ve mutlaka yukarıdaki ölçüte göre (kararOnerisi "belirsiz" ise aciliyet de "belirsiz"), aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
 
@@ -271,6 +303,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       const parsed = extractJSON(data.text || "");
+      // FİYAT DETERMİNİSTİK (guard'lardan ÖNCE): EN OLASI arıza SEED'de eşleşiyorsa beklenen'i
+      // tarifeden hesapla (marka kademesi + işçilik) — AI'ın oynak sayısını KULLANMA. Eşleşmezse
+      // AI beklenen'ine düşülür (liste dışı arıza). gerek_yok'ta atla (kozmetik → beklenen 0).
+      if (parsed && parsed.kararOnerisi !== "gerek_yok") {
+        const seedBek = seedBeklenen(cihaz, parsed.seedRef, markaKademe(efektifMarka));
+        if (seedBek != null) parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: seedBek };
+      }
       // Savunma: beklenen 0/yok iken karar "tamir"/"yenisi" geldiyse bu bir çelişkidir
       // (model kozmetik olduğunu anladı ama yanlış badge verdi) → "gerek_yok" say.
       if (parsed) {
