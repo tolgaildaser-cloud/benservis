@@ -532,18 +532,18 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               onClick={sesDurumu === "kaydediyor" ? sesDurdur : sesBaslat}
               disabled={sesDurumu === "isliyor"}
               style={{
-                flex: "0 0 84px", width: 84, alignSelf: "stretch", padding: "10px 6px", borderRadius: 12,
+                flex: "0 0 62px", width: 62, alignSelf: "stretch", padding: "10px 5px", borderRadius: 12,
                 border: `1.5px solid ${sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB"}`,
                 background: sesDurumu === "kaydediyor" ? "rgba(220,38,38,.06)" : "rgba(37,99,235,.06)",
                 color: sesDurumu === "kaydediyor" ? "#DC2626" : "#2563EB",
-                fontSize: 13.5, fontWeight: 700, cursor: sesDurumu === "isliyor" ? "default" : "pointer",
+                fontSize: 13, fontWeight: 700, cursor: sesDurumu === "isliyor" ? "default" : "pointer",
                 fontFamily: "inherit", display: "flex", flexDirection: "column", alignItems: "center",
-                justifyContent: "center", gap: 6, textAlign: "center", lineHeight: 1.25,
+                justifyContent: "center", gap: 5, textAlign: "center", lineHeight: 1.2, overflowWrap: "break-word",
               }}
             >
-              {sesDurumu === "bosta" && (<><span style={{ fontSize: 22, lineHeight: 1 }}>🎤</span><span style={{ whiteSpace: "nowrap" }}>Sesle anlat</span></>)}
-              {sesDurumu === "kaydediyor" && (<span>● Dinliyorum…<br />durdurmak için dokun</span>)}
-              {sesDurumu === "isliyor" && (<span>Yazıya<br />çevriliyor…</span>)}
+              {sesDurumu === "bosta" && (<><span style={{ fontSize: 20, lineHeight: 1 }}>🎤</span><span>Sesle anlat</span></>)}
+              {sesDurumu === "kaydediyor" && (<><span style={{ fontSize: 16, lineHeight: 1 }}>●</span><span>Durdur</span></>)}
+              {sesDurumu === "isliyor" && (<span>İşliyor…</span>)}
             </button>
           </div>
 
