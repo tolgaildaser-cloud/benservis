@@ -1,6 +1,6 @@
 // src/constants.js
 export const CIHAZLAR = [
-  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon", "Fırın / Ocak / Aspiratör", "Klima",
+  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör", "Fırın / Ocak / Aspiratör", "Klima",
   "Kombi / Termosifon", "Mikrodalga / Air Fryer", "Süpürge",
   "Su Sebili / Arıtma", "Bilgisayar / Yazıcı",
 ];
@@ -19,6 +19,8 @@ export const KATEGORI_ESLES = {
   "Kombi / Termosifon": ["Kombi / Termosifon", "Kombi", "Termosifon / Şofben", "Termosifon", "Şofben"],
   // Bilgisayar + Yazıcı birleşti.
   "Bilgisayar / Yazıcı": ["Bilgisayar / Yazıcı", "Bilgisayar", "Masaüstü Bilgisayar", "Notebook", "Yazıcı"],
+  // Televizyon + Monitör birleşti; eski servis kayıtları "Televizyon" tuttuğu için alias kalır.
+  "Televizyon / Monitör": ["Televizyon / Monitör", "Televizyon", "Monitör"],
 };
 
 // Bir cihaz için eşleşecek tüm kategori adları (birleştirme dahil).
@@ -64,6 +66,12 @@ const TELEVIZYON = [
   "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Skyworth",
   "Sony", "Sunny", "TCL", "Telefunken", "Thomson", "Toshiba", "Vestel", "Xiaomi",
 ];
+// Monitör markaları — TV'den kısmen farklı (bilgisayar + ekran-uzmanı markalar). 2026 TR
+// piyasası (Amazon/Teknosa/Technopat "en çok satan monitör": Dell/Asus/MSI/Samsung/Gigabyte/AOC).
+const MONITOR = [
+  "AOC", "Acer", "Asus", "BenQ", "Casper", "Dell", "Gigabyte", "HP",
+  "Iiyama", "Lenovo", "MSI", "Monster", "ViewSonic",
+];
 const SU_ARITMA = [
   "A.O. Smith", "Aqua", "Aquapro", "Aquatech", "Arçelik", "Aura (İhlas)", "Beko",
   "Brita", "Conti", "Coway", "Cuckoo", "Elit", "Fakir", "Homefil", "Puretech",
@@ -84,7 +92,7 @@ const YAZICI = ["Brother", "Canon", "Epson", "Lexmark", "Pantum", "Ricoh", "Xero
 // Garanti yönlendirmesi ve teşhis kalitesi için master liste — tüm grupların birleşimi
 // (haritada olmayan cihaz veya "Diğer" → bu liste). Süperset garantisi için üretilir.
 export const MARKALAR = [...new Set([
-  ...BEYAZ_ESYA, ...KLIMA, ...KOMBI, ...KUCUK_EV, ...SUPURGE, ...TELEVIZYON,
+  ...BEYAZ_ESYA, ...KLIMA, ...KOMBI, ...KUCUK_EV, ...SUPURGE, ...TELEVIZYON, ...MONITOR,
   ...SU_ARITMA, ...BILGISAYAR, ...TELEFON, ...ANKASTRE_EK, ...YAZICI,
   "Balay", "Comfee", "Singer",
 ])].sort(trSort);
@@ -97,7 +105,7 @@ export const CIHAZ_MARKALARI = {
   "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort(trSort),
   "Klima": KLIMA,
   "Kombi / Termosifon": KOMBI,
-  "Televizyon": TELEVIZYON,
+  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR])].sort(trSort),
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort(trSort),
   "Su Sebili / Arıtma": SU_ARITMA,
   "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI])].sort(trSort),

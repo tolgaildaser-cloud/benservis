@@ -24,7 +24,7 @@ const IKONLAR = {
   "Kombi": (
     <g {...P}><rect x="5" y="3" width="14" height="13" rx="2" /><rect x="8" y="6" width="8" height="3.5" rx="0.8" /><line x1="9" y1="16" x2="9" y2="20" /><line x1="15" y1="16" x2="15" y2="20" /></g>
   ),
-  "Televizyon": (
+  "Televizyon / Monitör": (
     <g {...P}><rect x="3" y="4" width="18" height="12" rx="2" /><line x1="9" y1="20" x2="15" y2="20" /><line x1="12" y1="16" x2="12" y2="20" /></g>
   ),
   "Termosifon / Şofben": (
