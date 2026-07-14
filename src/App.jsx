@@ -119,7 +119,6 @@ export default function App() {
   const [marka, setMarka] = useState("");
   const [markaDiger, setMarkaDiger] = useState(""); // "Diğer" seçilince elle yazılan marka (veri toplama)
   const efektifMarka = (marka === "Diğer" && markaDiger.trim()) ? markaDiger.trim() : marka;
-  const [garantiAltinda, setGarantiAltinda] = useState(false);
   const [yas, setYas] = useState("");
   const [belirti, setBelirti] = useState("");
   const BELIRTI_MAX = 300; // belirti karakter limiti (maxLength + sayaç + ses kırpma tek kaynak)
@@ -224,7 +223,7 @@ export default function App() {
 
   const tesisEt = async () => {
     if (!cihaz) { setHataMsg("Cihaz türünü seç."); return; }
-    if (!marka) { setHataMsg("Marka seçimi zorunludur — garanti yönlendirmesi için gerekli."); return; }
+    if (!marka) { setHataMsg("Marka seçimi zorunludur — teşhis ve fiyat için gerekli."); return; }
     if (belirti.trim().length < 4) { setHataMsg("Arıza belirtisini birkaç kelimeyle yaz."); return; }
     setHataMsg("");
     setAdim("loading");
@@ -355,7 +354,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             karar: teshis.kararOnerisi || null,
             aciliyet: teshis.aciliyet || null,
             yas: yas || null,
-            garanti: !!garantiAltinda,
           }),
         }).then((r) => (r.ok ? r.json() : null)).then((d) => { if (d?.id) setTeshisLogId(d.id); }).catch(() => {});
       }
@@ -390,7 +388,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setGarantiAltinda(false); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
+  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
@@ -406,7 +404,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         <ServisEkrani
           cihaz={cihaz}
           marka={efektifMarka}
-          garantiAltinda={garantiAltinda}
           belirti={belirti}
           onKapat={() => setShowServisler(false)}
           onAnaSayfa={sifirla}
@@ -518,19 +515,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             />
           )}
 
-          {/* Garanti checkbox — yetkili servis yönlendirmesini tetikler */}
-          <label style={s.garantiRow}>
-            <input
-              type="checkbox"
-              checked={garantiAltinda}
-              onChange={(e) => setGarantiAltinda(e.target.checked)}
-              style={{ width: 16, height: 16, cursor: "pointer", accentColor: "#22C55E" }}
-            />
-            <span>
-              Cihazım garantili{" "}
-              <span style={s.opt}>(yalnızca yetkili servisler gösterilir)</span>
-            </span>
-          </label>
 
           <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
           {/* Belirti textarea (sol, esnek) + Sesle anlat butonu (sağ, kutu boyunda) YAN YANA */}
@@ -754,7 +738,6 @@ const s = {
   oneriChipActive: { background: AMBER, color: "#fff", border: `1px solid ${AMBER}`, boxShadow: "0 6px 14px -6px rgba(37,99,235,.55)" },
   oneriChipIkon: { fontSize: 13, fontWeight: 800, opacity: 0.85, lineHeight: 1 },
   row: { display: "flex", gap: 12, alignItems: "flex-start" },
-  garantiRow: { display: "flex", alignItems: "center", gap: 10, margin: "18px 0 0", cursor: "pointer", fontSize: 13.5, color: GREEN, fontWeight: 600, userSelect: "none" },
   input: { width: "100%", height: 46, padding: "0 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 16, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, transition: "all .15s", boxSizing: "border-box" },
   textarea: { width: "100%", padding: "13px 14px", borderRadius: 12, border: `1px solid ${HAIR}`, background: SURFACE, fontSize: 16, fontFamily: "'Hanken Grotesk', sans-serif", color: INK, resize: "none", overflow: "hidden", boxSizing: "border-box", minHeight: 116, lineHeight: 1.55 },
   err: { marginTop: 14, color: "#DC2626", fontSize: 13.5, fontWeight: 600 },
