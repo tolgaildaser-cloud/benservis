@@ -535,6 +535,13 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
       </div>
 
       <div style={{ padding: "16px" }}>
+        {/* Garantili cihaz ipucu — kısıtlama değil öneri; SERBİS rozetini işaret eder (herkese) */}
+        {locationState === "success" && gosterilenServisler.length > 0 && (
+          <div style={{ display: "flex", alignItems: "flex-start", gap: 7, background: "#EFF4FF", border: "1px solid #DBEAFE", borderRadius: 10, padding: "9px 12px", marginBottom: 12, fontSize: 12, color: "#475569", lineHeight: 1.45 }}>
+            <span style={{ fontSize: 13, flexShrink: 0 }} aria-hidden="true">🛡</span>
+            <span>Garantili cihazsan <strong style={{ color: "#2563EB" }}>✓ SERBİS Yetkili</strong> servisi seç — yetkili dışı servis garantiyi etkileyebilir.</span>
+          </div>
+        )}
         {/* Sıralama — sağ üst: Mesafe (default) / Puan */}
         {locationState === "success" && gosterilenServisler.length > 0 && (
           <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 8, marginBottom: 12 }}>
