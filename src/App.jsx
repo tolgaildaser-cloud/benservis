@@ -436,7 +436,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
       {(adim === "form" || adim === "hata") && (
         <div style={s.card}>
-          <label style={s.label}>Hangi cihaz? <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span></label>
+          <label style={s.label}>Cihaz <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span></label>
           <div style={s.cihazGrid}>
             {CIHAZLAR.map((c) => {
               const aktif = cihaz === c;
@@ -492,7 +492,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               </select>
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <label style={{ ...s.label, whiteSpace: "nowrap" }}>Cihaz yaşı <span style={s.opt}>(ops.)</span></label>
+              <label style={{ ...s.label, whiteSpace: "nowrap" }}>Cihaz yaşı <span style={s.opt}>(opsiyonel)</span></label>
               <select style={{ ...s.input, cursor: "pointer" }} value={yas} onChange={(e) => setYas(e.target.value)}>
                 <option value="">Seç…</option>
                 <option value="0-2 yıl">0-2 yıl</option>
