@@ -552,9 +552,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             onClick={tesisEt}
             disabled={!formHazir}
           >Teşhis et →</button>
-          {!formHazir && (
+          {!formHazir && cihaz && (
             <p style={{ fontSize: 12.5, color: "#94A3B8", textAlign: "center", margin: "8px 0 0" }}>
-              {!cihaz ? "Önce bir cihaz seçin." : !marka ? "Marka seçin." : "Arıza belirtisini yazın."}
+              {!marka ? "Marka seçin." : "Arıza belirtisini yazın."}
             </p>
           )}
           <p style={s.disclaimer}>Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>
