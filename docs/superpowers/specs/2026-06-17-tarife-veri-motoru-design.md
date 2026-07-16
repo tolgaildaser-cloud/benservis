@@ -1,8 +1,8 @@
 # Tarife Veri Motoru — Tasarım (v1)
 
 **Tarih:** 2026-06-17
-**Durum:** Onaylandı (brainstorming) → uygulama planı bekliyor
-**Branch:** `feat/tarife-veri-motoru`
+**Durum:** Onaylandı — ama HİÇ UYGULANMADI. **16 Tem 2026 CANLANDIRILDI + genişletildi** → bkz. [`2026-07-16-tarife-web-besleyici-guvenilirlik-design.md`](2026-07-16-tarife-web-besleyici-guvenilirlik-design.md) (web scraping ilk besleyici oldu; wiring baked-snapshot'a döndü; §9 migration güncel SEED'den yeniden üretilir). Bu doküman **v1 temeli** olarak geçerlidir; okurken 2026-07-16 delta'larıyla birlikte oku.
+**Branch:** `feat/tarife-veri-motoru` (eski) → yeni çalışma `feat/tarife-veri-motoru-web` (güncel main'den)
 
 ## 1. Amaç & Bağlam
 
