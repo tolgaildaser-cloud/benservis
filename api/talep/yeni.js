@@ -2,8 +2,10 @@
 // POST /api/talep/yeni
 // Body: { ilan_id, alici_ad, alici_tel, ilk_mesaj? }
 // Alıcı talebi oluşturur, satıcıya SMS gönderir, alici_token döndürür.
+// Güvenlik: public + satıcıya SMS → per-IP rate-limit (taciz/kredi-yakma önle).
 import supabase from "../_supabase.js";
 import { sendSMS } from "../_verimor.js";
+import { withRateLimit } from "../_ratelimit.js";
 import crypto from "crypto";
 
 const BASE_URL = "https://benservis.com";
@@ -15,7 +17,7 @@ function e164(tel) {
   return "+90" + d;
 }
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -27,6 +29,15 @@ export default async function handler(req, res) {
   if (!ilan_id?.trim())   return res.status(400).json({ error: "ilan_id gerekli" });
   if (!alici_ad?.trim())  return res.status(400).json({ error: "Ad gerekli" });
   if (!alici_tel?.trim()) return res.status(400).json({ error: "Telefon gerekli" });
+
+  // Sunucu-tarafı uzunluk tavanları (client atlatılabilir; alici_ad SMS'e girdiği için de önemli)
+  const cokUzun = (v, n) => v != null && String(v).length > n;
+  if (
+    cokUzun(ilan_id, 100) || cokUzun(alici_ad, 100) || cokUzun(alici_tel, 20) ||
+    cokUzun(alici_email, 200) || cokUzun(ilk_mesaj, 2000)
+  ) {
+    return res.status(400).json({ error: "Girdi çok uzun" });
+  }
 
   // İlanı getir
   const { data: ilan, error: ie } = await supabase
@@ -87,3 +98,9 @@ export default async function handler(req, res) {
   const aliciUrl = `${BASE_URL}/ikinci-el/alici/${alici_token}`;
   return res.status(201).json({ talep_id: talep.id, alici_token, alici_url: aliciUrl });
 }
+
+// Public + satıcıya SMS gönderir → taciz/kredi-yakma önlemek için per-IP 8/saat (fail-open).
+export default withRateLimit(handler, {
+  prefix: "talep-yeni",
+  limits: [{ tokens: 8, window: "1 h" }],
+});

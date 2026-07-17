@@ -2,8 +2,10 @@
 // POST /api/ilan/yeni
 // Body: { seri_no, baslik, aciklama?, fiyat, konum?, satici_ad, satici_tel, satici_iban?, fotograflar? }
 // DPP pasaportunu otomatik çeker, ilan oluşturur. satici_token üretir.
+// Güvenlik: public + kullanıcının verdiği numaraya SMS → per-IP rate-limit (SMS-bombing önle).
 import supabase from "../_supabase.js";
 import { sendSMS } from "../_verimor.js";
+import { withRateLimit } from "../_ratelimit.js";
 import crypto from "crypto";
 
 const BASE_URL = "https://benservis.com";
@@ -15,7 +17,7 @@ function e164(tel) {
   return "+90" + d;
 }
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -34,6 +36,16 @@ export default async function handler(req, res) {
                            return res.status(400).json({ error: "Geçerli bir fiyat girin" });
   if (!satici_ad?.trim())  return res.status(400).json({ error: "satici_ad gerekli" });
   if (!satici_tel?.trim()) return res.status(400).json({ error: "satici_tel gerekli" });
+
+  // Sunucu-tarafı uzunluk tavanları (client atlatılabilir; baslik SMS'e girdiği için de önemli)
+  const cokUzun = (v, n) => v != null && String(v).length > n;
+  if (
+    cokUzun(seri_no, 100) || cokUzun(kategori, 100) || cokUzun(baslik, 200) ||
+    cokUzun(aciklama, 4000) || cokUzun(konum, 200) || cokUzun(satici_ad, 100) ||
+    cokUzun(satici_tel, 20) || cokUzun(satici_iban, 40)
+  ) {
+    return res.status(400).json({ error: "Girdi çok uzun" });
+  }
 
   // DPP özeti çek (opsiyonel — cihaz yoksa ilan yine de oluşur)
   let dpp = null;
@@ -100,3 +112,9 @@ export default async function handler(req, res) {
 
   return res.status(201).json({ ilan, dpp, satici_panel_url: saticiUrl });
 }
+
+// Public + kullanıcının verdiği numaraya SMS → SMS-bombing riski. Per-IP 5/saat (fail-open).
+export default withRateLimit(handler, {
+  prefix: "ilan-yeni",
+  limits: [{ tokens: 5, window: "1 h" }],
+});
