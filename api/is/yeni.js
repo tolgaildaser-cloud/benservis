@@ -3,8 +3,11 @@
 // Body: { servis_id?, servis_ad?, musteri_ad, musteri_tel, adres, tarih_tercihi?, cihaz?, belirti? }
 // servis_id/servis_ad yoksa → havuz modu (durum=havuzda, ilçe parse edilir, servis yarışır).
 // DEMO_SERVIS_ID set ise → tüm talepler demo servise yönlenir (havuz bypass).
+// Güvenlik: SMS gönderdiği için per-IP rate-limit (SMS-abuse/toll-fraud koruması) +
+// sunucu-tarafı uzunluk tavanları (client atlatılabilir → DB bloat önle).
 import supabase from "../_supabase.js";
 import { sendSMS, setCorsHeaders } from "../_verimor.js";
+import { withRateLimit } from "../_ratelimit.js";
 
 // Adres metninden ilçe tahmin eder: "Kadıköy, Moda Cad. 12/3" → "Kadıköy"
 function ilcedenAdres(adres) {
@@ -14,7 +17,7 @@ function ilcedenAdres(adres) {
   return parca.replace(/\d.*/, "").trim() || null;
 }
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   setCorsHeaders(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
@@ -40,6 +43,16 @@ export default async function handler(req, res) {
     return res.status(400).json({
       error: "musteri_ad, musteri_tel, adres zorunludur",
     });
+  }
+
+  // Sunucu-tarafı uzunluk tavanları (client atlatılabilir → DB bloat + kötüye kullanım önle)
+  const cokUzun = (v, n) => v != null && String(v).length > n;
+  if (
+    cokUzun(musteri_ad, 100) || cokUzun(musteri_tel, 20) || cokUzun(adres, 500) ||
+    cokUzun(cihaz, 100) || cokUzun(belirti, 2000) || cokUzun(seri_no, 100) ||
+    cokUzun(tarih_tercihi, 200) || cokUzun(ilce, 100) || cokUzun(servis_ad, 200)
+  ) {
+    return res.status(400).json({ error: "Girdi çok uzun" });
   }
 
   // Havuz modu: DEMO kapalı ve servis_id verilmemişse
@@ -95,3 +108,10 @@ export default async function handler(req, res) {
 
   return res.status(201).json({ is, havuz: isHavuz });
 }
+
+// Per-IP rate-limit: 5/saat. Bu uç kullanıcının verdiği numaraya SMS gönderir →
+// limitsiz olsa döngüyle farklı numaralara spam/toll-fraud yapılabilirdi. fail-open.
+export default withRateLimit(handler, {
+  prefix: "is-yeni",
+  limits: [{ tokens: 5, window: "1 h" }],
+});

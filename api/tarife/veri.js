@@ -8,6 +8,11 @@ function gecerli(p) {
   if (!p.ariza?.trim()) return "ariza gerekli";
   if (p.parca_tl == null && p.iscilik_tl == null && p.toplam_tl == null)
     return "parca_tl / iscilik_tl / toplam_tl'den en az biri gerekli";
+  const uzun = (v, n) => v != null && String(v).length > n;
+  if (uzun(p.cihaz, 100) || uzun(p.marka, 100) || uzun(p.ariza, 200) ||
+      uzun(p.belirtiler, 2000) || uzun(p.hata_kodu, 100) || uzun(p.bolge, 100) ||
+      uzun(p.kaynak_servis, 200) || uzun(p.kaynak_url, 500) || uzun(p.notlar, 1000))
+    return "alan çok uzun";
   return null;
 }
 function temizle(p) {
@@ -40,6 +45,7 @@ export default async function handler(req, res) {
   const body = req.body || {};
   const kayitlar = Array.isArray(body) ? body : [body];
   if (!kayitlar.length) return res.status(400).json({ error: "kayıt yok" });
+  if (kayitlar.length > 1000) return res.status(400).json({ error: "çok fazla kayıt (max 1000)" });
   for (const k of kayitlar) {
     const hata = gecerli(k);
     if (hata) return res.status(400).json({ error: hata });
