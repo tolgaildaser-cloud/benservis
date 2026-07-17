@@ -12,6 +12,7 @@ import RaporPaneli from "./RaporPaneli.jsx";
 import ServisMagaza from "./ServisMagaza.jsx";
 import UrunDetay from "./UrunDetay.jsx";
 import Sepet from "./Sepet.jsx";
+import TarifeAdmin from "./TarifeAdmin.jsx";
 
 const path = window.location.pathname;
 const isAriza       = path.startsWith("/ariza");
@@ -24,6 +25,7 @@ const isTakip       = path.startsWith("/takip/");
 const isServisKayit = path === "/servis-kayit";
 const isServisAdmin = path === "/servis-admin";
 const isAdmin       = path === "/admin";
+const isTarife      = path === "/tarife";
 const isServisMagaza = path.startsWith("/servis/");
 const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : null;
 
@@ -40,6 +42,7 @@ createRoot(document.getElementById("root")).render(
      isTakip        ? <MusteriTakip isNo={takipIsNo} /> :
      isServisKayit  ? <ServisKayit />                   :
      isServisAdmin  ? <ServisAdmin />                   :
+     isTarife       ? <TarifeAdmin />                   :
      isAdmin        ? <RaporPaneli />                   :
      isServisMagaza ? <ServisMagaza />                  :
      <App />}
