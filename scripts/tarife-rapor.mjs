@@ -44,17 +44,20 @@ for (const [k, pts] of grupMap) {
     guven: o.guven, nokta: pts.length,
   });
 }
-satirlar.sort((a, b) => Math.abs(b.sapma) - Math.abs(a.sapma));
+// KURAL (kullanıcı, 17 Tem): "düşük çıkanlarda düşürme" — web bizden DÜŞÜK derse (ucuz işlerde)
+// DÜŞÜRMEYİZ; 1500 gidiş minimum kalır (gerçek çağırma maliyeti). Web yalnızca bizi YUKARI çeker
+// (underpricing = asıl marka riski: quote düşük → gerçek bill şok). Aşağı yön aksiyon değildir.
+satirlar.sort((a, b) => b.sapma - a.sapma); // en çok DÜŞÜK KALDIĞIMIZ (web > biz) en üstte
 
 console.log("# Tarife Sapma Raporu — bizim TAM tahmin (parça+işçilik+gidiş) vs web ALL-IN\n");
 if (!satirlar.length) {
   console.log("_(Henüz karşılaştırılabilir web verisi yok. Önce `node scripts/tarife-topla.mjs <Cihaz>` çalıştır.)_");
   process.exit(0);
 }
-console.log("| Cihaz · Arıza | Bizim (tam) | Web (all-in) | Sapma | Güven | Nokta | Durum |");
+console.log("| Cihaz · Arıza | Bizim (tam) | Web (all-in) | Sapma | Güven | Nokta | Aksiyon |");
 console.log("|---|--:|--:|--:|:--:|--:|:--|");
 for (const s of satirlar) {
-  const bayrak = Math.abs(s.sapma) > 20 ? "⚠️ KALİBRASYON" : "✓ ±%20";
-  console.log(`| ${s.ad} | ${s.biz} | ${s.web} | %${s.sapma > 0 ? "+" : ""}${s.sapma} | ${s.guven} | ${s.nokta} | ${bayrak} |`);
+  const aksiyon = s.sapma > 20 ? "⚠️ DÜŞÜK KALMIŞIZ (yükselt?)" : s.sapma < -20 ? "floor — düşürme" : "✓ ±%20";
+  console.log(`| ${s.ad} | ${s.biz} | ${s.web} | %${s.sapma > 0 ? "+" : ""}${s.sapma} | ${s.guven} | ${s.nokta} | ${aksiyon} |`);
 }
-console.log(`\nHedef: |sapma| ≤ %20 (final fiyat). ⚠️ satırlar için kaynakları/Onaylı değeri gözden geçir. Not: web all-in gidiş dahildir.`);
+console.log(`\nKural: web YÜKSEK (⚠️) → underpriced olabiliriz, yükseltmeyi değerlendir. Web DÜŞÜK → floor tutulur (DÜŞÜRME). Düşük güven = daha çok kaynak topla.`);
