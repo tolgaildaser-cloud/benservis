@@ -11,5 +11,55 @@
     "Gaz kaçağı/dolum": [
       "https://www.ucretii.com/buzdolabi-gaz-dolum-ucreti_19.html"
     ]
+  },
+  "Çamaşır Makinesi": {
+    "Rulman/keçe": [
+      "https://www.fiyatii.com/camasir-makinesi-tamir-fiyati_21.html",
+      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+    ],
+    "Elektronik kart": [
+      "https://www.fiyatii.com/camasir-makinesi-tamir-fiyati_21.html",
+      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+    ],
+    "Tahliye pompası": [
+      "https://www.fiyatii.com/camasir-makinesi-tamir-fiyati_21.html",
+      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+    ]
+  },
+  "Klima": {
+    "Kompresör": [
+      "https://www.haberts.com/2026-klima-servisi-fiyatlari-guncel-bakim-montaj-ve-gaz-dolumu-ucretleri"
+    ],
+    "Gaz dolumu": [
+      "https://www.haberts.com/2026-klima-servisi-fiyatlari-guncel-bakim-montaj-ve-gaz-dolumu-ucretleri",
+      "https://www.fiyatlarii.com/klima-gaz-dolum-ucretleri_59.html"
+    ],
+    "Kapasitör": [
+      "https://tamirart.com/klima-kart-tamiri-fiyatlari"
+    ]
+  },
+  "Kombi / Termosifon": {
+    "Eşanjör": [
+      "https://www.elitkombi.tr/blog-detay/kombi-tamir-fiyatlari-2026-ortalama-maliyet-analizi",
+      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir"
+    ],
+    "Sirkülasyon pompası": [
+      "https://www.elitkombi.tr/blog-detay/kombi-tamir-fiyatlari-2026-ortalama-maliyet-analizi",
+      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir"
+    ],
+    "3 yollu vana": [
+      "https://www.elitkombi.tr/blog-detay/kombi-tamir-fiyatlari-2026-ortalama-maliyet-analizi",
+      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir"
+    ]
+  },
+  "Bulaşık Makinesi": {
+    "Sirkülasyon (yıkama) motoru": [
+      "https://hizmetdukkani.com/hizmetler/bulasik-makinesi-tamiri/",
+      "https://fiyatlarii.com/bulasik-makinesi-pompa-fiyatlari_53.html"
+    ],
+    "Tahliye pompası": [
+      "https://hizmetdukkani.com/hizmetler/bulasik-makinesi-tamiri/",
+      "https://fiyatlarii.com/bulasik-makinesi-pompa-fiyatlari_53.html"
+    ]
   }
 }
