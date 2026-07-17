@@ -29,8 +29,12 @@ async function sayfadanCek(url, cihaz, ariza) {
   } catch (e) { console.warn(`  ✗ fetch ${url}: ${e.message}`); return null; }
   if (metin.length < 200) { console.warn(`  ✗ boş/kısa içerik ${url}`); return null; }
 
-  const prompt = `Aşağıdaki Türkçe sayfa metninden "${cihaz} — ${ariza}" için 2026 TL fiyatı çıkar. SADECE bu arıza/parça için.
-Marka bazlı aralık varsa parca_min=en ucuz marka, parca_max=en pahalı marka. Bu arıza sayfada yoksa/emin değilsen null yaz, uydurma.
+  const prompt = `Aşağıdaki Türkçe sayfa metninden "${cihaz} — ${ariza}" için 2026 TL fiyatları çıkar. SADECE bu arıza/parça.
+Şu üç şeyi AYIR (karıştırma):
+- parca_min/parca_max: SADECE yedek parçanın fiyatı (işçilik, servis, gidiş, montaj HARİÇ). Marka aralığı varsa min=en ucuz marka, max=en pahalı. Sayfa sadece "değişim/servis dahil" fiyat veriyorsa parça'yı null bırak.
+- iscilik: sadece işçilik/montaj ücreti (varsa).
+- toplam: HER ŞEY DAHİL servis/değişim fiyatı (parça+işçilik+gidiş). Fiyat-listesi siteleri genelde BUNU verir.
+Bu arıza sayfada yoksa/emin değilsen ilgili alanı null yaz, UYDURMA.
 Yalnız şu JSON: {"parca_min":sayı|null,"parca_max":sayı|null,"iscilik":sayı|null,"toplam":sayı|null}
 METİN: ${metin}`;
   try {
