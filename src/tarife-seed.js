@@ -1,7 +1,6 @@
-// src/tarife-seed.js — referans tarife (SEED). App.jsx + scripts/tarife-topla.mjs okur.
-// KAYNAK: başta App.jsx'ten çıkarıldı; scripts/tarife-snapshot.mjs bunu Supabase ONAYLI
-// tarifeden YENİDEN ÜRETİR (aynı şekil: cihaz → [[arıza, parça_min, parça_max, işçilik], …]).
-// Elle düzenleme yerine tarife'yi onayla + snapshot'ı çalıştır.
+// src/tarife-seed.js — ÜRETİLDİ (scripts/tarife-snapshot.mjs, Supabase Onaylı tarife).
+// Elle düzenleme yerine /tarife'de onayla + snapshot'ı yeniden çalıştır.
+// Şekil: cihaz → [[arıza, parça_min, parça_max, işçilik], …].
 export const SEED = {
   "Buzdolabı": [["Termostat/sensör",250,1200,600],["Gaz kaçağı/dolum",900,2000,1400],["Kompresör değişimi",2500,5500,2400],["Fan motoru (no-frost)",400,1200,600]],
   "Çamaşır Makinesi": [["Su giriş valfi",200,1500,600],["Tahliye pompası",200,1200,600],["Rulman/keçe",600,3500,2000],["Elektronik kart",1000,5000,1300],["Kapı kilidi",250,900,500]],
