@@ -584,6 +584,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
       {adim === "sonuc" && sonuc && (
         <div style={s.results}>
+          {/* Garanti uyarısı — 0-2 yaş cihaz büyük olasılıkla garanti kapsamında; ücretli servisten önce yetkiliyle görüşmeyi öner (kozmetik/tamir gerekmez durumunda gösterme) */}
+          {yas === "0-2 yıl" && sonuc.kararOnerisi !== "gerek_yok" && (
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 7, background: "#EFF4FF", border: "1px solid #DBEAFE", borderRadius: 10, padding: "11px 13px", marginBottom: 14, fontSize: 12.5, color: "#475569", lineHeight: 1.45 }}>
+              <span style={{ fontSize: 14, flexShrink: 0 }} aria-hidden="true">🛡</span>
+              <span><strong style={{ color: "#2563EB" }}>Cihazın büyük olasılıkla garanti kapsamında.</strong> Ücretli bir servise gitmeden önce, cihazı aldığın yerin yetkili servisiyle görüşmeni öneririz — arıza garanti kapsamındaysa onarım ücretsiz olabilir.</span>
+            </div>
+          )}
           <div style={s.card}>
             <div style={s.secHead}>Olası arızalar</div>
             {sonuc.olasiArizalar?.map((a, i) => (
