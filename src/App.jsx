@@ -536,7 +536,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             style={{ ...s.cta, ...(formHazir ? {} : { opacity: 0.45, cursor: "not-allowed", boxShadow: "none" }) }}
             onClick={tesisEt}
             disabled={!formHazir}
-          >Teşhis et →</button>
+          >Ücretsiz teşhis et →</button>
           {!formHazir && cihaz && (
             <p style={{ fontSize: 12.5, color: "#94A3B8", textAlign: "center", margin: "8px 0 0" }}>
               {!marka ? "Marka seçin." : "Arıza belirtisini yazın."}
@@ -546,15 +546,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      {/* Ana sayfa alt bölümleri — yalnız form ekranında: (1) ücretsiz teşhis CTA, (2) sık sorulanlar */}
+      {/* Ana sayfa alt bölümü — yalnız form ekranında: sık sorulanlar (SSS) */}
       {adim === "form" && (
         <>
-          <div style={{ position: "relative", zIndex: 1, marginTop: 16, background: "linear-gradient(135deg, #2563EB, #1E40AF)", borderRadius: 20, padding: "24px 22px", color: "#fff", boxShadow: "0 16px 40px -24px rgba(37,99,235,.6)" }}>
-            <div style={{ fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 20, marginBottom: 6 }}>Önce öğren, sonra karar ver.</div>
-            <p style={{ margin: "0 0 16px", fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,.9)" }}>Cihazının belirtisini yaz; yapay zeka olası arızayı ve tahmini maliyeti söylesin. Tamir mi mantıklı, yenisi mi — kararı bilgiyle ver.</p>
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ background: "#fff", color: "#1E40AF", fontWeight: 700, fontSize: 15, border: "none", borderRadius: 12, padding: "13px 24px", boxShadow: "0 8px 20px -10px rgba(0,0,0,.35)" }}>Ücretsiz teşhis al →</button>
-          </div>
-
           <div style={{ position: "relative", zIndex: 1, marginTop: 24 }}>
             <div style={{ ...s.secHead, marginBottom: 12 }}>Sık sorulanlar</div>
             {SSS.map((q, i) => (
