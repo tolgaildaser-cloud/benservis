@@ -176,6 +176,7 @@ export default function App() {
       const data = await res.json();
       if (!res.ok || !data.text) throw new Error(data.error || "bos");
       setBelirti((prev) => { const y = prev.trim() ? prev.trim() + ". " + data.text : data.text; return y.slice(0, BELIRTI_MAX); });
+      sesFocusRef.current = true; // STT batch'tir, kelime-kelime değil: transkript textarea'ya düşünce odaklan + imleci sona al ki kullanıcı yanlışı düzeltip AYRI "Teşhis et"e bassın (otomatik teşhis YOK)
     } catch (e) {
       setHataMsg("Sesi anlayamadım — tekrar dene ya da yazarak anlat.");
     } finally {
@@ -186,12 +187,21 @@ export default function App() {
   // Belirti textarea: elle (mouse) resize kapalı; yazdıkça veya chip ile içerik
   // değiştikçe otomatik uzar (min ~4 satır).
   const belirtiRef = useRef(null);
+  const sesFocusRef = useRef(false); // STT sonrası tek seferlik odak isteği (her tuş vuruşunda odak çalınmasın)
   useEffect(() => {
     const el = belirtiRef.current;
     if (!el) return;
     el.style.height = "auto";
     const kenarlik = el.offsetHeight - el.clientHeight; // border-box: kenarlık payı (içerik kırpılmasın)
     el.style.height = Math.max(el.scrollHeight + kenarlik, 116) + "px";
+    // Sesli anlat sonrası: kullanıcı yanlış transkripti hemen düzeltebilsin diye
+    // textarea'ya odaklan ve imleci metnin SONUNA al (mobilde klavye açılır).
+    if (sesFocusRef.current) {
+      sesFocusRef.current = false;
+      el.focus();
+      const son = el.value.length;
+      try { el.setSelectionRange(son, son); } catch { /* setSelectionRange bazı tarayıcılarda atabilir */ }
+    }
   }, [belirti]);
 
   // Teşhis sonucu / geçersiz ekranı geldiğinde sayfayı başa al — cihazdan bağımsız
