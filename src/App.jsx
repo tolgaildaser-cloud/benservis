@@ -699,12 +699,18 @@ const INK = "#1E293B", CREAM = "#F8FAFC", AMBER = "#2563EB", GREEN = "#22C55E";
 // Minimal & premium paleti
 const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 
-// Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı
+// Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
+// YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
+// FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
+// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 20 Tem 2026.
 const SSS = [
+  // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
-  { s: "Teşhis nasıl çalışıyor?", c: "Cihaz, marka ve belirtiyi yazıyorsun; yapay zeka olası arızaları, olasılıklarını ve tahmini onarım maliyetini saniyeler içinde çıkarıyor." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  { s: "Tamir mi ettireyim, yenisini mi alayım?", c: "Tahmini onarım maliyetini cihazın yaşı ve yeni fiyatıyla birlikte değerlendir; Benservis kararı kolaylaştırmak için tamir/yenisi önerisi de sunar." },
+  // — haftalık belirti soruları (blog verisinden) —
+  { s: "Çamaşır makinesi su almıyor / atmıyor — ne yapmalıyım?", c: "Çoğu zaman tıkalı tahliye filtresi, kıvrılmış su hortumu veya kapalı musluk kaynaklıdır; filtreyi temizleyip hortumu ve musluğu kontrol et. Geçmezse cihaz ve belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  { s: "Buzdolabı soğutmuyor: arıza mı, ayar mı?", c: "Önce termostat ayarını, kapı contasını ve arka ızgaranın tozunu kontrol et; yazın aşırı dolu dolap da soğutmayı düşürür. Sorun sürerse belirtiyi yaz, olası arızayı ve tahmini onarım maliyetini ücretsiz gör." },
+  { s: "Klima soğutmuyor, önce neye bakmalıyım?", c: "Kirli filtre hava akışını düşürür; iç ünite filtresini temizle, dış üniteyi kontrol et. Soğutma hâlâ zayıfsa gaz azalması söz konusu olabilir — belirtiyi yaz, olası nedeni ve tahmini maliyeti ücretsiz teşhisle öğren." },
 ];
 
 const CSS = `
