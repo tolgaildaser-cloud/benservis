@@ -62,6 +62,8 @@ E15'i sebep sebep, güvenlik sınırlarıyla anlattığımız ayrıntılı rehbe
 ### E22 / E24 — Filtre ve tahliye
 E22'de taban filtresini çıkarıp temizlemek genelde yeter. E24'te ek olarak tahliye hortumunu (bükük/tıkalı mı) ve pompa kapağını kontrol et. İkisi de çoğu zaman ücretsiz.
 
+Her birini adım adım anlattığımız ayrıntılı rehberler: [Bosch bulaşık makinesi E22 hatası: filtre tıkalı](/blog/bosch-bulasik-makinesi-e22-hatasi/) · [Bosch bulaşık makinesi E24 hatası: su atmıyor (tahliye)](/blog/bosch-bulasik-makinesi-e24-hatasi/)
+
 ### E09 — Isıtıcı
 Su ısınmaz, bulaşıklar yağlı/soğuk kalır. Rezistans ya da kontrol kartı arızasıdır; servis gerekir.
 
