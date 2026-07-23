@@ -4,7 +4,7 @@
 > bölümü, `docs/DURUM.md`) birleştirir ve **17 Haziran 2026 pivotunu** yansıtır. Çakışma
 > olursa bu doküman geçerlidir; `CLAUDE.md` artık tarihsel/teknik devir bağlamı olarak kalır.
 >
-> Son güncelleme: **7 Temmuz 2026**
+> Son güncelleme: **23 Temmuz 2026** (organizasyon & yürütme bölümü eklendi — §9)
 
 ---
 
@@ -113,8 +113,8 @@ daha zengin DPP → daha güvenilir pazar.
 - **KPI (yatırımcı için):** teşhis tamamlama oranı, "Ara" dönüşümü, K-faktörü, D7/D30 retention,
   şehir penetrasyonu.
 
-> **Session ayrımı:** Blog/içerik/GTM **ayrı marketing session**'da; yatırım/fonlama araştırması
-> **ayrı session**'da yürütülür. Ana (core) session = ürün/kod.
+> **Session ayrımı:** 18 Tem 2026'da tam organizasyon yapısına evrildi — bkz. **§9 Organizasyon
+> & Yürütme** (YK + iki ayrı org + merkez fonksiyonlar + zamanlanmış çalışanlar).
 
 ---
 
@@ -196,6 +196,56 @@ kapısı, admin teşhis raporu, Bilgi Merkezi 59 yazı, entity/sosyal ağı, GSC
 - Güvenlik/KVKK açıkları satıştan önce kapanmalı.
 
 ---
+
+## 9. Organizasyon & Yürütme (YK Düzeni — 18-20 Tem 2026'da kuruldu)
+
+Benservis yarı zamanlı yürütüleceği için (1 Eyl 2026 sonrası) işletme, **AI departmanlarından
+oluşan bir organizasyona** devredildi. Kurucu = Yönetim Kurulu; departmanlar = Claude
+oturumları + zamanlanmış görevler ("çalışanlar").
+
+### Yapı: tek YK, iki tamamen ayrı organizasyon
+
+- **🏛️ YK (ana oturum):** Tüm kararlar burada alınır ve **karar defteri**
+  (`~/Desktop/yonetim-kurulu/KARAR-DEFTERI.md`) üzerinden dağılır; her çalışan koşusuna
+  kendi bölümünü okuyarak başlar. Öncelik: **karar defteri > backlog > brif.** Tüm iş
+  raporlarının bildirimleri YK'ya döner; Pazartesi sabahı otomatik **YK brifingi** üretilir.
+- **🟦 BENSERVİS ORG:** Pazarlama-Benservis · IT (veri + güvenlik + teşhis + altyapı) ·
+  Yazılım/QA (güvenilirlik + fiyat doğruluğu **denetimi** — IT işletir, Yazılım denetler) ·
+  Kurumsal (A.Ş./marka/exit + **Yatırım Araştırma ekibi** = exit stream).
+- **🟧 KIPIR ORG:** tamamı ayrı "Kıpır Shopify" oturumunda (ürün yönetimi + fiyatlama +
+  operasyon). Benservis'le içerik/plan **çapraz karışmaz**.
+- **🏦 Merkez fonksiyonlar (iki org'a hizmet):** Muhasebe (ham finansal veri, Shopify ciro +
+  gider taraması) · Bütçe & Raporlama (org bazlı bilançolar, bütçe vs gerçekleşen).
+- **🎨 Ortak pazarlama havuzu:** 3 AI rol — pazarlama uzmanı (günlük; **sosyal yayın tekeli
+  onda**), grafiker (Pzt/Çar/Cum), front-endci (Pzt/Çar/Cum; canlıya taşıma yetkili, otonom
+  koşuda deploy öncesi kurucu onayı). İki org'a **ayrı** çalışır (backlog iki bölüm).
+
+### Rutin takvimi
+
+| Ne zaman | Çalışan / iş |
+|---|---|
+| Pzt 09:00 | YK brifingi (org bazlı durum + onay kuyruğu + açık kararlar + öncelikler) |
+| Her gün 09:15 | Pazarlama uzmanı (haftalık plan: org başına 3 carousel + 1 Reels + 3 blog taslağı; onaylı yayın) |
+| Pzt/Çar/Cum | Grafiker (10:30) + Front-endci (11:30) |
+| Çar 09:00 | Yazılım fiyat nöbeti (underpricing avı + fiyat determinizm testi) |
+| Perş 10:00 | Yatırım/pazar radarı (Kurumsal) |
+| Ayın 1'i | Sağlık kontrolü (site/API probe) + DPP mevzuat takibi |
+| Ayın 2'si / 3'ü | Muhasebe finans raporu → Bütçe & Raporlama bilançosu |
+| Ayın 15'i | Tarife günü (veri onayı + snapshot — insan onaylı) |
+
+### Yürütme ilkeleri
+
+1. **İnsan onay kapıları:** sosyal yayın (1 Ağu'ya kadar onay kuyruğu), blog/site yayını,
+   tarife onayı, tüm harcamalar ve bütçe hedefleri kurucuda. Görevler ödeme/finansal işlem
+   asla yapmaz.
+2. **"Beyin Claude'da, borular Zapier'de":** Zapier yalnız veri/yayın borusudur (Shopify
+   sipariş çekme, IG+YT yayını); yönetim ve muhakeme Claude oturumlarında.
+3. **Bütçe çerçevesi (2026 H2):** Benservis ilk yıl gelir hedefi yok (ücretsiz büyüme);
+   Kıpır aylık ciro hedefi Ç1 10K TL → her çeyrek ×2. Pazarlama bütçesi: Benservis 5.000
+   TL/ay, Kıpır 200 TL/ay (harcama kurucuda) — "sıfır bütçe organik" dönemi 20 Tem'de kapandı.
+4. **Kurumsal takvim:** Eylül 2026 marka tescili (şahıs adına, Tolga İldaser) → **Ekim 2026
+   Benservis A.Ş. kuruluşu** + kuruluşta pay senedi bastırma (2 yıl sonrası vergisiz hisse
+   satışı → exit penceresi Ekim 2028+; §5'teki "temiz paketleme" kaldıracını karşılar).
 
 ## İlgili Dokümanlar
 
