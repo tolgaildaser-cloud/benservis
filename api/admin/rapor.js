@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   try {
     const { data, error } = await supabase
       .from("teshis_log")
-      .select("created_at,cihaz,marka,ariza,il,ilce,maliyet_min,maliyet_max,karar,aciliyet")
+      .select("created_at,cihaz,marka,yas,ariza,il,ilce,maliyet_min,maliyet_max,karar,aciliyet")
       .gte("created_at", `${fromQ}T00:00:00.000Z`)
       .lte("created_at", `${toQ}T23:59:59.999Z`)
       .order("created_at", { ascending: false })

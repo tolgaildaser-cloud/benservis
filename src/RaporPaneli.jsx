@@ -47,9 +47,9 @@ export default function RaporPaneli() {
   const csvIndir = () => {
     if (!rapor?.satirlar?.length) return;
     const esc = (v) => { const s = v == null ? "" : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
-    const head = ["Tarih", "Cihaz", "Marka", "Arıza", "İl", "İlçe", "MaliyetMin", "MaliyetMax", "Karar", "Aciliyet"];
+    const head = ["Tarih", "Cihaz", "Marka", "Yaş", "Arıza", "İl", "İlçe", "MaliyetMin", "MaliyetMax", "Karar", "Aciliyet"];
     const lines = [head.join(",")];
-    for (const s of rapor.satirlar) lines.push([trTarih(s.created_at), s.cihaz, s.marka, s.ariza, s.il, s.ilce, s.maliyet_min, s.maliyet_max, s.karar, s.aciliyet].map(esc).join(","));
+    for (const s of rapor.satirlar) lines.push([trTarih(s.created_at), s.cihaz, s.marka, s.yas, s.ariza, s.il, s.ilce, s.maliyet_min, s.maliyet_max, s.karar, s.aciliyet].map(esc).join(","));
     const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
@@ -85,7 +85,7 @@ export default function RaporPaneli() {
   }
 
   // ── RAPOR EKRANI (sır var) ──
-  const basliklar = ["Tarih", "Cihaz", "Marka", "Arıza", "İl", "İlçe", "Maliyet", "Karar", "Aciliyet"];
+  const basliklar = ["Tarih", "Cihaz", "Marka", "Yaş", "Arıza", "İl", "İlçe", "Maliyet", "Karar", "Aciliyet"];
   return (
     <div style={{ minHeight: "100vh", background: PAPER, fontFamily: "'Hanken Grotesk',sans-serif", padding: "20px 16px" }}>
       <style>{FONT}</style>
@@ -133,6 +133,7 @@ export default function RaporPaneli() {
                         <td style={tdS}>{trTarih(s.created_at)}</td>
                         <td style={tdS}>{s.cihaz || "—"}</td>
                         <td style={tdS}>{s.marka || "—"}</td>
+                        <td style={tdS}>{s.yas || "—"}</td>
                         <td style={tdS}>{s.ariza || "—"}</td>
                         <td style={tdS}>{s.il || "—"}</td>
                         <td style={tdS}>{s.ilce || "—"}</td>
