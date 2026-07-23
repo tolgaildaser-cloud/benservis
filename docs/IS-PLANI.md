@@ -153,7 +153,17 @@ daha zengin DPP → daha güvenilir pazar.
 - **SERBİS (servis.gov.tr):** T.C. Ticaret Bakanlığı resmî yetkili-servis sistemi. Public API yok;
   ama KVKK metni "üçüncü taraflarla paylaşım" mekanizması olduğunu söylüyor → resmî veri erişimi
   başvurusu (Tüketicinin Korunması Gen. Md. / CİMER) gerçekleşirse **"✓ SERBİS kayıtlı yetkili
-  servis" otomatik rozeti = büyük moat + yatırımcı hikâyesi**. Başvuru **ertelendi**.
+  servis" otomatik rozeti = büyük moat + yatırımcı hikâyesi**. Başvuru **ertelendi**. (Not: telefon
+  eşleşmesiyle 207 servislik "✓ SERBİS Yetkili" rozeti Tem 2026'da zaten canlıya alındı.)
+- **🆕 YÜBİS — Yenilenmiş Ürün Bilgi Sistemi (RG 27 Haz 2026, yürürlük 1 Ağu 2026):** Ticaret
+  Bakanlığı, yenilenmiş cihazlar için **cihaz başına dijital sicil** kurdu (değişen parçalar,
+  e-sertifika, çalıntı sorgusu; tüketici internetten sorgular). Kapsam yalnız elektronik
+  (telefon/tablet/TV/bilgisayar/konsol/saat/modem) ve yalnız "yenileme anı" — **beyaz eşya ve
+  yaşam-boyu tamir geçmişi YOK = tam bizim boşluğumuz.** Okuma: devlet "cihaz sicili" kavramını
+  meşrulaştırdı (DPP tezimizin yerli emsali; aynı bakanlık SERBİS+YÜBİS+Yeşil Mutabakat'ı
+  yürütüyor → kurumsal tutarlılık hikâyesi). Konum: *"YÜBİS yenilenmiş elektroniğin doğum
+  belgesi; biz tüm cihazların sağlık karnesi."* Risk izlemede: kapsam beyaz eşyaya genişlerse /
+  üçüncü taraf API açılırsa (aylık DPP mevzuat takibine eklendi, 23 Tem 2026).
 
 ---
 
