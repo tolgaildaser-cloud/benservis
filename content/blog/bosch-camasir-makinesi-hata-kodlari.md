@@ -1,6 +1,6 @@
 ---
-title: "Bosch çamaşır makinesi hata kodları: tam liste ve anlamları"
-description: "Bosch çamaşır makinesi hata kodları tam liste: E16/F16, E17/F17, E18/F18, F21, F23, F43, F63 ve daha fazlasının anlamı, kendin çözebilecekleri ve 2026 tamir fiyatları. Bil, gör, çağır."
+title: "Bosch çamaşır makinesi hata kodları: E/F tam liste"
+description: "E16, E17, E18, F21, F23, F63… Bosch, Siemens ve Neff kodlarının anlamı: hangisini evde ücretsiz çözersin, hangisi servis ister?"
 slug: "bosch-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
 updated: "2026-06-29"
@@ -83,6 +83,8 @@ Sembolün ne olduğundan emin değilsen modelini yaz, [Benservis](/) söylesin.
 
 ## Kodun listede yok mu?
 Bosch yüzlerce farklı model üretir; bazı kodlar (ör. **F80, E92, E00, F44**) yalnız belirli serilerde çıkar ve anlamı modele göre değişir. **Uydurma bir anlam vermeyiz** — yanlış teşhis sana pahalıya patlar. Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
+
+> 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 
 ## Tahmini tamir maliyeti
 Bosch dâhil parça parça 2026 İstanbul tahminleri: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/). (Motor kömürü, tahliye pompası, elektronik kart…)
