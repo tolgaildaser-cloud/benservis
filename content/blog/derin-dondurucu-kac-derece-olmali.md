@@ -1,6 +1,6 @@
 ---
-title: "Derin dondurucu kaç derece olmalı? -18 kuralı, şoklama ve doluluk rehberi"
-description: "Derin dondurucu ve buzluk ideal kaç derece? -18°C standardı, şoklama (-24) ne zaman kullanılır, dondurucu dolu mu boş mu daha verimli çalışır, elektrik kesintisinde gıdalar kaç saat dayanır? Bil, gör, çağır."
+title: "Derin dondurucu kaç derece olmalı? -18°C kuralı"
+description: "Doğru ayar -18°C. Şoklama ne zaman açılır, dondurucu dolu mu boş mu verimli, kesintide gıda kaç saat dayanır? Kısa ve net cevaplar."
 slug: "derin-dondurucu-kac-derece-olmali"
 date: "2026-07-14"
 category: "Buzdolabı"

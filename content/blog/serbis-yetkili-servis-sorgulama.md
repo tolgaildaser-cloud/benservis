@@ -1,6 +1,6 @@
 ---
-title: "SERBİS nedir, nasıl sorgulanır? Yetkili servisi doğrulama rehberi"
-description: "SERBİS (Servis Bilgi Sistemi) nedir, servis.gov.tr'de yetkili servis nasıl sorgulanır, sahte servisten nasıl korunursun? Adım adım resmî doğrulama rehberi. Bil, gör, çağır."
+title: "SERBİS sorgulama: yetkili servis nasıl doğrulanır?"
+description: "servis.gov.tr'de marka ve ilçene göre yetkili servisi ücretsiz doğrula. Sahte 'yetkili servis' tuzağından korunmanın adım adım yolu."
 slug: "serbis-yetkili-servis-sorgulama"
 date: "2026-06-22"
 updated: "2026-07-03"

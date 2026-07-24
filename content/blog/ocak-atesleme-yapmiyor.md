@@ -1,6 +1,6 @@
 ---
-title: "Ocak ateşleme yapmıyor: ateşleme bujisi tamiri ve fiyatı (2026)"
-description: "Gazlı ocak ateşleme yapmıyor, çakmak çakmıyor mu? Ateşleme bujisi tamiri gerçekten gerekli mi, fiyatı ne kadar? Kirli başlık, buji, gaz akışı — kendin yapabileceklerin + 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+title: "Ocak ateşleme yapmıyor mu? Evde 3 kontrol + tamir fiyatı"
+description: "Çakmak çakıyor ama ocak yanmıyor mu? Önce başlık temizliği, buji ve gaz akışı — çoğu ücretsiz çözülür. Servis gerekirse 2026 tahmini fiyat içeride."
 slug: "ocak-atesleme-yapmiyor"
 date: "2026-06-23"
 updated: "2026-07-09"
@@ -61,6 +61,8 @@ Ateşleme bujisi, düğmeye basınca **kıvılcım üreten seramik uçtur**. Ça
 - **Gaz kokusu** varsa (aşağıdaki uyarı)
 
 > ⚠️ **Güvenlik:** Gaz kokusu alırsan vanayı kapat, havalandır, elektrikli düğmelere dokunma ve yetkili servise/doğalgaz acil hattına haber ver. Gaz tarafına (valf, hortum, regülatör) kendin müdahale etme.
+
+> 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 
 ## 2026 ocak tamiri tahmini fiyatları (İstanbul)
 

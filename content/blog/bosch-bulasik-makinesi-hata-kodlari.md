@@ -1,6 +1,6 @@
 ---
-title: "Bosch bulaşık makinesi hata kodları: tam liste (E15, E22, E24…)"
-description: "Bosch bulaşık makinesi hata kodları tam liste: E15 (musluk işareti), E22, E24, E09, E25 anlamı ve çözümü, E15 için yana yatırma yöntemi, 2026 tamir fiyatları. Siemens/Profilo/Neff'te de geçerli. Bil, gör, çağır."
+title: "Bosch bulaşık makinesi hata kodları: E15, E22, E24"
+description: "E15 musluk işareti, E22 iç filtre, E24 tahliye ve diğerleri. Her kodun anlamı, evde denenecek adımlar ve 2026 tamir fiyat aralıkları."
 slug: "bosch-bulasik-makinesi-hata-kodlari"
 date: "2026-06-19"
 updated: "2026-07-04"
@@ -72,6 +72,8 @@ Su ısınmaz, bulaşıklar yağlı/soğuk kalır. Rezistans ya da kontrol kartı
 
 ## Kodun listede yok mu?
 Bosch (ve Siemens/Profilo/Neff) yüzlerce model üretir; bazı kodlar (ör. **E01, E34, H24, F kodları**) yalnız belirli serilerde çıkar ve anlamı modele göre değişir. **Uydurma bir anlam vermeyiz** — yanlış teşhis pahalıya patlar. Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
+
+> 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 
 ## Tahmini tamir maliyeti
 Parça parça 2026 İstanbul tahminleri: [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/).
