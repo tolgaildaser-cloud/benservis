@@ -4,6 +4,7 @@ import DPPEkrani from "./DPPEkrani.jsx";
 import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
+import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
 
@@ -210,6 +211,12 @@ export default function App() {
     if (!cihaz) { setHataMsg("Cihaz türünü seç."); return; }
     if (!marka) { setHataMsg("Marka seçimi zorunludur — teşhis ve fiyat için gerekli."); return; }
     if (belirti.trim().length < 4) { setHataMsg("Arıza belirtisini birkaç kelimeyle yaz."); return; }
+    // Offline (ör. ana ekrandan uçak modunda açıldı): teşhis AI çağrısı gerektirir — sessiz
+    // hata yerine net mesaj (YK #26 / PWA planı adım 3, IT gizlilik+UX kuralı).
+    if (typeof navigator !== "undefined" && navigator.onLine === false) {
+      setHataMsg("Teşhis için internet gerekiyor. Bağlanınca tekrar dene — kayıtlı servis listesi çevrimdışı da açılır.");
+      return;
+    }
     setHataMsg("");
     setAdim("loading");
     track("diagnose_start", { cihaz, marka }); // funnel: kullanıcı teşhis istedi
@@ -676,6 +683,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             <button style={s.copyBtn} onClick={kopyala}>{kopyalandi ? "✓ Kopyalandı" : "⧉ Özeti kopyala"}</button>
             <button style={s.reset} onClick={sifirla}>↺ Yeni arıza</button>
           </div>
+          {/* PWA ipucu (YK #26): yalnız sonuç ekranında + 2. ziyaretten sonra; kendi içinde eleniyor */}
+          <AnaEkranaEkle />
         </div>
       )}
 

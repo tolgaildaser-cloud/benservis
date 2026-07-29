@@ -177,9 +177,17 @@ function page({ title, desc, canonical, head = "", body }) {
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- PWA (YK #26): blog aramadan gelen ilk temas — manifest + SW burada da olmalı, yoksa
+     yalnız ana sayfaya girenler uygulamayı kurabilir. Push YOK. -->
+<meta name="theme-color" content="${T.BLUE}">
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Benservis">
 <style>${CSS}</style>${head}
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </head><body>
 <header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Bilgi Merkezi</a></div></header>
 <main><div class="wrap">${body}</div></main>
