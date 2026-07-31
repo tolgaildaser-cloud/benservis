@@ -106,6 +106,11 @@ blockquote p{margin:0}
 .cta h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 8px;color:#fff;font-size:20px}
 .cta p{margin:0 0 4px;opacity:.96}
 .cta .tag{font-weight:600;opacity:1}
+.pwa-not{margin:14px 0 8px;padding:16px 18px;border-radius:14px;background:rgba(37,99,235,.05);border:1px solid ${T.HAIR}}
+.pwa-not h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 7px;font-size:16px;color:${T.NAVY}}
+.pwa-not p{margin:0 0 8px;font-size:14px;line-height:1.6;color:${T.MUTED}}
+.pwa-not .tarif{margin:0;font-size:12.5px;line-height:1.5;color:${T.FAINT}}
+@media (display-mode: standalone){.pwa-not{display:none}}
 footer.site{border-top:1px solid ${T.HAIR};font-size:13px;padding:24px 0;text-align:center;color:${T.FAINT}}
 footer.site .foot-social{display:flex;justify-content:center;gap:18px;margin-top:12px}
 footer.site .foot-social a{color:${T.FAINT};display:inline-flex;transition:color .15s ease,transform .15s ease}
@@ -140,6 +145,11 @@ const LOGO = `<svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="tru
 const WORDMARK = `<span class="brand-text"><span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span><span class="brand-motto">Bil, gör, çağır.</span></span>`;
 
 const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+
+// PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
+// Pasif blok: ana CTA'nın altında, yazının akışını kesmez; uygulama ana ekrandan açıldıysa
+// CSS `display-mode: standalone` sorgusuyla gizlenir (statik sayfa, JS gerekmiyor).
+const PWA_NOT = `<section class="pwa-not"><h3>📱 Benservis'i telefonuna ekle</h3><p>Mağazadan indirmene gerek yok. Tarayıcı menüsünden &quot;Ana ekrana ekle&quot; dediğinde Benservis ikondan tam ekran açılır — ve internet çekmediğinde bile yakınındaki servislerin listesi elinde kalır.</p><p class="tarif">iPhone: Paylaş → Ana Ekrana Ekle · Android: menü (⋮) → Uygulamayı yükle</p></section>`;
 
 // Bilgi Merkezi listesi için client-side arama (statik, backend yok).
 // Kart metnini (kategori+başlık+özet) Türkçe-duyarlı + aksan toleranslı normalize eder,
@@ -275,7 +285,7 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${p.html}${CTA}</article>`;
+  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${p.html}${CTA}${PWA_NOT}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: `${p.title} | Benservis`, desc: p.description, canonical, head, body }));

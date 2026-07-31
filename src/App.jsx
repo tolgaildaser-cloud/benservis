@@ -5,6 +5,7 @@ import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
+import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
@@ -571,6 +572,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               </div>
             ))}
           </div>
+          {/* PWA duyurusu — site metni (YK #26 adım 5/5): pasif blok, ipucu şeridiyle çakışmaz */}
+          <TelefonaEkleBlok />
         </>
       )}
 
