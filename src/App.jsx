@@ -645,45 +645,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             </div>
           </div>
 
-          <div style={s.cardSplit}>
-            <div style={{ flex: 1 }}>
-              <div style={s.secHead}>Aciliyet</div>
-              <span style={{ ...s.acilBadge, color: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz, borderColor: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz }}>{(sonuc.aciliyet || "belirsiz").toUpperCase()}</span>
-              {sonuc.aciliyetNot && <p style={s.fiyatNot}>{sonuc.aciliyetNot}</p>}
-            </div>
-            <div style={s.divider} />
-            <div style={{ flex: 2 }}>
-              <div style={s.secHead}>Kendin çözebilir misin?</div>
-              {sonuc.kendinCozebilirMi?.mumkun ? (
-                <>
-                  <ul style={s.ipucuList}>
-                    {sonuc.kendinCozebilirMi.ipuclari?.map((ip, i) => (<li key={i} style={s.ipucu}><span style={s.tick}>✓</span>{ip}</li>))}
-                  </ul>
-                  {/* Adım adım rehber — YALNIZ mumkun=true iken (güvenlik kapısı) ve yalnız
-                      küratörlü haritada karşılığı varsa. Eşleşme yoksa hiç gösterilmez. */}
-                  {(() => {
-                    const r = rehberBul(cihaz, sonuc.olasiArizalar?.[0]?.ad);
-                    if (!r) return null;
-                    return (
-                      <a
-                        href={r.url} target="_blank" rel="noopener noreferrer nofollow"
-                        className="rehber-link" style={s.rehberLink}
-                        onClick={() => track("rehber_click", { cihaz, rehber: r.baslik })}
-                      >
-                        <span aria-hidden="true" style={{ fontSize: 16, lineHeight: 1.2 }}>🔧</span>
-                        <span style={{ flex: 1, minWidth: 0 }}>
-                          <span style={s.rehberBaslik}>Adım adım onarım rehberi: {r.baslik}</span>
-                          <span style={s.rehberMeta}>
-                            İngilizce · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure} · {r.adim} adım · iFixit.com
-                          </span>
-                        </span>
-                        <span aria-hidden="true" style={{ color: AMBER, fontWeight: 700 }}>→</span>
-                      </a>
-                    );
-                  })()}
-                </>
-              ) : (<p style={s.fiyatNot}>Bu arıza için servis önerilir, kendin müdahale etme.</p>)}
-            </div>
+          {/* Aciliyet — tam genişlik, TEK SATIR (başlık + rozet + gerekçe yan yana) */}
+          <div style={s.acilRow}>
+            <div style={s.acilHead}>Aciliyet</div>
+            <span style={{ ...s.acilBadge, color: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz, borderColor: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz }}>{(sonuc.aciliyet || "belirsiz").toUpperCase()}</span>
+            {sonuc.aciliyetNot && <p style={s.acilNot}>{sonuc.aciliyetNot}</p>}
           </div>
 
           {sonuc.ekSorular?.length > 0 && (
@@ -693,6 +659,32 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <button style={s.linkBtn} onClick={detayEkle}>Detay ekle ve tekrar sor</button>
             </div>
           )}
+
+          {/* Kendin çözmek ister misin? — "Tamir ettirmek ister misin?" ile AYNI format.
+              İki güvenlik kapısı korunuyor: yalnız kendinCozebilirMi.mumkun=true iken ve
+              yalnız küratörlü haritada rehber karşılığı varsa çıkar; ikisi yoksa blok yok. */}
+          {(() => {
+            if (!sonuc.kendinCozebilirMi?.mumkun) return null;
+            const r = rehberBul(cihaz, sonuc.olasiArizalar?.[0]?.ad);
+            if (!r) return null;
+            return (
+              <div style={s.faz2}>
+                <div>
+                  <div style={s.faz2Head}>Kendin çözmek ister misin?</div>
+                  <div style={s.faz2Sub}>{r.baslik} · İngilizce · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure} · {r.adim} adım</div>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <a
+                    href={r.url} target="_blank" rel="noopener noreferrer nofollow"
+                    style={{ ...s.faz2Btn, opacity: 1, display: "inline-block", textDecoration: "none", textAlign: "center" }}
+                    onClick={() => track("rehber_click", { cihaz, rehber: r.baslik })}
+                  >
+                    🔧 Rehberi Aç
+                  </a>
+                </div>
+              </div>
+            );
+          })()}
 
           <div style={s.faz2}>
             <div>
@@ -732,7 +724,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   );
 }
 
-const INK = "#1E293B", CREAM = "#F8FAFC", AMBER = "#2563EB", GREEN = "#22C55E";
+const INK = "#1E293B", CREAM = "#F8FAFC", AMBER = "#2563EB";
 // Minimal & premium paleti
 const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 
@@ -760,7 +752,6 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER
 button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
 .rehber-btn:hover { background: rgba(37,99,235,.13) !important; transform: translateY(-1px); }
 .foot-social:hover { color: #2563EB !important; transform: translateY(-1px); }
-.rehber-link:hover { background: rgba(37,99,235,.12) !important; transform: translateY(-1px); }
 `;
 
 const s = {
@@ -819,15 +810,14 @@ const s = {
   fiyatNot: { fontSize: 13, color: "#475569", marginTop: 8, lineHeight: 1.45 },
   divider: { width: 1, alignSelf: "stretch", background: "#E2E8F0" },
   kararBadge: { display: "inline-block", color: "#fff", fontSize: 12.5, fontWeight: 700, letterSpacing: ".04em", padding: "6px 12px", borderRadius: 8 },
-  acilBadge: { display: "inline-block", fontSize: 13, fontWeight: 700, letterSpacing: ".05em", padding: "6px 12px", borderRadius: 8, borderWidth: "1.5px", borderStyle: "solid", background: SURFACE },
-  ipucuList: { listStyle: "none", padding: 0, margin: 0 },
-  ipucu: { fontSize: 13.5, color: "#334155", display: "flex", gap: 8, marginBottom: 7, lineHeight: 1.4 },
-  tick: { color: GREEN, fontWeight: 800 },
+  acilBadge: { display: "inline-block", fontSize: 13, fontWeight: 700, letterSpacing: ".05em", padding: "6px 12px", borderRadius: 8, borderWidth: "1.5px", borderStyle: "solid", background: SURFACE, flexShrink: 0 },
+  // Aciliyet artık tam genişlikte TEK SATIR: başlık + rozet + gerekçe yan yana akar.
+  // Dar ekranda gerekçe alta iner (flexWrap) — rozet ve başlık asla kırılmaz.
+  acilRow: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 18, padding: "14px 20px", marginTop: 14, display: "flex", alignItems: "center", flexWrap: "wrap", gap: 12, boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 12px 28px -22px rgba(30,41,59,.22)", animation: "anrise .4s ease both" },
+  acilHead: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600, flexShrink: 0 },
+  acilNot: { fontSize: 13, color: "#475569", margin: 0, lineHeight: 1.45, flex: 1, minWidth: 180 },
   soru: { fontSize: 13.5, color: "#64748B", margin: "0 0 6px", lineHeight: 1.4 },
   linkBtn: { marginTop: 8, background: "none", border: "none", color: AMBER, fontWeight: 700, fontSize: 13.5, padding: 0, textDecoration: "underline" },
-  rehberLink: { display: "flex", alignItems: "flex-start", gap: 9, marginTop: 12, padding: "10px 12px", borderRadius: 12, background: "rgba(37,99,235,.06)", border: `1px solid ${HAIR}`, textDecoration: "none", color: INK, transition: "background .15s ease, transform .15s ease" },
-  rehberBaslik: { display: "block", fontSize: 13.5, fontWeight: 700, lineHeight: 1.35 },
-  rehberMeta: { display: "block", fontSize: 11.5, color: MUTED, marginTop: 3, lineHeight: 1.35 },
   faz2: { position: "relative", zIndex: 1, marginTop: 16, background: INK, color: CREAM, borderRadius: 18, padding: "18px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 },
   faz2Head: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600 },
   faz2Sub: { fontSize: 13, color: "#94A3B8", marginTop: 3 },
