@@ -671,7 +671,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <div style={s.faz2}>
                 <div>
                   <div style={s.faz2Head}>Kendin çözmek ister misin?</div>
-                  <div style={s.faz2Sub}>{r.baslik} · İngilizce · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure} · {r.adim} adım</div>
+                  {/* Alt satır bilerek KISA: iki kart aynı boyda dursun (Tolga, 31 Tem). */}
+                  <div style={s.faz2Sub}>İngilizce · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure}</div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <a
@@ -821,7 +822,9 @@ const s = {
   faz2: { position: "relative", zIndex: 1, marginTop: 16, background: INK, color: CREAM, borderRadius: 18, padding: "18px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 },
   faz2Head: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600 },
   faz2Sub: { fontSize: 13, color: "#94A3B8", marginTop: 3 },
-  faz2Btn: { background: AMBER, color: "#fff", border: "none", borderRadius: 11, padding: "11px 15px", fontWeight: 700, fontSize: 14, opacity: .85, whiteSpace: "nowrap" },
+  // İki CTA butonu (Rehberi Aç / Servis Bul) AYNI EBATTA olmalı (Tolga, 31 Tem):
+  // sabit minWidth + ortalanmış metin → metin uzunluğu buton boyunu değiştirmez.
+  faz2Btn: { background: AMBER, color: "#fff", border: "none", borderRadius: 11, padding: "11px 15px", fontWeight: 700, fontSize: 14, opacity: .85, whiteSpace: "nowrap", minWidth: 138, textAlign: "center", boxSizing: "border-box", lineHeight: 1.3 },
   altBtns: { display: "flex", gap: 10, marginTop: 16 },
   copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
   reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #CBD5E1", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
