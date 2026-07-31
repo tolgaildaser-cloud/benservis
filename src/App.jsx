@@ -711,15 +711,16 @@ const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8",
 // Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
 // YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
 // FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
-// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 27 Tem 2026.
+// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 29 Tem 2026.
 const SSS = [
   // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 27 Tem: bulaşık + buzdolabı yaz/tatil çıpası + çamaşır kümesi) —
-  { s: "Bulaşık makinesi su atmıyor / altında su kalıyor — ne yapmalıyım?", c: "Genellikle tıkalı tahliye filtresi veya kıvrılmış ya da tıkalı tahliye hortumu kaynaklıdır; alttaki filtreyi çıkarıp temizle, hortumun evye bağlantısını ve kıvrım olup olmadığını kontrol et. Su hâlâ atılmıyorsa cihazı ve belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  // — haftalık belirti soruları (blog verisinden; 29 Tem: buzdolabı + çamaşır kümesi + mevsim zirvesi klima
+  //   kümesi 8 yazı — bulaşık "su atmıyor" rotasyondan çıkarıldı, yerine klima su damlatıyor) —
   { s: "Buzdolabı çalışıyor ama soğutmuyor, önce neye bakmalıyım?", c: "Önce sıcaklık ayarına bak (dolap ~4 °C, buzluk ~ -18 °C), sonra kapı contasını dene: kapağın arasına bir kâğıt koyup kapat, çekerken direnç hissetmiyorsan conta sızdırıyordur. Arkadaki tozu da süpür. Buzluk soğuk ama dolap soğumuyorsa fan veya buz çözme arızası olabilir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Çamaşır makinesi kötü kokuyor, evde ne yapabilirim?", c: "Koku genelde nemde üreyen küften gelir; makineyi boşken 60-90°'de bir programa al (tambura 1-2 bardak beyaz sirke), kapı contasının kıvrımlarını ve deterjan çekmecesini temizle, kapağı açık bırak. Koku sürüyorsa tahliye hattında tıkanıklık olabilir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  { s: "Klima iç üniteden su damlatıyor, ne yapmalıyım?", c: "Önce klimayı kapat — su elektronik karta veya prize ulaşırsa risklidir. Sonra iç ünitenin filtresini çıkarıp yıka ve tahliye hortumunun dışarı çıkan ucunda tıkanıklık ya da bükülme var mı bak; en sık sebep tıkalı tahliye hattıdır. Filtre temiz, hortum açıkken damlama sürüyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
 ];
 
 const CSS = `
