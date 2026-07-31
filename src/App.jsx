@@ -5,6 +5,7 @@ import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
+import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
 
@@ -651,9 +652,33 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             <div style={{ flex: 2 }}>
               <div style={s.secHead}>Kendin çözebilir misin?</div>
               {sonuc.kendinCozebilirMi?.mumkun ? (
-                <ul style={s.ipucuList}>
-                  {sonuc.kendinCozebilirMi.ipuclari?.map((ip, i) => (<li key={i} style={s.ipucu}><span style={s.tick}>✓</span>{ip}</li>))}
-                </ul>
+                <>
+                  <ul style={s.ipucuList}>
+                    {sonuc.kendinCozebilirMi.ipuclari?.map((ip, i) => (<li key={i} style={s.ipucu}><span style={s.tick}>✓</span>{ip}</li>))}
+                  </ul>
+                  {/* Adım adım rehber — YALNIZ mumkun=true iken (güvenlik kapısı) ve yalnız
+                      küratörlü haritada karşılığı varsa. Eşleşme yoksa hiç gösterilmez. */}
+                  {(() => {
+                    const r = rehberBul(cihaz, sonuc.olasiArizalar?.[0]?.ad);
+                    if (!r) return null;
+                    return (
+                      <a
+                        href={r.url} target="_blank" rel="noopener noreferrer nofollow"
+                        className="rehber-link" style={s.rehberLink}
+                        onClick={() => track("rehber_click", { cihaz, rehber: r.baslik })}
+                      >
+                        <span aria-hidden="true" style={{ fontSize: 16, lineHeight: 1.2 }}>🔧</span>
+                        <span style={{ flex: 1, minWidth: 0 }}>
+                          <span style={s.rehberBaslik}>Adım adım onarım rehberi: {r.baslik}</span>
+                          <span style={s.rehberMeta}>
+                            İngilizce · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure} · {r.adim} adım · iFixit.com
+                          </span>
+                        </span>
+                        <span aria-hidden="true" style={{ color: AMBER, fontWeight: 700 }}>→</span>
+                      </a>
+                    );
+                  })()}
+                </>
               ) : (<p style={s.fiyatNot}>Bu arıza için servis önerilir, kendin müdahale etme.</p>)}
             </div>
           </div>
@@ -732,6 +757,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER
 button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
 .rehber-btn:hover { background: rgba(37,99,235,.13) !important; transform: translateY(-1px); }
 .foot-social:hover { color: #2563EB !important; transform: translateY(-1px); }
+.rehber-link:hover { background: rgba(37,99,235,.12) !important; transform: translateY(-1px); }
 `;
 
 const s = {
@@ -796,6 +822,9 @@ const s = {
   tick: { color: GREEN, fontWeight: 800 },
   soru: { fontSize: 13.5, color: "#64748B", margin: "0 0 6px", lineHeight: 1.4 },
   linkBtn: { marginTop: 8, background: "none", border: "none", color: AMBER, fontWeight: 700, fontSize: 13.5, padding: 0, textDecoration: "underline" },
+  rehberLink: { display: "flex", alignItems: "flex-start", gap: 9, marginTop: 12, padding: "10px 12px", borderRadius: 12, background: "rgba(37,99,235,.06)", border: `1px solid ${HAIR}`, textDecoration: "none", color: INK, transition: "background .15s ease, transform .15s ease" },
+  rehberBaslik: { display: "block", fontSize: 13.5, fontWeight: 700, lineHeight: 1.35 },
+  rehberMeta: { display: "block", fontSize: 11.5, color: MUTED, marginTop: 3, lineHeight: 1.35 },
   faz2: { position: "relative", zIndex: 1, marginTop: 16, background: INK, color: CREAM, borderRadius: 18, padding: "18px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 },
   faz2Head: { fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 600 },
   faz2Sub: { fontSize: 13, color: "#94A3B8", marginTop: 3 },
