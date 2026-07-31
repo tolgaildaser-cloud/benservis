@@ -22,7 +22,22 @@
 
 const G = (id, baslik, zorluk, sure, adim) => ({
   url: `https://www.ifixit.com/Guide/${id}`,
-  baslik, zorluk, sure, adim,
+  baslik, zorluk, sure, adim, kendi: false,
+});
+
+// B(...) = BİZİM kendi Türkçe rehberimiz (kendi blogumuz, kendi metnimiz, kendi görselimiz).
+//
+// TELİF NOTU (31 Tem 2026, kaynaktan doğrulandı): iFixit içeriği CC BY-NC-SA 3.0 —
+// kendi SSS'lerinde "çevirip sitene koyabilirsin" diyorlar AMA şart "noncommercial".
+// Benservis ticari bir site → iFixit rehberlerini ÇEVİRMEK ya da FOTOĞRAFLARINI
+// kullanmak YASAK. Telif ifadeyi korur, usulü/olguyu değil: kendi cümlelerimizle
+// sıfırdan yazılan Türkçe rehber tamamen serbesttir. Buradaki kayıtlar öyle yazıldı.
+//
+// KURAL: kendi rehberimiz varsa iFixit'e ASLA gönderilmez (rehberBul içinde önceliklidir) —
+// kullanıcı Türkçe okur, sitede kalır, iFixit yalnız bizde karşılığı olmayan konularda yedek.
+const B = (slug, baslik, zorluk, sure, adim) => ({
+  url: `/blog/${slug}/`,
+  baslik, zorluk, sure, adim, kendi: true,
 });
 
 // zorluk: kaynaktaki İngilizce değerlerin Türkçesi
@@ -37,8 +52,10 @@ export const REHBERLER = {
   "Çamaşır Makinesi": [
     { ara: ["su giriş", "su almıyor", "giriş valf", "inlet"],
       rehber: G("How+To+Replace+The+Inlet+Valve+In+Your+Washing+Machine/181828", "Su giriş valfi değişimi", "Moderate", "15-25 dk", 8) },
+    // KENDİ REHBERİMİZ — iFixit'in 17 adımlık İngilizce tahliye teşhisi yerine, kullanıcının
+    // ilk yapması gereken işi anlatan Türkçe sayfamız açılır (aynı belirti, daha basit ilk adım).
     { ara: ["tahliye", "pompa", "su atmıyor", "boşaltmıyor", "su boşalt"],
-      rehber: G("How+to+Troubleshoot+Drainage+Issues+in+a+Washing+Machine/218133", "Tahliye sorunlarını adım adım bulma", "Moderate", "45 dk-1 sa", 17) },
+      rehber: B("camasir-makinesi-tahliye-filtresi-temizleme", "Tahliye filtresini temizleme", "Kolay", "~10 dakika", 6) },
     { ara: ["rulman", "keçe", "bearing"],
       rehber: G("How+to+replace+the+drum+bearings+in+your+washing+machine/198640", "Kazan rulmanı değişimi", "Difficult", "35-45 dk", 15) },
     { ara: ["kapı contası", "conta", "körük", "seal"],
@@ -81,6 +98,13 @@ export const REHBERLER = {
     { ara: ["fırın kapak conta", "kapı contası", "fırın contası"],
       rehber: G("How+to+replace+the+door+gasket+and+light+bulb+in+your+stove/198592", "Fırın kapak contası değişimi", "Moderate", "15-25 dk", 9) },
   ],
+  // Klima kümesinde iFixit'te jenerik ev tipi klima rehberi YOK — bu cihaz haritaya
+  // yalnız KENDİ Türkçe rehberimizle girdi. Anahtar kelimeler bilerek DAR tutuldu:
+  // "soğutmuyor" gaz/kompresör arızası da olabilir, filtre rehberine bağlanmamalı.
+  "Klima": [
+    { ara: ["filtre", "kirli filtre", "hava akışı", "hava üflemiyor"],
+      rehber: B("klima-filtresi-temizleme", "Klima filtresini temizleme", "Kolay", "~15 dakika", 6) },
+  ],
   "Süpürge": [
     { ara: ["motor", "çekmiyor", "sıkış"],
       rehber: G("How+to+clear+a+jammed+motor+in+your+vacuum+cleaner/198622", "Sıkışan motoru açma", "Difficult", "25-35 dk", 18) },
@@ -104,13 +128,22 @@ export function rehberBul(cihaz, arizaAd) {
   const liste = REHBERLER[cihaz];
   if (!liste || !arizaAd) return null;
   const a = kucult(arizaAd);
-  // En SPESİFİK eşleşme kazansın: en uzun anahtar kelimeyi eşleyen kayıt önce gelir.
-  // ("tahliye pompa" > "tahliye" gibi) — böylece genel bir kelime spesifik olanı ezmez.
-  let en = null, enUzun = 0;
+  // İKİ AŞAMALI SEÇİM:
+  // 1) Her iki havuzda da (bizim rehberlerimiz / iFixit) en SPESİFİK eşleşme kazanır —
+  //    en uzun anahtar kelime ("tahliye pompa" > "tahliye"), böylece genel kelime
+  //    spesifik olanı ezmez.
+  // 2) Sonuçta KENDİ Türkçe rehberimiz varsa DAİMA o döner; iFixit yalnız bizde
+  //    karşılığı olmayan konularda yedektir (Tolga kararı, 31 Tem 2026).
+  //    Not: "en uzun anahtar" kuralı havuz İÇİNDE çalışır — bizim kaydımızın anahtarı
+  //    daha kısa diye iFixit öne geçemez.
+  let bizim = null, bizimUzun = 0, disari = null, disariUzun = 0;
   for (const kayit of liste) {
     for (const k of kayit.ara) {
-      if (a.includes(kucult(k)) && k.length > enUzun) { en = kayit.rehber; enUzun = k.length; }
+      if (!a.includes(kucult(k))) continue;
+      if (kayit.rehber.kendi) {
+        if (k.length > bizimUzun) { bizim = kayit.rehber; bizimUzun = k.length; }
+      } else if (k.length > disariUzun) { disari = kayit.rehber; disariUzun = k.length; }
     }
   }
-  return en;
+  return bizim || disari;
 }

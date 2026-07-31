@@ -671,14 +671,18 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <div style={s.faz2}>
                 <div>
                   <div style={s.faz2Head}>Kendin çözmek ister misin?</div>
-                  {/* Alt satır bilerek KISA: iki kart aynı boyda dursun (Tolga, 31 Tem). */}
-                  <div style={s.faz2Sub}>İngilizce · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure}</div>
+                  {/* Alt satır bilerek KISA: iki kart aynı boyda dursun (Tolga, 31 Tem).
+                      "İngilizce" ibaresi YALNIZ dış (iFixit) rehberde — kendi rehberimiz Türkçe. */}
+                  <div style={s.faz2Sub}>
+                    {r.kendi ? "Türkçe" : "İngilizce"} · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure}
+                  </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <a
-                    href={r.url} target="_blank" rel="noopener noreferrer nofollow"
+                    href={r.url}
+                    {...(r.kendi ? {} : { target: "_blank", rel: "noopener noreferrer nofollow" })}
                     style={{ ...s.faz2Btn, opacity: 1, display: "inline-block", textDecoration: "none", textAlign: "center" }}
-                    onClick={() => track("rehber_click", { cihaz, rehber: r.baslik })}
+                    onClick={() => track("rehber_click", { cihaz, rehber: r.baslik, kaynak: r.kendi ? "benservis" : "ifixit" })}
                   >
                     🔧 Rehberi Aç
                   </a>
