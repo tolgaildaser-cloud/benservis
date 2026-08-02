@@ -52,6 +52,8 @@ const ICON_PATHS = {
   kombi: '<rect x="5" y="3" width="14" height="13" rx="2"/><rect x="8" y="6" width="8" height="3.5" rx="0.8"/><line x1="9" y1="16" x2="9" y2="20"/><line x1="15" y1="16" x2="15" y2="20"/>',
   firin: '<rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="9" x2="20" y2="9"/><circle cx="8" cy="6.5" r="0.6" fill="currentColor"/><circle cx="12" cy="6.5" r="0.6" fill="currentColor"/><rect x="7" y="12" width="10" height="5" rx="1"/>',
   tv: '<rect x="3" y="4" width="18" height="12" rx="2"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/>',
+  // Sürdürülebilirlik KONU kategorisi (cihaz değil) — yaprak. Aynı 24x24 çizgi ailesi.
+  surdurulebilirlik: '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/>',
   default: '<path d="M14.5 6.5a3.5 3.5 0 0 0-4.9 4.4l-4.8 4.8a1.5 1.5 0 0 0 2.1 2.1l4.8-4.8a3.5 3.5 0 0 0 4.4-4.9l-2 2-1.7-1.7Z"/>',
 };
 function iconKey(cat) {
@@ -64,12 +66,15 @@ function iconKey(cat) {
   if (c.includes("kombi")) return "kombi";
   if (c.includes("fırın") || c.includes("firin") || c.includes("ocak")) return "firin";
   if (c.includes("televizyon") || c.includes("tv")) return "tv";
+  if (c.includes("sürdürülebilir") || c.includes("surdurulebilir")) return "surdurulebilirlik";
   return "default";
 }
 const iconSvg = (cat, cls) =>
   `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON_PATHS[iconKey(cat)]}</svg>`;
-const heroFor = (cat) =>
-  `<div class="hero">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
+// `varyant` YALNIZ Sürdürülebilirlik için "yesil" gelir (karar defteri renk kuralı:
+// yeşil sürdürülebilirlik temasına ait, başka yerde aksan olarak kullanılmaz).
+const heroFor = (cat, varyant = "") =>
+  `<div class="hero${varyant ? " " + varyant : ""}">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
 
 // iFixit-tarzı rehber meta kutusu (zorluk · süre · maliyet · gerekenler) — frontmatter `guide` varsa.
 function guideMeta(g) {
@@ -150,6 +155,12 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
    Rehberi OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok). */
 .katlar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 8px}
 @media(min-width:640px){.katlar{grid-template-columns:repeat(3,1fr)}}
+/* KONU ızgarası (Genel + Sürdürülebilirlik) — cihaz ızgarasından ayrı bölüm.
+   375px'te TEK sütun: "Sürdürülebilirlik" bölünemeyen 17 harflik bir kelime, iki sütunda
+   min-content genişliği 1fr'i eziyor ve kartlar 136/177px gibi eğri kalıyordu. Tek sütunda
+   ikisi de tam genişlik → eşit. ≥640px'te cihaz ızgarasıyla AYNI 3 sütuna oturur. */
+.katlar.konu{grid-template-columns:1fr}
+@media(min-width:640px){.katlar.konu{grid-template-columns:repeat(3,1fr)}}
 .katkart{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:18px;border:1px solid ${T.HAIR};border-radius:14px;background:${T.SURFACE};text-decoration:none;color:${T.NAVY}}
 a.katkart{transition:border-color .15s,box-shadow .15s}
 a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,59,.3)}
@@ -170,6 +181,14 @@ a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,5
 .katkart.yok{background:${T.BG}}
 .katkart.yok .kat-ic{background:#F1F5F9;color:${T.FAINT}}
 .katkart.yok .kat-rozet{background:#F1F5F9;color:${T.MUTED}}
+/* YEŞİL AKSAN — karar defteri kuralı: yeşil YALNIZ sürdürülebilirlik temasına ait.
+   Tek kullanım yeri: Sürdürülebilirlik konu kartı + kendi kategori sayfasının hero'su.
+   Marka kiti sınırı: güven yeşili #16A34A (CLAUDE.md) ve onun açık tonu; yeni renk YOK.
+   Beyaz üstü küçük metinde #15803D kullanılıyor — #16A34A o boyutta kontrast bırakmıyor. */
+a.katkart.yesil:hover{border-color:#16A34A;box-shadow:0 10px 24px -20px rgba(22,101,52,.35)}
+.katkart.yesil .kat-ic{background:#ECFDF5;color:#15803D}
+.katkart.yesil .kat-rozet{background:#ECFDF5;color:#15803D}
+.hero.yesil{background:#16A34A}
 .kat-not{margin:0;font-size:13px;line-height:1.5;color:${T.MUTED}}
 .geri{display:inline-block;margin:0 0 14px;font-size:14px;font-weight:600;text-decoration:none}
 .bloghead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 8px}
@@ -427,7 +446,7 @@ const katIzgarasi = (items, birim) =>
   items
     .map((k) =>
       k.sayi
-        ? `<a class="katkart" href="${k.url}"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${birim}</span></a>`
+        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${birim}</span></a>`
         : `<div class="katkart yok"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span><p class="kat-not">${esc(k.bosNot)}</p></div>`
     )
     .join("");
@@ -436,10 +455,16 @@ const katIzgarasi = (items, birim) =>
 // Yazıların `category` frontmatter'ı serbest metin ("Kombi", "Çamaşır makinesi",
 // "Sürdürülebilirlik"…). Hub 11 CIHAZLAR grubuyla çalıştığı için eşleme burada yapılır.
 // ⛔ UYDURMA KATEGORİ AÇILMAZ: cihaz grubuna oturmayan yazılar (hakkımızda, mevzuat,
-// enerji/fatura, sürdürülebilirlik…) TEK bir "Genel" toplayıcısına gider.
+// enerji/fatura…) TEK bir "Genel" toplayıcısına gider.
 // ⛔ Yazının kendi `category` etiketi DEĞİŞMEZ — kartta ve yazı sayfasında aynen görünür;
 // bu eşleme yalnız hub/kategori katmanını besler.
+//
+// 2 Ağu (Tolga, ②): "Sürdürülebilirlik" Genel'den ÇIKTI, kendi konu kategorisine ayrıldı.
+// Gerekçe: 8 yazılık gerçek bir küme + footer'dan doğrudan link veriliyor; Genel'in içinde
+// kalırsa footer linki 22 karışık yazıya düşerdi. Bu YENİ BİR CİHAZ GRUBU DEĞİL —
+// "Genel" gibi bir KONU toplayıcısı, hub'ın 11'li cihaz ızgarasına karışmaz (aşağıya bak).
 const GENEL = "Genel";
+const SURDURULEBILIRLIK = "Sürdürülebilirlik";
 const BLOG_KAT_ESLES = {
   "camasir-makinesi": "Çamaşır Makinesi",
   "bulasik-makinesi": "Bulaşık Makinesi",
@@ -461,10 +486,19 @@ const BLOG_KAT_ESLES = {
   bilgisayar: "Bilgisayar / Yazıcı",
   yazici: "Bilgisayar / Yazıcı",
 };
+// Konu (cihaz-dışı) kategorileri: slug → görünen ad. Cihaz eşlemesinden ÖNCE bakılır ki
+// ileride "Sürdürülebilirlik" adlı bir cihaz grubu açılsa bile burası kaymasın.
+const KONU_ESLES = {
+  surdurulebilirlik: SURDURULEBILIRLIK,
+  "surdurulebilir-tuketim": SURDURULEBILIRLIK,
+  "onarim-hakki": SURDURULEBILIRLIK,
+  "dongusel-ekonomi": SURDURULEBILIRLIK,
+};
 const CIHAZ_SLUG = new Map(KATEGORILER.map((k) => [k.slug, k.ad]));
 function blogGrubu(p) {
   const s = slugify(p.category || "");
   if (!s) return GENEL;
+  if (KONU_ESLES[s]) return KONU_ESLES[s]; // konu kategorisi (cihaz değil)
   if (CIHAZ_SLUG.has(s)) return CIHAZ_SLUG.get(s); // birebir cihaz adı
   return BLOG_KAT_ESLES[s] || GENEL;
 }
@@ -480,12 +514,20 @@ const cards = posts
 // (`/blog/kategori/<slug>/`) açıldı — yazı slug'larıyla çakışmaz, mevcut adresleri
 // gölgelemez. `/blog/` yalnız INDEKS katmanı olarak yeniden düzenlendi.
 const blogPostlari = posts.filter((p) => p.slug !== "hakkimizda");
-const blogKatVeri = [
-  ...KATEGORILER.map((k) => ({ ...k, yazilar: blogPostlari.filter((p) => blogGrubu(p) === k.ad) })),
-  // "Genel" toplayıcısı: cihaz grubuna oturmayan yazılar (mevzuat, enerji/fatura,
-  // sürdürülebilirlik, kurumsal…). Cihaz değil → GRF ikonu yok, gömülü SVG'ye düşer.
+// ① CİHAZ ızgarası — hub'ın "Cihazını seç" bölümü. 11 grup, TEK KAYNAK CIHAZLAR.
+// ⛔ Buraya konu kategorisi (Genel, Sürdürülebilirlik) KARIŞMAZ: kullanıcı burada
+// cihazını arıyor, konu kartı ızgaranın anlamını bozar (Tolga, 2 Ağu).
+const blogCihazKat = KATEGORILER.map((k) => ({
+  ...k, yazilar: blogPostlari.filter((p) => blogGrubu(p) === k.ad),
+}));
+// ② KONU kategorileri — cihaz ızgarasının ALTINDA ayrı, küçük bir bölümde durur.
+// `yesil` YALNIZ Sürdürülebilirlik'te: karar defteri renk kuralı (yeşil = sürdürülebilirlik).
+const blogKonuKat = [
   { ad: GENEL, slug: "genel", yazilar: blogPostlari.filter((p) => blogGrubu(p) === GENEL) },
+  { ad: SURDURULEBILIRLIK, slug: "surdurulebilirlik", yesil: true, yazilar: blogPostlari.filter((p) => blogGrubu(p) === SURDURULEBILIRLIK) },
 ];
+// Kategori SAYFALARI + sitemap ikisini birlikte gezer (sıra: cihazlar, sonra konular).
+const blogKatVeri = [...blogCihazKat, ...blogKonuKat];
 
 // Yazı kartı (② katman) — /tamir/'deki zorluk·süre·adım·dil satırının blog karşılığı:
 // konu tipi (yazının kendi kategori etiketi) · tarih.
@@ -518,20 +560,37 @@ for (const k of blogKatVeri) {
   fs.writeFileSync(
     path.join(OUT, "kategori", k.slug, "index.html"),
     page({
-      title: `${k.ad} — arıza nedenleri ve tamir maliyetleri | Benservis`,
-      desc: `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları. ${k.yazilar.length} yazı.`,
+      // Sürdürülebilirlik bir CİHAZ değil → "arıza nedenleri / tamir maliyeti" başlığı ona
+      // yalan olur. Konu kategorisinde başlık, açıklama ve meta satırı konuya göre yazılır.
+      title: k.yesil
+        ? `${k.ad} — onarım hakkı, döngüsel ekonomi ve daha az atık | Benservis`
+        : `${k.ad} — arıza nedenleri ve tamir maliyetleri | Benservis`,
+      desc: k.yesil
+        ? `Tamir etmek neden atmaktan iyi: onarım hakkı, cihaz ömrü, enerji ve döngüsel ekonomi üzerine ${k.yazilar.length} yazı.`
+        : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad)}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · arıza nedenleri, kontroller ve tahmini maliyetler</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "")}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : "arıza nedenleri, kontroller ve tahmini maliyetler"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
     })
   );
 }
 
-// ① HUB — /tamir/ ile AYNI ızgara. Boş kategoride "yakında" YOK, dürüst hâl + CTA.
-const blogKatKartlari = katIzgarasi(
-  blogKatVeri.map((k) => ({
+// ① HUB — /tamir/ ile AYNI ızgara bileşeni, ama İKİ bölüm hâlinde (2 Ağu, Tolga):
+//   "Cihazını seç"     → 11 cihaz kartı (ızgaranın anlamı: cihazımı bul)
+//   "Konu başlıkları"  → Genel + Sürdürülebilirlik (cihaz değil, konu)
+// Önceden "Genel" cihaz ızgarasının 12. kartı olarak duruyordu; Sürdürülebilirlik ayrılınca
+// bu karışıklık iyice görünür olacaktı, o yüzden konu kartları kendi bölümüne alındı.
+const blogCihazKartlari = katIzgarasi(
+  blogCihazKat.map((k) => ({
     ...k, sayi: k.yazilar.length, url: `/blog/kategori/${k.slug}/`,
     bosRozet: "Yazı yok", bosNot: "Bu cihaz için henüz yazı yazmadık.",
+  })),
+  "yazı"
+);
+const blogKonuKartlari = katIzgarasi(
+  blogKonuKat.map((k) => ({
+    ...k, sayi: k.yazilar.length, url: `/blog/kategori/${k.slug}/`,
+    bosRozet: "Yazı yok", bosNot: "Bu başlıkta henüz yazı yazmadık.",
   })),
   "yazı"
 );
@@ -561,7 +620,7 @@ fs.writeFileSync(
     // NOT: kategori ızgarasının ALTINDA tüm yazılar listesi BİLEREK duruyor. Hub'ı 12 karta
     // indirip 78 yazıyı bir tık derine itmek, /blog/'dan gelen iç linkleri koparır (79 sayfa
     // aramada gösterim alıyor). Izgara = gezinme katmanı, liste = tarama/arama katmanı.
-    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogKatKartlari}</div><p class="kat-not">Cihaz grubuna girmeyen yazılar (mevzuat, enerji, sürdürülebilirlik…) <a href="/blog/kategori/genel/">Genel</a> başlığında toplanır.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
+    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogCihazKartlari}</div><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0">Konu başlıkları</h2><div class="katlar konu">${blogKonuKartlari}</div><p class="kat-not">Belirli bir cihaza bağlı olmayan yazılar bu iki başlıkta toplanır: mevzuat, enerji ve fatura yazıları <a href="/blog/kategori/genel/">Genel</a>'de; onarım hakkı, cihaz ömrü ve döngüsel ekonomi yazıları <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a>'te.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
   })
 );
 

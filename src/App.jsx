@@ -764,9 +764,20 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         <div style={s.footBrand}>Benservis · Bil, gör, çağır.</div>
         {/* "Bilgi Merkezi" 2 Ağu'da footer'dan ÇIKARILDI (Tolga): artık ana sayfa ızgarasının
             BİRİNCİ butonu, footer'da ikinci kez durması mükerrerdi. Hakkımızda ve SERBİS'te
-            Doğrula KALIR — Hakkımızda ızgarada yok, tek erişim noktası burası. Ayırıcı (·)
-            yalnız iki link arasında; başta/sonda boşta ayırıcı bırakılmadı. */}
-        <div style={s.footSub}><a href="/blog/hakkimizda/" style={s.footLink}>Hakkımızda</a> · <a href="https://www.servis.gov.tr/Genel/Sorgu" target="_blank" rel="noopener noreferrer" style={s.footLink}>SERBİS'te Doğrula</a></div>
+            Doğrula KALIR — Hakkımızda ızgarada yok, tek erişim noktası burası.
+            2 Ağu (Tolga, ②): araya "Sürdürülebilirlik" girdi. Sıra BİLEREK
+            Hakkımızda → Sürdürülebilirlik → SERBİS'te Doğrula: önce biz kimiz, sonra neden
+            varız, en sonda SİTE DIŞINA çıkan doğrulama linki (dış link satırın sonunda durur).
+            Punto 12 → 14.5 (Tolga, ①): footer'ın tek gezinme satırı, okunur olmalı; marka
+            satırı 14 Fraunces olduğu için hiyerarşi bozulmuyor (o serif, bu mavi+600).
+            Ayırıcı (·) düzeni: her ayırıcı KENDİ linkiyle aynı nowrap kutusunda ve linkin
+            ARDINDAN geliyor → 375px'te satır sarınca ayırıcı bir sonraki satırın başında
+            öksüz kalmıyor, sonda da boşta ayırıcı yok. */}
+        <div style={s.footNav}>
+          <span style={s.footNavUnit}><a href="/blog/hakkimizda/" style={s.footLink}>Hakkımızda</a><span style={s.footSep} aria-hidden="true">·</span></span>
+          <span style={s.footNavUnit}><a href="/blog/kategori/surdurulebilirlik/" style={s.footLink}>Sürdürülebilirlik</a><span style={s.footSep} aria-hidden="true">·</span></span>
+          <span style={s.footNavUnit}><a href="https://www.servis.gov.tr/Genel/Sorgu" target="_blank" rel="noopener noreferrer" style={s.footLink}>SERBİS'te Doğrula</a></span>
+        </div>
         <div style={{ ...s.footSub, marginTop: 3 }}>AI destekli teşhis · tahmini maliyet</div>
         <div style={s.footSocial}>
           <a href="https://www.instagram.com/benservis.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="foot-social" style={s.footSocialLink}><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg></a>
@@ -898,6 +909,15 @@ const s = {
   footer: { position: "relative", zIndex: 1, textAlign: "center", marginTop: 30, paddingTop: 22, borderTop: `1px solid ${HAIR}` },
   footBrand: { fontFamily: "'Fraunces', serif", fontSize: 14, fontWeight: 600, color: MUTED },
   footSub: { fontSize: 12, color: FAINT, marginTop: 6 },
+  // Footer gezinme satırı (Hakkımızda · Sürdürülebilirlik · SERBİS'te Doğrula).
+  // ÖNCE: footSub'ı paylaşıyordu → 12px. SONRA: kendi stili, 14px (Tolga ①).
+  // Slogan satırı ("AI destekli teşhis…") 12px'te KALDI; büyüyen yalnız tıklanan satır.
+  // Neden tam 14: üç linkin doğal genişliği 375px'te 14px'te 325/335px (tek satır),
+  // 14.5px'te 339px → sarıyor ve satır sonunda öksüz "·" kalıyordu. 14 hem okunur
+  // hem tek satır. Daha dar ekranda (≤360px) sarma flexWrap ile ortalı bozulmadan olur.
+  footNav: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 6, rowGap: 2, fontSize: 14, lineHeight: 1.6, marginTop: 8 },
+  footNavUnit: { display: "inline-flex", alignItems: "baseline", gap: 6, whiteSpace: "nowrap" },
+  footSep: { color: FAINT },
   footLink: { color: "#2563EB", textDecoration: "none", fontWeight: 600 },
   footSocial: { display: "flex", justifyContent: "center", gap: 18, marginTop: 12 },
   footSocialLink: { color: FAINT, display: "inline-flex", transition: "color .15s ease, transform .15s ease" },
