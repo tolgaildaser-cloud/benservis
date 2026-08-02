@@ -363,35 +363,202 @@ for (const p of posts) {
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: `${p.title} | Benservis`, desc: p.description, canonical, head, body }));
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// ORTAK KATMAN — ÜÇ MERKEZ TEK DÜZEN (2 Ağu 2026, Tolga: "Bilgi Merkezi · Tamir
+// Merkezi · Kullanım Kılavuzları — üçü de tıklayınca aynı gözüksün").
+//
+// /tamir/'de kurulan üç katmanlı düzen artık üç merkezin ORTAK kalıbı:
+//   ① HUB           → cihaz kategorisi kart ızgarası + sayı rozeti
+//   ② KATEGORİ      → o kategorinin meta'lı içerik kartları
+//   ③ İÇERİK        → yazının/rehberin kendisi (/blog/<slug>/ — URL'e DOKUNULMAZ)
+//
+// Kategori listesi, slug mantığı ve GRF ikonları ÜÇÜNDE DE AYNI kaynaktan gelir;
+// merkez başına ikinci bir liste ya da ikon seti tutulmaz.
+// ═══════════════════════════════════════════════════════════════════════════════
+const ldTag = (o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`;
+const crumb = (items) => ({
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, item: x.item })),
+});
+
+// ⚠️ KATEGORİ KAYNAĞI (YK #32, 2 Ağu — Tolga: "bizim ürün grupları olmalı, telefon vs olmamalı"):
+// liste ELLE YAZILMAZ, `src/constants.js` → CIHAZLAR'dan türetilir. Uygulamanın cihaz grubu
+// eklenip çıkarıldığında üç merkez de kendiliğinden uyar; ikinci bir liste tutulmaz.
+// ⛔ iFixit'in kategori dünyası (telefon, tablet, konsol, araba, Mac) BİZE GİRMEZ.
+const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: slugify(ad), kaynak: ad }));
+
+// Slug çakışması sessizce iki kategoriyi aynı sayfaya basar → build'i durdur.
+const slugSay = KATEGORILER.reduce((m, k) => ((m[k.slug] = (m[k.slug] || 0) + 1), m), {});
+const cakisan = Object.entries(slugSay).filter(([, n]) => n > 1);
+if (cakisan.length) {
+  console.error(`[build-blog] ⛔ kategori slug çakışması: ${cakisan.map(([s]) => s).join(", ")}`);
+  process.exit(1);
+}
+// CANLI URL KİLİDİ: bu iki adres yayında ve sitemap'te. Cihaz adı değişirse slug kayar ve
+// indekslenmiş sayfa 404'e düşer → build burada bağırır, sessizce kırılmaz.
+const KILITLI_SLUGLAR = ["camasir-makinesi", "klima"];
+const kayanSlug = KILITLI_SLUGLAR.filter((s) => !KATEGORILER.some((k) => k.slug === s));
+if (kayanSlug.length) {
+  console.error(`[build-blog] ⛔ /tamir/ canlı URL kayboldu: ${kayanSlug.join(", ")} — CIHAZLAR değişti, yönlendirme gerekiyor.`);
+  process.exit(1);
+}
+
+// GRF kategori ikonu (`public/tamir-gorsel/kategori/<slug>.png`) — ÜÇ MERKEZDE ORTAK.
+// Merkez başına yeni ikon üretilmez. Dosya yoksa gömülü çizgi SVG'ye düşülür (kırık görsel yok).
+const katIkon = (k) => {
+  const rel = `tamir-gorsel/kategori/${k.slug}.png`;
+  if (fs.existsSync(path.join(ROOT, "public", rel))) {
+    return `<img class="kat-png" src="/${rel}" width="44" height="44" loading="lazy" decoding="async" alt="${esc(k.ad)} kategorisi ikonu">`;
+  }
+  return iconSvg(k.ad, "");
+};
+
+/**
+ * ① HUB ızgarası — üç merkezin ORTAK kart bileşeni.
+ * İçeriği OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok).
+ * ⛔ "yakında" YAZILMAZ (YK #32): boşluk gerçek ve kalıcı olabilir; söz vermek yerine ne
+ * olduğu açıkça yazılır + kullanıcı teşhis/servis CTA'sına yönlendirilir.
+ * @param items [{ ad, slug, sayi, url, bosRozet, bosNot }]
+ */
+const katIzgarasi = (items, birim) =>
+  items
+    .map((k) =>
+      k.sayi
+        ? `<a class="katkart" href="${k.url}"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${birim}</span></a>`
+        : `<div class="katkart yok"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span><p class="kat-not">${esc(k.bosNot)}</p></div>`
+    )
+    .join("");
+
+// ── BLOG YAZISI → CİHAZ GRUBU EŞLEMESİ ────────────────────────────────────────
+// Yazıların `category` frontmatter'ı serbest metin ("Kombi", "Çamaşır makinesi",
+// "Sürdürülebilirlik"…). Hub 11 CIHAZLAR grubuyla çalıştığı için eşleme burada yapılır.
+// ⛔ UYDURMA KATEGORİ AÇILMAZ: cihaz grubuna oturmayan yazılar (hakkımızda, mevzuat,
+// enerji/fatura, sürdürülebilirlik…) TEK bir "Genel" toplayıcısına gider.
+// ⛔ Yazının kendi `category` etiketi DEĞİŞMEZ — kartta ve yazı sayfasında aynen görünür;
+// bu eşleme yalnız hub/kategori katmanını besler.
+const GENEL = "Genel";
+const BLOG_KAT_ESLES = {
+  "camasir-makinesi": "Çamaşır Makinesi",
+  "bulasik-makinesi": "Bulaşık Makinesi",
+  kombi: "Kombi / Termosifon",
+  termosifon: "Kombi / Termosifon",
+  klima: "Klima",
+  buzdolabi: "Buzdolabı",
+  "firin-ocak": "Fırın / Ocak / Aspiratör",
+  firin: "Fırın / Ocak / Aspiratör",
+  ocak: "Fırın / Ocak / Aspiratör",
+  aspirator: "Fırın / Ocak / Aspiratör",
+  televizyon: "Televizyon / Monitör",
+  monitor: "Televizyon / Monitör",
+  supurge: "Süpürge",
+  mikrodalga: "Mikrodalga / Air Fryer",
+  "air-fryer": "Mikrodalga / Air Fryer",
+  "su-sebili": "Su Sebili / Arıtma",
+  aritma: "Su Sebili / Arıtma",
+  bilgisayar: "Bilgisayar / Yazıcı",
+  yazici: "Bilgisayar / Yazıcı",
+};
+const CIHAZ_SLUG = new Map(KATEGORILER.map((k) => [k.slug, k.ad]));
+function blogGrubu(p) {
+  const s = slugify(p.category || "");
+  if (!s) return GENEL;
+  if (CIHAZ_SLUG.has(s)) return CIHAZ_SLUG.get(s); // birebir cihaz adı
+  return BLOG_KAT_ESLES[s] || GENEL;
+}
+
 const cards = posts
   .filter((p) => p.slug !== "hakkimizda")
   .map((p) => `<a class="card" data-cat="${esc(p.category || "Rehber")}" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p></div></a>`)
   .join("");
 
-// Kategori düğmeleri: kartlarda görünen kategorilerden (hakkımızda hariç). "Tümü" başta ve
-// varsayılan aktif; sonra ÖNCELIK listesi (Genel → Sürdürülebilirlik → Buzdolabı), kalanı yazı
-// sayısı çok olan önce. Yeni kategori eklenince (öncelik dışıysa) sayıya göre kendiliğinden gelir.
-const catSay = {};
-for (const p of posts) {
-  if (p.slug === "hakkimizda") continue;
-  const k = p.category || "Rehber";
-  catSay[k] = (catSay[k] || 0) + 1;
+// ── BİLGİ MERKEZİ: ② KATEGORİ SAYFALARI + ① HUB ───────────────────────────────
+// ⛔ SEO KİLİDİ (bağlayıcı): 79 yazının URL'i `/blog/<slug>/` olarak AYNEN KALIR.
+// Taşıma, yönlendirme, slug değişikliği YOK. Kategori katmanı AYRI bir ad alanına
+// (`/blog/kategori/<slug>/`) açıldı — yazı slug'larıyla çakışmaz, mevcut adresleri
+// gölgelemez. `/blog/` yalnız INDEKS katmanı olarak yeniden düzenlendi.
+const blogPostlari = posts.filter((p) => p.slug !== "hakkimizda");
+const blogKatVeri = [
+  ...KATEGORILER.map((k) => ({ ...k, yazilar: blogPostlari.filter((p) => blogGrubu(p) === k.ad) })),
+  // "Genel" toplayıcısı: cihaz grubuna oturmayan yazılar (mevzuat, enerji/fatura,
+  // sürdürülebilirlik, kurumsal…). Cihaz değil → GRF ikonu yok, gömülü SVG'ye düşer.
+  { ad: GENEL, slug: "genel", yazilar: blogPostlari.filter((p) => blogGrubu(p) === GENEL) },
+];
+
+// Yazı kartı (② katman) — /tamir/'deki zorluk·süre·adım·dil satırının blog karşılığı:
+// konu tipi (yazının kendi kategori etiketi) · tarih.
+const blogKarti = (p) =>
+  `<a class="card" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p><span class="tamir-meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</span></div></a>`;
+
+const BLOG_CTA = `<a class="cta" href="/"><h3>🔧 Cihazın şimdi mi bozuldu?</h3><p>Belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+
+for (const k of blogKatVeri) {
+  if (!k.yazilar.length) continue;
+  const canonical = `${SITE}/blog/kategori/${k.slug}/`;
+  const head =
+    ldTag({
+      "@context": "https://schema.org", "@type": "CollectionPage",
+      name: `${k.ad} yazıları`, url: canonical, inLanguage: "tr-TR",
+      isPartOf: { "@type": "CollectionPage", name: "Bilgi Merkezi", url: `${SITE}/blog/` },
+      mainEntity: {
+        "@type": "ItemList", numberOfItems: k.yazilar.length,
+        itemListElement: k.yazilar.map((p, i) => ({
+          "@type": "ListItem", position: i + 1, name: p.title, url: `${SITE}/blog/${p.slug}/`,
+        })),
+      },
+    }) +
+    ldTag(crumb([
+      { name: "Ana Sayfa", item: `${SITE}/` },
+      { name: "Bilgi Merkezi", item: `${SITE}/blog/` },
+      { name: k.ad, item: canonical },
+    ]));
+  fs.mkdirSync(path.join(OUT, "kategori", k.slug), { recursive: true });
+  fs.writeFileSync(
+    path.join(OUT, "kategori", k.slug, "index.html"),
+    page({
+      title: `${k.ad} — arıza nedenleri ve tamir maliyetleri | Benservis`,
+      desc: `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları. ${k.yazilar.length} yazı.`,
+      canonical,
+      head,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad)}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · arıza nedenleri, kontroller ve tahmini maliyetler</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
+    })
+  );
 }
-const ONCELIK = ["Genel", "Sürdürülebilirlik", "Buzdolabı"]; // Tümü'den sonra bu sırayla sabit
-const rank = (c) => { const i = ONCELIK.indexOf(c); return i === -1 ? 99 : i; };
-const katSirali = Object.keys(catSay).sort(
-  (a, b) => rank(a) - rank(b) || catSay[b] - catSay[a] || a.localeCompare(b, "tr")
+
+// ① HUB — /tamir/ ile AYNI ızgara. Boş kategoride "yakında" YOK, dürüst hâl + CTA.
+const blogKatKartlari = katIzgarasi(
+  blogKatVeri.map((k) => ({
+    ...k, sayi: k.yazilar.length, url: `/blog/kategori/${k.slug}/`,
+    bosRozet: "Yazı yok", bosNot: "Bu cihaz için henüz yazı yazmadık.",
+  })),
+  "yazı"
 );
-const chips =
-  `<button type="button" class="chip on" data-cat="">Tümü</button>` +
-  katSirali.map((c) => `<button type="button" class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+const blogluKat = blogKatVeri.filter((k) => k.yazilar.length);
+
 fs.writeFileSync(
   path.join(OUT, "index.html"),
   page({
     title: "Benservis Bilgi Merkezi — cihaz arızaları ve tamir maliyetleri",
     desc: "Cihaz arızalarının nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları.",
     canonical: `${SITE}/blog/`,
-    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><div class="blogcats">${chips}</div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
+    head:
+      ldTag({
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        name: "Bilgi Merkezi", url: `${SITE}/blog/`, inLanguage: "tr-TR",
+        mainEntity: {
+          "@type": "ItemList", numberOfItems: blogluKat.length,
+          itemListElement: blogluKat.map((k, i) => ({
+            "@type": "ListItem", position: i + 1, name: k.ad, url: `${SITE}/blog/kategori/${k.slug}/`,
+          })),
+        },
+      }) +
+      ldTag(crumb([
+        { name: "Ana Sayfa", item: `${SITE}/` },
+        { name: "Bilgi Merkezi", item: `${SITE}/blog/` },
+      ])),
+    // NOT: kategori ızgarasının ALTINDA tüm yazılar listesi BİLEREK duruyor. Hub'ı 12 karta
+    // indirip 78 yazıyı bir tık derine itmek, /blog/'dan gelen iç linkleri koparır (79 sayfa
+    // aramada gösterim alıyor). Izgara = gezinme katmanı, liste = tarama/arama katmanı.
+    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogKatKartlari}</div><p class="kat-not">Cihaz grubuna girmeyen yazılar (mevzuat, enerji, sürdürülebilirlik…) <a href="/blog/kategori/genel/">Genel</a> başlığında toplanır.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
   })
 );
 
@@ -437,28 +604,10 @@ if (eksikRehber.length) {
 // ⛔ /tamir/ altında iFixit kaydı LİSTELENMEZ — iki gerekçe: (a) o kayıtların çoğu parça
 // değişimi/söküm, YK #31'in içerik sınırını çiğner; (b) sayfa İngilizce link tarlasına döner.
 // iFixit yedeği yerinde duruyor: teşhis ekranında, yalnız bizde karşılığı olmayan arızalarda.
-// ⚠️ KATEGORİ KAYNAĞI (YK #32, 2 Ağu — Tolga: "bizim ürün grupları olmalı, telefon vs olmamalı"):
-// liste ELLE YAZILMAZ, `src/constants.js` → CIHAZLAR'dan türetilir. Uygulamanın cihaz grubu
-// eklenip çıkarıldığında /tamir/ kendiliğinden uyar; ikinci bir liste tutulmaz.
-// ⛔ iFixit'in kategori dünyası (telefon, tablet, konsol, araba, Mac) BİZE GİRMEZ — bu liste
-// bizim ürün gruplarımızdır, başka yerden beslenmez.
-const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: slugify(ad), kaynak: ad }));
-
-// Slug çakışması sessizce iki kategoriyi aynı sayfaya basar → build'i durdur.
-const slugSay = KATEGORILER.reduce((m, k) => ((m[k.slug] = (m[k.slug] || 0) + 1), m), {});
-const cakisan = Object.entries(slugSay).filter(([, n]) => n > 1);
-if (cakisan.length) {
-  console.error(`[build-blog] ⛔ /tamir/ slug çakışması: ${cakisan.map(([s]) => s).join(", ")}`);
-  process.exit(1);
-}
-// CANLI URL KİLİDİ: bu iki adres yayında ve sitemap'te. Cihaz adı değişirse slug kayar ve
-// indekslenmiş sayfa 404'e düşer → build burada bağırır, sessizce kırılmaz.
-const KILITLI_SLUGLAR = ["camasir-makinesi", "klima"];
-const kayanSlug = KILITLI_SLUGLAR.filter((s) => !KATEGORILER.some((k) => k.slug === s));
-if (kayanSlug.length) {
-  console.error(`[build-blog] ⛔ /tamir/ canlı URL kayboldu: ${kayanSlug.join(", ")} — CIHAZLAR değişti, yönlendirme gerekiyor.`);
-  process.exit(1);
-}
+//
+// NOT (2 Ağu): `KATEGORILER`, slug çakışma/kilit guard'ları ve `katIkon` artık YUKARIDAKİ
+// ORTAK KATMAN'da — üç merkez aynı listeyi, aynı slug mantığını ve aynı GRF ikonlarını
+// paylaşır. Burada ikinci bir kopya TUTULMAZ.
 
 const TAMIR_CTA = `<a class="cta" href="/"><h3>🔧 Rehber sorunu çözmediyse</h3><p>Cihazını ve belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
 
@@ -473,12 +622,6 @@ const rehberGorsel = (r) => {
 };
 const rehberKarti = (r) =>
   `<a class="card" href="${r.url}">${rehberGorsel(r)}<div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`;
-
-const crumb = (items) => ({
-  "@context": "https://schema.org", "@type": "BreadcrumbList",
-  itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, item: x.item })),
-});
-const ldTag = (o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`;
 
 // ② KATEGORİ SAYFALARI — yalnız rehberi OLAN kategori için basılır.
 // Boş kategoriye ayrı sayfa açılmıyor: 5 boş sayfa "thin content" olur ve indeks kalitesini
@@ -521,28 +664,16 @@ for (const k of katVeri) {
   );
 }
 
-// ① HUB — cihaz kategorisi ızgarası.
+// ① HUB — cihaz kategorisi ızgarası (ORTAK `katIzgarasi`; /blog/ ve /kilavuzlar/ ile aynı).
 // Rehberi olmayan kategoride "yakında" YAZILMAZ (YK #32): boşluk gerçek ve kalıcı olabilir,
 // söz vermek yerine dürüst hâli yazılır — "kendin-çöz adımı yok, servis işi" + servis CTA'sı.
-// Kategori görseli: GRF'nin ürettiği ikon `public/tamir-gorsel/kategori/<slug>.png` olarak duruyorsa
-// o kullanılır, yoksa gömülü çizgi SVG'ye düşülür (11 kategorinin 7'sinde ikon var — kalan 4'ü
-// GRF'de sırada; ikon gelince dosyayı koymak yetiyor, kod değişmiyor).
-const katIkon = (k) => {
-  const rel = `tamir-gorsel/kategori/${k.slug}.png`;
-  if (fs.existsSync(path.join(ROOT, "public", rel))) {
-    return `<img class="kat-png" src="/${rel}" width="44" height="44" loading="lazy" decoding="async" alt="${esc(k.ad)} kategorisi ikonu">`;
-  }
-  return iconSvg(k.ad, "");
-};
-const katKartlari = katVeri
-  .map((k) => {
-    const n = k.rehberler.length;
-    if (n) {
-      return `<a class="katkart" href="/tamir/${k.slug}/"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${n} rehber</span></a>`;
-    }
-    return `<div class="katkart yok"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">Rehber yok</span><p class="kat-not">Kendin-çöz adımı yok, servis işi.</p></div>`;
-  })
-  .join("");
+const katKartlari = katIzgarasi(
+  katVeri.map((k) => ({
+    ...k, sayi: k.rehberler.length, url: `/tamir/${k.slug}/`,
+    bosRozet: "Rehber yok", bosNot: "Kendin-çöz adımı yok, servis işi.",
+  })),
+  "rehber"
+);
 const rehberliKat = katVeri.filter((k) => k.rehberler.length);
 
 fs.mkdirSync(path.join(DIST, "tamir"), { recursive: true });
@@ -584,16 +715,51 @@ fs.writeFileSync(
 // ⚠️ noindex: içeriği olmayan sayfayı indekslemek zararlı (thin content). Sitemap'e de EKLENMEDİ.
 //    İlk gerçek marka linkleri girdiğinde noindex kalkar ve sayfa sitemap'e eklenir.
 //
-// MİMARİ HAZIR: `KILAVUZ_MARKALARI` dolduğunda kart ızgarası kendiliğinden basılır — katmanlar
-// /tamir/ ile aynı: ① /kilavuzlar/ (marka) → ② /kilavuzlar/<marka>/ (cihaz) → ③ üreticinin
-// resmî kılavuz sayfası (DIŞ LİNK; bizde barındırılan dosya yok).
-const KILAVUZ_MARKALARI = []; // { ad, slug, url, cihazlar: [{ ad, url, ozet }] }
+// MİMARİ (2 Ağu — ÜÇ MERKEZ TEK DÜZEN): katmanlar /tamir/ ve /blog/ ile AYNI, ve hub artık
+// MARKA değil CİHAZ ızgarası (üç merkezde aynı 11 grup, aynı slug, aynı GRF ikonları):
+//   ① /kilavuzlar/          → cihaz kategorisi ızgarası + kılavuz sayısı rozeti
+//   ② /kilavuzlar/<cihaz>/  → o cihazın marka/model kartları (yalnız kayıt varsa basılır)
+//   ③ üreticinin resmî kılavuz sayfası (DIŞ LİNK; bizde barındırılan dosya YOK)
+// `KILAVUZLAR` dolduğunda ② katmanı ve rozetler kendiliğinden gelir — kod değişmez.
+const KILAVUZLAR = []; // { cihaz, marka, model, url, ozet }
 
-const KILAVUZ_BOS = `<blockquote><p><strong>Bu sayfa henüz marka listesi içermiyor.</strong> Doldurmaya başladığımızda burada beyaz eşya ve elektronik markalarının <strong>resmî kullanım kılavuzu sayfalarına</strong> giden linkler olacak — üreticinin kendi sitesindeki kılavuza, Türkçe tek satırlık &quot;bu kılavuzda ne var&quot; özetiyle.</p></blockquote><p class="kat-not"><strong>Kılavuz dosyasını burada barındırmıyoruz.</strong> Kullanım kılavuzunun telif hakkı üreticiye aittir; PDF'i kopyalayıp yeniden yayımlamak yerine seni doğrudan üreticinin resmî sayfasına göndeririz — böylece her zaman güncel ve doğru sürümü görürsün.</p><p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="/">belirtini yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren</a> ya da <a href="/tamir/">Tamir Merkezi'ndeki ücretsiz bakım adımlarına</a> bak.</p>`;
+const kilavuzKatVeri = KATEGORILER.map((k) => ({
+  ...k, kayitlar: KILAVUZLAR.filter((m) => m.cihaz === k.kaynak),
+}));
 
-const kilavuzKartlari = KILAVUZ_MARKALARI.map(
-  (m) => `<a class="katkart" href="/kilavuzlar/${m.slug}/"><h2>${esc(m.ad)}</h2><span class="kat-rozet">${m.cihazlar.length} cihaz</span></a>`
-).join("");
+// ② KATEGORİ SAYFALARI — yalnız kaydı OLAN cihaz için (boş sayfa = thin content, açılmaz).
+for (const k of kilavuzKatVeri) {
+  if (!k.kayitlar.length) continue;
+  fs.mkdirSync(path.join(DIST, "kilavuzlar", k.slug), { recursive: true });
+  fs.writeFileSync(
+    path.join(DIST, "kilavuzlar", k.slug, "index.html"),
+    page({
+      title: `${k.ad} kullanım kılavuzları | Benservis`,
+      desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları ve Türkçe özetleri.`,
+      canonical: `${SITE}/kilavuzlar/${k.slug}/`,
+      robots: "noindex,follow", // ⚠️ merkez indekse açılana kadar tüm katmanlar noindex
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad)}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} kılavuz · üreticinin resmî sayfasına gider</p><div class="bloglist">${k.kayitlar
+        .map(
+          (m) =>
+            `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow"><div class="card-ic">${iconSvg(k.ad, "")}</div><div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.model || m.marka)}</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(m.marka)} · resmî sayfa ↗</span></div></a>`
+        )
+        .join("")}</div>${CTA}`,
+    })
+  );
+}
+
+// ① HUB — /tamir/ ve /blog/ ile AYNI ızgara. Boş kategoride "yakında" YOK: ne olduğu açıkça
+// yazılır ve kullanıcı teşhis/bakım yoluna gönderilir.
+const kilavuzKartlari = katIzgarasi(
+  kilavuzKatVeri.map((k) => ({
+    ...k, sayi: k.kayitlar.length, url: `/kilavuzlar/${k.slug}/`,
+    bosRozet: "Kılavuz yok", bosNot: "Bu cihaz için henüz kılavuz linki toplamadık.",
+  })),
+  "kılavuz"
+);
+
+// Telif notu — her hâlde basılır (liste dolunca da geçerli, bağlayıcı kural).
+const KILAVUZ_NOT = `<p class="kat-not"><strong>Kılavuz dosyasını burada barındırmıyoruz.</strong> Kullanım kılavuzunun telif hakkı üreticiye aittir; PDF'i kopyalayıp yeniden yayımlamak yerine seni doğrudan üreticinin resmî sayfasına göndeririz — böylece her zaman güncel ve doğru sürümü görürsün.</p><p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="/">belirtini yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren</a> ya da <a href="/tamir/">Tamir Merkezi'ndeki ücretsiz bakım adımlarına</a> bak.</p>`;
 
 fs.mkdirSync(path.join(DIST, "kilavuzlar"), { recursive: true });
 fs.writeFileSync(
@@ -603,9 +769,7 @@ fs.writeFileSync(
     desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden linkler ve Türkçe özetler. Sayfa hazırlık aşamasında.",
     canonical: `${SITE}/kilavuzlar/`,
     robots: "noindex,follow",
-    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${
-      KILAVUZ_MARKALARI.length ? `<div class="katlar">${kilavuzKartlari}</div>` : KILAVUZ_BOS
-    }${CTA}`,
+    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p><blockquote><p><strong>Bu sayfa henüz kılavuz linki içermiyor.</strong> Doldurmaya başladığımızda her cihaz grubunun altında markaların <strong>resmî kullanım kılavuzu sayfalarına</strong> giden linkler olacak — üreticinin kendi sitesindeki kılavuza, Türkçe tek satırlık &quot;bu kılavuzda ne var&quot; özetiyle.</p></blockquote><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${CTA}`,
   })
 );
 
@@ -620,6 +784,9 @@ const urlEntries = [
   { loc: `${SITE}/tamir/`, lastmod: newest },
   // Kategori sayfaları — yalnız rehberi olanlar basıldığı için hepsi gerçek içerikli.
   ...rehberliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
+  // Bilgi Merkezi kategori katmanı — yalnız yazısı olanlar (boş kategoriye sayfa basılmıyor).
+  // ⛔ /kilavuzlar/ ve alt sayfaları sitemap'e GİRMEZ: içerik yok, noindex (thin content).
+  ...blogluKat.map((k) => ({ loc: `${SITE}/blog/kategori/${k.slug}/`, lastmod: newest })),
   { loc: `${SITE}/ikinci-el`, lastmod: newest },
   ...posts.map((p) => ({ loc: `${SITE}/blog/${p.slug}/`, lastmod: postLastmod(p) })),
 ];
