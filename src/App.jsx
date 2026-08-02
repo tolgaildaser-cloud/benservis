@@ -581,9 +581,12 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
               <span style={s.navKartText}>Yakın Servisler</span>
             </button>
-            <a href="/blog/hakkimizda/" className="nav-kart" style={s.navKart}>
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><line x1="12" y1="11" x2="12" y2="16.5" /><circle cx="12" cy="7.8" r="0.9" fill="currentColor" stroke="none" /></svg>
-              <span style={s.navKartText}>Hakkımızda</span>
+            {/* 4. buton (YK #32, 2 Ağu — Tolga düzeltmesi): "Hakkımızda" YERİNE "Kullanım
+                Kılavuzları". Hakkımızda ızgaradan çıktı ama FOOTER'DA DURUYOR (aşağıda) —
+                güven sayfası kaybolmasın. Hedef /kilavuzlar/ şu an iskelet + noindex. */}
+            <a href="/kilavuzlar/" className="nav-kart" style={s.navKart}>
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H18a1 1 0 0 1 1 1v14.5" /><path d="M4 4.5v14A2.5 2.5 0 0 0 6.5 21H19" /><line x1="8" y1="7.5" x2="15" y2="7.5" /><line x1="8" y1="11" x2="13" y2="11" /></svg>
+              <span style={s.navKartText}>Kullanım Kılavuzları</span>
             </a>
           </nav>
           <div style={{ position: "relative", zIndex: 1, marginTop: 26 }}>

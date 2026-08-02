@@ -17,6 +17,17 @@ steps:
   - "Filtreyi saat yönünün tersine çevirip yavaşça çıkar; suyu boşalt."
   - "İçindeki tüy, bozuk para ve düğmeyi temizle, yuvayı sil."
   - "Filtreyi sıkıca geri tak, kapağı kapat ve kısa bir programla dene."
+# GRF adım görselleri (2 Ağu 2026) — dosyalar public/tamir/camasir-makinesi-tahliye-filtresi-temizleme/.
+# Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
+images:
+  coverAlt: "Çamaşır makinesi tahliye filtresi temizliği rehberinin kapak çizimi"
+  steps:
+    - "Çamaşır makinesinin kapatılıp fişinin prizden çekilişini gösteren çizim"
+    - "Çamaşır makinesinin alt ön köşesindeki filtre kapağının açılışını gösteren çizim"
+    - "Açık filtre kapağının önüne havlu ve geniş, sığ bir kap konulduğunu gösteren çizim"
+    - "Tahliye filtresinin saat yönünün tersine çevrilişi ve suyun kaba boşaltılışını gösteren çizim"
+    - "Filtreden çıkan tüy, bozuk para ve düğmenin temizlenişi ile filtre yuvasının silinişini gösteren çizim"
+    - "Filtrenin sıkıca geri takılışını ve kısa programla denenişini gösteren çizim"
 faq:
   - q: "Çamaşır makinesi filtresini ne sıklıkla temizlemeli?"
     a: "Ayda bir ya da iki ayda bir yeterli. Makine su atmıyor, ıslak çıkıyor ya da kötü kokuyorsa hemen kontrol et — en sık sebep tıkalı filtredir."

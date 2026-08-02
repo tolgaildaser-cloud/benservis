@@ -8,6 +8,9 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import * as T from "../src/theme.js";
 import { REHBERLER } from "../src/onarim-rehberleri.js";
+// TEK KAYNAK (YK #32, 2 Ağu — Tolga düzeltmesi): /tamir/ kategorileri elle yazılmaz,
+// uygulamanın resmî cihaz listesinden türetilir. Cihaz grubu eklenip çıktığında hub uyar.
+import { CIHAZLAR } from "../src/constants.js";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -20,6 +23,17 @@ const SITE = "https://www.benservis.com";
 
 const esc = (s) =>
   String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// Türkçe-duyarlı slug. Cihaz adlarında "/" ve Türkçe harf var:
+//   "Fırın / Ocak / Aspiratör" → firin-ocak-aspirator · "Su Sebili / Arıtma" → su-sebili-aritma
+// ⚠️ toLowerCase Türkçe "I/İ" tuzağına düşmesin diye harf eşlemesi ÖNCE yapılır.
+const TR_HARF = { ı: "i", İ: "i", ş: "s", Ş: "s", ğ: "g", Ğ: "g", ü: "u", Ü: "u", ö: "o", Ö: "o", ç: "c", Ç: "c" };
+const slugify = (s) =>
+  String(s ?? "")
+    .replace(/[ıİşŞğĞüÜöÖçÇ]/g, (c) => TR_HARF[c])
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 const trDate = (d) => {
   const [y, m, day] = String(d).split("-");
   return day && m && y ? `${day}.${m}.${y}` : String(d);
@@ -138,6 +152,16 @@ a.katkart{transition:border-color .15s,box-shadow .15s}
 a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,59,.3)}
 .katkart .kat-ic{width:44px;height:44px;border-radius:12px;background:#EFF4FF;color:${T.BLUE};display:flex;align-items:center;justify-content:center}
 .katkart .kat-ic svg{width:25px;height:25px}
+/* GRF kategori ikonu (PNG). Rehberi olmayan kartta gri + soluk: dürüst boş hâl görselde de bozulmasın. */
+.katkart .kat-png{width:44px;height:44px;border-radius:12px;display:block;object-fit:cover}
+.katkart.yok .kat-png{filter:grayscale(1);opacity:.55}
+/* Rehber kartındaki kapak görseli (GRF) — ikon kutusunun yerine 3:2 küçük görsel. */
+.card-ic.kapak{width:96px;height:64px;padding:0;border-radius:11px;overflow:hidden;background:${T.BG}}
+/* contain (cover değil): kapaklar çizim — kırpmak çizimin yarısını götürür. */
+.card-ic.kapak img{width:100%;height:100%;object-fit:contain;display:block}
+/* Rehber içindeki adım görselleri (GRF, 1200x800) — metin akışını kesmeden, tam genişlik. */
+.adim-gorsel{margin:14px 0 18px}
+.adim-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
 .katkart h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
 .kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
 .katkart.yok{background:${T.BG}}
@@ -197,11 +221,13 @@ const SEARCH_JS = `(function(){
   });});
 })();`;
 
-function page({ title, desc, canonical, head = "", body }) {
+// `robots` = "noindex,follow" verilen sayfalar aramaya SOKULMAZ (ve sitemap'e de eklenmez).
+// İçeriği hazır olmayan bir sayfayı indekslemek site kalitesini düşürür; içerik gelince kalkar.
+function page({ title, desc, canonical, head = "", body, robots = "" }) {
   return `<!doctype html><html lang="tr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
-<meta name="description" content="${esc(desc)}">
+<meta name="description" content="${esc(desc)}">${robots ? `\n<meta name="robots" content="${esc(robots)}">` : ""}
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
@@ -264,6 +290,30 @@ const posts = serpistir(
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
 );
 
+// ── GRF adım görselleri (public/tamir-gorsel/<slug>/adim-0N.png) ──────────────────────────────
+// Bağlama tek kaynaktan: yazının frontmatter'ındaki `images.steps` alt metinleri. Alt metin
+// yoksa görsel BASILMAZ (erişilebilirlik: alt'sız çizim ekran okuyucuda gürültüdür).
+// Görsel dosyası yoksa da basılmaz — kırık <img> çıkmaz.
+const adimGorselUrl = (p, n) => {
+  const alt = p.images?.steps?.[n - 1];
+  if (!alt) return null;
+  const rel = `tamir-gorsel/${p.slug}/adim-${String(n).padStart(2, "0")}.png`;
+  return fs.existsSync(path.join(ROOT, "public", rel)) ? `/${rel}` : null;
+};
+// Markdown gövdesindeki numaralı adım paragrafları — marked bunları
+// `<p><strong>1. …</strong> …</p>` olarak basıyor — ilgili görsel paragrafın ARDINA eklenir.
+// width/height attribute'u CLS için zorunlu; lazy-loading ilk ekranı yavaşlatmasın diye açık.
+function adimGorselleriEkle(p) {
+  if (!p.images?.steps?.length) return p.html;
+  // NOT: bold lead-in'e yukarıda `class="lead"` ekleniyor → <strong[^>]*> ile eşleşmeli.
+  return p.html.replace(/<p><strong[^>]*>(\d+)\.[\s\S]*?<\/p>/g, (m, n) => {
+    const url = adimGorselUrl(p, Number(n));
+    if (!url) return m;
+    const alt = p.images.steps[Number(n) - 1];
+    return `${m}<figure class="adim-gorsel"><img src="${url}" width="1200" height="800" loading="lazy" decoding="async" alt="${esc(alt)}"></figure>`;
+  });
+}
+
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
   const ld = {
@@ -300,11 +350,14 @@ for (const p of posts) {
       name: p.title, description: p.description, inLanguage: "tr-TR",
       ...(p.guide.totalTime ? { totalTime: p.guide.totalTime } : {}),
       tool: (p.guide.tools || []).map((t) => ({ "@type": "HowToTool", name: t })),
-      step: (p.steps || []).map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s, text: s })),
+      step: (p.steps || []).map((s, i) => ({
+        "@type": "HowToStep", position: i + 1, name: s, text: s,
+        ...(adimGorselUrl(p, i + 1) ? { image: `${SITE}${adimGorselUrl(p, i + 1)}` } : {}),
+      })),
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${p.html}${CTA}${PWA_NOT}</article>`;
+  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${adimGorselleriEkle(p)}${CTA}${PWA_NOT}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: `${p.title} | Benservis`, desc: p.description, canonical, head, body }));
@@ -384,21 +437,42 @@ if (eksikRehber.length) {
 // ⛔ /tamir/ altında iFixit kaydı LİSTELENMEZ — iki gerekçe: (a) o kayıtların çoğu parça
 // değişimi/söküm, YK #31'in içerik sınırını çiğner; (b) sayfa İngilizce link tarlasına döner.
 // iFixit yedeği yerinde duruyor: teşhis ekranında, yalnız bizde karşılığı olmayan arızalarda.
-const KATEGORILER = [
-  { slug: "camasir-makinesi", ad: "Çamaşır makinesi", kaynak: "Çamaşır Makinesi" },
-  { slug: "bulasik-makinesi", ad: "Bulaşık makinesi", kaynak: "Bulaşık Makinesi" },
-  { slug: "firin-ocak", ad: "Fırın ve ocak", kaynak: "Fırın / Ocak / Aspiratör" },
-  { slug: "buzdolabi", ad: "Buzdolabı", kaynak: "Buzdolabı" },
-  { slug: "klima", ad: "Klima", kaynak: "Klima" },
-  { slug: "supurge", ad: "Süpürge", kaynak: "Süpürge" },
-  { slug: "kombi", ad: "Kombi", kaynak: "Kombi" },
-];
+// ⚠️ KATEGORİ KAYNAĞI (YK #32, 2 Ağu — Tolga: "bizim ürün grupları olmalı, telefon vs olmamalı"):
+// liste ELLE YAZILMAZ, `src/constants.js` → CIHAZLAR'dan türetilir. Uygulamanın cihaz grubu
+// eklenip çıkarıldığında /tamir/ kendiliğinden uyar; ikinci bir liste tutulmaz.
+// ⛔ iFixit'in kategori dünyası (telefon, tablet, konsol, araba, Mac) BİZE GİRMEZ — bu liste
+// bizim ürün gruplarımızdır, başka yerden beslenmez.
+const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: slugify(ad), kaynak: ad }));
+
+// Slug çakışması sessizce iki kategoriyi aynı sayfaya basar → build'i durdur.
+const slugSay = KATEGORILER.reduce((m, k) => ((m[k.slug] = (m[k.slug] || 0) + 1), m), {});
+const cakisan = Object.entries(slugSay).filter(([, n]) => n > 1);
+if (cakisan.length) {
+  console.error(`[build-blog] ⛔ /tamir/ slug çakışması: ${cakisan.map(([s]) => s).join(", ")}`);
+  process.exit(1);
+}
+// CANLI URL KİLİDİ: bu iki adres yayında ve sitemap'te. Cihaz adı değişirse slug kayar ve
+// indekslenmiş sayfa 404'e düşer → build burada bağırır, sessizce kırılmaz.
+const KILITLI_SLUGLAR = ["camasir-makinesi", "klima"];
+const kayanSlug = KILITLI_SLUGLAR.filter((s) => !KATEGORILER.some((k) => k.slug === s));
+if (kayanSlug.length) {
+  console.error(`[build-blog] ⛔ /tamir/ canlı URL kayboldu: ${kayanSlug.join(", ")} — CIHAZLAR değişti, yönlendirme gerekiyor.`);
+  process.exit(1);
+}
 
 const TAMIR_CTA = `<a class="cta" href="/"><h3>🔧 Rehber sorunu çözmediyse</h3><p>Cihazını ve belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
 
 // Rehber kartı — kullanıcı tıklamadan işin boyutunu görsün (zorluk · süre · adım · dil).
+// GRF kapak görseli varsa (public/tamir-gorsel/<slug>/kapak.png) ikon yerine o basılır.
+const rehberGorsel = (r) => {
+  const alt = r.post.images?.coverAlt;
+  if (alt && fs.existsSync(path.join(ROOT, "public", "tamir-gorsel", r.slug, "kapak.png"))) {
+    return `<div class="card-ic kapak"><img src="/tamir-gorsel/${r.slug}/kapak.png" width="96" height="64" loading="lazy" decoding="async" alt="${esc(alt)}"></div>`;
+  }
+  return `<div class="card-ic">${iconSvg(r.post.category, "")}</div>`;
+};
 const rehberKarti = (r) =>
-  `<a class="card" href="${r.url}"><div class="card-ic">${iconSvg(r.post.category, "")}</div><div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`;
+  `<a class="card" href="${r.url}">${rehberGorsel(r)}<div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`;
 
 const crumb = (items) => ({
   "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -450,13 +524,23 @@ for (const k of katVeri) {
 // ① HUB — cihaz kategorisi ızgarası.
 // Rehberi olmayan kategoride "yakında" YAZILMAZ (YK #32): boşluk gerçek ve kalıcı olabilir,
 // söz vermek yerine dürüst hâli yazılır — "kendin-çöz adımı yok, servis işi" + servis CTA'sı.
+// Kategori görseli: GRF'nin ürettiği ikon `public/tamir-gorsel/kategori/<slug>.png` olarak duruyorsa
+// o kullanılır, yoksa gömülü çizgi SVG'ye düşülür (11 kategorinin 7'sinde ikon var — kalan 4'ü
+// GRF'de sırada; ikon gelince dosyayı koymak yetiyor, kod değişmiyor).
+const katIkon = (k) => {
+  const rel = `tamir-gorsel/kategori/${k.slug}.png`;
+  if (fs.existsSync(path.join(ROOT, "public", rel))) {
+    return `<img class="kat-png" src="/${rel}" width="44" height="44" loading="lazy" decoding="async" alt="${esc(k.ad)} kategorisi ikonu">`;
+  }
+  return iconSvg(k.ad, "");
+};
 const katKartlari = katVeri
   .map((k) => {
     const n = k.rehberler.length;
     if (n) {
-      return `<a class="katkart" href="/tamir/${k.slug}/"><span class="kat-ic">${iconSvg(k.ad, "")}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${n} rehber</span></a>`;
+      return `<a class="katkart" href="/tamir/${k.slug}/"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${n} rehber</span></a>`;
     }
-    return `<div class="katkart yok"><span class="kat-ic">${iconSvg(k.ad, "")}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">Rehber yok</span><p class="kat-not">Kendin-çöz adımı yok, servis işi.</p></div>`;
+    return `<div class="katkart yok"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">Rehber yok</span><p class="kat-not">Kendin-çöz adımı yok, servis işi.</p></div>`;
   })
   .join("");
 const rehberliKat = katVeri.filter((k) => k.rehberler.length);
@@ -484,6 +568,44 @@ fs.writeFileSync(
         { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       ])),
     body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Servisi çağırmadan önce dene — çoğu arıza basit bir bakımla düzeliyor.</p><blockquote><p><strong>Buradaki rehberler ücretsiz bakım seviyesindedir:</strong> temizlik, filtre, kontrol ve ayar. Parça değişimi ya da cihazın içini açmak gereken işleri bilerek anlatmıyoruz — o işler ölçüm, yetki ve garanti sorumluluğu ister; onlarda doğru adım servisi çağırmaktır.</p></blockquote><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetinde <strong>&quot;Rehber yok&quot;</strong> yazan cihazlarda kendin güvenle yapabileceğin bir bakım adımı yok — o arızalar ölçüm, yetki ve garanti sorumluluğu ister. <a href="/">Yakınındaki servisi bul →</a></p>${TAMIR_CTA}`,
+  })
+);
+
+// ───────────────────────────────────────────────────────────────────────────────
+// /kilavuzlar/ — KULLANIM KILAVUZLARI (YK Kararı #32, 2 Ağu 2026 — Tolga düzeltmesi ②)
+//
+// Ana sayfa ızgarasının 4. butonu buraya bakıyor ("Hakkımızda" ızgaradan çıktı, footer'da durdu).
+// BU KOŞUDA YALNIZ İSKELET: link toplama işi yapılmadı, sayfa dürüst boş hâliyle açılıyor.
+//
+// ⛔ TELİF (bağlayıcı, YK #32): üreticinin kullanım kılavuzu PDF'i BARINDIRILMAZ, kopyalanmaz,
+//    yeniden yayımlanmaz. Yalnız üreticinin RESMÎ kılavuz sayfasına link verilir (link telif
+//    meselesi değildir). Kendi katkımız: Türkçe özet satırı + model eşleştirme + arama kolaylığı.
+//
+// ⚠️ noindex: içeriği olmayan sayfayı indekslemek zararlı (thin content). Sitemap'e de EKLENMEDİ.
+//    İlk gerçek marka linkleri girdiğinde noindex kalkar ve sayfa sitemap'e eklenir.
+//
+// MİMARİ HAZIR: `KILAVUZ_MARKALARI` dolduğunda kart ızgarası kendiliğinden basılır — katmanlar
+// /tamir/ ile aynı: ① /kilavuzlar/ (marka) → ② /kilavuzlar/<marka>/ (cihaz) → ③ üreticinin
+// resmî kılavuz sayfası (DIŞ LİNK; bizde barındırılan dosya yok).
+const KILAVUZ_MARKALARI = []; // { ad, slug, url, cihazlar: [{ ad, url, ozet }] }
+
+const KILAVUZ_BOS = `<blockquote><p><strong>Bu sayfa henüz marka listesi içermiyor.</strong> Doldurmaya başladığımızda burada beyaz eşya ve elektronik markalarının <strong>resmî kullanım kılavuzu sayfalarına</strong> giden linkler olacak — üreticinin kendi sitesindeki kılavuza, Türkçe tek satırlık &quot;bu kılavuzda ne var&quot; özetiyle.</p></blockquote><p class="kat-not"><strong>Kılavuz dosyasını burada barındırmıyoruz.</strong> Kullanım kılavuzunun telif hakkı üreticiye aittir; PDF'i kopyalayıp yeniden yayımlamak yerine seni doğrudan üreticinin resmî sayfasına göndeririz — böylece her zaman güncel ve doğru sürümü görürsün.</p><p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="/">belirtini yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren</a> ya da <a href="/tamir/">Tamir Merkezi'ndeki ücretsiz bakım adımlarına</a> bak.</p>`;
+
+const kilavuzKartlari = KILAVUZ_MARKALARI.map(
+  (m) => `<a class="katkart" href="/kilavuzlar/${m.slug}/"><h2>${esc(m.ad)}</h2><span class="kat-rozet">${m.cihazlar.length} cihaz</span></a>`
+).join("");
+
+fs.mkdirSync(path.join(DIST, "kilavuzlar"), { recursive: true });
+fs.writeFileSync(
+  path.join(DIST, "kilavuzlar", "index.html"),
+  page({
+    title: "Kullanım Kılavuzları — üreticinin resmî kılavuzuna git | Benservis",
+    desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden linkler ve Türkçe özetler. Sayfa hazırlık aşamasında.",
+    canonical: `${SITE}/kilavuzlar/`,
+    robots: "noindex,follow",
+    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${
+      KILAVUZ_MARKALARI.length ? `<div class="katlar">${kilavuzKartlari}</div>` : KILAVUZ_BOS
+    }${CTA}`,
   })
 );
 

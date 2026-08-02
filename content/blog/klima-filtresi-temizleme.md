@@ -17,6 +17,17 @@ steps:
   - "Ilık suyla durula; çok kirliyse yumuşak fırçayla nazikçe ov. Sıcak su ve deterjan kullanma."
   - "Filtreleri gölgede, tamamen kuruyana kadar beklet."
   - "Filtreleri yerine tak ve ön kapağı kapat."
+# GRF adım görselleri (2 Ağu 2026) — dosyalar public/tamir/klima-filtresi-temizleme/.
+# Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
+images:
+  coverAlt: "Klima filtresi temizliği rehberinin kapak çizimi"
+  steps:
+    - "Klimanın kumandayla kapatılışını gösteren çizim"
+    - "Klima iç ünitesinin ön kapağının iki yandan tutulup yukarı kaldırılışını gösteren çizim"
+    - "Izgara filtrelerin klima iç ünitesinden yavaşça çıkarılışını gösteren çizim"
+    - "Klima filtresinin ılık suyla durulanışını, sıcak su ve deterjanın kullanılmayacağını gösteren çizim"
+    - "Klima filtresinin gölgede, doğrudan güneş almadan kurutuluşunu gösteren çizim"
+    - "Kuruyan klima filtresinin yerine takılıp ön kapağın kapatılışını gösteren çizim"
 faq:
   - q: "Klima filtresini ne sıklıkla temizlemeli?"
     a: "Yoğun kullanımda 2-3 haftada bir, normalde ayda bir. Sezon başında mutlaka temizle; en sık 'klima soğutmuyor' şikâyetinin sebebi kirli filtredir."
