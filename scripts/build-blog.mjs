@@ -11,6 +11,9 @@ import { REHBERLER } from "../src/onarim-rehberleri.js";
 // TEK KAYNAK (YK #32, 2 Ağu — Tolga düzeltmesi): /tamir/ kategorileri elle yazılmaz,
 // uygulamanın resmî cihaz listesinden türetilir. Cihaz grubu eklenip çıktığında hub uyar.
 import { CIHAZLAR } from "../src/constants.js";
+// /kilavuzlar/ verisi de TEK KAYNAKTAN gelir (YK #34): marka→resmî kılavuz adresi
+// `src/kullanim-kilavuzlari.js`'te, cihaz→marka eşleşmesi `CIHAZ_MARKALARI`'nda. Burada liste tutulmaz.
+import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -706,14 +709,15 @@ fs.writeFileSync(
 // /kilavuzlar/ — KULLANIM KILAVUZLARI (YK Kararı #32, 2 Ağu 2026 — Tolga düzeltmesi ②)
 //
 // Ana sayfa ızgarasının 4. butonu buraya bakıyor ("Hakkımızda" ızgaradan çıktı, footer'da durdu).
-// BU KOŞUDA YALNIZ İSKELET: link toplama işi yapılmadı, sayfa dürüst boş hâliyle açılıyor.
+// 2 Ağu 2026 (YK #34 Faz 4): iskelet DOLDU — marka bazlı resmî kılavuz adresleri girildi.
 //
 // ⛔ TELİF (bağlayıcı, YK #32): üreticinin kullanım kılavuzu PDF'i BARINDIRILMAZ, kopyalanmaz,
 //    yeniden yayımlanmaz. Yalnız üreticinin RESMÎ kılavuz sayfasına link verilir (link telif
 //    meselesi değildir). Kendi katkımız: Türkçe özet satırı + model eşleştirme + arama kolaylığı.
 //
-// ⚠️ noindex: içeriği olmayan sayfayı indekslemek zararlı (thin content). Sitemap'e de EKLENMEDİ.
-//    İlk gerçek marka linkleri girdiğinde noindex kalkar ve sayfa sitemap'e eklenir.
+// ⚠️ noindex OTOMATİK: kayıt sayısı `KILAVUZ_INDEKS_ESIGI`nin (30) altındaysa hem hub hem
+//    kategori sayfaları noindex kalır ve sitemap'e girmez (ince içerik indeksi aşağı çeker);
+//    eşiği geçince ikisi de kendiliğinden açılır. Elle bayrak çevrilmez.
 //
 // MİMARİ (2 Ağu — ÜÇ MERKEZ TEK DÜZEN): katmanlar /tamir/ ve /blog/ ile AYNI, ve hub artık
 // MARKA değil CİHAZ ızgarası (üç merkezde aynı 11 grup, aynı slug, aynı GRF ikonları):
@@ -721,28 +725,37 @@ fs.writeFileSync(
 //   ② /kilavuzlar/<cihaz>/  → o cihazın marka/model kartları (yalnız kayıt varsa basılır)
 //   ③ üreticinin resmî kılavuz sayfası (DIŞ LİNK; bizde barındırılan dosya YOK)
 // `KILAVUZLAR` dolduğunda ② katmanı ve rozetler kendiliğinden gelir — kod değişmez.
-const KILAVUZLAR = []; // { cihaz, marka, model, url, ozet }
+const KILAVUZLAR = kilavuzKayitlari(); // { cihaz, marka, url, ozet }
+// Eşiği geçtiyse merkez indekse açılır; altındaysa üç katman da noindex + sitemap dışı.
+const kilavuzIndeksli = KILAVUZLAR.length >= KILAVUZ_INDEKS_ESIGI;
+const kilavuzRobots = kilavuzIndeksli ? undefined : "noindex,follow";
 
 const kilavuzKatVeri = KATEGORILER.map((k) => ({
   ...k, kayitlar: KILAVUZLAR.filter((m) => m.cihaz === k.kaynak),
 }));
 
+// Telif + dürüstlük notu — her hâlde ve HER KATMANDA basılır (bağlayıcı kural, YK #32/#34).
+const KILAVUZ_NOT = `<p class="kat-not"><strong>Kılavuz dosyasını burada barındırmıyoruz.</strong> Kullanım kılavuzunun telif hakkı üreticiye aittir; PDF'i kopyalayıp yeniden yayımlamak yerine seni doğrudan üreticinin resmî sayfasına göndeririz — böylece her zaman güncel ve doğru sürümü görürsün.</p><p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="/">belirtini yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren</a> ya da <a href="/tamir/">Tamir Merkezi'ndeki ücretsiz bakım adımlarına</a> bak.</p>`;
+
+// Dış link kartı — bizde dosya YOK, kullanıcı üreticinin sayfasına gidiyor. Bunu kart üstünde
+// açıkça yazıyoruz (alan adı görünür) ki tıklamadan önce nereye gittiğini bilsin.
+const kilavuzAlanAdi = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return "resmî sayfa"; } };
+const kilavuzKarti = (k, m) =>
+  `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow"><div class="card-ic">${iconSvg(k.ad, "")}</div><div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.marka)} ${esc(k.ad.toLocaleLowerCase("tr"))} kullanım kılavuzu</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(kilavuzAlanAdi(m.url))} · üreticinin resmî sayfası ↗</span></div></a>`;
+
 // ② KATEGORİ SAYFALARI — yalnız kaydı OLAN cihaz için (boş sayfa = thin content, açılmaz).
-for (const k of kilavuzKatVeri) {
-  if (!k.kayitlar.length) continue;
+const kilavuzluKat = kilavuzKatVeri.filter((k) => k.kayitlar.length);
+for (const k of kilavuzluKat) {
   fs.mkdirSync(path.join(DIST, "kilavuzlar", k.slug), { recursive: true });
   fs.writeFileSync(
     path.join(DIST, "kilavuzlar", k.slug, "index.html"),
     page({
-      title: `${k.ad} kullanım kılavuzları | Benservis`,
-      desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları ve Türkçe özetleri.`,
+      title: `${k.ad} kullanım kılavuzları — üreticinin resmî sayfası | Benservis`,
+      desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
-      robots: "noindex,follow", // ⚠️ merkez indekse açılana kadar tüm katmanlar noindex
-      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad)}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} kılavuz · üreticinin resmî sayfasına gider</p><div class="bloglist">${k.kayitlar
-        .map(
-          (m) =>
-            `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow"><div class="card-ic">${iconSvg(k.ad, "")}</div><div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.model || m.marka)}</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(m.marka)} · resmî sayfa ↗</span></div></a>`
-        )
+      robots: kilavuzRobots,
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad)}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
+        .map((m) => kilavuzKarti(k, m))
         .join("")}</div>${CTA}`,
     })
   );
@@ -758,18 +771,22 @@ const kilavuzKartlari = katIzgarasi(
   "kılavuz"
 );
 
-// Telif notu — her hâlde basılır (liste dolunca da geçerli, bağlayıcı kural).
-const KILAVUZ_NOT = `<p class="kat-not"><strong>Kılavuz dosyasını burada barındırmıyoruz.</strong> Kullanım kılavuzunun telif hakkı üreticiye aittir; PDF'i kopyalayıp yeniden yayımlamak yerine seni doğrudan üreticinin resmî sayfasına göndeririz — böylece her zaman güncel ve doğru sürümü görürsün.</p><p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="/">belirtini yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren</a> ya da <a href="/tamir/">Tamir Merkezi'ndeki ücretsiz bakım adımlarına</a> bak.</p>`;
+// Hub açılış bloğu — sayfa doluysa ne yaptığımızı, boşsa boş olduğunu DÜRÜSTÇE yazar
+// ("yakında" yok). Marka sayısı listeden hesaplanır, elle güncellenmez.
+const kilavuzMarkaSayisi = new Set(KILAVUZLAR.map((m) => m.marka)).size;
+const KILAVUZ_GIRIS = KILAVUZLAR.length
+  ? `<blockquote><p><strong>${kilavuzMarkaSayisi} markanın resmî kullanım kılavuzu sayfası burada toplandı.</strong> Cihaz grubunu seç, markanı bul, üreticinin kendi sayfasında modelini arat. Her adres yayına girmeden önce tek tek denendi; çalışmayan link listeye alınmadı.</p></blockquote>`
+  : `<blockquote><p><strong>Bu sayfa henüz kılavuz linki içermiyor.</strong> Doldurmaya başladığımızda her cihaz grubunun altında markaların <strong>resmî kullanım kılavuzu sayfalarına</strong> giden linkler olacak — üreticinin kendi sitesindeki kılavuza, Türkçe tek satırlık &quot;bu kılavuzda ne var&quot; özetiyle.</p></blockquote>`;
 
 fs.mkdirSync(path.join(DIST, "kilavuzlar"), { recursive: true });
 fs.writeFileSync(
   path.join(DIST, "kilavuzlar", "index.html"),
   page({
     title: "Kullanım Kılavuzları — üreticinin resmî kılavuzuna git | Benservis",
-    desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden linkler ve Türkçe özetler. Sayfa hazırlık aşamasında.",
+    desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden doğrulanmış linkler ve Türkçe özetler. PDF barındırmıyoruz, üreticiye yönlendiriyoruz.",
     canonical: `${SITE}/kilavuzlar/`,
-    robots: "noindex,follow",
-    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p><blockquote><p><strong>Bu sayfa henüz kılavuz linki içermiyor.</strong> Doldurmaya başladığımızda her cihaz grubunun altında markaların <strong>resmî kullanım kılavuzu sayfalarına</strong> giden linkler olacak — üreticinin kendi sitesindeki kılavuza, Türkçe tek satırlık &quot;bu kılavuzda ne var&quot; özetiyle.</p></blockquote><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${CTA}`,
+    robots: kilavuzRobots,
+    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${CTA}`,
   })
 );
 
@@ -785,8 +802,15 @@ const urlEntries = [
   // Kategori sayfaları — yalnız rehberi olanlar basıldığı için hepsi gerçek içerikli.
   ...rehberliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
   // Bilgi Merkezi kategori katmanı — yalnız yazısı olanlar (boş kategoriye sayfa basılmıyor).
-  // ⛔ /kilavuzlar/ ve alt sayfaları sitemap'e GİRMEZ: içerik yok, noindex (thin content).
   ...blogluKat.map((k) => ({ loc: `${SITE}/blog/kategori/${k.slug}/`, lastmod: newest })),
+  // Kullanım Kılavuzları — sitemap'e YALNIZ eşik (30 kayıt) aşıldığında girer; altındayken
+  // sayfa noindex olduğu için sitemap'e koymak çelişkili sinyal olurdu.
+  ...(kilavuzIndeksli
+    ? [
+        { loc: `${SITE}/kilavuzlar/`, lastmod: newest },
+        ...kilavuzluKat.map((k) => ({ loc: `${SITE}/kilavuzlar/${k.slug}/`, lastmod: newest })),
+      ]
+    : []),
   { loc: `${SITE}/ikinci-el`, lastmod: newest },
   ...posts.map((p) => ({ loc: `${SITE}/blog/${p.slug}/`, lastmod: postLastmod(p) })),
 ];
