@@ -42,7 +42,7 @@ export default function TelefonaEkleBlok() {
         elinde kalır.
       </p>
       <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.5, color: FAINT }}>
-        iPhone: Paylaş → Ana Ekrana Ekle · Android: menü (⋮) → Uygulamayı yükle
+        iPhone: Paylaş → Ana Ekrana Ekle · Android: sağ üstteki üç nokta → Uygulamayı yükle
       </p>
     </section>
   );

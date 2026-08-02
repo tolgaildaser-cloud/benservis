@@ -149,7 +149,7 @@ const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını sa
 // PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
 // Pasif blok: ana CTA'nın altında, yazının akışını kesmez; uygulama ana ekrandan açıldıysa
 // CSS `display-mode: standalone` sorgusuyla gizlenir (statik sayfa, JS gerekmiyor).
-const PWA_NOT = `<section class="pwa-not"><h3>📱 Benservis'i telefonuna ekle</h3><p>Mağazadan indirmene gerek yok. Tarayıcı menüsünden &quot;Ana ekrana ekle&quot; dediğinde Benservis ikondan tam ekran açılır — ve internet çekmediğinde bile yakınındaki servislerin listesi elinde kalır.</p><p class="tarif">iPhone: Paylaş → Ana Ekrana Ekle · Android: menü (⋮) → Uygulamayı yükle</p></section>`;
+const PWA_NOT = `<section class="pwa-not"><h3>📱 Benservis'i telefonuna ekle</h3><p>Mağazadan indirmene gerek yok. Tarayıcı menüsünden &quot;Ana ekrana ekle&quot; dediğinde Benservis ikondan tam ekran açılır — ve internet çekmediğinde bile yakınındaki servislerin listesi elinde kalır.</p><p class="tarif">iPhone: Paylaş → Ana Ekrana Ekle · Android: sağ üstteki üç nokta → Uygulamayı yükle</p></section>`;
 
 // Bilgi Merkezi listesi için client-side arama (statik, backend yok).
 // Kart metnini (kategori+başlık+özet) Türkçe-duyarlı + aksan toleranslı normalize eder,
