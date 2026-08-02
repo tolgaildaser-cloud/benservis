@@ -127,8 +127,24 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .card .cat{color:${T.BLUE};font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .card h2{font-family:'Fraunces',serif;font-weight:600;font-size:20px;margin:5px 0 5px}
 .card p{margin:0;color:${T.MUTED};font-size:14.5px}
-/* /tamir/ kart alt satırı (zorluk · süre · adım) — kullanıcı tıklamadan işin boyutunu görsün. */
+/* /tamir/ kart alt satırı (zorluk · süre · adım · dil) — kullanıcı tıklamadan işin boyutunu görsün. */
 .tamir-meta{display:block;margin-top:8px;color:${T.FAINT};font-size:12.5px;font-weight:600}
+/* /tamir/ hub — cihaz kategorisi ızgarası (YK #32 format kararı, ① katman).
+   Rehberi OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok). */
+.katlar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 8px}
+@media(min-width:640px){.katlar{grid-template-columns:repeat(3,1fr)}}
+.katkart{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:18px;border:1px solid ${T.HAIR};border-radius:14px;background:${T.SURFACE};text-decoration:none;color:${T.NAVY}}
+a.katkart{transition:border-color .15s,box-shadow .15s}
+a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,59,.3)}
+.katkart .kat-ic{width:44px;height:44px;border-radius:12px;background:#EFF4FF;color:${T.BLUE};display:flex;align-items:center;justify-content:center}
+.katkart .kat-ic svg{width:25px;height:25px}
+.katkart h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
+.kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
+.katkart.yok{background:${T.BG}}
+.katkart.yok .kat-ic{background:#F1F5F9;color:${T.FAINT}}
+.katkart.yok .kat-rozet{background:#F1F5F9;color:${T.MUTED}}
+.kat-not{margin:0;font-size:13px;line-height:1.5;color:${T.MUTED}}
+.geri{display:inline-block;margin:0 0 14px;font-size:14px;font-weight:600;text-decoration:none}
 .bloghead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 8px}
 .bloghead h1{margin:0}
 .blogsearch{flex:1 1 220px;max-width:360px;margin:0;padding:12px 15px;border:1px solid ${T.HAIR};border-radius:12px;font-size:15px;font-family:'Hanken Grotesk',system-ui,sans-serif;color:${T.NAVY};background:${T.SURFACE};outline:none}
@@ -355,20 +371,119 @@ if (eksikRehber.length) {
   console.error(`[build-blog] ⛔ /tamir/: ${eksikRehber.length} rehberin blog yazısı YOK → ${eksikRehber.map((r) => r.slug).join(", ")}`);
   process.exit(1);
 }
-const tamirKartlari = kendiRehberler
-  .map(
-    (r) =>
-      `<a class="card" href="${r.url}"><div class="card-ic">${iconSvg(r.post.category, "")}</div><div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`
-  )
+// BİLGİ MİMARİSİ (YK #32 format kararı — üç katman):
+//   ① /tamir/            → cihaz kategorisi ızgarası + rehber sayısı rozeti
+//   ② /tamir/<kategori>/ → o cihazın rehber kartları (zorluk · süre · adım · dil)
+//   ③ /blog/<slug>/      → rehberin kendisi; ⛔ URL TAŞINMADI, blog motoru basıyor
+//                          (giriş + güvenlik uyarısı → alet kutusu → numaralı adımlar →
+//                           sonuç kontrolü/SSS → "çözülmediyse servisi çağır" CTA'sı)
+//
+// ⛔ FORMAT TAKLİT EDİLİR, İÇERİK EDİLMEZ: düzen/akış serbest, iFixit metni-fotoğrafı-tasarımı
+// kopyalanmadı (CC BY-NC-SA, ticari kullanım yasak). Sayfa benservis marka diliyle kuruldu.
+//
+// ⛔ /tamir/ altında iFixit kaydı LİSTELENMEZ — iki gerekçe: (a) o kayıtların çoğu parça
+// değişimi/söküm, YK #31'in içerik sınırını çiğner; (b) sayfa İngilizce link tarlasına döner.
+// iFixit yedeği yerinde duruyor: teşhis ekranında, yalnız bizde karşılığı olmayan arızalarda.
+const KATEGORILER = [
+  { slug: "camasir-makinesi", ad: "Çamaşır makinesi", kaynak: "Çamaşır Makinesi" },
+  { slug: "bulasik-makinesi", ad: "Bulaşık makinesi", kaynak: "Bulaşık Makinesi" },
+  { slug: "firin-ocak", ad: "Fırın ve ocak", kaynak: "Fırın / Ocak / Aspiratör" },
+  { slug: "buzdolabi", ad: "Buzdolabı", kaynak: "Buzdolabı" },
+  { slug: "klima", ad: "Klima", kaynak: "Klima" },
+  { slug: "supurge", ad: "Süpürge", kaynak: "Süpürge" },
+  { slug: "kombi", ad: "Kombi", kaynak: "Kombi" },
+];
+
+const TAMIR_CTA = `<a class="cta" href="/"><h3>🔧 Rehber sorunu çözmediyse</h3><p>Cihazını ve belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+
+// Rehber kartı — kullanıcı tıklamadan işin boyutunu görsün (zorluk · süre · adım · dil).
+const rehberKarti = (r) =>
+  `<a class="card" href="${r.url}"><div class="card-ic">${iconSvg(r.post.category, "")}</div><div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`;
+
+const crumb = (items) => ({
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, item: x.item })),
+});
+const ldTag = (o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`;
+
+// ② KATEGORİ SAYFALARI — yalnız rehberi OLAN kategori için basılır.
+// Boş kategoriye ayrı sayfa açılmıyor: 5 boş sayfa "thin content" olur ve indeks kalitesini
+// düşürür. Boşluk hub kartında dürüstçe yazılı (aşağıda), kullanıcı bilgisiz kalmıyor.
+const katVeri = KATEGORILER.map((k) => ({
+  ...k,
+  rehberler: kendiRehberler.filter((r) => r.cihaz === k.kaynak),
+}));
+
+for (const k of katVeri) {
+  if (!k.rehberler.length) continue;
+  const canonical = `${SITE}/tamir/${k.slug}/`;
+  const head =
+    ldTag({
+      "@context": "https://schema.org", "@type": "CollectionPage",
+      name: `${k.ad} bakım rehberleri`, url: canonical, inLanguage: "tr-TR",
+      isPartOf: { "@type": "CollectionPage", name: "Tamir Merkezi", url: `${SITE}/tamir/` },
+      mainEntity: {
+        "@type": "ItemList", numberOfItems: k.rehberler.length,
+        itemListElement: k.rehberler.map((r, i) => ({
+          "@type": "ListItem", position: i + 1, name: r.baslik, url: `${SITE}${r.url}`,
+        })),
+      },
+    }) +
+    ldTag(crumb([
+      { name: "Ana Sayfa", item: `${SITE}/` },
+      { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
+      { name: k.ad, item: canonical },
+    ]));
+  fs.mkdirSync(path.join(DIST, "tamir", k.slug), { recursive: true });
+  fs.writeFileSync(
+    path.join(DIST, "tamir", k.slug, "index.html"),
+    page({
+      title: `${k.ad} bakım rehberleri — kendin dene | Benservis`,
+      desc: `${k.ad} için servisi çağırmadan önce deneyebileceğin ücretsiz bakım adımları. Türkçe ve adım adım; zorluk ile süre her rehberde yazılı.`,
+      canonical,
+      head,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad)}<h1>${esc(k.ad)} bakım rehberleri</h1><p class="meta">${k.rehberler.length} rehber · hepsi ücretsiz, alet gerektirmeyen bakım seviyesi</p><div class="bloglist">${k.rehberler.map(rehberKarti).join("")}</div>${TAMIR_CTA}`,
+    })
+  );
+}
+
+// ① HUB — cihaz kategorisi ızgarası.
+// Rehberi olmayan kategoride "yakında" YAZILMAZ (YK #32): boşluk gerçek ve kalıcı olabilir,
+// söz vermek yerine dürüst hâli yazılır — "kendin-çöz adımı yok, servis işi" + servis CTA'sı.
+const katKartlari = katVeri
+  .map((k) => {
+    const n = k.rehberler.length;
+    if (n) {
+      return `<a class="katkart" href="/tamir/${k.slug}/"><span class="kat-ic">${iconSvg(k.ad, "")}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${n} rehber</span></a>`;
+    }
+    return `<div class="katkart yok"><span class="kat-ic">${iconSvg(k.ad, "")}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">Rehber yok</span><p class="kat-not">Kendin-çöz adımı yok, servis işi.</p></div>`;
+  })
   .join("");
+const rehberliKat = katVeri.filter((k) => k.rehberler.length);
+
 fs.mkdirSync(path.join(DIST, "tamir"), { recursive: true });
 fs.writeFileSync(
   path.join(DIST, "tamir", "index.html"),
   page({
-    title: "Tamir Merkezi — kendin yapabileceğin bakım ve onarım rehberleri",
-    desc: "Servis çağırmadan önce deneyebileceğin ücretsiz bakım adımları: filtre temizliği, kontroller ve ayarlar. Türkçe, adım adım.",
+    title: "Tamir Merkezi — kendin yapabileceğin bakım işleri | Benservis",
+    desc: "Servisi çağırmadan önce deneyebileceğin ücretsiz bakım adımları: filtre temizliği, kontroller ve ayarlar. Cihazına göre Türkçe, adım adım.",
     canonical: `${SITE}/tamir/`,
-    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Servisi çağırmadan önce dene — çoğu arıza basit bir bakımla düzeliyor.</p><blockquote><p><strong>Buradaki rehberler ücretsiz bakım seviyesindedir:</strong> temizlik, filtre, kontrol ve ayar. Parça değişimi ya da cihazı sökmek gereken işleri bilerek anlatmıyoruz — o işler ölçüm, yetki ve garanti sorumluluğu ister; onlarda doğru adım servisi çağırmaktır.</p></blockquote><div class="bloglist">${tamirKartlari}</div><a class="cta" href="/"><h3>🔧 Rehber sorunu çözmediyse</h3><p>Cihazını ve belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`,
+    head:
+      ldTag({
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        name: "Tamir Merkezi", url: `${SITE}/tamir/`, inLanguage: "tr-TR",
+        mainEntity: {
+          "@type": "ItemList", numberOfItems: rehberliKat.length,
+          itemListElement: rehberliKat.map((k, i) => ({
+            "@type": "ListItem", position: i + 1, name: `${k.ad} bakım rehberleri`, url: `${SITE}/tamir/${k.slug}/`,
+          })),
+        },
+      }) +
+      ldTag(crumb([
+        { name: "Ana Sayfa", item: `${SITE}/` },
+        { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
+      ])),
+    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Servisi çağırmadan önce dene — çoğu arıza basit bir bakımla düzeliyor.</p><blockquote><p><strong>Buradaki rehberler ücretsiz bakım seviyesindedir:</strong> temizlik, filtre, kontrol ve ayar. Parça değişimi ya da cihazın içini açmak gereken işleri bilerek anlatmıyoruz — o işler ölçüm, yetki ve garanti sorumluluğu ister; onlarda doğru adım servisi çağırmaktır.</p></blockquote><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetinde <strong>&quot;Rehber yok&quot;</strong> yazan cihazlarda kendin güvenle yapabileceğin bir bakım adımı yok — o arızalar ölçüm, yetki ve garanti sorumluluğu ister. <a href="/">Yakınındaki servisi bul →</a></p>${TAMIR_CTA}`,
   })
 );
 
@@ -381,6 +496,8 @@ const urlEntries = [
   { loc: `${SITE}/`, lastmod: newest },
   { loc: `${SITE}/blog/`, lastmod: newest },
   { loc: `${SITE}/tamir/`, lastmod: newest },
+  // Kategori sayfaları — yalnız rehberi olanlar basıldığı için hepsi gerçek içerikli.
+  ...rehberliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
   { loc: `${SITE}/ikinci-el`, lastmod: newest },
   ...posts.map((p) => ({ loc: `${SITE}/blog/${p.slug}/`, lastmod: postLastmod(p) })),
 ];
