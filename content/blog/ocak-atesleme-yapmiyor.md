@@ -52,7 +52,7 @@ Kıvılcım çıkıyor ve gaz da geliyorsa ama alev tutmuyorsa: başlık ıslak/
 Tüpte gaz olduğu hâlde yanmıyorsa sorun çoğu zaman tüpte değildir: **regülatör (dedantör)** arızalı/donmuş, hortum bükük/tıkalı ya da regülatör tüpe tam oturmamış olabilir. Regülatörü kontrol et; şüpheliyse değiştir (ucuzdur). Hortumda ezik/çatlak varsa yenile.
 
 ### Ateşleme bujisi (çakmak) arızası ve tamiri
-Ateşleme bujisi, düğmeye basınca **kıvılcım üreten seramik uçtur**. Çatlak, kirli ya da ıslaksa kıvılcım çıkmaz. Önce ucunu **kuru bezle temizle**. Hiç kıvılcım çıkmıyorsa buji ya da kablosu arızalıdır; değişimi bir servis işidir ama genelde düşük maliyetlidir (aşağıdaki tabloya bak).
+Ateşleme bujisi, düğmeye basınca **kıvılcım üreten seramik uçtur**. Çatlak, kirli ya da ıslaksa kıvılcım çıkmaz. Önce ucunu **kuru bezle temizle**. Hiç kıvılcım çıkmıyorsa buji ya da kablosu arızalıdır; değişimi bir servis işidir ama genelde düşük maliyetlidir (aşağıdaki tabloya bak). Yalnız bu parçayı merak ediyorsan [ocak ateşleme bujisi değişimi](/blog/ocak-atesleme-bujisi-degisimi/) yazısı fiyat kapsamını ve öncesinde ücretsiz denenecekleri ayrıntılı anlatıyor.
 
 ## Ne zaman servis çağırmalısın?
 
