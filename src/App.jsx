@@ -736,14 +736,15 @@ const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8",
 // Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
 // YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
 // FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
-// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 31 Tem 2026.
+// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 2 Ağu 2026.
 const SSS = [
   // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 31 Tem: kümeler çamaşır 13 · bulaşık 11 · klima 9 ·
-  //   kombi 9 · buzdolabı 8 — çamaşır "kokuyor" 24 Tem'den beri settteydi, yerine bulaşık temiz yıkamıyor) —
-  { s: "Buzdolabı çalışıyor ama soğutmuyor, önce neye bakmalıyım?", c: "Önce sıcaklık ayarına bak (dolap ~4 °C, buzluk ~ -18 °C), sonra kapı contasını dene: kapağın arasına bir kâğıt koyup kapat, çekerken direnç hissetmiyorsan conta sızdırıyordur. Arkadaki tozu da süpür. Buzluk soğuk ama dolap soğumuyorsa fan veya buz çözme arızası olabilir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  // — haftalık belirti soruları (blog verisinden; 2 Ağu taraması: kümeler çamaşır 13 · bulaşık 11 ·
+  //   kombi 9 · klima 9 · buzdolabı 8 — en büyük küme çamaşır 31 Tem'den beri sette yoktu; 27 Tem'den
+  //   beri duran buzdolabı sorusu (setin en eskisi) yerine çamaşır "ses/titreşim" geldi) —
+  { s: "Çamaşır makinesi santrifüj sırasında çok ses yapıyor ve titriyor, önce neye bakmalıyım?", c: "Önce makinenin dengesine bak: dört ayağın da yere tam bastığından ve makinenin elle itince oynamadığından emin ol, gerekiyorsa ayakları ayarlayıp kilit somunlarını sabitle. Ses taşınmadan sonra başladıysa arkadaki nakliye vidaları sökülmemiş olabilir; yükü de dengeli dağıt, tek bir ağır parça tamburu savurur. Makine düz zeminde, dengeli yükle ve vidaları sökülmüş hâldeyken hâlâ gürültülüyse rulman ya da amortisör yorulmuş olabilir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Bulaşıklar yıkamadan sonra kirli çıkıyor, önce neye bakmalıyım?", c: "Önce alt ve üst püskürtme kollarını çıkar; deliklerini ince bir fırçayla aç, taktıktan sonra serbestçe döndüğünü kontrol et — sorun çoğu zaman buradadır. Tabandaki filtreyi de yıka, tuz ve parlatıcı seviyesine bak. Kollar ve filtre temizken bulaşıklar hâlâ kirli çıkıyorsa su yeterince ısınmıyor olabilir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Klima iç üniteden su damlatıyor, ne yapmalıyım?", c: "Önce klimayı kapat — su elektronik karta veya prize ulaşırsa risklidir. Sonra iç ünitenin filtresini çıkarıp yıka ve tahliye hortumunun dışarı çıkan ucunda tıkanıklık ya da bükülme var mı bak; sorun genellikle tıkalı tahliye hattıdır. Filtre temiz, hortum açıkken damlama sürüyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
 ];
