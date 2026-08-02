@@ -38,10 +38,18 @@ export default function handler(req, res) {
       return res.status(200).json({ servisler: bul });
     }
 
-    const kat = eslesenKategoriler(cihaz || "");
-    // Telefonu olan + kategori eşleşen (telefonsuz = "Ara" çalışmaz → elenir)
+    // CİHAZ OPSİYONEL (2 Ağu 2026 düzeltmesi — Tolga: "Yakın servisler butonu yakın servisleri
+    // vermiyor"). Ana sayfa ızgarasındaki "Yakın Servisler" teşhis akışının DIŞINDAN gelir →
+    // cihaz bilinmez. Eskiden cihaz boşken eslesenKategoriler("") → [""] dönüyordu; hiçbir
+    // servisin kategorisi "" olmadığı için filtre TÜM dizini eliyordu (7832 → 0 servis) ve
+    // konum izni verilse bile liste boş geliyordu. Artık cihaz yoksa kategori filtresi hiç
+    // uygulanmaz = tüm dizin aday olur.
+    const kat = cihaz ? eslesenKategoriler(cihaz) : null;
+    // Telefonu olan (telefonsuz = "Ara" çalışmaz → elenir) + cihaz verildiyse kategori eşleşen.
+    // NOT: yetkili/SERBİS ayrımı BURADA FİLTRE DEĞİLDİR — yetkisiz servisler de listeye girer,
+    // rozet yalnız bilgi amaçlıdır (kullanıcı kuralı, 2 Ağu).
     let list = SERVISLER.filter(
-      (s) => s.telefon && Array.isArray(s.kategoriler) && s.kategoriler.some((k) => kat.includes(k))
+      (s) => s.telefon && (!kat || (Array.isArray(s.kategoriler) && s.kategoriler.some((k) => kat.includes(k))))
     );
 
     if (lat && lng) {

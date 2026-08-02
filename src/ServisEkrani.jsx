@@ -412,7 +412,14 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
         setMusteriKonum({ lat, lng });
         let liste = [];
         try {
-          const r = await fetch(`/api/servis/yakin?cihaz=${encodeURIComponent(cihaz)}&lat=${lat}&lng=${lng}`);
+          // cihaz OPSİYONEL: ana sayfa ızgarasındaki "Yakın Servisler" teşhissiz gelir →
+          // boş cihaz parametresi HİÇ gönderilmez (sunucu kategori filtresi uygulamaz).
+          // Eskiden `cihaz=` boş gönderiliyordu ve sunucu bunu [""] kategorisine çevirip
+          // tüm dizini eliyordu → liste her zaman boş.
+          const qs = new URLSearchParams();
+          if (cihaz) qs.set("cihaz", cihaz);
+          qs.set("lat", lat); qs.set("lng", lng);
+          const r = await fetch(`/api/servis/yakin?${qs}`);
           const d = await r.json();
           liste = d?.servisler || [];
         } catch { liste = []; }
@@ -470,6 +477,37 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
   // İl → ilçe haritası: tüm Türkiye
   const ilIlceMap = TR_IL_ILCE;
 
+  // İlçe ile devam yolu — konum izni YOKKEN de, konum ALINIP sonuç boş kaldığında da
+  // kullanılır (2 Ağu: "boş ekran gösterme"). Eskiden yalnız "denied" dalında inline
+  // duruyordu; success+0 sonuç dalında kullanıcıya "farklı bölge seçin" deniyor ama
+  // seçecek kontrol RENDER EDİLMİYORDU → çıkışsız ekran.
+  const ilceIleAra = async (ilce, il) => {
+    if (!ilce) return;
+    setFallbackIlce(ilce);
+    setKonumIlce(ilce); // bölge bilgisi — seçilen ilçe kesin doğru
+    if (il) setKonumIl(il); // rapor için il (anonim log)
+    let liste = [];
+    try {
+      // cihaz opsiyonel: teşhis akışı dışından gelindiyse parametre hiç gönderilmez →
+      // sunucu kategori filtresi uygulamaz (tüm dizin).
+      const qs = new URLSearchParams();
+      if (cihaz) qs.set("cihaz", cihaz);
+      qs.set("ilce", ilce);
+      const r = await fetch(`/api/servis/yakin?${qs}`);
+      const d = await r.json();
+      liste = d?.servisler || [];
+    } catch { liste = []; }
+    // Konum yok → mesafe hesaplanamaz; puana göre sırala (yetkili/SERBİS FİLTRE DEĞİL,
+    // yalnız eşit puanda öne alınır — rozet bilgi olarak kalır).
+    const ilceListe = [...liste].sort((a, b) => {
+      const pf = (b.puan || 0) - (a.puan || 0);
+      if (pf !== 0) return pf;
+      return !!a.serbis === !!b.serbis ? 0 : a.serbis ? -1 : 1;
+    });
+    setSiraliServisler(ilceListe.slice(0, 10));
+    setLocationState("success");
+  };
+
   // Profil ekranı
   if (ekran === "profil" && seciliServis) {
     return (
@@ -483,19 +521,39 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
   // Sıralama tercihine göre liste: "mesafe" = km birincil + puan ikincil;
   // "puan" = puan birincil + mesafe ikincil (kullanıcı kuralı).
   const _liste = siraliServisler;
+  // SIRALAMA (2 Ağu 2026 düzeltmesi — Tolga: "yetkili vs ayrımı bakmaksızın vermeli"):
+  // Eskiden `if (!!a.serbis !== !!b.serbis) return a.serbis ? -1 : 1;` EN BAŞTAYDI → SERBİS
+  // mesafenin ÖNÜNDE birincil anahtardı; 40 km'deki SERBİS servis, 800 m'deki yetkisiz
+  // servisin üstüne çıkıyordu ve ekran "yakın servis" gibi okunmuyordu.
+  // Yeni kural: BİRİNCİL ANAHTAR MESAFE. SERBİS yalnız EŞİT mesafede öne alır — burada
+  // "eşit" = kartta gösterilen değer (km.toFixed(1)), yani 0,1 km'lik aynı dilim; float
+  // eşitliği pratikte hiç tutmadığı için kıyas gösterilen hassasiyetten yapılır.
+  // Hiçbir servis LİSTEDEN ÇIKARILMAZ — yetkisiz servisler de listede, rozet sadece bilgi.
+  const kmDilim = (s) => (s.km == null ? null : Math.round(s.km * 10)); // 0,1 km = gösterilen hassasiyet
+  const serbisFarki = (a, b) => (!!a.serbis === !!b.serbis ? 0 : a.serbis ? -1 : 1);
   const gosterilenServisler = [..._liste].sort((a, b) => {
-    if (!!a.serbis !== !!b.serbis) return a.serbis ? -1 : 1; // SERBİS kayıtlı yetkili → EN ÜSTE
     if (siralama === "puan") {
       const pf = (b.puan || 0) - (a.puan || 0);
       if (pf !== 0) return pf;
-      if (a.km != null && b.km != null) return a.km - b.km;
+      if (a.km != null && b.km != null) {
+        if (a.km !== b.km) return a.km - b.km;
+        return serbisFarki(a, b);
+      }
       return a.km == null ? 1 : -1;
     }
+    // "mesafe" (varsayılan): km → (eşit dilimde) SERBİS → puan
     if (a.km != null && b.km != null) {
-      if (a.km !== b.km) return a.km - b.km;
+      const da = kmDilim(a), db = kmDilim(b);
+      if (da !== db) return da - db;
+      const sf = serbisFarki(a, b);
+      if (sf !== 0) return sf;
       return (b.puan || 0) - (a.puan || 0);
     }
-    if (a.km == null && b.km == null) return (b.puan || 0) - (a.puan || 0);
+    if (a.km == null && b.km == null) {
+      const sf = serbisFarki(a, b);
+      if (sf !== 0) return sf;
+      return (b.puan || 0) - (a.puan || 0);
+    }
     return a.km == null ? 1 : -1;
   });
 
@@ -572,7 +630,8 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
           </p>
         )}
 
-        {/* Başarılı ama (filtre sonrası) gösterilecek servis yok */}
+        {/* Başarılı ama (filtre sonrası) gösterilecek servis yok → ÇIKIŞ YOLU ver:
+            metnin altına ilçe seçiciyi de bas (eskiden yalnız metin vardı = çıkışsız ekran). */}
         {locationState === "success" && gosterilenServisler.length === 0 && (
           <div style={{ textAlign: "center", marginTop: 32 }}>
             <div style={{ fontSize: 36, marginBottom: 10 }}>📍</div>
@@ -580,8 +639,9 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
               Bu bölgede henüz listeli servis yok
             </p>
             <p style={{ color: "#64748B", fontSize: 12.5, lineHeight: 1.5 }}>
-              Yakındaki servisleri görmek için konum izni verin<br />veya farklı bir bölge seçin.
+              Yakındaki servisleri göremiyorsak başka bir bölge seçebilirsin.
             </p>
+            <FallbackIlce ilIlceMap={ilIlceMap} secili={fallbackIlce} onSec={ilceIleAra} />
           </div>
         )}
 
@@ -599,22 +659,7 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
           <FallbackIlce
             ilIlceMap={ilIlceMap}
             secili={fallbackIlce}
-            onSec={async (ilce, il) => {
-              if (!ilce) return;
-              setFallbackIlce(ilce);
-              setKonumIlce(ilce); // bölge bilgisi — seçilen ilçe kesin doğru
-              if (il) setKonumIl(il); // rapor için il (anonim log)
-              let liste = [];
-              try {
-                const r = await fetch(`/api/servis/yakin?cihaz=${encodeURIComponent(cihaz)}&ilce=${encodeURIComponent(ilce)}`);
-                const d = await r.json();
-                liste = d?.servisler || [];
-              } catch { liste = []; }
-              // Konum yok → puana göre sırala (yetkili sabitlenmez, rozet kalır)
-              const ilceListe = [...liste].sort((a, b) => (b.puan || 0) - (a.puan || 0));
-              setSiraliServisler(ilceListe.slice(0, 10));
-              setLocationState("success");
-            }}
+            onSec={ilceIleAra}
           />
         )}
       </div>
