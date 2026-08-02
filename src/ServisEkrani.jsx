@@ -516,7 +516,9 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
         >←</button>
         <div style={{ flex: 1 }}>
           <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 600 }}>
-            {marka ? `${marka} — ` : ""}{cihaz} Servisleri
+            {/* Cihaz seçilmeden de açılabiliyor (YK #32 ızgarasındaki "Yakın Servisler") →
+                boş cihazda başlık " Servisleri" diye çıkıyordu. Cihaz yoksa jenerik başlık. */}
+            {cihaz ? `${marka ? `${marka} — ` : ""}${cihaz} Servisleri` : "Yakın Servisler"}
           </span>
         </div>
         {/* Sağ üst: Benservis logosu — tıklayınca ana sayfa (koyu zemin varyantı) */}
