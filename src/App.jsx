@@ -583,7 +583,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                 YER DEĞİŞTİRDİ. Yeni sıra: Bilgi Merkezi · Tamir Merkezi · Kullanım Kılavuzları ·
                 Yakın Servisler. YALNIZ konum değişti — etiket, hedef ve ikon aynı kaldı.
                 ("Hakkımızda" ızgarada değil ama FOOTER'DA DURUYOR — güven sayfası kaybolmasın.)
-                Hedef /kilavuzlar/ şu an iskelet + noindex. */}
+                Hedef /kilavuzlar/ 2 Ağu'da DOLDU (YK #34 Faz 4): marka bazlı, HTTP 200
+                doğrulanmış resmî kılavuz linkleri; eşik aşıldığı için noindex kalktı. */}
             <a href="/kilavuzlar/" className="nav-kart" style={s.navKart}>
               {/* Dört ikonun EN ZAYIFI buydu: ince iki kısa çizgili defter, kutunun sağ-alt
                   çeyreği boş kalıyor ve Bilgi Merkezi'nin kapalı kitabıyla karışıyordu.

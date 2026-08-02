@@ -9,8 +9,10 @@
 //   · Statik olması: sıfır gecikme, dış bağımlılık yok, service worker/offline bozulmuyor,
 //     ve kullanıcının teşhis metni ÜÇÜNCÜ TARAFA HİÇ GİTMİYOR (KVKK açısından da temiz).
 //
-// Aşağıdaki 23 bağlantının HEPSİ elle doğrulandı: her biri jenerik (marka-bağımsız) —
+// Aşağıdaki dış (iFixit) bağlantıların HEPSİ elle doğrulandı: her biri jenerik (marka-bağımsız) —
 // çünkü kaynakta Arçelik'e ait tek rehber bile yok, markaya özel eşleştirme imkânsız.
+// Kendi Türkçe rehberlerimizde (B) durum farklı: BSH hata kodu rehberleri gibi markaya bağlı
+// olanlar başlıkta markayı açıkça yazar, anahtar kelimeleri de o koda dar tutulur.
 // Kapsam bilinçli olarak dar: yalnız gerçekten karşılığı olan 4 cihaz kümesi. Buzdolabı,
 // klima, kombi, TV vb. için jenerik rehber YOK → o cihazlarda buton hiç çıkmaz.
 //
@@ -69,7 +71,20 @@ export const REHBERLER = {
     { ara: ["koku", "küf", "kokuyor"],
       rehber: G("How+to+Remove+Mold+and+Odors+Inside+a+Washing+Machine/207574", "Küf ve kokuyu giderme", "Moderate", "1-2 sa", 8) },
   ],
+  // KENDİ REHBERLERİMİZ (2 Ağu 2026, YK Kararı #34 Faz 1) — blogda `steps:` alanı ZATEN olan
+  // üç Bosch/BSH yazısı rehber olarak bağlandı; sıfır yeni metin, URL değişmedi.
+  // ⚠️ ANAHTAR KELİMELER BİLEREK DAR: hata kodları (e15/e22/e24) + o koda özgü ifadeler.
+  // Jenerik bulaşık arızalarını ("tahliye", "su atmıyor", "temiz yıkamıyor") ÇALMAMALI —
+  // aksi hâlde kendi rehberimiz DAİMA öncelikli olduğu için doğru iFixit kaydını ezerdi.
+  // YK #31 denetimi geçti: üçü de ücretsiz/bakım seviyesi (su boşaltma, filtre temizliği,
+  // tahliye yolu kontrolü); hiçbirinde parça değişimi ya da cihaz söküm adımı yok.
   "Bulaşık Makinesi": [
+    { ara: ["e15", "aquastop", "taban tavası", "taşma güvenliği"],
+      rehber: B("bosch-bulasik-makinesi-e15-hatasi", "Bosch/Siemens E15: taban suyunu boşaltma", "Kolay-Orta", "~20 dakika", 6) },
+    { ara: ["e22", "iç filtre", "filtre tıkalı", "filtre tıkanık"],
+      rehber: B("bosch-bulasik-makinesi-e22-hatasi", "Bosch/Siemens E22: iç filtreyi temizleme", "Kolay", "~10 dakika", 7) },
+    { ara: ["e24", "tahliye tıkanık", "tıkalı tahliye", "tahliye hortumu"],
+      rehber: B("bosch-bulasik-makinesi-e24-hatasi", "Bosch/Siemens E24: tahliye yolunu açma", "Kolay-Orta", "~20 dakika", 7) },
     { ara: ["tahliye pompa", "tahliye", "su atmıyor", "boşaltmıyor"],
       rehber: G("How+To+Replace+The+Drain+Pump+In+Your+Dishwasher/181830", "Tahliye pompası değişimi", "Moderate", "20-35 dk", 8) },
     { ara: ["su giriş", "su almıyor", "giriş valf", "inlet"],
