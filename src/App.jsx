@@ -579,6 +579,21 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M14.6 6.4a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z" /></svg>
               <span style={s.navKartText}>Tamir Merkezi</span>
             </a>
+            {/* 3. buton (2 Ağu, Tolga talimatı): "Kullanım Kılavuzları" ile "Yakın Servisler"
+                YER DEĞİŞTİRDİ. Yeni sıra: Bilgi Merkezi · Tamir Merkezi · Kullanım Kılavuzları ·
+                Yakın Servisler. YALNIZ konum değişti — etiket, hedef ve ikon aynı kaldı.
+                ("Hakkımızda" ızgarada değil ama FOOTER'DA DURUYOR — güven sayfası kaybolmasın.)
+                Hedef /kilavuzlar/ şu an iskelet + noindex. */}
+            <a href="/kilavuzlar/" className="nav-kart" style={s.navKart}>
+              {/* Dört ikonun EN ZAYIFI buydu: ince iki kısa çizgili defter, kutunun sağ-alt
+                  çeyreği boş kalıyor ve Bilgi Merkezi'nin kapalı kitabıyla karışıyordu.
+                  AÇIK kitap ile değişti — kutuyu yatayda doldurur, kapalı kitaptan ilk bakışta
+                  ayrılır (dik dikdörtgen vs. yatay iki sayfa). */}
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 7.5v13" /><path d="M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" /></svg>
+              <span style={s.navKartText}>Kullanım Kılavuzları</span>
+            </a>
+            {/* 4. buton: Yakın Servisler — tek <button> (diğer üçü <a>), servis dizinini
+                teşhissiz açar. Izgaranın SONUNA taşındı; davranışı değişmedi. */}
             <button
               type="button"
               className="nav-kart"
@@ -588,17 +603,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
               <span style={s.navKartText}>Yakın Servisler</span>
             </button>
-            {/* 4. buton (YK #32, 2 Ağu — Tolga düzeltmesi): "Hakkımızda" YERİNE "Kullanım
-                Kılavuzları". Hakkımızda ızgaradan çıktı ama FOOTER'DA DURUYOR (aşağıda) —
-                güven sayfası kaybolmasın. Hedef /kilavuzlar/ şu an iskelet + noindex. */}
-            <a href="/kilavuzlar/" className="nav-kart" style={s.navKart}>
-              {/* Dört ikonun EN ZAYIFI buydu: ince iki kısa çizgili defter, kutunun sağ-alt
-                  çeyreği boş kalıyor ve Bilgi Merkezi'nin kapalı kitabıyla karışıyordu.
-                  AÇIK kitap ile değişti — kutuyu yatayda doldurur, kapalı kitaptan ilk bakışta
-                  ayrılır (dik dikdörtgen vs. yatay iki sayfa). */}
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 7.5v13" /><path d="M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" /></svg>
-              <span style={s.navKartText}>Kullanım Kılavuzları</span>
-            </a>
           </nav>
           <div style={{ position: "relative", zIndex: 1, marginTop: 26 }}>
             <div style={{ ...s.secHead, marginBottom: 12 }}>Sık sorulanlar</div>
