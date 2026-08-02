@@ -564,12 +564,19 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               "Yakın Servisler" yeni bir sayfa açmaz — mevcut servis dizini ekranını (ServisEkrani)
               teşhissiz açar; cihaz seçilmediyse API kategori filtresi uygulamaz (tüm dizin). */}
           <nav className="nav-izgara" style={{ position: "relative", zIndex: 1, marginTop: 26 }} aria-label="Site bölümleri">
+            {/* İKONLAR (2 Ağu düzeltmesi — Tolga: "Tamir Merkezi ikonu çirkin, ne olduğu belli değil"):
+                dördü de 21→26px, çizgi 1.7→1.8. Boyut tek başına değil TUTARLI büyütüldü;
+                ikon kutuyu köşeden köşeye doldursun diye viewBox 24 sabit kaldı. */}
             <a href="/blog/" className="nav-kart" style={s.navKart}>
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
               <span style={s.navKartText}>Bilgi Merkezi</span>
             </a>
             <a href="/tamir/" className="nav-kart" style={s.navKart}>
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 1-5.1 5.1l-5.1 5.1a1.8 1.8 0 0 0 2.5 2.5l5.1-5.1a4 4 0 0 1 5.1-5.1l-2.4 2.4-2-2 2-2Z" /></svg>
+              {/* İNGİLİZ ANAHTARI — eskisi 12x12'lik alana sıkışmış, jaw'ı kapalı, uzaktan
+                  "tamir" okunmayan bir çizgi yumağıydı. Yenisi kutuyu köşeden köşeye (2,22)→(22,2)
+                  kaplar: açık ağızlı anahtar başı + kalın sap. Tek büyük alet, çapraz ikili
+                  değil — 26px'te iki alet birbirine giriyor, tek anahtar net okunuyor. */}
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M14.6 6.4a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z" /></svg>
               <span style={s.navKartText}>Tamir Merkezi</span>
             </a>
             <button
@@ -578,14 +585,18 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               style={{ ...s.navKart, fontFamily: "inherit" }}
               onClick={() => { track("servis_click", { kaynak: "anasayfa_izgara" }); setShowServisler(true); }}
             >
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
               <span style={s.navKartText}>Yakın Servisler</span>
             </button>
             {/* 4. buton (YK #32, 2 Ağu — Tolga düzeltmesi): "Hakkımızda" YERİNE "Kullanım
                 Kılavuzları". Hakkımızda ızgaradan çıktı ama FOOTER'DA DURUYOR (aşağıda) —
                 güven sayfası kaybolmasın. Hedef /kilavuzlar/ şu an iskelet + noindex. */}
             <a href="/kilavuzlar/" className="nav-kart" style={s.navKart}>
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H18a1 1 0 0 1 1 1v14.5" /><path d="M4 4.5v14A2.5 2.5 0 0 0 6.5 21H19" /><line x1="8" y1="7.5" x2="15" y2="7.5" /><line x1="8" y1="11" x2="13" y2="11" /></svg>
+              {/* Dört ikonun EN ZAYIFI buydu: ince iki kısa çizgili defter, kutunun sağ-alt
+                  çeyreği boş kalıyor ve Bilgi Merkezi'nin kapalı kitabıyla karışıyordu.
+                  AÇIK kitap ile değişti — kutuyu yatayda doldurur, kapalı kitaptan ilk bakışta
+                  ayrılır (dik dikdörtgen vs. yatay iki sayfa). */}
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 7.5v13" /><path d="M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" /></svg>
               <span style={s.navKartText}>Kullanım Kılavuzları</span>
             </a>
           </nav>
@@ -808,7 +819,11 @@ const s = {
   trustItem: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: MUTED, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 999, padding: "6px 12px" },
   // Gezinme ızgarası kartı (YK #32) — dördü de birebir aynı kutu: eşit yükseklik (minHeight),
   // ortalanmış ikon + tek satır etiket. <a> ve <button> aynı stili paylaşır.
-  navKart: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 7, width: "100%", minHeight: 84, padding: "12px 6px", borderRadius: 14, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 13, fontWeight: 700, textDecoration: "none", textAlign: "center", border: "1.5px solid rgba(37,99,235,.22)", transition: "background .15s ease, border-color .15s ease, transform .15s ease", boxSizing: "border-box" },
+  // İkon 21→26 büyüdüğü için minHeight 84→92: iki satırlık etiket ("Kullanım Kılavuzları")
+  // 375px'te de kırpılmadan sığsın, dört kutu eşit yükseklikte kalsın.
+  navKart: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 7, width: "100%", minHeight: 92, padding: "12px 6px", borderRadius: 14, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 13, fontWeight: 700, textDecoration: "none", textAlign: "center", border: "1.5px solid rgba(37,99,235,.22)", transition: "background .15s ease, border-color .15s ease, transform .15s ease", boxSizing: "border-box" },
+  // flexShrink:0 — dar kutuda flex ikonu ezip ikonu bozmasın (26px sabit kalır).
+  navIkon: { flexShrink: 0 },
   navKartText: { fontSize: 12.5, fontWeight: 700, lineHeight: 1.25 },
   card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 16px 40px -28px rgba(30,41,59,.30)", animation: "anrise .4s ease both" },
   cardSplit: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 12px 28px -22px rgba(30,41,59,.22)", animation: "anrise .4s ease both" },
