@@ -425,7 +425,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✦</span> AI destekli</span>
           <span style={s.trustItem}><span style={{ color: "#F5A623" }}>★</span> Google puanlı servisler</span>
         </div>
-        <a href="/blog/" className="rehber-btn" style={s.rehberBtn}><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>Bilgi Merkezi →</a>
+        {/* NOT (YK Kararı #32, 2 Ağu 2026): buradaki satır içi "Bilgi Merkezi →" linki
+            SSS'nin üstündeki 4'lü buton ızgarasına TAŞINDI — mükerrer link bırakılmadı. */}
       </header>
 
       {(adim === "form" || adim === "hata") && (
@@ -555,10 +556,37 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      {/* Ana sayfa alt bölümü — yalnız form ekranında: sık sorulanlar (SSS) */}
+      {/* Ana sayfa alt bölümü — yalnız form ekranında: gezinme ızgarası + sık sorulanlar (SSS) */}
       {adim === "form" && (
         <>
-          <div style={{ position: "relative", zIndex: 1, marginTop: 24 }}>
+          {/* Gezinme ızgarası (YK Kararı #32, 2 Ağu 2026 — kalıcı): SSS'nin ÜSTÜNDE, dört buton
+              AYNI EBAT. Mobilde 2×2, ≥560px'te tek sıra 4'lü (CSS: .nav-izgara).
+              "Yakın Servisler" yeni bir sayfa açmaz — mevcut servis dizini ekranını (ServisEkrani)
+              teşhissiz açar; cihaz seçilmediyse API kategori filtresi uygulamaz (tüm dizin). */}
+          <nav className="nav-izgara" style={{ position: "relative", zIndex: 1, marginTop: 26 }} aria-label="Site bölümleri">
+            <a href="/blog/" className="nav-kart" style={s.navKart}>
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
+              <span style={s.navKartText}>Bilgi Merkezi</span>
+            </a>
+            <a href="/tamir/" className="nav-kart" style={s.navKart}>
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 1-5.1 5.1l-5.1 5.1a1.8 1.8 0 0 0 2.5 2.5l5.1-5.1a4 4 0 0 1 5.1-5.1l-2.4 2.4-2-2 2-2Z" /></svg>
+              <span style={s.navKartText}>Tamir Merkezi</span>
+            </a>
+            <button
+              type="button"
+              className="nav-kart"
+              style={{ ...s.navKart, fontFamily: "inherit" }}
+              onClick={() => { track("servis_click", { kaynak: "anasayfa_izgara" }); setShowServisler(true); }}
+            >
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
+              <span style={s.navKartText}>Yakın Servisler</span>
+            </button>
+            <a href="/blog/hakkimizda/" className="nav-kart" style={s.navKart}>
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><line x1="12" y1="11" x2="12" y2="16.5" /><circle cx="12" cy="7.8" r="0.9" fill="currentColor" stroke="none" /></svg>
+              <span style={s.navKartText}>Hakkımızda</span>
+            </a>
+          </nav>
+          <div style={{ position: "relative", zIndex: 1, marginTop: 26 }}>
             <div style={{ ...s.secHead, marginBottom: 12 }}>Sık sorulanlar</div>
             {SSS.map((q, i) => (
               <div key={i} style={{ background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" }}>
@@ -756,7 +784,11 @@ html, body { margin: 0; overflow-x: hidden; }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
 input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }
 button { cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; }
-.rehber-btn:hover { background: rgba(37,99,235,.13) !important; transform: translateY(-1px); }
+/* Ana sayfa gezinme ızgarası (YK #32): mobilde 2×2, geniş ekranda tek sıra 4'lü.
+   grid + 1fr → dört kart HER ZAMAN aynı ebatta; metin uzunluğu boyutu değiştirmez. */
+.nav-izgara { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 560px) { .nav-izgara { grid-template-columns: repeat(4, 1fr); } }
+.nav-kart:hover { background: rgba(37,99,235,.10) !important; border-color: rgba(37,99,235,.45) !important; transform: translateY(-1px); }
 .foot-social:hover { color: #2563EB !important; transform: translateY(-1px); }
 `;
 
@@ -771,7 +803,10 @@ const s = {
   trustBadge: { display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: AMBER },
   trustRow: { display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 8, marginTop: 14 },
   trustItem: { display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: MUTED, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 999, padding: "6px 12px" },
-  rehberBtn: { display: "inline-flex", alignItems: "center", gap: 7, marginTop: 16, padding: "10px 20px", borderRadius: 12, background: "rgba(37,99,235,.07)", color: AMBER, fontSize: 14, fontWeight: 700, textDecoration: "none", border: "1.5px solid rgba(37,99,235,.25)", transition: "background .15s ease, transform .15s ease" },
+  // Gezinme ızgarası kartı (YK #32) — dördü de birebir aynı kutu: eşit yükseklik (minHeight),
+  // ortalanmış ikon + tek satır etiket. <a> ve <button> aynı stili paylaşır.
+  navKart: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 7, width: "100%", minHeight: 84, padding: "12px 6px", borderRadius: 14, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 13, fontWeight: 700, textDecoration: "none", textAlign: "center", border: "1.5px solid rgba(37,99,235,.22)", transition: "background .15s ease, border-color .15s ease, transform .15s ease", boxSizing: "border-box" },
+  navKartText: { fontSize: 12.5, fontWeight: 700, lineHeight: 1.25 },
   card: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 20, padding: "26px 24px", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 16px 40px -28px rgba(30,41,59,.30)", animation: "anrise .4s ease both" },
   cardSplit: { position: "relative", zIndex: 1, background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 18, padding: 20, marginTop: 14, display: "flex", gap: 18, alignItems: "flex-start", boxShadow: "0 1px 2px rgba(30,41,59,.04), 0 12px 28px -22px rgba(30,41,59,.22)", animation: "anrise .4s ease both" },
   cardSoft: { position: "relative", zIndex: 1, background: "#F1F5F9", border: "1px dashed #CBD5E1", borderRadius: 18, padding: 20, marginTop: 14 },
