@@ -15,9 +15,22 @@
  *   - /assets/* (hash'li) → cache-first (dosya adı hash'li, içerik değişmez).
  *   - /api/servis/yakin  → stale-while-revalidate, TTL 24 saat (anonim servis dizini).
  *   - Diğer statikler    → cache-first.
+ *
+ * 2 AĞU 2026 — IT İNCELEMESİ (PWA adım 3/5, hüküm "ŞARTLI GEÇER") DÜZELTMELERİ:
+ *   1) /api/servis/yakin cache ANAHTARINDAN ham GPS çıkarıldı. Eskiden anahtar tam URL'di
+ *      (…?lat=41.0123456&lng=29.0123456) → koordinat cache'te düz metin duruyordu (kuralın
+ *      açık ihlali) VE koordinat her ölçümde değiştiği için anahtar hiç tutmuyordu, yani
+ *      offline liste de boş geliyordu. Tek düzeltme iki sorunu birden kapatıyor.
+ *   2) Token'lı ikinci el sayfaları (/ikinci-el/alici/…, /ikinci-el/satis/…) kara listeye alındı.
+ *   3) Gezinme cache'i BEYAZ LİSTEYE bağlandı: yalnız herkese açık içerik (ana sayfa + blog)
+ *      cache'lenir; kalan rotalar offline'da yalnız uygulama kabuğuna düşer.
  */
 
-const SURUM = "benservis-v1";
+// ⚠️ SÜRÜM v1 → v2 (2 Ağu 2026): sürüm adı değişince activate() eski cache'leri SİLER.
+// Bu, düzeltmenin geriye dönük ayağıdır — daha önce kurulmuş cihazlarda diske yazılmış
+// ham GPS'li anahtarlar ve token'lı sayfalar ilk açılışta temizlenir. Sürüm bumb'ı olmadan
+// kod düzelir ama eski cihazdaki veri yerinde kalırdı.
+const SURUM = "benservis-v2";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;
@@ -48,6 +61,11 @@ const ASLA_CACHE = [
   "/tarife",
   "/panel",
   "/ikinci-el/admin",
+  // Token'lı ikinci el sayfaları (IT incelemesi, 2 Ağu 2026): URL'in kendisi paylaşılan
+  // gizli anahtar (/ikinci-el/alici/:token · /ikinci-el/satis/:token) → cache anahtarında
+  // duramaz; sayfanın kendisi de kişiye özel işlem ekranı.
+  "/ikinci-el/alici",
+  "/ikinci-el/satis",
   "/takip/",
   "/dpp/",
   "/_vercel/", // analitik/insights — cache'lenirse bayat script kalır, ölçüm bozulur
@@ -55,6 +73,13 @@ const ASLA_CACHE = [
 
 const yasakli = (url) =>
   ASLA_CACHE.some((p) => url.pathname === p || url.pathname.startsWith(p + "/") || url.pathname.startsWith(p));
+
+// ✅ GEZİNME BEYAZ LİSTESİ (IT incelemesi, 2 Ağu 2026). Kara liste "neyi saklama"yı sayar;
+// beyaz liste "yalnız şunu sakla" der → ileride eklenecek kişiye özel rotalar cache'e
+// KENDİLİĞİNDEN giremez. Kapsam: ana sayfa (uygulama kabuğu) + statik blog sayfaları.
+// Diğer tüm rotalar (SPA rewrite'ları) zaten aynı kabuğu döndürüyor; offline'da "/" kabuğuna
+// düşerler, yani kullanıcı deneyimi kaybı yok.
+const gezinmeCachelenir = (url) => url.pathname === "/" || url.pathname === "/blog" || url.pathname.startsWith("/blog/");
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
@@ -80,9 +105,25 @@ self.addEventListener("message", (e) => {
   if (e.data === "SKIP_WAITING") self.skipWaiting();
 });
 
-async function servisDiziniSWR(request) {
+// Cache ANAHTARI — ham koordinat İÇERMEZ (IT incelemesi, 2 Ağu 2026).
+// Konumlu istekler tek bir "kaynak=konum" anahtarında toplanır: cihaz başına "en son görülen
+// yakın servis listesi". Ağa giden istek DEĞİŞMEZ (gerçek lat/lng sunucuya gider, sıralama
+// doğru kalır) — yalnız diske yazılan anahtar sadeleşir.
+// İlçe, kullanıcının kendi seçtiği idari birimdir (ilçe düzeyi = yüz binlerce kişi), koordinat
+// değildir; offline'da doğru listeyi verebilmek için anahtarda kalır.
+function dizinAnahtari(url) {
+  const anahtar = new URL("/api/servis/yakin", self.location.origin);
+  const cihaz = url.searchParams.get("cihaz");
+  const ilce = url.searchParams.get("ilce");
+  if (cihaz) anahtar.searchParams.set("cihaz", cihaz);
+  if (url.searchParams.has("lat") && url.searchParams.has("lng")) anahtar.searchParams.set("kaynak", "konum");
+  else if (ilce) anahtar.searchParams.set("ilce", ilce);
+  return new Request(anahtar.toString());
+}
+
+async function servisDiziniSWR(request, anahtar) {
   const cache = await caches.open(DIZIN_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(anahtar);
   const yas = cached ? Date.now() - Number(cached.headers.get("x-benservis-cached-at") || 0) : Infinity;
 
   const agdanAl = fetch(request)
@@ -95,7 +136,7 @@ async function servisDiziniSWR(request) {
         const govde = await res.clone().blob();
         const h = new Headers(res.headers);
         h.set("x-benservis-cached-at", String(Date.now()));
-        await cache.put(request, new Response(govde, { status: res.status, statusText: res.statusText, headers: h }));
+        await cache.put(anahtar, new Response(govde, { status: res.status, statusText: res.statusText, headers: h }));
       }
       return res;
     })
@@ -115,10 +156,10 @@ async function servisDiziniSWR(request) {
   );
 }
 
-async function gezinme(request) {
+async function gezinme(request, cachelenir) {
   try {
     const res = await fetch(request);
-    if (res && res.ok) {
+    if (res && res.ok && cachelenir) {
       const cache = await caches.open(KABUK_CACHE);
       cache.put(request, res.clone());
     }
@@ -156,17 +197,20 @@ self.addEventListener("fetch", (e) => {
   if (yasakli(url)) return;
 
   // 4) Anonim servis dizini → SWR (uçak modunda son liste gelir).
+  //    İsim araması (?q=) servis panelinin kurulum ekranına ait, kullanıcı girdisidir →
+  //    cache'lenmez, SW hiç karışmaz.
   if (url.pathname === "/api/servis/yakin") {
-    e.respondWith(servisDiziniSWR(request));
+    if (url.searchParams.has("q")) return;
+    e.respondWith(servisDiziniSWR(request, dizinAnahtari(url)));
     return;
   }
 
   // 5) Diğer tüm API'ler cache'lenmez (bilinmeyen uç = güvenli taraf).
   if (url.pathname.startsWith("/api/")) return;
 
-  // 6) Sayfa gezinmeleri (ana sayfa + blog) → network-first.
+  // 6) Sayfa gezinmeleri → network-first; cache'e yalnız beyaz listedekiler yazılır.
   if (request.mode === "navigate") {
-    e.respondWith(gezinme(request));
+    e.respondWith(gezinme(request, gezinmeCachelenir(url)));
     return;
   }
 
