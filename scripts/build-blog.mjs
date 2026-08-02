@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { marked } from "marked";
 import * as T from "../src/theme.js";
+import { REHBERLER } from "../src/onarim-rehberleri.js";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -126,6 +127,8 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .card .cat{color:${T.BLUE};font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .card h2{font-family:'Fraunces',serif;font-weight:600;font-size:20px;margin:5px 0 5px}
 .card p{margin:0;color:${T.MUTED};font-size:14.5px}
+/* /tamir/ kart alt satırı (zorluk · süre · adım) — kullanıcı tıklamadan işin boyutunu görsün. */
+.tamir-meta{display:block;margin-top:8px;color:${T.FAINT};font-size:12.5px;font-weight:600}
 .bloghead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 8px}
 .bloghead h1{margin:0}
 .blogsearch{flex:1 1 220px;max-width:360px;margin:0;padding:12px 15px;border:1px solid ${T.HAIR};border-radius:12px;font-size:15px;font-family:'Hanken Grotesk',system-ui,sans-serif;color:${T.NAVY};background:${T.SURFACE};outline:none}
@@ -323,6 +326,52 @@ fs.writeFileSync(
   })
 );
 
+// ───────────────────────────────────────────────────────────────────────────────
+// /tamir/ — TAMİR MERKEZİ (YK Kararı #32, 2 Ağu 2026)
+//
+// Kendi Türkçe onarım rehberlerimizin derleme/indeks sayfası. ⛔ Hiçbir URL taşınmıyor:
+// rehberler `/blog/<slug>/` adresinde kalır, bu sayfa yalnız onları toplar ve linkler
+// (73 blog sayfası aramada gösterim alıyor — kırılma riski alınmaz).
+//
+// TEK KAYNAK: liste `src/onarim-rehberleri.js`'ten okunur (`kendi: true` kayıtlar) — teşhis
+// ekranındaki rehber butonu da aynı dosyadan besleniyor. Yeni Türkçe rehber oraya eklendiğinde
+// bu sayfaya KENDİLİĞİNDEN düşer, ayrıca elle liste tutulmaz.
+//
+// KAPSAM SINIRI (YK #31): yalnız ücretsiz/bakım seviyesi işler (temizlik, filtre, kontrol,
+// ayar). Parça değişimi ve söküm rehberi YAZILMAZ — kullanıcı servise gider.
+const kendiRehberler = [];
+for (const [cihaz, kayitlar] of Object.entries(REHBERLER)) {
+  for (const k of kayitlar) {
+    if (!k.rehber?.kendi) continue;
+    if (kendiRehberler.some((r) => r.url === k.rehber.url)) continue; // aynı rehber iki arızaya bağlıysa bir kez
+    const slug = k.rehber.url.replace(/^\/blog\/|\/$/g, "");
+    const post = posts.find((p) => p.slug === slug);
+    kendiRehberler.push({ ...k.rehber, cihaz, slug, post });
+  }
+}
+const eksikRehber = kendiRehberler.filter((r) => !r.post);
+if (eksikRehber.length) {
+  // Sessizce boş kart basmak yerine bağır: kayıt var ama blog yazısı yok = kırık link.
+  console.error(`[build-blog] ⛔ /tamir/: ${eksikRehber.length} rehberin blog yazısı YOK → ${eksikRehber.map((r) => r.slug).join(", ")}`);
+  process.exit(1);
+}
+const tamirKartlari = kendiRehberler
+  .map(
+    (r) =>
+      `<a class="card" href="${r.url}"><div class="card-ic">${iconSvg(r.post.category, "")}</div><div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`
+  )
+  .join("");
+fs.mkdirSync(path.join(DIST, "tamir"), { recursive: true });
+fs.writeFileSync(
+  path.join(DIST, "tamir", "index.html"),
+  page({
+    title: "Tamir Merkezi — kendin yapabileceğin bakım ve onarım rehberleri",
+    desc: "Servis çağırmadan önce deneyebileceğin ücretsiz bakım adımları: filtre temizliği, kontroller ve ayarlar. Türkçe, adım adım.",
+    canonical: `${SITE}/tamir/`,
+    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Servisi çağırmadan önce dene — çoğu arıza basit bir bakımla düzeliyor.</p><blockquote><p><strong>Buradaki rehberler ücretsiz bakım seviyesindedir:</strong> temizlik, filtre, kontrol ve ayar. Parça değişimi ya da cihazı sökmek gereken işleri bilerek anlatmıyoruz — o işler ölçüm, yetki ve garanti sorumluluğu ister; onlarda doğru adım servisi çağırmaktır.</p></blockquote><div class="bloglist">${tamirKartlari}</div><a class="cta" href="/"><h3>🔧 Rehber sorunu çözmediyse</h3><p>Cihazını ve belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`,
+  })
+);
+
 // lastmod = frontmatter `updated` varsa onu, yoksa `date`'i kullan (Vercel checkout dosya
 // mtime'ını sıfırladığı için frontmatter sabit/güvenilir kaynaktır). Date objesi gelirse ISO'ya çevir.
 const isoDate = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d).slice(0, 10));
@@ -331,6 +380,7 @@ const newest = posts.map(postLastmod).filter(Boolean).sort().reverse()[0];
 const urlEntries = [
   { loc: `${SITE}/`, lastmod: newest },
   { loc: `${SITE}/blog/`, lastmod: newest },
+  { loc: `${SITE}/tamir/`, lastmod: newest },
   { loc: `${SITE}/ikinci-el`, lastmod: newest },
   ...posts.map((p) => ({ loc: `${SITE}/blog/${p.slug}/`, lastmod: postLastmod(p) })),
 ];
