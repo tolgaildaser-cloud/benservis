@@ -10,6 +10,20 @@ import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
 
+// YK #35 ŞART 2 — HUNİYİ UÇTAN UCA BAĞLA. `/tamir/` sayfalarındaki "servis çağır"
+// bağlantıları `?kaynak=tamir-<cihaz>` taşır ve orada `servis_cagir` olayı düşer; burada aynı
+// etiket uygulamadaki teşhis/servis olaylarına `gelis` alanı olarak eklenir. Böylece
+// "hata kodu sayfasından gelen kullanıcı gerçekten servis çağırdı mı" ölçülebilir hâle gelir
+// (kurulun `rehber_click` ölü sayacı itirazının karşılığı).
+// ⛔ Serbest metin ALINMAZ: yalnız [a-z0-9-] ve en fazla 32 karakter — analitiğe çöp ya da
+// kişisel veri sızmasın; desene uymayan değer sessizce atılır.
+const GELIS = (() => {
+  try {
+    const v = new URLSearchParams(window.location.search).get("kaynak") || "";
+    return /^[a-z0-9-]{1,32}$/.test(v) ? v : "";
+  } catch { return ""; }
+})();
+
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 // Cihaza özel hızlı belirti butonları (sürtünmeyi azaltır)
@@ -221,7 +235,7 @@ export default function App() {
     }
     setHataMsg("");
     setAdim("loading");
-    track("diagnose_start", { cihaz, marka }); // funnel: kullanıcı teşhis istedi
+    track("diagnose_start", { cihaz, marka, gelis: GELIS }); // funnel: kullanıcı teşhis istedi
 
     const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
 
@@ -599,7 +613,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               type="button"
               className="nav-kart"
               style={{ ...s.navKart, fontFamily: "inherit" }}
-              onClick={() => { track("servis_click", { kaynak: "anasayfa_izgara" }); setShowServisler(true); }}
+              onClick={() => { track("servis_click", { kaynak: "anasayfa_izgara", gelis: GELIS }); setShowServisler(true); }}
             >
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
               <span style={s.navKartText}>Yakın Servisler</span>
@@ -729,7 +743,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                     href={r.url}
                     {...(r.kendi ? {} : { target: "_blank", rel: "noopener noreferrer nofollow" })}
                     style={{ ...s.faz2Btn, opacity: 1, display: "inline-block", textDecoration: "none", textAlign: "center" }}
-                    onClick={() => track("rehber_click", { cihaz, rehber: r.baslik, kaynak: r.kendi ? "benservis" : "ifixit" })}
+                    onClick={() => track("rehber_click", { cihaz, rehber: r.baslik, kaynak: r.kendi ? "benservis" : "ifixit", gelis: GELIS })}
                   >
                     🔧 Rehberi Aç
                   </a>
@@ -745,7 +759,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => { track("servis_click", { cihaz, marka }); setShowServisler(true); }}>
+              <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => { track("servis_click", { cihaz, marka, gelis: GELIS }); setShowServisler(true); }}>
                 📍 Servis Bul
               </button>
             </div>
