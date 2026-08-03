@@ -18,6 +18,7 @@
     { "source": "/servis-kayit",                  "destination": "/index.html" },
     { "source": "/servis-admin",                  "destination": "/index.html" },
     { "source": "/admin",                         "destination": "/index.html" },
+    { "source": "/tarife",                        "destination": "/index.html" },
     { "source": "/servis/:id",                    "destination": "/index.html" },
     { "source": "/urun/:id",                      "destination": "/index.html" },
     { "source": "/sepet",                         "destination": "/index.html" }
