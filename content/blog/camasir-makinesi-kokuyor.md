@@ -61,17 +61,17 @@ Temiz yıkadığın çamaşırlar makineden **rutubet, küf ya da lağım gibi**
 
 Güvenli ve çoğu zaman ücretsiz:
 
-**1. Tamburu boşalt;** içinde çamaşır kalmasın.
+**1. Tamburu boşalt; içinde çamaşır kalmasın.**
 
-**2. Kapı contasının kıvrımlarını aç ve nemli bezle sil;** saç, tüy ve kalıntıyı temizle.
+**2. Kapı contasının kıvrımlarını aç ve nemli bezle sil; saç, tüy ve kalıntıyı temizle.**
 
-**3. Deterjan çekmecesini çıkar,** ılık suda yıka, yuvasını da sil ve kurut.
+**3. Deterjan çekmecesini çıkar, ılık suda yıka, yuvasını da sil ve kurut.**
 
-**4. Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar,** temizle, sonuna kadar geri tak. Bu adımın ayrıntısı ayrı rehberimizde: [tahliye filtresi nasıl temizlenir](/blog/camasir-makinesi-tahliye-filtresi-temizleme/).
+**4. Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar, temizle, sonuna kadar geri tak.** Bu adımın ayrıntısı ayrı rehberimizde: [tahliye filtresi nasıl temizlenir](/blog/camasir-makinesi-tahliye-filtresi-temizleme/).
 
-**5. Tambura 1-2 bardak beyaz sirke ekle** ve makineyi boş, 60-90 derece bir programda çalıştır.
+**5. Tambura 1-2 bardak beyaz sirke ekle ve makineyi boş, 60-90 derece bir programda çalıştır.**
 
-**6. Program bitince contayı ve kapak çevresini kurula,** kapağı açık bırak.
+**6. Program bitince contayı ve kapak çevresini kurula, kapağı açık bırak.**
 
 ## Ne zaman servis çağırmalısın?
 

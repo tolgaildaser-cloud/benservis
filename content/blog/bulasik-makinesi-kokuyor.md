@@ -63,19 +63,19 @@ Bulaşık makineni açtığında **rutubet, çürük ya da lağım gibi** bir ko
 
 Güvenli ve çoğu zaman ücretsiz:
 
-**1. Makineyi kapat ve boşalt;** içinde bulaşık kalmasın.
+**1. Makineyi kapat ve boşalt; içinde bulaşık kalmasın.**
 
-**2. Taban filtresini çevirip çıkar,** altındaki süzgeci de al.
+**2. Taban filtresini çevirip çıkar, altındaki süzgeci de al.**
 
-**3. Filtreyi ve süzgeci akan suyun altında sünger yardımıyla temizle,** yemek artıklarını at.
+**3. Filtreyi ve süzgeci akan suyun altında sünger yardımıyla temizle, yemek artıklarını at.**
 
-**4. Filtre yuvasını ve tabandaki durgun suyu bezle sil,** sonra parçaları yerine tak.
+**4. Filtre yuvasını ve tabandaki durgun suyu bezle sil, sonra parçaları yerine tak.**
 
-**5. Kapı contasının kıvrımlarını nemli bezle sil** — kalıntı orada birikir.
+**5. Kapı contasının kıvrımlarını nemli bezle sil — kalıntı orada birikir.**
 
-**6. Hazneye 1-2 bardak beyaz sirke koy** ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır.
+**6. Hazneye 1-2 bardak beyaz sirke koy ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır.**
 
-**7. Program bittikten sonra kapağı aralık bırak;** nem çıkmadan koku geri gelir.
+**7. Program bittikten sonra kapağı aralık bırak; nem çıkmadan koku geri gelir.**
 
 ## Ne zaman servis çağırmalısın?
 
