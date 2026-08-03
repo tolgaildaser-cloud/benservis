@@ -8,7 +8,14 @@ import fs from "node:fs";
 import supabase from "../api/_supabase.js";
 import { onerTarife } from "../api/_tarife-hesap.js";
 
-const KAYNAKLAR = JSON.parse(fs.readFileSync(new URL("./kaynaklar.json", import.meta.url)));
+// Kaynak listesi. Varsayılan: kaynaklar.json (kanonik kayıt defteri — TÜM bilinen URL'ler).
+// TARIFE_KAYNAK_DOSYA ile kısmi liste verilebilir: `tarife_veri`'de zaten olan host'ları
+// tekrar çekmeden yalnız YENİ kaynakları toplamak için (mükerrer nokta `veri_noktasi_sayisi`yi
+// şişirip `guven` seviyesini olduğundan iyi gösterir — 3 Ağu 2026, IT).
+const KAYNAK_DOSYA = process.env.TARIFE_KAYNAK_DOSYA
+  ? new URL(process.env.TARIFE_KAYNAK_DOSYA, `file://${process.cwd()}/`)
+  : new URL("./kaynaklar.json", import.meta.url);
+const KAYNAKLAR = JSON.parse(fs.readFileSync(KAYNAK_DOSYA));
 const OPENAI = process.env.OPENAI_API_KEY;
 const MODEL = process.env.TARIFE_EXTRACT_MODEL || "gpt-4o-mini";
 const DRY = process.argv.includes("--dry");
@@ -51,7 +58,9 @@ METİN: ${metin}`;
 }
 
 const hedef = process.argv.find((a, i) => i >= 2 && !a.startsWith("--"));
-const cihazlar = hedef ? [hedef] : Object.keys(KAYNAKLAR);
+// "_" ile başlayan anahtarlar CİHAZ DEĞİL, meta/dokümantasyon bloğudur (ör. _kurallar:
+// kara liste, UA reddi olan siteler, tek-host kümeleri). Toplamada atlanır.
+const cihazlar = (hedef ? [hedef] : Object.keys(KAYNAKLAR)).filter((c) => !c.startsWith("_"));
 let toplam = 0;
 for (const cihaz of cihazlar) {
   for (const [ariza, urller] of Object.entries(KAYNAKLAR[cihaz] || {})) {
