@@ -14,6 +14,8 @@ import { CIHAZLAR } from "../src/constants.js";
 // /kilavuzlar/ verisi de TEK KAYNAKTAN gelir (YK #34): marka→resmî kılavuz adresi
 // `src/kullanim-kilavuzlari.js`'te, cihaz→marka eşleşmesi `CIHAZ_MARKALARI`'nda. Burada liste tutulmaz.
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
+// ① HATA KODU / BELİRTİ KATMANI (YK #35, 3 Ağu) — kayıtlar tek kaynakta, burada liste tutulmaz.
+import { hataKoduKayitlari, TIP_BASLIK, TIP_ETIKET, HATA_KODU_SIRA } from "../src/hata-kodlari.js";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -151,6 +153,14 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .card p{margin:0;color:${T.MUTED};font-size:14.5px}
 /* /tamir/ kart alt satırı (zorluk · süre · adım · dil) — kullanıcı tıklamadan işin boyutunu görsün. */
 .tamir-meta{display:block;margin-top:8px;color:${T.FAINT};font-size:12.5px;font-weight:600}
+/* ① HATA KODU KATMANI (YK #35) — AYRI BİLEŞEN AÇILMADI: satırlar aynı .card ızgarasını
+   kullanır (YK #32: ortak kalıptan bas). Tek fark, kendi rehberimiz olmayan ve doğrudan
+   servis yoluna çıkan kartın nötr ikon kutusu — kullanıcı tıklamadan nereye gittiğini görsün. */
+.card.servis .card-ic{background:#F1F5F9;color:${T.MUTED}}
+.katbaslik{font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0}
+/* Yazı sayfasındaki ① katman geri-linki (YK #35 pilot): başlığın hemen altında, metnin
+   akışını kesmeyen tek satır. */
+.tamir-geri{margin:0 0 22px;padding:11px 14px;border-left:3px solid ${T.BLUE};background:#EFF4FF;border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.55;color:${T.NAVY}}
 /* /tamir/ hub — cihaz kategorisi ızgarası (YK #32 format kararı, ① katman).
    Rehberi OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok). */
 .katlar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 8px}
@@ -336,6 +346,20 @@ function adimGorselleriEkle(p) {
   });
 }
 
+// ── PİLOT GİRİŞ NOKTASI (YK #35): en çok gösterim alan sayfalar ① katmanın kapısı olsun ──
+// Yazı ① katmana bağlıysa, yazının kendi sayfasına da o cihazın hata kodu/belirti listesine
+// giden bir satır basılır. ⛔ Yazının METNİNE dokunulmaz (PAZ'ın işi) — bu satır şablon
+// katmanında, mevcut CTA/PWA blokları gibi eklenir. URL'ler değişmez.
+const TAMIR_GERI = new Map();
+for (const ad of CIHAZLAR) {
+  for (const g of hataKoduKayitlari(ad)) if (g.yazi) TAMIR_GERI.set(g.yazi, { ad, slug: slugify(ad) });
+}
+const tamirGeriSatiri = (p) => {
+  const k = TAMIR_GERI.get(p.slug);
+  if (!k) return "";
+  return `<p class="tamir-geri">🔧 Bu sayfa <a href="/tamir/${k.slug}/">${esc(k.ad)} hata kodu ve belirti listesinin</a> bir parçası — aynı cihazda başka bir kod ya da belirti arıyorsan oradan devam edebilirsin.</p>`;
+};
+
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
   const ld = {
@@ -379,7 +403,7 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${adimGorselleriEkle(p)}${CTA}${PWA_NOT}</article>`;
+  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${adimGorselleriEkle(p)}${CTA}${PWA_NOT}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: `${p.title} | Benservis`, desc: p.description, canonical, head, body }));
@@ -440,13 +464,15 @@ const katIkon = (k) => {
  * İçeriği OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok).
  * ⛔ "yakında" YAZILMAZ (YK #32): boşluk gerçek ve kalıcı olabilir; söz vermek yerine ne
  * olduğu açıkça yazılır + kullanıcı teşhis/servis CTA'sına yönlendirilir.
- * @param items [{ ad, slug, sayi, url, bosRozet, bosNot }]
+ * `birim` merkez başına tek kelimedir ("yazı" / "kılavuz"); kart kendi `birim`ini verirse o
+ * kazanır — /tamir/ hub'ında kartın içeriği rehber de olabilir hata kodu da (YK #35).
+ * @param items [{ ad, slug, sayi, url, birim?, bosRozet, bosNot }]
  */
 const katIzgarasi = (items, birim) =>
   items
     .map((k) =>
       k.sayi
-        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${birim}</span></a>`
+        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${esc(k.birim || birim)}</span></a>`
         : `<div class="katkart yok"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span><p class="kat-not">${esc(k.bosNot)}</p></div>`
     )
     .join("");
@@ -671,10 +697,44 @@ if (eksikRehber.length) {
 // ORTAK KATMAN'da — üç merkez aynı listeyi, aynı slug mantığını ve aynı GRF ikonlarını
 // paylaşır. Burada ikinci bir kopya TUTULMAZ.
 
-const TAMIR_CTA = `<a class="cta" href="/"><h3>🔧 Rehber sorunu çözmediyse</h3><p>Cihazını ve belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+// ═══ ⛔ ŞART 2 (YK #35, bağlayıcı): "SERVİS ÇAĞIR" ÇAĞRISI ÖLÇÜLEBİLİR ═══════════════════
+// `rehber_click` gibi tek başına yorumlanamayan bir sayaç istenmedi: her servis çağrısı
+// GERÇEK bir olay olarak (`servis_cagir`) ve KAYNAK AYRIMLI düşer.
+//   kaynak → hangi sayfa   (tamir-hub | tamir-<cihaz-slug>)
+//   katman → hangi blok    (satir = hata kodu/belirti satırı · cta = sayfa sonu çağrısı ·
+//                           bos-kategori = içeriğimiz olmayan cihaz kartının altı)
+//   giris  → satırdan geldiyse hangi kod/belirti (ör. "E24") — hangi girişin servise
+//            döndüğü ölçülebilsin diye; Rıza'nın "satın alma öncesi merak" tezinin testi bu.
+// Ayrıca hedef adrese `?kaynak=` eklenir: uygulamadaki `servis_click`/`diagnose_start`
+// olayları da `gelis` alanıyla aynı kaynağı taşır (src/App.jsx) → huni uçtan uca bağlanır.
+// Olay yolu: `window.va` kuyruğu sayfa şablonunda zaten tanımlı (Vercel Analytics).
+const cagirHref = (kaynak) => `/?kaynak=${encodeURIComponent(kaynak)}`;
+const CAGIR_JS = (kaynak) => `<script>(function(){var K=${JSON.stringify(kaynak)};
+document.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;var el=t.closest("[data-cagir]");if(!el)return;
+try{window.va&&window.va("event",{name:"servis_cagir",data:{kaynak:K,katman:el.getAttribute("data-cagir"),giris:el.getAttribute("data-giris")||""}});}catch(_){}},true);})();</script>`;
 
-// Rehber kartı — kullanıcı tıklamadan işin boyutunu görsün (zorluk · süre · adım · dil).
-// GRF kapak görseli varsa (public/tamir-gorsel/<slug>/kapak.png) ikon yerine o basılır.
+// ⛔ ŞART 1 (YK #35, bağlayıcı): /tamir/ altında HİÇBİR YERDE fiyat geçmez — "yakında" da yok.
+// Gözle kontrol edilmez, build denetler: üretilen HTML'in tamamı (görünen metin + meta +
+// JSON-LD + link adresleri) taranır, eşleşme varsa build DURUR.
+// `ücretsiz` serbesttir (fiyat değil, fiyatın yokluğudur) — desende `ücret(?!siz)` ile ayrıldı.
+const FIYAT_DESENI = /(₺|\bTL\b|\blira\b|fiyat|ücret(?!siz)|maliyet|bedel|\bpara\b|tarife)/i;
+function fiyatDenetimi(dosyalar) {
+  const ihlal = [];
+  for (const f of dosyalar) {
+    const m = fs.readFileSync(f, "utf8").match(FIYAT_DESENI);
+    if (m) ihlal.push(`${path.relative(DIST, f)} → "${m[0]}"`);
+  }
+  if (ihlal.length) {
+    console.error(`[build-blog] ⛔ YK #35 ŞART 1 İHLALİ — /tamir/ altında fiyat ifadesi:\n  ${ihlal.join("\n  ")}`);
+    process.exit(1);
+  }
+  console.log(`[build-blog] ✓ YK #35 şart 1: ${dosyalar.length} /tamir/ sayfasında fiyat ifadesi YOK.`);
+}
+
+const TAMIR_CTA = (kaynak) =>
+  `<a class="cta" href="${cagirHref(kaynak)}" data-cagir="cta"><h3>🔧 Kendin çözemiyorsan</h3><p>Cihazını ve belirtini yaz; olası arızayı saniyede öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+
+// Kapak görseli (GRF, public/tamir-gorsel/<slug>/kapak.png) varsa ikon yerine o basılır.
 const rehberGorsel = (r) => {
   const alt = r.post.images?.coverAlt;
   if (alt && fs.existsSync(path.join(ROOT, "public", "tamir-gorsel", r.slug, "kapak.png"))) {
@@ -682,29 +742,77 @@ const rehberGorsel = (r) => {
   }
   return `<div class="card-ic">${iconSvg(r.post.category, "")}</div>`;
 };
-const rehberKarti = (r) =>
-  `<a class="card" href="${r.url}">${rehberGorsel(r)}<div class="card-body"><span class="cat">${esc(r.cihaz)}</span><h2>${esc(r.baslik)}</h2><p>${esc(r.post.description)}</p><span class="tamir-meta">${esc(r.zorluk)} · ${esc(r.sure)} · ${r.adim} adım · Türkçe</span></div></a>`;
 
-// ② KATEGORİ SAYFALARI — yalnız rehberi OLAN kategori için basılır.
-// Boş kategoriye ayrı sayfa açılmıyor: 5 boş sayfa "thin content" olur ve indeks kalitesini
-// düşürür. Boşluk hub kartında dürüstçe yazılı (aşağıda), kullanıcı bilgisiz kalmıyor.
-const katVeri = KATEGORILER.map((k) => ({
-  ...k,
-  rehberler: kendiRehberler.filter((r) => r.cihaz === k.kaynak),
-}));
+// ── ① KATMAN VERİSİ + GUARD'LAR ───────────────────────────────────────────────
+// Kayıtlar `src/hata-kodlari.js`'te; burada yalnız blog yazısıyla ve rehber kaydıyla eşlenir.
+const rehberSlugu = new Map(kendiRehberler.map((r) => [r.slug, r]));
+const katVeri = KATEGORILER.map((k) => {
+  const kayitlar = hataKoduKayitlari(k.kaynak).map((g) => ({
+    ...g,
+    post: g.yazi ? posts.find((p) => p.slug === g.yazi) : null,
+    rehberMeta: g.rehber ? rehberSlugu.get(g.yazi) : null,
+  }));
+  return { ...k, kayitlar, rehberler: kendiRehberler.filter((r) => r.cihaz === k.kaynak) };
+});
+const tumKayitlar = katVeri.flatMap((k) => k.kayitlar.map((g) => ({ ...g, cihaz: k.ad, katSlug: k.slug })));
+// (a) Kayıt bir yazıya bağlıysa o yazı GERÇEKTEN olmalı — yoksa kırık link basardık.
+const kayipYazi = tumKayitlar.filter((g) => g.yazi && !g.post);
+if (kayipYazi.length) {
+  console.error(`[build-blog] ⛔ /tamir/ ① katman: blog yazısı YOK → ${kayipYazi.map((g) => g.yazi).join(", ")}`);
+  process.exit(1);
+}
+// (b) `rehber: true` işaretli kayıt, onarim-rehberleri.js'te `kendi: true` olarak KAYITLI olmalı.
+const kayipRehber = tumKayitlar.filter((g) => g.rehber && !g.rehberMeta);
+if (kayipRehber.length) {
+  console.error(`[build-blog] ⛔ /tamir/ ① katman: rehber kaydı yok → ${kayipRehber.map((g) => g.yazi).join(", ")}`);
+  process.exit(1);
+}
+// (c) ② KENDİN-ÇÖZ BAĞLAMA DENETİMİ (YK #35): canlı 5 rehberin HEPSİ bir giriş satırından
+//     erişilebilir olmalı; biri katmana bağlanmadıysa kullanıcı ona hiç ulaşamaz.
+const baglanmayanRehber = kendiRehberler.filter((r) => !tumKayitlar.some((g) => g.rehber && g.yazi === r.slug));
+if (baglanmayanRehber.length) {
+  console.error(`[build-blog] ⛔ /tamir/ ② katman: rehber hiçbir girişe bağlı değil → ${baglanmayanRehber.map((r) => r.slug).join(", ")}`);
+  process.exit(1);
+}
 
-for (const k of katVeri) {
-  if (!k.rehberler.length) continue;
+// Giriş kartı — AYRI BİLEŞEN AÇILMADI, ortak `.card` kalıbı (YK #32).
+//   kendi rehberimiz varsa  → kapak/ikon + zorluk·süre·adım meta'sı, "Kendin çöz" etiketi
+//   yalnız yazımız varsa    → "Ne demek, ne yapmalı"
+//   ikisi de yoksa          → doğrudan SERVİS yolu (ölçülen `servis_cagir` olayı)
+// ⛔ Yazının kendi `description`'ı BASILMAZ: o metinler fiyat ifadesi içeriyor, bu katman
+//    fiyatsız (YK #35 şart 1). Kartta `anlam` satırı görünür.
+const girisKarti = (k, g) => {
+  const ikon = g.rehberMeta ? rehberGorsel(g.rehberMeta) : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`;
+  const etiket = g.rehberMeta ? "Kendin çöz" : TIP_ETIKET[g.tip];
+  const meta = g.rehberMeta
+    ? `${g.rehberMeta.zorluk} · ${g.rehberMeta.sure} · ${g.rehberMeta.adim} adım · Türkçe`
+    : g.post
+      ? "Ne demek, ne yapmalı · Türkçe"
+      : "Servis işi — yakınındaki servisi bul →";
+  const href = g.post ? `/blog/${g.post.slug}/` : cagirHref(`tamir-${k.slug}`);
+  const ek = g.post ? "" : ` data-cagir="satir" data-giris="${esc(g.giris)}"`;
+  return `<a class="card${g.post ? "" : " servis"}" href="${href}"${ek}>${ikon}<div class="card-body"><span class="cat">${esc(etiket)}</span><h2>${esc(g.giris)}</h2><p>${esc(g.anlam)}</p><span class="tamir-meta">${esc(meta)}</span></div></a>`;
+};
+
+// ② KATEGORİ SAYFALARI — artık rehberi olmayan cihazda da basılır (YK #35 erken uyarı ①:
+// "hata kodu katmanı 9 boş kategoriyi doldurmalı"). Basılma ölçütü: en az bir giriş kaydı.
+// Hiç kaydı olmayan cihaz için sayfa AÇILMAZ — boş sayfa "thin content" olur, hub'da dürüst kalır.
+const tamirliKat = katVeri.filter((k) => k.kayitlar.length);
+const basilanTamir = [];
+for (const k of tamirliKat) {
   const canonical = `${SITE}/tamir/${k.slug}/`;
+  const kaynak = `tamir-${k.slug}`;
+  const rehberSayisi = k.kayitlar.filter((g) => g.rehberMeta).length;
   const head =
     ldTag({
       "@context": "https://schema.org", "@type": "CollectionPage",
-      name: `${k.ad} bakım rehberleri`, url: canonical, inLanguage: "tr-TR",
+      name: `${k.ad} hata kodları ve arıza belirtileri`, url: canonical, inLanguage: "tr-TR",
       isPartOf: { "@type": "CollectionPage", name: "Tamir Merkezi", url: `${SITE}/tamir/` },
       mainEntity: {
-        "@type": "ItemList", numberOfItems: k.rehberler.length,
-        itemListElement: k.rehberler.map((r, i) => ({
-          "@type": "ListItem", position: i + 1, name: r.baslik, url: `${SITE}${r.url}`,
+        "@type": "ItemList", numberOfItems: k.kayitlar.length,
+        itemListElement: k.kayitlar.map((g, i) => ({
+          "@type": "ListItem", position: i + 1, name: g.giris,
+          ...(g.post ? { url: `${SITE}/blog/${g.post.slug}/` } : {}),
         })),
       },
     }) +
@@ -713,46 +821,55 @@ for (const k of katVeri) {
       { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       { name: k.ad, item: canonical },
     ]));
+  // Gruplar: kod → belirti → ayar. Boş grup başlığı basılmaz.
+  const gruplar = HATA_KODU_SIRA.map((t) => {
+    const liste = k.kayitlar.filter((g) => g.tip === t);
+    if (!liste.length) return "";
+    return `<h2 class="katbaslik">${esc(TIP_BASLIK[t])}</h2><div class="bloglist">${liste.map((g) => girisKarti(k, g)).join("")}</div>`;
+  }).join("");
   fs.mkdirSync(path.join(DIST, "tamir", k.slug), { recursive: true });
+  const dosya = path.join(DIST, "tamir", k.slug, "index.html");
   fs.writeFileSync(
-    path.join(DIST, "tamir", k.slug, "index.html"),
+    dosya,
     page({
-      title: `${k.ad} bakım rehberleri — kendin dene | Benservis`,
-      desc: `${k.ad} için servisi çağırmadan önce deneyebileceğin ücretsiz bakım adımları. Türkçe ve adım adım; zorluk ile süre her rehberde yazılı.`,
+      title: `${k.ad} hata kodları ve arıza belirtileri — ne demek, ne yapmalı | Benservis`,
+      desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad)}<h1>${esc(k.ad)} bakım rehberleri</h1><p class="meta">${k.rehberler.length} rehber · hepsi ücretsiz, alet gerektirmeyen bakım seviyesi</p><div class="bloglist">${k.rehberler.map(rehberKarti).join("")}</div>${TAMIR_CTA}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad)}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.</p>${gruplar}${TAMIR_CTA(kaynak)}${CAGIR_JS(kaynak)}`,
     })
   );
+  basilanTamir.push(dosya);
 }
 
 // ① HUB — cihaz kategorisi ızgarası (ORTAK `katIzgarasi`; /blog/ ve /kilavuzlar/ ile aynı).
-// Rehberi olmayan kategoride "yakında" YAZILMAZ (YK #32): boşluk gerçek ve kalıcı olabilir,
-// söz vermek yerine dürüst hâli yazılır — "kendin-çöz adımı yok, servis işi" + servis CTA'sı.
+// Rozet artık "rehber" değil "giriş" sayar: kartın arkasında hata kodu + belirti + ayar +
+// varsa kendi rehberimiz duruyor (YK #35 üç katmanlı düzen).
+// İçeriği olmayan kategoride "yakında" YAZILMAZ (YK #32) — dürüst hâl + ölçülen servis yolu.
 const katKartlari = katIzgarasi(
   katVeri.map((k) => ({
-    ...k, sayi: k.rehberler.length, url: `/tamir/${k.slug}/`,
-    bosRozet: "Rehber yok", bosNot: "Kendin-çöz adımı yok, servis işi.",
+    ...k, sayi: k.kayitlar.length, url: `/tamir/${k.slug}/`, birim: "giriş",
+    bosRozet: "İçerik yok", bosNot: "Bu cihaz için hata kodu ya da belirti sayfası yayınlamadık.",
   })),
-  "rehber"
+  "giriş"
 );
-const rehberliKat = katVeri.filter((k) => k.rehberler.length);
 
 fs.mkdirSync(path.join(DIST, "tamir"), { recursive: true });
+const tamirHub = path.join(DIST, "tamir", "index.html");
 fs.writeFileSync(
-  path.join(DIST, "tamir", "index.html"),
+  tamirHub,
   page({
-    title: "Tamir Merkezi — kendin yapabileceğin bakım işleri | Benservis",
-    desc: "Servisi çağırmadan önce deneyebileceğin ücretsiz bakım adımları: filtre temizliği, kontroller ve ayarlar. Cihazına göre Türkçe, adım adım.",
+    title: "Tamir Merkezi — hata kodu, belirti ve kendin-çöz adımları | Benservis",
+    desc: "Cihazının hata kodu ne demek, belirtisi neyi işaret ediyor, kendin ne yapabilirsin? Cihazını seç; kodundan ya da belirtinden başla, gerekiyorsa yakınındaki servise ulaş.",
     canonical: `${SITE}/tamir/`,
     head:
       ldTag({
         "@context": "https://schema.org", "@type": "CollectionPage",
         name: "Tamir Merkezi", url: `${SITE}/tamir/`, inLanguage: "tr-TR",
         mainEntity: {
-          "@type": "ItemList", numberOfItems: rehberliKat.length,
-          itemListElement: rehberliKat.map((k, i) => ({
-            "@type": "ListItem", position: i + 1, name: `${k.ad} bakım rehberleri`, url: `${SITE}/tamir/${k.slug}/`,
+          "@type": "ItemList", numberOfItems: tamirliKat.length,
+          itemListElement: tamirliKat.map((k, i) => ({
+            "@type": "ListItem", position: i + 1, name: `${k.ad} hata kodları ve belirtileri`, url: `${SITE}/tamir/${k.slug}/`,
           })),
         },
       }) +
@@ -760,9 +877,11 @@ fs.writeFileSync(
         { name: "Ana Sayfa", item: `${SITE}/` },
         { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       ])),
-    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Servisi çağırmadan önce dene — çoğu arıza basit bir bakımla düzeliyor.</p><blockquote><p><strong>Buradaki rehberler ücretsiz bakım seviyesindedir:</strong> temizlik, filtre, kontrol ve ayar. Parça değişimi ya da cihazın içini açmak gereken işleri bilerek anlatmıyoruz — o işler ölçüm, yetki ve garanti sorumluluğu ister; onlarda doğru adım servisi çağırmaktır.</p></blockquote><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetinde <strong>&quot;Rehber yok&quot;</strong> yazan cihazlarda kendin güvenle yapabileceğin bir bakım adımı yok — o arızalar ölçüm, yetki ve garanti sorumluluğu ister. <a href="/">Yakınındaki servisi bul →</a></p>${TAMIR_CTA}`,
+    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. Kendin-çöz adımlarımız yalnız <strong>ücretsiz bakım seviyesindedir</strong> (temizlik, filtre, kontrol, ayar); parça değişimi ve cihazın içini açmak isteyen işleri bilerek anlatmıyoruz — onlarda doğru adım servisi çağırmaktır.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetteki sayı o cihazda kaç hata kodu, belirti ve kendin-çöz adımının toplandığını gösterir. Rozetinde <strong>&quot;İçerik yok&quot;</strong> yazan cihazlarda henüz yayınlanmış sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
   })
 );
+basilanTamir.push(tamirHub);
+fiyatDenetimi(basilanTamir);
 
 // ───────────────────────────────────────────────────────────────────────────────
 // /kilavuzlar/ — KULLANIM KILAVUZLARI (YK Kararı #32, 2 Ağu 2026 — Tolga düzeltmesi ②)
@@ -858,8 +977,8 @@ const urlEntries = [
   { loc: `${SITE}/`, lastmod: newest },
   { loc: `${SITE}/blog/`, lastmod: newest },
   { loc: `${SITE}/tamir/`, lastmod: newest },
-  // Kategori sayfaları — yalnız rehberi olanlar basıldığı için hepsi gerçek içerikli.
-  ...rehberliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
+  // Kategori sayfaları — yalnız giriş kaydı olanlar basıldığı için hepsi gerçek içerikli.
+  ...tamirliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
   // Bilgi Merkezi kategori katmanı — yalnız yazısı olanlar (boş kategoriye sayfa basılmıyor).
   ...blogluKat.map((k) => ({ loc: `${SITE}/blog/kategori/${k.slug}/`, lastmod: newest })),
   // Kullanım Kılavuzları — sitemap'e YALNIZ eşik (30 kayıt) aşıldığında girer; altındayken
