@@ -68,8 +68,11 @@ export const REHBERLER = {
       rehber: G("How+to+replace+the+heating+element+and+temperature+sensor+in+your+washing+machine/198599", "Rezistans ve sıcaklık sensörü değişimi", "Moderate", "15-20 dk", 15) },
     { ara: ["amortisör", "titreşim", "sarsıl", "zıpl"],
       rehber: G("How+to+replace+the+shock+absorbers+in+your+washing+machine/198630", "Amortisör değişimi", "Difficult", "30-40 dk", 14) },
-    { ara: ["koku", "küf", "kokuyor"],
-      rehber: G("How+to+Remove+Mold+and+Odors+Inside+a+Washing+Machine/207574", "Küf ve kokuyu giderme", "Moderate", "1-2 sa", 8) },
+    // KENDİ REHBERİMİZ (3 Ağu 2026, YK #34 Faz 2) — yerini aldığı iFixit kaydı
+    // ("How to Remove Mold and Odors…", 8 adım) BİLEREK kaldırıldı: kendi rehberimiz
+    // rehberBul içinde daima öncelikli olduğu için o satır artık erişilemez ölü koddu.
+    { ara: ["koku", "küf", "kokuyor", "kokuyu"],
+      rehber: B("camasir-makinesi-kokuyor", "Çamaşır makinesi kokusunu giderme", "Kolay", "~25 dakika", 6) },
   ],
   // KENDİ REHBERLERİMİZ (2 Ağu 2026, YK Kararı #34 Faz 1) — blogda `steps:` alanı ZATEN olan
   // üç Bosch/BSH yazısı rehber olarak bağlandı; sıfır yeni metin, URL değişmedi.
@@ -84,7 +87,11 @@ export const REHBERLER = {
     { ara: ["e22", "iç filtre", "filtre tıkalı", "filtre tıkanık"],
       rehber: B("bosch-bulasik-makinesi-e22-hatasi", "Bosch/Siemens E22: iç filtreyi temizleme", "Kolay", "~10 dakika", 7) },
     { ara: ["e24", "tahliye tıkanık", "tıkalı tahliye", "tahliye hortumu"],
-      rehber: B("bosch-bulasik-makinesi-e24-hatasi", "Bosch/Siemens E24: tahliye yolunu açma", "Kolay-Orta", "~20 dakika", 7) },
+      rehber: B("bosch-bulasik-makinesi-e24-hatasi", "Bosch/Siemens E24: tahliye yolunu açma", "Kolay-Orta", "~20 dakika", 6) },
+    // KENDİ REHBERİMİZ (3 Ağu 2026, YK #34 Faz 2) — anahtar kelimeler yalnız kokuya dar;
+    // jenerik bulaşık arızalarını çalmaz.
+    { ara: ["koku", "kokuyor", "kokuyu", "lağım"],
+      rehber: B("bulasik-makinesi-kokuyor", "Bulaşık makinesi kokusunu giderme", "Kolay", "~20 dakika", 7) },
     { ara: ["tahliye pompa", "tahliye", "su atmıyor", "boşaltmıyor"],
       rehber: G("How+To+Replace+The+Drain+Pump+In+Your+Dishwasher/181830", "Tahliye pompası değişimi", "Moderate", "20-35 dk", 8) },
     { ara: ["su giriş", "su almıyor", "giriş valf", "inlet"],

@@ -4,6 +4,34 @@ description: "Bulaşık makinen lağım/rutubet mi kokuyor? Tıkalı filtre, yem
 slug: "bulasik-makinesi-kokuyor"
 date: "2026-07-06"
 category: "Bulaşık makinesi"
+# YK #34 Faz 2 — mevcut yazıdan TÜRETİLDİ (3 Ağu 2026). URL değişmedi, 301 yok.
+# Adım metinleri PAZ teslimi: sosyal/2026-08-03-benservis-haftalik-plan-3-9agu.md §1️⃣.
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Sünger veya yumuşak bez", "Beyaz sirke (1-2 bardak)", "Eldiven (önerilir)"]
+steps:
+  - "Makineyi kapat ve boşalt; içinde bulaşık kalmasın."
+  - "Taban filtresini çevirip çıkar, altındaki süzgeci de al."
+  - "Filtreyi ve süzgeci akan suyun altında sünger yardımıyla temizle, yemek artıklarını at."
+  - "Filtre yuvasını ve tabandaki durgun suyu bezle sil, sonra parçaları yerine tak."
+  - "Kapı contasının kıvrımlarını nemli bezle sil — kalıntı orada birikir."
+  - "Hazneye 1-2 bardak beyaz sirke koy ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır."
+  - "Program bittikten sonra kapağı aralık bırak; nem çıkmadan koku geri gelir."
+# GRF adım görselleri BEKLENİYOR (backlog: 13 adım görseli).
+# Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
+images:
+  coverAlt: "Bulaşık makinesi koku temizliği rehberinin kapak çizimi"
+  steps:
+    - "Kapatılmış, içi boşaltılmış bulaşık makinesini gösteren çizim"
+    - "Taban filtresinin çevrilerek çıkarılışını ve altındaki süzgecin alınışını gösteren çizim"
+    - "Filtre ve süzgecin akan su altında süngerle temizlenişini gösteren çizim"
+    - "Filtre yuvasının ve tabandaki durgun suyun bezle silinişini gösteren çizim"
+    - "Kapı contası kıvrımlarının nemli bezle silinişini gösteren çizim"
+    - "Hazneye beyaz sirke konulup boş, yüksek sıcaklıkta programın başlatılışını gösteren çizim"
+    - "Program sonunda bulaşık makinesi kapağının aralık bırakılışını gösteren çizim"
 faq:
   - q: "Bulaşık makinesi neden kokar?"
     a: "En sık sebep taban filtresinde ve süzgeçte biriken yemek artıklarının çürümesidir. Ayrıca kireç ve yağ birikimi, kapı contasındaki kalıntı, tıkalı püskürtme kolları ve tahliye hattındaki tıkanıklık kokuya yol açar."
@@ -35,11 +63,19 @@ Bulaşık makineni açtığında **rutubet, çürük ya da lağım gibi** bir ko
 
 Güvenli ve çoğu zaman ücretsiz:
 
-1. **Taban filtresini temizle.** Alt sepeti çıkar, taban filtresini çevirip al, yemek artıklarını temizle, süzgeci fırçala.
-2. **Boş sıcak program + sirke.** Makineyi boşken en yüksek sıcaklıkta çalıştır; hazneye **1-2 bardak beyaz sirke** ya da makine temizleyici koy.
-3. **Kapı contasını sil.** Kıvrımları bez + sirke/karbonatla temizle, kuru bırak.
-4. **Püskürtme kollarını kontrol et.** Kolları çıkarabiliyorsan deliklerini kürdanla aç, altındaki kiri temizle.
-5. **Tuz + parlatıcı.** Bitmişse kireç ve leke yapar → doldur. Kullanım sonrası **kapağı aralık bırak**, iç kurusun.
+**1. Makineyi kapat ve boşalt;** içinde bulaşık kalmasın.
+
+**2. Taban filtresini çevirip çıkar,** altındaki süzgeci de al.
+
+**3. Filtreyi ve süzgeci akan suyun altında sünger yardımıyla temizle,** yemek artıklarını at.
+
+**4. Filtre yuvasını ve tabandaki durgun suyu bezle sil,** sonra parçaları yerine tak.
+
+**5. Kapı contasının kıvrımlarını nemli bezle sil** — kalıntı orada birikir.
+
+**6. Hazneye 1-2 bardak beyaz sirke koy** ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır.
+
+**7. Program bittikten sonra kapağı aralık bırak;** nem çıkmadan koku geri gelir.
 
 ## Ne zaman servis çağırmalısın?
 

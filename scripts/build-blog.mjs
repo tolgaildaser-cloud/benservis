@@ -335,16 +335,62 @@ const adimGorselUrl = (p, n) => {
 // Markdown gövdesindeki numaralı adım paragrafları — marked bunları
 // `<p><strong>1. …</strong> …</p>` olarak basıyor — ilgili görsel paragrafın ARDINA eklenir.
 // width/height attribute'u CLS için zorunlu; lazy-loading ilk ekranı yavaşlatmasın diye açık.
+// ⚠️ ADIM BÖLÜMÜ SINIRI (3 Ağu 2026): numaralı `**N. …**` paragraf kalıbı yazının BAŞKA
+// bölümlerinde de kullanılıyor (koku yazılarında "neden kokar?" nedenleri aynı biçimde
+// numaralı). Görsel enjeksiyonu tüm gövdeye uygulanırsa adım görselleri NEDENLER listesine
+// de basılır — sessiz ve yanlış eşleşme. Bu yüzden enjeksiyon "adım adım" başlığından
+// SONRAKİ bölümle sınırlanır; rehber gövdelerinin hepsinde o başlık var (rehberDenetimi
+// bunu build'de zorunlu tutar).
+function adimBolumIndeksi(html) {
+  const norm = (s) => s.toLocaleLowerCase("tr").replace(/\s+/g, " ");
+  let i = -1;
+  for (const m of html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)) {
+    if (norm(m[1]).includes("adım adım")) i = m.index + m[0].length;
+  }
+  return i;
+}
 function adimGorselleriEkle(p) {
   if (!p.images?.steps?.length) return p.html;
+  const bas = adimBolumIndeksi(p.html);
+  if (bas < 0) return p.html; // rehberDenetimi zaten durdurur; burada sessiz yanlış basmaktansa hiç basma
+  const once = p.html.slice(0, bas), sonra = p.html.slice(bas);
   // NOT: bold lead-in'e yukarıda `class="lead"` ekleniyor → <strong[^>]*> ile eşleşmeli.
-  return p.html.replace(/<p><strong[^>]*>(\d+)\.[\s\S]*?<\/p>/g, (m, n) => {
+  return once + sonra.replace(/<p><strong[^>]*>(\d+)\.[\s\S]*?<\/p>/g, (m, n) => {
     const url = adimGorselUrl(p, Number(n));
     if (!url) return m;
     const alt = p.images.steps[Number(n) - 1];
     return `${m}<figure class="adim-gorsel"><img src="${url}" width="1200" height="800" loading="lazy" decoding="async" alt="${esc(alt)}"></figure>`;
   });
 }
+
+// ── REHBER DENETİMİ (build'i durdurur) ────────────────────────────────────────────────────
+// HowTo JSON-LD sayfada GÖRÜNEN adımlarla birebir aynı olmalı. `steps:` ile gövdedeki numaralı
+// adım paragrafları ayrışırsa yapılandırılmış veri sayfayı yanlış anlatır (Google için de ihlal),
+// adım görselleri de kayar. 2 Ağu'da E24 tam bunu yapıyordu: 7 `steps:` / 6 gövde adımı.
+function rehberDenetimi(posts) {
+  const sorunlar = [];
+  for (const p of posts) {
+    if (!p.guide) continue;
+    const n = (p.steps || []).length;
+    if (!n) { sorunlar.push(`${p.slug}: guide: var ama steps: yok`); continue; }
+    const bas = adimBolumIndeksi(p.html);
+    if (bas < 0) { sorunlar.push(`${p.slug}: gövdede "adım adım" içeren <h2> yok — adım bölümü bulunamıyor`); continue; }
+    const govde = [...p.html.slice(bas).matchAll(/<p><strong[^>]*>(\d+)\./g)].map((m) => Number(m[1]));
+    const beklenen = Array.from({ length: n }, (_, i) => i + 1);
+    if (govde.join(",") !== beklenen.join(","))
+      sorunlar.push(`${p.slug}: steps: ${n} adım diyor, gövdede ${govde.length} adım var (${govde.join(",") || "yok"}) — HowTo JSON-LD sayfayla uyuşmuyor`);
+    const ig = p.images?.steps?.length;
+    if (ig && ig !== n) sorunlar.push(`${p.slug}: images.steps ${ig} ≠ steps ${n} — görseller kayar`);
+  }
+  if (sorunlar.length) {
+    console.error("[build-blog] ✗ REHBER DENETİMİ BAŞARISIZ:");
+    for (const s of sorunlar) console.error("  · " + s);
+    process.exit(1);
+  }
+  const rehberSayisi = posts.filter((p) => p.guide).length;
+  console.log(`[build-blog] ✓ rehber denetimi: ${rehberSayisi} rehberde steps ↔ gövde ↔ görsel hizası birebir.`);
+}
+rehberDenetimi(posts); // fail-fast: sayfa yazılmadan önce dursun
 
 // ── PİLOT GİRİŞ NOKTASI (YK #35): en çok gösterim alan sayfalar ① katmanın kapısı olsun ──
 // Yazı ① katmana bağlıysa, yazının kendi sayfasına da o cihazın hata kodu/belirti listesine
@@ -877,7 +923,7 @@ fs.writeFileSync(
         { name: "Ana Sayfa", item: `${SITE}/` },
         { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       ])),
-    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. Kendin-çöz adımlarımız yalnız <strong>ücretsiz bakım seviyesindedir</strong> (temizlik, filtre, kontrol, ayar); parça değişimi ve cihazın içini açmak isteyen işleri bilerek anlatmıyoruz — onlarda doğru adım servisi çağırmaktır.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetteki sayı o cihazda kaç hata kodu, belirti ve kendin-çöz adımının toplandığını gösterir. Rozetinde <strong>&quot;İçerik yok&quot;</strong> yazan cihazlarda henüz yayınlanmış sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
+    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. <strong>Buradaki adımlar bakım seviyesindedir: temizlik, filtre, kontrol ve ayar.</strong> Parça değişimi ya da cihazı sökmek gereken işleri buraya koymuyoruz — onlar servis işi. Her rehberin başında <strong>gereken malzemeyi</strong> yazıyoruz.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetteki sayı o cihazda kaç hata kodu, belirti ve kendin-çöz adımının toplandığını gösterir. Rozetinde <strong>&quot;İçerik yok&quot;</strong> yazan cihazlarda henüz yayınlanmış sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
   })
 );
 basilanTamir.push(tamirHub);

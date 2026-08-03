@@ -30,7 +30,7 @@ images:
     - "Filtrenin sıkıca geri takılışını ve kısa programla denenişini gösteren çizim"
 faq:
   - q: "Çamaşır makinesi filtresini ne sıklıkla temizlemeli?"
-    a: "Ayda bir ya da iki ayda bir yeterli. Makine su atmıyor, ıslak çıkıyor ya da kötü kokuyorsa hemen kontrol et — en sık sebep tıkalı filtredir."
+    a: "Ayda bir ya da iki ayda bir yeterli. Makine su atmıyor, ıslak çıkıyor ya da kötü kokuyorsa hemen kontrol et — sorun çoğu zaman tıkalı filtredir."
   - q: "Filtreyi açınca su geldi, normal mi?"
     a: "Evet, tamamen normal. Bu yüzden önüne havlu ve sığ bir kap koymak gerekir. Suyu boşaltıp devam edebilirsin."
   - q: "Filtre yerine tam oturmazsa ne olur?"

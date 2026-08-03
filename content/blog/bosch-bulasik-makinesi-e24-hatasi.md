@@ -16,8 +16,7 @@ steps:
   - "Filtre yuvasının altındaki tahliye pompası kapağını (varsa) açıp yabancı cismi (cam, çekirdek, etiket) kontrol et."
   - "Makinenin arkasındaki tahliye hortumunun bükülmediğinden/ezilmediğinden emin ol."
   - "Hortumun evye/sifon bağlantısının tıkalı olmadığını kontrol et."
-  - "Filtreyi ve kapağı yerine tam oturtup kilitle."
-  - "Kısa bir programla dene; su rahat boşalıyorsa çözülmüştür."
+  - "Filtreyi ve pompa kapağını yerine tam oturtup kilitle, sonra kısa bir programla dene; su rahat boşalıyorsa çözülmüştür."
 faq:
   - q: "Bosch bulaşık makinesi E24 hatası ne demek?"
     a: "E24, makinenin kirli suyu boşaltamadığını (tahliye edemediğini) gösterir. En sık sebep tıkalı taban filtresi ya da bükük/tıkalı tahliye hortumudur; bazen pompa kapağının altına kaçan bir yabancı cisim (cam kırığı, meyve çekirdeği, etiket) suyu keser. Çoğu E24 evde ücretsiz çözülür."

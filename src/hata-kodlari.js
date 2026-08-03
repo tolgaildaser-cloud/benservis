@@ -65,7 +65,7 @@ export const HATA_KODU_KATMANI = {
       yazi: "camasir-makinesi-ses-titresim" },
     { giris: "Küf / rutubet kokusu", tip: "belirti",
       anlam: "Kapı contası, deterjan çekmecesi, filtre ve kireç kaynaklı kokunun nedenleri.",
-      yazi: "camasir-makinesi-kokuyor" },
+      yazi: "camasir-makinesi-kokuyor", rehber: true },
     { giris: "Hangi çamaşır kaç derecede yıkanır", tip: "ayar",
       anlam: "30-40-60-90 derece seçimi ve makinede koku yapmaması için tek kural.",
       yazi: "camasir-kac-derecede-yikanir" },
@@ -101,7 +101,7 @@ export const HATA_KODU_KATMANI = {
       yazi: "bulasik-makinesi-temiz-yikamiyor" },
     { giris: "Kötü koku", tip: "belirti",
       anlam: "Tıkalı filtre, yemek artığı, kireç, kapı contası ve tahliye kaynaklı koku.",
-      yazi: "bulasik-makinesi-kokuyor" },
+      yazi: "bulasik-makinesi-kokuyor", rehber: true },
   ],
 
   "Kombi / Termosifon": [

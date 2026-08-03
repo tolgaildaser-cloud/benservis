@@ -4,6 +4,32 @@ description: "Çamaşır makinen küf/rutubet mi kokuyor? Kapı contası, deterj
 slug: "camasir-makinesi-kokuyor"
 date: "2026-07-06"
 category: "Çamaşır makinesi"
+# YK #34 Faz 2 — mevcut yazıdan TÜRETİLDİ (3 Ağu 2026). URL değişmedi, 301 yok.
+# Adım metinleri PAZ teslimi: sosyal/2026-08-03-benservis-haftalik-plan-3-9agu.md §2️⃣.
+guide:
+  difficulty: "Kolay"
+  time: "~25 dakika"
+  totalTime: "PT25M"
+  cost: "Ücretsiz"
+  tools: ["Yumuşak bez veya sünger", "Beyaz sirke (1-2 bardak)", "Havlu", "Eldiven (önerilir)"]
+steps:
+  - "Tamburu boşalt; içinde çamaşır kalmasın."
+  - "Kapı contasının kıvrımlarını aç ve nemli bezle sil; saç, tüy ve kalıntıyı temizle."
+  - "Deterjan çekmecesini çıkar, ılık suda yıka, yuvasını da sil ve kurut."
+  - "Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar, temizle, sonuna kadar geri tak."
+  - "Tambura 1-2 bardak beyaz sirke ekle ve makineyi boş, 60-90 derece bir programda çalıştır."
+  - "Program bitince contayı ve kapak çevresini kurula, kapağı açık bırak."
+# GRF adım görselleri BEKLENİYOR (backlog: 13 adım görseli).
+# Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
+images:
+  coverAlt: "Çamaşır makinesi koku temizliği rehberinin kapak çizimi"
+  steps:
+    - "İçi boşaltılmış çamaşır makinesi tamburunu gösteren çizim"
+    - "Kapı contası kıvrımlarının açılıp nemli bezle silinişini gösteren çizim"
+    - "Deterjan çekmecesinin çıkarılıp ılık suda yıkanışını gösteren çizim"
+    - "Alt köşedeki tahliye filtresinin havlu ve kapla çıkarılışını gösteren çizim"
+    - "Tambura beyaz sirke eklenip yüksek sıcaklıkta boş programın başlatılışını gösteren çizim"
+    - "Program sonunda contanın kurulanıp kapağın açık bırakılışını gösteren çizim"
 faq:
   - q: "Çamaşır makinesi neden kötü kokar?"
     a: "En sık sebep nemli ortamda üreyen küf ve bakteridir. Kapı contasında biriken kir/nem, deterjan çekmecesindeki kalıntı, tıkalı tahliye filtresi, kireç birikimi ve hep düşük sıcaklıkta yıkamak kokuya yol açar."
@@ -35,11 +61,17 @@ Temiz yıkadığın çamaşırlar makineden **rutubet, küf ya da lağım gibi**
 
 Güvenli ve çoğu zaman ücretsiz:
 
-1. **Boş, sıcak program çalıştır.** Makineyi boşken **60-90°** bir programa al; tambura **1-2 bardak beyaz sirke** ya da makine temizleyici ekle. Bu, tamburdaki kir, kireç ve bakteriyi çözer.
-2. **Kapı contasını temizle.** Lastik kıvrımlarını bez + beyaz sirke/karbonatla sil, arasındaki kalıntıyı al, kuru bırak.
-3. **Deterjan çekmecesini çıkar, yıka.** Çekmeceyi sökebiliyorsan çıkar, kalıntıyı fırçayla temizle.
-4. **Tahliye filtresini temizle.** Alt kapağı aç, filtreyi çıkar, tüy/kalıntıyı al → [tahliye filtresi nasıl temizlenir](/blog/camasir-makinesi-tahliye-filtresi-temizleme/).
-5. **Alışkanlık edin.** Çamaşırı bekletmeden çıkar, **kapağı ve çekmeceyi açık bırak**, ayda bir sıcak boş program çalıştır.
+**1. Tamburu boşalt;** içinde çamaşır kalmasın.
+
+**2. Kapı contasının kıvrımlarını aç ve nemli bezle sil;** saç, tüy ve kalıntıyı temizle.
+
+**3. Deterjan çekmecesini çıkar,** ılık suda yıka, yuvasını da sil ve kurut.
+
+**4. Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar,** temizle, sonuna kadar geri tak. Bu adımın ayrıntısı ayrı rehberimizde: [tahliye filtresi nasıl temizlenir](/blog/camasir-makinesi-tahliye-filtresi-temizleme/).
+
+**5. Tambura 1-2 bardak beyaz sirke ekle** ve makineyi boş, 60-90 derece bir programda çalıştır.
+
+**6. Program bitince contayı ve kapak çevresini kurula,** kapağı açık bırak.
 
 ## Ne zaman servis çağırmalısın?
 

@@ -1,6 +1,6 @@
 ---
 title: "Klima filtresi nasıl temizlenir? (adım adım)"
-description: "Klima soğutmuyor, kokuyor ya da az üflüyorsa en sık sebep kirli filtre. 6 adımda kendin temizle — ücretsiz, ~15 dakika. Bil, gör, çağır."
+description: "Klima soğutmuyor, kokuyor ya da az üflüyorsa sorun çoğu zaman kirli filtre. 6 adımda kendin temizle — ücretsiz, ~15 dakika. Bil, gör, çağır."
 slug: "klima-filtresi-temizleme"
 date: "2026-06-21"
 category: "Klima"
@@ -30,7 +30,7 @@ images:
     - "Kuruyan klima filtresinin yerine takılıp ön kapağın kapatılışını gösteren çizim"
 faq:
   - q: "Klima filtresini ne sıklıkla temizlemeli?"
-    a: "Yoğun kullanımda 2-3 haftada bir, normalde ayda bir. Sezon başında mutlaka temizle; en sık 'klima soğutmuyor' şikâyetinin sebebi kirli filtredir."
+    a: "Yoğun kullanımda 2-3 haftada bir, normalde ayda bir. Sezon başında mutlaka temizle; 'klima soğutmuyor' şikâyetinin arkasında çoğu zaman kirli filtre çıkıyor."
   - q: "Filtreyi sıcak suyla yıkayabilir miyim?"
     a: "Hayır. Sıcak su ve deterjan filtreye zarar verebilir; ılık su ve yumuşak fırça yeterli. İyice durula."
   - q: "Islak takarsam ne olur?"
@@ -39,7 +39,7 @@ faq:
     a: "O zaman sorun gaz, kompresör ya da dış ünitede olabilir; bu servis işidir. Olası arızayı ve tahmini maliyeti Benservis'ten öğren."
 ---
 
-Klima **soğutmuyor**, **kötü kokuyor** ya da **zayıf üflüyorsa**, en sık sebep şaşırtıcı derecede basittir: **kirli hava filtresi**. Tıkalı filtre hava akışını boğar, soğutmayı düşürür ve koku yapar. İyi haber — bunu **kendin, ücretsiz, ~15 dakikada** temizleyebilirsin. İşte adım adım.
+Klima **soğutmuyor**, **kötü kokuyor** ya da **zayıf üflüyorsa**, sebep çoğu zaman şaşırtıcı derecede basittir: **kirli hava filtresi**. Tıkalı filtre hava akışını boğar, soğutmayı düşürür ve koku yapar. İyi haber — bunu **kendin, ücretsiz, ~15 dakikada** temizleyebilirsin. İşte adım adım.
 
 ## Adım adım: klima filtresi temizliği
 
