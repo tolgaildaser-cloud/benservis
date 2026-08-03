@@ -46,17 +46,9 @@ Televizyonu açıyorsun, **ses geliyor ama ekran karanlık** — ya da görünt�
 - Ekranda **çizgi, leke, yarım görüntü** varsa (T-con/panel)
 - **Yanık kokusu** ya da açılışta tık sesi varsa (güç kartı)
 
-## 2026 televizyon tamiri tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, ekran boyutu ve arızaya göre değişir. Kesin tahmini Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Arka ışık (LED bar) değişimi | 1.200 – 3.000 ₺ |
-| Güç (power) kartı tamiri | 1.000 – 2.500 ₺ |
-| T-con kartı | 1.200 – 2.800 ₺ |
-| Anakart (main board) | 1.500 – 3.500 ₺ |
-| Panel değişimi | genelde ekonomik değil (yeni TV'ye yakın) |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Televizyon açılmıyor / hiç çalışmıyor](/blog/tv-acilmiyor/) · [Bilgi Merkezi](/blog/)
 

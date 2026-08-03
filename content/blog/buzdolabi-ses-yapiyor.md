@@ -12,7 +12,7 @@ faq:
   - q: "Buzdolabından metalik vuruntu geliyor, tehlikeli mi?"
     a: "Sert metalik vuruntu genelde kompresör askı lastiklerinin yıpranmasıdır; cihaz çalışır ama ses artar. Servisle kontrol ettirmek mantıklıdır."
   - q: "Sesli buzdolabı tamiri kaç para?"
-    a: "Denge ayarı çoğu zaman ücretsizdir; fan motoru 2026 İstanbul tahmini ~900–2.000 ₺, kompresör takoz/askı işçiliği daha düşüktür. Kesin tahmini Benservis'ten al."
+    a: "Denge ayarı çoğu zaman ücretsizdir. Fan motoru ya da kompresör takoz/askı işçiliği gerekiyorsa maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Buzdolabı sessiz bir cihaz değildir — ama **sesin türü** çoğu zaman neyin olup bittiğini söyler. Bazı sesler tamamen normaldir; bazıları ise basit bir ayar ya da yaklaşan bir arıza işaretidir. Bu yazıda hangi sesin ne anlama geldiğini, **kendin neyi çözebileceğini** ve 2026 tahmini fiyatları paylaşıyoruz.
@@ -50,18 +50,9 @@ Güvenli ve çoğu zaman ücretsiz adımlar:
 - Röle sesi **çok sıklaştı** ve soğutma bozulduysa
 - Denge ve temas düzeltildiği hâlde **gürültü sürüyorsa**
 
-## 2026 buzdolabı ses arızası tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Denge / yerleşim ayarı | Çoğu zaman ücretsiz |
-| Fan motoru (no-frost) | 900 – 2.000 ₺ |
-| Kompresör takoz / askı işçiliği | 500 – 1.200 ₺ |
-| Termostat / röle değişimi | 700 – 1.500 ₺ |
-
-İlgili rehberler: [Buzdolabı soğutmuyor ama çalışıyor](/blog/buzdolabi-sogutmuyor-nedenleri/) · [Buzdolabı tamiri 2026 fiyatları](/blog/buzdolabi-tamiri-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -75,4 +66,4 @@ Genelde dengesiz duruş, temas ya da yıpranmış kompresör takozları; no-fros
 Genelde kompresör askı lastiği yıpranmasıdır; servisle kontrol mantıklı.
 
 **Tamiri kaç para?**
-Denge ayarı çoğu zaman ücretsiz; fan motoru ~900–2.000 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

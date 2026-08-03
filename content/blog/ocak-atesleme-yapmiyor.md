@@ -17,7 +17,7 @@ faq:
   - q: "Tüp dolu ama ocak yanmıyor, neden?"
     a: "Tüpte gaz olduğu hâlde yanmıyorsa sorun çoğu zaman tüpte değil regülatördedir (dedantör): arızalı, donmuş ya da tüpe tam oturmamış olabilir. Hortum da bükük/tıkalı olabilir. Regülatörü kontrol et, şüpheliyse değiştir; hortumda ezik/çatlak varsa yenile."
   - q: "Ateşleme bujisi tamiri kaç para?"
-    a: "Ateşleme ünitesi/buji değişimi 2026 İstanbul tahmini ~500–1.100 ₺ aralığındadır; marka ve modele göre değişir. Önce ucu kuru bezle temizlemeyi dene; hiç kıvılcım çıkmıyorsa buji ya da kablosu değişmelidir. Kesin tahmini cihazına göre Benservis'ten al."
+    a: "Önce ucu kuru bezle temizlemeyi dene; hiç kıvılcım çıkmıyorsa buji ya da kablosu değişmelidir. Maliyet marka ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bir türlü yanmıyor. İyi haber: çoğu zaman sebep basit ve **evde, dakikalar içinde** çözülüyor. Bu yazıda nedenleri, **kendin yapabileceklerini** ve gerektiğinde 2026 tahmini servis fiyatlarını bulacaksın.
@@ -64,15 +64,9 @@ Ateşleme bujisi, düğmeye basınca **kıvılcım üreten seramik uçtur**. Ça
 
 > 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 
-## 2026 ocak tamiri tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Ateşleme ünitesi / buji | 500 – 1.100 ₺ |
-| Gaz valfi / musluk | 600 – 1.200 ₺ |
-| Brülör / başlık | 400 – 900 ₺ |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Bilgi Merkezi](/blog/)
 

@@ -49,19 +49,9 @@ faq:
 - **Kapak kilidi kapanmıyorsa**
 - Işıklar anormal yanıp sönüyor, **anakart/elektronik şüphesi** varsa
 
-## 2026 çamaşır makinesi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Giriş filtresi temizliği | 400 – 800 ₺ (ya da kendin ücretsiz) |
-| Su giriş valfi (selenoid) değişimi | 700 – 1.500 ₺ |
-| Basınç anahtarı değişimi | 700 – 1.400 ₺ |
-| Kapı/kapak kilidi değişimi | 600 – 1.300 ₺ |
-| Anakart tamiri | 1.200 – 3.000 ₺ |
-
-İlgili rehber: [Buzdolabı soğutmuyor: nedenleri ve fiyatlar](/blog/buzdolabi-sogutmuyor-nedenleri/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 

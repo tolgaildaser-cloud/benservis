@@ -12,7 +12,7 @@ faq:
   - q: "Su geliyor ama makine almıyorsa sebebi ne?"
     a: "Genelde su giriş valfi (selenoid), aquastop hortum kilidi ya da basınç anahtarı arızalıdır. Bunlar servis işidir."
   - q: "Tamiri kaç para?"
-    a: "2026 İstanbul tahmini olarak su giriş valfi ~600–1.300 ₺, kapı kilidi ~500–1.200 ₺. Filtre/musluk kaynaklıysa çoğu zaman ücretsiz çözülür. Kesin tahmini Benservis'ten al."
+    a: "Filtre ya da musluk kaynaklıysa çoğu zaman ücretsiz çözülür. Su giriş valfi veya kapı kilidi gerekiyorsa maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve 2026 için tahmini fiyatları bulacaksın.
@@ -49,19 +49,9 @@ Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozuc
 - Tabanda **tekrar tekrar su birikiyorsa** (iç sızıntı)
 - Işıklar anormal yanıp sönüyor, **elektronik kart şüphesi** varsa
 
-## 2026 bulaşık makinesi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Giriş süzgeci temizliği | 400 – 800 ₺ (ya da kendin ücretsiz) |
-| Su giriş valfi (selenoid) | 600 – 1.300 ₺ |
-| Aquastop hortum değişimi | 700 – 1.500 ₺ |
-| Kapı / kapak kilidi | 500 – 1.200 ₺ |
-| Elektronik kart tamiri | 1.200 – 3.000 ₺ |
-
-İlgili rehberler: [Bulaşık makinesi su atmıyor](/blog/bulasik-makinesi-su-atmiyor/) · [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/) · [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -75,4 +65,4 @@ Taşma güvenliği devrededir; tabanı kurula, tekrarlıyorsa servis gerekir.
 Genelde giriş valfi, aquastop ya da basınç anahtarı — servis işidir.
 
 **Tamiri kaç para?**
-Su giriş valfi ~600–1.300 ₺, kapı kilidi ~500–1.200 ₺; filtre/musluk kaynaklıysa ücretsiz.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

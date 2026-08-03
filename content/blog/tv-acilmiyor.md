@@ -13,7 +13,7 @@ faq:
   - q: "TV açılmıyor, kendim ne yapabilirim?"
     a: "Prizi ve güç kablosunu kontrol et, farklı prize tak; fişten çekip 1-2 dakika bekleyip yeniden tak; kumandanın pilini değiştir ve TV'nin fiziksel güç düğmesiyle dene."
   - q: "Tamiri kaç para?"
-    a: "Arızaya göre değişir: güç kaynağı kartı 2026 İstanbul tahmini ~700–1.800 ₺, kondansatör değişimi ~500–1.000 ₺, anakart ~1.000–2.500 ₺. Panel arızası genelde ekonomik değildir. Kesin tahmini Benservis'ten al."
+    a: "Arızaya göre değişir: güç kaynağı kartı, kondansatör ve anakart farklı işlerdir. Panel arızası genelde ekonomik değildir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönüyor ya da ses gelip görüntü gelmiyor. Sebep çoğu zaman birkaç parçadan biridir ve belirtiye bakarak daraltmak mümkün. Bu yazıda TV'nin neden açılmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve 2026 tahmini fiyatları bulacaksın.
@@ -47,16 +47,9 @@ Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönü
 
 > ⚠️ **Güvenlik:** TV'nin içinde, kapalıyken bile yüksek voltaj tutan parçalar (kondansatörler) bulunur. Arka kapağı **kendin açma**; bu işleri yetkili/uzman servise bırak.
 
-## 2026 TV tamiri tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, ekran boyutu ve arızaya göre değişir. Kesin tahmini Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Güç kaynağı kartı (power board) | 700 – 1.800 ₺ |
-| Kondansatör değişimi | 500 – 1.000 ₺ |
-| Anakart (main board) | 1.000 – 2.500 ₺ |
-| Panel arızası | Genelde yüksek → yenisi değerlendirilebilir |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Görüntü gelmiyor / ses var görüntü yok](/blog/televizyon-goruntu-gelmiyor/) · [Bilgi Merkezi](/blog/) · [İyi servisi nasıl seçersin](/blog/serbis-yetkili-servis-sorgulama/)
 
@@ -72,4 +65,4 @@ Güç var, sorun anakart/güç çıkışında; önce resetle, geçmezse servis.
 Priz/kablo + farklı priz, fişten çek 1-2 dk bekle, kumanda pili + fiziksel düğme.
 
 **Tamiri kaç para?**
-Güç kartı ~700–1.800 ₺, kondansatör ~500–1.000 ₺, anakart ~1.000–2.500 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

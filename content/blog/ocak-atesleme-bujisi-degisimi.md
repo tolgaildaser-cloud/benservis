@@ -6,7 +6,7 @@ date: "2026-08-02"
 category: "Fırın / Ocak"
 faq:
   - q: "Ocak ateşleme bujisi değişimi kaç para?"
-    a: "Ateşleme ünitesi/buji değişimi için 2026 İstanbul tahmini fiyat aralığı yaklaşık 500–1.100 ₺'dir; marka, model ve tek gözün mü yoksa ateşleme ünitesinin tamamının mı değiştiğine göre değişir. Kesin tahmini kendi cihazınıza göre Benservis'in ücretsiz teşhis aracından alabilirsiniz."
+    a: "Marka, model ve tek gözün mü yoksa ateşleme ünitesinin tamamının mı değiştiğine göre değişir; bu sayfada aralık vermiyoruz. Kesin tahmini kendi cihazına göre Benservis'in ücretsiz teşhis aracından alabilirsin."
   - q: "Ateşleme bujisini kendim değiştirebilir miyim?"
     a: "Önermiyoruz. Buji değişimi ocağın üst tablasının sökülmesini ve gaz hattının bulunduğu bölgeye erişmeyi gerektirir. Gazlı cihazlarda söküm sonrası sızdırmazlığın kontrol edilmesi gerekir; bu, ölçüm ve yetki isteyen bir iştir. Buna karşılık aşağıdaki temizlik ve kurutma adımları tamamen ücretsizdir ve arızaların önemli bir bölümünü çözer."
   - q: "Hiç kıvılcım çıkmıyorsa kesin buji mi arızalı?"
@@ -23,7 +23,7 @@ Ocağın düğmesine basıyorsunuz, tık tık sesi geliyor ama kıvılcım yok �
 
 Bu sayfa tam olarak o soruya cevap veriyor: **buji gerçekten değişmeli mi, değişirse ne kadar tutar, ve öncesinde ücretsiz denenebilecek ne var?**
 
-> ⚡ **Kısa cevap:** Buji değişimi 2026 İstanbul için tahmini **~500–1.100 ₺**. Ama vakaların önemli bir bölümünde buji sağlamdır; sorun ıslaklık, kirlilik ya da yerine oturmamış bir başlıktır. Aşağıdaki üç kontrol ücretsizdir ve 10 dakika sürer.
+> ⚡ **Kısa cevap:** Değişime gitmeden önce dur — vakaların önemli bir bölümünde buji sağlamdır; sorun ıslaklık, kirlilik ya da yerine oturmamış bir başlıktır. Aşağıdaki üç kontrol ücretsizdir ve 10 dakika sürer. Değişim gerekiyorsa maliyeti cihazına göre [ücretsiz öğrenebilirsin](/).
 
 ## Önce şunu ayırın: kıvılcım var mı, yok mu?
 
@@ -50,14 +50,9 @@ Brülör başlığındaki küçük gaz delikleri yemek artığıyla tıkanmış 
 
 Bu üç adımdan sonra hâlâ kıvılcım yoksa, sıra gerçekten ateşleme parçasındadır.
 
-## Değişim gerekiyorsa: fiyat ve kapsam
+## Tamir maliyeti ne kadar olur?
 
-2026 İstanbul için tahmini aralık **~500–1.100 ₺**. Aradaki farkın ana sebebi işin kapsamı:
-
-- **Tek gözün bujisi ya da kablosu** değişiyorsa aralığın alt tarafındasınız.
-- **Ateşleme ünitesinin tamamı** değişiyorsa üst tarafa yaklaşır. Bu genellikle hiçbir göz kıvılcım çıkarmadığında gündeme gelir.
-
-Servisle konuşurken **hangi gözlerin çalıştığını** söylemek, size verilecek tahmini doğrudan netleştirir.
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Bu işi neden kendiniz yapmanızı önermiyoruz
 

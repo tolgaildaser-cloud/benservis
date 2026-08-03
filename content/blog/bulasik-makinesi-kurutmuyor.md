@@ -53,18 +53,9 @@ Aşağıdaki durumda müdahale etme, servis gerekir:
 - Yıkama suyu **hiç ısınmıyorsa** (bulaşıklar soğuk ve ıslaksa)
 - Fanlı modelde **fan sesi hiç gelmiyorsa** ya da yanık kokusu varsa
 
-## 2026 bulaşık makinesi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Parlatıcı / tuz (market, kendin) | 150 – 400 ₺ |
-| Isıtıcı rezistans değişimi | 1.500 – 3.000 ₺ |
-| Kurutma fanı / termostat | 1.200 – 2.500 ₺ |
-| Elektronik kart tamiri | 1.500 – 3.500 ₺ |
-
-İlgili rehberler: [Bulaşık makinesi temiz yıkamıyor](/blog/bulasik-makinesi-temiz-yikamiyor/) · [Su atmıyor / dipte su kalıyor](/blog/bulasik-makinesi-su-atmiyor/) · [Bulaşık makinesi tamiri kaç para?](/blog/bulasik-makinesi-tamiri-kac-para/) · [Bosch bulaşık makinesi hata kodları](/blog/bosch-bulasik-makinesi-hata-kodlari/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 

@@ -53,20 +53,9 @@ Aşağıdakiler uzmanlık ve özel ekipman ister — kendin müdahale etme:
 - **Yanık kokusu, anormal ses** ya da sürekli açılıp kapanma varsa
 - Filtre temiz, ayarlar doğru olduğu hâlde **hâlâ soğutmuyorsa**
 
-## 2026 klima servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka, kapasite (BTU), gaz tipi ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Klima bakımı / temizlik (split) | 600 – 1.200 ₺ |
-| Gaz dolumu (R32 / R410) | 1.200 – 2.800 ₺ |
-| Gaz kaçağı tespiti + onarım | 1.500 – 3.500 ₺ |
-| Fan motoru değişimi | 1.200 – 2.500 ₺ |
-| Elektronik kart tamiri | 1.500 – 3.500 ₺ |
-| Kompresör değişimi | 4.000 – 9.000 ₺ |
-
-İlgili rehberler: [Klima hiç açılmıyor / çalışmıyor mu?](/blog/klima-calismiyor/) · [Klima gazı dolumu 2026 fiyatları](/blog/klima-gazi-dolumu-fiyat/) · [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 

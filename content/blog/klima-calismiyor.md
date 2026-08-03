@@ -12,7 +12,7 @@ faq:
   - q: "Kumanda çalışıyor, ekran yanıyor ama klima açılmıyorsa?"
     a: "Kumanda ve elektrik sağlamken klima komut almıyorsa genelde iç ünitenin elektronik kartı (PCB) ya da alıcı sensörü arızalıdır. Bu durumda servis gerekir."
   - q: "Klima açılmıyorsa tamiri kaç para?"
-    a: "Pil/sigorta çoğu zaman ücretsizdir; uzaktan kumanda 2026 İstanbul tahmini ~300–800 ₺, kapasitör ~600–1.500 ₺, elektronik kart tamiri ~1.500–3.500 ₺ aralığındadır. Kesin tahmini cihazına göre Benservis'ten al."
+    a: "Pil ya da sigorta kaynaklıysa çoğu zaman ücretsizdir. Kumanda, kapasitör ve elektronik kart tamiri çok farklı işlerdir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Klimayı açmak istiyorsun ama cihaz hiç tepki vermiyor: ekran yanmıyor, iç ünite ses çıkarmıyor ya da çalışıyor gibi yapıp duruyor. Panikleyip servise koşmadan önce iyi haber: klima açılmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden çalışmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda 2026 için tahmini fiyatları paylaşıyoruz.
@@ -54,20 +54,9 @@ Aşağıdakiler uzmanlık ve özel ekipman ister — kendin müdahale etme:
 - **Yanık kokusu, atan sigortanın tekrarı** ya da sürekli açılıp kapanma varsa
 - Klima **koruma moduna girip çıkıyorsa** ve şebeke düzeldiği hâlde açılmıyorsa
 
-## 2026 klima servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka, kapasite (BTU) ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Uzaktan kumanda değişimi | 300 – 800 ₺ |
-| Sigorta / küçük elektrik | ücretsiz – 500 ₺ |
-| Marş kapasitörü değişimi | 600 – 1.500 ₺ |
-| Elektronik kart (PCB) tamiri | 1.500 – 3.500 ₺ |
-| Fan motoru değişimi | 1.200 – 2.500 ₺ |
-| Kompresör değişimi | 4.000 – 9.000 ₺ |
-
-İlgili rehberler: [Klima soğutmuyor: 6 olası neden](/blog/klima-sogutmuyor-nedenleri/) · [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/) · [Klima gazı dolumu 2026 fiyatları](/blog/klima-gazi-dolumu-fiyat/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -81,4 +70,4 @@ En sık sebep dış ünitedeki marş kapasitörünün zayıflamasıdır; kompres
 Kumanda ve elektrik sağlamken klima komut almıyorsa genelde iç ünitenin elektronik kartı (PCB) ya da alıcı sensörü arızalıdır.
 
 **Klima açılmıyorsa tamiri kaç para?**
-Pil/sigorta çoğu zaman ücretsizdir; kumanda ~300–800 ₺, kapasitör ~600–1.500 ₺, elektronik kart ~1.500–3.500 ₺. Kesin tahmini Benservis'ten al.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

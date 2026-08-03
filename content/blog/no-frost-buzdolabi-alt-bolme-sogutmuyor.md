@@ -12,7 +12,7 @@ faq:
   - q: "Alt bölme soğutmaması gıdaları bozar mı?"
     a: "Evet, alt bölme ~4 °C'nin üstüne çıkarsa gıdalar hızla bozulabilir. Bu yüzden orta-yüksek aciliyetli bir arızadır; uzun süre bekletme."
   - q: "Fan veya defrost tamiri kaç para?"
-    a: "2026 İstanbul tahmini olarak fan motoru ~900–2.000 ₺, defrost onarımı (rezistans/sensör/saat) ~800–1.800 ₺. Kesin tahmini Benservis'ten al."
+    a: "Fan motoru ile defrost onarımı (rezistans/sensör/saat) farklı işlerdir; maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olması en sık görülen ve en kafa karıştırıcı arızalardan biridir. Sebebi aslında mantıklı: bu modellerde tek bir soğutucu (evaporatör) buzlukta durur ve soğuk havayı **fanla** alt bölmeye üfler. Bu zincirin bir halkası kopunca buzluk soğur, dolap soğumaz. Bu yazıda nedenleri, **kendi yapabileceğin testi** ve 2026 fiyatlarını anlatıyoruz.
@@ -45,18 +45,9 @@ No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olma
 - Fandan **uğultu/çığlık** geliyor ya da hiç ses yoksa
 - Alt bölme **ısınıp gıdalar bozuluyorsa** (bekletme)
 
-## 2026 no-frost buzdolabı tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Fan motoru değişimi | 900 – 2.000 ₺ |
-| Defrost onarımı (rezistans/sensör/saat) | 800 – 1.800 ₺ |
-| Damper / klape onarımı | 700 – 1.600 ₺ |
-| Sensör / kart onarımı | 900 – 2.500 ₺ |
-
-İlgili rehberler: [Buzdolabı soğutmuyor ama çalışıyor](/blog/buzdolabi-sogutmuyor-nedenleri/) · [Buzdolabı tamiri 2026 fiyatları](/blog/buzdolabi-tamiri-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -70,4 +61,4 @@ No-frost'ta soğuk hava buzluktan fanla dolaba üflenir; fan ya da defrost arız
 Evet, alt bölme 4 °C üstüne çıkarsa gıdalar hızla bozulur — bekletme.
 
 **Tamiri kaç para?**
-Fan ~900–2.000 ₺, defrost ~800–1.800 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

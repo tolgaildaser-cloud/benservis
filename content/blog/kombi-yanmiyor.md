@@ -12,7 +12,7 @@ faq:
   - q: "Kombi yanmama hata kodu verir mi?"
     a: "Evet, genelde ateşleme/gaz kodu çıkar (Vaillant F.28, Baymak E01, DemirDöküm F.28 gibi). Kodun anlamı için marka rehberlerimize bakabilirsin."
   - q: "Tamiri kaç para?"
-    a: "Arızaya göre: ateşleme elektrodu 2026 İstanbul tahmini ~500–1.200 ₺, gaz valfi ~1.500–3.500 ₺, fan ~1.200–2.800 ₺, elektronik kart ~1.500–3.500 ₺. Kesin tahmini Benservis'ten al."
+    a: "Arızaya göre değişir: ateşleme elektrodu, gaz valfi, fan ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Kombin çalışmıyor, radyatörler ve sıcak su soğuk — kombi **yanmıyor ya da ateşleme yapmıyor**. Soğuk havada sinir bozucu ama iyi haber: sebeplerin bir kısmı basit ve **güvenle evde** kontrol edilir. Bu yazıda nedenleri, kendin yapabileceklerini ve 2026 tahmini fiyatları paylaşıyoruz.
@@ -50,17 +50,9 @@ Güvenli adımlar:
 - **Yanık kokusu, anormal ses** ya da sürekli kilitlenme varsa
 - Fan/baca ya da **kart şüphesi** varsa
 
-## 2026 kombi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Ateşleme / iyonizasyon elektrodu | 500 – 1.200 ₺ |
-| Gaz valfi (armatür) | 1.500 – 3.500 ₺ |
-| Fan değişimi | 1.200 – 2.800 ₺ |
-| Su basınç sensörü | 500 – 1.200 ₺ |
-| Elektronik kart tamiri | 1.500 – 3.500 ₺ |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/) · [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/)
 
@@ -76,4 +68,4 @@ Gaz var mı, vana açık mı, kontör, su basıncı (1–1.5 bar), reset. Gaz pa
 Evet (Vaillant F.28, Baymak E01…); marka rehberlerine bak.
 
 **Tamiri kaç para?**
-Elektrot ~500–1.200 ₺, gaz valfi ~1.500–3.500 ₺, kart ~1.500–3.500 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

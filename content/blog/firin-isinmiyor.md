@@ -12,7 +12,7 @@ faq:
   - q: "Fırın ısınmıyor, kendim ne yapabilirim?"
     a: "Doğru pişirme fonksiyonunu seçtiğinden, kapağın tam kapandığından ve sigortanın atmadığından emin ol; programlı modellerde saat ayarlı değilse fırın ısıtmayabilir. Fişi 1 dakika çekip resetle."
   - q: "Tamiri kaç para?"
-    a: "Arızaya göre değişir: rezistans 2026 İstanbul tahmini ~600–1.300 ₺, termostat/sensör ~600–1.200 ₺, fan motoru ~700–1.400 ₺, elektronik kart ~1.200–2.800 ₺. Kesin tahmini Benservis'ten al."
+    a: "Arızaya göre değişir: rezistans, termostat/sensör, fan motoru ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısınıyor — yemek pişmiyor. Sinir bozucu ama sebep çoğu zaman birkaç parçadan biridir ve teşhisi kolaydır. Bu yazıda fırının neden ısınmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve 2026 tahmini tamir fiyatlarını bulacaksın.
@@ -46,17 +46,9 @@ Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısını
 - Fanlı fırında **fan dönmüyor / ses geliyorsa** (fan motoru)
 - Ekranda **hata kodu** varsa (kart/sensör)
 
-## 2026 fırın tamiri tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Alt / üst rezistans değişimi | 600 – 1.300 ₺ |
-| Termostat / sıcaklık sensörü | 600 – 1.200 ₺ |
-| Fan (turbo) motoru | 700 – 1.400 ₺ |
-| Kapı contası | 400 – 800 ₺ |
-| Elektronik kart tamiri | 1.200 – 2.800 ₺ |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Bilgi Merkezi](/blog/)
 
@@ -72,4 +64,4 @@ Alt ya da üst rezistanslardan biri yanmıştır; o ısıtıcı değişmeli.
 Doğru fonksiyon + saat ayarı + kapak + sigorta kontrol et, resetle.
 
 **Tamiri kaç para?**
-Rezistans ~600–1.300 ₺, termostat ~600–1.200 ₺, fan ~700–1.400 ₺, kart ~1.200–2.800 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

@@ -13,7 +13,7 @@ faq:
   - q: "Bulaşıklar ıslak çıkıyorsa sebebi ne?"
     a: "Parlatıcı eksikliği ve kurutma (rezistans/fan) sorunu kuruluğu bozar. Önce parlatıcıyı kontrol et; geçmezse ısıtma/kurutma arızası servis ister."
   - q: "Servis gerekirse kaç para?"
-    a: "2026 İstanbul tahmini olarak rezistans/ısıtıcı ~700–1.500 ₺, sirkülasyon pompası ~900–2.000 ₺. Çoğu temizlik sorunu ise ücretsiz çözülür. Kesin tahmini Benservis'ten al."
+    a: "Çoğu temizlik sorunu ücretsiz çözülür. Rezistans ya da sirkülasyon pompası gerekiyorsa maliyet modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıktı. İyi haber: "temiz yıkamama" sorunlarının büyük kısmı arıza değil, **bakım ve kullanım** kaynaklı — yani evde, ücretsiz çözülüyor. Bu yazıda 6 olası nedeni, **kendi yapabileceğin çözümleri** ve servis gerekirse 2026 tahmini fiyatları anlatıyoruz.
@@ -50,19 +50,9 @@ Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıkt�
 - **Sirkülasyon pompası** zayıf/ses yapıyorsa (su basıncı düşük)
 - Kurutma hiç olmuyorsa ve **parlatıcı sorunu değilse**
 
-## 2026 bulaşık makinesi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Filtre / kol temizliği | Çoğu zaman ücretsiz |
-| Rezistans / ısıtıcı değişimi | 700 – 1.500 ₺ |
-| Sirkülasyon (yıkama) pompası | 900 – 2.000 ₺ |
-| Su yumuşatma / tuz haznesi onarımı | 600 – 1.300 ₺ |
-| Elektronik kart tamiri | 1.200 – 3.000 ₺ |
-
-İlgili rehberler: [Bulaşıklar ıslak çıkıyor / kurutmuyor](/blog/bulasik-makinesi-kurutmuyor/) · [Bulaşık makinesi su almıyor](/blog/bulasik-makinesi-su-almiyor/) · [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -76,4 +66,4 @@ Tuz/parlatıcı bitmiş ya da sertlik ayarı yanlıştır; doldur ve makine temi
 Parlatıcı eksikliği ya da kurutma/ısıtma sorunu; önce parlatıcıyı kontrol et.
 
 **Servis kaç para?**
-Rezistans ~700–1.500 ₺, sirkülasyon pompası ~900–2.000 ₺; temizlik sorunu ücretsiz.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

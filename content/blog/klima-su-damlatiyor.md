@@ -12,7 +12,7 @@ faq:
   - q: "Klimadan su damlaması tehlikeli mi?"
     a: "Su iç ünitedeki elektronik karta veya prize ulaşırsa risklidir. Damlama sürüyorsa cihazı kapatıp fişini çek, suyun elektrikle temasını önle ve servis çağır."
   - q: "Tahliye hattı temizliği kaç para?"
-    a: "2026 İstanbul tahmini olarak genelde bakım kapsamında ~600–1.200 ₺. Pompa veya montaj düzeltme gerekiyorsa fiyat artar. Kesin tahmini cihazına göre Benservis'ten al."
+    a: "Genelde bakım kapsamındadır; pompa ya da montaj düzeltme gerekiyorsa artar. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğu zaman ciddi bir arıza değil — ama **ihmal edilirse** duvarına, elektroniğe ve eşyana zarar verebilir. İyi haber: en sık sebep basit bir tıkanıklık. Bu yazıda klimanın neden su damlattığını, **servisi aramadan önce kendin kontrol edebileceklerini** ve 2026 için tahmini fiyatları paylaşıyoruz.
@@ -50,18 +50,9 @@ Güvenli adımlar — sorun çoğu zaman burada çözülür:
 - Su **elektronik karta veya prize** ulaşıyorsa (önce kapat, sonra çağır)
 - Pompalı sistemde **pompa sesi yok** ve su taşıyorsa
 
-## 2026 klima su damlaması tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; arızaya, kapasiteye ve kat/yüksekliğe göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Tahliye (drenaj) hattı temizliği | 600 – 1.200 ₺ |
-| Montaj eğimi düzeltme | 500 – 1.100 ₺ |
-| Tahliye pompası değişimi | 900 – 2.000 ₺ |
-| Gaz kaçağı tespiti + onarım | 1.500 – 3.500 ₺ |
-
-İlgili rehberler: [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/) · [Klima soğutmuyor: nedenleri ve fiyatlar](/blog/klima-sogutmuyor-nedenleri/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -75,4 +66,4 @@ Klimayı kapat, filtreyi temizle, tahliye hortumunun ucunu kontrol et. Geçmezse
 Su elektronik karta/prize ulaşırsa evet — cihazı kapatıp fişini çek ve servis çağır.
 
 **Tahliye hattı temizliği kaç para?**
-2026 İstanbul tahmini ~600–1.200 ₺; pompa/montaj gerekiyorsa artar.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

@@ -12,7 +12,7 @@ faq:
   - q: "Yeni makine neden çok titriyor?"
     a: "Büyük ihtimalle nakliye (transport) cıvataları sökülmemiştir. Arkadaki bu cıvatalar kurulumda mutlaka çıkarılmalı; aksi halde makine şiddetli titrer."
   - q: "Tamiri kaç para?"
-    a: "Denge ayarı çoğu zaman ücretsiz; rulman/keçe değişimi 2026 İstanbul tahmini ~1.500–3.000 ₺ (işçilik ağır), amortisör ~600–1.300 ₺. Kesin tahmini Benservis'ten al."
+    a: "Denge ayarı çoğu zaman ücretsizdir. Rulman/keçe değişimi işçiliği ağır bir iştir, amortisör daha hafiftir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Çamaşır makinesi özellikle **santrifüj** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve 2026 tahmini fiyatları anlatıyoruz.
@@ -47,19 +47,9 @@ faq:
 - Denge ve cıvata sağlamken **şiddetli titreşim** sürüyorsa (amortisör)
 - Tamburdan çıkmayan **metalik ses** varsa (yabancı cisim/kazan)
 
-## 2026 çamaşır makinesi ses/titreşim tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Denge / ayak ayarı | Çoğu zaman ücretsiz |
-| Yabancı cisim çıkarma | 500 – 900 ₺ |
-| Amortisör / süspansiyon | 600 – 1.300 ₺ |
-| Rulman / keçe değişimi (işçilik ağır) | 1.500 – 3.000 ₺ |
-| Motor kömürü / fırça | 600 – 1.200 ₺ |
-
-İlgili rehberler: [Çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -73,4 +63,4 @@ Santrifüjde artan boğuk uğultu + alttan su sızması; işçiliği ağır bir 
 Büyük ihtimalle nakliye cıvataları sökülmemiştir.
 
 **Tamiri kaç para?**
-Denge ücretsiz; rulman ~1.500–3.000 ₺, amortisör ~600–1.300 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

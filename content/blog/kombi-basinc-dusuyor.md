@@ -46,17 +46,9 @@ Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sor
 - Isınınca basınç **çok yükselip** ventilden taşıyorsa (genleşme tankı)
 - Radyatör/tesisat kaçağı **gözle görülüyorsa** (tesisat işi)
 
-## 2026 kombi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Genleşme tankı değişimi | 700 – 1.600 ₺ |
-| Emniyet (tahliye) ventili | 400 – 900 ₺ |
-| Kombi içi conta / hidrolik grup | 600 – 1.400 ₺ |
-| Plakalı eşanjör (iç kaçak) | 1.000 – 2.200 ₺ |
-| Tesisat kaçak onarımı | Keşfe göre değişir |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
 

@@ -51,20 +51,9 @@ Güvenli ve ücretsiz adımlar — sorun çoğu zaman burada çözülür:
 - Conta sağlam, ayar doğru olduğu hâlde **hâlâ soğutmuyorsa**
 - **Gaz kaçağı şüphesi** (çalışıyor ama hiç soğutmuyor)
 
-## 2026 buzdolabı servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Kapı contası değişimi | 500 – 1.200 ₺ |
-| Termostat değişimi | 700 – 1.500 ₺ |
-| Fan motoru (no-frost) | 900 – 2.000 ₺ |
-| Defrost onarımı (rezistans/sensör/saat) | 800 – 1.800 ₺ |
-| Gaz dolumu / kaçak onarımı | 1.500 – 3.500 ₺ |
-| Kompresör değişimi | 3.500 – 8.000 ₺ |
-
-İlgili rehber: [Klima soğutmuyor: nedenleri ve 2026 fiyatları](/blog/klima-sogutmuyor-nedenleri/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 

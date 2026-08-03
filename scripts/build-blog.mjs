@@ -929,6 +929,56 @@ fs.writeFileSync(
 basilanTamir.push(tamirHub);
 fiyatDenetimi(basilanTamir);
 
+// ── TAMİR MERKEZİ FİYAT DENETİMİ — İÇERİK KATMANI (Tolga, 3 Ağu 2026) ────────────────────
+// "Benservis tamir merkezinde hiç açık fiyat göstermeyelim." YK #35 şart 1 yalnız /tamir/
+// SAYFALARINI koruyordu; kullanıcının fiilen fiyat GÖRDÜĞÜ yer ise oradan tıklanan içerik
+// sayfalarıydı (3 Ağu ölçümü: 48 bağlı yazının 25'inde TL bandı vardı).
+//
+// KAPSAM SINIRI (bilerek dar): yalnız HATA_KODU_KATMANI'ndan bağlanan yazılar. Bilgi
+// Merkezi'ndeki adanmış "…tamiri kaç para" sayfalarına DOKUNULMAZ — oraya kullanıcı zaten
+// fiyat sormaya geliyor, fiyat o sayfanın varlık sebebi (Tolga kararı, 3 Ağu).
+//
+// ⚠️ Bu denetim TL RAKAMINI arar, "ücretsiz" ifadesini DEĞİL — bedelsizlik bir fiyat vaadi
+// değil, dönüşüm mesajıdır ve kalması istenir.
+const TL_RAKAMI = /[\d.]{3,}\s*(?:₺|\bTL\b)|₺\s*[\d.]{3,}/;
+const tamirIcerikIhlal = [];
+for (const slug of new Set(tumKayitlar.map((g) => g.yazi).filter(Boolean))) {
+  const dosya = path.join(OUT, slug, "index.html");
+  if (!fs.existsSync(dosya)) continue;
+  const m = fs.readFileSync(dosya, "utf8").match(TL_RAKAMI);
+  if (m) tamirIcerikIhlal.push(`/blog/${slug}/ → "${m[0].trim()}"`);
+}
+if (tamirIcerikIhlal.length) {
+  console.error(
+    `[build-blog] ⛔ TAMİR MERKEZİ FİYAT İHLALİ — Tamir Merkezi'nden bağlanan sayfada TL rakamı:\n  ` +
+      tamirIcerikIhlal.join("\n  ") +
+      `\n  → Rakamı kaldır, yerine ücretsiz teşhis yönlendirmesi koy. (Bilgi Merkezi'ndeki "…kaç para" sayfaları bu kuralın dışında.)`
+  );
+  process.exit(1);
+}
+console.log(`[build-blog] ✓ Tamir Merkezi içerik katmanı: ${new Set(tumKayitlar.map((g) => g.yazi).filter(Boolean)).size} bağlı sayfada TL rakamı YOK.`);
+
+// ── TUTULMAYAN SERP SÖZÜ — UYARI (build'i DURDURMAZ) ─────────────────────────────────────
+// Fiyat gövdeden kalktı ama title/description hâlâ "2026 tahmini fiyatları" vaat ediyorsa
+// kullanıcı aramada gördüğü sözü sayfada bulamaz: CTR'ı değil, GÜVENİ yakar.
+// ⛔ Metin PAZ'ın alanı ([[feedback_rol_siniri]]) → FE düzeltmez, yalnız görünür kılar.
+// Build'i durdurmuyor: durdursaydı bu koşuda fiyat kaldırma işi hiç yayına giremezdi.
+const VAAT = /fiyat|maliyet|kaç para|ücret(?!siz)/i;
+const sozler = [];
+for (const slug of new Set(tumKayitlar.map((g) => g.yazi).filter(Boolean))) {
+  const p = posts.find((x) => x.slug === slug);
+  if (!p) continue;
+  const nerede = [VAAT.test(p.title || "") && "title", VAAT.test(p.description || "") && "description"].filter(Boolean);
+  if (nerede.length) sozler.push(`${slug} (${nerede.join("+")})`);
+}
+if (sozler.length) {
+  const baslikta = sozler.filter((s) => s.includes("title")).length;
+  console.warn(
+    `[build-blog] ⚠️  ${sozler.length} sayfanın title/description'ı hâlâ FİYAT VAAT EDİYOR ama gövdede rakam yok` +
+      ` (${baslikta} tanesi BAŞLIKTA — en görünür yer). Metin düzeltmesi PAZ'da:\n  ` + sozler.join("\n  ")
+  );
+}
+
 // ───────────────────────────────────────────────────────────────────────────────
 // /kilavuzlar/ — KULLANIM KILAVUZLARI (YK Kararı #32, 2 Ağu 2026 — Tolga düzeltmesi ②)
 //

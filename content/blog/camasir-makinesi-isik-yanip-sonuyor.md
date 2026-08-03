@@ -12,7 +12,7 @@ faq:
   - q: "Hata kodunun anlamını nasıl öğrenirim?"
     a: "Kullanım kılavuzundaki kod tablosuna bak ya da belirtiyi (hangi ışık, kaç kez) Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
   - q: "Tamiri kaç para?"
-    a: "Arızaya göre değişir: kapı kilidi 2026 İstanbul tahmini ~600–1.300 ₺, su valfi/pompa ~700–1.500 ₺, elektronik kart ~1.200–3.000 ₺. Kesin tahmini Benservis'ten al."
+    a: "Arızaya göre değişir: kapı kilidi, su valfi/pompa ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve 2026 tahmini fiyatları paylaşıyoruz.
@@ -48,19 +48,9 @@ faq:
 - **Isıtma hata kodu** varsa (rezistans/sensör)
 - Aynı kod resetlemeye rağmen **hemen geri geliyorsa**
 
-## 2026 çamaşır makinesi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Kapı / kapak kilidi değişimi | 600 – 1.300 ₺ |
-| Su giriş valfi (selenoid) | 700 – 1.500 ₺ |
-| Tahliye pompası | 700 – 1.500 ₺ |
-| Rezistans / ısıtıcı | 600 – 1.400 ₺ |
-| Elektronik kart tamiri | 1.200 – 3.000 ₺ |
-
-İlgili rehberler: [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -74,4 +64,4 @@ Kapağı kapat, filtreyi temizle, musluğu aç, resetle. Desen geçmiyorsa servi
 Kılavuzdaki tabloya bak ya da belirtiyi Benservis'e yaz; olası arızayı ve fiyatı söyler.
 
 **Tamiri kaç para?**
-Kapı kilidi ~600–1.300 ₺, su valfi/pompa ~700–1.500 ₺, kart ~1.200–3.000 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

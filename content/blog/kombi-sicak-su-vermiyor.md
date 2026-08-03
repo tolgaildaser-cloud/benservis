@@ -12,7 +12,7 @@ faq:
   - q: "Hiç sıcak su yok ve ısıtma da yoksa?"
     a: "O zaman sorun sıcak su tarafında değil, kombinin yanmasındadır (gaz/ateşleme/su basıncı). Kombi yanmıyor rehberimize bak."
   - q: "Tamiri kaç para?"
-    a: "2026 İstanbul tahmini olarak plakalı eşanjör ~1.000–2.200 ₺, 3 yollu vana ~800–1.700 ₺, akış sensörü ~500–1.200 ₺, eşanjör kimyasal temizlik ~800–1.800 ₺. Kesin tahmini Benservis'ten al."
+    a: "Arızaya göre değişir: plakalı eşanjör, 3 yollu vana, akış sensörü ve kimyasal temizlik çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyor** (ya da ılık geliyor). Bu, sıcak su tarafında bir sorun olduğunu gösterir ve sebeplerin bir kısmı bakımla çözülür. Bu yazıda olası arızaları, kendin yapabileceklerini ve 2026 tahmini fiyatları anlatıyoruz.
@@ -46,17 +46,9 @@ Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyo
 - Sıcak su **dalgalı** (bir sıcak bir soğuk) geliyorsa
 - Hem ısıtma hem sıcak su yoksa → [kombi yanmıyor](/blog/kombi-yanmiyor/) durumudur
 
-## 2026 kombi servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Plakalı eşanjör değişimi | 1.000 – 2.200 ₺ |
-| Eşanjör kimyasal (kireç) temizliği | 800 – 1.800 ₺ |
-| 3 yollu vana (motoru/conta) | 800 – 1.700 ₺ |
-| Akış (debi) sensörü | 500 – 1.200 ₺ |
-| Sıcak su NTC sensörü | 500 – 1.200 ₺ |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
 
@@ -72,4 +64,4 @@ Eşanjör kireç tutmuş ya da aeratör tıkalı; aeratörü temizle, geçmezse 
 Sorun yanmadadır; kombi yanmıyor rehberine bak.
 
 **Tamiri kaç para?**
-Plakalı eşanjör ~1.000–2.200 ₺, 3 yollu vana ~800–1.700 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

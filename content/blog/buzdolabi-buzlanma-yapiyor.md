@@ -47,16 +47,9 @@ Güvenli ve çoğu zaman ücretsiz:
 - Buzlanmayla birlikte **soğutma düşüyorsa** → [buzdolabı soğutmuyor](/blog/buzdolabi-sogutmuyor-nedenleri/)
 - **Tabanda/altında su birikiyorsa** → [buzdolabı altında su birikiyor](/blog/buzdolabi-altinda-su-birikiyor/)
 
-## 2026 buzdolabı servisi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka ve arızaya göre değişir. Kesin tahmini Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Kapı contası değişimi | 500 – 1.200 ₺ |
-| Buz çözme (defrost) rezistansı/sensörü | 800 – 1.800 ₺ |
-| Tahliye kanalı açma / temizlik | genelde düşük / ücretsiz kontrol |
-| Termostat değişimi | 700 – 1.500 ₺ |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Buzdolabı soğutmuyor](/blog/buzdolabi-sogutmuyor-nedenleri/) · [Altında su birikiyor](/blog/buzdolabi-altinda-su-birikiyor/) · [No-frost alt bölme soğutmuyor](/blog/no-frost-buzdolabi-alt-bolme-sogutmuyor/)
 

@@ -12,7 +12,7 @@ faq:
   - q: "Su birikmesi başka neyin işareti olabilir?"
     a: "Kapı contasının sızdırması (nem→yoğuşma), arka tahliye kabının çatlaması/kayması ya da su sebilli modellerde hortum/depo sızıntısı da su birikmesine yol açar."
   - q: "Servis gerekirse kaç para?"
-    a: "2026 İstanbul tahmini olarak tahliye/defrost temizliği ~600–1.400 ₺, kapı contası değişimi ~500–1.200 ₺. Kesin tahmini Benservis'ten al."
+    a: "Tahliye/defrost temizliği ile kapı contası değişimi farklı işlerdir; maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Buzdolabının altında, sebze gözünde ya da önünde su birikmesi sık görülen ve çoğu zaman **evde, ücretsiz çözülebilen** bir sorundur. En yaygın sebep küçük bir tıkanıklık. Bu yazıda suyun nereden geldiğini, **kendin nasıl temizleyeceğini** ve servis gerekirse 2026 tahmini fiyatları anlatıyoruz.
@@ -46,18 +46,9 @@ Buzdolabının altında, sebze gözünde ya da önünde su birikmesi sık görü
 - Kapı contası **sızdırıyor** ve değişmesi gerekiyorsa
 - Su birikmesi + **aşırı buzlanma** birlikteyse (defrost arızası)
 
-## 2026 buzdolabı su birikmesi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Tahliye / defrost hattı temizliği | 600 – 1.400 ₺ |
-| Kapı contası değişimi | 500 – 1.200 ₺ |
-| Tahliye kabı / hortum onarımı | 500 – 1.300 ₺ |
-| Defrost onarımı | 800 – 1.800 ₺ |
-
-İlgili rehberler: [Buzdolabı soğutmuyor ama çalışıyor](/blog/buzdolabi-sogutmuyor-nedenleri/) · [Buzdolabı tamiri 2026 fiyatları](/blog/buzdolabi-tamiri-kac-para/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -71,4 +62,4 @@ Evet — arka iç duvardaki küçük deliği ılık su ve ince telle nazikçe a�
 Kapı contası sızıntısı, çatlak tahliye kabı ya da sebilli modelde hortum sızıntısı.
 
 **Servis kaç para?**
-Tahliye temizliği ~600–1.400 ₺, conta ~500–1.200 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).

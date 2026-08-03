@@ -48,16 +48,9 @@ Bunlar çözmüyorsa sorun iç devrededir (magnetron/kapasitör) → **servis ge
 - **Vızıltı/uğultu + ısıtmama** ya da **yanık kokusu** varsa
 - Çalışırken **anormal ses/kıvılcım** görüyorsan (hemen kapat)
 
-## 2026 mikrodalga tamiri tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka ve modele göre değişir. Kesin tahmini Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Magnetron değişimi | 900 – 2.000 ₺ |
-| Yüksek voltaj kapasitörü / diyot | 500 – 1.200 ₺ |
-| Kapı anahtarı (switch) | 400 – 900 ₺ |
-| Elektronik kart | 800 – 1.800 ₺ |
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 İlgili: [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Bilgi Merkezi](/blog/)
 

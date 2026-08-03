@@ -12,7 +12,7 @@ faq:
   - q: "Klimadan yanık kokusu geliyorsa ne yapmalıyım?"
     a: "Yanık veya elektrik/plastik kokusu acil bir uyarıdır — elektrik sorununa işaret edebilir. Cihazı hemen kapat, fişini çek ve kendin müdahale etmeden servis çağır."
   - q: "Klima dezenfekteli bakım kaç para?"
-    a: "2026 İstanbul tahmini olarak derin/dezenfekteli bakım ~900–1.600 ₺. Kapasite ve kat/yüksekliğe göre değişir."
+    a: "Kapasiteye ve kat/yüksekliğe göre değişir; bu sayfada aralık vermiyoruz. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
 Klimayı açtığın anda odaya yayılan küf, rutubet ya da kötü koku hem rahatsız edici hem de çoğu zaman **sağlıksız bir havanın işareti**. İyi haber: kokuların büyük kısmı temizlikle çözülür. Ama bazı kokular (özellikle yanık) ciddi uyarıdır. Bu yazıda hangi kokunun neyi gösterdiğini, **kendin neyi çözebileceğini** ve ne zaman servis gerektiğini anlatıyoruz.
@@ -47,17 +47,9 @@ Sadece küf/rutubet kokusu için güvenli adımlar:
 - Koku + **su damlaması** birlikteyse (tahliye hattı tıkalı)
 - Kokuyla birlikte **soğutma da düştüyse**
 
-## 2026 klima koku / temizlik tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; kapasite, kat/yükseklik ve işlem tipine göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Standart bakım (filtre + iç/dış temizlik) | 600 – 1.200 ₺ |
-| Derin / dezenfekteli bakım | 900 – 1.600 ₺ |
-| Tahliye hattı temizliği | 600 – 1.200 ₺ |
-
-İlgili rehberler: [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/) · [Klima su damlatıyor: nedenleri](/blog/klima-su-damlatiyor/)
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## Sık sorulan sorular
 
@@ -71,4 +63,4 @@ Filtre temizliği + cihazı fan modunda çalıştırıp kurutmak hafif kokuyu az
 Acil uyarı — hemen kapat, fişini çek, kendin açma, servis çağır.
 
 **Dezenfekteli bakım kaç para?**
-2026 İstanbul tahmini ~900–1.600 ₺.
+Arızaya göre değişir; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).
