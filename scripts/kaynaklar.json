@@ -1,65 +1,260 @@
 {
+  "_kurallar": {
+    "amac": "45 tarife kaydinin her biri icin >=2 BAGIMSIZ kaynak (YK Karari #35). Bagimsizlik olcutu = farkli APEX DOMAIN. Ayni sitenin iki sayfasi TEK kaynak sayilir (ama iki ayri veri noktasi olarak yine de degerlidir).",
+    "guncelleme": "3 Agu 2026 — IT veri toplama kosusu. Onceki hali 5 cihaz/14 ariza idi; 45 kaydin 31'i icin tek URL bile yoktu.",
+    "eksen_ayrimi_EN_KRITIK": "Kaynaklar PARCA fiyati ile PARCA+ISCILIK (her sey dahil) rakamini karistiriyor. 17 Tem verisindeki sistematik 'biz pahaliyiz' yanilsamasinin kokeni buydu. Cikarim her satiri parca / iscilik / toplam olarak AYIRMALI; eksen belirsizse kayit DUSUK GUVEN. merkezteknikservis.com gibi ayni sayfada iki eksen veren kaynaklarda TOPLAM satiri alinir.",
+    "kara_liste_HOST": {
+      "servisdukkani.com": "2022-2023 fiyatlari, piyasanin ~10x altinda",
+      "hizmetgo.app": "her hizmete birebir ayni 200-2.000 TL boilerplate — arizaya ozel bilgi yok"
+    },
+    "kara_liste_SAYFA": {
+      "not": "Kara liste HOST bazinda degil SAYFA bazinda uygulanir — ayni sitenin baska sayfasi gecerli olabilir.",
+      "merkezteknikservis.com/davlumbaz-ve-havalandirma-*": "ENDUSTRIYEL mutfak fiyatlari, ev tipi degil. Ayni sitenin firin-ve-ocak sayfalari GECERLI.",
+      "degisimucreti.com bulasik rezistans sayfasi": "2024 fiyati, 3-5x dusuk. Ayni sitenin TV LED sayfasi kullanilabilir ama host agirligi dusuk tutulur."
+    },
+    "UA_403_eklenmez": ["trendyol.com", "hepsiburada.com", "n11.com", "cimri.com"],
+    "tek_host_kumeleri": {
+      "not": "Asagidakiler dedup'ta TEK kaynak sayilir; her kumeden en fazla bir URL kullanilir.",
+      "yetkiliservisibul.com": "ilce alt alan adlari (bahcelievler.*, kadikoy.* ...) ayni sitedir",
+      "yurticiservis.com": "blog + fiyat listesi ayni sitedir",
+      "perpa_kumesi": ["mxstore.com.tr", "laptopservisi.tr", "ekrantamiri.tr"],
+      "mycom_kumesi": ["mycombilgisayar.com.tr", "beyazbilisim.net"]
+    },
+    "kaynak_agirligi": {
+      "1_en_yuksek": "armut.com — tarihli, konumlu, ariza etiketli GERCEK islem kayitlari. Rakamlari ALL-IN is fiyatidir (toplam ekseni), parca degil.",
+      "2_ust_bant": "buranservis.com — premium marka (Franke/Elica) servisi; medyan degil UST BANT sinyali olarak oku.",
+      "3_tavan_sinyali": "sikayetvar.com — gercek ama PAHALI UC yanli (sikayet edilen fiyatlar). Medyan sanma, tavan olarak oku.",
+      "4_parca_only": "yedek parca e-ticareti (212yedekparca, penguensogutma, btkyedekparca, mutfakmerkezi, online-yedekparca, kombiparcafiyatlari) — YALNIZ parca ekseni. Iscilik marjiyla modellenir ve kayit DUSUK GUVEN etiketi alir.",
+      "5_en_dusuk": "SEO icerik / jenerik fiyat listesi siteleri (fiyatii, fiyatlarii, yorumbilgi, ucretii, hizmetdukkani, bilgihizmetleri)."
+    },
+    "filtre_uyarilari": {
+      "armut.com/fiyatlari/klima-kompresoru-tamiri_5768": "OTO KLIMA kayitlari iceriyor (or. Volvo V60). Ev tipi split disi kayitlar elenmeli.",
+      "armut.com/fiyatlari/buzdolabi-motor-degisimi_5273": "'Buzdolabi motoru' = KOMPRESOR. Fan motoru kalemine ASLA girmemeli, 2x asiri fiyat uretir.",
+      "armut.com/fiyatlari/kombi-tamiri_459": "3 yollu vana ayri kalem degil; ariza metnine gore filtrelenmeli.",
+      "armut.com/sirkulasyon-pompasi-tamiri": "/fiyatlari/ formatinda DEGIL, farkli sablon — parser ayri ele almali."
+    },
+    "kaynak_bulunamadi": {
+      "not": "Bu kalemler icin arizaya OZEL, TL rakami veren, dogrulanabilir sayfa BULUNAMADI. Satir uydurulmadi.",
+      "liste": [
+        "Klima / Kapasitor — ayri arastirma turu gerekiyor",
+        "Camasir Makinesi / Kapi kilidi",
+        "Bulasik Makinesi / Su giris valfi",
+        "Bulasik Makinesi / Rezistans-isitici",
+        "Mikrodalga / Rezistans (air fryer)",
+        "Bilgisayar-Yazici / Kagit besleme-merdane"
+      ]
+    }
+  },
+
   "Buzdolabı": {
     "Kompresör değişimi": [
       "https://buzdolabimotordegisimfiyati.com.tr/",
-      "https://www.beyazesya-bolgeservis.com/buzdolabi-motor-degisim-fiyati"
+      "https://www.beyazesya-bolgeservis.com/buzdolabi-motor-degisim-fiyati",
+      "https://armut.com/fiyatlari/buzdolabi-motor-degisimi_5273"
     ],
     "Termostat/sensör": [
-      "https://www.hizmetgo.app/fiyatlari/buzdolabi-termostat-degisimi",
-      "https://bilgihizmetleri.com/buzdolabi-termostat-degisimi-fiyati/"
+      "https://bilgihizmetleri.com/buzdolabi-termostat-degisimi-fiyati/",
+      "https://armut.com/fiyatlari/buzdolabi-kart-tamiri_67560"
     ],
     "Gaz kaçağı/dolum": [
-      "https://www.ucretii.com/buzdolabi-gaz-dolum-ucreti_19.html"
+      "https://www.ucretii.com/buzdolabi-gaz-dolum-ucreti_19.html",
+      "https://armut.com/fiyatlari/buzdolabi-gaz-dolumu_88507",
+      "https://armut.com/fiyatlari/buzdolabi-gaz-kacagi-tamiri_7383"
+    ],
+    "Fan motoru (no-frost)": [
+      "https://www.212yedekparca.com/buzdolabi/fan-motoru",
+      "https://www.penguensogutma.com/bosch-buzdolabi-fan-motoru-00661664"
     ]
   },
+
   "Çamaşır Makinesi": {
     "Rulman/keçe": [
       "https://www.fiyatii.com/camasir-makinesi-tamir-fiyati_21.html",
-      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati",
+      "https://armut.com/fiyatlari/camasir-makinesi-rulman-degisimi_7384",
+      "https://armut.com/fiyatlari/camasir-makinesi-kazan-degisimi_8110"
     ],
     "Elektronik kart": [
       "https://www.fiyatii.com/camasir-makinesi-tamir-fiyati_21.html",
-      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati",
+      "https://armut.com/fiyatlari/camasir-makinesi-kart-tamiri_67561"
     ],
     "Tahliye pompası": [
       "https://www.fiyatii.com/camasir-makinesi-tamir-fiyati_21.html",
       "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+    ],
+    "Su giriş valfi": [
+      "https://armut.com/fiyatlari/camasir-makinesi-su-almiyor_103905",
+      "https://www.yorumbilgi.com/camasir-makinesi-tamiri-fiyati"
+    ],
+    "Kapı kilidi": []
+  },
+
+  "Bulaşık Makinesi": {
+    "Sirkülasyon (yıkama) motoru": [
+      "https://hizmetdukkani.com/hizmetler/bulasik-makinesi-tamiri/",
+      "https://fiyatlarii.com/bulasik-makinesi-pompa-fiyatlari_53.html",
+      "https://armut.com/fiyatlari/bulasik-makinesi-motor-degisimi_7399",
+      "https://www.fiyatlarii.com/bulasik-makinesi-motor-fiyati_52.html"
+    ],
+    "Tahliye pompası": [
+      "https://hizmetdukkani.com/hizmetler/bulasik-makinesi-tamiri/",
+      "https://fiyatlarii.com/bulasik-makinesi-pompa-fiyatlari_53.html"
+    ],
+    "Su giriş valfi": [],
+    "Rezistans/ısıtıcı": []
+  },
+
+  "Fırın / Ocak / Aspiratör": {
+    "Rezistans": [
+      "https://armut.com/fiyatlari/firin-rezistans-degisimi_174808",
+      "https://bahcelievler.yetkiliservisibul.com/firin-rezistans-degisimi_7280.html",
+      "https://blog.beyazesyatamircisi.net/firin-rezistans-tamiri/",
+      "https://buranservis.com/franke-firin-servisi-fiyatlari"
+    ],
+    "Termostat": [
+      "https://buranservis.com/franke-firin-servisi-fiyatlari",
+      "https://armut.com/fiyatlari/firin-tamiri_702"
+    ],
+    "Fan motoru": [
+      "https://buranservis.com/franke-firin-servisi-fiyatlari",
+      "https://armut.com/fiyatlari/firin-tamiri_702"
+    ],
+    "Aspiratör motoru": [
+      "https://armut.com/fiyatlari/aspirator-tamiri_79488",
+      "https://armut.com/fiyatlari/davlumbaz-tamiri_58647"
+    ],
+    "Aspiratör anahtar/kart/lamba": [
+      "https://armut.com/fiyatlari/davlumbaz-tamiri_58647"
     ]
   },
+
   "Klima": {
-    "Kompresör": [
-      "https://www.haberts.com/2026-klima-servisi-fiyatlari-guncel-bakim-montaj-ve-gaz-dolumu-ucretleri"
-    ],
     "Gaz dolumu": [
       "https://www.haberts.com/2026-klima-servisi-fiyatlari-guncel-bakim-montaj-ve-gaz-dolumu-ucretleri",
-      "https://www.fiyatlarii.com/klima-gaz-dolum-ucretleri_59.html"
+      "https://www.fiyatlarii.com/klima-gaz-dolum-ucretleri_59.html",
+      "https://armut.com/fiyatlari/klima-gaz-dolumu_1520"
+    ],
+    "Kompresör": [
+      "https://www.haberts.com/2026-klima-servisi-fiyatlari-guncel-bakim-montaj-ve-gaz-dolumu-ucretleri",
+      "https://armut.com/fiyatlari/klima-kompresoru-tamiri_5768"
     ],
     "Kapasitör": [
       "https://tamirart.com/klima-kart-tamiri-fiyatlari"
     ]
   },
+
   "Kombi / Termosifon": {
     "Eşanjör": [
       "https://www.elitkombi.tr/blog-detay/kombi-tamir-fiyatlari-2026-ortalama-maliyet-analizi",
-      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir"
+      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir",
+      "https://armut.com/fiyatlari/kombi-esanjor-degisimi_76514",
+      "https://askombiservisi.com.tr/kombi-bakim-fiyatlari/"
     ],
     "Sirkülasyon pompası": [
       "https://www.elitkombi.tr/blog-detay/kombi-tamir-fiyatlari-2026-ortalama-maliyet-analizi",
-      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir"
+      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir",
+      "https://armut.com/sirkulasyon-pompasi-tamiri"
     ],
     "3 yollu vana": [
       "https://www.elitkombi.tr/blog-detay/kombi-tamir-fiyatlari-2026-ortalama-maliyet-analizi",
-      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir"
+      "https://www.parcabayim.com/2026-guncel-kombi-servis-ucretleri-servis-ucreti-nedir",
+      "https://ustasiniyolla.com/uc-3-yollu-vana-arizalari-tamiri-temizligi-fiyat-uc-yollu-vana-tamir-takim-seti/",
+      "https://www.penguensogutma.com/3-yollu-vana-motorlari"
+    ],
+    "Rezistans (termosifon)": [
+      "https://armut.com/fiyatlari/termosifon-rezistans-degisimi_3747"
+    ],
+    "Termostat": [
+      "https://armut.com/fiyatlari/kombi-termostat-montaji_133107",
+      "https://askombiservisi.com.tr/kombi-bakim-fiyatlari/"
     ]
   },
-  "Bulaşık Makinesi": {
-    "Sirkülasyon (yıkama) motoru": [
-      "https://hizmetdukkani.com/hizmetler/bulasik-makinesi-tamiri/",
-      "https://fiyatlarii.com/bulasik-makinesi-pompa-fiyatlari_53.html"
+
+  "Televizyon / Monitör": {
+    "Backlight LED bar": [
+      "https://armut.com/fiyatlari/televizyon-led-degisimi_62811",
+      "https://www.japonteknoloji.com/led-televizyon-led-bar/arka-isik-degisim-ucretleri-ve-iscilik-ucretleri",
+      "https://www.lcdtvtamircisi.com/led-tv-led-bar-degisimi-fiyati.html"
     ],
-    "Tahliye pompası": [
-      "https://hizmetdukkani.com/hizmetler/bulasik-makinesi-tamiri/",
-      "https://fiyatlarii.com/bulasik-makinesi-pompa-fiyatlari_53.html"
+    "Besleme kartı": [
+      "https://www.japonteknoloji.com/led-televizyon-led-bar/arka-isik-degisim-ucretleri-ve-iscilik-ucretleri"
+    ],
+    "Anakart": [
+      "https://armut.com/fiyatlari/tv-anakart-degisimi_8794"
+    ],
+    "Monitör paneli": [
+      "https://armut.com/fiyatlari/monitor-ekran-degisimi_135978"
+    ],
+    "TV paneli": [
+      "https://armut.com/fiyatlari/tv-panel-degisimi_8888",
+      "https://www.televizyonpaneli.com/"
     ]
+  },
+
+  "Mikrodalga / Air Fryer": {
+    "Magnetron (mikrodalga)": [
+      "https://armut.com/fiyatlari/mikrodalga-firin-tamiri_1423",
+      "https://www.mutfakmerkezi.com/urunler/magnetron-detail",
+      "https://www.btkyedekparca.com/kategori/mikrodalga-magnetronlari"
+    ],
+    "Fan/termostat/kart": [
+      "https://armut.com/fiyatlari/mikrodalga-firin-tamiri_1423"
+    ],
+    "Rezistans (air fryer)": []
+  },
+
+  "Süpürge": {
+    "Batarya (şarjlı)": [
+      "https://armut.com/fiyatlari/sarjli-supurge-batarya-degisimi_104921",
+      "https://tektamir.com/robot-supurge-batarya-tamiri/"
+    ],
+    "Motor": [
+      "https://armut.com/fiyatlari/elektrikli-supurge-tamiri_32288"
+    ],
+    "Fırça/sensör/anakart": [
+      "https://armut.com/fiyatlari/robot-supurge-tamiri_63773"
+    ]
+  },
+
+  "Su Sebili / Arıtma": {
+    "Filtre seti": [
+      "https://armut.com/fiyatlari/su-aritma-filtre-degisimi_46377",
+      "https://www.merkezsuaritma.com/su-aritma-cihazi-filtre-degisimi-ne-kadar-fiyati-ne-2026/",
+      "https://www.suaritmacihaziservis.com/su-aritma-cihazi-filtre-degisimi/"
+    ],
+    "Pompa/membran": [
+      "https://armut.com/fiyatlari/su-aritma-tamiri_54866",
+      "https://www.merkezsuaritma.com/su-aritma-cihazi-filtre-degisimi-ne-kadar-fiyati-ne-2026/"
+    ]
+  },
+
+  "Bilgisayar / Yazıcı": {
+    "Güç kaynağı / şarj soketi": [
+      "https://armut.com/fiyatlari/bilgisayar-guc-kaynagi-tamiri_70490",
+      "https://armut.com/fiyatlari/laptop-sarj-soketi-degisimi_5941",
+      "https://www.ilsabilisimelektronik.com/hizmetlerimiz/laptop-bilgisayar-tamir-fiyatlari",
+      "https://beyazbilisim.net/sayfa-teknik-servis-fiyat-listesi-5"
+    ],
+    "Ekran kartı/RAM/disk": [
+      "https://armut.com/fiyatlari/laptop-ekran-karti-degisimi_1547",
+      "https://armut.com/fiyatlari/laptop-harddisk-degisimi_5943",
+      "https://www.ilsabilisimelektronik.com/hizmetlerimiz/laptop-bilgisayar-tamir-fiyatlari"
+    ],
+    "Anakart": [
+      "https://armut.com/fiyatlari/bilgisayar-anakart-tamiri_1550",
+      "https://armut.com/fiyatlari/laptop-anakart-degisimi_5937",
+      "https://beyazbilisim.net/sayfa-teknik-servis-fiyat-listesi-5"
+    ],
+    "Ekran/menteşe (laptop)": [
+      "https://armut.com/fiyatlari/laptop-ekran-degisimi_58248",
+      "https://armut.com/fiyatlari/laptop-mentese-degisimi_5942",
+      "https://mxstore.com.tr/laptop-mentese-tamiri/",
+      "https://www.ilsabilisimelektronik.com/hizmetlerimiz/laptop-bilgisayar-tamir-fiyatlari"
+    ],
+    "Yazıcı kafa/kartuş": [
+      "https://armut.com/fiyatlari/yazici-tamiri_1078"
+    ],
+    "Kağıt besleme/merdane": []
   }
 }
