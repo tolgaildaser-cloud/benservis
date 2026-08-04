@@ -95,6 +95,10 @@ const ALAN_ADI = {
 // → kayıt src/tarife-seed.js'ten tamamen düşer ve teşhis motoru o arıza için fiyat gösteremez.
 // (3 Ağu 2026 IT bulgusu; "Buzdolabı · Kompresör değişimi" tam bu tuzağa düşüyordu.)
 const ZORUNLU = ["onayli_parca_min", "onayli_parca_max", "onayli_iscilik"];
+// YK #15 (23 Tem 2026): her düzeltme ÇOK KAYNAK + insan onayı ister — tek kaynakla asla.
+// Kayda yazılacak nokta sayısı bu ifadeyle belirlenir (onayla() ile birebir aynı olmalı).
+const noktaSayisi = (g) => g.nokta || g.mevcut?.veri_noktasi_sayisi || 0;
+const TEK_KAYNAK_ESIGI = 2;
 const bosMu = (v) => v == null || String(v).trim() === "";
 const sayi = (v) => (bosMu(v) ? null : Number(v));
 const formDegerleri = (kaynak) => ({
@@ -142,7 +146,7 @@ function Onayla() {
       await api("onayla", { method: "POST", body: JSON.stringify({
         cihaz: g.cihaz, marka: g.marka, ariza: g.ariza,
         // Ham veri yoksa öneri de yok — mevcut kaydın güveni/nokta sayısı sıfırlanmasın.
-        veri_noktasi_sayisi: g.nokta || g.mevcut?.veri_noktasi_sayisi || 0,
+        veri_noktasi_sayisi: noktaSayisi(g),
         guven: g.oneri?.guven || g.mevcut?.guven || undefined,
         ...d,
       })});
@@ -185,6 +189,8 @@ function Onayla() {
             {acik === k && (() => {
               const eksik = eksikler(d);
               const fark = farklar(g.mevcut, d);
+              const nokta = noktaSayisi(g);
+              const tekKaynak = nokta < TEK_KAYNAK_ESIGI;
               const yaz = (v) => (v == null ? "—" : v);
               // İkisi de boşken "———" gibi okunmaz bir bant basmayalım.
               const bant = (min, max) => (min == null && max == null ? "yok" : `${yaz(min)}–${yaz(max)}`);
@@ -195,6 +201,18 @@ function Onayla() {
                     ? <>Form <strong style={{ color: INK }}>mevcut onaylı bantla</strong> dolu: parça {bant(g.mevcut.onayli_parca_min, g.mevcut.onayli_parca_max)}, işçilik {yaz(g.mevcut.onayli_iscilik)}, beklenen {yaz(g.mevcut.onayli_beklenen)}</>
                     : <>Bu grubun <strong style={{ color: INK }}>onaylı kaydı yok</strong> — form boş açıldı.</>}
                 </div>
+
+                {/* YK #15: tek kaynakla bant düzeltilmez. Kaydı teknik olarak engellemiyoruz
+                    (kararı kurucu verir) ama körlemesine onay için görünür kapı koyuyoruz. */}
+                {tekKaynak && (
+                  <div style={{ fontSize: 12.5, color: "#9A3412", background: "#FFF7ED", border: "1px solid #FED7AA", borderRadius: 8, padding: "8px 11px" }}>
+                    <strong>⚠ Tek kaynak ({nokta} veri noktası) — YK #15 gereği onaylanmaz.</strong>{" "}
+                    Bant düzeltmesi çok kaynaklı veri ister; tek kaynakla ne yükseltilir ne düşürülür.
+                    {fark.length > 0
+                      ? " Aşağıdaki değişikliği kaydetmeden önce 2. bağımsız kaynağı bul."
+                      : " Bandı olduğu gibi bırak; 2. bağımsız kaynak gelene kadar bu kaydı açma."}
+                  </div>
+                )}
 
                 {/* Web önerisi SALT OKUNUR — forma ancak düğmeyle taşınır (3 Ağu düzeltmesi). */}
                 {g.oneri && (
