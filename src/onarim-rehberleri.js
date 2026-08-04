@@ -144,7 +144,16 @@ const kucult = (s) => String(s || "").toLocaleLowerCase("tr");
  * Eşleşme yoksa null döner → buton hiç gösterilmez (boş/yanlış link YOK).
  *
  * @param {string} cihaz   Seçilen cihaz (CIHAZLAR listesinden birebir)
- * @param {string} arizaAd En olası arızanın adı (AI çıktısı) — SEED adlarıyla örtüşür
+ * @param {string} arizaAd En olası arızanın adı (AI çıktısı — serbest metin)
+ *
+ * ⚠️ SEED BAĞIMLILIĞI (4 Ağu 2026, YK #38 denetimi): burada eşleşme SEED satır ADLARINA
+ * DEĞİL, aşağıdaki küratörlü `ara` anahtar listelerine yapılır — tarife satırı bölünse ya da
+ * yeniden adlandırılsa bile bu harita kendiliğinden bozulmaz. `seedBeklenen`'deki sessiz
+ * yanlış-eşleşme hatası burada YOK: (a) "en uzun anahtar kazanır" kuralı zaten belirleyici,
+ * (b) eşleşme yoksa null → buton hiç gösterilmez (güvenli varsayılan), (c) en kötü sonuç
+ * yanlış LİNK'tir, yanlış FİYAT değil. Denetim: bugünkü 45 SEED adı × 5 ek ile 0 beraberlik;
+ * bölünecek üç kalemin cihazlarında (TV · Bilgisayar/Yazıcı · Su Sebili) zaten rehber yok.
+ * Kilit: `src/seed-eslesme.test.js` → "onarim-rehberleri: SEED adlarına bağlılık".
  */
 export function rehberBul(cihaz, arizaAd) {
   const liste = REHBERLER[cihaz];

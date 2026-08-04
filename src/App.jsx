@@ -9,6 +9,7 @@ import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
+import { seedEslestir } from "./seed-eslesme.js";
 
 // YK #35 ŞART 2 — HUNİYİ UÇTAN UCA BAĞLA. `/tamir/` sayfalarındaki "servis çağır"
 // bağlantıları `?kaynak=tamir-<cihaz>` taşır ve orada `servis_cagir` olayı düşer; burada aynı
@@ -59,21 +60,10 @@ function markaKademe(marka) {
 }
 
 // EN OLASI arızanın SEED satırından beklenen tutarı DETERMİNİSTİK hesaplar: parça bandı kademeye
-// göre (premium=üst, ekonomik=alt, orta=orta) + işçilik. seedRef SEED'de yoksa null → çağıran
-// AI'ın (fallback) beklenen'ini kullanır. Böylece aynı cihaz+arıza+marka HER ZAMAN aynı fiyat.
-function seedBeklenen(cihaz, seedRef, kademe) {
-  const arr = SEED[cihaz] || [];
-  if (!seedRef) return null;
-  const norm = (s) => String(s).toLocaleLowerCase("tr").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
-  const hedef = norm(String(seedRef).split(":")[0]); // AI ": parça…" eklerse kes, ad kalsın
-  if (!hedef) return null;
-  let row = arr.find((r) => norm(r[0]) === hedef);
-  if (!row) row = arr.find((r) => { const n = norm(r[0]); return n.includes(hedef) || hedef.includes(n.split(" ")[0]); });
-  if (!row) return null;
-  const [, pmin, pmax, isc] = row;
-  const parca = kademe === "premium" ? pmax : kademe === "ekonomik" ? pmin : Math.round((pmin + pmax) / 2);
-  return parca + isc;
-}
+// göre (premium=üst, ekonomik=alt, orta=orta) + işçilik. Böylece aynı cihaz+arıza+marka HER
+// ZAMAN aynı fiyat. Eşleşme mantığı `src/seed-eslesme.js` içinde (tam eşleşme → en spesifik
+// kelime skoru → BERABERLİKTE null). ⛔ Belirsizlikte sessizce ilk satır SEÇİLMEZ; null döner
+// ve çağıran AI'ın (referans tarifeye çıpalı) kendi tahminine düşer — YK Kararı #38, 4 Ağu 2026.
 
 function extractJSON(text) {
   let t = text.replace(/```json/gi, "").replace(/```/g, "").trim();
@@ -317,12 +307,17 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       // En olası İKİ arıza olasılıkça YAKINSA (≤15 puan) ve #2 daha UCUZ/yaygınsa onu fiyatla —
       // böylece AI en-olasıyı gaz↔kompresör arasında çevirse bile fiyat SIÇRAMAZ (tutarlı). Net
       // baskın arızada (>15 puan fark) #1 kalır. #1 için seedRef (güvenilir), #2 için arıza adı
-      // (fuzzy eşleşir). Eşleşme yoksa AI beklenen'ine düşülür. gerek_yok'ta atla.
+      // (kelime skoru ile eşleşir). Eşleşme yoksa YA DA iki satır beraberse (belirsiz) AI
+      // beklenen'ine düşülür — yanlış satırdan fiyat üretilmez. gerek_yok'ta atla.
       if (parsed && parsed.kararOnerisi !== "gerek_yok" && Array.isArray(parsed.olasiArizalar) && parsed.olasiArizalar.length) {
         const kademe = markaKademe(efektifMarka);
         const f = parsed.olasiArizalar;
-        const p1 = seedBeklenen(cihaz, parsed.seedRef || f[0]?.ad, kademe);
-        const p2 = f[1] ? seedBeklenen(cihaz, f[1].ad, kademe) : null;
+        const e1 = seedEslestir(cihaz, parsed.seedRef || f[0]?.ad, kademe);
+        const e2 = f[1] ? seedEslestir(cihaz, f[1].ad, kademe) : { beklenen: null, durum: "yok", adaylar: [] };
+        const p1 = e1.beklenen, p2 = e2.beklenen;
+        // Belirsizlik SESSİZ kalmasın: kaç vakada iki satır berabere kalıyor ölçülsün.
+        // ⛔ Serbest metin (kullanıcı/AI cümlesi) GÖNDERİLMEZ — yalnız cihaz + aday sayısı.
+        if (e1.durum === "belirsiz") { try { track("seed_belirsiz", { cihaz, aday: e1.adaylar.length }); } catch {} }
         const w1 = Number(f[0]?.olasilik) || 0, w2 = Number(f[1]?.olasilik) || 0;
         let sec = p1;
         if (p1 != null && p2 != null && w1 - w2 <= 15 && p2 < p1) sec = p2; // yakın + daha ucuz kök neden
