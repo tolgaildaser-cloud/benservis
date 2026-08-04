@@ -20,8 +20,13 @@ import { medyan, aykiriEle } from "../api/_tarife-hesap.js";
 
 const GIDIS = 1500; // App.jsx SERVIS_GIDIS_BEDELI ile aynı; final fiyata sabit eklenir.
 
+// Bu rapor "bizim SEED'imiz vs WEB piyasası" kıyasıdır → YALNIZ kaynak='web' noktaları.
+// (4 Ağu 2026, IT) Panelin "Veri gir" formu `kaynak='saha'` yazar; bölme sırasında yeni satırı
+// panelde görünür kılmak için atılan TOHUM noktaları da öyle. Onlar bizim kendi rakamımızdır —
+// kıyasa girerlerse kendimizi kendimizle doğrular, YK #35 host sayımını da şişiririz.
 const { data: veriler, error: e1 } = await supabase
-  .from("tarife_veri").select("cihaz, marka, ariza, parca_tl, iscilik_tl, toplam_tl, kaynak_url, notlar");
+  .from("tarife_veri").select("cihaz, marka, ariza, parca_tl, iscilik_tl, toplam_tl, kaynak_url, notlar")
+  .eq("kaynak", "web");
 if (e1) { console.error("Supabase hatası (tarife_veri):", e1.message); process.exit(1); }
 
 // K3 (4 Ağu 2026, IT) — EKSENE ÖZEL. `dusuk-guven=sayfa-ici-makas-*` etiketi, sayfanın verdiği
