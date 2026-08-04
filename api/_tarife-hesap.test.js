@@ -1,6 +1,33 @@
 // api/_tarife-hesap.test.js
 import { describe, it, expect } from "vitest";
-import { onerTarife, medyan, yuzdelik, guvenSeviyesi } from "./_tarife-hesap.js";
+import { onerTarife, medyan, yuzdelik, guvenSeviyesi, aykiriEle, mertebeDisi, MERTEBE } from "./_tarife-hesap.js";
+
+describe("aykiriEle (4 Ağu 2026 — robust)", () => {
+  it("REGRESYON: n=2'de çöpü tutup doğruyu atmaz (eski kural [1000,111111] → [111111])", () => {
+    expect(aykiriEle([1000, 111111])).toEqual([1000, 111111]); // eleme yok, karar YK #15'e kalır
+  });
+  it("n≥4 Tukey çiti: 50.000 elenir, gövde kalır", () => {
+    expect(aykiriEle([1000, 1100, 1200, 50000])).toEqual([1000, 1100, 1200]);
+  });
+  it("n=3 MAD: tek uç elenir", () => {
+    expect(aykiriEle([1000, 1100, 90000])).toEqual([1000, 1100]);
+  });
+  it("n=3 dağınık ama gerçek veri elenmez", () => {
+    expect(aykiriEle([1000, 1500, 2200])).toEqual([1000, 1500, 2200]);
+  });
+  it("tek nokta / boş dizi güvenli", () => {
+    expect(aykiriEle([1000])).toEqual([1000]);
+    expect(aykiriEle([])).toEqual([]);
+  });
+});
+
+describe("mertebeDisi (toplama akıl çiti)", () => {
+  it("111.111 TL vs 2.350 TL referans → çöp", () => expect(mertebeDisi(111111, 2350)).toBe(true));
+  it("gözlenen en büyük MEŞRU sapma (+%404 ≈ 5×) kesilmez", () => expect(mertebeDisi(3150, 625)).toBe(false));
+  it("gözlenen en büyük MEŞRU düşüş (−%83 ≈ 1/5,9) kesilmez", () => expect(mertebeDisi(400, 2350)).toBe(false));
+  it("referans yoksa karar verilmez", () => expect(mertebeDisi(999999, null)).toBe(false));
+  it("eşik tek sabit", () => expect(MERTEBE).toBe(10));
+});
 
 describe("yuzdelik/medyan", () => {
   it("medyan tek/çift", () => { expect(medyan([10,20,30])).toBe(20); expect(medyan([10,20,30,40])).toBe(25); });

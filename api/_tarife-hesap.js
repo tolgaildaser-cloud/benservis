@@ -10,10 +10,44 @@ export function yuzdelik(arr, p) {
 }
 export function medyan(arr) { return yuzdelik(arr, 50); }
 
-function aykiriEle(arr) {
-  const m = medyan(arr);
-  if (m == null) return arr;
-  return arr.filter((x) => x >= m * 0.4 && x <= m * 2.5);
+// TEK EŞİK — "bir büyüklük mertebesi". Hem toplama katmanındaki akıl çiti (nokta, onaylı
+// referansımızın 10 katından büyük / 1/10'undan küçük olamaz) hem de sayfa içi makas çiti
+// (tek bir parçanın marka-marka bandı bir mertebeyi aşamaz; aşıyorsa sayfa tek kalem değil,
+// KATEGORİ listesidir) bu sabiti kullanır. Kalem başına elle ayarlanan sınır YOK.
+// Kalibrasyon: 68 satırlık veri setinde gözlenen en büyük MEŞRU sapma +%404 (≈5,0×) ve
+// −%83 (≈1/5,9) → 10× bunun ~2 katı, yani hiçbir gerçek düzeltmeyi kesmez.
+export const MERTEBE = 10;
+
+// Aykırı değer elemesi — ROBUST (4 Ağu 2026, IT).
+// ⚠️ ESKİ KURAL (medyanın 0,4×–2,5× bandı) n=2'de TERS çalışıyordu: [1.000, 111.111]
+// çiftinde medyan 56.055 olur, bant 22.422–140.138 → DOĞRU olan 1.000 elenir, ÇÖP 111.111
+// KALIR. İki noktanın hangisinin aykırı olduğuna karar verecek istatistiksel dayanak yoktur.
+// YENİ POLİTİKA:
+//   n ≥ 4 → Tukey çiti (Q1−1,5·IQR … Q3+1,5·IQR) — dağılımın KENDİ genişliğine göre ölçekler.
+//   n = 3 → medyan ± 3·MAD (medyan mutlak sapma; MAD=0 ise eleme yok).
+//   n ≤ 2 → ELEME YOK. Fizik dışı nokta bu katmanda değil, TOPLAMA katmanında
+//           (scripts/tarife-topla.mjs · MERTEBE çiti) daha girmeden elenir; kalan
+//           ihtilafı YK #15 çözer (≥2 bağımsız kaynak + insan onayı).
+export function aykiriEle(arr) {
+  const v = arr.filter((x) => x != null && !isNaN(x)).map(Number);
+  if (v.length <= 2) return v;
+  if (v.length === 3) {
+    const m = medyan(v);
+    const mad = medyan(v.map((x) => Math.abs(x - m)));
+    if (!mad) return v;
+    return v.filter((x) => Math.abs(x - m) <= 3 * mad);
+  }
+  const q1 = yuzdelik(v, 25), q3 = yuzdelik(v, 75), iqr = q3 - q1;
+  if (!iqr) return v;
+  return v.filter((x) => x >= q1 - 1.5 * iqr && x <= q3 + 1.5 * iqr);
+}
+
+// Bir nokta, onaylı referansımıza göre bir büyüklük mertebesi dışında mı? (toplama çiti)
+// ref yoksa (henüz onaylı satır yok) karar verilemez → false (eleme yok, uydurma yok).
+export function mertebeDisi(deger, ref) {
+  if (deger == null || !(Number(deger) > 0) || !ref || !(Number(ref) > 0)) return false;
+  const k = Number(deger) / Number(ref);
+  return k > MERTEBE || k < 1 / MERTEBE;
 }
 
 // Güven: nokta sayısı + dağılım. yuksek = 3+ & düşük varyans; orta = 2 veya 3+ yüksek varyans; dusuk = ≤1.

@@ -16,13 +16,21 @@
 // Ayrıca YK #35 kapısı için: her satırda kıyası besleyen **bağımsız host** sayısı gösterilir
 // (aynı alan adının iki sayfası TEK kaynak sayılır). Host < 2 ise aksiyon önerilmez.
 import supabase from "../api/_supabase.js";
-import { medyan } from "../api/_tarife-hesap.js";
+import { medyan, aykiriEle } from "../api/_tarife-hesap.js";
 
 const GIDIS = 1500; // App.jsx SERVIS_GIDIS_BEDELI ile aynı; final fiyata sabit eklenir.
 
 const { data: veriler, error: e1 } = await supabase
-  .from("tarife_veri").select("cihaz, marka, ariza, parca_tl, iscilik_tl, toplam_tl, kaynak_url");
+  .from("tarife_veri").select("cihaz, marka, ariza, parca_tl, iscilik_tl, toplam_tl, kaynak_url, notlar");
 if (e1) { console.error("Supabase hatası (tarife_veri):", e1.message); process.exit(1); }
+
+// K3 (4 Ağu 2026, IT) — EKSENE ÖZEL. `dusuk-guven=sayfa-ici-makas-*` etiketi, sayfanın verdiği
+// parça bandının bir büyüklük mertebesini aştığını söyler: o sayfa tek kalem değil KATEGORİ
+// listesi okumuştur → noktanın PARÇA ekseni güvenilmezdir. Aynı satırın gerçek `toplam_tl`
+// (all-in) değeri varsa o SAĞLAMDIR, kıyasa girmeye devam eder. Nokta silinmez (kanıt kalır);
+// yalnız parça medyanını ve YK #35 host sayımını beslemez, raporun altında ayrıca listelenir.
+const parcaGuvensiz = (v) => /dusuk-guven=sayfa-ici-makas/.test(v.notlar || "");
+const dusukGuven = (veriler || []).filter(parcaGuvensiz);
 
 const { data: onaylar, error: e2 } = await supabase
   .from("tarife").select("cihaz, marka, ariza, onayli_parca_min, onayli_parca_max, onayli_iscilik").eq("durum", "onayli");
@@ -39,8 +47,8 @@ const orta = (a, b) => (a != null && b != null ? (Number(a) + Number(b)) / 2 : n
 
 // Bir URL'in alan adı (www. atılır). Bağımsızlık ölçütü = farklı host.
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u || "?"; } };
-// Medyanın 0,4×–2,5× bandı dışındaki uçları at (api/_tarife-hesap.js ile aynı politika).
-const aykiriEle = (arr) => { const m = medyan(arr); return m == null ? arr : arr.filter((x) => x >= m * 0.4 && x <= m * 2.5); };
+// Aykırı eleme politikası TEK YERDE: api/_tarife-hesap.js `aykiriEle` (Tukey/MAD; n≤2'de eleme
+// yok — eski medyan×[0,4–2,5] kuralı n=2'de çöpü tutup doğruyu atıyordu). Kopya kural YOK.
 
 const satirlar = [];
 const veriYok = [];
@@ -53,7 +61,7 @@ for (const [k, pts] of grupMap) {
 
   // ② ELMA-ELMA: all-in yalnız GERÇEK toplam_tl'den gelir; parça+işçilik toplam sayılmaz.
   const allinPts = pts.filter((p) => p.toplam_tl != null && Number(p.toplam_tl) > 0);
-  const parcaPts = pts.filter((p) => p.parca_tl != null && Number(p.parca_tl) > 0);
+  const parcaPts = pts.filter((p) => p.parca_tl != null && Number(p.parca_tl) > 0 && !parcaGuvensiz(p));
 
   let eksen, biz, web, kullanilan;
   if (allinPts.length) {
@@ -123,6 +131,15 @@ const celiskili = (veriler || []).filter(
 if (celiskili.length) {
   console.log(`\n**⚠️ Çelişkili nokta (parça > toplam — LLM çıkarımı yanlış slotlamış, ${celiskili.length} adet):**`);
   for (const v of celiskili) console.log(`- ${v.cihaz} · ${v.ariza} — parça ${v.parca_tl} > toplam ${v.toplam_tl} · ${host(v.kaynak_url)}`);
+}
+
+if (dusukGuven.length) {
+  console.log(`\n**⚠️ Düşük güven — PARÇA ekseni kıyasa katılmadı (sayfa içi makas > 1 mertebe, ${dusukGuven.length} nokta):**`);
+  for (const v of dusukGuven) {
+    const et = (/dusuk-guven=([^;]+)/.exec(v.notlar) || [])[1] || "?";
+    console.log(`- ${v.cihaz} · ${v.ariza} — parça ${v.parca_tl} · ${host(v.kaynak_url)} · ${et}`);
+  }
+  console.log("_Bu noktalar silinmedi (kanıt), ama sayfa tek kalem değil kategori listesi okuduğu için ne medyanı ne host sayımını besler._");
 }
 
 const kapiGecen = satirlar.filter((s) => s.hostSayisi >= 2).length;
