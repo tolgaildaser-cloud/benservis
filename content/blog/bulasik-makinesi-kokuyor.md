@@ -20,7 +20,7 @@ steps:
   - "Kapı contasının kıvrımlarını nemli bezle sil — kalıntı orada birikir."
   - "Hazneye 1-2 bardak beyaz sirke koy ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır."
   - "Program bittikten sonra kapağı aralık bırak; nem çıkmadan koku geri gelir."
-# GRF adım görselleri BEKLENİYOR (backlog: 13 adım görseli).
+# GRF adım görselleri BAĞLANDI (4 Ağu 2026): public/tamir-gorsel/<slug>/adim-0N.png + kapak.png
 # Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
 images:
   coverAlt: "Bulaşık makinesi koku temizliği rehberinin kapak çizimi"

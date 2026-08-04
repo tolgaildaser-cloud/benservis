@@ -19,7 +19,7 @@ steps:
   - "Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar, temizle, sonuna kadar geri tak."
   - "Tambura 1-2 bardak beyaz sirke ekle ve makineyi boş, 60-90 derece bir programda çalıştır."
   - "Program bitince contayı ve kapak çevresini kurula, kapağı açık bırak."
-# GRF adım görselleri BEKLENİYOR (backlog: 13 adım görseli).
+# GRF adım görselleri BAĞLANDI (4 Ağu 2026): public/tamir-gorsel/<slug>/adim-0N.png + kapak.png
 # Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
 images:
   coverAlt: "Çamaşır makinesi koku temizliği rehberinin kapak çizimi"
