@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi su atmıyor: altında su kalıyorsa"
-description: "Bulaşık makinen suyu boşaltmıyor, tabanında su mu kalıyor? En sık sebep tıkalı filtre/pompa. Kendin yapabileceğin kontroller ve 2026 tahmini fiyatları. Bil, gör, çağır."
+description: "Bulaşık makinen suyu boşaltmıyor, tabanında su mu kalıyor? En sık sebep tıkalı filtre/pompa. Kendin yapabileceğin kontroller ve servis sınırı. Bil, gör, çağır."
 slug: "bulasik-makinesi-su-atmiyor"
 date: "2026-06-19"
 category: "Bulaşık makinesi"

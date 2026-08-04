@@ -1,6 +1,6 @@
 ---
-title: "Ocak ateşleme bujisi değişimi: fiyatı ve kendin yapılır mı?"
-description: "Ocak kıvılcım çıkarmıyor mu? Bujiyi değiştirmeden önce ücretsiz denenecek 3 şey, değişim gerekiyorsa 2026 tahmini fiyat ve bu işin neden servis işi olduğu."
+title: "Ocak ateşleme bujisi değişimi: kendin yapılır mı, ne zaman servis?"
+description: "Ocak kıvılcım çıkarmıyor mu? Bujiyi değiştirmeden önce ücretsiz denenecek 3 şey ve bu işin neden servis işi olduğu. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "ocak-atesleme-bujisi-degisimi"
 date: "2026-08-02"
 category: "Fırın / Ocak"

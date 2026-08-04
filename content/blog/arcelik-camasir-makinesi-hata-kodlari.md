@@ -1,6 +1,6 @@
 ---
 title: "Arçelik çamaşır makinesi hata kodları ve anlamları"
-description: "Arçelik (ve Beko/Grundig) çamaşır makinesi hata kodları: su alma, tahliye, ısıtma, kapı ve motor arızalarının kodları, kendin çözebilecekleri ve 2026 tamir fiyatları. Bil, gör, çağır."
+description: "Arçelik (ve Beko/Grundig) çamaşır makinesi hata kodları: su alma, tahliye, ısıtma, kapı ve motor arızalarının kodları, kendin çözebilecekleri ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "arcelik-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
 category: "Çamaşır makinesi"

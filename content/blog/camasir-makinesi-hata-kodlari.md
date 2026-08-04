@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi hata kodları ne demek? (marka marka)"
-description: "Çamaşır makinende hata kodu mu çıktı? Bosch, Siemens, Arçelik, Beko en sık kodların anlamı, kendin çözebileceklerin ve 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+description: "Çamaşır makinende hata kodu mu çıktı? Bosch, Siemens, Arçelik, Beko en sık kodların anlamı, kendin çözebileceklerin ve servisin hangi noktada gerektiği. Bil, gör, çağır."
 slug: "camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
 category: "Çamaşır makinesi"

@@ -1,6 +1,6 @@
 ---
 title: "Bosch bulaşık makinesi hata kodları: E15, E22, E24"
-description: "E15 musluk işareti, E22 iç filtre, E24 tahliye ve diğerleri. Her kodun anlamı, evde denenecek adımlar ve 2026 tamir fiyat aralıkları."
+description: "E15 musluk işareti, E22 iç filtre, E24 tahliye ve diğerleri. Her kodun anlamı, evde denenecek adımlar ve hangi kodda servis gerekir."
 slug: "bosch-bulasik-makinesi-hata-kodlari"
 date: "2026-06-19"
 updated: "2026-07-04"

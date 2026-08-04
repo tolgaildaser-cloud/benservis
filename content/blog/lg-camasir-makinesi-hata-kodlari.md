@@ -1,6 +1,6 @@
 ---
 title: "LG çamaşır makinesi hata kodları: IE, OE, UE, dE ve fazlası"
-description: "LG çamaşır makinende IE, OE, UE, dE gibi bir hata kodu mu var? Kodların anlamı, kendin çözebilecekleri ve 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+description: "LG çamaşır makinende IE, OE, UE, dE gibi bir hata kodu mu var? Kodların anlamı, kendin çözebilecekleri ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "lg-camasir-makinesi-hata-kodlari"
 date: "2026-06-21"
 category: "Çamaşır makinesi"

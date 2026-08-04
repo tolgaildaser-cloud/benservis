@@ -1,6 +1,6 @@
 ---
 title: "Bosch bulaşık makinesi E24 hatası: su atmıyor (tahliye) — adım adım çözümü"
-description: "Bosch bulaşık makinesinde E24 hatası ne demek? Makine suyu atamıyor (tahliye); genelde tıkalı filtre ya da bükük/tıkalı tahliye hortumu. Filtre + hortum + pompa kapağını kontrol yöntemi adım adım + hangi durumda servis + tahmini maliyet. Siemens/Profilo/Neff'te de aynı. Bil, gör, çağır."
+description: "Bosch bulaşık makinesinde E24 hatası ne demek? Makine suyu atamıyor (tahliye); genelde tıkalı filtre ya da bükük/tıkalı tahliye hortumu. Filtre + hortum + pompa kapağını kontrol yöntemi adım adım + hangi durumda servis. Siemens/Profilo/Neff'te de aynı. Bil, gör, çağır."
 slug: "bosch-bulasik-makinesi-e24-hatasi"
 date: "2026-07-22"
 category: "Bulaşık makinesi"

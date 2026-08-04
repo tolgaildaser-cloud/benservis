@@ -1,6 +1,6 @@
 ---
-title: "TV açılmıyor: nedenleri ve tamir maliyeti"
-description: "Televizyon açılmıyor, standby ışığı yanıp sönüyor ya da hiç tepki vermiyor mu? Güç kaynağı, kondansatör, anakart + kendin kontroller + 2026 tahmini fiyatlar. Bil, gör, çağır."
+title: "TV açılmıyor: nedenleri ve evde yapabileceğin kontroller"
+description: "Televizyon açılmıyor, standby ışığı yanıp sönüyor ya da hiç tepki vermiyor mu? Güç kaynağı, kondansatör ve anakart kaynaklı nedenler + evde yapabileceğin kontroller. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "tv-acilmiyor"
 date: "2026-06-23"
 updated: "2026-07-06"

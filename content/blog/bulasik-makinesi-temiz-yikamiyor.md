@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi temiz yıkamıyor: 6 neden ve çözüm"
-description: "Bulaşıklar yıkamadan sonra kirli, kireçli ya da ıslak mı çıkıyor? 6 olası neden, kendin yapabileceğin çözümler ve 2026 tahmini servis fiyatları. Bil, gör, çağır."
+description: "Bulaşıklar yıkamadan sonra kirli ya da kireçli mi çıkıyor? 6 olası neden, kendin yapabileceğin çözümler ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "bulasik-makinesi-temiz-yikamiyor"
 date: "2026-06-19"
 updated: "2026-07-01"

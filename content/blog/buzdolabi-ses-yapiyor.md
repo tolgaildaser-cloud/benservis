@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı ses yapıyor: hangi ses neyin habercisi?"
-description: "Buzdolabın vızıltı, tıkırtı, gürültü mü yapıyor? Hangi sesin normal, hangisinin arıza işareti olduğunu ve 2026 tahmini tamir fiyatlarını öğren. Bil, gör, çağır."
+description: "Buzdolabın vızıltı, tıkırtı, gürültü mü yapıyor? Hangi sesin normal, hangisinin arıza işareti olduğunu ve hangi seste servis gerektiğini öğren. Bil, gör, çağır."
 slug: "buzdolabi-ses-yapiyor"
 date: "2026-06-19"
 category: "Buzdolabı"

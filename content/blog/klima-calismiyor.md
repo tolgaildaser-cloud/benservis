@@ -1,6 +1,6 @@
 ---
-title: "Klima çalışmıyor / açılmıyor: 6 olası neden ve 2026 servis fiyatları"
-description: "Klima hiç açılmıyor ya da çalışmıyor mu? Elektrik, kumanda, kapasitör ve elektronik kart kaynaklı 6 olası neden, kendin yapabileceğin kontroller ve 2026 İstanbul servis fiyatları. Bil, gör, çağır."
+title: "Klima çalışmıyor / açılmıyor: 6 olası neden ve ne yapmalı"
+description: "Klima hiç açılmıyor mu? Elektrik, kumanda, kapasitör ve elektronik kart kaynaklı 6 olası neden, kendin yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "klima-calismiyor"
 date: "2026-06-29"
 category: "Klima"
@@ -57,6 +57,8 @@ Aşağıdakiler uzmanlık ve özel ekipman ister — kendin müdahale etme:
 ## Tamir maliyeti ne kadar olur?
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
+
+Genel fiyat bandı arıyorsan: [klima bakımı kaç para?](/blog/klima-bakimi-kac-para/) · [klima gazı dolumu fiyatı](/blog/klima-gazi-dolumu-fiyat/)
 
 ## Sık sorulan sorular
 

@@ -1,6 +1,6 @@
 ---
-title: "Fırın ısınmıyor: nedenleri ve tamir maliyeti"
-description: "Fırın ısınmıyor ya da geç ısınıyor mu? Rezistans, termostat, fan ve kart arızaları + servis çağırmadan önce kontroller + 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+title: "Fırın ısınmıyor: nedenleri ve servis çağırmadan önce kontroller"
+description: "Fırın ısınmıyor ya da geç ısınıyor mu? Rezistans, termostat, fan ve kart arızaları, servis çağırmadan önce yapabileceğin kontroller ve servis sınırı nerede başlar. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "firin-isinmiyor"
 date: "2026-06-23"
 category: "Fırın / Ocak"

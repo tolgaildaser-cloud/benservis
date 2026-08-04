@@ -1,6 +1,6 @@
 ---
 title: "Samsung çamaşır makinesi hata kodları: 4E, 5E, UE ve fazlası"
-description: "Samsung çamaşır makinende 4E/4C, 5E/5C, UE gibi bir hata kodu mu var? Kodların anlamı, kendin çözebilecekleri ve 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+description: "Samsung çamaşır makinende 4E/4C, 5E/5C, UE gibi bir hata kodu mu var? Kodların anlamı, kendin çözebilecekleri ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "samsung-camasir-makinesi-hata-kodlari"
 date: "2026-06-21"
 category: "Çamaşır makinesi"

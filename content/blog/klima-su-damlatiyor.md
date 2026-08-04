@@ -1,6 +1,6 @@
 ---
-title: "Klima su damlatıyor: nedenleri ve tahmini tamir ücreti"
-description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahliye hattı. Olası nedenler, kendin yapabileceğin kontroller ve 2026 İstanbul tahmini fiyatları. Bil, gör, çağır."
+title: "Klima su damlatıyor: nedenleri ve kendin yapabileceğin kontroller"
+description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahliye hattı. Olası nedenler, evde güvenle yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "klima-su-damlatiyor"
 date: "2026-06-19"
 category: "Klima"
@@ -53,6 +53,8 @@ Güvenli adımlar — sorun çoğu zaman burada çözülür:
 ## Tamir maliyeti ne kadar olur?
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
+
+Genel fiyat bandı arıyorsan: [klima bakımı kaç para?](/blog/klima-bakimi-kac-para/) · [klima gazı dolumu fiyatı](/blog/klima-gazi-dolumu-fiyat/)
 
 ## Sık sorulan sorular
 

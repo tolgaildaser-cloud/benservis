@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi kurutmuyor: 6 neden ve çözüm (2026)"
-description: "Bulaşıklar yıkanıyor ama ıslak mı çıkıyor? Parlatıcıdan rezistansa 6 olası neden, kendin yapabileceğin çözümler ve 2026 tahmini servis fiyatları. Bil, gör, çağır."
+description: "Bulaşıklar yıkanıyor ama ıslak mı çıkıyor? Parlatıcıdan rezistansa 6 olası neden, kendin yapabileceğin çözümler ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "bulasik-makinesi-kurutmuyor"
 date: "2026-07-01"
 category: "Bulaşık makinesi"

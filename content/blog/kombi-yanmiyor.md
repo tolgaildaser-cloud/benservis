@@ -1,6 +1,6 @@
 ---
-title: "Kombi yanmıyor / ateşlemiyor: nedenleri ve servis ücreti"
-description: "Kombin yanmıyor, ateşleme yapmıyor mu? Gaz, su basıncı, ateşleme elektrodu ve fan nedenleri; güvenle kendin kontrol edebileceklerin ve 2026 tahmini fiyatları. Bil, gör, çağır."
+title: "Kombi yanmıyor / ateşlemiyor: nedenleri ve güvenli kontroller"
+description: "Kombin yanmıyor, ateşleme yapmıyor mu? Gaz, su basıncı, ateşleme elektrodu ve fan kaynaklı nedenler; güvenle kendin kontrol edebileceklerin ve nerede durman gerektiği. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "kombi-yanmiyor"
 date: "2026-06-19"
 category: "Kombi"

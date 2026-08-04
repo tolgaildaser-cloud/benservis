@@ -601,6 +601,16 @@ const blogKonuKat = [
 // Kategori SAYFALARI + sitemap ikisini birlikte gezer (sıra: cihazlar, sonra konular).
 const blogKatVeri = [...blogCihazKat, ...blogKonuKat];
 
+// ── KATEGORİ FİYAT VAADİ, VERİDEN TÜRETİLİR (4 Ağu 2026) ──────────────────────────────────
+// PAZ'ın SERP düzeltmesi kategori açıklamalarının da fiyat vaat ettiğini bildirdi. Ama bu
+// vaat HER kategoride kırık değil: adanmış "…tamiri kaç para" sayfaları Tolga'nın kararıyla
+// KORUNDU ve hâlâ o kategorilerin içinde duruyor (bulaşık · buzdolabı · çamaşır · klima ·
+// kombi). Oralarda vaat gerçek; kaldırmak bu kez EKSİK vaat olurdu.
+// Bu yüzden metni sabitlemek yerine kategorinin fiilen fiyat içerip içermediğine bakıyoruz —
+// yarın bir fiyat sayfası eklenir/çıkarılırsa metin kendiliğinden doğru kalır, elle liste yok.
+const KAT_TL = /[\d.]{3,}\s*(?:₺|\bTL\b)|₺\s*[\d.]{3,}/;
+for (const k of blogKatVeri) k.fiyatVar = k.yazilar.some((p) => KAT_TL.test(p.html));
+
 // Yazı kartı (② katman) — /tamir/'deki zorluk·süre·adım·dil satırının blog karşılığı:
 // konu tipi (yazının kendi kategori etiketi) · tarih.
 const blogKarti = (p) =>
@@ -636,13 +646,15 @@ for (const k of blogKatVeri) {
       // yalan olur. Konu kategorisinde başlık, açıklama ve meta satırı konuya göre yazılır.
       title: k.yesil
         ? `${k.ad} — onarım hakkı, döngüsel ekonomi ve daha az atık | Benservis`
-        : `${k.ad} — arıza nedenleri ve tamir maliyetleri | Benservis`,
+        : `${k.ad} — arıza nedenleri ve ${k.fiyatVar ? "tamir maliyetleri" : "servis sınırı"} | Benservis`,
       desc: k.yesil
         ? `Tamir etmek neden atmaktan iyi: onarım hakkı, cihaz ömrü, enerji ve döngüsel ekonomi üzerine ${k.yazilar.length} yazı.`
-        : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları. ${k.yazilar.length} yazı.`,
+        : k.fiyatVar
+        ? `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve güncel tahmini tamir fiyatları. ${k.yazilar.length} yazı.`
+        : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "")}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : "arıza nedenleri, kontroller ve tahmini maliyetler"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "")}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
     })
   );
 }

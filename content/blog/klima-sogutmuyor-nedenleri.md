@@ -1,6 +1,6 @@
 ---
-title: "Klima soğutmuyor: 6 olası neden ve 2026 servis fiyatları"
-description: "Klima soğutmuyorsa nedeni kirli filtreden gaz kaçağına kadar uzanır. 6 olası neden, kendin yapabileceğin kontroller ve 2026 İstanbul servis fiyatlarını öğren."
+title: "Klima soğutmuyor: 6 olası neden ve ne zaman servis gerekir"
+description: "Klima soğutmuyorsa nedeni kirli filtreden gaz kaçağına kadar uzanır. 6 olası neden, kendin yapabileceğin kontroller ve servisi hangi noktada çağırmalısın. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "klima-sogutmuyor-nedenleri"
 date: "2026-06-17"
 updated: "2026-06-29"
@@ -56,6 +56,8 @@ Aşağıdakiler uzmanlık ve özel ekipman ister — kendin müdahale etme:
 ## Tamir maliyeti ne kadar olur?
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
+
+Genel fiyat bandı arıyorsan: [klima bakımı kaç para?](/blog/klima-bakimi-kac-para/) · [klima gazı dolumu fiyatı](/blog/klima-gazi-dolumu-fiyat/)
 
 ## Sık sorulan sorular
 

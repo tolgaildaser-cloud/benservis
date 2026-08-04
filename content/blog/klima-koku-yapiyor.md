@@ -1,6 +1,6 @@
 ---
 title: "Klimadan kötü koku geliyor: sebepleri ve çözümü"
-description: "Klima açınca küf, rutubet ya da yanık kokusu mu geliyor? Hangi koku neyin işareti, kendin neyi çözebilirsin ve ne zaman servis gerekir. 2026 fiyatlarıyla. Bil, gör, çağır."
+description: "Klima açınca küf, rutubet ya da yanık kokusu mu geliyor? Hangi koku neyin işareti, kendin neyi çözebilirsin ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "klima-koku-yapiyor"
 date: "2026-06-19"
 category: "Klima"

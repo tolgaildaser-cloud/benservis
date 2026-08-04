@@ -1,6 +1,6 @@
 ---
-title: "Buzdolabı soğutmuyor ama çalışıyor: nedenleri ve tamir ücreti"
-description: "Buzdolabın çalışıyor ama soğutmuyor mu? 6 olası neden, kendin yapabileceğin kontroller ve 2026 İstanbul tahmini tamir fiyatları. Bil, gör, çağır."
+title: "Buzdolabı soğutmuyor ama çalışıyor: 6 olası neden ve kontroller"
+description: "Buzdolabın çalışıyor ama soğutmuyor mu? 6 olası neden, kendin yapabileceğin kontroller ve hangi belirtide servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "buzdolabi-sogutmuyor-nedenleri"
 date: "2026-06-17"
 category: "Buzdolabı"
@@ -54,6 +54,8 @@ Güvenli ve ücretsiz adımlar — sorun çoğu zaman burada çözülür:
 ## Tamir maliyeti ne kadar olur?
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
+
+Genel fiyat bandı arıyorsan: [buzdolabı tamiri kaç para?](/blog/buzdolabi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 

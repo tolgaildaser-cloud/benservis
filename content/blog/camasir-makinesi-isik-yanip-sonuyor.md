@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi ışıkları yanıp sönüyor: hata ne demek?"
-description: "Çamaşır makinende ışıklar yanıp sönüyor ya da hata kodu mu veriyor? En sık sebepler, yanıp sönmenin ne anlama geldiği ve 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+description: "Çamaşır makinende ışıklar yanıp sönüyor ya da hata kodu mu veriyor? En sık sebepler, yanıp sönmenin ne anlama geldiği ve ne zaman servis gerekir. Bil, gör, çağır."
 slug: "camasir-makinesi-isik-yanip-sonuyor"
 date: "2026-06-19"
 category: "Çamaşır makinesi"

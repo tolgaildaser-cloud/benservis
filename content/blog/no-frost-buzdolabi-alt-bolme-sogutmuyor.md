@@ -1,6 +1,6 @@
 ---
 title: "No-frost buzdolabı alt bölme soğutmuyor: nedenleri"
-description: "Buzluk soğuk ama alt (dolap) bölme soğumuyor mu? No-frost modellerde bunun klasik sebepleri fan ve buz çözme arızasıdır. Nedenler, kontroller ve 2026 fiyatları. Bil, gör, çağır."
+description: "Buzluk soğuk ama alt (dolap) bölme soğumuyor mu? No-frost modellerde bunun klasik sebepleri fan ve buz çözme arızasıdır. Nedenler, kontroller ve servis sınırı. Bil, gör, çağır."
 slug: "no-frost-buzdolabi-alt-bolme-sogutmuyor"
 date: "2026-06-19"
 category: "Buzdolabı"

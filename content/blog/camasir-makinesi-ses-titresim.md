@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi gürültü yapıyor: rulman mı, başka mı?"
-description: "Çamaşır makinen sıkarken çok ses ve titreşim mi yapıyor? Nakliye cıvatası, denge, yabancı cisim ve rulman ayrımı + 2026 tahmini tamir fiyatları. Bil, gör, çağır."
+description: "Çamaşır makinen sıkarken çok ses ve titreşim mi yapıyor? Nakliye cıvatası, denge, yabancı cisim ve rulman ayrımı + hangisinde servis gerekir. Bil, gör, çağır."
 slug: "camasir-makinesi-ses-titresim"
 date: "2026-06-19"
 category: "Çamaşır makinesi"

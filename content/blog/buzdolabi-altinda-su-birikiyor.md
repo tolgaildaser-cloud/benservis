@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabının altında su birikiyor: sebebi ve çözümü"
-description: "Buzdolabının altında ya da sebze gözünde su mu birikiyor? En sık sebep tıkalı tahliye deliği. Nedenler, kendin yapabileceğin temizlik ve 2026 fiyatları. Bil, gör, çağır."
+description: "Buzdolabının altında ya da sebze gözünde su mu birikiyor? En sık sebep tıkalı tahliye deliği. Nedenler, kendin yapabileceğin temizlik ve servis sınırı. Bil, gör, çağır."
 slug: "buzdolabi-altinda-su-birikiyor"
 date: "2026-06-19"
 category: "Buzdolabı"

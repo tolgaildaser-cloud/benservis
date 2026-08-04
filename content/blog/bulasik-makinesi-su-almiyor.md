@@ -1,6 +1,6 @@
 ---
-title: "Bulaşık makinesi su almıyor: olası nedenler ve ücret"
-description: "Bulaşık makinen su almıyor mu? En sık sebepler musluk, giriş filtresi ve valf. Kendin yapabileceğin kontroller ve 2026 İstanbul tahmini fiyatları. Bil, gör, çağır."
+title: "Bulaşık makinesi su almıyor: olası nedenler ve kontroller"
+description: "Bulaşık makinen su almıyor mu? En sık sebepler musluk, giriş filtresi ve valf. Kendin yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "bulasik-makinesi-su-almiyor"
 date: "2026-06-19"
 category: "Bulaşık makinesi"
@@ -52,6 +52,8 @@ Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozuc
 ## Tamir maliyeti ne kadar olur?
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
+
+Genel fiyat bandı arıyorsan: [bulaşık makinesi tamiri kaç para?](/blog/bulasik-makinesi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 

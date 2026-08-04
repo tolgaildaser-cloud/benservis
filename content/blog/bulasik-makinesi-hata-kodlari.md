@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi hata kodları ne demek? (marka marka)"
-description: "Bulaşık makinende E15, E24 gibi bir hata kodu mu var? Bosch, Siemens, Arçelik, Beko en sık kodların anlamı, kendin çözebileceklerin ve 2026 tahmini fiyatları. Bil, gör, çağır."
+description: "Bulaşık makinende E15, E24 gibi bir hata kodu mu var? Bosch, Siemens, Arçelik, Beko en sık kodların anlamı, kendin çözebileceklerin ve servis sınırı. Bil, gör, çağır."
 slug: "bulasik-makinesi-hata-kodlari"
 date: "2026-06-19"
 category: "Bulaşık makinesi"
