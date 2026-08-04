@@ -807,16 +807,17 @@ const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8",
 // Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
 // YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
 // FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
-// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 3 Ağu 2026.
+// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 4 Ağu 2026.
 const SSS = [
   // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 3 Ağu taraması: kümeler çamaşır 13 · bulaşık 11 ·
-  //   kombi 9 · klima 9 · buzdolabı 8 — kombi hiç sette olmamıştı, girdi. Çıkan: bulaşık (31 Tem).
-  //   NOT: setin EN ESKİSİ klima (29 Tem) ama Ağustos klimanın zirve ayı — mevsim yaşa baskın,
-  //   bilerek tutuldu; kombi de yazın "sıcak su" ekseninden giriyor, ısıtma ekseninden değil) —
-  { s: "Çamaşır makinesi santrifüj sırasında çok ses yapıyor ve titriyor, önce neye bakmalıyım?", c: "Önce makinenin dengesine bak: dört ayağın da yere tam bastığından ve makinenin elle itince oynamadığından emin ol, gerekiyorsa ayakları ayarlayıp kilit somunlarını sabitle. Ses taşınmadan sonra başladıysa arkadaki nakliye vidaları sökülmemiş olabilir; yükü de dengeli dağıt, tek bir ağır parça tamburu savurur. Makine düz zeminde, dengeli yükle ve vidaları sökülmüş hâldeyken hâlâ gürültülüyse rulman ya da amortisör yorulmuş olabilir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  // — haftalık belirti soruları (blog verisinden; 4 Ağu taraması: kümeler çamaşır 13 · bulaşık 11 ·
+  //   kombi 9 · klima 9 · buzdolabı 8 — buzdolabı sette EN UZUN süredir yoktu, girdi.
+  //   Çıkan: çamaşır ses/titreşim (2 Ağu). GEREKÇE: Ağustos sıcağı buzdolabının zirve dönemi,
+  //   çamaşır ses/titreşim ise mevsim-nötr; en büyük küme olması sıra beklemesine engel değil.
+  //   Klima (29 Tem) yaşça en eski ama zirve ayında bilerek tutuluyor — mevsim yaşa baskın.) —
+  { s: "Buzdolabı çalışıyor ama soğutmuyor, önce neye bakmalıyım?", c: "Önce sıcaklık ayarına bak: dolap yaklaşık 4, buzluk yaklaşık eksi 18 derece olmalı — ayar yanlışlıkla değişmiş olabilir. Sonra kapı contasını dene; kapağa bir kağıt kıstırıp çek, direnç hissetmiyorsan conta sızdırıyordur. Arkadaki ve alttaki tozu da süpür, dolabı duvardan 5-10 cm uzak tut — tozlu kondenser ısıyı dışarı atamaz. Ayar doğru, conta sağlam ve arka temizken hâlâ soğutmuyorsa ya da buzluk soğuk olduğu hâlde dolap soğumuyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Kombi ısıtıyor ama musluktan sıcak su gelmiyor, önce neye bakmalıyım?", c: "Önce kombi panelinden musluk (sıcak su) sıcaklığını yükselt, sonra musluk ucundaki aeratörü çıkarıp kirecini temizle — debi düşünce bazı kombiler sıcak su moduna hiç geçmez. Birden çok muslukta dene: yalnız birinde sorun varsa mesele kombide değil o musluktadır. Ayar yüksek ve aeratör temizken su hâlâ ılık geliyorsa sorun çoğu zaman sıcak su eşanjörünün kireçlenmesinden çıkıyor — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Klima iç üniteden su damlatıyor, ne yapmalıyım?", c: "Önce klimayı kapat — su elektronik karta veya prize ulaşırsa risklidir. Sonra iç ünitenin filtresini çıkarıp yıka ve tahliye hortumunun dışarı çıkan ucunda tıkanıklık ya da bükülme var mı bak; sorun genellikle tıkalı tahliye hattıdır. Filtre temiz, hortum açıkken damlama sürüyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
 ];
