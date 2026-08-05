@@ -1,6 +1,6 @@
 ---
-title: "Fırın ısınmıyor: nedenleri ve servis çağırmadan önce kontroller"
-description: "Fırın ısınmıyor ya da geç ısınıyor mu? Rezistans, termostat, fan ve kart arızaları, servis çağırmadan önce yapabileceğin kontroller ve servis sınırı nerede başlar. Ücretsiz teşhis. Bil, gör, çağır."
+title: "Fırın ısınmıyor: nedenleri ve kendin kontroller"
+description: "Fırın ısınmıyor ya da geç mi ısınıyor? Rezistans, termostat, fan ve kart arızaları, servis çağırmadan önceki kontroller. Ücretsiz teşhis."
 slug: "firin-isinmiyor"
 date: "2026-06-23"
 category: "Fırın / Ocak"

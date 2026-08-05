@@ -1,5 +1,5 @@
 ---
-title: "COP31 nedir, neden önemli? Türkiye'nin ev sahipliği ve sıfır atık"
+title: "COP31 nedir, neden önemli? Türkiye'nin ev sahipliği"
 description: "COP31 nedir, neden önemli ve Türkiye'nin ev sahipliği ne anlama geliyor? BM İklim Zirvesi, sıfır atık teması ve döngüsel ekonominin (onarım dâhil) rolü. Bil, gör, çağır."
 slug: "cop31-nedir-neden-onemli"
 date: "2026-06-19"

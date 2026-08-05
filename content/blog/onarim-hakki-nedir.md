@@ -1,5 +1,5 @@
 ---
-title: "Onarım Hakkı (Right to Repair) nedir? AB yasası ve Türkiye için anlamı"
+title: "Onarım Hakkı (Right to Repair) nedir? Türkiye için anlamı"
 description: "Onarım Hakkı (Right to Repair) nedir, AB yasası ne getiriyor ve tüketici için ne değişiyor? Yedek parça, onarım bilgisi ve 'değiştirmeden önce onar' ilkesi. Bil, gör, çağır."
 slug: "onarim-hakki-nedir"
 date: "2026-07-04"

@@ -1,6 +1,6 @@
 ---
 title: "Klima çalışmıyor / açılmıyor: 6 olası neden ve ne yapmalı"
-description: "Klima hiç açılmıyor mu? Elektrik, kumanda, kapasitör ve elektronik kart kaynaklı 6 olası neden, kendin yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Klima hiç açılmıyor mu? Elektrik, kumanda, kapasitör ve elektronik kart kaynaklı 6 olası neden ve kendin kontroller. Ücretsiz teşhis."
 slug: "klima-calismiyor"
 date: "2026-06-29"
 category: "Klima"

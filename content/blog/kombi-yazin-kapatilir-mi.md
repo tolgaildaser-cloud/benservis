@@ -1,6 +1,6 @@
 ---
-title: "Kombi yazın tamamen kapatılır mı? Yaz modu nedir, nasıl kullanılır?"
-description: "Kombi yazın şalterden kapatılmalı mı yoksa yaz moduna mı alınmalı? Yaz modu ne yapar, uzun süre kapalı kalan kombide pompa sıkışması riski nedir, tatile giderken ne yapılmalı, kışa dönerken nelere bakılmalı? Bil, gör, çağır."
+title: "Kombi yazın kapatılır mı? Yaz modu nedir, nasıl kullanılır"
+description: "Kombi yazın şalterden mi kapatılmalı, yaz moduna mı alınmalı? Yaz modu ne yapar, uzun kapalı kombide pompa sıkışması riski ve kışa dönüş kontrolleri."
 slug: "kombi-yazin-kapatilir-mi"
 date: "2026-07-14"
 category: "Kombi"

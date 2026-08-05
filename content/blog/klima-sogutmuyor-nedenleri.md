@@ -1,6 +1,6 @@
 ---
 title: "Klima soğutmuyor: 6 olası neden ve ne zaman servis gerekir"
-description: "Klima soğutmuyorsa nedeni kirli filtreden gaz kaçağına kadar uzanır. 6 olası neden, kendin yapabileceğin kontroller ve servisi hangi noktada çağırmalısın. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Klima soğutmuyorsa sebep kirli filtreden gaz kaçağına uzanır. 6 olası neden, kendin kontroller ve servisi hangi noktada çağırmalısın. Ücretsiz teşhis."
 slug: "klima-sogutmuyor-nedenleri"
 date: "2026-06-17"
 updated: "2026-06-29"

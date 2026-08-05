@@ -1,6 +1,6 @@
 ---
-title: "Tatile çıkarken buzdolabının fişi çekilir mi? Ev aletleri tatil hazırlığı"
-description: "Tatile giderken buzdolabının fişi çekilmeli mi, tatil modu ne işe yarar? Çamaşır ve bulaşık makinesinin muslukları, kombi, fişler ve dönüşte yapılacaklar — ev aletlerini tatile hazırlamanın tam listesi. Bil, gör, çağır."
+title: "Tatile çıkarken buzdolabının fişi çekilir mi?"
+description: "Tatilde buzdolabının fişi çekilmeli mi, tatil modu ne işe yarar? Musluklar, kombi, fişler ve dönüşte yapılacaklar — tam hazırlık listesi."
 slug: "tatile-cikarken-buzdolabi-ve-cihazlar"
 date: "2026-07-13"
 category: "Genel"

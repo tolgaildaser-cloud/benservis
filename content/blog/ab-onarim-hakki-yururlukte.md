@@ -1,6 +1,6 @@
 ---
-title: "AB Onarım Hakkı 31 Temmuz 2026'da yürürlükte: neler değişiyor, Türkiye'yi nasıl etkiler?"
-description: "AB Onarım Hakkı Direktifi (2024/1799) 31 Temmuz 2026'da tüm üye ülkelerde uygulamaya giriyor: üreticiye tamir zorunluluğu, onarımı seçene +12 ay garanti, yedek parça erişimi. Kapsamdaki ürünler, tüketiciye kazandırdıkları ve Türkiye'ye olası etkileri. Bil, gör, çağır."
+title: "AB Onarım Hakkı yürürlükte: ne değişiyor, Türkiye'ye etkisi"
+description: "AB Onarım Hakkı Direktifi 31 Temmuz 2026'da yürürlükte: tamir zorunluluğu, +12 ay garanti, yedek parça erişimi ve Türkiye'ye olası etkileri."
 slug: "ab-onarim-hakki-yururlukte"
 date: "2026-07-13"
 category: "Sürdürülebilirlik"

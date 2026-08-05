@@ -1,6 +1,6 @@
 ---
-title: "Elektrik kesintisi sonrası cihaz arızaları: kesinti öncesi ve sonrası ne yapmalı?"
-description: "Elektrik kesintisinde cihaza zarar veren şey kesintinin kendisi değil, elektrik dönerkenki voltaj dalgalanmasıdır. Kesintide fişleri çekme, buzdolabında 4 saat kuralı, elektrik gelince sırayla takma + kesinti sonrası tipik arızalar ve tahmini maliyetler. Bil, gör, çağır."
+title: "Elektrik kesintisi sonrası cihaz arızaları: ne yapmalı?"
+description: "Cihaza zarar veren kesinti değil, elektrik dönerkenki voltaj dalgalanması. Fiş kuralı, buzdolabında 4 saat kuralı ve kesinti sonrası tipik arızalar."
 slug: "elektrik-kesintisi-sonrasi-cihaz-arizalari"
 date: "2026-07-13"
 category: "Genel"

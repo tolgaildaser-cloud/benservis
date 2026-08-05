@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi kokuyor: nedenleri ve kötü kokuyu giderme"
-description: "Çamaşır makinen küf/rutubet mi kokuyor? Kapı contası, deterjan çekmecesi, filtre ve kireç kaynaklı kokunun nedenleri, evde temizleme yöntemleri ve ne zaman servis gerekir. Bil, gör, çağır."
+description: "Çamaşır makinen küf/rutubet mi kokuyor? Kapı contası, deterjan çekmecesi, filtre ve kireç kaynaklı nedenler + evde temizleme yöntemleri."
 slug: "camasir-makinesi-kokuyor"
 date: "2026-07-06"
 category: "Çamaşır makinesi"

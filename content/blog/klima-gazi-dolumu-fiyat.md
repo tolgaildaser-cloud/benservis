@@ -1,5 +1,5 @@
 ---
-title: "Klima gazı dolumu 2026 fiyatları: ne zaman gerekir, kaça yapılır?"
+title: "Klima gazı dolumu 2026 fiyatları: ne zaman gerekir?"
 description: "Klima gazı ne zaman dolar, kaç para? Gaz tipine (R32/R410) göre 2026 İstanbul fiyatları, gaz azalması belirtileri ve dikkat edilecekler. Bil, gör, çağır."
 slug: "klima-gazi-dolumu-fiyat"
 date: "2026-06-17"

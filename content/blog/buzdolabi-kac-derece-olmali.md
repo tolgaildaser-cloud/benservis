@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı kaç derece olmalı? Yaz-kış doğru ayar rehberi"
-description: "Buzdolabı ideal sıcaklığı kaç derece? Soğutucu +4°C, dondurucu -18°C kuralı; yazın ve kışın ayar nasıl değişir, 1-5 kademeli düğme neye ayarlanır, yanlış ayar neden fatura ve arıza üretir? Bil, gör, çağır."
+description: "Buzdolabı ideal sıcaklığı kaç derece? Soğutucu +4°C, dondurucu -18°C kuralı; 1-5 kademeli düğme neye ayarlanır, yanlış ayar neden arıza üretir?"
 slug: "buzdolabi-kac-derece-olmali"
 date: "2026-07-14"
 category: "Buzdolabı"

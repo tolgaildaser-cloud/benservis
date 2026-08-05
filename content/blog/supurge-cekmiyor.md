@@ -1,6 +1,6 @@
 ---
 title: "Süpürge çekmiyor / emişi zayıf: nedenleri ve çözüm"
-description: "Elektrikli süpürgen çekmiyor ya da emişi mi zayıfladı? Dolu hazne, tıkalı filtre, tıkanan hortum, aşınmış fırça ve motor kaynaklı nedenler + kendin yapabileceğin kontroller. Bil, gör, çağır."
+description: "Süpürgen çekmiyor ya da emişi mi zayıfladı? Dolu hazne, tıkalı filtre, tıkanan hortum, aşınmış fırça ve motor nedenleri + kendin kontroller."
 slug: "supurge-cekmiyor"
 date: "2026-07-06"
 category: "Süpürge"

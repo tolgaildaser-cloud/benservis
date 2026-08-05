@@ -452,7 +452,7 @@ for (const p of posts) {
   const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${adimGorselleriEkle(p)}${CTA}${PWA_NOT}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), page({ title: `${p.title} | Benservis`, desc: p.description, canonical, head, body }));
+  fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body }));
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -645,8 +645,8 @@ for (const k of blogKatVeri) {
       // Sürdürülebilirlik bir CİHAZ değil → "arıza nedenleri / tamir maliyeti" başlığı ona
       // yalan olur. Konu kategorisinde başlık, açıklama ve meta satırı konuya göre yazılır.
       title: k.yesil
-        ? `${k.ad} — onarım hakkı, döngüsel ekonomi ve daha az atık | Benservis`
-        : `${k.ad} — arıza nedenleri ve ${k.fiyatVar ? "tamir maliyetleri" : "servis sınırı"} | Benservis`,
+        ? `${k.ad} — onarım hakkı, döngüsel ekonomi ve daha az atık`
+        : `${k.ad} — arıza nedenleri ve ${k.fiyatVar ? "tamir maliyetleri" : "servis sınırı"}`,
       desc: k.yesil
         ? `Tamir etmek neden atmaktan iyi: onarım hakkı, cihaz ömrü, enerji ve döngüsel ekonomi üzerine ${k.yazilar.length} yazı.`
         : k.fiyatVar
@@ -890,7 +890,7 @@ for (const k of tamirliKat) {
   fs.writeFileSync(
     dosya,
     page({
-      title: `${k.ad} hata kodları ve arıza belirtileri — ne demek, ne yapmalı | Benservis`,
+      title: `${k.ad} hata kodları ve arıza belirtileri — ne demek, ne yapmalı`,
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
@@ -917,7 +917,7 @@ const tamirHub = path.join(DIST, "tamir", "index.html");
 fs.writeFileSync(
   tamirHub,
   page({
-    title: "Tamir Merkezi — hata kodu, belirti ve kendin-çöz adımları | Benservis",
+    title: "Tamir Merkezi — hata kodu, belirti ve kendin-çöz adımları",
     desc: "Cihazının hata kodu ne demek, belirtisi neyi işaret ediyor, kendin ne yapabilirsin? Cihazını seç; kodundan ya da belirtinden başla, gerekiyorsa yakınındaki servise ulaş.",
     canonical: `${SITE}/tamir/`,
     head:
@@ -1036,7 +1036,7 @@ for (const k of kilavuzluKat) {
   fs.writeFileSync(
     path.join(DIST, "kilavuzlar", k.slug, "index.html"),
     page({
-      title: `${k.ad} kullanım kılavuzları — üreticinin resmî sayfası | Benservis`,
+      title: `${k.ad} kullanım kılavuzları — üreticinin resmî sayfası`,
       desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
@@ -1068,7 +1068,7 @@ fs.mkdirSync(path.join(DIST, "kilavuzlar"), { recursive: true });
 fs.writeFileSync(
   path.join(DIST, "kilavuzlar", "index.html"),
   page({
-    title: "Kullanım Kılavuzları — üreticinin resmî kılavuzuna git | Benservis",
+    title: "Kullanım Kılavuzları — üreticinin resmî kılavuzuna git",
     desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden doğrulanmış linkler ve Türkçe özetler. PDF barındırmıyoruz, üreticiye yönlendiriyoruz.",
     canonical: `${SITE}/kilavuzlar/`,
     robots: kilavuzRobots,

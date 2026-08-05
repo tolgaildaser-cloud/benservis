@@ -1,5 +1,5 @@
 ---
-title: "Çamaşır makinesi su atmıyor / çamaşırlar ıslak çıkıyor: nedenleri ve tamir ücreti"
+title: "Çamaşır makinesi su atmıyor: nedenleri ve tamir ücreti"
 description: "Çamaşır makinen suyu atmıyor, çamaşırlar ıslak mı çıkıyor? Tahliye filtresi, pompa ve hortum kontrolü + 2026 tahmini tamir fiyatları. Bil, gör, çağır."
 slug: "camasir-makinesi-su-atmiyor"
 date: "2026-06-17"

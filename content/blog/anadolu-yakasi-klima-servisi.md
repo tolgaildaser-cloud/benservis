@@ -1,5 +1,5 @@
 ---
-title: "Anadolu yakası klima servisi: en yüksek puanlıyı nasıl bulursun?"
+title: "Anadolu yakası klima servisi: en yüksek puanlıyı bul"
 description: "İstanbul Anadolu yakasında klima bakımı, gaz dolumu veya tamiri mi lazım? Yaz yoğunluğunda güvenilir ve uygun servisi seçmenin yolları. Bil, gör, çağır."
 slug: "anadolu-yakasi-klima-servisi"
 date: "2026-06-19"

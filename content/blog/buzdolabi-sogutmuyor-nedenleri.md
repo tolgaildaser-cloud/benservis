@@ -1,5 +1,5 @@
 ---
-title: "Buzdolabı soğutmuyor ama çalışıyor: 6 olası neden ve kontroller"
+title: "Buzdolabı soğutmuyor ama çalışıyor: 6 olası neden"
 description: "Buzdolabın çalışıyor ama soğutmuyor mu? 6 olası neden, kendin yapabileceğin kontroller ve hangi belirtide servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "buzdolabi-sogutmuyor-nedenleri"
 date: "2026-06-17"

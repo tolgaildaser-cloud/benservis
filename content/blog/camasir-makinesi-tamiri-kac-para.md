@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi tamiri 2026 fiyatları: arızaya göre"
-description: "Çamaşır makinesi tamiri kaç para? Pompa, rulman, kart, kapı kilidi ve valf için 2026 İstanbul tahmini fiyatları; fiyatı belirleyen faktörler ve tamir mi yenisi mi kararı. Bil, gör, çağır."
+description: "Çamaşır makinesi tamiri kaç para? Pompa, rulman, kart, kapı kilidi ve valf için 2026 İstanbul tahmini fiyatları ve tamir mi yenisi mi kararı."
 slug: "camasir-makinesi-tamiri-kac-para"
 date: "2026-06-19"
 category: "Çamaşır makinesi"

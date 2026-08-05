@@ -1,6 +1,6 @@
 ---
-title: "Klima su damlatıyor: nedenleri ve kendin yapabileceğin kontroller"
-description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahliye hattı. Olası nedenler, evde güvenle yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
+title: "Klima su damlatıyor: nedenleri ve kendin kontroller"
+description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahliye hattı. Olası nedenler, evde güvenle yapabileceğin kontroller. Ücretsiz teşhis."
 slug: "klima-su-damlatiyor"
 date: "2026-06-19"
 category: "Klima"

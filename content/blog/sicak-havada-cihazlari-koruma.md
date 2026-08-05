@@ -1,6 +1,6 @@
 ---
 title: "Sıcak hava dalgasında ev aletlerini koruma rehberi (2026)"
-description: "Hissedilen sıcaklığın 40 dereceyi bulduğu günlerde buzdolabı, klima, TV ve modem de zorlanır. Sıcak dalgasında hangi cihaz neden arızalanır, nasıl korursun, hangi belirti servise işaret eder? Pratik önlemler + tahmini maliyet. Bil, gör, çağır."
+description: "Sıcak dalgasında buzdolabı, klima, TV ve modem de zorlanır. Hangi cihaz neden arızalanır, nasıl korursun, hangi belirti servise işaret eder?"
 slug: "sicak-havada-cihazlari-koruma"
 date: "2026-07-13"
 category: "Genel"

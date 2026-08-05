@@ -1,5 +1,5 @@
 ---
-title: "Vaillant kombi arıza kodları: F.22, F.28, F.29, F.75 ve fazlası"
+title: "Vaillant kombi arıza kodları: F.22, F.28, F.29, F.75"
 description: "Vaillant kombi arıza kodları tam liste: F.22 düşük su basıncı, F.28 ateşleme, F.29 alev sönmesi, F.75 pompa ve daha fazlasının anlamı ve çözümü. Bil, gör, çağır."
 slug: "vaillant-kombi-ariza-kodlari"
 date: "2026-06-19"

@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı tamiri 2026 fiyatları: kompresör, gaz, termostat"
-description: "Buzdolabı tamiri kaç para? Kompresör, gaz dolumu, termostat, fan ve conta için 2026 İstanbul tahmini fiyatları; fiyatı belirleyen faktörler ve tamir mi yenisi mi kararı. Bil, gör, çağır."
+description: "Buzdolabı tamiri kaç para? Kompresör, gaz dolumu, termostat, fan ve conta için 2026 İstanbul tahmini fiyatları ve tamir mi yenisi mi kararı."
 slug: "buzdolabi-tamiri-kac-para"
 date: "2026-06-19"
 category: "Buzdolabı"

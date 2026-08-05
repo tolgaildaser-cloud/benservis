@@ -1,6 +1,6 @@
 ---
 title: "Mikrodalga çalışıyor ama ısıtmıyor: nedenleri ve çözüm"
-description: "Mikrodalga fırın çalışıyor, ışık ve tabla dönüyor ama yemeği ısıtmıyor mu? Magnetron, yüksek voltaj kapasitörü, kapı arızası ve düşük voltaj nedenleri + güvenlik uyarısı + servis sınırı. Bil, gör, çağır."
+description: "Mikrodalga çalışıyor, tabla dönüyor ama ısıtmıyor mu? Magnetron, yüksek voltaj kapasitörü, kapı ve düşük voltaj nedenleri + güvenlik uyarısı."
 slug: "mikrodalga-isitmiyor"
 date: "2026-07-06"
 category: "Mikrodalga"

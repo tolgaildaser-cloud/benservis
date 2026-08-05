@@ -1,5 +1,5 @@
 ---
-title: "Klima bakımı kaç para? 2026 fiyatları, sıklığı ve neden gerekli"
+title: "Klima bakımı kaç para? 2026 fiyatları ve sıklığı"
 description: "Klima bakımı ne sıklıkla, kaça yapılır? 2026 İstanbul fiyatları, bakımda neler yapılır ve atlanırsa ne olur. Bil, gör, çağır."
 slug: "klima-bakimi-kac-para"
 date: "2026-06-17"

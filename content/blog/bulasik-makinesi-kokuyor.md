@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi kokuyor: nedenleri ve kötü kokuyu giderme"
-description: "Bulaşık makinen lağım/rutubet mi kokuyor? Tıkalı filtre, yemek artığı, kireç, kapı contası ve tahliye kaynaklı kokunun nedenleri, evde temizleme yöntemleri ve ne zaman servis gerekir. Bil, gör, çağır."
+description: "Bulaşık makinen lağım/rutubet mi kokuyor? Tıkalı filtre, yemek artığı, kireç, conta ve tahliye kaynaklı nedenler + evde temizleme yöntemleri."
 slug: "bulasik-makinesi-kokuyor"
 date: "2026-07-06"
 category: "Bulaşık makinesi"

@@ -1,5 +1,5 @@
 ---
-title: "Beyaz eşya servis ücreti ve keşif bedeli 2026: ne kadar, nasıl hesaplanır?"
+title: "Beyaz eşya servis ücreti ve keşif bedeli 2026"
 description: "Beyaz eşya servis ücreti neyden oluşur? Keşif/çağırma bedeli, işçilik ve parça nasıl hesaplanır, onarımda düşülür mü? 2026 mantığı ve fazla ödememenin yolu. Bil, gör, çağır."
 slug: "beyaz-esya-servis-ucreti"
 date: "2026-07-03"
