@@ -1,12 +1,12 @@
 ---
-title: "Bulaşık makinesi tamiri 2026: tahmini fiyat aralıkları"
-description: "Bulaşık makinesi tamiri kaç para? Pompa, valf, rezistans, kart ve kilit için 2026 İstanbul tahmini fiyatları; fiyatı belirleyen faktörler ve tamir mi yenisi mi kararı. Bil, gör, çağır."
+title: "Bulaşık makinesi tamiri: fiyatı ne belirler?"
+description: "Pompa, valf, rezistans, elektronik kart ve kilit neden çok farklı işler? Tamir bedelini belirleyen faktörler ve tamir mi yenisi mi kararı."
 slug: "bulasik-makinesi-tamiri-kac-para"
 date: "2026-06-19"
 category: "Bulaşık makinesi"
 faq:
   - q: "Bulaşık makinesi tamiri ortalama kaç para?"
-    a: "Arızaya göre değişir: valf/pompa/kilit gibi kalemler 2026 İstanbul tahmini ~500–1.500 ₺, rezistans ~700–1.500 ₺, elektronik kart ~1.200–3.000 ₺. Filtre/temizlik sorunları çoğu zaman ücretsizdir."
+    a: "Arızaya göre çok değişir: valf, pompa, kilit ve rezistans düşük-orta maliyetli kalemlerdir; sirkülasyon pompası ve elektronik kart en pahalılarıdır. Filtre/temizlik sorunları çoğu zaman ücretsizdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
   - q: "En pahalı bulaşık makinesi arızası hangisi?"
     a: "Elektronik kart ve sirkülasyon (yıkama) pompası en maliyetli kalemlerdir. Makine eskiyse bu arızalarda yenisi değerlendirilebilir."
   - q: "Keşif / servis ücreti var mı?"
@@ -15,7 +15,7 @@ faq:
     a: "Tamir maliyeti yeni bir makinenin yaklaşık yarısını geçiyorsa ve makine 8–10+ yaşındaysa yenisi mantıklı. Ucuz parçalı arızalarda tamir doğru seçim."
 ---
 
-Bulaşık makinesi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: tıkalı bir filtre ya da yanlış kullanım çoğu zaman bedava çözülürken, pompa ya da kart arızası daha maliyetlidir. Bu yazıda 2026 İstanbul için **parça parça tahmini fiyatları**, fiyatı neyin belirlediğini ve "tamir mi yenisi mi" kararını netleştiriyoruz.
+Bulaşık makinesi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: tıkalı bir filtre ya da yanlış kullanım çoğu zaman bedava çözülürken, pompa ya da kart arızası daha maliyetlidir. Bu yazıda fiyatı neyin belirlediğini, hangi arızanın ucuz hangisinin pahalı olduğunu ve "tamir mi yenisi mi" kararını netleştiriyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi markalarda fiyatlar benzer aralıktadır. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
 
@@ -26,20 +26,15 @@ Bulaşık makinesi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: 
 - **Parça orijinalliği:** Orijinal parça yan sanayiden pahalı ama uzun ömürlü.
 - **İşçilik ve keşif:** Ankastre sökme/takma işçiliği serbest modele göre artar.
 
-## 2026 bulaşık makinesi tamiri tahmini fiyatları (İstanbul)
+## Hangi iş ne kadar tutar?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
+Bu sayfada rakam aralığı vermiyoruz — bedel markaya, modele ve gerçek arızaya göre değişiyor. Ama işlerin **birbirine göre sırası** hemen hemen sabittir:
 
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Filtre / pompa kapağı temizliği | Çoğu zaman ücretsiz |
-| Su giriş valfi (selenoid) | 600 – 1.300 ₺ |
-| Tahliye pompası | 600 – 1.300 ₺ |
-| Kapı / kapak kilidi | 500 – 1.200 ₺ |
-| Rezistans / ısıtıcı | 700 – 1.500 ₺ |
-| Sirkülasyon (yıkama) pompası | 900 – 2.000 ₺ |
-| Elektronik kart tamiri | 1.200 – 3.000 ₺ |
+- **Çoğu zaman ücretsiz:** filtre / pompa kapağı temizliği — kendin yapabilirsin
+- **Düşük–orta:** kapı / kapak kilidi · su giriş valfi (selenoid) · tahliye pompası · rezistans / ısıtıcı
+- **Yüksek:** sirkülasyon (yıkama) pompası · elektronik kart tamiri
 
+**[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 ## Tamir mi, yenisi mi?
 
 - **Tamir et:** Arıza valf, pompa, kilit, rezistans gibi **orta-düşük maliyetli** bir kalemse ve makine 8 yaşından gençse.
@@ -57,7 +52,7 @@ Bulaşık makinesi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: 
 ## Sık sorulan sorular
 
 **Ortalama kaç para?**
-Valf/pompa/kilit ~500–1.500 ₺, rezistans ~700–1.500 ₺, kart ~1.200–3.000 ₺.
+Arızaya göre değişir: valf/pompa/kilit/rezistans ucuz uçta, sirkülasyon pompası ve kart pahalı uçta. Kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).
 
 **En pahalı arıza hangisi?**
 Elektronik kart ve sirkülasyon pompası.

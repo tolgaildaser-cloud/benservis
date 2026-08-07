@@ -15,7 +15,7 @@ faq:
     a: "Radyatör vanalarının altını, tesisat rakorlarını ve kombinin altını kuru bezle kontrol et; ıslaklık/damla var mı bak. Görünür kaçak yoksa kombi içi olabilir — servis gerekir."
 ---
 
-Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sorun çoğu zaman küçük bir kaçaktan kaynaklanır ve kaynağı bulununca kalıcı çözülür. Bu yazıda nedenleri, güvenle yapabileceğin kontrolleri ve 2026 tahmini fiyatları anlatıyoruz.
+Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sorun çoğu zaman küçük bir kaçaktan kaynaklanır ve kaynağı bulununca kalıcı çözülür. Bu yazıda nedenleri, güvenle yapabileceğin kontrolleri ve hangi noktadan sonra yetkili servis gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔥 **Güvenlik:** Su eklemek ve görünür kaçak aramak güvenlidir. Genleşme tankı, emniyet ventili ve kombi içi parçalara kendin müdahale etme — yetkili servise başvur.
 
@@ -50,7 +50,7 @@ Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sor
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
-İlgili: [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
+İlgili: [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
 
 ## Sık sorulan sorular
 

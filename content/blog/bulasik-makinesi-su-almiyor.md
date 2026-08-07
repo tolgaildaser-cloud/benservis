@@ -15,7 +15,7 @@ faq:
     a: "Filtre ya da musluk kaynaklıysa çoğu zaman ücretsiz çözülür. Su giriş valfi veya kapı kilidi gerekiyorsa maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve 2026 için tahmini fiyatları bulacaksın.
+Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
 

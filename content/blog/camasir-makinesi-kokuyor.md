@@ -81,7 +81,7 @@ Güvenli ve çoğu zaman ücretsiz:
 
 ## Tahmini maliyet
 
-Temizlik çoğu zaman ücretsizdir. Conta değişimi ya da tahliye/pompa arızası gerekiyorsa 2026 tahminleri: [Çamaşır makinesi tamiri kaç para?](/blog/camasir-makinesi-tamiri-kac-para/). Kesin tahmini cihazına göre [Benservis'ten](/) ücretsiz al.
+Temizlik çoğu zaman ücretsizdir. Conta ya da tahliye/pompa arızası çıkarsa işin kapsamı: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/) Kesin tahmini cihazına göre [Benservis'ten](/) ücretsiz al.
 
 İlgili: [Su atmıyor / ıslak çıkıyor](/blog/camasir-makinesi-su-atmiyor/) · [Tahliye filtresi temizleme](/blog/camasir-makinesi-tahliye-filtresi-temizleme/) · [Ses/titreşim yapıyor](/blog/camasir-makinesi-ses-titresim/)
 

@@ -15,7 +15,7 @@ faq:
     a: "Tahliye/defrost temizliği ile kapı contası değişimi farklı işlerdir; maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Buzdolabının altında, sebze gözünde ya da önünde su birikmesi sık görülen ve çoğu zaman **evde, ücretsiz çözülebilen** bir sorundur. En yaygın sebep küçük bir tıkanıklık. Bu yazıda suyun nereden geldiğini, **kendin nasıl temizleyeceğini** ve servis gerekirse 2026 tahmini fiyatları anlatıyoruz.
+Buzdolabının altında, sebze gözünde ya da önünde su birikmesi sık görülen ve çoğu zaman **evde, ücretsiz çözülebilen** bir sorundur. En yaygın sebep küçük bir tıkanıklık. Bu yazıda suyun nereden geldiğini, **kendin nasıl temizleyeceğini** ve servis gerekirse hangi parçanın konuşulduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi buzdolaplarında nedenler ve çözüm büyük ölçüde benzerdir.
 

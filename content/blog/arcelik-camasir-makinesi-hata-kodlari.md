@@ -57,7 +57,7 @@ Isıtma (NTC/rezistans) ve su seviye sensörü (basınç anahtarı) kodları uzm
 Program düğmesini **"Kapalı"ya** al, makineyi **fişten 1 dakika** çek, çocuk kilidi açık mı bak. Arıza sürüyorsa kod tekrar çıkar.
 
 ## Tahmini tamir maliyeti
-Arçelik dâhil parça parça 2026 İstanbul tahminleri: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/).
+Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
 
 İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor / ıslak çıkıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
 

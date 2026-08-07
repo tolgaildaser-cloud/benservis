@@ -32,7 +32,7 @@ Sıcaklar bastırınca herkes aynı anda servis arar; randevular uzar, fiyatlar 
 
 ## Klima sorununa göre ne bekleyebilirsin?
 - [Klima soğutmuyor: 6 olası neden ve fiyatlar](/blog/klima-sogutmuyor-nedenleri/)
-- [Klima gazı dolumu 2026 fiyatları](/blog/klima-gazi-dolumu-fiyat/)
+- [Klima gazı dolumu ne zaman gerçekten gerekir?](/blog/klima-gazi-dolumu-fiyat/)
 - [Klima bakımı kaç para?](/blog/klima-bakimi-kac-para/)
 - [Klima su damlatıyor: nedenleri](/blog/klima-su-damlatiyor/)
 

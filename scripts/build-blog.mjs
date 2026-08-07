@@ -941,47 +941,90 @@ fs.writeFileSync(
 basilanTamir.push(tamirHub);
 fiyatDenetimi(basilanTamir);
 
-// ── TAMİR MERKEZİ FİYAT DENETİMİ — İÇERİK KATMANI (Tolga, 3 Ağu 2026) ────────────────────
-// "Benservis tamir merkezinde hiç açık fiyat göstermeyelim." YK #35 şart 1 yalnız /tamir/
-// SAYFALARINI koruyordu; kullanıcının fiilen fiyat GÖRDÜĞÜ yer ise oradan tıklanan içerik
-// sayfalarıydı (3 Ağu ölçümü: 48 bağlı yazının 25'inde TL bandı vardı).
+// ── BLOGDA FİYAT SIFIR — TÜM KORPUS (YK Kararı #46, 5 Ağu 2026, Tolga) ───────────────────
+// "Bloglarda hiçbir fiyat bildirimi olamaz, olmamalı." — 3 Ağu'nun DAR kapsamı kalktı.
 //
-// KAPSAM SINIRI (bilerek dar): yalnız HATA_KODU_KATMANI'ndan bağlanan yazılar. Bilgi
-// Merkezi'ndeki adanmış "…tamiri kaç para" sayfalarına DOKUNULMAZ — oraya kullanıcı zaten
-// fiyat sormaya geliyor, fiyat o sayfanın varlık sebebi (Tolga kararı, 3 Ağu).
+// ESKİ KAPSAM (3 Ağu, YK #35): yalnız HATA_KODU_KATMANI'ndan bağlanan 48 yazı; adanmış
+// "…tamiri kaç para" sayfaları bilinçle DIŞARIDA bırakılmıştı. #46 o istisnayı kaldırdı:
+// fiyatın tek yüzeyi teşhis ekranıdır, blog TL rakamı yazmaz.
+//
+// 7 Ağu ölçümü (bu kapsam genişlemesinin gerekçesi): dar kapsam yüzünden `camasir-makinesi-
+// su-atmiyor` üç süpürmede birden atlanmıştı — Tamir Merkezi'ne bağlı olmadığı için guard
+// görmüyordu, adanmış fiyat sayfası olmadığı için de listelere girmiyordu.
 //
 // ⚠️ Bu denetim TL RAKAMINI arar, "ücretsiz" ifadesini DEĞİL — bedelsizlik bir fiyat vaadi
 // değil, dönüşüm mesajıdır ve kalması istenir.
 const TL_RAKAMI = /[\d.]{3,}\s*(?:₺|\bTL\b)|₺\s*[\d.]{3,}/;
-const tamirIcerikIhlal = [];
-for (const slug of new Set(tumKayitlar.map((g) => g.yazi).filter(Boolean))) {
-  const dosya = path.join(OUT, slug, "index.html");
+const fiyatIhlal = [];
+for (const p of posts) {
+  const dosya = path.join(OUT, p.slug, "index.html");
   if (!fs.existsSync(dosya)) continue;
   const m = fs.readFileSync(dosya, "utf8").match(TL_RAKAMI);
-  if (m) tamirIcerikIhlal.push(`/blog/${slug}/ → "${m[0].trim()}"`);
+  if (m) fiyatIhlal.push(`/blog/${p.slug}/ → "${m[0].trim()}"`);
 }
-if (tamirIcerikIhlal.length) {
+if (fiyatIhlal.length) {
   console.error(
-    `[build-blog] ⛔ TAMİR MERKEZİ FİYAT İHLALİ — Tamir Merkezi'nden bağlanan sayfada TL rakamı:\n  ` +
-      tamirIcerikIhlal.join("\n  ") +
-      `\n  → Rakamı kaldır, yerine ücretsiz teşhis yönlendirmesi koy. (Bilgi Merkezi'ndeki "…kaç para" sayfaları bu kuralın dışında.)`
+    `[build-blog] ⛔ YK #46 FİYAT İHLALİ — blog sayfasında TL rakamı (istisna YOK):\n  ` +
+      fiyatIhlal.join("\n  ") +
+      `\n  → Rakamı kaldır, yerine ücretsiz teşhis yönlendirmesi koy.`
   );
   process.exit(1);
 }
-console.log(`[build-blog] ✓ Tamir Merkezi içerik katmanı: ${new Set(tumKayitlar.map((g) => g.yazi).filter(Boolean)).size} bağlı sayfada TL rakamı YOK.`);
+console.log(`[build-blog] ✓ YK #46: ${posts.length} blog sayfasının TAMAMINDA TL rakamı YOK (FAQ şeması dahil).`);
+
+// ── TUTULMAYAN VAAT — GÖVDE KALIBI (YK #46, 7 Ağu: guard'ın kör noktası kapatıldı) ────────
+// 3 Ağu'nun guard'ı TL RAKAMINI arıyordu, VAAT CÜMLESİNİ değil — bu yüzden 25 sayfa üç gün
+// boyunca "2026 tahmini fiyatları paylaşıyoruz" derken sayfada fiyat yokken sessiz kaldı.
+// Kalıplar PAZ'ın 6 Ağu teslimindendir; 79 yazının gövdesine karşı test edilmiş (40/40).
+//
+// ⚠️ 7 Ağu DÜZELTMESİ (FE, ölçümle): PAZ'ın 1. kalıbı `/tahmini (tamir |servis )?fiyat/`
+// SAHTE POZİTİF üretiyordu — "tahmini fiyatı önceden bil", "tahmini fiyatı öğrenebilir
+// miyim?" gibi TAVSİYE cümlelerini vaat sanıyordu (7 sayfa; üçü PAZ'ın kendi "dokunma"
+// listesindeydi). Kalıba yıl öneki eklendi. Ölçüm (origin/main, düzeltme öncesi hâl):
+// geniş kalıp 49 sayfa · dar kalıp 42 sayfa · farkın 7'si de tavsiye cümlesi.
+// Yani daraltma tek bir gerçek vaadi kaçırmıyor, yalnız gürültüyü kesiyor — build'i
+// DURDURAN bir denetimde sahte pozitif, denetimin kendisini devre dışı bıraktırır.
+const VAAT_KALIPLARI = [
+  /20\d\d (için )?tahmini (tamir |servis )?fiyat/i,
+  /fiyatlar(ı|ını|ın) (paylaşıyoruz|anlatıyoruz|bulacaksın|topladık|veriyoruz)/i,
+  /20\d\d (İstanbul )?tahminleri/i,
+  /parça parça .*(fiyat|tahmin)/i,
+  /20\d\d fiyatlar/i,
+];
+const govdeVaat = [];
+for (const p of posts) {
+  // gövde + FAQ cevapları (FAQ, FAQPage JSON-LD'ye de basıldığı için Google'a giden metindir)
+  const govde = (p.html || "") + " " + (p.faq || []).map((s) => `${s.q} ${s.a}`).join(" ");
+  const k = VAAT_KALIPLARI.find((re) => re.test(govde));
+  if (k) govdeVaat.push(`${p.slug} → ${(govde.match(k) || [""])[0]}`);
+}
+if (govdeVaat.length) {
+  console.error(
+    `[build-blog] ⛔ TUTULMAYAN VAAT — gövde fiyat vaat ediyor ama sayfada rakam yok (YK #46):\n  ` +
+      govdeVaat.join("\n  ") +
+      `\n  → Vaat cümlesini ücretsiz teşhis yönlendirmesine çevir (metin PAZ'da).`
+  );
+  process.exit(1);
+}
+console.log(`[build-blog] ✓ YK #46: ${posts.length} sayfanın gövdesinde tutulmayan fiyat vaadi YOK.`);
 
 // ── TUTULMAYAN SERP SÖZÜ — UYARI (build'i DURDURMAZ) ─────────────────────────────────────
 // Fiyat gövdeden kalktı ama title/description hâlâ "2026 tahmini fiyatları" vaat ediyorsa
 // kullanıcı aramada gördüğü sözü sayfada bulamaz: CTR'ı değil, GÜVENİ yakar.
 // ⛔ Metin PAZ'ın alanı ([[feedback_rol_siniri]]) → FE düzeltmez, yalnız görünür kılar.
 // Build'i durdurmuyor: durdursaydı bu koşuda fiyat kaldırma işi hiç yayına giremezdi.
-const VAAT = /fiyat|maliyet|kaç para|ücret(?!siz)/i;
+// KAPSAM (7 Ağu): 48 bağlı yazı değil, TÜM korpus — #46 istisnasız.
+//
+// ⚠️ 7 Ağu ÖLÇÜT DEĞİŞİKLİĞİ: eski ölçüt `/fiyat|maliyet|kaç para|ücret/` idi ve korpus
+// geneline açılınca 13 sayfa basıyordu — ama 6'sı PAZ'ın #46 için YENİ YAZDIĞI onaylı
+// başlıklardı ("Çamaşır makinesi tamiri: fiyatı ne belirler?"). O başlık fiyat VAAT
+// etmiyor, fiyatın neden değiştiğini anlatıyor; uyarı doğru işi hatalı gösteriyordu.
+// Yeni ölçüt RAKAM VAADİ arıyor (gövde denetimiyle aynı kalıplar) — kırık olan tam da bu.
 const sozler = [];
-for (const slug of new Set(tumKayitlar.map((g) => g.yazi).filter(Boolean))) {
-  const p = posts.find((x) => x.slug === slug);
-  if (!p) continue;
-  const nerede = [VAAT.test(p.title || "") && "title", VAAT.test(p.description || "") && "description"].filter(Boolean);
-  if (nerede.length) sozler.push(`${slug} (${nerede.join("+")})`);
+for (const p of posts) {
+  const vaatMi = (s) => VAAT_KALIPLARI.some((re) => re.test(s || ""));
+  const nerede = [vaatMi(p.title) && "title", vaatMi(p.description) && "description"].filter(Boolean);
+  if (nerede.length) sozler.push(`${p.slug} (${nerede.join("+")})`);
 }
 if (sozler.length) {
   const baslikta = sozler.filter((s) => s.includes("title")).length;
@@ -1097,7 +1140,12 @@ const urlEntries = [
         ...kilavuzluKat.map((k) => ({ loc: `${SITE}/kilavuzlar/${k.slug}/`, lastmod: newest })),
       ]
     : []),
-  { loc: `${SITE}/ikinci-el`, lastmod: newest },
+  // ⛔ /ikinci-el SİTEMAP'TEN ÇIKARILDI — Tolga kararı, 6 Ağu 2026 ("/ikinci-el sitemap'ten
+  // çıksın, prerender yok"). Sayfa SİLİNMEDİ, site içinden erişilebilir; yalnız Google'a
+  // "bunu indeksle" sinyali verilmiyor. Sebep (PAZ ölçümü, 6 Ağu): prerender olmadığı için
+  // SPA rotası index.html varsayılanını basıyor → title/description ANA SAYFAYLA BİREBİR
+  // aynı, yani kendi sorgusunda hiçbir şey vaat etmezken ana sayfayla çakışıyordu.
+  // Geri konma şartı: sayfa prerender edilip kendi metnini bastığında (metin PAZ'da).
   ...posts.map((p) => ({ loc: `${SITE}/blog/${p.slug}/`, lastmod: postLastmod(p) })),
 ];
 fs.writeFileSync(

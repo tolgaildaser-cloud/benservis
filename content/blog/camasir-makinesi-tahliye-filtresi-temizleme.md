@@ -58,7 +58,7 @@ faq:
 ## Ne zaman servis gerekir?
 Filtre tertemiz olduğu hâlde makine **hâlâ su atmıyor ya da ıslak kalıyorsa**, sorun **tahliye pompası** ya da **hortumda** olabilir — bu bir servis işidir.
 
-İlgili: [Çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/)
+İlgili: [Çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 

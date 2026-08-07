@@ -16,7 +16,7 @@ faq:
     a: "Arızaya göre değişir: güç kaynağı kartı, kondansatör ve anakart farklı işlerdir. Panel arızası genelde ekonomik değildir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönüyor ya da ses gelip görüntü gelmiyor. Sebep çoğu zaman birkaç parçadan biridir ve belirtiye bakarak daraltmak mümkün. Bu yazıda TV'nin neden açılmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve 2026 tahmini fiyatları bulacaksın.
+Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönüyor ya da ses gelip görüntü gelmiyor. Sebep çoğu zaman birkaç parçadan biridir ve belirtiye bakarak daraltmak mümkün. Bu yazıda TV'nin neden açılmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi belirtinin panel, hangisinin besleme arızası olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Samsung, LG, Vestel, Arçelik, Beko, Sony, Philips, TCL gibi LED/LCD televizyonlarda nedenler benzerdir.
 

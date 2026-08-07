@@ -1,6 +1,6 @@
 ---
-title: "Beyaz eşya servis ücreti ve keşif bedeli 2026"
-description: "Beyaz eşya servis ücreti neyden oluşur? Keşif/çağırma bedeli, işçilik ve parça nasıl hesaplanır, onarımda düşülür mü? 2026 mantığı ve fazla ödememenin yolu. Bil, gör, çağır."
+title: "Beyaz eşya servis ücreti: keşif bedeli nasıl işler?"
+description: "Servis ücreti neyden oluşur? Keşif/çağırma bedeli, işçilik ve parça nasıl hesaplanır, onarımda düşülür mü ve fazla ödememenin yolu nedir?"
 slug: "beyaz-esya-servis-ucreti"
 date: "2026-07-03"
 category: "Genel"
@@ -47,10 +47,10 @@ Bunu önceden konuşmak, sonradan sürpriz faturayı önler.
 
 Her cihazın kendi tahmini tamir aralıklarını ayrı ayrı derledik:
 
-- [Buzdolabı tamiri kaç para? (2026)](/blog/buzdolabi-tamiri-kac-para/)
-- [Çamaşır makinesi tamiri kaç para? (2026)](/blog/camasir-makinesi-tamiri-kac-para/)
-- [Bulaşık makinesi tamiri kaç para? (2026)](/blog/bulasik-makinesi-tamiri-kac-para/)
-- [Kombi tamiri kaç para? (2026)](/blog/kombi-tamiri-kac-para/)
+- [Buzdolabı tamirinde fiyatı ne belirler?](/blog/buzdolabi-tamiri-kac-para/)
+- [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
+- [Bulaşık makinesi tamirinde fiyatı ne belirler?](/blog/bulasik-makinesi-tamiri-kac-para/)
+- [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/)
 
 > ⚠️ Bu sayfalardaki rakamlar tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir.
 

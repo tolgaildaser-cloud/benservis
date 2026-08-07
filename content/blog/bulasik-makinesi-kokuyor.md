@@ -85,7 +85,7 @@ Güvenli ve çoğu zaman ücretsiz:
 
 ## Tahmini maliyet
 
-Temizlik ücretsizdir. Tahliye/pompa arızası gerekiyorsa 2026 tahminleri: [Bulaşık makinesi tamiri kaç para?](/blog/bulasik-makinesi-tamiri-kac-para/). Kesin tahmini cihazına göre [Benservis'ten](/) ücretsiz al.
+Temizlik ücretsizdir. Tahliye/pompa arızası çıkarsa işin kapsamı: [Bulaşık makinesi tamirinde fiyatı ne belirler?](/blog/bulasik-makinesi-tamiri-kac-para/) Kesin tahmini cihazına göre [Benservis'ten](/) ücretsiz al.
 
 İlgili: [Su atmıyor / dipte su kalıyor](/blog/bulasik-makinesi-su-atmiyor/) · [Temiz yıkamıyor](/blog/bulasik-makinesi-temiz-yikamiyor/) · [Kurutmuyor](/blog/bulasik-makinesi-kurutmuyor/)
 

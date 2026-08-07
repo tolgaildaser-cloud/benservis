@@ -16,7 +16,7 @@ faq:
     a: "Çoğu temizlik sorunu ücretsiz çözülür. Rezistans ya da sirkülasyon pompası gerekiyorsa maliyet modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıktı. İyi haber: "temiz yıkamama" sorunlarının büyük kısmı arıza değil, **bakım ve kullanım** kaynaklı — yani evde, ücretsiz çözülüyor. Bu yazıda 6 olası nedeni, **kendi yapabileceğin çözümleri** ve servis gerekirse 2026 tahmini fiyatları anlatıyoruz.
+Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıktı. İyi haber: "temiz yıkamama" sorunlarının büyük kısmı arıza değil, **bakım ve kullanım** kaynaklı — yani evde, ücretsiz çözülüyor. Bu yazıda 6 olası nedeni, **kendi yapabileceğin çözümleri** ve servis gerekirse hangi parçanın konuşulduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler ve çözüm benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
 

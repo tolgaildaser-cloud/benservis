@@ -15,7 +15,7 @@ faq:
     a: "Kodlar model/seriye göre değişebilir. Kılavuzundaki tabloya bak ya da markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
 ---
 
-Çamaşır makinen ekranında bir **hata kodu** gösteriyor (F18, E03, H1…) ve ne anlama geldiğini merak ediyorsun. İyi haber: bu kodlar arızayı işaret eder ve çoğu zaman en sık çıkan birkaç kod, basit ve **evde ücretsiz** çözülebilen sorunları gösterir. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve 2026 tahmini fiyatları topladık.
+Çamaşır makinen ekranında bir **hata kodu** gösteriyor (F18, E03, H1…) ve ne anlama geldiğini merak ediyorsun. İyi haber: bu kodlar arızayı işaret eder ve çoğu zaman en sık çıkan birkaç kod, basit ve **evde ücretsiz** çözülebilen sorunları gösterir. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Önemli: Hata kodlarının anlamı **model ve seriye göre değişebilir**. Aşağıdakiler en yaygın anlamlardır; kesin teşhis için kılavuzuna bak ya da kodu Benservis'e yaz.
 
@@ -53,7 +53,7 @@ Su alma (F17/E02) ve tahliye (F18/E03) kodlarının en sık sebebi basit:
 Motor (F21/F43), su kaçağı (F23), basınç anahtarı (E07) ve ısıtma (H1) kodları uzmanlık ister; kendin müdahale etme.
 
 ## Tahmini tamir maliyeti
-Arızaya göre değişir; parça parça 2026 İstanbul tahminleri için: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/).
+Arızaya göre değişir. Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
 
 İlgili marka rehberleri: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [Samsung](/blog/samsung-camasir-makinesi-hata-kodlari/) · [LG](/blog/lg-camasir-makinesi-hata-kodlari/) çamaşır hata kodları · [Çamaşır makinesi su almıyor](/blog/camasir-makinesi-su-almiyor/)
 

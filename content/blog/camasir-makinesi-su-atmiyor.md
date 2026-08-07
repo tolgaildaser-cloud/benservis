@@ -15,7 +15,7 @@ faq:
     a: "Filtre/pompa/hortum ucuz, tamir mantıklı. Motor veya elektronik kart pahalıysa ve makine eskiyse yenisi değerlendirilebilir."
 ---
 
-Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir bozucu ama çoğu zaman sebep basit ve evde, dakikalar içinde çözülüyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve 2026 tahmini tamir fiyatlarını bulacaksın.
+Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir bozucu ama çoğu zaman sebep basit ve evde, dakikalar içinde çözülüyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve iş servise kaldığında ne beklemen gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler benzerdir. Ekranda hata kodu varsa markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
 
@@ -44,20 +44,9 @@ Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir
 - Pompadan **ses geliyor ama çalışmıyorsa**
 - Tamburdan **gürültü / kayış kokusu** geliyorsa (kayış/motor)
 
-## 2026 çamaşır makinesi tahmini fiyatları (İstanbul)
+## Tamir maliyeti ne kadar olur?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Tahliye filtresi temizliği | 400 – 700 ₺ (ya da kendin ücretsiz) |
-| Tahliye pompası değişimi | 700 – 1.500 ₺ |
-| Kayış değişimi (eski model) | 500 – 900 ₺ |
-| Motor kömürü / fırça | 600 – 1.200 ₺ |
-| Elektronik kart tamiri | 1.200 – 3.000 ₺ |
-
-İlgili rehber: [Çamaşır makinesi su almıyor: 5 kontrol ve maliyet](/blog/camasir-makinesi-su-almiyor/) · [Tahliye filtresi nasıl temizlenir](/blog/camasir-makinesi-tahliye-filtresi-temizleme/)
-
+Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 ## Sık sorulan sorular
 
 **Çamaşır makinesi su atmıyor, ilk ne kontrol edilir?**

@@ -1,21 +1,21 @@
 ---
-title: "Buzdolabı tamiri 2026 fiyatları: kompresör, gaz, termostat"
-description: "Buzdolabı tamiri kaç para? Kompresör, gaz dolumu, termostat, fan ve conta için 2026 İstanbul tahmini fiyatları ve tamir mi yenisi mi kararı."
+title: "Buzdolabı tamiri: fiyatı ne belirler?"
+description: "Kompresör, gaz dolumu, termostat, fan ve conta neden çok farklı işler? Tamir bedelini belirleyen faktörler ve tamir mi yenisi mi kararı."
 slug: "buzdolabi-tamiri-kac-para"
 date: "2026-06-19"
 category: "Buzdolabı"
 faq:
   - q: "Buzdolabı tamiri ortalama kaç para?"
-    a: "Arızaya göre çok değişir: conta/termostat gibi kalemler 2026 İstanbul tahmini ~500–1.500 ₺, gaz/defrost orta seviyede, kompresör ise ~3.500–8.000 ₺ ile en pahalı kalemdir."
+    a: "Arızaya göre çok değişir: conta ve termostat düşük-orta maliyetli kalemlerdir, gaz ve defrost orta seviyededir, kompresör ise açık ara en pahalı kalemdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
   - q: "En pahalı buzdolabı arızası hangisi?"
-    a: "Kompresör değişimi en maliyetli kalemdir (~3.500–8.000 ₺). Bu yüzden cihaz eskiyse kompresör arızasında tamir yerine yenisi değerlendirilir."
+    a: "Kompresör değişimi açık ara en maliyetli kalemdir. Bu yüzden cihaz eskiyse kompresör arızasında tamir yerine yenisi değerlendirilir."
   - q: "Keşif / servis çağırma ücreti var mı?"
     a: "Birçok serviste keşif/yol ücreti alınır ve iş yapılırsa genelde toplam tutara mahsup edilir. Net bilgi için önce tahmini maliyeti gör, sonra servise sor."
   - q: "Tamir mi yenisi mi almalı?"
     a: "Kabaca: tamir maliyeti yeni cihazın yaklaşık yarısını geçiyorsa ve cihaz 10+ yaşındaysa yenisi daha mantıklıdır. Ucuz parçalı arızalarda tamir neredeyse her zaman doğru."
 ---
 
-Buzdolabı bozulunca akla gelen ilk soru: **"Acaba ne kadar tutar?"** Cevap tamamen arızaya bağlı — basit bir conta değişimi ile kompresör değişimi arasında ciddi fark var. Bu yazıda 2026 İstanbul için **parça parça tahmini fiyatları**, fiyatı neyin belirlediğini ve "tamir mi yenisi mi" kararını netleştiriyoruz.
+Buzdolabı bozulunca akla gelen ilk soru: **"Acaba ne kadar tutar?"** Cevap tamamen arızaya bağlı — basit bir conta değişimi ile kompresör değişimi arasında ciddi fark var. Bu yazıda fiyatı neyin belirlediğini, hangi arızanın ucuz hangisinin pahalı olduğunu ve "tamir mi yenisi mi" kararını netleştiriyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi markalarda fiyatlar benzer aralıktadır; ankastre ve ithal modellerde parça biraz daha pahalıdır.
 
@@ -26,20 +26,15 @@ Buzdolabı bozulunca akla gelen ilk soru: **"Acaba ne kadar tutar?"** Cevap tama
 - **Parça orijinalliği:** Orijinal parça yan sanayiden pahalıdır ama daha uzun ömürlüdür.
 - **İşçilik ve keşif:** Yol/keşif ücreti, işin süresi ve garanti kapsamı.
 
-## 2026 buzdolabı tamiri tahmini fiyatları (İstanbul)
+## Hangi iş ne kadar tutar?
 
-> ⚠️ Aşağıdaki rakamlar 2026 için tahmini İstanbul ortalamalarıdır; marka, model ve arızaya göre değişir. Kesin tahmini cihazına göre Benservis'ten saniyede al.
+Bu sayfada rakam aralığı vermiyoruz — bedel markaya, modele ve gerçek arızaya göre değişiyor. Ama işlerin **birbirine göre sırası** hemen hemen sabittir:
 
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Kapı contası değişimi | 500 – 1.200 ₺ |
-| Termostat değişimi | 700 – 1.500 ₺ |
-| Fan motoru (no-frost) | 900 – 2.000 ₺ |
-| Defrost onarımı (rezistans/sensör/saat) | 800 – 1.800 ₺ |
-| Gaz dolumu / kaçak onarımı | 1.500 – 3.500 ₺ |
-| Anakart onarımı / değişimi | 1.200 – 3.000 ₺ |
-| Kompresör değişimi | 3.500 – 8.000 ₺ |
+- **Düşük–orta:** kapı contası değişimi · termostat değişimi · defrost onarımı (rezistans / sensör / saat) · fan motoru (no-frost)
+- **Orta–yüksek:** gaz dolumu / kaçak onarımı · anakart onarımı veya değişimi
+- **En pahalı kalem:** kompresör değişimi — cihaz eskiyse bu arızada yenisi değerlendirilir
 
+**[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 ## Tamir mi, yenisi mi?
 
 Basit bir kural:
@@ -59,10 +54,10 @@ Basit bir kural:
 ## Sık sorulan sorular
 
 **Buzdolabı tamiri ortalama kaç para?**
-Arızaya göre değişir: conta/termostat ~500–1.500 ₺, kompresör ~3.500–8.000 ₺.
+Arızaya göre değişir: conta ve termostat ucuz uçta, kompresör açık ara pahalı uçta. Kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).
 
 **En pahalı arıza hangisi?**
-Kompresör değişimi (~3.500–8.000 ₺).
+Kompresör değişimi.
 
 **Keşif ücreti var mı?**
 Genelde var ve iş yapılırsa toplama mahsup edilir; servise sor.

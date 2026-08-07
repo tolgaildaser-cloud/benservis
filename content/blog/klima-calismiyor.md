@@ -15,7 +15,7 @@ faq:
     a: "Pil ya da sigorta kaynaklıysa çoğu zaman ücretsizdir. Kumanda, kapasitör ve elektronik kart tamiri çok farklı işlerdir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Klimayı açmak istiyorsun ama cihaz hiç tepki vermiyor: ekran yanmıyor, iç ünite ses çıkarmıyor ya da çalışıyor gibi yapıp duruyor. Panikleyip servise koşmadan önce iyi haber: klima açılmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden çalışmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda 2026 için tahmini fiyatları paylaşıyoruz.
+Klimayı açmak istiyorsun ama cihaz hiç tepki vermiyor: ekran yanmıyor, iç ünite ses çıkarmıyor ya da çalışıyor gibi yapıp duruyor. Panikleyip servise koşmadan önce iyi haber: klima açılmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden çalışmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda ne beklemen gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 💡 **Açılıyor ama soğutmuyor mu?** Klima çalışıyor, hava üflüyor ama oda soğumuyorsa bu farklı bir sorundur → [Klima soğutmuyor: 6 olası neden](/blog/klima-sogutmuyor-nedenleri/). Bu yazı, klimanın **hiç açılmadığı / çalışmadığı** durum içindir.
 

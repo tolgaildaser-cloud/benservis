@@ -15,7 +15,7 @@ faq:
     a: "Arızaya göre değişir: ateşleme elektrodu, gaz valfi, fan ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Kombin çalışmıyor, radyatörler ve sıcak su soğuk — kombi **yanmıyor ya da ateşleme yapmıyor**. Soğuk havada sinir bozucu ama iyi haber: sebeplerin bir kısmı basit ve **güvenle evde** kontrol edilir. Bu yazıda nedenleri, kendin yapabileceklerini ve 2026 tahmini fiyatları paylaşıyoruz.
+Kombin çalışmıyor, radyatörler ve sıcak su soğuk — kombi **yanmıyor ya da ateşleme yapmıyor**. Soğuk havada sinir bozucu ama iyi haber: sebeplerin bir kısmı basit ve **güvenle evde** kontrol edilir. Bu yazıda nedenleri, kendin yapabileceklerini ve iş servise kaldığında nerede durman gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔥 **Güvenlik:** Kombi gaz ve basınçlı sıcak su ile çalışır. Güvenle yapabileceğin tek şey **su basıncı eklemek** ve **reset**'tir. Gaz, alev, fan ya da elektronik işlerine kendin müdahale etme — yetkili servise başvur.
 
@@ -54,7 +54,7 @@ Güvenli adımlar:
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
-İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/) · [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/)
+İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/) · [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 

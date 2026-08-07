@@ -20,7 +20,7 @@ faq:
     a: "Önce ucu kuru bezle temizlemeyi dene; hiç kıvılcım çıkmıyorsa buji ya da kablosu değişmelidir. Maliyet marka ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bir türlü yanmıyor. İyi haber: çoğu zaman sebep basit ve **evde, dakikalar içinde** çözülüyor. Bu yazıda nedenleri, **kendin yapabileceklerini** ve gerektiğinde 2026 tahmini servis fiyatlarını bulacaksın.
+Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bir türlü yanmıyor. İyi haber: çoğu zaman sebep basit ve **evde, dakikalar içinde** çözülüyor. Bu yazıda nedenleri, **kendin yapabileceklerini** ve gerektiğinde servisten ne isteyeceğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo, Franke, Silverline gibi ankastre ve set üstü gazlı ocaklarda nedenler benzerdir.
 
@@ -52,7 +52,7 @@ Kıvılcım çıkıyor ve gaz da geliyorsa ama alev tutmuyorsa: başlık ıslak/
 Tüpte gaz olduğu hâlde yanmıyorsa sorun çoğu zaman tüpte değildir: **regülatör (dedantör)** arızalı/donmuş, hortum bükük/tıkalı ya da regülatör tüpe tam oturmamış olabilir. Regülatörü kontrol et; şüpheliyse değiştir (ucuzdur). Hortumda ezik/çatlak varsa yenile.
 
 ### Ateşleme bujisi (çakmak) arızası ve tamiri
-Ateşleme bujisi, düğmeye basınca **kıvılcım üreten seramik uçtur**. Çatlak, kirli ya da ıslaksa kıvılcım çıkmaz. Önce ucunu **kuru bezle temizle**. Hiç kıvılcım çıkmıyorsa buji ya da kablosu arızalıdır; değişimi bir servis işidir ama genelde düşük maliyetlidir (aşağıdaki tabloya bak). Yalnız bu parçayı merak ediyorsan [ocak ateşleme bujisi değişimi](/blog/ocak-atesleme-bujisi-degisimi/) yazısı fiyat kapsamını ve öncesinde ücretsiz denenecekleri ayrıntılı anlatıyor.
+Ateşleme bujisi, düğmeye basınca **kıvılcım üreten seramik uçtur**. Çatlak, kirli ya da ıslaksa kıvılcım çıkmaz. Önce ucunu **kuru bezle temizle**. Hiç kıvılcım çıkmıyorsa buji ya da kablosu arızalıdır; değişimi bir servis işidir ama genelde düşük maliyetlidir. Yalnız bu parçayı merak ediyorsan [ocak ateşleme bujisi değişimi](/blog/ocak-atesleme-bujisi-degisimi/) yazısı fiyat kapsamını ve öncesinde ücretsiz denenecekleri ayrıntılı anlatıyor.
 
 ## Ne zaman servis çağırmalısın?
 
