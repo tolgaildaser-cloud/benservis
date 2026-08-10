@@ -1020,17 +1020,50 @@ console.log(`[build-blog] ✓ YK #46: ${posts.length} sayfanın gövdesinde tutu
 // başlıklardı ("Çamaşır makinesi tamiri: fiyatı ne belirler?"). O başlık fiyat VAAT
 // etmiyor, fiyatın neden değiştiğini anlatıyor; uyarı doğru işi hatalı gösteriyordu.
 // Yeni ölçüt RAKAM VAADİ arıyor (gövde denetimiyle aynı kalıplar) — kırık olan tam da bu.
+//
+// ⚠️ 10 AĞU GENİŞLETMESİ (FE, Tolga: _"guard'ı da genişlet"_) — RAKAMSIZ VAAT KÖR NOKTASI.
+// 7 Ağu'nun ölçütü RAKAM/YIL arıyordu, dolayısıyla ÇIPLAK ÜCRET ADINI kaçırıyordu:
+// `camasir-makinesi-su-atmiyor` başlığı "…nedenleri ve tamir ücreti" diyor — tek rakam yok,
+// ama aramada ücret sözü veriyor, sayfada karşılığı yok. Guard bu yüzden aynı sayfa için
+// "0 tanesi BAŞLIKTA" diyordu; kırıklık YK #46 deploy'unun canlı doğrulamasında (10 Ağu)
+// elle görüldü. Aşağıdaki İKİNCİ kalıp seti ad öbeğinin kendisini arar.
+//
+// ⛔ 7 Ağu'nun dersi tekrarlanmadı — geniş kalıp (`/fiyat|maliyet|ücret/`) PAZ'ın ONAYLI
+// AÇIKLAYICI başlıklarını yakıyordu. Bu yüzden yazılmadan önce 79 yazıya karşı ölçüldü:
+//   · ham eşleşme 2 → biri `beyaz-esya-servis-ucreti` ("Beyaz eşya servis ücreti: keşif
+//     bedeli NASIL İŞLER?") = sahte pozitif, tam da 7 Ağu'da yanan tip.
+//   · açıklayıcı istisnası eklendikten sonra 1 → yalnız gerçek kırık başlık.
+// Kural: "ücret NASIL İŞLER / NEYDEN OLUŞUR / NE BELİRLER" bir vaat değil, bir açıklamadır.
+const RAKAMSIZ_VAAT_KALIPLARI = [
+  /\b(tamir|servis|bakım|montaj|onarım|değişim|dolum)\s+(ücreti|ücretleri|bedeli|fiyatı|fiyatları)\b/i,
+  /(kaç para|kaç TL|ne kadar tutar|ne kadara mal)/i,
+  /(fiyat listesi|ücret tarifesi|fiyat tarifesi)/i,
+];
+const ACIKLAYICI_ISTISNA =
+  /(ne belirler|neyin belirled|nasıl belirlen|nasıl işler|nasıl hesaplan|neyden oluşur|dahil mi|düşülür mü|ücretsiz)/i;
+
 const sozler = [];
 for (const p of posts) {
-  const vaatMi = (s) => VAAT_KALIPLARI.some((re) => re.test(s || ""));
-  const nerede = [vaatMi(p.title) && "title", vaatMi(p.description) && "description"].filter(Boolean);
-  if (nerede.length) sozler.push(`${p.slug} (${nerede.join("+")})`);
+  const rakamVaadi = (s) => VAAT_KALIPLARI.some((re) => re.test(s || ""));
+  const rakamsizVaat = (s) =>
+    RAKAMSIZ_VAAT_KALIPLARI.some((re) => re.test(s || "")) && !ACIKLAYICI_ISTISNA.test(s || "");
+  for (const alan of ["title", "description"]) {
+    const metin = p[alan] || "";
+    const kalip = rakamVaadi(metin)
+      ? { tur: "rakam", re: VAAT_KALIPLARI.find((re) => re.test(metin)) }
+      : rakamsizVaat(metin)
+        ? { tur: "rakamsız", re: RAKAMSIZ_VAAT_KALIPLARI.find((re) => re.test(metin)) }
+        : null;
+    if (kalip) sozler.push({ slug: p.slug, alan, tur: kalip.tur, esles: (metin.match(kalip.re) || [""])[0].trim() });
+  }
 }
 if (sozler.length) {
-  const baslikta = sozler.filter((s) => s.includes("title")).length;
+  const sayfa = new Set(sozler.map((s) => s.slug)).size;
+  const baslikta = sozler.filter((s) => s.alan === "title").length;
   console.warn(
-    `[build-blog] ⚠️  ${sozler.length} sayfanın title/description'ı hâlâ FİYAT VAAT EDİYOR ama gövdede rakam yok` +
-      ` (${baslikta} tanesi BAŞLIKTA — en görünür yer). Metin düzeltmesi PAZ'da:\n  ` + sozler.join("\n  ")
+    `[build-blog] ⚠️  ${sayfa} sayfanın title/description'ı hâlâ FİYAT VAAT EDİYOR ama gövdede rakam yok` +
+      ` (${baslikta} tanesi BAŞLIKTA — en görünür yer). Metin düzeltmesi PAZ'da:\n  ` +
+      sozler.map((s) => `${s.slug} (${s.alan} · ${s.tur} vaat) → "${s.esles}"`).join("\n  ")
   );
 }
 
