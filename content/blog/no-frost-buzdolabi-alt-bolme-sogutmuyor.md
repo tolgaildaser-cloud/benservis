@@ -15,7 +15,7 @@ faq:
     a: "Fan motoru ile defrost onarımı (rezistans/sensör/saat) farklı işlerdir; maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olması en sık görülen ve en kafa karıştırıcı arızalardan biridir. Sebebi aslında mantıklı: bu modellerde tek bir soğutucu (evaporatör) buzlukta durur ve soğuk havayı **fanla** alt bölmeye üfler. Bu zincirin bir halkası kopunca buzluk soğur, dolap soğumaz. Bu yazıda nedenleri, **kendi yapabileceğin testi** ve 2026 fiyatlarını anlatıyoruz.
+No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olması en sık görülen ve en kafa karıştırıcı arızalardan biridir. Sebebi aslında mantıklı: bu modellerde tek bir soğutucu (evaporatör) buzlukta durur ve soğuk havayı **fanla** alt bölmeye üfler. Bu zincirin bir halkası kopunca buzluk soğur, dolap soğumaz. Bu yazıda nedenleri, **kendi yapabileceğin testi** ve sonucun ne anlama geldiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi no-frost buzdolaplarında nedenler ve maliyet büyük ölçüde benzerdir.
 

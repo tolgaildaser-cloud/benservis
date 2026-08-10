@@ -1,6 +1,6 @@
 ---
-title: "Klima gazı dolumu 2026 fiyatları: ne zaman gerekir, kaça yapılır?"
-description: "Klima gazı ne zaman dolar, kaç para? Gaz tipine (R32/R410) göre 2026 İstanbul fiyatları, gaz azalması belirtileri ve dikkat edilecekler. Bil, gör, çağır."
+title: "Klima gazı dolumu ne zaman gerçekten gerekir?"
+description: "Klima gazı gerçekten azalır mı, R32 ve R410 farkı nedir, gaz azalmasının belirtileri neler? Gereksiz gaz dolumundan kaçınmanın yolu."
 slug: "klima-gazi-dolumu-fiyat"
 date: "2026-06-17"
 category: "Klima"
@@ -8,14 +8,14 @@ faq:
   - q: "Klima gazı kaç yılda bir biter?"
     a: "Klima kapalı bir sistemdir; gaz normalde bitmez. Azalıyorsa mutlaka bir kaçak vardır — sadece dolum geçici çözümdür, kaçak da onarılmalıdır."
   - q: "Klima gazı dolumu kaç para?"
-    a: "2026 İstanbul tahmini olarak kapasiteye ve gaz tipine göre yaklaşık 1.200–2.800 ₺. R32/R410 gibi gaz tipi ve kaçak onarımı fiyatı etkiler."
+    a: "Kapasite, gaz tipi (R32/R410) ve kaçak onarımı gerekip gerekmediği bedeli belirler; bu sayfada aralık vermiyoruz. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
   - q: "Klima gazı azaldı, nasıl anlarım?"
     a: "Klima soğutmaz ya da geç soğutur, dış ünitenin ince borusunda buzlanma olur, elektrik tüketimi artar."
   - q: "Sadece gaz doldurmak yeterli mi?"
     a: "Hayır. Gaz azaldıysa kaçak vardır; kaçak bulunup onarılmadan yapılan dolum kısa sürede yine biter."
 ---
 
-"Klima gaz mı bitirdi?" — yazın en çok duyulan cümlelerden. Aslında klima gazı normalde **bitmez**; azalıyorsa bir kaçak vardır. Bu yazıda gazın ne zaman gerçekten gerektiğini, gaz tiplerini, 2026 tahmini fiyatları ve doğru maliyeti ödemek için dikkat edilecekleri anlatıyoruz.
+"Klima gaz mı bitirdi?" — yazın en çok duyulan cümlelerden. Aslında klima gazı normalde **bitmez**; azalıyorsa bir kaçak vardır. Bu yazıda gazın ne zaman gerçekten gerektiğini, gaz tiplerini, bedeli neyin belirlediğini ve gereksiz dolum ödememek için dikkat edilecekleri anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve maliyet büyük ölçüde benzerdir.
 
@@ -39,16 +39,9 @@ Bu belirtiler tek başına "gaz bitti" demek değildir — filtre kirliliği, fa
 - **Gaz tipi:** R32/R410/R22.
 - **Kaçak var mı:** sadece dolum mu, yoksa kaçak tespiti + onarım + vakum mu.
 
-## 2026 klima gazı dolumu tahmini fiyatları (İstanbul)
+## Dolum ne kadar tutar?
 
-> ⚠️ Tahmini İstanbul ortalamalarıdır; kapasite, gaz tipi ve kaçağa göre değişir. Kesin tahmini cihazına göre Benservis'ten al.
-
-| İşlem | Tahmini aralık |
-|-------|----------------|
-| Gaz dolumu (split, R32) | 1.200 – 2.200 ₺ |
-| Gaz dolumu (R410A) | 1.400 – 2.800 ₺ |
-| Kaçak tespiti + onarım | 1.500 – 3.500 ₺ |
-| Vakum + dolum (montaj/bakım sonrası) | 800 – 1.500 ₺ |
+Bedel kapasiteye, gaz tipine ve kaçak onarımı gerekip gerekmediğine göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
 ## "Kazık yememek" için 3 not
 1. **Kaçak onarılmadan dolum** kısa sürede biter — "sürekli gaz koyduruyorum" diyorsan kaçak var demektir.
@@ -61,7 +54,7 @@ Bu belirtiler tek başına "gaz bitti" demek değildir — filtre kirliliği, fa
 Bitmez; azalıyorsa kaçak vardır. Sadece dolum geçici çözümdür.
 
 **Klima gazı dolumu kaç para?**
-2026 İstanbul tahmini ~1.200–2.800 ₺ (kapasite + gaz tipine göre).
+Kapasite, gaz tipi ve kaçak onarımı belirler; kesin tahmini cihazına göre [Benservis'ten ücretsiz al](/).
 
 **Gaz azaldı nasıl anlarım?**
 Soğutmaz/geç soğutur, dış ünitede buzlanma, tüketim artışı.

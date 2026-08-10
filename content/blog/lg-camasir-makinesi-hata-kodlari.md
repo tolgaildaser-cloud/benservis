@@ -56,7 +56,7 @@ UE'de çamaşırı dağıt; çok az yük varsa birkaç parça ekle. LE'de yükü
 Çoğu modelde: makineyi **kapat**, **fişten 1 dakika** çek, tekrar tak. Arızanın kaynağı düzelmediyse kod tekrar çıkar.
 
 ## Tahmini tamir maliyeti
-LG dâhil parça parça 2026 İstanbul tahminleri: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/).
+Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
 
 İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Tahliye filtresi nasıl temizlenir (adım adım)](/blog/camasir-makinesi-tahliye-filtresi-temizleme/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/)
 

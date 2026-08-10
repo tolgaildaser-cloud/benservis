@@ -27,7 +27,7 @@ Aradığın numara, markanın gerçek yetkili servisi mi, yoksa öyle görünen 
 
 ## 3. Fiyatı ÖNCEDEN ve şeffaf konuş
 
-İşe başlamadan önce iki şeyi net sor: **keşif/çağırma ücreti** ne kadar ve onarım yapılırsa bu ücret işçilikten düşülüyor mu? İşçilik ve parça bedeli ayrı ayrı belirtiliyor mu? Fiyat bilgisi vermeyen ya da "gelince bakarız" deyip sonra şişiren servisleri tercih etme. Detay: [Beyaz eşya servis ücreti ve keşif bedeli 2026](/blog/beyaz-esya-servis-ucreti/).
+İşe başlamadan önce iki şeyi net sor: **keşif/çağırma ücreti** ne kadar ve onarım yapılırsa bu ücret işçilikten düşülüyor mu? İşçilik ve parça bedeli ayrı ayrı belirtiliyor mu? Fiyat bilgisi vermeyen ya da "gelince bakarız" deyip sonra şişiren servisleri tercih etme. Detay: [Beyaz eşya servis ücreti: keşif bedeli nasıl işler?](/blog/beyaz-esya-servis-ucreti/).
 
 ## 4. Önce tahmini maliyeti öğren (kıyas için)
 

@@ -15,7 +15,7 @@ faq:
     a: "Kodlar model/seriye göre değişebilir. Markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
 ---
 
-Bulaşık makinen bir **hata kodu** gösteriyor (E15, E24, H5…) ve ne demek olduğunu çözmeye çalışıyorsun. İyi haber: en sık çıkan kodların çoğu **filtre, tahliye ve taban suyu** gibi basit sebepleri işaret eder — bir kısmı evde ücretsiz çözülür. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve 2026 tahmini fiyatları topladık.
+Bulaşık makinen bir **hata kodu** gösteriyor (E15, E24, H5…) ve ne demek olduğunu çözmeye çalışıyorsun. İyi haber: en sık çıkan kodların çoğu **filtre, tahliye ve taban suyu** gibi basit sebepleri işaret eder — bir kısmı evde ücretsiz çözülür. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Önemli: Kodların anlamı **model ve seriye göre değişebilir**. Aşağıdakiler en yaygın anlamlardır; kesin teşhis için kılavuzuna bak ya da kodu Benservis'e yaz.
 
@@ -49,7 +49,7 @@ Filtre (E22), tahliye (E24) ve taban suyu (E15) en sık ve en kolay çözülenle
 4. **Resetle:** başlat tuşunu basılı tut ya da fişi 1 dakika çek.
 
 ## Tahmini tamir maliyeti
-Parça parça 2026 İstanbul tahminleri için: [Bulaşık makinesi tamiri 2026 fiyatları](/blog/bulasik-makinesi-tamiri-kac-para/).
+Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Bulaşık makinesi tamirinde fiyatı ne belirler?](/blog/bulasik-makinesi-tamiri-kac-para/)
 
 İlgili rehberler: [Bosch bulaşık makinesi hata kodları](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [Bulaşık makinesi su atmıyor](/blog/bulasik-makinesi-su-atmiyor/) · [Bulaşık makinesi su almıyor](/blog/bulasik-makinesi-su-almiyor/)
 

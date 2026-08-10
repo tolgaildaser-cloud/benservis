@@ -1,6 +1,6 @@
 ---
-title: "Televizyon görüntü gelmiyor (ses var görüntü yok): nedenleri ve çözüm"
-description: "TV'de ses var ama görüntü yok mu, ekran karanlık mı? Kaynak/kablo, arka ışık (backlight), panel ve güç kartı kaynaklı nedenler, kendin yapabileceğin kontroller ve servis sınırı. Bil, gör, çağır."
+title: "Televizyon ses var görüntü yok: nedenleri ve çözüm"
+description: "TV'de ses var görüntü yok mu, ekran karanlık mı? Kaynak/kablo, arka ışık (backlight), panel ve güç kartı nedenleri + kendin kontroller."
 slug: "televizyon-goruntu-gelmiyor"
 date: "2026-07-06"
 category: "Televizyon"

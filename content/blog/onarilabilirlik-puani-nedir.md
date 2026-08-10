@@ -1,6 +1,6 @@
 ---
-title: "Onarılabilirlik puanı nedir? Cihaz alırken yeni AB etiketi nasıl okunur?"
-description: "AB'nin Haziran 2025'te zorunlu kıldığı yeni enerji ve onarılabilirlik etiketi ne anlatıyor? Onarılabilirlik puanı (A-E), pil dayanıklılığı, düşme direnci — telefon, tablet ve beyaz eşya alırken bu etiket nasıl okunur, Türkiye'deki alıcı için ne anlama gelir? Bil, gör, çağır."
+title: "Onarılabilirlik puanı nedir? AB etiketi nasıl okunur?"
+description: "AB'nin zorunlu kıldığı yeni etikette onarılabilirlik puanı (A-E) ne anlatıyor? Cihaz alırken etiket nasıl okunur, Türkiye'deki alıcı için ne demek?"
 slug: "onarilabilirlik-puani-nedir"
 date: "2026-07-13"
 category: "Sürdürülebilirlik"

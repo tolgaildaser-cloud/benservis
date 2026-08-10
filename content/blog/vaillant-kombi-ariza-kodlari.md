@@ -1,5 +1,5 @@
 ---
-title: "Vaillant kombi arıza kodları: F.22, F.28, F.29, F.75 ve fazlası"
+title: "Vaillant kombi arıza kodları: F.22, F.28, F.29, F.75"
 description: "Vaillant kombi arıza kodları tam liste: F.22 düşük su basıncı, F.28 ateşleme, F.29 alev sönmesi, F.75 pompa ve daha fazlasının anlamı ve çözümü. Bil, gör, çağır."
 slug: "vaillant-kombi-ariza-kodlari"
 date: "2026-06-19"
@@ -64,7 +64,7 @@ Pompa çalışırken basınç farkı algılanmıyor; pompa ya da su basıncı se
 ## Tahmini maliyet
 Vaillant modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler; sonra yakınındaki yüksek puanlı kombi servisini ara.
 
-İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) · [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/) · [Kombi yanmıyor](/blog/kombi-yanmiyor/) · [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/)
+İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) · [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/) · [Kombi yanmıyor](/blog/kombi-yanmiyor/) · [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/)
 
 ## Sık sorulan sorular
 

@@ -1,6 +1,6 @@
 ---
-title: "Elektrik faturası neden yüksek gelir? Cihazınız fazla elektrik yakıyor olabilir"
-description: "Yazın kabaran elektrik faturasının sebebi her zaman fazla kullanım değildir; yıpranmış conta, tıkalı filtre veya kireçlenmiş rezistans gibi sessiz arızalar tüketimi katlar. Hangi cihaz neden çok yakar, nasıl anlarsın, faturayı düşürmek için ne yapmalısın? Bil, gör, çağır."
+title: "Elektrik faturası neden yüksek? Cihaz kaynaklı sebepler"
+description: "Yüksek faturanın sebebi hep fazla kullanım değil: yıpranmış conta, tıkalı filtre, kireçli rezistans. Hangi cihaz neden çok yakar, nasıl anlarsın?"
 slug: "elektrik-faturasi-neden-yuksek"
 date: "2026-07-09"
 category: "Genel"

@@ -1,6 +1,6 @@
 ---
-title: "Bosch bulaşık makinesi E22 hatası: filtre tıkalı — adım adım çözümü"
-description: "Bosch bulaşık makinesinde E22 hatası ne demek? İç (taban) filtre tıkalı; su süzülemiyor. Filtreyi çıkarıp temizleme yöntemi adım adım + hangi durumda servis gerekir. Siemens/Profilo/Neff'te de aynı. Bil, gör, çağır."
+title: "Bosch bulaşık makinesi E22 hatası: filtre tıkalı"
+description: "Bosch E22: iç (taban) filtre tıkalı, su süzülemiyor. Filtreyi çıkarıp temizleme adımları ve servis sınırı. Siemens/Profilo/Neff'te de aynı."
 slug: "bosch-bulasik-makinesi-e22-hatasi"
 date: "2026-07-22"
 category: "Bulaşık makinesi"

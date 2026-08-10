@@ -1,6 +1,6 @@
 ---
-title: "Klima su damlatıyor: nedenleri ve kendin yapabileceğin kontroller"
-description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahliye hattı. Olası nedenler, evde güvenle yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
+title: "Klima su damlatıyor: nedenleri ve kendin kontroller"
+description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahliye hattı. Olası nedenler, evde güvenle yapabileceğin kontroller. Ücretsiz teşhis."
 slug: "klima-su-damlatiyor"
 date: "2026-06-19"
 category: "Klima"
@@ -15,7 +15,7 @@ faq:
     a: "Genelde bakım kapsamındadır; pompa ya da montaj düzeltme gerekiyorsa artar. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğu zaman ciddi bir arıza değil — ama **ihmal edilirse** duvarına, elektroniğe ve eşyana zarar verebilir. İyi haber: en sık sebep basit bir tıkanıklık. Bu yazıda klimanın neden su damlattığını, **servisi aramadan önce kendin kontrol edebileceklerini** ve 2026 için tahmini fiyatları paylaşıyoruz.
+Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğu zaman ciddi bir arıza değil — ama **ihmal edilirse** duvarına, elektroniğe ve eşyana zarar verebilir. İyi haber: en sık sebep basit bir tıkanıklık. Bu yazıda klimanın neden su damlattığını, **servisi aramadan önce kendin kontrol edebileceklerini** ve hangi durumda servis gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve maliyet büyük ölçüde benzerdir.
 

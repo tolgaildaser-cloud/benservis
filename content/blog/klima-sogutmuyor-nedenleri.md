@@ -1,6 +1,6 @@
 ---
 title: "Klima soğutmuyor: 6 olası neden ve ne zaman servis gerekir"
-description: "Klima soğutmuyorsa nedeni kirli filtreden gaz kaçağına kadar uzanır. 6 olası neden, kendin yapabileceğin kontroller ve servisi hangi noktada çağırmalısın. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Klima soğutmuyorsa sebep kirli filtreden gaz kaçağına uzanır. 6 olası neden, kendin kontroller ve servisi hangi noktada çağırmalısın. Ücretsiz teşhis."
 slug: "klima-sogutmuyor-nedenleri"
 date: "2026-06-17"
 updated: "2026-06-29"
@@ -16,7 +16,7 @@ faq:
     a: "Evet. Verimsiz çalışan klima aynı serinlik için çok daha fazla enerji harcar; sorunu erken çözmek hem konfor hem tasarruf sağlar."
 ---
 
-Yaz geldi, klimayı açtın ama oda bir türlü serinlemiyor. Panikleyip hemen servise koşmadan önce iyi haber: klima soğutmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden soğutmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda 2026 için tahmini fiyatları paylaşıyoruz.
+Yaz geldi, klimayı açtın ama oda bir türlü serinlemiyor. Panikleyip hemen servise koşmadan önce iyi haber: klima soğutmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden soğutmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda ne beklemen gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Vestel, Daikin, Mitsubishi, Samsung, LG, Gree gibi klimalarda nedenler ve maliyet büyük ölçüde benzerdir.
 

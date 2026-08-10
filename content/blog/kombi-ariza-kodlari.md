@@ -50,7 +50,7 @@ Basınç sürekli düşüyorsa **kaçak** vardır (petek, vana, kombi içi) → 
 | Gaz valfi / elektronik kart | Donanım arızası | 🔧 Cihazı kapat, servis |
 
 ## Tahmini maliyet
-Kombine ve arızaya göre tahmini tamir maliyetini [Benservis](/) saniyede söyler; sonra yakınındaki yüksek puanlı kombi servisini ara. Parça parça tahminler: [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/).
+Kombine ve arızaya göre tahmini tamir maliyetini [Benservis](/) saniyede söyler; sonra yakınındaki yüksek puanlı kombi servisini ara. Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/)
 
 ## Cihazına göre rehberler
 - [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/)

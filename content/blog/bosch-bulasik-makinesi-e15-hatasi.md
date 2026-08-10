@@ -1,6 +1,6 @@
 ---
-title: "Bosch bulaşık makinesi E15 hatası: nedeni ve adım adım çözümü"
-description: "Bosch bulaşık makinesinde E15 hatası (musluk işaretiyle) ne demek? Tabanda su, AquaStop taşma güvenliği devrede. Öne yatırıp suyu boşaltma yöntemi adım adım + kurutma + hangi durumda servis gerekir. Siemens/Profilo/Neff'te de aynı. Bil, gör, çağır."
+title: "Bosch bulaşık makinesi E15 hatası: adım adım çözümü"
+description: "Bosch E15 (musluk işareti): tabanda su var, AquaStop devrede. Suyu boşaltma yöntemi adım adım ve servis sınırı. Siemens/Profilo/Neff'te de aynı."
 slug: "bosch-bulasik-makinesi-e15-hatasi"
 date: "2026-07-09"
 category: "Bulaşık makinesi"

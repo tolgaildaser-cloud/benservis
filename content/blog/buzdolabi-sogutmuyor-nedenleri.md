@@ -1,5 +1,5 @@
 ---
-title: "Buzdolabı soğutmuyor ama çalışıyor: 6 olası neden ve kontroller"
+title: "Buzdolabı soğutmuyor ama çalışıyor: 6 olası neden"
 description: "Buzdolabın çalışıyor ama soğutmuyor mu? 6 olası neden, kendin yapabileceğin kontroller ve hangi belirtide servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "buzdolabi-sogutmuyor-nedenleri"
 date: "2026-06-17"
@@ -15,7 +15,7 @@ faq:
     a: "Buzdolabı yatık taşındıysa kompresör yağı borulara kaçmış olabilir. Fişe takmadan önce birkaç saat (ideali 4-6 saat) dik beklet, sonra çalıştır."
 ---
 
-Buzdolabını açtın, ışık yanıyor, motor sesi de geliyor — ama içerisi soğuk değil. Bu kafa karıştırıcı bir durum: cihaz "çalışıyor" gibi görünür ama soğutmaz. İyi haber, sebeplerin bir kısmı basit ve evde çözülebilir. Bu yazıda 6 olası nedeni, **servis çağırmadan önce kendin kontrol edebileceklerini** ve 2026 için tahmini tamir fiyatlarını paylaşıyoruz.
+Buzdolabını açtın, ışık yanıyor, motor sesi de geliyor — ama içerisi soğuk değil. Bu kafa karıştırıcı bir durum: cihaz "çalışıyor" gibi görünür ama soğutmaz. İyi haber, sebeplerin bir kısmı basit ve evde çözülebilir. Bu yazıda 6 olası nedeni, **servis çağırmadan önce kendin kontrol edebileceklerini** ve hangi belirtinin servis gerektirdiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo, Vestel gibi buzdolaplarında nedenler ve maliyet büyük ölçüde benzerdir.
 

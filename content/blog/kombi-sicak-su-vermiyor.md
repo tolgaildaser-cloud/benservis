@@ -15,7 +15,7 @@ faq:
     a: "Arızaya göre değişir: plakalı eşanjör, 3 yollu vana, akış sensörü ve kimyasal temizlik çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyor** (ya da ılık geliyor). Bu, sıcak su tarafında bir sorun olduğunu gösterir ve sebeplerin bir kısmı bakımla çözülür. Bu yazıda olası arızaları, kendin yapabileceklerini ve 2026 tahmini fiyatları anlatıyoruz.
+Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyor** (ya da ılık geliyor). Bu, sıcak su tarafında bir sorun olduğunu gösterir ve sebeplerin bir kısmı bakımla çözülür. Bu yazıda olası arızaları, kendin yapabileceklerini ve hangi arızanın servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔥 **Güvenlik:** Kombi gaz ve basınçlı sıcak su ile çalışır. Güvenle yapabileceğin tek şey **musluk/aeratör temizliği**, **su basıncı** ve **reset**'tir. İç parçalara (eşanjör, vana, sensör) kendin müdahale etme.
 
@@ -50,7 +50,7 @@ Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyo
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
-İlgili: [Kombi tamiri 2026 fiyatları](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
+İlgili: [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
 
 ## Sık sorulan sorular
 

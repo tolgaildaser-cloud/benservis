@@ -1,5 +1,5 @@
 ---
-title: "Çamaşır makinesi su almıyor: 5 kontrol ve ne zaman servis gerekir"
+title: "Çamaşır makinesi su almıyor: 5 kontrol ve servis sınırı"
 description: "Çamaşır makinen su almıyor mu? Önce kendin kontrol et: musluk, filtre, hortum. Olası nedenler ve servisin hangi noktada gerektiği. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "camasir-makinesi-su-almiyor"
 date: "2026-06-17"
@@ -15,7 +15,7 @@ faq:
     a: "Valf, filtre, kapı kilidi gibi parçalar ucuzdur, tamir mantıklı. Anakart arızası pahalıysa ve makine eskiyse yenisi değerlendirilebilir."
 ---
 
-Çamaşırları koydun, programı başlattın ama makine su almıyor — ya hiç, ya da yarım. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin 5 kontrolü** ve 2026 için tahmini tamir fiyatlarını bulacaksın.
+Çamaşırları koydun, programı başlattın ama makine su almıyor — ya hiç, ya da yarım. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin 5 kontrolü** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler benzerdir. Ekranda hata kodu varsa markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
 

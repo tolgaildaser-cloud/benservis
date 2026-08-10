@@ -1,6 +1,6 @@
 ---
 title: "TV açılmıyor: nedenleri ve evde yapabileceğin kontroller"
-description: "Televizyon açılmıyor, standby ışığı yanıp sönüyor ya da hiç tepki vermiyor mu? Güç kaynağı, kondansatör ve anakart kaynaklı nedenler + evde yapabileceğin kontroller. Ücretsiz teşhis. Bil, gör, çağır."
+description: "TV açılmıyor, standby ışığı yanıp sönüyor ya da hiç tepki vermiyor mu? Güç kaynağı, kondansatör ve anakart nedenleri + evde yapabileceğin kontroller."
 slug: "tv-acilmiyor"
 date: "2026-06-23"
 updated: "2026-07-06"
@@ -16,7 +16,7 @@ faq:
     a: "Arızaya göre değişir: güç kaynağı kartı, kondansatör ve anakart farklı işlerdir. Panel arızası genelde ekonomik değildir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönüyor ya da ses gelip görüntü gelmiyor. Sebep çoğu zaman birkaç parçadan biridir ve belirtiye bakarak daraltmak mümkün. Bu yazıda TV'nin neden açılmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve 2026 tahmini fiyatları bulacaksın.
+Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönüyor ya da ses gelip görüntü gelmiyor. Sebep çoğu zaman birkaç parçadan biridir ve belirtiye bakarak daraltmak mümkün. Bu yazıda TV'nin neden açılmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi belirtinin panel, hangisinin besleme arızası olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Samsung, LG, Vestel, Arçelik, Beko, Sony, Philips, TCL gibi LED/LCD televizyonlarda nedenler benzerdir.
 

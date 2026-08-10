@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır kaç derecede yıkanır? 30-40-60-90 derece rehberi"
-description: "Hangi çamaşır kaç derecede yıkanmalı? 30 derece günlük kıyafetler, 40 derece pamuklular, 60 derece havlu-nevresim ve hijyen, 90 derece ne zaman? Düşük derecenin tasarruf etkisi ve makinede koku yapmaması için tek kural. Bil, gör, çağır."
+description: "Hangi çamaşır kaç derecede yıkanmalı? 30-40-60-90 derecenin karşılıkları, düşük derecenin tasarruf etkisi ve makinede koku yapmaması için tek kural."
 slug: "camasir-kac-derecede-yikanir"
 date: "2026-07-14"
 category: "Çamaşır makinesi"

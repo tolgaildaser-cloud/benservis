@@ -15,7 +15,7 @@ faq:
     a: "Arızaya göre değişir: kapı kilidi, su valfi/pompa ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve 2026 tahmini fiyatları paylaşıyoruz.
+Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve hangi kodun servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler benzerdir. Yanıp sönen ışık bir hata kodu olabilir — markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
 

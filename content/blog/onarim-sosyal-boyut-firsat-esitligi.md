@@ -1,6 +1,6 @@
 ---
-title: "Sürdürülebilirliğin sosyal boyutu: onarım, şeffaflık ve fırsat eşitliği"
-description: "Sürdürülebilirlik yalnızca çevre değildir; sosyal bir boyutu da vardır. Onarımı şeffaf hâle getirmek bilgi asimetrisini kaldırır, kırılgan grupları korur ve fırsat eşitliğine katkı sağlar. Bil, gör, çağır."
+title: "Onarımın sosyal boyutu: şeffaflık ve fırsat eşitliği"
+description: "Sürdürülebilirlik yalnız çevre değil: onarımı şeffaflaştırmak bilgi asimetrisini kaldırır, kırılgan grupları korur, fırsat eşitliğine katkı sağlar."
 slug: "onarim-sosyal-boyut-firsat-esitligi"
 date: "2026-06-20"
 category: "Sürdürülebilirlik"

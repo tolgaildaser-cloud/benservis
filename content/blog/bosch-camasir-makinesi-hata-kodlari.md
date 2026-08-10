@@ -20,7 +20,7 @@ faq:
     a: "Bosch yüzlerce model üretir; F80, E92, E00 gibi bazı kodlar yalnız belirli serilerde çıkar ve anlamı modele göre değişir. Yanlış teşhis pahalıya patlayacağı için uydurma anlam vermeyiz — ekrandaki kodu ve cihaz modelini Benservis'e yaz, olası arızayı ve tahmini maliyeti saniyede söyleyelim."
 ---
 
-Bosch çamaşır makinen ekranında bir hata kodu gösteriyor ve ne demek olduğunu çözmek istiyorsun. Bosch (ve aynı platformu kullanan **Siemens, Neff**) arızayı **E** ya da **F** önekli kodlarla bildirir. Bu rehberde Bosch çamaşır makinesinin **tüm sık kodlarını**, anlamlarını, hangisini **kendin çözebileceğini** ve 2026 tahmini fiyatları topladık.
+Bosch çamaşır makinen ekranında bir hata kodu gösteriyor ve ne demek olduğunu çözmek istiyorsun. Bosch (ve aynı platformu kullanan **Siemens, Neff**) arızayı **E** ya da **F** önekli kodlarla bildirir. Bu rehberde Bosch çamaşır makinesinin **tüm sık kodlarını**, anlamlarını, hangisini **kendin çözebileceğini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Kodların anlamı model ve seriye göre değişebilir; aşağıdakiler en yaygın anlamlardır. Kesin teşhis için modelini ve kodu [Benservis'e](/) yaz.
 
@@ -87,7 +87,7 @@ Bosch yüzlerce farklı model üretir; bazı kodlar (ör. **F80, E92, E00, F44**
 > 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 
 ## Tahmini tamir maliyeti
-Bosch dâhil parça parça 2026 İstanbul tahminleri: [Çamaşır makinesi tamiri 2026 fiyatları](/blog/camasir-makinesi-tamiri-kac-para/). (Motor kömürü, tahliye pompası, elektronik kart…)
+Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/) (Motor kömürü, tahliye pompası, elektronik kart…)
 
 İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor / ıslak çıkıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
 

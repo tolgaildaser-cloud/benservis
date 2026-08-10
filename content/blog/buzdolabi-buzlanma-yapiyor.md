@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı buzlanma yapıyor / buz tutuyor: nedenleri ve çözüm"
-description: "Buzdolabının buzluğu ya da arka duvarı buz mu tutuyor? Kapı contası, defrost (buz çözme) arızası, tıkalı tahliye kanalı ve kapı alışkanlıkları kaynaklı nedenler + kendin kontroller + ne zaman servis gerekir. Bil, gör, çağır."
+description: "Buzluk ya da arka duvar buz mu tutuyor? Kapı contası, defrost arızası, tıkalı tahliye kanalı ve kapı alışkanlıkları + kendin kontroller."
 slug: "buzdolabi-buzlanma-yapiyor"
 date: "2026-07-06"
 category: "Buzdolabı"

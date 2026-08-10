@@ -1,6 +1,6 @@
 ---
-title: "Beyaz eşya ömrü kaç yıl? Cihaz cihaz ortalama ömür ve değişim zamanı"
-description: "Çamaşır makinesi, buzdolabı, bulaşık makinesi, fırın ve kombi ortalama kaç yıl kullanılır? Ömrü uzatan bakım alışkanlıkları, hangi yaşta hangi arızada tamir yerine değişim mantıklı olur? Tamir mi yenisi mi kararının pratik kuralları. Bil, gör, çağır."
+title: "Beyaz eşya ömrü kaç yıl? Cihaz cihaz ortalama ömür"
+description: "Çamaşır, buzdolabı, bulaşık makinesi, fırın ve kombi ortalama kaç yıl kullanılır? Ömrü uzatan bakım ve tamir mi yenisi mi kararının pratik kuralları."
 slug: "beyaz-esya-omru-kac-yil"
 date: "2026-07-14"
 category: "Genel"

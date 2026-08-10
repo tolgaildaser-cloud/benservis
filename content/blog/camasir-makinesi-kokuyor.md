@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi kokuyor: nedenleri ve kötü kokuyu giderme"
-description: "Çamaşır makinen küf/rutubet mi kokuyor? Kapı contası, deterjan çekmecesi, filtre ve kireç kaynaklı kokunun nedenleri, evde temizleme yöntemleri ve ne zaman servis gerekir. Bil, gör, çağır."
+description: "Çamaşır makinen küf/rutubet mi kokuyor? Kapı contası, deterjan çekmecesi, filtre ve kireç kaynaklı nedenler + evde temizleme yöntemleri."
 slug: "camasir-makinesi-kokuyor"
 date: "2026-07-06"
 category: "Çamaşır makinesi"
@@ -81,7 +81,7 @@ Güvenli ve çoğu zaman ücretsiz:
 
 ## Tahmini maliyet
 
-Temizlik çoğu zaman ücretsizdir. Conta değişimi ya da tahliye/pompa arızası gerekiyorsa 2026 tahminleri: [Çamaşır makinesi tamiri kaç para?](/blog/camasir-makinesi-tamiri-kac-para/). Kesin tahmini cihazına göre [Benservis'ten](/) ücretsiz al.
+Temizlik çoğu zaman ücretsizdir. Conta ya da tahliye/pompa arızası çıkarsa işin kapsamı: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/) Kesin tahmini cihazına göre [Benservis'ten](/) ücretsiz al.
 
 İlgili: [Su atmıyor / ıslak çıkıyor](/blog/camasir-makinesi-su-atmiyor/) · [Tahliye filtresi temizleme](/blog/camasir-makinesi-tahliye-filtresi-temizleme/) · [Ses/titreşim yapıyor](/blog/camasir-makinesi-ses-titresim/)
 

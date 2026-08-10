@@ -812,14 +812,16 @@ const SSS = [
   // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 4 Ağu taraması: kümeler çamaşır 13 · bulaşık 11 ·
-  //   kombi 9 · klima 9 · buzdolabı 8 — buzdolabı sette EN UZUN süredir yoktu, girdi.
-  //   Çıkan: çamaşır ses/titreşim (2 Ağu). GEREKÇE: Ağustos sıcağı buzdolabının zirve dönemi,
-  //   çamaşır ses/titreşim ise mevsim-nötr; en büyük küme olması sıra beklemesine engel değil.
-  //   Klima (29 Tem) yaşça en eski ama zirve ayında bilerek tutuluyor — mevsim yaşa baskın.) —
+  // — haftalık belirti soruları (blog verisinden; 7 Ağu taraması: kümeler çamaşır 13 · bulaşık 11 ·
+  //   kombi 9 · buzdolabı 8 · klima 8 — 4 Ağu'ya göre değişmedi).
+  //   ÇIKAN: klima su damlatıyor. GEREKÇE: 29 Tem'den beri sette, 9 gün — rotasyon geçmişindeki
+  //   EN UZUN görev süresi (diğerleri 3-4 gün). 4 Ağu'da "mevsim yaşa baskın" diye bilerek
+  //   tutulmuştu; bir hafta daha tutmak sıra mantığını fiilen askıya alırdı.
+  //   GİREN: çamaşır makinesi su atmıyor — en büyük küme (13) ve setten 4 Ağu'da çıkmıştı;
+  //   içindeki bu belirti hiç kullanılmadı (kokuyor 31 Tem, ses/titreşim 2-4 Ağu kullanıldı). —
   { s: "Buzdolabı çalışıyor ama soğutmuyor, önce neye bakmalıyım?", c: "Önce sıcaklık ayarına bak: dolap yaklaşık 4, buzluk yaklaşık eksi 18 derece olmalı — ayar yanlışlıkla değişmiş olabilir. Sonra kapı contasını dene; kapağa bir kağıt kıstırıp çek, direnç hissetmiyorsan conta sızdırıyordur. Arkadaki ve alttaki tozu da süpür, dolabı duvardan 5-10 cm uzak tut — tozlu kondenser ısıyı dışarı atamaz. Ayar doğru, conta sağlam ve arka temizken hâlâ soğutmuyorsa ya da buzluk soğuk olduğu hâlde dolap soğumuyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Kombi ısıtıyor ama musluktan sıcak su gelmiyor, önce neye bakmalıyım?", c: "Önce kombi panelinden musluk (sıcak su) sıcaklığını yükselt, sonra musluk ucundaki aeratörü çıkarıp kirecini temizle — debi düşünce bazı kombiler sıcak su moduna hiç geçmez. Birden çok muslukta dene: yalnız birinde sorun varsa mesele kombide değil o musluktadır. Ayar yüksek ve aeratör temizken su hâlâ ılık geliyorsa sorun çoğu zaman sıcak su eşanjörünün kireçlenmesinden çıkıyor — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
-  { s: "Klima iç üniteden su damlatıyor, ne yapmalıyım?", c: "Önce klimayı kapat — su elektronik karta veya prize ulaşırsa risklidir. Sonra iç ünitenin filtresini çıkarıp yıka ve tahliye hortumunun dışarı çıkan ucunda tıkanıklık ya da bükülme var mı bak; sorun genellikle tıkalı tahliye hattıdır. Filtre temiz, hortum açıkken damlama sürüyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  { s: "Çamaşır makinesi su atmıyor, çamaşırlar ıslak çıkıyor — önce neye bakmalıyım?", c: "Önce makinenin alt kapağındaki tahliye filtresini çıkarıp temizle; su atmama şikâyetinin en sık sebebi budur. Altına havlu ve geniş bir kap koy, çünkü içeride kalan su filtreyi açar açmaz gelir. Sonra arkadaki tahliye hortumunu kontrol et: bükülmüş, ezilmiş ya da giderin içinde çok derine itilmiş olabilir. Filtre temiz ve hortum açıkken makine hâlâ suyu boşaltmıyor ya da santrifüje hiç geçmiyorsa sıra tahliye pompasına gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
 ];
 
 const CSS = `

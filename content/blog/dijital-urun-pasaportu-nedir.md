@@ -1,5 +1,5 @@
 ---
-title: "Dijital Ürün Pasaportu (DPP) nedir? AB takvimi ve Türkiye için anlamı"
+title: "Dijital Ürün Pasaportu (DPP) nedir? AB takvimi"
 description: "Dijital Ürün Pasaportu (DPP) nedir, AB'de ne zaman zorunlu oluyor ve Türkiye'yi nasıl etkiler? Cihazların dijital kimliği, onarım geçmişi ve döngüsel ekonomi. Bil, gör, çağır."
 slug: "dijital-urun-pasaportu-nedir"
 date: "2026-07-04"

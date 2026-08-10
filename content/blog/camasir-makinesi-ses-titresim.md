@@ -15,7 +15,7 @@ faq:
     a: "Denge ayarı çoğu zaman ücretsizdir. Rulman/keçe değişimi işçiliği ağır bir iştir, amortisör daha hafiftir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 ---
 
-Çamaşır makinesi özellikle **santrifüj** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve 2026 tahmini fiyatları anlatıyoruz.
+Çamaşır makinesi özellikle **santrifüj** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve hangi sesin servis işaret ettiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler ve maliyet benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
 

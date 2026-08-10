@@ -1,5 +1,5 @@
 ---
-title: "Yetkili servis mi özel servis mi? Beyaz eşyada fark ve hangisi ne zaman"
+title: "Yetkili servis mi özel servis mi? Fark ve hangisi ne zaman"
 description: "Beyaz eşyada yetkili servis mi özel servis mi seçmeli? Garanti, fiyat, parça ve uzmanlık farkları + hangi durumda hangisi mantıklı. Bil, gör, çağır."
 slug: "yetkili-servis-mi-ozel-servis-mi"
 date: "2026-07-03"
