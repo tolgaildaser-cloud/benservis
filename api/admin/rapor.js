@@ -19,14 +19,20 @@ export default async function handler(req, res) {
   const fromQ = isDate(q.from) ? q.from : def30;
   const toQ = isDate(q.to) ? q.to : today;
 
+  // YK #58 ⑴ — kaynak/cins/kampanya sütunları rapora girer (gclid GİRMEZ: tık kimliğidir,
+  // matriste analitik değeri yok). Kolonlar canlı şemada yoksa rapor ÇÖKMEZ, UTM'siz döner.
+  const TEMEL = "created_at,cihaz,marka,yas,ariza,il,ilce,maliyet_min,maliyet_max,karar,aciliyet";
+  const sorgu = (alanlar) => supabase
+    .from("teshis_log")
+    .select(alanlar)
+    .gte("created_at", `${fromQ}T00:00:00.000Z`)
+    .lte("created_at", `${toQ}T23:59:59.999Z`)
+    .order("created_at", { ascending: false })
+    .limit(5000);
+
   try {
-    const { data, error } = await supabase
-      .from("teshis_log")
-      .select("created_at,cihaz,marka,yas,ariza,il,ilce,maliyet_min,maliyet_max,karar,aciliyet")
-      .gte("created_at", `${fromQ}T00:00:00.000Z`)
-      .lte("created_at", `${toQ}T23:59:59.999Z`)
-      .order("created_at", { ascending: false })
-      .limit(5000);
+    let { data, error } = await sorgu(`${TEMEL},kaynak,cins,kampanya`);
+    if (error) ({ data, error } = await sorgu(TEMEL));
     if (error) return res.status(500).json({ ok: false, error: error.message });
     const satirlar = data || [];
     return res.status(200).json({
