@@ -340,8 +340,10 @@ function ServisProfil({ servis, onGeri }) {
 
 // İki kademeli konum seçimi: önce il, sonra o ile ait ilçeler.
 // ilIlceMap: tüm Türkiye (TR_IL_ILCE) — { "İstanbul": ["Kadıköy", ...], ... }
-function FallbackIlce({ ilIlceMap, secili, onSec }) {
-  const [il, setIl] = useState("");
+// `baslangicIl`: sunucunun IP'den bulduğu il (varsa). Ön-seçili gelir → kullanıcı iki
+// seçim yerine tek seçim (yalnız ilçe) yapar. Konum köprüsü, 13 Ağu YK hacim analizi ②.
+function FallbackIlce({ ilIlceMap, secili, onSec, baslangicIl }) {
+  const [il, setIl] = useState(() => (baslangicIl && ilIlceMap[baslangicIl] ? baslangicIl : ""));
   const iller = Object.keys(ilIlceMap).sort((a, b) => a.localeCompare(b, "tr"));
   const ilceler = il
     ? [...(ilIlceMap[il] || [])].sort((a, b) => a.localeCompare(b, "tr"))
@@ -357,7 +359,9 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
   return (
     <div style={{ textAlign: "center", marginTop: 40 }}>
       <p style={{ color: "#1E293B", marginBottom: 16, fontSize: 14 }}>
-        Konum iznine gerek kalmadan bölgenizi seçin:
+        {il
+          ? <>Bölgeniz <b>{il}</b> olarak bulundu — ilçenizi seçin:</>
+          : "Konum iznine gerek kalmadan bölgenizi seçin:"}
       </p>
       <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
         {/* İl */}
@@ -385,7 +389,7 @@ function FallbackIlce({ ilIlceMap, secili, onSec }) {
   );
 }
 
-export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayfa, teshisLogId }) {
+export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayfa, teshisLogId, baslangicIl }) {
   // "loading" | "success" | "denied" | "error"
   const [locationState, setLocationState] = useState("loading");
   const [siraliServisler, setSiraliServisler] = useState([]);
@@ -654,12 +658,17 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
           />
         ))}
 
-        {/* Konum izni reddedildi — ilçe fallback */}
+        {/* Konum izni reddedildi — ilçe fallback.
+            Konum köprüsünün asıl kazandığı yer BURASI: kullanıcının konumu bilinmiyor,
+            sunucunun IP'den bulduğu il ön-seçili gelince iki seçim tek seçime iner.
+            ⛔ Yukarıdaki "bu bölgede servis yok" dalına ön-seçim VERİLMEZ: orada gerçek
+            konum zaten alınmış ve kullanıcı bilerek BAŞKA bölge arıyor. */}
         {locationState === "denied" && (
           <FallbackIlce
             ilIlceMap={ilIlceMap}
             secili={fallbackIlce}
             onSec={ilceIleAra}
+            baslangicIl={baslangicIl}
           />
         )}
       </div>

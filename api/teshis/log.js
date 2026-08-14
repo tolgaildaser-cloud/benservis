@@ -1,9 +1,10 @@
 // api/teshis/log.js — Teşhis istatistiği (ANONİM, PII YOK). İki mod:
-//  insert: {cihaz,marka,ariza,maliyet_min,maliyet_max,karar,aciliyet,yas,garanti} → {ok,id}
-//  konum : {id, il, ilce} → o satırın il/ilce'sini BİR KEZ doldurur (üzerine yazmaz) → {ok}
+//  insert: {cihaz,marka,ariza,maliyet_min,maliyet_max,karar,aciliyet,yas,garanti} → {ok,id,il}
+//  konum : {id, il, ilce} → o satırın il/ilce'sini doldurur (ilçe dolana kadar) → {ok}
 // Sunucu service-role ile yazar (RLS bypass). Best-effort: hata 200 {ok:false}, akışı bozma.
 import supabase from "../_supabase.js";
 import { withRateLimit } from "../_ratelimit.js";
+import { TR_IL_ILCE } from "../../src/tr-iller.js";
 
 const IZIN = ["benservis.com", "vercel.app", "localhost"];
 function originOk(req) {
@@ -50,16 +51,49 @@ function kaynakOku(req) {
 // bilinmeyen kolon hatasında (PostgREST PGRST204) kayıt UTM'siz tekrar denenir.
 const kolonYok = (e) => e?.code === "PGRST204" || /column .* does not exist|Could not find the/i.test(e?.message || "");
 
+// ——— KONUM KÖPRÜSÜ (13 Ağu YK hacim analizi ②) — IP'DEN İL ÖN-DOLUMU ———
+// Sorun: `il`/`ilce` YALNIZ kullanıcı "Servis Bul"a basıp ServisEkrani'na girince
+// doluyordu; teşhis alıp orada durmayan herkeste NULL kalıyor → "yakın servis"
+// köprüsü hem veride hem UX'te kopuk.
+// ⛔ Zorunlu alan / ısrarcı istem YAPILMADI: teşhis için konum GEREKMİYOR, akışa
+// sürtünme eklemek asıl KPI'yı (teşhis sayısı) riske atardı. Onun yerine kullanıcıya
+// hiç dokunmayan sunucu tarafı tahmin — UTM'deki ilkeyle aynı çizgi (kaynak SUNUCUDAN
+// okunur, client'tan alınmaz; çerez YOK · izin istemi YOK · ek istek YOK).
+// Vercel her isteğe coğrafi başlık ekler; IP'nin kendisi OKUNMAZ ve SAKLANMAZ, yalnız
+// şehir adı il listemizle eşleşirse yazılır (gizlilik metni: "yaklaşık konum (ilçe)" —
+// il ondan daha kaba, taahhüdün altında kalır).
+// Tek kaynak: `src/tr-iller.js` (81 il) — ikinci bir il listesi tutulmaz.
+const norm = (s) =>
+  String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ı/g, "i").toLowerCase().trim();
+const IL_INDEX = Object.fromEntries(Object.keys(TR_IL_ILCE).map((il) => [norm(il), il]));
+function ilTahmin(req) {
+  try {
+    if (String(req.headers["x-vercel-ip-country"] || "").toUpperCase() !== "TR") return null;
+    let sehir = String(req.headers["x-vercel-ip-city"] || "");
+    try { sehir = decodeURIComponent(sehir); } catch { /* zaten çözülmüş */ }
+    // Eşleşmezse (ör. başlık ilçe adı taşıyorsa) sessizce null — yanlış il yazmaktansa boş bırak.
+    return IL_INDEX[norm(sehir)] || null;
+  } catch { return null; }
+}
+
 async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ ok: false });
   if (!originOk(req)) return res.status(403).json({ ok: false });
   const b = req.body || {};
   try {
-    // Konum modu — id varsa o satırı güncelle (yalnız il null iken → bir kez)
+    // Konum modu — id varsa o satırı güncelle.
+    // ⚠️ Şart `il is null` DEĞİL `ilce is null`: IP ön-dolumu artık il'i insert anında
+    // yazıyor, eski şart bıraksaydık kullanıcının GERÇEK konumu bir daha yazılamazdı.
+    // IP yalnız il üretir (ilce NULL kalır) → gerçek konum ikisini birden yazıp kapıyı
+    // kapatır; kesin veri tahmini her zaman ezer, tersi olmaz.
     if (b.id) {
       const il = str(b.il, 64), ilce = str(b.ilce, 64);
       if (!il && !ilce) return res.status(400).json({ ok: false });
-      await supabase.from("teshis_log").update({ il, ilce }).eq("id", b.id).is("il", null);
+      // Yalnız DOLU alanlar yazılır — boş ilçeyle gelen çağrı IP'nin bulduğu ili silmesin.
+      const yama = {};
+      if (il) yama.il = il;
+      if (ilce) yama.ilce = ilce;
+      await supabase.from("teshis_log").update(yama).eq("id", b.id).is("ilce", null);
       return res.status(200).json({ ok: true });
     }
     // Insert modu — anonim teşhis kaydı
@@ -70,14 +104,19 @@ async function handler(req, res) {
       yas: str(b.yas, 20), garanti: b.garanti === true,
     };
     const utm = kaynakOku(req); // YK #58 ⑴ — sunucu tarafı, çerezsiz
-    let { data, error } = await supabase.from("teshis_log").insert({ ...kayit, ...utm }).select("id").single();
+    const ilIp = ilTahmin(req); // konum köprüsü — kullanıcıya sorulmadan, IP saklanmadan
+    const temel = { ...kayit, ...(ilIp ? { il: ilIp } : {}) };
+    let { data, error } = await supabase.from("teshis_log").insert({ ...temel, ...utm }).select("id").single();
     if (error && kolonYok(error)) {
       // Kolonlar henüz yok → teşhis kaydı UTM'siz de olsa DÜŞMEZ (ölçüm ikincil, kayıt birincil).
+      // (`il` kolonu şemada zaten var — bu dal yalnız UTM kolonlarını düşürür.)
       console.warn("[teshis/log] UTM kolonlari yok — kayit UTM'siz yazildi (supabase/teshis-log-utm.sql)");
-      ({ data, error } = await supabase.from("teshis_log").insert(kayit).select("id").single());
+      ({ data, error } = await supabase.from("teshis_log").insert(temel).select("id").single());
     }
     if (error) return res.status(200).json({ ok: false }); // best-effort
-    return res.status(200).json({ ok: true, id: data.id });
+    // `il` client'a DÖNER: servis ekranındaki il seçicisi ön-seçili gelsin, kullanıcı
+    // konum izni vermediğinde iki seçim yerine tek seçimle (yalnız ilçe) devam etsin.
+    return res.status(200).json({ ok: true, id: data.id, il: ilIp });
   } catch {
     return res.status(200).json({ ok: false });
   }
