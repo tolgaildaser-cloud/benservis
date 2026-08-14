@@ -6,6 +6,7 @@
 //   belirti  {string}   Teşhisten gelen belirti metni
 //   onKapat  {Function} Formu kapat
 import React, { useState } from "react";
+import KvkkNotu from "./KvkkNotu.jsx";
 
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
@@ -205,6 +206,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
               style={{ width: "100%", padding: 14, borderRadius: 12, border: "none", background: AMBER, color: "white", fontSize: 16, fontWeight: 700, cursor: yukleniyor ? "not-allowed" : "pointer", opacity: yukleniyor ? 0.7 : 1 }}>
               {yukleniyor ? "Gönderiliyor..." : "Talebi Gönder →"}
             </button>
+            <KvkkNotu amac="talebinizi uygun servise iletmek ve sizinle iletişim kurmak" />
           </form>
         )}
       </div>

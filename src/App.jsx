@@ -549,6 +549,16 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             </button>
           </div>
 
+          {/* Sesli girdi KVKK ipucu (YK #45, teslim belgesi §4-4). Yalnız mikrofona dokunmadan
+              ÖNCE görünür: kayıt başlayınca kullanıcı zaten karar vermiştir, o anda metin
+              göstermek gürültü olur. Buradaki söz /gizlilik'teki tabloyla birebir aynı —
+              "ses işlenir, saklanmaz" (transcribe-and-discard). */}
+          {sesDurumu === "bosta" && (
+            <p style={{ fontSize: 12, color: "#94A3B8", margin: "8px 0 0", lineHeight: 1.5 }}>
+              🎤 Ses kaydınız yalnızca metne çevrilir, saklanmaz.
+            </p>
+          )}
+
           {hataMsg && <div style={s.err}>{hataMsg}</div>}
           {/* ZORUNLU alanlar (cihaz + marka + belirti) dolmadan buton aktif görünmez (tesisEt guard'ı da var) */}
           <button
@@ -787,6 +797,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <span style={s.footNavUnit}><a href="/blog/kategori/surdurulebilirlik/" style={s.footLink}>Sürdürülebilirlik</a><span style={s.footSep} aria-hidden="true">·</span></span>
           <span style={s.footNavUnit}><a href="https://www.servis.gov.tr/Genel/Sorgu" target="_blank" rel="noopener noreferrer" style={s.footLink}>SERBİS'te Doğrula</a></span>
         </div>
+        {/* KVKK paketi (YK #45, 14 Ağu) — hukuk linkleri gezinme satırının ALTINDA, kendi
+            satırında ve daha küçük puntoda duruyor. Gerekçe: Hakkımızda/Sürdürülebilirlik/
+            SERBİS pazarlama gezinmesi, bunlar zorunlu hukuk linkleri; aynı satıra karışırsa
+            gezinme satırı 375px'te üçüncü satıra sarıyor ve iki işlev birbirini yiyor.
+            Erişilebilir olmaları yeter — arananınca bulunur, aranmayanı yormaz. */}
+        <div style={s.footHukuk}>
+          <span style={s.footNavUnit}><a href="/gizlilik/" style={s.footHukukLink}>Gizlilik</a><span style={s.footSep} aria-hidden="true">·</span></span>
+          <span style={s.footNavUnit}><a href="/kullanim-kosullari/" style={s.footHukukLink}>Kullanım Koşulları</a></span>
+        </div>
         <div style={{ ...s.footSub, marginTop: 3 }}>AI destekli teşhis · tahmini maliyet</div>
         <div style={s.footSocial}>
           <a href="https://www.instagram.com/benservis.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="foot-social" style={s.footSocialLink}><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg></a>
@@ -807,20 +826,22 @@ const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8",
 // Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
 // YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
 // FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
-// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 4 Ağu 2026.
+// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 14 Ağu 2026.
 const SSS = [
   // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 7 Ağu taraması: kümeler çamaşır 13 · bulaşık 11 ·
-  //   kombi 9 · buzdolabı 8 · klima 8 — 4 Ağu'ya göre değişmedi).
-  //   ÇIKAN: klima su damlatıyor. GEREKÇE: 29 Tem'den beri sette, 9 gün — rotasyon geçmişindeki
-  //   EN UZUN görev süresi (diğerleri 3-4 gün). 4 Ağu'da "mevsim yaşa baskın" diye bilerek
-  //   tutulmuştu; bir hafta daha tutmak sıra mantığını fiilen askıya alırdı.
-  //   GİREN: çamaşır makinesi su atmıyor — en büyük küme (13) ve setten 4 Ağu'da çıkmıştı;
-  //   içindeki bu belirti hiç kullanılmadı (kokuyor 31 Tem, ses/titreşim 2-4 Ağu kullanıldı). —
+  // — haftalık belirti soruları (blog verisinden; 14 Ağu taraması, frontmatter `category`
+  //   sayımı: çamaşır 13 · bulaşık 11 · kombi 9 · klima 8 · buzdolabı 8 · fırın/ocak 3 —
+  //   7 Ağu'ya göre DEĞİŞMEDİ; 13 Ağu'nun iki yeni taslağı henüz repoya girmedi).
+  //   ÇIKAN: kombi sıcak su gelmiyor. İKİ GEREKÇE ÜST ÜSTE BİNDİ:
+  //     ① 4 Ağu'dan beri sette — 10 gün, rotasyon geçmişindeki en uzun görev süresi.
+  //     ② Tolga, 13 Ağu: "kış/kombi ekimden önce yazma artık" — SSS metni yeni üretim
+  //        değil ama ana sayfanın en görünür kombi yüzeyi; talimatın yönüyle aynı yere bakar.
+  //   GİREN: bulaşık makinesi temiz yıkamıyor — külliyatın İKİNCİ büyük kümesi (11 yazı) ve
+  //   rotasyon başladığından beri hiç temsil edilmedi; kaynak yazı `bulasik-makinesi-temiz-yikamiyor`. —
   { s: "Buzdolabı çalışıyor ama soğutmuyor, önce neye bakmalıyım?", c: "Önce sıcaklık ayarına bak: dolap yaklaşık 4, buzluk yaklaşık eksi 18 derece olmalı — ayar yanlışlıkla değişmiş olabilir. Sonra kapı contasını dene; kapağa bir kağıt kıstırıp çek, direnç hissetmiyorsan conta sızdırıyordur. Arkadaki ve alttaki tozu da süpür, dolabı duvardan 5-10 cm uzak tut — tozlu kondenser ısıyı dışarı atamaz. Ayar doğru, conta sağlam ve arka temizken hâlâ soğutmuyorsa ya da buzluk soğuk olduğu hâlde dolap soğumuyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
-  { s: "Kombi ısıtıyor ama musluktan sıcak su gelmiyor, önce neye bakmalıyım?", c: "Önce kombi panelinden musluk (sıcak su) sıcaklığını yükselt, sonra musluk ucundaki aeratörü çıkarıp kirecini temizle — debi düşünce bazı kombiler sıcak su moduna hiç geçmez. Birden çok muslukta dene: yalnız birinde sorun varsa mesele kombide değil o musluktadır. Ayar yüksek ve aeratör temizken su hâlâ ılık geliyorsa sorun çoğu zaman sıcak su eşanjörünün kireçlenmesinden çıkıyor — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  { s: "Bulaşık makinesi temiz yıkamıyor, tabaklar kirli çıkıyor — önce neye bakmalıyım?", c: "Önce alt ve üst püskürtme kollarını çıkar: deliklerini kürdanla aç, takınca elinle çevirip serbestçe döndüklerinden emin ol — su bulaşığa ulaşamıyorsa en sık sebep budur. Sonra tabandaki filtreyi çıkarıp yıka, tuz ve parlatıcı haznelerini doldur; tuz bitince kireç, parlatıcı bitince leke bırakır. Bulaşıkları da üst üste bindirmeden diz, derin kapları ters çevir. Kollar ve filtre temiz, tuz ile parlatıcı tamken hâlâ kirli çıkıyorsa ya da su hiç ısınmıyorsa sıra rezistansa gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Çamaşır makinesi su atmıyor, çamaşırlar ıslak çıkıyor — önce neye bakmalıyım?", c: "Önce makinenin alt kapağındaki tahliye filtresini çıkarıp temizle; su atmama şikâyetinin en sık sebebi budur. Altına havlu ve geniş bir kap koy, çünkü içeride kalan su filtreyi açar açmaz gelir. Sonra arkadaki tahliye hortumunu kontrol et: bükülmüş, ezilmiş ya da giderin içinde çok derine itilmiş olabilir. Filtre temiz ve hortum açıkken makine hâlâ suyu boşaltmıyor ya da santrifüje hiç geçmiyorsa sıra tahliye pompasına gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
 ];
 
@@ -932,6 +953,9 @@ const s = {
   footNavUnit: { display: "inline-flex", alignItems: "baseline", gap: 6, whiteSpace: "nowrap" },
   footSep: { color: FAINT },
   footLink: { color: "#2563EB", textDecoration: "none", fontWeight: 600 },
+  // Hukuk satırı: aynı ızgara, ama 12.5px ve nötr renkte — gezinme satırıyla yarışmasın.
+  footHukuk: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 6, rowGap: 2, fontSize: 12.5, lineHeight: 1.6, marginTop: 6 },
+  footHukukLink: { color: FAINT, textDecoration: "none", fontWeight: 600 },
   footSocial: { display: "flex", justifyContent: "center", gap: 18, marginTop: 12 },
   footSocialLink: { color: FAINT, display: "inline-flex", transition: "color .15s ease, transform .15s ease" },
   dppBanner: {
