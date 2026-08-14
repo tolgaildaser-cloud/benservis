@@ -3,6 +3,7 @@
 // Auth yok; başarıyla gönderilince admin onayı beklenir.
 import React, { useState } from "react";
 import { CIHAZLAR, MARKALAR } from "./constants.js";
+import KvkkNotu from "./KvkkNotu.jsx";
 
 const INK   = "#1E293B";
 const CREAM = "#F1F5F9";
@@ -480,6 +481,7 @@ export default function ServisKayit() {
           <p style={{ fontSize: 12, color: GRAY, textAlign: "center", marginTop: 12 }}>
             Başvurunuz incelendikten sonra telefon numaranıza SMS ile bilgilendirme yapılacaktır.
           </p>
+          <KvkkNotu amac="başvurunuzu değerlendirmek ve servis ağına dahil etmek" style={{ marginTop: 6 }} />
         </form>
       </div>
     </div>

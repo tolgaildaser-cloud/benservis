@@ -3,6 +3,7 @@
 // Aynı HTML server-rendered og.js'den de üretiliyor (WhatsApp/bot için)
 import React, { useState, useEffect } from "react";
 import BenservisRozet from "./BenservisRozet.jsx";
+import KvkkNotu from "./KvkkNotu.jsx";
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
@@ -257,6 +258,7 @@ export default function IlanDetay({ id }) {
               {talepGon ? "Gönderiliyor…" : "Talebi Gönder →"}
             </button>
             <button style={st.vazgecBtn} onClick={() => { setTF(false); setTH(""); }}>Vazgeç</button>
+            <KvkkNotu amac="talebinizi ilan sahibine iletmek" />
           </div>
         )}
 

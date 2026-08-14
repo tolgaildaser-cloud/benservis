@@ -278,7 +278,7 @@ function page({ title, desc, canonical, head = "", body, robots = "" }) {
 </head><body>
 <header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Bilgi Merkezi</a></div></header>
 <main><div class="wrap">${body}</div></main>
-<footer class="site"><span class="wm-b">ben</span><span class="wm-s">servis</span> · Bil, gör, çağır. · <a href="/" style="color:${T.MUTED}">benservis.com</a> · <a href="/blog/hakkimizda/" style="color:${T.MUTED}">Hakkımızda</a><span class="foot-social"><a href="https://www.instagram.com/benservis.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@benservis.app" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/134824266/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><a href="https://www.youtube.com/@benservisapp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://medium.com/@benservis.app" target="_blank" rel="noopener noreferrer" aria-label="Medium"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a></span></footer>
+<footer class="site"><span class="wm-b">ben</span><span class="wm-s">servis</span> · Bil, gör, çağır. · <a href="/" style="color:${T.MUTED}">benservis.com</a> · <a href="/blog/hakkimizda/" style="color:${T.MUTED}">Hakkımızda</a> · <a href="/gizlilik/" style="color:${T.MUTED}">Gizlilik</a> · <a href="/kullanim-kosullari/" style="color:${T.MUTED}">Kullanım Koşulları</a><span class="foot-social"><a href="https://www.instagram.com/benservis.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@benservis.app" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/134824266/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><a href="https://www.youtube.com/@benservisapp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://medium.com/@benservis.app" target="_blank" rel="noopener noreferrer" aria-label="Medium"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a></span></footer>
 </body></html>`;
 }
 
@@ -1152,6 +1152,145 @@ fs.writeFileSync(
   })
 );
 
+// ───────────────────────────────────────────────────────────────────────────────
+// /gizlilik/ + /kullanim-kosullari/ — KVKK PAKETİ (YK Kararı #45, 5 Ağu 2026)
+//
+// Metin YK/IT'nin ürettiği teslim belgesinden BİREBİR alındı ve Tolga tarafından
+// onaylandı (8 Ağu 2026: "kvkk metnini onaylıyorum, FE pazartesi yayınlasın").
+// Kaynak: `~/Desktop/benservis-icerik/2026-08-05-KVKK-GIZLILIK-FE-TESLIM.md` §2 ve §3.
+//
+// ⚠️ METİN FE'NİN KALEMİNDE DEĞİL — burada yalnız YAYINLANIYOR. Hukuki metnin
+//    içeriği değişecekse kaynak belge güncellenir, sonra buraya taşınır; tersi olmaz.
+// ⚠️ Tebligat adresi BİLEREK YOK (Tolga kararı, 8 Ağu): şahıs işletmesi olduğumuz
+//    sürece yalnız e-posta yazılır; A.Ş. kurulunca (Ekim 2026) unvan + adres eklenir.
+// ✅ noindex YOK ve sitemap'e giriyor: aydınlatma metninin bulunabilir olması KVKK
+//    md.10'un amacı — arama sonucunda çıkması lehimize.
+const HUKUK_SON_GUNCELLEME = "5 Ağustos 2026";
+
+// İki sayfada da tekrarlayan kapanış: kullanıcı hukuk metninden çıkarken huniye dönsün.
+const HUKUK_CAPRAZ = (oteki) =>
+  `<p class="kat-not">İlgili sayfa: <a href="${oteki.url}">${esc(oteki.ad)}</a> · Sorularınız için <a href="mailto:info@benservis.com">info@benservis.com</a></p>`;
+
+const GIZLILIK_GOVDE = `<article>
+<h1>Gizlilik ve Kişisel Verilerin Korunması</h1>
+<p class="meta">Son güncelleme: ${HUKUK_SON_GUNCELLEME}</p>
+<p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca aydınlatma yükümlülüğümüzü yerine getirmek için hazırlanmıştır.</p>
+
+<h2>Veri sorumlusu</h2>
+<p><strong>Benservis</strong> — Tolga İldaser (şahıs işletmesi)<br>E-posta: <a href="mailto:info@benservis.com">info@benservis.com</a></p>
+<p><em>(Benservis A.Ş.'nin kuruluşu tamamlandığında veri sorumlusu, şirket unvanı ve tebligat adresiyle güncellenecektir.)</em></p>
+
+<h2>Hangi verileri işliyoruz</h2>
+<table><thead><tr><th>Ne zaman</th><th>Hangi veriler</th><th>Neden</th></tr></thead><tbody>
+<tr><td><strong>Arıza teşhisi yaptığınızda</strong></td><td>Cihaz türü, marka, arıza tarifi, yaklaşık konum (ilçe)</td><td>Olası arızayı ve tahmini maliyeti gösterebilmek; hizmetin kalitesini ölçmek. <strong>Bu kayıt anonimdir; adınız veya telefonunuz saklanmaz.</strong></td></tr>
+<tr><td><strong>Sesli anlatım kullandığınızda (🎤)</strong></td><td>Ses kaydınız</td><td>Yalnızca metne çevirmek için. <strong>Ses kaydı sunucumuzda saklanmaz</strong> — çeviri biter, kayıt silinir. Metin, teşhis için işlenir.</td></tr>
+<tr><td><strong>Servis talebi/iş kaydı oluşturduğunuzda</strong></td><td>Ad-soyad, telefon, adres, ilçe, cihaz ve arıza bilgisi</td><td>Talebinizi uygun servise iletmek, sizinle iletişim kurmak</td></tr>
+<tr><td><strong>İkinci el ilanı veya alım talebi verdiğinizde</strong></td><td>Ad-soyad, telefon, e-posta, ürün ve fiyat bilgisi</td><td>İlanı yayınlamak, alıcı-satıcı eşleştirmesi yapmak</td></tr>
+<tr><td><strong>Servis olarak başvurduğunuzda</strong></td><td>İşletme/kişi adı, telefon, hizmet bölgesi</td><td>Servis ağına dahil etmek, iş yönlendirmek</td></tr>
+<tr><td><strong>Sipariş/ödeme adımında</strong></td><td>Sipariş ve ödeme kaydı</td><td>Kaydı tutmak, yasal saklama yükümlülüğünü yerine getirmek</td></tr>
+</tbody></table>
+<p><strong>Toplamadığımız veriler:</strong> T.C. kimlik numarası, kart bilgisi (ödeme sağlayıcısında işlenir, bize gelmez), sağlık verisi, biyometrik veri ve KVKK md.6 kapsamındaki diğer özel nitelikli veriler.</p>
+
+<h2>İşleme amaçlarımız ve hukuki sebep</h2>
+<ul>
+<li><strong>Sözleşmenin kurulması/ifası (KVKK md.5/2-c):</strong> talebinizi servise iletmek, ilan yayınlamak, sipariş kaydı tutmak</li>
+<li><strong>Meşru menfaat (md.5/2-f):</strong> hizmetin çalıştığını ölçmek (anonim teşhis kaydı), kötüye kullanımı önlemek (istek sınırlama), hizmet kalitesini geliştirmek</li>
+<li><strong>Hukuki yükümlülük (md.5/2-ç):</strong> mali kayıtların yasal süre boyunca saklanması</li>
+<li><strong>Açık rıza (md.5/1):</strong> yalnızca ticari elektronik ileti göndermemiz gerektiğinde — bu rıza olmadan tanıtım mesajı gönderilmez</li>
+</ul>
+
+<h2>Kimlerle paylaşıyoruz</h2>
+<ul>
+<li><strong>Talebinizi ilettiğiniz servis(ler)le</strong> — yalnızca işi yapabilmesi için gereken kadarıyla (ad, telefon, adres, arıza bilgisi)</li>
+<li><strong>Altyapı sağlayıcılarımızla (yurt dışı sunucu barındırma dahil):</strong> Supabase (veritabanı), Vercel (barındırma), Upstash (istek sınırlama), OpenAI (sesin metne çevrilmesi ve teşhis metni üretimi)</li>
+<li><strong>Yasal olarak zorunlu olduğunda</strong> yetkili kamu kurum ve kuruluşlarıyla</li>
+<li><strong>Reklam/veri satışı yapmıyoruz.</strong> Verileriniz üçüncü taraflara pazarlama amacıyla satılmaz veya kiralanmaz.</li>
+</ul>
+<blockquote><p>⚠️ <strong>Yurt dışına aktarım:</strong> yukarıdaki sağlayıcıların sunucuları yurt dışında bulunabilir; hizmeti kullanabilmeniz için bu aktarım gereklidir ve KVKK md.9 çerçevesinde yapılır.</p></blockquote>
+
+<h2>Ne kadar süre saklıyoruz</h2>
+<table><thead><tr><th>Veri</th><th>Süre</th></tr></thead><tbody>
+<tr><td>Servis talebi / iş kaydı</td><td>İşin tamamlanmasından itibaren <strong>2 yıl</strong> (uyuşmazlık zamanaşımı)</td></tr>
+<tr><td>İkinci el ilan ve talepleri</td><td>İlanın kaldırılmasından itibaren <strong>1 yıl</strong></td></tr>
+<tr><td>Sipariş ve ödeme kayıtları</td><td><strong>10 yıl</strong> (vergi ve ticaret mevzuatı)</td></tr>
+<tr><td>Anonim teşhis kaydı</td><td>Süresiz (kişisel veri içermez)</td></tr>
+<tr><td>Ses kaydı</td><td><strong>Saklanmaz</strong> — çeviri anında silinir</td></tr>
+</tbody></table>
+<p>Süre sonunda veriler silinir veya anonim hale getirilir.</p>
+
+<h2>Haklarınız (KVKK md.11)</h2>
+<p>Kişisel verileriniz hakkında: işlenip işlenmediğini öğrenme, bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı tarafları bilme, <strong>düzeltilmesini</strong>, <strong>silinmesini</strong> veya <strong>yok edilmesini</strong> isteme, işlemeye itiraz etme ve zararınızın giderilmesini talep etme haklarına sahipsiniz.</p>
+<p>Başvurunuzu <a href="mailto:info@benservis.com"><strong>info@benservis.com</strong></a> adresine iletebilirsiniz; <strong>en geç 30 gün</strong> içinde yanıtlanır. Yanıtı yeterli bulmazsanız Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsiniz.</p>
+
+<h2>Çerezler ve yerel depolama</h2>
+<p>Reklam veya takip çerezi kullanmıyoruz. Sitenin çalışması için tarayıcınızda <strong>yerel depolama</strong> ve <strong>service worker önbelleği</strong> kullanılır (ör. sayfaların çevrimdışı açılabilmesi). Bu önbellekte <strong>konum bilgisi ve kişisel veri tutulmaz</strong>; ikinci el sayfaları önbelleğe hiç alınmaz. Ziyaret istatistikleri, kişi bazlı olmayan ve çerez kullanmayan bir ölçümle (Vercel) toplanır.</p>
+
+<h2>Güvenlik</h2>
+<p>Veritabanımızda satır düzeyi erişim kısıtlaması (RLS) açıktır; kayıtlara yalnızca yetkili sunucu tarafı erişebilir. Genel uçlarda istek sınırlaması uygulanır. Yönetim panelleri belirteçle (token) korunur.</p>
+
+<h2>Değişiklikler</h2>
+<p>Bu metin güncellendiğinde bu sayfadaki tarih değişir. Esaslı değişikliklerde site üzerinden bilgilendirme yapılır.</p>
+${HUKUK_CAPRAZ({ url: "/kullanim-kosullari/", ad: "Kullanım Koşulları" })}
+</article>`;
+
+const KOSULLAR_GOVDE = `<article>
+<h1>Kullanım Koşulları</h1>
+<p class="meta">Son güncelleme: ${HUKUK_SON_GUNCELLEME}</p>
+
+<p><strong>Hizmetin niteliği.</strong> Benservis, cihaz arızanız için <strong>olası nedenleri ve tahmini maliyet aralığını</strong> gösteren, size yakın servisleri listeleyen <strong>ücretsiz</strong> bir bilgi ve yönlendirme hizmetidir.</p>
+
+<p><strong>Teşhis ve fiyat bilgisi tahminîdir.</strong> Gösterilen olası arızalar ve maliyet aralıkları, benzer arızalardan derlenen verilere dayanır; <strong>kesin teşhis ve kesin fiyat yalnızca cihazı yerinde gören servis tarafından verilebilir.</strong> Bu bilgiler bir teklif veya taahhüt niteliği taşımaz.</p>
+
+<p><strong>Onarım rehberleri.</strong> Sitedeki kendin-çöz rehberleri yalnızca <strong>bakım seviyesindeki</strong> işleri kapsar (temizlik, filtre, kontrol, ayar). Elektrikli cihazlarla çalışmak risk taşır: cihazın fişini çekin, emin olmadığınız işe girişmeyin. Rehberleri uygulama kararı ve sorumluluğu kullanıcıya aittir; garanti kapsamındaki cihazlarda müdahale garantiyi etkileyebilir.</p>
+
+<p><strong>Servislerle ilişkiniz.</strong> Benservis, servis ile aramızda <strong>yönlendirme</strong> yapar; onarım sözleşmesi doğrudan sizinle servis arasında kurulur. Servisin yaptığı işin kalitesinden, fiyatından ve garantisinden servis sorumludur. Servisleri listelerken kamuya açık kayıtlardan (ör. yetkili servis kayıtları) ve kullanıcı puanlarından yararlanırız; bu bir kefalet veya kalite garantisi değildir.</p>
+
+<p><strong>Kullanıcının yükümlülükleri.</strong> Girdiğiniz bilgilerin doğru olması, başkasının kişisel verisini izinsiz girmemek, hizmeti kötüye kullanmamak (otomatik/aşırı istek, sahte talep, sahte ilan) sizin sorumluluğunuzdadır.</p>
+
+<p><strong>İkinci el ilanları.</strong> İlan içeriğinden ilan sahibi sorumludur. Mevzuata aykırı, yanıltıcı veya üçüncü kişi hakkını ihlal eden ilanlar kaldırılabilir.</p>
+
+<p><strong>Sorumluluk sınırı.</strong> Hizmet "olduğu gibi" sunulur; kesintisizlik ve hatasızlık taahhüt edilmez. Tahminî bilgilere dayanarak aldığınız kararların sonuçlarından Benservis sorumlu tutulamaz.</p>
+
+<p><strong>Fikri haklar.</strong> Sitedeki metin, görsel ve rehberler Benservis'e aittir; izinsiz çoğaltılamaz. Üçüncü taraf kaynaklara yalnızca bağlantı verilir.</p>
+
+<p><strong>Kişisel verileriniz.</strong> <a href="/gizlilik/">Gizlilik ve Kişisel Verilerin Korunması</a> metnine bakınız.</p>
+
+<p><strong>Uygulanacak hukuk.</strong> Türkiye Cumhuriyeti hukuku uygulanır; uyuşmazlıklarda <strong>İstanbul Anadolu Mahkemeleri ve İcra Daireleri</strong> yetkilidir. <em>(Tüketici işlemlerinde tüketicinin yerleşim yeri mahkemesi/hakem heyeti hakları saklıdır.)</em></p>
+
+<p><strong>İletişim:</strong> <a href="mailto:info@benservis.com">info@benservis.com</a></p>
+${HUKUK_CAPRAZ({ url: "/gizlilik/", ad: "Gizlilik ve Kişisel Verilerin Korunması" })}
+</article>`;
+
+// Her iki sayfa da /tamir/ · /kilavuzlar/ ile AYNI şablonu kullanır (page()) — ayrı bir
+// hukuk şablonu açılmadı; sayfa sayısı arttıkça bakılacak tek yer kalsın.
+const HUKUK_SAYFALARI = [
+  {
+    dizin: "gizlilik",
+    title: "Gizlilik ve Kişisel Verilerin Korunması — Benservis",
+    desc: "Benservis'in KVKK aydınlatma metni ve gizlilik politikası: hangi verileri, neden, ne kadar süre işliyoruz; kimlerle paylaşıyoruz ve haklarınızı nasıl kullanırsınız.",
+    govde: GIZLILIK_GOVDE,
+  },
+  {
+    dizin: "kullanim-kosullari",
+    title: "Kullanım Koşulları — Benservis",
+    desc: "Benservis'i kullanırken geçerli koşullar: hizmetin niteliği, teşhis ve fiyat bilgisinin tahminî olması, onarım rehberlerinin kapsamı, servislerle ilişkiniz ve sorumluluk sınırları.",
+    govde: KOSULLAR_GOVDE,
+  },
+];
+for (const h of HUKUK_SAYFALARI) {
+  fs.mkdirSync(path.join(DIST, h.dizin), { recursive: true });
+  fs.writeFileSync(
+    path.join(DIST, h.dizin, "index.html"),
+    page({
+      title: h.title,
+      desc: h.desc,
+      canonical: `${SITE}/${h.dizin}/`,
+      body: `<a class="geri" href="/">← Ana sayfa</a>${h.govde}`,
+    })
+  );
+}
+console.log(`[build-blog] ✓ KVKK paketi: /${HUKUK_SAYFALARI.map((h) => h.dizin).join("/ · /")}/ basıldı (indexlenebilir, sitemap'te).`);
+
 // lastmod = frontmatter `updated` varsa onu, yoksa `date`'i kullan (Vercel checkout dosya
 // mtime'ını sıfırladığı için frontmatter sabit/güvenilir kaynaktır). Date objesi gelirse ISO'ya çevir.
 const isoDate = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d).slice(0, 10));
@@ -1161,6 +1300,9 @@ const urlEntries = [
   { loc: `${SITE}/`, lastmod: newest },
   { loc: `${SITE}/blog/`, lastmod: newest },
   { loc: `${SITE}/tamir/`, lastmod: newest },
+  // KVKK paketi (YK #45): aydınlatma metninin BULUNABİLİR olması md.10'un amacı — noindex
+  // yok, sitemap'te var. lastmod içerik tarihidir (blogla birlikte kaymasın diye sabit).
+  ...HUKUK_SAYFALARI.map((h) => ({ loc: `${SITE}/${h.dizin}/`, lastmod: "2026-08-05" })),
   // Kategori sayfaları — yalnız giriş kaydı olanlar basıldığı için hepsi gerçek içerikli.
   ...tamirliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
   // Bilgi Merkezi kategori katmanı — yalnız yazısı olanlar (boş kategoriye sayfa basılmıyor).
