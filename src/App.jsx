@@ -119,6 +119,9 @@ export default function App() {
   const [kopyalandi, setKopyalandi] = useState(false);
   const [showServisler, setShowServisler] = useState(false);
   const [teshisLogId, setTeshisLogId] = useState(null); // anonim teşhis log id (konum iliştirmek için)
+  // Sunucunun IP'den tahmin ettiği il (Vercel coğrafi başlığı; izin istemi YOK, çerez YOK).
+  // İki yerde kullanılır: CTA'yı kişiselleştirmek + servis ekranında il seçicisini ön-seçmek.
+  const [ipIl, setIpIl] = useState(null);
   const [showDPP, setShowDPP] = useState(false);
   const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
 
@@ -358,7 +361,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             aciliyet: teshis.aciliyet || null,
             yas: yas || null,
           }),
-        }).then((r) => (r.ok ? r.json() : null)).then((d) => { if (d?.id) setTeshisLogId(d.id); }).catch(() => {});
+        }).then((r) => (r.ok ? r.json() : null)).then((d) => {
+          if (d?.id) setTeshisLogId(d.id);
+          if (d?.il) setIpIl(d.il); // konum köprüsü — sunucu tahmini, kullanıcıya hiç sorulmadı
+        }).catch(() => {});
       }
     } catch (e) {
       setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
@@ -411,6 +417,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           onKapat={() => setShowServisler(false)}
           onAnaSayfa={sifirla}
           teshisLogId={teshisLogId}
+          baslangicIl={ipIl}
         />
       )}
       {showDPP && (
@@ -760,7 +767,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <div style={s.faz2}>
             <div>
               <div style={s.faz2Head}>{sonuc.kararOnerisi === "gerek_yok" ? "Yine de kontrol ettirmek istersen" : "Tamir ettirmek ister misin?"}</div>
-              <div style={s.faz2Sub}>Konumuna göre sıralar · Direkt arama</div>
+              {/* Konum köprüsü (13 Ağu YK ②): il sunucuda IP'den biliniyorsa CTA'yı
+                  somutlaştır — "konumuna göre" soyut vaadi yerine ilin adı. Bilinmiyorsa
+                  eski metin aynen kalır. ⛔ "açık/müsait servis" DENMEZ: müsaitlik verisi yok. */}
+              <div style={s.faz2Sub}>{ipIl ? `${ipIl} ve çevresindeki servisler · Direkt arama` : "Konumuna göre sıralar · Direkt arama"}</div>
               {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
