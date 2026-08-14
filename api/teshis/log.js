@@ -76,6 +76,18 @@ function ilTahmin(req) {
   } catch { return null; }
 }
 
+// ——— İL/İLÇE YAZIMINI TEKİLLEŞTİR (14 Ağu, canlı veriden çıkan bulgu) ———
+// `teshis_log`'da İstanbul İKİYE BÖLÜNMÜŞTÜ: 32 kayıt "istanbul", 2 kayıt "İstanbul".
+// Sebep: servis dizini `sehir` alanını küçük harfli tutuyor (istanbul/izmir/ankara) ve
+// konum akışı onu ham hâliyle yazıyordu. Gruplayan her rapor İstanbul'u iki ayrı il
+// sanardı — konum verisini toplamanın amacı tam da bu gruplamaydı.
+// Çözüm: yazmadan önce kanonik yazıma çevir (tek kaynak: src/tr-iller.js).
+// Eşleşmezse gelen değer AYNEN korunur — tanımadığımız yeri silmek veri kaybı olurdu.
+const ilceKanonik = (il, ilce) => {
+  const liste = (il && TR_IL_ILCE[il]) || [];
+  return liste.find((x) => norm(x) === norm(ilce)) || ilce;
+};
+
 async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ ok: false });
   if (!originOk(req)) return res.status(403).json({ ok: false });
@@ -87,8 +99,12 @@ async function handler(req, res) {
     // IP yalnız il üretir (ilce NULL kalır) → gerçek konum ikisini birden yazıp kapıyı
     // kapatır; kesin veri tahmini her zaman ezer, tersi olmaz.
     if (b.id) {
-      const il = str(b.il, 64), ilce = str(b.ilce, 64);
-      if (!il && !ilce) return res.status(400).json({ ok: false });
+      const ilHam = str(b.il, 64), ilceHam = str(b.ilce, 64);
+      if (!ilHam && !ilceHam) return res.status(400).json({ ok: false });
+      // Kanonik yazıma çevir: servis dizininden gelen "istanbul" ile IP'den gelen
+      // "İstanbul" aynı satırda toplansın (yoksa rapor İstanbul'u ikiye böler).
+      const il = ilHam ? IL_INDEX[norm(ilHam)] || ilHam : null;
+      const ilce = ilceHam ? ilceKanonik(il, ilceHam) : null;
       // Yalnız DOLU alanlar yazılır — boş ilçeyle gelen çağrı IP'nin bulduğu ili silmesin.
       const yama = {};
       if (il) yama.il = il;
