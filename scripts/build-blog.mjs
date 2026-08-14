@@ -1331,4 +1331,69 @@ fs.writeFileSync(
 );
 fs.writeFileSync(path.join(DIST, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 
+// ——— ANA SAYFA ÖN-RENDER (Tolga talimatı 9 Ağu; 17 Ağu dizin okumasından önce) ———
+// SORUN: /tamir/ · /blog/ · /kilavuzlar/ bu betikten statik basılıyordu, ANA SAYFA hiç
+// kapsamda değildi → `vite build`in çıkardığı çıplak SPA kabuğu kalıyordu. Ham HTML'de
+// gezinilebilir TEK BİR iç link yoktu (yalnız favicon/manifest), oysa ana sayfa sitenin
+// en çok tık alan sayfası (8 Ağu GSC: toplam tıkın %21'i). Googlebot ilk taramada
+// buradan hiçbir yere geçemiyordu.
+//
+// ÇÖZÜM VE NEDEN BU: içerik `<div id="root">` İÇİNE konur. React `createRoot().render()`
+// container'ı mount anında temizler (hydrateRoot DEĞİL) → SPA açılışı bozulmaz, uyarı
+// üretmez. Alternatifler elendi: root DIŞINA koymak SPA yüklenince ekranda çift içerik
+// bırakırdı; `<noscript>` ise gizli-metin sinyali riski taşırdı.
+//
+// ⛔ CLOAKING YOK: basılan her şey SPA'nin ana sayfada FİİLEN gösterdiği şeyin aynısı —
+// aynı gezinme ızgarası, aynı footer linkleri. Googlebot'a kullanıcıdan farklı bir sayfa
+// gösterilmiyor; yalnız aynı içerik JS'ten önce de okunabilir hâle getiriliyor.
+const anaSayfaOnRender = () => {
+  const dosya = path.join(DIST, "index.html");
+  if (!fs.existsSync(dosya)) { console.warn("[build-blog] ⚠️  dist/index.html yok — ana sayfa ön-render ATLANDI."); return; }
+  let html = fs.readFileSync(dosya, "utf8");
+  if (!html.includes('<div id="root"></div>')) {
+    // Kabuk değiştiyse SESSİZCE geçme: enjeksiyon yapılmadığı hâlde yapılmış sanmak,
+    // ölçüyü bozar (ana sayfa yine linksiz kalır ama kimse fark etmez).
+    console.warn("[build-blog] ⚠️  dist/index.html'de boş `<div id=\"root\"></div>` bulunamadı — ön-render ATLANDI.");
+    return;
+  }
+  // Öne çıkan yazılar: en yeni 8 (aynı sıralama /blog listesindekiyle tutarlı).
+  const oneCikan = posts.slice(0, 8);
+  const kart = (href, baslik) => `<a href="${href}">${esc(baslik)}</a>`;
+  const govde =
+    `<div id="on-render">` +
+      `<h1>Benservis — cihazın neden bozuldu, tamiri kaça mal olur?</h1>` +
+      `<p>Cihazını ve arıza belirtisini yaz; olası arızayı, tahmini maliyeti ve “tamir mi, yenisi mi” kararını ücretsiz gör. Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>` +
+      // Gezinme ızgarası — SPA'deki YK #32 ızgarasının birebir karşılığı.
+      // ⚠️ 4. kart ("Yakın Servisler") BİLEREK YOK: o bir <button>, kendi URL'i olmayan
+      // SPA içi ekran. Olmayan adrese link uydurmak 404 üretirdi.
+      `<nav aria-label="Site bölümleri">` +
+        kart("/blog/", "Bilgi Merkezi") +
+        kart("/tamir/", "Tamir Merkezi") +
+        kart("/kilavuzlar/", "Kullanım Kılavuzları") +
+      `</nav>` +
+      (oneCikan.length
+        ? `<h2>Sık okunan arıza rehberleri</h2><ul>` +
+          oneCikan.map((p) => `<li><a href="/blog/${p.slug}/">${esc(p.title)}</a></li>`).join("") +
+          `</ul>`
+        : "") +
+      `<p><a href="/blog/hakkimizda/">Hakkımızda</a> · <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a> · <a href="/gizlilik/">Gizlilik</a> · <a href="/kullanim-kosullari/">Kullanım Koşulları</a></p>` +
+    `</div>`;
+  // Ön-render bloğu SPA mount'a kadar görünür; tasarım dilinden sapmasın diye sade
+  // tipografi (marka fontları index.html'de zaten yüklü).
+  const stil =
+    `<style>#on-render{max-width:760px;margin:0 auto;padding:28px 20px;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#1E293B}` +
+    `#on-render h1{font-family:Fraunces,Georgia,serif;font-size:26px;line-height:1.25;margin:0 0 10px}` +
+    `#on-render h2{font-size:17px;margin:26px 0 10px}` +
+    `#on-render p{color:#475569;font-size:15px;line-height:1.6;margin:0 0 14px}` +
+    `#on-render nav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}` +
+    `#on-render nav a{border:1px solid #E2E8F0;border-radius:10px;padding:10px 14px;font-weight:600;font-size:14px}` +
+    `#on-render ul{margin:0;padding-left:18px}#on-render li{margin:6px 0;font-size:14px}` +
+    `#on-render a{color:#2563EB;text-decoration:none}</style>`;
+  html = html.replace('<div id="root"></div>', `<div id="root">${stil}${govde}</div>`);
+  fs.writeFileSync(dosya, html);
+  const linkSayisi = (govde.match(/href="\//g) || []).length;
+  console.log(`[build-blog] ✓ ana sayfa ön-render edildi: ${linkSayisi} gezinilebilir iç link (önce 0).`);
+};
+anaSayfaOnRender();
+
 console.log(`[build-blog] ${posts.length} yazı + /blog + sitemap üretildi.`);
