@@ -13,6 +13,8 @@ faq:
     a: "Genelde su giriş valfi (selenoid), aquastop hortum kilidi ya da basınç anahtarı arızalıdır. Bunlar servis işidir."
   - q: "Tamiri kaç para?"
     a: "Filtre ya da musluk kaynaklıysa çoğu zaman ücretsiz çözülür. Su giriş valfi veya kapı kilidi gerekiyorsa maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Bulaşık makinesi ve yanında kesik kesik damlayan, akmayan su çizimi"
 ---
 
 Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

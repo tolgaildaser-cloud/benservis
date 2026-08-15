@@ -13,6 +13,8 @@ faq:
     a: "UE dengesiz yük (çamaşır eşit dağılmamış), LE ise motorun kilitlenmesidir (genelde aşırı/ağır yük). İkisi de çoğu zaman yükü düzenleyince geçer; LE tekrarlarsa servis gerekir."
   - q: "LG dE hatası neden olur?"
     a: "dE (Door Error) kapının kilitlenemediğini gösterir. Genelde kapı arasında bir şey sıkışmıştır ya da kapı tam kapanmamıştır; kontrol edip tekrar kapat."
+images:
+  coverAlt: "Hafif açılı çamaşır makinesi, ekranında hata göstergesi ve yanında kod listesi çizimi"
 ---
 
 LG çamaşır makinen ekranında bir hata kodu gösteriyor (IE, OE, UE…) ve ne demek olduğunu merak ediyorsun. İyi haber: en sık çıkan kodlar genelde **su alma, tahliye ve denge** gibi basit sebepleri gösterir ve bir kısmı evde ücretsiz çözülür. Bu rehberde LG çamaşır makinesinin **en sık kodlarını**, anlamlarını ve çözümlerini topladık.

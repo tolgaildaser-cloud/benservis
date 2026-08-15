@@ -13,6 +13,8 @@ faq:
     a: "Çoğu serviste keşif/yol ücreti alınır ve iş yapılırsa toplam tutara mahsup edilir. Önce tahmini maliyeti gör, sonra servise sor."
   - q: "Tamir mi yenisi mi?"
     a: "Tamir maliyeti yeni bir makinenin yaklaşık yarısını geçiyorsa ve makine 8–10+ yaşındaysa yenisi mantıklı. Ucuz parçalı arızalarda tamir doğru seçim."
+images:
+  coverAlt: "Bulaşık makinesi ve yanında servis föyü ile büyüteç çizimi; föyde rakam yok"
 ---
 
 Bulaşık makinesi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: tıkalı bir filtre ya da yanlış kullanım çoğu zaman bedava çözülürken, pompa ya da kart arızası daha maliyetlidir. Bu yazıda fiyatı neyin belirlediğini, hangi arızanın ucuz hangisinin pahalı olduğunu ve "tamir mi yenisi mi" kararını netleştiriyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

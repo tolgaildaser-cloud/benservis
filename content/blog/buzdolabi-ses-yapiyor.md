@@ -13,6 +13,8 @@ faq:
     a: "Sert metalik vuruntu genelde kompresör askı lastiklerinin yıpranmasıdır; cihaz çalışır ama ses artar. Servisle kontrol ettirmek mantıklıdır."
   - q: "Sesli buzdolabı tamiri kaç para?"
     a: "Denge ayarı çoğu zaman ücretsizdir. Fan motoru ya da kompresör takoz/askı işçiliği gerekiyorsa maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Buzdolabı çizimi ve yanından yayılan ses dalgaları"
 ---
 
 Buzdolabı sessiz bir cihaz değildir — ama **sesin türü** çoğu zaman neyin olup bittiğini söyler. Bazı sesler tamamen normaldir; bazıları ise basit bir ayar ya da yaklaşan bir arıza işaretidir. Bu yazıda hangi sesin ne anlama geldiğini, **kendin neyi çözebileceğini** ve hangi durumda servis gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

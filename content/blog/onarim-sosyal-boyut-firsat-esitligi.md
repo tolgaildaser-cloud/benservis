@@ -13,6 +13,8 @@ faq:
     a: "Bilgi asimetrisi, taraflardan birinin (ör. servis) diğerinden (tüketici) çok daha fazla bilgiye sahip olmasıdır. Beyaz eşya onarımında bu, teknik bilmeyenin dezavantajlı kalması demektir. Şeffaf teşhis ve fiyat bilgisi bu farkı kapatır."
   - q: "Onarım hangi grupları korur?"
     a: "Yaşlılar, düşük gelirli haneler, dil ya da teknik bariyeri olanlar servis mağduriyetine en açık kesimdir. Şeffaf bilgi ve önden fiyat, bu gruplar için hem koruma hem de bütçe güvencesidir."
+images:
+  coverAlt: "İki ev, döngü okları ve yaprak çizimi"
 ---
 
 Sürdürülebilirlik denince aklımıza çoğunlukla **çevre** gelir: karbon, atık, geri dönüşüm. Oysa gerçek sürdürülebilirlik **üç ayak** üzerinde durur — çevresel, ekonomik ve **sosyal.** Bu yazıda çoğu zaman gölgede kalan **sosyal boyutu** ele alıyoruz: onarımı şeffaf hâle getirmenin nasıl bir **fırsat eşitliği** meselesi olduğunu.

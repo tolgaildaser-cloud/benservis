@@ -14,6 +14,8 @@ faq:
     a: "Parlatıcı eksikliği ve kurutma (rezistans/fan) sorunu kuruluğu bozar. Önce parlatıcıyı kontrol et; geçmezse ısıtma/kurutma arızası servis ister."
   - q: "Servis gerekirse kaç para?"
     a: "Çoğu temizlik sorunu ücretsiz çözülür. Rezistans ya da sirkülasyon pompası gerekiyorsa maliyet modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Bulaşık makinesi ve yanında lekeli tabak ile temiz tabak karşılaştırması çizimi"
 ---
 
 Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıktı. İyi haber: "temiz yıkamama" sorunlarının büyük kısmı arıza değil, **bakım ve kullanım** kaynaklı — yani evde, ücretsiz çözülüyor. Bu yazıda 6 olası nedeni, **kendi yapabileceğin çözümleri** ve servis gerekirse hangi parçanın konuşulduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

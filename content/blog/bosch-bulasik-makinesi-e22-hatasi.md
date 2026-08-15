@@ -29,6 +29,8 @@ faq:
     a: "Sebep sadece tıkalı filtreyse maliyet sıfırdır — temizlik yeterlidir. Filtreyi temizlemene rağmen hata sürüyorsa ve tahliye pompası/hortumu değişimi gerekiyorsa bu genelde düşük-orta maliyetli bir iştir. Belirtini Benservis'e yaz, senin durumun için tahmini fiyatı ücretsiz gör."
   - q: "Siemens/Profilo bulaşık makinesindeki E22 de aynı mı?"
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E22 bu markaların hepsinde 'iç filtre tıkalı' anlamına gelir ve çözümü aynıdır."
+images:
+  coverAlt: "Bulaşık makinesinin açık kapağı, çıkarılmış alt sepeti ve sökülen taban filtresi çizimi"
 ---
 
 > ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**

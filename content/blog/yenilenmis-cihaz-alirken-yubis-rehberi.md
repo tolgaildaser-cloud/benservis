@@ -17,6 +17,8 @@ faq:
     a: "Hayır. Yenileme merkezi olabilmek için yönetmelikte 100 milyon TL sermaye şartı gibi ciddi koşullar var. Bu, yenileme işinin belirli standartları karşılayan kuruluşlarca yapılmasını amaçlıyor. Aldığın cihazın YÜBİS kaydı ve e-sertifikası varsa, kayıtlı bir yenileme merkezinden geçmiş demektir."
   - q: "Benservis yenilenmiş cihaz satıyor mu?"
     a: "Hayır. Benservis, beyaz eşyada arıza teşhisi ve tahmini maliyet bilgisi veren ücretsiz bir araçtır; ayrıca Google puanlı yakın servisleri listeler. Bu rehber, 'satın almadan önce öğren' yaklaşımımızın bir parçası: cihazın geçmişini ve durumunu bilmek, doğru karar vermenin ilk adımıdır."
+images:
+  coverAlt: "Yenilenmiş cihaz, mühürlü jenerik belge ve büyüteç çizimi"
 ---
 
 1 Ağustos 2026'da Türkiye'de yenilenmiş elektronik cihaz almanın kuralları değişiyor. Ticaret Bakanlığı'nın **Yenilenmiş Ürünler Hakkında Yönetmeliği** (Resmî Gazete, 27 Haziran 2026, sayı 33293) yürürlüğe giriyor ve beraberinde **YÜBİS**'i getiriyor: yenilenmiş her cihaz için tutulan **dijital bir sicil**. Bu rehberde, yenilenmiş telefon, tablet veya TV alırken artık nelere bakabileceğini anlatıyoruz.

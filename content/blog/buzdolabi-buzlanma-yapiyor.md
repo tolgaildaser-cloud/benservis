@@ -13,6 +13,8 @@ faq:
     a: "Arka duvarda buz + tabanda su birikmesi genelde tıkalı buz çözme tahliye kanalıdır: eriyen su akamayınca donar ya da içeri sızar. Tahliye deliğini temizlemek çoğu zaman çözer."
   - q: "Buzlanan buzdolabı tamir edilir mi?"
     a: "Conta değişimi, tahliye kanalı temizliği ve defrost parçaları (rezistans/sensör) çoğu zaman uygun maliyetlidir, tamir mantıklıdır. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Buzdolabının açık bölmesi ve çevresinde biriken kar taneleri çizimi"
 ---
 
 Buzluğun ya da dolabının arka duvarı **kalın bir buz tabakası** tutuyor; bazen tabanda su birikiyor. Bu hem yer kaplar hem soğutmayı düşürür. İyi haber: sebeplerin bir kısmı basit alışkanlık ya da conta sorunudur ve evde çözülür. Bu yazıda nedenleri, kendin kontrolleri ve tahmini maliyeti anlatıyoruz.

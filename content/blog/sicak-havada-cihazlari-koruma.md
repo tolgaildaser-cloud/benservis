@@ -13,6 +13,8 @@ faq:
     a: "Evet. TV, modem, oyun konsolu gibi cihazlar zaten ısı üretir; doğrudan güneş alan veya havasız (kapalı dolap içi gibi) bir yerde çalışırlarsa aşırı ısınıp kapanabilir, ömürleri kısalır. Etraflarında hava boşluğu bırakmak ve güneşten uzak tutmak çoğu sorunu önler."
   - q: "Sıcak dalgasından sonra cihazım tuhaf çalışıyor, ne yapmalıyım?"
     a: "Geç soğutma, sık durup kalkma, alışılmadık ses veya kendini kapatma gibi belirtiler sıcak stresinin izleri olabilir. Belirtiyi Benservis'e yaz; yapay zeka olası arızayı ve tahmini tamir maliyetini ücretsiz söylesin — servisle bilgiyle konuşursun."
+images:
+  coverAlt: "Güneş ve üç beyaz eşya silueti çizimi"
 ---
 
 Türkiye bu yaz art arda sıcak dalgaları yaşıyor; İstanbul'da hissedilen sıcaklık 40 dereceyi buldu ve elektrik tüketimi rekor kırdı. Sıcaktan sadece biz bunalmıyoruz: **buzdolabı, klima ve elektronik cihazlar da en ağır mesailerini bu günlerde yapıyor.** Arıza istatistiklerinin yaz zirvesi tesadüf değil. Bu rehberde hangi cihazın sıcakta neden zorlandığını ve birkaç dakikalık önlemlerle nasıl koruyacağını anlatıyoruz.

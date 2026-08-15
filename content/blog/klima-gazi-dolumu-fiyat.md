@@ -13,6 +13,8 @@ faq:
     a: "Klima soğutmaz ya da geç soğutur, dış ünitenin ince borusunda buzlanma olur, elektrik tüketimi artar."
   - q: "Sadece gaz doldurmak yeterli mi?"
     a: "Hayır. Gaz azaldıysa kaçak vardır; kaçak bulunup onarılmadan yapılan dolum kısa sürede yine biter."
+images:
+  coverAlt: "Klima iç ünitesi, gaz tüpü ve rakamsız servis föyü çizimi"
 ---
 
 "Klima gaz mı bitirdi?" — yazın en çok duyulan cümlelerden. Aslında klima gazı normalde **bitmez**; azalıyorsa bir kaçak vardır. Bu yazıda gazın ne zaman gerçekten gerektiğini, gaz tiplerini, bedeli neyin belirlediğini ve gereksiz dolum ödememek için dikkat edilecekleri anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

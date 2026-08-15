@@ -13,6 +13,8 @@ faq:
     a: "Kapı contasının sızdırması (nem→yoğuşma), arka tahliye kabının çatlaması/kayması ya da su sebilli modellerde hortum/depo sızıntısı da su birikmesine yol açar."
   - q: "Servis gerekirse kaç para?"
     a: "Tahliye/defrost temizliği ile kapı contası değişimi farklı işlerdir; maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Buzdolabının altında zeminde biriken su ve düşen damla çizimi"
 ---
 
 Buzdolabının altında, sebze gözünde ya da önünde su birikmesi sık görülen ve çoğu zaman **evde, ücretsiz çözülebilen** bir sorundur. En yaygın sebep küçük bir tıkanıklık. Bu yazıda suyun nereden geldiğini, **kendin nasıl temizleyeceğini** ve servis gerekirse hangi parçanın konuşulduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

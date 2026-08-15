@@ -13,6 +13,8 @@ faq:
     a: "Evet. Tek parça ağır çamaşır (battaniye, halı) topaklanıp dengesizlik yapar; makine güvenlik için su atma adımını azaltır veya durdurur, çamaşır ıslak çıkar. Yükü dağıt."
   - q: "Tamir mi yenisi mi?"
     a: "Filtre/pompa/hortum ucuz, tamir mantıklı. Motor veya elektronik kart pahalıysa ve makine eskiyse yenisi değerlendirilebilir."
+images:
+  coverAlt: "Tamburunda su kalmış çamaşır makinesi ve yanında duran su çizimi"
 ---
 
 Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir bozucu ama çoğu zaman sebep basit ve evde, dakikalar içinde çözülüyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve iş servise kaldığında ne beklemen gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

@@ -14,6 +14,8 @@ faq:
     a: "Filtreleri evet, rahatça temizleyebilirsin. Ancak gaz, elektrik ve iç mekanik aksam servis işidir."
   - q: "Soğutmayan klima elektrik faturasını yükseltir mi?"
     a: "Evet. Verimsiz çalışan klima aynı serinlik için çok daha fazla enerji harcar; sorunu erken çözmek hem konfor hem tasarruf sağlar."
+images:
+  coverAlt: "Duvar tipi klima iç ünitesi, yanında kar tanesi ve yükselen ısı dalgaları çizimi"
 ---
 
 Yaz geldi, klimayı açtın ama oda bir türlü serinlemiyor. Panikleyip hemen servise koşmadan önce iyi haber: klima soğutmama sorunlarının önemli bir kısmı basit ve ücretsiz çözülebiliyor. Bu yazıda klimanın neden soğutmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve işin servise kaldığı durumlarda ne beklemen gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

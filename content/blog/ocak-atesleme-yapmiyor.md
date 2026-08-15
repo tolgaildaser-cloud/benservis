@@ -18,6 +18,8 @@ faq:
     a: "Tüpte gaz olduğu hâlde yanmıyorsa sorun çoğu zaman tüpte değil regülatördedir (dedantör): arızalı, donmuş ya da tüpe tam oturmamış olabilir. Hortum da bükük/tıkalı olabilir. Regülatörü kontrol et, şüpheliyse değiştir; hortumda ezik/çatlak varsa yenile."
   - q: "Ateşleme bujisi tamiri kaç para?"
     a: "Önce ucu kuru bezle temizlemeyi dene; hiç kıvılcım çıkmıyorsa buji ya da kablosu değişmelidir. Maliyet marka ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Ocak çizimi, yanında kıvılcım ve tutuşmamış sönük alev"
 ---
 
 Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bir türlü yanmıyor. İyi haber: çoğu zaman sebep basit ve **evde, dakikalar içinde** çözülüyor. Bu yazıda nedenleri, **kendin yapabileceklerini** ve gerektiğinde servisten ne isteyeceğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

@@ -13,6 +13,8 @@ faq:
     a: "Karanlık bir odada TV açıkken ekrana yakından bir el feneri tut ve açıyı değiştir. Çok soluk da olsa menü/görüntü seçebiliyorsan panel çalışıyor, arka ışık (LED) arızalıdır. Hiçbir şey göremiyorsan panel ya da anakart şüphesi artar."
   - q: "Görüntü arızası tamir edilir mi, yenisini mi almalı?"
     a: "Arka ışık (LED bar) değişimi çoğu zaman uygun maliyetlidir ve tamir mantıklıdır. Ancak panel (ekranın kendisi) arızalıysa maliyet yeni TV'ye yaklaşır; bu durumda değişim düşünülebilir. Tahmini maliyeti görüp karar ver."
+images:
+  coverAlt: "Televizyon çizimi, ekranında yatay parazit çizgileri ve yandan yayılan ses dalgaları"
 ---
 
 Televizyonu açıyorsun, **ses geliyor ama ekran karanlık** — ya da görüntü hiç gelmiyor. Kafa karıştırıcı bir durum: cihaz "çalışıyor" ama göremiyorsun. İyi haber, bir kısmı basit ayar/kablo sorunudur; gerisi için nedenleri ve tahmini maliyeti aşağıda topladık.

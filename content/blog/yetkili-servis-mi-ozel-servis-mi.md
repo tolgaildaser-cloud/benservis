@@ -13,6 +13,8 @@ faq:
     a: "Kullanabilir ama zorunlu değildir. İyi özel servisler orijinal ya da kaliteli muadil parça sunar; parçanın orijinal mi muadil mi olduğunu ve fiyatını önceden sorman önemlidir."
   - q: "Fiyat farkı ne kadar?"
     a: "Genelde yetkili servis daha yüksek, özel servis daha uygun fiyatlıdır. Ama tek ölçüt fiyat değildir; garanti durumu, parça kalitesi ve servisin güvenilirliği birlikte değerlendirilmelidir."
+images:
+  coverAlt: "İki farklı yolu, onay rozetini ve kontrol listesini gösteren karşılaştırma çizimi"
 ---
 
 Beyaz eşyan bozulunca ilk soru genelde şu olur: markanın **yetkili servisini** mi arasam, yoksa mahalledeki **özel (bağımsız) servisi** mi? İkisinin de yeri var; doğru seçim cihazının **garanti durumuna**, arızanın türüne ve bütçene bağlı. Bu rehberde farkı net koyuyor ve hangi durumda hangisinin mantıklı olduğunu anlatıyoruz.

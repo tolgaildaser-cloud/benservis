@@ -13,6 +13,8 @@ faq:
     a: "Birçok serviste keşif/yol ücreti alınır ve iş yapılırsa genelde toplam tutara mahsup edilir. Net bilgi için önce tahmini maliyeti gör, sonra servise sor."
   - q: "Tamir mi yenisi mi almalı?"
     a: "Kabaca: tamir maliyeti yeni cihazın yaklaşık yarısını geçiyorsa ve cihaz 10+ yaşındaysa yenisi daha mantıklıdır. Ucuz parçalı arızalarda tamir neredeyse her zaman doğru."
+images:
+  coverAlt: "Buzdolabı ve yanında servis föyü ile büyüteç çizimi; föyde rakam yok"
 ---
 
 Buzdolabı bozulunca akla gelen ilk soru: **"Acaba ne kadar tutar?"** Cevap tamamen arızaya bağlı — basit bir conta değişimi ile kompresör değişimi arasında ciddi fark var. Bu yazıda fiyatı neyin belirlediğini, hangi arızanın ucuz hangisinin pahalı olduğunu ve "tamir mi yenisi mi" kararını netleştiriyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis ile cihazını ve belirtini seç, tahmini maliyeti gör; sonra Ataşehir'deki en yüksek puanlı servisi tek dokunuşla ara."
   - q: "Garanti varsa ne yapmalı?"
     a: "Cihaz garantideyse yetkili servisi çağır (genelde ücretsiz işçilik). Garanti bittiyse puanı ve fiyatı iyi özel servis de uygundur."
+images:
+  coverAlt: "Harita işareti, ev ve beyaz eşya siluetleri çizimi"
 ---
 
 Ataşehir, yeni siteler ile yerleşik mahallelerin iç içe olduğu, beyaz eşya servisi açısından **bol seçenekli ama seçimi zor** bir ilçe. Buzdolabın, çamaşır ya da bulaşık makinen bozulduğunda "kime güveneyim, ne kadar tutar?" sorusu kafa karıştırır. Bu rehberde güvenilir servisi nasıl ayırt edeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

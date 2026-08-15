@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'e cihazını ve arızanı yazarsan olası arızayı ve tahmini tamir maliyetini ücretsiz söyler. Böylece keşif için servis çağırmadan önce bir fikrin olur ve gelen teklifi kıyaslayabilirsin."
   - q: "Servis ücreti neden servisler arasında farklı?"
     a: "Arıza türü, orijinal/muadil parça tercihi, işçilik süresi, servisin bölgesi ve fiyat politikası ücreti etkiler. Bu yüzden tek teklife bağlı kalmadan, şeffaf fiyatlı ve iyi puanlı servisi seçmek mantıklıdır."
+images:
+  coverAlt: "Üç beyaz eşya silueti, rakamsız servis föyü ve büyüteç çizimi"
 ---
 
 Beyaz eşya bozulunca akla ilk gelen soru: "Bu tamir kaça patlar?" Servisi arayınca net cevap almak da zor olabilir. Bu rehberde servis ücretinin **neyden oluştuğunu**, keşif bedelinin **onarımda düşülüp düşülmediğini** ve fazla ödememek için ne yapman gerektiğini net anlatıyoruz.

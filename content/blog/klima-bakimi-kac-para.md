@@ -13,6 +13,8 @@ faq:
     a: "Filtre temizliği, iç ve dış ünite temizliği, gaz/basınç kontrolü, drenaj (su tahliye) hattı temizliği ve elektrik bağlantısı kontrolü."
   - q: "Bakım yapılmazsa ne olur?"
     a: "Soğutma verimi düşer, elektrik faturası artar, küf/koku oluşur, arıza riski yükselir ve cihazın ömrü kısalır."
+images:
+  coverAlt: "Duvar tipi klima iç ünitesi ve yanında servis föyü ile büyüteç çizimi; föyde rakam yok"
 ---
 
 Klimayı yazın ilk açtığında kötü koku, zayıf soğutma ya da damlama yaşıyorsan, cihaz büyük ihtimalle **bakım istiyor**. Klima bakımı; hem faturanı düşüren hem de pahalı arızaları önleyen, küçük ama önemli bir yatırımdır. Bu yazıda bakımın ne sıklıkla yapıldığını, içinde neler olduğunu ve atlanırsa ne olacağını anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

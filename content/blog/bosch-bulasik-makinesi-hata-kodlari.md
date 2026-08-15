@@ -16,6 +16,8 @@ faq:
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) aynı platformunu kullandığı için E15, E22, E24, E09, E25 gibi kodlar bu markaların hepsinde aynı anlama gelir. Örneğin Profilo bulaşık makinesindeki E24 ile Bosch'taki E24 aynı arızadır."
   - q: "E15 ile birlikte musluk (çeşme) işareti yanıyor, ne demek?"
     a: "E15 hatasında genelde ekranda musluk/çeşme sembolü de yanıp söner; bu, makinenin su ile ilgili bir güvenlik durumu (taban tavasında su + taşma şamandırası) algıladığını gösterir. Makineyi yana yatırıp taban suyunu boşaltmak çoğu zaman çözer; su tekrar birikiyorsa sızıntı vardır, servis gerekir."
+images:
+  coverAlt: "Bulaşık makinesi kumanda şeridinin yakın plan çizimi, ekranda hata göstergesi yanıyor"
 ---
 
 Bosch bulaşık makinen **E** ile başlayan bir hata kodu gösteriyor (E15, E22, E24…). Bosch (ve aynı BSH platformunu kullanan **Siemens, Profilo, Neff, Gaggenau**) arızayı bu kodlarla bildirir — yani bu markaların hepsinde kodlar aynı anlama gelir. İyi haber: en sık çıkan kodlar genelde **filtre, tahliye ve taban suyu** gibi basit sebepleri işaret eder ve bir kısmı evde ücretsiz çözülür. Bu rehberde Bosch bulaşık makinesinin **tüm sık kodlarını**, anlamlarını ve çözümlerini topladık.

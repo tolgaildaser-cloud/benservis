@@ -13,6 +13,8 @@ faq:
     a: "Garanti kapsamındaki bir arızada değişim yerine onarımı seçen tüketicinin yasal garantisi 12 ay uzuyor. Ayrıca üreticiler, garanti dışı ürünleri de makul fiyat ve sürede tamir etmek, yedek parçaları ve tamir bilgilerini erişilebilir tutmak zorunda."
   - q: "Türkiye'de onarım hakkı geçerli mi?"
     a: "Direktif doğrudan Türkiye'de geçerli değil; ancak Türkiye AB uyum sürecini izliyor ve mevzuatında zaten güçlü tüketici korumaları var (garanti, üreticinin ürünün kullanım ömrü boyunca yedek parça bulundurma yükümlülüğü gibi). AB pazarına üretim yapan markaların onarım altyapısını Türkiye'de de yaygınlaştırması bekleniyor."
+images:
+  coverAlt: "Mühürlü resmî olmayan jenerik belge, tornavida ve onay rozeti çizimi"
 ---
 
 Avrupa Birliği'nin **Onarım Hakkı Direktifi** için geri sayım bitti: üye ülkelerin kuralları iç hukuka aktarma son tarihi **31 Temmuz 2026** — yani bu ayın sonunda "tamir ettirmek", 27 ülkede yasal olarak desteklenen varsayılan seçenek hâline geliyor. Peki tam olarak ne değişiyor ve Türkiye'deki tüketiciyi neden ilgilendiriyor?

@@ -13,6 +13,8 @@ faq:
     a: "Basınç anahtarı veya onun hava hortumu tıkanmış olabilir; makine 'su doldu' sanıp durabilir. Servis kontrolü gerekir."
   - q: "Tamir mi yenisi mi?"
     a: "Valf, filtre, kapı kilidi gibi parçalar ucuzdur, tamir mantıklı. Anakart arızası pahalıysa ve makine eskiyse yenisi değerlendirilebilir."
+images:
+  coverAlt: "Çamaşır makinesi ve yanında kesik kesik damlayan, akmayan su çizimi"
 ---
 
 Çamaşırları koydun, programı başlattın ama makine su almıyor — ya hiç, ya da yarım. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin 5 kontrolü** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

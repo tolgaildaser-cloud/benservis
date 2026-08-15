@@ -13,6 +13,8 @@ faq:
     a: "Sıcak aylarda mutfak ısındıkça iç sıcaklık yükselme eğilimindedir; soğutucuyu +3°C civarına (veya kademede bir tık yukarı) almak yeterlidir. Kışın +4-5°C'ye dönebilirsin. Amaç iç sıcaklığı sabit tutmak, düğmeyi mevsime göre aşırıya çevirmek değil."
   - q: "Buzdolabı doğru ayarda ama yine soğutmuyorsa?"
     a: "Ayar doğruysa ve içerik hâlâ yeterince soğuk değilse conta, fan, termostat veya gaz kaynaklı bir arıza olabilir. Belirtiyi Benservis'e yaz; olası arızayı ve tahmini tamir maliyetini ücretsiz öğren."
+images:
+  coverAlt: "Buzdolabı ve yanında düşük sıcaklık gösteren termometre çizimi"
 ---
 
 Buzdolabı günde 24 saat çalışan tek cihazın — ve doğru sıcaklık ayarı hem gıda güvenliğini hem elektrik faturasını hem de cihazın ömrünü belirliyor. Cevap kısa ama detaylar önemli: **soğutucu +4°C, dondurucu -18°C.** Bu rehberde kademeli düğmelerin ne anlama geldiğini, yaz-kış ayar farkını ve yanlış ayarın nelere mal olduğunu anlatıyoruz.

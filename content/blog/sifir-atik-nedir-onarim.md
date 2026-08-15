@@ -13,6 +13,8 @@ faq:
     a: "Gereksiz tüketimi azalt, tek kullanımlıktan kaçın, atıkları ayrıştır ve geri dönüşüme ver. Elektronik cihazlarda ise en etkili adım: bozulan cihazı hemen atmadan önce onarılabilir mi diye bakmak. Onarım hem atığı hem karbonu azaltır."
   - q: "Onarmak mı geri dönüştürmek mi daha iyi?"
     a: "Atık hiyerarşisine göre önce onarım gelir. Geri dönüşüm değerlidir ama enerji ister ve malzeme değer kaybeder. Bir cihaz hâlâ onarılabiliyorsa, onu onarıp kullanmaya devam etmek geri dönüştürmekten daha sürdürülebilirdir."
+images:
+  coverAlt: "Geri dönüşüm döngüsü, tornavida ve yaprak çizimi"
 ---
 
 Son yıllarda sık duyduğumuz bir kavram: **sıfır atık.** Peki tam olarak ne demek, nasıl işler ve bozulan bir cihazla nasıl bir bağı var? Bu yazıda sıfır atığı sade bir dille açıklıyor ve çoğu zaman atlanan en etkili adımı — **onarımı** — öne çıkarıyoruz.

@@ -14,6 +14,8 @@ faq:
     a: "Hayır, verdiğimiz rakam bir ön tahmindir — marka, model ve gerçek arızaya göre değişir. Amacı, servise gitmeden önce bir fikrin olması ve belirsizliği azaltmaktır. Kesin fiyatı işi yapan servis belirler."
   - q: "Servisleri neye göre sıralıyorsunuz?"
     a: "Puan, mesafe ve fiyat üçlüsüne göre. Komisyon sıralamaya GİRMEZ — yani bir servis bize daha çok ödediği için üste çıkmaz. Bu, tavsiyemizin tarafsız kalması içindir."
+images:
+  coverAlt: "Ev, beyaz eşya siluetleri ve harita işareti çizimi"
 ---
 
 Benservis, cihazın bozulduğunda yaşadığın o en sinir bozucu anı — *"ne olmuş olabilir, ne kadar tutar, kime güveneyim?"* — basit ve şeffaf hale getirmek için kurulduk. Düşmanımız tamirciler değil; **belirsizlik.**

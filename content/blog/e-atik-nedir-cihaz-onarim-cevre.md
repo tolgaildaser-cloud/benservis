@@ -13,6 +13,8 @@ faq:
     a: "Evet, çok. Yeni bir cihaz üretmek maden çıkarımı ve enerji gerektiren karbon-yoğun bir süreçtir. Mevcut cihazı onarıp kullanmaya devam etmek bu karbonu ve atığı doğrudan önler — tamir, çevre için en etkili adımlardan biridir."
   - q: "Onarmak mı yenisini almak mı daha çevreci?"
     a: "Çoğu durumda onarmak. Cihaz onarılabilir durumdaysa, yeni üretimin çevresel maliyeti onarımdan çok daha yüksektir. Ancak cihaz çok eski ve verimsizse (ör. çok yüksek enerji tüketen), enerji tasarrufu açısından değişim mantıklı olabilir. Kararı arıza ve maliyetle birlikte değerlendir."
+images:
+  coverAlt: "Cihaz, geri dönüşüm döngüsü ve yaprak çizimi"
 ---
 
 Her yıl milyonlarca cihaz, aslında **onarılabilecekken** çöpe atılıyor. Bunlara elektronik atık — kısaca **e-atık** — deniyor ve dünyanın en hızlı büyüyen atık türü. İyi haber şu: bir cihazı atmak yerine onarmak, hem cüzdanın hem de gezegen için en etkili adımlardan biri. Bu yazıda e-atığın ne olduğunu, Türkiye'deki tablonun boyutunu ve onarmanın çevreye somut faydasını anlatıyoruz.

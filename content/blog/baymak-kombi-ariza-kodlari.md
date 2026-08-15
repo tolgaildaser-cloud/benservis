@@ -13,6 +13,8 @@ faq:
     a: "Çoğu modelde reset tuşuna birkaç saniye basmak arızayı sıfırlar. Su basıncı düşükse önce 1–1.5 bara tamamla. Kod tekrar çıkarsa arıza sürüyordur."
   - q: "Kodlar her Baymak modelinde aynı mı?"
     a: "Hayır, model serisine göre değişebilir. Aşağıdakiler en yaygın anlamlardır; kesin teşhis için modelini ve kodu Benservis'e yaz."
+images:
+  coverAlt: "Kombi panelinin yakın plan çizimi: hata göstergesi yanan ekran ve basınç göstergesi"
 ---
 
 Baymak kombin ekranında **E** ile başlayan bir arıza kodu gösteriyor (E01, E04, E05…). Bu rehberde Baymak kombinin en sık kodlarını, anlamlarını ve hangisini **güvenle kendin** çözebileceğini topladık.

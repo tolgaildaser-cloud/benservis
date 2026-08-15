@@ -13,6 +13,8 @@ faq:
     a: "Yanık veya elektrik/plastik kokusu acil bir uyarıdır — elektrik sorununa işaret edebilir. Cihazı hemen kapat, fişini çek ve kendin müdahale etmeden servis çağır."
   - q: "Klima dezenfekteli bakım kaç para?"
     a: "Kapasiteye ve kat/yüksekliğe göre değişir; bu sayfada aralık vermiyoruz. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Klima iç ünitesinden yayılan koku dalgalarını gösteren çizim"
 ---
 
 Klimayı açtığın anda odaya yayılan küf, rutubet ya da kötü koku hem rahatsız edici hem de çoğu zaman **sağlıksız bir havanın işareti**. İyi haber: kokuların büyük kısmı temizlikle çözülür. Ama bazı kokular (özellikle yanık) ciddi uyarıdır. Bu yazıda hangi kokunun neyi gösterdiğini, **kendin neyi çözebileceğini** ve ne zaman servis gerektiğini anlatıyoruz.

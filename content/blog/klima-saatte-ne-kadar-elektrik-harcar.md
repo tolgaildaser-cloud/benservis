@@ -13,6 +13,8 @@ faq:
     a: "Evet — inverter kompresör, oda istenen sıcaklığa gelince durup kalkmak yerine düşük güçte çalışmaya devam eder; uzun kullanımda on-off (eski tip) klimaya göre belirgin tasarruf sağlar. Fark özellikle gün boyu açık kalan klimalarda büyür."
   - q: "Klima neden normalden fazla elektrik yakmaya başlar?"
     a: "En sık sebepler: kirli/tıkalı filtre, eksik gaz, düşük derece ayarı (16-18°C), doğrudan güneş alan veya yalıtımsız oda ve dış ünitenin hava akışının engellenmesi. Filtre temizliği ve doğru ayar (24-26°C) tek başına gözle görülür fark yaratır."
+images:
+  coverAlt: "Klima iç ünitesi ve yanında elektrik sayacı çizimi"
 ---
 
 Yazın en çok sorulan hesap sorusu: **"Bu klima saatte kaça mal oluyor?"** Cevap iki satırlık bir çarpımdan ibaret — yeter ki klimanın gerçek tüketimini ve tüketimi neyin şişirdiğini bil. İşte pratik rehber.

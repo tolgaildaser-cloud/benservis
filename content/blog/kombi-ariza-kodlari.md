@@ -13,6 +13,8 @@ faq:
     a: "Güvenle yapabileceğin tek şey düşük su basıncında su eklemek ve reset'tir. Gaz, alev, fan, baca veya elektronik kart kodlarında cihazı kapat ve yetkili servise başvur — gazla ilgili işe kendin müdahale etme."
   - q: "Kod tekrar tekrar çıkıyorsa ne yapmalıyım?"
     a: "Reset ve su basıncı düzeltmesinden sonra kod hemen geri geliyorsa arıza sürüyordur. Markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti gör."
+images:
+  coverAlt: "Duvara asılı kombi çizimi, ekranında yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
 Kombin ekranında bir **arıza kodu** gösteriyor (F.22, F.28, E01…) ve ne demek olduğunu çözmek istiyorsun. İyi haber: en sık çıkan kod neredeyse her markada aynı — **düşük su basıncı** — ve güvenle evde çözülür. Bu rehberde marka marka en yaygın kodları, **güvenle kendin yapabileceklerini** ve ne zaman servis gerektiğini topladık.

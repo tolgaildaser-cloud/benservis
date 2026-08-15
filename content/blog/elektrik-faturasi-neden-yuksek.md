@@ -13,6 +13,8 @@ faq:
     a: "Tipik sinyaller: buzdolabı motorunun neredeyse hiç durmadan çalışması, klimanın odayı eskisi kadar hızlı soğutmaması, çamaşır/bulaşık programlarının belirgin uzaması ve kullanım değişmeden faturanın artması. Bu belirtiler çoğu zaman conta, filtre, gaz veya rezistans kaynaklı basit arızalara işaret eder."
   - q: "Yüksek fatura için cihazı yenilemek mi tamir ettirmek mi mantıklı?"
     a: "Çoğu durumda sorun yıpranmış conta, tıkalı filtre gibi düşük maliyetli bir bakım/tamir işidir ve yenileme gerektirmez. Cihaz çok eskiyse ve düşük enerji sınıfındaysa değişim mantıklı olabilir. Kararı arızaya ve maliyete bakarak ver: Benservis'e belirtiyi yaz, tahmini tamir maliyetini ve tamir mi yenisi mi önerisini ücretsiz öğren."
+images:
+  coverAlt: "Elektrik sayacı, rakamsız fatura föyü ve üç cihaz silueti çizimi"
 ---
 
 Yaz geldi, klimalar açıldı ve elektrik faturaları yine konuşulmaya başladı. Fatura kabardığında akla önce zam ve "çok kullandık" geliyor — çoğu zaman da doğru. Ama az bilinen bir ihtimal daha var: **kullanımın değişmediği hâlde fatura artıyorsa, cihazlardan biri fazla elektrik yakıyor olabilir.** Yıpranmış bir kapı contası, tıkalı bir filtre ya da kireçlenmiş bir rezistans, tüketimi sessizce katlar. Bu yazıda faturayı kabartan asıl şüphelileri, arıza sinyallerini ve yaza özel tasarruf ipuçlarını anlatıyoruz.

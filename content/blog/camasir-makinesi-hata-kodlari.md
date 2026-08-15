@@ -13,6 +13,8 @@ faq:
     a: "Çoğu modelde program düğmesini 'Kapalı'ya alıp makineyi fişten 1 dakika çekmek kodu sıfırlar. Arızanın kaynağı düzelmediyse kod tekrar çıkar."
   - q: "Kodun anlamından emin değilim, ne yapmalıyım?"
     a: "Kodlar model/seriye göre değişebilir. Kılavuzundaki tabloya bak ya da markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
+images:
+  coverAlt: "Çamaşır makinesi ekranında yanıp sönen hata göstergesi ve yanında kod listesi çizimi"
 ---
 
 Çamaşır makinen ekranında bir **hata kodu** gösteriyor (F18, E03, H1…) ve ne anlama geldiğini merak ediyorsun. İyi haber: bu kodlar arızayı işaret eder ve çoğu zaman en sık çıkan birkaç kod, basit ve **evde ücretsiz** çözülebilen sorunları gösterir. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

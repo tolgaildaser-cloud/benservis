@@ -13,6 +13,8 @@ faq:
     a: "F.75 pompa çalıştığında basınç farkının algılanmadığını gösterir; genelde pompa veya su basıncı sensörü arızasıdır. Servis gerekir."
   - q: "Vaillant kombi nasıl reset edilir?"
     a: "Çoğu Vaillant modelde gösterge/reset tuşuna birkaç saniye basmak arızayı sıfırlar. Su basıncı düşükse önce 1–1.5 bara tamamla. Kod tekrar çıkarsa arıza sürüyordur."
+images:
+  coverAlt: "Kombi çizimi, ekranında hata göstergesi ve yanında kod listesi"
 ---
 
 Vaillant kombin ekranında **F.** ile başlayan bir arıza kodu gösteriyor (F.22, F.28, F.75…). Bu rehberde Vaillant (ecoTEC ve diğer seriler) kombinin **en sık kodlarını**, anlamlarını ve hangisini **güvenle kendin** çözebileceğini topladık.

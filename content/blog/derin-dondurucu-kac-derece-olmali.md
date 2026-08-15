@@ -13,6 +13,8 @@ faq:
     a: "Dolu — donmuş gıdalar soğuk kütle olarak davranır, kapı açıldığında sıcaklık daha az oynar ve motor daha az çalışır. Yarı boş dondurucuda araya su şişeleri koymak bile verimi artırır. Ancak hava sirkülasyonunu tamamen engelleyecek kadar tıkış tıkış doldurma."
   - q: "Elektrik kesintisinde dondurucudaki gıdalar ne kadar dayanır?"
     a: "Kapı hiç açılmazsa dolu bir derin dondurucu gıdayı yaklaşık 48 saat, yarı dolu ise yaklaşık 24 saat güvenli tutabilir. Kural: kesintide kapıyı açma. Çözülüp yeniden donan gıdada buz kristalleri ve koku kontrolü yap; şüphelendiğinden ye deme, at."
+images:
+  coverAlt: "Çekmeceli derin dondurucu ve yanında düşük sıcaklık gösteren termometre çizimi"
 ---
 
 Buzdolabının [soğutucu bölmesi için +4°C kuralını](/blog/buzdolabi-kac-derece-olmali/) yazmıştık; sıra kardeş soruda: **derin dondurucu kaç derece olmalı?** Cevabın standardı net — **-18°C** — ama şoklamanın ne zaman kullanılacağı, doluluk oranı ve kesinti senaryosu işin az bilinen tarafları. İşte tamamı.

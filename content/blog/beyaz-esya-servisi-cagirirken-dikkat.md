@@ -13,6 +13,8 @@ faq:
     a: "Servis teslim fişi, cihazı hangi arıza için, hangi tarihte ve kimin aldığını belgeler; yapılan işlem ve ücret için resmî dayanağındır. Anlaşmazlık ya da tekrar arıza durumunda seni korur — mutlaka iste."
   - q: "Servis çağırmadan önce tahmini fiyatı öğrenebilir miyim?"
     a: "Evet. Benservis'e cihazını ve arızanı yazarsan olası arızayı ve tahmini tamir maliyetini ücretsiz söyler. Böylece gelen teklifin makul olup olmadığını kıyaslayabilir, fazla ödemekten kaçınırsın."
+images:
+  coverAlt: "Telefon, kontrol listesi ve onay rozeti çizimi"
 ---
 
 Beyaz eşyan bozuldu ve bir servis çağıracaksın. Ama internette yüzlerce numara var, fiyatlar belirsiz ve "servis kazığı" hikâyeleri hiç eksik olmuyor. İyi haber: birkaç basit kurala uyarsan hem güvenli bir servis seçer hem de fazla ödemekten kaçınırsın. İşte beyaz eşya servisi çağırırken dikkat edilecek 7 şey.

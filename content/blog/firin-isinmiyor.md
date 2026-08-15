@@ -13,6 +13,8 @@ faq:
     a: "Doğru pişirme fonksiyonunu seçtiğinden, kapağın tam kapandığından ve sigortanın atmadığından emin ol; programlı modellerde saat ayarlı değilse fırın ısıtmayabilir. Fişi 1 dakika çekip resetle."
   - q: "Tamiri kaç para?"
     a: "Arızaya göre değişir: rezistans, termostat/sensör, fan motoru ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Fırın çizimi ve yanında ısı dalgaları"
 ---
 
 Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısınıyor — yemek pişmiyor. Sinir bozucu ama sebep çoğu zaman birkaç parçadan biridir ve teşhisi kolaydır. Bu yazıda fırının neden ısınmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi parçanın servis işi olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
