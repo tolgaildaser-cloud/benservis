@@ -30,6 +30,8 @@ faq:
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E15 bu markaların hepsinde 'taban tavasında su / taşma güvenliği' anlamına gelir ve çözümü aynıdır."
 ---
 
+> ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**
+
 Bosch bulaşık makinen çalışmayı kesti, ekranda **E15** yazıyor ve genelde yanında bir **musluk (çeşme) işareti** yanıp sönüyor. Panik yok: E15 çoğu zaman pahalı bir arıza değil, makinenin **taşma güvenliğinin** devreye girmesi. Bu rehberde E15'in tam olarak ne anlama geldiğini, evde nasıl çözeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı çözüm **Siemens, Profilo, Neff** için de geçerli.
 
 > ⚡ **Kısa özet:** E15 = makinenin **taban tavasına su kaçmış**, taşma şamandırası (AquaStop güvenliği) makineyi durdurmuş. Çözüm: fişi çek → musluğu kapat → makineyi öne/yana **~30-45° eğip taban suyunu boşalt** → kurut → dene. Tekrarlıyorsa sızıntı vardır → servis.

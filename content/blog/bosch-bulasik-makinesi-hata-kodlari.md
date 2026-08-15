@@ -1,9 +1,9 @@
 ---
-title: "Bosch bulaşık makinesi hata kodları: E15, E22, E24"
-description: "E15 musluk işareti, E22 iç filtre, E24 tahliye ve diğerleri. Her kodun anlamı, evde denenecek adımlar ve hangi kodda servis gerekir."
+title: "Bosch bulaşık makinesi hata kodları: E tam liste"
+description: "E09, E14, E15, E17, E22, E24, E25… Bosch, Siemens ve Profilo kodlarının anlamı: hangisini evde ücretsiz çözersin, hangisi servis ister?"
 slug: "bosch-bulasik-makinesi-hata-kodlari"
 date: "2026-06-19"
-updated: "2026-07-04"
+updated: "2026-08-15"
 category: "Bulaşık makinesi"
 faq:
   - q: "Bosch bulaşık makinesi E15 ne demek ve nasıl çözülür?"

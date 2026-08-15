@@ -30,6 +30,8 @@ faq:
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E24 bu markaların hepsinde 'su atamıyor / tahliye sorunu' anlamına gelir ve çözümü aynıdır."
 ---
 
+> ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**
+
 Bosch bulaşık makinen program sonunda içinde suyla kaldı ve ekranda **E24** yazıyor. Panik yok: E24 çoğu zaman pahalı bir arıza değil, makinenin **kirli suyu boşaltamadığını** söylüyor — ve sebebi genelde **tıkalı bir filtre veya bükük bir hortum** gibi evde çözülebilecek basit bir şey. Bu rehberde E24'ün ne anlama geldiğini, evde nasıl kontrol edeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı çözüm **Siemens, Profilo, Neff** için de geçerli.
 
 > ⚡ **Kısa özet:** E24 = makine **suyu atamıyor (tahliye sorunu)**. Sırayla kontrol et: taban filtresi → pompa kapağı (yabancı cisim) → tahliye hortumu (bükük/tıkalı mı) → evye bağlantısı. Çoğu E24 **ücretsiz** çözülür.
