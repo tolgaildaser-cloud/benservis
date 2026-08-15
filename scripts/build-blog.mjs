@@ -136,6 +136,24 @@ blockquote p{margin:0}
 .cta h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 8px;color:#fff;font-size:20px}
 .cta p{margin:0 0 4px;opacity:.96}
 .cta .tag{font-weight:600;opacity:1}
+/* YK #67 ① — ilk ekran bağlam satırı: yazının akışını kesmeyen, tek satırlık köprü. */
+.kopru{margin:18px 0 24px;padding:13px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}
+.kopru a{color:${T.INK};text-decoration:none}
+.kopru a:hover strong{text-decoration:underline}
+/* YK #67 ③ — mobil sticky bant. position:fixed → akış dışında, DÜZEN KAYMAZ (CLS 0);
+   metin-only → LCP adayı değil. Yalnız dar ekranda; masaüstünde son kart yeterli. */
+.sticky-kopru,.sticky-bosluk{display:none}
+@media(max-width:640px){
+  .sticky-kopru{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;
+    background:${T.BLUE};color:#fff;text-align:center;text-decoration:none;
+    font-weight:700;font-size:16px;padding:15px 16px calc(15px + env(safe-area-inset-bottom));
+    box-shadow:0 -2px 12px rgba(15,23,42,.16)}
+  /* Bant altbilgiyi örtmesin. Boşluk BODY'ye değil, bandın kendi kardeşine verilir:
+     bu CSS altbilgi/liste/hub sayfalarında da ortak — body'ye verilseydi bandın
+     BULUNMADIĞI sayfalarda da mobilde ölü boşluk kalırdı. Ara parça HTML'de baştan
+     var (sonradan eklenmiyor) → düzen kaymaz. */
+  .sticky-bosluk{display:block;height:calc(64px + env(safe-area-inset-bottom))}
+}
 .pwa-not{margin:14px 0 8px;padding:16px 18px;border-radius:14px;background:rgba(37,99,235,.05);border:1px solid ${T.HAIR}}
 .pwa-not h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 7px;font-size:16px;color:${T.NAVY}}
 .pwa-not p{margin:0 0 8px;font-size:14px;line-height:1.6;color:${T.MUTED}}
@@ -229,6 +247,113 @@ const LOGO = `<svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="tru
 const WORDMARK = `<span class="brand-text"><span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span><span class="brand-motto">Bil, gör, çağır.</span></span>`;
 
 const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// YK #67 — TAMİR MERKEZİ → TEŞHİS KÖPRÜSÜ (kurul 4-0, 15 Ağu 2026)
+// Teşhis: CTA vardı ama JENERİKti (`/`) ve yalnız yazı SONUNDAydı. Hata kodu
+// sayfasının okuma deseni "cevabı bul, çık" — çoğu kullanıcı sona inmiyor; inen de
+// cihazını/belirtisini zaten söylemişken sıfırdan forma düşüyordu.
+// Çözüm: sayfa konusunu URL'e taşı → `/?cihaz=<slug>&ariza=<slug>&k=blog-<slug>`.
+//   `cihaz`/`ariza` → App.jsx formu ön-doldurur (ONSECIM)
+//   `k`             → api/teshis/log.js iç kaynağı yazar (kaynak=blog-ici, kampanya=<slug>)
+// ⛔ KIRMA YOK: eşleşme türetilemeyen yazıda link jenerik `/`ye düşer, yalnız `k` kalır —
+//    ölçüm her yazıda çalışır, ön-doldurma yalnız güvenli eşleşmede.
+// Slug sözlüğü App.jsx ile AYNI olmak zorunda (orada CIHAZLAR'dan üretiliyor); burada
+// blog kategorisi → cihaz slug'ı elle eşlenir çünkü blog kategorileri daha kaba
+// ("Kombi" → "Kombi / Termosifon"). Kategorisi eşleşmeyen (Genel · Sürdürülebilirlik ·
+// Kurumsal) yazı bağlam TAŞIMAZ — o yazıların tek bir cihazı yoktur, uydurmak yanlış olur.
+const KOPRU_CIHAZ = {
+  "Buzdolabı": "buzdolabi",
+  "Çamaşır makinesi": "camasir-makinesi",
+  "Bulaşık makinesi": "bulasik-makinesi",
+  "Klima": "klima",
+  "Kombi": "kombi-termosifon",
+  "Fırın / Ocak": "firin-ocak-aspirator",
+  "Televizyon": "televizyon-monitor",
+  "Süpürge": "supurge",
+  "Mikrodalga": "mikrodalga-air-fryer",
+};
+// Yazı slug'ı → o cihazın HIZLI BELİRTİ listesindeki karşılık (App.jsx `BELIRTILER`).
+// ⛔ Bulanık eşleştirme YAPILMADI, tablo elle kürasyon: "kombi-yanmiyor" listedeki hiçbir
+// belirtiye tam oturmuyor (en yakını "petekler ısınmıyor" ama aynı şey değil) → yazılmadı,
+// o yazı cihaz ön-seçimiyle yetinir. Yanlış ön-doldurma, ön-doldurmamaktan kötüdür.
+// NOT: Çamaşır makinesi listesinde "hata kodu" belirtisi YOK → hata kodu yazıları
+// (arcelik/bosch/lg/samsung) yalnız cihaz taşır; bulaşık ve kombide o belirti VAR.
+const KOPRU_ARIZA = {
+  "bulasik-makinesi-su-atmiyor": "su-tahliye-etmiyor",
+  "bulasik-makinesi-su-almiyor": "su-almiyor",
+  "bulasik-makinesi-temiz-yikamiyor": "temiz-yikamiyor",
+  "bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "bosch-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "bosch-bulasik-makinesi-e15-hatasi": "hata-kodu-veriyor",
+  "bosch-bulasik-makinesi-e22-hatasi": "hata-kodu-veriyor",
+  "bosch-bulasik-makinesi-e24-hatasi": "hata-kodu-veriyor",
+  "camasir-makinesi-su-almiyor": "su-almiyor",
+  "camasir-makinesi-su-atmiyor": "su-bosaltmiyor",
+  "camasir-makinesi-ses-titresim": "asiri-titresim-ses",
+  "buzdolabi-sogutmuyor-nedenleri": "sogutmuyor",
+  "no-frost-buzdolabi-alt-bolme-sogutmuyor": "sogutmuyor",
+  "buzdolabi-ses-yapiyor": "cok-ses-yapiyor",
+  "buzdolabi-altinda-su-birikiyor": "su-akitiyor",
+  "klima-sogutmuyor-nedenleri": "sogutmuyor",
+  "klima-su-damlatiyor": "su-damlatiyor",
+  "klima-koku-yapiyor": "koku-yapiyor",
+  "klima-calismiyor": "hic-calismiyor",
+  "kombi-sicak-su-vermiyor": "sicak-su-gelmiyor",
+  "kombi-basinc-dusuyor": "basinc-dusuyor",
+  "kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "baymak-kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "vaillant-kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "demirdokum-kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "firin-isinmiyor": "isinmiyor",
+  "ocak-atesleme-yapmiyor": "ocak-gozu-yanmiyor",
+  "ocak-atesleme-bujisi-degisimi": "ocak-gozu-yanmiyor",
+  "tv-acilmiyor": "acilmiyor",
+  "televizyon-goruntu-gelmiyor": "goruntu-yok",
+  "supurge-cekmiyor": "cekis-zayif",
+  "mikrodalga-isitmiyor": "isitmiyor-pisirmiyor",
+};
+function kopruHref(p) {
+  const q = new URLSearchParams();
+  const cihaz = KOPRU_CIHAZ[p.category];
+  if (cihaz) {
+    q.set("cihaz", cihaz);
+    const ariza = KOPRU_ARIZA[p.slug];
+    if (ariza) q.set("ariza", ariza);
+  }
+  q.set("k", `blog-${p.slug}`); // ölçüm HER yazıda, bağlam bulunamasa da
+  return `/?${q}`;
+}
+// Cihaz adı kullanıcıya görünen metinde geçecek → blog kategorisi zaten insan diliyle
+// yazılmış ("Çamaşır makinesi"), ikinci bir görünen-ad tablosu tutmuyoruz.
+const kopruCihazAdi = (p) => (KOPRU_CIHAZ[p.category] ? String(p.category).toLocaleLowerCase("tr") : "");
+
+// ① İLK EKRAN — "cevabı bul, çık" kullanıcısını sona inmeden yakalayan tek satır.
+// Kurul notu: yazının ilk ekranına bağlamlı bir satır konmalı. Bağlam yoksa satır HİÇ
+// basılmaz (jenerik satır gürültüdür; sayfa sonundaki kart zaten duruyor).
+const KOPRU_SATIRI = (p) => {
+  const ad = kopruCihazAdi(p);
+  if (!ad) return "";
+  return `<p class="kopru"><a href="${kopruHref(p)}" data-kopru="ilk-ekran">🔧 <strong>${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızan için tahmini maliyeti ücretsiz öğren</strong> — cihazın ve belirtin hazır seçili gelir. →</a></p>`;
+};
+
+// ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.
+const YAZI_CTA = (p) => {
+  const ad = kopruCihazAdi(p);
+  const baslik = ad ? `🔧 ${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızanı ve tahmini fiyatını saniyede öğren` : "🔧 Arızanı ve tahmini fiyatını saniyede öğren";
+  const govde = ad
+    ? "Cihazın ve belirtin hazır seçili açılır → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara."
+    : "Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.";
+  return `<a class="cta" href="${kopruHref(p)}" data-kopru="son-kart"><h3>${baslik}</h3><p>${govde}</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+};
+
+// ③ MOBİL STİCKY BANT — aynı bağlamlı linke basar (kurul: A, B'nin taşıyıcısı olsun).
+// ⛔ CLS/LCP: `position:fixed` akış DIŞINDA → düzen kaymaz; görsel/font yok, yalnız metin →
+//    LCP adayı değil. Gövdeye alttan boşluk eklenir ki bant altbilgiyi örtmesin.
+// Yalnız yazı sayfalarında ve yalnız dar ekranda görünür (masaüstünde sona kadar okuma
+// deseni farklı; orada son kart yeterli).
+const STICKY = (p) =>
+  `<div class="sticky-bosluk"></div><a class="sticky-kopru" href="${kopruHref(p)}" data-kopru="sticky">Tahmini fiyatı gör →</a>`;
 
 // PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
 // Pasif blok: ana CTA'nın altında, yazının akışını kesmez; uygulama ana ekrandan açıldıysa
@@ -578,7 +703,7 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${yaziHero(p)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${CTA}${PWA_NOT}</article>`;
+  const body = `<article>${yaziHero(p)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${KOPRU_SATIRI(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}</article>${STICKY(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));

@@ -32,6 +32,25 @@ const utmTemiz = (v, n = 60) => {
   const s = v.trim().toLowerCase().slice(0, n);
   return /^[a-z0-9._-]{1,60}$/.test(s) ? s : null;
 };
+// ——— YK #67 ① — İÇ GEÇİŞ ÖLÇÜMÜ (Tamir Merkezi → teşhis) ———
+// Kör nokta: blog CTA'ları parametresiz `/` idi; blogdan gelip teşhis alan kullanıcı
+// logda KAYNAKSIZ görünüyordu → "bloglardan siteye geçiş yok" hükmünün oranı hiç
+// hesaplanamıyordu. Yazı CTA'ları artık `?k=blog-<slug>` taşıyor; bu işaret dış UTM ile
+// AYNI boruya girer ama kendi adıyla ayrışır: `kaynak=blog-ici` · `cins=ic` · `kampanya=<slug>`.
+// Böylece hangi YAZININ dönüştürdüğü tek tek sayılabilir (ölçüt: 31 Ağu okuması).
+// ⛔ DIŞ UTM ÜSTÜNDÜR: bu fonksiyon yalnız hiçbir dış sinyal (utm_*/gclid) yokken çağrılır —
+// reklamdan gelip sonra blog CTA'sına basan kullanıcıda atıf reklamda KALIR, ödenmiş
+// trafiğin kaynağı iç tıkla silinmez.
+// ⛔ `cins=ic` organik sayılır (şemada yalnız cpc/paid-social ödenmiştir) — iç geçiş
+//   ödenmiş trafik gibi raporlanmaz.
+// Serbest metin ALINMAZ: `utmTemiz` deseni (a-z0-9._-) dışına çıkan değer sessizce atılır;
+// en uzun slug `blog-` önekiyle 48 karakter, desenin 60 sınırının altında.
+function icKaynak(q) {
+  const ham = utmTemiz(q.get("k"), 60);
+  if (!ham || !ham.startsWith("blog-")) return {};
+  const slug = ham.slice(5);
+  return slug ? { kaynak: "blog-ici", cins: "ic", kampanya: slug, gclid: null } : {};
+}
 function kaynakOku(req) {
   try {
     const ref = req.headers.referer || req.headers.referrer || "";
@@ -43,7 +62,7 @@ function kaynakOku(req) {
     const kaynak = utmTemiz(q.get("utm_source")) || (gclid ? "google" : null);
     const cins = utmTemiz(q.get("utm_medium")) || (gclid ? "cpc" : null);
     const kampanya = utmTemiz(q.get("utm_campaign"), 80);
-    if (!kaynak && !cins && !kampanya && !gclid) return {};
+    if (!kaynak && !cins && !kampanya && !gclid) return icKaynak(q);
     return { kaynak, cins, kampanya, gclid };
   } catch { return {}; }
 }

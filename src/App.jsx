@@ -27,6 +27,18 @@ const GELIS = (() => {
 
 const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
+// YK #67 ② — BAĞLAMLI GİRİŞ. Tamir Merkezi yazısındaki kullanıcı cihazını VE belirtisini
+// zaten söylemiş durumda; jenerik `/` linki bu kazanılmış bağlamı çöpe atıp onu sıfırdan
+// "cihaz seç → belirti yaz" akışına düşürüyordu. Yazı CTA'ları artık
+// `/?cihaz=<slug>&ariza=<slug>&k=blog-<slug>` açar ve form ön-dolu gelir.
+// Slug sözlüğü UYDURULMAZ: `/tamir/` kategori slug'larıyla (ve kategori ikon dosya
+// adlarıyla) aynı üretici — tek kaynak CIHAZLAR, ikinci bir cihaz listesi tutulmaz.
+const slugla = (s) =>
+  String(s).toLocaleLowerCase("tr").replace(/ı/g, "i").replace(/ş/g, "s").replace(/ğ/g, "g")
+    .replace(/ü/g, "u").replace(/ö/g, "o").replace(/ç/g, "c")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const CIHAZ_SLUG = Object.fromEntries(CIHAZLAR.map((c) => [slugla(c), c]));
+
 // Cihaza özel hızlı belirti butonları (sürtünmeyi azaltır)
 const BELIRTILER = {
   "Buzdolabı": ["Soğutmuyor", "Çok ses yapıyor", "Su akıtıyor", "Buzluk çalışmıyor"],
@@ -41,6 +53,21 @@ const BELIRTILER = {
   "Su Sebili / Arıtma": ["Su gelmiyor", "Su akıtıyor", "Soğutmuyor/ısıtmıyor", "Tat/koku sorunu"],
   "Bilgisayar / Yazıcı": ["Açılmıyor", "Yazdırmıyor", "Donma / yavaşlama", "Kağıt sıkışması", "Aşırı ısınma / ses", "Bağlantı sorunu"],
 };
+
+// ⛔ `ariza` SERBEST METİN DEĞİL: yalnız o cihazın kendi hızlı-belirti listesindeki bir
+// değerle eşleşirse uygulanır. URL'den textarea'ya (dolayısıyla AI promptuna) rastgele
+// metin taşınmaz — `kaynak=`/UTM tarafındaki "serbest metin alınmaz" kuralıyla aynı çizgi.
+// Eşleşmeyen `ariza` sessizce düşer, cihaz ön-seçimi yine de uygulanır (kırma).
+// NOT: `BELIRTILER`den SONRA durmalı — modül yüklenirken çalışıyor.
+const ONSECIM = (() => {
+  try {
+    const q = new URLSearchParams(window.location.search);
+    const cihaz = CIHAZ_SLUG[(q.get("cihaz") || "").trim().toLowerCase()] || "";
+    if (!cihaz) return { cihaz: "", belirti: "" };
+    const a = (q.get("ariza") || "").trim().toLowerCase();
+    return { cihaz, belirti: (BELIRTILER[cihaz] || []).find((b) => slugla(b) === a) || "" };
+  } catch { return { cihaz: "", belirti: "" }; }
+})();
 
 function refMetni(cihaz) {
   const arr = SEED[cihaz] || [];
@@ -106,12 +133,12 @@ function normalizeMaliyet(sonuc) {
 
 export default function App() {
   const [adim, setAdim] = useState("form");
-  const [cihaz, setCihaz] = useState("");
+  const [cihaz, setCihaz] = useState(ONSECIM.cihaz); // YK #67 ② — blogdan gelen bağlam
   const [marka, setMarka] = useState("");
   const [markaDiger, setMarkaDiger] = useState(""); // "Diğer" seçilince elle yazılan marka (veri toplama)
   const efektifMarka = (marka === "Diğer" && markaDiger.trim()) ? markaDiger.trim() : marka;
   const [yas, setYas] = useState("");
-  const [belirti, setBelirti] = useState("");
+  const [belirti, setBelirti] = useState(ONSECIM.belirti); // YK #67 ② — blogdan gelen bağlam
   const BELIRTI_MAX = 300; // belirti karakter limiti (maxLength + sayaç + ses kırpma tek kaynak)
   const [sonuc, setSonuc] = useState(null);
   const [sssAcik, setSssAcik] = useState(null); // ana sayfa SSS akordeon açık indeksi
