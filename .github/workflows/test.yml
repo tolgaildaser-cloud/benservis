@@ -1,0 +1,39 @@
+# YK #67 sonrası kapı (15 Ağu 2026, Tolga: "B + C uygula").
+#
+# Neden var: `npm test` 9-15 Ağu arası main'de KIRIKTI ve altı gün kimse fark etmedi
+# (tarife paketi kalem adlarını değiştirmişti). Kırık test paketi "normal" hâle geldiği
+# için o pencerede gerçek bir regresyon gelseydi de görünmezdi. Bu iş akışı, testleri
+# her PR'da ve main'e her girişte koşar; kırıkken PR yeşil görünmez.
+#
+# Kapsam bilerek DAR: yalnız `npm test`. Lint/tip/build kapısı eklenmedi — bugün böyle
+# bir kapı yok, birden fazlasını aynı anda açmak yerleşik akışı kilitleyebilirdi.
+name: test
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          # package.json engines: node >=20
+          node-version: 20
+          cache: npm
+      # ⚠️ `npm ci` DEĞİL, bilerek. `npm ci` bu repoda bugün ÇÖKÜYOR (ilk koşuda yakalandı):
+      #   npm error Missing: @esbuild/linux-x64@0.28.2 from lock file  (+22 platform)
+      # Sebep bu iş akışı değil, ÖNCEDEN VAR OLAN bir bağımlılık tutarsızlığı:
+      #   package.json → vite ^5.4.11   ·   vitest@4.1.10 → vite "^6 || ^7 || ^8"
+      # Karşılanmadığı için npm, vitest'e NESTED vite@8.1.5 kuruyor; onun esbuild alt ağacı
+      # (0.28.2 + 23 platform paketi) lockfile'a yazılmıyor — lock sıfırdan üretilse bile.
+      # `npm ci` lock'u harfiyen doğruladığı için reddediyor; `npm install` ağacı çözüp kuruyor.
+      # Kalıcı çözüm ya vite'ı 7/8'e çıkarmak (canlı sitenin derleyicisinde major yükseltme)
+      # ya da vitest'i vite 5 ile uyumlu hatta çekmek — İKİSİ DE AYRI KARAR, ayrı PR.
+      # Buraya sıkıştırılmadı: bu iş akışının amacı test regresyonunu yakalamak.
+      - run: npm install --no-audit --no-fund
+      - run: npm test

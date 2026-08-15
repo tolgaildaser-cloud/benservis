@@ -52,33 +52,45 @@ describe("① tam eşleşme — doğru satır", () => {
 });
 
 describe("② iki aday — belirleyici davranış", () => {
-  // ⚠️ Bu iki testin beklentisi CANLI `SEED`'in satır ADLARINA çakılıdır (dosyadaki diğer
-  // testler `SEED_BOLUNMUS` fikstürünü kullanır, o yüzden veri paketlerinden etkilenmez).
-  // Tarife paketi bir satırı yeniden adlandırır ya da bölerse burası kırılır — eşleşme
-  // mantığı bozulmadan. 13 Ağu'da `f68f87d` ("15 Ağu paketi — 4 yükseltme + 4 bölme,
-  // 48→52 satır") tam olarak bunu yaptı ve iki test kırıldı; adlar aşağıda güncellendi:
-  //   "Aspiratör anahtar/kart/lamba" → "Aspiratör lamba / anahtar / kart"
-  //   "Ekran kartı/RAM/disk"         → "Ekran kartı (GPU) / RAM / disk"
-  //   "Ekran/menteşe (laptop)"       → "Menteşe tamiri (laptop)"  (satır İKİYE BÖLÜNDÜ:
-  //      "Ekran paneli değişimi (laptop)" + "Menteşe tamiri (laptop)")
-  // Korunan davranış AYNI: en SPESİFİK satır kazanır, açgözlü ilk satır DEĞİL.
+  // ⚠️ AŞAĞIDAKİ İKİ TEST CANLI `SEED`'E BAKAR (dosyanın gerisi `SEED_BOLUNMUS` fikstürünü
+  // kullanır). Bu bilinçli: bu testlerin var oluş sebebi, eşleşmenin GERÇEK tarife verisinde
+  // doğru davrandığını doğrulamak — fikstüre taşınsalar o güvence kaybolurdu.
+  //
+  // Ama satır ADINA çakmak pahalıya patladı: `fa0e46b` (9 Ağu, "YK #49 kalem adları") dört
+  // adı birden değiştirdi, `f68f87d` (13 Ağu) laptop satırını ikiye böldü → testler
+  // 9-15 Ağu arası ALTI GÜN kırık kaldı. Eşleşme mantığı hiç bozulmamıştı; kırık test
+  // paketi "normal" hale geldiği için o pencerede GERÇEK bir regresyon da görünmezdi.
+  //
+  // Çözüm: ada değil DAVRANIŞA çak. İddia iki parçalı — (1) eşleşen satır, açgözlü
+  // rakibinden FARKLI olmalı, (2) ayırt edici kelimeyi taşımalı. Tarife paketi satırı
+  // yeniden adlandırıp bölebilir; kelime kökü durdukça test yaşar. Satır gerçekten
+  // KAYBOLURSA test yine kırılır — istenen de budur (o zaman haber vermesi gerekir).
+  const satirAdi = (kategori, sorgu) => {
+    const r = seedSatirBul(SEED[kategori], sorgu);
+    expect(r.row, `"${sorgu}" hiçbir satıra eşleşmedi (satır SEED'den kalkmış olabilir)`).not.toBe(null);
+    return r.row[0];
+  };
 
-  // BUGÜNKÜ SEED'de ölçülen gerçek hata #1: "Aspiratör …" ile başlayan her ad
-  // dizide önce gelen "Aspiratör motoru" satırına gidiyordu.
+  // Gerçek hata #1: "Aspiratör …" ile başlayan her ad, dizide önce gelen motor satırına
+  // gidiyordu. Korunan davranış: en SPESİFİK satır kazanır, açgözlü ilk satır DEĞİL.
   it("en SPESİFİK satır kazanır: aspiratör lamba/kart → motor satırı DEĞİL", () => {
-    expect(seedSatirBul(SEED["Fırın / Ocak / Aspiratör"], "Aspiratör lambası yanmıyor").row[0])
-      .toBe("Aspiratör lamba / anahtar / kart");
-    expect(seedSatirBul(SEED["Fırın / Ocak / Aspiratör"], "Aspiratör kartı arızası").row[0])
-      .toBe("Aspiratör lamba / anahtar / kart");
+    const motor = satirAdi("Fırın / Ocak / Aspiratör", "Aspiratör motoru arızası");
+    expect(motor).toMatch(/motor/i);
+    for (const sorgu of ["Aspiratör lambası yanmıyor", "Aspiratör kartı arızası"]) {
+      const bulunan = satirAdi("Fırın / Ocak / Aspiratör", sorgu);
+      expect(bulunan, `"${sorgu}" açgözlü motor satırına düştü`).not.toBe(motor);
+      expect(bulunan).toMatch(/lamba|anahtar|kart/i);
+    }
   });
 
-  // Gerçek hata #2: "Ekran …" adları hep ekran kartı satırına düşüyordu.
-  // Bölme sonrası ayrışma daha da keskin: menteşe artık KENDİ satırında.
+  // Gerçek hata #2: "Ekran …" adları hep ekran kartı satırına düşüyordu. 13 Ağu bölmesinden
+  // sonra ayrışma daha da keskin: menteşe artık kendi satırında.
   it("ekran kartı ile laptop ekranı ayrışır", () => {
-    expect(seedSatirBul(SEED["Bilgisayar / Yazıcı"], "Ekran kartı arızası").row[0])
-      .toBe("Ekran kartı (GPU) / RAM / disk");
-    expect(seedSatirBul(SEED["Bilgisayar / Yazıcı"], "Menteşe kırılması").row[0])
-      .toBe("Menteşe tamiri (laptop)");
+    const gpu = satirAdi("Bilgisayar / Yazıcı", "Ekran kartı arızası");
+    const mentese = satirAdi("Bilgisayar / Yazıcı", "Menteşe kırılması");
+    expect(gpu, "menteşe sorgusu ekran kartı satırına düştü").not.toBe(mentese);
+    expect(gpu).toMatch(/ekran kartı|gpu/i);
+    expect(mentese).toMatch(/menteşe/i);
   });
 
   it("GERÇEK beraberlikte sessizce ilk satır SEÇİLMEZ → belirsiz + fiyat yok", () => {
