@@ -13,6 +13,8 @@ faq:
     a: "Plastik, cam ve metal gibi ısıyı tutmaz; kondenserli kurutmada yeterince ısınıp buharı bırakamadığı için üzerinde su kalır. Plastikleri üst sepete koymak ve program bitince kapağı aralamak yardımcı olur."
   - q: "Parlatıcı dolu, program doğru ama hâlâ ıslak çıkıyorsa?"
     a: "Bu durumda genelde su yeterince ısınmıyordur — ısıtıcı rezistans ya da fanlı kurutma modelinde fan/termostat arızalı olabilir. Bu bir servis işidir; kesin tahmini cihazına göre Benservis'ten al."
+images:
+  coverAlt: "Bulaşık makinesi ve yanında üstünde su damlaları kalmış tabak çizimi"
 ---
 
 Bulaşıkların tertemiz ama sırılsıklam mı çıkıyor? İyi haber: bulaşık makinesi kurutmama sorunlarının çoğu basit ve ücretsiz çözülür — çünkü en sık sebep bir arıza değil, biten **parlatıcı** ya da yanlış program. Bu yazıda makinenin neden kurutmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve iş servise kaldığında ne beklemen gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

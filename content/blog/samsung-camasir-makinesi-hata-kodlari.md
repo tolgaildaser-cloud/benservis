@@ -13,6 +13,8 @@ faq:
     a: "Aynı arıza, model neslineline göre farklı önekle gösterilir: yeni Samsung modelleri 'C', eski modeller 'E' önekiyle aynı kodu verir. Yani 4E ile 4C aynı anlama gelir."
   - q: "UE kodu nasıl çözülür?"
     a: "UE dengesiz yük demektir. Çamaşırları yeniden dağıt, tek ağır parçayı (battaniye, halı) böl veya yanına birkaç parça ekle. Genelde evde çözülür."
+images:
+  coverAlt: "Çamaşır makinesi kumanda panelinin yakın plan çizimi, ekranda hata göstergesi yanıyor"
 ---
 
 Samsung çamaşır makinen ekranında bir hata kodu gösteriyor (4E, 5E, UE…) ve ne demek olduğunu çözmek istiyorsun. İyi haber: en sık çıkan kodlar genelde **su alma, tahliye ve denge** gibi basit sebepleri işaret eder ve bir kısmı evde ücretsiz çözülür. Bu rehberde Samsung çamaşır makinesinin **en sık kodlarını**, anlamlarını ve çözümlerini topladık.

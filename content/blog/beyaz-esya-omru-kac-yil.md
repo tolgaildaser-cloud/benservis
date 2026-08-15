@@ -13,6 +13,8 @@ faq:
     a: "Yaygın pratik kural: cihaz ortalama ömrünün son çeyreğindeyse VE tamir maliyeti yeni cihaz fiyatının %40-50'sini geçiyorsa değişim düşünülür. Genç cihazda büyük arıza bile çoğu zaman tamire değer; yaşlı cihazda üst üste gelen arızalar değişim sinyalidir."
   - q: "Tamir mi yenisi mi kararını nasıl veririm?"
     a: "İki veri gerekir: arızanın ne olduğu ve tahmini tamir maliyeti. Benservis'e cihazını ve belirtiyi yaz; yapay zeka olası arızayı, tahmini maliyeti ve tamir mi yenisi mi önerisini ücretsiz verir — kararı yaş + maliyet tablosuna göre bilinçli verirsin."
+images:
+  coverAlt: "Üç beyaz eşya silueti ve yanında bölümlü ömür halkası çizimi"
 ---
 
 "Bu makine kaç yıl daha gider?" — servis çağırmadan önce hepimizin kafasındaki soru bu. Cevap hem cihaza hem de (çoğu kişinin sandığından çok daha fazla) **bakıma** bağlı. Bu rehberde cihaz cihaz ortalama ömürleri, ömrü gerçekten uzatan alışkanlıkları ve "tamir mi, yenisi mi" kararının pratik kurallarını topladık.

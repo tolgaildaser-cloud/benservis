@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis ile klimanı ve belirtini (soğutmuyor, su damlatıyor, koku) seç, tahmini maliyeti gör; sonra yakınındaki en yüksek puanlı servisi tek dokunuşla ara."
   - q: "Sadece gaz dolumu yeterli mi?"
     a: "Klima 'gaz bitmez' bir sistemdir; azalıyorsa kaçak vardır. Yalnız dolum geçici çözümdür; kaçağın da bulunup onarılması gerekir."
+images:
+  coverAlt: "Harita işareti ve duvar tipi klima iç ünitesi çizimi"
 ---
 
 İstanbul'un Anadolu yakasında (Kadıköy, Ataşehir, Ümraniye, Maltepe, Üsküdar ve çevresi) yaz gelince klima talebi patlar; bakım, gaz dolumu ve tamir için **güvenilir ve uygun fiyatlı** servis bulmak zorlaşır. Bu rehberde yoğun sezonda doğru klima servisini nasıl seçeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

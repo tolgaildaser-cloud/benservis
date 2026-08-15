@@ -13,6 +13,8 @@ faq:
     a: "Evet — en kritik adımlardan biri budur. Sen yokken hortum patlaması ya da bağlantı sızıntısı günlerce fark edilmez ve hem evine hem alt komşuya büyük hasar verir. Cihaz musluklarını, mümkünse evin ana su vanasını kapat."
   - q: "Tatil dönüşü cihazlarda nelere dikkat etmeli?"
     a: "Önce su vanasını ve fişleri sırayla aç. Buzdolabını çalıştırıp birkaç saat soğumasını bekle, çamaşır/bulaşık makinesini ilk seferde boş ve kısa programda çalıştır. Tuhaflık (koku, ses, hata kodu, geç soğutma) varsa belirtiyi Benservis'e yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren."
+images:
+  coverAlt: "Kapağı açık buzdolabı, bavul ve güneş çizimi"
 ---
 
 Temmuz-Ağustos tatil sezonunun zirvesi — ve her yıl aynı soru: **"Buzdolabının fişini çekelim mi?"** Kimine göre çekilir ("boşuna elektrik yakmasın"), kimine göre asla ("dönünce küf kokusuyla karşılaşırsın"). İkisinin de haklı olduğu senaryolar var; doğru cevap tatilin süresine bağlı. Bu rehberde buzdolabı kararını netleştirip evden çıkmadan önceki tam cihaz listesini veriyoruz — dönüşte sürprizle karşılaşmaman için.

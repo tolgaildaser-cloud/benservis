@@ -13,6 +13,8 @@ faq:
     a: "Aylarca hiç çalışmayan kombide sirkülasyon pompası sıkışabilir, contalar kuruyabilir ve kışın ilk çalıştırmada arıza çıkabilir. Tamamen kapatmayı tercih ediyorsan ayda bir kez birkaç dakika çalıştırmak bu riski büyük ölçüde azaltır."
   - q: "Tatile giderken kombi ne yapılmalı?"
     a: "Kısa tatilde yaz modu yeterli. Uzun tatilde kombiyi kapatıp gaz vanasını kapatabilirsin; dönüşte basıncı kontrol et (1-1,5 bar) ve sıcak su alarak çalıştığını doğrula. Basınç sık düşüyorsa serviste kontrol ettir."
+images:
+  coverAlt: "Kombi ve yanında güneş çizimi"
 ---
 
 Havalar ısındı, petekler aylardır soğuk — akla hep aynı soru geliyor: **kombiyi tamamen kapatmak mı, yoksa öylece bırakmak mı daha doğru?** Cevap ikisi de değil: doğru seçenek çoğu ev için **yaz modu**. Bu rehberde yaz modunun ne yaptığını, tamamen kapatmanın hangi riskleri taşıdığını ve kışa dönüşte nelere bakman gerektiğini anlatıyoruz.

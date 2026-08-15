@@ -13,6 +13,8 @@ faq:
     a: "Ateşleme/gaz yok durumunda genelde F.28 (bazı modellerde F.01) çıkar. Önce gaz vanasının açık olduğunu kontrol et ve reset'le; geçmezse gazla ilgili bir arızadır ve servis gerekir."
   - q: "Kod yerine sadece uyarı/ışık varsa?"
     a: "Bazı modeller kod yerine basınç ya da arıza ikonu gösterir. Modelini ve belirtiyi Benservis'e yazarsan olası arızayı ve tahmini maliyeti söyler."
+images:
+  coverAlt: "Kombi çizimi, ekranında hata göstergesi; yanında basınç göstergesi ve kod listesi"
 ---
 
 DemirDöküm kombin ekranında bir arıza kodu (F.22, F.28…) gösteriyor. DemirDöküm **Vaillant Group** bünyesinde olduğu için birçok modelde Vaillant'a benzer **F** kodları kullanır. Bu rehberde en sık kodları, anlamlarını ve hangisini **güvenle kendin** çözebileceğini topladık.

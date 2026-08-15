@@ -13,6 +13,8 @@ faq:
     a: "Büyük ihtimalle nakliye (transport) cıvataları sökülmemiştir. Arkadaki bu cıvatalar kurulumda mutlaka çıkarılmalı; aksi halde makine şiddetli titrer."
   - q: "Tamiri kaç para?"
     a: "Denge ayarı çoğu zaman ücretsizdir. Rulman/keçe değişimi işçiliği ağır bir iştir, amortisör daha hafiftir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Hafif eğik çizilmiş çamaşır makinesi ve iki yanından yayılan titreşim dalgaları"
 ---
 
 Çamaşır makinesi özellikle **santrifüj** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve hangi sesin servis işaret ettiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

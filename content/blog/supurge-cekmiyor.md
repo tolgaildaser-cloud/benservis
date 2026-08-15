@@ -13,6 +13,8 @@ faq:
     a: "Yıkanabilir filtreyi tam kurumadan takmak kötü koku, küf ve motor arızasına yol açabilir. Filtreyi yıkadıktan sonra en az 24 saat, tamamen kuruyana kadar beklet, öyle tak."
   - q: "Her şeyi temizledim ama hâlâ çekmiyor?"
     a: "Hazne, filtre, hortum ve fırça temiz olduğu hâlde emiş yoksa sorun motorda ya da elektrik/anahtar tarafında olabilir. Bu bir servis işidir; kesin tahmini Benservis'ten al."
+images:
+  coverAlt: "Elektrikli süpürge ve zemindeki ağızlığa doğru giden kesik çizgili zayıf emiş okları"
 ---
 
 Süpürgeni çalıştırıyorsun ama **çekmiyor ya da emişi eskisi gibi güçlü değil.** İyi haber: emiş sorunlarının çoğu bir arıza değil, **tıkanmış hava akışıdır** ve evde dakikalar içinde çözülür. Bu yazıda nedenleri, adım adım çözümü ve gerçekten servis gereken durumları anlatıyoruz.

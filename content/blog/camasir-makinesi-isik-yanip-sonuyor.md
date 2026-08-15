@@ -13,6 +13,8 @@ faq:
     a: "Kullanım kılavuzundaki kod tablosuna bak ya da belirtiyi (hangi ışık, kaç kez) Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
   - q: "Tamiri kaç para?"
     a: "Arızaya göre değişir: kapı kilidi, su valfi/pompa ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Çamaşır makinesi ve yanında yanıp sönen ışık göstergesi çizimi"
 ---
 
 Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve hangi kodun servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

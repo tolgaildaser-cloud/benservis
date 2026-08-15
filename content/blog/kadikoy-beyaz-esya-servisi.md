@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis ile cihazını ve belirtini seç, tahmini maliyeti gör; sonra Kadıköy'deki en yüksek puanlı servisi tek dokunuşla ara."
   - q: "Kadıköy'de servis ne kadar sürede gelir?"
     a: "Yoğunluğa göre değişir; çoğu servis aynı gün veya ertesi gün randevu verir."
+images:
+  coverAlt: "Harita işareti ve ona bağlanan üç beyaz eşya silueti çizimi"
 ---
 
 Kadıköy'de buzdolabın, çamaşır ya da bulaşık makinen bozuldu ve "kime güveneceğim, ne kadar tutar?" diye düşünüyorsun. Yerel bir servis seçmek aslında birkaç basit kurala bakmakla kolaylaşır. Bu rehberde güvenilir servisi nasıl ayırt edeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

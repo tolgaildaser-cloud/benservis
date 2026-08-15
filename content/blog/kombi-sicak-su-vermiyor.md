@@ -13,6 +13,8 @@ faq:
     a: "O zaman sorun sıcak su tarafında değil, kombinin yanmasındadır (gaz/ateşleme/su basıncı). Kombi yanmıyor rehberimize bak."
   - q: "Tamiri kaç para?"
     a: "Arızaya göre değişir: plakalı eşanjör, 3 yollu vana, akış sensörü ve kimyasal temizlik çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Kombi çizimi, yanında akan su ve ısı dalgaları"
 ---
 
 Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyor** (ya da ılık geliyor). Bu, sıcak su tarafında bir sorun olduğunu gösterir ve sebeplerin bir kısmı bakımla çözülür. Bu yazıda olası arızaları, kendin yapabileceklerini ve hangi arızanın servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

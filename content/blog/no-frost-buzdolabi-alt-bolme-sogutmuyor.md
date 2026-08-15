@@ -13,6 +13,8 @@ faq:
     a: "Evet, alt bölme ~4 °C'nin üstüne çıkarsa gıdalar hızla bozulabilir. Bu yüzden orta-yüksek aciliyetli bir arızadır; uzun süre bekletme."
   - q: "Fan veya defrost tamiri kaç para?"
     a: "Fan motoru ile defrost onarımı (rezistans/sensör/saat) farklı işlerdir; maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Alt bölmesi açık buzdolabı; üstte kar tanesi, alt bölmede ısı dalgaları çizimi"
 ---
 
 No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olması en sık görülen ve en kafa karıştırıcı arızalardan biridir. Sebebi aslında mantıklı: bu modellerde tek bir soğutucu (evaporatör) buzlukta durur ve soğuk havayı **fanla** alt bölmeye üfler. Bu zincirin bir halkası kopunca buzluk soğur, dolap soğumaz. Bu yazıda nedenleri, **kendi yapabileceğin testi** ve sonucun ne anlama geldiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

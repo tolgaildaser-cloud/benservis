@@ -13,6 +13,8 @@ faq:
     a: "Su iç ünitedeki elektronik karta veya prize ulaşırsa risklidir. Damlama sürüyorsa cihazı kapatıp fişini çek, suyun elektrikle temasını önle ve servis çağır."
   - q: "Tahliye hattı temizliği kaç para?"
     a: "Genelde bakım kapsamındadır; pompa ya da montaj düzeltme gerekiyorsa artar. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Klima iç ünitesinden damlayan su ve altında zeminde biriken su çizimi"
 ---
 
 Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğu zaman ciddi bir arıza değil — ama **ihmal edilirse** duvarına, elektroniğe ve eşyana zarar verebilir. İyi haber: en sık sebep basit bir tıkanıklık. Bu yazıda klimanın neden su damlattığını, **servisi aramadan önce kendin kontrol edebileceklerini** ve hangi durumda servis gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

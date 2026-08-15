@@ -13,6 +13,8 @@ faq:
     a: "Hayır. Elektrik döndükten sonra 5-10 dakika bekleyip cihazları teker teker takmak en güvenlisidir — şebeke ilk dakikalarda dalgalı olabilir ve tüm cihazların aynı anda kalkışı sigortayı da zorlar."
   - q: "Kesinti sonrası cihazım çalışmıyor, ne yapmalıyım?"
     a: "Önce sigortayı ve prizi kontrol et, cihazı birkaç dakika fişte bekletip yeniden dene. Hâlâ açılmıyorsa veya hata kodu veriyorsa büyük ihtimalle elektronik kart ya da güç ünitesi etkilenmiştir. Belirtiyi Benservis'e yaz, olası arızayı ve tahmini tamir maliyetini ücretsiz öğren."
+images:
+  coverAlt: "Üç beyaz eşya silueti ve yanında kesik çizgili elektrik simgesi"
 ---
 
 Bu yaz sıcak dalgasıyla birlikte elektrik tüketimi rekor kırdı ve İstanbul dahil birçok şehirde planlı/plansız kesintiler arttı. Kesinti anında akla önce "elektrikler ne zaman gelecek" sorusu geliyor — ama cihazların açısından kritik soru başka: **elektrik geri gelirken ne olacak?** Çünkü beyaz eşya ve elektronik arızalarının klasik tetikleyicisi kesinti değil, dönüş anındaki **voltaj dalgalanmasıdır.** Bu rehberde kesinti öncesi-sırası-sonrası yapılacakları ve kesinti sonrası tipik arızaları anlatıyoruz.

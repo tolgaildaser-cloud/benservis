@@ -13,6 +13,8 @@ faq:
     a: "AB yasası doğrudan Türkiye'yi bağlamasa da Türkiye, Gümrük Birliği ve Yeşil Mutabakat uyum süreci nedeniyle bu ilkeleri yakından izliyor. Ayrıca 'onar > değiştir' yaklaşımı, e-atığı azalttığı için Türkiye'nin döngüsel ekonomi ve sıfır atık hedefleriyle de örtüşüyor."
   - q: "Onarım Hakkı bana ne kazandırır?"
     a: "Cihazını daha kolay ve uygun fiyata onarabilirsin; yedek parça daha uzun süre bulunur; ve en önemlisi, bir arıza çıktığında 'yenisini al' baskısı yerine gerçek bir onarım seçeneğin olur — bu hem cebine hem çevreye iyi gelir."
+images:
+  coverAlt: "Jenerik belge, tornavida ve onarım döngüsünü gösteren oklar çizimi"
 ---
 
 Bir cihazın küçük bir arızası çıktığında çoğu zaman "tamir edilmez, yenisini al" deniyor. **Onarım Hakkı** (İngilizce *Right to Repair*) hareketi tam da buna karşı çıkıyor: cihazlar **onarılabilir olmalı**, tüketici de onları atmak yerine makul şekilde tamir edebilmeli. Bu yazıda Onarım Hakkı'nın ne olduğunu, AB yasasının ne getirdiğini ve Türkiye için ne anlama geldiğini anlatıyoruz.

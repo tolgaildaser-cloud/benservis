@@ -13,6 +13,8 @@ faq:
     a: "Evet. Türkiye AB ile Gümrük Birliği içinde ve ihracatının büyük kısmını AB'ye yapıyor; bu yüzden AB'ye ürün gönderen Türk üreticiler DPP kurallarına uymak zorunda kalacak. Ticaret Bakanlığı, Yeşil Mutabakat kapsamında DPP için hazırlık (kamu istişaresi, bilgilendirme) yürütüyor."
   - q: "DPP tüketiciye ne fayda sağlar?"
     a: "Bir cihazın geçmişini şeffaf görürsün: nasıl üretilmiş, hangi parçaları değişmiş, kaç tamir görmüş. Bu, özellikle ikinci el alımında güven sağlar ve onarım/yeniden kullanımı kolaylaştırır — cihazlar daha uzun yaşar, atık azalır."
+images:
+  coverAlt: "Cihazdan dijital ürün kartına giden bağlantı ve veri ızgarası çizimi"
 ---
 
 Yakın gelecekte satın aldığın her cihazın bir **dijital kimliği** olacak: nasıl üretildiği, nelerden yapıldığı, kaç tamir gördüğü ve nasıl geri dönüştürüleceği tek bir dijital kayıtta. Buna **Dijital Ürün Pasaportu (DPP)** deniyor ve döngüsel ekonominin en önemli araçlarından biri. Bu yazıda DPP'nin ne olduğunu, AB'de ne zaman zorunlu olacağını ve Türkiye'yi nasıl etkileyeceğini sade bir dille anlatıyoruz.

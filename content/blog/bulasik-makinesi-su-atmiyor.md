@@ -13,6 +13,8 @@ faq:
     a: "Genelde tahliye pompası arızalı ya da tahliye hortumu/gider bağlantısı tıkalı/büküktür. Pompa arızası servis işidir."
   - q: "Tamiri kaç para?"
     a: "Filtre ya da hortum kaynaklıysa çoğu zaman ücretsiz çözülür. Tahliye pompası gerekiyorsa maliyet modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Bulaşık makinesinin açık kapağı ve tabanında duran su çizimi"
 ---
 
 Program bitti ama bulaşık makinesinin **tabanında su kaldı** — makine suyu boşaltamamış. Sık görülen bu sorun çoğu zaman basit bir tıkanıklık ve evde çözülebiliyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve iş servise kaldığında ne beklemen gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

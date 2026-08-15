@@ -13,6 +13,8 @@ faq:
     a: "Sıfır atık, Türkiye'nin COP31 sürecinde öne çıkardığı temalardan biridir. Atığı kaynağında azaltmak — geri dönüşümden önce yeniden kullanım ve onarım — hem çevre hem iklim için en etkili adımlardan sayılır."
   - q: "Onarımın iklimle ne ilgisi var?"
     a: "Yeni bir cihaz üretmek karbon-yoğun madencilik ve enerji gerektirir. Mevcut cihazı onarıp kullanmaya devam etmek bu karbonu ve atığı önler; bu yüzden onarım, döngüsel ekonominin ve sıfır atığın en somut bireysel adımlarından biridir."
+images:
+  coverAlt: "Dünya küresi, yaprak ve döngü oklarını gösteren çizim"
 ---
 
 2026'da iklim gündeminin en önemli başlıklarından biri **COP31.** Türkiye'nin ev sahipliği yapması ve **sıfır atık** temasının öne çıkması, bu zirveyi bizim için özellikle anlamlı kılıyor. Peki COP31 tam olarak nedir, neden önemli ve gündelik hayatımızla — hatta bozulan bir cihazla — nasıl bir bağı var? Sade bir dille anlatalım.

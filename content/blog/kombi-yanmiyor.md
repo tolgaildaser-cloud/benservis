@@ -13,6 +13,8 @@ faq:
     a: "Evet, genelde ateşleme/gaz kodu çıkar (Vaillant F.28, Baymak E01, DemirDöküm F.28 gibi). Kodun anlamı için marka rehberlerimize bakabilirsin."
   - q: "Tamiri kaç para?"
     a: "Arızaya göre değişir: ateşleme elektrodu, gaz valfi, fan ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
+images:
+  coverAlt: "Kombi çizimi ve yanında sönük, kesik çizgiyle gösterilen alev"
 ---
 
 Kombin çalışmıyor, radyatörler ve sıcak su soğuk — kombi **yanmıyor ya da ateşleme yapmıyor**. Soğuk havada sinir bozucu ama iyi haber: sebeplerin bir kısmı basit ve **güvenle evde** kontrol edilir. Bu yazıda nedenleri, kendin yapabileceklerini ve iş servise kaldığında nerede durman gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

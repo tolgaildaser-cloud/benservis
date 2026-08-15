@@ -28,6 +28,8 @@ faq:
     a: "Taşma/köpük gibi tek seferlik durumlarda maliyet sıfırdır (suyu boşaltmak yeter). Sızıntı varsa maliyet kaynağına göre değişir: kapı contası, hortum veya su giriş valfi değişimi genelde düşük-orta maliyetli işlerdir. Belirtiyi Benservis'e yaz, senin durumun için tahmini fiyatı ücretsiz gör."
   - q: "Siemens/Profilo bulaşık makinesindeki E15 de aynı mı?"
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E15 bu markaların hepsinde 'taban tavasında su / taşma güvenliği' anlamına gelir ve çözümü aynıdır."
+images:
+  coverAlt: "Eğik tutulan bulaşık makinesinden taban suyunun boşaldığını gösteren çizim"
 ---
 
 > ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**

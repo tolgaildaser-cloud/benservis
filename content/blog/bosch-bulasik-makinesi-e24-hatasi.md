@@ -28,6 +28,8 @@ faq:
     a: "Sebep tıkalı filtre/hortum ya da pompaya kaçmış bir cisimse maliyet sıfırdır — temizlik yeterlidir. Tahliye pompası arızalıysa ve değişmesi gerekiyorsa bu genelde düşük-orta maliyetli bir iştir. Belirtini Benservis'e yaz, senin durumun için tahmini fiyatı ücretsiz gör."
   - q: "Siemens/Profilo bulaşık makinesindeki E24 de aynı mı?"
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E24 bu markaların hepsinde 'su atamıyor / tahliye sorunu' anlamına gelir ve çözümü aynıdır."
+images:
+  coverAlt: "Bulaşık makinesi tabanında açılmış tahliye pompası kapağı, yabancı cisimler ve düz tahliye hortumu çizimi"
 ---
 
 > ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**

@@ -13,6 +13,8 @@ faq:
     a: "Hayır, kesinlikle önerilmez. Mikrodalganın yüksek voltaj kapasitörü, fişten çekildikten sonra bile ölümcül düzeyde elektrik yükü tutabilir. Ayrıca yanlış montaj radyasyon (mikrodalga) sızıntısına yol açabilir. Bu cihaz mutlaka yetkili/uzman servisçe açılmalıdır."
   - q: "Isıtmayan mikrodalga tamir edilir mi, yenisini mi almalı?"
     a: "Magnetron ya da kapasitör değişimi çoğu zaman uygun maliyetlidir ve tamir mantıklıdır. Ancak cihaz çok eski ve ekonomik bir modelse, tamir bedeli yeni cihaza yaklaşabilir. Tahmini maliyeti görüp karar ver."
+images:
+  coverAlt: "Mikrodalga fırın çizimi ve yanında ısı dalgaları"
 ---
 
 Mikrodalganı çalıştırıyorsun; ışık yanıyor, tabla dönüyor, fan sesi geliyor — ama yemek **soğuk kalıyor.** Standart fırından farklı olarak mikrodalga, rezistansla değil **mikrodalga ışımasıyla** ısıtır; ısıtma yoksa bu ışıma üretimi durmuş demektir. Bu yazıda nedenleri, güvenlik uyarısını ve tahmini maliyeti anlatıyoruz.

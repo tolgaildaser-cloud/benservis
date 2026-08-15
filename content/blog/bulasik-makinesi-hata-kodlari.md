@@ -13,6 +13,8 @@ faq:
     a: "Çoğu modelde başlat düğmesini birkaç saniye basılı tutmak ya da makineyi fişten 1 dakika çekmek kodu sıfırlar. Arıza sürüyorsa kod tekrar çıkar."
   - q: "Kodun anlamından emin değilim?"
     a: "Kodlar model/seriye göre değişebilir. Markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
+images:
+  coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
 Bulaşık makinen bir **hata kodu** gösteriyor (E15, E24, H5…) ve ne demek olduğunu çözmeye çalışıyorsun. İyi haber: en sık çıkan kodların çoğu **filtre, tahliye ve taban suyu** gibi basit sebepleri işaret eder — bir kısmı evde ücretsiz çözülür. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

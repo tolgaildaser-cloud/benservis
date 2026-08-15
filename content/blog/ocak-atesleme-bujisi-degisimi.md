@@ -17,6 +17,8 @@ faq:
     a: "Hayır. Kıvılcım görüyorsanız ateşleme sistemi çalışıyor demektir; sorun gaz tarafındadır. Vananın açık, tüpün dolu ya da doğalgaz vanasının açık olduğunu kontrol edin. Regülatör (dedantör) ve hortum da sık rastlanan sebeplerdendir."
   - q: "Gaz kokusu alıyorum, ne yapmalıyım?"
     a: "Hemen gaz vanasını kapatın, pencereleri açın, elektrikli düğmelere ve çakmağa dokunmayın, yetkili servise ya da doğalgaz acil hattına haber verin. Gaz kaçağına kendiniz müdahale etmeyin."
+images:
+  coverAlt: "Ocak çizimi ve yanında ateşleme bujisinin yakın plan çizimi, ucunda kıvılcım"
 ---
 
 Ocağın düğmesine basıyorsunuz, tık tık sesi geliyor ama kıvılcım yok — ya da hiç ses de yok. Bu noktada arattırılan şey genellikle doğrudan "ateşleme bujisi tamiri" oluyor.

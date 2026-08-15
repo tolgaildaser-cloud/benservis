@@ -13,6 +13,8 @@ faq:
     a: "Enerji verimliliği, pil dayanıklılığı (pilin en az 800 tam şarj döngüsünden sonra kapasitesinin %80'ini koruması şartı), düşmeye karşı dayanıklılık ve toz/su koruması (IP) sınıfı gibi bilgiler de yer alıyor."
   - q: "Türkiye'de bu puanı görebilir miyim?"
     a: "Türkiye'de satılan ürünlerde bu etiket henüz zorunlu değil; ancak aynı modeller AB'de puanlandığı için modelin onarılabilirlik notunu internetten birkaç saniyede bulabilirsin. Cihaz alırken fiyat ve özellik kadar bu notu da karşılaştırmak, uzun vadede tamir masrafını belirler."
+images:
+  coverAlt: "Cihaz çizimi ve yanında kademeli onarılabilirlik puanı skalası"
 ---
 
 Telefon ya da beyaz eşya alırken hepimiz aynı şeylere bakarız: fiyat, özellikler, belki enerji sınıfı. Avrupa'da artık etikette yeni bir satır var ve uzun vadede cebini en çok o ilgilendiriyor: **onarılabilirlik puanı** — bu cihaz bozulduğunda kolayca tamir edilebilecek mi?

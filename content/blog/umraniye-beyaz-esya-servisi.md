@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis ile cihazını ve belirtini seç, tahmini maliyeti gör; sonra Ümraniye'deki en yüksek puanlı servisi tek dokunuşla ara."
   - q: "Garanti varsa ne yapmalı?"
     a: "Cihaz garantideyse yetkili servisi çağır (genelde ücretsiz işçilik). Garanti bittiyse puanı ve fiyatı iyi özel servis de uygundur."
+images:
+  coverAlt: "İki harita işareti, kesik çizgili kapsama yayı ve beyaz eşya siluetleri çizimi"
 ---
 
 Ümraniye, nüfusu yoğun ve geniş bir ilçe; bu da beyaz eşya servisi için **çok sayıda seçenek** ama aynı zamanda **karar zorluğu** demek. Buzdolabın, çamaşır ya da bulaşık makinen bozulduğunda doğru servisi seçmek birkaç basit kurala bakmakla kolaylaşır. Bu rehberde güvenilir servisi nasıl ayırt edeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

@@ -13,6 +13,8 @@ faq:
     a: "Conta, termostat veya fan gibi arızalar ucuzdur, tamir mantıklıdır. Ama cihaz 10+ yaşında ve arıza kompresör/gaz gibi pahalı bir kalemse, yenisi daha mantıklı olabilir. Tahmini maliyeti görüp karar ver."
   - q: "Yeni taşınan buzdolabı neden soğutmuyor?"
     a: "Buzdolabı yatık taşındıysa kompresör yağı borulara kaçmış olabilir. Fişe takmadan önce birkaç saat (ideali 4-6 saat) dik beklet, sonra çalıştır."
+images:
+  coverAlt: "Buzdolabı çizimi, yanında kar tanesi ve yükselen ısı dalgaları"
 ---
 
 Buzdolabını açtın, ışık yanıyor, motor sesi de geliyor — ama içerisi soğuk değil. Bu kafa karıştırıcı bir durum: cihaz "çalışıyor" gibi görünür ama soğutmaz. İyi haber, sebeplerin bir kısmı basit ve evde çözülebilir. Bu yazıda 6 olası nedeni, **servis çağırmadan önce kendin kontrol edebileceklerini** ve hangi belirtinin servis gerektirdiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

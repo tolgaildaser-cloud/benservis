@@ -16,6 +16,8 @@ faq:
     a: "Yetkili servis, ürünün üreticisi/ithalatçısı tarafından yetkilendirilmiş ve SERBİS'te kayıtlı servistir; garanti süresindeki işlemler için önemlidir. Bağımsız (özel) servis de iyi iş çıkarabilir, ancak markanın yetkilisi değildir. Riskli olan, yetkili olmadığı hâlde 'yetkili servis' gibi tanıtım yapan sahte servislerdir."
   - q: "Aradığım servis SERBİS'te çıkmıyorsa ne anlama gelir?"
     a: "O servis, ilgili marka için Bakanlığa bildirilmiş bir yetkili servis değildir. Garanti kapsamındaki bir iş için mutlaka SERBİS'te kayıtlı yetkili servise yönelmen, kendini 'sahte yetkili servis' mağduriyetinden korur."
+images:
+  coverAlt: "Servis kayıt listesi, büyüteç ve onay rozeti çizimi"
 ---
 
 Cihazın bozuldu, internette "**marka + yetkili servis**" arattın ve karşına onlarca numara çıktı. Peki bunların hangisi gerçekten yetkili? "Yetkili servis" diye tanıtıp aslında olmayan **sahte servisler**, orijinal olmayan parça, garantinin yanması ve haksız ücret gibi mağduriyetlere yol açabiliyor. İyi haber: bunu **resmî ve ücretsiz** olarak saniyede doğrulayabileceğin bir devlet sistemi var — **SERBİS**.

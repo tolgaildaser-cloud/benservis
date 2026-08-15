@@ -13,6 +13,8 @@ faq:
     a: "Bu farklı bir durumdur: ısınınca aşırı yükselip emniyet ventilinden su boşalıyorsa genellikle genleşme tankı arızalıdır (membran/şarj). Servis kontrolü gerekir."
   - q: "Kaçağı nasıl bulurum?"
     a: "Radyatör vanalarının altını, tesisat rakorlarını ve kombinin altını kuru bezle kontrol et; ıslaklık/damla var mı bak. Görünür kaçak yoksa kombi içi olabilir — servis gerekir."
+images:
+  coverAlt: "Kombi çizimi ve yanında ibresi düşük basınç göstergesi"
 ---
 
 Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sorun çoğu zaman küçük bir kaçaktan kaynaklanır ve kaynağı bulununca kalıcı çözülür. Bu yazıda nedenleri, güvenle yapabileceğin kontrolleri ve hangi noktadan sonra yetkili servis gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

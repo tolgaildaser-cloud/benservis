@@ -13,6 +13,8 @@ faq:
     a: "Yıllık bakım, kombinin düşük maliyetli kalemlerinden biridir ve pahalı arızaları önlediği için uzun vadede tasarruf sağlar. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
   - q: "Kombi tamiri mi yenisi mi?"
     a: "Tamir maliyeti yeni bir kombinin yaklaşık yarısını geçiyorsa ve kombi 12–15+ yaşındaysa yenisi (yüksek verimli yoğuşmalı) daha mantıklı olabilir. Ucuz parçalı arızalarda tamir doğru seçim."
+images:
+  coverAlt: "Kombi, rakamsız servis föyü ve büyüteç çizimi"
 ---
 
 Kombi bozulunca ilk soru **fiyat** oluyor. Cevap arızaya bağlı: su basıncı eklemek bedavayken ana eşanjör değişimi epey tutabilir. Bu yazıda fiyatı neyin belirlediğini, hangi arızanın ucuz hangisinin pahalı olduğunu ve "tamir mi yenisi mi" kararını netleştiriyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
