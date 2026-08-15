@@ -52,21 +52,33 @@ describe("① tam eşleşme — doğru satır", () => {
 });
 
 describe("② iki aday — belirleyici davranış", () => {
+  // ⚠️ Bu iki testin beklentisi CANLI `SEED`'in satır ADLARINA çakılıdır (dosyadaki diğer
+  // testler `SEED_BOLUNMUS` fikstürünü kullanır, o yüzden veri paketlerinden etkilenmez).
+  // Tarife paketi bir satırı yeniden adlandırır ya da bölerse burası kırılır — eşleşme
+  // mantığı bozulmadan. 13 Ağu'da `f68f87d` ("15 Ağu paketi — 4 yükseltme + 4 bölme,
+  // 48→52 satır") tam olarak bunu yaptı ve iki test kırıldı; adlar aşağıda güncellendi:
+  //   "Aspiratör anahtar/kart/lamba" → "Aspiratör lamba / anahtar / kart"
+  //   "Ekran kartı/RAM/disk"         → "Ekran kartı (GPU) / RAM / disk"
+  //   "Ekran/menteşe (laptop)"       → "Menteşe tamiri (laptop)"  (satır İKİYE BÖLÜNDÜ:
+  //      "Ekran paneli değişimi (laptop)" + "Menteşe tamiri (laptop)")
+  // Korunan davranış AYNI: en SPESİFİK satır kazanır, açgözlü ilk satır DEĞİL.
+
   // BUGÜNKÜ SEED'de ölçülen gerçek hata #1: "Aspiratör …" ile başlayan her ad
   // dizide önce gelen "Aspiratör motoru" satırına gidiyordu.
   it("en SPESİFİK satır kazanır: aspiratör lamba/kart → motor satırı DEĞİL", () => {
     expect(seedSatirBul(SEED["Fırın / Ocak / Aspiratör"], "Aspiratör lambası yanmıyor").row[0])
-      .toBe("Aspiratör anahtar/kart/lamba");
+      .toBe("Aspiratör lamba / anahtar / kart");
     expect(seedSatirBul(SEED["Fırın / Ocak / Aspiratör"], "Aspiratör kartı arızası").row[0])
-      .toBe("Aspiratör anahtar/kart/lamba");
+      .toBe("Aspiratör lamba / anahtar / kart");
   });
 
-  // Gerçek hata #2: "Ekran …" adları hep "Ekran kartı/RAM/disk" satırına düşüyordu.
+  // Gerçek hata #2: "Ekran …" adları hep ekran kartı satırına düşüyordu.
+  // Bölme sonrası ayrışma daha da keskin: menteşe artık KENDİ satırında.
   it("ekran kartı ile laptop ekranı ayrışır", () => {
     expect(seedSatirBul(SEED["Bilgisayar / Yazıcı"], "Ekran kartı arızası").row[0])
-      .toBe("Ekran kartı/RAM/disk");
+      .toBe("Ekran kartı (GPU) / RAM / disk");
     expect(seedSatirBul(SEED["Bilgisayar / Yazıcı"], "Menteşe kırılması").row[0])
-      .toBe("Ekran/menteşe (laptop)");
+      .toBe("Menteşe tamiri (laptop)");
   });
 
   it("GERÇEK beraberlikte sessizce ilk satır SEÇİLMEZ → belirsiz + fiyat yok", () => {
