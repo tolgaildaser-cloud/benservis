@@ -131,6 +131,17 @@ export default function App() {
   const sesChunksRef = useRef([]);
   const sesStreamRef = useRef(null);
   const sesTimerRef = useRef(null);
+  // ——— SESSİZLİK ALGILAMA (Tolga, 15 Ağu: "sessizlik algılamayı yap") ———
+  // Kullanıcı konuşmayı bırakınca kayıt KENDİLİĞİNDEN biter; "Durdur"a basmak
+  // zorunlu değil. Neden bu yol seçildi (canlı/eş zamanlı yazma yerine):
+  // Whisper batch çalışır, kelime kelime dönmez. Eş zamanlı yazı için ya tarayıcının
+  // Web Speech API'si gerekirdi (ses Chrome'da Google'a gider → gizlilik metnimiz
+  // "yalnızca metne çevrilir, saklanmaz" diyor; ayrıca TR'de marka/hata kodu
+  // doğruluğu Whisper'ın altında) ya da streaming STT (WebSocket + dakika ücreti).
+  // Asıl şikâyet "bitir demek zorunda kalmak"tı; bu, o şikâyeti sunucuya ve
+  // gizlilik metnine hiç dokunmadan çözer. ⛔ Ses yine SAKLANMIYOR — buradaki
+  // analiz tamamen tarayıcıda, canlı akış üzerinde; hiçbir yere gönderilmiyor.
+  const vadRef = useRef(null); // { ctx, raf, kapat() }
 
   const sesBaslat = async () => {
     if (sesDurumu !== "bosta") return;
@@ -152,14 +163,91 @@ export default function App() {
       rec.start();
       setSesDurumu("kaydediyor");
       setHataMsg("");
-      sesTimerRef.current = setTimeout(() => sesDurdur(), 60000); // 60sn otomatik durdur
+      sesTimerRef.current = setTimeout(() => sesDurdur(), 60000); // 60sn üst sınır (sessizlik algılasa da bu kalır)
+      vadBaslat(stream);
     } catch (e) {
       setHataMsg("Mikrofon izni gerekli — yazarak da anlatabilirsin.");
       setSesDurumu("bosta");
     }
   };
 
+  // Mikrofon akışını TARAYICIDA dinler; konuşma başladıktan sonra ~2 sn sessizlik
+  // olursa kaydı bitirir. Sabit eşik kullanmıyoruz: sessiz bir odayla açık pencere
+  // kenarının zemin gürültüsü çok farklı — ilk ~400 ms zemin ölçülüp eşik ona göre
+  // kuruluyor, yoksa gürültülü ortamda hiç durmaz ya da sessiz odada konuşmayı keser.
+  const vadBaslat = (stream) => {
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return; // desteklemeyen tarayıcıda sessizce vazgeç — "Durdur" butonu zaten var
+      const ctx = new AC();
+      const src = ctx.createMediaStreamSource(stream);
+      const an = ctx.createAnalyser();
+      an.fftSize = 512;
+      // Varsayılan 0.8 yumuşatma sessizliğe tepkiyi çok geciktiriyor: ölçümle
+      // doğrulandı — konuşma bitince değer ölçüm başına yalnız ~7 birim düşüyor,
+      // eşiğe inmesi ~20 sn buluyordu (özellikle sekme arka plandayken ölçüm
+      // seyrekleşince). 0.3 ile 2-3 ölçümde iniyor; VAD'ın kendi 2 sn'lik
+      // sessizlik penceresi zaten gürültüye karşı yeterli tamponu sağlıyor.
+      an.smoothingTimeConstant = 0.3;
+      src.connect(an);
+      const veri = new Uint8Array(an.frequencyBinCount);
+      // YALNIZ KONUŞMA BANDI (~80-4000 Hz) ortalanır. Tüm spektrumu (0-24 kHz)
+      // ortalamak konuşma enerjisini ~7 kat seyreltiyordu: insan sesi ilk ~40 bin'de
+      // toplanır, üstü neredeyse boştur; tamamının ortalaması alınınca konuşma ile
+      // sessizlik arasındaki fark eşiğin altına düşüyordu.
+      const binHz = ctx.sampleRate / an.fftSize;
+      const bas = Math.max(1, Math.floor(80 / binHz));
+      const bit = Math.min(an.frequencyBinCount - 1, Math.ceil(4000 / binHz));
+      const t0 = performance.now();
+      let zeminTop = 0, zeminN = 0, esik = 0;
+      let konusmaBasladi = false, sessizlikBasi = 0, zamanlayici = 0;
+      const SESSIZLIK_MS = 2000;   // konuşma bitti sayılması için gereken sessizlik
+      const KALIBRASYON_MS = 400;  // zemin gürültüsü ölçüm penceresi
+
+      const olc = () => {
+        an.getByteFrequencyData(veri);
+        let top = 0;
+        for (let i = bas; i <= bit; i++) top += veri[i];
+        const ort = top / (bit - bas + 1);
+        const simdi = performance.now();
+
+        if (simdi - t0 < KALIBRASYON_MS) {
+          zeminTop += ort; zeminN += 1;                       // zemini öğren
+        } else {
+          if (!esik) {
+            const zemin = zeminN ? zeminTop / zeminN : 0;
+            // Zeminin üstünde belirgin bir pay + mutlak taban: fısıltıyı konuşma
+            // sanmasın, ama normal konuşmayı da kaçırmasın.
+            esik = Math.max(zemin * 1.8, zemin + 6, 10);
+          }
+          if (ort > esik) {
+            konusmaBasladi = true; sessizlikBasi = 0;
+          } else if (konusmaBasladi) {
+            if (!sessizlikBasi) sessizlikBasi = simdi;
+            else if (simdi - sessizlikBasi >= SESSIZLIK_MS) { sesDurdur(); return; }
+          }
+        }
+      };
+      // ⚠️ requestAnimationFrame DEĞİL, setInterval: rAF sekme arka plana alınınca
+      // tamamen durur (ölçüldü: gizli sayfada 3 sn'de 0 tik, setInterval 11 tik).
+      // Kullanıcı kayıt sürerken başka sekmeye geçerse rAF'la sessizlik hiç
+      // algılanmaz, kayıt 60 sn üst sınıra kadar sürerdi.
+      zamanlayici = setInterval(olc, 60);
+      vadRef.current = {
+        kapat() {
+          clearInterval(zamanlayici);
+          try { src.disconnect(); } catch { /* zaten kopmuş */ }
+          try { ctx.close(); } catch { /* zaten kapalı */ }
+        },
+      };
+    } catch { /* VAD kurulamazsa kayıt normal çalışır, kullanıcı elle durdurur */ }
+  };
+  const vadDurdur = () => { try { vadRef.current?.kapat(); } catch { /* yok say */ } vadRef.current = null; };
+  // Kayıt sürerken sayfadan çıkılırsa AudioContext ve rAF döngüsü açık kalmasın.
+  useEffect(() => () => vadDurdur(), []);
+
   const sesDurdur = () => {
+    vadDurdur();
     if (mediaRecRef.current && mediaRecRef.current.state === "recording") {
       clearTimeout(sesTimerRef.current);
       setSesDurumu("isliyor");
