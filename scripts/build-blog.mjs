@@ -110,6 +110,11 @@ main{padding:40px 0 64px}
 .hero::before{content:"";position:absolute;left:-55px;bottom:-75px;width:210px;height:210px;border-radius:50%;background:rgba(255,255,255,.06)}
 .hero-icon{width:82px;height:82px;color:#fff;position:relative;z-index:1}
 .hero-cat{position:relative;z-index:1;color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.92}
+/* YK #65 kapak varyantı: gerçek görsel basılınca mavi zemin ve dekoratif daireler kalkar.
+   contain (cover değil): kapaklar çizim — kırpmak çizimin yarısını götürür (kart kuralıyla aynı). */
+.hero.kapak{height:auto;aspect-ratio:3/2;background:#EFF4FF;padding:0}
+.hero.kapak::before,.hero.kapak::after{display:none}
+.hero.kapak img{width:100%;height:100%;object-fit:contain;display:block}
 h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 8px}
 .meta{color:${T.FAINT};font-size:14px;margin:0 0 28px}
 .guide-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 26px;padding:14px 18px;background:#EFF4FF;border:1px solid ${T.HAIR};border-radius:14px}
@@ -259,7 +264,9 @@ const SEARCH_JS = `(function(){
 
 // `robots` = "noindex,follow" verilen sayfalar aramaya SOKULMAZ (ve sitemap'e de eklenmez).
 // İçeriği hazır olmayan bir sayfayı indekslemek site kalitesini düşürür; içerik gelince kalkar.
-function page({ title, desc, canonical, head = "", body, robots = "" }) {
+// `image` = mutlak görsel adresi (YK #65 kapağı). Verilmeyen sayfalarda og:image hiç
+// basılmaz ve twitter kartı eskisi gibi `summary` kalır — mevcut paylaşım görüntüsü bozulmaz.
+function page({ title, desc, canonical, head = "", body, robots = "", image = "" }) {
   return `<!doctype html><html lang="tr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
@@ -267,7 +274,7 @@ function page({ title, desc, canonical, head = "", body, robots = "" }) {
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
-<meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">${image ? `\n<meta property="og:image" content="${esc(image)}"><meta name="twitter:image" content="${esc(image)}">` : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <!-- PWA (YK #26): blog aramadan gelen ilk temas — manifest + SW burada da olmalı, yoksa
      yalnız ana sayfaya girenler uygulamayı kurabilir. Push YOK. -->
@@ -325,6 +332,32 @@ const posts = serpistir(
     .filter((p) => p.slug && p.title)
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
 );
+
+// ── GRF kapak görseli (public/tamir-gorsel/<slug>/kapak.png) ─────────────────────────────────
+// YK #65 (15 Ağu 2026): Tamir Merkezi'ndeki her yazıda en az bir GERÇEK görsel bulunur —
+// şablonun bastığı jenerik mavi kategori-ikon bandı görsel sayılmaz. Bağlama yine tek
+// kaynaktan: frontmatter'daki `images.coverAlt`. Alt metin yoksa ya da dosya yoksa kapak
+// BASILMAZ, yazı mevcut ikon hero'suna DÜŞER — 79 yazının 75'i kapaksızken de hiçbiri
+// bozulmasın, GRF dalga dalga teslim ettikçe yazılar kendiliğinden gerçek kapağa geçsin.
+// Yol sözleşmesi GRF'ye: public/tamir-gorsel/<slug>/kapak.png · 1200×800 (3:2) · alt metin
+// frontmatter'da `images.coverAlt`. Uzantı sırası sabit, GRF hangisini teslim ederse bulunur.
+const KAPAK_UZANTILARI = ["png", "webp", "svg"];
+const kapakUrl = (slug, alt) => {
+  if (!alt) return null;
+  for (const uz of KAPAK_UZANTILARI) {
+    const rel = `tamir-gorsel/${slug}/kapak.${uz}`;
+    if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
+  }
+  return null;
+};
+// Yazı hero'su: kapak varsa gerçek görsel, yoksa mevcut mavi ikon bandı (fallback aynen).
+// width/height sözleşme oranından sabit — CLS için zorunlu, `.hero.kapak` kutusu da
+// aspect-ratio ile aynı oranı tutuyor (kart görselindeki hardcoded ölçü deseniyle aynı).
+const yaziHero = (p) => {
+  const url = kapakUrl(p.slug, p.images?.coverAlt);
+  if (!url) return heroFor(p.category);
+  return `<div class="hero kapak"><img src="${url}" width="1200" height="800" loading="lazy" decoding="async" alt="${esc(p.images.coverAlt)}"></div>`;
+};
 
 // ── GRF adım görselleri (public/tamir-gorsel/<slug>/adim-0N.png) ──────────────────────────────
 // Bağlama tek kaynaktan: yazının frontmatter'ındaki `images.steps` alt metinleri. Alt metin
@@ -473,8 +506,18 @@ function rehberDenetimi(posts) {
   const rehberSayisi = posts.filter((p) => p.guide).length;
   console.log(`[build-blog] ✓ rehber denetimi: ${rehberSayisi} rehberde steps ↔ gövde ↔ görsel hizası birebir.`);
 }
+// YK #65 sayacı + sessiz bozulma kalkanı: `coverAlt` yazılmış ama dosya yoksa yazı sessizce
+// mavi hero'ya düşer — build bunu SÖYLER (durdurmaz; kapak eksikliği yayını bloklamamalı).
+function kapakDenetimi(posts) {
+  const eksik = posts.filter((p) => p.images?.coverAlt && !kapakUrl(p.slug, p.images.coverAlt));
+  const kapakli = posts.filter((p) => kapakUrl(p.slug, p.images?.coverAlt)).length;
+  for (const p of eksik) console.warn(`[build-blog] ⚠️  ${p.slug}: images.coverAlt var ama kapak dosyası yok — mavi ikon hero'suna düştü`);
+  console.log(`[build-blog] ✓ YK #65 kapak sayacı: ${kapakli}/${posts.length} yazıda gerçek kapak (kalan ${posts.length - kapakli} yazı ikon hero'sunda).`);
+}
+
 rehberDenetimi(posts); // fail-fast: sayfa yazılmadan önce dursun
 kontrolDenetimi(posts); // uyarır, durdurmaz — eksik görsel yayını bloklamaz ama sessiz de geçmez
+kapakDenetimi(posts); // uyarır + YK #65 ilerleme sayacını basar
 
 // ── PİLOT GİRİŞ NOKTASI (YK #35): en çok gösterim alan sayfalar ① katmanın kapısı olsun ──
 // Yazı ① katmana bağlıysa, yazının kendi sayfasına da o cihazın hata kodu/belirti listesine
@@ -492,11 +535,13 @@ const tamirGeriSatiri = (p) => {
 
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
+  // Kapağı olan yazı paylaşımda da kendi görselini gösterir; olmayan eski `og.png`de kalır.
+  const kapak = kapakUrl(p.slug, p.images?.coverAlt);
   const ld = {
     "@context": "https://schema.org", "@type": "Article",
     headline: p.title, description: p.description,
     datePublished: p.date, dateModified: p.date,
-    inLanguage: "tr-TR", image: `${SITE}/og.png`,
+    inLanguage: "tr-TR", image: kapak ? `${SITE}${kapak}` : `${SITE}/og.png`,
     author: { "@type": "Organization", name: "Benservis", url: `${SITE}/` },
     publisher: { "@type": "Organization", name: "Benservis", logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } },
     mainEntityOfPage: canonical,
@@ -533,10 +578,10 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${CTA}${PWA_NOT}</article>`;
+  const body = `<article>${yaziHero(p)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${CTA}${PWA_NOT}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body }));
+  fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -877,10 +922,12 @@ const TAMIR_CTA = (kaynak) =>
   `<a class="cta" href="${cagirHref(kaynak)}" data-cagir="cta"><h3>🔧 Kendin çözemiyorsan</h3><p>Cihazını ve belirtini yaz; olası arızayı saniyede öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
 
 // Kapak görseli (GRF, public/tamir-gorsel/<slug>/kapak.png) varsa ikon yerine o basılır.
+// Yol/uzantı çözümü `kapakUrl` ile ortak — kart ve yazı hero'su aynı sözleşmeyi okur.
 const rehberGorsel = (r) => {
   const alt = r.post.images?.coverAlt;
-  if (alt && fs.existsSync(path.join(ROOT, "public", "tamir-gorsel", r.slug, "kapak.png"))) {
-    return `<div class="card-ic kapak"><img src="/tamir-gorsel/${r.slug}/kapak.png" width="96" height="64" loading="lazy" decoding="async" alt="${esc(alt)}"></div>`;
+  const url = kapakUrl(r.slug, alt);
+  if (url) {
+    return `<div class="card-ic kapak"><img src="${url}" width="96" height="64" loading="lazy" decoding="async" alt="${esc(alt)}"></div>`;
   }
   return `<div class="card-ic">${iconSvg(r.post.category, "")}</div>`;
 };
