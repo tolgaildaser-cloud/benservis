@@ -185,6 +185,10 @@ a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,5
 .card-ic.kapak img{width:100%;height:100%;object-fit:contain;display:block}
 /* Rehber içindeki adım görselleri (GRF, 1200x800) — metin akışını kesmeden, tam genişlik. */
 .adim-gorsel{margin:14px 0 18px}
+/* Kontrol listesi görseli (14 Ağu kuralı) — <li> İÇİNDE durur, madde metninin altında.
+   Adım görselinden dar üst boşluk: görsel ait olduğu maddeye yapışık okunsun. */
+.kontrol-gorsel{margin:9px 0 4px}
+.kontrol-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
 .adim-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
 .katkart h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
 .kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
@@ -363,6 +367,85 @@ function adimGorselleriEkle(p) {
   });
 }
 
+// ── KONTROL GÖRSELLERİ (public/tamir-gorsel/<slug>/kontrol-0N.png) ────────────────────────
+// Tolga kuralı, 14 Ağu 2026: "tamir merkezindeki tüm yazılarda mutlaka konuyu daha rahat
+// çözmeye yarayan görsel olmalı". Yukarıdaki adım görseli sistemi YALNIZ rehberlere (`## Adım
+// adım` bölümü olan 3 yazı) uyuyordu; Tamir Merkezi'nin asıl kütlesi olan **26 arıza yazısı**
+// farklı yapıda: "Servisi aramadan önce kendin kontrol et" başlığı altında NUMARALI MARKDOWN
+// LİSTESİ (`1. **Musluğu tam aç.** …`) → marked bunu <ol><li><strong>…</strong>…</li></ol>
+// olarak basıyor. Adım kalıbı (<p><strong>N. …) burada HİÇ eşleşmiyordu.
+//
+// AYRI ALAN VE AYRI DOSYA ADI — bilerek:
+//   `images.steps` + `adim-0N.png` → HowTo adımları (rehberDenetimi bunları `steps:` ile
+//   birebir hizalıyor; oraya kontrol görseli karıştırmak o denetimi yanlış tetiklerdi).
+//   `images.checks` + `kontrol-0N.png` → kontrol listesi maddeleri. İki sistem çakışmaz,
+//   bir yazıda ikisi birden bulunabilir.
+//
+// ⚠️ BÖLÜM SINIRI (3 Ağu'daki adım görseli dersinin aynısı): numaralı liste yazının başka
+// bölümlerinde de var (nedenler, SSS). Enjeksiyon tüm gövdeye uygulanırsa görsel YANLIŞ
+// listeye basılır — sessiz ve yanlış eşleşme. Bu yüzden yalnız "kontrol/kendin/dene"
+// başlığından SONRAKİ İLK <ol> hedeflenir, bir sonraki <h2>'de durulur.
+const kontrolGorselUrl = (p, n) => {
+  const alt = p.images?.checks?.[n - 1];
+  if (!alt) return null; // alt'sız görsel basılmaz (ekran okuyucuda gürültü)
+  const rel = `tamir-gorsel/${p.slug}/kontrol-${String(n).padStart(2, "0")}.png`;
+  return fs.existsSync(path.join(ROOT, "public", rel)) ? `/${rel}` : null;
+};
+// "Servisi aramadan önce kendin kontrol et" / "kendin dene" gibi başlıkları yakalar.
+function kontrolBolumu(html) {
+  const norm = (s) => s.toLocaleLowerCase("tr").replace(/<[^>]*>/g, "").replace(/\s+/g, " ");
+  const basliklar = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)];
+  for (let i = 0; i < basliklar.length; i++) {
+    const m = basliklar[i];
+    const t = norm(m[1]);
+    if (!/(kontrol et|kendin|denemen|önce dene)/.test(t)) continue;
+    const bas = m.index + m[0].length;
+    const son = basliklar[i + 1]?.index ?? html.length; // sonraki <h2>'de dur
+    return { bas, son };
+  }
+  return null;
+}
+function kontrolGorselleriEkle(p) {
+  if (!p.images?.checks?.length) return p.html;
+  const b = kontrolBolumu(p.html);
+  if (!b) return p.html; // başlık yoksa sessiz yanlış basmaktansa hiç basma (denetim aşağıda uyarır)
+  const once = p.html.slice(0, b.bas), bolum = p.html.slice(b.bas, b.son), sonra = p.html.slice(b.son);
+  // Bölümdeki İLK <ol> — nedenler/SSS listelerine bulaşmasın.
+  const ol = bolum.match(/<ol[^>]*>[\s\S]*?<\/ol>/);
+  if (!ol) return p.html;
+  let n = 0;
+  const yeniOl = ol[0].replace(/<li>([\s\S]*?)<\/li>/g, (m, ic) => {
+    n += 1;
+    const url = kontrolGorselUrl(p, n);
+    if (!url) return m;
+    const alt = p.images.checks[n - 1];
+    // <figure> <li> İÇİNE girer — listeyi bölmek geçersiz HTML üretirdi.
+    return `<li>${ic}<figure class="kontrol-gorsel"><img src="${url}" width="1200" height="800" loading="lazy" decoding="async" alt="${esc(alt)}"></figure></li>`;
+  });
+  return once + bolum.replace(ol[0], yeniOl) + sonra;
+}
+// Sessiz bozulmayı engelle: alt metin yazılmış ama bağlanacak yer/dosya yoksa build UYARIR
+// (durdurmaz — görsel eksikliği yayını bloklamamalı, ama fark edilmeden de geçmemeli).
+function kontrolDenetimi(posts) {
+  const uyari = [];
+  for (const p of posts) {
+    const k = p.images?.checks?.length;
+    if (!k) continue;
+    const b = kontrolBolumu(p.html);
+    if (!b) { uyari.push(`${p.slug}: images.checks var ama "kendin kontrol et" <h2> yok — görsel BASILMADI`); continue; }
+    const ol = p.html.slice(b.bas, b.son).match(/<ol[^>]*>[\s\S]*?<\/ol>/);
+    if (!ol) { uyari.push(`${p.slug}: kontrol bölümünde numaralı liste yok — görsel BASILMADI`); continue; }
+    const madde = (ol[0].match(/<li>/g) || []).length;
+    if (k > madde) uyari.push(`${p.slug}: images.checks ${k} alt metin ama listede ${madde} madde — fazlası basılmaz`);
+    const eksik = Array.from({ length: Math.min(k, madde) }, (_, i) => i + 1).filter((n) => !kontrolGorselUrl(p, n));
+    if (eksik.length) uyari.push(`${p.slug}: kontrol-${eksik.map((n) => String(n).padStart(2, "0")).join(", kontrol-")}.png dosyası yok`);
+  }
+  if (uyari.length) {
+    console.warn("[build-blog] ⚠️  kontrol görseli uyarıları:");
+    for (const u of uyari) console.warn("  · " + u);
+  }
+}
+
 // ── REHBER DENETİMİ (build'i durdurur) ────────────────────────────────────────────────────
 // HowTo JSON-LD sayfada GÖRÜNEN adımlarla birebir aynı olmalı. `steps:` ile gövdedeki numaralı
 // adım paragrafları ayrışırsa yapılandırılmış veri sayfayı yanlış anlatır (Google için de ihlal),
@@ -391,6 +474,7 @@ function rehberDenetimi(posts) {
   console.log(`[build-blog] ✓ rehber denetimi: ${rehberSayisi} rehberde steps ↔ gövde ↔ görsel hizası birebir.`);
 }
 rehberDenetimi(posts); // fail-fast: sayfa yazılmadan önce dursun
+kontrolDenetimi(posts); // uyarır, durdurmaz — eksik görsel yayını bloklamaz ama sessiz de geçmez
 
 // ── PİLOT GİRİŞ NOKTASI (YK #35): en çok gösterim alan sayfalar ① katmanın kapısı olsun ──
 // Yazı ① katmana bağlıysa, yazının kendi sayfasına da o cihazın hata kodu/belirti listesine
@@ -449,7 +533,7 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${adimGorselleriEkle(p)}${CTA}${PWA_NOT}</article>`;
+  const body = `<article>${heroFor(p.category)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${CTA}${PWA_NOT}</article>`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body }));
