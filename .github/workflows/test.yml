@@ -1,0 +1,29 @@
+# YK #67 sonrası kapı (15 Ağu 2026, Tolga: "B + C uygula").
+#
+# Neden var: `npm test` 9-15 Ağu arası main'de KIRIKTI ve altı gün kimse fark etmedi
+# (tarife paketi kalem adlarını değiştirmişti). Kırık test paketi "normal" hâle geldiği
+# için o pencerede gerçek bir regresyon gelseydi de görünmezdi. Bu iş akışı, testleri
+# her PR'da ve main'e her girişte koşar; kırıkken PR yeşil görünmez.
+#
+# Kapsam bilerek DAR: yalnız `npm test`. Lint/tip/build kapısı eklenmedi — bugün böyle
+# bir kapı yok, birden fazlasını aynı anda açmak yerleşik akışı kilitleyebilirdi.
+name: test
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          # package.json engines: node >=20
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test
