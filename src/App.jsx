@@ -54,9 +54,27 @@ const BELIRTILER = {
   "Bilgisayar / Yazıcı": ["Açılmıyor", "Yazdırmıyor", "Donma / yavaşlama", "Kağıt sıkışması", "Aşırı ısınma / ses", "Bağlantı sorunu"],
 };
 
-// ⛔ `ariza` SERBEST METİN DEĞİL: yalnız o cihazın kendi hızlı-belirti listesindeki bir
-// değerle eşleşirse uygulanır. URL'den textarea'ya (dolayısıyla AI promptuna) rastgele
-// metin taşınmaz — `kaynak=`/UTM tarafındaki "serbest metin alınmaz" kuralıyla aynı çizgi.
+// YK #68 ③ (Tolga, 15 Ağu: "cihaz seçili geliyor ama belirti yazılı gelmiyor") — DEEP-LINK
+// BELİRTİ SÖZLÜĞÜ. #67'de `ariza` yalnız yukarıdaki hızlı-belirti ÇİPLERİNE eşleşebiliyordu;
+// blog yazılarının çoğunun konusu hiçbir çipe oturmadığı için bağlam taşıyan 56 yazının
+// 24'ünde `ariza` hiç üretilmiyor, belirti BOŞ açılıyordu (Tolga'nın açtığı
+// `camasir-makinesi-tahliye-filtresi-temizleme` bunlardan biri).
+// ⛔ ÇÖZÜM SÖZLÜĞÜ GENİŞLETMEK, SERBEST METNE AÇMAK DEĞİL: URL yine yalnız bir slug taşır,
+// görünen metin uygulamanın KENDİ tablosundan gelir → "URL'den textarea'ya (dolayısıyla AI
+// promptuna) rastgele metin taşınmaz" güvencesi #67'deki gibi aynen durur.
+// Bu değerler ÇİP DEĞİLDİR (formdaki hızlı-belirti butonları `BELIRTILER`den gelir, değişmedi);
+// yalnız blogdan gelen deep-link'i çözmeye yarar. Cihaz kapsamı korunur: bir belirti yalnız
+// kendi cihazında geçerlidir, `?cihaz=klima&ariza=kurutmuyor` eşleşmez.
+const EK_BELIRTI = {
+  "Çamaşır Makinesi": ["Hata kodu veriyor", "Kötü kokuyor"],
+  "Bulaşık Makinesi": ["Kurutmuyor", "Kötü kokuyor"],
+  "Buzdolabı": ["Buzlanma yapıyor"],
+};
+const belirtiCoz = (cihaz, slug) =>
+  [...(BELIRTILER[cihaz] || []), ...(EK_BELIRTI[cihaz] || [])].find((b) => slugla(b) === slug) || "";
+
+// ⛔ `ariza` SERBEST METİN DEĞİL: yalnız o cihaza ait, yukarıda TANIMLI bir değerle
+// eşleşirse uygulanır — `kaynak=`/UTM tarafındaki "serbest metin alınmaz" kuralıyla aynı çizgi.
 // Eşleşmeyen `ariza` sessizce düşer, cihaz ön-seçimi yine de uygulanır (kırma).
 // NOT: `BELIRTILER`den SONRA durmalı — modül yüklenirken çalışıyor.
 const ONSECIM = (() => {
@@ -65,7 +83,7 @@ const ONSECIM = (() => {
     const cihaz = CIHAZ_SLUG[(q.get("cihaz") || "").trim().toLowerCase()] || "";
     if (!cihaz) return { cihaz: "", belirti: "" };
     const a = (q.get("ariza") || "").trim().toLowerCase();
-    return { cihaz, belirti: (BELIRTILER[cihaz] || []).find((b) => slugla(b) === a) || "" };
+    return { cihaz, belirti: belirtiCoz(cihaz, a) };
   } catch { return { cihaz: "", belirti: "" }; }
 })();
 

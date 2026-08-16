@@ -136,10 +136,19 @@ blockquote p{margin:0}
 .cta h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 8px;color:#fff;font-size:20px}
 .cta p{margin:0 0 4px;opacity:.96}
 .cta .tag{font-weight:600;opacity:1}
-/* YK #67 ① — ilk ekran bağlam satırı: yazının akışını kesmeyen, tek satırlık köprü. */
-.kopru{margin:18px 0 24px;padding:13px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}
-.kopru a{color:${T.INK};text-decoration:none}
-.kopru a:hover strong{text-decoration:underline}
+/* YK #67 ① — ilk ekran bağlam satırı: yazının akışını kesmeyen, tek satırlık köprü.
+   YK #68 ② (Tolga, 15 Ağu): tüm satır tek <a> idi ve gövde metniyle aynı renkteydi →
+   "linki buton şeklinde olmalı, bu şekilde belli değil". Artık BAĞLAM METİN, EYLEM BUTON:
+   cümle düz metin kalır (bağlam #67'nin asıl kazanımıydı, silinmez), tıklanacak yer
+   sayfa sonundaki mavi .cta kartıyla AYNI dilde dolgulu bir butona çıkar (aynı mavi,
+   aynı hover, aynı 1px kalkma). Ölçüm işareti data-kopru=ilk-ekran butonda kalır.
+   (Bu blok bir template literal içinde — yorumda backtick KULLANMA, literali kapatır.) */
+.kopru{margin:18px 0 24px;padding:14px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}
+.kopru p{margin:0 0 11px;color:${T.NAVY}}
+.kopru-btn{display:inline-block;padding:12px 20px;border-radius:12px;background:${T.BLUE};
+  color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;line-height:1.25;
+  box-shadow:0 1px 3px rgba(37,99,235,.28);transition:background .15s,transform .15s}
+.kopru-btn:hover{background:#1D4ED8;transform:translateY(-1px)}
 /* YK #67 ③ — mobil sticky bant. position:fixed → akış dışında, DÜZEN KAYMAZ (CLS 0);
    metin-only → LCP adayı değil. Yalnız dar ekranda; masaüstünde son kart yeterli. */
 .sticky-kopru,.sticky-bosluk{display:none}
@@ -277,13 +286,23 @@ const KOPRU_CIHAZ = {
 // ⛔ Bulanık eşleştirme YAPILMADI, tablo elle kürasyon: "kombi-yanmiyor" listedeki hiçbir
 // belirtiye tam oturmuyor (en yakını "petekler ısınmıyor" ama aynı şey değil) → yazılmadı,
 // o yazı cihaz ön-seçimiyle yetinir. Yanlış ön-doldurma, ön-doldurmamaktan kötüdür.
-// NOT: Çamaşır makinesi listesinde "hata kodu" belirtisi YOK → hata kodu yazıları
-// (arcelik/bosch/lg/samsung) yalnız cihaz taşır; bulaşık ve kombide o belirti VAR.
+// YK #68 ③ (15 Ağu) — TABLO EKSİKTİ: bağlam taşıyan 56 yazının 24'ünde `ariza` hiç
+// üretilmiyordu, o yazılarda belirti boş açılıyordu. Eksiğin sebebi kürasyon değil,
+// SÖZLÜK DARLIĞIydı: konuların çoğu (kokuyor · kurutmuyor · buzlanma · hata kodu)
+// hızlı-belirti çiplerinde yok. App.jsx tarafında `EK_BELIRTI` ile sözlük genişletildi
+// (çip eklenmedi, yalnız deep-link çözümü), aşağıdaki eşleşmeler onunla açıldı.
+// KÜRASYON İLKESİ DEĞİŞMEDİ — yanlış ön-doldurma, ön-doldurmamaktan kötüdür:
+// tek bir belirtisi olmayan yazılar (… -tamiri-kac-para · buzdolabi-kac-derece-olmali ·
+// klima-gazi-dolumu-fiyat · kombi-yazin-kapatilir-mi · camasir-kac-derecede-yikanir …)
+// bilerek DIŞARIDA; "kombi-yanmiyor" ve "klima-filtresi-temizleme" de tek bir belirtiye
+// oturmadığı için (filtre yazısı hem "soğutmuyor" hem "koku" olabilir) yalnız cihaz taşır.
 const KOPRU_ARIZA = {
   "bulasik-makinesi-su-atmiyor": "su-tahliye-etmiyor",
   "bulasik-makinesi-su-almiyor": "su-almiyor",
   "bulasik-makinesi-temiz-yikamiyor": "temiz-yikamiyor",
   "bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "bulasik-makinesi-kurutmuyor": "kurutmuyor",
+  "bulasik-makinesi-kokuyor": "kotu-kokuyor",
   "bosch-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "bosch-bulasik-makinesi-e15-hatasi": "hata-kodu-veriyor",
   "bosch-bulasik-makinesi-e22-hatasi": "hata-kodu-veriyor",
@@ -291,7 +310,16 @@ const KOPRU_ARIZA = {
   "camasir-makinesi-su-almiyor": "su-almiyor",
   "camasir-makinesi-su-atmiyor": "su-bosaltmiyor",
   "camasir-makinesi-ses-titresim": "asiri-titresim-ses",
+  "camasir-makinesi-tahliye-filtresi-temizleme": "su-bosaltmiyor", // Tolga'nın açtığı yazı
+  "camasir-makinesi-kokuyor": "kotu-kokuyor",
+  "camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "arcelik-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "bosch-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "lg-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "samsung-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "camasir-makinesi-isik-yanip-sonuyor": "hata-kodu-veriyor", // yazının kendi konusu: yanıp sönme = hata kodu
   "buzdolabi-sogutmuyor-nedenleri": "sogutmuyor",
+  "buzdolabi-buzlanma-yapiyor": "buzlanma-yapiyor",
   "no-frost-buzdolabi-alt-bolme-sogutmuyor": "sogutmuyor",
   "buzdolabi-ses-yapiyor": "cok-ses-yapiyor",
   "buzdolabi-altinda-su-birikiyor": "su-akitiyor",
@@ -331,10 +359,13 @@ const kopruCihazAdi = (p) => (KOPRU_CIHAZ[p.category] ? String(p.category).toLoc
 // ① İLK EKRAN — "cevabı bul, çık" kullanıcısını sona inmeden yakalayan tek satır.
 // Kurul notu: yazının ilk ekranına bağlamlı bir satır konmalı. Bağlam yoksa satır HİÇ
 // basılmaz (jenerik satır gürültüdür; sayfa sonundaki kart zaten duruyor).
+// YK #68 ② — cümle metin, eylem BUTON (gerekçe CSS'te). Butonun kendisi cihazı söyler ki
+// bağlamdan koparılmış "Tıkla" tipi bir etiket olmasın.
 const KOPRU_SATIRI = (p) => {
   const ad = kopruCihazAdi(p);
   if (!ad) return "";
-  return `<p class="kopru"><a href="${kopruHref(p)}" data-kopru="ilk-ekran">🔧 <strong>${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızan için tahmini maliyeti ücretsiz öğren</strong> — cihazın ve belirtin hazır seçili gelir. →</a></p>`;
+  const Ad = esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1));
+  return `<div class="kopru"><p>🔧 <strong>${Ad} arızan için tahmini maliyeti ücretsiz öğren</strong> — cihazın ve belirtin hazır seçili gelir.</p><a class="kopru-btn" href="${kopruHref(p)}" data-kopru="ilk-ekran">Tahmini maliyeti ücretsiz öğren →</a></div>`;
 };
 
 // ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.
