@@ -364,8 +364,11 @@ const kopruCihazAdi = (p) => (KOPRU_CIHAZ[p.category] ? String(p.category).toLoc
 const KOPRU_SATIRI = (p) => {
   const ad = kopruCihazAdi(p);
   if (!ad) return "";
-  const Ad = esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1));
-  return `<div class="kopru"><p>🔧 <strong>${Ad} arızan için tahmini maliyeti ücretsiz öğren</strong> — cihazın ve belirtin hazır seçili gelir.</p><a class="kopru-btn" href="${kopruHref(p)}" data-kopru="ilk-ekran">Tahmini maliyeti ücretsiz öğren →</a></div>`;
+  // Tolga, 15 Ağu: "tahmini maliyeti öğren butonu etrafında dikkat dağıtıcı yazı
+  // olmasın, tamamını sil". Açıklama paragrafı kaldırıldı; BUTON AYNEN KORUNDU
+  // (metni de değişmedi) — istenen butonun sadeleşmesi değil, etrafının boşalması.
+  // `kopruCihazAdi(p)` çağrısı duruyor: dönüşü boşsa köprü hiç basılmaz.
+  return `<div class="kopru"><a class="kopru-btn" href="${kopruHref(p)}" data-kopru="ilk-ekran">Tahmini maliyeti ücretsiz öğren →</a></div>`;
 };
 
 // ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.
@@ -734,7 +737,7 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${yaziHero(p)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${tamirGeriSatiri(p)}${guideMeta(p.guide)}${KOPRU_SATIRI(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}</article>${STICKY(p)}`;
+  const body = `<article>${yaziHero(p)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${KOPRU_SATIRI(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}${tamirGeriSatiri(p)}</article>${STICKY(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
