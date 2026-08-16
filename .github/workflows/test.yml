@@ -25,15 +25,10 @@ jobs:
           # package.json engines: node >=20
           node-version: 20
           cache: npm
-      # ⚠️ `npm ci` DEĞİL, bilerek. `npm ci` bu repoda bugün ÇÖKÜYOR (ilk koşuda yakalandı):
-      #   npm error Missing: @esbuild/linux-x64@0.28.2 from lock file  (+22 platform)
-      # Sebep bu iş akışı değil, ÖNCEDEN VAR OLAN bir bağımlılık tutarsızlığı:
-      #   package.json → vite ^5.4.11   ·   vitest@4.1.10 → vite "^6 || ^7 || ^8"
-      # Karşılanmadığı için npm, vitest'e NESTED vite@8.1.5 kuruyor; onun esbuild alt ağacı
-      # (0.28.2 + 23 platform paketi) lockfile'a yazılmıyor — lock sıfırdan üretilse bile.
-      # `npm ci` lock'u harfiyen doğruladığı için reddediyor; `npm install` ağacı çözüp kuruyor.
-      # Kalıcı çözüm ya vite'ı 7/8'e çıkarmak (canlı sitenin derleyicisinde major yükseltme)
-      # ya da vitest'i vite 5 ile uyumlu hatta çekmek — İKİSİ DE AYRI KARAR, ayrı PR.
-      # Buraya sıkıştırılmadı: bu iş akışının amacı test regresyonunu yakalamak.
-      - run: npm install --no-audit --no-fund
+      # `npm ci` = lockfile'a birebir sadık kurulum → yerel ile CI aynı ağacı kurar.
+      # Not: kapı ilk kurulduğunda burada geçici olarak `npm install` vardı, çünkü `npm ci`
+      # çöküyordu (vitest@4 → vite ^6|^7|^8 isterken proje vite ^5'teydi; npm vitest'e nested
+      # vite@8 kuruyor, onun esbuild alt ağacı lock'a yazılmıyordu). Kök sebep vitest 3.2.7'ye
+      # çekilerek giderildi (tek vite kaldı) → `npm ci` geri alındı, tekrarlanabilirlik kazanıldı.
+      - run: npm ci --no-audit --no-fund
       - run: npm test
