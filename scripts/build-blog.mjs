@@ -168,7 +168,10 @@ blockquote p{margin:0}
 .kopru{margin:18px 0 24px;padding:14px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}
 .kopru p{margin:0 0 11px;color:${T.NAVY}}
 .kopru-cift{display:flex;gap:10px;flex-wrap:wrap}
-.kopru-cift .kopru-btn{flex:1 1 240px;text-align:center}
+/* Iki kapi BIREBIR ayni yukseklikte olmali: teshis butonunda 2px kenarlik var,
+   servis butonunda yoktu → olculdu, 43px vs 47px (4px fark). Servise de aynı
+   kalinlikta SEFFAF kenarlik verilerek kutu modeli esitlendi. */
+.kopru-cift .kopru-btn{flex:1 1 240px;text-align:center;border:2px solid transparent}
 /* Tolga, 17 Ağu: "servis bul mavi olsun, diğeri beyaz" — ağırlık servise verildi.
    Güç metriği Servis Bul olduğu için baskın buton da o olmalı; teşhis kapısı
    ikincil (beyaz + mavi kenarlık) ama aynı boyutta, yani kapı olmaktan çıkmıyor. */
