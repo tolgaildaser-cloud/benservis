@@ -139,7 +139,10 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);l
 .guide-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 26px;padding:14px 18px;background:#EFF4FF;border:1px solid ${T.HAIR};border-radius:14px}
 .guide-meta .gm{display:flex;flex-direction:column;font-size:14.5px;color:${T.NAVY};font-weight:600}
 .guide-meta .gm b{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:${T.BLUE};margin-bottom:3px}
-article h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:36px 0 12px;letter-spacing:-.01em}
+/* Bölüm ritmi: h2 öncesi boşluk 36→48, üstüne ince ayraç. Uzun sayfa tek blok
+   yerine okunabilir bölümlere ayrılıyor (metin kısaltılmadan). */
+article h2{font-family:'Fraunces',serif;font-weight:600;font-size:25px;margin:48px 0 14px;padding-top:8px;letter-spacing:-.01em;border-top:1px solid ${T.HAIR}}
+article h2:first-of-type{border-top:none;padding-top:0;margin-top:34px}
 article p{margin:0 0 16px}
 article ul,article ol{margin:0 0 16px;padding-left:22px}
 article li{margin:6px 0}
@@ -166,7 +169,10 @@ blockquote p{margin:0}
 .kopru p{margin:0 0 11px;color:${T.NAVY}}
 .kopru-cift{display:flex;gap:10px;flex-wrap:wrap}
 .kopru-cift .kopru-btn{flex:1 1 240px;text-align:center}
-.kopru-servis{background:#fff !important;color:${T.BLUE} !important;border:2px solid ${T.BLUE}}
+/* Tolga, 17 Ağu: "servis bul mavi olsun, diğeri beyaz" — ağırlık servise verildi.
+   Güç metriği Servis Bul olduğu için baskın buton da o olmalı; teşhis kapısı
+   ikincil (beyaz + mavi kenarlık) ama aynı boyutta, yani kapı olmaktan çıkmıyor. */
+.kopru-teshis{background:#fff !important;color:${T.BLUE} !important;border:2px solid ${T.BLUE}}
 .kopru-btn{display:inline-block;padding:12px 20px;border-radius:12px;background:${T.BLUE};
   color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;line-height:1.25;
   box-shadow:0 1px 3px rgba(37,99,235,.28);transition:background .15s,transform .15s}
@@ -238,10 +244,17 @@ a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,5
 /* contain (cover değil): kapaklar çizim — kırpmak çizimin yarısını götürür. */
 .card-ic.kapak img{width:100%;height:100%;object-fit:contain;display:block}
 /* Rehber içindeki adım görselleri (GRF, 1200x800) — metin akışını kesmeden, tam genişlik. */
-.adim-gorsel{margin:14px 0 18px}
+/* ——— YK #69 / Tolga 16 Ağu: "albenisi yüksek, basit ve bol görselli — açıklamalı
+   görselli" → ADIM GÖRSELİ SUNUMU. Görsel artık metnin arasına sıkışmış bir ek değil,
+   adımın kendisi: sol kenarda mavi bağ çizgisi onu ait olduğu maddeye bağlar (IKEA
+   kılavuzu hissi), etrafındaki nefes iki katına çıkar.
+   ⛔ Metin katmanına dokunulmadı — bu yalnız sunum. */
+.adim-gorsel{margin:18px 0 30px;padding-left:14px;border-left:3px solid #DBEAFE}
 /* Kontrol listesi görseli (14 Ağu kuralı) — <li> İÇİNDE durur, madde metninin altında.
    Adım görselinden dar üst boşluk: görsel ait olduğu maddeye yapışık okunsun. */
-.kontrol-gorsel{margin:9px 0 4px}
+/* Kontrol görseli maddenin İÇİNDE (<li>) duruyor; nefesi maddeye yapışık kalsın
+   ama görsel ezilmesin diye alt boşluk açıldı. */
+.kontrol-gorsel{margin:11px 0 16px;padding-left:12px;border-left:3px solid #DBEAFE}
 .kontrol-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
 .adim-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
 .katkart h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
