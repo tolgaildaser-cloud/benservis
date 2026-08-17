@@ -14,6 +14,12 @@ faq:
   - q: "Parlatıcı dolu, program doğru ama hâlâ ıslak çıkıyorsa?"
     a: "Bu durumda genelde su yeterince ısınmıyordur — ısıtıcı rezistans ya da fanlı kurutma modelinde fan/termostat arızalı olabilir. Bu bir servis işidir; kesin tahmini cihazına göre Benservis'ten al."
 images:
+  checks:
+    - "Boş ve dolu parlatıcı haznesinin göstergeleriyle karşılaştırıldığı çizim"
+    - "Eco veya hızlı program yerine yoğun ve ekstra kurutma programının seçilişini gösteren çizim"
+    - "Program bitiminde bulaşık makinesi kapağının birkaç santim aralanıp buharın çıkışını gösteren çizim"
+    - "Bardakların ters, plastik kapların üst sepete yerleştirildiği doğru diziliş çizimi"
+    - "Tuz haznesinin huniyle dolduruluşunu gösteren çizim"
   coverAlt: "Bulaşık makinesi ve yanında üstünde su damlaları kalmış tabak çizimi"
 ---
 

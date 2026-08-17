@@ -30,6 +30,14 @@ faq:
   - q: "Siemens/Profilo bulaşık makinesindeki E22 de aynı mı?"
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E22 bu markaların hepsinde 'iç filtre tıkalı' anlamına gelir ve çözümü aynıdır."
 images:
+  steps:
+    - "Makineyi kapat ve programı iptal et — adımı gösteren çizim"
+    - "Alt sepeti çıkar; makinenin tabanındaki yuvarlak filtre grubunu bul — adımı gösteren çizim"
+    - "Filtreyi saatin tersine çevirerek yerinden çıkar (genelde birkaç parçadır) — adımı gösteren çizim"
+    - "Filtreleri sıcak suyun altında, sünger/eski diş fırçasıyla yağ ve yemek artıklarından temizle — adımı gösteren çizim"
+    - "Filtre yuvasındaki (haznedeki) kalıntıları da al; delikleri açık olsun — adımı gösteren çizim"
+    - "Filtreyi yerine tam oturacak şekilde takıp saat yönünde kilitle — adımı gösteren çizim"
+    - "Kısa bir programla dene. Hata gelmiyorsa çözülmüştür — adımı gösteren çizim"
   coverAlt: "Bulaşık makinesinin açık kapağı, çıkarılmış alt sepeti ve sökülen taban filtresi çizimi"
 ---
 

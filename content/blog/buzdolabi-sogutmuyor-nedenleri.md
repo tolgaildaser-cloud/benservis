@@ -14,6 +14,13 @@ faq:
   - q: "Yeni taşınan buzdolabı neden soğutmuyor?"
     a: "Buzdolabı yatık taşındıysa kompresör yağı borulara kaçmış olabilir. Fişe takmadan önce birkaç saat (ideali 4-6 saat) dik beklet, sonra çalıştır."
 images:
+  checks:
+    - "Dolap bölmesi için yaklaşık dört derece, buzluk için yaklaşık eksi on sekiz derece hedefini gösteren çizim"
+    - "Kapıya konan kâğıt şeridinin çekilerek conta sızdırma testinin yapılışını gösteren çizim"
+    - "Arkadaki tozlu kondenserin süpürülüşünü ve ısının atılabilmesini gösteren çizim"
+    - "Aşırı dolu raflarla hava dolaşımının kesildiği ve seyrek istifle havanın dolaştığı karşılaştırma çizimi"
+    - "Buzluğun soğuk, dolabın soğumadığı durumda fan ve defrost şüphesini gösteren çizim"
+    - "Yatık taşınan buzdolabının çalıştırılmadan önce dört ila altı saat dik bekletilişini gösteren çizim"
   coverAlt: "Buzdolabı çizimi, yanında kar tanesi ve yükselen ısı dalgaları"
 ---
 

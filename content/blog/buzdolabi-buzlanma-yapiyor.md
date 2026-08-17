@@ -14,6 +14,12 @@ faq:
   - q: "Buzlanan buzdolabı tamir edilir mi?"
     a: "Conta değişimi, tahliye kanalı temizliği ve defrost parçaları (rezistans/sensör) çoğu zaman uygun maliyetlidir, tamir mantıklıdır. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Ezik kıvrımlı sızdıran conta ile düzgün kıvrımlı contanın karşılaştırıldığı, ılık su ve süngerle temizlik çizimi"
+    - "Kapının uzun süre açık kalmasının nem getirdiğini ve sıcak yiyeceğin kapalı kapta konulmasını gösteren çizim"
+    - "Arka alt kısımdaki buz çözme tahliye deliğinin yumuşak telle nazikçe açılışını gösteren çizim"
+    - "Termostat kademesinin bir adım yukarı alınışını ve dolap için yaklaşık dört derece hedefini gösteren çizim"
+    - "Kapak çevresindeki ince buz ile arka duvardaki kalın buzun ayrımını gösteren karşılaştırma çizimi"
   coverAlt: "Buzdolabının açık bölmesi ve çevresinde biriken kar taneleri çizimi"
 ---
 

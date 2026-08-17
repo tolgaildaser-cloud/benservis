@@ -14,6 +14,11 @@ faq:
   - q: "Fan veya defrost tamiri kaç para?"
     a: "Fan motoru ile defrost onarımı (rezistans/sensör/saat) farklı işlerdir; maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Alt bölme sıcaklık ayarının yaklaşık dört dereceye getirilişini gösteren çizim"
+    - "Kapı açıldığında iç fanın sesinin dinlenişini gösteren çizim"
+    - "Dolabın boşaltılıp fişinin çekilerek kapağı açık halde yirmi dört saat bekletildiği defrost testi çizimi"
+    - "Defrost testinden sonra birkaç gün izlenmesi ve arıza tekrarlarsa servis gerektiğini gösteren çizim"
   coverAlt: "Alt bölmesi açık buzdolabı; üstte kar tanesi, alt bölmede ısı dalgaları çizimi"
 ---
 

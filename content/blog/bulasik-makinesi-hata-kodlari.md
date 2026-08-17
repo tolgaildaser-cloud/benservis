@@ -14,6 +14,11 @@ faq:
   - q: "Kodun anlamından emin değilim?"
     a: "Kodlar model/seriye göre değişebilir. Markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
 images:
+  checks:
+    - "Taban filtresinin çevrilip çıkarılıp yıkanışını ve filtre hata kodunu gösteren çizim"
+    - "Tahliye hortumunun bükülmemiş, düz olması gerektiğini ve tahliye hata kodunu gösteren çizim"
+    - "Makinenin hafif yana yatırılıp taban suyunun boşaltılışını ve taban suyu hata kodunu gösteren çizim"
+    - "Başlat tuşunun basılı tutulması ya da fişin bir dakika çekilmesiyle kodun sıfırlanışını gösteren çizim"
   coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 

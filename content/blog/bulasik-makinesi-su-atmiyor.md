@@ -14,6 +14,13 @@ faq:
   - q: "Tamiri kaç para?"
     a: "Filtre ya da hortum kaynaklıysa çoğu zaman ücretsiz çözülür. Tahliye pompası gerekiyorsa maliyet modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Makinenin tabanında kalan suyun sığ kap ve süngerle alınışını gösteren çizim"
+    - "Taban filtresinin saatin tersine çevrilip çıkarılışını ve temizlenişini gösteren çizim"
+    - "Tahliye pompası kapağının açılıp içindeki yabancı cismin eldivenle alınışını gösteren çizim"
+    - "Bükülmüş tahliye hortumu ile düz uzanan hortumun karşılaştırıldığı çizim"
+    - "Evye sifonu ve makineden gelen tahliye hortumu ile çıkarılması gereken sifon tapasını gösteren çizim"
+    - "Fişin bir dakika çekilip tahliye programının tekrar denenişini gösteren çizim"
   coverAlt: "Bulaşık makinesinin açık kapağı ve tabanında duran su çizimi"
 ---
 

@@ -29,6 +29,13 @@ faq:
   - q: "Siemens/Profilo bulaşık makinesindeki E15 de aynı mı?"
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E15 bu markaların hepsinde 'taban tavasında su / taşma güvenliği' anlamına gelir ve çözümü aynıdır."
 images:
+  steps:
+    - "Makineyi kapat, fişini çek ve su musluğunu kapat — adımı gösteren çizim"
+    - "Makinenin önüne ve altına havlu ser — adımı gösteren çizim"
+    - "Makineyi bir kişinin yardımıyla öne/yana doğru yaklaşık 30-45° eğ; taban tavasındaki su dışarı boşalacak — adımı gösteren çizim"
+    - "Su gelmesi durana kadar eğik tut, sonra yavaşça yerine koy — adımı gösteren çizim"
+    - "Tabanın kuruması için makineyi bir süre bekle (mümkünse birkaç saat) — adımı gösteren çizim"
+    - "Fişi tak, musluğu aç ve kısa bir programla dene. Hata tekrarlıyorsa sızıntı var demektir — servis gerekir — adımı gösteren çizim"
   coverAlt: "Eğik tutulan bulaşık makinesinden taban suyunun boşaldığını gösteren çizim"
 ---
 
