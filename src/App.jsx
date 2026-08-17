@@ -77,19 +77,6 @@ const belirtiCoz = (cihaz, slug) =>
 // eşleşirse uygulanır — `kaynak=`/UTM tarafındaki "serbest metin alınmaz" kuralıyla aynı çizgi.
 // Eşleşmeyen `ariza` sessizce düşer, cihaz ön-seçimi yine de uygulanır (kırma).
 // NOT: `BELIRTILER`den SONRA durmalı — modül yüklenirken çalışıyor.
-// YK #69 koşu 3 — HERO VAADİ: İKİ ALTERNATİF, SEÇİM TOLGA'DA (backlog: "hero vaat
-// metni için 2 alternatif sun, Tolga PR'da seçer").
-//   A = sonuç odaklı — "neden bozuldu, kaça mal olur" (fiyat şeffaflığını öne alır)
-//   B = karar odaklı — "belki tamirciye hiç gerek yok" (araştırma deseni 5'i sahiplenir)
-// PR'da ikisinin de ekran görüntüsü var. Seçim yapılınca bu sabit sabitlenir;
-// `?vaat=B` ile geçici önizleme de yapılabilir (yalnız değerlendirme kolaylığı için).
-const VAAT_SECENEK = (() => {
-  try {
-    const v = new URLSearchParams(window.location.search).get("vaat");
-    return v === "B" ? "B" : "A";
-  } catch { return "A"; }
-})();
-
 const ONSECIM = (() => {
   try {
     const q = new URLSearchParams(window.location.search);
@@ -619,7 +606,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           forma kaydırır. Teşhis akışının kendisine tek satır dokunulmadı. */}
       {adim === "form" && (
         <AnaSayfaVitrin
-          vaatSecenek={VAAT_SECENEK}
           onCihazSec={(c) => {
             setCihaz(c);
             if (marka && marka !== "Diğer" && !markalarForCihaz(c).includes(marka)) setMarka("");

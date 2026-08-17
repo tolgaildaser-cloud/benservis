@@ -90,7 +90,7 @@ const ADIMLAR = [
   { n: "3", b: "Puanlı servise kendin ulaş", a: "Yanındaki Google puanlı servisleri gör, doğrudan ara. Araya kimse girmez." },
 ];
 
-export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, vaatSecenek = "A" }) {
+export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit }) {
   const [dert, setDert] = useState("");
   // Sticky bandı hero ekrandan çıkınca göster: hero'nun kendi kutusu görünürken
   // ikinci bir CTA gürültü olur (araştırma deseni 7 "tek net çağrı" ilkesi).
@@ -113,12 +113,13 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, vaat
     return () => { window.removeEventListener("scroll", bak); window.removeEventListener("resize", bak); };
   }, []);
 
-  // İki hero vaadi — Tolga PR'da seçecek (backlog: "2 alternatif sun").
-  // A: sonuç odaklı, fiyat şeffaflığını öne alır. B: karar odaklı, "gerek var mı?" sorusunu sahiplenir.
+  // HERO VAADİ — Tolga seçti (17 Ağu, PR #14: "a"). İki alternatif sunulmuştu;
+  // B ("Belki de tamirciye hiç gerek yok.") ve `?vaat=` önizleme parametresi karar
+  // verildiği için kaldırıldı — seçilmeyen metni kodda tutmak ölü dal bırakırdı.
   const VAAT = {
-    A: { h1: "Cihazın neden bozuldu, tamiri kaça mal olur?", alt: "Belirtiyi yaz; olası arızayı ve tahmini tutarı ücretsiz gör. Sonra yanındaki puanlı servisi kendin ara." },
-    B: { h1: "Belki de tamirciye hiç gerek yok.", alt: "Önce ne olduğunu öğren, sonra çağır. Ücretsiz teşhis + tahmini maliyet, üstelik çoğu arıza evde çözülüyor." },
-  }[vaatSecenek] || {};
+    h1: "Cihazın neden bozuldu, tamiri kaça mal olur?",
+    alt: "Belirtiyi yaz; olası arızayı ve tahmini tutarı ücretsiz gör. Sonra yanındaki puanlı servisi kendin ara.",
+  };
 
   const gonder = () => {
     const metin = dert.trim();
