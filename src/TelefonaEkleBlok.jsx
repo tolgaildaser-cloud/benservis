@@ -10,8 +10,8 @@
 //     "kur" demek anlamsız.
 
 import React, { useEffect, useState } from "react";
+import { NAVY as INK, MUTED, FAINT, HAIR } from "./theme.js";
 
-const INK = "#1E293B", MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 
 const standaloneMi = () => {
   try {

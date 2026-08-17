@@ -18,8 +18,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { CIHAZLAR } from "./constants.js";
 import { SEED } from "./tarife-seed.js";
 import BenservisLogo from "./BenservisLogo.jsx";
+import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT } from "./theme.js";
 
-const BLUE = "#2563EB", NAVY = "#1E293B", BG = "#F8FAFC", HAIR = "#E2E8F0", MUTED = "#475569", FAINT = "#64748B";
+// ⚠️ DÜZELTME (YK #69 cila ①): bu dosya `FAINT` adını #64748B ile tanımlıyordu, oysa
+// külliyatta FAINT = #94A3B8; #64748B'nin adı SLATE. Aynı ad iki farklı tonu gösteriyordu.
+// Değer DEĞİŞMİYOR — kullanılan ton yine #64748B, yalnız doğru adıyla (SLATE) çağrılıyor.
 
 // Cihaz adı → kategori ikonu dosya adı (public/tamir-gorsel/kategori/<slug>.webp).
 // Dosyalar zaten repoda; ad eşlemesi elle sabitlendi çünkü slug üretimi Türkçe

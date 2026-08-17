@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import BenservisRozet from "./BenservisRozet.jsx";
 import { CIHAZLAR } from "./constants.js";
 import { supabase } from "./lib/supabase.js";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
 
 // TODO (Faz 3+): After cihaz ID is known, move files to cihazlar/{id}/ or tamirler/{id}/
 // Auth gelince storage path'ler RLS ile kısıtlanacak.
@@ -46,7 +47,6 @@ async function uploadFatura(file, cihazId) {
 }
 
 // Tasarım token'ları (App.jsx ile tutarlı)
-const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 // ─── Fotoğraf Yükleme ────────────────────────────────────────────────────────
 function FotoYukle({ urls, onUrls, maxAdet = 3 }) {

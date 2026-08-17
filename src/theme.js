@@ -9,5 +9,10 @@ export const SURFACE = "#FFFFFF";
 export const MUTED   = "#475569";
 export const FAINT   = "#94A3B8";
 export const HAIR    = "#E2E8F0";
+// ——— YK #69 cila ① eklemeleri (17 Ağu): külliyatta yaşayıp theme'de karşılığı
+// olmayan tonlar. Kaynak: 24 dosyadaki 117 sabit tanımının envanteri.
+export const TINT    = "#F1F5F9"; // yumuşak panel zemini (eski yanlış adı: CREAM)
+export const SLATE   = "#64748B"; // ikincil metin (MUTED ile FAINT arası)
+export const RED     = "#DC2626"; // hata / yıkıcı eylem (semantik, marka dışı — korunur)
 export const FONT_IMPORT =
   "@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');";

@@ -2,8 +2,8 @@
 // Benservis operatör paneli — bekleyen IBAN transferlerini yönet
 // /ikinci-el/admin?token=:ADMIN_TOKEN
 import React, { useState, useEffect } from "react";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
 
-const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CSS = `
 * { box-sizing:border-box; }

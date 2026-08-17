@@ -2,8 +2,8 @@
 // Şifre ile giriş (localStorage hatırlar) → tarih aralığı → "Raporu çek" → HAM VERİ MATRİSİ (Excel benzeri) + CSV.
 // Sır = localStorage ya da ?token=. Sunucu Bearer (ADMIN_TOKEN/ADMIN_PASSWORD) kontrol eder.
 import React, { useState, useEffect } from "react";
+import { NAVY as INK, BG as PAPER, BLUE, SLATE, HAIR as LINE } from "./theme.js";
 
-const INK = "#1E293B", PAPER = "#F8FAFC", BLUE = "#2563EB", SLATE = "#64748B", LINE = "#E2E8F0";
 const LS_KEY = "benservis_admin";
 const bugun = () => new Date().toISOString().slice(0, 10);
 const gunOnce = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);

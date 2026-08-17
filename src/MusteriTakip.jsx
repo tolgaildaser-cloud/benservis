@@ -2,9 +2,8 @@
 // Müşteri iş takip sayfası — /takip/:is_no
 // SMS'teki link buraya gelir. Auth yok, sadece is_no ile çalışır.
 import React, { useState, useEffect } from "react";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, RED, FAINT as GRAY } from "./theme.js";
 
-const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
-const RED = "#DC2626", GRAY = "#94A3B8";
 
 const DURUM_ADI = {
   bekliyor:     { label: "İnceleniyor", renk: AMBER, ikon: "⏳" },

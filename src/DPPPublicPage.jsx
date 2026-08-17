@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import QRCode from "qrcode";
 import BenservisRozet from "./BenservisRozet.jsx";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
 
-const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 function garantiDurumu(cihaz) {
   const bugun = new Date();

@@ -3,13 +3,8 @@
 // Başvuruları listeler; onayla/reddet işlemleri yapar.
 // Onayda geçici şifre modal'da gösterilir (tek sefer!).
 import React, { useState, useEffect } from "react";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, RED, FAINT as GRAY } from "./theme.js";
 
-const INK   = "#1E293B";
-const CREAM = "#F1F5F9";
-const AMBER = "#2563EB";
-const GREEN = "#22C55E";
-const RED   = "#DC2626";
-const GRAY  = "#94A3B8";
 
 
 const TIER_RENK = {

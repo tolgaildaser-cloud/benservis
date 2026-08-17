@@ -5,8 +5,8 @@
 // "odeme_bekleniyor" kaydedilir ve onay ekranı gösterilir.
 import React, { useState, useEffect } from "react";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
+import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
-const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E", LINK = "#2563EB", BORDER = "#E2E8F0";
 
 export default function Sepet() {
   const [kalemler, setKalemler] = useState(sepetOku());
