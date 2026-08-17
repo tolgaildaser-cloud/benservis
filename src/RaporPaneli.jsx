@@ -4,7 +4,6 @@
 import React, { useState, useEffect } from "react";
 
 const INK = "#1E293B", PAPER = "#F8FAFC", BLUE = "#2563EB", SLATE = "#64748B", LINE = "#E2E8F0";
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const LS_KEY = "benservis_admin";
 const bugun = () => new Date().toISOString().slice(0, 10);
 const gunOnce = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
@@ -66,7 +65,7 @@ export default function RaporPaneli() {
   if (!sir) {
     return (
       <div style={{ minHeight: "100vh", background: PAPER, fontFamily: "'Hanken Grotesk',sans-serif", padding: "20px 16px" }}>
-        <style>{FONT}</style>
+        
         <div style={{ maxWidth: 340, margin: "70px auto 0", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 14, padding: 24 }}>
           <h1 style={{ fontFamily: "'Fraunces',serif", fontSize: 22, color: INK, margin: "0 0 4px" }}>Teşhis Raporu</h1>
           <p style={{ color: SLATE, fontSize: 13, margin: "0 0 16px" }}>Giriş için şifre.</p>
@@ -88,7 +87,7 @@ export default function RaporPaneli() {
   const basliklar = ["Tarih", "Cihaz", "Marka", "Yaş", "Arıza", "İl", "İlçe", "Maliyet", "Karar", "Aciliyet"];
   return (
     <div style={{ minHeight: "100vh", background: PAPER, fontFamily: "'Hanken Grotesk',sans-serif", padding: "20px 16px" }}>
-      <style>{FONT}</style>
+      
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div>

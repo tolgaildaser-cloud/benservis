@@ -7,6 +7,16 @@
     <meta name="description" content="Cihazın mı bozuldu? Benservis ile olası arızayı ve tahmini tamir maliyetini saniyede öğren, yanındaki en yüksek puanlı servisi bul. Bil, gör, çağır." />
     <link rel="canonical" href="https://www.benservis.com/" />
     <meta name="theme-color" content="#2563EB" />
+    <!-- YK #69 koşu 1/cila ② — FONT İSTEĞİ ARTIK HTML'DEN BAŞLIYOR.
+         Önce fontlar JS içindeki `<style>{FONT}` bloğuna gömülü bir @import'tu:
+         tarayıcı fontu ancak bundle inip React render ettikten SONRA keşfediyordu
+         (üstelik @import kendisi de CSS zincirini bir tur daha bekletir). Şimdi
+         <head>'de: bağlantı ısınması hemen, istek ilk taramada başlıyor.
+         Ağırlık seti 20 dosyadaki tüm @import'ların BİRLEŞİMİ — hiçbir yüzeyde
+         eksik ağırlık kalmasın diye tek tek toplandı. display=swap korundu. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

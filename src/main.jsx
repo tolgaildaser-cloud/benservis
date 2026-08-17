@@ -1,18 +1,36 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { inject, track } from "@vercel/analytics";
 import App from "./App.jsx";
-import ServisPanel from "./ServisPanel.jsx";
-import DPPPublicPage from "./DPPPublicPage.jsx";
-import IkinciElApp from "./IkinciElApp.jsx";
-import MusteriTakip from "./MusteriTakip.jsx";
-import ServisKayit from "./ServisKayit.jsx";
-import ServisAdmin from "./ServisAdmin.jsx";
-import RaporPaneli from "./RaporPaneli.jsx";
-import ServisMagaza from "./ServisMagaza.jsx";
-import UrunDetay from "./UrunDetay.jsx";
-import Sepet from "./Sepet.jsx";
-import TarifeAdmin from "./TarifeAdmin.jsx";
+
+// ——— YK #69 koşu 1/cila ④ — KOD BÖLME ———
+// Önceki hâlde 12 ekranın hepsi tek bundle'a giriyordu: ana sayfaya gelen kullanıcı
+// admin panelini, tarife yöneticisini, sepeti, DPP'yi ve ikinci el uygulamasını da
+// indiriyordu — hiçbirini açmayacakken. `App` STATİK kalır (ilk boyanan ekran, lazy
+// olsaydı gereksiz bir bekleme katardı); geri kalan 11 rota kendi parçasına ayrılır
+// ve YALNIZ o adrese girildiğinde inar.
+const ServisPanel   = lazy(() => import("./ServisPanel.jsx"));
+const DPPPublicPage = lazy(() => import("./DPPPublicPage.jsx"));
+const IkinciElApp   = lazy(() => import("./IkinciElApp.jsx"));
+const MusteriTakip  = lazy(() => import("./MusteriTakip.jsx"));
+const ServisKayit   = lazy(() => import("./ServisKayit.jsx"));
+const ServisAdmin   = lazy(() => import("./ServisAdmin.jsx"));
+const RaporPaneli   = lazy(() => import("./RaporPaneli.jsx"));
+const ServisMagaza  = lazy(() => import("./ServisMagaza.jsx"));
+const UrunDetay     = lazy(() => import("./UrunDetay.jsx"));
+const Sepet         = lazy(() => import("./Sepet.jsx"));
+const TarifeAdmin   = lazy(() => import("./TarifeAdmin.jsx"));
+
+// Parça inerken görünen ara ekran. Marka zemininde sade bir satır — spinner yok:
+// parçalar küçük, çoğu bağlantıda göz kırpması bile olmadan geçer; dönen bir ikon
+// "bir şey yavaş" hissi verirdi.
+const Yukleniyor = () => (
+  <div style={{
+    minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center",
+    background: "#F8FAFC", color: "#64748B",
+    fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontSize: 14,
+  }}>Yükleniyor…</div>
+);
 
 const path = window.location.pathname;
 const isAriza       = path.startsWith("/ariza");
@@ -64,6 +82,9 @@ try {
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* Suspense yalnız lazy rotalar için: `App` statik olduğundan ana sayfa
+        fallback'i HİÇ görmez, doğrudan boyanır. */}
+    <Suspense fallback={<Yukleniyor />}>
     {isAriza        ? <App />                           :
      isUrun         ? <UrunDetay />                     :
      isSepet        ? <Sepet />                         :
@@ -77,5 +98,6 @@ createRoot(document.getElementById("root")).render(
      isAdmin        ? <RaporPaneli />                   :
      isServisMagaza ? <ServisMagaza />                  :
      <App />}
+    </Suspense>
   </React.StrictMode>
 );

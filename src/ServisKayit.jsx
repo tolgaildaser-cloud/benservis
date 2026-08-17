@@ -12,7 +12,6 @@ const GREEN = "#22C55E";
 const GRAY  = "#94A3B8";
 const RED   = "#DC2626";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 // ─── Ortak input stili ───────────────────────────────────────────
 const sInput = {
@@ -173,7 +172,7 @@ export default function ServisKayit() {
   if (basarili) {
     return (
       <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
-        <style>{FONT}</style>
+        
         <div style={{ maxWidth: 480, margin: "0 auto", padding: "80px 20px", textAlign: "center" }}>
           <div style={{ fontSize: 52, marginBottom: 20 }}>🎉</div>
           <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 26, fontWeight: 700, color: INK, marginBottom: 12 }}>
@@ -207,7 +206,7 @@ export default function ServisKayit() {
   // ── Form ──────────────────────────────────────────────────────
   return (
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
 
       {/* Header */}
       <div style={{ background: INK, color: CREAM, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10 }}>

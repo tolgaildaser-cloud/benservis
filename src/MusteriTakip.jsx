@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 const RED = "#DC2626", GRAY = "#94A3B8";
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 const DURUM_ADI = {
   bekliyor:     { label: "İnceleniyor", renk: AMBER, ikon: "⏳" },
@@ -147,7 +146,7 @@ export default function MusteriTakip({ isNo }) {
 
   return (
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
 
       {/* Üst bar */}
       <div style={{ background: INK, color: CREAM, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10 }}>

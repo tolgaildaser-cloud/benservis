@@ -5,7 +5,6 @@
 import React, { useState, useEffect } from "react";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E", LINK = "#2563EB";
 
 export default function UrunDetay() {
@@ -42,15 +41,15 @@ export default function UrunDetay() {
     window.location.href = "/sepet?odeme=1";
   };
 
-  if (yukleniyor) return <Merkez><style>{FONT}</style>Yükleniyor…</Merkez>;
-  if (hata)       return <Merkez><style>{FONT}</style><span style={{ color: "#DC2626" }}>{hata}</span></Merkez>;
+  if (yukleniyor) return <Merkez>Yükleniyor…</Merkez>;
+  if (hata)       return <Merkez><span style={{ color: "#DC2626" }}>{hata}</span></Merkez>;
 
   const { urun, servis, dpp } = data;
   const sepette = !eklendi && sepetAdet() > 0 && JSON.parse(localStorage.getItem("bs_sepet") || "[]").some(u => u.id === urun.id);
 
   return (
     <div style={{ minHeight: "100vh", background: "#F8FAFC", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
-      <style>{FONT}</style>
+      
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>

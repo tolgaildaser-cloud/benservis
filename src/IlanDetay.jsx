@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import BenservisRozet from "./BenservisRozet.jsx";
 import KvkkNotu from "./KvkkNotu.jsx";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const DURUM_CFG = {
@@ -74,7 +73,7 @@ export default function IlanDetay({ id }) {
   if (yukleniyor) {
     return (
       <div style={sWrap}>
-        <style>{FONT}</style>
+        
         <div style={st.merkez}>
           <div style={st.spinner} />
           <p style={st.yukMetin}>İlan yükleniyor…</p>
@@ -86,7 +85,7 @@ export default function IlanDetay({ id }) {
   if (bulunamadi || !ilan) {
     return (
       <div style={sWrap}>
-        <style>{FONT}</style>
+        
         <div style={st.merkez}>
           <div style={{ fontSize: 44, marginBottom: 12 }}>🔍</div>
           <div style={st.baslik404}>İlan Bulunamadı</div>
@@ -125,7 +124,7 @@ export default function IlanDetay({ id }) {
 
   return (
     <div style={sWrap}>
-      <style>{FONT}{CSS_ILANDETAY}</style>
+      <style>{CSS_ILANDETAY}</style>
       <div style={st.grain} />
 
       {/* Header */}

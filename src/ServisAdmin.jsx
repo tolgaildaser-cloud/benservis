@@ -11,7 +11,6 @@ const GREEN = "#22C55E";
 const RED   = "#DC2626";
 const GRAY  = "#94A3B8";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 const TIER_RENK = {
   platin: { bg: "#F0EAF8", fg: "#6B3FA0" },
@@ -284,7 +283,7 @@ export default function ServisAdmin() {
 
   return (
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
 
       {/* Header */}
       <div style={{ background: INK, color: CREAM, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10 }}>

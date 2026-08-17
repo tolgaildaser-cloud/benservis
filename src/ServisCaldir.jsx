@@ -9,7 +9,6 @@ import React, { useState } from "react";
 import KvkkNotu from "./KvkkNotu.jsx";
 
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 const GUNLER = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
 const AYLAR = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"];
@@ -102,7 +101,7 @@ export default function ServisCaldir({ servis, cihaz, belirti, ilce, konum, onKa
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.5)", zIndex: 200, display: "flex", alignItems: "flex-end", fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
       <div style={{ background: CREAM, borderRadius: "20px 20px 0 0", padding: "20px 16px 36px", width: "100%", maxHeight: "90vh", overflowY: "auto" }}>
 
         {/* Başlık */}

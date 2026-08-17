@@ -6,7 +6,6 @@ import QRCode from "qrcode";
 import { supabase } from "./lib/supabase.js";
 
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 const DURUM_LABEL = {
   bekliyor: { label: "Bekliyor", color: AMBER },
@@ -58,7 +57,7 @@ function ServisKurulum({ session, onTamamlandi }) {
 
   return (
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif", padding: "32px 18px" }}>
-      <style>{FONT}</style>
+      
       <div style={{ maxWidth: 480, margin: "0 auto" }}>
         <div style={{ fontFamily: "'Fraunces', serif", fontSize: 24, fontWeight: 700, marginBottom: 6 }}>Panel Kurulumu</div>
         <p style={{ fontSize: 14, color: "#475569", marginBottom: 24, lineHeight: 1.5 }}>
@@ -146,7 +145,7 @@ function GirisFormu({ onGiris }) {
 
   return (
     <div style={{ minHeight: "100vh", background: INK, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
       <div style={{ background: "#1E293B", borderRadius: 18, padding: 32, border: "1px solid #334155", boxShadow: "0 18px 48px -24px rgba(0,0,0,.55)", width: "100%", maxWidth: 360 }}>
         <div style={{ fontFamily: "'Fraunces', serif", color: CREAM, fontSize: 22, fontWeight: 700, marginBottom: 24, textAlign: "center" }}>
           🔧 Benservis Panel
@@ -204,7 +203,7 @@ function YeniSifreFormu({ onTamam }) {
 
   return (
     <div style={{ minHeight: "100vh", background: INK, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
       <div style={{ background: "#1E293B", borderRadius: 18, padding: 32, border: "1px solid #334155", boxShadow: "0 18px 48px -24px rgba(0,0,0,.55)", width: "100%", maxWidth: 360 }}>
         <div style={{ fontFamily: "'Fraunces', serif", color: CREAM, fontSize: 20, fontWeight: 700, marginBottom: 8, textAlign: "center" }}>
           🔑 Yeni Şifre Belirle
@@ -1001,7 +1000,7 @@ export default function ServisPanel() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#F1F5F9", fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
       <div style={{ background: INK, color: CREAM, padding: "14px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 10 }}>
         <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>🔧 Benservis Panel</span>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>

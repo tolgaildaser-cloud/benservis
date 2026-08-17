@@ -6,7 +6,6 @@
 import React, { useState, useEffect } from "react";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E", LINK = "#2563EB", BORDER = "#E2E8F0";
 
 export default function Sepet() {
@@ -57,7 +56,7 @@ export default function Sepet() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#F8FAFC", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
-      <style>{FONT}</style>
+      
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>

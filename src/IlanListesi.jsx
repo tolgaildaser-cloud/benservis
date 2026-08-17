@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import { CIHAZLAR } from "./constants.js";
 import { sepetAdet } from "./sepet.js";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E";
 const LINK = "#2563EB";          // sahibinden alışkanlığı: mavi ilan başlığı
 const HOVER_BG = "#FFF8DF";      // satır hover — sarımsı
@@ -145,7 +144,7 @@ export default function IlanListesi() {
 
   return (
     <div className="sah-wrap">
-      <style>{FONT}</style>
+      
       <style>{CSS}</style>
 
       {/* ── HEADER: logo | arama | ilan ver ── */}

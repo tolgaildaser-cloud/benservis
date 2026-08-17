@@ -4,7 +4,6 @@ import { CIHAZLAR } from "./constants.js";
 
 const INK = "#1E293B", PAPER = "#F8FAFC", BLUE = "#2563EB", GREEN = "#22C55E",
       SLATE = "#64748B", HAIR = "#E2E8F0", WHITE = "#fff";
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 function authToken() {
   return new URLSearchParams(window.location.search).get("token") || "";
@@ -278,7 +277,7 @@ export default function TarifeAdmin() {
   );
   return (
     <div style={{ minHeight: "100vh", background: PAPER, color: INK, fontFamily: "'Hanken Grotesk', sans-serif", padding: "28px 20px" }}>
-      <style>{FONT}</style>
+      
       <h1 style={{ fontSize: 22, marginBottom: 4 }}>Tarife Veri Motoru</h1>
       <p style={{ color: SLATE, fontSize: 14, marginTop: 0 }}>Saha verisi gir · harmanlanan tarifeyi onayla</p>
       <div style={{ display: "flex", gap: 10, margin: "16px 0 22px" }}>{tabBtn("gir", "Veri Gir")}{tabBtn("onay", "Onayla")}</div>
