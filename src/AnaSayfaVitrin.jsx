@@ -16,7 +16,6 @@
 // ham CSV'sinden geliyor, bizim dizinimizde 420 "yetkili" kaydı var. Yanlış olurdu.
 import React, { useState, useEffect, useRef } from "react";
 import { CIHAZLAR } from "./constants.js";
-import { SEED } from "./tarife-seed.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT } from "./theme.js";
 
@@ -55,16 +54,6 @@ const FOTOGRAFLI = new Set([
   "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör",
   "Fırın / Ocak / Aspiratör", "Klima", "Süpürge", "Bilgisayar / Yazıcı",
 ]);
-
-// Cihazın en düşük onaylı işçilik/parça başlangıcı — "X TL'den" bandı buradan gelir.
-// 🔥 Araştırma raporu deseni 4: TR'de hiçbir oyuncu (Armut dahil) fiyatı vitrine
-// koymuyor; tarife motoru bunu yapabilecek tek altyapı.
-const baslangic = (cihaz) => {
-  const satirlar = SEED[cihaz];
-  if (!Array.isArray(satirlar) || !satirlar.length) return null;
-  const min = Math.min(...satirlar.map((r) => r[1]).filter(Number.isFinite));
-  return Number.isFinite(min) ? min : null;
-};
 
 // Hero kutusundan cihaz tahmini — mevcut sözlükle, yeni NLP yok.
 // Eşleşmezse cihaz seçtirme adımı olduğu gibi kalır (kullanıcı formda seçer).
@@ -223,13 +212,12 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         </div>
       </section>
 
-      {/* ═══ ② CİHAZ KARTLARI + "X TL'den" ═══ */}
+      {/* ═══ ② CİHAZ KARTLARI ═══ */}
       <section style={st.bolumDis}><div style={st.bolum}>
         <h2 style={st.h2}>Hangi cihazın bozuldu?</h2>
-        <p style={st.bolumAlt}>Başlangıç tutarları onaylı tarife kalemlerinden gelir — tahmini aralığı teşhisten sonra görürsün.</p>
+        <p style={st.bolumAlt}>Cihazını seç, belirtiyi kendi kelimelerinle anlat — olası arızayı ve tahmini tutarı teşhisten sonra görürsün.</p>
         <div className="vitrin-kartlar" style={st.kartlar}>
           {CIHAZLAR.map((c) => {
-            const bas = baslangic(c);
             const fotoVar = FOTOGRAFLI.has(c);
               return (
                 <button key={c} style={st.kartFoto} onClick={() => onCihazSec(c)}>
@@ -245,7 +233,6 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                     </span>
                   )}
                   <span style={st.kartAdFoto}>{c}</span>
-                  {bas != null && <span style={st.kartFiyatFoto}>{bas.toLocaleString("tr-TR")} TL'den</span>}
                 </button>
               );
           })}
@@ -360,7 +347,7 @@ const st = {
   },
   bolumAlt: { color: FAINT, fontSize: 14.5, textAlign: "center", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.6 },
 
-  kartlar: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12, alignItems: "stretch" },
+  kartlar: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12, alignItems: "stretch", gridAutoRows: "1fr" },
   kart: {
     display: "flex", flexDirection: "column", alignItems: "center", gap: 7,
     background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, padding: "18px 12px",
@@ -375,18 +362,24 @@ const st = {
   },
   // Fotoğraflı kart: görsel üstte kenardan kenara, metin altta (Armut deseni).
   kartFoto: {
-    display: "flex", flexDirection: "column", alignItems: "stretch", gap: 0,
+    display: "flex", flexDirection: "column", alignItems: "stretch", gap: 0, height: "100%",
     background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, padding: 0,
     overflow: "hidden", cursor: "pointer", fontFamily: "inherit", textAlign: "left",
     boxShadow: "0 1px 2px rgba(30,41,59,.04)",
   },
   kartGorsel: { display: "block", width: "100%", height: "auto", aspectRatio: "16 / 10", objectFit: "cover" },
-  // Ad alanı iki satırlık sabit yükseklikte: "Fırın / Ocak / Aspiratör" iki satıra,
-  // "Klima" tek satıra düşüyordu → kart yükseklikleri 164/181 olarak ayrışıyordu.
-  kartAdFoto: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3, padding: "12px 12px 0", minHeight: 47 },
-  kartFiyatFoto: { fontSize: 12.5, fontWeight: 700, color: BLUE, padding: "4px 12px 14px" },
+  // Fiyat satırı kalkınca kartın tek metni ad kaldı → punto büyütüldü.
+  // Sabit yükseklik (minHeight) BIRAKILDI: ölçüm gösterdi ki 375 px'de kart
+  // 162 px'e düşüyor ve "Fırın / Ocak / Aspiratör" 13,5 px'te BİLE üç satıra
+  // çıkıyor — yani sınırı punto değil kart genişliği koyuyor. Eşitliği artık
+  // ızgara veriyor (`gridAutoRows: 1fr`); bu alan kalan boşluğu doldurup metni
+  // dikeyde ortalar, punto da genişliğe göre serbestçe büyür.
+  kartAdFoto: {
+    flex: 1, display: "flex", alignItems: "center",
+    fontSize: "clamp(15px, 4.4vw, 20px)", fontWeight: 700, color: NAVY,
+    lineHeight: 1.25, padding: "12px 12px 14px",
+  },
   kartAd: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3 },
-  kartFiyat: { fontSize: 12.5, fontWeight: 700, color: BLUE },
 
   adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 20, maxWidth: 900, margin: "0 auto" },
   adim: { textAlign: "center", padding: "0 8px" },
