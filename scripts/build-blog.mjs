@@ -164,6 +164,9 @@ blockquote p{margin:0}
    (Bu blok bir template literal içinde — yorumda backtick KULLANMA, literali kapatır.) */
 .kopru{margin:18px 0 24px;padding:14px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}
 .kopru p{margin:0 0 11px;color:${T.NAVY}}
+.kopru-cift{display:flex;gap:10px;flex-wrap:wrap}
+.kopru-cift .kopru-btn{flex:1 1 240px;text-align:center}
+.kopru-servis{background:#fff !important;color:${T.BLUE} !important;border:2px solid ${T.BLUE}}
 .kopru-btn{display:inline-block;padding:12px 20px;border-radius:12px;background:${T.BLUE};
   color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;line-height:1.25;
   box-shadow:0 1px 3px rgba(37,99,235,.28);transition:background .15s,transform .15s}
@@ -371,6 +374,20 @@ function kopruHref(p) {
   q.set("k", `blog-${p.slug}`); // ölçüm HER yazıda, bağlam bulunamasa da
   return `/?${q}`;
 }
+// ——— ÇİFT KAPI ② — SERVİS BUL (YK notu, Tolga 16 Ağu: "bu sayfaya geleni ya servis
+// bul'a direkt yönlendirmeliyiz ya da tahmini maliyet sayfasına; bize güç getirecek
+// kısım servis bul'dan insanların servislere ulaşması").
+// Aynı bağlamı taşır ama `servis=1` ile TEŞHİSİ ATLAR: kullanıcı doğrudan yakınındaki
+// puanlı servis listesine düşer. Ölçüm aynı `k=blog-<slug>` borusundan akar, böylece
+// 31 Ağu okumasında "hangi yazı servise ulaştırdı" ayrı ayrı sayılabilir.
+function servisHref(p) {
+  const q = new URLSearchParams();
+  const cihaz = KOPRU_CIHAZ[p.category];
+  if (cihaz) q.set("cihaz", cihaz);
+  q.set("servis", "1");
+  q.set("k", `blog-${p.slug}`);
+  return `/?${q}`;
+}
 // Cihaz adı kullanıcıya görünen metinde geçecek → blog kategorisi zaten insan diliyle
 // yazılmış ("Çamaşır makinesi"), ikinci bir görünen-ad tablosu tutmuyoruz.
 const kopruCihazAdi = (p) => (KOPRU_CIHAZ[p.category] ? String(p.category).toLocaleLowerCase("tr") : "");
@@ -387,7 +404,12 @@ const KOPRU_SATIRI = (p) => {
   // olmasın, tamamını sil". Açıklama paragrafı kaldırıldı; BUTON AYNEN KORUNDU
   // (metni de değişmedi) — istenen butonun sadeleşmesi değil, etrafının boşalması.
   // `kopruCihazAdi(p)` çağrısı duruyor: dönüşü boşsa köprü hiç basılmaz.
-  return `<div class="kopru"><a class="kopru-btn" href="${kopruHref(p)}" data-kopru="ilk-ekran">Tahmini maliyeti ücretsiz öğren →</a></div>`;
+  // ÇİFT KAPI: iki eşit ağırlıkta buton. Sol = doğrudan servis (güç metriği),
+  // sağ = tahmini maliyet (mevcut köprü). Sıra bilinçli: Tolga'nın önceliği servis.
+  return `<div class="kopru kopru-cift">` +
+    `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="servis-ilk">📍 Yakınımdaki servisi bul →</a>` +
+    `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="ilk-ekran">Tahmini maliyeti ücretsiz öğren →</a>` +
+  `</div>`;
 };
 
 // ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.

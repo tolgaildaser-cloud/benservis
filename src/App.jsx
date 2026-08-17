@@ -82,10 +82,13 @@ const ONSECIM = (() => {
   try {
     const q = new URLSearchParams(window.location.search);
     const cihaz = CIHAZ_SLUG[(q.get("cihaz") || "").trim().toLowerCase()] || "";
-    if (!cihaz) return { cihaz: "", belirti: "" };
+    if (!cihaz) return { cihaz: "", belirti: "", servis: q.get("servis") === "1" };
     const a = (q.get("ariza") || "").trim().toLowerCase();
-    return { cihaz, belirti: belirtiCoz(cihaz, a) };
-  } catch { return { cihaz: "", belirti: "" }; }
+    // YK #69/#68 ÇİFT KAPI: `servis=1` ile tamir sayfasından DOĞRUDAN servis
+    // listesine gelinir (teşhis adımı atlanır). Tolga'nın güç metriği bu kapı:
+    // "servis bul'dan insanların servislere ulaşması".
+    return { cihaz, belirti: belirtiCoz(cihaz, a), servis: q.get("servis") === "1" };
+  } catch { return { cihaz: "", belirti: "", servis: false }; }
 })();
 
 function refMetni(cihaz) {
@@ -163,7 +166,8 @@ export default function App() {
   const [sssAcik, setSssAcik] = useState(null); // ana sayfa SSS akordeon açık indeksi
   const [hataMsg, setHataMsg] = useState("");
   const [kopyalandi, setKopyalandi] = useState(false);
-  const [showServisler, setShowServisler] = useState(false);
+  // Çift kapı: `?servis=1` ile gelindiyse servis listesi DOĞRUDAN açılır.
+  const [showServisler, setShowServisler] = useState(ONSECIM.servis);
   const [teshisLogId, setTeshisLogId] = useState(null); // anonim teşhis log id (konum iliştirmek için)
   // Sunucunun IP'den tahmin ettiği il (Vercel coğrafi başlığı; izin istemi YOK, çerez YOK).
   // İki yerde kullanılır: CTA'yı kişiselleştirmek + servis ekranında il seçicisini ön-seçmek.
@@ -567,7 +571,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           de saydığı için klasik scrollbar'lı tarayıcılarda sağdan ~15px taşma yapıyordu
           (headless çekimde içerik kesik çıktı — gerçek hata, ölçüm hatası değil).
           Dışarı alınca taşırma hilesine hiç gerek kalmadı. */}
-      {adim === "form" && (
+      {/* Servis ekranı açıkken vitrin GİZLENİR: `?servis=1` ile gelen kullanıcı
+          doğrudan servis listesini görmeli, altında ana sayfa vitrini kalmamalı. */}
+      {adim === "form" && !showServisler && (
         <AnaSayfaVitrin
           onCihazSec={(c) => {
             setCihaz(c);
