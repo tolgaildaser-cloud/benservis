@@ -169,7 +169,10 @@ blockquote p{margin:0}
 .kopru p{margin:0 0 11px;color:${T.NAVY}}
 .kopru-cift{display:flex;gap:10px;flex-wrap:wrap}
 .kopru-cift .kopru-btn{flex:1 1 240px;text-align:center}
-.kopru-servis{background:#fff !important;color:${T.BLUE} !important;border:2px solid ${T.BLUE}}
+/* Tolga, 17 Ağu: "servis bul mavi olsun, diğeri beyaz" — ağırlık servise verildi.
+   Güç metriği Servis Bul olduğu için baskın buton da o olmalı; teşhis kapısı
+   ikincil (beyaz + mavi kenarlık) ama aynı boyutta, yani kapı olmaktan çıkmıyor. */
+.kopru-teshis{background:#fff !important;color:${T.BLUE} !important;border:2px solid ${T.BLUE}}
 .kopru-btn{display:inline-block;padding:12px 20px;border-radius:12px;background:${T.BLUE};
   color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;line-height:1.25;
   box-shadow:0 1px 3px rgba(37,99,235,.28);transition:background .15s,transform .15s}
