@@ -6,6 +6,7 @@ import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
 import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
+import AnaSayfaVitrin from "./AnaSayfaVitrin.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
@@ -318,6 +319,15 @@ export default function App() {
 
   // Belirti textarea: elle (mouse) resize kapalı; yazdıkça veya chip ile içerik
   // değiştikçe otomatik uzar (min ~4 satır).
+  // YK #69 koşu 3 — vitrinden forma iniş. Hero kutusu/kartı kullanıldığında kullanıcı
+  // "bir şey oldu" geri bildirimi almalı; yoksa sayfa değişmemiş gibi görünüyor.
+  const formRef = useRef(null);
+  const formaKaydir = () => {
+    requestAnimationFrame(() => {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   const belirtiRef = useRef(null);
   const sesFocusRef = useRef(false); // STT sonrası tek seferlik odak isteği (her tuş vuruşunda odak çalınmasın)
   useEffect(() => {
@@ -550,7 +560,32 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const formHazir = !!cihaz && !!marka && belirti.trim().length >= 4;
 
   return (
-    <div style={s.wrap}>
+    <>
+      {/* ⚠️ VİTRİN, dar kapsayıcının (`s.wrap`, maxWidth 600) DIŞINDA duruyor.
+          Önce içine konup `width:100vw` ile taşırılmıştı; 100vw scrollbar genişliğini
+          de saydığı için klasik scrollbar'lı tarayıcılarda sağdan ~15px taşma yapıyordu
+          (headless çekimde içerik kesik çıktı — gerçek hata, ölçüm hatası değil).
+          Dışarı alınca taşırma hilesine hiç gerek kalmadı. */}
+      {adim === "form" && (
+        <AnaSayfaVitrin
+          onCihazSec={(c) => {
+            setCihaz(c);
+            if (marka && marka !== "Diğer" && !markalarForCihaz(c).includes(marka)) setMarka("");
+            formaKaydir();
+          }}
+          onFormaGit={formaKaydir}
+          onLogo={sifirla}
+          onDertYaz={(metin, tahminCihaz) => {
+            setBelirti(metin.slice(0, BELIRTI_MAX));
+            if (tahminCihaz) {
+              setCihaz(tahminCihaz);
+              if (marka && marka !== "Diğer" && !markalarForCihaz(tahminCihaz).includes(marka)) setMarka("");
+            }
+            formaKaydir();
+          }}
+        />
+      )}
+    <div style={adim === "form" ? { ...s.wrap, paddingTop: 0 } : s.wrap}>
       {showServisler && (
         <ServisEkrani
           cihaz={cihaz}
@@ -572,13 +607,18 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       <style>{CSS}</style>
       <div style={s.grain} />
 
-      <header style={s.header}>
+      {/* Form ekranında logo HERO'nun üzerinde (YK #69 koşu 3, Tolga talebi) — bu
+          header yalnız sonuç/hata ekranlarında görünür, orada hero yok. */}
+      <header style={{ ...s.header, display: adim === "form" ? "none" : undefined }}>
         {/* Kurumsal logo + motto — en üstte. Logoya tıkla → ana sayfa (sıfırla). */}
         <button onClick={sifirla} aria-label="Ana sayfaya dön" style={s.logoBtn}>
           <BenservisLogo style={s.brandLogo} />
         </button>
-        <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>
-        <div style={s.trustRow}>
+        {/* YK #69 koşu 3: form ekranında bu iki satır HERO'ya devredildi — aynı vaadi
+            iki kez söylemek "basic" hissinin kaynaklarından biriydi. Sonuç/hata
+            ekranlarında (hero görünmezken) eskisi gibi duruyorlar. */}
+        {adim !== "form" && <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>}
+        <div style={{ ...s.trustRow, display: adim === "form" ? "none" : s.trustRow.display }}>
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✓</span> Ücretsiz</span>
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✦</span> AI destekli</span>
           <span style={s.trustItem}><span style={{ color: "#F5A623" }}>★</span> Google puanlı servisler</span>
@@ -587,8 +627,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             SSS'nin üstündeki 4'lü buton ızgarasına TAŞINDI — mükerrer link bırakılmadı. */}
       </header>
 
+      {/* YK #69 koşu 3 — ANA SAYFA VİTRİNİ (yalnız form ekranında; sonuç/servis
+          ekranlarında görünmez). Hero kutusu YENİ AKIŞ AÇMAZ: yazdığını aşağıdaki
+          mevcut formun `belirti` alanına indirir, cihazı tahmin edebilirse seçer ve
+          forma kaydırır. Teşhis akışının kendisine tek satır dokunulmadı. */}
+
       {(adim === "form" || adim === "hata") && (
-        <div style={s.card}>
+        <div ref={formRef} style={s.card}>
           <label style={s.label}>Cihaz <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span></label>
           <div style={s.cihazGrid}>
             {CIHAZLAR.map((c) => {
@@ -975,6 +1020,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
@@ -1006,7 +1052,10 @@ const SSS = [
 
 const CSS = `
 * { box-sizing: border-box; }
-html, body { margin: 0; overflow-x: hidden; }
+/* Zemin BODY'de sabitlenir: wrap 600px'lik bir kolon, gövdenin arka planı
+   tanımsız kaldığı için geniş ekranda kolonun iki yanı tarayıcının varsayılanına
+   (koyu temada siyaha) düşüyordu. Hero full-bleed olunca bu daha da göze battı. */
+html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
 /* YK #69 koşu 1/cila ⑤ — TEK ETKİLEŞİM DİLİ (blog şablonuyla aynı sözleşme).
    Form alanlarının odak halkası vardı ama buton/link'lerde yoktu: klavyeyle gezen
    kullanıcı cihaz kartları ve CTA'lar arasında nerede olduğunu göremiyordu.
@@ -1015,6 +1064,30 @@ html, body { margin: 0; overflow-x: hidden; }
 :where(a, button) { transition: background-color .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease, transform .15s ease; }
 :where(a, button, [tabindex]):focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; border-radius: 10px; }
 @media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* YK #69 koşu 3 ⑥ — MOBİL STICKY CTA. Masaüstünde HİÇ görünmez (hero kutusu zaten
+   ekranda); mobilde ise yalnız hero kaydırılıp geçildikten sonra belirir. */
+.vitrin-sticky { display: none; }
+@media (max-width: 640px) {
+  .vitrin-sticky[data-gorunur="1"] {
+    display: block; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40;
+    padding: 15px 18px; border: none; border-radius: 14px;
+    background: ${AMBER}; color: #fff; font-family: inherit; font-size: 15.5px; font-weight: 700;
+    box-shadow: 0 10px 30px -8px rgba(37,99,235,.55); cursor: pointer;
+  }
+}
+/* "Derdini yaz" kutusu dar ekranda DİKEY: yan yana dururken textarea sıkışıp
+   metin üç satıra bölünüyor, buton alanın yarısını yiyordu (mobilde ölçüldü). */
+@media (max-width: 560px) {
+  .vitrin-kutu { flex-direction: column; gap: 8px; }
+  .vitrin-kutu-yazi { min-height: 74px; }
+  .vitrin-kutu-btn { width: 100%; padding: 14px 18px; }
+}
+/* Vitrin ızgaraları dar ekranda ikişerli/tek sıraya iner. */
+@media (max-width: 520px) {
+  .vitrin-kartlar { grid-template-columns: repeat(2, 1fr) !important; }
+  .vitrin-sayilar { grid-template-columns: repeat(2, 1fr) !important; }
+}
 @keyframes anspin { to { transform: rotate(360deg); } }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
 input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }
