@@ -14,6 +14,12 @@ faq:
   - q: "Servis gerekirse kaç para?"
     a: "Tahliye/defrost temizliği ile kapı contası değişimi farklı işlerdir; maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Buzdolabının arka iç duvarındaki tahliye deliğinin ince telle ve ılık suyla açılışını gösteren çizim"
+    - "Sebze gözünün çıkarılıp altında biriken suyun bezle kurulanışını gösteren çizim"
+    - "Kapıya konan kâğıt şeridinin çekilerek conta sızdırma testinin yapılışını gösteren çizim"
+    - "Öne eğik duran buzdolabı ile hafif arkaya yatırılmış dolabın karşılaştırıldığı çizim"
+    - "Su sebili olan modelde depo ve hortum bağlantı noktalarının kontrolünü gösteren çizim"
   coverAlt: "Buzdolabının altında zeminde biriken su ve düşen damla çizimi"
 ---
 

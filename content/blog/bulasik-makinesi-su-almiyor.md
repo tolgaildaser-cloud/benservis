@@ -14,6 +14,13 @@ faq:
   - q: "Tamiri kaç para?"
     a: "Filtre ya da musluk kaynaklıysa çoğu zaman ücretsiz çözülür. Su giriş valfi veya kapı kilidi gerekiyorsa maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Su musluğunun kolunun yatay konuma getirilip sonuna kadar açılışını gösteren çizim"
+    - "Giriş hortumunun ayrılıp içindeki küçük süzgecin çıkarılıp fırçayla temizlenişini gösteren çizim"
+    - "Bükülmüş tahliye hortumu ile düz uzanan hortumun karşılaştırıldığı çizim"
+    - "Bulaşık makinesi kapağının kilidi oturana kadar tam kapatılışını gösteren çizim"
+    - "Makinenin altında biriken suyun bezle kurulanışını gösteren çizim"
+    - "Fişin prizden çekilip bir dakika beklenişini ve çocuk kilidi göstergesini anlatan çizim"
   coverAlt: "Bulaşık makinesi ve yanında kesik kesik damlayan, akmayan su çizimi"
 ---
 

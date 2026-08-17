@@ -14,6 +14,12 @@ faq:
   - q: "Sesli buzdolabı tamiri kaç para?"
     a: "Denge ayarı çoğu zaman ücretsizdir. Fan motoru ya da kompresör takoz/askı işçiliği gerekiyorsa maliyet arızaya göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Buzdolabının ön ayaklarının çevrilerek sallanmasının giderilişini gösteren çizim"
+    - "Buzdolabının duvardan ve yan eşyadan beş ila on santim uzaklaştırılışını gösteren ölçülü çizim"
+    - "Buzdolabının üstünde duran şişe ve kutuların tıngırtı yaptığını ve kaldırılması gerektiğini gösteren çizim"
+    - "Eğik zeminde duran dolap ile ayaklarına takoz konulmuş dolabın karşılaştırıldığı çizim"
+    - "Sesin arka alttaki kompresörden mi içerideki fandan mı geldiğini gösteren çizim"
   coverAlt: "Buzdolabı çizimi ve yanından yayılan ses dalgaları"
 ---
 

@@ -29,6 +29,13 @@ faq:
   - q: "Siemens/Profilo bulaşık makinesindeki E24 de aynı mı?"
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E24 bu markaların hepsinde 'su atamıyor / tahliye sorunu' anlamına gelir ve çözümü aynıdır."
 images:
+  steps:
+    - "Makineyi kapat ve programı iptal et; tabanda su varsa havlu/kapla al — adımı gösteren çizim"
+    - "Alt sepeti çıkar, tabandaki filtreyi saatin tersine çevirip sök ve temizle — adımı gösteren çizim"
+    - "Filtre yuvasının altındaki tahliye pompası kapağını (varsa) açıp yabancı cismi (cam, çekirdek, etiket) kontrol et — adımı gösteren çizim"
+    - "Makinenin arkasındaki tahliye hortumunun bükülmediğinden/ezilmediğinden emin ol — adımı gösteren çizim"
+    - "Hortumun evye/sifon bağlantısının tıkalı olmadığını kontrol et — adımı gösteren çizim"
+    - "Filtreyi ve pompa kapağını yerine tam oturtup kilitle, sonra kısa bir programla dene; su rahat boşalıyorsa çözülmüştür — adımı gösteren çizim"
   coverAlt: "Bulaşık makinesi tabanında açılmış tahliye pompası kapağı, yabancı cisimler ve düz tahliye hortumu çizimi"
 ---
 

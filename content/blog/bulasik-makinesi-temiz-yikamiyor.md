@@ -15,6 +15,13 @@ faq:
   - q: "Servis gerekirse kaç para?"
     a: "Çoğu temizlik sorunu ücretsiz çözülür. Rezistans ya da sirkülasyon pompası gerekiyorsa maliyet modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Püskürtme kolunun tıkalı deliklerinin kürdanla açılışını ve kolun serbest dönüşünü gösteren çizim"
+    - "Taban filtresinin sıcak su altında sünger ve fırçayla yıkanışını gösteren çizim"
+    - "Tuz ve parlatıcı haznelerinin doldurulmasını ve su sertliği ayarının kılavuzdan kontrolünü gösteren çizim"
+    - "Deterjan haznesine tablet konulmasını ve yüksek sıcaklıklı programın seçilişini gösteren çizim"
+    - "Bulaşıkların yanlış ve doğru dizilişinin karşılaştırıldığı, püskürtme kolunun serbest kaldığı çizim"
+    - "Boş makinede makine temizleyiciyle en yüksek sıcaklıkta program çalıştırılışını gösteren çizim"
   coverAlt: "Bulaşık makinesi ve yanında lekeli tabak ile temiz tabak karşılaştırması çizimi"
 ---
 
