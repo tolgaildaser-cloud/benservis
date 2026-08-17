@@ -17,6 +17,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CIHAZLAR } from "./constants.js";
 import { SEED } from "./tarife-seed.js";
+import BenservisLogo from "./BenservisLogo.jsx";
 
 const BLUE = "#2563EB", NAVY = "#1E293B", BG = "#F8FAFC", HAIR = "#E2E8F0", MUTED = "#475569", FAINT = "#64748B";
 
@@ -36,6 +37,18 @@ const IKON = {
   "Su Sebili / Arıtma": "su-sebili-aritma",
   "Bilgisayar / Yazıcı": "bilgisayar-yazici",
 };
+
+// ——— CİHAZ KARTI FOTOĞRAFI (Tolga, 17 Ağu: "cihazların fotoğrafları da olsun
+// artık armuttaki gibi") ———
+// Kart, fotoğrafı OLAN cihazda Armut deseni gibi üstte geniş görsel gösterir;
+// olmayanda mevcut çizgi ikonuna düşer → GRF dalga dalga teslim ettikçe kartlar
+// kendiliğinden geçer, ara durumda hiçbir kart bozulmaz (kapak sisteminin aynısı).
+// ⚠️ Liste BİLEREK elle tutuluyor: SPA build zamanı dosya varlığını göremez;
+// `onError` ile denemek her açılışta 11 adet 404 isteği üretirdi.
+// GRF bir cihazın fotoğrafını teslim edince FE bu sete adını ekler.
+const FOTOGRAFLI = new Set([
+  // "Çamaşır Makinesi", "Buzdolabı", …  ← GRF teslim ettikçe buraya eklenir
+]);
 
 // Cihazın en düşük onaylı işçilik/parça başlangıcı — "X TL'den" bandı buradan gelir.
 // 🔥 Araştırma raporu deseni 4: TR'de hiçbir oyuncu (Armut dahil) fiyatı vitrine
@@ -90,7 +103,7 @@ const ADIMLAR = [
   { n: "3", b: "Puanlı servise kendin ulaş", a: "Yanındaki Google puanlı servisleri gör, doğrudan ara. Araya kimse girmez." },
 ];
 
-export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit }) {
+export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLogo }) {
   const [dert, setDert] = useState("");
   // Sticky bandı hero ekrandan çıkınca göster: hero'nun kendi kutusu görünürken
   // ikinci bir CTA gürültü olur (araştırma deseni 7 "tek net çağrı" ilkesi).
@@ -134,6 +147,20 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit }) {
           uygun stok bulunamadı, GRF'ye foto talebi backlog'a açıldı. Placeholder
           BİLEREK "boş fotoğraf kutusu" değil — kendi başına bitmiş görünüyor. */}
       <section ref={heroRef} style={st.hero}>
+        {/* ═══ ÜST BAR — hero'nun ÜZERİNE biner (Tolga, 17 Ağu: "benservis logosu hero
+            üzerine binsin armuttaki gibi ve menuler de binsin"). Şeffaf zemin, beyaz
+            logo; koyu hero üstünde kendi kutusu yok — Armut deseni. */}
+        <div style={st.ustBar}>
+          <button onClick={onLogo} aria-label="Ana sayfa" style={st.ustLogoBtn}>
+            <BenservisLogo style={st.ustLogo} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
+          </button>
+          <nav style={st.ustMenu} aria-label="Ana menü">
+            <a href="/blog/" style={st.ustLink}>Bilgi Merkezi</a>
+            <a href="/tamir/" style={st.ustLink}>Tamir Merkezi</a>
+            <a href="/kilavuzlar/" style={st.ustLink}>Kullanım Kılavuzları</a>
+          </nav>
+        </div>
+
         <div style={st.heroIc}>
           <div style={st.rozetler}>
             <span style={st.rozet}>★ Google puanlı servisler</span>
@@ -146,17 +173,18 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit }) {
 
           {/* Tek büyük "derdini yaz" kutusu — araştırma deseni 1.
               ⛔ Yeni akış açmaz: yazılan metin mevcut formun `belirti` alanına iner. */}
-          <div style={st.kutuSar}>
+          <div className="vitrin-kutu" style={st.kutuSar}>
             <textarea
               value={dert}
               onChange={(e) => setDert(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) gonder(); }}
               placeholder="Çamaşır makinesi su almıyor, program başlamıyor…"
               rows={2}
+              className="vitrin-kutu-yazi"
               style={st.kutu}
               aria-label="Cihazının derdini yaz"
             />
-            <button onClick={gonder} disabled={dert.trim().length < 4} style={{ ...st.kutuBtn, opacity: dert.trim().length < 4 ? 0.5 : 1 }}>
+            <button onClick={gonder} disabled={dert.trim().length < 4} className="vitrin-kutu-btn" style={{ ...st.kutuBtn, opacity: dert.trim().length < 4 ? 0.5 : 1 }}>
               Ücretsiz teşhis et →
             </button>
           </div>
@@ -183,13 +211,18 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit }) {
         <div className="vitrin-kartlar" style={st.kartlar}>
           {CIHAZLAR.map((c) => {
             const bas = baslangic(c);
-            return (
-              <button key={c} style={st.kart} onClick={() => onCihazSec(c)}>
-                <img src={`/tamir-gorsel/kategori/${IKON[c]}.webp`} alt="" width="44" height="44" loading="lazy" decoding="async" style={st.kartIkon} />
-                <span style={st.kartAd}>{c}</span>
-                {bas != null && <span style={st.kartFiyat}>{bas.toLocaleString("tr-TR")} TL'den</span>}
-              </button>
-            );
+            const fotoVar = FOTOGRAFLI.has(c);
+              return (
+                <button key={c} style={fotoVar ? st.kartFoto : st.kart} onClick={() => onCihazSec(c)}>
+                  {fotoVar ? (
+                    <img src={`/anasayfa/cihaz/${IKON[c]}.webp`} alt="" width="600" height="380" loading="lazy" decoding="async" style={st.kartGorsel} />
+                  ) : (
+                    <img src={`/tamir-gorsel/kategori/${IKON[c]}.webp`} alt="" width="44" height="44" loading="lazy" decoding="async" style={st.kartIkon} />
+                  )}
+                  <span style={fotoVar ? st.kartAdFoto : st.kartAd}>{c}</span>
+                  {bas != null && <span style={fotoVar ? st.kartFiyatFoto : st.kartFiyat}>{bas.toLocaleString("tr-TR")} TL'den</span>}
+                </button>
+              );
           })}
         </div>
       </div></section>
@@ -235,16 +268,25 @@ const st = {
   // FULL-BLEED: App'in kapsayıcısı maxWidth:600 — vitrin bölümleri o kolona sıkışırsa
   // "platform" hissi kaybolur. Bu üç satır kapsayıcıdan taşırıp tam genişlik verir;
   // form kartı 600px'te olduğu gibi kalır (ona dokunulmaz).
-  tasir: { width: "100vw", marginLeft: "calc(50% - 50vw)" },
   hero: {
     position: "relative", overflow: "hidden",
-    width: "100vw", marginLeft: "calc(50% - 50vw)",
     // Derinlik: iki katmanlı radyal ışık + lacivert taban. Düz renk yerine
     // atmosfer — premium his süsten değil katmandan gelir.
     background: `radial-gradient(1200px 600px at 15% -10%, #3B82F6 0%, transparent 55%), radial-gradient(900px 500px at 90% 10%, #1D4ED8 0%, transparent 50%), linear-gradient(180deg, #1E293B 0%, #172033 100%)`,
-    padding: "clamp(48px, 9vw, 96px) 20px clamp(40px, 7vw, 72px)",
+    padding: "clamp(14px, 2vw, 20px) 20px clamp(40px, 7vw, 72px)", // üst bar hero içinde
   },
-  heroIc: { maxWidth: 760, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 },
+  heroIc: { maxWidth: 760, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1, paddingTop: "clamp(28px, 6vw, 62px)" },
+  ustBar: {
+    position: "relative", zIndex: 2, maxWidth: 1160, margin: "0 auto",
+    display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap",
+  },
+  ustLogoBtn: { background: "none", border: "none", padding: 0, cursor: "pointer", lineHeight: 0 },
+  ustLogo: { display: "block", width: "min(190px, 46vw)", height: "auto" },
+  ustMenu: { display: "flex", gap: 4, flexWrap: "wrap" },
+  ustLink: {
+    color: "#DBEAFE", fontSize: 13.5, fontWeight: 600, textDecoration: "none",
+    padding: "8px 12px", borderRadius: 999, whiteSpace: "nowrap",
+  },
   rozetler: { display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", marginBottom: 22 },
   rozet: {
     fontSize: 12.5, fontWeight: 600, color: "#DBEAFE",
@@ -278,7 +320,7 @@ const st = {
   },
   guvenSatiri: { color: "#94A3B8", fontSize: 13.5, marginTop: 22, marginBottom: 0 },
 
-  bolumDis: { width: "100vw", marginLeft: "calc(50% - 50vw)" },
+  bolumDis: {},  // vitrin zaten tam genişlikte (wrap dışında) — taşırma hilesi gerekmiyor
   bolum: { maxWidth: 1080, margin: "0 auto", padding: "clamp(40px, 6vw, 64px) 20px" },
   h2: {
     fontFamily: "Fraunces, Georgia, serif", fontWeight: 600, color: NAVY,
@@ -294,6 +336,16 @@ const st = {
     boxShadow: "0 1px 2px rgba(30,41,59,.04)",
   },
   kartIkon: { display: "block", objectFit: "contain" },
+  // Fotoğraflı kart: görsel üstte kenardan kenara, metin altta (Armut deseni).
+  kartFoto: {
+    display: "flex", flexDirection: "column", alignItems: "stretch", gap: 0,
+    background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, padding: 0,
+    overflow: "hidden", cursor: "pointer", fontFamily: "inherit", textAlign: "left",
+    boxShadow: "0 1px 2px rgba(30,41,59,.04)",
+  },
+  kartGorsel: { display: "block", width: "100%", height: "auto", aspectRatio: "16 / 10", objectFit: "cover" },
+  kartAdFoto: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3, padding: "12px 12px 0" },
+  kartFiyatFoto: { fontSize: 12.5, fontWeight: 700, color: BLUE, padding: "4px 12px 14px" },
   kartAd: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3 },
   kartFiyat: { fontSize: 12.5, fontWeight: 700, color: BLUE },
 

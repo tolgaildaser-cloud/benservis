@@ -560,7 +560,32 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const formHazir = !!cihaz && !!marka && belirti.trim().length >= 4;
 
   return (
-    <div style={s.wrap}>
+    <>
+      {/* ⚠️ VİTRİN, dar kapsayıcının (`s.wrap`, maxWidth 600) DIŞINDA duruyor.
+          Önce içine konup `width:100vw` ile taşırılmıştı; 100vw scrollbar genişliğini
+          de saydığı için klasik scrollbar'lı tarayıcılarda sağdan ~15px taşma yapıyordu
+          (headless çekimde içerik kesik çıktı — gerçek hata, ölçüm hatası değil).
+          Dışarı alınca taşırma hilesine hiç gerek kalmadı. */}
+      {adim === "form" && (
+        <AnaSayfaVitrin
+          onCihazSec={(c) => {
+            setCihaz(c);
+            if (marka && marka !== "Diğer" && !markalarForCihaz(c).includes(marka)) setMarka("");
+            formaKaydir();
+          }}
+          onFormaGit={formaKaydir}
+          onLogo={sifirla}
+          onDertYaz={(metin, tahminCihaz) => {
+            setBelirti(metin.slice(0, BELIRTI_MAX));
+            if (tahminCihaz) {
+              setCihaz(tahminCihaz);
+              if (marka && marka !== "Diğer" && !markalarForCihaz(tahminCihaz).includes(marka)) setMarka("");
+            }
+            formaKaydir();
+          }}
+        />
+      )}
+    <div style={adim === "form" ? { ...s.wrap, paddingTop: 0 } : s.wrap}>
       {showServisler && (
         <ServisEkrani
           cihaz={cihaz}
@@ -582,7 +607,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       <style>{CSS}</style>
       <div style={s.grain} />
 
-      <header style={s.header}>
+      {/* Form ekranında logo HERO'nun üzerinde (YK #69 koşu 3, Tolga talebi) — bu
+          header yalnız sonuç/hata ekranlarında görünür, orada hero yok. */}
+      <header style={{ ...s.header, display: adim === "form" ? "none" : undefined }}>
         {/* Kurumsal logo + motto — en üstte. Logoya tıkla → ana sayfa (sıfırla). */}
         <button onClick={sifirla} aria-label="Ana sayfaya dön" style={s.logoBtn}>
           <BenservisLogo style={s.brandLogo} />
@@ -604,24 +631,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           ekranlarında görünmez). Hero kutusu YENİ AKIŞ AÇMAZ: yazdığını aşağıdaki
           mevcut formun `belirti` alanına indirir, cihazı tahmin edebilirse seçer ve
           forma kaydırır. Teşhis akışının kendisine tek satır dokunulmadı. */}
-      {adim === "form" && (
-        <AnaSayfaVitrin
-          onCihazSec={(c) => {
-            setCihaz(c);
-            if (marka && marka !== "Diğer" && !markalarForCihaz(c).includes(marka)) setMarka("");
-            formaKaydir();
-          }}
-          onFormaGit={formaKaydir}
-          onDertYaz={(metin, tahminCihaz) => {
-            setBelirti(metin.slice(0, BELIRTI_MAX));
-            if (tahminCihaz) {
-              setCihaz(tahminCihaz);
-              if (marka && marka !== "Diğer" && !markalarForCihaz(tahminCihaz).includes(marka)) setMarka("");
-            }
-            formaKaydir();
-          }}
-        />
-      )}
 
       {(adim === "form" || adim === "hata") && (
         <div ref={formRef} style={s.card}>
@@ -1011,6 +1020,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
@@ -1065,6 +1075,13 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
     background: ${AMBER}; color: #fff; font-family: inherit; font-size: 15.5px; font-weight: 700;
     box-shadow: 0 10px 30px -8px rgba(37,99,235,.55); cursor: pointer;
   }
+}
+/* "Derdini yaz" kutusu dar ekranda DİKEY: yan yana dururken textarea sıkışıp
+   metin üç satıra bölünüyor, buton alanın yarısını yiyordu (mobilde ölçüldü). */
+@media (max-width: 560px) {
+  .vitrin-kutu { flex-direction: column; gap: 8px; }
+  .vitrin-kutu-yazi { min-height: 74px; }
+  .vitrin-kutu-btn { width: 100%; padding: 14px 18px; }
 }
 /* Vitrin ızgaraları dar ekranda ikişerli/tek sıraya iner. */
 @media (max-width: 520px) {
