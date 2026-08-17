@@ -50,7 +50,10 @@ const IKON = {
 // `onError` ile denemek her açılışta 11 adet 404 isteği üretirdi.
 // GRF bir cihazın fotoğrafını teslim edince FE bu sete adını ekler.
 const FOTOGRAFLI = new Set([
-  // "Çamaşır Makinesi", "Buzdolabı", …  ← GRF teslim ettikçe buraya eklenir
+  // GRF teslimi 17 Ağu — 8/11 kart. Kalan 3 (Mikrodalga · Kombi · Su Sebili)
+  // BİLEREK çizgi ikonunda: GRF'nin devir belgesinde gerekçesi yazılı.
+  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör",
+  "Fırın / Ocak / Aspiratör", "Klima", "Süpürge", "Bilgisayar / Yazıcı",
 ]);
 
 // Cihazın en düşük onaylı işçilik/parça başlangıcı — "X TL'den" bandı buradan gelir.
@@ -150,6 +153,19 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           uygun stok bulunamadı, GRF'ye foto talebi backlog'a açıldı. Placeholder
           BİLEREK "boş fotoğraf kutusu" değil — kendi başına bitmiş görünüyor. */}
       <section ref={heroRef} style={st.hero}>
+        {/* GRF hero fotoğrafı (17 Ağu teslimi) — degradenin ÜZERİNE biner.
+            ⚠️ Degrade SİLİNMEDİ: dosya inmezse/yavaş inerse ekran boş kalmaz, altta
+            aynı kompozisyon durur. Üstündeki koyu perde başlık ve kutunun okunmasını
+            garanti eder (GRF'nin "kare arkadan aydınlatmalı" uyarısı için). */}
+        <img
+          src="/anasayfa/hero.webp"
+          srcSet="/anasayfa/hero-780.webp 780w, /anasayfa/hero-1200.webp 1200w, /anasayfa/hero-1600.webp 1600w, /anasayfa/hero.webp 2400w"
+          sizes="100vw"
+          alt="Salonda kanepenin önünde oturup birlikte çay içen anne, baba ve çocuk"
+          width="2400" height="1200" fetchPriority="high" decoding="async"
+          style={st.heroFoto}
+        />
+        <div style={st.heroPerde} aria-hidden="true" />
         {/* ═══ ÜST BAR — hero'nun ÜZERİNE biner (Tolga, 17 Ağu: "benservis logosu hero
             üzerine binsin armuttaki gibi ve menuler de binsin"). Şeffaf zemin, beyaz
             logo; koyu hero üstünde kendi kutusu yok — Armut deseni. */}
@@ -216,14 +232,20 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             const bas = baslangic(c);
             const fotoVar = FOTOGRAFLI.has(c);
               return (
-                <button key={c} style={fotoVar ? st.kartFoto : st.kart} onClick={() => onCihazSec(c)}>
+                <button key={c} style={st.kartFoto} onClick={() => onCihazSec(c)}>
+                  {/* Görsel alanı HER kartta aynı oranda (16:10): fotoğrafı olan kart
+                      fotoğrafı kenardan kenara basar, olmayan aynı alanda ortalanmış
+                      çizgi ikonunu gösterir. 8 fotoğraflı + 3 ikonlu kart karışıkken
+                      ızgara satırları böyle kaymıyor (ölçüldü: 164/181/128 px'di). */}
                   {fotoVar ? (
                     <img src={`/anasayfa/cihaz/${IKON[c]}.webp`} alt="" width="600" height="380" loading="lazy" decoding="async" style={st.kartGorsel} />
                   ) : (
-                    <img src={`/tamir-gorsel/kategori/${IKON[c]}.webp`} alt="" width="44" height="44" loading="lazy" decoding="async" style={st.kartIkon} />
+                    <span style={st.kartIkonAlan}>
+                      <img src={`/tamir-gorsel/kategori/${IKON[c]}.webp`} alt="" width="44" height="44" loading="lazy" decoding="async" style={st.kartIkon} />
+                    </span>
                   )}
-                  <span style={fotoVar ? st.kartAdFoto : st.kartAd}>{c}</span>
-                  {bas != null && <span style={fotoVar ? st.kartFiyatFoto : st.kartFiyat}>{bas.toLocaleString("tr-TR")} TL'den</span>}
+                  <span style={st.kartAdFoto}>{c}</span>
+                  {bas != null && <span style={st.kartFiyatFoto}>{bas.toLocaleString("tr-TR")} TL'den</span>}
                 </button>
               );
           })}
@@ -278,6 +300,13 @@ const st = {
     background: `radial-gradient(1200px 600px at 15% -10%, #3B82F6 0%, transparent 55%), radial-gradient(900px 500px at 90% 10%, #1D4ED8 0%, transparent 50%), linear-gradient(180deg, #1E293B 0%, #172033 100%)`,
     padding: "clamp(14px, 2vw, 20px) 20px clamp(40px, 7vw, 72px)", // üst bar hero içinde
   },
+  heroFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0 },
+  // Koyu perde: fotoğraf parlak olduğunda beyaz başlık/kutu okunur kalsın.
+  // Üstte daha yoğun (başlık orada), altta hafif — fotoğrafı tamamen boğmaz.
+  heroPerde: {
+    position: "absolute", inset: 0, zIndex: 0,
+    background: "linear-gradient(180deg, rgba(15,23,42,.78) 0%, rgba(15,23,42,.62) 45%, rgba(15,23,42,.72) 100%)",
+  },
   heroIc: { maxWidth: 760, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1, paddingTop: "clamp(28px, 6vw, 62px)" },
   ustBar: {
     position: "relative", zIndex: 2, maxWidth: 1160, margin: "0 auto",
@@ -331,7 +360,7 @@ const st = {
   },
   bolumAlt: { color: FAINT, fontSize: 14.5, textAlign: "center", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.6 },
 
-  kartlar: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12 },
+  kartlar: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12, alignItems: "stretch" },
   kart: {
     display: "flex", flexDirection: "column", alignItems: "center", gap: 7,
     background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, padding: "18px 12px",
@@ -339,6 +368,11 @@ const st = {
     boxShadow: "0 1px 2px rgba(30,41,59,.04)",
   },
   kartIkon: { display: "block", objectFit: "contain" },
+  // Fotoğrafsız kartın görsel alanı — fotoğraflıyla BİREBİR aynı oran, ikon ortada.
+  kartIkonAlan: {
+    display: "flex", alignItems: "center", justifyContent: "center",
+    width: "100%", aspectRatio: "16 / 10", background: BG,
+  },
   // Fotoğraflı kart: görsel üstte kenardan kenara, metin altta (Armut deseni).
   kartFoto: {
     display: "flex", flexDirection: "column", alignItems: "stretch", gap: 0,
@@ -347,7 +381,9 @@ const st = {
     boxShadow: "0 1px 2px rgba(30,41,59,.04)",
   },
   kartGorsel: { display: "block", width: "100%", height: "auto", aspectRatio: "16 / 10", objectFit: "cover" },
-  kartAdFoto: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3, padding: "12px 12px 0" },
+  // Ad alanı iki satırlık sabit yükseklikte: "Fırın / Ocak / Aspiratör" iki satıra,
+  // "Klima" tek satıra düşüyordu → kart yükseklikleri 164/181 olarak ayrışıyordu.
+  kartAdFoto: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3, padding: "12px 12px 0", minHeight: 47 },
   kartFiyatFoto: { fontSize: 12.5, fontWeight: 700, color: BLUE, padding: "4px 12px 14px" },
   kartAd: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3 },
   kartFiyat: { fontSize: 12.5, fontWeight: 700, color: BLUE },
