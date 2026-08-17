@@ -3,7 +3,6 @@
 // Servis bilgisi + aktif ikinci el ürün listesi
 import React, { useState, useEffect } from "react";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CIHAZ_EMOJI = {
@@ -139,21 +138,21 @@ export default function ServisMagaza() {
 
   if (yukleniyor) return (
     <div style={{ minHeight: "100vh", background: CREAM, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
       <span style={{ color: "#64748B" }}>Yükleniyor...</span>
     </div>
   );
 
   if (hata) return (
     <div style={{ minHeight: "100vh", background: CREAM, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
       <span style={{ color: "#DC2626" }}>{hata}</span>
     </div>
   );
 
   return (
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
-      <style>{FONT}</style>
+      
 
       {/* Header */}
       <div style={{ background: INK, color: CREAM, padding: "16px 18px" }}>

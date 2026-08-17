@@ -25,7 +25,6 @@ const GELIS = (() => {
   } catch { return ""; }
 })();
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 // YK #67 ② — BAĞLAMLI GİRİŞ. Tamir Merkezi yazısındaki kullanıcı cihazını VE belirtisini
 // zaten söylemiş durumda; jenerik `/` linki bu kazanılmış bağlamı çöpe atıp onu sıfırdan
@@ -570,7 +569,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           onKapat={() => { setShowDPP(false); setDppInitialSeriNo(""); }}
         />
       )}
-      <style>{FONT}{CSS}</style>
+      <style>{CSS}</style>
       <div style={s.grain} />
 
       <header style={s.header}>
@@ -1008,6 +1007,14 @@ const SSS = [
 const CSS = `
 * { box-sizing: border-box; }
 html, body { margin: 0; overflow-x: hidden; }
+/* YK #69 koşu 1/cila ⑤ — TEK ETKİLEŞİM DİLİ (blog şablonuyla aynı sözleşme).
+   Form alanlarının odak halkası vardı ama buton/link'lerde yoktu: klavyeyle gezen
+   kullanıcı cihaz kartları ve CTA'lar arasında nerede olduğunu göremiyordu.
+   Renkler ve hover davranışı DEĞİŞMİYOR — yalnız ortak geçiş süresi + görünür odak.
+   :where() özgüllüğü 0 → mevcut inline/CSS kurallarının hiçbirini ezmez. */
+:where(a, button) { transition: background-color .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease, transform .15s ease; }
+:where(a, button, [tabindex]):focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; border-radius: 10px; }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 @keyframes anspin { to { transform: rotate(360deg); } }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
 input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }

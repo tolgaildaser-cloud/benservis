@@ -3,7 +3,6 @@
 // /ikinci-el/admin?token=:ADMIN_TOKEN
 import React, { useState, useEffect } from "react";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CSS = `
@@ -64,7 +63,7 @@ export default function AdminOdemePaneli() {
 
   return (
     <div style={sWrap}>
-      <style>{FONT}{CSS}</style>
+      <style>{CSS}</style>
       <div style={st.grain} />
 
       <header style={st.header}>

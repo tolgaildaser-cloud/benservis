@@ -7,7 +7,6 @@ import BenservisRozet from "./BenservisRozet.jsx";
 import { CIHAZLAR } from "./constants.js";
 import KvkkNotu from "./KvkkNotu.jsx";
 
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap');`;
 const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const CSS = `
@@ -117,7 +116,7 @@ export default function IlanOlustur() {
   // ── Render ───────────────────────────────────────────────────────────────────
   return (
     <div style={s.wrap}>
-      <style>{FONT}{CSS}</style>
+      <style>{CSS}</style>
       <div style={s.grain} />
 
       <header style={s.header}>

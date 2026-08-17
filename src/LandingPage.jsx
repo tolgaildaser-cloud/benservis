@@ -6,7 +6,6 @@ import React from "react";
 const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E";
 const BG = "#F8FAFC", SURFACE = "#FFFFFF";
 const MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
-const FONT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');`;
 
 function Kart({ href, harici, no, baslik, aciklama, etiket, ikon, tint, accent }) {
   return (
@@ -47,7 +46,7 @@ function Kart({ href, harici, no, baslik, aciklama, etiket, ikon, tint, accent }
 export default function LandingPage() {
   return (
     <div style={{ minHeight: "100vh", background: BG, fontFamily: "'Hanken Grotesk', sans-serif", display: "flex", flexDirection: "column", color: INK }}>
-      <style>{FONT}</style>
+      
       <style>{`
         .lp-kart { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
         .lp-kart:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(30,41,59,.30); border-color: #E2E8F0; }

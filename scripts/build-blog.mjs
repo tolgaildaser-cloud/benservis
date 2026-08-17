@@ -89,9 +89,28 @@ function guideMeta(g) {
   return `<div class="guide-meta">${it.join("")}</div>`;
 }
 
+// YK #69 koşu 1/cila ② — font <head>'de: bağlantı ısınması + tek stylesheet linki.
+// Ağırlık seti SPA'nın `index.html`'indekiyle BİREBİR aynı olmalı — ikisi ayrışırsa
+// blogdan uygulamaya geçen kullanıcı aynı fontu ikinci kez indirir (önbellek ıskalar).
+const FONT_LINK =
+  `<link rel="preconnect" href="https://fonts.googleapis.com">` +
+  `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
+  `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">`;
+
+// YK #69 koşu 1/cila ② — font @import'u CSS'ten çıkıp <head>'e taşındı (bkz. FONT_LINK).
+// CSS içindeki @import, stil dosyası okunana kadar beklediği için font isteğini bir tur
+// geciktiriyordu; <head>'deki preconnect + <link> ilk taramada başlar.
 const CSS = `
-${T.FONT_IMPORT}
 *{box-sizing:border-box}
+/* YK #69 koşu 1/cila ⑤ — TEK ETKİLEŞİM DİLİ. Şablonda 7 :hover kuralı vardı ama yalnız
+   1 geçiş ve 1 focus kuralı: hover'lar ani sıçrıyordu, klavyeyle gezen kullanıcı nerede
+   olduğunu göremiyordu. Redesign DEĞİL — mevcut hover renkleri aynen kalıyor, yalnız
+   ortak bir süre ve görünür bir odak halkası ekleniyor.
+   :where() özgüllüğü 0'a düşürür → var olan hiçbir kuralı ezmez. */
+:where(a,button,.cta,.kopru-btn,.card,.chip,.katkart,.nav-kart){transition:background-color .15s ease,border-color .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+:where(a,button,[tabindex]):focus-visible{outline:2px solid ${T.BLUE};outline-offset:2px;border-radius:8px}
+/* Hareket azaltma tercihi işletim sisteminden geliyorsa geçişler susar (WCAG 2.3.3). */
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 body{margin:0;background:${T.BG};color:${T.NAVY};font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.7}
 .wrap{max-width:720px;margin:0 auto;padding:0 24px}
 a{color:${T.BLUE}}
@@ -435,6 +454,7 @@ function page({ title, desc, canonical, head = "", body, robots = "", image = ""
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">${image ? `\n<meta property="og:image" content="${esc(image)}"><meta name="twitter:image" content="${esc(image)}">` : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+${FONT_LINK}
 <!-- PWA (YK #26): blog aramadan gelen ilk temas — manifest + SW burada da olmalı, yoksa
      yalnız ana sayfaya girenler uygulamayı kurabilir. Push YOK. -->
 <meta name="theme-color" content="${T.BLUE}">
@@ -500,14 +520,23 @@ const posts = serpistir(
 // bozulmasın, GRF dalga dalga teslim ettikçe yazılar kendiliğinden gerçek kapağa geçsin.
 // Yol sözleşmesi GRF'ye: public/tamir-gorsel/<slug>/kapak.png · 1200×800 (3:2) · alt metin
 // frontmatter'da `images.coverAlt`. Uzantı sırası sabit, GRF hangisini teslim ederse bulunur.
-const KAPAK_UZANTILARI = ["png", "webp", "svg"];
-const kapakUrl = (slug, alt) => {
-  if (!alt) return null;
-  for (const uz of KAPAK_UZANTILARI) {
-    const rel = `tamir-gorsel/${slug}/kapak.${uz}`;
+// YK #69 koşu 1/cila ③ — WEBP ÖNCE. Sıra `png` ile başlıyordu; WebP dosyaları yanına
+// eklenince PNG kazanmaya devam ederdi. Artık aynı adın .webp'si varsa o servis edilir,
+// yoksa .png'ye düşer → GRF'nin bundan sonra PNG teslim etmesi de bir şeyi bozmaz.
+// ⛔ PNG'ler SİLİNMEZ (dışarıdan doğrudan linklenmiş olabilir) — yalnız tercih sırası değişti.
+const GORSEL_UZANTILARI = ["webp", "png", "svg"];
+// Kapak/adım/kontrol görsellerinin ortak çözücüsü: üç yerde ayrı ayrı `.png` sabiti
+// yazılıydı, WebP'ye geçerken üçünü de tek tek düzeltmek gerekiyordu — tek kaynağa alındı.
+const gorselUrl = (slug, ad) => {
+  for (const uz of GORSEL_UZANTILARI) {
+    const rel = `tamir-gorsel/${slug}/${ad}.${uz}`;
     if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
   }
   return null;
+};
+const kapakUrl = (slug, alt) => {
+  if (!alt) return null;
+  return gorselUrl(slug, "kapak");
 };
 // Yazı hero'su: kapak varsa gerçek görsel, yoksa mevcut mavi ikon bandı (fallback aynen).
 // width/height sözleşme oranından sabit — CLS için zorunlu, `.hero.kapak` kutusu da
@@ -525,8 +554,7 @@ const yaziHero = (p) => {
 const adimGorselUrl = (p, n) => {
   const alt = p.images?.steps?.[n - 1];
   if (!alt) return null;
-  const rel = `tamir-gorsel/${p.slug}/adim-${String(n).padStart(2, "0")}.png`;
-  return fs.existsSync(path.join(ROOT, "public", rel)) ? `/${rel}` : null;
+  return gorselUrl(p.slug, `adim-${String(n).padStart(2, "0")}`); // uzantı: webp → png → svg
 };
 // Markdown gövdesindeki numaralı adım paragrafları — marked bunları
 // `<p><strong>1. …</strong> …</p>` olarak basıyor — ilgili görsel paragrafın ARDINA eklenir.
@@ -580,8 +608,7 @@ function adimGorselleriEkle(p) {
 const kontrolGorselUrl = (p, n) => {
   const alt = p.images?.checks?.[n - 1];
   if (!alt) return null; // alt'sız görsel basılmaz (ekran okuyucuda gürültü)
-  const rel = `tamir-gorsel/${p.slug}/kontrol-${String(n).padStart(2, "0")}.png`;
-  return fs.existsSync(path.join(ROOT, "public", rel)) ? `/${rel}` : null;
+  return gorselUrl(p.slug, `kontrol-${String(n).padStart(2, "0")}`); // uzantı: webp → png → svg
 };
 // "Servisi aramadan önce kendin kontrol et" / "kendin dene" gibi başlıkları yakalar.
 function kontrolBolumu(html) {
@@ -630,7 +657,7 @@ function kontrolDenetimi(posts) {
     const madde = (ol[0].match(/<li>/g) || []).length;
     if (k > madde) uyari.push(`${p.slug}: images.checks ${k} alt metin ama listede ${madde} madde — fazlası basılmaz`);
     const eksik = Array.from({ length: Math.min(k, madde) }, (_, i) => i + 1).filter((n) => !kontrolGorselUrl(p, n));
-    if (eksik.length) uyari.push(`${p.slug}: kontrol-${eksik.map((n) => String(n).padStart(2, "0")).join(", kontrol-")}.png dosyası yok`);
+    if (eksik.length) uyari.push(`${p.slug}: kontrol-${eksik.map((n) => String(n).padStart(2, "0")).join(", kontrol-")} görseli yok`);
   }
   if (uyari.length) {
     console.warn("[build-blog] ⚠️  kontrol görseli uyarıları:");
@@ -786,9 +813,11 @@ if (kayanSlug.length) {
 // GRF kategori ikonu (`public/tamir-gorsel/kategori/<slug>.png`) — ÜÇ MERKEZDE ORTAK.
 // Merkez başına yeni ikon üretilmez. Dosya yoksa gömülü çizgi SVG'ye düşülür (kırık görsel yok).
 const katIkon = (k) => {
-  const rel = `tamir-gorsel/kategori/${k.slug}.png`;
-  if (fs.existsSync(path.join(ROOT, "public", rel))) {
-    return `<img class="kat-png" src="/${rel}" width="44" height="44" loading="lazy" decoding="async" alt="${esc(k.ad)} kategorisi ikonu">`;
+  // Uzantı sırası kapak/adım görselleriyle aynı çözücüden (webp → png → svg);
+  // burada da sabit `.png` yazılıydı, WebP dosyaları yanına konunca PNG kazanıyordu.
+  const url = gorselUrl("kategori", k.slug);
+  if (url) {
+    return `<img class="kat-png" src="${url}" width="44" height="44" loading="lazy" decoding="async" alt="${esc(k.ad)} kategorisi ikonu">`;
   }
   return iconSvg(k.ad, "");
 };
