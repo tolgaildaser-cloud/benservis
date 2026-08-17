@@ -1,9 +1,8 @@
 // src/TarifeAdmin.jsx — Tarife veri giriş + onay paneli. /tarife?token=ADMIN_TOKEN
 import React, { useState, useEffect } from "react";
 import { CIHAZLAR } from "./constants.js";
+import { NAVY as INK, BG as PAPER, BLUE, GREEN, SLATE, HAIR, SURFACE as WHITE } from "./theme.js";
 
-const INK = "#1E293B", PAPER = "#F8FAFC", BLUE = "#2563EB", GREEN = "#22C55E",
-      SLATE = "#64748B", HAIR = "#E2E8F0", WHITE = "#fff";
 
 function authToken() {
   return new URLSearchParams(window.location.search).get("token") || "";

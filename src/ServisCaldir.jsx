@@ -7,8 +7,8 @@
 //   onKapat  {Function} Formu kapat
 import React, { useState } from "react";
 import KvkkNotu from "./KvkkNotu.jsx";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
 
-const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E";
 
 const GUNLER = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
 const AYLAR = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"];

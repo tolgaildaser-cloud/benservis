@@ -2,10 +2,8 @@
 // benservis.com ana karşılama — minimal & premium.
 // 1) Arıza Kaydı → /ariza  2) İkinci El → /ikinci-el  3) Ben Tamir Ederim → tr.ifixit.com
 import React from "react";
+import { NAVY as INK, BLUE as AMBER, GREEN, MUTED, FAINT, HAIR, BG, SURFACE } from "./theme.js";
 
-const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E";
-const BG = "#F8FAFC", SURFACE = "#FFFFFF";
-const MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 
 function Kart({ href, harici, no, baslik, aciklama, etiket, ikon, tint, accent }) {
   return (

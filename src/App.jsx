@@ -11,6 +11,7 @@ import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
 import { seedEslestir } from "./seed-eslesme.js";
+import { NAVY as INK, BG as CREAM, BLUE as AMBER, BG, SURFACE, MUTED, FAINT, HAIR } from "./theme.js";
 
 // YK #35 ŞART 2 — HUNİYİ UÇTAN UCA BAĞLA. `/tamir/` sayfalarındaki "servis çağır"
 // bağlantıları `?kaynak=tamir-<cihaz>` taşır ve orada `servis_cagir` olayı düşer; burada aynı
@@ -1024,9 +1025,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   );
 }
 
-const INK = "#1E293B", CREAM = "#F8FAFC", AMBER = "#2563EB";
 // Minimal & premium paleti
-const BG = "#F8FAFC", SURFACE = "#FFFFFF", MUTED = "#475569", FAINT = "#94A3B8", HAIR = "#E2E8F0";
 
 // Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
 // YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,

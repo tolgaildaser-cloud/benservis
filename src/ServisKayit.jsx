@@ -4,13 +4,8 @@
 import React, { useState } from "react";
 import { CIHAZLAR, MARKALAR } from "./constants.js";
 import KvkkNotu from "./KvkkNotu.jsx";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, FAINT as GRAY, RED } from "./theme.js";
 
-const INK   = "#1E293B";
-const CREAM = "#F1F5F9";
-const AMBER = "#2563EB";
-const GREEN = "#22C55E";
-const GRAY  = "#94A3B8";
-const RED   = "#DC2626";
 
 
 // ─── Ortak input stili ───────────────────────────────────────────

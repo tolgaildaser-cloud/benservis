@@ -11,9 +11,9 @@
 
 import React, { useEffect, useState } from "react";
 import { track } from "@vercel/analytics";
+import { BLUE as MAVI, NAVY as INK, MUTED, HAIR } from "./theme.js";
 
 const OTUZ_GUN_MS = 30 * 24 * 60 * 60 * 1000;
-const MAVI = "#2563EB", INK = "#1E293B", MUTED = "#475569", HAIR = "#E2E8F0";
 
 const standaloneMi = () => {
   try {

@@ -4,8 +4,8 @@
 // satıcı firma kartı (tıklayınca firmanın mağazası: /servis/:id).
 import React, { useState, useEffect } from "react";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
+import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, BLUE as LINK } from "./theme.js";
 
-const INK = "#1E293B", CREAM = "#F1F5F9", AMBER = "#2563EB", GREEN = "#22C55E", LINK = "#2563EB";
 
 export default function UrunDetay() {
   const urunId = window.location.pathname.split("/")[2] || "";

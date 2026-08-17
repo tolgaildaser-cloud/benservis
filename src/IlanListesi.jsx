@@ -4,11 +4,9 @@
 import React, { useState, useEffect } from "react";
 import { CIHAZLAR } from "./constants.js";
 import { sepetAdet } from "./sepet.js";
+import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
-const INK = "#1E293B", AMBER = "#2563EB", GREEN = "#22C55E";
-const LINK = "#2563EB";          // sahibinden alışkanlığı: mavi ilan başlığı
-const HOVER_BG = "#FFF8DF";      // satır hover — sarımsı
-const BORDER = "#E2E8F0";
+const HOVER_BG = "#FFF8DF";
 
 const CIHAZ_EMOJI = {
   "Buzdolabı": "🧊", "Çamaşır Makinesi": "🫧", "Bulaşık Makinesi": "🍽️",
