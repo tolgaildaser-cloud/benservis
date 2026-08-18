@@ -15,6 +15,8 @@
 // ⚠️ Backlog'daki "6.475 yetkili servis" ifadesi VİTRİNE ALINMADI: o rakam servis.gov.tr
 // ham CSV'sinden geliyor, bizim dizinimizde 420 "yetkili" kaydı var. Yanlış olurdu.
 import React, { useState, useEffect, useRef } from "react";
+import { SSS } from "./sss.js";
+import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
 import { CIHAZLAR } from "./constants.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT } from "./theme.js";
@@ -113,14 +115,35 @@ const SLOGAN = [
   },
 ];
 
+// Gezinme kartlari. Cihaz kartlariyla AYNI iskelet: 16:10 gorsel alani + ad,
+// hover'da ayni hareket. `foto` dolunca kart fotografa gecer; bos oldugu surece
+// ayni alanda buyutulmus cizgi ikon durur (cihaz kartlarindaki desenin aynisi,
+// dalga dalga teslim edilebilir). Fotograflar GRF'den bekleniyor.
+const GEZINME = [
+  { ad: "Bilgi Merkezi",       href: "/blog/",      foto: "", ikon: "kitap" },
+  { ad: "Tamir Merkezi",       href: "/tamir/",     foto: "", ikon: "anahtar" },
+  { ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "", ikon: "acik-kitap" },
+  { ad: "Yakın Servisler",     href: null,          foto: "", ikon: "konum" },
+];
+
+// Izgara ikonlari — 26 px'lik nav ikonlari 16:10 alanda kayboluyordu, buyuk
+// cizildiler. Fotograf gelince bu tamamen devre disi kalir.
+const IZGARA_IKON = {
+  kitap: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></>,
+  anahtar: <path d="M14.6 6.4a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z" />,
+  "acik-kitap": <path d="M12 7.5v13M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" />,
+  konum: <><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></>,
+};
+
 const ADIMLAR = [
   { n: "1", b: "Derdini yaz", a: "Cihazını ve belirtiyi kendi kelimelerinle anlat. Teknik terim gerekmez." },
   { n: "2", b: "Olası arızayı ve tahmini maliyeti gör", a: "Onaylı tarife kalemlerine dayanan bir aralık — reklam değil, veri." },
   { n: "3", b: "Puanlı servise kendin ulaş", a: "Yanındaki Google puanlı servisleri gör, doğrudan ara. Araya kimse girmez." },
 ];
 
-export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLogo }) {
+export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLogo, onServisler }) {
   const [dert, setDert] = useState("");
+  const [sssAcik, setSssAcik] = useState(null); // SSS akordeon açık indeksi
   // Sticky bandı hero ekrandan çıkınca göster: hero'nun kendi kutusu görünürken
   // ikinci bir CTA gürültü olur (araştırma deseni 7 "tek net çağrı" ilkesi).
   const heroRef = useRef(null);
@@ -311,6 +334,51 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           ))}
         </div>
       </div></section>
+
+      {/* ═══ ⑤ GEZİNME + SIK SORULANLAR ═══
+          18 Ağu'da App.jsx'ten BURAYA taşındı. Orada `s.wrap` (maxWidth 600)
+          içindeydi; Tolga "tam sayfa genişliğine al" dedi ve vitrin zaten wrap'in
+          dışında olduğu için blok buraya gelince taşırma hilesine gerek kalmadı.
+          İçerik 1080 px'lik kolonda kalır — SSS satırı ekran boyunca uzarsa
+          okunmuyor; genişleyen zemin, sınırlı olan satır uzunluğu. */}
+      <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}` }}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
+        <div className="vitrin-gezinme" style={st.gezinmeler}>
+          {GEZINME.map((x) => {
+            const ic = (
+              <>
+                {x.foto ? (
+                  <img src={x.foto} alt="" width="600" height="380" loading="lazy" decoding="async" style={st.kartGorsel} />
+                ) : (
+                  <span style={st.kartIkonAlan}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke={BLUE} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={st.gezinmeIkon} aria-hidden="true">
+                      {IZGARA_IKON[x.ikon]}
+                    </svg>
+                  </span>
+                )}
+                <span style={st.kartAdFoto}>{x.ad}</span>
+              </>
+            );
+            return x.href
+              ? <a key={x.ad} href={x.href} style={{ ...st.kartFoto, textDecoration: "none" }}>{ic}</a>
+              : <button key={x.ad} type="button" onClick={onServisler} style={st.kartFoto}>{ic}</button>;
+          })}
+        </div>
+
+        <h2 style={{ ...st.h2, marginTop: "clamp(36px, 5vw, 56px)", marginBottom: "clamp(18px, 2.2vw, 26px)" }}>Sık sorulanlar</h2>
+        <div style={st.sssListe}>
+          {SSS.map((q, i) => (
+            <div key={i} style={st.sssKart}>
+              <button onClick={() => setSssAcik(sssAcik === i ? null : i)} aria-expanded={sssAcik === i} style={st.sssBtn}>
+                <span>{q.s}</span>
+                <span style={st.sssArti} aria-hidden="true">{sssAcik === i ? "–" : "+"}</span>
+              </button>
+              {sssAcik === i && <p style={st.sssCevap}>{q.c}</p>}
+            </div>
+          ))}
+        </div>
+
+        <TelefonaEkleBlok />
+      </div></section>
     </>
   );
 }
@@ -437,6 +505,21 @@ const st = {
   },
   sloganBaslik: { display: "block", color: NAVY, fontSize: "clamp(17px, 1.8vw, 20px)", lineHeight: 1.3, marginBottom: 8 },
   sloganMetin: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.6, margin: 0 },
+
+  // Gezinme ızgarası: cihaz kartlarıyla aynı kart stilini (kartFoto) paylaşır,
+  // yalnız 4 sütuna sabitlenir — dört kalem var, satır bölünmesin.
+  gezinmeler: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, alignItems: "stretch", gridAutoRows: "1fr" },
+  gezinmeIkon: { width: "clamp(44px, 26%, 66px)", height: "auto" },
+
+  sssListe: { maxWidth: 860, margin: "0 auto" },
+  sssKart: { background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" },
+  sssBtn: {
+    width: "100%", background: "none", border: "none", padding: "16px 18px",
+    display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12,
+    textAlign: "left", fontFamily: "inherit", fontSize: "clamp(15px, 1.6vw, 18px)", fontWeight: 600, color: NAVY,
+  },
+  sssArti: { color: BLUE, fontSize: 24, fontWeight: 400, lineHeight: 1, flexShrink: 0 },
+  sssCevap: { margin: 0, padding: "0 18px 16px", fontSize: "clamp(14.5px, 1.5vw, 16.5px)", lineHeight: 1.65, color: MUTED },
 
   adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(24px, 3vw, 34px)", maxWidth: 980, margin: "0 auto" },
   adim: { textAlign: "center", padding: "0 6px" },
