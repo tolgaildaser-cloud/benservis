@@ -14,6 +14,12 @@ faq:
   - q: "Tamir mi yenisi mi?"
     a: "Valf, filtre, kapı kilidi gibi parçalar ucuzdur, tamir mantıklı. Anakart arızası pahalıysa ve makine eskiyse yenisi değerlendirilebilir."
 images:
+  checks:
+    - "Su musluğunun kolunun yatay konuma getirilip sonuna kadar açılışını gösteren çizim"
+    - "Giriş filtresindeki küçük süzgecin çıkarılıp fırçayla temizlenişini gösteren çizim"
+    - "Bükülmüş hortum ile düz uzanan hortumun karşılaştırıldığı çizim"
+    - "Çamaşır makinesi kapağının kilidi oturana kadar tam kapatılışını gösteren çizim"
+    - "Fişin bir dakika çekilişini ve çocuk kilidinin kontrolünü gösteren çizim"
   coverAlt: "Çamaşır makinesi ve yanında kesik kesik damlayan, akmayan su çizimi"
 ---
 

@@ -14,6 +14,12 @@ faq:
   - q: "Klima açılmıyorsa tamiri kaç para?"
     a: "Pil ya da sigorta kaynaklıysa çoğu zaman ücretsizdir. Kumanda, kapasitör ve elektronik kart tamiri çok farklı işlerdir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Klima kumandasının pilinin değiştirilip soğutma moduna alınışını gösteren çizim"
+    - "Panoda atmış şalterin kaldırılışını gösteren karşılaştırma çizimi"
+    - "Taşınabilir klimada fişin prize tam oturmasının kontrolünü gösteren çizim"
+    - "Klimanın şalterden beş dakika kapatılıp tekrar açılışını gösteren çizim"
+    - "Kumanda ekranı sönük ile ekranı yanan kumandanın karşılaştırıldığı çizim"
   coverAlt: "Çalışmayan klima iç ünitesi ve yanında sönük gösterge çizimi"
 ---
 

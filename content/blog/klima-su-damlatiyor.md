@@ -14,6 +14,12 @@ faq:
   - q: "Tahliye hattı temizliği kaç para?"
     a: "Genelde bakım kapsamındadır; pompa ya da montaj düzeltme gerekiyorsa artar. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Damlama sürerken klimanın kapatılışını gösteren çizim"
+    - "İç ünitenin filtresinin çıkarılıp yıkanışını ve kuruyunca takılışını gösteren çizim"
+    - "Tahliye hortumunun dış ucundaki tıkanma ile açık ucun karşılaştırıldığı çizim"
+    - "Buzlanmanın erimesi için on beş yirmi dakika beklenmesini gösteren çizim"
+    - "Yoğun damlamada altına kap konulmasını ve servis çağrılmasını gösteren çizim"
   coverAlt: "Klima iç ünitesinden damlayan su ve altında zeminde biriken su çizimi"
 ---
 

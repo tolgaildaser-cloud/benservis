@@ -330,8 +330,11 @@ a.katkart:focus-visible{transform:translateY(-2px);border-color:#C7D7F5}
    Adım görselinden dar üst boşluk: görsel ait olduğu maddeye yapışık okunsun. */
 /* Kontrol görseli maddenin İÇİNDE (<li>) duruyor; nefesi maddeye yapışık kalsın
    ama görsel ezilmesin diye alt boşluk açıldı. */
-.kontrol-gorsel{margin:11px 0 16px;padding-left:12px;border-left:3px solid #DBEAFE}
-.kontrol-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
+/* Adım görseliyle AYNI dil (18 Ağu): ince sol çizgi yerine kart yüzeyi.
+   Farkı ölçek: bu görsel bir liste maddesinin İÇİNDE durur, o yüzden daha
+   küçük köşe ve daha dar nefes — maddeye ait olduğu okunsun. */
+.kontrol-gorsel{margin:11px 0 18px;padding:0;border:1px solid ${T.HAIR};border-radius:13px;overflow:hidden;background:${T.SURFACE}}
+.kontrol-gorsel img{width:100%;height:auto;display:block;border:0;border-radius:0;background:#fff}
 .adim-gorsel img{width:100%;height:auto;display:block;border:0;border-radius:0;background:#fff}
 /* Adım başlıkları (h3 "1. Makineyi durdur") görselle tek blok gibi okunsun:
    üstünde nefes, altında yapışıklık. */

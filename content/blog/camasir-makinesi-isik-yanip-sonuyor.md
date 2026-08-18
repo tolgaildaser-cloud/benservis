@@ -14,6 +14,13 @@ faq:
   - q: "Tamiri kaç para?"
     a: "Arızaya göre değişir: kapı kilidi, su valfi/pompa ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Çamaşır makinesi kapağının kilidi oturana kadar itilip tam kapatılışını gösteren çizim"
+    - "Su musluğunun açık olup olmadığının ve giriş süzgecinin tıkalı olup olmadığının kontrolünü gösteren çizim"
+    - "Alt ön kapaktaki tahliye filtresinin çıkarılıp tüy ve ipliğin temizlenişini gösteren çizim"
+    - "Tamburdaki tek ağır parça ile bölünüp dağıtılmış yükün karşılaştırıldığı çizim"
+    - "Fişin bir dakika çekilişini ve çocuk kilidinin kontrolünü gösteren çizim"
+    - "Panelde yanıp sönen ışık deseninin not alınmasını gösteren çizim"
   coverAlt: "Çamaşır makinesi ve yanında yanıp sönen ışık göstergesi çizimi"
 ---
 

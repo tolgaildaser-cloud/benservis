@@ -15,6 +15,12 @@ faq:
   - q: "Soğutmayan klima elektrik faturasını yükseltir mi?"
     a: "Evet. Verimsiz çalışan klima aynı serinlik için çok daha fazla enerji harcar; sorunu erken çözmek hem konfor hem tasarruf sağlar."
 images:
+  checks:
+    - "İç ünitenin kapağı açılıp filtrelerin çıkarılıp yıkanışını gösteren çizim"
+    - "Modun soğutmaya, sıcaklığın on altı yirmi iki dereceye alınışını ve fan hızının yükseltilişini gösteren çizim"
+    - "Dış ünitenin önü kapalı hâli ile açılmış hâlinin karşılaştırıldığı çizim"
+    - "Panoda klimanın atmış şalterinin kaldırılışını gösteren çizim"
+    - "Yeni açılan klimanın tam soğutması için on beş dakika beklenmesini gösteren çizim"
   coverAlt: "Duvar tipi klima iç ünitesi, yanında kar tanesi ve yükselen ısı dalgaları çizimi"
 ---
 

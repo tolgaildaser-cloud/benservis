@@ -14,6 +14,12 @@ faq:
   - q: "Tamiri kaç para?"
     a: "Denge ayarı çoğu zaman ücretsizdir. Rulman/keçe değişimi işçiliği ağır bir iştir, amortisör daha hafiftir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "Makinenin arkasındaki dört nakliye cıvatasının anahtarla çıkarılışını gösteren çizim"
+    - "Ön ayakların çevrilip dengelenişini ve kontra somunun sabitlenişini gösteren çizim"
+    - "Tamburdaki tek ağır parça ile dağıtılmış yükün karşılaştırıldığı çizim"
+    - "Tambur kauçuğunun kıvrımında sıkışmış bozuk para ve telin aranışını gösteren çizim"
+    - "Metalik takırtı ile boğuk uğultu sesinin ayrımını gösteren çizim"
   coverAlt: "Hafif eğik çizilmiş çamaşır makinesi ve iki yanından yayılan titreşim dalgaları"
 ---
 
