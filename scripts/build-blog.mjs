@@ -113,9 +113,26 @@ const CSS = `
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 body{margin:0;background:${T.BG};color:${T.NAVY};font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.7}
 .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+/* Hub sayfalari (Bilgi/Tamir Merkezi, Kilavuzlar) GENIS kolon kullanir: 4 sutunlu
+   cihaz izgarasi 720 px'e sigmiyor. YAZI sayfalari 720'de kalir — orada satir
+   uzunlugu okunabilirligi belirliyor, genisletmek zarar verirdi. */
+body.genis .wrap{max-width:1120px}
 a{color:${T.BLUE}}
-header.site{background:${T.SURFACE};border-bottom:1px solid ${T.HAIR}}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+/* ÜST BAR — ana sayfanın hero üst barıyla aynı dil (Tolga 18 Ağu): koyu lacivert
+   zemin, beyaz logo, menü linkleri ve sağ uçta tek dolgulu düğme. Önceki hâl beyaz
+   zeminde tek "Bilgi Merkezi" linkiydi; ana sayfadan gelen kullanıcı için başka bir
+   siteye girmiş gibi duruyordu. */
+header.site{background:${T.NAVY};border-bottom:none}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+header.site .brand .wm-b{color:#fff}
+header.site .brand .wm-s{color:#93C5FD}
+header.site .brand .brand-motto{color:#CBD5E1}
+.sitenav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.sitenav a{color:#DBEAFE;font-size:13.5px;font-weight:600;text-decoration:none;padding:8px 12px;border-radius:999px;white-space:nowrap}
+@media(hover:hover){.sitenav a:hover{background:rgba(255,255,255,.10)}}
+/* Sağ uçtaki tek eylem. Beyaz zemin seçildi: lacivert barda mavi dolgu ayrışmıyor. */
+.sitenav a.navcta{display:inline-flex;align-items:center;gap:7px;background:#fff;color:${T.NAVY};padding:9px 16px;margin-left:6px;box-shadow:0 2px 10px -4px rgba(15,23,42,.45)}
+@media(hover:hover){.sitenav a.navcta:hover{background:#F1F5F9}}
 .brand{display:flex;align-items:center;gap:9px;text-decoration:none}
 .brand .wm{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:21px;letter-spacing:-.5px;line-height:1}
 .brand .wm-b{color:${T.NAVY}}
@@ -226,22 +243,43 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .tamir-geri{margin:0 0 22px;padding:11px 14px;border-left:3px solid ${T.BLUE};background:#EFF4FF;border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.55;color:${T.NAVY}}
 /* /tamir/ hub — cihaz kategorisi ızgarası (YK #32 format kararı, ① katman).
    Rehberi OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok). */
-.katlar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 8px}
+.katlar{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:26px 0 8px;grid-auto-rows:1fr}
 @media(min-width:640px){.katlar{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:960px){.katlar{grid-template-columns:repeat(4,1fr)}}
 /* KONU ızgarası (Genel + Sürdürülebilirlik) — cihaz ızgarasından ayrı bölüm.
    375px'te TEK sütun: "Sürdürülebilirlik" bölünemeyen 17 harflik bir kelime, iki sütunda
    min-content genişliği 1fr'i eziyor ve kartlar 136/177px gibi eğri kalıyordu. Tek sütunda
    ikisi de tam genişlik → eşit. ≥640px'te cihaz ızgarasıyla AYNI 3 sütuna oturur. */
 .katlar.konu{grid-template-columns:1fr}
 @media(min-width:640px){.katlar.konu{grid-template-columns:repeat(3,1fr)}}
-.katkart{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:18px;border:1px solid ${T.HAIR};border-radius:14px;background:${T.SURFACE};text-decoration:none;color:${T.NAVY}}
-a.katkart{transition:border-color .15s,box-shadow .15s}
-a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,59,.3)}
-.katkart .kat-ic{width:44px;height:44px;border-radius:12px;background:#EFF4FF;color:${T.BLUE};display:flex;align-items:center;justify-content:center}
-.katkart .kat-ic svg{width:25px;height:25px}
+/* KART — ana sayfadaki cihaz kartlarıyla AYNI dil (Tolga 18 Ağu: "ana sayfa ile
+   benzer stile gelmeli"): üstte 16:10 görsel alanı kenardan kenara, altta ad +
+   rozet. Önceki hâl 44px'lik köşe ikonuyla bir liste satırı gibi duruyordu. */
+.katkart{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden;border:1px solid ${T.HAIR};border-radius:16px;background:#fff;text-decoration:none;color:${T.NAVY};height:100%}
+.katkart .kat-gorsel{display:block;width:100%;aspect-ratio:16/10;overflow:hidden;background:${T.SURFACE}}
+.katkart .kat-gorsel img{display:block;width:100%;height:100%;object-fit:cover}
+/* Fotoğrafı olmayan cihaz: aynı alanda ortalanmış büyük ikon (ana sayfada da böyle). */
+.katkart .kat-gorsel-ikon{display:flex;align-items:center;justify-content:center;background:#EFF4FF}
+.katkart .kat-gorsel-ikon svg{width:34%;height:auto;color:${T.BLUE}}
+.katkart .kat-gorsel-ikon .kat-png{width:34%;height:auto;border-radius:0}
+.katkart .kat-govde{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px 16px}
+/* Hover hareketi ana sayfayla aynı: kart yükselir, gölge derinleşir, görsel büyür. */
+@media(hover:hover) and (pointer:fine){
+  a.katkart{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+  a.katkart .kat-gorsel img,a.katkart .kat-gorsel svg{transition:transform .3s ease}
+  a.katkart:hover{transform:translateY(-2px);border-color:#C7D7F5;box-shadow:0 10px 24px -10px rgba(30,41,59,.28)}
+  a.katkart:hover .kat-gorsel img,a.katkart:hover .kat-gorsel svg{transform:scale(1.06)}
+}
+a.katkart:focus-visible{transform:translateY(-2px);border-color:#C7D7F5}
+@media(prefers-reduced-motion:reduce){
+  a.katkart,a.katkart .kat-gorsel img,a.katkart .kat-gorsel svg{transition:none}
+  a.katkart:hover,a.katkart:focus-visible{transform:none}
+  a.katkart:hover .kat-gorsel img,a.katkart:hover .kat-gorsel svg{transform:none}
+}
 /* GRF kategori ikonu (PNG). Rehberi olmayan kartta gri + soluk: dürüst boş hâl görselde de bozulmasın. */
 .katkart .kat-png{width:44px;height:44px;border-radius:12px;display:block;object-fit:cover}
 .katkart.yok .kat-png{filter:grayscale(1);opacity:.55}
+.katkart.yok .kat-gorsel img{filter:grayscale(1);opacity:.5}
 /* Rehber kartındaki kapak görseli (GRF) — ikon kutusunun yerine 3:2 küçük görsel. */
 .card-ic.kapak{width:96px;height:64px;padding:0;border-radius:11px;overflow:hidden;background:${T.BG}}
 /* contain (cover değil): kapaklar çizim — kırpmak çizimin yarısını götürür. */
@@ -260,7 +298,7 @@ a.katkart:hover{border-color:${T.BLUE};box-shadow:0 10px 24px -20px rgba(30,41,5
 .kontrol-gorsel{margin:11px 0 16px;padding-left:12px;border-left:3px solid #DBEAFE}
 .kontrol-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
 .adim-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
-.katkart h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
+.katkart .kat-govde h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
 .kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
 .katkart.yok{background:${T.BG}}
 .katkart.yok .kat-ic{background:#F1F5F9;color:${T.FAINT}}
@@ -276,7 +314,8 @@ a.katkart.yesil:hover{border-color:#16A34A;box-shadow:0 10px 24px -20px rgba(22,
 .kat-not{margin:0;font-size:13px;line-height:1.5;color:${T.MUTED}}
 .geri{display:inline-block;margin:0 0 14px;font-size:14px;font-weight:600;text-decoration:none}
 .bloghead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 8px}
-.bloghead h1{margin:0}
+/* Hub başlığı ana sayfadaki bölüm başlıklarıyla aynı ölçekte (clamp 22→34). */
+.bloghead h1{margin:0;font-size:clamp(28px,4.4vw,42px);line-height:1.1;letter-spacing:-.02em}
 .blogsearch{flex:1 1 220px;max-width:360px;margin:0;padding:12px 15px;border:1px solid ${T.HAIR};border-radius:12px;font-size:15px;font-family:'Hanken Grotesk',system-ui,sans-serif;color:${T.NAVY};background:${T.SURFACE};outline:none}
 .blogsearch:focus{border-color:${T.BLUE};box-shadow:0 0 0 3px rgba(37,99,235,.12)}
 .blogsearch::placeholder{color:${T.FAINT}}
@@ -482,7 +521,7 @@ const SEARCH_JS = `(function(){
 // İçeriği hazır olmayan bir sayfayı indekslemek site kalitesini düşürür; içerik gelince kalkar.
 // `image` = mutlak görsel adresi (YK #65 kapağı). Verilmeyen sayfalarda og:image hiç
 // basılmaz ve twitter kartı eskisi gibi `summary` kalır — mevcut paylaşım görüntüsü bozulmaz.
-function page({ title, desc, canonical, head = "", body, robots = "", image = "" }) {
+function page({ title, desc, canonical, head = "", body, robots = "", image = "", genis = false }) {
   return `<!doctype html><html lang="tr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
@@ -503,8 +542,8 @@ ${FONT_LINK}
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
-</head><body>
-<header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><a class="nav" href="/blog/">Bilgi Merkezi</a></div></header>
+</head><body${genis ? ' class="genis"' : ""}>
+<header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><nav class="sitenav" aria-label="Ana menü"><a href="/blog/">Bilgi Merkezi</a><a href="/tamir/">Tamir Merkezi</a><a href="/kilavuzlar/">Kullanım Kılavuzları</a><a class="navcta" href="/?servis=1"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Yakın Servisler</a></nav></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer class="site"><span class="wm-b">ben</span><span class="wm-s">servis</span> · Bil, gör, çağır. · <a href="/" style="color:${T.MUTED}">benservis.com</a> · <a href="/blog/hakkimizda/" style="color:${T.MUTED}">Hakkımızda</a> · <a href="/gizlilik/" style="color:${T.MUTED}">Gizlilik</a> · <a href="/kullanim-kosullari/" style="color:${T.MUTED}">Kullanım Koşulları</a><span class="foot-social"><a href="https://www.instagram.com/benservis.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@benservis.app" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/134824266/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><a href="https://www.youtube.com/@benservisapp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://medium.com/@benservis.app" target="_blank" rel="noopener noreferrer" aria-label="Medium"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a></span></footer>
 </body></html>`;
@@ -850,6 +889,28 @@ if (kayanSlug.length) {
 
 // GRF kategori ikonu (`public/tamir-gorsel/kategori/<slug>.png`) — ÜÇ MERKEZDE ORTAK.
 // Merkez başına yeni ikon üretilmez. Dosya yoksa gömülü çizgi SVG'ye düşülür (kırık görsel yok).
+// Kart görsel alanı — ANA SAYFA İLE AYNI DİL (Tolga 18 Ağu: "ana sayfa ile benzer
+// stile gelmeli"). Ana sayfadaki cihaz fotoğrafı varsa kenardan kenara o basılır;
+// yoksa aynı alanda büyütülmüş çizgi ikon durur. Dosya adları ana sayfayla birebir
+// aynı slug (buzdolabi, camasir-makinesi…), o yüzden ek eşleme tablosu gerekmedi.
+// `gorselUrl` yalnız tamir-gorsel/ altına bakıyor; ana sayfa fotoğrafları
+// public/anasayfa/cihaz/ altında, o yüzden ayrı çözücü.
+const anasayfaFotosu = (slug) => {
+  for (const uz of GORSEL_UZANTILARI) {
+    const rel = `anasayfa/cihaz/${slug}.${uz}`;
+    if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
+  }
+  return null;
+};
+
+const katKapak = (k) => {
+  const foto = anasayfaFotosu(k.slug);
+  if (foto) {
+    return `<span class="kat-gorsel"><img src="${foto}" width="600" height="380" loading="lazy" decoding="async" alt=""></span>`;
+  }
+  return `<span class="kat-gorsel kat-gorsel-ikon">${katIkon(k)}</span>`;
+};
+
 const katIkon = (k) => {
   // Uzantı sırası kapak/adım görselleriyle aynı çözücüden (webp → png → svg);
   // burada da sabit `.png` yazılıydı, WebP dosyaları yanına konunca PNG kazanıyordu.
@@ -873,8 +934,8 @@ const katIzgarasi = (items, birim) =>
   items
     .map((k) =>
       k.sayi
-        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${esc(k.birim || birim)}</span></a>`
-        : `<div class="katkart yok"><span class="kat-ic">${katIkon(k)}</span><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span><p class="kat-not">${esc(k.bosNot)}</p></div>`
+        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${esc(k.birim || birim)}</span></span></a>`
+        : `<div class="katkart yok">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span><p class="kat-not">${esc(k.bosNot)}</p></span></div>`
     )
     .join("");
 
@@ -1059,6 +1120,7 @@ fs.writeFileSync(
     // NOT: kategori ızgarasının ALTINDA tüm yazılar listesi BİLEREK duruyor. Hub'ı 12 karta
     // indirip 78 yazıyı bir tık derine itmek, /blog/'dan gelen iç linkleri koparır (79 sayfa
     // aramada gösterim alıyor). Izgara = gezinme katmanı, liste = tarama/arama katmanı.
+    genis: true,
     body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogCihazKartlari}</div><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0">Konu başlıkları</h2><div class="katlar konu">${blogKonuKartlari}</div><p class="kat-not">Belirli bir cihaza bağlı olmayan yazılar bu iki başlıkta toplanır: mevzuat, enerji ve fatura yazıları <a href="/blog/kategori/genel/">Genel</a>'de; onarım hakkı, cihaz ömrü ve döngüsel ekonomi yazıları <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a>'te.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
   })
 );
@@ -1292,6 +1354,7 @@ fs.writeFileSync(
         { name: "Ana Sayfa", item: `${SITE}/` },
         { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       ])),
+    genis: true,
     body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. <strong>Buradaki adımlar bakım seviyesindedir: temizlik, filtre, kontrol ve ayar.</strong> Parça değişimi ya da cihazı sökmek gereken işleri buraya koymuyoruz — onlar servis işi. Her rehberin başında <strong>gereken malzemeyi</strong> yazıyoruz.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetteki sayı o cihazda kaç hata kodu, belirti ve kendin-çöz adımının toplandığını gösterir. Rozetinde <strong>&quot;İçerik yok&quot;</strong> yazan cihazlarda henüz yayınlanmış sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
   })
 );
@@ -1505,6 +1568,7 @@ fs.writeFileSync(
     desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden doğrulanmış linkler ve Türkçe özetler. PDF barındırmıyoruz, üreticiye yönlendiriyoruz.",
     canonical: `${SITE}/kilavuzlar/`,
     robots: kilavuzRobots,
+    genis: true,
     body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${CTA}`,
   })
 );
