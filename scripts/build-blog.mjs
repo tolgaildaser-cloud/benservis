@@ -958,21 +958,31 @@ if (kayanSlug.length) {
 // GRF kategori ikonu (`public/tamir-gorsel/kategori/<slug>.png`) — ÜÇ MERKEZDE ORTAK.
 // Merkez başına yeni ikon üretilmez. Dosya yoksa gömülü çizgi SVG'ye düşülür (kırık görsel yok).
 // Kart görsel alanı — ANA SAYFA İLE AYNI DİL (Tolga 18 Ağu: "ana sayfa ile benzer
-// stile gelmeli"). Ana sayfadaki cihaz fotoğrafı varsa kenardan kenara o basılır;
-// yoksa aynı alanda büyütülmüş çizgi ikon durur. Dosya adları ana sayfayla birebir
-// aynı slug (buzdolabi, camasir-makinesi…), o yüzden ek eşleme tablosu gerekmedi.
-// `gorselUrl` yalnız tamir-gorsel/ altına bakıyor; ana sayfa fotoğrafları
-// public/anasayfa/cihaz/ altında, o yüzden ayrı çözücü.
-const anasayfaFotosu = (slug) => {
-  for (const uz of GORSEL_UZANTILARI) {
-    const rel = `anasayfa/cihaz/${slug}.${uz}`;
-    if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
+// stile gelmeli"), AMA AYNI KARELER DEĞİL.
+//
+// Tolga, 19 Ağu: "insansız seti ana sayfa hariç, bilgi merkezi, tamir merkezi ve
+// kullanım kılavuzlarında kullan."
+//   · ana sayfa      → mavi üniformalı usta seti (public/anasayfa/cihaz/) — DEĞİŞMEDİ
+//   · üç merkez hub'ı → insansız set (public/merkez-gorsel/)
+// Gerekçe GRF'nin prompt paketinde: hub'lar bir katalog yüzeyi, orada cihazın kendisi
+// özne olmalı; usta figürü ana sayfanın karşılama anına ait.
+// YK #32 gereği ÜÇ MERKEZ TEK ORTAK SET kullanır (merkez başına ayrı set üretilmez).
+//
+// Dosya adları her iki sette de aynı slug (buzdolabi, camasir-makinesi…), o yüzden
+// ek eşleme tablosu gerekmedi. Insansız kare yoksa ana sayfa karesine düşer, o da
+// yoksa çizgi ikon — hiçbir ara durumda kart boş kalmaz.
+const merkezFotosu = (slug) => {
+  for (const kok of ["merkez-gorsel", "anasayfa/cihaz"]) {
+    for (const uz of GORSEL_UZANTILARI) {
+      const rel = `${kok}/${slug}.${uz}`;
+      if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
+    }
   }
   return null;
 };
 
 const katKapak = (k) => {
-  const foto = anasayfaFotosu(k.slug);
+  const foto = merkezFotosu(k.slug);
   if (foto) {
     return `<span class="kat-gorsel"><img src="${foto}" width="600" height="380" loading="lazy" decoding="async" alt=""></span>`;
   }
