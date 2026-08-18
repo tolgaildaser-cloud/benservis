@@ -153,6 +153,38 @@ main{padding:40px 0 64px}
 .hero.kapak img{width:100%;height:100%;object-fit:contain;display:block}
 h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 8px}
 .meta{color:${T.FAINT};font-size:14px;margin:0 0 28px}
+/* ——— YAZI BAŞI (18 Ağu tasarım) ———
+   Kapak görseli ARKA PLAN, üstünde koyu perde, içinde başlık + meta + iki kapı.
+   Amaç: okuyucu ilk ekranda hem ne okuduğunu hem iki çıkışını görsün.
+   wrap'in içinde ama kenar boşluğunu iptal eder: şerit tam genişlik görünür. */
+.yazibasi{position:relative;margin:0 -24px 30px;padding:0;overflow:hidden;border-radius:0;background:${T.NAVY};isolation:isolate}
+@media(min-width:760px){.yazibasi{margin:0 0 34px;border-radius:22px}}
+.yazibasi .yb-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+/* Perde: üstte yoğun (metin orada), altta hafif. Kapaklar açık zeminli çizimler
+   olduğu için beyaz metnin okunması PERDEYE bağlı — opaklık ölçümle seçildi. */
+.yazibasi .yb-perde{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,23,42,.86) 0%,rgba(15,23,42,.78) 55%,rgba(15,23,42,.88) 100%)}
+.yazibasi.yb-fotosuz .yb-perde{background:linear-gradient(180deg,#1E293B 0%,#172033 100%)}
+.yazibasi .yb-ic{position:relative;z-index:2;padding:clamp(26px,4vw,44px) clamp(22px,3.4vw,40px)}
+.yazibasi .yb-ust{margin:0 0 10px;font-size:13px;font-weight:600;color:#93C5FD;letter-spacing:.02em}
+.yazibasi h1{margin:0 0 16px;color:#fff;font-size:clamp(26px,3.6vw,40px);line-height:1.15}
+/* Meta rozetleri koyu zeminde: mavi kutu yerine cam yüzey. */
+.yazibasi .guide-meta{margin:0 0 20px;background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.16)}
+.yazibasi .guide-meta .gm{color:#fff}
+.yazibasi .guide-meta .gm b{color:#93C5FD}
+.yazibasi .kopru{margin:0}
+/* İki kapı koyu zeminde: servis DOLU beyaz (ana eylem — Tolga'nın güç metriği),
+   teşhis ÇERÇEVELİ. Açık zemindeki mavi/beyaz düzeninin koyu karşılığı. */
+/* Köprü sarmalayıcısı açık zeminde mavi kutu; koyu başlıkta o kutu FAZLA —
+   kendi zeminini ve sol çizgisini bırakır, yalnız iki düğme kalır. */
+.yazibasi .kopru{background:transparent;border:0;padding:0}
+.yazibasi .kopru-servis{background:#fff;color:${T.NAVY};border-color:#fff}
+/* important ZORUNLU: açık zemin kuralı (.kopru-teshis) zaten important ile
+   yazılmış, onu ancak aynı silahla ezebiliyoruz. Ölçümle görüldü: düğme koyu
+   zeminde beyaz dolu kalıyordu, iki kapı birbirinden ayrışmıyordu. */
+.yazibasi .kopru-teshis{background:transparent !important;color:#fff !important;border-color:rgba(255,255,255,.55)}
+/* Kapak illüstrasyonları çizgi ağırlıklı; hafif bulanıklık metni öne çıkarır,
+   fotoğraf gelirse de aynı kural doku olarak çalışır. */
+.yazibasi .yb-foto{filter:blur(1.5px) saturate(.9)}
 .guide-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 26px;padding:14px 18px;background:#EFF4FF;border:1px solid ${T.HAIR};border-radius:14px}
 .guide-meta .gm{display:flex;flex-direction:column;font-size:14.5px;color:${T.NAVY};font-weight:600}
 .guide-meta .gm b{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:${T.BLUE};margin-bottom:3px}
@@ -290,14 +322,20 @@ a.katkart:focus-visible{transform:translateY(-2px);border-color:#C7D7F5}
    adımın kendisi: sol kenarda mavi bağ çizgisi onu ait olduğu maddeye bağlar (IKEA
    kılavuzu hissi), etrafındaki nefes iki katına çıkar.
    ⛔ Metin katmanına dokunulmadı — bu yalnız sunum. */
-.adim-gorsel{margin:18px 0 30px;padding-left:14px;border-left:3px solid #DBEAFE}
+/* 18 Ağu tasarım: adım görseli artık kenarında ince çizgi olan bir ek değil,
+   adımın KENDİSİ. Kart yüzeyine oturur, görsel kenardan kenara basar.
+   Tolga'nın ilkesi: "albenisi yüksek, basit, bol görselli — açıklamalı görselli". */
+.adim-gorsel{margin:16px 0 30px;padding:0;border:1px solid ${T.HAIR};border-radius:16px;overflow:hidden;background:${T.SURFACE};box-shadow:0 1px 2px rgba(30,41,59,.04)}
 /* Kontrol listesi görseli (14 Ağu kuralı) — <li> İÇİNDE durur, madde metninin altında.
    Adım görselinden dar üst boşluk: görsel ait olduğu maddeye yapışık okunsun. */
 /* Kontrol görseli maddenin İÇİNDE (<li>) duruyor; nefesi maddeye yapışık kalsın
    ama görsel ezilmesin diye alt boşluk açıldı. */
 .kontrol-gorsel{margin:11px 0 16px;padding-left:12px;border-left:3px solid #DBEAFE}
 .kontrol-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
-.adim-gorsel img{width:100%;height:auto;display:block;border:1px solid ${T.HAIR};border-radius:13px;background:${T.SURFACE}}
+.adim-gorsel img{width:100%;height:auto;display:block;border:0;border-radius:0;background:#fff}
+/* Adım başlıkları (h3 "1. Makineyi durdur") görselle tek blok gibi okunsun:
+   üstünde nefes, altında yapışıklık. */
+article h3{margin:34px 0 8px;font-size:clamp(18px,2vw,21px);line-height:1.3}
 .katkart .kat-govde h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
 .kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
 .katkart.yok{background:${T.BG}}
@@ -618,6 +656,26 @@ const kapakUrl = (slug, alt) => {
 // Yazı hero'su: kapak varsa gerçek görsel, yoksa mevcut mavi ikon bandı (fallback aynen).
 // width/height sözleşme oranından sabit — CLS için zorunlu, `.hero.kapak` kutusu da
 // aspect-ratio ile aynı oranı tutuyor (kart görselindeki hardcoded ölçü deseniyle aynı).
+// Sayfa başı bloğu: kapak görseli arka planda, üstünde koyu perde, en üstte
+// kategori+tarih satırı, sonra H1, sonra meta rozetleri, en altta İKİ KAPI.
+// Kapak YOKSA görsel katmanı hiç basılmaz — blok düz koyu yüzeye düşer, bozulmaz.
+const yaziBasi = (p) => {
+  const url = kapakUrl(p.slug, p.images?.coverAlt);
+  const gorsel = url
+    ? `<img class="yb-foto" src="${url}" width="1200" height="800" fetchpriority="high" decoding="async" alt="${esc(p.images.coverAlt)}">`
+    : "";
+  return `<div class="yazibasi${url ? "" : " yb-fotosuz"}">` +
+    gorsel +
+    `<div class="yb-perde"></div>` +
+    `<div class="yb-ic">` +
+      `<p class="yb-ust">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p>` +
+      `<h1>${esc(p.title)}</h1>` +
+      guideMeta(p.guide) +
+      KOPRU_SATIRI(p) +
+    `</div>` +
+  `</div>`;
+};
+
 const yaziHero = (p) => {
   const url = kapakUrl(p.slug, p.images?.coverAlt);
   if (!url) return heroFor(p.category);
@@ -841,7 +899,14 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
-  const body = `<article>${yaziHero(p)}<p class="meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p><h1>${esc(p.title)}</h1>${guideMeta(p.guide)}${KOPRU_SATIRI(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}${tamirGeriSatiri(p)}</article>${STICKY(p)}`;
+  // TASARIM (18 Ağu, backlog "TAMİR SAYFASI YENİDEN TASARIMI"): sayfa başı artık
+  // dağınık bir yığın değil, TEK KARAR EKRANI. Eskiden sıra şuydu: kapak → küçük
+  // meta satırı → başlık → guide kutusu → köprü butonları; okuyucu başlığı görmek
+  // için kapağı geçiyor, kapıları görmek için üç blok daha iniyordu.
+  // Yeni sıra: kapak ARKA PLAN olur, başlık + meta + iki kapı onun üstünde tek
+  // yüzeyde toplanır. "Servis bul" ile "tahmini maliyet" ilk ekranda birlikte görünür
+  // — Tolga'nın güç metriği (servise ulaşma) ilk ekranda karar alabilsin.
+  const body = `<article>${yaziBasi(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}${tamirGeriSatiri(p)}</article>${STICKY(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
