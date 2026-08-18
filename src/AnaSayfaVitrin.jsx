@@ -94,9 +94,10 @@ const SAYILAR = [
   { buyuk: "52", kucuk: "onaylı tarife kalemi" },
 ];
 
-// "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. NASIL ÇALIŞIR
-// bölümüyle karışmasın diye ekseni bilinçli olarak farklı: orası SÜREÇ (kullanıcı
-// sırayla ne yapar), burası VAAT (kullanıcı ne kazanır, neden güvensin).
+// "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. Sürecin üç adımını
+// da bu bölüm taşıyor: 18 Ağu'da ayrı bir "Nasıl çalışır?" bölümü vardı, Tolga
+// "bil gör çağır ile tekrar oldu" deyip kaldırttı. Eksen farkı (süreç vs. vaat)
+// okuyucuya geçmemiş — tek bölüm kaldı.
 const SLOGAN = [
   {
     k: "Bil",
@@ -120,10 +121,30 @@ const SLOGAN = [
 // ayni alanda buyutulmus cizgi ikon durur (cihaz kartlarindaki desenin aynisi,
 // dalga dalga teslim edilebilir). Fotograflar GRF'den bekleniyor.
 const GEZINME = [
-  { ad: "Bilgi Merkezi",       href: "/blog/",      foto: "", ikon: "kitap" },
-  { ad: "Tamir Merkezi",       href: "/tamir/",     foto: "", ikon: "anahtar" },
-  { ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "", ikon: "acik-kitap" },
-  { ad: "Yakın Servisler",     href: null,          foto: "", ikon: "konum" },
+  {
+    ad: "Bilgi Merkezi", href: "/blog/", foto: "", ikon: "kitap",
+    baslik: "Önce öğren, sonra çağır",
+    metin: "Cihazın neden bozulduğunu sade Türkçeyle anlatan yazılar. Teknik terim yok; çoğu arızada servise gerek olup olmadığını kendin anlarsın.",
+    btn: "Yazılara göz at",
+  },
+  {
+    ad: "Tamir Merkezi", href: "/tamir/", foto: "", ikon: "anahtar",
+    baslik: "Belirtiden çözüme",
+    metin: "\"Su almıyor\", \"soğutmuyor\", \"ses yapıyor\" — belirtiyle başlayıp adım adım ne kontrol edeceğini gösteren rehberler.",
+    btn: "Rehberlere bak",
+  },
+  {
+    ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "", ikon: "acik-kitap",
+    baslik: "Kılavuzun elinin altında",
+    metin: "Hata kodunu okumak ya da bir ayarı bulmak için markanın resmî kullanım kılavuzuna doğrudan ulaş.",
+    btn: "Kılavuz ara",
+  },
+  {
+    ad: "Yakın Servisler", href: null, foto: "", ikon: "konum",
+    baslik: "Yanındaki servisi gör",
+    metin: "Google puanlı servisleri yakınlığa göre sırala, telefonunu al, doğrudan kendin ara. Araya kimse girmez.",
+    btn: "Servisleri gör",
+  },
 ];
 
 // Izgara ikonlari — 26 px'lik nav ikonlari 16:10 alanda kayboluyordu, buyuk
@@ -134,12 +155,6 @@ const IZGARA_IKON = {
   "acik-kitap": <path d="M12 7.5v13M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" />,
   konum: <><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></>,
 };
-
-const ADIMLAR = [
-  { n: "1", b: "Derdini yaz", a: "Cihazını ve belirtiyi kendi kelimelerinle anlat. Teknik terim gerekmez." },
-  { n: "2", b: "Olası arızayı ve tahmini maliyeti gör", a: "Onaylı tarife kalemlerine dayanan bir aralık — reklam değil, veri." },
-  { n: "3", b: "Puanlı servise kendin ulaş", a: "Yanındaki Google puanlı servisleri gör, doğrudan ara. Araya kimse girmez." },
-];
 
 export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLogo, onServisler }) {
   const [dert, setDert] = useState("");
@@ -210,6 +225,15 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             <a href="/blog/" style={st.ustLink}>Bilgi Merkezi</a>
             <a href="/tamir/" style={st.ustLink}>Tamir Merkezi</a>
             <a href="/kilavuzlar/" style={st.ustLink}>Kullanım Kılavuzları</a>
+            {/* Sağ uçta ayrışan tek eylem: servis dizinini teşhissiz açar.
+                Diğer üçü metin bağlantısı; bu dolgulu, çünkü sitenin ikinci
+                ana kapısı (birincisi hero kutusundaki teşhis). */}
+            <button type="button" onClick={onServisler} style={st.ustCta}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" />
+              </svg>
+              Yakın Servisler
+            </button>
           </nav>
         </div>
 
@@ -283,9 +307,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         </div>
       </div></section>
 
-      {/* ═══ ②b BİL · GÖR · ÇAĞIR ═══
-          Logonun altındaki slogan burada açılıyor. NASIL ÇALIŞIR'la eksen farkı
-          kasıtlı: orası süreç (ne yaparsın), burası vaat (ne kazanırsın). */}
+      {/* ═══ ②b BİL · GÖR · ÇAĞIR ═══ */}
       <section style={st.bolumDis}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
         <h2 style={{ ...st.h2, marginBottom: "clamp(22px, 2.6vw, 30px)" }}>Bil, gör, çağır.</h2>
         <div className="vitrin-slogan" style={st.sloganlar}>
@@ -294,22 +316,6 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <span style={st.sloganKelime}>{x.k}</span>
               <b style={st.sloganBaslik}>{x.b}</b>
               <p style={st.sloganMetin}>{x.a}</p>
-            </div>
-          ))}
-        </div>
-      </div></section>
-
-      {/* ═══ ③ NASIL ÇALIŞIR ═══ */}
-      <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}`, borderBottom: `1px solid ${HAIR}` }}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
-        {/* Bu bölümde başlık YUKARI çekildi (üst boşluk 64 → 44) ve altındaki
-            aralık açıldı (8 → 30): numaralar %50 büyüyünce başlığa yapışıyordu. */}
-        <h2 style={{ ...st.h2, marginBottom: "clamp(22px, 2.6vw, 30px)" }}>Nasıl çalışır?</h2>
-        <div className="vitrin-adimlar" style={st.adimlar}>
-          {ADIMLAR.map((a) => (
-            <div key={a.n} style={st.adim}>
-              <span style={st.adimNo}>{a.n}</span>
-              <b style={st.adimBaslik}>{a.b}</b>
-              <p style={st.adimAciklama}>{a.a}</p>
             </div>
           ))}
         </div>
@@ -342,25 +348,42 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           İçerik 1080 px'lik kolonda kalır — SSS satırı ekran boyunca uzarsa
           okunmuyor; genişleyen zemin, sınırlı olan satır uzunluğu. */}
       <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}` }}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
+        {/* Yatay şerit düzeni (Tolga 18 Ağu, Armut örneği): solda metin bloğu +
+            çağrı düğmesi, sağda görsel. Kart TAMAMEN tıklanabilir; düğme görsel
+            bir işaret (kendi tıklama alanı yok) — iç içe tıklanabilir öğe
+            olmasın, ekran okuyucu tek hedef görsün. */}
         <div className="vitrin-gezinme" style={st.gezinmeler}>
-          {GEZINME.map((x) => {
+          {GEZINME.map((x, i) => {
+            // Zikzak (Tolga: "bir sağ bir sol olsun"): tek sıradakilerde görsel
+            // sola geçer. DOM sırası DEĞİŞMEZ — her şeritte önce metin, sonra
+            // görsel okunur; yer değişimi yalnız sütun sırası + order ile yapılır,
+            // böylece ekran okuyucu ve klavye sırası tutarlı kalır.
+            const ters = i % 2 === 1;
             const ic = (
               <>
-                {x.foto ? (
-                  <img src={x.foto} alt="" width="600" height="380" loading="lazy" decoding="async" style={st.kartGorsel} />
-                ) : (
-                  <span style={st.kartIkonAlan}>
-                    <svg viewBox="0 0 24 24" fill="none" stroke={BLUE} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={st.gezinmeIkon} aria-hidden="true">
+                <div style={st.seritMetin}>
+                  <h3 style={st.seritBaslik}>{x.baslik}</h3>
+                  <p style={st.seritYazi}>{x.metin}</p>
+                  <span style={st.seritBtn}>{x.btn} <span aria-hidden="true">→</span></span>
+                </div>
+                <div style={ters ? { ...st.seritGorselAlan, order: -1 } : st.seritGorselAlan}>
+                  {x.foto ? (
+                    <img src={x.foto} alt="" width="900" height="700" loading="lazy" decoding="async" style={st.seritFoto} />
+                  ) : (
+                    <svg viewBox="0 0 24 24" fill="none" stroke={BLUE} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" style={st.seritIkon} aria-hidden="true">
                       {IZGARA_IKON[x.ikon]}
                     </svg>
-                  </span>
-                )}
-                <span style={st.kartAdFoto}>{x.ad}</span>
+                  )}
+                </div>
               </>
             );
+            const kutu = {
+              ...st.serit,
+              gridTemplateColumns: ters ? "minmax(240px, 38%) 1fr" : "1fr minmax(240px, 38%)",
+            };
             return x.href
-              ? <a key={x.ad} href={x.href} style={{ ...st.kartFoto, textDecoration: "none" }}>{ic}</a>
-              : <button key={x.ad} type="button" onClick={onServisler} style={st.kartFoto}>{ic}</button>;
+              ? <a key={x.ad} href={x.href} aria-label={x.ad} style={kutu}>{ic}</a>
+              : <button key={x.ad} type="button" onClick={onServisler} aria-label={x.ad} style={{ ...kutu, font: "inherit", textAlign: "left" }}>{ic}</button>;
           })}
         </div>
 
@@ -408,7 +431,17 @@ const st = {
   },
   ustLogoBtn: { background: "none", border: "none", padding: 0, cursor: "pointer", lineHeight: 0 },
   ustLogo: { display: "block", width: "min(190px, 46vw)", height: "auto" },
-  ustMenu: { display: "flex", gap: 4, flexWrap: "wrap" },
+  ustMenu: { display: "flex", gap: 4, flexWrap: "wrap", alignItems: "center" },
+  // Üst bardaki tek dolgulu öğe. Hero fotoğrafın üzerinde durduğu için beyaz
+  // zemin + lacivert metin seçildi: mavi düğme koyu perdeyle yeterince
+  // ayrışmıyordu (hero degradesinin kendisi mavi).
+  ustCta: {
+    display: "inline-flex", alignItems: "center", gap: 7,
+    background: "#fff", color: NAVY, border: "none", borderRadius: 999,
+    padding: "9px 16px", marginLeft: 6, cursor: "pointer",
+    fontFamily: "inherit", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap",
+    boxShadow: "0 2px 10px -4px rgba(15,23,42,.45)",
+  },
   ustLink: {
     color: "#DBEAFE", fontSize: 13.5, fontWeight: 600, textDecoration: "none",
     padding: "8px 12px", borderRadius: 999, whiteSpace: "nowrap",
@@ -508,8 +541,33 @@ const st = {
 
   // Gezinme ızgarası: cihaz kartlarıyla aynı kart stilini (kartFoto) paylaşır,
   // yalnız 4 sütuna sabitlenir — dört kalem var, satır bölünmesin.
-  gezinmeler: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, alignItems: "stretch", gridAutoRows: "1fr" },
-  gezinmeIkon: { width: "clamp(44px, 26%, 66px)", height: "auto" },
+  gezinmeler: { display: "grid", gap: "clamp(14px, 1.8vw, 20px)" },
+  serit: {
+    display: "grid", gridTemplateColumns: "1fr minmax(240px, 38%)",
+    alignItems: "stretch", background: BG, border: `1px solid ${HAIR}`,
+    borderRadius: 20, overflow: "hidden", textDecoration: "none", cursor: "pointer",
+    padding: 0, width: "100%",
+  },
+  seritMetin: { padding: "clamp(24px, 3.4vw, 44px)", alignSelf: "center" },
+  seritBaslik: {
+    fontFamily: "Fraunces, Georgia, serif", fontWeight: 600, color: NAVY,
+    fontSize: "clamp(21px, 2.6vw, 30px)", lineHeight: 1.2, letterSpacing: "-.01em", margin: "0 0 10px",
+  },
+  seritYazi: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.6, margin: "0 0 20px", maxWidth: 460 },
+  // Düğme GÖRÜNÜMÜNDE bir işaret — gerçek tıklama alanı kartın tamamı.
+  seritBtn: {
+    display: "inline-flex", alignItems: "center", gap: 8,
+    background: BLUE, color: "#fff", borderRadius: 12,
+    padding: "12px 20px", fontSize: "clamp(14.5px, 1.4vw, 16px)", fontWeight: 700,
+  },
+  // Görsel yarısı: fotoğraf gelene kadar marka zeminli ikon durur.
+  seritGorselAlan: {
+    position: "relative", background: "#EFF4FF",
+    display: "flex", alignItems: "center", justifyContent: "center",
+    minHeight: "clamp(180px, 22vw, 260px)", overflow: "hidden",
+  },
+  seritFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
+  seritIkon: { width: "clamp(54px, 7vw, 84px)", height: "auto" },
 
   sssListe: { maxWidth: 860, margin: "0 auto" },
   sssKart: { background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" },
@@ -520,16 +578,6 @@ const st = {
   },
   sssArti: { color: BLUE, fontSize: 24, fontWeight: 400, lineHeight: 1, flexShrink: 0 },
   sssCevap: { margin: 0, padding: "0 18px 16px", fontSize: "clamp(14.5px, 1.5vw, 16.5px)", lineHeight: 1.65, color: MUTED },
-
-  adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(24px, 3vw, 34px)", maxWidth: 980, margin: "0 auto" },
-  adim: { textAlign: "center", padding: "0 6px" },
-  adimNo: {
-    display: "inline-flex", alignItems: "center", justifyContent: "center", width: 54, height: 54,
-    borderRadius: "50%", background: "#EFF4FF", color: BLUE, fontWeight: 800,
-    fontSize: "clamp(24px, 2.2vw, 27px)", marginBottom: 16,
-  },
-  adimBaslik: { display: "block", color: NAVY, fontSize: "clamp(21px, 2.2vw, 26px)", lineHeight: 1.3, marginBottom: 10 },
-  adimAciklama: { color: MUTED, fontSize: "clamp(18px, 1.8vw, 21.5px)", lineHeight: 1.55, margin: 0 },
 
   sayilar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 14 },
   sayiKutu: {
