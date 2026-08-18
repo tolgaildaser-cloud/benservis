@@ -1121,6 +1121,16 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
   .vitrin-kartlar button:hover img { transform: none; }
 }
 
+/* Cihaz ızgarası: masaüstünde satır başına 4 kart (Armut deseni). Ara
+   genişliklerde 4 sütun kartı görselin okunmayacağı kadar daraltıyor,
+   o yüzden kademe kademe iniyor: 4 → 3 → 2. */
+@media (max-width: 900px) {
+  .vitrin-kartlar { grid-template-columns: repeat(3, 1fr) !important; }
+}
+/* Slogan bölümü dar ekranda alt alta. */
+@media (max-width: 860px) {
+  .vitrin-slogan { grid-template-columns: 1fr !important; }
+}
 /* Vitrin ızgaraları dar ekranda ikişerli/tek sıraya iner. */
 @media (max-width: 520px) {
   .vitrin-kartlar { grid-template-columns: repeat(2, 1fr) !important; }

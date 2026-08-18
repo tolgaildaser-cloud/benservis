@@ -92,6 +92,27 @@ const SAYILAR = [
   { buyuk: "52", kucuk: "onaylı tarife kalemi" },
 ];
 
+// "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. NASIL ÇALIŞIR
+// bölümüyle karışmasın diye ekseni bilinçli olarak farklı: orası SÜREÇ (kullanıcı
+// sırayla ne yapar), burası VAAT (kullanıcı ne kazanır, neden güvensin).
+const SLOGAN = [
+  {
+    k: "Bil",
+    b: "Neyin bozulduğunu bil",
+    a: "Servise gitmeden önce olası arızayı öğren. Teknik terim yok; belirtiyi kendi cümlenle yaz, karşılığını sade Türkçe al.",
+  },
+  {
+    k: "Gör",
+    b: "Tutarı önceden gör",
+    a: "Fiyatı iş bittikten sonra değil, başlamadan gör. Verdiğimiz aralık onaylı tarife kalemlerine dayanır — reklam değil, veri.",
+  },
+  {
+    k: "Çağır",
+    b: "Servisi kendin çağır",
+    a: "Yanındaki Google puanlı servisleri gör ve doğrudan ara. Yönlendirme yok, araya giren yok, komisyon yok.",
+  },
+];
+
 const ADIMLAR = [
   { n: "1", b: "Derdini yaz", a: "Cihazını ve belirtiyi kendi kelimelerinle anlat. Teknik terim gerekmez." },
   { n: "2", b: "Olası arızayı ve tahmini maliyeti gör", a: "Onaylı tarife kalemlerine dayanan bir aralık — reklam değil, veri." },
@@ -229,13 +250,29 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                     <img src={`/anasayfa/cihaz/${IKON[c]}.webp`} alt="" width="600" height="380" loading="lazy" decoding="async" style={st.kartGorsel} />
                   ) : (
                     <span style={st.kartIkonAlan}>
-                      <img src={`/tamir-gorsel/kategori/${IKON[c]}.webp`} alt="" width="44" height="44" loading="lazy" decoding="async" style={st.kartIkon} />
+                      <img src={`/tamir-gorsel/kategori/${IKON[c]}.webp`} alt="" width="72" height="72" loading="lazy" decoding="async" style={st.kartIkon} />
                     </span>
                   )}
                   <span style={st.kartAdFoto}>{c}</span>
                 </button>
               );
           })}
+        </div>
+      </div></section>
+
+      {/* ═══ ②b BİL · GÖR · ÇAĞIR ═══
+          Logonun altındaki slogan burada açılıyor. NASIL ÇALIŞIR'la eksen farkı
+          kasıtlı: orası süreç (ne yaparsın), burası vaat (ne kazanırsın). */}
+      <section style={st.bolumDis}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
+        <h2 style={{ ...st.h2, marginBottom: "clamp(22px, 2.6vw, 30px)" }}>Bil, gör, çağır.</h2>
+        <div className="vitrin-slogan" style={st.sloganlar}>
+          {SLOGAN.map((x) => (
+            <div key={x.k} style={st.sloganKart}>
+              <span style={st.sloganKelime}>{x.k}</span>
+              <b style={st.sloganBaslik}>{x.b}</b>
+              <p style={st.sloganMetin}>{x.a}</p>
+            </div>
+          ))}
         </div>
       </div></section>
 
@@ -349,14 +386,16 @@ const st = {
   },
   bolumAlt: { color: FAINT, fontSize: "clamp(14.5px, 1.5vw, 17px)", textAlign: "center", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.6 },
 
-  kartlar: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12, alignItems: "stretch", gridAutoRows: "1fr" },
+  kartlar: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, alignItems: "stretch", gridAutoRows: "1fr" },
   kart: {
     display: "flex", flexDirection: "column", alignItems: "center", gap: 7,
     background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, padding: "18px 12px",
     cursor: "pointer", fontFamily: "inherit", textAlign: "center",
     boxShadow: "0 1px 2px rgba(30,41,59,.04)",
   },
-  kartIkon: { display: "block", objectFit: "contain" },
+  // Kart 163 → 248 px'e çıkınca 44 px'lik ikon kayboluyordu; görsel alanının
+  // yarısına yakın bir boy dengeyi kuruyor (fotoğraflı kartlarla aynı ağırlık).
+  kartIkon: { display: "block", width: "clamp(44px, 30%, 72px)", height: "auto", objectFit: "contain" },
   // Fotoğrafsız kartın görsel alanı — fotoğraflıyla BİREBİR aynı oran, ikon ortada.
   kartIkonAlan: {
     display: "flex", alignItems: "center", justifyContent: "center",
@@ -382,6 +421,22 @@ const st = {
     lineHeight: 1.25, padding: "12px 12px 14px",
   },
   kartAd: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3 },
+
+  // Slogan kartları: sola hizalı, hafif zeminli, üstte büyük tek kelime.
+  // Adım bloklarından (ortalı, numaralı, zeminsiz) bilinçli olarak farklı
+  // görünürler — iki bölüm alt alta dururken birbirinin tekrarı sanılmasın.
+  sloganlar: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "clamp(16px, 2vw, 24px)", maxWidth: 1080, margin: "0 auto" },
+  sloganKart: {
+    // Bölüm zemini zaten BG; kart da BG olunca ayrışmıyordu → beyaz.
+    background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 16,
+    padding: "clamp(20px, 2.4vw, 28px)", textAlign: "left",
+  },
+  sloganKelime: {
+    display: "block", fontFamily: "Fraunces, Georgia, serif", fontWeight: 600,
+    fontSize: "clamp(26px, 3vw, 34px)", color: BLUE, lineHeight: 1.1, marginBottom: 12,
+  },
+  sloganBaslik: { display: "block", color: NAVY, fontSize: "clamp(17px, 1.8vw, 20px)", lineHeight: 1.3, marginBottom: 8 },
+  sloganMetin: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.6, margin: 0 },
 
   adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(24px, 3vw, 34px)", maxWidth: 980, margin: "0 auto" },
   adim: { textAlign: "center", padding: "0 6px" },
