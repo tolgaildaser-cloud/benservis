@@ -225,6 +225,15 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             <a href="/blog/" style={st.ustLink}>Bilgi Merkezi</a>
             <a href="/tamir/" style={st.ustLink}>Tamir Merkezi</a>
             <a href="/kilavuzlar/" style={st.ustLink}>Kullanım Kılavuzları</a>
+            {/* Sağ uçta ayrışan tek eylem: servis dizinini teşhissiz açar.
+                Diğer üçü metin bağlantısı; bu dolgulu, çünkü sitenin ikinci
+                ana kapısı (birincisi hero kutusundaki teşhis). */}
+            <button type="button" onClick={onServisler} style={st.ustCta}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" />
+              </svg>
+              Yakın Servisler
+            </button>
           </nav>
         </div>
 
@@ -422,7 +431,17 @@ const st = {
   },
   ustLogoBtn: { background: "none", border: "none", padding: 0, cursor: "pointer", lineHeight: 0 },
   ustLogo: { display: "block", width: "min(190px, 46vw)", height: "auto" },
-  ustMenu: { display: "flex", gap: 4, flexWrap: "wrap" },
+  ustMenu: { display: "flex", gap: 4, flexWrap: "wrap", alignItems: "center" },
+  // Üst bardaki tek dolgulu öğe. Hero fotoğrafın üzerinde durduğu için beyaz
+  // zemin + lacivert metin seçildi: mavi düğme koyu perdeyle yeterince
+  // ayrışmıyordu (hero degradesinin kendisi mavi).
+  ustCta: {
+    display: "inline-flex", alignItems: "center", gap: 7,
+    background: "#fff", color: NAVY, border: "none", borderRadius: 999,
+    padding: "9px 16px", marginLeft: 6, cursor: "pointer",
+    fontFamily: "inherit", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap",
+    boxShadow: "0 2px 10px -4px rgba(15,23,42,.45)",
+  },
   ustLink: {
     color: "#DBEAFE", fontSize: 13.5, fontWeight: 600, textDecoration: "none",
     padding: "8px 12px", borderRadius: 999, whiteSpace: "nowrap",
