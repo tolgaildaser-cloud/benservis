@@ -826,15 +826,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             </button>
           </nav>
           <div style={{ position: "relative", zIndex: 1, marginTop: 26 }}>
-            <div style={{ ...s.secHead, marginBottom: 12 }}>Sık sorulanlar</div>
+            <div style={{ ...s.secHead, fontSize: "clamp(17px, 1.8vw, 21px)", marginBottom: 12 }}>Sık sorulanlar</div>
             {SSS.map((q, i) => (
               <div key={i} style={{ background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" }}>
-                <button onClick={() => setSssAcik(sssAcik === i ? null : i)} aria-expanded={sssAcik === i} style={{ width: "100%", background: "none", border: "none", padding: "15px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, textAlign: "left", fontSize: 14.5, fontWeight: 600, color: INK }}>
+                <button onClick={() => setSssAcik(sssAcik === i ? null : i)} aria-expanded={sssAcik === i} style={{ width: "100%", background: "none", border: "none", padding: "15px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, textAlign: "left", fontSize: "clamp(14.5px, 1.5vw, 17px)", fontWeight: 600, color: INK }}>
                   <span>{q.s}</span>
                   <span style={{ color: "#2563EB", fontSize: 22, fontWeight: 400, lineHeight: 1, flexShrink: 0 }} aria-hidden="true">{sssAcik === i ? "–" : "+"}</span>
                 </button>
                 {sssAcik === i && (
-                  <p style={{ margin: 0, padding: "0 16px 15px", fontSize: 13.5, lineHeight: 1.6, color: MUTED }}>{q.c}</p>
+                  <p style={{ margin: 0, padding: "0 16px 15px", fontSize: "clamp(13.5px, 1.4vw, 16px)", lineHeight: 1.6, color: MUTED }}>{q.c}</p>
                 )}
               </div>
             ))}
@@ -1088,6 +1088,39 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
   .vitrin-kutu-yazi { min-height: 74px; }
   .vitrin-kutu-btn { width: 100%; padding: 14px 18px; }
 }
+/* ——— Cihaz kartı: imleç üzerine gelince hareket (Armut deseni) ———
+   Üç katman birlikte çalışır: kart hafifçe yükselir, gölgesi derinleşir,
+   içindeki fotoğraf çerçeve sabitken büyür (kart overflow:hidden). Fotoğrafın
+   büyümesi kartı büyütmez — kırpma çerçevede kalır, ızgara hizası bozulmaz.
+   Ölçü kasıtlı olarak küçük (2px / %6): kart tıklanabilir bir hedef, oyuncak değil.
+   Dokunmatikte hover yok; @media (hover:hover) ile yalnız gerçek imlece verilir.
+
+   DİKKAT - important NEDEN VAR: kartın gölgesi ve kenarı SATIR İÇİ stilde
+   tanımlı (st.kartFoto). Satır içi stil her zaman stylesheet'i yener,
+   özgüllükten bağımsız olarak. İlk denemede :where() ile yazdım; Playwright'la
+   ölçünce transform tuttu ama gölge/kenar HİÇ değişmedi. Bu iki özellik için
+   tek yol important; transform'da gerek yok (satır içinde tanımlı değil). */
+@media (hover: hover) and (pointer: fine) {
+  .vitrin-kartlar button { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .vitrin-kartlar button img { transition: transform .3s ease; }
+  .vitrin-kartlar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -10px rgba(30,41,59,.28) !important;
+    border-color: #C7D7F5 !important;
+  }
+  .vitrin-kartlar button:hover img { transform: scale(1.06); }
+}
+/* Klavye kullanıcısı da aynı geri bildirimi görür (hover'a erişemez). */
+.vitrin-kartlar button:focus-visible { transform: translateY(-2px); border-color: #C7D7F5 !important; }
+/* Hareket azaltma tercihi: konum/ölçek değişimi tamamen kalkar, renk ipucu kalır. */
+@media (prefers-reduced-motion: reduce) {
+  .vitrin-kartlar button,
+  .vitrin-kartlar button img { transition: none; }
+  .vitrin-kartlar button:hover,
+  .vitrin-kartlar button:focus-visible { transform: none; }
+  .vitrin-kartlar button:hover img { transform: none; }
+}
+
 /* Vitrin ızgaraları dar ekranda ikişerli/tek sıraya iner. */
 @media (max-width: 520px) {
   .vitrin-kartlar { grid-template-columns: repeat(2, 1fr) !important; }
@@ -1186,20 +1219,21 @@ const s = {
   copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
   reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #CBD5E1", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
   footer: { position: "relative", zIndex: 1, textAlign: "center", marginTop: 30, paddingTop: 22, borderTop: `1px solid ${HAIR}` },
-  footBrand: { fontFamily: "'Fraunces', serif", fontSize: 14, fontWeight: 600, color: MUTED },
-  footSub: { fontSize: 12, color: FAINT, marginTop: 6 },
+  footBrand: { fontFamily: "'Fraunces', serif", fontSize: "clamp(14px, 1.4vw, 16px)", fontWeight: 600, color: MUTED },
+  footSub: { fontSize: "clamp(12px, 1.2vw, 13.5px)", color: FAINT, marginTop: 6 },
   // Footer gezinme satırı (Hakkımızda · Sürdürülebilirlik · SERBİS'te Doğrula).
   // ÖNCE: footSub'ı paylaşıyordu → 12px. SONRA: kendi stili, 14px (Tolga ①).
   // Slogan satırı ("AI destekli teşhis…") 12px'te KALDI; büyüyen yalnız tıklanan satır.
-  // Neden tam 14: üç linkin doğal genişliği 375px'te 14px'te 325/335px (tek satır),
-  // 14.5px'te 339px → sarıyor ve satır sonunda öksüz "·" kalıyordu. 14 hem okunur
-  // hem tek satır. Daha dar ekranda (≤360px) sarma flexWrap ile ortalı bozulmadan olur.
-  footNav: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 6, rowGap: 2, fontSize: 14, lineHeight: 1.6, marginTop: 8 },
+  // Neden ALT SINIR tam 14: üç linkin doğal genişliği 375px'te 14px'te 325/335px
+  // (tek satır), 14.5px'te 339px → sarıyor ve satır sonunda öksüz "·" kalıyordu.
+  // Bu ölçüm hâlâ geçerli, o yüzden clamp'in tabanı 14 — mobilde davranış DEĞİŞMEDİ.
+  // Tavan 15.5: masaüstünde kolon geniş, sarma riski yok, kart/adım puntosuyla uyum.
+  footNav: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 6, rowGap: 2, fontSize: "clamp(14px, 1.4vw, 15.5px)", lineHeight: 1.6, marginTop: 8 },
   footNavUnit: { display: "inline-flex", alignItems: "baseline", gap: 6, whiteSpace: "nowrap" },
   footSep: { color: FAINT },
   footLink: { color: "#2563EB", textDecoration: "none", fontWeight: 600 },
   // Hukuk satırı: aynı ızgara, ama 12.5px ve nötr renkte — gezinme satırıyla yarışmasın.
-  footHukuk: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 6, rowGap: 2, fontSize: 12.5, lineHeight: 1.6, marginTop: 6 },
+  footHukuk: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 6, rowGap: 2, fontSize: "clamp(12.5px, 1.2vw, 14px)", lineHeight: 1.6, marginTop: 6 },
   footHukukLink: { color: FAINT, textDecoration: "none", fontWeight: 600 },
   footSocial: { display: "flex", justifyContent: "center", gap: 18, marginTop: 12 },
   footSocialLink: { color: FAINT, display: "inline-flex", transition: "color .15s ease, transform .15s ease" },

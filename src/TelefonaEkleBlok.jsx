@@ -33,15 +33,15 @@ export default function TelefonaEkleBlok() {
         borderRadius: 14, padding: "16px 16px 14px",
       }}
     >
-      <h2 style={{ margin: "0 0 7px", fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: 16, color: INK }}>
+      <h2 style={{ margin: "0 0 7px", fontFamily: "'Fraunces', serif", fontWeight: 600, fontSize: "clamp(16px, 1.7vw, 19px)", color: INK }}>
         📱 Benservis'i telefonuna ekle
       </h2>
-      <p style={{ margin: "0 0 8px", fontSize: 13.5, lineHeight: 1.6, color: MUTED }}>
+      <p style={{ margin: "0 0 8px", fontSize: "clamp(13.5px, 1.4vw, 16px)", lineHeight: 1.6, color: MUTED }}>
         Mağazadan indirmene gerek yok. Tarayıcı menüsünden "Ana ekrana ekle" dediğinde Benservis
         ikondan tam ekran açılır — ve internet çekmediğinde bile yakınındaki servislerin listesi
         elinde kalır.
       </p>
-      <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.5, color: FAINT }}>
+      <p style={{ margin: 0, fontSize: "clamp(12.5px, 1.2vw, 14px)", lineHeight: 1.5, color: FAINT }}>
         iPhone: Paylaş → Ana Ekrana Ekle · Android: sağ üstteki üç nokta → Uygulamayı yükle
       </p>
     </section>
