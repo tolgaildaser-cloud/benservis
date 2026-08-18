@@ -14,6 +14,12 @@ faq:
   - q: "Kodun anlamından emin değilim, ne yapmalıyım?"
     a: "Kodlar model/seriye göre değişebilir. Kılavuzundaki tabloya bak ya da markanı, modelini ve kodu Benservis'e yaz; olası arızayı ve tahmini maliyeti saniyede söyler."
 images:
+  checks:
+    - "Çamaşır makinesinin su musluğunun kolunun yatay konuma getirilip tam açılışını gösteren çizim"
+    - "Musluk ve hortum bağlantısındaki giriş süzgecinin çıkarılıp fırçayla temizlenişini gösteren çizim"
+    - "Alt ön kapaktaki tahliye filtresinin çevrilerek çıkarılışını ve havlu hazırlanmasını gösteren çizim"
+    - "Bükülmüş hortum ile düz uzanan hortumun karşılaştırıldığı çizim"
+    - "Programın kapalı konuma alınıp fişin bir dakika çekilişini gösteren çizim"
   coverAlt: "Çamaşır makinesi ekranında yanıp sönen hata göstergesi ve yanında kod listesi çizimi"
 ---
 

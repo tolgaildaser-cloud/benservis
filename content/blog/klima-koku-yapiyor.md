@@ -14,6 +14,11 @@ faq:
   - q: "Klima dezenfekteli bakım kaç para?"
     a: "Kapasiteye ve kat/yüksekliğe göre değişir; bu sayfada aralık vermiyoruz. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
+  checks:
+    - "İç ünitenin kapağı açılıp filtrenin çıkarılışını ve ılık suyla yıkanışını gösteren çizim"
+    - "Klimanın sadece fan modunda otuz altmış dakika çalıştırılarak kurutulmasını gösteren çizim"
+    - "Tahliye hortumunun tıkalı ucu ile açık ucunun karşılaştırıldığı çizim"
+    - "Sezon başında bir kez yapılan dezenfekteli bakımı gösteren çizim"
   coverAlt: "Klima iç ünitesinden yayılan koku dalgalarını gösteren çizim"
 ---
 
