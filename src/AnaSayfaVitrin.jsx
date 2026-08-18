@@ -343,9 +343,9 @@ const st = {
   bolum: { maxWidth: 1080, margin: "0 auto", padding: "clamp(40px, 6vw, 64px) 20px" },
   h2: {
     fontFamily: "Fraunces, Georgia, serif", fontWeight: 600, color: NAVY,
-    fontSize: "clamp(22px, 3.2vw, 30px)", letterSpacing: "-.01em", margin: "0 0 8px", textAlign: "center",
+    fontSize: "clamp(22px, 3.4vw, 34px)", letterSpacing: "-.01em", margin: "0 0 8px", textAlign: "center",
   },
-  bolumAlt: { color: FAINT, fontSize: 14.5, textAlign: "center", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.6 },
+  bolumAlt: { color: FAINT, fontSize: "clamp(14.5px, 1.5vw, 17px)", textAlign: "center", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.6 },
 
   kartlar: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12, alignItems: "stretch", gridAutoRows: "1fr" },
   kart: {
@@ -385,10 +385,10 @@ const st = {
   adim: { textAlign: "center", padding: "0 8px" },
   adimNo: {
     display: "inline-flex", alignItems: "center", justifyContent: "center", width: 38, height: 38,
-    borderRadius: "50%", background: "#EFF4FF", color: BLUE, fontWeight: 800, fontSize: 16, marginBottom: 12,
+    borderRadius: "50%", background: "#EFF4FF", color: BLUE, fontWeight: 800, fontSize: "clamp(16px, 1.5vw, 18px)", marginBottom: 12,
   },
-  adimBaslik: { display: "block", color: NAVY, fontSize: 16, marginBottom: 6 },
-  adimAciklama: { color: MUTED, fontSize: 14, lineHeight: 1.6, margin: 0 },
+  adimBaslik: { display: "block", color: NAVY, fontSize: "clamp(16px, 1.7vw, 20px)", lineHeight: 1.3, marginBottom: 7 },
+  adimAciklama: { color: MUTED, fontSize: "clamp(14px, 1.4vw, 16.5px)", lineHeight: 1.6, margin: 0 },
 
   sayilar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 14 },
   sayiKutu: {
@@ -397,7 +397,7 @@ const st = {
   },
   sayiBuyuk: {
     display: "block", fontFamily: "Fraunces, Georgia, serif", fontWeight: 600,
-    fontSize: "clamp(24px, 3.4vw, 32px)", color: NAVY, lineHeight: 1.1,
+    fontSize: "clamp(24px, 3.6vw, 36px)", color: NAVY, lineHeight: 1.1,
   },
-  sayiKucuk: { display: "block", color: FAINT, fontSize: 13, marginTop: 5 },
+  sayiKucuk: { display: "block", color: FAINT, fontSize: "clamp(13px, 1.3vw, 15px)", marginTop: 5 },
 };
