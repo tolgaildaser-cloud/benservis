@@ -94,9 +94,10 @@ const SAYILAR = [
   { buyuk: "52", kucuk: "onaylı tarife kalemi" },
 ];
 
-// "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. NASIL ÇALIŞIR
-// bölümüyle karışmasın diye ekseni bilinçli olarak farklı: orası SÜREÇ (kullanıcı
-// sırayla ne yapar), burası VAAT (kullanıcı ne kazanır, neden güvensin).
+// "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. Sürecin üç adımını
+// da bu bölüm taşıyor: 18 Ağu'da ayrı bir "Nasıl çalışır?" bölümü vardı, Tolga
+// "bil gör çağır ile tekrar oldu" deyip kaldırttı. Eksen farkı (süreç vs. vaat)
+// okuyucuya geçmemiş — tek bölüm kaldı.
 const SLOGAN = [
   {
     k: "Bil",
@@ -134,12 +135,6 @@ const IZGARA_IKON = {
   "acik-kitap": <path d="M12 7.5v13M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" />,
   konum: <><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></>,
 };
-
-const ADIMLAR = [
-  { n: "1", b: "Derdini yaz", a: "Cihazını ve belirtiyi kendi kelimelerinle anlat. Teknik terim gerekmez." },
-  { n: "2", b: "Olası arızayı ve tahmini maliyeti gör", a: "Onaylı tarife kalemlerine dayanan bir aralık — reklam değil, veri." },
-  { n: "3", b: "Puanlı servise kendin ulaş", a: "Yanındaki Google puanlı servisleri gör, doğrudan ara. Araya kimse girmez." },
-];
 
 export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLogo, onServisler }) {
   const [dert, setDert] = useState("");
@@ -283,9 +278,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         </div>
       </div></section>
 
-      {/* ═══ ②b BİL · GÖR · ÇAĞIR ═══
-          Logonun altındaki slogan burada açılıyor. NASIL ÇALIŞIR'la eksen farkı
-          kasıtlı: orası süreç (ne yaparsın), burası vaat (ne kazanırsın). */}
+      {/* ═══ ②b BİL · GÖR · ÇAĞIR ═══ */}
       <section style={st.bolumDis}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
         <h2 style={{ ...st.h2, marginBottom: "clamp(22px, 2.6vw, 30px)" }}>Bil, gör, çağır.</h2>
         <div className="vitrin-slogan" style={st.sloganlar}>
@@ -294,22 +287,6 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <span style={st.sloganKelime}>{x.k}</span>
               <b style={st.sloganBaslik}>{x.b}</b>
               <p style={st.sloganMetin}>{x.a}</p>
-            </div>
-          ))}
-        </div>
-      </div></section>
-
-      {/* ═══ ③ NASIL ÇALIŞIR ═══ */}
-      <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}`, borderBottom: `1px solid ${HAIR}` }}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
-        {/* Bu bölümde başlık YUKARI çekildi (üst boşluk 64 → 44) ve altındaki
-            aralık açıldı (8 → 30): numaralar %50 büyüyünce başlığa yapışıyordu. */}
-        <h2 style={{ ...st.h2, marginBottom: "clamp(22px, 2.6vw, 30px)" }}>Nasıl çalışır?</h2>
-        <div className="vitrin-adimlar" style={st.adimlar}>
-          {ADIMLAR.map((a) => (
-            <div key={a.n} style={st.adim}>
-              <span style={st.adimNo}>{a.n}</span>
-              <b style={st.adimBaslik}>{a.b}</b>
-              <p style={st.adimAciklama}>{a.a}</p>
             </div>
           ))}
         </div>
@@ -520,16 +497,6 @@ const st = {
   },
   sssArti: { color: BLUE, fontSize: 24, fontWeight: 400, lineHeight: 1, flexShrink: 0 },
   sssCevap: { margin: 0, padding: "0 18px 16px", fontSize: "clamp(14.5px, 1.5vw, 16.5px)", lineHeight: 1.65, color: MUTED },
-
-  adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(24px, 3vw, 34px)", maxWidth: 980, margin: "0 auto" },
-  adim: { textAlign: "center", padding: "0 6px" },
-  adimNo: {
-    display: "inline-flex", alignItems: "center", justifyContent: "center", width: 54, height: 54,
-    borderRadius: "50%", background: "#EFF4FF", color: BLUE, fontWeight: 800,
-    fontSize: "clamp(24px, 2.2vw, 27px)", marginBottom: 16,
-  },
-  adimBaslik: { display: "block", color: NAVY, fontSize: "clamp(21px, 2.2vw, 26px)", lineHeight: 1.3, marginBottom: 10 },
-  adimAciklama: { color: MUTED, fontSize: "clamp(18px, 1.8vw, 21.5px)", lineHeight: 1.55, margin: 0 },
 
   sayilar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 14 },
   sayiKutu: {
