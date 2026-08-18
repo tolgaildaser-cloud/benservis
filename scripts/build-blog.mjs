@@ -1835,7 +1835,7 @@ fs.writeFileSync(path.join(DIST, "robots.txt"), `User-agent: *\nAllow: /\nSitema
 // ⛔ CLOAKING YOK: basılan her şey SPA'nin ana sayfada FİİLEN gösterdiği şeyin aynısı —
 // aynı gezinme ızgarası, aynı footer linkleri. Googlebot'a kullanıcıdan farklı bir sayfa
 // gösterilmiyor; yalnız aynı içerik JS'ten önce de okunabilir hâle getiriliyor.
-const anaSayfaOnRender = () => {
+const anaSayfaOnRender = (cihazSayfalari = []) => {
   const dosya = path.join(DIST, "index.html");
   if (!fs.existsSync(dosya)) { console.warn("[build-blog] ⚠️  dist/index.html yok — ana sayfa ön-render ATLANDI."); return; }
   let html = fs.readFileSync(dosya, "utf8");
@@ -1856,10 +1856,22 @@ const anaSayfaOnRender = () => {
       // ⚠️ 4. kart ("Yakın Servisler") BİLEREK YOK: o bir <button>, kendi URL'i olmayan
       // SPA içi ekran. Olmayan adrese link uydurmak 404 üretirdi.
       `<nav aria-label="Site bölümleri">` +
+        // Teşhis formu 18 Ağu'da kendi adresine taşındı (/teshis). SPA içi geçişle
+        // açılıyor ama ARTIK GERÇEK BİR ADRESİ VAR → ön-render'dan da erişilebilir
+        // olmalı; sitenin ana eylemi JS beklemeden linklenebiliyor.
+        kart("/teshis", "Ücretsiz teşhis") +
         kart("/blog/", "Bilgi Merkezi") +
         kart("/tamir/", "Tamir Merkezi") +
         kart("/kilavuzlar/", "Kullanım Kılavuzları") +
       `</nav>` +
+      // Cihaz ızgarasının ön-render karşılığı. SPA'deki kartlar <button> (kendi
+      // URL'leri yok) ama her cihazın /tamir/<slug>/ sayfası VAR — ana sayfadan o
+      // sayfalara iç link, JS çalışmadan da cihaz katmanına yol açar.
+      (cihazSayfalari.length
+        ? `<h2>Cihazına göre</h2><ul>` +
+          cihazSayfalari.map((k) => `<li><a href="/tamir/${k.slug}/">${esc(k.ad)}</a></li>`).join("") +
+          `</ul>`
+        : "") +
       (oneCikan.length
         ? `<h2>Sık okunan arıza rehberleri</h2><ul>` +
           oneCikan.map((p) => `<li><a href="/blog/${p.slug}/">${esc(p.title)}</a></li>`).join("") +
@@ -1883,6 +1895,8 @@ const anaSayfaOnRender = () => {
   const linkSayisi = (govde.match(/href="\//g) || []).length;
   console.log(`[build-blog] ✓ ana sayfa ön-render edildi: ${linkSayisi} gezinilebilir iç link (önce 0).`);
 };
-anaSayfaOnRender();
+// Cihaz linkleri FIILEN BASILAN sayfalardan gelir (tamirliKat) — liste elle
+// yazilsaydi bir kategori bosaldiginda ana sayfa 404'e link vermeye devam ederdi.
+anaSayfaOnRender(tamirliKat);
 
 console.log(`[build-blog] ${posts.length} yazı + /blog + sitemap üretildi.`);
