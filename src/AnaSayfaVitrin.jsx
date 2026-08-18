@@ -51,10 +51,14 @@ const IKON = {
 // `onError` ile denemek her açılışta 11 adet 404 isteği üretirdi.
 // GRF bir cihazın fotoğrafını teslim edince FE bu sete adını ekler.
 const FOTOGRAFLI = new Set([
-  // GRF teslimi 17 Ağu — 8/11 kart. Kalan 3 (Mikrodalga · Kombi · Su Sebili)
-  // BİLEREK çizgi ikonunda: GRF'nin devir belgesinde gerekçesi yazılı.
+  // GRF teslimi 18 Ağu gece (v3) — ARTIK 11/11. Set Kling ile üretilen
+  // "Benservis ustası" karelerinden oluşuyor (süpürgede stok kare: Kling
+  // üretimi robot süpürge çıkardığı için elendi).
+  // Eksik kalan 3 kart (Kombi · Mikrodalga · Su Sebili) bu teslimle kapandı;
+  // artık hiçbir kart çizgi ikonuna düşmüyor.
   "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör",
   "Fırın / Ocak / Aspiratör", "Klima", "Süpürge", "Bilgisayar / Yazıcı",
+  "Kombi / Termosifon", "Mikrodalga / Air Fryer", "Su Sebili / Arıtma",
 ]);
 
 // Hero kutusundan cihaz tahmini — mevcut sözlükle, yeni NLP yok.
