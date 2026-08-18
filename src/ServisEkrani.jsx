@@ -169,7 +169,7 @@ function ServisKarti({ servis, onSec, cihaz }) {
         <div style={{ display: "flex", flexDirection: "column", gap: 6, flexShrink: 0 }}>
           <a
             href={`tel:${servis.telefon}`}
-            onClick={(e) => { e.stopPropagation(); track("call_click", { kaynak: "kart" }); }}
+            onClick={(e) => { e.stopPropagation(); track("call_click", { kaynak: "kart", gelis: GELIS_KAYNAGI }); }}
             style={{
               background: "#2563EB", color: "white",
               borderRadius: 10, padding: "10px 16px",
@@ -182,7 +182,7 @@ function ServisKarti({ servis, onSec, cihaz }) {
             <a
               href={waLink(servis.telefon, `Merhaba, ${cihaz || "cihazım"} arızası için servis desteği almak istiyorum.`)}
               target="_blank" rel="noopener noreferrer"
-              onClick={(e) => { e.stopPropagation(); track("wa_click", { kaynak: "kart" }); }}
+              onClick={(e) => { e.stopPropagation(); track("wa_click", { kaynak: "kart", gelis: GELIS_KAYNAGI }); }}
               style={{
                 background: "#25D366", color: "white",
                 borderRadius: 10, padding: "10px 16px",
@@ -259,7 +259,7 @@ function ServisProfil({ servis, onGeri }) {
           {servis.telefon && (
             <a
               href={`tel:${servis.telefon}`}
-              onClick={() => track("call_click", { kaynak: "detay" })}
+              onClick={() => track("call_click", { kaynak: "detay", gelis: GELIS_KAYNAGI })}
               style={{
                 background: "#2563EB", color: "white",
                 borderRadius: 10, padding: "12px 20px",
@@ -388,6 +388,18 @@ function FallbackIlce({ ilIlceMap, secili, onSec, baslangicIl }) {
     </div>
   );
 }
+
+// Kullanıcı buraya nereden geldi? Tamir sayfasındaki "Yakınımdaki servisi bul"
+// düğmesi adrese `k=blog-<slug>` bırakıyor (servisHref, build-blog.mjs).
+// Aramaya/WhatsApp'a basıldığında bu etiket olayla birlikte yazılır — böylece
+// "hangi tamir sayfası servise ULAŞMA üretiyor" sorusu ölçülebilir hale gelir.
+// Adres parametresi yoksa "dogrudan" yazılır; tahmin YAPILMAZ.
+const GELIS_KAYNAGI = (() => {
+  try {
+    const k = new URLSearchParams(window.location.search).get("k");
+    return k ? String(k).slice(0, 60) : "dogrudan";
+  } catch { return "dogrudan"; }
+})();
 
 export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayfa, teshisLogId, baslangicIl }) {
   // "loading" | "success" | "denied" | "error"
