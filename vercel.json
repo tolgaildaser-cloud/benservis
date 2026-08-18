@@ -4,6 +4,7 @@
     { "source": "/blog/camasir-makinesi-sikmiyor/", "destination": "/blog/camasir-makinesi-su-atmiyor/", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/teshis",      "destination": "/index.html" },
     { "source": "/ariza",       "destination": "/index.html" },
     { "source": "/panel",       "destination": "/index.html" },
     { "source": "/panel/(.*)", "destination": "/index.html" },

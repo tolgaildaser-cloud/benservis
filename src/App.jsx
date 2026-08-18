@@ -91,6 +91,20 @@ const ONSECIM = (() => {
   } catch { return { cihaz: "", belirti: "", servis: false }; }
 })();
 
+// Hangi ekranla acilacak? Tesihs formu artik ana sayfanin ALTINDA degil, kendi
+// adresinde (/teshis). "Yeni sayfa olarak acilmasin" talimati geregi gecis SPA
+// icinde yapilir: sunucuya gidilmez, history.pushState ile adres degisir.
+//   · /teshis           → dogrudan form
+//   · ?cihaz=... (blog) → dogrudan form; blogdan gelen kullanici zaten teshis
+//                          niyetiyle geliyor, once vitrini gormesi gereksiz adim
+//   · digerleri         → vitrin
+const BASLANGIC_EKRAN = (() => {
+  try {
+    if (window.location.pathname.replace(/\/+$/, "") === "/teshis") return "teshis";
+    return ONSECIM.cihaz ? "teshis" : "vitrin";
+  } catch { return "vitrin"; }
+})();
+
 function refMetni(cihaz) {
   const arr = SEED[cihaz] || [];
   if (!arr.length) return "Bu cihaz için referans tarife yok; Türkiye 2026 piyasasına göre makul tahmin yürüt.";
@@ -326,7 +340,30 @@ export default function App() {
   // değiştikçe otomatik uzar (min ~4 satır).
   // YK #69 koşu 3 — vitrinden forma iniş. Hero kutusu/kartı kullanıldığında kullanıcı
   // "bir şey oldu" geri bildirimi almalı; yoksa sayfa değişmemiş gibi görünüyor.
+  // "vitrin" = ana sayfa (hero + kartlar + slogan + nasil calisir + SSS)
+  // "teshis" = form ekrani (/teshis). `adim` bundan bagimsiz: teshis EKRANI
+  // icinde form → sonuc/hata asamalarini o tutuyor.
+  const [ekran, setEkran] = useState(BASLANGIC_EKRAN);
   const formRef = useRef(null);
+  // Vitrin → teshis gecisi. Tam sayfa yuklemesi YOK: adres pushState ile degisir,
+  // React ekrani degistirir. Geri tusu popstate ile vitrine dondurur.
+  const teshiseGec = () => {
+    setEkran("teshis");
+    try {
+      if (window.location.pathname.replace(/\/+$/, "") !== "/teshis") {
+        window.history.pushState({ bsEkran: "teshis" }, "", "/teshis");
+      }
+    } catch { /* pushState kapaliysa ekran yine degisir, yalniz adres sabit kalir */ }
+    window.scrollTo(0, 0);
+  };
+  const vitrineDon = (adresiDeYaz = true) => {
+    setEkran("vitrin");
+    if (adresiDeYaz) {
+      try { window.history.pushState({ bsEkran: "vitrin" }, "", "/"); } catch {}
+    }
+    window.scrollTo(0, 0);
+  };
+
   const formaKaydir = () => {
     requestAnimationFrame(() => {
       formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -554,7 +591,19 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); window.scrollTo(0, 0); };
+  // Tarayici geri/ileri tusu. pushState ile gelen adres degisimini React'e
+  // yansitir; boylece /teshis'ten geri basinca vitrin acilir (sunucuya gidilmez).
+  useEffect(() => {
+    const gez = () => {
+      const teshisMi = window.location.pathname.replace(/\/+$/, "") === "/teshis";
+      setEkran(teshisMi ? "teshis" : "vitrin");
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener("popstate", gez);
+    return () => window.removeEventListener("popstate", gez);
+  }, []);
+
+  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); vitrineDon(); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
@@ -573,14 +622,14 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           Dışarı alınca taşırma hilesine hiç gerek kalmadı. */}
       {/* Servis ekranı açıkken vitrin GİZLENİR: `?servis=1` ile gelen kullanıcı
           doğrudan servis listesini görmeli, altında ana sayfa vitrini kalmamalı. */}
-      {adim === "form" && !showServisler && (
+      {ekran === "vitrin" && !showServisler && (
         <AnaSayfaVitrin
           onCihazSec={(c) => {
             setCihaz(c);
             if (marka && marka !== "Diğer" && !markalarForCihaz(c).includes(marka)) setMarka("");
-            formaKaydir();
+            teshiseGec();
           }}
-          onFormaGit={formaKaydir}
+          onFormaGit={teshiseGec}
           onLogo={sifirla}
           onDertYaz={(metin, tahminCihaz) => {
             setBelirti(metin.slice(0, BELIRTI_MAX));
@@ -588,7 +637,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               setCihaz(tahminCihaz);
               if (marka && marka !== "Diğer" && !markalarForCihaz(tahminCihaz).includes(marka)) setMarka("");
             }
-            formaKaydir();
+            teshiseGec();
           }}
         />
       )}
@@ -616,7 +665,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
       {/* Form ekranında logo HERO'nun üzerinde (YK #69 koşu 3, Tolga talebi) — bu
           header yalnız sonuç/hata ekranlarında görünür, orada hero yok. */}
-      <header style={{ ...s.header, display: adim === "form" ? "none" : undefined }}>
+      {/* Header vitrinde gizli (orada hero + kendi ust bari var), teshis ekraninda
+          GORUNUR — kullanicinin ana sayfaya donecegi tek yer logo. */}
+      <header style={{ ...s.header, display: ekran === "vitrin" ? "none" : undefined }}>
         {/* Kurumsal logo + motto — en üstte. Logoya tıkla → ana sayfa (sıfırla). */}
         <button onClick={sifirla} aria-label="Ana sayfaya dön" style={s.logoBtn}>
           <BenservisLogo style={s.brandLogo} />
@@ -624,8 +675,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         {/* YK #69 koşu 3: form ekranında bu iki satır HERO'ya devredildi — aynı vaadi
             iki kez söylemek "basic" hissinin kaynaklarından biriydi. Sonuç/hata
             ekranlarında (hero görünmezken) eskisi gibi duruyorlar. */}
-        {adim !== "form" && <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>}
-        <div style={{ ...s.trustRow, display: adim === "form" ? "none" : s.trustRow.display }}>
+        {!(ekran === "teshis" && adim === "form") && <p style={s.tagline}>Cihazın bozuldu, belirtisini yaz — teşhisi ve tahmini maliyeti söyleyelim.</p>}
+        <div style={{ ...s.trustRow, display: (ekran === "teshis" && adim === "form") ? "none" : s.trustRow.display }}>
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✓</span> Ücretsiz</span>
           <span style={s.trustItem}><span style={{ color: "#2563EB", fontWeight: 800 }}>✦</span> AI destekli</span>
           <span style={s.trustItem}><span style={{ color: "#F5A623" }}>★</span> Google puanlı servisler</span>
@@ -639,7 +690,16 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           mevcut formun `belirti` alanına indirir, cihazı tahmin edebilirse seçer ve
           forma kaydırır. Teşhis akışının kendisine tek satır dokunulmadı. */}
 
-      {(adim === "form" || adim === "hata") && (
+      {/* Teşhis ekranının geri kapısı. Logo da ana sayfaya döner ama formu
+          sıfırlar; bu satır aynı şeyi AÇIKÇA söyler — kullanıcı ayrı bir adreste
+          olduğunu buradan anlar. Tam sayfa yüklemesi yok: SPA içi geçiş. */}
+      {ekran === "teshis" && !showServisler && (
+        <button type="button" onClick={() => vitrineDon()} style={s.geriLink}>
+          ← Ana sayfa
+        </button>
+      )}
+
+      {ekran === "teshis" && (adim === "form" || adim === "hata") && !showServisler && (
         <div ref={formRef} style={s.card}>
           <label style={s.label}>Cihaz <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span></label>
           <div style={s.cihazGrid}>
@@ -776,8 +836,9 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      {/* Ana sayfa alt bölümü — yalnız form ekranında: gezinme ızgarası + sık sorulanlar (SSS) */}
-      {adim === "form" && (
+      {/* Ana sayfa alt bölümü — yalnız VİTRİNDE: gezinme ızgarası + sık sorulanlar (SSS).
+          Teşhis ekranı artık ayrı adreste; oraya bu blok taşınmaz (form odaklı kalsın). */}
+      {ekran === "vitrin" && !showServisler && (
         <>
           {/* Gezinme ızgarası (YK Kararı #32, 2 Ağu 2026 — kalıcı): SSS'nin ÜSTÜNDE, dört buton
               AYNI EBAT. Mobilde 2×2, ≥560px'te tek sıra 4'lü (CSS: .nav-izgara).
@@ -1228,6 +1289,11 @@ const s = {
   altBtns: { display: "flex", gap: 10, marginTop: 16 },
   copyBtn: { flex: 1, padding: "12px", borderRadius: 12, border: `1.5px solid ${AMBER}`, background: "rgba(37,99,235,.06)", color: AMBER, fontSize: 14.5, fontWeight: 700 },
   reset: { flex: 1, padding: "12px", borderRadius: 12, border: "1.5px solid #CBD5E1", background: "transparent", color: INK, fontSize: 14.5, fontWeight: 600 },
+  geriLink: {
+    position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center",
+    background: "none", border: "none", padding: "0 0 12px", cursor: "pointer",
+    color: MUTED, fontFamily: "inherit", fontSize: 14.5, fontWeight: 600,
+  },
   footer: { position: "relative", zIndex: 1, textAlign: "center", marginTop: 30, paddingTop: 22, borderTop: `1px solid ${HAIR}` },
   footBrand: { fontFamily: "'Fraunces', serif", fontSize: "clamp(14px, 1.4vw, 16px)", fontWeight: 600, color: MUTED },
   footSub: { fontSize: "clamp(12px, 1.2vw, 13.5px)", color: FAINT, marginTop: 6 },
