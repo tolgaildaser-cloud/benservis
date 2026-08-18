@@ -14,6 +14,8 @@
  *     (Bayat HTML riski yok; "normal tarayıcı deneyimi bozulmasın" ölçütü bunu gerektiriyor.)
  *   - /assets/* (hash'li) → cache-first (dosya adı hash'li, içerik değişmez).
  *   - /api/servis/yakin  → stale-while-revalidate, TTL 24 saat (anonim servis dizini).
+ *   - /anasayfa/*, /tamir-gorsel/* (hash'siz görseller) → stale-while-revalidate
+ *     (aynı adreste içerik değişebiliyor; cache-first bayat kare servis ediyordu).
  *   - Diğer statikler    → cache-first.
  *
  * 2 AĞU 2026 — IT İNCELEMESİ (PWA adım 3/5, hüküm "ŞARTLI GEÇER") DÜZELTMELERİ:
@@ -30,7 +32,13 @@
 // Bu, düzeltmenin geriye dönük ayağıdır — daha önce kurulmuş cihazlarda diske yazılmış
 // ham GPS'li anahtarlar ve token'lı sayfalar ilk açılışta temizlenir. Sürüm bumb'ı olmadan
 // kod düzelir ama eski cihazdaki veri yerinde kalırdı.
-const SURUM = "benservis-v2";
+// ⚠️ SÜRÜM v2 → v3 (19 Ağu 2026): cihaz kartı kareleri 18 Ağu'da iki kez yenilendi
+// (v2 → Kling v3) ama DOSYA ADLARI AYNI kaldı. Hash'siz statikler cache-first
+// olduğu için siteyi daha önce açmış cihazlarda SW eski kareyi diskten servis
+// etmeye devam etti — Tolga "mavili adamları canlıda göremiyorum" dedi, sebebi bu.
+// Sürüm adı değişince activate() eski cache'leri siler; bu, düzeltmenin geriye
+// dönük ayağı. İleriye dönük ayağı aşağıdaki HASHSIZ_SWR kuralı.
+const SURUM = "benservis-v3";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;
@@ -170,6 +178,26 @@ async function gezinme(request, cachelenir) {
   }
 }
 
+// İçeriği aynı adreste değişebilen statikler (hash'siz): kare/kapak görselleri,
+// ikonlar. Bunlarda cache-first BAYAT İÇERİK üretir — dosya adı sabit olduğu için
+// SW yeni sürümü hiç görmez. Çözüm stale-while-revalidate: kullanıcı beklemeden
+// cache'ten görür, arka planda tazelenir, BİR SONRAKİ açılışta yeni kare gelir.
+// /assets/* bu listede DEĞİL — orada ad hash'li, içerik asla değişmez.
+const HASHSIZ_SWR = /^\/(anasayfa|tamir-gorsel|ikon|logo)\//;
+
+async function statikSWR(request, cacheAdi) {
+  const cache = await caches.open(cacheAdi);
+  const cached = await cache.match(request);
+  const agdan = fetch(request)
+    .then((res) => {
+      if (res && res.ok && res.type === "basic") cache.put(request, res.clone());
+      return res;
+    })
+    .catch(() => null);
+  // Cache varsa anında dön (tazeleme arka planda sürer); yoksa ağı bekle.
+  return cached || (await agdan) || Response.error();
+}
+
 async function cacheOnce(request, cacheAdi) {
   const cache = await caches.open(cacheAdi);
   const cached = await cache.match(request);
@@ -214,6 +242,13 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // 7) Hash'li build çıktıları ve statik varlıklar → cache-first.
+  // 7a) Hash'siz görsel varlıkları → stale-while-revalidate (içerik aynı adreste
+  //     değişebiliyor; cache-first bayat kare servis ediyordu).
+  if (HASHSIZ_SWR.test(url.pathname)) {
+    e.respondWith(statikSWR(request, STATIK_CACHE));
+    return;
+  }
+
+  // 7b) Hash'li build çıktıları ve diğer statikler → cache-first (ad hash'li, içerik sabit).
   e.respondWith(cacheOnce(request, STATIK_CACHE).catch(() => caches.match(request).then((c) => c || Response.error())));
 });
