@@ -344,7 +344,12 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             bir işaret (kendi tıklama alanı yok) — iç içe tıklanabilir öğe
             olmasın, ekran okuyucu tek hedef görsün. */}
         <div className="vitrin-gezinme" style={st.gezinmeler}>
-          {GEZINME.map((x) => {
+          {GEZINME.map((x, i) => {
+            // Zikzak (Tolga: "bir sağ bir sol olsun"): tek sıradakilerde görsel
+            // sola geçer. DOM sırası DEĞİŞMEZ — her şeritte önce metin, sonra
+            // görsel okunur; yer değişimi yalnız sütun sırası + order ile yapılır,
+            // böylece ekran okuyucu ve klavye sırası tutarlı kalır.
+            const ters = i % 2 === 1;
             const ic = (
               <>
                 <div style={st.seritMetin}>
@@ -352,7 +357,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                   <p style={st.seritYazi}>{x.metin}</p>
                   <span style={st.seritBtn}>{x.btn} <span aria-hidden="true">→</span></span>
                 </div>
-                <div style={st.seritGorselAlan}>
+                <div style={ters ? { ...st.seritGorselAlan, order: -1 } : st.seritGorselAlan}>
                   {x.foto ? (
                     <img src={x.foto} alt="" width="900" height="700" loading="lazy" decoding="async" style={st.seritFoto} />
                   ) : (
@@ -363,9 +368,13 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 </div>
               </>
             );
+            const kutu = {
+              ...st.serit,
+              gridTemplateColumns: ters ? "minmax(240px, 38%) 1fr" : "1fr minmax(240px, 38%)",
+            };
             return x.href
-              ? <a key={x.ad} href={x.href} aria-label={x.ad} style={st.serit}>{ic}</a>
-              : <button key={x.ad} type="button" onClick={onServisler} aria-label={x.ad} style={{ ...st.serit, font: "inherit", textAlign: "left" }}>{ic}</button>;
+              ? <a key={x.ad} href={x.href} aria-label={x.ad} style={kutu}>{ic}</a>
+              : <button key={x.ad} type="button" onClick={onServisler} aria-label={x.ad} style={{ ...kutu, font: "inherit", textAlign: "left" }}>{ic}</button>;
           })}
         </div>
 
