@@ -240,8 +240,10 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
       </div></section>
 
       {/* ═══ ③ NASIL ÇALIŞIR ═══ */}
-      <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}`, borderBottom: `1px solid ${HAIR}` }}><div style={st.bolum}>
-        <h2 style={st.h2}>Nasıl çalışır?</h2>
+      <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}`, borderBottom: `1px solid ${HAIR}` }}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
+        {/* Bu bölümde başlık YUKARI çekildi (üst boşluk 64 → 44) ve altındaki
+            aralık açıldı (8 → 30): numaralar %50 büyüyünce başlığa yapışıyordu. */}
+        <h2 style={{ ...st.h2, marginBottom: "clamp(22px, 2.6vw, 30px)" }}>Nasıl çalışır?</h2>
         <div className="vitrin-adimlar" style={st.adimlar}>
           {ADIMLAR.map((a) => (
             <div key={a.n} style={st.adim}>
@@ -381,14 +383,15 @@ const st = {
   },
   kartAd: { fontSize: 13.5, fontWeight: 600, color: NAVY, lineHeight: 1.3 },
 
-  adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 20, maxWidth: 900, margin: "0 auto" },
-  adim: { textAlign: "center", padding: "0 8px" },
+  adimlar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(24px, 3vw, 34px)", maxWidth: 980, margin: "0 auto" },
+  adim: { textAlign: "center", padding: "0 6px" },
   adimNo: {
-    display: "inline-flex", alignItems: "center", justifyContent: "center", width: 38, height: 38,
-    borderRadius: "50%", background: "#EFF4FF", color: BLUE, fontWeight: 800, fontSize: "clamp(16px, 1.5vw, 18px)", marginBottom: 12,
+    display: "inline-flex", alignItems: "center", justifyContent: "center", width: 54, height: 54,
+    borderRadius: "50%", background: "#EFF4FF", color: BLUE, fontWeight: 800,
+    fontSize: "clamp(24px, 2.2vw, 27px)", marginBottom: 16,
   },
-  adimBaslik: { display: "block", color: NAVY, fontSize: "clamp(16px, 1.7vw, 20px)", lineHeight: 1.3, marginBottom: 7 },
-  adimAciklama: { color: MUTED, fontSize: "clamp(14px, 1.4vw, 16.5px)", lineHeight: 1.6, margin: 0 },
+  adimBaslik: { display: "block", color: NAVY, fontSize: "clamp(21px, 2.2vw, 26px)", lineHeight: 1.3, marginBottom: 10 },
+  adimAciklama: { color: MUTED, fontSize: "clamp(18px, 1.8vw, 21.5px)", lineHeight: 1.55, margin: 0 },
 
   sayilar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 14 },
   sayiKutu: {
