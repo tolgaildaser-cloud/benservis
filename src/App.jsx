@@ -5,7 +5,6 @@ import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
-import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
 import AnaSayfaVitrin from "./AnaSayfaVitrin.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
@@ -177,7 +176,6 @@ export default function App() {
   const [belirti, setBelirti] = useState(ONSECIM.belirti); // YK #67 ② — blogdan gelen bağlam
   const BELIRTI_MAX = 300; // belirti karakter limiti (maxLength + sayaç + ses kırpma tek kaynak)
   const [sonuc, setSonuc] = useState(null);
-  const [sssAcik, setSssAcik] = useState(null); // ana sayfa SSS akordeon açık indeksi
   const [hataMsg, setHataMsg] = useState("");
   const [kopyalandi, setKopyalandi] = useState(false);
   // Çift kapı: `?servis=1` ile gelindiyse servis listesi DOĞRUDAN açılır.
@@ -630,6 +628,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             teshiseGec();
           }}
           onFormaGit={teshiseGec}
+          onServisler={() => { track("servis_click", { kaynak: "anasayfa_izgara", gelis: GELIS }); setShowServisler(true); }}
           onLogo={sifirla}
           onDertYaz={(metin, tahminCihaz) => {
             setBelirti(metin.slice(0, BELIRTI_MAX));
@@ -836,74 +835,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      {/* Ana sayfa alt bölümü — yalnız VİTRİNDE: gezinme ızgarası + sık sorulanlar (SSS).
-          Teşhis ekranı artık ayrı adreste; oraya bu blok taşınmaz (form odaklı kalsın). */}
-      {ekran === "vitrin" && !showServisler && (
-        <>
-          {/* Gezinme ızgarası (YK Kararı #32, 2 Ağu 2026 — kalıcı): SSS'nin ÜSTÜNDE, dört buton
-              AYNI EBAT. Mobilde 2×2, ≥560px'te tek sıra 4'lü (CSS: .nav-izgara).
-              "Yakın Servisler" yeni bir sayfa açmaz — mevcut servis dizini ekranını (ServisEkrani)
-              teşhissiz açar; cihaz seçilmediyse API kategori filtresi uygulamaz (tüm dizin). */}
-          <nav className="nav-izgara" style={{ position: "relative", zIndex: 1, marginTop: 26 }} aria-label="Site bölümleri">
-            {/* İKONLAR (2 Ağu düzeltmesi — Tolga: "Tamir Merkezi ikonu çirkin, ne olduğu belli değil"):
-                dördü de 21→26px, çizgi 1.7→1.8. Boyut tek başına değil TUTARLI büyütüldü;
-                ikon kutuyu köşeden köşeye doldursun diye viewBox 24 sabit kaldı. */}
-            <a href="/blog/" className="nav-kart" style={s.navKart}>
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
-              <span style={s.navKartText}>Bilgi Merkezi</span>
-            </a>
-            <a href="/tamir/" className="nav-kart" style={s.navKart}>
-              {/* İNGİLİZ ANAHTARI — eskisi 12x12'lik alana sıkışmış, jaw'ı kapalı, uzaktan
-                  "tamir" okunmayan bir çizgi yumağıydı. Yenisi kutuyu köşeden köşeye (2,22)→(22,2)
-                  kaplar: açık ağızlı anahtar başı + kalın sap. Tek büyük alet, çapraz ikili
-                  değil — 26px'te iki alet birbirine giriyor, tek anahtar net okunuyor. */}
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M14.6 6.4a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z" /></svg>
-              <span style={s.navKartText}>Tamir Merkezi</span>
-            </a>
-            {/* 3. buton (2 Ağu, Tolga talimatı): "Kullanım Kılavuzları" ile "Yakın Servisler"
-                YER DEĞİŞTİRDİ. Yeni sıra: Bilgi Merkezi · Tamir Merkezi · Kullanım Kılavuzları ·
-                Yakın Servisler. YALNIZ konum değişti — etiket, hedef ve ikon aynı kaldı.
-                ("Hakkımızda" ızgarada değil ama FOOTER'DA DURUYOR — güven sayfası kaybolmasın.)
-                Hedef /kilavuzlar/ 2 Ağu'da DOLDU (YK #34 Faz 4): marka bazlı, HTTP 200
-                doğrulanmış resmî kılavuz linkleri; eşik aşıldığı için noindex kalktı. */}
-            <a href="/kilavuzlar/" className="nav-kart" style={s.navKart}>
-              {/* Dört ikonun EN ZAYIFI buydu: ince iki kısa çizgili defter, kutunun sağ-alt
-                  çeyreği boş kalıyor ve Bilgi Merkezi'nin kapalı kitabıyla karışıyordu.
-                  AÇIK kitap ile değişti — kutuyu yatayda doldurur, kapalı kitaptan ilk bakışta
-                  ayrılır (dik dikdörtgen vs. yatay iki sayfa). */}
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 7.5v13" /><path d="M3 18.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z" /></svg>
-              <span style={s.navKartText}>Kullanım Kılavuzları</span>
-            </a>
-            {/* 4. buton: Yakın Servisler — tek <button> (diğer üçü <a>), servis dizinini
-                teşhissiz açar. Izgaranın SONUNA taşındı; davranışı değişmedi. */}
-            <button
-              type="button"
-              className="nav-kart"
-              style={{ ...s.navKart, fontFamily: "inherit" }}
-              onClick={() => { track("servis_click", { kaynak: "anasayfa_izgara", gelis: GELIS }); setShowServisler(true); }}
-            >
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={s.navIkon} aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" /></svg>
-              <span style={s.navKartText}>Yakın Servisler</span>
-            </button>
-          </nav>
-          <div style={{ position: "relative", zIndex: 1, marginTop: 26 }}>
-            <div style={{ ...s.secHead, fontSize: "clamp(17px, 1.8vw, 21px)", marginBottom: 12 }}>Sık sorulanlar</div>
-            {SSS.map((q, i) => (
-              <div key={i} style={{ background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" }}>
-                <button onClick={() => setSssAcik(sssAcik === i ? null : i)} aria-expanded={sssAcik === i} style={{ width: "100%", background: "none", border: "none", padding: "15px 16px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, textAlign: "left", fontSize: "clamp(14.5px, 1.5vw, 17px)", fontWeight: 600, color: INK }}>
-                  <span>{q.s}</span>
-                  <span style={{ color: "#2563EB", fontSize: 22, fontWeight: 400, lineHeight: 1, flexShrink: 0 }} aria-hidden="true">{sssAcik === i ? "–" : "+"}</span>
-                </button>
-                {sssAcik === i && (
-                  <p style={{ margin: 0, padding: "0 16px 15px", fontSize: "clamp(13.5px, 1.4vw, 16px)", lineHeight: 1.6, color: MUTED }}>{q.c}</p>
-                )}
-              </div>
-            ))}
-          </div>
-          {/* PWA duyurusu — site metni (YK #26 adım 5/5): pasif blok, ipucu şeridiyle çakışmaz */}
-          <TelefonaEkleBlok />
-        </>
-      )}
+      {/* Gezinme ızgarası + SSS + PWA bloğu 18 Ağu'da AnaSayfaVitrin'e TAŞINDI:
+          Tolga "bu kısmı da tam sayfa genişliğine al" dedi; burası `s.wrap`
+          (maxWidth 600) içindeydi, orada tam genişlik verilemezdi. Vitrin zaten
+          wrap'in dışında duruyor — blok oraya gidince taşırma hilesi gerekmedi. */}
 
       {adim === "loading" && (
         <div style={s.card}>
@@ -1094,27 +1029,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
 // Minimal & premium paleti
 
-// Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
-// YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
-// FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
-// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 14 Ağu 2026.
-const SSS = [
-  // — evergreen (sabit) —
-  { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
-  { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 14 Ağu taraması, frontmatter `category`
-  //   sayımı: çamaşır 13 · bulaşık 11 · kombi 9 · klima 8 · buzdolabı 8 · fırın/ocak 3 —
-  //   7 Ağu'ya göre DEĞİŞMEDİ; 13 Ağu'nun iki yeni taslağı henüz repoya girmedi).
-  //   ÇIKAN: kombi sıcak su gelmiyor. İKİ GEREKÇE ÜST ÜSTE BİNDİ:
-  //     ① 4 Ağu'dan beri sette — 10 gün, rotasyon geçmişindeki en uzun görev süresi.
-  //     ② Tolga, 13 Ağu: "kış/kombi ekimden önce yazma artık" — SSS metni yeni üretim
-  //        değil ama ana sayfanın en görünür kombi yüzeyi; talimatın yönüyle aynı yere bakar.
-  //   GİREN: bulaşık makinesi temiz yıkamıyor — külliyatın İKİNCİ büyük kümesi (11 yazı) ve
-  //   rotasyon başladığından beri hiç temsil edilmedi; kaynak yazı `bulasik-makinesi-temiz-yikamiyor`. —
-  { s: "Buzdolabı çalışıyor ama soğutmuyor, önce neye bakmalıyım?", c: "Önce sıcaklık ayarına bak: dolap yaklaşık 4, buzluk yaklaşık eksi 18 derece olmalı — ayar yanlışlıkla değişmiş olabilir. Sonra kapı contasını dene; kapağa bir kağıt kıstırıp çek, direnç hissetmiyorsan conta sızdırıyordur. Arkadaki ve alttaki tozu da süpür, dolabı duvardan 5-10 cm uzak tut — tozlu kondenser ısıyı dışarı atamaz. Ayar doğru, conta sağlam ve arka temizken hâlâ soğutmuyorsa ya da buzluk soğuk olduğu hâlde dolap soğumuyorsa belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
-  { s: "Bulaşık makinesi temiz yıkamıyor, tabaklar kirli çıkıyor — önce neye bakmalıyım?", c: "Önce alt ve üst püskürtme kollarını çıkar: deliklerini kürdanla aç, takınca elinle çevirip serbestçe döndüklerinden emin ol — su bulaşığa ulaşamıyorsa en sık sebep budur. Sonra tabandaki filtreyi çıkarıp yıka, tuz ve parlatıcı haznelerini doldur; tuz bitince kireç, parlatıcı bitince leke bırakır. Bulaşıkları da üst üste bindirmeden diz, derin kapları ters çevir. Kollar ve filtre temiz, tuz ile parlatıcı tamken hâlâ kirli çıkıyorsa ya da su hiç ısınmıyorsa sıra rezistansa gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
-  { s: "Çamaşır makinesi su atmıyor, çamaşırlar ıslak çıkıyor — önce neye bakmalıyım?", c: "Önce makinenin alt kapağındaki tahliye filtresini çıkarıp temizle; su atmama şikâyetinin en sık sebebi budur. Altına havlu ve geniş bir kap koy, çünkü içeride kalan su filtreyi açar açmaz gelir. Sonra arkadaki tahliye hortumunu kontrol et: bükülmüş, ezilmiş ya da giderin içinde çok derine itilmiş olabilir. Filtre temiz ve hortum açıkken makine hâlâ suyu boşaltmıyor ya da santrifüje hiç geçmiyorsa sıra tahliye pompasına gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
-];
+
 
 const CSS = `
 * { box-sizing: border-box; }
@@ -1182,6 +1097,28 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
   .vitrin-kartlar button:hover img { transform: none; }
 }
 
+/* Gezinme ızgarası cihaz ızgarasıyla aynı kademeleri izler. */
+@media (max-width: 900px) {
+  .vitrin-gezinme { grid-template-columns: repeat(2, 1fr) !important; }
+}
+/* Gezinme kartlarına da cihaz kartlarının hover hareketi (aynı kural gövdesi,
+   ayrı seçici: ızgaralar farklı sınıflarda). */
+@media (hover: hover) and (pointer: fine) {
+  .vitrin-gezinme > * { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .vitrin-gezinme > * img, .vitrin-gezinme > * svg { transition: transform .3s ease; }
+  .vitrin-gezinme > *:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -10px rgba(30,41,59,.28) !important;
+    border-color: #C7D7F5 !important;
+  }
+  .vitrin-gezinme > *:hover img, .vitrin-gezinme > *:hover svg { transform: scale(1.06); }
+}
+.vitrin-gezinme > *:focus-visible { transform: translateY(-2px); border-color: #C7D7F5 !important; }
+@media (prefers-reduced-motion: reduce) {
+  .vitrin-gezinme > *, .vitrin-gezinme > * img, .vitrin-gezinme > * svg { transition: none; }
+  .vitrin-gezinme > *:hover, .vitrin-gezinme > *:focus-visible { transform: none; }
+  .vitrin-gezinme > *:hover img, .vitrin-gezinme > *:hover svg { transform: none; }
+}
 /* Cihaz ızgarası: masaüstünde satır başına 4 kart (Armut deseni). Ara
    genişliklerde 4 sütun kartı görselin okunmayacağı kadar daraltıyor,
    o yüzden kademe kademe iniyor: 4 → 3 → 2. */
