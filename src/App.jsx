@@ -1036,7 +1036,13 @@ const CSS = `
 /* Zemin BODY'de sabitlenir: wrap 600px'lik bir kolon, gövdenin arka planı
    tanımsız kaldığı için geniş ekranda kolonun iki yanı tarayıcının varsayılanına
    (koyu temada siyaha) düşüyordu. Hero full-bleed olunca bu daha da göze battı. */
-html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
+/* Gövde fontu BODY'de tanımlı olmalı: vitrin bölümleri s.wrap'in (maxWidth 600)
+   DIŞINDA duruyor ve font yalnız orada tanımlıydı → vitrindeki tüm gövde metinleri
+   (kart adları, slogan kartları, SSS, hero alt başlığı) tarayıcı varsayılanı olan
+   Times ile çiziliyordu. Ölçümle yakalandı: computed fontFamily = "Times".
+   Başlıklar etkilenmemişti, çünkü onların Fraunces'u kendi stillerinde yazılı. */
+html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, sans-serif; }
 /* YK #69 koşu 1/cila ⑤ — TEK ETKİLEŞİM DİLİ (blog şablonuyla aynı sözleşme).
    Form alanlarının odak halkası vardı ama buton/link'lerde yoktu: klavyeyle gezen
    kullanıcı cihaz kartları ve CTA'lar arasında nerede olduğunu göremiyordu.
@@ -1097,9 +1103,11 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM}; }
   .vitrin-kartlar button:hover img { transform: none; }
 }
 
-/* Gezinme ızgarası cihaz ızgarasıyla aynı kademeleri izler. */
-@media (max-width: 900px) {
-  .vitrin-gezinme { grid-template-columns: repeat(2, 1fr) !important; }
+/* Gezinme şeritleri dar ekranda dikey: görsel üstte, metin altta. Yan yana
+   kalsalardı 375 px'te metin sütunu ~135 px'e düşüyordu (okunmaz). */
+@media (max-width: 720px) {
+  .vitrin-gezinme > * { grid-template-columns: 1fr !important; }
+  .vitrin-gezinme > * > div:last-child { order: -1; min-height: 150px !important; }
 }
 /* Gezinme kartlarına da cihaz kartlarının hover hareketi (aynı kural gövdesi,
    ayrı seçici: ızgaralar farklı sınıflarda). */

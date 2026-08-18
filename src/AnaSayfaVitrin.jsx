@@ -121,10 +121,30 @@ const SLOGAN = [
 // ayni alanda buyutulmus cizgi ikon durur (cihaz kartlarindaki desenin aynisi,
 // dalga dalga teslim edilebilir). Fotograflar GRF'den bekleniyor.
 const GEZINME = [
-  { ad: "Bilgi Merkezi",       href: "/blog/",      foto: "", ikon: "kitap" },
-  { ad: "Tamir Merkezi",       href: "/tamir/",     foto: "", ikon: "anahtar" },
-  { ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "", ikon: "acik-kitap" },
-  { ad: "Yakın Servisler",     href: null,          foto: "", ikon: "konum" },
+  {
+    ad: "Bilgi Merkezi", href: "/blog/", foto: "", ikon: "kitap",
+    baslik: "Önce öğren, sonra çağır",
+    metin: "Cihazın neden bozulduğunu sade Türkçeyle anlatan yazılar. Teknik terim yok; çoğu arızada servise gerek olup olmadığını kendin anlarsın.",
+    btn: "Yazılara göz at",
+  },
+  {
+    ad: "Tamir Merkezi", href: "/tamir/", foto: "", ikon: "anahtar",
+    baslik: "Belirtiden çözüme",
+    metin: "\"Su almıyor\", \"soğutmuyor\", \"ses yapıyor\" — belirtiyle başlayıp adım adım ne kontrol edeceğini gösteren rehberler.",
+    btn: "Rehberlere bak",
+  },
+  {
+    ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "", ikon: "acik-kitap",
+    baslik: "Kılavuzun elinin altında",
+    metin: "Hata kodunu okumak ya da bir ayarı bulmak için markanın resmî kullanım kılavuzuna doğrudan ulaş.",
+    btn: "Kılavuz ara",
+  },
+  {
+    ad: "Yakın Servisler", href: null, foto: "", ikon: "konum",
+    baslik: "Yanındaki servisi gör",
+    metin: "Google puanlı servisleri yakınlığa göre sırala, telefonunu al, doğrudan kendin ara. Araya kimse girmez.",
+    btn: "Servisleri gör",
+  },
 ];
 
 // Izgara ikonlari — 26 px'lik nav ikonlari 16:10 alanda kayboluyordu, buyuk
@@ -319,25 +339,33 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           İçerik 1080 px'lik kolonda kalır — SSS satırı ekran boyunca uzarsa
           okunmuyor; genişleyen zemin, sınırlı olan satır uzunluğu. */}
       <section style={{ ...st.bolumDis, background: "#fff", borderTop: `1px solid ${HAIR}` }}><div style={{ ...st.bolum, paddingTop: "clamp(28px, 4vw, 44px)" }}>
+        {/* Yatay şerit düzeni (Tolga 18 Ağu, Armut örneği): solda metin bloğu +
+            çağrı düğmesi, sağda görsel. Kart TAMAMEN tıklanabilir; düğme görsel
+            bir işaret (kendi tıklama alanı yok) — iç içe tıklanabilir öğe
+            olmasın, ekran okuyucu tek hedef görsün. */}
         <div className="vitrin-gezinme" style={st.gezinmeler}>
           {GEZINME.map((x) => {
             const ic = (
               <>
-                {x.foto ? (
-                  <img src={x.foto} alt="" width="600" height="380" loading="lazy" decoding="async" style={st.kartGorsel} />
-                ) : (
-                  <span style={st.kartIkonAlan}>
-                    <svg viewBox="0 0 24 24" fill="none" stroke={BLUE} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={st.gezinmeIkon} aria-hidden="true">
+                <div style={st.seritMetin}>
+                  <h3 style={st.seritBaslik}>{x.baslik}</h3>
+                  <p style={st.seritYazi}>{x.metin}</p>
+                  <span style={st.seritBtn}>{x.btn} <span aria-hidden="true">→</span></span>
+                </div>
+                <div style={st.seritGorselAlan}>
+                  {x.foto ? (
+                    <img src={x.foto} alt="" width="900" height="700" loading="lazy" decoding="async" style={st.seritFoto} />
+                  ) : (
+                    <svg viewBox="0 0 24 24" fill="none" stroke={BLUE} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" style={st.seritIkon} aria-hidden="true">
                       {IZGARA_IKON[x.ikon]}
                     </svg>
-                  </span>
-                )}
-                <span style={st.kartAdFoto}>{x.ad}</span>
+                  )}
+                </div>
               </>
             );
             return x.href
-              ? <a key={x.ad} href={x.href} style={{ ...st.kartFoto, textDecoration: "none" }}>{ic}</a>
-              : <button key={x.ad} type="button" onClick={onServisler} style={st.kartFoto}>{ic}</button>;
+              ? <a key={x.ad} href={x.href} aria-label={x.ad} style={st.serit}>{ic}</a>
+              : <button key={x.ad} type="button" onClick={onServisler} aria-label={x.ad} style={{ ...st.serit, font: "inherit", textAlign: "left" }}>{ic}</button>;
           })}
         </div>
 
@@ -485,8 +513,33 @@ const st = {
 
   // Gezinme ızgarası: cihaz kartlarıyla aynı kart stilini (kartFoto) paylaşır,
   // yalnız 4 sütuna sabitlenir — dört kalem var, satır bölünmesin.
-  gezinmeler: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, alignItems: "stretch", gridAutoRows: "1fr" },
-  gezinmeIkon: { width: "clamp(44px, 26%, 66px)", height: "auto" },
+  gezinmeler: { display: "grid", gap: "clamp(14px, 1.8vw, 20px)" },
+  serit: {
+    display: "grid", gridTemplateColumns: "1fr minmax(240px, 38%)",
+    alignItems: "stretch", background: BG, border: `1px solid ${HAIR}`,
+    borderRadius: 20, overflow: "hidden", textDecoration: "none", cursor: "pointer",
+    padding: 0, width: "100%",
+  },
+  seritMetin: { padding: "clamp(24px, 3.4vw, 44px)", alignSelf: "center" },
+  seritBaslik: {
+    fontFamily: "Fraunces, Georgia, serif", fontWeight: 600, color: NAVY,
+    fontSize: "clamp(21px, 2.6vw, 30px)", lineHeight: 1.2, letterSpacing: "-.01em", margin: "0 0 10px",
+  },
+  seritYazi: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.6, margin: "0 0 20px", maxWidth: 460 },
+  // Düğme GÖRÜNÜMÜNDE bir işaret — gerçek tıklama alanı kartın tamamı.
+  seritBtn: {
+    display: "inline-flex", alignItems: "center", gap: 8,
+    background: BLUE, color: "#fff", borderRadius: 12,
+    padding: "12px 20px", fontSize: "clamp(14.5px, 1.4vw, 16px)", fontWeight: 700,
+  },
+  // Görsel yarısı: fotoğraf gelene kadar marka zeminli ikon durur.
+  seritGorselAlan: {
+    position: "relative", background: "#EFF4FF",
+    display: "flex", alignItems: "center", justifyContent: "center",
+    minHeight: "clamp(180px, 22vw, 260px)", overflow: "hidden",
+  },
+  seritFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
+  seritIkon: { width: "clamp(54px, 7vw, 84px)", height: "auto" },
 
   sssListe: { maxWidth: 860, margin: "0 auto" },
   sssKart: { background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" },
