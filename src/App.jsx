@@ -642,7 +642,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       )}
     <div style={
       ekran === "teshis" && (adim === "form" || adim === "hata") && !showServisler
-        ? { ...s.wrap, paddingTop: 0, maxWidth: 1080 }
+        ? { ...s.wrap, paddingTop: 0, maxWidth: 1240 }
         : adim === "form" ? { ...s.wrap, paddingTop: 0 } : s.wrap
     }>
       {showServisler && (
@@ -854,18 +854,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             </p>
           )}
 
-          {hataMsg && <div style={s.err}>{hataMsg}</div>}
-          {/* ZORUNLU alanlar (cihaz + marka + belirti) dolmadan buton aktif görünmez (tesisEt guard'ı da var) */}
-          <button
-            style={{ ...s.cta, ...(formHazir ? {} : { opacity: 0.45, cursor: "not-allowed", boxShadow: "none" }) }}
-            onClick={tesisEt}
-            disabled={!formHazir}
-          >Ücretsiz teşhis et →</button>
-          {!formHazir && cihaz && (
-            <p style={{ fontSize: 12.5, color: "#94A3B8", textAlign: "center", margin: "8px 0 0" }}>
-              {!marka ? "Marka seçin." : "Arıza belirtisini yazın."}
-            </p>
-          )}
           </section>
 
           {/* ═══ PANEL ④ SONUÇ ═══
@@ -880,6 +868,28 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               Teşhis sonucu burada belirecek.<br />Soldaki adımları tamamla.
             </p>
           </section>
+          </div>
+
+          {/* ═══ GÖNDERİM BANDI ═══
+              CTA panel ③'ün içindeydi; orada dar kalıyor ve dört panelin arasında
+              kayboluyordu (Tolga: "teşhis et butonu en altta bütün sayfa boyunca
+              olsun"). Panellerin ALTINDA, kolonun tamamı kadar geniş duruyor:
+              hangi adımda olursan ol gözünün önünde, tamamlanınca basılacak yer belli.
+              Hata mesajı ve eksik-alan uyarısı da buraya taşındı — ikisi de bu
+              düğmenin gerekçesi, onunla aynı yerde okunmalı. */}
+          <div className="gonderi-bant">
+            {hataMsg && <div style={s.err}>{hataMsg}</div>}
+            <button
+              className="gonderi-btn"
+              style={{ ...s.cta, ...(formHazir ? {} : { opacity: 0.45, cursor: "not-allowed", boxShadow: "none" }) }}
+              onClick={tesisEt}
+              disabled={!formHazir}
+            >Ücretsiz teşhis et →</button>
+            {!formHazir && (
+              <p style={{ fontSize: 13, color: "#94A3B8", textAlign: "center", margin: "10px 0 0" }}>
+                {!cihaz ? "Cihazını seç." : !marka ? "Marka seçin." : "Arıza belirtisini yazın."}
+              </p>
+            )}
           </div>
 
           <p style={s.disclaimer}>Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>
@@ -1166,6 +1176,10 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
 /* Sonuç paneli boşken: ne beklendiğini söyleyen sakin bir yer tutucu. */
 .panel-bos { text-align: center; padding: 26px 8px; color: #94A3B8; font-size: 13px; line-height: 1.6; }
 .panel-bos .ikon { display: block; font-size: 26px; margin-bottom: 10px; opacity: .5; }
+
+/* Gönderim bandı — panellerin altında, kolonun tamamı kadar geniş. */
+.gonderi-bant { margin: 18px 0 0; }
+.gonderi-bant .gonderi-btn { width: 100%; min-height: 58px; font-size: 17px; }
 
 /* MOBİL: paneller alt alta; kilitli olanlar hiç görünmez — bugünkü tek kolon
    akışıyla aynı his, kullanıcı sırası gelmemiş alanla karşılaşmaz. */
