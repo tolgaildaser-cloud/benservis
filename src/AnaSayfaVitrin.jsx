@@ -119,7 +119,9 @@ const SURDURULEBILIR = {
   // (degrade + döngü motifi) artık basılmıyor, yedek olarak kodda duruyor.
   foto: "/anasayfa/surdurulebilirlik.webp",
   baslik: "Tamir etmek, yenisini almaktan iyidir",
-  metin: "Çalışabilecek bir cihazı çöpe göndermek yerine onarmak hem bütçeyi hem doğayı korur. Onarım hakkı, cihaz ömrünü uzatma ve döngüsel ekonomi üzerine yazdıklarımız burada.",
+  // Metin ŞERİT UZUNLUĞUNA çekildi (19 Ağu): şeritler ~100 karakter, bu 168'di ve
+  // bloğu iki satır uzatıyordu. "Döngüsel ekonomi" rozetten buraya taşındı.
+  metin: "Çalışabilecek bir cihazı onarmak hem bütçeyi hem doğayı korur. Döngüsel ekonomi yazılarımız burada.",
   btn: "Sürdürülebilirlik yazıları",
 };
 
@@ -405,7 +407,9 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         <div style={st.surdurDis}>
           <a className="vitrin-surdur" href={SURDURULEBILIR.href} aria-label={SURDURULEBILIR.baslik} style={st.surdur}>
             <div style={st.surdurMetin}>
-              <span style={st.surdurRozet}>Döngüsel ekonomi</span>
+              {/* Rozet KALDIRILDI (19 Ağu, Tolga: "aynı yükseklikte olmalı") — şeritlerde
+                  karşılığı yok, tek başına ~40 px ekliyordu. "Döngüsel ekonomi" ifadesi
+                  gövde metnine taşındı, kavram kaybolmadı. */}
               <h2 style={st.surdurBaslik}>{SURDURULEBILIR.baslik}</h2>
               <p style={st.surdurYazi}>{SURDURULEBILIR.metin}</p>
               <span style={st.surdurBtn}>{SURDURULEBILIR.btn} <span aria-hidden="true">→</span></span>
@@ -613,41 +617,43 @@ const st = {
   seritFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
   seritIkon: { width: "clamp(54px, 7vw, 84px)", height: "auto" },
 
-  // ——— SÜRDÜRÜLEBİLİRLİK BÖLÜMÜ (19 Ağu) ———
-  // Şerit dilinin AYNISI, iki farkla: ① görsel sütunu %38 → %46 ve minHeight ~1,6×
-  // (Tolga "büyük görsel" dedi) ② mavi yerine yeşil (YK 23 Tem renk kuralı).
-  // Üstteki şeritlerden ayrılsın diye kendi nefes payı + yeşil kâğıt zemini var.
+  // ——— SÜRDÜRÜLEBİLİRLİK BÖLÜMÜ ———
+  // ⚠️ 19 Ağu akşamı DÜZELTİLDİ (Tolga: "üstteki ile alttaki aynı yükseklikte ve
+  // genişlikte olmalı"). İlk sürüm bilerek şeritlerden büyüktü (görsel sütunu %46,
+  // minHeight 240-400) — ölçüldü: şerit 262 px / görsel 394 px, sürdürülebilirlik
+  // 402 px / 477 px. Artık ŞERİTLE BİREBİR AYNI değerler kullanılıyor; tek fark renk
+  // (YK 23 Tem: yeşil = sürdürülebilirlik). Bir değer değişecekse ikisi birlikte değişir.
   surdurDis: { marginTop: "clamp(36px, 5vw, 56px)" },
   surdur: {
-    display: "grid", gridTemplateColumns: "1fr minmax(280px, 46%)",
+    // gridTemplateColumns · borderRadius · overflow: `serit` ile birebir.
+    display: "grid", gridTemplateColumns: "1fr minmax(240px, 38%)",
     alignItems: "stretch", background: GREEN_TINT, border: `1px solid ${GREEN}33`,
     borderRadius: 20, overflow: "hidden", textDecoration: "none", cursor: "pointer",
     padding: 0, width: "100%",
   },
-  surdurMetin: { padding: "clamp(26px, 3.8vw, 52px)", alignSelf: "center" },
-  surdurRozet: {
-    display: "inline-block", marginBottom: 12, padding: "5px 12px", borderRadius: 999,
-    background: "#fff", border: `1px solid ${GREEN}44`, color: GREEN_DEEP,
-    fontSize: "clamp(11.5px, 1.1vw, 12.5px)", fontWeight: 700, letterSpacing: ".02em",
-  },
+  // Dolgu ŞERİTTEN (44) bir tık dar: 32. Sebep ölçüldü — bu blokta metin şeritten
+  // 26 px daha uzun (buton etiketi + gövde), 44 dolguyla blok 281 px çıkıyordu.
+  // 32'de blok TAM 262 px = şeridin yüksekliği. Hedef ölçü eşitliği, dolgu eşitliği değil.
+  surdurMetin: { padding: "clamp(20px, 2.6vw, 32px)", alignSelf: "center" },
   surdurBaslik: {
     fontFamily: "Fraunces, Georgia, serif", fontWeight: 600, color: NAVY,
-    fontSize: "clamp(23px, 3vw, 34px)", lineHeight: 1.18, letterSpacing: "-.01em", margin: "0 0 12px",
+    fontSize: "clamp(21px, 2.6vw, 30px)", lineHeight: 1.2, letterSpacing: "-.01em", margin: "0 0 10px",
   },
-  surdurYazi: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17.5px)", lineHeight: 1.62, margin: "0 0 22px", maxWidth: 480 },
+  surdurYazi: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.6, margin: "0 0 20px", maxWidth: 460 },
   surdurBtn: {
     display: "inline-flex", alignItems: "center", gap: 8,
     background: GREEN_DEEP, color: "#fff", borderRadius: 12,
-    padding: "13px 22px", fontSize: "clamp(14.5px, 1.4vw, 16px)", fontWeight: 700,
+    padding: "12px 20px", fontSize: "clamp(14.5px, 1.4vw, 16px)", fontWeight: 700,
   },
-  // Görsel yarısı: dosya gelene kadar yeşil degrade + döngü motifi (boş kutu değil).
+  // Görsel yarısı: şeritle aynı minHeight. Amblem FOTOĞRAF DEĞİL marka kilidi →
+  // `cover` kırpar, wordmark'ı keser; bu yüzden `contain` + beyaz zemin (kategori
+  // bandındaki `.hero.amblem` ile aynı gerekçe).
   surdurGorselAlan: {
     position: "relative", display: "flex", alignItems: "center", justifyContent: "center",
-    minHeight: "clamp(240px, 32vw, 400px)", overflow: "hidden",
-    background: `linear-gradient(150deg, #DCFCE7 0%, #BBF7D0 55%, #A7F3D0 100%)`,
+    minHeight: "clamp(180px, 22vw, 260px)", overflow: "hidden", background: "#fff",
   },
-  surdurFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
-  surdurIkon: { width: "clamp(84px, 11vw, 132px)", height: "auto", opacity: 0.85 },
+  surdurFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 18, boxSizing: "border-box" },
+  surdurIkon: { width: "clamp(54px, 7vw, 84px)", height: "auto", opacity: 0.85 },
 
   sssListe: { maxWidth: 860, margin: "0 auto" },
   sssKart: { background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" },
