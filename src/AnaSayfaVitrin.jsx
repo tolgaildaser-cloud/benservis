@@ -20,7 +20,7 @@ import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
 import { CIHAZLAR } from "./constants.js";
 import { heroTahmin } from "./hero-tahmin.js";
 import BenservisLogo from "./BenservisLogo.jsx";
-import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT } from "./theme.js";
+import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT, GREEN, GREEN_TINT, GREEN_DEEP } from "./theme.js";
 
 // ⚠️ DÜZELTME (YK #69 cila ①): bu dosya `FAINT` adını #64748B ile tanımlıyordu, oysa
 // külliyatta FAINT = #94A3B8; #64748B'nin adı SLATE. Aynı ad iki farklı tonu gösteriyordu.
@@ -109,6 +109,17 @@ const SLOGAN = [
 // hover'da ayni hareket. `foto` dolunca kart fotografa gecer; bos oldugu surece
 // ayni alanda buyutulmus cizgi ikon durur (cihaz kartlarindaki desenin aynisi).
 // GRF fotograflari 19 Agu 07:34'te teslim etti; ikon dallari YEDEK olarak duruyor.
+// Sürdürülebilirlik bölümü (Tolga, 19 Ağu). Yazı sayısı BİLEREK yazılmadı: vitrin
+// külliyatı okumuyor, elle yazılan sayı külliyat büyüyünce sessizce bayatlar.
+// `foto` doldurulduğu anda placeholder yerine gerçek görsel basılır — başka iş yok.
+const SURDURULEBILIR = {
+  href: "/blog/kategori/surdurulebilirlik/",
+  foto: null, // GRF teslimi: public/anasayfa/surdurulebilirlik.webp (1200×800, 3:2)
+  baslik: "Tamir etmek, yenisini almaktan iyidir",
+  metin: "Çalışabilecek bir cihazı çöpe göndermek yerine onarmak hem bütçeyi hem doğayı korur. Onarım hakkı, cihaz ömrünü uzatma ve döngüsel ekonomi üzerine yazdıklarımız burada.",
+  btn: "Sürdürülebilirlik yazıları",
+};
+
 const GEZINME = [
   {
     ad: "Bilgi Merkezi", href: "/blog/", foto: "/gezinme/bilgi-merkezi.webp", ikon: "kitap",
@@ -377,6 +388,39 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           })}
         </div>
 
+        {/* ═══ SÜRDÜRÜLEBİLİRLİK ═══ (Tolga, 19 Ağu, birebir: "en alttaki sürdürülebilirlik
+            bağlantısını sık sorulan soruların üstüne büyük görsel ile alalım")
+            Bağlantı footer gezinme satırında küçük bir link olarak duruyordu; burada
+            KENDİ bölümü oluyor ve SSS'nin ÜSTÜNE geliyor.
+            🎨 YK 23 Tem renk kuralı: YEŞİL = sürdürülebilirlik (mavi kurumsal kalır) —
+            bu, ana sayfada mavi olmayan tek bölüm; ayrışması bilinçli.
+            🖼️ Görsel: eldeki setler tarandı (`public/anasayfa/` · `merkez-gorsel/` ·
+            `gezinme/`) — sürdürülebilirlik karşılığı YOK, GRF talebi backlog'a açıldı.
+            Dosya gelene kadar degrade + döngü motifi duruyor; hero desenindeki gibi
+            placeholder BİLEREK "boş kutu" değil. Dosya inince tek satır: SURDURULEBILIR.foto.
+            📐 Şeritlerden BÜYÜK: görsel sütunu %38 değil %46 ve yüksekliği ~1,6×. */}
+        <div style={st.surdurDis}>
+          <a className="vitrin-surdur" href={SURDURULEBILIR.href} aria-label={SURDURULEBILIR.baslik} style={st.surdur}>
+            <div style={st.surdurMetin}>
+              <span style={st.surdurRozet}>Döngüsel ekonomi</span>
+              <h2 style={st.surdurBaslik}>{SURDURULEBILIR.baslik}</h2>
+              <p style={st.surdurYazi}>{SURDURULEBILIR.metin}</p>
+              <span style={st.surdurBtn}>{SURDURULEBILIR.btn} <span aria-hidden="true">→</span></span>
+            </div>
+            <div style={st.surdurGorselAlan}>
+              {SURDURULEBILIR.foto ? (
+                <img src={SURDURULEBILIR.foto} alt="" width="1200" height="800" loading="lazy" decoding="async" style={st.surdurFoto} />
+              ) : (
+                <svg viewBox="0 0 24 24" fill="none" stroke={GREEN_DEEP} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" style={st.surdurIkon} aria-hidden="true">
+                  <path d="M12 3a9 9 0 0 1 8.5 6.1" /><path d="M20.5 4.6v4.7h-4.7" />
+                  <path d="M12 21a9 9 0 0 1-8.5-6.1" /><path d="M3.5 19.4v-4.7h4.7" />
+                  <path d="M9.2 12.4l1.9 1.9 3.7-4.2" />
+                </svg>
+              )}
+            </div>
+          </a>
+        </div>
+
         <h2 style={{ ...st.h2, marginTop: "clamp(36px, 5vw, 56px)", marginBottom: "clamp(18px, 2.2vw, 26px)" }}>Sık sorulanlar</h2>
         <div style={st.sssListe}>
           {SSS.map((q, i) => (
@@ -565,6 +609,42 @@ const st = {
   },
   seritFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
   seritIkon: { width: "clamp(54px, 7vw, 84px)", height: "auto" },
+
+  // ——— SÜRDÜRÜLEBİLİRLİK BÖLÜMÜ (19 Ağu) ———
+  // Şerit dilinin AYNISI, iki farkla: ① görsel sütunu %38 → %46 ve minHeight ~1,6×
+  // (Tolga "büyük görsel" dedi) ② mavi yerine yeşil (YK 23 Tem renk kuralı).
+  // Üstteki şeritlerden ayrılsın diye kendi nefes payı + yeşil kâğıt zemini var.
+  surdurDis: { marginTop: "clamp(36px, 5vw, 56px)" },
+  surdur: {
+    display: "grid", gridTemplateColumns: "1fr minmax(280px, 46%)",
+    alignItems: "stretch", background: GREEN_TINT, border: `1px solid ${GREEN}33`,
+    borderRadius: 20, overflow: "hidden", textDecoration: "none", cursor: "pointer",
+    padding: 0, width: "100%",
+  },
+  surdurMetin: { padding: "clamp(26px, 3.8vw, 52px)", alignSelf: "center" },
+  surdurRozet: {
+    display: "inline-block", marginBottom: 12, padding: "5px 12px", borderRadius: 999,
+    background: "#fff", border: `1px solid ${GREEN}44`, color: GREEN_DEEP,
+    fontSize: "clamp(11.5px, 1.1vw, 12.5px)", fontWeight: 700, letterSpacing: ".02em",
+  },
+  surdurBaslik: {
+    fontFamily: "Fraunces, Georgia, serif", fontWeight: 600, color: NAVY,
+    fontSize: "clamp(23px, 3vw, 34px)", lineHeight: 1.18, letterSpacing: "-.01em", margin: "0 0 12px",
+  },
+  surdurYazi: { color: MUTED, fontSize: "clamp(15px, 1.5vw, 17.5px)", lineHeight: 1.62, margin: "0 0 22px", maxWidth: 480 },
+  surdurBtn: {
+    display: "inline-flex", alignItems: "center", gap: 8,
+    background: GREEN_DEEP, color: "#fff", borderRadius: 12,
+    padding: "13px 22px", fontSize: "clamp(14.5px, 1.4vw, 16px)", fontWeight: 700,
+  },
+  // Görsel yarısı: dosya gelene kadar yeşil degrade + döngü motifi (boş kutu değil).
+  surdurGorselAlan: {
+    position: "relative", display: "flex", alignItems: "center", justifyContent: "center",
+    minHeight: "clamp(240px, 32vw, 400px)", overflow: "hidden",
+    background: `linear-gradient(150deg, #DCFCE7 0%, #BBF7D0 55%, #A7F3D0 100%)`,
+  },
+  surdurFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
+  surdurIkon: { width: "clamp(84px, 11vw, 132px)", height: "auto", opacity: 0.85 },
 
   sssListe: { maxWidth: 860, margin: "0 auto" },
   sssKart: { background: "#fff", border: `1px solid ${HAIR}`, borderRadius: 14, marginBottom: 10, overflow: "hidden" },

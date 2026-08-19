@@ -1349,6 +1349,29 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
   .vitrin-gezinme > *:hover, .vitrin-gezinme > *:focus-visible { transform: none; }
   .vitrin-gezinme > *:hover img, .vitrin-gezinme > *:hover svg { transform: none; }
 }
+/* Surdurulebilirlik bandi (19 Agu) — gezinme seritleriyle AYNI etkilesim dili,
+   yalniz vurgu rengi yesil (YK 23 Tem: yesil = surdurulebilirlik).
+   Dar ekranda seritlerle ayni davranir: tek sutun, gorsel uste. */
+@media (max-width: 720px) {
+  .vitrin-surdur { grid-template-columns: 1fr !important; }
+  .vitrin-surdur > div:last-child { order: -1; min-height: 190px !important; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .vitrin-surdur { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .vitrin-surdur img, .vitrin-surdur svg { transition: transform .3s ease; }
+  .vitrin-surdur:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -10px rgba(21,128,61,.30) !important;
+    border-color: #86EFAC !important;
+  }
+  .vitrin-surdur:hover img, .vitrin-surdur:hover svg { transform: scale(1.06); }
+}
+.vitrin-surdur:focus-visible { transform: translateY(-2px); border-color: #86EFAC !important; }
+@media (prefers-reduced-motion: reduce) {
+  .vitrin-surdur, .vitrin-surdur img, .vitrin-surdur svg { transition: none; }
+  .vitrin-surdur:hover, .vitrin-surdur:focus-visible { transform: none; }
+  .vitrin-surdur:hover img, .vitrin-surdur:hover svg { transform: none; }
+}
 /* Cihaz ızgarası: masaüstünde satır başına 4 kart (Armut deseni). Ara
    genişliklerde 4 sütun kartı görselin okunmayacağı kadar daraltıyor,
    o yüzden kademe kademe iniyor: 4 → 3 → 2. */
