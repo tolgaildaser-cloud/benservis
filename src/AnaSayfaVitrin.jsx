@@ -18,6 +18,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { SSS } from "./sss.js";
 import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
 import { CIHAZLAR } from "./constants.js";
+import { heroTahmin } from "./hero-tahmin.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT } from "./theme.js";
 
@@ -61,26 +62,10 @@ const FOTOGRAFLI = new Set([
   "Kombi / Termosifon", "Mikrodalga / Air Fryer", "Su Sebili / Arıtma",
 ]);
 
-// Hero kutusundan cihaz tahmini — mevcut sözlükle, yeni NLP yok.
-// Eşleşmezse cihaz seçtirme adımı olduğu gibi kalır (kullanıcı formda seçer).
-const CIHAZ_IPUCU = [
-  ["Çamaşır Makinesi", ["çamaşır", "camasir"]],
-  ["Bulaşık Makinesi", ["bulaşık", "bulasik"]],
-  ["Buzdolabı", ["buzdolab", "dolap", "derin dondurucu"]],
-  ["Klima", ["klima"]],
-  ["Kombi / Termosifon", ["kombi", "termosifon", "petek", "radyatör"]],
-  ["Fırın / Ocak / Aspiratör", ["fırın", "firin", "ocak", "aspiratör", "davlumbaz"]],
-  ["Televizyon / Monitör", ["televizyon", "tv", "monitör"]],
-  ["Mikrodalga / Air Fryer", ["mikrodalga", "air fryer", "airfryer"]],
-  ["Süpürge", ["süpürge", "supurge"]],
-  ["Su Sebili / Arıtma", ["su sebili", "arıtma", "aritma"]],
-  ["Bilgisayar / Yazıcı", ["bilgisayar", "laptop", "yazıcı", "yazici", "printer"]],
-];
-const cihazTahmin = (metin) => {
-  const t = (metin || "").toLocaleLowerCase("tr");
-  for (const [cihaz, ipuclari] of CIHAZ_IPUCU) if (ipuclari.some((k) => t.includes(k))) return cihaz;
-  return null;
-};
+// Hero kutusundan cihaz + MARKA tahmini `hero-tahmin.js`'te — sözlük aynı, eşleme
+// yazım hatasına toleranslı (Tolga, 19 Ağu: "arçelik çamamşır makinam su almıyor
+// dedim çalışmadı" + "marka yazılırsa o da seçili gelmeli"). Yeni NLP/AI yok.
+// Eşleşmezse cihaz/marka seçtirme adımı olduğu gibi kalır (kullanıcı formda seçer).
 
 // Hero'da dönüşümlü görünen örnekler — placeholder'a gerçek cümle koymak
 // (araştırma deseni 1) kullanıcıya "buraya ne yazacağımı biliyorum" hissi veriyor.
@@ -195,7 +180,8 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
   const gonder = () => {
     const metin = dert.trim();
     if (metin.length < 4) return;
-    onDertYaz(metin, cihazTahmin(metin));
+    const { cihaz, marka } = heroTahmin(metin);
+    onDertYaz(metin, cihaz, marka);
   };
 
   return (
