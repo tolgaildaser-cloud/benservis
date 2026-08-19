@@ -665,6 +665,25 @@ const kapakUrl = (slug, alt) => {
   if (!alt) return null;
   return gorselUrl(slug, "kapak");
 };
+
+// Kart görseli — TEK KAYNAK (Tolga, 19 Ağu: "tüm merkezlerdeki thumbnailler insansız
+// görseller ile değişecek. vektörel görsel kalmasın"; kararı ①+② birlikte: FE kartlara
+// yazının KENDİ kapağını basar, GRF paralelde kapakları fotoğrafa çevirir → kart kapağı
+// ne ise onu bastığı için fotoğraflar geldikçe kartlar kendiliğinden fotoğrafa döner).
+//
+// Kapak yoksa eski SVG çizgi ikonuna düşer — hiçbir ara durumda kart boş kalmaz.
+// ⛔ `alt` metni yoksa `kapakUrl` bilerek null döndürür: alt'sız görsel ekran okuyucuda
+// gürültüdür (18 Ağu'da 40 karenin görünmeme sebebi tam olarak buydu).
+// 📐 Kutu 96×64 (3:2), kapaklar 1200×800 (3:2) → `contain` ile `cover` aynı sonucu verir;
+// GRF'nin fotoğraf kapakları da 3:2 geldiği sürece CSS'e dokunmak gerekmez.
+const postGorsel = (p) => {
+  const alt = p.images?.coverAlt;
+  const url = kapakUrl(p.slug, alt);
+  if (url) {
+    return `<div class="card-ic kapak"><img src="${url}" width="96" height="64" loading="lazy" decoding="async" alt="${esc(alt)}"></div>`;
+  }
+  return `<div class="card-ic">${iconSvg(p.category, "")}</div>`;
+};
 // Yazı hero'su: kapak varsa gerçek görsel, yoksa mevcut mavi ikon bandı (fallback aynen).
 // width/height sözleşme oranından sabit — CLS için zorunlu, `.hero.kapak` kutusu da
 // aspect-ratio ile aynı oranı tutuyor (kart görselindeki hardcoded ölçü deseniyle aynı).
@@ -1086,7 +1105,7 @@ function blogGrubu(p) {
 
 const cards = posts
   .filter((p) => p.slug !== "hakkimizda")
-  .map((p) => `<a class="card" data-cat="${esc(p.category || "Rehber")}" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p></div></a>`)
+  .map((p) => `<a class="card" data-cat="${esc(p.category || "Rehber")}" href="/blog/${p.slug}/">${postGorsel(p)}<div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p></div></a>`)
   .join("");
 
 // ── BİLGİ MERKEZİ: ② KATEGORİ SAYFALARI + ① HUB ───────────────────────────────
@@ -1123,7 +1142,7 @@ for (const k of blogKatVeri) k.fiyatVar = k.yazilar.some((p) => KAT_TL.test(p.ht
 // Yazı kartı (② katman) — /tamir/'deki zorluk·süre·adım·dil satırının blog karşılığı:
 // konu tipi (yazının kendi kategori etiketi) · tarih.
 const blogKarti = (p) =>
-  `<a class="card" href="/blog/${p.slug}/"><div class="card-ic">${iconSvg(p.category, "")}</div><div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p><span class="tamir-meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</span></div></a>`;
+  `<a class="card" href="/blog/${p.slug}/">${postGorsel(p)}<div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p><span class="tamir-meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</span></div></a>`;
 
 const BLOG_CTA = `<a class="cta" href="/"><h3>🔧 Cihazın şimdi mi bozuldu?</h3><p>Belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
 
@@ -1302,16 +1321,10 @@ function fiyatDenetimi(dosyalar) {
 const TAMIR_CTA = (kaynak) =>
   `<a class="cta" href="${cagirHref(kaynak)}" data-cagir="cta"><h3>🔧 Kendin çözemiyorsan</h3><p>Cihazını ve belirtini yaz; olası arızayı saniyede öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
 
-// Kapak görseli (GRF, public/tamir-gorsel/<slug>/kapak.png) varsa ikon yerine o basılır.
-// Yol/uzantı çözümü `kapakUrl` ile ortak — kart ve yazı hero'su aynı sözleşmeyi okur.
-const rehberGorsel = (r) => {
-  const alt = r.post.images?.coverAlt;
-  const url = kapakUrl(r.slug, alt);
-  if (url) {
-    return `<div class="card-ic kapak"><img src="${url}" width="96" height="64" loading="lazy" decoding="async" alt="${esc(alt)}"></div>`;
-  }
-  return `<div class="card-ic">${iconSvg(r.post.category, "")}</div>`;
-};
+// Rehber kartı — kart görseli sözleşmesi `postGorsel` ile ORTAK (19 Ağu'da tek kaynağa
+// indirildi; önce burada ayrı bir kopya vardı ve blog kartları ikonda kalmıştı).
+// Rehber kaydında slug ile yazı ayrı alanlarda duruyor, o yüzden birleştirilip veriliyor.
+const rehberGorsel = (r) => postGorsel({ slug: r.slug, category: r.post.category, images: r.post.images });
 
 // ── ① KATMAN VERİSİ + GUARD'LAR ───────────────────────────────────────────────
 // Kayıtlar `src/hata-kodlari.js`'te; burada yalnız blog yazısıyla ve rehber kaydıyla eşlenir.
