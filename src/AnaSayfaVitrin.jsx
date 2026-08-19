@@ -221,11 +221,11 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         {/* ═══ ÜST BAR — hero'nun ÜZERİNE biner (Tolga, 17 Ağu: "benservis logosu hero
             üzerine binsin armuttaki gibi ve menuler de binsin"). Şeffaf zemin, beyaz
             logo; koyu hero üstünde kendi kutusu yok — Armut deseni. */}
-        <div style={st.ustBar}>
+        <div className="vitrin-ustbar" style={st.ustBar}>
           <button onClick={onLogo} aria-label="Ana sayfa" style={st.ustLogoBtn}>
             <BenservisLogo style={st.ustLogo} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
           </button>
-          <nav style={st.ustMenu} aria-label="Ana menü">
+          <nav className="vitrin-ustmenu" style={st.ustMenu} aria-label="Ana menü">
             <a href="/blog/" style={st.ustLink}>Bilgi Merkezi</a>
             <a href="/tamir/" style={st.ustLink}>Tamir Merkezi</a>
             <a href="/kilavuzlar/" style={st.ustLink}>Kullanım Kılavuzları</a>
@@ -470,10 +470,17 @@ const st = {
     fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontSize: 16, lineHeight: 1.45,
     color: NAVY, padding: "10px 12px", minHeight: 56,
   },
+  // ⚠️ Dikey padding ve minHeight SATIR İÇİNDE olmalı: mobil media query'sinde
+  // (.vitrin-kutu-btn) dolgu tanımlıydı ama satır içi "0 22px" onu eziyordu —
+  // düğme 20 px yüksekliğinde kalıyordu, dokunma hedefi olarak çok ince
+  // (Tolga: "basmak zor"; erişilebilirlik tabanı 44 px).
+  // Masaüstünde alignSelf:stretch yüksekliği zaten textarea'ya eşitler, o yüzden
+  // minHeight orada devreye girmez — yalnız dikey düzende iş görür.
   kutuBtn: {
     border: "none", background: BLUE, color: "#fff", borderRadius: 12,
-    padding: "0 22px", fontFamily: "inherit", fontSize: 15, fontWeight: 700,
+    padding: "14px 22px", minHeight: 50, fontFamily: "inherit", fontSize: 15.5, fontWeight: 700,
     cursor: "pointer", whiteSpace: "nowrap", alignSelf: "stretch",
+    display: "inline-flex", alignItems: "center", justifyContent: "center",
   },
   populer: { display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", marginTop: 16 },
   populerEtiket: { color: "#94A3B8", fontSize: 13, alignSelf: "center" },

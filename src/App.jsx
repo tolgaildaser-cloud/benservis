@@ -1063,6 +1063,24 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
     box-shadow: 0 10px 30px -8px rgba(37,99,235,.55); cursor: pointer;
   }
 }
+/* ÜST BAR — MOBİL (≤640px): üç metin bağlantısı gizlenir, yalnız logo +
+   "Yakın Servisler" düğmesi kalır. Ölçüm: 375 px'te dört öğe iki satıra
+   dağılıyor, üstelik hizasız (üst kenarları 81/119/120 px) ve bar 73 px'e
+   şişiyordu — Tolga: "sığmıyor, kötü görünüyor".
+   ⛔ Bağlantılar SİLİNMEDİ, yalnız bu genişlikte gizlendi: aynı üç bölüme
+   sayfanın altındaki gezinme şeritleri götürüyor, yani mobil kullanıcı hiçbir
+   yere erişimini kaybetmiyor. HTML'de durdukları için tarama katmanı da aynı. */
+@media (max-width: 640px) {
+  .vitrin-ustmenu a { display: none; }
+  /* Logo + düğme TEK SATIR: ölçüldü, 375 px'te logo 172 + düğme 146 + boşluk 16
+     = 334 px < 375, yani sarmaya gerek yok. Sarınca düğme alta düşüp sola
+     yaslanıyor ve bar 103 px'e çıkıyordu; nowrap ile bar yarı yarıya iniyor. */
+  .vitrin-ustbar { flex-wrap: nowrap !important; gap: 10px !important; }
+  .vitrin-ustmenu { flex-shrink: 0; }
+  /* Üstteki düğme de dokunma tabanına (44 px) çıkar — teşhis düğmesiyle aynı
+     ölçüt. 36 px'te kalıyordu; barı 8 px büyütmesi kabul edilebilir bedel. */
+  .vitrin-ustmenu button { min-height: 44px; }
+}
 /* "Derdini yaz" kutusu dar ekranda DİKEY: yan yana dururken textarea sıkışıp
    metin üç satıra bölünüyor, buton alanın yarısını yiyordu (mobilde ölçüldü). */
 @media (max-width: 560px) {
