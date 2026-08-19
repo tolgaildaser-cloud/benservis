@@ -550,13 +550,24 @@ const KOPRU_SATIRI = (p) => {
 };
 
 // ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.
+// ② KAPANIŞ — #68 ②'nin kapanmamış yarısı (Tolga, 15 Ağu: "hem ilk-ekran satırı HEM YAZI SONU").
+// 19 Ağu'da hub kapanışları sadeleşti (BLOG_CTA / TAMIR_CTA) ama yazı sonu koca mavi kart
+// olarak kaldı — ve tek kapısı TEŞHİSTİ. Oysa YK'nın güç metriği "Servis Bul'dan servise
+// ULAŞMA"; sayfanın en altındaki en güçlü yerde o kapı hiç yoktu.
+// Artık sayfa başındaki ÇİFT KAPI ile birebir aynı: aynı sınıf, aynı metin, aynı sıra.
+// 📏 ÖLÇÜM SÜREKLİLİĞİ: teşhis kapısı `son-kart` etiketini AYNEN koruyor (aynı eylem =
+// aynı seri, geçmişle kıyas bozulmaz); servis kapısı YENİ bir etiketle (`son-kart-servis`)
+// ekleniyor, mevcut seriyi kirletmiyor.
 const YAZI_CTA = (p) => {
   const ad = kopruCihazAdi(p);
-  const baslik = ad ? `🔧 ${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızanı ve tahmini fiyatını saniyede öğren` : "🔧 Arızanı ve tahmini fiyatını saniyede öğren";
-  const govde = ad
-    ? "Cihazın ve belirtin hazır seçili açılır → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara."
-    : "Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.";
-  return `<a class="cta" href="${kopruHref(p)}" data-kopru="son-kart"><h3>${baslik}</h3><p>${govde}</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+  const baslik = ad
+    ? `${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızanı ve tahmini fiyatını saniyede öğren`
+    : "Arızanı ve tahmini fiyatını saniyede öğren";
+  return `<div class="kopru kopru-kapanis"><p><strong>${baslik}</strong></p>` +
+    `<div class="kopru-cift">` +
+      `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="son-kart-servis">📍 Yakınımdaki servisi bul →</a>` +
+      `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="son-kart">Tahmini maliyeti ücretsiz öğren →</a>` +
+    `</div></div>`;
 };
 
 // ③ MOBİL STİCKY BANT — aynı bağlamlı linke basar (kurul: A, B'nin taşıyıcısı olsun).
