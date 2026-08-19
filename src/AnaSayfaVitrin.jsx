@@ -122,29 +122,29 @@ const SLOGAN = [
 
 // Gezinme kartlari. Cihaz kartlariyla AYNI iskelet: 16:10 gorsel alani + ad,
 // hover'da ayni hareket. `foto` dolunca kart fotografa gecer; bos oldugu surece
-// ayni alanda buyutulmus cizgi ikon durur (cihaz kartlarindaki desenin aynisi,
-// dalga dalga teslim edilebilir). Fotograflar GRF'den bekleniyor.
+// ayni alanda buyutulmus cizgi ikon durur (cihaz kartlarindaki desenin aynisi).
+// GRF fotograflari 19 Agu 07:34'te teslim etti; ikon dallari YEDEK olarak duruyor.
 const GEZINME = [
   {
-    ad: "Bilgi Merkezi", href: "/blog/", foto: "", ikon: "kitap",
+    ad: "Bilgi Merkezi", href: "/blog/", foto: "/gezinme/bilgi-merkezi.webp", ikon: "kitap",
     baslik: "Önce öğren, sonra çağır",
     metin: "Cihazın neden bozulduğunu sade Türkçeyle anlatan yazılar. Teknik terim yok; çoğu arızada servise gerek olup olmadığını kendin anlarsın.",
     btn: "Yazılara göz at",
   },
   {
-    ad: "Tamir Merkezi", href: "/tamir/", foto: "", ikon: "anahtar",
+    ad: "Tamir Merkezi", href: "/tamir/", foto: "/gezinme/tamir-merkezi.webp", ikon: "anahtar",
     baslik: "Belirtiden çözüme",
     metin: "\"Su almıyor\", \"soğutmuyor\", \"ses yapıyor\" — belirtiyle başlayıp adım adım ne kontrol edeceğini gösteren rehberler.",
     btn: "Rehberlere bak",
   },
   {
-    ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "", ikon: "acik-kitap",
+    ad: "Kullanım Kılavuzları", href: "/kilavuzlar/", foto: "/gezinme/kullanim-kilavuzlari.webp", ikon: "acik-kitap",
     baslik: "Kılavuzun elinin altında",
     metin: "Hata kodunu okumak ya da bir ayarı bulmak için markanın resmî kullanım kılavuzuna doğrudan ulaş.",
     btn: "Kılavuz ara",
   },
   {
-    ad: "Yakın Servisler", href: null, foto: "", ikon: "konum",
+    ad: "Yakın Servisler", href: null, foto: "/gezinme/yakin-servisler.webp", ikon: "konum",
     baslik: "Yanındaki servisi gör",
     metin: "Google puanlı servisleri yakınlığa göre sırala, telefonunu al, doğrudan kendin ara. Araya kimse girmez.",
     btn: "Servisleri gör",
