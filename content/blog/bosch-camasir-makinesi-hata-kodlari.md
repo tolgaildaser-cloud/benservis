@@ -1,6 +1,6 @@
 ---
-title: "Bosch çamaşır makinesi hata kodları: E/F tam liste"
-description: "E16, E17, E18, F21, F23, F63… Bosch, Siemens ve Neff kodlarının anlamı: hangisini evde ücretsiz çözersin, hangisi servis ister?"
+title: "Bosch çamaşır makinesi hata kodları: F21, F23, F29, F80"
+description: "Bosch çamaşır makinende F21, F23, F29, F80, E21 ya da E92 mi çıktı? Her kodun ne anlama geldiği, hangisi evde ücretsiz çözülür, hangisi servis ister."
 slug: "bosch-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
 updated: "2026-06-29"

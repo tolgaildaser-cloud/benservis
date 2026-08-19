@@ -1,6 +1,6 @@
 ---
-title: "Ocak ateşleme yapmıyor mu? Evde 3 kontrol ve servis sınırı"
-description: "Çakmak çakıyor ama ocak yanmıyor mu? Önce başlık temizliği, buji ve gaz akışı — çoğu evde ücretsiz çözülür. Çözülmezse servis sınırı nerede başlar. Bil, gör, çağır."
+title: "Ocak ateşleme yapmıyor: buji, gaz ve 3 ücretsiz kontrol"
+description: "Çakmak çakıyor ama ocak yanmıyor mu? Ateşleme bujisi, kirli başlık ve gaz akışı — ankastre ve tüplü ocakta çoğu sebep evde ücretsiz çözülür."
 slug: "ocak-atesleme-yapmiyor"
 date: "2026-06-23"
 updated: "2026-07-09"
