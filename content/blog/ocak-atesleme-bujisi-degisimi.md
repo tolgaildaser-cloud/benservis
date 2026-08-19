@@ -4,6 +4,15 @@ description: "Ocak kıvılcım çıkarmıyor mu? Bujiyi değiştirmeden önce ü
 slug: "ocak-atesleme-bujisi-degisimi"
 date: "2026-08-02"
 category: "Fırın / Ocak"
+# PAZ rehber dönüşümü (19 Ağu). ⛔ slug · date · gövde DEĞİŞMEDİ — kazanılmış SEO korunur.
+# Adımlar buji DEĞİŞİMİNİ değil, değişimden önceki ÜCRETSİZ kontrolleri anlatır (YK #31 sınırı).
+steps:
+  - "Önce ayır: kıvılcım çıkıyor ama ocak yanmıyorsa sorun gaz tarafındadır, buji değil."
+  - "Ocağı tamamen soğut ve tüm düğmelerin kapalı olduğundan emin ol."
+  - "Buji ucunu ve başlık çevresini KURU bir bezle sil; ıslak bez kullanma."
+  - "Brülör başlığını kaldır, düz ve tam oturacak şekilde yeniden yerleştir."
+  - "Başlığı çıkar, ılık suda yıka, gaz deliklerini yumuşak bir fırçayla aç."
+  - "Başlığı tamamen kuruttuktan sonra tak ve kıvılcımı dene."
 faq:
   - q: "Ocak ateşleme bujisi değişimi kaç para?"
     a: "Marka, model ve tek gözün mü yoksa ateşleme ünitesinin tamamının mı değiştiğine göre değişir; bu sayfada aralık vermiyoruz. Kesin tahmini kendi cihazına göre Benservis'in ücretsiz teşhis aracından alabilirsin."
@@ -19,6 +28,15 @@ faq:
     a: "Hemen gaz vanasını kapatın, pencereleri açın, elektrikli düğmelere ve çakmağa dokunmayın, yetkili servise ya da doğalgaz acil hattına haber verin. Gaz kaçağına kendiniz müdahale etmeyin."
 images:
   coverAlt: "Ocak çizimi ve yanında ateşleme bujisinin yakın plan çizimi, ucunda kıvılcım"
+  # Sıra sözleşmesi: images.steps[N-1] ↔ adim-0N.png ↔ steps[N-1]. Görseller GRF'de;
+  # dosya gelene kadar alt metin var/görsel yok durumunu build uyarı olarak bildirir.
+  steps:
+    - "Ocakta kıvılcım çıktığı hâlde alevin yanmadığını gösteren çizim — sorunun gaz tarafında olduğunu anlatan ayrım"
+    - "Soğumuş ocağın kapalı düğmelerini gösteren çizim"
+    - "Brülör başlığının yanındaki seramik buji ucunun kuru bezle silinişini gösteren çizim"
+    - "Brülör başlığının kaldırılıp yerine düz ve tam oturacak şekilde yerleştirilişini gösteren çizim"
+    - "Çıkarılan brülör başlığının ılık suda yıkanışı ve gaz deliklerinin yumuşak fırçayla açılışını gösteren çizim"
+    - "Tamamen kurutulmuş başlığın takılışını ve kıvılcımın denenişini gösteren çizim"
 ---
 
 Ocağın düğmesine basıyorsunuz, tık tık sesi geliyor ama kıvılcım yok — ya da hiç ses de yok. Bu noktada arattırılan şey genellikle doğrudan "ateşleme bujisi tamiri" oluyor.
