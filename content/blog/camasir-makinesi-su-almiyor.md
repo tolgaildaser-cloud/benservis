@@ -20,7 +20,7 @@ images:
     - "Bükülmüş hortum ile düz uzanan hortumun karşılaştırıldığı çizim"
     - "Çamaşır makinesi kapağının kilidi oturana kadar tam kapatılışını gösteren çizim"
     - "Fişin bir dakika çekilişini ve çocuk kilidinin kontrolünü gösteren çizim"
-  coverAlt: "Çamaşır makinesi ve yanında kesik kesik damlayan, akmayan su çizimi"
+  coverAlt: "Tezgâh altındaki çamaşır makinesinin kapağı ve solunda lavabo giderinin bağlantı borusu"
 ---
 
 Çamaşırları koydun, programı başlattın ama makine su almıyor — ya hiç, ya da yarım. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin 5 kontrolü** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

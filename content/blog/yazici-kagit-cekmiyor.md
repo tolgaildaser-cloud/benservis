@@ -13,6 +13,8 @@ faq:
     a: "Yazıcıyı kapat ve fişini çek. Yaprağı, kâğıdın ilerlediği yönde, iki eliyle ve yavaşça çek — geriye doğru zorlamak makaraları ve dişlileri yorar. Yaprak yırtılırsa geride kalan parçaları da mutlaka çıkar; içeride unutulan küçük bir parça sonraki her çıktıda aynı sorunu tekrarlatır. Ulaşamadığın bir parça kaldıysa cihazı zorlamak yerine servise danış."
   - q: "Kâğıt alma lastiğini kendim değiştirebilir miyim?"
     a: "Biz bu sitede parça değişimi için adım adım rehber yayımlamıyoruz. Kâğıdı tepsiden alan kauçuk makara zamanla sertleşip tutuşunu kaybeder ve bu gerçek bir parça arızasıdır; değişimi cihazın ilgili bölümünü açmayı gerektirir. Bu yazı hangi belirtinin neye işaret ettiğini anlatır — sertleşmiş makara tespiti sende, değişimi serviste."
+images:
+  coverAlt: "Dolap üstünde duran çok fonksiyonlu yazıcı ve önden açılan kâğıt tepsisi"
 ---
 
 Belgeyi gönderdin, yazıcı sesleniyor, makaralar dönüyor — ama tepsideki kâğıt yerinden kıpırdamıyor. Ya da yazıcı kâğıdı yarı yolda bırakıyor ve uyarı veriyor. Bu şikâyetin arkasında çoğu zaman **arızalı bir cihaz değil**, kâğıdın kendisi ya da tepsi ayarı vardır — ve bunların hepsi cihazın gövdesine hiç girmeden kontrol edilir.

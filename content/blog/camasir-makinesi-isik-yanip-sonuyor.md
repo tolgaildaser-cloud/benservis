@@ -21,7 +21,7 @@ images:
     - "Tamburdaki tek ağır parça ile bölünüp dağıtılmış yükün karşılaştırıldığı çizim"
     - "Fişin bir dakika çekilişini ve çocuk kilidinin kontrolünü gösteren çizim"
     - "Panelde yanıp sönen ışık deseninin not alınmasını gösteren çizim"
-  coverAlt: "Çamaşır makinesi ve yanında yanıp sönen ışık göstergesi çizimi"
+  coverAlt: "Ankastre nişe yerleştirilmiş çamaşır makinesinin kapağı ve tamburu yakın plan"
 ---
 
 Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve hangi kodun servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

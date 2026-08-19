@@ -19,7 +19,7 @@ faq:
   - q: "Ekrandaki kod bu listede yok, ne yapmalıyım?"
     a: "Bosch yüzlerce model üretir; F80, E92, E00 gibi bazı kodlar yalnız belirli serilerde çıkar ve anlamı modele göre değişir. Yanlış teşhis pahalıya patlayacağı için uydurma anlam vermeyiz — ekrandaki kodu ve cihaz modelini Benservis'e yaz, olası arızayı ve tahmini maliyeti saniyede söyleyelim."
 images:
-  coverAlt: "Çamaşır makinesi kumanda panelinin yakın plan çizimi, ekranda hata göstergesi yanıyor"
+  coverAlt: "Çamaşır odasında yan yana duran iki ön yüklemeli makine ve arkalarındaki mavi duvar"
 ---
 
 Bosch çamaşır makinen ekranında bir hata kodu gösteriyor ve ne demek olduğunu çözmek istiyorsun. Bosch (ve aynı platformu kullanan **Siemens, Neff**) arızayı **E** ya da **F** önekli kodlarla bildirir. Bu rehberde Bosch çamaşır makinesinin **tüm sık kodlarını**, anlamlarını, hangisini **kendin çözebileceğini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

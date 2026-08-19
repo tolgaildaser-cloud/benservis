@@ -38,7 +38,10 @@
 // etmeye devam etti — Tolga "mavili adamları canlıda göremiyorum" dedi, sebebi bu.
 // Sürüm adı değişince activate() eski cache'leri siler; bu, düzeltmenin geriye
 // dönük ayağı. İleriye dönük ayağı aşağıdaki HASHSIZ_SWR kuralı.
-const SURUM = "benservis-v3";
+// v3 → v4 (19 Ağu): kapak fotoğrafı dalga 1 — 15 kapak AYNI dosya adıyla değişti.
+// Sürüm artmazsa mevcut ziyaretçide hiçbiri değişmez: build ve ölçüm yeşil görünür,
+// canlı eski kalır. (Aynı senaryo v2→v3 notunda da yazılı.)
+const SURUM = "benservis-v4";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;

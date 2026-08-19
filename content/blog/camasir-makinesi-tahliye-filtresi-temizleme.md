@@ -20,7 +20,7 @@ steps:
 # GRF adım görselleri (2 Ağu 2026) — dosyalar public/tamir/camasir-makinesi-tahliye-filtresi-temizleme/.
 # Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
 images:
-  coverAlt: "Çamaşır makinesi tahliye filtresi temizliği rehberinin kapak çizimi"
+  coverAlt: "Mutfak dolabının yanındaki çamaşır makinesinin kapağı ve tahliye filtresinin bulunduğu alt ön paneli"
   steps:
     - "Çamaşır makinesinin kapatılıp fişinin prizden çekilişini gösteren çizim"
     - "Çamaşır makinesinin alt ön köşesindeki filtre kapağının açılışını gösteren çizim"

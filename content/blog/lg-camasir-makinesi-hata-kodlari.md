@@ -14,7 +14,7 @@ faq:
   - q: "LG dE hatası neden olur?"
     a: "dE (Door Error) kapının kilitlenemediğini gösterir. Genelde kapı arasında bir şey sıkışmıştır ya da kapı tam kapanmamıştır; kontrol edip tekrar kapat."
 images:
-  coverAlt: "Hafif açılı çamaşır makinesi, ekranında hata göstergesi ve yanında kod listesi çizimi"
+  coverAlt: "Üst üste katlanmış temiz beyaz havlu istifi"
 ---
 
 LG çamaşır makinen ekranında bir hata kodu gösteriyor (IE, OE, UE…) ve ne demek olduğunu merak ediyorsun. İyi haber: en sık çıkan kodlar genelde **su alma, tahliye ve denge** gibi basit sebepleri gösterir ve bir kısmı evde ücretsiz çözülür. Bu rehberde LG çamaşır makinesinin **en sık kodlarını**, anlamlarını ve çözümlerini topladık.
