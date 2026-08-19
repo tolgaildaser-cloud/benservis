@@ -743,12 +743,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           onFormaGit={teshiseGec}
           onServisler={() => { track("servis_click", { kaynak: "anasayfa_izgara", gelis: GELIS }); setShowServisler(true); }}
           onLogo={sifirla}
-          onDertYaz={(metin, tahminCihaz) => {
+          onDertYaz={(metin, tahminCihaz, tahminMarka) => {
             setBelirti(metin.slice(0, BELIRTI_MAX));
             if (tahminCihaz) {
               setCihaz(tahminCihaz);
               if (marka && marka !== "Diğer" && !markalarForCihaz(tahminCihaz).includes(marka)) setMarka("");
             }
+            // Metinde marka geçtiyse ön-seçili gelir (Tolga, 19 Ağu). Tahmin edilemezse
+            // mevcut seçim KORUNUR — boş metin yüzünden kullanıcının seçimi silinmez.
+            if (tahminMarka) setMarka(tahminMarka);
             teshiseGec();
           }}
         />
