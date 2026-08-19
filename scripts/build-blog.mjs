@@ -228,6 +228,10 @@ blockquote p{margin:0}
    (Bu blok bir template literal içinde — yorumda backtick KULLANMA, literali kapatır.) */
 .kopru{margin:18px 0 24px;padding:14px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}
 .kopru p{margin:0 0 11px;color:${T.NAVY}}
+/* Kapanış çağrısı (19 Ağu, sadeleştirme): eski koca mavi kartın yerini alan blok.
+   Kutu dili yazı içindeki köprüyle aynı; tek fark üstündeki nefes payı. */
+.kopru-kapanis{margin:36px 0 8px}
+.kopru-kapanis p{margin:0 0 12px}
 .kopru-cift{display:flex;gap:10px;flex-wrap:wrap}
 /* Iki kapi BIREBIR ayni yukseklikte olmali: teshis butonunda 2px kenarlik var,
    servis butonunda yoktu → olculdu, 43px vs 47px (4px fark). Servise de aynı
@@ -1177,7 +1181,42 @@ for (const k of blogKatVeri) k.fiyatVar = k.yazilar.some((p) => KAT_TL.test(p.ht
 const blogKarti = (p) =>
   `<a class="card" href="/blog/${p.slug}/">${postGorsel(p)}<div class="card-body"><span class="cat">${esc(p.category || "Rehber")}</span><h2>${esc(p.title)}</h2><p>${esc(p.description)}</p><span class="tamir-meta">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</span></div></a>`;
 
-const BLOG_CTA = `<a class="cta" href="/"><h3>🔧 Cihazın şimdi mi bozuldu?</h3><p>Belirtini yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+// ── KAPANIŞ ÇAĞRISI — SADELEŞTİRİLDİ (Tolga, 19 Ağu: "burayı basitleştir, servis bul
+// butonu gelsin standart") ───────────────────────────────────────────────────────────
+// ÖNCE: koca mavi kart — başlık + iki satırlık paragraf + "Bil, gör, çağır." etiketi,
+// üstelik kartın TAMAMI `/` adresine giden tek bir linkti (servis bul butonu YOKTU).
+// SONRA: tek satır + sayfanın geri kalanıyla AYNI standart buton (`kopru-btn kopru-servis`,
+// tamir sayfalarındaki çift kapının birebir aynısı) → kullanıcı aynı düğmeyi her yerde
+// aynı yerde görür, kapanışta da doğrudan servise çıkar (YK güç metriği).
+//
+// ⛔ /tamir/ ALTINDA FİYAT KELİMESİ YASAK (YK #35 şart 1 — build denetliyor, ihlalde DURUYOR).
+// Bu yüzden ikinci kapı ("Tahmini maliyeti…") YALNIZ blog tarafında basılır; /tamir/'de
+// tek buton kalır. Kısıt keşfedildi, varsayılmadı: `FIYAT_DESENI` "maliyet"i de yakalıyor.
+// ⚠️ İKİ AYRI ÖLÇÜM BORUSU VAR, İKİSİ DE BESLENİR (ölçüldü, varsayılmadı):
+//   `kaynak=` → App.jsx `GELIS` (istemci; her track olayına `gelis` alanı olarak girer,
+//               YK #35 şart 2 hunisi). Desen: [a-z0-9-], en fazla 32 karakter.
+//   `k=`      → api/teshis/log.js `icKaynak` (sunucu; `kaynak=blog-ici · kampanya=<slug>`).
+//               ⛔ YALNIZ `blog-` önekli değeri kabul eder, gerisini sessizce ATAR.
+// Bu yüzden `k` yalnız blog tarafında basılır; /tamir/ değeri (`tamir-…`) zaten reddedilirdi.
+// Eski kapanış kartı `/` ya da `?kaynak=` taşıyordu; blog tarafında ikisi de yoktu → bu
+// sadeleştirme aynı zamanda blog kategorisi kapanışına ölçüm KAZANDIRIYOR.
+const kapanisHref = (cihazSlug, kaynak, servis) => {
+  const q = new URLSearchParams();
+  if (cihazSlug) q.set("cihaz", cihazSlug);
+  if (servis) q.set("servis", "1");
+  q.set("kaynak", kaynak);
+  if (kaynak.startsWith("blog-")) q.set("k", kaynak);
+  return `/?${q}`;
+};
+// Standart servis butonu — metni ve sınıfı yazı içindeki çift kapıyla BİREBİR aynı.
+const SERVIS_BTN = (cihazSlug, kaynak) =>
+  `<a class="kopru-btn kopru-servis" href="${kapanisHref(cihazSlug, kaynak, true)}" data-kopru="servis-kapanis" data-cagir="cta">📍 Yakınımdaki servisi bul →</a>`;
+
+const BLOG_CTA = (cihazSlug, kaynak) =>
+  `<div class="kopru kopru-kapanis"><p><strong>Cihazın şimdi mi bozuldu?</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
+  `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Tahmini maliyeti ücretsiz öğren →</a>` +
+  `</div></div>`;
 
 for (const k of blogKatVeri) {
   if (!k.yazilar.length) continue;
@@ -1215,7 +1254,7 @@ for (const k of blogKatVeri) {
         : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
     })
   );
 }
@@ -1351,8 +1390,11 @@ function fiyatDenetimi(dosyalar) {
   console.log(`[build-blog] ✓ YK #35 şart 1: ${dosyalar.length} /tamir/ sayfasında fiyat ifadesi YOK.`);
 }
 
-const TAMIR_CTA = (kaynak) =>
-  `<a class="cta" href="${cagirHref(kaynak)}" data-cagir="cta"><h3>🔧 Kendin çözemiyorsan</h3><p>Cihazını ve belirtini yaz; olası arızayı saniyede öğren, yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+// /tamir/ kapanışı — aynı sadeleştirme, ama TEK buton: fiyat/maliyet kelimesi bu ağaçta
+// yasak (YK #35 şart 1), ikinci kapı basılamaz. Zaten istenen de "servis bul butonu standart".
+const TAMIR_CTA = (kaynak, cihazSlug = "") =>
+  `<div class="kopru kopru-kapanis"><p><strong>Kendin çözemiyorsan</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}</div></div>`;
 
 // Rehber kartı — kart görseli sözleşmesi `postGorsel` ile ORTAK (19 Ağu'da tek kaynağa
 // indirildi; önce burada ayrı bir kopya vardı ve blog kartları ikonda kalmıştı).
@@ -1452,7 +1494,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak)}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
