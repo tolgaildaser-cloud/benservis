@@ -748,7 +748,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           {/* ═══ PANEL ② MARKA & DETAY ═══ */}
           <section className="panel" data-durum={!cihaz ? "kilitli" : marka ? "tamam" : "aktif"}>
             <div className="panel-bas"><h3>Marka &amp; detay</h3><span className="panel-rozet">{marka ? "✓ Seçildi" : "Adım 2"}</span></div>
-          <div style={s.row}>
+          <div className="marka-satir" style={s.row}>
             <div style={{ flex: 1.5, minWidth: 0 }}>
               <label style={s.label}>
                 Marka <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span>
@@ -1176,6 +1176,12 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
 /* Sonuç paneli boşken: ne beklendiğini söyleyen sakin bir yer tutucu. */
 .panel-bos { text-align: center; padding: 26px 8px; color: #94A3B8; font-size: 13px; line-height: 1.6; }
 .panel-bos .ikon { display: block; font-size: 26px; margin-bottom: 10px; opacity: .5; }
+
+/* Marka ve cihaz yaşı panelde ALT ALTA (Tolga: "cihaz yaşını markanın altına al
+   yer var orada"). Yan yanayken 290 px'lik panelde iki açılır kutu da daralıyor,
+   "Önce cihaz seç" yer tutucusu kırpılıyordu. Alt alta ikisi de tam genişlikte. */
+.panel .marka-satir { flex-direction: column; gap: 12px; }
+.panel .marka-satir > div { flex: 1 1 auto !important; width: 100%; }
 
 /* Gönderim bandı — panellerin altında, kolonun tamamı kadar geniş. */
 .gonderi-bant { margin: 18px 0 0; }
