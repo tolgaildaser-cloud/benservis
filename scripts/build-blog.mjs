@@ -75,8 +75,13 @@ const iconSvg = (cat, cls) =>
   `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON_PATHS[iconKey(cat)]}</svg>`;
 // `varyant` YALNIZ Sürdürülebilirlik için "yesil" gelir (karar defteri renk kuralı:
 // yeşil sürdürülebilirlik temasına ait, başka yerde aksan olarak kullanılmaz).
-const heroFor = (cat, varyant = "") =>
-  `<div class="hero${varyant ? " " + varyant : ""}">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
+// `foto` verilirse (kategori sayfalarında `merkezFotosu(k.slug)`) mavi+ikon bant yerine
+// GERÇEK FOTOĞRAF basılır — Tolga, 19 Ağu: "vektörel görsel kalmasın". Kategori adı
+// fotoğrafın üstünde, alta inen koyu perdeyle okunur kalır. Fotoğraf yoksa eski bant aynen.
+const heroFor = (cat, varyant = "", foto = null) =>
+  foto
+    ? `<div class="hero foto"><img src="${foto}" width="900" height="570" loading="lazy" decoding="async" alt=""><span class="hero-cat">${esc(cat || "Rehber")}</span></div>`
+    : `<div class="hero${varyant ? " " + varyant : ""}">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
 
 // iFixit-tarzı rehber meta kutusu (zorluk · süre · maliyet · gerekenler) — frontmatter `guide` varsa.
 function guideMeta(g) {
@@ -148,6 +153,13 @@ main{padding:40px 0 64px}
 .hero-cat{position:relative;z-index:1;color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.92}
 /* YK #65 kapak varyantı: gerçek görsel basılınca mavi zemin ve dekoratif daireler kalkar.
    contain (cover değil): kapaklar çizim — kırpmak çizimin yarısını götürür (kart kuralıyla aynı). */
+/* Kategori bandı FOTOĞRAFLI hâli (19 Ağu): Kling insansız karesi bandı doldurur,
+   kategori adı sol-altta, alta inen koyu perdenin üstünde okunur. Daire süsleri kapalı. */
+.hero.foto{background:${T.NAVY};padding:0 0 16px 20px;align-items:flex-start;justify-content:flex-end;gap:0}
+.hero.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.foto::before{display:none}
+.hero.foto::after{content:"";position:absolute;inset:0;right:auto;top:auto;width:100%;height:100%;border-radius:0;background:linear-gradient(180deg,rgba(15,23,42,0) 45%,rgba(15,23,42,.78) 100%)}
+.hero.foto .hero-cat{z-index:2;text-shadow:0 1px 3px rgba(15,23,42,.5)}
 .hero.kapak{height:auto;aspect-ratio:3/2;background:#EFF4FF;padding:0}
 .hero.kapak::before,.hero.kapak::after{display:none}
 .hero.kapak img{width:100%;height:100%;object-fit:contain;display:block}
@@ -676,7 +688,19 @@ const kapakUrl = (slug, alt) => {
 // gürültüdür (18 Ağu'da 40 karenin görünmeme sebebi tam olarak buydu).
 // 📐 Kutu 96×64 (3:2), kapaklar 1200×800 (3:2) → `contain` ile `cover` aynı sonucu verir;
 // GRF'nin fotoğraf kapakları da 3:2 geldiği sürece CSS'e dokunmak gerekmez.
+// ⚠️ SIRA ÖNEMLİ — 19 Ağu'da Tolga düzeltti: *"benim aklımdaki bu değil, gerçek
+// fotoğraflar dün Kling'den indirdiğimiz"*. İlk sürüm yazının KENDİ kapağını basıyordu;
+// o kapaklar teknik olarak WebP ama görsel dil olarak ÇİZGİ İLLÜSTRASYON — yani hâlâ
+// "vektörel". Kural: önce GERÇEK FOTOĞRAF (Kling insansız seti), sonra çizim, sonra ikon.
+//   ① `/merkez-gorsel/<kategori>.webp`  → gerçek fotoğraf (yazının kategorisinden)
+//   ② yazının kendi kapağı              → çizim (yalnız kategorisi cihaz olmayanlarda)
+//   ③ SVG ikon                          → ikisi de yoksa
+// GRF'nin ② dalgası (79 kapağı fotoğrafa çevirme) bittiğinde ①/② ayrımı zaten anlamsızlaşır.
 const postGorsel = (p) => {
+  const foto = yaziFotosu(p);
+  if (foto) {
+    return `<div class="card-ic kapak"><img src="${foto}" width="96" height="64" loading="lazy" decoding="async" alt=""></div>`;
+  }
   const alt = p.images?.coverAlt;
   const url = kapakUrl(p.slug, alt);
   if (url) {
@@ -1095,6 +1119,15 @@ const KONU_ESLES = {
   "dongusel-ekonomi": SURDURULEBILIRLIK,
 };
 const CIHAZ_SLUG = new Map(KATEGORILER.map((k) => [k.slug, k.ad]));
+// Görünen ad → slug (yukarıdakinin tersi). Yazının kategorisinden gerçek Kling
+// fotoğrafına gitmek için gerekiyor; `merkezFotosu` slug ile çalışıyor.
+const KAT_AD_SLUG = new Map(KATEGORILER.map((k) => [k.ad, k.slug]));
+// Yazının kategorisine karşılık gelen GERÇEK FOTOĞRAF (Kling insansız seti).
+// Cihaz olmayan kategorilerde (Genel · Sürdürülebilirlik · Kurumsal) karşılığı yok → null.
+const yaziFotosu = (p) => {
+  const slug = KAT_AD_SLUG.get(blogGrubu(p));
+  return slug ? merkezFotosu(slug) : null;
+};
 function blogGrubu(p) {
   const s = slugify(p.category || "");
   if (!s) return GENEL;
@@ -1182,7 +1215,7 @@ for (const k of blogKatVeri) {
         : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "")}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA}`,
     })
   );
 }
@@ -1419,7 +1452,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad)}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak)}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak)}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
@@ -1642,7 +1675,7 @@ for (const k of kilavuzluKat) {
       desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
-      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad)}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
         .map((m) => kilavuzKarti(k, m))
         .join("")}</div>${CTA}`,
     })
