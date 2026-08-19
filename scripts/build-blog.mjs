@@ -112,11 +112,11 @@ const CSS = `
 /* Hareket azaltma tercihi işletim sisteminden geliyorsa geçişler susar (WCAG 2.3.3). */
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 body{margin:0;background:${T.BG};color:${T.NAVY};font-family:'Hanken Grotesk',system-ui,sans-serif;line-height:1.7}
-.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
 /* Hub sayfalari (Bilgi/Tamir Merkezi, Kilavuzlar) GENIS kolon kullanir: 4 sutunlu
    cihaz izgarasi 720 px'e sigmiyor. YAZI sayfalari 720'de kalir — orada satir
    uzunlugu okunabilirligi belirliyor, genisletmek zarar verirdi. */
-body.genis .wrap{max-width:1120px}
+body.genis .wrap{max-width:1080px}
 a{color:${T.BLUE}}
 /* ÜST BAR — ana sayfanın hero üst barıyla aynı dil (Tolga 18 Ağu): koyu lacivert
    zemin, beyaz logo, menü linkleri ve sağ uçta tek dolgulu düğme. Önceki hâl beyaz
@@ -275,6 +275,10 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .tamir-geri{margin:0 0 22px;padding:11px 14px;border-left:3px solid ${T.BLUE};background:#EFF4FF;border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.55;color:${T.NAVY}}
 /* /tamir/ hub — cihaz kategorisi ızgarası (YK #32 format kararı, ① katman).
    Rehberi OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok). */
+/* Thumb ölçüsü ana sayfayla BİREBİR (Tolga, 19 Ağu): kolon .wrap üzerinden
+   eşitlendi (maxWidth 1080 + 20 px yan boşluk = 1040 iç genişlik, ana sayfayla
+   aynı), sütun sayısı ve 16 px boşluk da aynı → kart ve thumb her kademede
+   birebir aynı piksele oturuyor. Ayrı bir max-width'e gerek kalmadı. */
 .katlar{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:26px 0 8px;grid-auto-rows:1fr}
 @media(min-width:640px){.katlar{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:960px){.katlar{grid-template-columns:repeat(4,1fr)}}
@@ -287,7 +291,7 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 /* KART — ana sayfadaki cihaz kartlarıyla AYNI dil (Tolga 18 Ağu: "ana sayfa ile
    benzer stile gelmeli"): üstte 16:10 görsel alanı kenardan kenara, altta ad +
    rozet. Önceki hâl 44px'lik köşe ikonuyla bir liste satırı gibi duruyordu. */
-.katkart{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden;border:1px solid ${T.HAIR};border-radius:16px;background:#fff;text-decoration:none;color:${T.NAVY};height:100%}
+.katkart{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden;border:1px solid ${T.HAIR};border-radius:14px;background:#fff;text-decoration:none;color:${T.NAVY};height:100%}
 .katkart .kat-gorsel{display:block;width:100%;aspect-ratio:16/10;overflow:hidden;background:${T.SURFACE}}
 .katkart .kat-gorsel img{display:block;width:100%;height:100%;object-fit:cover}
 /* Fotoğrafı olmayan cihaz: aynı alanda ortalanmış büyük ikon (ana sayfada da böyle). */
