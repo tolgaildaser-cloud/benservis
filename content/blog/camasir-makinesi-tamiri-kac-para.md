@@ -14,7 +14,7 @@ faq:
   - q: "Tamir mi yenisi mi?"
     a: "Tamir maliyeti yeni bir makinenin yaklaşık yarısını geçiyorsa ve makine 10+ yaşındaysa yenisi mantıklı. Ucuz parçalı arızalarda tamir doğru seçim."
 images:
-  coverAlt: "Çamaşır makinesi ve yanında servis föyü ile büyüteç çizimi; föyde rakam yok"
+  coverAlt: "Hasır sepette katlanmış temiz çamaşırlar ve yanında beyaz tekstil yığını"
 ---
 
 Çamaşır makinesi bozulunca ilk merak edilen şey **fiyat**. Cevap arızaya bağlı: tıkalı bir filtre neredeyse bedava çözülürken, rulman değişimi işçilik nedeniyle epey tutabilir. Bu yazıda fiyatı neyin belirlediğini, hangi arızanın ucuz hangisinin pahalı olduğunu ve "tamir mi yenisi mi" kararını netleştiriyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

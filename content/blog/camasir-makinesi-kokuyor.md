@@ -22,7 +22,7 @@ steps:
 # GRF adım görselleri BAĞLANDI (4 Ağu 2026): public/tamir-gorsel/<slug>/adim-0N.png + kapak.png
 # Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
 images:
-  coverAlt: "Çamaşır makinesi koku temizliği rehberinin kapak çizimi"
+  coverAlt: "Çamaşır makinesinin açık kapağı, kapak contası ve tamburdaki turkuaz havlular yakın plan"
   steps:
     - "İçi boşaltılmış çamaşır makinesi tamburunu gösteren çizim"
     - "Kapı contası kıvrımlarının açılıp nemli bezle silinişini gösteren çizim"

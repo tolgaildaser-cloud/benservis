@@ -14,7 +14,7 @@ faq:
   - q: "Beko ve Grundig'te de aynı kodlar mı?"
     a: "Büyük ölçüde evet; Arçelik, Beko ve Grundig benzer platform kullanır. Yine de kod öneki (E ya da H) ve numaralandırma model serisine göre değişebilir."
 images:
-  coverAlt: "Hafif açılı çizilmiş çamaşır makinesi, ekranında hata göstergesi, yanında kod listesi ve büyüteç"
+  coverAlt: "Çatı katı mutfağında tezgâh altına yerleştirilmiş ön yüklemeli çamaşır makinesi"
 ---
 
 Arçelik çamaşır makinen ekranında bir hata kodu (E01, E03, H1…) ya da yanıp sönen ışık deseni gösteriyor. Arçelik (ve aynı çatıdaki **Beko, Grundig**) bu kodlarla arızayı bildirir. Ancak önemli bir nokta var: **Arçelik/Beko kod şeması model serisine göre belirgin biçimde değişir** — aynı numara farklı modelde farklı anlama gelebilir. Bu yüzden bu rehberde kodları **arıza türüyle birlikte** topladık; en güvenilir yaklaşım budur.

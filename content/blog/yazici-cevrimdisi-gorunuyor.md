@@ -13,6 +13,8 @@ faq:
     a: "Yazıcı ağa bir kez katılır ve o ağın bilgisini kendi belleğinde tutar. Modem değiştiğinde, ağ adı ya da parolası güncellendiğinde bu bilgi geçersiz olur ve yazıcı artık ağa giremez. Cihaz bozulmamıştır; yeni ağa yeniden tanıtılması gerekir. Ayrıca bazı modemler 2,4 GHz ve 5 GHz ağlarını ayrı yayınlar — birçok yazıcı yalnız 2,4 GHz'e bağlanabilir."
   - q: "Sürücüyü yeniden kurmak verilerimi etkiler mi?"
     a: "Yazıcı sürücüsünü kaldırıp yeniden kurmak yalnız bilgisayarla yazıcı arasındaki iletişimi düzenler; belgelerine, dosyalarına ya da diğer ayarlarına dokunmaz. Yeniden kurulumdan sonra yazıcıyı varsayılan olarak yeniden seçmen gerekebilir."
+images:
+  coverAlt: "Çok fonksiyonlu yazıcının eğimli dokunmatik ekranı ve kart okuyucusu yakın plan"
 ---
 
 Yazıcının ışığı yanıyor, ekranında hata yok, hazır bekliyor. Ama bilgisayarda adının altında **"Çevrimdışı"** yazıyor ve gönderdiğin belge kuyrukta öylece duruyor. Bu, bu kategorideki en yaygın şikâyet ve önemli bir kısmında **cihazda hiçbir arıza yoktur** — bozulan şey, bilgisayarla yazıcı arasındaki yoldur.
