@@ -114,7 +114,10 @@ const SLOGAN = [
 // `foto` doldurulduğu anda placeholder yerine gerçek görsel basılır — başka iş yok.
 const SURDURULEBILIR = {
   href: "/blog/kategori/surdurulebilirlik/",
-  foto: null, // GRF teslimi: public/anasayfa/surdurulebilirlik.webp (1200×800, 3:2)
+  // GRF teslimi 19 Ağu (1200×800): yeşil döngü amblemi — incelen iki şerit ok + ortada
+  // yeşil işaret, altta "benservis" + "Tamir et, kullanmaya devam et." Placeholder
+  // (degrade + döngü motifi) artık basılmıyor, yedek olarak kodda duruyor.
+  foto: "/anasayfa/surdurulebilirlik.webp",
   baslik: "Tamir etmek, yenisini almaktan iyidir",
   metin: "Çalışabilecek bir cihazı çöpe göndermek yerine onarmak hem bütçeyi hem doğayı korur. Onarım hakkı, cihaz ömrünü uzatma ve döngüsel ekonomi üzerine yazdıklarımız burada.",
   btn: "Sürdürülebilirlik yazıları",

@@ -78,9 +78,20 @@ const iconSvg = (cat, cls) =>
 // `foto` verilirse (kategori sayfalarında `merkezFotosu(k.slug)`) mavi+ikon bant yerine
 // GERÇEK FOTOĞRAF basılır — Tolga, 19 Ağu: "vektörel görsel kalmasın". Kategori adı
 // fotoğrafın üstünde, alta inen koyu perdeyle okunur kalır. Fotoğraf yoksa eski bant aynen.
-const heroFor = (cat, varyant = "", foto = null) =>
+// AMBLEM SLUG'LARI — "vektörel kalmasın" kuralının BİLİNÇLİ İSTİSNASI (Tolga, 19 Ağu:
+// *"sürdürülebilirlik ile ilgili logo tadında bir şey olsun"* + *"'genel' olan yerlere de
+// benservis logoyu koyalım"*). Sonraki koşular bunları fotoğrafa çevirmesin.
+const AMBLEM_SLUG = new Set(["genel", "surdurulebilirlik"]);
+
+// `foto` verilirse mavi+ikon bant yerine görsel basılır. İKİ AYRI DİL var:
+//   · FOTOĞRAF (cihaz kareleri) → `cover` + alta inen koyu perde, ad perdenin üstünde.
+//   · AMBLEM (genel · sürdürülebilirlik) → `contain`, PERDE YOK, açık zemin.
+//     Gerekçe GRF'nin devir notunda ölçülü: bant 188 px ve `cover`, amblem 900×570 →
+//     amblem ortasından kırpılıyor, wordmark kayboluyor, %78 perde beyaz zemini
+//     çamur griye çeviriyordu. Amblem bir MARKA KİLİDİ, kırpılamaz.
+const heroFor = (cat, varyant = "", foto = null, amblem = false) =>
   foto
-    ? `<div class="hero foto"><img src="${foto}" width="900" height="570" loading="lazy" decoding="async" alt=""><span class="hero-cat">${esc(cat || "Rehber")}</span></div>`
+    ? `<div class="hero ${amblem ? "amblem" : "foto"}"><img src="${foto}" width="900" height="570" loading="lazy" decoding="async" alt=""><span class="hero-cat">${esc(cat || "Rehber")}</span></div>`
     : `<div class="hero${varyant ? " " + varyant : ""}">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
 
 // iFixit-tarzı rehber meta kutusu (zorluk · süre · maliyet · gerekenler) — frontmatter `guide` varsa.
@@ -160,6 +171,11 @@ main{padding:40px 0 64px}
 .hero.foto::before{display:none}
 .hero.foto::after{content:"";position:absolute;inset:0;right:auto;top:auto;width:100%;height:100%;border-radius:0;background:linear-gradient(180deg,rgba(15,23,42,0) 45%,rgba(15,23,42,.78) 100%)}
 .hero.foto .hero-cat{z-index:2;text-shadow:0 1px 3px rgba(15,23,42,.5)}
+/* AMBLEM bandı: marka kilidi kırpılamaz → contain, perde YOK, açık zemin, ad altta koyu. */
+.hero.amblem{background:${T.SURFACE};border:1px solid ${T.HAIR};gap:10px;padding:14px}
+.hero.amblem::before,.hero.amblem::after{display:none}
+.hero.amblem img{position:relative;width:auto;height:auto;max-width:min(100%,380px);max-height:108px;object-fit:contain}
+.hero.amblem .hero-cat{color:${T.MUTED};text-shadow:none;opacity:1}
 .hero.kapak{height:auto;aspect-ratio:3/2;background:#EFF4FF;padding:0}
 .hero.kapak::before,.hero.kapak::after{display:none}
 .hero.kapak img{width:100%;height:100%;object-fit:contain;display:block}
@@ -1254,7 +1270,7 @@ for (const k of blogKatVeri) {
         : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
     })
   );
 }
@@ -1494,7 +1510,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
@@ -1717,7 +1733,7 @@ for (const k of kilavuzluKat) {
       desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
-      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
         .map((m) => kilavuzKarti(k, m))
         .join("")}</div>${CTA}`,
     })
