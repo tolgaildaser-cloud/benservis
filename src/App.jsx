@@ -611,6 +611,119 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   // "Teşhis et" yalnız üç zorunlu alan (cihaz + marka + belirti) dolunca aktif görünür.
   const formHazir = !!cihaz && !!marka && belirti.trim().length >= 4;
 
+  // Teşhis sonucu artık AYRI SAYFA DEĞİL, sihirbazın 4. paneli (Tolga: "en sağda
+  // teşhis olmasına rağmen, teşhis için yeni sayfa açılıyor"). Blok olduğu gibi
+  // taşındı — tek satırı değişmedi; yalnız dış sarmalayıcısının kart görünümü
+  // sıfırlandı, çünkü panelin kendisi zaten kart.
+  const SONUC_ICERIK = sonuc ? (
+    <div style={{ ...s.results, padding: 0, background: "transparent", border: "none", boxShadow: "none" }}>
+              {/* Garanti uyarısı — 0-2 yaş cihaz büyük olasılıkla garanti kapsamında; ücretli servisten önce yetkiliyle görüşmeyi öner (kozmetik/tamir gerekmez durumunda gösterme) */}
+              {yas === "0-2 yıl" && sonuc.kararOnerisi !== "gerek_yok" && (
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 7, background: "#EFF4FF", border: "1px solid #DBEAFE", borderRadius: 10, padding: "11px 13px", marginBottom: 14, fontSize: 12.5, color: "#475569", lineHeight: 1.45 }}>
+                  <span style={{ fontSize: 14, flexShrink: 0 }} aria-hidden="true">🛡</span>
+                  <span><strong style={{ color: "#2563EB" }}>Cihazın büyük olasılıkla garanti kapsamında.</strong> Ücretli bir servise gitmeden önce, cihazı aldığın yerin yetkili servisiyle görüşmeni öneririz — arıza garanti kapsamındaysa onarım ücretsiz olabilir.</span>
+                </div>
+              )}
+              <div style={s.card}>
+                <div style={s.secHead}>Olası arızalar</div>
+                {sonuc.olasiArizalar?.map((a, i) => (
+                  <div key={i} style={s.ariza}>
+                    <div style={s.arizaTop}><span style={s.arizaAd}>{a.ad}</span><span style={s.arizaPct}>%{a.olasilik}</span></div>
+                    <div style={s.barTrack}><div style={{ ...s.barFill, width: `${a.olasilik}%` }} /></div>
+                    <p style={s.arizaAcik}>{a.aciklama}</p>
+                  </div>
+                ))}
+              </div>
+    
+              <div style={s.cardSplit}>
+                <div style={{ flex: 1.2 }}>
+                  <div style={s.secHead}>Tahmini maliyet</div>
+                  {sonuc.kararOnerisi === "gerek_yok" || sonuc.tahminiMaliyet?.min == null ? (
+                    <div style={{ ...s.fiyat, fontSize: 23, lineHeight: 1.15 }}>Tamir gerekmez</div>
+                  ) : (
+                    <div style={s.fiyat}>{sonuc.tahminiMaliyet?.min?.toLocaleString("tr-TR")}–{sonuc.tahminiMaliyet?.max?.toLocaleString("tr-TR")} <span style={s.tl}>TL</span></div>
+                  )}
+                  <p style={s.fiyatNot}>En olası arızaya göre tahmini tutar (parça + işçilik dahil); kesin fiyat yerinde tespitte netleşir.</p>
+                </div>
+                <div style={s.divider} />
+                <div style={{ flex: 1 }}>
+                  <div style={s.secHead}>Karar</div>
+                  <span style={{ ...s.kararBadge, background: kararRenk[sonuc.kararOnerisi] || "#64748B" }}>{kararEtiket[sonuc.kararOnerisi] || "BELİRSİZ"}</span>
+                  <p style={s.fiyatNot}>{sonuc.kararAciklama}</p>
+                </div>
+              </div>
+    
+              {/* Aciliyet — tam genişlik, TEK SATIR (başlık + rozet + gerekçe yan yana) */}
+              <div style={s.acilRow}>
+                <div style={s.acilHead}>Aciliyet</div>
+                <span style={{ ...s.acilBadge, color: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz, borderColor: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz }}>{(sonuc.aciliyet || "belirsiz").toUpperCase()}</span>
+                {sonuc.aciliyetNot && <p style={s.acilNot}>{sonuc.aciliyetNot}</p>}
+              </div>
+    
+              {sonuc.ekSorular?.length > 0 && (
+                <div style={s.cardSoft}>
+                  <div style={s.secHeadSoft}>Daha kesin teşhis için</div>
+                  {sonuc.ekSorular.map((q, i) => <p key={i} style={s.soru}>• {q}</p>)}
+                  <button style={s.linkBtn} onClick={detayEkle}>Detay ekle ve tekrar sor</button>
+                </div>
+              )}
+    
+              {/* Kendin çözmek ister misin? — "Tamir ettirmek ister misin?" ile AYNI format.
+                  İki güvenlik kapısı korunuyor: yalnız kendinCozebilirMi.mumkun=true iken ve
+                  yalnız küratörlü haritada rehber karşılığı varsa çıkar; ikisi yoksa blok yok. */}
+              {(() => {
+                if (!sonuc.kendinCozebilirMi?.mumkun) return null;
+                const r = rehberBul(cihaz, sonuc.olasiArizalar?.[0]?.ad);
+                if (!r) return null;
+                return (
+                  <div style={s.faz2}>
+                    <div>
+                      <div style={s.faz2Head}>Kendin çözmek ister misin?</div>
+                      {/* Alt satır bilerek KISA: iki kart aynı boyda dursun (Tolga, 31 Tem).
+                          "İngilizce" ibaresi YALNIZ dış (iFixit) rehberde — kendi rehberimiz Türkçe. */}
+                      <div style={s.faz2Sub}>
+                        {r.kendi ? "Türkçe" : "İngilizce"} · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure}
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      <a
+                        href={r.url}
+                        {...(r.kendi ? {} : { target: "_blank", rel: "noopener noreferrer nofollow" })}
+                        style={{ ...s.faz2Btn, opacity: 1, display: "inline-block", textDecoration: "none", textAlign: "center" }}
+                        onClick={() => track("rehber_click", { cihaz, rehber: r.baslik, kaynak: r.kendi ? "benservis" : "ifixit", gelis: GELIS })}
+                      >
+                        🔧 Rehberi Aç
+                      </a>
+                    </div>
+                  </div>
+                );
+              })()}
+    
+              <div style={s.faz2}>
+                <div>
+                  <div style={s.faz2Head}>{sonuc.kararOnerisi === "gerek_yok" ? "Yine de kontrol ettirmek istersen" : "Tamir ettirmek ister misin?"}</div>
+                  {/* Konum köprüsü (13 Ağu YK ②): il sunucuda IP'den biliniyorsa CTA'yı
+                      somutlaştır — "konumuna göre" soyut vaadi yerine ilin adı. Bilinmiyorsa
+                      eski metin aynen kalır. ⛔ "açık/müsait servis" DENMEZ: müsaitlik verisi yok. */}
+                  <div style={s.faz2Sub}>{ipIl ? `${ipIl} ve çevresindeki servisler · Direkt arama` : "Konumuna göre sıralar · Direkt arama"}</div>
+                  {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => { track("servis_click", { cihaz, marka, gelis: GELIS }); setShowServisler(true); }}>
+                    📍 Servis Bul
+                  </button>
+                </div>
+              </div>
+    
+              <div style={s.altBtns}>
+                <button style={s.copyBtn} onClick={kopyala}>{kopyalandi ? "✓ Kopyalandı" : "⧉ Özeti kopyala"}</button>
+                <button style={s.reset} onClick={sifirla}>↺ Yeni arıza</button>
+              </div>
+              {/* PWA ipucu (YK #26): yalnız sonuç ekranında + 2. ziyaretten sonra; kendi içinde eleniyor */}
+              <AnaEkranaEkle />
+            </div>
+  ) : null;
+
   return (
     <>
       {/* ⚠️ VİTRİN, dar kapsayıcının (`s.wrap`, maxWidth 600) DIŞINDA duruyor.
@@ -641,7 +754,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         />
       )}
     <div style={
-      ekran === "teshis" && (adim === "form" || adim === "hata") && !showServisler
+      ekran === "teshis" && (adim === "form" || adim === "hata" || adim === "sonuc") && !showServisler
         ? { ...s.wrap, paddingTop: 0, maxWidth: 1240 }
         : adim === "form" ? { ...s.wrap, paddingTop: 0 } : s.wrap
     }>
@@ -702,8 +815,8 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </button>
       )}
 
-      {ekran === "teshis" && (adim === "form" || adim === "hata") && !showServisler && (
-        <div ref={formRef} className="sihirbaz">
+      {ekran === "teshis" && (adim === "form" || adim === "hata" || adim === "sonuc") && !showServisler && (
+        <div ref={formRef} className={"sihirbaz" + (adim === "sonuc" ? " sonuc-modu" : "")}>
           {/* Adım çubuğu — hangi adımdayız, ne kadarı bitti. Durumlar aşağıdaki
               panel durumlarıyla AYNI kaynaktan (cihaz/marka/formHazir) türetilir,
               yani ikisi asla ayrı düşemez. */}
@@ -712,7 +825,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               { n: 1, et: "Cihaz",  d: cihaz ? "tamam" : "aktif" },
               { n: 2, et: "Detay",  d: !cihaz ? "kilitli" : marka ? "tamam" : "aktif" },
               { n: 3, et: "Belirti", d: !marka ? "kilitli" : formHazir ? "tamam" : "aktif" },
-              { n: 4, et: "Sonuç",  d: "kilitli" },
+              { n: 4, et: "Sonuç",  d: adim === "sonuc" ? "tamam" : "kilitli" },
             ].map((a, i, dizi) => (
               <React.Fragment key={a.n}>
                 <span className="ad" data-d={a.d}>
@@ -727,7 +840,14 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           <div className="paneller">
           {/* ═══ PANEL ① CİHAZ ═══ */}
           <section className="panel" data-durum={cihaz ? "tamam" : "aktif"}>
-            <div className="panel-bas"><h3>Cihazını seç</h3><span className="panel-rozet">{cihaz ? "✓ Seçildi" : "Adım 1"}</span></div>
+            <div className="panel-bas"><h3>Cihaz</h3>{adim !== "sonuc" && <span className="panel-rozet">{cihaz ? "✓ Seçildi" : "Adım 1"}</span>}</div>
+            {adim === "sonuc" && (
+              <div className="ozet">
+                <b>{cihaz}</b>
+                <button type="button" className="ozet-degistir" onClick={() => setAdim("form")}>değiştir</button>
+              </div>
+            )}
+          {adim !== "sonuc" && (
           <div className="cihaz-izgara" style={s.cihazGrid}>
             {CIHAZLAR.map((c) => {
               const aktif = cihaz === c;
@@ -743,11 +863,19 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               );
             })}
           </div>
+          )}
           </section>
 
           {/* ═══ PANEL ② MARKA & DETAY ═══ */}
           <section className="panel" data-durum={!cihaz ? "kilitli" : marka ? "tamam" : "aktif"}>
-            <div className="panel-bas"><h3>Marka &amp; detay</h3><span className="panel-rozet">{marka ? "✓ Seçildi" : "Adım 2"}</span></div>
+            <div className="panel-bas"><h3>Marka</h3>{adim !== "sonuc" && <span className="panel-rozet">{marka ? "✓ Seçildi" : "Adım 2"}</span>}</div>
+            {adim === "sonuc" && (
+              <div className="ozet">
+                <b>{efektifMarka}</b>{yas && <span className="ozet-alt">{yas}</span>}
+                <button type="button" className="ozet-degistir" onClick={() => setAdim("form")}>değiştir</button>
+              </div>
+            )}
+          {adim !== "sonuc" && (<>
           <div className="marka-satir" style={s.row}>
             <div style={{ flex: 1.5, minWidth: 0 }}>
               <label style={s.label}>
@@ -787,14 +915,22 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               style={{ ...s.input, marginTop: 10 }}
             />
           )}
+          </>)}
 
 
           </section>
 
           {/* ═══ PANEL ③ BELİRTİ + CTA ═══ */}
           <section className="panel" data-durum={!marka ? "kilitli" : formHazir ? "tamam" : "aktif"}>
-            <div className="panel-bas"><h3>Ne oluyor?</h3><span className="panel-rozet">{formHazir ? "✓ Hazır" : "Adım 3"}</span></div>
+            <div className="panel-bas"><h3>Belirti</h3>{adim !== "sonuc" && <span className="panel-rozet">{formHazir ? "✓ Hazır" : "Adım 3"}</span>}</div>
+            {adim === "sonuc" && (
+              <div className="ozet">
+                <span className="ozet-belirti">{belirti}</span>
+                <button type="button" className="ozet-degistir" onClick={() => setAdim("form")}>değiştir</button>
+              </div>
+            )}
 
+          {adim !== "sonuc" && (<>
           {/* Sık görülen belirtiler — cihaz seçilince dolan çipler. Panel ②'den
               buraya alındı: belirti yazma anına ait, marka seçimine değil. */}
           {oneriler.length > 0 && (
@@ -853,6 +989,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               🎤 Ses kaydınız yalnızca metne çevrilir, saklanmaz.
             </p>
           )}
+          </>)}
 
           </section>
 
@@ -861,12 +998,14 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               "sonuc" olur ve bu blok hiç render edilmez — sonuç ekranı tam
               genişlikte, bugünkü zengin haliyle açılır. Panel, kullanıcıya
               "dördüncü adımda ne olacağını" gösteren bir söz. */}
-          <section className="panel" data-durum="kilitli">
-            <div className="panel-bas"><h3>Teşhis &amp; maliyet</h3><span className="panel-rozet">Adım 4</span></div>
-            <p className="panel-bos">
-              <span className="ikon" aria-hidden="true">🔎</span>
-              Teşhis sonucu burada belirecek.<br />Soldaki adımları tamamla.
-            </p>
+          <section className="panel panel-sonuc" data-durum={adim === "sonuc" ? "aktif" : "kilitli"}>
+            <div className="panel-bas"><h3>Teşhis &amp; maliyet</h3>{adim !== "sonuc" && <span className="panel-rozet">Adım 4</span>}</div>
+            {adim === "sonuc" ? SONUC_ICERIK : (
+              <p className="panel-bos">
+                <span className="ikon" aria-hidden="true">🔎</span>
+                Teşhis sonucu burada belirecek.<br />Soldaki adımları tamamla.
+              </p>
+            )}
           </section>
           </div>
 
@@ -877,6 +1016,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               hangi adımda olursan ol gözünün önünde, tamamlanınca basılacak yer belli.
               Hata mesajı ve eksik-alan uyarısı da buraya taşındı — ikisi de bu
               düğmenin gerekçesi, onunla aynı yerde okunmalı. */}
+          {adim !== "sonuc" && (
           <div className="gonderi-bant">
             {hataMsg && <div style={s.err}>{hataMsg}</div>}
             <button
@@ -891,6 +1031,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               </p>
             )}
           </div>
+          )}
 
           <p style={s.disclaimer}>Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>
         </div>
@@ -938,114 +1079,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         </div>
       )}
 
-      {adim === "sonuc" && sonuc && (
-        <div style={s.results}>
-          {/* Garanti uyarısı — 0-2 yaş cihaz büyük olasılıkla garanti kapsamında; ücretli servisten önce yetkiliyle görüşmeyi öner (kozmetik/tamir gerekmez durumunda gösterme) */}
-          {yas === "0-2 yıl" && sonuc.kararOnerisi !== "gerek_yok" && (
-            <div style={{ display: "flex", alignItems: "flex-start", gap: 7, background: "#EFF4FF", border: "1px solid #DBEAFE", borderRadius: 10, padding: "11px 13px", marginBottom: 14, fontSize: 12.5, color: "#475569", lineHeight: 1.45 }}>
-              <span style={{ fontSize: 14, flexShrink: 0 }} aria-hidden="true">🛡</span>
-              <span><strong style={{ color: "#2563EB" }}>Cihazın büyük olasılıkla garanti kapsamında.</strong> Ücretli bir servise gitmeden önce, cihazı aldığın yerin yetkili servisiyle görüşmeni öneririz — arıza garanti kapsamındaysa onarım ücretsiz olabilir.</span>
-            </div>
-          )}
-          <div style={s.card}>
-            <div style={s.secHead}>Olası arızalar</div>
-            {sonuc.olasiArizalar?.map((a, i) => (
-              <div key={i} style={s.ariza}>
-                <div style={s.arizaTop}><span style={s.arizaAd}>{a.ad}</span><span style={s.arizaPct}>%{a.olasilik}</span></div>
-                <div style={s.barTrack}><div style={{ ...s.barFill, width: `${a.olasilik}%` }} /></div>
-                <p style={s.arizaAcik}>{a.aciklama}</p>
-              </div>
-            ))}
-          </div>
 
-          <div style={s.cardSplit}>
-            <div style={{ flex: 1.2 }}>
-              <div style={s.secHead}>Tahmini maliyet</div>
-              {sonuc.kararOnerisi === "gerek_yok" || sonuc.tahminiMaliyet?.min == null ? (
-                <div style={{ ...s.fiyat, fontSize: 23, lineHeight: 1.15 }}>Tamir gerekmez</div>
-              ) : (
-                <div style={s.fiyat}>{sonuc.tahminiMaliyet?.min?.toLocaleString("tr-TR")}–{sonuc.tahminiMaliyet?.max?.toLocaleString("tr-TR")} <span style={s.tl}>TL</span></div>
-              )}
-              <p style={s.fiyatNot}>En olası arızaya göre tahmini tutar (parça + işçilik dahil); kesin fiyat yerinde tespitte netleşir.</p>
-            </div>
-            <div style={s.divider} />
-            <div style={{ flex: 1 }}>
-              <div style={s.secHead}>Karar</div>
-              <span style={{ ...s.kararBadge, background: kararRenk[sonuc.kararOnerisi] || "#64748B" }}>{kararEtiket[sonuc.kararOnerisi] || "BELİRSİZ"}</span>
-              <p style={s.fiyatNot}>{sonuc.kararAciklama}</p>
-            </div>
-          </div>
-
-          {/* Aciliyet — tam genişlik, TEK SATIR (başlık + rozet + gerekçe yan yana) */}
-          <div style={s.acilRow}>
-            <div style={s.acilHead}>Aciliyet</div>
-            <span style={{ ...s.acilBadge, color: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz, borderColor: acilRenk[sonuc.aciliyet] || acilRenk.belirsiz }}>{(sonuc.aciliyet || "belirsiz").toUpperCase()}</span>
-            {sonuc.aciliyetNot && <p style={s.acilNot}>{sonuc.aciliyetNot}</p>}
-          </div>
-
-          {sonuc.ekSorular?.length > 0 && (
-            <div style={s.cardSoft}>
-              <div style={s.secHeadSoft}>Daha kesin teşhis için</div>
-              {sonuc.ekSorular.map((q, i) => <p key={i} style={s.soru}>• {q}</p>)}
-              <button style={s.linkBtn} onClick={detayEkle}>Detay ekle ve tekrar sor</button>
-            </div>
-          )}
-
-          {/* Kendin çözmek ister misin? — "Tamir ettirmek ister misin?" ile AYNI format.
-              İki güvenlik kapısı korunuyor: yalnız kendinCozebilirMi.mumkun=true iken ve
-              yalnız küratörlü haritada rehber karşılığı varsa çıkar; ikisi yoksa blok yok. */}
-          {(() => {
-            if (!sonuc.kendinCozebilirMi?.mumkun) return null;
-            const r = rehberBul(cihaz, sonuc.olasiArizalar?.[0]?.ad);
-            if (!r) return null;
-            return (
-              <div style={s.faz2}>
-                <div>
-                  <div style={s.faz2Head}>Kendin çözmek ister misin?</div>
-                  {/* Alt satır bilerek KISA: iki kart aynı boyda dursun (Tolga, 31 Tem).
-                      "İngilizce" ibaresi YALNIZ dış (iFixit) rehberde — kendi rehberimiz Türkçe. */}
-                  <div style={s.faz2Sub}>
-                    {r.kendi ? "Türkçe" : "İngilizce"} · {ZORLUK_TR[r.zorluk] || r.zorluk} · {r.sure}
-                  </div>
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                  <a
-                    href={r.url}
-                    {...(r.kendi ? {} : { target: "_blank", rel: "noopener noreferrer nofollow" })}
-                    style={{ ...s.faz2Btn, opacity: 1, display: "inline-block", textDecoration: "none", textAlign: "center" }}
-                    onClick={() => track("rehber_click", { cihaz, rehber: r.baslik, kaynak: r.kendi ? "benservis" : "ifixit", gelis: GELIS })}
-                  >
-                    🔧 Rehberi Aç
-                  </a>
-                </div>
-              </div>
-            );
-          })()}
-
-          <div style={s.faz2}>
-            <div>
-              <div style={s.faz2Head}>{sonuc.kararOnerisi === "gerek_yok" ? "Yine de kontrol ettirmek istersen" : "Tamir ettirmek ister misin?"}</div>
-              {/* Konum köprüsü (13 Ağu YK ②): il sunucuda IP'den biliniyorsa CTA'yı
-                  somutlaştır — "konumuna göre" soyut vaadi yerine ilin adı. Bilinmiyorsa
-                  eski metin aynen kalır. ⛔ "açık/müsait servis" DENMEZ: müsaitlik verisi yok. */}
-              <div style={s.faz2Sub}>{ipIl ? `${ipIl} ve çevresindeki servisler · Direkt arama` : "Konumuna göre sıralar · Direkt arama"}</div>
-              {sonuc.kararOnerisi === "belirsiz" && <div style={{ fontSize: 12.5, color: "#EA580C", marginTop: 4, fontWeight: 600 }}>Arıza net değil — kesin teşhis için yerinde servis önerilir.</div>}
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <button style={{ ...s.faz2Btn, opacity: 1 }} onClick={() => { track("servis_click", { cihaz, marka, gelis: GELIS }); setShowServisler(true); }}>
-                📍 Servis Bul
-              </button>
-            </div>
-          </div>
-
-          <div style={s.altBtns}>
-            <button style={s.copyBtn} onClick={kopyala}>{kopyalandi ? "✓ Kopyalandı" : "⧉ Özeti kopyala"}</button>
-            <button style={s.reset} onClick={sifirla}>↺ Yeni arıza</button>
-          </div>
-          {/* PWA ipucu (YK #26): yalnız sonuç ekranında + 2. ziyaretten sonra; kendi içinde eleniyor */}
-          <AnaEkranaEkle />
-        </div>
-      )}
 
       <footer style={s.footer}>
         <div style={s.footBrand}>Benservis · Bil, gör, çağır.</div>
@@ -1147,10 +1181,16 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
 .adimcubugu .bag[data-dolu="1"] { background: #2563EB; }
 
 /* Paneller: masaüstünde dört sütun, mobilde alt alta. */
-.paneller { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start; }
+/* Dört panel EŞİT yükseklikte (Tolga: "4 kolonun da çerçeve büyüklükleri aynı
+   olsun, alttan ve yandan aynı ölçü"). align-items:start her paneli kendi
+   içeriği kadar bırakıyordu — cihaz paneli 690, marka paneli 300 px'di.
+   stretch + height:100% ile dördü de en uzuna eşitlenir; iç boşluklar zaten
+   aynı (padding 18/16), yani yan ve alt ölçüler de birebir. */
+.paneller { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: stretch; }
 .panel {
   position: relative; background: #fff; border: 1px solid #E2E8F0; border-radius: 16px;
-  padding: 18px 16px; transition: box-shadow .18s ease, border-color .18s ease, opacity .18s ease;
+  padding: 18px 16px; height: 100%;
+  transition: box-shadow .18s ease, border-color .18s ease, opacity .18s ease;
 }
 .panel::before {
   content: ""; position: absolute; inset: -1px -1px auto; height: 3px;
@@ -1182,6 +1222,34 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    "Önce cihaz seç" yer tutucusu kırpılıyordu. Alt alta ikisi de tam genişlikte. */
 .panel .marka-satir { flex-direction: column; gap: 12px; }
 .panel .marka-satir > div { flex: 1 1 auto !important; width: 100%; }
+
+/* ═══ SONUÇ MODU ═══
+   Sonuç geldiğinde AYRI SAYFA AÇILMAZ: üç giriş paneli özete iner, dördüncü
+   panel kalan alanı alır. Kullanıcı ne girdiğini görmeye devam eder, "değiştir"
+   ile state kaybetmeden geri döner. */
+.sihirbaz.sonuc-modu .paneller { grid-template-columns: 170px 170px 170px minmax(0, 1fr); }
+.sihirbaz.sonuc-modu .panel { padding: 14px; }
+.sihirbaz.sonuc-modu .panel-bas { margin-bottom: 8px; }
+.sihirbaz.sonuc-modu .panel-bas h3 { font-size: 14px; }
+.ozet { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.ozet b { font-size: 14.5px; color: #1E293B; line-height: 1.3; }
+.ozet .ozet-alt { font-size: 12.5px; color: #64748B; }
+.ozet .ozet-belirti {
+  font-size: 12.5px; color: #475569; line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+.ozet .ozet-degistir {
+  margin-top: 4px; background: none; border: none; padding: 0; cursor: pointer;
+  font-family: inherit; font-size: 12.5px; font-weight: 700; color: #2563EB; text-decoration: underline;
+}
+/* Sonuç paneli: kilitli panel kuralı buraya UYGULANMAZ — sonuç modunda aktif. */
+.panel-sonuc { text-align: left; }
+
+/* Sonuç modunda mobil: özetler üstte alt alta, sonuç en altta tam genişlik. */
+@media (max-width: 959px) {
+  .sihirbaz.sonuc-modu .paneller { grid-template-columns: 1fr; }
+  .sihirbaz.sonuc-modu .panel[data-durum="kilitli"] { display: block; }
+}
 
 /* Gönderim bandı — panellerin altında, kolonun tamamı kadar geniş. */
 .gonderi-bant { margin: 18px 0 0; }
