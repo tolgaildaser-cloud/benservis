@@ -343,7 +343,12 @@ a.katkart:focus-visible{transform:translateY(-2px);border-color:#C7D7F5}
 /* Adım başlıkları (h3 "1. Makineyi durdur") görselle tek blok gibi okunsun:
    üstünde nefes, altında yapışıklık. */
 article h3{margin:34px 0 8px;font-size:clamp(18px,2vw,21px);line-height:1.3}
-.katkart .kat-govde h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
+/* Ad alanı İKİ SATIRLIK sabit yükseklikte: dar ekranda "Fırın / Ocak / Aspiratör"
+   iki satıra, "Klima" tek satıra düşüyordu; grid-auto-rows:1fr satırı en uzuna
+   eşitleyince kısa adlı kartların altında 23 px boşluk kalıyordu (375 px'te ölçüldü).
+   Ana sayfadaki kart adında da aynı çözüm var (kartAdFoto minHeight) — iki yüzey
+   aynı davranışta. 17 x 1.25 x 2 satır ≈ 42 px. */
+.katkart .kat-govde h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25;min-height:42px;display:flex;align-items:center}
 .kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
 .katkart.yok{background:${T.BG}}
 .katkart.yok .kat-ic{background:#F1F5F9;color:${T.FAINT}}
@@ -1017,7 +1022,13 @@ const katIzgarasi = (items, birim) =>
     .map((k) =>
       k.sayi
         ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${esc(k.birim || birim)}</span></span></a>`
-        : `<div class="katkart yok">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span><p class="kat-not">${esc(k.bosNot)}</p></span></div>`
+        // BOŞ KART — not satırı KALDIRILDI (19 Ağu, Tolga: "altta boşluk var").
+        // Ölçüm: notlu iki kart 286 px'e çıkıyordu, grid-auto-rows:1fr tüm satırları
+        // ona eşitliyor ve içerikli 9 kartın altında 49 px boşluk kalıyordu.
+        // Not zaten rozetin tekrarıydı ("İçerik yok" / "Bu cihaz için ... yayınlamadık"),
+        // bilgi kaybı yok; boş hâl rozette DÜRÜSTÇE duruyor. `bosNot` metni title'a
+        // taşındı — imleçle bekleyen tam cümleyi görür, kart yüksekliğini şişirmez.
+        : `<div class="katkart yok" title="${esc(k.bosNot)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span></span></div>`
     )
     .join("");
 
