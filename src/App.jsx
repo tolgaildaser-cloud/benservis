@@ -640,7 +640,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           }}
         />
       )}
-    <div style={adim === "form" ? { ...s.wrap, paddingTop: 0 } : s.wrap}>
+    <div style={
+      ekran === "teshis" && (adim === "form" || adim === "hata") && !showServisler
+        ? { ...s.wrap, paddingTop: 0, maxWidth: 1080 }
+        : adim === "form" ? { ...s.wrap, paddingTop: 0 } : s.wrap
+    }>
       {showServisler && (
         <ServisEkrani
           cihaz={cihaz}
@@ -699,9 +703,32 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       )}
 
       {ekran === "teshis" && (adim === "form" || adim === "hata") && !showServisler && (
-        <div ref={formRef} style={s.card}>
-          <label style={s.label}>Cihaz <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span></label>
-          <div style={s.cihazGrid}>
+        <div ref={formRef} className="sihirbaz">
+          {/* Adım çubuğu — hangi adımdayız, ne kadarı bitti. Durumlar aşağıdaki
+              panel durumlarıyla AYNI kaynaktan (cihaz/marka/formHazir) türetilir,
+              yani ikisi asla ayrı düşemez. */}
+          <div className="adimcubugu" aria-hidden="true">
+            {[
+              { n: 1, et: "Cihaz",  d: cihaz ? "tamam" : "aktif" },
+              { n: 2, et: "Detay",  d: !cihaz ? "kilitli" : marka ? "tamam" : "aktif" },
+              { n: 3, et: "Belirti", d: !marka ? "kilitli" : formHazir ? "tamam" : "aktif" },
+              { n: 4, et: "Sonuç",  d: "kilitli" },
+            ].map((a, i, dizi) => (
+              <React.Fragment key={a.n}>
+                <span className="ad" data-d={a.d}>
+                  <span className="no">{a.d === "tamam" ? "✓" : a.n}</span>
+                  <span className="et">{a.et}</span>
+                </span>
+                {i < dizi.length - 1 && <span className="bag" data-dolu={a.d === "tamam" ? "1" : "0"} />}
+              </React.Fragment>
+            ))}
+          </div>
+
+          <div className="paneller">
+          {/* ═══ PANEL ① CİHAZ ═══ */}
+          <section className="panel" data-durum={cihaz ? "tamam" : "aktif"}>
+            <div className="panel-bas"><h3>Cihazını seç</h3><span className="panel-rozet">{cihaz ? "✓ Seçildi" : "Adım 1"}</span></div>
+          <div className="cihaz-izgara" style={s.cihazGrid}>
             {CIHAZLAR.map((c) => {
               const aktif = cihaz === c;
               return (
@@ -716,29 +743,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               );
             })}
           </div>
+          </section>
 
-          {oneriler.length > 0 && (
-            <div style={s.oneriBox}>
-              <span style={s.oneriLabel}>Sık görülen belirtiler <span style={s.opt}>· dokunarak ekle</span></span>
-              <div style={s.oneriWrap}>
-                {oneriler.map((b) => {
-                  const aktif = belirtiAktif(b);
-                  return (
-                    <button
-                      key={b}
-                      type="button"
-                      onClick={() => belirtiToggle(b)}
-                      style={{ ...s.oneriChip, ...(aktif ? s.oneriChipActive : {}) }}
-                    >
-                      <span style={s.oneriChipIkon}>{aktif ? "✓" : "+"}</span>
-                      {b}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
+          {/* ═══ PANEL ② MARKA & DETAY ═══ */}
+          <section className="panel" data-durum={!cihaz ? "kilitli" : marka ? "tamam" : "aktif"}>
+            <div className="panel-bas"><h3>Marka &amp; detay</h3><span className="panel-rozet">{marka ? "✓ Seçildi" : "Adım 2"}</span></div>
           <div style={s.row}>
             <div style={{ flex: 1.5, minWidth: 0 }}>
               <label style={s.label}>
@@ -780,9 +789,35 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           )}
 
 
-          <label style={s.label}>Ne oluyor? Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa ekrandaki hata kodunu da yaz)</span></label>
+          </section>
+
+          {/* ═══ PANEL ③ BELİRTİ + CTA ═══ */}
+          <section className="panel" data-durum={!marka ? "kilitli" : formHazir ? "tamam" : "aktif"}>
+            <div className="panel-bas"><h3>Ne oluyor?</h3><span className="panel-rozet">{formHazir ? "✓ Hazır" : "Adım 3"}</span></div>
+
+          {/* Sık görülen belirtiler — cihaz seçilince dolan çipler. Panel ②'den
+              buraya alındı: belirti yazma anına ait, marka seçimine değil. */}
+          {oneriler.length > 0 && (
+            <div style={s.oneriBox}>
+              <span style={s.oneriLabel}>Sık görülen belirtiler <span style={s.opt}>· dokunarak ekle</span></span>
+              <div style={s.oneriWrap}>
+                {oneriler.map((b) => {
+                  const aktif = belirtiAktif(b);
+                  return (
+                    <button key={b} type="button" onClick={() => belirtiToggle(b)}
+                      style={{ ...s.oneriChip, ...(aktif ? s.oneriChipActive : {}) }}>
+                      <span style={s.oneriChipIkon}>{aktif ? "✓" : "+"}</span>
+                      {b}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          <label style={s.label}>Belirtiyi anlat <span style={{ color: "#DC2626", fontWeight: 700 }}>*</span> <span style={s.opt}>(varsa hata kodunu da yaz)</span></label>
           {/* Belirti textarea (sol, esnek) + Sesle anlat butonu (sağ, kutu boyunda) YAN YANA */}
-          <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+          <div className="belirti-satir" style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
             <div style={{ flex: 1, minWidth: 0, position: "relative" }}>
               <textarea ref={belirtiRef} style={{ ...s.textarea, width: "100%", padding: "13px 14px 24px" }} value={belirti} onChange={(e) => setBelirti(e.target.value)} rows={4} maxLength={BELIRTI_MAX}
                 placeholder="örn. Çamaşır makinesi su almıyor, başlatınca tıkırtı geliyor ama dönmüyor. Hata kodu varsa: E3" />
@@ -831,6 +866,22 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               {!marka ? "Marka seçin." : "Arıza belirtisini yazın."}
             </p>
           )}
+          </section>
+
+          {/* ═══ PANEL ④ SONUÇ ═══
+              Form ekranındayken burası her zaman boş: sonuç geldiğinde `adim`
+              "sonuc" olur ve bu blok hiç render edilmez — sonuç ekranı tam
+              genişlikte, bugünkü zengin haliyle açılır. Panel, kullanıcıya
+              "dördüncü adımda ne olacağını" gösteren bir söz. */}
+          <section className="panel" data-durum="kilitli">
+            <div className="panel-bas"><h3>Teşhis &amp; maliyet</h3><span className="panel-rozet">Adım 4</span></div>
+            <p className="panel-bos">
+              <span className="ikon" aria-hidden="true">🔎</span>
+              Teşhis sonucu burada belirecek.<br />Soldaki adımları tamamla.
+            </p>
+          </section>
+          </div>
+
           <p style={s.disclaimer}>Sonuç bir ön tahmindir; kesin teşhis için yetkili servis gerekir.</p>
         </div>
       )}
@@ -1063,6 +1114,68 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
     box-shadow: 0 10px 30px -8px rgba(37,99,235,.55); cursor: pointer;
   }
 }
+/* ═══ TEŞHİS SİHİRBAZI — 4 YATAY PANEL (19 Ağu, Tolga: "teşhis sayfası çok eski
+   kaldı… bilgisayarda yatay, mobilde dikey, soldan sağa adım adım") ═══
+   Tasarım kaynağı: pazarlama-departmani/fe-taslaklar/teshis-yatay-mockup.html
+   ⛔ İŞLEV DEĞİŞMEDİ: aynı state, aynı alanlar, aynı gönderim. Bu katman yalnız
+   sunum — alanlar panellere DAĞITILDI, hiçbiri yeniden yazılmadı. */
+.sihirbaz { position: relative; z-index: 1; }
+
+/* Adım çubuğu: 1-2-3-4 daireleri, aralarındaki bağ tamamlanınca soldan sağa dolar. */
+.adimcubugu { display: flex; align-items: center; gap: 0; margin: 0 0 18px; }
+.adimcubugu .ad { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.adimcubugu .no {
+  width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; font-size: 13px; font-weight: 700; background: #E2E8F0; color: #94A3B8;
+}
+.adimcubugu .et { font-size: 13px; font-weight: 600; color: #94A3B8; white-space: nowrap; }
+.adimcubugu .ad[data-d="aktif"] .no { background: #2563EB; color: #fff; }
+.adimcubugu .ad[data-d="aktif"] .et { color: #2563EB; }
+.adimcubugu .ad[data-d="tamam"] .no { background: #16A34A; color: #fff; }
+.adimcubugu .ad[data-d="tamam"] .et { color: #1E293B; }
+.adimcubugu .bag { flex: 1; height: 2px; background: #E2E8F0; margin: 0 10px; border-radius: 2px; }
+.adimcubugu .bag[data-dolu="1"] { background: #2563EB; }
+
+/* Paneller: masaüstünde dört sütun, mobilde alt alta. */
+.paneller { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start; }
+.panel {
+  position: relative; background: #fff; border: 1px solid #E2E8F0; border-radius: 16px;
+  padding: 18px 16px; transition: box-shadow .18s ease, border-color .18s ease, opacity .18s ease;
+}
+.panel::before {
+  content: ""; position: absolute; inset: -1px -1px auto; height: 3px;
+  border-radius: 16px 16px 0 0; background: transparent;
+}
+.panel[data-durum="aktif"] { border-color: #2563EB; box-shadow: 0 10px 26px -14px rgba(37,99,235,.5); }
+.panel[data-durum="aktif"]::before { background: #2563EB; }
+/* Kilitli panel: soluk ve tıklanamaz — sırası gelmeden alanına girilemez. */
+.panel[data-durum="kilitli"] { opacity: .5; pointer-events: none; }
+.panel[data-durum="tamam"] { border-color: #BBF7D0; }
+.panel-bas { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 12px; }
+.panel-bas h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 16px; margin: 0; color: #1E293B; }
+/* Panel içindeki cihaz ızgarası: dar sütunda iki kolon (mockup deseni).
+   Sayfa genelindeki s.cihazGrid daha geniş kolona göre ayarlı, panelde ezilirdi. */
+.panel .cihaz-izgara { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+/* Belirti alanı panelde dikey: textarea üstte tam genişlik, ses düğmesi altta.
+   Yan yana kalsalardı 240 px'lik panelde textarea harf harf sarıyordu (ölçüldü). */
+.panel .belirti-satir { flex-direction: column !important; }
+.panel .belirti-satir > button { flex: 0 0 auto !important; width: 100% !important; align-self: auto !important; flex-direction: row !important; gap: 8px !important; padding: 11px !important; }
+.panel-rozet { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: #F1F5F9; color: #64748B; white-space: nowrap; }
+.panel[data-durum="aktif"] .panel-rozet { background: #EFF4FF; color: #2563EB; }
+.panel[data-durum="tamam"] .panel-rozet { background: #F0FDF4; color: #15803D; }
+/* Sonuç paneli boşken: ne beklendiğini söyleyen sakin bir yer tutucu. */
+.panel-bos { text-align: center; padding: 26px 8px; color: #94A3B8; font-size: 13px; line-height: 1.6; }
+.panel-bos .ikon { display: block; font-size: 26px; margin-bottom: 10px; opacity: .5; }
+
+/* MOBİL: paneller alt alta; kilitli olanlar hiç görünmez — bugünkü tek kolon
+   akışıyla aynı his, kullanıcı sırası gelmemiş alanla karşılaşmaz. */
+@media (max-width: 959px) {
+  .paneller { grid-template-columns: 1fr; gap: 12px; }
+  .panel[data-durum="kilitli"] { display: none; }
+  .adimcubugu .et { display: none; }
+  .adimcubugu .bag { margin: 0 6px; }
+}
+
 /* ÜST BAR — MOBİL (≤640px): üç metin bağlantısı gizlenir, yalnız logo +
    "Yakın Servisler" düğmesi kalır. Ölçüm: 375 px'te dört öğe iki satıra
    dağılıyor, üstelik hizasız (üst kenarları 81/119/120 px) ve bar 73 px'e
