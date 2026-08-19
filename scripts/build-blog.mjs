@@ -298,7 +298,11 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 .katkart .kat-gorsel-ikon{display:flex;align-items:center;justify-content:center;background:#EFF4FF}
 .katkart .kat-gorsel-ikon svg{width:34%;height:auto;color:${T.BLUE}}
 .katkart .kat-gorsel-ikon .kat-png{width:34%;height:auto;border-radius:0}
-.katkart .kat-govde{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px 16px}
+/* Gövde kalan alanı DOLDURUR (flex:1) ve metni dikeyde ortalar — ana sayfadaki
+   kart adının birebir karşılığı. Olmadığında: 375 px'te "Fırın / Ocak / Aspiratör"
+   üç satıra çıkıyor, grid satırı ona eşitliyor, kısa adlı kartların altında 23 px
+   ölü alan kalıyordu. flex:1 ile o alan gövdenin içine geçiyor, kart eşit ve dolu. */
+.katkart .kat-govde{display:flex;flex:1;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;padding:14px 16px 16px}
 /* Hover hareketi ana sayfayla aynı: kart yükselir, gölge derinleşir, görsel büyür. */
 @media(hover:hover) and (pointer:fine){
   a.katkart{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
@@ -343,23 +347,19 @@ a.katkart:focus-visible{transform:translateY(-2px);border-color:#C7D7F5}
 /* Adım başlıkları (h3 "1. Makineyi durdur") görselle tek blok gibi okunsun:
    üstünde nefes, altında yapışıklık. */
 article h3{margin:34px 0 8px;font-size:clamp(18px,2vw,21px);line-height:1.3}
-/* Ad alanı İKİ SATIRLIK sabit yükseklikte: dar ekranda "Fırın / Ocak / Aspiratör"
-   iki satıra, "Klima" tek satıra düşüyordu; grid-auto-rows:1fr satırı en uzuna
-   eşitleyince kısa adlı kartların altında 23 px boşluk kalıyordu (375 px'te ölçüldü).
-   Ana sayfadaki kart adında da aynı çözüm var (kartAdFoto minHeight) — iki yüzey
-   aynı davranışta. 17 x 1.25 x 2 satır ≈ 42 px. */
-.katkart .kat-govde h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25;min-height:42px;display:flex;align-items:center}
-.kat-rozet{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#EFF4FF;color:${T.BLUE}}
+/* Ad alanına SABİT YÜKSEKLİK VERİLMEDİ: rozet varken gerekiyordu, rozet kalkınca
+   gövdedeki flex:1 + justify-content:center aynı işi görüyor (kalan alanı gövde
+   yutuyor, kartlar eşit kalıyor). min-height bırakılsaydı tek satırlık adlarda
+   21 px fazladan yükseklik yapıyordu — ölçüldü: 1280 px'te kart 228, ana sayfa 207. */
+.katkart .kat-govde h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin:0;line-height:1.25}
 .katkart.yok{background:${T.BG}}
 .katkart.yok .kat-ic{background:#F1F5F9;color:${T.FAINT}}
-.katkart.yok .kat-rozet{background:#F1F5F9;color:${T.MUTED}}
 /* YEŞİL AKSAN — karar defteri kuralı: yeşil YALNIZ sürdürülebilirlik temasına ait.
    Tek kullanım yeri: Sürdürülebilirlik konu kartı + kendi kategori sayfasının hero'su.
    Marka kiti sınırı: güven yeşili #16A34A (CLAUDE.md) ve onun açık tonu; yeni renk YOK.
    Beyaz üstü küçük metinde #15803D kullanılıyor — #16A34A o boyutta kontrast bırakmıyor. */
 a.katkart.yesil:hover{border-color:#16A34A;box-shadow:0 10px 24px -20px rgba(22,101,52,.35)}
 .katkart.yesil .kat-ic{background:#ECFDF5;color:#15803D}
-.katkart.yesil .kat-rozet{background:#ECFDF5;color:#15803D}
 .hero.yesil{background:#16A34A}
 .kat-not{margin:0;font-size:13px;line-height:1.5;color:${T.MUTED}}
 .geri{display:inline-block;margin:0 0 14px;font-size:14px;font-weight:600;text-decoration:none}
@@ -1021,14 +1021,14 @@ const katIzgarasi = (items, birim) =>
   items
     .map((k) =>
       k.sayi
-        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${k.sayi} ${esc(k.birim || birim)}</span></span></a>`
-        // BOŞ KART — not satırı KALDIRILDI (19 Ağu, Tolga: "altta boşluk var").
-        // Ölçüm: notlu iki kart 286 px'e çıkıyordu, grid-auto-rows:1fr tüm satırları
-        // ona eşitliyor ve içerikli 9 kartın altında 49 px boşluk kalıyordu.
-        // Not zaten rozetin tekrarıydı ("İçerik yok" / "Bu cihaz için ... yayınlamadık"),
-        // bilgi kaybı yok; boş hâl rozette DÜRÜSTÇE duruyor. `bosNot` metni title'a
-        // taşındı — imleçle bekleyen tam cümleyi görür, kart yüksekliğini şişirmez.
-        : `<div class="katkart yok" title="${esc(k.bosNot)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2><span class="kat-rozet">${esc(k.bosRozet)}</span></span></div>`
+        // ROZET KALDIRILDI (19 Ağu, Tolga: "rozeti de kaldır") — hub kartı ana
+        // sayfadaki kartla aynı iskelete iner: görsel + ad, başka satır yok.
+        // Sayı bilgisi title'a taşındı: imleçle bekleyen görür, kartı şişirmez.
+        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}" title="${k.sayi} ${esc(k.birim || birim)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></a>`
+        // BOŞ KART: rozet ve not gitti ama boş hâl KAYBOLMADI — kart <div>, yani
+        // tıklanamaz, ve .katkart.yok görseli grayscale + soluk basıyor. Tam cümle
+        // title'da. Kullanıcı boş kategoriye tıklayıp boş sayfaya düşmez.
+        : `<div class="katkart yok" title="${esc(k.bosRozet)} — ${esc(k.bosNot)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></div>`
     )
     .join("");
 
@@ -1448,7 +1448,7 @@ fs.writeFileSync(
         { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       ])),
     genis: true,
-    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. <strong>Buradaki adımlar bakım seviyesindedir: temizlik, filtre, kontrol ve ayar.</strong> Parça değişimi ya da cihazı sökmek gereken işleri buraya koymuyoruz — onlar servis işi. Her rehberin başında <strong>gereken malzemeyi</strong> yazıyoruz.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not">Rozetteki sayı o cihazda kaç hata kodu, belirti ve kendin-çöz adımının toplandığını gösterir. Rozetinde <strong>&quot;İçerik yok&quot;</strong> yazan cihazlarda henüz yayınlanmış sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
+    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. <strong>Buradaki adımlar bakım seviyesindedir: temizlik, filtre, kontrol ve ayar.</strong> Parça değişimi ya da cihazı sökmek gereken işleri buraya koymuyoruz — onlar servis işi. Her rehberin başında <strong>gereken malzemeyi</strong> yazıyoruz.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not"><strong>Soluk görünen</strong> cihazlarda henüz yayınlanmış hata kodu ya da belirti sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
   })
 );
 basilanTamir.push(tamirHub);
