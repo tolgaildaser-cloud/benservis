@@ -40,7 +40,8 @@ Maliyet tahminimiz havadan değil; **gerçek ve güncel tarife verisine** çıpa
 Cihazı bozulan, **doğru maliyeti ödemek** ve **önce öğrenip sonra çağırmak** isteyen herkes için. Bilinçli müşteri = hem senin için hem iyi servis için kazançlı bir başlangıç.
 
 ## İletişim
-Soru, öneri ya da iş birliği için: **info@benservis.com**
+Soru, öneri ya da iş birliği için: **info@benservis.com** · **0530 710 55 85**
+Adres: **Ark 399 Plaza, Suadiye, Kadıköy / İstanbul**
 Sosyal: [Instagram](https://www.instagram.com/benservis.app/) · [TikTok](https://www.tiktok.com/@benservis.app) · [LinkedIn](https://www.linkedin.com/company/134824266/) · [YouTube](https://www.youtube.com/@benservisapp)
 
 İlgili: [Bilgi Merkezi (arıza rehberleri)](/blog/) · [SERBİS'te yetkili servisi nasıl doğrularsın?](/blog/serbis-yetkili-servis-sorgulama/)

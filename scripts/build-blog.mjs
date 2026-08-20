@@ -1892,7 +1892,7 @@ const HUKUK_SON_GUNCELLEME = "5 Ağustos 2026";
 
 // İki sayfada da tekrarlayan kapanış: kullanıcı hukuk metninden çıkarken huniye dönsün.
 const HUKUK_CAPRAZ = (oteki) =>
-  `<p class="kat-not">İlgili sayfa: <a href="${oteki.url}">${esc(oteki.ad)}</a> · Sorularınız için <a href="mailto:info@benservis.com">info@benservis.com</a></p>`;
+  `<p class="kat-not">İlgili sayfa: <a href="${oteki.url}">${esc(oteki.ad)}</a> · Sorularınız için <a href="mailto:info@benservis.com">info@benservis.com</a> · <a href="tel:+905307105585">0530 710 55 85</a></p>`;
 
 const GIZLILIK_GOVDE = `<article>
 <h1>Gizlilik ve Kişisel Verilerin Korunması</h1>
@@ -1900,7 +1900,7 @@ const GIZLILIK_GOVDE = `<article>
 <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca aydınlatma yükümlülüğümüzü yerine getirmek için hazırlanmıştır.</p>
 
 <h2>Veri sorumlusu</h2>
-<p><strong>Benservis</strong> — Tolga İldaser (şahıs işletmesi)<br>E-posta: <a href="mailto:info@benservis.com">info@benservis.com</a></p>
+<p><strong>Benservis</strong> — Tolga İldaser (şahıs işletmesi)<br>E-posta: <a href="mailto:info@benservis.com">info@benservis.com</a><br>Telefon: <a href="tel:+905307105585">0530 710 55 85</a></p>
 <p><em>(Benservis A.Ş.'nin kuruluşu tamamlandığında veri sorumlusu, şirket unvanı ve tebligat adresiyle güncellenecektir.)</em></p>
 
 <h2>Hangi verileri işliyoruz</h2>
@@ -1981,7 +1981,7 @@ const KOSULLAR_GOVDE = `<article>
 
 <p><strong>Uygulanacak hukuk.</strong> Türkiye Cumhuriyeti hukuku uygulanır; uyuşmazlıklarda <strong>İstanbul Anadolu Mahkemeleri ve İcra Daireleri</strong> yetkilidir. <em>(Tüketici işlemlerinde tüketicinin yerleşim yeri mahkemesi/hakem heyeti hakları saklıdır.)</em></p>
 
-<p><strong>İletişim:</strong> <a href="mailto:info@benservis.com">info@benservis.com</a></p>
+<p><strong>İletişim:</strong> <a href="mailto:info@benservis.com">info@benservis.com</a> · <a href="tel:+905307105585">0530 710 55 85</a></p>
 ${HUKUK_CAPRAZ({ url: "/gizlilik/", ad: "Gizlilik ve Kişisel Verilerin Korunması" })}
 </article>`;
 
