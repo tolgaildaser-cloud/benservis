@@ -1475,7 +1475,18 @@ if (baglanmayanRehber.length) {
 // ⛔ Yazının kendi `description`'ı BASILMAZ: o metinler fiyat ifadesi içeriyor, bu katman
 //    fiyatsız (YK #35 şart 1). Kartta `anlam` satırı görünür.
 const girisKarti = (k, g) => {
-  const ikon = g.rehberMeta ? rehberGorsel(g.rehberMeta) : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`;
+  // KART GÖRSELİ — Tolga, 20 Ağu: "tamir ile ilgili ise ilgili insanlı görsel,
+  // bilgilendirme ise insansız". Ayrım kaynaktaki `tip` alanından geliyor, elle liste yok:
+  //   kod · belirti · kendin-çöz rehberi → TAMİR işi   → "Benservis ustası" seti (insanlı)
+  //   ayar                               → BİLGİLENDİRME → insansız set
+  // Not: rehber kartı da artık cihazın usta karesini basıyor; önce yazının kendi kapağını
+  // basıyordu ama o da cihaz karesine çözülüyordu (yani zaten insansızdı) — şimdi kural
+  // içerik tipine göre işliyor. Görsel yoksa eski SVG ikonuna düşer, kart boş kalmaz.
+  const tamirIsi = !!g.rehberMeta || g.tip === "kod" || g.tip === "belirti";
+  const kartFoto = tamirIsi ? merkezFotosu(k.slug, TAMIR_KOK) : merkezFotosu(k.slug);
+  const ikon = kartFoto
+    ? `<div class="card-ic kapak"><img src="${kartFoto}" width="96" height="64" loading="lazy" decoding="async" alt=""></div>`
+    : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`;
   const etiket = g.rehberMeta ? "Kendin çöz" : TIP_ETIKET[g.tip];
   const meta = g.rehberMeta
     ? `${g.rehberMeta.zorluk} · ${g.rehberMeta.sure} · ${g.rehberMeta.adim} adım · Türkçe`
