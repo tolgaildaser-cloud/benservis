@@ -1215,7 +1215,13 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
 .panel .cihaz-izgara { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
 /* Belirti alanı panelde dikey: textarea üstte tam genişlik, ses düğmesi altta.
    Yan yana kalsalardı 240 px'lik panelde textarea harf harf sarıyordu (ölçüldü). */
-.panel .belirti-satir { flex-direction: column !important; }
+/* align-items STRETCH şart: satırın kendi inline stili alignItems:"flex-start"
+   (yan yana dizilimde textarea'yı ses düğmesiyle üstten hizalamak için). Column'a
+   çevrilince o değer çapraz eksene geçti ve textarea sarmalını İÇERİK genişliğine
+   büzdü — sarmalın flex:1'i ana eksende (artık dikey) çalıştığı için genişliğe
+   etki etmiyordu. Ölçüm (390px, 20 Ağu): panel içi 318 · ses düğmesi 316 ·
+   textarea 200 → 116 px fark. Düğme width:100% taşıdığı için sağlamdı, kutu değil. */
+.panel .belirti-satir { flex-direction: column !important; align-items: stretch !important; }
 .panel .belirti-satir > button { flex: 0 0 auto !important; width: 100% !important; align-self: auto !important; flex-direction: row !important; gap: 8px !important; padding: 11px !important; }
 .panel-rozet { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: #F1F5F9; color: #64748B; white-space: nowrap; }
 .panel[data-durum="aktif"] .panel-rozet { background: #EFF4FF; color: #2563EB; }
