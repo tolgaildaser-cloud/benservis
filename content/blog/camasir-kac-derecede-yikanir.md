@@ -14,7 +14,7 @@ faq:
   - q: "Hep 30 derecede yıkamak makineye zarar verir mi?"
     a: "Makineye zarar vermez ama sürekli düşük sıcaklık, kazanda yağ ve deterjan kalıntısı (biofilm) birikmesine, dolayısıyla kokuya yol açabilir. Çözüm basit: ayda bir 60-90°C boş/hijyen programı çalıştır."
 images:
-  coverAlt: "Çamaşır makinesinin program kadranını çeviren bir el ve yanındaki sıcaklık göstergesi"
+  coverAlt: "Çamaşır makinesinin işaretsiz program kadranının yakın planı, sağda bulanık ahşap raflar"
 ---
 
 Etiketler bir şey söylüyor, alışkanlıklar başka: Türkiye'de çamaşırların çoğu hâlâ "her ihtimale karşı" 60 derecede yıkanıyor. Oysa doğru dereceyi seçmek üç şeyi birden belirliyor: **kıyafetin ömrünü, elektrik faturasını ve makinenin sağlığını.** İşte net bir 30-40-60-90 rehberi.
