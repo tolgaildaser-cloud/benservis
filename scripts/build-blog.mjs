@@ -1351,7 +1351,7 @@ fs.writeFileSync(
     // indirip 78 yazıyı bir tık derine itmek, /blog/'dan gelen iç linkleri koparır (79 sayfa
     // aramada gösterim alıyor). Izgara = gezinme katmanı, liste = tarama/arama katmanı.
     genis: true,
-    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogCihazKartlari}</div><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0">Konu başlıkları</h2><div class="katlar konu">${blogKonuKartlari}</div><p class="kat-not">Belirli bir cihaza bağlı olmayan yazılar bu iki başlıkta toplanır: mevzuat, enerji ve fatura yazıları <a href="/blog/kategori/genel/">Genel</a>'de; onarım hakkı, cihaz ömrü ve döngüsel ekonomi yazıları <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a>'te.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
+    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogCihazKartlari}</div><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0">Konu başlıkları</h2><div class="katlar konu">${blogKonuKartlari}</div><p class="kat-not">Belirli bir cihaza bağlı olmayan yazılar bu iki başlıkta toplanır: mevzuat, enerji ve fatura yazıları <a href="/blog/kategori/genel/">Genel</a>'de; onarım hakkı, cihaz ömrü ve döngüsel ekonomi yazıları <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a>'te.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p>${BLOG_CTA("", "blog-hub")}<script>${SEARCH_JS}</script>`,
   })
 );
 
@@ -1438,9 +1438,17 @@ function fiyatDenetimi(dosyalar) {
 
 // /tamir/ kapanışı — aynı sadeleştirme, ama TEK buton: fiyat/maliyet kelimesi bu ağaçta
 // yasak (YK #35 şart 1), ikinci kapı basılamaz. Zaten istenen de "servis bul butonu standart".
+// /tamir/ kapanışı — 20 Ağu'da diğerleriyle AYNI hâle geldi (Tolga: "tamir merkezini de
+// aynı yap"): aynı başlık, aynı iki kapı.
+// ⛔ TEK FARK ZORUNLU: ikinci kapının metni "Tahmini MALİYETİ…" olamaz — bu ağaçta fiyat
+// kelimesi yasak (YK #35 şart 1) ve build ihlalde DURUYOR. `FIYAT_DESENI` "ücret" i
+// yakalarken "ücretsiz"i bilerek dışarıda bırakıyor (`ücret(?!siz)`), o yüzden kapı
+// "Ücretsiz teşhis et" olarak yazıldı: yapı ve hedef aynı, kelime kurala uygun.
 const TAMIR_CTA = (kaynak, cihazSlug = "") =>
-  `<div class="kopru kopru-kapanis"><p><strong>Kendin çözemiyorsan</strong></p>` +
-  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}</div></div>`;
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
+  `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Ücretsiz teşhis et →</a>` +
+  `</div></div>`;
 
 // Rehber kartı — kart görseli sözleşmesi `postGorsel` ile ORTAK (19 Ağu'da tek kaynağa
 // indirildi; önce burada ayrı bir kopya vardı ve blog kartları ikonda kalmıştı).
