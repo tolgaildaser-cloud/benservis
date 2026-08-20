@@ -1172,9 +1172,18 @@ const KONU_ESLES = {
 const CIHAZ_SLUG = new Map(KATEGORILER.map((k) => [k.slug, k.ad]));
 // Görünen ad → slug (yukarıdakinin tersi). Yazının kategorisinden gerçek Kling
 // fotoğrafına gitmek için gerekiyor; `merkezFotosu` slug ile çalışıyor.
-const KAT_AD_SLUG = new Map(KATEGORILER.map((k) => [k.ad, k.slug]));
-// Yazının kategorisine karşılık gelen GERÇEK FOTOĞRAF (Kling insansız seti).
-// Cihaz olmayan kategorilerde (Genel · Sürdürülebilirlik · Kurumsal) karşılığı yok → null.
+const KAT_AD_SLUG = new Map([
+  ...KATEGORILER.map((k) => [k.ad, k.slug]),
+  // KONU kategorileri de eşlendi (Tolga, 20 Ağu: "Genel ve Sürdürülebilirlik
+  // thumbnailleri hâlâ SVG, değiştir"). 22 yazı (Genel 14 + Sürdürülebilirlik 8)
+  // yazının KENDİ çizgi-illüstrasyon kapağına düşüyordu — teknik olarak WebP ama
+  // görsel dil olarak vektörel. 20 Ağu'da bu iki kareye artık gerçek fotoğraf
+  // (orman/oturma odası + elde telefon) bağlı, o yüzden eşleme açılabildi.
+  [GENEL, "genel"],
+  [SURDURULEBILIRLIK, "surdurulebilirlik"],
+]);
+// Yazının kategorisine karşılık gelen fotoğraf. Karşılığı olmayan kategori → null,
+// o zaman yazının kendi kapağına, o da yoksa çizgi ikona düşer.
 const yaziFotosu = (p) => {
   const slug = KAT_AD_SLUG.get(blogGrubu(p));
   return slug ? merkezFotosu(slug) : null;
