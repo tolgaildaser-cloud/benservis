@@ -183,6 +183,45 @@ export const MARKA_KILAVUZLARI = {
     url: "https://support.brother.com/g/b/countrytop.aspx?c=tr&lang=tr",
     ozet: "Brother Türkiye destek merkezi: model seçip kullanım kılavuzu, sürücü ve SSS'lere ulaşıyorsun.",
   },
+  // ── 20 Ağu 2026 boşluk dalgası (YK): 8 marka eklendi. URL'ler o gün tek tek doğrulandı
+  //    (bot korumalı siteler tarayıcıyla gezilerek teyit edildi); kombi tarafında çoğu markada
+  //    merkezî arama kutusu yok, akış "ürün sayfası → Dokümanlar → kılavuz PDF".
+  "Regal": {
+    url: "https://destekmerkezi.vestel.com.tr/urunum",
+    ozet: "Regal, Vestel çatısındaki markadır; kılavuza cihazın seri numarasıyla Vestel Destek Merkezi üzerinden ulaşılıyor.",
+  },
+  "Baymak": {
+    url: "https://www.baymak.com.tr/kombi",
+    ozet: "Kombi modelini listeden seçiyorsun; montaj ve kullanma kılavuzu ürün sayfasının doküman bölümünde PDF olarak duruyor.",
+  },
+  "Demirdöküm": {
+    url: "https://www.demirdokum.com.tr/urunler/kombiler/",
+    ozet: "Model sayfasını açtığında kullanım kılavuzu ürün dokümanları arasında listeleniyor; model adı kombinin alt kapağı içindeki etikette yazar.",
+  },
+  "Ariston": {
+    url: "https://www.ariston.com/tr-tr/indirme-alani/",
+    ozet: "İndirme alanında önce ürün kategorisini, sonra modelini seçiyorsun; kullanım kılavuzu PDF olarak listeleniyor.",
+  },
+  "Buderus": {
+    url: "https://www.buderus.com/tr/tr/hizmetler/muesteri-kilavuzu/",
+    ozet: "Müşteri kılavuzu bölümünden modelini seçerek kullanım ve montaj dokümanlarına ulaşıyorsun.",
+  },
+  "Ferroli": {
+    url: "https://www.ferroli.com.tr/kombiler-F2771",
+    ozet: "Kombi modelini seçtiğinde kullanım kılavuzu ürün sayfasında PDF olarak açılıyor.",
+  },
+  "Mitsubishi": {
+    url: "https://klima.mitsubishielectric.com.tr/tr/kullanim-kilavuzlari",
+    ozet: "Cihaz tipini (duvar tipi, kaset, salon tipi) filtreleyip model numarana göre kılavuzu seçiyorsun; model etiketi iç ünitenin yanındadır.",
+  },
+  "Roborock": {
+    url: "https://support.roborock.com/hc/en-us",
+    ozet: "Robot süpürge modelini seçip kılavuzu indiriyorsun (sayfa İngilizce); model etiketi cihazın alt yüzünde.",
+  },
+  "Dreame": {
+    url: "https://global.dreametech.com/pages/user-manuals-and-faqs",
+    ozet: "Modelini listeden seçerek kullanım kılavuzuna ve sık sorulanlara ulaşıyorsun (sayfa İngilizce); model etiketi cihazın altında.",
+  },
 };
 
 /**
