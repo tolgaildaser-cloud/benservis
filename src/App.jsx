@@ -1110,7 +1110,12 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
             Erişilebilir olmaları yeter — arananınca bulunur, aranmayanı yormaz. */}
         <div style={s.footHukuk}>
           <span style={s.footNavUnit}><a href="/gizlilik/" style={s.footHukukLink}>Gizlilik</a><span style={s.footSep} aria-hidden="true">·</span></span>
-          <span style={s.footNavUnit}><a href="/kullanim-kosullari/" style={s.footHukukLink}>Kullanım Koşulları</a></span>
+          <span style={s.footNavUnit}><a href="/kullanim-kosullari/" style={s.footHukukLink}>Kullanım Koşulları</a><span style={s.footSep} aria-hidden="true">·</span></span>
+          {/* İletişim telefonu (Tolga, 20 Ağu: "çok göze batan bir yerde olmasın").
+              6563 sayılı kanunun istediği tanıtıcı bilgi; hukuk satırında, soluk
+              renkte ve sayfanın en altında duruyor — arayan bulur, aramayanı yormaz.
+              tel: bağlantısı bilerek: mobilde tek dokunuşla aranır, görünürlüğü artmaz. */}
+          <span style={s.footNavUnit}><a href="tel:+905307105585" style={s.footHukukLink}>0530 710 55 85</a></span>
         </div>
         <div style={{ ...s.footSub, marginTop: 3 }}>AI destekli teşhis · tahmini maliyet</div>
         <div style={s.footSocial}>
