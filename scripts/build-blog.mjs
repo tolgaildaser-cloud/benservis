@@ -414,7 +414,16 @@ const TEETH = [0, 45, 90, 135, 180, 225, 270, 315]
 const LOGO = `<svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" fill="${T.BLUE}"/><path d="M60 22C42 22 28 36 28 53c0 22 32 45 32 45s32-23 32-45C92 36 78 22 60 22Z" fill="#fff"/><g fill="${T.BLUE}"><circle cx="60" cy="51" r="15"/>${TEETH}</g><circle cx="60" cy="51" r="6" fill="#fff"/></svg>`;
 const WORDMARK = `<span class="brand-text"><span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span><span class="brand-motto">Bil, gör, çağır.</span></span>`;
 
-const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+// /kilavuzlar/ kapanışı — 20 Ağu'da SADELEŞTİ. Bu blok sitedeki EN ESKİ kalıntıydı:
+// 19 Ağu'da blog/tamir/yazı kapanışları çift kapıya geçerken kılavuzlar atlanmıştı,
+// 12 sayfa (hub + 11 kategori) hâlâ koca mavi kartla ve TEK kapıyla duruyordu.
+// Artık diğerleriyle birebir aynı: aynı başlık, aynı iki buton, aynı ölçüm etiketleri.
+// `cihazSlug` verilirse cihaz ön-seçili gider; hub'da boş kalır.
+const KILAVUZ_CTA = (cihazSlug, kaynak) =>
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
+  `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Tahmini maliyeti ücretsiz öğren →</a>` +
+  `</div></div>`;
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // YK #67 — TAMİR MERKEZİ → TEŞHİS KÖPRÜSÜ (kurul 4-0, 15 Ağu 2026)
@@ -550,6 +559,11 @@ const KOPRU_SATIRI = (p) => {
 };
 
 // ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.
+// Kapanış başlığı TEK KAYNAK (Tolga, 20 Ağu: "tüm yazıların en altında bu olmalı").
+// Önce yazı sonu cihaz adını başlığa yazıyordu → 84 yazıda 10 FARKLI başlık oluşmuştu.
+// Bağlam kaybolmuyor: butonların adresleri cihazı ve belirtiyi taşımaya devam ediyor.
+const KAPANIS_BASLIK = "Cihazın şimdi mi bozuldu?";
+
 // ② KAPANIŞ — #68 ②'nin kapanmamış yarısı (Tolga, 15 Ağu: "hem ilk-ekran satırı HEM YAZI SONU").
 // 19 Ağu'da hub kapanışları sadeleşti (BLOG_CTA / TAMIR_CTA) ama yazı sonu koca mavi kart
 // olarak kaldı — ve tek kapısı TEŞHİSTİ. Oysa YK'nın güç metriği "Servis Bul'dan servise
@@ -559,11 +573,8 @@ const KOPRU_SATIRI = (p) => {
 // aynı seri, geçmişle kıyas bozulmaz); servis kapısı YENİ bir etiketle (`son-kart-servis`)
 // ekleniyor, mevcut seriyi kirletmiyor.
 const YAZI_CTA = (p) => {
-  const ad = kopruCihazAdi(p);
-  const baslik = ad
-    ? `${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızanı ve tahmini fiyatını saniyede öğren`
-    : "Arızanı ve tahmini fiyatını saniyede öğren";
-  return `<div class="kopru kopru-kapanis"><p><strong>${baslik}</strong></p>` +
+  // Başlık artık cihaza göre DEĞİŞMİYOR — hub kapanışıyla birebir aynı metin.
+  return `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
     `<div class="kopru-cift">` +
       `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="son-kart-servis">📍 Yakınımdaki servisi bul →</a>` +
       `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="son-kart">Tahmini maliyeti ücretsiz öğren →</a>` +
@@ -1248,7 +1259,7 @@ const SERVIS_BTN = (cihazSlug, kaynak) =>
   `<a class="kopru-btn kopru-servis" href="${kapanisHref(cihazSlug, kaynak, true)}" data-kopru="servis-kapanis" data-cagir="cta">📍 Yakınımdaki servisi bul →</a>`;
 
 const BLOG_CTA = (cihazSlug, kaynak) =>
-  `<div class="kopru kopru-kapanis"><p><strong>Cihazın şimdi mi bozuldu?</strong></p>` +
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
   `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
   `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Tahmini maliyeti ücretsiz öğren →</a>` +
   `</div></div>`;
@@ -1774,7 +1785,7 @@ for (const k of kilavuzluKat) {
       robots: kilavuzRobots,
       body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
         .map((m) => kilavuzKarti(k, m))
-        .join("")}</div>${CTA}`,
+        .join("")}</div>${KILAVUZ_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `kilavuz-${k.slug}`)}`,
     })
   );
 }
@@ -1805,7 +1816,7 @@ fs.writeFileSync(
     canonical: `${SITE}/kilavuzlar/`,
     robots: kilavuzRobots,
     genis: true,
-    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${CTA}`,
+    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${KILAVUZ_CTA("", "kilavuz-hub")}`,
   })
 );
 
