@@ -213,6 +213,31 @@ export const HATA_KODU_KATMANI = {
     { giris: "Şarj tutmuyor", tip: "belirti",
       anlam: "Şarjlı modellerde batarya işi; kendin-çöz adımı yayınlamadık." },
   ],
+
+  // ——— SU SEBİLİ / ARITMA (20 Ağu 2026) ———
+  // Yazılar 19 Ağu'da yayına alınmıştı (PR #52) ama /tamir/ blog yazısından DEĞİL bu
+  // dosyadan besleniyor; kayıt açılmadığı için hub'da "İçerik yok" görünüyordu.
+  // `anlam` satırları yazıların KENDİ ilk bölüm başlıklarından türetildi, uydurulmadı.
+  "Su Sebili / Arıtma": [
+    { giris: "Soğuk su vermiyor / üstü buz tutuyor", tip: "belirti",
+      anlam: "Çoğu durumda ayar kademesi düşüktür ya da arka havalandırma kapalıdır; ikisini de kendin kontrol edebilirsin.",
+      yazi: "su-sebili-sogutmuyor" },
+    { giris: "Altında su birikiyor", tip: "belirti",
+      anlam: "En yaygın sebep dolan damlama tepsisi ve tam kapanmayan musluktur; damacananın oturuşunu da kontrol et.",
+      yazi: "su-sebili-altinda-su-birikiyor" },
+    { giris: "Arıtmadan su gelmiyor", tip: "belirti",
+      anlam: "Önce giriş vanasına ve şebeke basıncına bak; tortu filtresi tıkalıysa akış durur.",
+      yazi: "su-aritma-su-gelmiyor" },
+  ],
+  // ——— BİLGİSAYAR / YAZICI (20 Ağu 2026) ———
+  "Bilgisayar / Yazıcı": [
+    { giris: "Yazıcı çevrimdışı görünüyor", tip: "belirti",
+      anlam: "Genellikle yazıcı uykudadır ya da bilgisayar yanlış yazıcıya gönderiyordur; kuyruğu sıfırlamak çoğu vakayı çözer.",
+      yazi: "yazici-cevrimdisi-gorunuyor" },
+    { giris: "Kâğıt çekmiyor", tip: "belirti",
+      anlam: "Kâğıt nemli ya da yapraklar birbirine yapışmış olabilir; tepsi kılavuzlarını ve deste yüksekliğini de kontrol et.",
+      yazi: "yazici-kagit-cekmiyor" },
+  ],
 };
 
 /**
