@@ -1750,8 +1750,16 @@ const KILAVUZ_NOT = `<p class="kat-not"><strong>Kılavuz dosyasını burada bar�
 // Dış link kartı — bizde dosya YOK, kullanıcı üreticinin sayfasına gidiyor. Bunu kart üstünde
 // açıkça yazıyoruz (alan adı görünür) ki tıklamadan önce nereye gittiğini bilsin.
 const kilavuzAlanAdi = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return "resmî sayfa"; } };
+// Kart görseli İNSANSIZ set (Tolga, 20 Ağu: "kılavuzlarda da insansız set olsun").
+// Kılavuz = bilgilendirme içeriği; /tamir/'deki "ayar" kartlarıyla aynı mantık.
+// ⛔ Usta (insanlı) seti BURAYA GİRMEZ — o yalnız /tamir/'in tamir içeriğine ait.
+// Cihazın karesi yoksa eski SVG ikonuna düşer, kart boş kalmaz.
 const kilavuzKarti = (k, m) =>
-  `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow"><div class="card-ic">${iconSvg(k.ad, "")}</div><div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.marka)} ${esc(k.ad.toLocaleLowerCase("tr"))} kullanım kılavuzu</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(kilavuzAlanAdi(m.url))} · üreticinin resmî sayfası ↗</span></div></a>`;
+  `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow">${
+    merkezFotosu(k.slug)
+      ? `<div class="card-ic kapak"><img src="${merkezFotosu(k.slug)}" width="96" height="64" loading="lazy" decoding="async" alt=""></div>`
+      : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`
+  }<div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.marka)} ${esc(k.ad.toLocaleLowerCase("tr"))} kullanım kılavuzu</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(kilavuzAlanAdi(m.url))} · üreticinin resmî sayfası ↗</span></div></a>`;
 
 // ② KATEGORİ SAYFALARI — yalnız kaydı OLAN cihaz için (boş sayfa = thin content, açılmaz).
 const kilavuzluKat = kilavuzKatVeri.filter((k) => k.kayitlar.length);
