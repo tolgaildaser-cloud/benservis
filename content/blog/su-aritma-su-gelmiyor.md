@@ -13,6 +13,8 @@ faq:
     a: "Cihazın tankı doldurmaya çalışıp dolduramadığı anlamına gelir. En yaygın sebepler: giriş basıncının yetersiz olması, tıkalı filtre, tankın hava basıncının düşmesi veya membranın ömrünü tamamlaması. Pompa sesi sürekli geliyor ve su birikmiyorsa cihazı kapatıp servise danış — sürekli çalışma pompaya zarar verir."
   - q: "Filtreyi kendim değiştirebilir miyim?"
     a: "Kartuş değişimi çoğu modelde kullanıcı tarafından yapılabilen bir işlem ve cihazın kendi kullanım kılavuzunda anlatılır. Biz bu sitede parça değişimi için adım adım rehber yayımlamıyoruz — yanlış takılan bir kartuş su kaçağına yol açabiliyor. Bu yazı hangi belirtinin neye işaret ettiğini anlatır; değişimin nasıl yapılacağını cihazının kılavuzundan ya da servisinden öğren."
+images:
+  coverAlt: "Mutfak dolabının içinde tezgâh altına monte edilmiş, beyaz filtre kartuşlu su arıtma ünitesi"
 ---
 
 Mutfaktaki arıtma cihazının musluğunu açıyorsun ve su ya hiç gelmiyor ya da eskisinin yarısı kadar ince akıyor. Bu, ilk bakışta "cihaz bozuldu" gibi görünen ama sebeplerinin önemli bir kısmı **birkaç dakikalık kontrolle** anlaşılan arızalardan biri. Bu yazıda en yaygın nedenleri sırayla, en basitten en teknik olana doğru ele alıyoruz — ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.
