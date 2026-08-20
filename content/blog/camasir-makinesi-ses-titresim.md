@@ -20,7 +20,7 @@ images:
     - "Tamburdaki tek ağır parça ile dağıtılmış yükün karşılaştırıldığı çizim"
     - "Tambur kauçuğunun kıvrımında sıkışmış bozuk para ve telin aranışını gösteren çizim"
     - "Metalik takırtı ile boğuk uğultu sesinin ayrımını gösteren çizim"
-  coverAlt: "Ön yüklemeli çamaşır makinesinin tamburuna renkli havlular yerleştiren bir el"
+  coverAlt: "Kapağı açık çamaşır makinesinin tamburunda tek tarafa yığılmış ıslak havlular"
 ---
 
 Çamaşır makinesi özellikle **santrifüj** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve hangi sesin servis işaret ettiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

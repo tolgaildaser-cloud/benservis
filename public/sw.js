@@ -44,7 +44,9 @@
 // v4 → v5 (20 Ağu): merkez-gorsel/genel + surdurulebilirlik AYNI adla değişti (kavram
 // kartları) ve /merkez-gorsel/ SWR listesinde yoktu → cache-first bayat kare servis
 // ederdi. Yol SWR listesine alındı, sürüm artışı geriye dönük temizliği yapıyor.
-const SURUM = "benservis-v5";
+// v5 → v6 (20 Ağu, Kling dalga 3): camasir-kac-derecede-yikanir + camasir-makinesi-
+// ses-titresim kapakları AYNI adla değişti (kusurlu kareler yenilendi) → 19 Ağu kuralı.
+const SURUM = "benservis-v6";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;

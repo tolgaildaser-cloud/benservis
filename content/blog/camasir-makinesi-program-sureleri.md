@@ -13,6 +13,8 @@ faq:
     a: "En sık üç sebep: makine az köpük/çok köpük algılayıp fazladan durulama ekler, su yavaş geliyordur (kısık musluk ya da tıkalı giriş filtresi), ya da yük dengesizdir ve santrifüj tekrar tekrar denenir. Makinelerin çoğu yükü tartıp süreyi kendisi günceller, bu yüzden ekrandaki ilk süre tahmindir."
   - q: "Program süresi uzadıysa arıza mıdır?"
     a: "Her zaman değil. Ama süre alıştığından belirgin biçimde uzadıysa ve bu her yıkamada tekrarlıyorsa belirti sayılır: su alma yavaşlığı, ısıtma sorunu ya da tahliye tıkanıklığı programı uzatır. Aynı programın bir anda iki katına çıkması normal değildir."
+images:
+  coverAlt: "Önde keskin odaklı bir kum saati, arkada bulanık kapağı açık çamaşır makinesi"
 ---
 
 Makineye çamaşırı attın, ekranda bir süre yazıyor — ama program o sürede bitmiyor. Ya da "pamuklu 60'a atsam kaç saat sürer?" diye merak ediyorsun. Bu yazıda **programların gerçek süre bantlarını**, süreyi uzatan sebepleri ve **süre uzamasının ne zaman arıza belirtisi** olduğunu anlatıyoruz.
