@@ -30,7 +30,8 @@ FIELD_MASK = (
     "places.googleMapsUri,places.regularOpeningHours,nextPageToken"
 )
 
-CITY_DISPLAY = {"istanbul": "İstanbul", "izmir": "İzmir", "ankara": "Ankara"}
+CITY_DISPLAY = {"istanbul": "İstanbul", "izmir": "İzmir", "ankara": "Ankara",
+                "bursa": "Bursa", "adana": "Adana", "eskisehir": "Eskişehir", "trabzon": "Trabzon"}
 CITY_DISTRICTS = {
     "istanbul": ["Adalar","Arnavutköy","Ataşehir","Avcılar","Bağcılar","Bahçelievler","Bakırköy",
         "Başakşehir","Bayrampaşa","Beşiktaş","Beykoz","Beylikdüzü","Beyoğlu","Büyükçekmece","Çatalca",
@@ -44,6 +45,15 @@ CITY_DISTRICTS = {
     "ankara": ["Akyurt","Altındağ","Ayaş","Bala","Beypazarı","Çamlıdere","Çankaya","Çubuk","Elmadağ",
         "Etimesgut","Evren","Gölbaşı","Güdül","Haymana","Kalecik","Kahramankazan","Keçiören",
         "Kızılcahamam","Mamak","Nallıhan","Polatlı","Pursaklar","Sincan","Şereflikoçhisar","Yenimahalle"],
+    # 20 Ağu 2026 (Tolga: "bursa, adana, eskişehir, trabzon da ekleyelim") — 4 yeni il, 64 ilçe.
+    "bursa": ["Büyükorhan","Gemlik","Gürsu","Harmancık","İnegöl","İznik","Karacabey","Keles","Kestel",
+        "Mudanya","Mustafakemalpaşa","Nilüfer","Orhaneli","Orhangazi","Osmangazi","Yenişehir","Yıldırım"],
+    "adana": ["Aladağ","Ceyhan","Çukurova","Feke","İmamoğlu","Karaisalı","Karataş","Kozan","Pozantı",
+        "Saimbeyli","Sarıçam","Seyhan","Tufanbeyli","Yumurtalık","Yüreğir"],
+    "eskisehir": ["Alpu","Beylikova","Çifteler","Günyüzü","Han","İnönü","Mahmudiye","Mihalgazi",
+        "Mihalıççık","Odunpazarı","Sarıcakaya","Seyitgazi","Sivrihisar","Tepebaşı"],
+    "trabzon": ["Akçaabat","Araklı","Arsin","Beşikdüzü","Çarşıbaşı","Çaykara","Dernekpazarı","Düzköy",
+        "Hayrat","Köprübaşı","Maçka","Of","Ortahisar","Sürmene","Şalpazarı","Tonya","Vakfıkebir","Yomra"],
 }
 ALL_CITIES = list(CITY_DISTRICTS.keys())
 CITIES = [c for c in ALL_CITIES if not CITIES_SEL or c in CITIES_SEL]
