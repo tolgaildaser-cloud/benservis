@@ -288,8 +288,10 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             ))}
           </div>
 
+          {/* Güven satırı da site-istatistik.json'dan (20 Ağu, Tolga: "burayı da güncelle");
+              band ile aynı 10.000+ kuralı, SERBİS sayısı da artık sayılıyor (elle 207 değil). */}
           <p style={st.guvenSatiri}>
-            <b style={{ color: "#fff" }}>7.832</b> servis kaydı · <b style={{ color: "#fff" }}>7.286</b> Google puanlı · <b style={{ color: "#fff" }}>207</b> SERBİS'te doğrulanmış · ücretsiz
+            <b style={{ color: "#fff" }}>{IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis)}</b> servis kaydı · <b style={{ color: "#fff" }}>{trSayi(IST.puanli)}</b> Google puanlı · <b style={{ color: "#fff" }}>{trSayi(IST.serbis)}</b> SERBİS'te doğrulanmış · ücretsiz
           </p>
         </div>
       </section>

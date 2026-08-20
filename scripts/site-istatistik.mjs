@@ -12,12 +12,14 @@ const { SEED } = await import("../src/tarife-seed.js");
 const iller = new Set(servisler.map((s) => s.sehir));
 const ilceler = new Set(servisler.map((s) => `${s.sehir}|${s.ilce}`));
 const puanli = servisler.filter((s) => s.puan != null && s.puan !== "").length;
+const serbis = servisler.filter((s) => s.serbis).length;
 const tarife = Object.values(SEED).reduce((n, satirlar) => n + satirlar.length, 0);
 
 const istatistik = {
   aciklama: "ÜRETİLDİ (scripts/site-istatistik.mjs) — elle düzenleme, veri değişince script yeniden koşulur.",
   servis: servisler.length,
   puanli,
+  serbis,
   il: iller.size,
   ilce: ilceler.size,
   tarife,
