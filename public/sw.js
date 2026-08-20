@@ -41,7 +41,10 @@
 // v3 → v4 (19 Ağu): kapak fotoğrafı dalga 1 — 15 kapak AYNI dosya adıyla değişti.
 // Sürüm artmazsa mevcut ziyaretçide hiçbiri değişmez: build ve ölçüm yeşil görünür,
 // canlı eski kalır. (Aynı senaryo v2→v3 notunda da yazılı.)
-const SURUM = "benservis-v4";
+// v4 → v5 (20 Ağu): merkez-gorsel/genel + surdurulebilirlik AYNI adla değişti (kavram
+// kartları) ve /merkez-gorsel/ SWR listesinde yoktu → cache-first bayat kare servis
+// ederdi. Yol SWR listesine alındı, sürüm artışı geriye dönük temizliği yapıyor.
+const SURUM = "benservis-v5";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;
@@ -186,7 +189,7 @@ async function gezinme(request, cachelenir) {
 // SW yeni sürümü hiç görmez. Çözüm stale-while-revalidate: kullanıcı beklemeden
 // cache'ten görür, arka planda tazelenir, BİR SONRAKİ açılışta yeni kare gelir.
 // /assets/* bu listede DEĞİL — orada ad hash'li, içerik asla değişmez.
-const HASHSIZ_SWR = /^\/(anasayfa|tamir-gorsel|ikon|logo)\//;
+const HASHSIZ_SWR = /^\/(anasayfa|tamir-gorsel|merkez-gorsel|ikon|logo)\//;
 
 async function statikSWR(request, cacheAdi) {
   const cache = await caches.open(cacheAdi);
