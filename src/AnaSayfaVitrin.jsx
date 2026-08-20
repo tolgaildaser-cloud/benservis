@@ -9,9 +9,9 @@
 // AÇMAZ — mevcut teşhis formunun `belirti` alanına yazar ve forma indirir.
 //
 // 📊 VİTRİNDEKİ HER SAYI KAYNAĞINDAN OKUNDU (şişirme yasağı, Tolga):
-//   7.832 servis · 7.286 Google puanlı · 96 ilçe · 207 SERBİS  → src/services-data.json
-//   52 onaylı tarife satırı, cihaz başı başlangıç bandı        → src/tarife-seed.js
-//   79 rehber                                                   → content/blog/*.md
+//   band sayıları → src/site-istatistik.json (ÜRETİLİR: scripts/site-istatistik.mjs,
+//   kaynak services-data.json + tarife-seed.js; veri değişince script yeniden koşulur)
+//   79 rehber → content/blog/*.md
 // ⚠️ Backlog'daki "6.475 yetkili servis" ifadesi VİTRİNE ALINMADI: o rakam servis.gov.tr
 // ham CSV'sinden geliyor, bizim dizinimizde 420 "yetkili" kaydı var. Yanlış olurdu.
 import React, { useState, useEffect, useRef } from "react";
@@ -21,6 +21,7 @@ import { CIHAZLAR } from "./constants.js";
 import { heroTahmin } from "./hero-tahmin.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { BLUE, NAVY, BG, HAIR, MUTED, SLATE as FAINT, GREEN, GREEN_TINT, GREEN_DEEP } from "./theme.js";
+import IST from "./site-istatistik.json";
 
 // ⚠️ DÜZELTME (YK #69 cila ①): bu dosya `FAINT` adını #64748B ile tanımlıyordu, oysa
 // külliyatta FAINT = #94A3B8; #64748B'nin adı SLATE. Aynı ad iki farklı tonu gösteriyordu.
@@ -76,11 +77,18 @@ const POPULER = [
   { etiket: "Klima soğutmuyor", cihaz: "Klima" },
 ];
 
+// 20 Ağu 2026 (Tolga): "buraya il de ekleyelim … 10.000+ olarak gösterelim, arkada biz
+// tam sayıyı takip edelim" → band artık src/site-istatistik.json'dan beslenir (üreten:
+// scripts/site-istatistik.mjs — her sayı services-data.json + tarife-seed.js'ten SAYILIR,
+// elle yazılmaz; şişirme yasağı korunur). TAM servis sayısı o dosyada durur; vitrin
+// 10.000'i aşınca "10.000+" yazar, aşmadıkça gerçek sayıyı gösterir.
+const trSayi = (n) => n.toLocaleString("tr-TR");
 const SAYILAR = [
-  { buyuk: "7.832", kucuk: "servis kaydı" },
-  { buyuk: "7.286", kucuk: "Google puanlı" },
-  { buyuk: "96", kucuk: "ilçe" },
-  { buyuk: "52", kucuk: "onaylı tarife kalemi" },
+  { buyuk: IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis), kucuk: "servis kaydı" },
+  { buyuk: trSayi(IST.puanli), kucuk: "Google puanlı" },
+  { buyuk: trSayi(IST.il), kucuk: "il" },
+  { buyuk: trSayi(IST.ilce), kucuk: "ilçe" },
+  { buyuk: trSayi(IST.tarife), kucuk: "onaylı tarife kalemi" },
 ];
 
 // "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. Sürecin üç adımını
