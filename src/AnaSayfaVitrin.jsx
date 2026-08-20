@@ -114,10 +114,10 @@ const SLOGAN = [
 // `foto` doldurulduğu anda placeholder yerine gerçek görsel basılır — başka iş yok.
 const SURDURULEBILIR = {
   href: "/blog/kategori/surdurulebilirlik/",
-  // GRF teslimi 19 Ağu (1200×800): yeşil döngü amblemi — incelen iki şerit ok + ortada
-  // yeşil işaret, altta "benservis" + "Tamir et, kullanmaya devam et." Placeholder
-  // (degrade + döngü motifi) artık basılmıyor, yedek olarak kodda duruyor.
-  foto: "/anasayfa/surdurulebilirlik.webp",
+  // GRF teslimi 20 Ağu (1200×800): orman + elde telefon, ekranda benservis mobil görünümü.
+  // Bilgi Merkezi kavram kartlarıyla AYNI dili konuşuyor (20 Ağu'da amblemler o dile geçti).
+  // 19 Ağu'nun yeşil döngü amblemi arşivde: anasayfa-gorselleri/anasayfa/surdurulebilirlik.webp
+  foto: "/anasayfa/surdurulebilirlik-telefon.webp",
   baslik: "Tamir etmek, yenisini almaktan iyidir",
   // Metin ŞERİT UZUNLUĞUNA çekildi (19 Ağu): şeritler ~100 karakter, bu 168'di ve
   // bloğu iki satır uzatıyordu. "Döngüsel ekonomi" rozetten buraya taşındı.
@@ -645,14 +645,17 @@ const st = {
     background: GREEN_DEEP, color: "#fff", borderRadius: 12,
     padding: "12px 20px", fontSize: "clamp(14.5px, 1.4vw, 16px)", fontWeight: 700,
   },
-  // Görsel yarısı: şeritle aynı minHeight. Amblem FOTOĞRAF DEĞİL marka kilidi →
-  // `cover` kırpar, wordmark'ı keser; bu yüzden `contain` + beyaz zemin (kategori
-  // bandındaki `.hero.amblem` ile aynı gerekçe).
+  // Görsel yarısı: şeritle aynı minHeight VE aynı dolgu dili.
+  // ⚠️ 20 Ağu'da değişti: kare artık amblem (marka kilidi) değil FOTOĞRAF (orman + telefon).
+  // Amblem için `contain` + beyaz zemin + dolgu gerekiyordu — wordmark kırpılmasın diye.
+  // Fotoğrafta bu tam tersini yapıyordu: komşu gezinme şeritleri tam-taşma `cover` iken
+  // bu blok beyaz paspartulu duruyordu. Artık şeritlerle aynı: `cover`, dolgusuz.
+  // Kırpma payı ihmal edilebilir — kare 1200×800 (1,500), alan ~1,515.
   surdurGorselAlan: {
     position: "relative", display: "flex", alignItems: "center", justifyContent: "center",
-    minHeight: "clamp(180px, 22vw, 260px)", overflow: "hidden", background: "#fff",
+    minHeight: "clamp(180px, 22vw, 260px)", overflow: "hidden", background: GREEN_TINT,
   },
-  surdurFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 18, boxSizing: "border-box" },
+  surdurFoto: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" },
   surdurIkon: { width: "clamp(54px, 7vw, 84px)", height: "auto", opacity: 0.85 },
 
   sssListe: { maxWidth: 860, margin: "0 auto" },

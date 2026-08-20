@@ -78,10 +78,10 @@ const iconSvg = (cat, cls) =>
 // `foto` verilirse (kategori sayfalarında `merkezFotosu(k.slug)`) mavi+ikon bant yerine
 // GERÇEK FOTOĞRAF basılır — Tolga, 19 Ağu: "vektörel görsel kalmasın". Kategori adı
 // fotoğrafın üstünde, alta inen koyu perdeyle okunur kalır. Fotoğraf yoksa eski bant aynen.
-// AMBLEM SLUG'LARI — "vektörel kalmasın" kuralının BİLİNÇLİ İSTİSNASI (Tolga, 19 Ağu:
+// KAVRAM KARTI SLUG'LARI — "vektörel kalmasın" kuralının BİLİNÇLİ İSTİSNASI (Tolga, 19 Ağu:
 // *"sürdürülebilirlik ile ilgili logo tadında bir şey olsun"* + *"'genel' olan yerlere de
 // benservis logoyu koyalım"*). Sonraki koşular bunları fotoğrafa çevirmesin.
-const AMBLEM_SLUG = new Set(["genel", "surdurulebilirlik"]);
+const KAVRAM_SLUG = new Set(["genel", "surdurulebilirlik"]);
 
 // `foto` verilirse mavi+ikon bant yerine görsel basılır. İKİ AYRI DİL var:
 //   · FOTOĞRAF (cihaz kareleri) → `cover` + alta inen koyu perde, ad perdenin üstünde.
@@ -89,10 +89,16 @@ const AMBLEM_SLUG = new Set(["genel", "surdurulebilirlik"]);
 //     Gerekçe GRF'nin devir notunda ölçülü: bant 188 px ve `cover`, amblem 900×570 →
 //     amblem ortasından kırpılıyor, wordmark kayboluyor, %78 perde beyaz zemini
 //     çamur griye çeviriyordu. Amblem bir MARKA KİLİDİ, kırpılamaz.
-const heroFor = (cat, varyant = "", foto = null, amblem = false) =>
-  foto
-    ? `<div class="hero ${amblem ? "amblem" : "foto"}"><img src="${foto}" width="900" height="570" loading="lazy" decoding="async" alt=""><span class="hero-cat">${esc(cat || "Rehber")}</span></div>`
-    : `<div class="hero${varyant ? " " + varyant : ""}">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
+const heroFor = (cat, varyant = "", foto = null, kavram = false) => {
+  if (!foto) return `<div class="hero${varyant ? " " + varyant : ""}">${iconSvg(cat, "hero-icon")}<span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
+  // KAVRAM KARTI (genel · sürdürülebilirlik) → `.hero.kapak`: contain, PERDE YOK, açık zemin.
+  // 20 Ağu'da bu iki kare amblemden "elde telefon fotoğrafı"na döndü; bant 188 px + cover +
+  // %78 perde ile DİKEY telefonu ortadan dilimliyordu (GRF simüle etti). Kategori adı
+  // zaten hemen altındaki <h1>'de, o yüzden bu dalda etiket basılmıyor.
+  if (kavram) return `<div class="hero kapak"><img src="${foto}" width="900" height="570" loading="lazy" decoding="async" alt=""></div>`;
+  // CİHAZ kategorisi → `.hero.foto`: cover + alta inen perde, ad perdenin üstünde.
+  return `<div class="hero foto"><img src="${foto}" width="900" height="570" loading="lazy" decoding="async" alt=""><span class="hero-cat">${esc(cat || "Rehber")}</span></div>`;
+};
 
 // iFixit-tarzı rehber meta kutusu (zorluk · süre · maliyet · gerekenler) — frontmatter `guide` varsa.
 function guideMeta(g) {
@@ -171,11 +177,6 @@ main{padding:40px 0 64px}
 .hero.foto::before{display:none}
 .hero.foto::after{content:"";position:absolute;inset:0;right:auto;top:auto;width:100%;height:100%;border-radius:0;background:linear-gradient(180deg,rgba(15,23,42,0) 45%,rgba(15,23,42,.78) 100%)}
 .hero.foto .hero-cat{z-index:2;text-shadow:0 1px 3px rgba(15,23,42,.5)}
-/* AMBLEM bandı: marka kilidi kırpılamaz → contain, perde YOK, açık zemin, ad altta koyu. */
-.hero.amblem{background:${T.SURFACE};border:1px solid ${T.HAIR};gap:10px;padding:14px}
-.hero.amblem::before,.hero.amblem::after{display:none}
-.hero.amblem img{position:relative;width:auto;height:auto;max-width:min(100%,380px);max-height:108px;object-fit:contain}
-.hero.amblem .hero-cat{color:${T.MUTED};text-shadow:none;opacity:1}
 .hero.kapak{height:auto;aspect-ratio:3/2;background:#EFF4FF;padding:0}
 .hero.kapak::before,.hero.kapak::after{display:none}
 .hero.kapak img{width:100%;height:100%;object-fit:contain;display:block}
@@ -414,7 +415,16 @@ const TEETH = [0, 45, 90, 135, 180, 225, 270, 315]
 const LOGO = `<svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="28" fill="${T.BLUE}"/><path d="M60 22C42 22 28 36 28 53c0 22 32 45 32 45s32-23 32-45C92 36 78 22 60 22Z" fill="#fff"/><g fill="${T.BLUE}"><circle cx="60" cy="51" r="15"/>${TEETH}</g><circle cx="60" cy="51" r="6" fill="#fff"/></svg>`;
 const WORDMARK = `<span class="brand-text"><span class="wm"><span class="wm-b">ben</span><span class="wm-s">servis</span></span><span class="brand-motto">Bil, gör, çağır.</span></span>`;
 
-const CTA = `<a class="cta" href="/"><h3>🔧 Arızanı ve tahmini fiyatını saniyede öğren</h3><p>Cihazını ve belirtini seç → tahmini maliyeti gör → yanındaki en yüksek puanlı servisi tek dokunuşla ara.</p><p class="tag">Bil, gör, çağır. →</p></a>`;
+// /kilavuzlar/ kapanışı — 20 Ağu'da SADELEŞTİ. Bu blok sitedeki EN ESKİ kalıntıydı:
+// 19 Ağu'da blog/tamir/yazı kapanışları çift kapıya geçerken kılavuzlar atlanmıştı,
+// 12 sayfa (hub + 11 kategori) hâlâ koca mavi kartla ve TEK kapıyla duruyordu.
+// Artık diğerleriyle birebir aynı: aynı başlık, aynı iki buton, aynı ölçüm etiketleri.
+// `cihazSlug` verilirse cihaz ön-seçili gider; hub'da boş kalır.
+const KILAVUZ_CTA = (cihazSlug, kaynak) =>
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
+  `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Tahmini maliyeti ücretsiz öğren →</a>` +
+  `</div></div>`;
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // YK #67 — TAMİR MERKEZİ → TEŞHİS KÖPRÜSÜ (kurul 4-0, 15 Ağu 2026)
@@ -550,6 +560,11 @@ const KOPRU_SATIRI = (p) => {
 };
 
 // ② SON KART — mevcut jenerik kartın bağlamlı hâli. Metin, bağlam varken cihazı söyler.
+// Kapanış başlığı TEK KAYNAK (Tolga, 20 Ağu: "tüm yazıların en altında bu olmalı").
+// Önce yazı sonu cihaz adını başlığa yazıyordu → 84 yazıda 10 FARKLI başlık oluşmuştu.
+// Bağlam kaybolmuyor: butonların adresleri cihazı ve belirtiyi taşımaya devam ediyor.
+const KAPANIS_BASLIK = "Cihazın şimdi mi bozuldu?";
+
 // ② KAPANIŞ — #68 ②'nin kapanmamış yarısı (Tolga, 15 Ağu: "hem ilk-ekran satırı HEM YAZI SONU").
 // 19 Ağu'da hub kapanışları sadeleşti (BLOG_CTA / TAMIR_CTA) ama yazı sonu koca mavi kart
 // olarak kaldı — ve tek kapısı TEŞHİSTİ. Oysa YK'nın güç metriği "Servis Bul'dan servise
@@ -559,11 +574,8 @@ const KOPRU_SATIRI = (p) => {
 // aynı seri, geçmişle kıyas bozulmaz); servis kapısı YENİ bir etiketle (`son-kart-servis`)
 // ekleniyor, mevcut seriyi kirletmiyor.
 const YAZI_CTA = (p) => {
-  const ad = kopruCihazAdi(p);
-  const baslik = ad
-    ? `${esc(ad.charAt(0).toLocaleUpperCase("tr") + ad.slice(1))} arızanı ve tahmini fiyatını saniyede öğren`
-    : "Arızanı ve tahmini fiyatını saniyede öğren";
-  return `<div class="kopru kopru-kapanis"><p><strong>${baslik}</strong></p>` +
+  // Başlık artık cihaza göre DEĞİŞMİYOR — hub kapanışıyla birebir aynı metin.
+  return `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
     `<div class="kopru-cift">` +
       `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="son-kart-servis">📍 Yakınımdaki servisi bul →</a>` +
       `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="son-kart">Tahmini maliyeti ücretsiz öğren →</a>` +
@@ -1054,8 +1066,12 @@ if (kayanSlug.length) {
 // Dosya adları her iki sette de aynı slug (buzdolabi, camasir-makinesi…), o yüzden
 // ek eşleme tablosu gerekmedi. Insansız kare yoksa ana sayfa karesine düşer, o da
 // yoksa çizgi ikon — hiçbir ara durumda kart boş kalmaz.
-const merkezFotosu = (slug) => {
-  for (const kok of ["merkez-gorsel", "anasayfa/cihaz"]) {
+// `oncelik` verilirse o kök ÖNCE denenir. 20 Ağu (Tolga: "ana sayfa değiştirme sadece
+// tamir merkezi"): /tamir/ artık "Benservis ustası" setini kullanıyor, /blog/ ve
+// /kilavuzlar/ ise insansız sette KALIYOR. Üçü aynı `merkez-gorsel/` kökünü paylaştığı
+// için ayrım kök listesiyle yapıldı — ikinci bir kategori listesi açılmadı.
+const merkezFotosu = (slug, oncelik = []) => {
+  for (const kok of [...oncelik, "merkez-gorsel", "anasayfa/cihaz"]) {
     for (const uz of GORSEL_UZANTILARI) {
       const rel = `${kok}/${slug}.${uz}`;
       if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
@@ -1064,8 +1080,12 @@ const merkezFotosu = (slug) => {
   return null;
 };
 
-const katKapak = (k) => {
-  const foto = merkezFotosu(k.slug);
+// /tamir/ KENDİ SETİNİ kullanır (Tolga, 20 Ağu: "ana sayfa değiştirme sadece tamir
+// merkezi"): "Benservis ustası" kareleri. /blog/ ve /kilavuzlar/ insansız sette KALIR,
+// ana sayfa (`anasayfa/cihaz/`) hiç değişmez. Dosyası olmayan cihaz insansıza düşer.
+const TAMIR_KOK = ["tamir-gorsel/merkez"];
+const katKapak = (k, oncelik = []) => {
+  const foto = merkezFotosu(k.slug, oncelik);
   if (foto) {
     return `<span class="kat-gorsel"><img src="${foto}" width="600" height="380" loading="lazy" decoding="async" alt=""></span>`;
   }
@@ -1091,18 +1111,18 @@ const katIkon = (k) => {
  * kazanır — /tamir/ hub'ında kartın içeriği rehber de olabilir hata kodu da (YK #35).
  * @param items [{ ad, slug, sayi, url, birim?, bosRozet, bosNot }]
  */
-const katIzgarasi = (items, birim) =>
+const katIzgarasi = (items, birim, oncelik = []) =>
   items
     .map((k) =>
       k.sayi
         // ROZET KALDIRILDI (19 Ağu, Tolga: "rozeti de kaldır") — hub kartı ana
         // sayfadaki kartla aynı iskelete iner: görsel + ad, başka satır yok.
         // Sayı bilgisi title'a taşındı: imleçle bekleyen görür, kartı şişirmez.
-        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}" title="${k.sayi} ${esc(k.birim || birim)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></a>`
+        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}" title="${k.sayi} ${esc(k.birim || birim)}">${katKapak(k, oncelik)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></a>`
         // BOŞ KART: rozet ve not gitti ama boş hâl KAYBOLMADI — kart <div>, yani
         // tıklanamaz, ve .katkart.yok görseli grayscale + soluk basıyor. Tam cümle
         // title'da. Kullanıcı boş kategoriye tıklayıp boş sayfaya düşmez.
-        : `<div class="katkart yok" title="${esc(k.bosRozet)} — ${esc(k.bosNot)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></div>`
+        : `<div class="katkart yok" title="${esc(k.bosRozet)} — ${esc(k.bosNot)}">${katKapak(k, oncelik)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></div>`
     )
     .join("");
 
@@ -1240,7 +1260,7 @@ const SERVIS_BTN = (cihazSlug, kaynak) =>
   `<a class="kopru-btn kopru-servis" href="${kapanisHref(cihazSlug, kaynak, true)}" data-kopru="servis-kapanis" data-cagir="cta">📍 Yakınımdaki servisi bul →</a>`;
 
 const BLOG_CTA = (cihazSlug, kaynak) =>
-  `<div class="kopru kopru-kapanis"><p><strong>Cihazın şimdi mi bozuldu?</strong></p>` +
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
   `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
   `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Tahmini maliyeti ücretsiz öğren →</a>` +
   `</div></div>`;
@@ -1281,7 +1301,7 @@ for (const k of blogKatVeri) {
         : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
     })
   );
 }
@@ -1332,7 +1352,7 @@ fs.writeFileSync(
     // indirip 78 yazıyı bir tık derine itmek, /blog/'dan gelen iç linkleri koparır (79 sayfa
     // aramada gösterim alıyor). Izgara = gezinme katmanı, liste = tarama/arama katmanı.
     genis: true,
-    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogCihazKartlari}</div><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0">Konu başlıkları</h2><div class="katlar konu">${blogKonuKartlari}</div><p class="kat-not">Belirli bir cihaza bağlı olmayan yazılar bu iki başlıkta toplanır: mevzuat, enerji ve fatura yazıları <a href="/blog/kategori/genel/">Genel</a>'de; onarım hakkı, cihaz ömrü ve döngüsel ekonomi yazıları <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a>'te.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p><script>${SEARCH_JS}</script>`,
+    body: `<div class="bloghead"><h1>Bilgi Merkezi</h1></div><p class="meta">Arızanı anla, maliyetini öğren — sonra çağır.</p><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${blogCihazKartlari}</div><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:34px 0 0">Konu başlıkları</h2><div class="katlar konu">${blogKonuKartlari}</div><p class="kat-not">Belirli bir cihaza bağlı olmayan yazılar bu iki başlıkta toplanır: mevzuat, enerji ve fatura yazıları <a href="/blog/kategori/genel/">Genel</a>'de; onarım hakkı, cihaz ömrü ve döngüsel ekonomi yazıları <a href="/blog/kategori/surdurulebilirlik/">Sürdürülebilirlik</a>'te.</p><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm yazılar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Yazılarda ara…" aria-label="Bilgi merkezinde ara"></div><div class="bloglist">${cards}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan yazı yok — farklı bir kelime dene.</p>${BLOG_CTA("", "blog-hub")}<script>${SEARCH_JS}</script>`,
   })
 );
 
@@ -1419,9 +1439,17 @@ function fiyatDenetimi(dosyalar) {
 
 // /tamir/ kapanışı — aynı sadeleştirme, ama TEK buton: fiyat/maliyet kelimesi bu ağaçta
 // yasak (YK #35 şart 1), ikinci kapı basılamaz. Zaten istenen de "servis bul butonu standart".
+// /tamir/ kapanışı — 20 Ağu'da diğerleriyle AYNI hâle geldi (Tolga: "tamir merkezini de
+// aynı yap"): aynı başlık, aynı iki kapı.
+// ⛔ TEK FARK ZORUNLU: ikinci kapının metni "Tahmini MALİYETİ…" olamaz — bu ağaçta fiyat
+// kelimesi yasak (YK #35 şart 1) ve build ihlalde DURUYOR. `FIYAT_DESENI` "ücret" i
+// yakalarken "ücretsiz"i bilerek dışarıda bırakıyor (`ücret(?!siz)`), o yüzden kapı
+// "Ücretsiz teşhis et" olarak yazıldı: yapı ve hedef aynı, kelime kurala uygun.
 const TAMIR_CTA = (kaynak, cihazSlug = "") =>
-  `<div class="kopru kopru-kapanis"><p><strong>Kendin çözemiyorsan</strong></p>` +
-  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}</div></div>`;
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
+  `<a class="kopru-btn kopru-teshis" href="${kapanisHref(cihazSlug, kaynak, false)}" data-kopru="teshis-kapanis">Ücretsiz teşhis et →</a>` +
+  `</div></div>`;
 
 // Rehber kartı — kart görseli sözleşmesi `postGorsel` ile ORTAK (19 Ağu'da tek kaynağa
 // indirildi; önce burada ayrı bir kopya vardı ve blog kartları ikonda kalmıştı).
@@ -1467,7 +1495,18 @@ if (baglanmayanRehber.length) {
 // ⛔ Yazının kendi `description`'ı BASILMAZ: o metinler fiyat ifadesi içeriyor, bu katman
 //    fiyatsız (YK #35 şart 1). Kartta `anlam` satırı görünür.
 const girisKarti = (k, g) => {
-  const ikon = g.rehberMeta ? rehberGorsel(g.rehberMeta) : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`;
+  // KART GÖRSELİ — Tolga, 20 Ağu: "tamir ile ilgili ise ilgili insanlı görsel,
+  // bilgilendirme ise insansız". Ayrım kaynaktaki `tip` alanından geliyor, elle liste yok:
+  //   kod · belirti · kendin-çöz rehberi → TAMİR işi   → "Benservis ustası" seti (insanlı)
+  //   ayar                               → BİLGİLENDİRME → insansız set
+  // Not: rehber kartı da artık cihazın usta karesini basıyor; önce yazının kendi kapağını
+  // basıyordu ama o da cihaz karesine çözülüyordu (yani zaten insansızdı) — şimdi kural
+  // içerik tipine göre işliyor. Görsel yoksa eski SVG ikonuna düşer, kart boş kalmaz.
+  const tamirIsi = !!g.rehberMeta || g.tip === "kod" || g.tip === "belirti";
+  const kartFoto = tamirIsi ? merkezFotosu(k.slug, TAMIR_KOK) : merkezFotosu(k.slug);
+  const ikon = kartFoto
+    ? `<div class="card-ic kapak"><img src="${kartFoto}" width="96" height="64" loading="lazy" decoding="async" alt=""></div>`
+    : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`;
   const etiket = g.rehberMeta ? "Kendin çöz" : TIP_ETIKET[g.tip];
   const meta = g.rehberMeta
     ? `${g.rehberMeta.zorluk} · ${g.rehberMeta.sure} · ${g.rehberMeta.adim} adım · Türkçe`
@@ -1521,7 +1560,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
@@ -1536,7 +1575,8 @@ const katKartlari = katIzgarasi(
     ...k, sayi: k.kayitlar.length, url: `/tamir/${k.slug}/`, birim: "giriş",
     bosRozet: "İçerik yok", bosNot: "Bu cihaz için hata kodu ya da belirti sayfası yayınlamadık.",
   })),
-  "giriş"
+  "giriş",
+  TAMIR_KOK
 );
 
 fs.mkdirSync(path.join(DIST, "tamir"), { recursive: true });
@@ -1730,8 +1770,16 @@ const KILAVUZ_NOT = `<p class="kat-not"><strong>Kılavuz dosyasını burada bar�
 // Dış link kartı — bizde dosya YOK, kullanıcı üreticinin sayfasına gidiyor. Bunu kart üstünde
 // açıkça yazıyoruz (alan adı görünür) ki tıklamadan önce nereye gittiğini bilsin.
 const kilavuzAlanAdi = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return "resmî sayfa"; } };
+// Kart görseli İNSANSIZ set (Tolga, 20 Ağu: "kılavuzlarda da insansız set olsun").
+// Kılavuz = bilgilendirme içeriği; /tamir/'deki "ayar" kartlarıyla aynı mantık.
+// ⛔ Usta (insanlı) seti BURAYA GİRMEZ — o yalnız /tamir/'in tamir içeriğine ait.
+// Cihazın karesi yoksa eski SVG ikonuna düşer, kart boş kalmaz.
 const kilavuzKarti = (k, m) =>
-  `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow"><div class="card-ic">${iconSvg(k.ad, "")}</div><div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.marka)} ${esc(k.ad.toLocaleLowerCase("tr"))} kullanım kılavuzu</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(kilavuzAlanAdi(m.url))} · üreticinin resmî sayfası ↗</span></div></a>`;
+  `<a class="card" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer nofollow">${
+    merkezFotosu(k.slug)
+      ? `<div class="card-ic kapak"><img src="${merkezFotosu(k.slug)}" width="96" height="64" loading="lazy" decoding="async" alt=""></div>`
+      : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`
+  }<div class="card-body"><span class="cat">${esc(m.marka)}</span><h2>${esc(m.marka)} ${esc(k.ad.toLocaleLowerCase("tr"))} kullanım kılavuzu</h2><p>${esc(m.ozet || "")}</p><span class="tamir-meta">${esc(kilavuzAlanAdi(m.url))} · üreticinin resmî sayfası ↗</span></div></a>`;
 
 // ② KATEGORİ SAYFALARI — yalnız kaydı OLAN cihaz için (boş sayfa = thin content, açılmaz).
 const kilavuzluKat = kilavuzKatVeri.filter((k) => k.kayitlar.length);
@@ -1744,9 +1792,9 @@ for (const k of kilavuzluKat) {
       desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
-      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
         .map((m) => kilavuzKarti(k, m))
-        .join("")}</div>${CTA}`,
+        .join("")}</div>${KILAVUZ_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `kilavuz-${k.slug}`)}`,
     })
   );
 }
@@ -1777,7 +1825,7 @@ fs.writeFileSync(
     canonical: `${SITE}/kilavuzlar/`,
     robots: kilavuzRobots,
     genis: true,
-    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${CTA}`,
+    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${KILAVUZ_CTA("", "kilavuz-hub")}`,
   })
 );
 
