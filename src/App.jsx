@@ -996,20 +996,21 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
 
           </section>
 
-          {/* ═══ PANEL ④ SONUÇ ═══
-              Form ekranındayken burası her zaman boş: sonuç geldiğinde `adim`
-              "sonuc" olur ve bu blok hiç render edilmez — sonuç ekranı tam
-              genişlikte, bugünkü zengin haliyle açılır. Panel, kullanıcıya
-              "dördüncü adımda ne olacağını" gösteren bir söz. */}
-          <section className="panel panel-sonuc" data-durum={adim === "sonuc" ? "aktif" : "kilitli"}>
-            <div className="panel-bas"><h3>Teşhis &amp; maliyet</h3>{adim !== "sonuc" && <span className="panel-rozet">Adım 4</span>}</div>
-            {adim === "sonuc" ? SONUC_ICERIK : (
-              <p className="panel-bos">
-                <span className="ikon" aria-hidden="true">🔎</span>
-                Teşhis sonucu burada belirecek.<br />Soldaki adımları tamamla.
-              </p>
-            )}
+          {/* ═══ PANEL ④ SONUÇ — YALNIZ SONUÇ GELİNCE ═══
+              Eskiden form aşamasında da basılıyordu: "Teşhis sonucu burada
+              belirecek / Adım 4" yazan boş bir kart. Tolga 20 Ağu'da kaldırttı
+              ("zaten burada göstermiyoruz") — çünkü boş kart bir söz veriyor ama
+              gönderimden sonra ızgara yeniden oranlanıp sayfa başa sarıyor, yani
+              kullanıcı sözün tutulduğu anı o kutuda görmüyor.
+              ⛔ Blok TAMAMEN silinemez: sonuç hâlâ BURADA render ediliyor
+              (`setAdim("sonuc")`, ayrı sayfa yok). Silinseydi teşhis çıktısının
+              basılacağı yer kalmazdı. Bu yüzden koşul render'a alındı. */}
+          {adim === "sonuc" && (
+          <section className="panel panel-sonuc" data-durum="aktif">
+            <div className="panel-bas"><h3>Teşhis &amp; maliyet</h3></div>
+            {SONUC_ICERIK}
           </section>
+          )}
           </div>
 
           {/* ═══ GÖNDERİM BANDI ═══
@@ -1189,7 +1190,10 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    içeriği kadar bırakıyordu — cihaz paneli 690, marka paneli 300 px'di.
    stretch + height:100% ile dördü de en uzuna eşitlenir; iç boşluklar zaten
    aynı (padding 18/16), yani yan ve alt ölçüler de birebir. */
-.paneller { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: stretch; }
+/* Form aşamasında ÜÇ kolon: sonuç paneli artık boş vaat kartı olarak basılmıyor
+   (Tolga, 20 Ağu: "en sağdaki adım 4'ü kaldıralım, zaten burada göstermiyoruz").
+   Sonuç geldiğinde sonuc-modu dördüncü track'i geri açar — aşağıdaki kural. */
+.paneller { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: stretch; }
 .panel {
   position: relative; background: #fff; border: 1px solid #E2E8F0; border-radius: 16px;
   padding: 18px 16px; height: 100%;
@@ -1217,8 +1221,8 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
 .panel[data-durum="aktif"] .panel-rozet { background: #EFF4FF; color: #2563EB; }
 .panel[data-durum="tamam"] .panel-rozet { background: #F0FDF4; color: #15803D; }
 /* Sonuç paneli boşken: ne beklendiğini söyleyen sakin bir yer tutucu. */
-.panel-bos { text-align: center; padding: 26px 8px; color: #94A3B8; font-size: 13px; line-height: 1.6; }
-.panel-bos .ikon { display: block; font-size: 26px; margin-bottom: 10px; opacity: .5; }
+/* .panel-bos kaldırıldı — tek kullanıcısı sonuç panelinin boş vaat kartıydı,
+   o kart 20 Ağu'da kalktı (bkz. PANEL ④ yorumu). Kuralı bırakmak ölü CSS olurdu. */
 
 /* Marka ve cihaz yaşı panelde ALT ALTA (Tolga: "cihaz yaşını markanın altına al
    yer var orada"). Yan yanayken 290 px'lik panelde iki açılır kutu da daralıyor,
