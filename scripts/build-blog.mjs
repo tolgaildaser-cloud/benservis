@@ -1579,6 +1579,15 @@ for (const k of tamirliKat) {
 // Rozet artık "rehber" değil "giriş" sayar: kartın arkasında hata kodu + belirti + ayar +
 // varsa kendi rehberimiz duruyor (YK #35 üç katmanlı düzen).
 // İçeriği olmayan kategoride "yakında" YAZILMAZ (YK #32) — dürüst hâl + ölçülen servis yolu.
+// Hub aramasının süzdüğü liste: 11 cihazın TÜM girişleri tek düzlemde (hata kodu ·
+// belirti · ayar · kendin-çöz). 20 Ağu (Tolga: "aynı şeyi tamir merkezine de yap") —
+// kılavuzlarla aynı gerekçe: girişler kategori sayfalarına dağılmıştı, "E22" arayan
+// kullanıcı cihazları tek tek açmak zorundaydı. Kart metni hata kodunu, belirtiyi ve
+// anlam satırını taşıyor, üçünden de bulunuyor.
+// ⛔ Kart üreteci `girisKarti` AYNEN kullanıldı → /tamir/ fiyat yasağı (YK #35 şart 1)
+// kendiliğinden korunuyor; build denetimi bunu doğruluyor.
+const tumGirisKartlari = katVeri.flatMap((k) => k.kayitlar.map((g) => girisKarti(k, g))).join("");
+
 const katKartlari = katIzgarasi(
   katVeri.map((k) => ({
     ...k, sayi: k.kayitlar.length, url: `/tamir/${k.slug}/`, birim: "giriş",
@@ -1612,7 +1621,7 @@ fs.writeFileSync(
         { name: "Tamir Merkezi", item: `${SITE}/tamir/` },
       ])),
     genis: true,
-    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. <strong>Buradaki adımlar bakım seviyesindedir: temizlik, filtre, kontrol ve ayar.</strong> Parça değişimi ya da cihazı sökmek gereken işleri buraya koymuyoruz — onlar servis işi. Her rehberin başında <strong>gereken malzemeyi</strong> yazıyoruz.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><p class="kat-not"><strong>Soluk görünen</strong> cihazlarda henüz yayınlanmış hata kodu ya da belirti sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}`,
+    body: `<div class="bloghead"><h1>Tamir Merkezi</h1></div><p class="meta">Hata kodun mu var, belirtin mi? Önce ne olduğunu öğren — sonra çağır.</p><blockquote><p><strong>Üç adım:</strong> elindeki <strong>hata kodundan</strong> ya da <strong>belirtiden</strong> gir → ne demek olduğunu oku → kendin güvenle yapabileceğin bir adım varsa dene. <strong>Buradaki adımlar bakım seviyesindedir: temizlik, filtre, kontrol ve ayar.</strong> Parça değişimi ya da cihazı sökmek gereken işleri buraya koymuyoruz — onlar servis işi. Her rehberin başında <strong>gereken malzemeyi</strong> yazıyoruz.</p></blockquote><h2 class="katbaslik">Cihazını seç</h2><div class="katlar">${katKartlari}</div><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm girişler</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Hata kodu, belirti ya da cihaz ara…" aria-label="Tamir Merkezinde ara"></div><div class="bloglist">${tumGirisKartlari}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan giriş yok — hata kodunu ya da belirtiyi farklı yaz.</p><p class="kat-not"><strong>Soluk görünen</strong> cihazlarda henüz yayınlanmış hata kodu ya da belirti sayfamız yok — <a href="${cagirHref("tamir-hub")}" data-cagir="bos-kategori">yakınındaki servisi bul →</a></p>${TAMIR_CTA("tamir-hub")}${CAGIR_JS("tamir-hub")}<script>${SEARCH_JS}</script>`,
   })
 );
 basilanTamir.push(tamirHub);
@@ -1821,9 +1830,23 @@ const kilavuzKartlari = katIzgarasi(
 // Hub açılış bloğu — sayfa doluysa ne yaptığımızı, boşsa boş olduğunu DÜRÜSTÇE yazar
 // ("yakında" yok). Marka sayısı listeden hesaplanır, elle güncellenmez.
 const kilavuzMarkaSayisi = new Set(KILAVUZLAR.map((m) => m.marka)).size;
+// ⛔ 20 Ağu (Tolga: "bu yazıyı sil buraya arama kolonu koyalım, çok kılavuz var tek tek
+// bakılmasın"): hub'daki tanıtım paragrafı KALDIRILDI, yerine ARAMA + TAM LİSTE geldi.
+// Asıl sorun paragraf değildi: 121 kılavuz 11 kategori sayfasına dağılmıştı, hub'da hiç
+// kılavuz yoktu → kullanıcı markasını bulmak için kategorileri tek tek açmak zorundaydı.
+// Artık tüm kılavuzlar hub'da ve marka/cihaz adına göre anında süzülüyor.
+// Arama motoru YENİDEN YAZILMADI — /blog/ hub'ının `SEARCH_JS`'i aynı seçicilerle
+// (`#blogSearch` · `.bloglist .card` · `#blogBos`) burada da çalışıyor.
 const KILAVUZ_GIRIS = KILAVUZLAR.length
-  ? `<blockquote><p><strong>${kilavuzMarkaSayisi} markanın resmî kullanım kılavuzu sayfası burada toplandı.</strong> Cihaz grubunu seç, markanı bul, üreticinin kendi sayfasında modelini arat. Her adres yayına girmeden önce tek tek denendi; çalışmayan link listeye alınmadı.</p></blockquote>`
+  ? ""
   : `<blockquote><p><strong>Bu sayfa henüz kılavuz linki içermiyor.</strong> Doldurmaya başladığımızda her cihaz grubunun altında markaların <strong>resmî kullanım kılavuzu sayfalarına</strong> giden linkler olacak — üreticinin kendi sitesindeki kılavuza, Türkçe tek satırlık &quot;bu kılavuzda ne var&quot; özetiyle.</p></blockquote>`;
+
+// Hub aramasının süzdüğü liste: 11 kategorinin TÜM kılavuzları tek düzlemde.
+// Kart metni hem markayı hem cihaz grubunu içeriyor (`kilavuzKarti`), o yüzden
+// "Arçelik" de "klima" da aynı kutudan bulunuyor.
+const tumKilavuzKartlari = kilavuzluKat
+  .flatMap((k) => k.kayitlar.map((m) => kilavuzKarti(k, m)))
+  .join("");
 
 fs.mkdirSync(path.join(DIST, "kilavuzlar"), { recursive: true });
 fs.writeFileSync(
@@ -1834,7 +1857,7 @@ fs.writeFileSync(
     canonical: `${SITE}/kilavuzlar/`,
     robots: kilavuzRobots,
     genis: true,
-    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div>${KILAVUZ_NOT}${KILAVUZ_CTA("", "kilavuz-hub")}`,
+    body: `<a class="geri" href="/">← Ana sayfa</a><div class="bloghead"><h1>Kullanım Kılavuzları</h1></div><p class="meta">Cihazının kılavuzunu üreticinin kendi sayfasında bul.</p>${KILAVUZ_GIRIS}<h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:30px 0 0">Cihazını seç</h2><div class="katlar">${kilavuzKartlari}</div><div class="bloghead" style="margin-top:38px"><h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0">Tüm kılavuzlar</h2><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="Marka ya da cihaz ara…" aria-label="Kullanım kılavuzlarında ara"></div><div class="bloglist">${tumKilavuzKartlari}</div><p id="blogBos" class="blogbos" style="display:none">Aramanı karşılayan kılavuz yok — marka adını ya da cihaz grubunu dene.</p>${KILAVUZ_NOT}${KILAVUZ_CTA("", "kilavuz-hub")}<script>${SEARCH_JS}</script>`,
   })
 );
 
