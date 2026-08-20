@@ -1054,8 +1054,12 @@ if (kayanSlug.length) {
 // Dosya adları her iki sette de aynı slug (buzdolabi, camasir-makinesi…), o yüzden
 // ek eşleme tablosu gerekmedi. Insansız kare yoksa ana sayfa karesine düşer, o da
 // yoksa çizgi ikon — hiçbir ara durumda kart boş kalmaz.
-const merkezFotosu = (slug) => {
-  for (const kok of ["merkez-gorsel", "anasayfa/cihaz"]) {
+// `oncelik` verilirse o kök ÖNCE denenir. 20 Ağu (Tolga: "ana sayfa değiştirme sadece
+// tamir merkezi"): /tamir/ artık "Benservis ustası" setini kullanıyor, /blog/ ve
+// /kilavuzlar/ ise insansız sette KALIYOR. Üçü aynı `merkez-gorsel/` kökünü paylaştığı
+// için ayrım kök listesiyle yapıldı — ikinci bir kategori listesi açılmadı.
+const merkezFotosu = (slug, oncelik = []) => {
+  for (const kok of [...oncelik, "merkez-gorsel", "anasayfa/cihaz"]) {
     for (const uz of GORSEL_UZANTILARI) {
       const rel = `${kok}/${slug}.${uz}`;
       if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
@@ -1064,8 +1068,12 @@ const merkezFotosu = (slug) => {
   return null;
 };
 
-const katKapak = (k) => {
-  const foto = merkezFotosu(k.slug);
+// /tamir/ KENDİ SETİNİ kullanır (Tolga, 20 Ağu: "ana sayfa değiştirme sadece tamir
+// merkezi"): "Benservis ustası" kareleri. /blog/ ve /kilavuzlar/ insansız sette KALIR,
+// ana sayfa (`anasayfa/cihaz/`) hiç değişmez. Dosyası olmayan cihaz insansıza düşer.
+const TAMIR_KOK = ["tamir-gorsel/merkez"];
+const katKapak = (k, oncelik = []) => {
+  const foto = merkezFotosu(k.slug, oncelik);
   if (foto) {
     return `<span class="kat-gorsel"><img src="${foto}" width="600" height="380" loading="lazy" decoding="async" alt=""></span>`;
   }
@@ -1091,18 +1099,18 @@ const katIkon = (k) => {
  * kazanır — /tamir/ hub'ında kartın içeriği rehber de olabilir hata kodu da (YK #35).
  * @param items [{ ad, slug, sayi, url, birim?, bosRozet, bosNot }]
  */
-const katIzgarasi = (items, birim) =>
+const katIzgarasi = (items, birim, oncelik = []) =>
   items
     .map((k) =>
       k.sayi
         // ROZET KALDIRILDI (19 Ağu, Tolga: "rozeti de kaldır") — hub kartı ana
         // sayfadaki kartla aynı iskelete iner: görsel + ad, başka satır yok.
         // Sayı bilgisi title'a taşındı: imleçle bekleyen görür, kartı şişirmez.
-        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}" title="${k.sayi} ${esc(k.birim || birim)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></a>`
+        ? `<a class="katkart${k.yesil ? " yesil" : ""}" href="${k.url}" title="${k.sayi} ${esc(k.birim || birim)}">${katKapak(k, oncelik)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></a>`
         // BOŞ KART: rozet ve not gitti ama boş hâl KAYBOLMADI — kart <div>, yani
         // tıklanamaz, ve .katkart.yok görseli grayscale + soluk basıyor. Tam cümle
         // title'da. Kullanıcı boş kategoriye tıklayıp boş sayfaya düşmez.
-        : `<div class="katkart yok" title="${esc(k.bosRozet)} — ${esc(k.bosNot)}">${katKapak(k)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></div>`
+        : `<div class="katkart yok" title="${esc(k.bosRozet)} — ${esc(k.bosNot)}">${katKapak(k, oncelik)}<span class="kat-govde"><h2>${esc(k.ad)}</h2></span></div>`
     )
     .join("");
 
@@ -1521,7 +1529,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), AMBLEM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
@@ -1536,7 +1544,8 @@ const katKartlari = katIzgarasi(
     ...k, sayi: k.kayitlar.length, url: `/tamir/${k.slug}/`, birim: "giriş",
     bosRozet: "İçerik yok", bosNot: "Bu cihaz için hata kodu ya da belirti sayfası yayınlamadık.",
   })),
-  "giriş"
+  "giriş",
+  TAMIR_KOK
 );
 
 fs.mkdirSync(path.join(DIST, "tamir"), { recursive: true });
