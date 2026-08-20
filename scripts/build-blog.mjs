@@ -119,6 +119,19 @@ const FONT_LINK =
   `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
   `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">`;
 
+// YK #78 — GA4 çerezsiz "consent mode". SPA'nın `index.html`'indeki blokla BİREBİR aynı
+// olmalı; ayrışırsa ölçüm iki ayrı davranışa böler.
+// ⚠️ Blogun kapsam DIŞI bırakılması ölçümü anlamsız kılardı: #78'in gerekçesi "sosyal→site
+// zinciri ilk kez ölçülür olsun" ve o zincirin varış noktası tam olarak bu sayfalar
+// (19 Ağu Shorts'u 390 izlenme aldı, hedefi bir blog yazısıydı). Karar metni yalnız
+// `index.html` diyor çünkü SPA kabuğu kastediliyordu; kapsam yorumu backlog'a yazıldı.
+// SIRA ŞART: consent default satırı gtag.js'ten ÖNCE çalışır, yoksa `_ga` çerezi yazılır.
+const GA4 =
+  `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
+  `gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});` +
+  `gtag('js',new Date());gtag('config','G-72D2B9S05R');</script>` +
+  `<script async src="https://www.googletagmanager.com/gtag/js?id=G-72D2B9S05R"></script>`;
+
 // YK #69 koşu 1/cila ② — font @import'u CSS'ten çıkıp <head>'e taşındı (bkz. FONT_LINK).
 // CSS içindeki @import, stil dosyası okunana kadar beklediği için font isteğini bir tur
 // geciktiriyordu; <head>'deki preconnect + <link> ilk taramada başlar.
@@ -636,6 +649,7 @@ function page({ title, desc, canonical, head = "", body, robots = "", image = ""
 <meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">${image ? `\n<meta property="og:image" content="${esc(image)}"><meta name="twitter:image" content="${esc(image)}">` : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+${GA4}
 ${FONT_LINK}
 <!-- PWA (YK #26): blog aramadan gelen ilk temas — manifest + SW burada da olmalı, yoksa
      yalnız ana sayfaya girenler uygulamayı kurabilir. Push YOK. -->
@@ -1933,6 +1947,7 @@ const GIZLILIK_GOVDE = `<article>
 
 <h2>Çerezler ve yerel depolama</h2>
 <p>Reklam veya takip çerezi kullanmıyoruz. Sitenin çalışması için tarayıcınızda <strong>yerel depolama</strong> ve <strong>service worker önbelleği</strong> kullanılır (ör. sayfaların çevrimdışı açılabilmesi). Bu önbellekte <strong>konum bilgisi ve kişisel veri tutulmaz</strong>; ikinci el sayfaları önbelleğe hiç alınmaz. Ziyaret istatistikleri, kişi bazlı olmayan ve çerez kullanmayan bir ölçümle (Vercel) toplanır.</p>
+<p>Sitede Google Analytics 4, çerez kullanmayan &quot;consent mode&quot; yapılandırmasıyla çalışır: tarayıcınıza analitik çerezi yazılmaz, ölçüm anonimleştirilmiş sayfa görüntüleme sinyalleriyle yapılır.</p>
 
 <h2>Güvenlik</h2>
 <p>Veritabanımızda satır düzeyi erişim kısıtlaması (RLS) açıktır; kayıtlara yalnızca yetkili sunucu tarafı erişebilir. Genel uçlarda istek sınırlaması uygulanır. Yönetim panelleri belirteçle (token) korunur.</p>

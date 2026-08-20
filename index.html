@@ -7,6 +7,25 @@
     <meta name="description" content="Cihazın mı bozuldu? Benservis ile olası arızayı ve tahmini tamir maliyetini saniyede öğren, yanındaki en yüksek puanlı servisi bul. Bil, gör, çağır." />
     <link rel="canonical" href="https://www.benservis.com/" />
     <meta name="theme-color" content="#2563EB" />
+    <!-- YK #78 — GA4, ÇEREZSİZ "consent mode" (default-denied) ile bağlı.
+         SIRA ŞART: consent default satırı gtag.js'ten ÖNCE çalışmalı; sonra
+         çalışırsa etiket bir an rıza verilmiş sayar ve `_ga` çerezini yazar.
+         Dört izin de KALICI `denied` — rıza banner'ı AÇILMAZ (YK #78 kararı),
+         ölçüm anonim ping'lerle akar, tarayıcıya çerez yazılmaz.
+         ⛔ Kabul ölçütü: canlıda `document.cookie` içinde `_ga` OLMAYACAK. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-72D2B9S05R');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72D2B9S05R"></script>
     <!-- YK #69 koşu 1/cila ② — FONT İSTEĞİ ARTIK HTML'DEN BAŞLIYOR.
          Önce fontlar JS içindeki `<style>{FONT}` bloğuna gömülü bir @import'tu:
          tarayıcı fontu ancak bundle inip React render ettikten SONRA keşfediyordu
