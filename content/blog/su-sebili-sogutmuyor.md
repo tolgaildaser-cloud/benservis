@@ -13,6 +13,8 @@ faq:
     a: "Fişi çek, damacanayı al ve cihazın kendiliğinden çözülmesini bekle. Buzu bıçak, tornavida ya da sivri bir aletle kırmaya çalışma — iç hazne ince malzemedir, delinirse tamir değil komple değişim gerektiren bir hasara döner. Buz çözüldükten sonra tekrar takıp izle; kısa sürede yeniden buz tutuyorsa ayar ya da termostat tarafında iş var demektir."
   - q: "Sıcak su geliyor ama soğuk gelmiyor, cihaz tamamen mi bozuldu?"
     a: "Hayır. Sebilde sıcak ve soğuk taraflar birbirinden bağımsız çalışır: sıcak taraf bir rezistansla, soğuk taraf ayrı bir soğutma düzeneğiyle. Birinin çalışıp diğerinin çalışmaması, arızanın yalnız o tarafta olduğunu gösterir — bu, servise gitmeden önce bilinmesi işi kolaylaştıran bir ayrımdır."
+images:
+  coverAlt: "Ahşap mutfak dolaplarının yanında duran, üstünde mavi damacana bulunan beyaz su sebili"
 ---
 
 Bardağı dolduruyorsun ve gelen su soğuk değil, ılık. Ya da tam tersi: iç hazneye baktığında buz tabakası görüyorsun ve su artık ince akıyor. Bu iki şikâyet birbirinin zıddı gibi görünse de aynı düzeneğin iki ucudur, ve ikisinde de **cihazın içine hiç girmeden** yapılabilecek birkaç kontrol var. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

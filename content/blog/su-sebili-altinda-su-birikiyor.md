@@ -13,6 +13,8 @@ faq:
     a: "Tepsi normalde yalnız bardak doldururken sıçrayan birkaç damlayı toplar; haftalarca dolmaması beklenir. Günler içinde doluyorsa tepsi dolduğu için değil, üst tarafta sürekli bir damlama olduğu için doluyordur — yani tepsi belirtiyi gösteriyor, sebebi değil. Musluğun tam kapanıp kapanmadığına bak."
   - q: "Sızdıran contayı kendim değiştirebilir miyim?"
     a: "Biz bu sitede parça değişimi için adım adım rehber yayımlamıyoruz. Sebilde sızıntının kaynağı çoğu zaman iç hattaki bir conta ya da hortum bağlantısıdır ve bunlara ulaşmak cihazın gövdesini açmayı gerektirir — üstelik açılan gövdenin içinde elektrik aksamı da vardır. Bu yazı hangi belirtinin neye işaret ettiğini anlatır; gövde içi işler servise bırakılır."
+images:
+  coverAlt: "Beyaz su sebilinin alt bölümü ve zemin fayanslarında birikmiş su"
 ---
 
 Sebilin altındaki zemin sabah kalktığında ıslak. Sildin, akşam yine ıslak. Bu, kullanıcıların en çok karşılaştığı sebil şikâyetlerinden biri ve iyi haber şu: sebeplerin önemli bir kısmı **cihazın içine hiç girmeden**, birkaç dakikada anlaşılıyor. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.
