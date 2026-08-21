@@ -26,6 +26,8 @@ faq:
     a: "En sık atlanan sebep hortum girişindeki küçük süzgecin kireç ve tortuyla tıkanmasıdır; su gelir ama makinenin istediği hızda gelemez. İkinci aday, hortumun mobilya arkasında ezilmiş olmasıdır. Bu ikisi de temizse ve şebeke basıncı normalse şüphe makinenin su giriş valfine kayar — orası servis işidir."
   - q: "E10 sürekli tekrarlıyorsa hangi parçalar sorumlu olabilir?"
     a: "Dış kontroller temiz olduğu hâlde tekrarlayan E10'da başlıca adaylar su giriş valfi, su seviyesini ölçen sensör ve bunları yöneten elektronik karttır. Bu parçaların hepsi gövdenin içindedir ve teşhisi ölçü aletiyle yapılır; kullanıcı tarafında denenecek bir şey kalmamıştır. Belirtiyi not edip servise aktarmak en hızlı yoldur."
+images:
+  coverAlt: "Fayans duvardaki krom musluğa bağlı beyaz çamaşır makinesi su giriş hortumu"
 ---
 
 Programı başlattın, makine birkaç saniye sessiz bekledi, sonra durdu ve ekranda **E10** belirdi. Tambur kuru, yıkama hiç başlamamış. E10, Beko çamaşır makinelerinde **su alamama** demektir: makine su istedi, ama beklediği sürede istediği seviyeye ulaşamadı. İyi haber şu ki bu hatanın en yaygın sebepleri makinenin içinde değil dışındadır — musluk, hortum ve süzgeç üçgeninde. Bu rehberde evde güvenle yapabileceğin kontrolleri sırayla anlatıyoruz ve işin nerede servise devrolduğunu açıkça söylüyoruz.

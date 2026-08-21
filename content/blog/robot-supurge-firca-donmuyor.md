@@ -13,6 +13,8 @@ faq:
     a: "Önce fırçayı elinle çevir: takılmadan, serbest dönüyor mu? Dönüyorsa fırçanın iki ucundaki yatak bölgesini ve fırça yuvasının içini de kontrol et; dolanma bazen uçlardaki kapakların altında gizlenir. Yuva temiz olduğu hâlde uyarı sürüyorsa robotu kapatıp açarak sıfırla; uyarı yine tekrarlıyorsa sorun fırçayı döndüren mekanizmadadır ve servise anlatılacak net bir belirtidir."
   - q: "Fırça motorunun arızalandığını nasıl anlarım?"
     a: "En net işaret şudur: fırça elle çevrildiğinde serbestçe dönüyor, yuva ve uçlar tertemiz, ama robot çalışınca fırça yine hareket etmiyor ya da cihaz aynı uyarıyı vermeye devam ediyor. Bu tablo dolanma değil, fırçayı döndüren motor ya da aktarma tarafını işaret eder. O bölüm gövdenin içindedir ve kullanıcı müdahale alanı değildir; doğru adres servistir."
+images:
+  coverAlt: "Yan yatırılmış robot süpürgenin alt yüzeyi ve yan fırçaları"
 ---
 
 Robot süpürge odayı geziyor, sesi her zamanki gibi, ama arkasında bıraktığı ize bakınca iş yapmadığı belli: kırıntılar yerinde duruyor. Ya da cihaz temizliğin ortasında durup fırça uyarısı veriyor. "Fırça dönmüyor" şikâyeti kulağa motor arızası gibi gelir ama gerçekte vakaların büyük çoğunluğunun sebebi çok daha sıradandır: fırçaya dolanan saç ve ip. İyi haber şu ki bu işin temizlik kısmı tamamen kullanıcı seviyesindedir — alet gerektirmez, gövde açılmaz. Basitten teknike gidelim.

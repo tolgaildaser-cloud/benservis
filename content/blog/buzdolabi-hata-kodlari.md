@@ -13,6 +13,8 @@ faq:
     a: "Hayır, gelmez. E1 kodu bir markada sensör hatasıyken başka bir markada bambaşka bir şeyi işaret edebilir; hatta aynı markanın farklı model ailelerinde bile tablo değişir. Bu yüzden kesin karşılık için cihazın kendi kullanım kılavuzuna bakmak her zaman en güvenilir yoldur."
   - q: "Kodu resetleyince sorun çözülmüş olur mu?"
     a: "Reset kodu siler ama arızayı tamir etmez. Kod bir daha gelmiyorsa büyük ihtimalle geçici bir elektronik takılmaydı ve sorun yoktur. Kısa aralıklarla tekrar geliyorsa cihaz sana ısrarla aynı şeyi söylüyor demektir; bu durumda resetlemeye devam etmek yalnızca teşhisi geciktirir."
+images:
+  coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"
 ---
 
 Akşam buzdolabından su alacaksın, panelde sıcaklık yerine E harfli bir kod yanıp sönüyor. İçeride üç günlük yemek var, cihaz ses çıkarıyor ama soğutup soğutmadığından emin değilsin. İlk refleks panik ya da hemen servis aramak oluyor; oysa kodların çoğu "cihaz bozuldu" değil, "şu parçamdan doğru veri alamıyorum" mesajıdır. Bu yazıda kod mantığını, Türkiye'de en yaygın iki markanın doğrulanmış kodlarını ve hangi noktadan sonra işin servise kaldığını anlatıyoruz.

@@ -13,6 +13,8 @@ faq:
     a: "Batarya ömrü yıla değil şarj döngüsüne bağlıdır; tipik kullanımda birkaç yıl sonra kapasitenin hissedilir şekilde düşmesi normaldir. Sürekli fişte ve sıcak ortamda çalışmak bu süreyi kısaltır. Batarya sağlığını Windows'un ürettiği batarya raporundan ya da üreticinin uygulamasından görebilirsin."
   - q: "Şarj ucu oynuyor, kendim sıkabilir miyim?"
     a: "Hayır. Şarj soketi anakarta lehimli ya da ayrı bir kartla bağlı bir parçadır; gevşekliği dışarıdan sıkılacak bir vida değildir. Fişi zorlayarak açıyı tutturmaya çalışmak soketi daha çok yıprattığı gibi kısa devre riski de doğurur. Soket gevşekliği net bir servis işidir."
+images:
+  coverAlt: "Ahşap masada kapalı duran dizüstü bilgisayar ve yan porta takılı şarj kablosu"
 ---
 
 Akşam laptopu fişe taktın, sabah kalktığında pil hâlâ %15. Ya da ekranın köşesinde o tanıdık yazı: **"takılı, şarj olmuyor"**. İlk akla gelen "batarya bitti, cihaz elden gitti" olur ama gerçek çoğu zaman çok daha basittir: sorun ya prizde, ya kabloda, ya da hiç arıza olmayan bir **yazılım ayarında**dır. Bu yazıda dışarıdan içeriye doğru eleyerek gidiyoruz; hiçbir adımda cihazın kapağını açmıyoruz.

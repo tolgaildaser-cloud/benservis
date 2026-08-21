@@ -13,6 +13,8 @@ faq:
     a: "İki kod bu bölgeyi işaret eder: E03 suyu ısıtan rezistans tarafındaki arızayı, E06 ise sıcaklığı ölçen NTC sensörünün arızasını gösterir. İkisinde de belirti benzerdir: bulaşıklar soğuk yıkanır, yağlı çıkar, kurutma zayıflar. Her iki kodda da parça gövde içindedir ve teşhis ölçü aletiyle yapılır; bu bölge kullanıcıya değil servise aittir."
   - q: "Hata kodunu sildim, makine çalıştı — servise yine de gerek var mı?"
     a: "Kodun ne olduğuna bağlı. E02 gibi dış sebepli uyarılar, sebep ortadan kalkınca gerçekten biter. Ama E01 gibi güvenlik kodları ve E03, E05, E06 gibi parça kodları tekrar geldiyse, kod silmek sorunu değil yalnızca ekranı temizler. Aynı kod üçüncü kez geldiğinde artık deneme yapmayı bırakıp belirtiyi not ederek servisle konuşmak en doğrusudur."
+images:
+  coverAlt: "Ahşap tezgâh altındaki bulaşık makinesinin açık kapağındaki kumanda şeridi"
 ---
 
 Akşam yemeğinin ardından makineyi doldurdun, programı başlattın; bir süre sonra makine sustu ve panelde E ile başlayan bir kod belirdi. Beko bulaşık makinelerinde bu kodlar makinenin kendi kendine koyduğu teşhistir: hangi bölgede sorun olduğunu söyler. Bu yazıda yaygın serilerde görülen E01-E06 kodlarını tek tek ele alıyoruz — her kodda önce ne anlama geldiğini, sonra evde neye bakabileceğini, en sonda da işin nerede servise geçtiğini bulacaksın.
