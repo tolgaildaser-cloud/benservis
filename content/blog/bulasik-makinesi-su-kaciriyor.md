@@ -13,6 +13,8 @@ faq:
     a: "Contayı silmek, temizlemek ve yıprandığını tespit etmek kullanıcı işidir; değişimi ise modele göre değişir ve yanlış oturan bir conta sızıntıyı çözmek yerine büyütür. Contanın sertleştiğini, çatladığını ya da yer yer koptuğunu görüyorsan bunu servise belirti olarak söyle — hangi noktadan sızdığını tarif etmen işi ciddi hızlandırır."
   - q: "Su bir kere sızdı, sonra kesildi — sorun kendi kendine geçmiş olabilir mi?"
     a: "Nadiren. Tek seferlik taşma bazen yanlış deterjandan kaynaklanan köpükten olur ve tekrarlamaz; ama conta, hortum ya da iç bağlantı kaynaklı sızıntılar tipik olarak aralıklı başlar ve zamanla sıklaşır. Bir kez su gördüysen sonraki birkaç yıkamada makinenin altını bilinçli olarak kontrol et; ikinci kez tekrarlarsa kaynağı ciddiye al."
+images:
+  coverAlt: "Mutfakta ahşap tezgâh altına yerleşik bulaşık makinesi"
 ---
 
 Yıkama bitmiş, mutfağa giriyorsun ve makinenin önünde ya da altında bir su birikintisi seni karşılıyor. İlk refleks paspası kapıp silmek — ama suyun **nereden** geldiğini anlamadan silmek, aynı manzarayı birkaç gün sonra yeniden görmek demek. Bu yazıda sızıntının en sık görülen sebeplerini basitten teknike doğru sıralıyoruz: hangilerine kendin bakabilirsin, hangi noktadan sonra iş servise kalır.

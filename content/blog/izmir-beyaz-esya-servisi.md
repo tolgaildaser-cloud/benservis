@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'te cihazını ve belirtini seçersin, tahmini maliyeti görürsün; sonra İzmir'deki yüksek puanlı servisleri listeleyip tek dokunuşla ararsın. Artık İzmir servisleri de benservis'te listeleniyor."
   - q: "Garantili cihazda ne yapmalıyım?"
     a: "Garanti süresi dolmamışsa önce yetkili servisi ara; garanti kapsamındaki arızada ücret ödemezsin. Garanti bittiyse puanı ve tahmini fiyatı iyi olan özel servis de gayet mantıklı bir tercihtir."
+images:
+  coverAlt: "Bir evde duvara monte klima iç ünitesi"
 ---
 
 Ağustos sıcağında Karşıyaka'daki evde klima öğlen saatinde soğutmayı bıraktı; ya da Bornova'da buzdolabı, tam pazar alışverişi doldurulmuşken sessizce durdu. İzmir'de cihaz arızası çoğu zaman en sıcak, en yoğun günde gelir ve "kimi çağırsam, ne kadar tutar?" sorusu telaşla birleşir. Telaşla seçilen servis ise genelde en pahalı seçimdir. Bu rehberde güvenilir servisi nasıl ayırt edeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

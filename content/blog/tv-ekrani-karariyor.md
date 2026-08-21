@@ -13,6 +13,8 @@ faq:
     a: "Arka aydınlatma LED'leri kullanım saatiyle birlikte yavaşça parlaklık kaybeder; yıllar içinde fark edilen sönükleşme bu yaşlanmanın doğal sonucudur. Ayarlarla bir miktar telafi edilir ama kaynağın kendisi zayıflamıştır. Belirgin rahatsızlık noktasına geldiyse aydınlatma tarafı için servisle konuşmak gerekir."
   - q: "Ekran kararıp ses devam ediyorsa bu da aynı sorun mu?"
     a: "Hayır, o farklı bir tablo. Işığın azalması ile görüntünün tamamen gitmesi ayrı belirtilerdir; ekran kapkara kalıp ses sürüyorsa fener testiyle aydınlatma-panel ayrımı yapılır. O durumun kontrol sırası ayrı yazımızda adım adım anlatılıyor."
+images:
+  coverAlt: "Oturma odasında ekranı kapalı televizyon"
 ---
 
 Film izlerken ekran gözle görülür biçimde sönükleşiyor; bazen birkaç saniye sonra eski parlaklığına dönüyor, bazen loş kalıyor. İlk akla gelen "televizyon bitiyor" olsa da, kendiliğinden kararan ekranın en yaygın sebepleri arıza bile değildir: **güç tasarrufu ayarları** ve **ortam ışığı sensörü**, kullanıcıya sorulmadan parlaklıkla oynayan iki gizli eldir. Bu yazıda kararmanın kontrol sırasını en olasıdan en teknike doğru diziyoruz.

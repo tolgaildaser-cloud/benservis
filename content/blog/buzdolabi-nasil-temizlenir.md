@@ -28,6 +28,8 @@ faq:
     a: "Buzdolabı içeriden çektiği ısıyı arkadaki ızgara ve borular üzerinden dışarı atar. Bu bölge toz tutunca ısı atılamaz, motor daha uzun çalışır, elektrik tüketimi artar ve cihazın ömrü kısalır. Fiş çekiliyken dışarıdan kuru fırçayla toz almak yeterlidir; herhangi bir kapak açmak gerekmez."
   - q: "Buzdolabındaki kötü koku temizlikten sonra da geçmezse?"
     a: "İçine ağzı açık bir kap karbonat koy ve birkaç gün bekle; karbonat kokuyu emer. Koku yine sürüyorsa kaynak genelde çekmece altlarında biriken sızıntı ya da arka iç duvardaki tahliye kanalıdır. Tahliye deliğini görünen kısmından temizleyebilirsin; koku buna rağmen geçmiyorsa bir kez servise gösterin."
+images:
+  coverAlt: "Buzdolabının açık kapağı ve iç rafları"
 ---
 
 Buzdolabının kapağını açıyorsun ve hafif ama rahatsız eden bir koku geliyor; raf kenarlarında kuruyan damlalar, sebzelikte unutulmuş bir yaprak, kapı contasının kıvrımlarında koyulaşmış bir çizgi. Tanıdık bir tablo — ve iyi haber şu: buzdolabı temizliği için özel bir kimyasala da servise de gerek yok. Evdeki iki malzeme, sirke ve karbonat, bu işin neredeyse tamamını görür. Bu rehberde rafından contasına, arkasındaki ızgaraya kadar bütün süreci adım adım anlatıyoruz.

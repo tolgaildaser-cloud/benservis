@@ -13,6 +13,8 @@ faq:
     a: "Tıkanıklık kaynaklı süre kaybında evet, fark hissedilir. Tıkalı filtre motoru zorlar; zorlanan motor daha çok akım çeker ve aynı batarya daha kısa sürede biter. Filtre, boru ve fırça yolu açıldığında motor rahatlar, hem çekiş hem süre toparlar. Batarya yaşlanmasından gelen kayıpsa temizlikle geri gelmez."
   - q: "Muadil batarya taktırmak güvenli mi?"
     a: "Riskli olabilir. Standart dışı hücre kullanan ucuz muadiller kapasite olarak yazdığını vermeyebilir; daha önemlisi aşırı ısınma ve yangın riski taşır. Batarya değişimini yetkili servise ya da orijinal/onaylı hücre kullandığını belgeleyen puanlı bir servise yaptırmak, aradaki fiyat farkına değer."
+images:
+  coverAlt: "Evde kullanılan elektrikli süpürge"
 ---
 
 Süpürgeyi aldığında bir şarjla evin tamamını bitiriyordun; şimdi salonun yarısında ışık kırmızıya dönüyor. "Batarya bitti, cihaz eskidi" diye düşünmek kolay — ve bazen doğru. Ama dikey süpürgelerde çok bilinmeyen bir bağlantı var: **süre kaybının suçlusu her zaman batarya değildir.** Tıkalı bir filtre motoru zorlar, zorlanan motor daha fazla akım çeker ve aynı batarya çok daha kısa sürede tükenir. Yani "şarj tutmuyor" şikâyetinin arkasından bazen on dakikalık bir filtre temizliği çıkar. Önce gerçekçi beklentiyi kuralım, sonra kontrolleri yapalım.

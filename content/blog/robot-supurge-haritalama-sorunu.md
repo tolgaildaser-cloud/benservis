@@ -13,6 +13,8 @@ faq:
     a: "Hayır, sıfırlama son çaredir ve altta yatan sebebi çözmez. Sensörler kirliyse ya da ortamda boy aynası gibi yanıltıcı yüzeyler varsa, yeni harita da aynı şekilde bozulur. Sıfırlama; taşınma, köklü mobilya değişikliği ya da onarılamayacak kadar parçalanmış harita gibi durumlarda anlamlıdır ve öncesinde sensör temizliği yapılmış olmalıdır."
   - q: "Robot süpürge karanlık odada çalışır mı?"
     a: "Modeline bağlıdır. Üstünde dönen lazer kulesi olan lidarlı modeller kendi ışığını ürettiği için karanlıktan etkilenmez. Kamerayla navigasyon yapan modeller ise ortam ışığına muhtaçtır; karanlık ya da loş odada yönünü kaybedebilir veya haritayı bozabilir. Kameralı bir modelin gece temizliğinde odada bir miktar ışık bırakmak gerekir."
+images:
+  coverAlt: "Parke zeminde duran robot süpürge"
 ---
 
 Aylardır sorunsuz çalışan robot süpürge bir sabah eve yeni gelmiş gibi davranıyor: harita silinmiş, oda isimleri gitmiş, yasak bölgeler uçmuş. Ya da harita duruyor ama içi karışmış — salon mutfağın üstüne binmiş, robot koridorda "kaybolduğunu" söylüyor. Haritalama şikâyetleri robot süpürgenin en sinir bozucu arızası gibi görünür, çünkü cihaz fiziksel olarak sapasağlamdır. Gerçekte ise bu vakaların önemli bölümü sensör kiri, ortam etkisi ya da kullanım alışkanlığından kaynaklanır ve evde çözülür. Sırayla gidelim; harita sıfırlamayı da doğru yerine koyalım — çünkü çoğu kişinin ilk yaptığı şey, aslında en son yapılması gerekendir.

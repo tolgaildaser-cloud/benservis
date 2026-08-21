@@ -13,6 +13,8 @@ faq:
     a: "22E fan tarafını işaret eder ve çoğu durumda arkasında fanı kilitleyen buzlanma vardır. Cihaz bir süre daha kısmen soğutabilir ama sorun kendiliğinden düzelmez; fan dönemedikçe soğuk hava bölmelere dağıtılamaz. Fişi çekip cihazı birkaç saat dinlendirmek buzu çözerek kodu geçici olarak giderebilir; kod tekrar geliyorsa defrost hattı için servis gerekir."
   - q: "Kod listelerinde cihazımın kodu yok, ne yapmalıyım?"
     a: "Samsung'un kod tablosu model ailesine ve üretim yılına göre ciddi biçimde değişir; her listede her kod bulunmaz. Kodu aynen not et ve model numaranla birlikte üreticinin destek sayfasından ya da kullanım kılavuzundan doğrula. Servisle konuşurken kodu ve model numarasını birlikte söylemen doğru teşhis için yeterlidir."
+images:
+  coverAlt: "Buzdolabı kapağındaki gösterge paneli"
 ---
 
 Samsung buzdolapları panel konusunda konuşkandır: bir sensör veri gönderemediğinde ya da bir fan dönmediğinde ekrana 5E, 6E, 22E gibi bir kod düşer. Sorun şu ki bu kodların dili kullanıcıya hiçbir şey söylemez ve internette her listede farklı bir karşılık dolaşır. Bu yazıda yalnızca birden çok kaynakla doğrulayabildiğimiz kodları anlatıyoruz; emin olamadıklarımızı da dürüstçe söylüyoruz. Bir de neredeyse arıza sanılan ama arıza olmayan meşhur bir ekran var: OF OF.

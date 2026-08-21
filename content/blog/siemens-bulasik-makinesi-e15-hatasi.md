@@ -28,6 +28,8 @@ faq:
     a: "Tabandaki su azsa buharlaşınca kod kalkabilir; fişten çekip bekleyince düzeldiğini görenler bu yüzden vardır. Ama bu, suyun tabana neden kaçtığı sorusunu yanıtlamaz. Eğip boşaltmak ve kurutmak hem daha hızlıdır hem de tekrar edip etmediğini net gösterir; kısa sürede geri geliyorsa sızıntı var demektir."
   - q: "Bosch ve Profilo'daki E15 ile aynı mı?"
     a: "Evet. Siemens, Bosch, Profilo ve Neff aynı grubun (BSH) ortak platformunu kullanır; E15 bu markaların hepsinde taban tavasında su ve taşma güvenliği anlamına gelir. Çözüm adımları da birebir aynıdır."
+images:
+  coverAlt: "Bulaşık makinesinin taban bölümü ve su tahliye alanı"
 ---
 
 Akşam bulaşığını yükledin, program başladı ve birkaç dakika sonra makine sustu: ekranda **E15**, yanında yanıp sönen bir **musluk işareti**. Belki bir de alttan gelen inatçı bir vızıltı. Siemens bulaşık makinelerinde E15, kullanıcıyı en çok telaşlandıran ama çoğu zaman en masum biten kodlardan biridir: makine arızalandığı için değil, **evini korumak için** durmuştur. Bu rehberde E15'in ne olduğunu, taban suyunu güvenle nasıl boşaltacağını ve hangi noktada işin servise geçtiğini anlatıyoruz.

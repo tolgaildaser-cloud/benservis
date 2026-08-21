@@ -13,6 +13,8 @@ faq:
     a: "Eski uydu alıcıları ve TV kutuları (birkaç watt'tan 8-10 W'a kadar), ağ bağlantısı açık bırakılmış oyun konsolları (bekleme türüne göre 1 W'ın altından birkaç watt'a, güncelleme indirirken daha yükseğe) ve eski televizyonlar başı çeker. Güncel cihazların derin bekleme modları ise çoğunlukla 0,5-1 W'ın altındadır — asıl fark cihazın yaşında ve ayarlarındadır."
   - q: "Prizde takılı duran şarj adaptörü elektrik harcar mı?"
     a: "Boştaki modern adaptörün tüketimi çok düşüktür — çoğunlukla 0,1-0,3 W düzeyinde, yani tek başına önemsiz. Yine de boşta belirgin ısınan eski ya da kalitesiz adaptör hem verimsizdir hem güvenlik riskidir; onu prizde bırakma. Adaptörleri toplu takmak yerine anahtarlı çoklu prizde toplayıp tek hareketle kapatmak en pratik çözümdür."
+images:
+  coverAlt: "Evde priz ve elektrik bağlantıları"
 ---
 
 Akşam televizyonu kumandayla kapattın, konsol uyku modunda, uydu alıcısının saati yanıyor, sehpanın arkasında üç adaptör prizde. Evde "çalışan" hiçbir cihaz yok — ama sayaç dönüyor. Kapalı sandığımız cihazların prizden sessizce çektiği bu sürekli tüketimin bir adı var: **vampir yük** (bekleme/stand-by tüketimi). Tek tek bakınca komik derecede küçük, toplamda ise faturada görünür bir kalem.

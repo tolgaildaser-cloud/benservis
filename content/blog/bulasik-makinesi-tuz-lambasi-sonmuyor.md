@@ -13,6 +13,8 @@ faq:
     a: "Makineyi çalıştırma ve durumu servise bildir. Deterjan, yumuşatma sistemine zarar verebilir; hazneyi kendi imkânlarınla boşaltmaya çalışmak da sistemin içine daha fazla deterjan itebilir. Bu, erken müdahaleyle küçük kalan ama görmezden gelinirse büyüyen bir hatadır — bu yüzden tuz paketi ile deterjan paketini ayrı yerlerde saklamak iyi bir alışkanlıktır."
   - q: "Lamba hiç yanmıyor, bu makinede tuz gerekmiyor mu demek?"
     a: "İki ihtimal var. Bazı makinelerde sertlik ayarı en düşük kademeye alındığında tuz sistemi ve göstergesi devre dışı kalır; suyun gerçekten yumuşak olduğu bölgede bu normaldir. Ama suyun sert olduğu bir bölgede lamba hiç yanmıyor ve bardaklarda kireç filmi görülüyorsa gösterge ya da ayar tarafında sorun olabilir; ayarı kılavuzdan kontrol etmek ilk adımdır."
+images:
+  coverAlt: "Mutfakta bulaşık makinesi ve çevresindeki dolaplar"
 ---
 
 Panodaki tuz lambası günlerdir yanıyor. Tuz aldın, hazneye doldurdun, kapağını kapattın — lamba yine yanıyor. Akla ilk gelen "sensör bozuldu" oluyor ama bu göstergenin kendine göre bir çalışma mantığı var ve vakaların çoğunda lamba, gayet haklı olduğu için ya da sadece henüz vakti gelmediği için yanmaya devam ediyor. Önce tuzun bu makinede ne işe yaradığına, sonra lambanın neden hemen sönmediğine bakalım.

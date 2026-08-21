@@ -13,6 +13,8 @@ faq:
     a: "Tabletin türüne bağlıdır ve paketin üzerinde açıkça yazar. Suda çözünen folyoya sarılı tabletler ambalajıyla konur; dış ambalajı plastik olanlar mutlaka çıkarılır. Suda çözünen folyolu tabletleri ıslak elle tutmak folyoyu erken yumuşatır ve tabletin bölmeye yapışmasına yol açar — tableti kuru elle, kuru bölmeye koy."
   - q: "Bölme kapağının yayı gevşedi, kendim değiştirebilir miyim?"
     a: "Hayır, burası servis sınırıdır. Bölme düzeneği kapı panelinin içindedir ve ona ulaşmak kapı iç sacını sökmeyi gerektirir. Kullanıcı tarafında yapılacaklar kapağın serbest hareket ettiğini kontrol etmek ve bölme çevresindeki deterjan kalıntısını temizlemektir; yay ya da mekanizma değişimi servise aittir."
+images:
+  coverAlt: "Kapağı açık bulaşık makinesinin iç bölümü ve sepetleri"
 ---
 
 Program bitti, kapıyı açıyorsun ve tablet ya olduğu gibi bölmede duruyor ya da yarı erimiş, hamur gibi bir kütle hâlinde kapağa yapışmış. Bulaşıklar da tahmin edileceği gibi kirli. Bu şikâyet ilk bakışta "makine bozuldu"ya benzese de, vakaların büyük kısmında sebep makinenin içinde hiç sökülmeden bulunabilir: yerleştirme, bölmenin durumu ya da su sıcaklığı. Basitten teknike doğru gidelim.

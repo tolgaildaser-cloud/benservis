@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'te cihazını ve belirtini seçersin, tahmini maliyeti görürsün; sonra Bursa'daki yüksek puanlı servisleri listeleyip tek dokunuşla ararsın. Artık Bursa servisleri de benservis'te listeleniyor."
   - q: "Garantili cihazda ne yapmalıyım?"
     a: "Garanti süresi dolmamışsa önce yetkili servisi ara; garanti kapsamındaki arızada işçilik dahil ücret ödemezsin. Garanti bittiyse puanı ve tahmini fiyatı iyi olan özel servis de mantıklı bir seçenektir."
+images:
+  coverAlt: "Bir evin mutfağında beyaz eşya ve teknisyen çantası"
 ---
 
 Nilüfer'de sitedeki dairede bulaşık makinesi program ortasında durdu; Yıldırım'daki evde çamaşır makinesi sıkma yapmadan çamaşırları sırılsıklam bırakıyor. Bursa gibi büyük bir sanayi şehrinde "usta bulunmaz" diye bir dert yok — dert, onlarca seçenek arasından **işini bilen ve fiyatı dürüst söyleyen** servisi ayırt etmek. Bu rehberde güvenilir servisi nasıl seçeceğini ve fiyatı çağırmadan önce nasıl öğreneceğini anlatıyoruz.

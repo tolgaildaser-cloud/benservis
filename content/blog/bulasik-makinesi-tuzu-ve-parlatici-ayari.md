@@ -27,6 +27,8 @@ faq:
     a: "Tuz lambası haznedeki tuzlu suyun yoğunluğunu ölçer. Kapak gevşek kaldıysa ya da tuz topaklanıp suya karışmıyorsa lamba erken yanabilir. Kapağı açıp tuzun gerçekten azalıp azalmadığına bak; hazne doluyken lamba sürekli yanıyorsa sensör tarafında iş var demektir, bu da servis konusudur."
   - q: "Parlatıcı şart mı, ne işe yarıyor?"
     a: "Parlatıcı son durulamada suyun yüzey gerilimini düşürür; su damla damla kalmak yerine ince film hâlinde akar ve bulaşık lekesiz, hızlı kurur. Bardaklarda su izi ve mat görüntü varsa ilk bakılacak yer parlatıcı seviyesi ve kademesidir. Şart değildir ama kurutma şikâyetlerinin büyük kısmını tek başına çözer."
+images:
+  coverAlt: "Bulaşık makinesi kapağının iç yüzeyi ve hazne kapakları"
 ---
 
 Makineden çıkan bardaklarda beyaz bir pus, çatalların üzerinde su lekeleri, tabaklarda mat bir görüntü var. İlk şüphelenilen hep deterjan olur, oysa bu tablo çoğu zaman üç ayarın işidir: **tuz, su sertliği kademesi ve parlatıcı**. Üçü de kullanıcının kendisinin bakabileceği, alet gerektirmeyen işlerdir — ve doğru kurulduğunda "makine iyi yıkamıyor" şikâyetlerinin önemli bir kısmı kendiliğinden biter.

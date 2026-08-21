@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'te cihazını ve belirtini seçersin, tahmini maliyeti görürsün; sonra Adana'daki yüksek puanlı servisleri listeleyip tek dokunuşla ararsın. Artık Adana servisleri de benservis'te listeleniyor."
   - q: "Garantili cihazda ne yapmalıyım?"
     a: "Garanti süresi dolmamışsa önce yetkili servisi ara; garanti kapsamındaki arızada işçilik dahil ücret ödemezsin. Garanti bittiyse puanı ve tahmini fiyatı iyi olan özel servis de mantıklı bir tercihtir."
+images:
+  coverAlt: "Evde klima ve beyaz eşya bulunan oda"
 ---
 
 Adana'da ağustos öğlesinde klimanın durması, başka şehirlerdeki gibi "birkaç gün idare ederiz" denecek bir aksaklık değil — evin yaşanmaz hâle gelmesi demek. Seyhan'daki apartmanda klima sıcak havayla dönmeye başladı, Yüreğir'deki evde buzdolabı Çukurova sıcağına yetişemiyor. Tam da bu panik ânında yanlış servise "evet" denir ve fatura kabarır. Bu rehberde güvenilir servisi nasıl ayırt edeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

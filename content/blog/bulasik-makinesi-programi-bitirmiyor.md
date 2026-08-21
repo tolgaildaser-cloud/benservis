@@ -13,6 +13,8 @@ faq:
     a: "Birçok makine program süresini sabit yazmaz, tahmin eder. Su ne kadar kirliyse, ne kadar soğuk girdiyse ve makine ne kadar yüklüyse süre o kadar uzar; bazı modellerde sensör suyun kirliliğine bakarak yıkamayı kendiliğinden uzatır. Yani sürenin uzaması tek başına arıza göstergesi değildir; şüphe, makinenin hiç bitirememesiyle başlar."
   - q: "Programı yarıda kesip kapatmak makineye zarar verir mi?"
     a: "Tek seferlik iptal zarar vermez; makineler program iptali için tasarlanmıştır ve çoğu model iptalde önce suyu boşaltır. Kapıyı aniden açmak yerine iptal/sıfırlama adımını kullan — içeride sıcak su ve buhar olabilir. Ama makineyi her yıkamada elle kapatmak zorunda kalıyorsan bu artık bir kullanım şekli değil, servise anlatılması gereken bir belirtidir."
+images:
+  coverAlt: "Bulaşık makinesinin kumanda paneli yakın plan"
 ---
 
 Akşam yattın, sabah kalktın — makine hâlâ çalışıyor. Ya da göstergedeki süre bir saattir aynı rakamda duruyor, makine içeride bir şeyler yapıyor ama bir türlü sona ulaşamıyor. "Programı bitirmiyor" şikâyeti, çamaşır-bulaşık dünyasının en yanıltıcı şikâyetlerinden biridir; çünkü bazen gerçek bir arızadır, bazen de makinenin gayet normal davranışıdır. Önce hangisi olduğunu ayıralım, sonra sırayla sebeplere bakalım.

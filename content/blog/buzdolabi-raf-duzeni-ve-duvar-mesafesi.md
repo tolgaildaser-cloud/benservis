@@ -13,6 +13,8 @@ faq:
     a: "Dumanı tüten tencere doğrudan konmaz; iç sıcaklığı yükseltir, motoru zorlar ve yoğuşma yapar. Ama yemeği saatlerce dışarıda soğutmak da doğru değildir, çünkü oda sıcaklığında bekleyen yemekte bakteri hızla çoğalır. Doğrusu ara yol: yemeği sığ kaplara bölüp buharı kesilene kadar kısa süre bekletmek ve ılıkken üstü kapalı dolaba koymak."
   - q: "Sebzelik neden ayrı bir çekmece?"
     a: "Sebze ve meyve, dolabın kuru soğuğunda hızla su kaybeder ve buruşur. Sebzelik, nemi içeride tutan yarı kapalı bir bölmedir; bazı modellerde nem ayar sürgüsü de vardır. Yapraklı sebzeler yüksek nemde, çoğu meyve daha düşük nemde iyi durur; sürgülü modelde çekmecenin birini sebzeye, birini meyveye ayırmak en pratiği."
+images:
+  coverAlt: "Buzdolabının iç raf düzeni"
 ---
 
 Pazar alışverişi mutfak tezgâhında; poşetler dolu ve hepsi bir an önce dolaba girecek. Süt her zamanki yerine, kapı rafına; et alt tarafa bir yere; domates en üste — nereye boşluk varsa oraya. Oysa buzdolabının içi tek tip bir soğuk kutu değildir: **her bölgesinin sıcaklığı farklıdır** ve neyin nereye konduğu, gıdanın kaç gün taze kalacağını doğrudan belirler. Bir de dolabın kendisinin nerede durduğu var — duvara sıfır dayalı bir dolap, en iyi raf düzenini bile boşa çıkarır.

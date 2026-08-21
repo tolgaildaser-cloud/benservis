@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'te cihazını ve belirtini seçersin, tahmini maliyeti görürsün; sonra Eskişehir'deki yüksek puanlı servisleri listeleyip tek dokunuşla ararsın. Artık Eskişehir servisleri de benservis'te listeleniyor."
   - q: "İkinci el cihaz aldım, garanti yok — ne yapmalıyım?"
     a: "Garanti yoksa tercihin puanı ve fiyatı iyi olan özel servistir. İkinci el cihazlarda arıza geçmişi bilinmediği için ustanın söylediği ilk teklifi tek referans yapma; tahmini maliyeti önceden öğrenip öyle karar ver."
+images:
+  coverAlt: "Bir apartman dairesinde beyaz eşya köşesi"
 ---
 
 Eskişehir'de eylül yaklaşırken on binlerce öğrenci eve yerleşir ve o evlerin çoğunda yıllardır çalışan, kim bilir kaçıncı kiracısını gören beyaz eşyalar vardır. Tepebaşı'ndaki öğrenci evinde çamaşır makinesi ilk yükte su kaçırdı; Odunpazarı'ndaki ailenin buzdolabı ise durup durup ses çıkarıyor. Şehir kompakt, servis çok — ama hangisi güvenilir? Bu rehberde servisi nasıl seçeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

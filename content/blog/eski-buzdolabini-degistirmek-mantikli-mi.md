@@ -13,6 +13,8 @@ faq:
     a: "En sağlıklı yol ölçmek: prize takılan basit bir enerji ölçer, dolabın gerçek tüketimini gösterir. Dolap gece-gündüz döngülü çalıştığı için en az 24 saat, ideali birkaç gün ölçüp günlük ortalamayı 365 ile çarpmak gerekir. Etiket ya da kılavuz değeri varsa fikir verir ama yaşlanmış contası ve yorulmuş motoruyla eski dolap, etiketindeki değerden fazla tüketiyor olabilir."
   - q: "Tamir mi yenisi mi kararında eşik nedir?"
     a: "Yaygın ve makul kural: tamir maliyeti, aynı segmentte yeni cihaz fiyatının yarısına yaklaşıyorsa ve cihaz ömrünün son çeyreğindeyse yenisi mantıklıdır. Genç bir cihazda ise ucuz ve kalıcı bir tamir neredeyse her zaman kazanır. Kararı sağlıklı vermenin ön şartı, tamirin tahmini maliyetini işe başlamadan bilmektir."
+images:
+  coverAlt: "Bir evin mutfağında duran buzdolabı"
 ---
 
 Mutfaktaki dolap on beş yaşında; ne zaman sustuğunu hatırlamıyorsun çünkü neredeyse hiç susmuyor. Bir yandan "çalışıyor işte, neden para harcayayım" diyorsun, bir yandan her elektrik faturasında içine bir kuşku düşüyor: "Bu dolap bana sessizce kaça mal oluyor?" Bu yazı o kararı duygudan çıkarıp hesaba bağlamak için — kimseye "hemen değiştir" demeden, amortiyi kendi rakamlarınla kurabileceğin bir çerçeve.

@@ -28,6 +28,8 @@ faq:
     a: "Çoğu modelde hayır. Bacasız çalışan davlumbazlardaki karbon filtre kokuyu emerek çalışır ve doygunluğa ulaştığında görevi biter; yıkamak emici özelliğini geri getirmez. Karbon filtre belirli aralıklarla yenisiyle değiştirilir. Az sayıda modelde yıkanabilir karbon filtre bulunur; senin modelinde hangisi olduğunu kullanım kılavuzu söyler."
   - q: "Filtreyi temizledim ama davlumbaz hâlâ az çekiyor?"
     a: "Bacalı modellerde şüpheli, baca bağlantısında birikinti ya da tıkanma olabilir; bacasız modellerde ise doymuş karbon filtre en olası sebeptir. Karbon filtreyi değiştirdiğin hâlde çekiş hâlâ zayıfsa motor tarafında yıpranma olabilir — o kısım gövde içindedir ve servis işidir."
+images:
+  coverAlt: "Mutfak tezgâhının üstündeki davlumbaz"
 ---
 
 Ocakta soğan kavruluyor, davlumbaz sonuna kadar açık — ama koku yine bütün eve yayılıyor. Elini filtreye yaklaştırdığında çekişin zayıfladığını hissediyorsun, filtrenin yüzeyi ise yağdan parlıyor. Bu tablo bir motor arızası değil, dolmuş bir **yağ filtresi** tablosudur: alüminyum kaset filtre yağı tuta tuta doyar ve havayı geçirmez olur. Temizliği evde, alet kullanmadan yapılır; bu rehberde elde ve makinede yıkamanın adımlarını, alüminyum kararması uyarısını ve en çok karıştırılan konuyu — karbon filtrenin neden yıkanmadığını — anlatıyoruz.

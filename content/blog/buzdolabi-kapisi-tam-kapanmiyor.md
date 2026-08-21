@@ -13,6 +13,8 @@ faq:
     a: "Hafif geriye eğim bilinçli bir ayardır: ön ayaklar bir miktar yükseltilir ki bırakılan kapı kendi ağırlığıyla kapanmaya meyletsin. Cihaz öne eğikse tam tersi olur, kapı kendiliğinden aralanır. Ön ayaklar çoğu modelde elle ya da anahtarla çevrilerek ayarlanır ve bu tamamen kullanıcının yapabileceği bir iştir."
   - q: "Conta değişimi kullanıcı işi mi?"
     a: "Temizlik ve katlanan bölümü düzeltme kullanıcı işidir; sertleşmiş, yırtılmış ya da çekmiş bir contanın değişimi ise modele uygun parça gerektirir ve kanala düzgün oturtulmazsa sızıntı devam eder. Doğru parçayla değişim servisin kısa sürede yaptığı bir iştir; teşhisten çıkan belirtiyle birlikte talep etmek işi hızlandırır."
+images:
+  coverAlt: "Mutfakta duran buzdolabının alt bölümü"
 ---
 
 Dolabın kapısını kapatıyorsun, mutfaktan çıkarken göz ucuyla bakınca kapı parmak kalınlığında aralık. Ya da gece bir tıkırtıyla iniyorsun: kapı yine kendiliğinden açılmış, içeride lamba yanıyor. Kapı sorunu masum görünür ama sonucu masum değildir — sızan sıcak hava motoru durmaksızın çalıştırır, buzlanmayı azdırır ve yiyecekleri riske atar. Neyse ki bu şikâyetin arkasından çıkan sebeplerin çoğu alet bile gerektirmeden, birkaç dakikada kendin bulabileceğin şeylerdir.

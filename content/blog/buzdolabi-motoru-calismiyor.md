@@ -13,6 +13,8 @@ faq:
     a: "İç lambanın yanması cihaza elektrik geldiğini gösterir; yani sorun priz ya da kablo değil, cihazın kendi içindedir. Bu durumda termostat ayarının kapalı konumda olmadığını kontrol etmek ve cihaza bir süre tanımak dışında kullanıcının yapabileceği kalmaz; motor tarafı — röle, termostat, kompresör — servis alanına girer."
   - q: "Elektrik kesintisinden sonra motor hemen çalışmayabilir mi?"
     a: "Evet. Bazı modellerde motor, durduktan hemen sonra yeniden kalkmaz; sistemdeki basıncın dengelenmesi için birkaç dakikalık gecikme normaldir. Kesinti sonrası dolabın birkaç dakika sessiz kalması arıza değildir. Bu yüzden fişi çekip takarak yapılan denemelerde de motora kalkış için birkaç dakika tanınmalıdır."
+images:
+  coverAlt: "Buzdolabının arka bölümü ve motor kısmı"
 ---
 
 Mutfakta bir şeyin eksik olduğunu fark ediyorsun: o alışıdık motor uğultusu yok. Dolabın lambası yanıyor, ama içerisi ılımaya başlamış. Ya da daha sinir bozucu senaryo: birkaç dakikada bir kısa bir uğultu, ardından "tık", sonra sessizlik — ve aynı döngü tekrar tekrar. Bu yazı "hiç durmuyor" şikâyetinin tam tersi için: motor kalkış yapmıyor. Sebep bazen prizde biter, bazen küçük bir parçada, bazen işin kalbi olan kompresörde. Sırayla gidelim.

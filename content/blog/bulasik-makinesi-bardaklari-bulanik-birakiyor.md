@@ -13,6 +13,8 @@ faq:
     a: "Kullanmak yetmez, ayarın suyuna uygun olması gerekir. Makinenin sertlik ayarı bölgenin su sertliğinden düşükse tuz sistemi yeterince yumuşatma yapmaz ve kireç filmi devam eder. Parlatıcı dozu da iki yönlü çalışır: az olursa su damlaları leke bırakır, fazla olursa gökkuşağı gibi yağlı görünümlü izler oluşur."
   - q: "Bu sorun 'makine temiz yıkamıyor' arızasıyla aynı şey mi?"
     a: "Hayır, ikisi ayrı şikâyetlerdir. Temiz yıkamama, tabaklarda yemek artığı ve yağ kalmasıdır; genelde filtre, püskürtme kolları ya da deterjan tarafına işaret eder. Bardak bulanıklığı ise bulaşık aslında temizken camın üstünde film ya da matlaşma görünmesidir ve su kimyası ile ayarlarla ilgilidir."
+images:
+  coverAlt: "Bulaşık makinesi sepetinde duran tabak ve bardaklar"
 ---
 
 Bulaşıklar temiz çıkıyor aslında — tabaklarda yemek artığı yok, yağ yok. Ama bardaklar ışığa tutunca bulanık: üzerlerinde beyaz bir film, su damlası izleri ya da gökkuşağı gibi mat bir perde var. Bu şikâyet "makine temiz yıkamıyor" arızasıyla karıştırılır ama farklı bir konudur: sorun kirde değil, **su kimyasında ve ayarlarda**. Ve burada baştan dürüst olmak gereken bir ayrım var — bulanıklığın bir türü tamamen düzelir, bir türü ise geri dönmez. Önce hangisiyle karşı karşıya olduğunu bulalım.

@@ -13,6 +13,8 @@ faq:
     a: "Sorunun cihazın genelinde değil, o göze ait parçalarda olduğu anlamına gelir: o gözün termokupl ucu kirlenmiş, brülör başlığı eğri oturmuş ya da alev termokupla temas etmiyor olabilir. Bu aslında iyi haberdir; kontrol alanın küçülür ve temizlikle çözülme ihtimali yükselir."
   - q: "Termokupl temizliği işe yaramadı, değişimi kendim yapabilir miyim?"
     a: "Hayır. Termokupl değişimi ocağın gaz taşıyan kısmında çalışmayı gerektirir; yanlış montaj gaz sızıntısı riski doğurur. Ucunu bezle silmek kullanıcı işidir ama sökülüp takılması yetkili servisin işidir. Sık sık kendiliğinden sönen bir gözü emniyeti iptal ederek kullanmak ise hiçbir koşulda kabul edilebilir bir çözüm değildir."
+images:
+  coverAlt: "Ocak brülörü ve ateşleme bölgesi yakın plan"
 ---
 
 Düğmeyi çeviriyorsun, çakmak çakıyor, alev güzelce yanıyor — ve elini çektiğin anda "pat" diye sönüyor. Bir daha deniyorsun, aynı film tekrar oynuyor. Bu, ocak şikâyetlerinin en yaygınlarından biri ve iyi haber şu: çoğu vakada ortada bozulan bir şey yok, **gaz emniyet sistemi tam da tasarlandığı gibi çalışıyor** — sadece ona ihtiyacı olan süreyi vermiyorsun ya da alevi "gören" ucu kirlenmiş durumda. Bu yazıda düzeneğin mantığını sade biçimde anlatıyor, evde yapılabilecek kontrolleri sıralıyor ve işin nerede servise geçtiğini net söylüyoruz.

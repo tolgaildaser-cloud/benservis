@@ -13,6 +13,8 @@ faq:
     a: "Bozması şart değil ama tanınmama riski gerçektir: yazıcı kartuşu çipinden tanır ve dolum yapılmış ya da muadil çipli kartuşlar bazı modellerde ve bazı yazılım güncellemelerinden sonra tanınmayabilir. Bu bir arıza değil uyumluluk durumudur. Dolum kullanıyorsan bunu bilerek kullan; tanınmama sorununda ilk şüpheli orijinal olmayan çiptir."
   - q: "Her şeyi denedim, hâlâ tanımıyor; sorun yazıcıda olabilir mi?"
     a: "Olabilir. Orijinal ve yeni bir kartuş, temizlik ve sürücü sıfırlamaya rağmen tanınmıyorsa yazıcının kendi temas ünitesinde ya da elektroniğinde sorun olabilir. Bu noktada yuvayı zorlamak ya da temas pimlerine sert müdahale etmek işi büyütür; doğrusu bu tabloyu servise anlatmaktır."
+images:
+  coverAlt: "Ev ofisinde duran yazıcı"
 ---
 
 Rapor çıktısı almak için yazıcıya gittin ve ekranda o sinir bozucu mesaj: kartuş tanınmıyor. Üstelik kartuş belki daha geçen hafta takıldı, belki de bugün — yepyeni. İyi haber: "kartuş tanımıyor" mesajı çoğu zaman kartuşun ya da yazıcının bozulduğu anlamına gelmez; yazıcıyla kartuş çipi arasındaki **milimetrik bir iletişim** kopmuştur ve bu iletişim çoğu zaman evde, birkaç dakikada geri kurulur. Bu yazıda basit kontrollerden başlayıp dolum kartuş gerçeğine ve yazılım tarafına kadar gidiyoruz.
