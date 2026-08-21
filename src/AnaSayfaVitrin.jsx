@@ -88,9 +88,22 @@ const trSayi = (n) => n.toLocaleString("tr-TR");
 const SAYILAR = [
   { buyuk: IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis), kucuk: "servis kaydı" },
   { buyuk: trSayi(IST.puanli), kucuk: "Google puanlı" },
+  // ⬇️ Hero güven satırından TAŞINDI (21 Ağu): satırın aşağıda karşılığı olmayan tek verisi buydu.
+  { buyuk: trSayi(IST.serbis), kucuk: "SERBİS'te doğrulanmış" },
   { buyuk: trSayi(IST.il), kucuk: "il" },
   { buyuk: trSayi(IST.ilce), kucuk: "ilçe" },
+  // Kapsam: ızgara `auto-fit` olduğu için kutu sayısı 12 tutuluyor — 2/3/4/6 sütunun
+  // hepsinde tam satır çıkar (10 kutuyken 6'lı dizilimde son satırda 2 boşluk kalıyordu).
+  { buyuk: trSayi(IST.cihaz), kucuk: "cihaz türü" },
+  { buyuk: trSayi(IST.marka), kucuk: "marka" },
   { buyuk: trSayi(IST.tarife), kucuk: "onaylı tarife kalemi" },
+  // ⬇️ İçerik tarafı (21 Ağu, Tolga: "50+ rehber, 200+ blog, tamir, kılavuz vb").
+  // ⛔ Rakamlar site-istatistik.json'dan GELİR, elle yazılmaz (#77 şişirme yasağı):
+  // gerçek sayım rehber 19 · blog 171 çıktı, "50+/200+" diye YUVARLANMADI.
+  { buyuk: trSayi(IST.blog), kucuk: "blog yazısı" },
+  { buyuk: trSayi(IST.rehber), kucuk: "onarım rehberi" },
+  { buyuk: trSayi(IST.tamir), kucuk: "tamir kaydı" },
+  { buyuk: trSayi(IST.kilavuz), kucuk: "kullanım kılavuzu" },
 ];
 
 // "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. Sürecin üç adımını
@@ -257,7 +270,10 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           <div style={st.rozetler}>
             <span style={st.rozet}>★ Google puanlı servisler</span>
             <span style={st.rozet}>✓ Ücretsiz teşhis</span>
-            <span style={st.rozet}>◎ 96 ilçe verisi</span>
+            {/* 21 Ağu 2026: rozet ELLE "96" yazıyordu, aşağıdaki bant ise 160 diyordu —
+                aynı sayfada aynı veri için İKİ FARKLI RAKAM. Rozet de tek kaynağa bağlandı
+                (#77 şişirme yasağı: sayı elle yazılmaz, site-istatistik.json'dan gelir). */}
+            <span style={st.rozet}>◎ {trSayi(IST.ilce)} ilçe verisi</span>
           </div>
 
           <h1 style={st.h1}>{VAAT.h1}</h1>
@@ -290,11 +306,11 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             ))}
           </div>
 
-          {/* Güven satırı da site-istatistik.json'dan (20 Ağu, Tolga: "burayı da güncelle");
-              band ile aynı 10.000+ kuralı, SERBİS sayısı da artık sayılıyor (elle 207 değil). */}
-          <p style={st.guvenSatiri}>
-            <b style={{ color: "#fff" }}>{IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis)}</b> servis kaydı · <b style={{ color: "#fff" }}>{trSayi(IST.puanli)}</b> Google puanlı · <b style={{ color: "#fff" }}>{trSayi(IST.serbis)}</b> SERBİS'te doğrulanmış · ücretsiz
-          </p>
+          {/* 21 Ağu 2026 (Tolga: "bunu kaldır aşağıda tekrarı var sadece eksik veriyi aşağı
+              ekle"): hero'daki güven satırı KALDIRILDI — servis kaydı ve Google puanlı zaten
+              aşağıdaki sayı bandında vardı, aynı rakam iki kez okunuyordu. Satırın TEK ÖZGÜN
+              verisi olan SERBİS sayısı banda taşındı, kaybolmadı. */
+          }
         </div>
       </section>
 
@@ -537,7 +553,6 @@ const st = {
     background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.14)", color: "#E2E8F0",
     borderRadius: 999, padding: "6px 12px", fontSize: 13, fontFamily: "inherit", cursor: "pointer",
   },
-  guvenSatiri: { color: "#94A3B8", fontSize: 13.5, marginTop: 22, marginBottom: 0 },
 
   bolumDis: {},  // vitrin zaten tam genişlikte (wrap dışında) — taşırma hilesi gerekmiyor
   bolum: { maxWidth: 1080, margin: "0 auto", padding: "clamp(40px, 6vw, 64px) 20px" },
