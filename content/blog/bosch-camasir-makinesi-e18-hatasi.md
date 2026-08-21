@@ -28,6 +28,8 @@ faq:
     a: "Filtre temizken tekrar eden E18'de sıra makinenin dışındaki hatta gelir: tahliye hortumunun gidere bağlandığı nokta, mutfak sifonu ya da duvardaki gider ağzı tıkalı olabilir. Hortumun gidere gereğinden fazla itilmesi de suyun geri emilmesine ve aynı kodun tekrarlamasına yol açar. Bu iki nokta da temizse şüphe tahliye pompasına kayar ve orası servis alanıdır."
   - q: "Kazan su dolu kaldıysa çamaşırları çıkarabilir miyim?"
     a: "Kapağı zorlamadan önce suyu boşaltman gerekir, çünkü çoğu makine içeride su varken kilidi açmaz. Ön alttaki kapağı açıp acil boşaltma hortumundan suyu sığ bir kaba alarak seviyeyi düşürebilirsin; bu işlem kaç kez tekrarlanabilir. Su bittikten sonra kilit birkaç dakika içinde çözülür ve çamaşırları rahatça alırsın."
+images:
+  coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
 ---
 
 Program bitti sandın, kapağı açmaya gittin ama kilit açılmadı; camdan bakınca kazanın dibinde su duruyor, çamaşırlar sırılsıklam. Panelde ise **E18** yazıyor. Bosch çamaşır makinelerinde bu kod **suyun dışarı atılamadığını** anlatır: makine tahliyeyi başlattı, ama verilen sürede içeriyi boşaltamadı ve güvenli şekilde durdu. İyi haber, bu kodun en yaygın sebeplerinin makinenin gövdesinde değil, tahliye hattının kolay ulaşılan ucunda olmasıdır.

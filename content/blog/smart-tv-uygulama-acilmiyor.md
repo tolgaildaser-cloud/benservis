@@ -28,6 +28,8 @@ faq:
     a: "Evet, televizyonun üstündeki kurulum silinir: kayıtlı kablosuz ağ parolası, uygulama hesap girişleri, kanal listesi ve görüntü ayarları sıfırlanır. Bu yüzden fabrika ayarı ilk değil son adımdır. Öncesinde kablosuz ağ parolanı ve kullandığın uygulamaların hesap bilgilerini yanına al, aksi hâlde kurulumun ortasında takılırsın."
   - q: "Uygulama listeden tamamen kayboldu, ne anlama gelir?"
     a: "İki ihtimal var. Birincisi, uygulama mağaza tarafında geçici bir sorun yaşıyordur; birkaç saat sonra geri gelir. İkincisi, uygulamanın sağlayıcısı eski model televizyonlar için desteği sonlandırmıştır ve uygulama artık o cihaza sunulmuyordur. İkincisi bir arıza değildir; televizyonun donanımı sağlamdır ve diğer işlevleri normal çalışmaya devam eder."
+images:
+  coverAlt: "Oturma odasında duvara asılı televizyon"
 ---
 
 Televizyonu açıyorsun, ana ekran geliyor, Netflix ya da YouTube simgesine basıyorsun ve ya hiçbir şey olmuyor ya da açılış ekranından sonra siyahlıkta kalıyorsun. Bazen "bağlanılamadı" gibi bir yazı çıkar, bazen sonsuza kadar dönen bir yükleme halkası. Bu şikâyette ilk refleks "televizyon bozuldu" olur; oysa vakaların büyük çoğunluğu **ağ, önbellek ya da yazılım** üçgeninde çözülür ve hiçbiri para gerektirmez.

@@ -28,6 +28,8 @@ faq:
     a: "Tekrarlayan sıkışmanın üç klasik sebebi vardır: içeride kalmış bir yırtık parça, kirlenmiş ya da yıpranmış merdaneler ve nem almış kâğıt. İlkini gözle ararsın, ikincisini nemli bezle silerek düzeltirsin, üçüncüsünü ise kâğıdı yeni bir paketle değiştirerek test edersin. Üçü de temizken sıkışma sürüyorsa mekanik tarafta yıpranma var demektir."
   - q: "Lazer yazıcıda içerisi sıcak, dokunabilir miyim?"
     a: "Hayır. Lazer yazıcılarda toneri kâğıda tutturan bölüm çalışma sırasında yüksek sıcaklığa çıkar ve cihaz kapatıldıktan sonra da bir süre sıcak kalır. Kapağı açıp hemen elini sokmak yanık riski taşır. Yazıcıyı kapat, fişten çek ve en az on beş dakika bekle. Bu bekleme aynı zamanda kâğıdın soğuyup daha az yırtılmasını da sağlar."
+images:
+  coverAlt: "Dolap üstünde duran çok fonksiyonlu yazıcı ve önden açılan kâğıt tepsisi"
 ---
 
 Belge yarıda kaldı, yazıcı durdu ve ekranda kâğıt sıkışması uyarısı var. Bu anda yapılan en yaygın hata acele etmektir: kapak açılır, görünen kâğıt ucundan yakalanır ve sertçe çekilir. Kâğıt yırtılır, bir parçası içeride kalır ve asıl sorun **o andan sonra** başlar. Sıkışan kâğıdı çıkarmanın bir tekniği vardır ve tamamen ücretsizdir; bu rehberde onu anlatıyoruz.

@@ -28,6 +28,8 @@ faq:
     a: "Hortumun gidere bağlandığı nokta gereğinden alçaksa makine suyu tutamaz ve sürekli boşalır; gereğinden yüksekse pompa suyu yukarı itmekte zorlanır ve süre dolduğu için E03 düşer. Taşınma, mobilya değişimi veya tesisat işi sonrası bu yükseklik farkında olmadan değişmiş olabilir. Hortumun ucunun gidere gereğinden fazla itilmesi de suyun geri emilmesine yol açar."
   - q: "Filtre temiz olduğu hâlde E03 devam ediyorsa sorun nerede?"
     a: "Dış hattın tamamı temizken tekrar eden E03'te akla gelen ilk aday tahliye pompasıdır; pervanesi kırılmış, yatağı sıkışmış ya da motoru zayıflamış olabilir. İkinci aday su seviyesini okuyan sensör, üçüncüsü ise pompayı süren elektronik karttır. Bu üçünün de teşhisi ölçü aletiyle ve tablanın altına inilerek yapılır, yani kullanıcı tarafında denenecek bir şey kalmamıştır."
+images:
+  coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
 ---
 
 Makine tam sıkmaya geçecekken durdu; kazanın içi su dolu, çamaşırlar ağırlaşmış ve panelde **E03** yazıyor. Vestel çamaşır makinelerinde bu kod **suyun boşaltılamadığını** anlatır: makine tahliye komutunu verdi ama beklenen sürede seviye inmedi, o da programı güvenli şekilde durdurdu. Bu, Vestel kullanıcılarının en sık gördüğü kodlardan biridir ve aynı zamanda en çok kendi çözdüğü kodlardan biridir — çünkü suçlu neredeyse her zaman makinenin gövdesinde değil, tahliye hattının kolay ulaşılan ucundadır.

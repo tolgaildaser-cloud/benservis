@@ -28,6 +28,8 @@ faq:
     a: "Evet, Arçelik buzdolaplarında E ve F dışında S ve D ile başlayan bildirimler de kullanılır. S ile başlayanlar çalışma sırasında verilen uyarılardır; örneğin motorlu klapenin açık kalması ya da kompresörün art arda kalkamaması bu grupta bildirilir. D ile başlayanlar ise bir sensörün açık devre mi kısa devre mi olduğunu ayırt eden servis bildirimleridir."
   - q: "Kodu not ettim, servisi aramadan önce başka ne yapabilirim?"
     a: "Kodun yanına model numarasını, kodun ilk ne zaman göründüğünü ve cihazın o sırada nasıl davrandığını yaz. Dondurucu soğutup soğutucu ılıklaşıyor mu, arka duvarda kalın karlanma var mı, kompresör sesi geliyor mu gibi gözlemler kodun kendisi kadar değerlidir. Bu notla arayan bir kullanıcı, servisin doğru parçayla gelme ihtimalini belirgin biçimde artırır."
+images:
+  coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"
 ---
 
 Sabah kapağı açtın, panelde derece yerine E ile başlayan bir şey yanıp sönüyor. Telefonla arattın ve işler daha da karıştı: aynı kod için üç ayrı sitede üç ayrı cevap var. Bu kafa karışıklığı senin hatan değil — Arçelik buzdolaplarında gerçekten birden fazla kod şeması kullanılıyor ve listelerin çoğu hangisini anlattığını söylemiyor. Bu yazıda önce şemayı nasıl ayırt edeceğini, sonra da birden çok kaynakla doğrulayabildiğimiz kodları anlatıyoruz. Doğrulayamadıklarımızı da açıkça atlıyoruz.
