@@ -13,6 +13,8 @@ faq:
     a: "Hayır. E1 bir markada haberleşme hatasıyken başka bir markada sensör arızası olabilir; aynı markanın salon tipi ve duvar tipi modellerinde bile tablo değişir. Bu yüzden kodun kesin karşılığı için cihazının kullanım kılavuzuna ya da üreticinin destek sayfasına bakmak şart."
   - q: "Kod silindikten sonra klima normale döndü, servise gerek var mı?"
     a: "Kod bir daha gelmiyorsa büyük ihtimalle geçici bir korumaydı ve izlemek yeterli. Ama aynı kod tekrar tekrar geliyorsa cihaz aynı devreden sürekli hata okuyor demektir; bu kendiliğinden düzelmez. Tekrarlayan kodu ve model numarasını not edip servise iletmek, doğru parçayla tek seferde çözüm ihtimalini artırır."
+images:
+  coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
 Ağustos ortası, termometre 35'i gösteriyor ve klima tam sezonun ortasında ekrana bir kod düşürüp duruyor. Sıcakta kod çözmeye çalışmak sinir bozucudur ama işin aslı şu: split klimalarda kodlar rastgele değildir, cihaz sana hangi devresinden veri alamadığını söyler. Bu yazıda kod okuma mantığını, Türkiye'de yaygın üç markanın birden çok kaynakla doğrulanmış kodlarını ve hangi noktadan sonra işin servise kaldığını anlatıyoruz.

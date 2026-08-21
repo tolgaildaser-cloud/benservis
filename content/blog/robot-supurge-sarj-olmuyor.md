@@ -13,6 +13,8 @@ faq:
     a: "Lityum bataryalar döngüyle yaşlanır; üreticilerin verdiği tipik aralık 300-500 tam şarj döngüsüdür ve bu düzenli kullanımda kabaca 2-3 yıla denk gelir. Bu sürenin sonunda batarya tamamen ölmez, kapasitesi düşer: robot şarjı tamamlar ama eskisinden çok daha kısa sürede biter. Yavaş kapasite kaybı arıza değil, yaşlanmadır."
   - q: "Bataryayı kendim değiştirebilir miyim?"
     a: "Önerilmez. Batarya gövdenin altındaki vidalı bölmenin içindedir ve lityum hücrelerle çalışmak delinme, kısa devre ve yangın riski taşır. Ayrıca uyumsuz ya da sahte batarya hem cihaza zarar verir hem güvenlik riski oluşturur. Doğru adres, orijinal batarya kullanan yetkili ya da puanlı bir servistir."
+images:
+  coverAlt: "Parke zeminde şarj istasyonuna oturmuş beyaz robot süpürge"
 ---
 
 Robot süpürge işini bitirdi, kendi kendine istasyona döndü, üstündeki ışık yandı — her şey yolunda görünüyor. Ertesi sabah temizlik saati geldiğinde ise robot yerinden kımıldamıyor: batarya boş. Ya da uygulama gece boyunca "şarj oluyor" ile "şarj kesildi" arasında gidip gelmiş. Bu şikâyet robot süpürgelerin en sık yaşananlarından biridir ve iyi haber şu: vakaların önemli bir kısmı cihazın içine hiç girmeden, birkaç dakikalık kontrolle çözülür. Basitten teknike doğru gidelim.

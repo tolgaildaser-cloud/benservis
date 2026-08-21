@@ -13,6 +13,8 @@ faq:
     a: "Hayır, tasarım gereği. Kurutma sırasında çamaşırdan alınan nem yoğuşturulup su tankında biriktirilir ve tankın her kurutmadan sonra boşaltılması gerekir. Tank doluyken makine kendini korumak için çalışmaz. Tankı boşalttığın hâlde ışık sönmüyorsa ya da tank bariz boşken uyarı geliyorsa o zaman şamandıra veya pompa tarafında bir sorun olabilir; bu servis konusudur."
   - q: "Kurutma makinesi ısıtmıyor gibi, çamaşırlar nemli çıkıyor — kod da yok, ne yapmalı?"
     a: "Önce filtreleri ve kondanseri temizle, tankı boşalt ve makineyi tam yükle değil normal yükle dene; hava yolu tıkalıyken makine ısıyı taşıyamaz ve süre uzar. Bunlara rağmen çamaşır ısınmadan çıkıyorsa ısıtıcı ya da sensör tarafında sorun olabilir. Isıtıcı hattı yüksek akım çeken bir devredir; teşhisi ve değişimi servise bırak."
+images:
+  coverAlt: "Kapağı açık beyaz kurutma makinesi ve üzerindeki hasır sepette katlı havlular"
 ---
 
 Kurutma makinesi programın ortasında durdu, ekranda E ya da F ile başlayan bir kod var; ya da ekranı olmayan modelde ışıklar anlamsız görünen bir düzenle yanıp sönüyor. Çamaşır makinesinin yanında sessiz sedasız çalışan bu cihaz aslında az konuşur ama net konuşur: kodlarının ve ışıklarının büyük kısmı iki şeyi işaret eder — dolu su tankı ve tıkalı hava yolu. İkisi de kullanıcının beş dakikada çözebileceği şeylerdir. Bu yazıda Arçelik ve Beko'nun doğrulanmış kodlarını, ışık dilini ve gerçek servis sınırını anlatıyoruz.

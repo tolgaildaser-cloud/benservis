@@ -13,6 +13,8 @@ faq:
     a: "E17 tambur içinde aşırı köpük oluştuğunu gösterir; en yaygın sebep fazla ya da yanlış tip deterjandır. Makineyi hiç deterjan koymadan kısa bir programda bir-iki kez boş çalıştır, köpük kalıntısı atılsın. Sonraki yıkamalarda dozu azalt ve mutlaka otomatik makine deterjanı kullan; elde yıkama deterjanı bu hatanın klasik tetikleyicisidir."
   - q: "E18 dengesiz yük hatası arıza mıdır?"
     a: "Çoğu zaman değildir. Tek bir yorgan ya da bir tarafa yığılmış çamaşır, sıkma sırasında tamburu dengesiz bıraktığı için makine kendini korumaya alır ve E18 verir. Çamaşırı elle dağıtıp birkaç parça daha ekleyerek yeniden dene. Neredeyse boş ya da dengeli yüklerde bile sürekli tekrarlıyorsa amortisör veya sensör tarafına servisin bakması gerekir."
+images:
+  coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
 ---
 
 Makine yıkamanın ortasında durdu, ekranda E ya da H ile başlayan bir kod yanıp sönüyor ve kılavuz her zamanki gibi ortada yok. İyi haber: bu kodlar rastgele değil, makinenin hangi bölgesinde sorun olduğunu söyleyen kısa mesajlardır. Bu yazıda Beko çamaşır makinelerinde yaygın görülen kodları bölge bölge topluyoruz: hangisi kapıyla, hangisi suyla, hangisi motorla ilgili — ve her birinde evde neye bakabileceğini, nerede durman gerektiğini söylüyoruz.

@@ -13,6 +13,8 @@ faq:
     a: "Windows'ta Ctrl+Shift+Esc ile Görev Yöneticisi'ni aç ve İşlemci sütununa göre sırala. En üstte sürekli yüksek yüzdeyle oturan programı görürsün. Tanımadığın bir program sürekli tepedeyse adını not et; senin açmadığın bir işlemse güvenlik taraması yapmakta da fayda var."
   - q: "Termal macun değişimi ne zaman gerekir, kendim yapabilir miyim?"
     a: "Cihaz temiz zeminde, hafif işte bile hızla ısınıyor ve fan temizliğine rağmen düzelmiyorsa termal macun ömrünü doldurmuş olabilir; birkaç yıllık cihazlarda tipiktir. Bu iş soğutma blokunun sökülmesini gerektirdiği için kullanıcı işi değildir — fan temizliğiyle birlikte servise yaptırılır."
+images:
+  coverAlt: "Ahşap masada açık duran dizüstü bilgisayarın yan profili ve kenarındaki bağlantı portları"
 ---
 
 Toplantı ortasında laptopun fanı uçağa kalkış izni verilmiş gibi hızlanıyor, klavyenin üstü elini rahatsız edecek kadar ısınıyor, cihaz da gözle görülür şekilde yavaşlıyor. Bu üçlü — ısı, ses, yavaşlama — aynı zincirin halkalarıdır ve zincirin başında çoğu zaman tamir gerektirmeyen bir sebep vardır: sıcak havanın dışarı atılamaması ya da arka planda senin haberin olmadan çalışan programlar. Bu yazıda en basitten en teknik olana doğru gidiyoruz.

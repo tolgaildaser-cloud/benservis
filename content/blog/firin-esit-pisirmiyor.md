@@ -13,6 +13,8 @@ faq:
     a: "Fanlı modun bütün işi sıcak havayı fırının her köşesine eşit dağıtmaktır; fan dönmüyorsa ısı tek bölgede toplanır ve dengesizlik fanlı modda daha da belirginleşir. Fan çalışırken arkadan hafif ama sürekli bir uğultu duyulur. Mod seçiliyken bu ses hiç yoksa ya da fan takılıp kalıyorsa sorun fan motorundadır ve servis gerektirir."
   - q: "Fırın ısınıyor ama dengesiz pişiriyorsa arıza mıdır?"
     a: "Her zaman değil. Dengesiz pişirmenin önemli bir kısmı kullanımdan çıkar: yanlış raf, kalabalık fırın, ön ısıtmasız başlamak ve sık kapı açmak. Bu alışkanlıklar düzeltildiği hâlde aynı yemek aynı tarifte hep aynı yönde hatalı çıkıyorsa — hep altı çiğ ya da hep tek köşe yanık — o zaman rezistans, fan ya da conta tarafında gerçek bir arıza aranır."
+images:
+  coverAlt: "Ahşap mutfak dolapları arasına gömülü ankastre fırının kapalı cam kapağı"
 ---
 
 Kek tarifte yazan sürede fırından çıkıyor: üstü kararmış, kürdanı batırınca ortası ve altı hamur. Ya da tepsi böreğin bir köşesi nar gibi, diğer köşesi beyaz. "Fırın ısınmıyor" diyemezsin — ısınıyor, hem de fazlasıyla; ama ısıyı **eşit dağıtmıyor**. Bu şikâyet, ısınmama arızasından ayrı bir yazıyı hak ediyor çünkü sebeplerin yarısı cihazda değil kullanımda çıkar ve o yarısı bugün, hiçbir alet olmadan düzelir. Diğer yarısı içinse elinde basit ama etkili bir gözlem aracı var: kızarma testi.

@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'te cihazını ve belirtini seçersin, tahmini maliyet bandını görürsün. Sonra Ankara'daki yüksek puanlı servisleri listeleyip tek dokunuşla arayabilirsin; artık Ankara servisleri de benservis'te listeleniyor."
   - q: "Cihaz garantideyse ne yapmalıyım?"
     a: "Garanti süresi dolmamışsa önce yetkili servisi ara; garanti kapsamındaki arızada işçilik dahil ücret ödemezsin. Garanti bittiyse puanı, yorumu ve tahmini fiyatı iyi olan özel servis de gayet uygun bir seçenektir."
+images:
+  coverAlt: "Bir evin mutfağında çamaşır makinesinin yanında duran, açık teknisyen alet çantası"
 ---
 
 Çankaya'da bir apartman dairesinde buzdolabın soğutmayı bıraktı, ya da Keçiören'deki evde çamaşır makinesi ortalığı suya verdi. İnternette "Ankara beyaz eşya servisi" yazınca karşına yüzlerce sonuç çıkıyor ve hepsi "en iyi, en ucuz, en hızlı" olduğunu söylüyor. Başkentte servis bulmak sorun değil; **doğru servisi ayırt etmek** sorun. Bu rehberde güvenilir servisi nasıl seçeceğini ve fiyatı çağırmadan önce nasıl öğreneceğini anlatıyoruz.

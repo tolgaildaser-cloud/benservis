@@ -13,6 +13,8 @@ faq:
     a: "E07 sürekli su alma durumudur ve genelde su giriş vanası ya da akış ölçer kaynaklıdır. Makinenin güvenlik algoritması fazla suyu tahliye ederek durumu dengelemeye çalışır. Yine de hata sürüyorsa riski büyütmemek için makineyi kapatıp fişini çek ve su musluğunu kapat; bu tablo kullanıcı müdahalesiyle çözülmez, servis gerektirir."
   - q: "E08 ve E09 kodlarında evde deneyebileceğim bir şey var mı?"
     a: "Tek güvenli deneme resetlemektir: makineyi kapat, fişten çek, birkaç dakika bekleyip yeniden dene. E08 elektronik kartın hafıza bölümünü, E09 kart ile iç sistemler arasındaki haberleşmeyi işaret eder; ikisi de tamamen elektronik alanındadır. Reset sonrası kod tekrar geliyorsa kartın ölçümü ve onarımı servise aittir, evde yapılacak başka bir şey yoktur."
+images:
+  coverAlt: "Türk mutfağında kapağı açık bulaşık makinesi ve alt sepetteki temiz tabaklar"
 ---
 
 Program yarıda kesildi, makine bip'liyor ve panelde E ile başlayan bir kod var. Arçelik bulaşık makinelerinde bu kodlar arızanın adresini verir: kimi musluğu işaret eder, kimi gövdenin içini. Aradaki farkı bilmek önemli, çünkü kodların bir kısmı iki dakikalık bir kontrolle çözülürken bir kısmında yapılacak en doğru şey makineye hiç dokunmamaktır. Bu rehberde E01'den E09'a yaygın kodları tek tek açıyoruz.
