@@ -4,6 +4,21 @@ description: "Süt neden kapı rafına konmaz, et hangi rafta durur, dolap duvar
 slug: "buzdolabi-raf-duzeni-ve-duvar-mesafesi"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Buzdolabı termometresi"]
+steps:
+  - "Sütü ve açılmış süt ürünlerini kapı rafından orta rafa taşı."
+  - "Yumurtayı kutusuyla orta rafa koy."
+  - "Çiğ et, tavuk ve balığı kapalı kapta en alt rafa al."
+  - "Sebze ve meyveyi sebzelik çekmecesine koy; sürgülü modelde birini sebzeye, birini meyveye ayır."
+  - "Kapı raflarına yalnız su, meşrubat, sos, reçel ve turşu gibi dayanıklıları koy."
+  - "Rafların arkasında hava dolaşımı için parmak kadar boşluk bırak."
+  - "Dolabı öne çek; kılavuzundaki kurulum boşluklarına göre arkada, yanlarda ve üstte boşluk aç."
+  - "Orta rafa bir buzdolabı termometresi koy ve ayar kademesini buna göre oynat."
 faq:
   - q: "Süt neden kapı rafına konmamalı?"
     a: "Kapı rafı, dolabın en sıcak ve sıcaklığı en çok dalgalanan bölgesidir; her kapı açılışında oda havasıyla doğrudan temas eder. Süt ve açılmış süt ürünleri gibi çabuk bozulanlar bu dalgalanmadan en hızlı etkilenen gıdalardır. Sütün yeri orta ya da üst raflar; kapı rafı su, meşrubat, sos ve reçel gibi dayanıklılar içindir."
@@ -20,6 +35,24 @@ images:
 Pazar alışverişi mutfak tezgâhında; poşetler dolu ve hepsi bir an önce dolaba girecek. Süt her zamanki yerine, kapı rafına; et alt tarafa bir yere; domates en üste — nereye boşluk varsa oraya. Oysa buzdolabının içi tek tip bir soğuk kutu değildir: **her bölgesinin sıcaklığı farklıdır** ve neyin nereye konduğu, gıdanın kaç gün taze kalacağını doğrudan belirler. Bir de dolabın kendisinin nerede durduğu var — duvara sıfır dayalı bir dolap, en iyi raf düzenini bile boşa çıkarır.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: raf düzeni ve yerleşim
+
+**1. Sütü orta rafa taşı.** Kapı rafı dolabın en ılık ve en dalgalı bölgesidir; süt ve açılmış süt ürünlerinin yeri orta raftır.
+
+**2. Yumurtayı kutusuyla koy.** Yumurtanın en iyi yeri kapıdaki yumurtalık değil, kutusuyla orta raftır — kutu hem korur hem koku almasını engeller.
+
+**3. Çiğ eti en alta al.** Çiğ et, tavuk ve balık en soğuk bölge olan alt rafta, **kapalı kapta** durur: çiğ etin suyu asla başka gıdanın üzerine damlamamalı.
+
+**4. Sebzeliği kullan.** Sebze ve meyve nemli mikro iklimi olan sebzelikte durur; nem sürgüsü olan modelde çekmecenin birini sebzeye, birini meyveye ayır.
+
+**5. Kapıya dayanıklıları koy.** Kapı raflarına su, meşrubat, sos, reçel, turşu ve tereyağı gibi sıcaklık oynamasına dayanıklı olanlar konur.
+
+**6. Doluluğu dengele.** Dolap ne bomboş ne tıka basa çalışmayı sever; rafların arkasında hava için **parmak kadar boşluk** bırak, yoksa arka duvara dayanan gıdalar donar.
+
+**7. Dolabın nefesini aç.** Kesin ölçü kılavuzundaki "kurulum boşlukları" bölümünde yazar; genel ilke arkada ve yanlarda birkaç santim, üstte daha geniş bir boşluktur. Öne çekerken zemine karton kaydır ve arkadaki fiş-kablonun ezilmediğinden emin ol.
+
+**8. Termometreyle ölç.** Orta rafa basit bir buzdolabı termometresi koy; soğutucu bölme için +4°C civarı hedeftir. Kapı açma alışkanlıkların ve doluluk değiştikçe ayar kademesini buna göre oynat.
 
 ## Dolabın sıcaklık haritası
 

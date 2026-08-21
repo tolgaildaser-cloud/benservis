@@ -4,6 +4,20 @@ description: "Kurutma makinesi hata mı verdi? Arçelik E01-E05 ve Beko F01-F07 
 slug: "kurutma-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Yumuşak fırça", "Telefon kamerası"]
+steps:
+  - "Kodu ya da ışık düzenini kaydet. Ekrandaki kodu aynen yaz; ekransız modelde ışıkların yanıp sönme düzenini fotoğrafla ve kılavuzun arıza tablosuyla karşılaştır."
+  - "Makineyi kapat ve fişini çek. Temizlik turuna enerji kesikken başla."
+  - "Su tankını boşalt. Kurutma sırasında biriken su tankta toplanır; tank doluyken makine kendini korumak için çalışmaz."
+  - "Kapak filtresini temizle. Her kurutmada yapılması gereken rutin budur; hav filtresi tıkalıyken makine ısıyı taşıyamaz."
+  - "Kondanser / alt filtre bölümünü kılavuzda tarif edilen şekilde temizle. Kapalı hava devresindeki tıkanıklık sensörlere anormal değer okutur ve makine durur."
+  - "Makinenin çevresinde hava dolaşacak boşluk bırak. Arkasının duvara tam dayalı olmadığından emin ol; dar ve havasız köşe, hedef sıcaklığa ulaşamama şikâyetinin bilinen sebebidir."
+  - "Kapağı tam kapat, fişi tak ve yeniden dene. Aynı kod geri geliyorsa, makine hiç ısıtmıyorsa ya da tank boşken uyarı sönmüyorsa iş servisindir."
 faq:
   - q: "Kurutma makinesi kod verdi, hemen servis mi çağırmalıyım?"
     a: "Önce iki basit kontrolü yap: su tankını boşalt ve tüm filtreleri temizle. Kurutma makinesi kodlarının önemli bir kısmı dolu tank ya da tıkalı filtre/kondanser kaynaklıdır ve bu ikisi tamamen kullanıcı işidir. Kontroller sonrası kod devam ediyorsa o zaman gerçek bir arıza bildirimi vardır ve servisle konuşmak gerekir."
@@ -22,6 +36,22 @@ Kurutma makinesi programın ortasında durdu, ekranda E ya da F ile başlayan bi
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Kod tablosu model ailesine göre değişir; aynı markanın farklı serilerinde aynı kod farklı anlama gelebilir. Aşağıdakiler yaygın serilerde birden çok kaynakla doğrulanmış karşılıklardır; kesin tablo kullanım kılavuzundadır.
+
+## Adım adım: kod ya da uyarı ışığı görünce
+
+**1. Kodu ya da ışık düzenini kaydet.** Ekrandaki kodu aynen yaz; ekransız modelde ışıkların yanıp sönme düzenini fotoğrafla ve kılavuzun arıza tablosuyla karşılaştır.
+
+**2. Makineyi kapat ve fişini çek.** Temizlik turuna enerji kesikken başla.
+
+**3. Su tankını boşalt.** Kurutma sırasında biriken su tankta toplanır; tank doluyken makine kendini korumak için çalışmaz.
+
+**4. Kapak filtresini temizle.** Her kurutmada yapılması gereken rutin budur; hav filtresi tıkalıyken makine ısıyı taşıyamaz.
+
+**5. Kondanser / alt filtre bölümünü kılavuzda tarif edilen şekilde temizle.** Kapalı hava devresindeki tıkanıklık sensörlere anormal değer okutur ve makine durur.
+
+**6. Makinenin çevresinde hava dolaşacak boşluk bırak.** Arkasının duvara tam dayalı olmadığından emin ol; dar ve havasız köşe, hedef sıcaklığa ulaşamama şikâyetinin bilinen sebebidir.
+
+**7. Kapağı tam kapat, fişi tak ve yeniden dene.** Aynı kod geri geliyorsa, makine hiç ısıtmıyorsa ya da tank boşken uyarı sönmüyorsa iş servisindir.
 
 ## Kurutma makinesi neden bu kadar çok "bakım" kodu verir?
 

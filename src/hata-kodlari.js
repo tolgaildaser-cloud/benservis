@@ -124,6 +124,17 @@ export const HATA_KODU_KATMANI = {
     { giris: "Hızlı program ne zaman kullanılır", tip: "ayar",
       anlam: "Hızlı program hangi kirde işe yarar, hangisinde yıkamayı yarım bırakır.",
       yazi: "camasir-makinesi-hizli-program-ne-zaman" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
+    { giris: "Grundig — E01, E02, E03, E04, E06, E17", tip: "kod",
+      anlam: "Grundig, Arçelik grubunun kod şemasını paylaşıyor; farklar ve tek haneli eski şema ayrımı.",
+      yazi: "grundig-camasir-makinesi-hata-kodlari" },
+    { giris: "Kireç ve tambur temizliği (planlı bakım)", tip: "ayar",
+      anlam: "Boş bakım yıkaması ne sıklıkta, kapak lastiğinin katları ve suyun sertliğiyle ilişkisi.",
+      yazi: "camasir-makinesi-kirec-ve-tambur-temizligi" },
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -226,6 +237,14 @@ export const HATA_KODU_KATMANI = {
     { giris: "Elektrik tüketimi birden arttı", tip: "ayar",
       anlam: "Enerjinin çoğu suyu ısıtmaya gider; aynı programda tüketimin belirgin artması bir sinyal olabilir.",
       yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
+    { giris: "Arçelik — semboller ve uyarı ışıkları", tip: "kod",
+      anlam: "Arçelik'in kendi kılavuzunda E kodu yok; cihaz sembolle konuşuyor — su tankı yanıyor mu yanıp sönüyor mu ayrımı.",
+      yazi: "arcelik-kurutma-makinesi-hata-kodlari" },
   ],
   "Bulaşık Makinesi": [
     { giris: "E15 (musluk işareti)", tip: "kod",
@@ -359,6 +378,14 @@ export const HATA_KODU_KATMANI = {
     { giris: "Eko program neden uzun sürüyor", tip: "ayar",
       anlam: "Uzun süre arıza değil, tasarımın kendisi; suyu yavaş ısıtıp az enerjiyle yıkıyor.",
       yazi: "bulasik-makinesi-eko-program-neden-uzun" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
+    { giris: "Siemens — E07…E27", tip: "kod",
+      anlam: "Siemens ve Bosch aynı kod dilini konuşuyor, panel farklı; hangi kod evde çözülür belli.",
+      yazi: "siemens-bulasik-makinesi-hata-kodlari" },
   ],
 
   "Kombi / Termosifon": [
@@ -552,6 +579,14 @@ export const HATA_KODU_KATMANI = {
     { giris: "Yazın kaç dereceye alınmalı", tip: "ayar",
       anlam: "Sıcak aylarda doğru ayar ve duvar mesafesi; yanlış ayar hem soğutmayı hem tüketimi bozuyor.",
       yazi: "buzdolabi-yaz-ayari" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
+    { giris: "Gaz bitti mi, kaçak mı", tip: "belirti",
+      anlam: "Buzdolabı kapalı devredir, gaz kullanımla azalmaz; azaldıysa kaçak var ve kaçak bulunmadan dolum kalıcı olmaz.",
+      yazi: "buzdolabi-gaz-dolumu" },
   ],
 
   "Klima": [
@@ -632,6 +667,23 @@ export const HATA_KODU_KATMANI = {
     { giris: "Kumanda çalışmıyor", tip: "belirti",
       anlam: "Telefon kamerasıyla iki dakikada kumanda testi: sorun kumandada mı, iç ünitede mi.",
       yazi: "klima-kumandasi-calismiyor" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
+    { giris: "Daikin — U, E, A, F, H, J, L kodları", tip: "kod",
+      anlam: "İlk harf üniteyi söylüyor: A/C iç ünite, E/F/H/J/L dış ünite, U sistem. Kodu ekranda okuma yolu dahil.",
+      yazi: "daikin-klima-hata-kodlari" },
+    { giris: "Vestel — Er + iki hane", tip: "kod",
+      anlam: "Güncel inverter kılavuzlarında format Er01, Er11, Er13; DF, AE, HL ise arıza değil koruma mesajı.",
+      yazi: "vestel-klima-hata-kodlari" },
+    { giris: "Samsung — C1, E5, E6, E7 · CF, CL, dF", tip: "kod",
+      anlam: "CF, CL ve dF arıza değil hatırlatıcı; C1 yanındaki sayı asıl arızayı söylüyor.",
+      yazi: "samsung-klima-hata-kodlari" },
+    { giris: "Montaj · söküm-takma nelerden oluşur", tip: "ayar",
+      anlam: "Taşınmada söküm ve takma iki ayrı iş; gaz toplanmazsa ne kaybediliyor ve kötü montaj garantiyi nasıl etkiliyor.",
+      yazi: "klima-montaj-sokum-takma" },
   ],
 
   "Fırın / Ocak / Aspiratör": [
@@ -704,6 +756,14 @@ export const HATA_KODU_KATMANI = {
     { giris: "Çak çak ediyor ama yanmıyor", tip: "belirti",
       anlam: "Kıvılcım çıkıp alev tutmuyorsa başlık ıslak, kirli ya da yanlış oturmuştur; gaz vanasını da kontrol et.",
       yazi: "ocak-atesleme-yapmiyor" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
+    { giris: "Fırın içi temizliği (piroliz · katalitik · buharlı)", tip: "ayar",
+      anlam: "Hangi fırında hangi yöntem; katalitik yüzeye deterjan sürülmez, sprey nereye gitmemeli.",
+      yazi: "firin-nasil-temizlenir" },
   ],
 
   "Televizyon / Monitör": [
@@ -757,6 +817,11 @@ export const HATA_KODU_KATMANI = {
     { giris: "Görüntü var, ses yok", tip: "belirti",
       anlam: "Sessiz mod, ses çıkışı ayarı, harici hoparlör ve panel hoparlörü sırasıyla kontrol ediliyor.",
       yazi: "tv-ses-gelmiyor" },
+  // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
+  // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
+  //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
+  //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
+  //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
   ],
 
   "Mikrodalga / Air Fryer": [

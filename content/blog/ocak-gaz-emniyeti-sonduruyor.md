@@ -4,6 +4,21 @@ description: "Elini çekince sönen ocak çoğu zaman bozuk değildir: gaz emniy
 slug: "ocak-gaz-emniyeti-sonduruyor"
 date: "2026-08-20"
 category: "Fırın / Ocak"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez", "Yumuşak fırça", "Sıcak sabunlu su"]
+steps:
+  - "Denemelere başlamadan gaz kokusu olmadığından emin ol; koku varsa düğmeyi kapat, pencereyi aç, elektrik düğmelerine dokunma."
+  - "Düğmeye bas ve çevir; alev yandıktan sonra bırakmadan 10-15 saniye daha basılı tut."
+  - "Düğmeyi yavaşça bırak ve alevin durup durmadığını izle."
+  - "Sönüyorsa ocağı kapat, tamamen soğumasını bekle ve ızgarayla brülör başlığını kaldır."
+  - "Alevin içindeki termokupl ucunu kuru bezle sil; inatçı kurumu nazikçe parlat, çubuğu bükme."
+  - "Hemen yanındaki ateşleme bujisini de sil."
+  - "Brülör başlığını sıcak sabunlu suda yıka, kanallarını fırçayla aç, tamamen kurut ve tam oturt."
+  - "Ocağı yak ve alevin termokupl çubuğunu yaladığını gözle; 30 saniye tutmana rağmen sönüyorsa o gözü kullanmayı bırak ve yetkili servisi ara."
 faq:
   - q: "Gaz emniyeti (gaz kesme) ne işe yarar?"
     a: "Alev herhangi bir sebeple sönerse — taşan tencere, hava akımı, cereyan — gazın boşa akmasını engelleyen güvenlik düzeneğidir. Alevin içinde duran küçük metal çubuk (termokupl) sıcakken gaz yolunu açık tutar; alev sönüp çubuk soğuyunca gaz otomatik kesilir. Yani seni rahatsız eden bu özellik, aslında evini koruyan sistemin ta kendisidir."
@@ -22,6 +37,24 @@ Düğmeyi çeviriyorsun, çakmak çakıyor, alev güzelce yanıyor — ve elini 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Önce güvenlik:** Tüm kontroller **ocak kapalı ve soğukken** yapılır. Denemeler sırasında gaz kokusu alırsan düğmeyi kapat, pencereyi aç, elektrik düğmelerine ve çakmağa dokunma. Ve en önemlisi: sık sönen bir gözü "emniyeti iptal ettirerek" kullanma fikrine hiç yaklaşma — o düzenek, alev söndüğünde mutfağına gaz dolmasını engelleyen tek şeydir.
+
+## Adım adım: elini çekince sönen gözde evde denenecekler
+
+**1. Önce güvenliği al.** ⚠️ Denemelere başlamadan gaz kokusu olmadığından emin ol. Koku alıyorsan düğmeyi kapat, pencereyi aç, **elektrik düğmelerine ve çakmağa dokunma.**
+
+**2. Süre ver.** Düğmeye bas ve çevir; alev yandıktan sonra **bırakmadan 10-15 saniye daha basılı tut.** Bu süre termokuplun ısınıp gaz yolunu devralması içindir.
+
+**3. Yavaşça bırak.** Düğmeyi yavaşça bırak ve alevi izle. Duruyorsa iş tamam; soğuk kış sabahında ya da cereyanlı mutfakta sürenin birkaç saniye uzayabileceğini bil.
+
+**4. Ocağı soğut ve aç.** Hâlâ sönüyorsa ocağı kapat, tamamen soğumasını bekle, ızgarayı ve brülör başlığını elinle kaldır.
+
+**5. Termokupl ucunu sil.** Alevin içinde duran, genelde bakır renkli çubuğu **kuru bir bezle** iyice sil; inatçı kurumu çok ince zımparayla nazikçe parlat. Çubuğu bükme, çekiştirme, yerinden oynatma.
+
+**6. Bujiyi de sil.** Hemen yanındaki kıvılcım çakan ateşleme ucunu da silersen çakma tarafı da rahatlar.
+
+**7. Başlığı yıka ve oturt.** Brülör başlığını sıcak sabunlu suda yıka, kanallarını yumuşak fırçayla aç, **tamamen kurut** ve yuvasına tam oturt.
+
+**8. Alevi gözle, sınırı bil.** Ocağı yak ve alevin termokupl çubuğunu yalayıp yalamadığına bak. 30 saniye tutmana rağmen göz hâlâ sönüyorsa ⛔ termokupl ya da valf tarafı devrededir: o gözü kullanmayı bırak, yetkili servisi ara. Emniyeti iptal ettirmek çözüm değildir.
 
 ## Önce mantığı anla: termokupl nedir?
 

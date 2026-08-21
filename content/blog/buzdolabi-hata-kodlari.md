@@ -4,6 +4,20 @@ description: "Buzdolabı panelinde E harfli kod mu belirdi? No-frost modellerde 
 slug: "buzdolabi-hata-kodlari"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Telefon kamerası", "Kullanım kılavuzu"]
+steps:
+  - "Kodu aynen not al. E harfi ile 8 rakamı karışabilir; en garantisi paneli fotoğraflamaktır."
+  - "Kapıyı olabildiğince az aç. Sensör arızasında bile cihaz genelde kısmen soğutmaya devam eder; içerideki soğuk yükü korumak sana zaman kazandırır."
+  - "Fişi çek ve 5-10 dakika bekle. Elektrik kesintisi ya da dalgalanma sonrası kartın geçici kod göstermesi yaygındır."
+  - "Fişi tekrar tak ve kodu izle. Silinen ve geri gelmeyen kod büyük ihtimalle anlık bir takılmaydı; geri gelen kod gerçek bir bildirimdir."
+  - "Kodun karşılığını kılavuzdan teyit et. Aynı kod markaya ve model ailesine göre farklı anlama gelebilir; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indir."
+  - "Soğutma tamamen durduysa yiyecekler için plan yap. Bozulabilir yiyecekleri en geç birkaç saat içinde başka bir soğuk ortama taşımayı planla; içine yeni sıcak yiyecek koyma."
+  - "Kod geri geliyorsa deneme yapmayı bırak. Markayı ve kodu birlikte söyleyerek servisle konuş; sensör, fan ve defrost ısıtıcısı panellerin arkasındadır, oraya kullanıcı girmez."
 faq:
   - q: "Buzdolabında hata kodu görünce hemen servis mi çağırmalıyım?"
     a: "Hayır, önce kodu not et ve cihazın fişini çekip 5-10 dakika bekledikten sonra tekrar tak. Elektrik kesintisi ya da anlık dalgalanma sonrası elektronik kart geçici bir kod gösterebilir; bu tür kodlar resetle silinir. Kod tekrar geliyorsa artık geçici değil gerçek bir bildirimdir ve o noktada servisle konuşmak doğru olur."
@@ -22,6 +36,22 @@ Akşam buzdolabından su alacaksın, panelde sıcaklık yerine E harfli bir kod 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Önemli uyarı:** Aynı kod, markaya ve hatta aynı markanın model ailesine göre farklı anlama gelebilir. Aşağıdaki karşılıklar en yaygın model gruplarına aittir; kesin tablo cihazının kullanım kılavuzundadır. Kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir.
+
+## Adım adım: kod görünce ilk yapılacaklar
+
+**1. Kodu aynen not al.** E harfi ile 8 rakamı karışabilir; en garantisi paneli fotoğraflamaktır.
+
+**2. Kapıyı olabildiğince az aç.** Sensör arızasında bile cihaz genelde kısmen soğutmaya devam eder; içerideki soğuk yükü korumak sana zaman kazandırır.
+
+**3. Fişi çek ve 5-10 dakika bekle.** Elektrik kesintisi ya da dalgalanma sonrası kartın geçici kod göstermesi yaygındır.
+
+**4. Fişi tekrar tak ve kodu izle.** Silinen ve geri gelmeyen kod büyük ihtimalle anlık bir takılmaydı; geri gelen kod gerçek bir bildirimdir.
+
+**5. Kodun karşılığını kılavuzdan teyit et.** Aynı kod markaya ve model ailesine göre farklı anlama gelebilir; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indir.
+
+**6. Soğutma tamamen durduysa yiyecekler için plan yap.** Bozulabilir yiyecekleri en geç birkaç saat içinde başka bir soğuk ortama taşımayı planla; içine yeni sıcak yiyecek koyma.
+
+**7. Kod geri geliyorsa deneme yapmayı bırak.** Markayı ve kodu birlikte söyleyerek servisle konuş; sensör, fan ve defrost ısıtıcısı panellerin arkasındadır, oraya kullanıcı girmez.
 
 ## Panelli buzdolabı neden kod verir?
 

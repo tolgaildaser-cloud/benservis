@@ -4,6 +4,20 @@ description: "Sütyen teli ya da bozuk para makineye kaçtıysa panik yok: cismi
 slug: "camasir-makinesine-cisim-kacti"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["El feneri", "Havlu", "Sığ bir kap", "Eldiven"]
+steps:
+  - "Yıkamayı durdur ve fişi çek. Cisim kaçtığını fark ettiğin anda programa devam etme; makinenin içinin boş olduğundan emin ol."
+  - "Tamburu el feneriyle dolaş. Tamburu elle yavaşça çevirerek her bölümüne bak; cisim sivriyse eldiven iyi fikirdir."
+  - "Kapak contasının kıvrımını nazikçe aralayıp yokla. Bozuk para, toka ve küçük cisimler çok sık contanın alt kıvrımında birikir."
+  - "Görünen teli nazikçe çekmeyi dene, direniyorsa bırak. Tambur deliğinden görünen ve düz duran bir tel çıkabilir; zorlama — kırılan tel daha derine düşer ve işi büyütür."
+  - "Filtre kapağını aç ve altını hazırla. Ön alt köşedeki kapağı aç, altına sığ bir kap ve havlu yerleştir; filtre gevşetilince içeride kalan su gelir, bu normaldir."
+  - "Filtreyi çıkar, hem üstüne hem yuvasına bak. Filtreyi saat yönünün tersine çevirerek çıkar; el feneriyle yuvanın derinliğini de kontrol et ve ulaşabildiğin cisimleri al, sonra filtreyi hissedilir bir dirençle durana kadar çevirerek geri tak."
+  - "Boş makinede kısa bir programda sesi dinle. Ses yoksa her yıkamadan sonra filtreyi yeniden kontrol ederek takip et; ritmik tıkırtı ya da metalik sürtünme varsa makineyi kullanmayı durdur ve cismin ne olduğunu servise tarif et."
 faq:
   - q: "Makineye kaçan cisim kendiliğinden çıkar mı?"
     a: "Bazen evet: bozuk para gibi küçük ve ağır cisimler birkaç yıkama içinde tahliye bölgesine sürüklenip filtrede birikir ve oradan elle alınır. Ama sütyen teli gibi uzun ve sivri cisimler tambur deliklerine ya da kazanla tambur arasına takılıp orada kalabilir. Bu yüzden cisim kaçtığını fark ettiğinde beklemek yerine önce filtreye bakmak, çıkmadıysa da tıkırtı sesini ciddiye almak gerekir."
@@ -22,6 +36,22 @@ Yıkama bitti, sütyenin bir telinin eksik olduğunu fark ettin. Ya da makine d�
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🧭 **Cismin yolculuğu şöyle işler:** tamburun içindeki cisim, deliklerden ya da conta ile tambur arasındaki boşluktan **tambur ile kazan arasına** düşer. Küçük ve ağırsa suyla birlikte aşağı, **tahliye bölgesine** sürüklenir ve pompanın önündeki **filtrede** takılır — filtre zaten tam bu iş için oradadır. Uzun ve sivriyse (tel, ataç) arada takılıp kalabilir. Senin güvenli sahan bu yolun iki ucudur: tamburun içi ve filtre. Aradaki bölge servise aittir.
+
+## Adım adım: kaçan cismi güvenle arama sırası
+
+**1. Yıkamayı durdur ve fişi çek.** Cisim kaçtığını fark ettiğin anda programa devam etme; makinenin içinin boş olduğundan emin ol.
+
+**2. Tamburu el feneriyle dolaş.** Tamburu elle yavaşça çevirerek her bölümüne bak; cisim sivriyse eldiven iyi fikirdir.
+
+**3. Kapak contasının kıvrımını nazikçe aralayıp yokla.** Bozuk para, toka ve küçük cisimler çok sık contanın alt kıvrımında birikir.
+
+**4. Görünen teli nazikçe çekmeyi dene, direniyorsa bırak.** Tambur deliğinden görünen ve düz duran bir tel çıkabilir; zorlama — kırılan tel daha derine düşer ve işi büyütür.
+
+**5. Filtre kapağını aç ve altını hazırla.** Ön alt köşedeki kapağı aç, altına **sığ bir kap ve havlu** yerleştir; filtre gevşetilince içeride kalan su gelir, bu normaldir.
+
+**6. Filtreyi çıkar, hem üstüne hem yuvasına bak.** Filtreyi saat yönünün tersine çevirerek çıkar; el feneriyle yuvanın derinliğini de kontrol et ve ulaşabildiğin cisimleri al, sonra filtreyi hissedilir bir dirençle durana kadar çevirerek geri tak.
+
+**7. Boş makinede kısa bir programda sesi dinle.** Ses yoksa her yıkamadan sonra filtreyi yeniden kontrol ederek takip et; ritmik tıkırtı ya da metalik sürtünme varsa makineyi kullanmayı durdur ve cismin ne olduğunu servise tarif et.
 
 ## 1) Önce tamburun içine ve contaya bak
 

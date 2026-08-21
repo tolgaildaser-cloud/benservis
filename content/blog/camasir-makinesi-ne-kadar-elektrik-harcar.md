@@ -4,6 +4,21 @@ description: "Çamaşır makinesi yıkama başına kaç kWh harcar? Enerjinin ç
 slug: "camasir-makinesi-ne-kadar-elektrik-harcar"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Enerji etiketindeki 100 döngü başına kWh değerini bul ve 100'e bölerek yıkama başına tüketimini çıkar."
+  - "Bir hafta boyunca kaç yıkama yaptığını ve hangi dereceleri seçtiğini not et."
+  - "Günlük az kirli çamaşırda sıcaklığı bir kademe düşür."
+  - "Nevresim ve havlu gibi hijyen gereken yıkamaları tek seferde topla."
+  - "Acelen olmayan yıkamalarda eko programı seç."
+  - "Makineyi tam yükle çalıştır."
+  - "Deterjanı kılavuzdaki doza göre ölç."
+  - "Sıkma devrini yükselt ve üreticinin önerdiği aralıkta kireç çözücü bakımını takvime al."
 faq:
   - q: "Çamaşır makinesi bir yıkamada kaç kWh harcar?"
     a: "Programa ve sıcaklığa göre değişir: soğuk ve 30°C programlarda yıkama başına ~0,3-0,5 kWh, 40°C'de ~0,5-1 kWh, 60°C ve üzeri programlarda 1 kWh'in üzerine çıkar. Verimli makinelerin Eco 40-60 programı tam yükte ~0,5 kWh civarında kalabilir. Kendi makinenin değeri enerji etiketinde 100 döngü başına kWh olarak yazar."
@@ -22,6 +37,24 @@ Makine üç saatlik programı bitirdiğinde akla hep aynı soru gelir: **"Bu kad
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚡ **Kısa özet:** Yıkama başına tüketim **~0,3-0,5 kWh (soğuk/30°C)**, **~0,5-1 kWh (40°C)**, **1 kWh üzeri (60°C+)**. Enerjinin büyük kısmı ısıtmaya gider; 60°C, 30°C'ye göre **3-4 kata varan** fark yaratır. Maliyet = **kWh × faturandaki birim fiyat.**
+
+## Adım adım: çamaşır makinesi tüketimini ölç ve düşür
+
+**1. Etiketteki rakamı bul.** Enerji etiketi kapak içinde ya da kullanım kılavuzunda yazar. kWh/100 döngü değerini bul, 100'e böl — yıkama başına tüketimin bu.
+
+**2. Kendi düzenini say.** Bir hafta boyunca kaç yıkama yaptığını ve hangi dereceleri seçtiğini not et. Rakamı görmek alışkanlığı değiştirir.
+
+**3. Bir kademe düşür.** Günlük az kirli çamaşırda 60'tan 40'a, 40'tan 30'a inmek tek başına en büyük tasarrufu getirir.
+
+**4. Sıcak yıkamaları topla.** Nevresim, havlu ve hijyen gereken yıkamaları dağıtma; tek seferde topla ki 60°C'yi haftada bir kez çalıştırasın.
+
+**5. Eko programı seç.** Eko program sıcaklığı düşük tutar, kaybettiğini süreyle telafi eder. Acelen olmayan her yıkamada varsayılan bu olsun.
+
+**6. Tam yükle çalıştır.** Yarım yükte yıkama başına tüketim çok az düşer; iki yarım yük, bir tam yükten pahalıdır.
+
+**7. Deterjanı ölçerek koy.** Fazla deterjan fazla köpük, bazı makinelerde ek durulama demektir — süre de su da artar. Kılavuzdaki dozu kullan.
+
+**8. Devri yükselt, kireci takvime al.** Sıkma devrini yükseltmek çamaşırı kurutucuya daha az nemle sokar. Üreticinin önerdiği aralıkta kireç çözücü bakımı da tüketimi yerinde tutar.
 
 ## Yıkama başına tipik tüketim
 

@@ -4,6 +4,20 @@ description: "Airfryer ısıtmıyorsa suçlu çoğu zaman rezistans değil, tam 
 slug: "airfryer-isitmiyor"
 date: "2026-08-20"
 category: "Mikrodalga"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez", "Küçük fırça"]
+steps:
+  - "Cihazı kapat ve soğumasını bekle."
+  - "Sepeti tamamen çıkar; yuvayı ve rayları kırıntı ve yağ birikintisine karşı temizle."
+  - "Sepeti tık sesini duyana kadar yerine it; ayrı bir iç ızgara tabanı varsa onun da oturduğundan emin ol."
+  - "Sıcaklık ayarının gerçekten istediğin derecede olduğunu kontrol et."
+  - "Dijital modelde başlat tuşuna bastığından emin ol."
+  - "Cihazı çoklu prizden çıkar, tek başına bir duvar prizine tak."
+  - "Boş cihazı birkaç dakika çalıştır ve üstteki hava çıkışından sıcak hava gelip gelmediğini hisset; hava soğuksa fişi çek ve belirtiyi not et."
 faq:
   - q: "Airfryer sepeti çıkarınca duruyor, takınca çalışıyor — bu normal mi?"
     a: "Evet, tam olarak böyle tasarlanmıştır. Sepet yuvasında bir güvenlik anahtarı bulunur; sepet çekildiği anda ısıtıcı ve fan durur, sepet tam oturduğunda yeniden çalışır. Bu, elini sıcak hazneye sokmana karşı bir korumadır. Sorun, sepet takılıyken bu anahtarın basılı kalmamasıdır: o zaman cihaz sepeti yok sayar ve hiç ısıtmaz."
@@ -20,6 +34,22 @@ images:
 Patatesleri doğradın, sepete dizdin, süreyi kurdun. Yirmi dakika sonra kapağı açtığında karşındaki manzara: soluk, yağlı, çiğ patates. Cihaz çalışıyor gibiydi — ekran yanıyordu, fan sesi geliyordu — ama içeride ısı yoktu. "Airfryer ısıtmıyor" şikâyeti kulağa rezistans arızası gibi gelir; oysa bu vakaların şaşırtıcı bir kısmının sebebi çok daha masumdur: **yerine tam oturmamış bir sepet.** Nedenini ve sırayla neye bakacağını anlatalım; cihazın içini açmak bu yazının hiçbir adımında yok, çünkü orası kullanıcı alanı değil.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: airfryer ısıtmıyorsa
+
+**1. Cihazı kapat.** Soğumasını bekle; sıcak hazneyle uğraşma.
+
+**2. Yuvayı temizle.** Sepeti tamamen çıkar, yuvaya ve sepetin oturduğu raylara bak: kırıntı, yağ birikintisi ya da sıkışmış parça varsa temizle.
+
+**3. Sepeti tık sesiyle tak.** Sepeti yerine **tık sesini duyana kadar** it. İç hazne ayrı bir parçaysa (ızgara tabanı gibi) onun da yerine oturduğundan emin ol — güvenlik anahtarı basılı kalmazsa cihaz ısıtmaya hiç başlamaz.
+
+**4. Sıcaklık ayarını kontrol et.** Mekanik modellerde süre ve sıcaklık ayrı kadranlardır; sıcaklık en düşükte unutulmuş olabilir.
+
+**5. Başlat adımını doğrula.** Dijital modelde programı seçmek yetmez, başlat tuşuna basılmış olmalı. Kapak/çekmece uyarısı var mı bak.
+
+**6. Duvar prizine tek başına tak.** Uzatma kablosunu ve çoklu prizi devreden çıkar; airfryer yüksek güç çeken bir cihazdır ve zayıf hatta yarı güçte kalabilir.
+
+**7. Sıcak hava testini yap.** Boş cihazı birkaç dakika çalıştır, üstteki hava çıkışını hisset. Hava soğuksa fişi çek ve **"fan çalışıyor, hava soğuk"** notunu servise aktar.
 
 ## 1) Sepet tam oturmamış: görünmez anahtar meselesi
 

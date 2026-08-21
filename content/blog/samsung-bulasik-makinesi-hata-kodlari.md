@@ -4,6 +4,21 @@ description: "Samsung bulaşık makinesinde 4C su temini, 5C tahliye, LC kaçak,
 slug: "samsung-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Küçük fırça", "Sünger"]
+steps:
+  - "Kodu aynen not al. 4C ile 4E, 5C ile 5E, LC ile LE aynı anlama gelir; ekranda hangisi varsa onu yaz."
+  - "Makineyi kapat ve fişini çek. Ekranda LC / LE varsa musluğu da kapat ve makineyi kurumaya bırak."
+  - "Musluğu ve şebekeyi kontrol et. Eviyenin altındaki makine musluğu tam açık mı? Evde su var mı — başka bir musluğu açıp bak."
+  - "Giriş hortumuna bak. Dolabın arkasında bükülmüş, ezilmiş ya da kıvrılmış olmasın; rahatlat ve düzelt."
+  - "Giriş filtresini temizle. Musluğu kapat, giriş hortumunu makine tarafından elinle sök (altına havlu ser) ve girişteki küçük süzgeci akan suda küçük bir fırçayla temizle."
+  - "İç filtreyi temizle. Alt sepeti çıkar, tabandaki filtreyi sök, yemek artıklarını temizle ve yerine sıkıca tak; tabandaki su ılık olabilir, elini yavaş daldır."
+  - "Tahliye hortumunu ve gideri kontrol et. Hortumda bükülme var mı, gider bağlantısı tıkalı mı bak; eviye gideri de yavaş akıyorsa sorun makinede değil giderde olabilir."
+  - "Hortumu tak, musluğu aç ve kısa bir programla dene. Bağlantıdan damlama olmadığını kontrol et, fişi tak ve dene; kod tekrar geliyorsa valf, pompa ve rezistans tarafı servis işidir."
 faq:
   - q: "Samsung bulaşık makinesinde 4C hatası ne demek?"
     a: "4C, makinenin ihtiyaç duyduğu suya ulaşamadığını gösteren su temini hatasıdır; eski modellerde aynı durum 4E olarak görünür. Sebep çoğu zaman makinenin dışındadır: kapalı ya da kısık musluk, su kesintisi, bükülmüş giriş hortumu veya tıkanmış giriş filtresi. Bu dış kontroller temizken 4C sürüyorsa su giriş valfi tarafına servisin bakması gerekir."
@@ -22,6 +37,24 @@ Makine programın başında bekliyor, su sesi yok ve panelde **4C** yazıyor. Ya
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ℹ️ Samsung aynı durumu model kuşağına göre farklı harflerle gösterebilir: 4C ile 4E, 5C ile 5E, LC ile LE aynı anlama gelir. Ekranda hangisini görürsen gör, aşağıdaki karşılıklar geçerlidir; yine de kendi modelinin kılavuzuyla teyit etmek en sağlamıdır.
+
+## Adım adım: 4C ve 5C için evde denenecekler
+
+**1. Kodu aynen not al.** 4C ile 4E, 5C ile 5E, LC ile LE aynı anlama gelir; ekranda hangisi varsa onu yaz.
+
+**2. Makineyi kapat ve fişini çek.** Ekranda **LC / LE** varsa musluğu da kapat ve makineyi kurumaya bırak.
+
+**3. Musluğu ve şebekeyi kontrol et.** Eviyenin altındaki makine musluğu tam açık mı? Evde su var mı — başka bir musluğu açıp bak.
+
+**4. Giriş hortumuna bak.** Dolabın arkasında bükülmüş, ezilmiş ya da kıvrılmış olmasın; rahatlat ve düzelt.
+
+**5. Giriş filtresini temizle.** **Musluğu kapat**, giriş hortumunu makine tarafından elinle sök (altına havlu ser) ve girişteki küçük süzgeci akan suda küçük bir fırçayla temizle.
+
+**6. İç filtreyi temizle.** Alt sepeti çıkar, tabandaki filtreyi sök, yemek artıklarını temizle ve yerine sıkıca tak; tabandaki su ılık olabilir, elini yavaş daldır.
+
+**7. Tahliye hortumunu ve gideri kontrol et.** Hortumda bükülme var mı, gider bağlantısı tıkalı mı bak; eviye gideri de yavaş akıyorsa sorun makinede değil giderde olabilir.
+
+**8. Hortumu tak, musluğu aç ve kısa bir programla dene.** Bağlantıdan damlama olmadığını kontrol et, fişi tak ve dene; kod tekrar geliyorsa valf, pompa ve rezistans tarafı servis işidir.
 
 ## 4C — su temini hatası (en yaygın kod)
 

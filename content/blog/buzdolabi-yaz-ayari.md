@@ -28,6 +28,8 @@ faq:
     a: "Kapı açıldığı anda içeriye oda sıcaklığında ve nemli hava dolar; yazın bu havanın taşıdığı ısı kışa göre çok daha fazladır. Bu yüzden yaz aylarında asıl kazanç ayarda değil alışkanlıktadır: ne alacağını kapıyı açmadan önce kararlaştır, sık kullandıklarını kapı rafında topla ve kapıyı açık tutarak düşünme. Uzun süre açık kalan kapı, ayarla kazandığın her şeyi geri alır."
   - q: "Tatile çıkarken buzdolabı fişten çekilmeli mi?"
     a: "Birkaç haftalık tatilde çekmeye gerek yoktur: bozulacakları boşalt, kapıyı kapat ve cihazı normal ayarında bırak. Kapalı ve az açılan bir buzdolabı bu dönemde zaten en az çalıştığı hâlindedir. Bir ayı aşan uzun yokluklarda ise içini tamamen boşaltmak, temizleyip kurulamak, fişi çekmek ve kapağı aralık bırakmak doğru olanıdır — kapalı bırakılan boş bir dolapta küf ve koku kaçınılmazdır."
+images:
+  coverAlt: "Mavi tulumlu benservis ustası yazlık mutfakta çelik buzdolabının yanında kollarını kavuşturmuş duruyor"
 ---
 
 Temmuz sıcağında mutfak otuz dereceyi geçmiş, buzdolabı sabahtan beri neredeyse hiç durmuyor ve dün akşam koyduğun süt bugün ılık gibi. Cihaz bozuldu mu? Çoğu zaman hayır: buzdolabı **aynı işi çok daha ağır koşullarda** yapmaya çalışıyordur. Bu yazıda mevsime özel olanı anlatıyoruz — sıcak aylarda ayar nereye gelir, hangi alışkanlık faturayı şişirir, tatile çıkarken ne yapılır.
