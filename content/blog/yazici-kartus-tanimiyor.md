@@ -4,6 +4,21 @@ description: "Yazıcı kartuşu tanımıyorsa çoğu zaman temas noktası kirli 
 slug: "yazici-kartus-tanimiyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru, tüy bırakmayan bez (gözlük bezi)"]
+steps:
+  - "Yazıcı açıkken kapağını kaldır ve taşıyıcının erişim konumuna gelmesini bekle."
+  - "Kartuşu mandalına basarak yuvasından çıkar; zorlama."
+  - "Yeni kartuşta çipin ve püskürtme bölgesinin üstündeki koruma bandının tamamen çıktığını doğrula."
+  - "Kartuşun temas bölgesini kuru, tüy bırakmayan bezle nazikçe sil; sıvı ya da metal cisim kullanma."
+  - "Yuvadaki temas pimlerinde mürekkep bulaşığı varsa aynı bezle, pimleri eğmeden çok hafifçe temizle."
+  - "Kartuşu doğru renk yuvasına klik sesini duyana kadar oturt ve kapağı kapat."
+  - "Yazıcıyı kapat, fişini prizden çek, bir-iki dakika bekle, tak ve aç."
+  - "Mesaj sürüyorsa yazıcıyı kaldırıp güncel sürücüyle yeniden ekle; dolum ya da muadil kullanıyorsan bir kez orijinal kartuşla dene."
 faq:
   - q: "Yeni taktığım kartuşu yazıcı neden tanımıyor?"
     a: "En sık üç sebep: kartuş yuvasına tam oturmamıştır, çipin üzerindeki koruma bandı çıkarılmamıştır ya da çip ile yazıcının temas noktaları arasında parmak izi, mürekkep veya toz vardır. Üçü de dakikalar içinde kendin kontrol edebileceğin şeylerdir; kartuşu çıkarıp temasları kuru bezle silip yeniden takmak vakaların önemli kısmını çözer."
@@ -22,6 +37,24 @@ Rapor çıktısı almak için yazıcıya gittin ve ekranda o sinir bozucu mesaj:
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🖨️ **Önce şu ayrımı yap:** yazıcı kartuşu **hiç mi görmüyor**, yoksa görüp **"uyumsuz/tanınmadı" mı diyor**? Hiç görmemek genelde oturma ve temas sorunudur. "Uyumsuz" demek ise çip tarafını — özellikle dolum ve muadil kartuşlarda — işaret eder. İkisinin de yolu aşağıda.
+
+## Adım adım: kartuş tanınmıyor kontrolü
+
+**1. Taşıyıcıyı erişime getir.** Yazıcı **açıkken** kapağını kaldır ve taşıyıcının ortaya, erişim konumuna gelmesini bekle.
+
+**2. Kartuşu çıkar.** Mandalına basarak kartuşu yuvasından çıkar; zorlama.
+
+**3. Koruma bandını doğrula.** Yeni kartuşta çipin ve püskürtme bölgesinin üstündeki **turuncu/sarı bandın** tamamen çıktığını kontrol et; küçük bir artık bile teması keser.
+
+**4. Çip temasını sil.** Kartuşun temas bölgesini **kuru, tüy bırakmayan bir bezle** nazikçe sil. ⚠️ Islak bez, kolonya, tiner ya da metal bir cisim kullanma; sıvı hem çipi hem yazıcı elektroniğini bozabilir.
+
+**5. Yuvadaki pimlere bak.** Kartuşun oturduğu yuvadaki **temas pimlerinde** görünür mürekkep bulaşığı varsa aynı bezle, pimleri **eğmeden** çok hafifçe temizle.
+
+**6. Doğru oturt.** Kartuşu doğru renk yuvasına, doğru açıyla yerleştir ve **"klik" sesini duyana kadar** oturt; kapağı kapat, yazıcının kartuşu yeniden okumasını bekle.
+
+**7. Tam sıfırlama yap.** Yazıcıyı düğmesinden kapat, **fişini prizden çek**, bir-iki dakika bekle, fişi tak ve aç.
+
+**8. Sürücüyü ve kartuşu ele.** Mesaj sürüyorsa yazıcıyı bilgisayardan kaldırıp güncel sürücüyle yeniden ekle. Dolum ya da muadil kartuş kullanıyorsan mümkünse bir kez **orijinal kartuşla** dene.
 
 ## 1) Çıkar, bak, yeniden tak
 

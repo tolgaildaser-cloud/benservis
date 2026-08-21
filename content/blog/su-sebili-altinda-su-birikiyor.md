@@ -4,6 +4,21 @@ description: "Su sebilinin altında ya da arkasında su birikiyorsa sebep çoğu
 slug: "su-sebili-altinda-su-birikiyor"
 date: "2026-08-19"
 category: "Su sebili / arıtma"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kâğıt havlu", "Kuru bez"]
+steps:
+  - "Zeminde gözle görülür su varsa önce fişi çek, sonra kurulamaya başla."
+  - "Su cihazın altında ve tepsisinde mi, yoksa arkasında ya da yanında mı birikiyor — belirle."
+  - "Izgaralı damlama tepsisini öne doğru çekip çıkar, içindekini dök, kurula ve yerine tak."
+  - "Izgaranın üstünü kâğıt havluyla kurut ve on dakika hiç dokunmadan bekle; havlu ıslanıyorsa musluk sızdırıyordur."
+  - "Sızdıran musluğu birkaç kez tam açıp kapat; altına oturmuş kireç ya da kırıntı kapanmayı engelliyor olabilir."
+  - "Damacanayı çıkar, oturma yüzeyini ve tıkacı kurula, damacanayı düz ve tek hamlede yerine oturt."
+  - "Sızıntı sürüyorsa damacanayı başka bir damacanayla değiştir ve fark olup olmadığına bak."
+  - "Cihazla duvar arasında birkaç santim boşluk bırak, arka ızgaranın önünü aç, zemini kurula ve bir gün gözle."
 faq:
   - q: "Su sebilinin altında biriken su tehlikeli mi?"
     a: "Suyun kendisi değil, bulunduğu yer tehlikeli. Sebil elektrikli bir cihaz ve su, prizin ya da cihazın alt bölümündeki elektrik aksamının yakınına ulaşabilir. Zeminde gözle görülür bir birikme varsa önce fişi çek, sonra kurula. Ayrıca sürekli ıslak kalan zemin laminat ve parkeyi kabartır — sızıntı küçük görünse de günlerce bekletilmemeli."
@@ -24,6 +39,25 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 > ⚡ **Önce güvenlik:** zeminde gözle görülür bir su birikintisi varsa **fişi çek**, sonra kurulamaya başla. Sebil elektrikli bir cihaz; suyun nereden geldiğini araştırmak, prizi güvenceye aldıktan sonra yapılacak iştir.
 
 > 💧 **Sonra şu ayrımı yap:** su **cihazın altında/tepsisinde** mi, yoksa **arkasında ya da yanında** mı birikiyor? Öndeki birikme genelde musluk, tepsi ve damacana tarafını işaret eder — hepsi kendin bakılabilir. Arkadaki birikme ise iç hat ya da yoğuşma tarafını gösterir ve daha erken servise çıkar. Bu tek soru aşağıdaki listede nereden başlayacağını belirler.
+
+## Adım adım: sızıntının kaynağını bulma kontrolü
+
+**1. Önce fişi çek.** Zeminde gözle görülür bir su birikintisi varsa **fişi çek**, sonra kurulamaya başla. Sebil elektrikli bir cihaz; araştırma prizi güvenceye aldıktan sonra yapılır.
+
+**2. Nereden biriktiğini belirle.** Su cihazın **altında ve tepsisinde** mi, yoksa **arkasında ya da yanında** mı? Öndeki birikme musluk, tepsi ve damacana tarafını; arkadaki birikme iç hat ya da yoğuşma tarafını gösterir.
+
+**3. Damlama tepsisini boşalt.** Izgaralı tepsiyi öne doğru çekip çıkar. İçi doluysa dök, kurula, yerine tak.
+
+**4. Kâğıt havlu testi yap.** Izgaranın üstünü kâğıt havluyla kurut ve **on dakika hiç dokunmadan bekle.** Havluda yeni ıslaklık varsa musluk sızdırıyordur — hangisinin (soğuk mu, sıcak mı) sızdırdığını da böylece görürsün.
+
+**5. Musluğu yokla.** Sızdıran musluğu birkaç kez tam açıp kapat; kolun altına oturmuş kireç ya da bir kırıntı kapanmayı engelliyor olabilir.
+
+**6. Damacanayı yeniden oturt.** Damacanayı çıkar, oturma yüzeyini ve tıkacı kurula, damacanayı **düz ve tek hamlede** yerine oturt.
+
+**7. Damacanayı değiştir.** Sızıntı sürüyorsa damacanayı **başka bir damacanayla değiştir.** Yenisinde sızıntı yoksa sorun cihazda değil, o damacanadaydı.
+
+**8. Arkayı aç ve bir gün gözle.** Cihazın arkasıyla duvar arasında birkaç santimlik boşluk bırak, arka havalandırma ızgarasının önünü kapatan bir şey varsa kaldır. Zemini kurula ve **bir gün gözle.**
+
 
 ## 1) Damlama tepsisi dolmuş
 

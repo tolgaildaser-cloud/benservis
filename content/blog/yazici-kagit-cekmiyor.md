@@ -4,6 +4,21 @@ description: "Yazıcı çalışıyor ama kâğıdı tepsiden almıyorsa sebep ç
 slug: "yazici-kagit-cekmiyor"
 date: "2026-08-19"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["El feneri"]
+steps:
+  - "Yazıcıyı kapat ve fişini çek; lazer yazıcıda birkaç dakika soğumasını bekle."
+  - "Kâğıt destesini tepsiden çıkar, yelpaze gibi havalandır ve kenarlarını hizala."
+  - "Kâğıt gözle görülür biçimde nemliyse ya da kenarları dalgalanmışsa o desteyi kullanma, kuru bir paketten dene."
+  - "Desteyi tepsinin arka duvarına kadar it ve yüksekliğinin azami çizgiyi aşmadığından emin ol."
+  - "Tepsi kılavuzlarını destenin kenarına değecek kadar yaklaştır, bastırma."
+  - "Kâğıt yolunun kapaklarını aç, el feneriyle içeriyi tara ve gördüğün kâğıt parçalarını kâğıdın ilerlediği yönde yavaşça çek."
+  - "Fişi tak; yazdırma penceresinde kaynak tepsiyi ve kâğıt türünü kontrol et, tür düz kâğıt olmalı."
+  - "Deneme çıktısı al; makara dönüyor ama kâğıt hiç ilerlemiyorsa servis gerekir."
 faq:
   - q: "Yazıcı kâğıdı hiç almıyor, tepside kâğıt olduğu hâlde neden 'kâğıt yok' diyor?"
     a: "Yazıcı tepsideki kâğıdı gözle görmez; bir sensörle yoklar. Kâğıt destesi tepsinin arka duvarına kadar itilmemişse ya da kılavuzlar desteyi ortalamamışsa sensör kâğıdı algılamaz ve cihaz 'kâğıt yok' uyarısı verir. Desteyi düzeltip yeniden yerleştirmek çoğu zaman yeterlidir."
@@ -26,6 +41,24 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 > 📄 **Önce şu ayrımı yap:** yazıcı kâğıdı **hiç mi almıyor**, yoksa **alıp yarı yolda mı bırakıyor**? Hiç almama genelde tepsi, kâğıt ve sensör tarafını işaret eder — üçü de kendin bakılabilir. Alıp yolda bırakma ise kâğıt yolunda bir engel ya da makara tarafını gösterir ve daha erken servise çıkar.
 
 > ⚡ **Güvenlik:** kâğıt yolunda kalan bir yaprağı çıkarmadan önce yazıcıyı kapat ve **fişini çek.** Lazer yazıcılarda kâğıdın geçtiği bölüm çalışırken ısınır; cihazı kapattıktan sonra birkaç dakika soğumasını beklemek doğru olur.
+
+## Adım adım: kâğıt çekmiyorsa evde yapılacaklar
+
+**1. Güvenliği al.** Yazıcıyı kapat ve **fişini çek.** Lazer yazıcılarda kâğıdın geçtiği bölüm çalışırken ısınır; kapattıktan sonra birkaç dakika soğumasını bekle.
+
+**2. Desteyi havalandır.** Kâğıt destesini tepsiden çıkar, iki elinle tutup **yelpaze gibi havalandır**, kenarlarını hizala. Yapraklar birbirinden ayrıldığında yazıcı tek yaprağı rahat alır.
+
+**3. Nemli kâğıdı ele.** Kâğıt gözle görülür biçimde nemliyse ya da kenarları dalgalanmışsa o desteyi kullanma; kuru, kapalı bir paketten dene.
+
+**4. Desteyi doğru yerleştir.** Desteyi tepsinin **arka duvarına kadar it** — sensörün kâğıdı algılaması buna bağlıdır. Destenin yüksekliği tepsideki azami çizgiyi aşmasın.
+
+**5. Kılavuzları ayarla.** Yanlardaki hareketli kılavuzları destenin kenarına **değecek kadar** yaklaştır; bastırma. Gevşek kılavuz eğik besleme, sıkı kılavuz hiç besleyememe demektir.
+
+**6. Kâğıt yolunu tara.** Kâğıt yolunun kapaklarını (arka kapak ve tepsi bölümü) aç, **el feneriyle** içeriyi tara ve gördüğün kâğıt parçalarını kâğıdın ilerlediği yönde yavaşça çek. ⚠️ Ulaşamadığın bir parça varsa cihazı zorlama, sallama, ters çevirme.
+
+**7. Ayarları kontrol et.** Fişi tak. Yazdırma penceresinde **kaynak tepsi** gerçekten kâğıt olan tepsi mi, **kâğıt türü** düz kâğıt mı? Bir önceki işte zarf ya da etiket bastıysan ayar orada kalmış olabilir.
+
+**8. Dene ve ayır.** Deneme çıktısı al. Yazıcı sesleniyor, **makara dönüyor ama kâğıt hiç ilerlemiyorsa** — üstelik kuru kâğıtta da tekrarlıyorsa — iş kâğıt alma makarasındadır ve servise kalır.
 
 ## 1) Kâğıt nemli ya da yapraklar birbirine yapışmış
 

@@ -4,6 +4,21 @@ description: "Robot süpürge dock'ta ama şarj olmuyorsa sebep çoğu zaman tem
 slug: "robot-supurge-sarj-olmuyor"
 date: "2026-08-20"
 category: "Süpürge"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Kuru, tüy bırakmayan bez", "Yumuşak silgi"]
+steps:
+  - "Robotu kapat ve istasyonun fişini çek."
+  - "Robotu ters çevir ve altındaki metal şeritleri kuru, tüy bırakmayan bezle sil."
+  - "İstasyonun üzerindeki metal pinleri de sil; lekede yumuşak silgi kullan, zımpara ve sivri metal alet kullanma."
+  - "İstasyonu düz sert zemine al, arkasını duvara daya ve çevresini boşalt."
+  - "İstasyonun fişini tak; ışığı yanmıyorsa çalıştığını bildiğin başka bir prize tak."
+  - "Uzatma ya da çoklu priz kullanıyorsan istasyonu doğrudan duvar prizine bağla; kabloda ezik veya soyulma varsa o adaptörü kullanma."
+  - "Robotu elinle istasyona oturt ve şarj göstergesinin yandığını doğrula."
+  - "Robotun kendi başına yanaşıp şarj aldığını izle; şarj olup hızla bitiyorsa batarya yaşlanmıştır ve servis gerekir."
 faq:
   - q: "Robot süpürge dock'ta duruyor ama şarj olmuyor, ilk neye bakmalıyım?"
     a: "İlk bakılacak yer temas noktalarıdır: istasyonun üzerindeki metal pinler ve robotun altındaki karşılık gelen metal şeritler. Bu yüzeylerde toz, kir ya da oksitlenme varsa elektrik geçmez ve robot istasyonda dursa bile şarj almaz. Kuru bir bezle iki tarafı da sil; inatçı lekede hafif alkollü bez ya da silgi işe yarar."
@@ -22,6 +37,24 @@ Robot süpürge işini bitirdi, kendi kendine istasyona döndü, üstündeki ı�
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔋 **Önce şu ayrımı yap:** robot **hiç mi şarj olmuyor**, yoksa **şarj olup hızlı mı bitiyor**? Hiç şarj almama genelde temas, istasyon ya da elektrik tarafını işaret eder — büyük kısmı kendin bakılır. Şarjın hızla bitmesi ise batarya yaşlanmasına işaret eder ve o iş servise gider.
+
+## Adım adım: şarj olmuyorsa evde yapılacaklar
+
+**1. Güvenliği al.** Robotu kapat ve şarj istasyonunun fişini çek. Temas noktalarıyla uğraşırken istasyon elektrikte olmasın.
+
+**2. Robotun altını sil.** Robotu ters çevir; altındaki metal şeritleri **kuru, tüy bırakmayan bir bezle** sil.
+
+**3. İstasyonun pinlerini sil.** İstasyonun üzerindeki iki metal pini de aynı bezle sil. Leke ya da matlaşma varsa çok az alkolle nemlendirilmiş bez ya da **yumuşak bir silgi** kullan. ⚠️ Suyla ıslatılmış bez, zımpara ya da sivri metal alet kullanma; çizilen pin yüzeyi temas sorununu kalıcı hâle getirir.
+
+**4. İstasyonun yerini düzelt.** İstasyonu halı ve eşikten al, **düz sert zemine** koy, arkasını duvara daya; sağında, solunda ve önünde robotun manevra yapacağı boşluk bırak.
+
+**5. Elektriği kontrol et.** Fişi tak ve istasyonun ışığına bak. Yanmıyorsa fişi, çalıştığını bildiğin **başka bir prize** tak.
+
+**6. Araya giren şeyleri çıkar.** Uzatma kablosu ya da çoklu priz kullanıyorsan istasyonu doğrudan duvar prizine bağlayıp dene. ⚠️ Kablo kılıfı ezilmiş, bükülmüş ya da soyulmuşsa o adaptörü kullanmayı bırak.
+
+**7. Elle oturt ve doğrula.** Robotu elinle istasyona oturt, şarj göstergesinin yandığını gör. Elle oturtunca şarj alıyorsa sorun pinlerde değil, yanaşma ve konumdadır.
+
+**8. İzle ve ayır.** Robotu kendi başına dock'a gönder. Şarj alıyor ama **temizliği bitiremeden bitiyorsa** tablo batarya yaşlanmasıdır — o iş servise gider.
 
 ## 1) Dock temas pinleri kirli — en yaygın sebep
 

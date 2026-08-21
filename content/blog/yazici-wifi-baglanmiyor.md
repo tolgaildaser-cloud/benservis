@@ -4,6 +4,21 @@ description: "Yazıcı Wi-Fi'a bağlanmıyorsa sıra önemli: önce modem, sonra
 slug: "yazici-wifi-baglanmiyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Önce modemi kapat ya da fişini çek, bir dakika bekle, aç."
+  - "Modemin internet ışıkları sabitlenene kadar bekle; ağ ayağa kalkmadan devam etme."
+  - "Sonra yazıcıyı kapat-aç ve ağa bağlanmasını bekle."
+  - "Telefonundan Wi-Fi listesine bak: ağ adın tek mi, yoksa sonu 5G ile biten ayrı bir ad daha var mı?"
+  - "Yazıcının ağ menüsünden adında 5G geçmeyen ağı seç ve şifreyi büyük-küçük harfe dikkat ederek gir."
+  - "Şifre yazmak istemiyorsan modemin WPS düğmesine bas, birkaç dakika içinde yazıcının WPS düğmesine basılı tut."
+  - "Deneme sırasında yazıcıyı geçici olarak modeme yaklaştır."
+  - "Yazıcı ağda görünüyor ama bilgisayar basmıyorsa yazıcıyı kaldırıp üreticinin uygulamasıyla yeniden ekle."
 faq:
   - q: "Yazıcı neden 5GHz Wi-Fi ağını görmüyor?"
     a: "Çünkü ev yazıcılarının büyük bölümü yalnız 2.4GHz bandını destekler; 5GHz ağlar bu yazıcılar için görünmezdir. Modemin iki bandı ayrı adlarla yayınlıyorsa yazıcıyı adında 5G geçmeyen ağa bağlamalısın. Tek ad altında birleşik yayın yapan modemlerde yazıcı bazen banda tutunamaz; bandları ayırmak en sağlam çözümdür."
@@ -22,6 +37,24 @@ Telefondan her şey açılıyor, televizyon internetten film oynatıyor — ama 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 📶 **Önce şu ayrımı yap:** yazıcı **ağa hiç mi bağlanamıyor** (kendi ekranında/ışığında bağlantı yok), yoksa **ağa bağlı ama bilgisayar mı basamıyor**? İlkinde konu modem-bant-şifre üçgenidir. İkincisinde Wi-Fi tamamdır, sorun bilgisayardaki sürücü ve port kaydındadır — o da bu yazının son bölümü.
+
+## Adım adım: yazıcıyı Wi-Fi ağına bağla
+
+**1. Önce modemi yeniden başlat.** Modemi kapat (ya da fişini çek), bir dakika bekle, aç.
+
+**2. Ağın oturmasını bekle.** Modemin **internet ışıkları sabitlenene** kadar bekle; bu birkaç dakika sürebilir. Ağ tam ayağa kalkmadan sonraki adıma geçme.
+
+**3. Sonra yazıcıyı kapat-aç.** Yazıcıyı kapat, aç ve ağa bağlanmasını bekle. Sıra işin kendisidir: yazıcı açılırken ağını arar.
+
+**4. Bantları ayırt et.** Telefonundan Wi-Fi listesine bak: ağ adın **tek mi**, yoksa sonu "5G" ile biten **ayrı bir ad** daha var mı?
+
+**5. 2.4GHz ağa bağlan.** Yazıcının ağ kurulum menüsünden **adında 5G geçmeyen** ağı seç ve şifreyi büyük-küçük harfe dikkat ederek gir.
+
+**6. WPS'i dene.** Şifre yazmak istemiyorsan modemin **WPS düğmesine** bas, birkaç dakika içinde yazıcının WPS/kablosuz düğmesine basılı tut ve ışıkların sabitlenmesini bekle.
+
+**7. Mesafeyi kısalt.** Deneme sırasında yazıcıyı geçici olarak modeme yaklaştır; böylece "sinyal mi zayıf, ayar mı yanlış" sorusu net ayrışır.
+
+**8. Sürücü kaydını tazele.** Yazıcı ağda görünüyor ama bilgisayar basmıyorsa yazıcıyı bilgisayardan **kaldır** ve üreticinin kurulum uygulamasıyla **yeniden ekle**.
 
 ## 1) Yeniden başlatma — ama doğru sırayla
 

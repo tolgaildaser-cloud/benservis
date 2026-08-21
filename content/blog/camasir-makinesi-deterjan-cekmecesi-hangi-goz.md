@@ -4,6 +4,21 @@ description: "Çekmecedeki I, II ve çiçek sembolleri ne anlama geliyor, sıvı
 slug: "camasir-makinesi-deterjan-cekmecesi-hangi-goz"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Çekmeceyi aç ve üç işareti bul: I, II ve çiçek."
+  - "Ana yıkama deterjanını II (ya da 2) işaretli göze koy; toz da sıvı da buraya girer."
+  - "Sıvı deterjan kullanıyorsan II gözündeki plakayı indir, toz kullanıyorsan kaldır."
+  - "Dozu ambalajdaki tablodan al; daha temiz olsun diye fazla koyma."
+  - "Ön yıkama programı seçmediysen I (ya da 1) gözünü boş bırak."
+  - "Yumuşatıcıyı çiçek işaretli göze, MAX çizgisini aşmadan koy."
+  - "Kapsül kullanıyorsan çekmeceye değil, doğrudan tambura, çamaşırın altına koy."
+  - "Ayda bir çekmeceyi çıkarıp sifon başlığıyla birlikte ılık suyla yıka."
 faq:
   - q: "Deterjanı yanlış göze koyarsam ne olur?"
     a: "Ana yıkama deterjanını ön yıkama gözüne koyarsan makine onu programın en başında, ön yıkama suyuyla alır ve asıl yıkama deterjansız geçer; çamaşır kirli çıkar. Yumuşatıcı gözüne deterjan koymak daha sorunludur: sifon düzeneğini tıkar ve göz taşmaya başlar. Yanlışlık fark edildiyse çekmeceyi çıkarıp yıkamak yeterlidir."
@@ -20,6 +35,25 @@ images:
 Yeni makine geldi ya da yıllardır kullandığın makinede çamaşırlar son zamanlarda kötü kokuyor; çekmeceyi açtın ve karşında üç göz: birinde **I**, birinde **II**, birinde **çiçek** işareti. Deterjanı yıllardır hangi göze koyduğunu düşünüyorsun ve emin olamıyorsun. Bu yazı o çekmeceyi bir kere ve tamamen netleştirmek için: hangi göz ne için, sıvı deterjan nereye, yumuşatıcı neden taşıyor.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: deterjanı doğru göze koyma sırası
+
+**1. Üç işareti bul.** Çekmeceyi aç ve **I**, **II** ve **çiçek** işaretlerini gör. Bazı modellerde rakam yerine kabartma sembol vardır; şema kapak içindeki etikette ya da kılavuzda bulunur.
+
+**2. Deterjanı II gözüne koy.** Ana yıkama deterjanının evi **II (ya da 2)** gözüdür; toz da sıvı da buraya girer. Makine bu gözü, program asıl yıkama suyunu alırken boşaltır.
+
+**3. Sıvıysa plakayı indir.** II gözünde ileri-geri oynayan küçük bir plastik plaka varsa sıvı kullanırken **indir**, toz kullanırken **kaldır**. Plaka hiç yoksa kılavuza bak.
+
+**4. Dozu ambalajdan al.** Doz tablosu su sertliğine göre verilir. "Biraz fazla koyayım" yaklaşımı ters teper: fazla deterjan tam durulanamaz, kumaşta kalır.
+
+**5. Ön yıkama gözünü boş bırak.** Ön yıkama özellikli bir program seçmediysen **I (ya da 1)** gözü hiç kullanılmaz; oraya konan deterjan kurur ve kanalı tıkar.
+
+**6. Yumuşatıcıyı çiçek gözüne koy.** Yumuşatıcı yalnız son durulamada çekilir. Gözün içindeki **MAX çizgisini aşma** — fazlası daha yumuşak çamaşır yapmaz, sifonu daha hızlı tıkar.
+
+**7. Kapsülü tambura koy.** Kapsül daima doğrudan tamburun içine, çamaşırın altına konur; çekmece gözünde düzgün çözünmez ve kanalı tıkayabilir.
+
+**8. Ayda bir çekmeceyi yıka.** Çekmeceyi çıkar, yumuşatıcı gözündeki renkli sifon başlığını ayırıp ılık suyla yıka. ⚠️ Bunu yaparken makinenin kapalı ve programda olmadığından emin ol.
+
 
 ## Üç gözün haritası
 

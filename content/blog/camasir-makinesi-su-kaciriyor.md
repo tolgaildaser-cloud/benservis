@@ -4,6 +4,21 @@ description: "Makine alttan su sızdırıyorsa kaynak çoğu zaman deterjan çek
 slug: "camasir-makinesi-su-kaciriyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Sığ bir kap", "Eski diş fırçası", "Kuru karton"]
+steps:
+  - "Fişi çek ve musluğu kapat. Programı durdur; fişi ıslak zemine basmadan ve ıslak elle değil çek. Fişe güvenle ulaşamıyorsan sigorta kutusundan makinenin hattını kapat. Su ve elektrik bir aradayken hiçbir kontrol yapılmaz."
+  - "Zemini kurula, karton ser. Birikintiyi kurula ve makinenin altına kuru karton ser; bir sonraki yıkamada ıslanan nokta sana kaynağı gösterir."
+  - "Deterjan çekmecesini temizle. Çekmeceyi ortasındaki mandala basarak çıkar, ılık suyla ve eski bir diş fırçasıyla kalıntılardan arındır. Yuvasının içine de bak; kurumuş deterjan birikintisi varsa nemli bezle sil."
+  - "Deterjan dozunu düşür. Aşırı deterjan ya da elde yıkama deterjanı fazla köpük yapar; köpük çekmeceden taşıp önden aşağı süzülür. Dozu üreticinin önerdiği miktara indir."
+  - "Hortum bağlantılarını elle sık. Musluk ile makine arasındaki hattı kuru bezle kurula, musluğu aç ve hangi noktanın yeniden ıslandığını izle. Gevşeyen vidalı rakoru elle sık; pense ile aşırı sıkmak contayı ezer ve sızıntıyı büyütür."
+  - "Tahliye hortumunu kontrol et. Tahliye hortumunun gider bağlantısından çıkıp çıkmadığına bak. Bazen kaçak sanılan şey, giderden kurtulmuş bir tahliye hortumudur."
+  - "Tahliye filtresini aç ve temizle. Fiş çekili ve makine boşken ön alt köşedeki kapağı aç, altına sığ bir kap ve havlu koy. Filtreyi çıkar, contasını gözle kontrol et, sıkışan tüy ve tortuyu temizle. Filtreyi asla makine su doluyken ya da program çalışırken açma."
+  - "Filtreyi tam oturt ve izle. Filtreyi hissedilir bir dirençle durana kadar saat yönünde sıkarak tak; çapraz dişliyle zorlama. Ardından fişi takıp musluğu aç ve kısa bir yıkama boyunca kartonun neresinin ıslandığını izle."
 faq:
   - q: "Makinenin altında su gördüm, hemen ne yapmalıyım?"
     a: "Önce programı durdur ve mümkünse fişi çek — ama ıslak zemine basarak ya da ıslak elle değil. Fişe güvenle ulaşamıyorsan sigorta kutusundan makinenin hattını kapat. Sonra musluğu kapat ve suyu kurula. Kaynağı aramaya ancak elektrik kesildikten sonra başla; su ve elektrik bir aradayken hiçbir kontrol yapılmaz."
@@ -24,6 +39,24 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 ⛔ **Önce güvenlik, sonra teşhis.** Su ve elektrik bir aradayken hiçbir kontrol yapılmaz. Sırayla: programı durdur → **fişi çek** (ıslak zemine basmadan, ıslak elle değil; fişe güvenle ulaşamıyorsan sigortadan makinenin hattını kapat) → **musluğu kapat** → zemini kurula. Kaynak aramaya ancak bundan sonra başla.
 
 > 💧 **En değerli ipucu zamanlamadır:** su **makine su alırken mi**, **yıkama sırasında mı**, yoksa **tahliye sırasında mı** geliyor? Bu üç cevap, aşağıdaki listede nereye bakacağını neredeyse tek başına söyler.
+
+## Adım adım: sızıntının kaynağını güvenle bulmak
+
+**1. Fişi çek ve musluğu kapat.** Programı durdur; fişi ıslak zemine basmadan ve ıslak elle değil çek. Fişe güvenle ulaşamıyorsan sigorta kutusundan makinenin hattını kapat. Su ve elektrik bir aradayken hiçbir kontrol yapılmaz.
+
+**2. Zemini kurula, karton ser.** Birikintiyi kurula ve makinenin altına kuru karton ser; bir sonraki yıkamada ıslanan nokta sana kaynağı gösterir.
+
+**3. Deterjan çekmecesini temizle.** Çekmeceyi ortasındaki mandala basarak çıkar, ılık suyla ve eski bir diş fırçasıyla kalıntılardan arındır. Yuvasının içine de bak; kurumuş deterjan birikintisi varsa nemli bezle sil.
+
+**4. Deterjan dozunu düşür.** Aşırı deterjan ya da elde yıkama deterjanı fazla köpük yapar; köpük çekmeceden taşıp önden aşağı süzülür. Dozu üreticinin önerdiği miktara indir.
+
+**5. Hortum bağlantılarını elle sık.** Musluk ile makine arasındaki hattı kuru bezle kurula, musluğu aç ve hangi noktanın yeniden ıslandığını izle. Gevşeyen vidalı rakoru elle sık; pense ile aşırı sıkmak contayı ezer ve sızıntıyı büyütür.
+
+**6. Tahliye hortumunu kontrol et.** Tahliye hortumunun gider bağlantısından çıkıp çıkmadığına bak. Bazen kaçak sanılan şey, giderden kurtulmuş bir tahliye hortumudur.
+
+**7. Tahliye filtresini aç ve temizle.** Fiş çekili ve makine boşken ön alt köşedeki kapağı aç, altına sığ bir kap ve havlu koy. Filtreyi çıkar, contasını gözle kontrol et, sıkışan tüy ve tortuyu temizle. Filtreyi asla makine su doluyken ya da program çalışırken açma.
+
+**8. Filtreyi tam oturt ve izle.** Filtreyi hissedilir bir dirençle durana kadar saat yönünde sıkarak tak; çapraz dişliyle zorlama. Ardından fişi takıp musluğu aç ve kısa bir yıkama boyunca kartonun neresinin ıslandığını izle.
 
 ## 1) Deterjan çekmecesi taşıyor — önden gelen su
 

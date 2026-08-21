@@ -4,6 +4,21 @@ description: "Kurutma makinesi çalışıyor ama soğuk üflüyorsa sorun çoğu
 slug: "kurutma-makinesi-isitmiyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~1,5 saat"
+  totalTime: "PT1H30M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez", "Yumuşak fırça"]
+steps:
+  - "Cihazı kapat ve soğut. Fişi çek ve cihaz tamamen soğuyana kadar bekle. Buradaki hiçbir adım panel sökmeyi içermez; içermediği için güvenlidir."
+  - "Programı doğrula. Program düğmesini standart pamuklu kurutmaya al; havalandırma/tazeleme ya da düşük ısı seçeneğinin devrede olmadığından emin ol. Şaşırtıcı sayıda ısıtmıyor vakası bu tek adımda kapanır."
+  - "Hav filtresini temizle. Kapak ağzındaki hav filtresini çıkar ve üzerindeki keçeleşmiş tabakayı al. Tek kurutmanın bıraktığı hav bile hava akışını ölçülebilir biçimde azaltır."
+  - "Filtreyi yıka ve tamamen kurut. Gerekiyorsa suyla yıka, sonra tamamen kuruyana kadar bekletip yerine tak. Islak filtre takma."
+  - "Kondenser bölümünü temizle. Alt köşedeki kondenser kapağını aç. Yoğuşmalı modellerde kondenseri kılavuzun tarifiyle akan suyla yıka; ısı pompalı modellerde kapak arkasındaki bölgeyi ve süngerli filtreyi temizle. Peteklere sert cisim değdirme, ezilen petek kalıcı verim kaybıdır."
+  - "Cihazın nefes almasını sağla. Kapağı contası düzgün oturacak şekilde kapat ve cihazın çevresine bak; dar bir nişe gömülü, havalanamayan makine aynı aşırı ısınma döngüsüne girer."
+  - "Bir saat dinlendir. Kendiliğinden sıfırlanan tip aşırı ısınma koruması, sebebi olan tıkanıklık ortadan kalktıysa cihaz soğuyunca normale döner."
+  - "Tam bir kurutma dene. Fişi tak ve standart pamuklu programda tam bir kurutma çalıştır. Ölçüt elinin hissettiği hava sıcaklığı değil, program sonunda çamaşırın kuruyup kurumadığıdır."
 faq:
   - q: "Makine çalışıyor, tambur dönüyor ama çamaşır soğuk çıkıyor. Bu kesin arıza mı?"
     a: "Hayır, önce programa bak. Çoğu modelde havalandırma/tazeleme gibi ısıtmasız programlar ve düşük ısı seçenekleri vardır; yanlışlıkla seçilmiş olabilir. Ayrıca ısı pompalı modeller doğası gereği düşük sıcaklıkla kurutur; kapaktan gelen havanın elle ılık hissedilmemesi tek başına arıza kanıtı değildir. Ölçüt, program sonunda çamaşırın kuruyup kurumadığıdır."
@@ -22,6 +37,24 @@ Program bitiyor, kapağı açıyorsun: çamaşırlar dönmüş, havalanmış ama
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Başlamadan:** tüm temizlik ve kontroller **fiş çekili ve cihaz soğukken** yapılır. Isıtıcı bölümü, panellerin ardındaki elektrikli alandır ve bu yazıdaki hiçbir adım panel sökmeyi içermez — içermediği için güvenlidir.
+
+## Adım adım: hava yolunu açmak
+
+**1. Cihazı kapat ve soğut.** Fişi çek ve cihaz tamamen soğuyana kadar bekle. Buradaki hiçbir adım panel sökmeyi içermez; içermediği için güvenlidir.
+
+**2. Programı doğrula.** Program düğmesini standart pamuklu kurutmaya al; havalandırma/tazeleme ya da düşük ısı seçeneğinin devrede olmadığından emin ol. Şaşırtıcı sayıda ısıtmıyor vakası bu tek adımda kapanır.
+
+**3. Hav filtresini temizle.** Kapak ağzındaki hav filtresini çıkar ve üzerindeki keçeleşmiş tabakayı al. Tek kurutmanın bıraktığı hav bile hava akışını ölçülebilir biçimde azaltır.
+
+**4. Filtreyi yıka ve tamamen kurut.** Gerekiyorsa suyla yıka, sonra tamamen kuruyana kadar bekletip yerine tak. Islak filtre takma.
+
+**5. Kondenser bölümünü temizle.** Alt köşedeki kondenser kapağını aç. Yoğuşmalı modellerde kondenseri kılavuzun tarifiyle akan suyla yıka; ısı pompalı modellerde kapak arkasındaki bölgeyi ve süngerli filtreyi temizle. Peteklere sert cisim değdirme, ezilen petek kalıcı verim kaybıdır.
+
+**6. Cihazın nefes almasını sağla.** Kapağı contası düzgün oturacak şekilde kapat ve cihazın çevresine bak; dar bir nişe gömülü, havalanamayan makine aynı aşırı ısınma döngüsüne girer.
+
+**7. Bir saat dinlendir.** Kendiliğinden sıfırlanan tip aşırı ısınma koruması, sebebi olan tıkanıklık ortadan kalktıysa cihaz soğuyunca normale döner.
+
+**8. Tam bir kurutma dene.** Fişi tak ve standart pamuklu programda tam bir kurutma çalıştır. Ölçüt elinin hissettiği hava sıcaklığı değil, program sonunda çamaşırın kuruyup kurumadığıdır.
 
 ## Önce ayrımı yap: hiç mi ısıtmıyor, yoksa sana mı öyle geliyor?
 

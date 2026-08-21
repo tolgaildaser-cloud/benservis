@@ -4,6 +4,20 @@ description: "Televizyon ekranı kendiliğinden kararıyor ya da ışığı azal
 slug: "tv-ekrani-karariyor"
 date: "2026-08-20"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez"]
+steps:
+  - "Menüde eko / enerji tasarrufu başlığını bul ve kapat ya da en düşük kademeye al."
+  - "Görüntü modunu kontrol et; kısık kalan modlar yerine daha parlak bir mod seç."
+  - "Menüde ortam ışığı algılama / otomatik parlaklık seçeneğini kapat."
+  - "Alt çerçevedeki sensörün önündeki engelleri kaldır ve bölgeyi kuru bezle sil."
+  - "Görüntü ayarlarında dinamik kontrast / dinamik aydınlatma seçeneklerini kapatıp aynı sahneyi tekrar izle."
+  - "Televizyonu fişten çek, bir-iki dakika bekle, tekrar tak ve aç."
+  - "Kararmanın menüde ve USB'den oynatılan videoda da olup olmadığına bak."
 faq:
   - q: "Ekran neden bazı sahnelerde kararıp bazılarında açılıyor?"
     a: "Birçok televizyon, ekrandaki içeriğe göre aydınlatmayı anlık ayarlar: karanlık sahnede ışığı kısar, aydınlık sahnede açar. Bu bir arıza değil, kontrast ve enerji için yapılmış bilinçli bir davranıştır. Rahatsız ediyorsa görüntü ayarlarındaki dinamik kontrast ve enerji tasarrufu seçeneklerini kapatarak büyük ölçüde önüne geçebilirsin."
@@ -22,6 +36,22 @@ Film izlerken ekran gözle görülür biçimde sönükleşiyor; bazen birkaç sa
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🌗 **Önce şu ayrımı yap:** kararma **ani ve gelip gidici mi**, yoksa **yıllara yayılan kalıcı bir sönükleşme mi**? Gelip gidici kararma neredeyse hep ayar ve sensör tarafıdır; yavaş ve kalıcı sönükleşme ise aydınlatmanın yaşlanmasını işaret eder.
+
+## Adım adım: kararan ekranın kontrol sırası
+
+**1. Eko modunu kapat.** Menüde **eko / enerji tasarrufu / güç tasarrufu** başlığını bul ve kapat ya da en düşük kademeye al.
+
+**2. Görüntü modunu değiştir.** "Standart" ve "Eko" modlar genelde kısıktır; daha parlak bir mod seçip aynı içeriği tekrar izle.
+
+**3. Otomatik parlaklığı kapat.** Menüde **ortam ışığı algılama / otomatik parlaklık / akıllı sensör** benzeri seçeneği bul ve kapat.
+
+**4. Sensörün önünü aç.** Alt çerçevedeki sensörün önünde ses çubuğu, dekor ya da toz varsa kaldır; sensör bölgesini kuru bezle sil.
+
+**5. Dinamik ayarları kapat.** Görüntü ayarlarında **dinamik kontrast / dinamik aydınlatma** seçeneklerini kapatıp aynı sahneyi tekrar izle.
+
+**6. Fişten çek.** Televizyonu fişten çekip bir-iki dakika sonra tekrar tak; yazılım kaynaklı takılmaları eler.
+
+**7. Kaynak elemesi yap.** Kararma televizyonun menüsünde ve USB'den oynatılan videoda da oluyor mu bak. Yalnız tek kaynakta oluyorsa sorun o cihazın çıkış ayarındadır.
 
 ## 1) Güç tasarrufu ve eko modu
 

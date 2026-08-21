@@ -4,6 +4,21 @@ description: "Siemens çamaşır makinen E18/F18, F21 ya da E23 mü veriyor? Her
 slug: "siemens-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Sığ bir kap", "Küçük fırça (eski diş fırçası)"]
+steps:
+  - "Kodu önekiyle not et. Ekrandaki kodu E ya da F önekiyle birlikte yaz. Yeni modeller E, eski modeller F önekiyle aynı numarayı gösterir; E18 ile F18 birebir aynı anlama gelir."
+  - "Bir kez resetle. Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve programı yeniden başlat. Reset kodu siler ama sebebi silmez; kod geri geliyorsa aşağı devam et."
+  - "Alt kapağı güvenle aç. Makineyi kapat, fişini çek ve cihaz soğukken ön alt köşedeki küçük kapağı aç; burası kullanıcıya ayrılmış bölümdür. Önüne havlu ser ve sığ bir kap koy. Filtreyi makine sıcakken ya da fiş takılıyken açma."
+  - "Tahliye filtresini temizle. Filtreyi çevirip çıkar; bir miktar su gelir, bu normaldir. Biriken tüyü, bozuk parayı, tokayı temizle ve filtreyi klik diye oturana kadar geri tak."
+  - "Tahliye hortumunu kontrol et. Makinenin arkasındaki tahliye hortumunun bükülmediğini ve gidere bağlandığı noktanın tıkalı olmadığını kontrol et. Bu iki kontrol tahliye kodlarının büyük kısmını ücretsiz kapatır."
+  - "Musluğu ve basıncı doğrula. Musluğun tam açık olduğundan ve giriş hortumunun bükülmediğinden emin ol. Evde genel bir su kesintisi ya da düşük basınç olup olmadığını başka bir muslukta test et."
+  - "Musluk süzgecini temizle. Musluğu kapat, hortumu musluk tarafından sök ve bağlantıdaki küçük süzgeci akan suyun altında temizleyip geri tak. Bu da kullanıcı seviyesinde bir iştir."
+  - "Çevreyi ıslaklık için gözle. Makinenin altına ve çevresine bak: görünür bir ıslaklık ya da damlama izi var mı? Son yıkamada fazla deterjan kullandıysan bunu da not et; servisle konuşurken işe yarar."
 faq:
   - q: "Siemens çamaşır makinesi E18 (F18) ne demek?"
     a: "E18/F18, tahliye süresinin aşıldığını gösterir: makine içindeki suyu atamıyordur. En sık sebep tüy, bozuk para ya da tokayla tıkanmış tahliye filtresi veya bükülmüş tahliye hortumudur. Bu, Siemens'te en sık çıkan ve çoğu zaman evde ücretsiz çözülen koddur."
@@ -24,6 +39,24 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 > 💡 **E mi F mi?** Yeni Siemens modelleri **E**, eski modeller **F** önekiyle **aynı numarayı** gösterir — yani **E18 = F18**, **E23 = F23**. Ayrıca Siemens, Bosch ile aynı platformu (BSH) kullandığı için kodlar iki markada da aynıdır.
 
 > ⚠️ Kodların anlamı model ve seriye göre değişebilir; aşağıdakiler en yaygın anlamlardır. Kesin teşhis için modelini ve kodu Benservis'e yaz.
+
+## Adım adım: kod geldiğinde evde denenecek ücretsiz kontroller
+
+**1. Kodu önekiyle not et.** Ekrandaki kodu E ya da F önekiyle birlikte yaz. Yeni modeller E, eski modeller F önekiyle aynı numarayı gösterir; E18 ile F18 birebir aynı anlama gelir.
+
+**2. Bir kez resetle.** Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve programı yeniden başlat. Reset kodu siler ama sebebi silmez; kod geri geliyorsa aşağı devam et.
+
+**3. Alt kapağı güvenle aç.** Makineyi kapat, fişini çek ve cihaz soğukken ön alt köşedeki küçük kapağı aç; burası kullanıcıya ayrılmış bölümdür. Önüne havlu ser ve sığ bir kap koy. Filtreyi makine sıcakken ya da fiş takılıyken açma.
+
+**4. Tahliye filtresini temizle.** Filtreyi çevirip çıkar; bir miktar su gelir, bu normaldir. Biriken tüyü, bozuk parayı, tokayı temizle ve filtreyi klik diye oturana kadar geri tak.
+
+**5. Tahliye hortumunu kontrol et.** Makinenin arkasındaki tahliye hortumunun bükülmediğini ve gidere bağlandığı noktanın tıkalı olmadığını kontrol et. Bu iki kontrol tahliye kodlarının büyük kısmını ücretsiz kapatır.
+
+**6. Musluğu ve basıncı doğrula.** Musluğun tam açık olduğundan ve giriş hortumunun bükülmediğinden emin ol. Evde genel bir su kesintisi ya da düşük basınç olup olmadığını başka bir muslukta test et.
+
+**7. Musluk süzgecini temizle.** Musluğu kapat, hortumu musluk tarafından sök ve bağlantıdaki küçük süzgeci akan suyun altında temizleyip geri tak. Bu da kullanıcı seviyesinde bir iştir.
+
+**8. Çevreyi ıslaklık için gözle.** Makinenin altına ve çevresine bak: görünür bir ıslaklık ya da damlama izi var mı? Son yıkamada fazla deterjan kullandıysan bunu da not et; servisle konuşurken işe yarar.
 
 ## En sık çıkan Siemens kodları (özet tablo)
 

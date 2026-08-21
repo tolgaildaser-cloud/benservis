@@ -4,6 +4,21 @@ description: "Makinenin altından su geliyorsa sebep çoğu zaman kapı contası
 slug: "bulasik-makinesi-su-kaciriyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru kağıt havlu", "Nemli bez"]
+steps:
+  - "Programı durdur, musluğu kapat ve makinenin fişini çek."
+  - "Birikintiye bak: içinde köpük ya da beyaz kuruma izi var mı, son yıkamada hangi deterjan kullanıldı öğren."
+  - "Kapıyı aç, contayı boydan boya parmağınla yokla ve nemli bezle sil; sertleşme, çatlak ve yapışmış artık ara."
+  - "Alt sepeti çek; kapı hizasını aşan, öne taşan tepsi ya da tencere varsa yerini değiştir."
+  - "Panelde musluk veya su uyarısı yanıyor mu, makine kapalıyken alttan pompa sesi geliyor mu kontrol et."
+  - "Tezgâh altına bak: musluk bağlantısı, sifon kelepçesi ve hortumlarda ıslaklık ya da kireç izi var mı incele."
+  - "Bağlantı noktalarına kuru kağıt havlu sar, musluğu kısa süre aç ve havlunun ıslandığı noktayı belirle."
+  - "Fişi tak, bir deneme yıkaması yap ve kapı altını kuru havluyla izle; su gelmeye devam ediyorsa servis gerekir."
 faq:
   - q: "Makinenin altında su birikti, çalıştırmaya devam edebilir miyim?"
     a: "Hayır. Altında su birikmiş bir makineyi çalıştırmaya devam etmek hem sızıntıyı büyütür hem de elektrikli bir cihazın altında su olması başlı başına risktir. Önce programı durdur, musluğu kapat ve makinenin fişini çek — fişe ıslak elle ya da su birikintisinin içinden dokunma. Ondan sonra sebebi aramaya başla."
@@ -22,6 +37,24 @@ Yıkama bitmiş, mutfağa giriyorsun ve makinenin önünde ya da altında bir su
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 ⛔ **Önce güvenlik:** su ve elektrik aynı zeminde buluşmuş durumda. Herhangi bir kontrole başlamadan önce **programı durdur, musluktan suyu kapat ve makinenin fişini çek.** Fişe ıslak elle ya da birikintinin içinde durarak dokunma; priz su birikintisinin yakınındaysa önce sigortadan o hattı kapatmak daha güvenlidir. Bu yazıdaki her adım, fiş çekili ve musluk kapalıyken yapılır.
+
+## Adım adım: sızıntının kaynağını bulma
+
+**1. Önce güvenliği al.** Programı durdur, musluktan suyu kapat ve makinenin **fişini çek**. Fişe ıslak elle ya da birikintinin içinde durarak dokunma.
+
+**2. Su mu, köpük mü ayır.** Birikintide köpük kalıntısı ya da beyaz kuruma izi var mı bak; son yıkamada elde yıkama deterjanı kullanıldıysa manzara sızıntı değil köpük taşmasıdır.
+
+**3. Contayı yokla ve sil.** Kapıyı aç, kapı contasını boydan boya parmağınla yokla, nemli bezle sil. Sertleşme, çatlak, kopma ya da yapışmış yemek artığı arıyorsun.
+
+**4. Yüklemeyi düzelt.** Alt sepeti çek: kapı hizasını aşan, öne taşan bir tepsi ya da tencere kulpu suyu doğrudan kapıya yönlendiriyor olabilir; o parçayı başka yere al.
+
+**5. Taşma emniyetini kontrol et.** Panelde musluk/su uyarısı yanıyor mu, makine kapalıyken alttan aralıklarla pompa sesi geliyor mu? Bu ikisi emniyetin devrede olduğunun işaretidir.
+
+**6. Görünür bağlantılara bak.** Fiş çekili ve musluk kapalıyken tezgâh altını incele: musluk bağlantısı, sifon kelepçesi ve hortumlarda ıslaklık ya da eski sızıntının beyaz kireç izi var mı?
+
+**7. Kağıt havlu testini yap.** Kuru bir kağıt havluyu bağlantı noktalarına sar, musluğu kısa süre aç. Islanan nokta sana sızıntının yerini söyler. Gevşek bağlantıyı yalnızca elle sık; anahtarla zorlama plastiği çatlatır.
+
+**8. Deneme yıkaması yap.** Fişi tak, bir program çalıştır ve kapı altını kuru havluyla izle. Yukarıdakiler tertemizken su gelmeye devam ediyorsa kaçak iç gövdededir — servis gerekir.
 
 ## 1) Su mu, köpük mü? İlk ayrımı yap
 

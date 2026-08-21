@@ -4,6 +4,21 @@ description: "Derin dondurucu soğutuyor ama dondurmuyor mu? Kapak contası, buz
 slug: "derin-dondurucu-dondurmuyor"
 date: "2026-08-06"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Bir parça kâğıt", "Ilık sabunlu su", "Kuru bez", "Havlu"]
+steps:
+  - "Cihaz hiç mi soğutmuyor, yoksa soğutuyor ama az mı donduruyor — önce bunu ayır."
+  - "Kapağın dört kenarında kâğıt testi yap: kâğıt dirençsiz çıkıyorsa conta orada kavramıyor."
+  - "Conta yüzeyini ılık sabunlu suyla sil, kiri ve ince buzu al, kuru bezle kurula."
+  - "İç arka yüzeydeki ve buzluk ızgarasındaki buz kalınlığına bak; 5 mm'den kalınsa buz tutmuş demektir."
+  - "Buz varsa cihazı boşalt, fişini çek ve kapağı açık bırakarak kendiliğinden çözülmesini bekle; buzu sivri aletle kırma."
+  - "Termostatı orta-yüksek kademeye al ve hüküm vermeden önce 24 saat bekle."
+  - "İç hava kanallarının önünü boşalt, cihazı duvardan 5-10 cm ayır, arka ızgaradaki tozu al."
+  - "Kapağı açıp fan sesini dinle; hiç ses yoksa ya da metalik sürtünme varsa dur, servis gerekir."
 faq:
   - q: "Derin dondurucu neden dondurmuyor?"
     a: "En sık sebepler: kapak contasının hava kaçırması, buharlaştırıcıda buz tutması, termostat/sensör arızası, fan motorunun dönmemesi, yoğun eşya nedeniyle hava dolaşımının kesilmesi ve kompresör arızası. İlk üçü çoğu zaman evde anlaşılır."
@@ -22,6 +37,25 @@ Derin dondurucun çalışıyor, motor sesi geliyor, hatta dışı ılık — ama
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ❄️ **Önce şunu ayır:** cihaz **hiç mi soğutmuyor**, yoksa **soğutuyor ama yeterince dondurmuyor** mu? Birincisi genelde kompresör/gaz tarafını, ikincisi hava akışı ve conta tarafını işaret eder. Bu ayrım, aşağıdaki listede doğru yerden başlamanı sağlar.
+
+## Adım adım: servis çağırmadan önce kontrol listesi
+
+**1. Belirtiyi ayır.** Cihaz **hiç mi soğutmuyor**, yoksa soğutuyor ama yeterince mi dondurmuyor? Bu ayrım, aşağıdaki listede doğru yerden başlamanı sağlar.
+
+**2. Kâğıt testini yap.** Bir kâğıt parçasını kapağın arasına koyup kapat, sonra yavaşça çek. Kâğıt hiç direnç hissetmeden çıkıyorsa conta o noktada kavramıyor demektir; testi dört kenarda ayrı ayrı tekrarla.
+
+**3. Contayı temizle.** Conta yüzeyini ılık sabunlu suyla sil, üzerindeki kiri ve ince buzu al, kuru bezle kurula.
+
+**4. Buz kalınlığına bak.** İç arka yüzeyde veya buzluk ızgarasında 5 mm'den kalın, düzgün olmayan bir buz tabakası var mı?
+
+**5. Buz varsa çözdür.** Cihazı boşalt, fişini çek ve kapağını açık bırakarak tamamen çözülmesini bekle (birkaç saat sürebilir). ⛔ Buzu bıçak, tornavida ya da sivri bir aletle kırma.
+
+**6. Termostatı yokla.** Kademeyi orta-yüksek konuma al ve **24 saat** bekle; derin dondurucular kademe değişimine anında tepki vermez.
+
+**7. Hava yolunu aç.** İç kısımda hava çıkış kanallarının önünü boşalt, cihazı duvardan 5-10 cm ayır, arka havalandırma ızgarasındaki tozu al.
+
+**8. Fanı dinle.** Kapağı açtığında fan sesi geliyor mu? Fan hiç çalışmıyorsa ya da metalik bir sürtünme sesi geliyorsa burada dur — iş servise kalır.
+
 
 ## 1) Kapak contası hava kaçırıyor
 

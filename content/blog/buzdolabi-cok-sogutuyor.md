@@ -4,6 +4,21 @@ description: "Sebzeler donuyor, süt buz tutuyorsa sebep çoğu zaman ayar kadem
 slug: "buzdolabi-cok-sogutuyor"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Bir parça kâğıt", "Ilık su", "Kuru bez"]
+steps:
+  - "Donma her yerde mi, yoksa yalnız belirli bir bölgede mi — önce bunu ayır."
+  - "Kadranlı modelde kademeyi ortaya al, dijital panelde soğutucu bölmeyi +4 °C civarına getir."
+  - "Süper soğutma / super cool modunun açık kalıp kalmadığına bak, açıksa kapat."
+  - "Arka duvarla yiyecekler arasında birkaç parmak boşluk bırak."
+  - "Arka duvardaki ızgara ve delik görünümlü hava kanalı ağızlarının önünü tamamen aç."
+  - "Kapıyı bir kâğıt parçasının üzerine kapatıp kâğıdı çek; testi dört kenarda tekrarla."
+  - "Contayı ılık suyla sil, katlanan bölümü parmakla düzelt."
+  - "Cihaza bir gün ver, sonra donmanın sürüp sürmediğine tekrar bak."
 faq:
   - q: "Buzdolabı kaç derecede olmalı?"
     a: "Soğutucu bölme için ideal aralık genelde +4 °C civarıdır; dondurucu -18 °C'de tutulur. Kademeli düğmesi olan modellerde orta kademe çoğu ev için yeterlidir. En soğuk kademe 'daha iyi korur' demek değildir; sebze ve yeşillik gibi hassas gıdaların donup bozulmasına yol açar."
@@ -22,6 +37,25 @@ Sabah dolabı açıyorsun: marul cam gibi olmuş, domatesin içi buz kristalli, 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ❄️ **Önce şu ayrımı yap:** donma **her yerde mi**, yoksa **belirli bir bölgede mi** (sebzelik, arka duvara yakın raflar)? Her yerde donma genelde ayar ya da termostat tarafını, tek bölgede donma ise neredeyse her zaman hava akışı ve yerleşimi işaret eder.
+
+## Adım adım: donmayı durdurmak için kontrol listesi
+
+**1. Donan bölgeyi belirle.** Donma **her yerde mi**, yoksa yalnız sebzelik ve arka duvara yakın raflarda mı? Her yerde donma ayar tarafını, tek bölgede donma hava akışı tarafını gösterir.
+
+**2. Kademeyi ortaya al.** Kadranlı modelde kademeyi orta konuma getir; dijital panelde soğutucu bölmeyi +4 °C civarına ayarla.
+
+**3. Süper soğutma modunu kapat.** "Süper soğutma / super cool" modu bazı modellerde bölmeyi bilerek aşırı soğutur ve kapatılana kadar öyle kalır — açık kalmış mı bak.
+
+**4. Arka duvarı boşalt.** Arka duvarla yiyecekler arasında **birkaç parmak boşluk** bırak; oraya yaslanan poşet ve kaplar hem kendileri donar hem hava akışını keser.
+
+**5. Kanal ağızlarını aç.** Arka duvardaki ızgara ve delik görünümlü kanal ağızlarının önünü tamamen aç; dolabı tıka basa doldurma.
+
+**6. Kâğıt testiyle contayı yokla.** Kapıyı bir kâğıt parçasının üzerine kapat ve kâğıdı çek. Kolayca kayıyorsa conta orada tutmuyor demektir; testi dört kenarda tekrarla.
+
+**7. Contayı temizle ve düzelt.** Contayı ılık suyla sil, katlanan bölümü parmakla düzelt. Conta yırtık ya da sertleşmişse değişim gerekir — o servis işidir.
+
+**8. Bir gün bekle.** Bölme sıcaklığının yeni ayara oturması saatler alır; sağlıklı karşılaştırma için cihaza 12-24 saat ver, sonra tekrar bak.
+
 
 ## 1) Ayar kademesi çok yüksek
 

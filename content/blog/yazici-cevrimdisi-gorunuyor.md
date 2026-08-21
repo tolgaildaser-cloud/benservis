@@ -4,6 +4,21 @@ description: "Yazıcı açık olduğu hâlde bilgisayarda çevrimdışı görün
 slug: "yazici-cevrimdisi-gorunuyor"
 date: "2026-08-19"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Bilgisayarda yazıcı kuyruğunu aç ve bekleyen tüm belgeleri iptal et."
+  - "Yazıcıyı düğmesinden kapat, fişini çek, yarım dakika bekle, fişi tak ve aç."
+  - "Yazıcı hazır duruma gelince tek bir deneme sayfası gönder."
+  - "Panelindeki bir düğmeye basarak yazıcıyı uyku modundan elle uyandır ve tekrar dene."
+  - "Yazıcılar listesinde doğru cihazın varsayılan olduğundan ve kopya kaydı seçmediğinden emin ol."
+  - "Kablosuzdaysa yazıcının panelinden bağlı olduğu ağı oku; bilgisayarınla aynı değilse doğru ağa yeniden tanıt."
+  - "Kabloluysa kabloyu iki uçtan çıkarıp tak, başka bir port ve mümkünse başka bir kablo dene."
+  - "Sorun sürüyorsa yazıcıyı bilgisayardan kaldır ve üreticinin sitesinden güncel sürücüyü indirip kur."
 faq:
   - q: "Yazıcı açık ama bilgisayar çevrimdışı diyor, bu bir arıza mı?"
     a: "Çoğu zaman değil. 'Çevrimdışı' ifadesi yazıcının bozuk olduğunu değil, bilgisayarın onunla o an konuşamadığını anlatır. Aradaki bağlantı — kablo, ağ ya da sürücü — koptuğunda yazıcı fiziksel olarak sapasağlam durduğu hâlde bu uyarı çıkar. Bu yüzden ilk bakılacak yer cihazın kendisi değil, aradaki yoldur."
@@ -24,6 +39,24 @@ Aşağıda en basitten en teknik olana doğru sırayla gidiyoruz. Sıra önemli:
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔌 **Önce şu ayrımı yap:** yazıcı bilgisayara **kabloyla** mı bağlı, yoksa **kablosuz ağ üzerinden** mi? Kablolu bağlantıda şüphelenilecek yer kısa bir listedir (kablo, port, sürücü). Kablosuzda ise araya bir de ev ağı girer ve sebeplerin çoğu oradadır. Bu tek soru, aşağıda hangi maddelerin seni ilgilendirdiğini belirler.
+
+## Adım adım: çevrimdışı yazıcıyı geri getir
+
+**1. Kuyruğu boşalt.** Bilgisayarda yazıcı kuyruğunu aç ve **bekleyen tüm belgeleri iptal et**; aynı belgeyi tekrar göndermek kuyruğu uzatır.
+
+**2. Yazıcıyı sıfırla.** Yazıcıyı düğmesinden kapat, **fişini çek**, yaklaşık yarım dakika bekle, fişi tak ve aç.
+
+**3. Tek sayfa dene.** Yazıcı tamamen açılıp hazır duruma gelene kadar bekle, sonra **tek bir** deneme sayfası gönder.
+
+**4. Uykudan uyandır.** Panelindeki herhangi bir düğmeye basıp cihazı **elle uyandır**, sonra bilgisayardan tekrar dene.
+
+**5. Varsayılanı doğrula.** Yazıcılar listesini aç; gerçekten kullandığın cihaz **varsayılan** mı, listede kopyası var mı kontrol et.
+
+**6. Ağı karşılaştır.** Kablosuzdaysa yazıcının panelinden **hangi ağa bağlı olduğunu** oku. Bilgisayarının ağıyla aynı değilse yazıcıyı doğru ağa yeniden tanıt.
+
+**7. Kabloyu ve portu ele.** Kabloluysa kabloyu iki uçtan çıkarıp tak, bilgisayarda **başka bir port** dene, mümkünse başka bir kabloyla test et.
+
+**8. Sürücüyü yenile.** Sorun sürüyorsa yazıcıyı bilgisayardan **kaldır**, üreticinin kendi sitesinden modeline ait güncel sürücüyü indirip kur; bu işlem belgelerine dokunmaz.
 
 ## 1) Yazıcıyı ve kuyruğu sıfırla
 

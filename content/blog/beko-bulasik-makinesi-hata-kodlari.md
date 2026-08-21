@@ -4,6 +4,21 @@ description: "Beko bulaşık makinesinde E01 taşma, E02 su kesik, E03 ısıtıc
 slug: "beko-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kullanım kılavuzu", "Küçük fırça", "Kuru bez"]
+steps:
+  - "Ekrandaki kodu yaz ve kendi makinenin kullanım kılavuzundan anlamını teyit et."
+  - "Makineyi kapat, fişini çek ve su musluğunu kapat."
+  - "Makinenin altına ve önüne bak: zeminde ıslaklık varsa kurula ve nereden geldiğini not et."
+  - "Eviyenin altındaki makine musluğunun tam açık olduğunu ve evde su olduğunu kontrol et."
+  - "Giriş hortumu dolap içinde büküldüyse ya da ezildiyse düzelt."
+  - "Tabandaki filtreyi çıkar, fırçayla akan suda yıka ve yerine tak."
+  - "Pervaneleri yerinden alıp deliklerini akan suda durula ve serbestçe döndüklerini kontrol et."
+  - "Fişi tak, birkaç dakika bekle ve kısa bir programla dene; aynı kod tekrar geliyorsa kodu ve gözlemlerini not ederek servisle konuş."
 faq:
   - q: "Beko bulaşık makinesinde E01 hatası ne demek?"
     a: "E01, yaygın serilerde taşma korumasının devreye girdiğini gösterir: makine ya fazla su almıştır ya da bir yerden sızan su şasiye inmiştir. Güvenlik sistemi bu durumda içerideki suyu tahliye etmeye çalışır ve programı durdurur. Tek seferlik bir taşmadan geldiyse kuruma sonrası tekrarlamayabilir; kısa sürede yeniden geliyorsa içeride aktif bir sızıntı vardır ve kaynağını servis bulmalıdır."
@@ -22,6 +37,28 @@ Akşam yemeğinin ardından makineyi doldurdun, programı başlattın; bir süre
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ℹ️ Kod-anlam eşleşmeleri model serisine göre değişebilir; aşağıdaki liste yaygın serilerde geçerlidir. Emin olmak için ekrandaki kodu kendi makinenin kullanım kılavuzuyla teyit et.
+
+## Adım adım: kod geldiğinde evde denenecekler
+
+Hangi kod gelirse gelsin, aşağıdaki sıra önce denenecek **ücretsiz ve aletsiz** kontrollerdir. Kodun kendi bölümüne inmeden önce bu listeyi yürüt; vakaların çoğu burada kapanır.
+
+**1. Kodu yaz ve kılavuzdan teyit et.** Ekrandaki kodu not et ve kendi makinenin kullanım kılavuzundan doğrula; kod-anlam eşleşmeleri model serisine göre değişir.
+
+**2. Güvenliği al.** Makineyi kapat, **fişini çek ve su musluğunu kapat**.
+
+**3. Zemine bak.** Makinenin altında ve önünde ıslaklık var mı? Varsa kurula ve suyun nereden geldiğini not et — taşma kodunda servise söyleyeceğin ilk bilgi budur.
+
+**4. Musluğu ve şebekeyi kontrol et.** Eviyenin altındaki makine musluğu tam açık mı, evde su var mı? Mahalle kesintisi su kesik kodunun en masum sebebidir.
+
+**5. Giriş hortumunu düzelt.** Hortum dolap içinde büküldüyse ya da mobilya altında ezildiyse rahatlat, keskin kıvrımları aç.
+
+**6. Filtreyi çıkar ve yıka.** Tabandaki filtreyi çıkar, küçük bir fırçayla akan suda temizle ve yerine tak.
+
+**7. Pervaneleri kontrol et.** Pervaneleri elle yerinden al, deliklerinin tıkalı olmadığını gözle, akan suda durula ve serbestçe döndüklerinden emin ol.
+
+**8. Resetleyip dene.** Fişi tak, birkaç dakika bekle ve kısa bir programla dene. Aynı kod ikinci-üçüncü kez geliyorsa makineyi zorlama; kodu ve gözlemlerini not ederek servisle konuş.
+
+⛔ Bu listede sökme yok. Rezistans, sensörler, vana ve taşma tavası gövdenin içindedir; o bölge servis alanıdır.
 
 ## E01 — taşma koruması devrede
 

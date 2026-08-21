@@ -4,6 +4,21 @@ description: "Robot süpürgenin haritası silindi ya da odalar üst üste bindi
 slug: "robot-supurge-haritalama-sorunu"
 date: "2026-08-20"
 category: "Süpürge"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Yumuşak, kuru, tüy bırakmayan bez"]
+steps:
+  - "Robotu kapat."
+  - "Üstteki lazer kulesinin çevresindeki şeffaf pencereyi yumuşak kuru bezle sil; kuleyi elinle zorla döndürme."
+  - "Varsa kamera merceğini, ön tampondaki sensör gözlerini ve alttaki düşme sensörlerini sil; ıslak bez, deterjan ya da sivri cisim kullanma."
+  - "Haritanın hep aynı bölgede bozulup bozulmadığına bak; o bölgede boy aynası ya da camlı yüzey var mı kontrol et."
+  - "Yanıltıcı yüzeyin olduğu bölgeyi uygulamadan yasak bölge yap; kameralı modelde gece temizliğinde odada ışık bırak."
+  - "İstasyonu sabit tut ve robotu temizlik sırasında elle taşıma."
+  - "Uygulamayı ve robot yazılımını güncelle."
+  - "Kapıları açık, yerdeki kablo ve çoraplar kaldırılmış hâlde tam bir tur yaptır; robotun istasyona kendi dönmesini bekle."
 faq:
   - q: "Robot süpürgenin haritası neden silindi?"
     a: "En sık sebep, robotun temizliği kendi başına tamamlayıp istasyona dönememesidir; birçok modelde harita ancak tur eksiksiz bitip robot dock'a kendisi döndüğünde kaydedilir. Yarıda kesilen, elle taşınarak bitirilen ya da robotun kaybolduğu turlar haritayı kaydettirmez. İstasyonun yerinin değiştirilmesi ve bazı yazılım güncellemeleri de kayıtlı haritayı geçersiz kılabilir."
@@ -20,6 +35,24 @@ images:
 Aylardır sorunsuz çalışan robot süpürge bir sabah eve yeni gelmiş gibi davranıyor: harita silinmiş, oda isimleri gitmiş, yasak bölgeler uçmuş. Ya da harita duruyor ama içi karışmış — salon mutfağın üstüne binmiş, robot koridorda "kaybolduğunu" söylüyor. Haritalama şikâyetleri robot süpürgenin en sinir bozucu arızası gibi görünür, çünkü cihaz fiziksel olarak sapasağlamdır. Gerçekte ise bu vakaların önemli bölümü sensör kiri, ortam etkisi ya da kullanım alışkanlığından kaynaklanır ve evde çözülür. Sırayla gidelim; harita sıfırlamayı da doğru yerine koyalım — çünkü çoğu kişinin ilk yaptığı şey, aslında en son yapılması gerekendir.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: harita bozulduğunda evde yapılacaklar
+
+**1. Robotu kapat.** Sensör temizliğine başlamadan önce cihazı kapat; kapalıyken çalış.
+
+**2. Lazer kulesini sil.** Üstteki dönen kulenin çevresindeki **şeffaf pencereyi** yumuşak, kuru, tüy bırakmayan bezle sil. Kuleyi elinle zorla döndürme, içine sıvı sıkma.
+
+**3. Diğer sensörleri sil.** Varsa kamera merceğini, ön tampondaki sensör gözlerini ve alttaki düşme sensörlerini aynı bezle sil. ⚠️ Sensör pencerelerine **ıslak bez, deterjan ya da sivri cisim** kullanma; çizilen pencere kalıcı görüş bozukluğu demektir.
+
+**4. Bozulmanın yerini bul.** Harita hep aynı bölgede mi bozuluyor? O bölgede boy aynası, camlı vitrin ya da parlak metal yüzey olup olmadığına bak — lazer bunlardan yansır ve robot olmayan bir açıklık görür.
+
+**5. Ortamı düzelt.** Yanıltıcı yüzeyin olduğu bölgeyi uygulamadan **yasak bölge** yap ya da temizlik sırasında aynanın robot boyu hizasını geçici bir örtüyle kapat. Kameralı bir modelde gece temizliği yapıyorsan odada bir miktar ışık bırak.
+
+**6. İstasyonu ve alışkanlığı sabitle.** Robot konumunu istasyona göre bilir: istasyonun yerini sabit tut ve robotu temizlik sırasında elle alıp başka odaya taşıma.
+
+**7. Yazılımı güncelle.** Uygulamayı ve robot yazılımını güncel tut; çok katlı kullanıyorsan kat değişiminde doğru haritanın seçildiğini kontrol et.
+
+**8. Tam tur yaptır.** Kapıları açık, yerdeki kablo ve çorapları kaldırılmış bir evde robotu hiç ellemeden çalıştır ve **turu bitirip istasyona kendi dönmesini** bekle — birçok modelde harita ancak o zaman kaydedilir.
 
 ## 1) Sensör temizliği: önce buradan başla
 
