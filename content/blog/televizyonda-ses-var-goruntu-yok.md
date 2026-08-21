@@ -13,6 +13,8 @@ faq:
     a: "Bazen evet. Televizyonlar da birer bilgisayardır ve yazılımları takılabilir; ekranın hiç uyanmaması bazen basit bir yazılım kilitlenmesidir. Fişi çekip bir iki dakika bekledikten sonra takmak bu ihtimali sıfır maliyetle eler. Kalıcı bir arızayı çözmez ama denemeden servise gitmek gereksiz yol olabilir."
   - q: "Görüntü yok ama uydu cihazından mı, televizyondan mı anlarım?"
     a: "Televizyonun kendi menüsünü aç: menü ekranda görünüyorsa televizyon görüntü üretebiliyor, sorun kaynak cihazda ya da kabloda demektir. Menü de görünmüyorsa arıza televizyonun kendisindedir. Bu tek hamle, yanlış cihaz için servis çağırmanı engeller."
+images:
+  coverAlt: "Oturma odasında duvara asılı televizyon"
 ---
 
 Akşam televizyonu açıyorsun; kanalın sesi geliyor, spiker konuşuyor, ama ekran kapkaranlık. İlk his "panel gitti, televizyon bitti" olur — oysa bu belirtinin en yaygın sebebi panel değil, panelin arkasındaki **aydınlatma katmanıdır**. Ve hangisi olduğunu evde, hiçbir şey sökmeden, bir telefon feneriyle ayırt edebilirsin. Bu yazıda en basit kontrolden en teknik ihtimale doğru gidiyoruz.

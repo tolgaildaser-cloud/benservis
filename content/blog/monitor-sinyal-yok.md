@@ -13,6 +13,8 @@ faq:
     a: "Bilgisayar açılışta belleğe erişemezse fanlar dönse bile ekrana hiç görüntü gönderilmez. Taşıma, sarsıntı ya da zamanla oluşan temassızlık yüzünden RAM yuvasında gevşeyebilir. Fiş çekiliyken modülü çıkarıp yuvaya iki uçtan klik sesi gelene kadar yeniden oturtmak bu temassızlığı giderir."
   - q: "Hangi noktadan sonra kendim uğraşmayı bırakmalıyım?"
     a: "Kablo, giriş seçimi, çapraz test ve yerine oturtma kontrolleri kullanıcı seviyesidir. Vida sökümü gerektiren işler, güç kaynağı, işlemci ve soğutucu tarafı ile dizüstü bilgisayarların içi tamamen servis alanıdır. Eleme kayıtlarını not edip servise anlatmak, tamiri hızlandıran en değerli katkındır."
+images:
+  coverAlt: "Ev ofisinde masa üstü çalışma alanı"
 ---
 
 Güç düğmesine basıyorsun; kasanın ışıkları yanıyor, fanlar dönüyor, ama monitör ekranında tek cümle: "Sinyal yok". Bilgisayar sanki çalışıyor, görüntü ise ortada yok. Bu tabloda şüpheliler bellidir — kablo, yanlış giriş, ekran kartı çıkışı, yerinden oynamış bir bileşen ya da monitörün kendisi — ve doğru sırayla elersen çoğu vaka evde, alet çantası açılmadan çözülür. Sıra şöyle.

@@ -13,6 +13,8 @@ faq:
     a: "Evet, iyi bir mutfak bıçağı makinede iki yönden zarar görür: güçlü deterjan ve sıcaklık ağzını yıpratır, sepette başka metallere çarpması da keskin hattı bozar. Ayrıca sepete ağzı yukarı konan bıçak, boşaltırken ciddi bir kesik riskidir. Kaliteli bıçağı elde yıkayıp hemen kurulamak en doğrusu."
   - q: "Alüminyum tencere makinede neden karardı?"
     a: "Bulaşık makinesi deterjanları güçlü alkali kimyasallardır ve alüminyum yüzeyle tepkimeye girer; sonuç, elde yıkamayla çıkmayan gri-siyah bir matlaşmadır. Bu bir sağlık sorunu değildir ama görüntü kalıcıdır. Alüminyum kaplar ve makine, deterjan kimyası yüzünden barışmaz; elde yıkamak gerekir."
+images:
+  coverAlt: "Mutfakta ankastre bulaşık makinesi"
 ---
 
 Hafta sonu misafir sofrası toplandı, her şeyi makineye dizdin: teflon tava, ahşap saplı bıçaklar, çeyizden çıkan kristal kadehler. İki gün sonra tava yapışmaya, kadehler matlaşmaya başladı — ve makine bunu bir gecede yapmadı; her yıkamada azar azar yaptı. Bulaşık makinesi çoğu şey için mükemmeldir ama içindeki ortam sanıldığından serttir: uzun süre yüksek sıcaklıkta su, güçlü alkali deterjan ve tazyik. Bazı malzemeler bu üçlüye dayanmaz. İşte girmemesi gerekenlerin listesi, tek tek gerekçesiyle.

@@ -13,6 +13,8 @@ faq:
     a: "Masaüstü bilgisayarda, kasa fişten çekilmiş ve güç düğmesine birkaç kez basılıp kalan enerji boşaltılmışken, yan kapağı açıp RAM'i yuvasından çıkarıp yeniden oturtmak yapılabilir bir kontroldür. Laptopta ise durum farklıdır: çoğu modelde RAM'e ulaşmak ciddi söküm ister, bu yüzden laptopta bu denemeyi yapma, servise bırak."
   - q: "Bip sesleri ne anlama geliyor?"
     a: "Açılışta duyulan bip desenleri anakartın kendi kendini test sonucudur; kısa ve uzun biplerin dizilimi bir şifre gibi sorunlu bölgeyi işaret eder. Ancak aynı desen her üreticide aynı anlama gelmez, bu yüzden desenin karşılığı cihazın ya da anakartın kılavuzundan bakılır. Senin yapacağın en değerli şey deseni doğru saymak ve not etmektir."
+images:
+  coverAlt: "Ahşap masada duran bilgisayar ve kabloları"
 ---
 
 Güç düğmesine bastın: kasanın ışıkları yandı, fanlar dönmeye başladı, belki diskin sesi bile geliyor — ama ekran kapkara. Ne logo var ne yazı; monitör ya bomboş ya "sinyal yok" diyor. Bu tablo korkutur çünkü bilgisayar "hiç açılmıyor" gibi görünür; oysa güç geliyordur ve sorun çoğu zaman iki basit yerden birindedir: **görüntünün yolu** (monitör ve kablo) ya da **açılış testine takılan bir parça**. İkisinin de ilk kontrolleri sende.

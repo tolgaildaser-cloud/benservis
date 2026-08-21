@@ -28,6 +28,8 @@ faq:
     a: "En pahalı hata tam olarak budur. Buzun altındaki iç yüzeyin hemen arkasında soğutucu gaz kanalları geçer; sivri bir aletin tek darbesi bu kanalı delerse gaz kaçar ve hasar çoğu durumda tamiri anlamsız kılacak kadar büyür. Buz yalnızca kendi kendine ya da sıcak su buharıyla çözülür; kendiliğinden ayrılmayan hiçbir parça zorlanmaz."
   - q: "Cihaz ne kadar hızlı yeniden buz tutarsa sorun var demektir?"
     a: "Yeni çözülmüş bir cihazda ince kırağı zamanla yeniden oluşur, bu normaldir. Anormal olan hızdır: birkaç hafta içinde yeniden kalın buz oluşuyorsa ilk şüpheli yıpranmış ya da tam oturmayan kapak contasıdır; kapı her açılışta nemli hava içeri dolar. Conta sağlamsa ve buzlanma yine hızlıysa termostat tarafına bakılmalıdır — o kısım servis işidir."
+images:
+  coverAlt: "Derin dondurucunun iç bölmesi"
 ---
 
 Derin dondurucunun kapağını açıyorsun: çekmece zor geliyor, duvarlarda parmak kalınlığını geçmiş bir buz tabakası var ve cihaz sanki eskisinden çok çalışıyor. Haklı bir gözlem — kalın buz yalıtım gibi davranır, cihaz aynı soğuğu üretmek için daha fazla elektrik harcar ve kullanılabilir hacim küçülür. Çözüm belli: defrost, yani buz çözme. Bu yazı işin **uygulamalı** rehberi; dondurucunun kaç derecede çalışması gerektiğini [derin dondurucu kaç derece olmalı](/blog/derin-dondurucu-kac-derece-olmali/) yazısında, buzlanmanın sebeplerini ise [buzdolabı buzlanma yapıyor](/blog/buzdolabi-buzlanma-yapiyor/) yazısında ayrıca anlattık — burada yalnız "nasıl yapılır"a odaklanıyoruz.

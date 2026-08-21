@@ -28,6 +28,8 @@ faq:
     a: "Normal. Isı pompalı modellerin birçoğunda ısı değiştirici gövde içindedir ve klasik kondenserli makinelerdeki gibi çıkarılıp yıkanmaz; bir kısmı kendini otomatik temizler. Kullanıcıya düşen, kapak filtresini her kurutmada temizlemek ve alt kapak arkasında erişilebilir bir filtre/bölge varsa kılavuzda tarif edildiği kadarıyla havını almaktır."
   - q: "Filtreyi ve kondenseri temizledim ama çamaşırlar hâlâ nemli çıkıyor?"
     a: "Önce basit olanları ele: makine aşırı doldurulmuşsa ya da çamaşırlar sıkılmadan atıldıysa süre yetmez. Su haznesi doluysa bazı modeller programı erken keser, hazneyi boşalt. Bunlar tamamsa ve şikâyet sürüyorsa sensör, rezistans ya da ısı pompası tarafında bir arıza olabilir; bu nokta servis işidir."
+images:
+  coverAlt: "Kapağı açık kurutma makinesinin tamburu"
 ---
 
 Eskiden bir buçuk saatte kupkuru çıkan çamaşırlar artık programın sonunda hâlâ nemli; makine daha uzun çalışıyor, dokunduğunda gövdesi her zamankinden sıcak. Kurutma makinesinde bu tablonun iki klasik sebebi vardır ve ikisi de arıza değildir: **dolmuş hav filtresi** ve **kirlenmiş kondenser**. İkisinin temizliği de kullanıcı için tasarlanmıştır — kapaklar elle açılır, parçalar elle çıkar, alet gerekmez. Bu rehberde her kurutmada yapılacak 10 saniyelik işi, ayda bir yapılacak kondenser bakımını ve ısı pompalı modellerdeki önemli farkı anlatıyoruz.

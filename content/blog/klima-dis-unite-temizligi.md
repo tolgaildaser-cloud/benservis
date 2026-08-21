@@ -28,6 +28,8 @@ faq:
     a: "Hayır, kesinlikle uzanma. Pencereden ya da balkon korkuluğundan sarkarak yapılan her iş düşme riskidir ve hiçbir temizlik bu riske değmez. Güvenle, iki ayak yere basarak erişemediğin üniteye kullanıcı temizliği yapılmaz; o ünite servis ekipmanıyla, emniyetli erişimle temizlenir."
   - q: "Dış üniteyi temizledim ama klima yine az soğutuyor?"
     a: "Önce iç ünite filtrelerinin temiz olduğundan emin ol; soğutma şikâyetlerinin en yaygın sebebi orasıdır. İki taraf da temizken soğutma hâlâ zayıfsa gaz miktarı, kompresör ya da fan motoru tarafında bir sorun olabilir. Bunlar basınç ölçümü ve yetkili müdahale gerektirir; bu noktada doğru hamle servisle konuşmaktır."
+images:
+  coverAlt: "Klima ünitesi ve montaj bölgesi"
 ---
 
 Klima çalışıyor ama eski gücünde değil; dış üniteye baktığında ızgarasında gri bir toz keçesi, önünde birikmiş yapraklar, bahardan kalma sarı bir polen tabakası görüyorsun. Dış ünite yazın kavurucu sıcakta, kışın yağmurda dışarıda çalışan taraftır ve ızgarası tıkandıkça klimanın ısı atma gücü düşer. Önemli bir not: bu rehber **dış ünite** içindir ve her şey **dışarıdan**, hiçbir kapak açmadan yapılır — iç ünitedeki filtre temizliği ayrı bir iştir, onu [klima filtresi temizliği rehberinde](/blog/klima-filtresi-temizleme/) adım adım anlattık.

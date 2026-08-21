@@ -13,6 +13,8 @@ faq:
     a: "Ev tipi buzdolaplarındaki gaz miktarı azdır ve kaçaklar çoğu zaman yavaş gelişir; panik gerektiren bir durum değildir. Yine de yaygın kullanılan soğutuculardan bazıları yanıcıdır. Şüphe varsa ortamı havalandırmak, cihazın yakınında açık alev ve kıvılcımdan kaçınmak ve teşhisi servise bırakmak doğru yaklaşımdır."
   - q: "Gaz kaçağı kesin nasıl teşhis edilir?"
     a: "Kesin teşhis evde göz kararı yapılamaz; servis basınç ölçümü ve kaçak dedektörü gibi araçlarla sistemi test eder. Kullanıcının yapabileceği, belirtileri toplamaktır: soğutma ne zamandır zayıf, motor duruyor mu, borularda kırağı ya da yağlı iz var mı. Bu tablo, servisin işini hem hızlandırır hem doğru parçayla gelmesini sağlar."
+images:
+  coverAlt: "Bir evin mutfağında duran buzdolabı"
 ---
 
 Dolap çalışıyor, motor sesi geliyor, ama içerisi bir türlü eskisi gibi soğumuyor — ve aklına o cümle düşüyor: "Acaba gazı mı kaçırıyor?" Gaz kaçağı, buzdolabı arızaları içinde hakkında en çok efsane üretilen konudur; internette de kulaktan kulağa da abartılı anlatılır. Bu yazıda iki şeyi ayırıyoruz: gerçekten gaz kaçağını düşündüren belirtiler ve öyle sanılan ama başka kapıya çıkan işaretler. Baştan söyleyelim: bu arızada kendin-çöz adımı yoktur; kullanıcının işi belirtiyi doğru toplamaktır, teşhis ve tamir servise aittir.

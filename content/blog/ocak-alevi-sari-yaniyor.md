@@ -13,6 +13,8 @@ faq:
     a: "Evet, aynı tablonun bir başka görüntüsü. Eksik yanan alev is üretir ve bu is tencere tabanında siyah tabaka olarak birikir. Alev rengine bakmadan bile, tencereleriniz sürekli kararıyorsa yanma tarafında bir sorun var demektir ve aynı kontrol sırası geçerlidir."
   - q: "Brülörü temizledim, alev hâlâ sarı. Gaz ayarını kendim yapabilir miyim?"
     a: "Hayır. Brülör başlığı ve kanallarının temizliği kullanıcı işidir ama gaz-hava karışımını belirleyen enjektör ve ayar vidaları yetkili servisin ya da yetkili gaz tesisatçısının işidir. Yanlış ayar hem cihaza hem güvenliğe zarar verir; temizlik sonuç vermediyse cihazı kullanmayı bırakıp servisi aramak doğru hamledir."
+images:
+  coverAlt: "Mutfakta gazlı ocak gözü yakın plan"
 ---
 
 Tencereyi ocağa koyuyorsun ve alev her zamanki gibi mavi değil: sarı, turuncu, uçları titrek. Belki tencerelerin altında son zamanlarda siyah is tabakası da fark ettin. Alev rengi, ocağın sağlığı hakkında konuşan en dürüst göstergedir — ve sarı alev, görmezden gelinecek bir estetik detay değil, **yanmanın eksik olduğunun** işaretidir. Bu yazıda neyin normal, neyin tehlike işareti olduğunu ayırıyor; hangi temizliği kendin güvenle yapabileceğini, hangi noktada işin kesinlikle servise ve yetkili gaz tesisatçısına geçtiğini net çiziyoruz.

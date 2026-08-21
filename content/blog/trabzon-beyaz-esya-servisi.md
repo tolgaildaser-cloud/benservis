@@ -13,6 +13,8 @@ faq:
     a: "Evet. Benservis'te cihazını ve belirtini seçersin, tahmini maliyeti görürsün; sonra Trabzon'daki yüksek puanlı servisleri listeleyip tek dokunuşla ararsın. Artık Trabzon servisleri de benservis'te listeleniyor."
   - q: "Garantili cihazda ne yapmalıyım?"
     a: "Garanti süresi dolmamışsa önce yetkili servisi ara; garanti kapsamındaki arızada işçilik dahil ücret ödemezsin. Garanti bittiyse puanı ve tahmini fiyatı iyi olan özel servis de mantıklı bir seçenektir."
+images:
+  coverAlt: "Mutfakta çamaşır makinesinin yanında duran alet çantası"
 ---
 
 Ortahisar'da denize bakan bir apartman dairesi: çamaşır makinesinin kapağını açınca burnuna küf kokusu geliyor, balkondaki derin dondurucunun gövdesinde ise pas lekeleri belirmeye başladı. Trabzon'da cihazların bir de görünmeyen mesaisi vardır — **Karadeniz'in nemiyle mücadele.** Cihazın bozulduğunda "kime güveneyim, ne kadar tutar?" sorusuna panikle değil, birkaç basit kuralla cevap verebilirsin. Bu rehberde güvenilir servisi nasıl seçeceğini ve **fiyatı çağırmadan önce nasıl öğreneceğini** anlatıyoruz.

@@ -13,6 +13,8 @@ faq:
     a: "Göstergeler çoğu yazıcıda ölçüm değil tahmindir ve özellikle dolum yapılmış ya da muadil kartuşlarda gerçeği yansıtmayabilir. Ayrıca mürekkep yerinde olsa bile uzun süre kullanılmayan kartuşta kuruma olabilir. Bu yüzden karar göstergeye değil nozzle check desenindeki eksik çizgilere bakılarak verilir."
   - q: "Nozzle check (püskürtme denetimi) deseni nasıl okunur?"
     a: "Desen, her rengin bütün kanallarını çalıştıran çizgi bloklarından oluşur. Sağlıklı yazıcıda bloklar kesiksiz çıkar; çizgilerde boşluk ya da eksik satır görüyorsan o rengin kanalları kısmen tıkalı demektir. Hangi renk bloğu bozuksa sorun o kartuş-başlık hattındadır; temizlik sonrası deseni tekrar yazdırıp karşılaştırırsın."
+images:
+  coverAlt: "Yazıcının kâğıt çıkış bölümü"
 ---
 
 Çıktıyı aldın: yazılar soluk gri, fotoğrafın bir şeridi eksik, bazı satırlar sanki yarım basılmış. Daha geçen ay gayet net basan yazıcı birden "yorulmuş" gibi. Mürekkepli yazıcılarda bu tablonun bir numaralı sebebi bellidir: kâğıda mürekkep püskürten kıl inceliğindeki kanalların bir kısmı kurumuş mürekkeple tıkanmıştır — özellikle yazıcı haftalarca çalışmadan beklediyse. İyi haber şu ki bu sorunun asıl çözümü tornavida değil, yazıcının kendi yazılımındaki iki düğmedir. Basitten teknike gidelim.

@@ -13,6 +13,8 @@ faq:
     a: "Bilinçli bir tasarım kararı: yeni skalada A sınıfı, geçiş sırasında kasıtlı olarak boş ya da çok seyrek bırakıldı. Amaç, üreticilere ulaşılacak bir hedef bırakmak ve skalanın birkaç yılda yeniden A+++ enflasyonuna dönmesini engellemek. Bu yüzden B-C sınıfı bir cihaz bugün piyasanın verimli ucunda yer alıyor olabilir."
   - q: "Satın alırken harften başka neye bakmalı?"
     a: "Harf hızlı kıyas içindir; asıl karşılaştırma etiketin ortasındaki yıllık ya da 100 çevrim başına kWh değeriyle yapılır. İki cihazın kWh değerini yan yana koymak, harf farkından daha net konuşur. Buzdolabında hacim, çamaşır makinesinde su tüketimi ve gürültü, bulaşık makinesinde program süresi de aynı etikette yazar; karar bu bütüne göre verilir."
+images:
+  coverAlt: "Bir evde duran beyaz eşyalar"
 ---
 
 Mağazadasın, iki çamaşır makinesine bakıyorsun. Evdeki eski makinen A+++'tı; rafta gördüklerin C ve D. İlk tepki doğal: "Bunca yıl sonra cihazlar kötüleşti mi?" Hayır — **cetvel değişti**. Avrupa Birliği, enflasyona uğrayan A+/A++/A+++ sistemini emekliye ayırıp etiketi sade bir **A'dan G'ye** skalaya döndürdü; büyük beyaz eşya gruplarında bu geçiş **1 Mart 2021**'de yapıldı ve Türkiye'de satılan cihazlar da AB uyumu gereği aynı etiket düzenini kullanıyor. Bu yazı, yeni etiketi raf karşısında doğru okumak için.

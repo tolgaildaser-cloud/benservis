@@ -13,6 +13,8 @@ faq:
     a: "5C, makinenin suyu boşaltamadığını gösterir. İlk bakılacak yer makinenin içindeki filtredir: çıkar, yemek artıklarından arındır, yerine tak. Sonra tahliye hortumunun bükülmediğini ve gider bağlantısının tıkalı olmadığını kontrol et. Bu üçü temizken hata sürüyorsa tahliye pompası tarafında sorun vardır ve o bölge servise aittir."
   - q: "HE hatası kendiliğinden düzelir mi?"
     a: "HE, suyun hedef sıcaklığa getirilemediğini gösteren ısıtıcı hatasıdır. Bir kez resetleyip normal bir programla denemek makul bir ilk adımdır; kod geçici bir okumadan gelmiş olabilir. Ama tekrar geliyorsa rezistans ya da sıcaklık ölçüm tarafında gerçek bir arıza vardır; bu parçalar gövde içindedir ve onarımı kesin olarak servis işidir."
+images:
+  coverAlt: "Bulaşık makinesinin üst kenarındaki kumanda şeridi"
 ---
 
 Makine programın başında bekliyor, su sesi yok ve panelde **4C** yazıyor. Ya da yıkama bitti ama taban su dolu, ekranda **5C** var. Samsung bulaşık makineleri arıza durumunu harf-rakam kodlarıyla bildirir ve bu kodların mantığı öğrenilince oldukça okunaklıdır: 4'lü kodlar su girişini, 5'liler tahliyeyi, LC kaçağı, HE ısıtmayı anlatır. Bu yazıda en yaygın dört kodu tek tek açıyoruz — en geniş yeri, en çok görülen 4C alıyor.

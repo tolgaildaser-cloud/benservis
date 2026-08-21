@@ -13,6 +13,8 @@ faq:
     a: "Bazı durumlarda evet. Piroliz yarıda kesildiğinde ya da elektronik kart takıldığında kilit mekanizması kilitli konumda kalabilir; cihazın elektriğini birkaç dakika kesip yeniden vermek elektroniği baştan başlatır ve kilidin çözülmesini sağlayabilir. Fırın hâlâ sıcakken işe yaramaz — kilit soğumadan açılmaz. Denemeye rağmen kilit takılı kalıyorsa servis gerekir."
   - q: "Kapağı biraz zorlasam açılmaz mı?"
     a: "Zorlamamak gerekir. Kilit pimini kasarak açmaya çalışmak mekanizmayı, menteşeyi ve kapının cam katmanlarını riske atar; ayarla ya da beklemeyle çözülecek bir durumu parça değişimi gerektiren hasara çevirebilir. Kapak, bekleme ve kilit açma yöntemleri denendikten sonra hâlâ açılmıyorsa doğru adres kendi gücün değil servistir."
+images:
+  coverAlt: "Mutfak dolapları arasına gömülü ankastre fırın"
 ---
 
 Akşam yemeği fırında, süre doldu, kapıya uzanıyorsun — kapı açılmıyor. Ya da piroliz temizliği çalıştırdın, program biteli epey oldu, kapı hâlâ kilitli ve ekranda bir kilit simgesi yanıyor. İçgüdü kapıyı biraz daha kuvvetli çekmek diyor; doğrusu tam tersi. Fırın kapısının açılmaması çoğu zaman bir arıza değil, bir **güvenlik davranışıdır** — ve hangi davranış olduğunu anlarsan çoğu vaka kendiliğinden çözülür. Sırayla gidelim.

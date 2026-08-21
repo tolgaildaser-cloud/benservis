@@ -13,6 +13,8 @@ faq:
     a: "İç bölmenin genelde sağ yan duvarında ya da tavanında duran, karton görünümlü gri-bej kapaktır; dalgaların çıktığı kanalı yiyecek buharından ve yağdan korur. Üzerinde yağ ve yemek artığı birikirse o noktalar kararır, kıvılcım ve çıtırtı orada başlar. Kararmış, delinmiş ya da yanık kokulu bir mika plaka, cihazın servise gitme vaktinin geldiğini söyler."
   - q: "Mikrodalganın içini açıp kendim bakamaz mıyım?"
     a: "Hayır, bu diğer cihazlardaki gibi bir 'kapağı aç bak' durumu değildir. Mikrodalganın içindeki kondansatör, fiş çekildikten sonra bile yüksek gerilimi günlerce tutabilir ve dokunana ciddi elektrik çarpması yaşatabilir. Dış yüzey ve iç bölme temizliği kullanıcı işidir; kapağın ötesindeki her şey yalnızca servis işidir."
+images:
+  coverAlt: "Mutfak tezgâhında duran mikrodalga fırın"
 ---
 
 Süt ısıtıyorsun, birden içeriden çıt çıt sesler ve mavi-beyaz kıvılcımlar. İlk refleks çoğu zaman "acaba geçer mi?" diye izlemek oluyor — oysa doğru refleks tek kelime: **durdur.** Mikrodalgada kıvılcım her zaman büyük arıza demek değildir; çoğu vakada sebep yanlış kap ya da iç yüzeyde biriken yağdır ve ikisi de evde çözülür. Ama aynı belirti, cihazın en pahalı parçasını birkaç kullanımda bitirebilecek bir zincirin ilk halkası da olabilir. Bu yazıda neyin senin alanında, neyin kesin servis işi olduğunu ayırıyoruz.

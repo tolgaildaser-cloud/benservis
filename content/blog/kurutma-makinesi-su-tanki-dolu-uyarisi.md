@@ -13,6 +13,8 @@ faq:
     a: "Yoğuşan su tanka giden yolculuğuna kondenser bölgesinden başlar. Kondenser ve çevresi hav, tüy ve tortuyla tıkanırsa su doğru toplanamaz ve akış bozulur; cihaz bunu su uyarısıyla ya da verim düşüşüyle gösterir. Bu yüzden filtre her kurutmada, kondenser bölümü ise kullanma kılavuzunun önerdiği aralıkla temizlenmelidir."
   - q: "Her şeyi temizledim, uyarı hâlâ geliyor. Sorun ne olabilir?"
     a: "Tank, yuva ve kondenser temiz olduğu hâlde uyarı sürüyorsa geriye suyu tanka basan pompa ve seviye algılama tarafı kalır. Pompa zayıflamış, tıkanmış ya da elektronik algılama şaşmış olabilir; bunlar cihazın alt bölümünde, kullanıcının girmemesi gereken alandadır. Bu noktada gözlemlerini not edip servisi aramak en hızlı yoldur."
+images:
+  coverAlt: "Kurutma makinesinin ön paneli ve çekmece bölümü"
 ---
 
 Kurutma tam ortasında duruyor, panelde su tankı simgesi yanıp sönüyor. Tankı çekiyorsun: ya gerçekten ağzına kadar dolu, ya da — daha sinir bozucusu — neredeyse bomboş ama cihaz "dolu" demekte ısrarcı. Bu uyarı, kurutma makinesi şikâyetlerinin klasiklerindendir ve iyi haber şu: vakaların büyük kısmı tank, yuva ve kondenser üçgeninde, yani **cihazın içine hiç girmeden** ulaşabildiğin yerlerde çözülür. Basitten teknike doğru gidelim.

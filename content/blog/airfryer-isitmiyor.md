@@ -13,6 +13,8 @@ faq:
     a: "Fan ve ısıtıcı ayrı devrelerdir; fanın dönmesi ısıtıcının çalıştığını göstermez. Sepet tam oturmuş, sıcaklık doğru ayarlanmış ve cihaz duvar prizine takılı olduğu hâlde hava soğuk esiyorsa, tablo rezistans ya da ısı devresi tarafını işaret eder. Bu bölüm gövdenin içindedir ve kontrolü de değişimi de servis işidir."
   - q: "Airfryer'ı uzatma kablosuna takmak sorun yapar mı?"
     a: "Yapabilir. Airfryer yüksek güç çeken bir cihazdır ve zayıf bir uzatma ya da dolu bir çoklu priz üzerinde gerilim düşer; cihaz hiç ısınmayabilir, yarı güçte kalabilir ya da kablo tehlikeli şekilde ısınır. Üretici önerisi cihazı tek başına bir duvar prizine takmaktır; bu hem performans hem güvenlik içindir."
+images:
+  coverAlt: "Mutfak tezgâhında duran küçük ev aleti"
 ---
 
 Patatesleri doğradın, sepete dizdin, süreyi kurdun. Yirmi dakika sonra kapağı açtığında karşındaki manzara: soluk, yağlı, çiğ patates. Cihaz çalışıyor gibiydi — ekran yanıyordu, fan sesi geliyordu — ama içeride ısı yoktu. "Airfryer ısıtmıyor" şikâyeti kulağa rezistans arızası gibi gelir; oysa bu vakaların şaşırtıcı bir kısmının sebebi çok daha masumdur: **yerine tam oturmamış bir sepet.** Nedenini ve sırayla neye bakacağını anlatalım; cihazın içini açmak bu yazının hiçbir adımında yok, çünkü orası kullanıcı alanı değil.

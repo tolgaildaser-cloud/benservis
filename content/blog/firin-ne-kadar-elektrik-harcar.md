@@ -13,6 +13,8 @@ faq:
     a: "Çoğu durumda evet. Fan, sıcak havayı fırının içinde eşit dağıttığı için aynı sonuç 15-20°C daha düşük sıcaklıkla ve genelde daha kısa sürede alınır; ön ısıtma ihtiyacı da azalır. Daha düşük sıcaklık + daha kısa süre = daha az kWh. Ayrıca fan sayesinde birden fazla tepsi aynı anda pişirilebilir."
   - q: "Fırının tüketimini en çok ne artırır?"
     a: "Gereksiz yüksek sıcaklık, uzun ön ısıtma, pişirme sırasında kapağın sık açılması ve yıpranmış kapak contası. Kapak her açıldığında iç sıcaklık düşer ve rezistans açığı kapatmak için yeniden devreye girer. Fırın eskisi gibi ısınmıyor ve süreler uzuyorsa rezistans zayıflamış olabilir — bu, tüketimi artıran bir arıza sinyalidir."
+images:
+  coverAlt: "Mutfakta ankastre fırın ve ocak yüzeyi"
 ---
 
 Pazar sabahı börek fırında, fırının lambası yanıyor ve akıllardaki soru hep aynı: **"Bu fırın çalışırken sayaç ne yapıyor?"** Fırın, evdeki en yüksek güçlü cihazlardan biridir — ama sanıldığı gibi açık kaldığı her dakika tam güç çekmez. Tüketimi belirleyen üç şey vardır: **sıcaklık, süre ve hangi modun seçildiği.** Üçü de senin elinde.

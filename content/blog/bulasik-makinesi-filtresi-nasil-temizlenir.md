@@ -28,6 +28,8 @@ faq:
     a: "Filtre temizken süren kokunun tipik kaynakları kapı iç kenarındaki ve conta kıvrımındaki birikinti ile giderin bağlantı noktasıdır. Kapı kenarını ve contayı nemli bezle sil, boş makinede sirke ya da makine temizleyiciyle sıcak program çalıştır. Koku buna rağmen sürüyorsa gider bağlantısına bakılması gerekir; orası servis tarafıdır."
   - q: "Püskürtme kolu elimde çıktı, sorun olur mu?"
     a: "Çoğu modelde alt püskürtme kolu elle takılıp çıkarılacak şekilde tasarlanmıştır; yerine bastırınca ya da çevirince oturur. Zorlamadan çıktıysa sorun yok — deliklerini akan suda temizleyip geri tak ve elinle çevirerek serbest döndüğünü kontrol et. Zorlamayla çıkmayan bir kolu asla alet kullanarak sökme."
+images:
+  coverAlt: "Bulaşık makinesinin açık kapağı ve alt sepet bölümü"
 ---
 
 Makine programı bitiriyor, kapağı açıyorsun: bardaklarda mat bir film, tabak kenarlarında kum gibi taneler, bir de içeriden gelen ekşi bir koku. İlk akla gelen "makine bozuldu" olur; oysa bu üçlünün en yaygın sebebi çok daha basit: **dolmuş filtre**. Bulaşık makinesinin tabanındaki filtre her yıkamada yemek artıklarını tutar ve düzenli temizlenmezse suyu kirli döndürmeye başlar. İyi haber: bu filtre kullanıcı çıkarsın diye tasarlanmıştır — elle çevrilir, alet istemez, temizliği 10 dakika sürer.

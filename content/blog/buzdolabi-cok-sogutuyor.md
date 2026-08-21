@@ -13,6 +13,8 @@ faq:
     a: "Arka duvar, soğutucu bölmenin en soğuk yüzeyidir; bazı modellerde üzerinde soğuk hava üfleyen kanallar da bulunur. Oraya yaslanan poşet ve kaplar hem kendileri donar hem de hava akışını keserek bölme içi sıcaklığın dengesiz dağılmasına yol açar. Arka duvarla yiyecekler arasında birkaç parmak boşluk bırakmak gerekir."
   - q: "Ayarı düşürdüm, ne zaman düzelir?"
     a: "Hemen değil. Bölme sıcaklığının yeni ayara oturması saatler alır; sağlıklı karşılaştırma için cihaza 12-24 saat vermek gerekir. Ayarı değiştirip bir saat sonra hâlâ donma görünce tekrar oynamak, cihazı sürekli dengesiz çalıştırır ve neyin işe yaradığını anlamayı imkânsızlaştırır."
+images:
+  coverAlt: "Buzdolabının iç rafları ve sebzelik bölümü"
 ---
 
 Sabah dolabı açıyorsun: marul cam gibi olmuş, domatesin içi buz kristalli, sütün üstünde ince bir buz tabakası var. Şikâyet "soğutmuyor"un tam tersi — cihaz görevini fazlasıyla yapıyor. İyi haber şu: aşırı soğutma vakalarının büyük kısmı arıza değil, ayar ve yerleşim meselesidir ve cihazın içine hiç girmeden çözülür. Bu yazıda en basit ihtimalden en teknik olana doğru gidiyoruz.

@@ -13,6 +13,8 @@ faq:
     a: "WPS, şifre yazmadan modemle yazıcıyı eşleştiren pratik bir yoldur: önce modemdeki WPS düğmesine basılır, ardından birkaç dakika içinde yazıcının WPS/kablosuz düğmesine basılı tutularak eşleşme beklenir. Eşleşme penceresi kısa süre açık kaldığı için pratik kullanımda risk düşüktür; istersen bağlantı kurulduktan sonra modem arayüzünden WPS'i kapatabilirsin."
   - q: "Yazıcı ağa bağlı görünüyor ama bilgisayar yine de basmıyor, neden?"
     a: "Bu durumda sorun Wi-Fi'da değil, bilgisayardaki yazıcı kaydındadır: sürücü, yazıcıyı eski bir adreste arıyor olabilir. Yazıcının IP adresi modem yeniden başlayınca değişebilir ve sürücüdeki port eski adreste kalır. Çözüm, yazıcıyı Windows'tan kaldırıp üreticinin uygulamasıyla yeniden eklemek ya da sürücü portunu güncel adrese çevirmektir."
+images:
+  coverAlt: "Rafta duran yazıcı"
 ---
 
 Telefondan her şey açılıyor, televizyon internetten film oynatıyor — ama yazıcı köşesinde inatla "bağlanamadı" diyor. Wi-Fi yazıcı sorunlarının kendine has bir huyu vardır: sorun neredeyse hiçbir zaman tek bir yerde değildir; modem, bant, şifre ve bilgisayardaki sürücü kaydı arasında bir yerde kopmuştur ve doğru sırayla bakılırsa çoğu evde çözülür. Bu yazıda o sırayı takip ediyoruz — ve çoğu rehberin atladığı kritik bilgiyi baştan söylüyoruz: **ev yazıcılarının büyük bölümü yalnız 2.4GHz ağını görür.**

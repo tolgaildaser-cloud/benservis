@@ -13,6 +13,8 @@ faq:
     a: "Eko program suyu daha düşük sıcaklığa ısıtır ve temizliği süre + deterjanla tamamlar. Elektriği program süresi değil, suyu ısıtan rezistans tüketir; ısıtma azaldığı için toplam tüketim kısa-sıcak programların altında kalır. Uzun süre yalnız bekletme ve düşük güçte püskürtmedir — sayaç o sırada çok yavaş döner."
   - q: "Bulaşık makinesinin tüketimi neden artar?"
     a: "En sık sebepler: yarım yükle sık çalıştırma, gereksiz yere yoğun/sıcak program seçmek, filtre ve püskürtme kollarının tıkanması yüzünden makinenin işi tekrar etmesi ve kireçlenme. Bulaşık iyi temizlenmiyor diye sürekli yoğun programa kaçmak yerine filtre temizliğiyle başlamak hem sonucu hem tüketimi düzeltir."
+images:
+  coverAlt: "Tezgâh altında çalışan bulaşık makinesi"
 ---
 
 Akşam yemeğinden sonra klasik ev tartışması: **"Makine mi açılsın, elde mi yıkansın?"** Sezgi çoğu zaman elde yıkamanın daha ekonomik olduğunu söyler — musluk açık, makine kapalı, ne tüketimi? Rakamlar tam tersini söylüyor. Bu yazıda makinenin gerçek elektrik ve su tüketimini, elde yıkamayla litre bazlı kıyası ve eko programın az bilinen gerçeğini masaya koyuyoruz.

@@ -13,6 +13,8 @@ faq:
     a: "F1, taşma ve su kaçağı riskini bildirir; makinenin tabanına su inmiş demektir ve güvenlik sistemi cihazı korumaya alır. İlk yapılacaklar fişi çekmek ve musluğu kapatmaktır. Tek seferlik taşmadan da kaynaklanabilir ama tekrar ediyorsa içeride sızıntı vardır; kaynağını servis bulmalıdır."
   - q: "Kod tablom bu yazıdakiyle uyuşmuyor, neden?"
     a: "Vestel bulaşık makinelerinde kod tablosu seriden seriye ciddi biçimde değişir; özellikle F serisi kodlar farklı nesillerde farklı arızaları gösterebilir. Bu yüzden yalnızca anlamı yaygın biçimde sabit kodları açıklıyor, gerisi için kılavuzu ve model bazlı teşhisi öneriyoruz. Kodu ve modelini Benservis'e yaz, modeline göre cevabı ücretsiz al."
+images:
+  coverAlt: "Bulaşık makinesi kapağındaki gösterge alanı"
 ---
 
 Program bitmesine yakın makine durdu, ekranda **E2** yanıp sönüyor ve açtığında tabanda kirli su bekliyor. Ya da makine daha suyu almadan **E1** verdi. Vestel bulaşık makineleri arızayı **E** ve **F** önekli kodlarla bildirir; bu kodların bir kısmı musluk, hortum ve filtre gibi tamamen kullanıcı seviyesindeki noktaları işaret eder, bir kısmıysa doğrudan servise havale edilmelidir. Bu rehberde anlamı yaygın biçimde sabit olan kodları, evde yapılacak kontrolleri ve aradaki sınırı topladık.

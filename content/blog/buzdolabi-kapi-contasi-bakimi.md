@@ -27,6 +27,8 @@ faq:
     a: "Hayır. Lastik yaşlandıkça esnekliğini geri kazanmaz; sertleşme, çatlama ve köşelerden dalgalanma kalıcıdır. Temizlik yalnız kirden kaynaklanan yalıtım kaybını çözer. Sertleşmiş ya da yırtılmış conta değişmelidir ve doğru parça modeline özel olduğundan bu işi servise bırakmak gerekir."
   - q: "Bozuk conta dolaba gerçekten zarar verir mi?"
     a: "Evet, hem de sessizce. İçeri sürekli sızan oda havası motoru neredeyse hiç susmadan çalıştırır; elektrik tüketimi artar, iç yüzeylerde terleme ve buzlanma başlar, gıdalar daha hızlı bozulur. Contası bozuk dolap 'çalışıyor' göründüğü için sorun aylarca fark edilmeyebilir; faturada ve buzlanmada kendini gösterir."
+images:
+  coverAlt: "Buzdolabı kapağının iç kenarı ve conta bölgesi"
 ---
 
 Dolabın motoru eskisinden sık çalışıyor, iç duvarlar terliyor, dondurucu kenarında buz kalınlaşıyor. Akla hemen "gaz mı bitti, motor mu gidiyor" gelir — oysa bu tablonun en masum ve en sık atlanan şüphelisi, kapının kenarını dolaşan o gri lastik: **conta**. Conta, dolabın soğuğunu içeride tutan tek şeydir; yalıtmadığı anda dolap, açık pencereli odayı ısıtan kombi gibi boşa çalışır. İyi haber: contanın durumunu bir kâğıt parçasıyla test edebilir, bakımını ılık su ve sabunla kendin yapabilirsin.

@@ -13,6 +13,8 @@ faq:
     a: "Evet, şaşırtıcı sıklıkta. HDMI bağlantısında iki cihaz açılışta el sıkışır; bu el sıkışma bazen takılır ve görüntü gelmez. Televizyonu ve kaynak cihazı fişten çekip bir dakika bekledikten sonra önce televizyonu sonra kaynağı açmak, el sıkışmayı sıfırdan başlatır."
   - q: "Sinyal gelip gidiyorsa sebep ne olabilir?"
     a: "Aralıklı sinyal kaybının en yaygın sebebi kablodur; özellikle uzun, eski ya da kıvrılmış kablolar yüksek çözünürlükte zorlanır. İkinci aday, fişin yuvada gevşek durmasıdır. Kablo değişimiyle geçmiyorsa ve aynı girişte sürüyorsa port tarafına şüphe kayar; bu da servislik bir kontroldür."
+images:
+  coverAlt: "Televizyon ve bağlantı kabloları"
 ---
 
 Uydu alıcısı çalışıyor, oyun konsolu açık, ama televizyon ekranında tek satır: "Sinyal yok". Bu uyarı, televizyonun bozulduğunu değil, yalnızca **seçili girişe o an görüntü akmadığını** söyler — ve arada dört ayrı şüpheli vardır: kaynak cihaz, kablo, giriş seçimi ve televizyonun kendisi. Rastgele kurcalamak yerine doğru sırayla elersen, sebebi çoğu zaman birkaç dakikada evde bulursun. Sıra şöyle.

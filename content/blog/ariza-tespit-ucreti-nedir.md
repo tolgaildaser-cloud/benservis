@@ -13,6 +13,8 @@ faq:
     a: "Sabit bir tarife yok; servise, cihaza ve şehre göre değişiyor. Basına yansıyan örneklerde (Dünya gazetesinin Mart 2026 tarihli haberi) beyaz eşyada belirli bir bant, kombi ve klimada daha yüksek bir bant telaffuz ediliyor. Kesin rakamı servise cihaza gelmeden önce sormak ve tamire dönüşürse mahsup edilip edilmeyeceğini netleştirmek en sağlıklısıdır."
   - q: "Tespit ücreti ödememek için ne yapabilirim?"
     a: "En etkili yol, servisi çağırmadan önce arızan hakkında fikir sahibi olmaktır. Benservis'te cihazını ve belirtini seçersin; olası arızayı ve tahmini maliyet bandını ücretsiz görürsün. Böylece servisle konuşurken elinde bir referans olur ve 'bakalım, öyle söyleriz' belirsizliğine mahkûm kalmazsın."
+images:
+  coverAlt: "Beyaz eşya servisi ve teknisyen çantası"
 ---
 
 Buzdolabın soğutmuyor, servisi çağırdın. Usta geldi, on dakika baktı, arızayı söyledi ve tamir için bir fiyat verdi. Fiyat yüksek geldi, "düşüneyim" dedin — ve o anda öğrendin ki sadece **bakmanın da bir ücreti** varmış. Son yıllarda teknik servislerde giderek yaygınlaşan "arıza tespit ücreti" (keşif ücreti, diyagnostik bedeli) tam olarak bu: tamir yapılsın yapılmasın, arızanın ne olduğunun söylenmesinin bedeli. Bu yazıda bu uygulamanın ne zaman meşru olduğunu, nerede sınırı aştığını ve tüketici olarak hangi haklara sahip olduğunu anlatıyoruz.

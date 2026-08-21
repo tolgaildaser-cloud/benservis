@@ -13,6 +13,8 @@ faq:
     a: "Bu, sorunun panel bağlantısı tarafında olduğuna dair güçlü bir işarettir — ama bunu bir çözüm yöntemi olarak kullanma. Panele baskı uygulamak mevcut hasarı büyütebilir ve yeni çizgiler doğurabilir. Gözlemini not et, servise aktar; bastırmayı tekrarlama."
   - q: "Panel değişimi mantıklı bir tamir mi?"
     a: "Panel, televizyonun en pahalı parçasıdır ve çoğu zaman değişim bedeli cihazın güncel değerine yaklaşır. Bu yüzden panel arızalarında tamir-yenisi kararı diğer arızalardan farklı işler. Cihazının yaşına ve modeline göre tahmini bandı Benservis'in ücretsiz teşhisinde görüp öyle karar vermek en sağlıklısı."
+images:
+  coverAlt: "Salonda sehpa üstünde duran televizyon"
 ---
 
 Film ortasında ekranda incecik bir dikey çizgi beliriyor; ya da alt yarıda yatay bantlar titriyor. İlk soru hep aynı: "panel mi gitti?" Cevap her zaman evet değil — çizgi bazen kablodan, bazen kaynak cihazdan, bazen gerçekten panelden gelir. Ve çizginin **yönü ile davranışı**, daha servis gelmeden arızanın hangi tarafta olduğuna dair ciddi ipucu verir. Bu yazıda önce çizginin kaynağını eleyerek bulacağız, sonra dikey/yatay ayrımının ne anlattığına ve panel işinin ekonomisine dürüstçe bakacağız.

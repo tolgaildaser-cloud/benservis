@@ -13,6 +13,8 @@ faq:
     a: "Evet, fark büyük. Verimli yeni bir model yılda 100-150 kWh ile idare edebilirken, 15-20 yaşındaki bir buzdolabı 400 kWh ve üzerine çıkabilir — yani iki üç kat fark mümkün. Buzdolabı günün 24 saati fişte kaldığı için bu fark başka hiçbir cihazda olmadığı kadar birikir."
   - q: "Buzdolabı neden normalden fazla elektrik yakmaya başlar?"
     a: "En sık sebepler: yıpranmış kapı contası, cihazın duvara ve ısı kaynaklarına çok yakın durması, sıcak yemeğin soğumadan içeri konması, kapının sık ve uzun açılması ve iç bölmelerde buz birikmesi. Bunların çoğu kullanıcı seviyesinde çözülür; motor sürekli çalışıyor ve dolap yine de soğutmuyorsa iş servise geçer."
+images:
+  coverAlt: "Mutfakta duran büyük buzdolabı"
 ---
 
 Buzdolabı evdeki en güçlü cihaz değildir — ama **hiç kapanmayan tek cihazdır**. Fırın günde bir saat, çamaşır makinesi haftada birkaç kez çalışırken buzdolabı 24 saat, 365 gün fiştedir. Bu yüzden "az yakan" bir cihaz gibi görünse de yıl sonunda faturadaki en istikrarlı kalemlerden biridir; eski bir modelde ise sessiz sedasız en büyük kalem hâline gelebilir.
