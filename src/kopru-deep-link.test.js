@@ -15,6 +15,10 @@
 // Tablolar büyüdükçe test kendini günceller; sayı sabitlenmez (kapsam kararı YK'nın).
 import { describe, it, expect } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
+// Cihaz slug'ı App.jsx'te `cihazSlug` ile üretiliyor (çivilenmiş adlarda ad≠slug).
+// Test bunu KOPYALAMAZ, tek kaynaktan ithal eder — kopyalasa çivi eklendiğinde
+// sessizce ayrışır ve köprü sözleşmesini yanlış yerden ölçerdi.
+import { cihazSlug } from "./constants.js";
 
 // App.jsx'teki `slugla` ile BİREBİR aynı olmak zorunda — köprünün tüm sözleşmesi bu.
 const slugla = (s) =>
@@ -38,7 +42,9 @@ const KOPRU_ARIZA = tabloOku("scripts/build-blog.mjs", "KOPRU_ARIZA");
 const BELIRTILER = tabloOku("src/App.jsx", "BELIRTILER");
 const EK_BELIRTI = tabloOku("src/App.jsx", "EK_BELIRTI");
 
-const CIHAZ_SLUG = Object.fromEntries(Object.keys(BELIRTILER).map((c) => [slugla(c), c]));
+const CIHAZ_SLUG = Object.fromEntries(
+  Object.keys(BELIRTILER).flatMap((c) => [[cihazSlug(c), c], [slugla(c), c]])
+);
 const belirtiCoz = (cihaz, slug) =>
   [...(BELIRTILER[cihaz] || []), ...(EK_BELIRTI[cihaz] || [])].find((b) => slugla(b) === slug) || "";
 

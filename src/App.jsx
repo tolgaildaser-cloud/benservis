@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 import DPPEkrani from "./DPPEkrani.jsx";
-import { CIHAZLAR, MARKALAR, markalarForCihaz } from "./constants.js";
+import { CIHAZLAR, MARKALAR, markalarForCihaz, cihazSlug, tabloBul } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
@@ -37,12 +37,19 @@ const slugla = (s) =>
   String(s).toLocaleLowerCase("tr").replace(/ı/g, "i").replace(/ş/g, "s").replace(/ğ/g, "g")
     .replace(/ü/g, "u").replace(/ö/g, "o").replace(/ç/g, "c")
     .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-const CIHAZ_SLUG = Object.fromEntries(CIHAZLAR.map((c) => [slugla(c), c]));
+// Cihaz slug'ı `cihazSlug` ile üretilir (çivilenmiş adlar için ad≠slug olabilir; constants.js).
+// Belirti slug'ları düz `slugla` ile kalır — onlarda çivi yok.
+// ⚠️ Sözlüğe ADIN KENDİ türevi de eklenir: çivi yüzünden ad-türevi slug (örn.
+// `camasir-makinesi-kurutma`) hiçbir yerde basılmaz ama biri elle yazarsa yine çözülsün.
+const CIHAZ_SLUG = Object.fromEntries(
+  CIHAZLAR.flatMap((c) => [[cihazSlug(c), c], [slugla(c), c]])
+);
 
 // Cihaza özel hızlı belirti butonları (sürtünmeyi azaltır)
 const BELIRTILER = {
   "Buzdolabı": ["Soğutmuyor", "Çok ses yapıyor", "Su akıtıyor", "Buzluk çalışmıyor"],
   "Çamaşır Makinesi": ["Su almıyor", "Sıkmıyor / dönmüyor", "Su boşaltmıyor", "Aşırı titreşim/ses"],
+  "Kurutma Makinesi": ["Kurutmuyor / nem kalıyor", "Isıtmıyor / soğuk üflüyor", "Su tankı dolu uyarısı", "Çok uzun sürüyor"],
   "Bulaşık Makinesi": ["Su tahliye etmiyor", "Temiz yıkamıyor", "Su almıyor", "Hata kodu veriyor"],
   "Fırın / Ocak / Aspiratör": ["Isınmıyor", "Ocak gözü yanmıyor", "Aspiratör çekmiyor / koku", "Fan çalışmıyor", "Kapı/cam sorunu"],
   "Klima": ["Soğutmuyor", "Su damlatıyor", "Koku yapıyor", "Hiç çalışmıyor"],
@@ -67,6 +74,7 @@ const BELIRTILER = {
 // kendi cihazında geçerlidir, `?cihaz=klima&ariza=kurutmuyor` eşleşmez.
 const EK_BELIRTI = {
   "Çamaşır Makinesi": ["Hata kodu veriyor", "Kötü kokuyor"],
+  "Kurutma Makinesi": ["Hata kodu veriyor", "Kötü kokuyor", "Filtre/kondenser tıkalı"],
   "Bulaşık Makinesi": ["Kurutmuyor", "Kötü kokuyor"],
   "Buzdolabı": ["Buzlanma yapıyor"],
 };
@@ -104,8 +112,16 @@ const BASLANGIC_EKRAN = (() => {
   } catch { return "vitrin"; }
 })();
 
+const TARIFE_YEDEK = { "Kurutma Makinesi": "Çamaşır Makinesi" };
+
 function refMetni(cihaz) {
-  const arr = SEED[cihaz] || [];
+  // ⚠️ GEÇİCİ TARİFE KÖPRÜSÜ — kurutma makinesinin Supabase'de KENDİ satırı henüz yok
+  // (21 Ağu 2026'da ölçüldü: SEED'de rezistans/nem sensörü/kondenser pompası/kayış YOK).
+  // Köprü olmasaydı kurutma teşhisi tamamen çıpasız kalırdı ve fiyat saf AI tahminine
+  // düşerdi — YK #46 hattında en istenmeyen durum. Şimdilik çamaşır makinesi çıpalarına
+  // dayanır; parçalar birebir aynı değil, bu yüzden AÇIK KALEM olarak kayıtlı.
+  // 📌 /tarife'de kurutma satırları onaylanınca bu satır SİLİNİR (tabloBul yeter).
+  const arr = tabloBul(SEED, cihaz) || tabloBul(SEED, TARIFE_YEDEK[cihaz]) || [];
   if (!arr.length) return "Bu cihaz için referans tarife yok; Türkiye 2026 piyasasına göre makul tahmin yürüt.";
   return arr.map(([ad, pmin, pmax, isc]) => `- ${ad}: parça ${pmin}-${pmax} TL, işçilik ~${isc} TL`).join("\n");
 }

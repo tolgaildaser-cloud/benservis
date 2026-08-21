@@ -71,6 +71,9 @@ function toleransliGecer(metinKelimeleri, anahtar) {
 
 // Cihaz ipuçları — 19 Ağu öncesiyle AYNI tablo; yalnız eşleme motoru değişti.
 export const CIHAZ_IPUCU = [
+  // ⚠️ SIRA ÖNEMLİ: "çamaşır kurutma makinem" ikisini de içeriyor — kurutma ÖNCE denenmeli,
+// yoksa cümle çamaşır makinesine düşer ve kullanıcı yanlış cihazla açılır.
+  ["Kurutma Makinesi", ["kurutma", "kurutucu", "kurutma makinesi", "çamaşır kurutma"]],
   ["Çamaşır Makinesi", ["çamaşır", "camasir"]],
   ["Bulaşık Makinesi", ["bulaşık", "bulasik"]],
   ["Buzdolabı", ["buzdolab", "dolap", "derin dondurucu"]],

@@ -1,14 +1,30 @@
 // src/constants.js
 export const CIHAZLAR = [
-  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör", "Fırın / Ocak / Aspiratör", "Klima",
+  "Buzdolabı", "Çamaşır Makinesi", "Kurutma Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör", "Fırın / Ocak / Aspiratör", "Klima",
   "Kombi / Termosifon", "Mikrodalga / Air Fryer", "Süpürge",
   "Su Sebili / Arıtma", "Bilgisayar / Yazıcı",
 ];
+
+// ── SLUG ÇİVİSİ ────────────────────────────────────────────────────────────────────
+// Cihaz adı → slug türetimi normalde yeterli. Bu tablo, YAYINDAKİ bir adresi addan
+// bağımsız dondurmak gerektiğinde kullanılır (ad değişir, adres değişmez).
+// ⛔ Kozmetik ad değişikliği için kullanılmaz — her satır bir adresi kalıcı dondurur.
+// Şu an boş: 21 Ağu 2026'da kurutma makinesi AYRI CİHAZ olarak eklendi (Tolga kararı),
+// "Çamaşır Makinesi" adı değişmedi, dolayısıyla çivilenecek bir adres yok.
+export const CIHAZ_SLUG_SABIT = {};
 
 // Birleştirilen cihazların eski kategori adlarıyla eşleştirilmesi —
 // eski servis kayıtları (services-data.json + DB) "Notebook", "Elektrik Süpürgesi"
 // gibi adlar tutuyor; birleştirme sonrası eşleşme kopmasın diye genişletilir.
 export const KATEGORI_ESLES = {
+  // ── KURUTMA MAKİNESİ: AYRI CİHAZ (Tolga, 21 Ağu 2026) ───────────────────────────
+  // ⚠️ SERVİS ARZI KENDİ ADIYLA SIFIR: 10.529 servis kaydının tamamı tarandı, "Kurutma
+  // Makinesi" kategorisi HİÇ YOK. Alias olmasaydı kullanıcı kurutma seçtiğinde "yakınındaki
+  // servis" ekranı BOŞ dönerdi — uygulamanın çekirdek vaadi tam orada kırılırdı.
+  // Bu yüzden kurutma, çamaşır makinesi kayıtlarına eşlenir: aynı beyaz eşya servisleri
+  // fiilen kurutma makinesine de bakıyor, 1.916 kayıt anında eşleşir.
+  // 📌 Servis verisine gerçek "Kurutma Makinesi" kaydı girdiği gün bu alias daraltılabilir.
+  "Kurutma Makinesi": ["Kurutma Makinesi", "Çamaşır Kurutma Makinesi", "Kurutucu", "Çamaşır Makinesi"],
   "Süpürge": ["Süpürge", "Elektrik Süpürgesi", "Robot Süpürge"],
   "Mikrodalga / Air Fryer": ["Mikrodalga / Air Fryer", "Mikrodalga", "Air Fryer"],
   // Aspiratör/davlumbaz, "Fırın / Ocak" mutfak ankastre segmentine katıldı; eski servis
@@ -26,6 +42,43 @@ export const KATEGORI_ESLES = {
 // Bir cihaz için eşleşecek tüm kategori adları (birleştirme dahil).
 export function eslesenKategoriler(cihaz) {
   return KATEGORI_ESLES[cihaz] || [cihaz];
+}
+
+// Cihaz adı → slug. TEK ÜRETİCİ: /tamir/, /kilavuzlar/, /blog/kategori/, kategori ikon
+// dosya adları ve `/?cihaz=` derin linki hep buradan geçer, ikinci bir slug tablosu tutulmaz.
+// Çivilenmiş ad varsa çivi kazanır (yukarıdaki CIHAZ_SLUG_SABIT gerekçesi).
+export function cihazSlug(ad) {
+  if (CIHAZ_SLUG_SABIT[ad]) return CIHAZ_SLUG_SABIT[ad];
+  return String(ad).toLocaleLowerCase("tr")
+    .replace(/ı/g, "i").replace(/ş/g, "s").replace(/ğ/g, "g")
+    .replace(/ü/g, "u").replace(/ö/g, "o").replace(/ç/g, "c")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+// ⚠️ İKİ FARKLI EŞLEŞME VAR, KARIŞTIRILMAZ (21 Ağu 2026'da karıştırıldı ve yakalandı):
+//   • KATEGORI_ESLES → SERVİS VERİSİ eşleşmesi. Geniş olabilir: kurutma, çamaşır makinesi
+//     servislerine düşer çünkü o servisler fiilen kurutmaya da bakıyor.
+//   • TABLO_ESLES    → İÇERİK/TABLO araması (hata kodu · rehber · ikon · marka · kılavuz).
+//     BURASI GENİŞ OLAMAZ: servis alias'ı buraya sızarsa kurutma makinesi sayfası çamaşır
+//     makinesinin 29 hata kodunu kendi kaydıymış gibi listeler (ölçüldü — 29/29 sızmıştı).
+// Şu an boş: 12 cihazın hiçbiri ad değiştirmedi. Bir cihaz YENİDEN ADLANDIRILIRSA eski adı
+// buraya yazılır, veri dosyaları olduğu gibi kalır.
+const TABLO_ESLES = {};
+
+// Tablo araması: cihazın kendisi + (varsa) eski adları sırayla denenir, ilk dolu olan döner.
+// NEDEN GEREKLİ: `src/tarife-seed.js` Supabase'den ÜRETİLİYOR (elle düzenlenmez) ve orada
+// "Kurutma Makinesi" satırı HENÜZ YOK. Alias çözümü olmasaydı kurutma teşhisi ÇIPASIZ kalırdı
+// (`SEED[cihaz]` → undefined) ve fiyat tamamen AI tahminine düşerdi — YK #46 hattında en
+// istenmeyen durum. Şimdilik çamaşır makinesi çıpalarına düşer.
+// ⚠️ AÇIK KALEM: kurutmaya ÖZGÜ satırlar (rezistans · nem sensörü · kondenser pompası · kayış)
+// Supabase'de /tarife onayıyla açılmalı; o satırlar girene kadar kurutma tahmini çamaşır
+// parçalarına dayanıyor. Bu bir FİYAT KARARI DEĞİL, köprü — fiyatı FE yazmaz.
+export function tabloBul(tablo, cihaz) {
+  for (const ad of (TABLO_ESLES[cihaz] || [cihaz])) {
+    const v = tablo?.[ad];
+    if (v && (!Array.isArray(v) || v.length)) return v;
+  }
+  return undefined;
 }
 
 const trSort = (a, b) => a.localeCompare(b, "tr");
@@ -100,6 +153,9 @@ export const MARKALAR = [...new Set([
 export const CIHAZ_MARKALARI = {
   "Buzdolabı": BEYAZ_ESYA,
   "Çamaşır Makinesi": BEYAZ_ESYA,
+  // Kurutma makinesi markaları çamaşır makinesiyle aynı üretici kümesi (TR piyasasında
+  // kurutmayı satan her marka çamaşır da satıyor) — ayrı liste tutmak ikinci kaynak olurdu.
+  "Kurutma Makinesi": BEYAZ_ESYA,
   "Bulaşık Makinesi": BEYAZ_ESYA,
   "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK])].sort(trSort),
   "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort(trSort),
@@ -114,6 +170,9 @@ export const CIHAZ_MARKALARI = {
 
 // Bir cihaz için marka listesi döndürür — yoksa tüm MARKALAR.
 export function markalarForCihaz(cihaz) {
-  const liste = CIHAZ_MARKALARI[cihaz];
+  // Alias-duyarlı OLMAK ZORUNDA: birleşen cihaz adı tabloda bulunamazsa fonksiyon TÜM
+  // MARKALAR'a düşüyor ve çamaşır makinesi listesinde Canon/Epson gibi yazıcı markaları
+  // beliriyordu (21 Ağu 2026'da `hero-tahmin.test.js` yakaladı — sessiz düşüş, hata vermiyor).
+  const liste = tabloBul(CIHAZ_MARKALARI, cihaz);
   return liste && liste.length ? liste : MARKALAR;
 }

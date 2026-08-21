@@ -9,7 +9,7 @@ import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from 
 const HOVER_BG = "#FFF8DF";
 
 const CIHAZ_EMOJI = {
-  "Buzdolabı": "🧊", "Çamaşır Makinesi": "🫧", "Bulaşık Makinesi": "🍽️",
+  "Buzdolabı": "🧊", "Çamaşır Makinesi": "🫧", "Kurutma Makinesi": "🌀", "Bulaşık Makinesi": "🍽️",
   "Fırın / Ocak": "🔥", "Klima": "❄️", "Kombi": "♨️", "Televizyon": "📺",
   "Termosifon / Şofben": "🚿", "Mikrodalga": "📡", "Elektrik Süpürgesi": "🌀",
   "Su Sebili / Arıtma": "💧", "Cep Telefonu": "📱", "Robot Süpürge": "🤖",

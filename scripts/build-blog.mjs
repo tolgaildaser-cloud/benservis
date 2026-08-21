@@ -10,7 +10,7 @@ import * as T from "../src/theme.js";
 import { REHBERLER } from "../src/onarim-rehberleri.js";
 // TEK KAYNAK (YK #32, 2 Ağu — Tolga düzeltmesi): /tamir/ kategorileri elle yazılmaz,
 // uygulamanın resmî cihaz listesinden türetilir. Cihaz grubu eklenip çıktığında hub uyar.
-import { CIHAZLAR } from "../src/constants.js";
+import { CIHAZLAR, cihazSlug } from "../src/constants.js";
 // /kilavuzlar/ verisi de TEK KAYNAKTAN gelir (YK #34): marka→resmî kılavuz adresi
 // `src/kullanim-kilavuzlari.js`'te, cihaz→marka eşleşmesi `CIHAZ_MARKALARI`'nda. Burada liste tutulmaz.
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
@@ -1008,7 +1008,11 @@ const tamirGeriSatiri = (p) => {
 // liste ELLE YAZILMAZ, `src/constants.js` → CIHAZLAR'dan türetilir. Uygulamanın cihaz grubu
 // eklenip çıkarıldığında üç merkez de kendiliğinden uyar; ikinci bir liste tutulmaz.
 // ⛔ iFixit'in kategori dünyası (telefon, tablet, konsol, araba, Mac) BİZE GİRMEZ.
-const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: slugify(ad), kaynak: ad }));
+// ⚠️ slug `cihazSlug` ile üretilir, `slugify(ad)` ile DEĞİL: çivilenmiş adlarda ikisi
+// ayrışır ("Çamaşır Makinesi / Kurutma" → çivi `camasir-makinesi`). Buradan üretilen slug
+// /tamir/, /kilavuzlar/, /blog/kategori/ adreslerini ve kategori ikon dosya adını besliyor;
+// `slugify` kalsaydı üç adres birden kayardı (KİLİTLİ_SLUGLAR kapısı da bağırırdı).
+const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: cihazSlug(ad), kaynak: ad }));
 
 // ── BLOG YAZISI → CİHAZ GRUBU EŞLEMESİ ────────────────────────────────────────
 // Yazıların `category` frontmatter'ı serbest metin ("Kombi", "Çamaşır makinesi",
@@ -1072,7 +1076,16 @@ const yaziFotosu = (p) => {
   const slug = KAT_AD_SLUG.get(blogGrubu(p));
   return slug ? merkezFotosu(slug) : null;
 };
+// ── KURUTMA YAZILARI: SLUG'DAN YÖNLENDİRME (21 Ağu 2026) ─────────────────────────────
+// Kurutma makinesi ayrı cihaz oldu ama 6 kurutma yazısının `category` frontmatter'ı hâlâ
+// "Çamaşır makinesi" (5'i) ve "Genel" (1'i) — o metadata PAZ'ın alanı, FE içeriğe dokunmaz.
+// Eşleşme MANTIĞI ise FE'nin alanı: yazı slug'ı `kurutma-makinesi-` ile başlıyorsa yazı
+// kurutma grubuna düşer. Deterministik, bulanık eşleştirme yok, tek satırda geri alınabilir.
+// ⛔ `bulasik-makinesi-kurutmuyor` BİLEREK dışarıda: o bulaşık makinesi yazısı, ön ek tutmuyor.
+// 📌 PAZ frontmatter'ları normalize edince bu kural gereksizleşir ve silinir.
+const KURUTMA_ONEK = "kurutma-makinesi-";
 function blogGrubu(p) {
+  if (p.slug?.startsWith(KURUTMA_ONEK)) return "Kurutma Makinesi";
   const s = slugify(p.category || "");
   if (!s) return GENEL;
   if (KONU_ESLES[s]) return KONU_ESLES[s]; // konu kategorisi (cihaz değil)

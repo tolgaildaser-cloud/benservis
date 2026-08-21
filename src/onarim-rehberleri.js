@@ -1,3 +1,4 @@
+import { tabloBul } from "./constants.js";
 // onarim-rehberleri.js — teşhis edilen arızaya karşılık gelen adım adım onarım rehberi.
 //
 // NEDEN STATİK HARİTA (canlı API değil) — 29 Tem 2026 fizibilite araştırmasının sonucu
@@ -171,7 +172,9 @@ const kucult = (s) => String(s || "").toLocaleLowerCase("tr");
  * Kilit: `src/seed-eslesme.test.js` → "onarim-rehberleri: SEED adlarına bağlılık".
  */
 export function rehberBul(cihaz, arizaAd) {
-  const liste = REHBERLER[cihaz];
+  // Alias-duyarlı: cihaz adı birleşince (örn. "Çamaşır Makinesi / Kurutma") tablo anahtarı
+  // eski adında kalabilir; `tabloBul` sırayla dener, veri dosyasına dokunmaya gerek kalmaz.
+  const liste = tabloBul(REHBERLER, cihaz);
   if (!liste || !arizaAd) return null;
   const a = kucult(arizaAd);
   // İKİ AŞAMALI SEÇİM:

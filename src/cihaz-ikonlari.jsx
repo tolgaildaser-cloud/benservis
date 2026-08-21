@@ -2,6 +2,7 @@
 // Cihaz türleri için basit, tutarlı çizgi (line) ikonları — minimal & premium.
 // Tümü 24×24 viewBox, stroke currentColor; renk/kalınlık dışarıdan gelir.
 import React from "react";
+import { tabloBul } from "./constants.js";
 
 const P = { fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round", strokeLinejoin: "round" };
 
@@ -11,6 +12,11 @@ const IKONLAR = {
   ),
   "Çamaşır Makinesi": (
     <g {...P}><rect x="4" y="3" width="16" height="18" rx="2" /><circle cx="12" cy="13" r="4.2" /><circle cx="8" cy="6.5" r="0.6" fill="currentColor" /><line x1="15" y1="6.5" x2="17" y2="6.5" /></g>
+  ),
+  // Kurutma makinesi — çamaşır makinesinden AYIRT EDİLEBİLİR olmalı (21 Ağu 2026):
+  // aynı gövde ama tambur yerine ısı/nem dalgaları + üstte tek kontrol kadranı.
+  "Kurutma Makinesi": (
+    <g {...P}><rect x="4" y="3" width="16" height="18" rx="2" /><circle cx="12" cy="14" r="4.2" /><path d="M10.4 15.8c0-1.6 1.6-1.9 1.6-3.4" /><path d="M13.2 15.8c0-1.6 1.6-1.9 1.6-3.4" /><circle cx="7.5" cy="6.5" r="1.1" /></g>
   ),
   "Bulaşık Makinesi": (
     <g {...P}><rect x="4" y="3" width="16" height="18" rx="2" /><line x1="4" y1="7" x2="20" y2="7" /><line x1="16.5" y1="5" x2="17.5" y2="5" /><line x1="8" y1="11" x2="8" y2="17" /><line x1="12" y1="11" x2="12" y2="17" /><line x1="16" y1="11" x2="16" y2="17" /></g>
@@ -78,7 +84,9 @@ const IKONLAR = {
 };
 
 export default function CihazIkon({ cihaz, size = 26 }) {
-  const ikon = IKONLAR[cihaz] || IKONLAR["Diğer"];
+  // Alias-duyarlı: birleşen cihaz adı (örn. "Çamaşır Makinesi / Kurutma") eski ikon
+  // anahtarına düşer — aynı JSX ikinci kez yazılmaz.
+  const ikon = tabloBul(IKONLAR, cihaz) || IKONLAR["Diğer"];
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">{ikon}</svg>
   );
