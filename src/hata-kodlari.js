@@ -111,6 +111,19 @@ export const HATA_KODU_KATMANI = {
     { giris: "Ne kadar elektrik harcar", tip: "ayar",
       anlam: "Enerjinin çoğu suyu ısıtmaya gider: 30-40-60 derece farkı, eko program gerçeği ve tüketimi düşüren alışkanlıklar.",
       yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Bosch · Siemens — E18", tip: "kod",
+      anlam: "Makine suyu atamıyor: tahliye pompası, filtre ve hortum sırasıyla eleniyor; çoğu evde çözülüyor.",
+      yazi: "bosch-camasir-makinesi-e18-hatasi" },
+    { giris: "Vestel — E03", tip: "kod",
+      anlam: "Tahliye süresi aşıldı demek; pompa filtresi ve gider hortumu kontrolüyle başlıyorsun.",
+      yazi: "vestel-camasir-makinesi-e03-hatasi" },
+    { giris: "Su alıyor ama tambur dönmüyor", tip: "belirti",
+      anlam: "Kayış, motor kömürü, kapı kilidi ve program ayrımı; hangisi evde bakılır hangisi servis işi.",
+      yazi: "camasir-makinesi-tambur-donmuyor" },
+    { giris: "Hızlı program ne zaman kullanılır", tip: "ayar",
+      anlam: "Hızlı program hangi kirde işe yarar, hangisinde yıkamayı yarım bırakır.",
+      yazi: "camasir-makinesi-hizli-program-ne-zaman" },
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -333,6 +346,19 @@ export const HATA_KODU_KATMANI = {
     { giris: "Makinenin altında su birikti", tip: "belirti",
       anlam: "Önce su mu köpük mü ayrımı yapılır; kapı contası, görünür hortum bağlantıları ve taşma emniyeti sırayla bakılır.",
       yazi: "bulasik-makinesi-su-kaciriyor" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Arçelik · Beko — E01", tip: "kod",
+      anlam: "Su güvenliği (taşma koruması) devrede; taban suyunu boşaltma ve kaçak arama sırası belli.",
+      yazi: "arcelik-bulasik-makinesi-e01-hatasi" },
+    { giris: "Beko — E01 (taşma koruması)", tip: "kod",
+      anlam: "Şamandıra kalkmış demek; makineyi eğip tabandaki suyu boşaltmak ilk adım.",
+      yazi: "beko-bulasik-makinesi-e01-hatasi" },
+    { giris: "Samsung — 4C", tip: "kod",
+      anlam: "Makine su alamıyor: musluk, giriş hortumu ve filtre elemesi evde yapılıyor.",
+      yazi: "samsung-bulasik-makinesi-4c-hatasi" },
+    { giris: "Eko program neden uzun sürüyor", tip: "ayar",
+      anlam: "Uzun süre arıza değil, tasarımın kendisi; suyu yavaş ısıtıp az enerjiyle yıkıyor.",
+      yazi: "bulasik-makinesi-eko-program-neden-uzun" },
   ],
 
   "Kombi / Termosifon": [
@@ -507,6 +533,25 @@ export const HATA_KODU_KATMANI = {
     { giris: "Tatile çıkıyorum, fişini çekeyim mi", tip: "ayar",
       anlam: "Kısa tatilde çekilmez, tatil modu ya da ekonomik kademe kullanılır; aylarca boş kalacaksa boşalt, temizle, kapıyı aralık bırak.",
       yazi: "tatile-cikarken-buzdolabi-ve-cihazlar" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Arçelik — E, F, S ve D kodları", tip: "kod",
+      anlam: "Arçelik iki ayrı kod şeması kullanıyor; önce hangisiyle konuştuğunu ayırt ediyorsun.",
+      yazi: "arcelik-buzdolabi-hata-kodlari" },
+    { giris: "Beko — E0, E1, E4", tip: "kod",
+      anlam: "Üçü de aynı defrost (buz çözme) hattının farklı durakları; evde buz çözdürme adımı dahil.",
+      yazi: "beko-buzdolabi-hata-kodlari" },
+    { giris: "Bosch — alarm mı, kod mu", tip: "kod",
+      anlam: "Bosch buzdolabı çoğu zaman kodla değil alarmla konuşur; tatil modu en sık karışan durum.",
+      yazi: "bosch-buzdolabi-hata-kodlari" },
+    { giris: "LG — Er FF, rF, CF, IF, dH", tip: "kod",
+      anlam: "İki harfli kod doğrudan parçayı söylüyor; fan kodlarının arkasında çoğu zaman buz var.",
+      yazi: "lg-buzdolabi-hata-kodlari" },
+    { giris: "Buz yapmıyor / buzmatik boş", tip: "belirti",
+      anlam: "Su hattı, buzluk sıcaklığı ve buzmatik kolu sırasıyla kontrol ediliyor.",
+      yazi: "buzdolabi-buz-yapmiyor" },
+    { giris: "Yazın kaç dereceye alınmalı", tip: "ayar",
+      anlam: "Sıcak aylarda doğru ayar ve duvar mesafesi; yanlış ayar hem soğutmayı hem tüketimi bozuyor.",
+      yazi: "buzdolabi-yaz-ayari" },
   ],
 
   "Klima": [
@@ -577,6 +622,16 @@ export const HATA_KODU_KATMANI = {
     { giris: "Dış üniteyi hortumla yıkayabilir miyim", tip: "ayar",
       anlam: "Hayır: gövdede elektronik kart ve elektrik bağlantısı var, kullanıcı temizliği fırça-süpürge-nemli bezle sınırlıdır.",
       yazi: "klima-dis-unite-temizligi" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Arçelik — E, P ve CH serisi", tip: "kod",
+      anlam: "Üç ayrı kod dili var: E arıza, P koruma, CH inverter tarafı; hangisi servis ister belli.",
+      yazi: "arcelik-klima-hata-kodlari" },
+    { giris: "Çalışıyor ama iç ünite üflemiyor", tip: "belirti",
+      anlam: "Fan motoru, kanat ayarı ve filtre tıkanması ayrımı; evde bakılacaklar sırayla.",
+      yazi: "klima-fan-donmuyor" },
+    { giris: "Kumanda çalışmıyor", tip: "belirti",
+      anlam: "Telefon kamerasıyla iki dakikada kumanda testi: sorun kumandada mı, iç ünitede mi.",
+      yazi: "klima-kumandasi-calismiyor" },
   ],
 
   "Fırın / Ocak / Aspiratör": [
@@ -695,6 +750,13 @@ export const HATA_KODU_KATMANI = {
     { giris: "Bağladığım cihaz açık ama sinyal yok yazıyor", tip: "belirti",
       anlam: "Kaynak cihaz bekleme modundaysa ya da kumandadan yanlış giriş seçiliyse bu uyarı çıkar; eleme sırası bu yazıda.",
       yazi: "tv-hdmi-sinyal-yok" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Uygulama açılmıyor / siyah ekranda kalıyor", tip: "belirti",
+      anlam: "İnternet, önbellek, saat ve yazılım sırasıyla eleniyor; fabrika ayarı en sonda.",
+      yazi: "smart-tv-uygulama-acilmiyor" },
+    { giris: "Görüntü var, ses yok", tip: "belirti",
+      anlam: "Sessiz mod, ses çıkışı ayarı, harici hoparlör ve panel hoparlörü sırasıyla kontrol ediliyor.",
+      yazi: "tv-ses-gelmiyor" },
   ],
 
   "Mikrodalga / Air Fryer": [
@@ -765,6 +827,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "Robot fırça uyarısı veriyor", tip: "belirti",
       anlam: "Ana fırçaya ve yan fırçaya dolanan saç-ip vakaların çoğunu açıklar; fırça yuvası ve emiş ağzı da kontrol edilir.",
       yazi: "robot-supurge-firca-donmuyor" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Hortum tıkandı / çekiş düştü", tip: "belirti",
+      anlam: "Işığa tutma testiyle tıkanıklığın yerini bulup hortumu zarar vermeden açıyorsun.",
+      yazi: "supurge-hortumu-tikandi" },
   ],
 
   // ——— SU SEBİLİ / ARITMA (20 Ağu 2026) ———
@@ -859,6 +925,16 @@ export const HATA_KODU_KATMANI = {
     { giris: "Yazıcı Wi-Fi ağını listede görmüyor", tip: "belirti",
       anlam: "En çok atlanan sebep frekans ayrımıdır: çoğu yazıcı yalnız 2.4GHz ağa bağlanır; sıra da önemli, önce modem.",
       yazi: "yazici-wifi-baglanmiyor" },
+  // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
+    { giris: "Bilgisayar yavaşladı", tip: "belirti",
+      anlam: "Parça değiştirmeden önce yapılacak kontroller: başlangıç programları, disk doluluğu, ısınma.",
+      yazi: "bilgisayar-yavas-calisiyor" },
+    { giris: "Laptop klavyesi çalışmıyor", tip: "belirti",
+      anlam: "Birkaç tuş mu tamamı mı sorusu arıza yerini söylüyor; evde ayrım yapılabiliyor.",
+      yazi: "laptop-klavyesi-calismiyor" },
+    { giris: "Yazıcıda kâğıt sıkıştı", tip: "belirti",
+      anlam: "Doğru çekme yönü ve geride yırtık parça kaldı mı kontrolü; yanlış çekiş merdaneyi bozuyor.",
+      yazi: "yazici-kagit-sikisti" },
   ],
 };
 

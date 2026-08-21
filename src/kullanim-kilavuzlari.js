@@ -230,6 +230,273 @@ export const MARKA_KILAVUZLARI = {
     url: "https://global.dreametech.com/pages/user-manuals-and-faqs",
     ozet: "Modelini listeden seçerek kullanım kılavuzuna ve sık sorulanlara ulaşıyorsun (sayfa İngilizce); model etiketi cihazın altında.",
   },
+  // ══════════════════════════════════════════════════════════════════════════
+  // 21 AĞU 2026 DALGASI (YK #80 · 200+ kayıt hedefi) — 54 yeni marka.
+  // Üç paralel doğrulama koşusu: beyaz eşya (15) · ankastre+küçük ev+süpürge (14) ·
+  // klima+kombi+TV/monitör+yazıcı+bilgisayar (25). Her adres o gün denendi; bot
+  // korumalı uçlar (Electrolux, Zanussi, Hisense, Acer, MSI, Gigabyte, Iiyama,
+  // Panasonic) gerçek tarayıcıyla açılıp içeriği görüldü. Doğrulanamayan 23 marka
+  // BİLEREK ALINMADI — gerekçeleri koşu raporlarında (YK #79: eksik olmak, ölü
+  // link vermekten iyidir).
+  // ══════════════════════════════════════════════════════════════════════════
+  // ── Beyaz eşya: Electrolux grubu ──────────────────────────────────────────
+  "AEG": {
+    url: "https://support.aeg.com.tr/support-articles",
+    ozet: "AEG Türkiye destek merkezi: hata kodu, model numarası ya da konu yazıp arıyorsun; soğutma, çamaşır, bulaşık, pişirme ve süpürge başlıkları ayrı ayrı açılıyor.",
+  },
+  "Electrolux": {
+    url: "https://www.electrolux.com.tr/support/user-manuals/",
+    ozet: "Electrolux Türkiye kullanma kılavuzu indirme sayfası; model ya da PNC numarasıyla kılavuzu ve ürün bilgi fişini birlikte buluyorsun.",
+  },
+  "Zanussi": {
+    url: "https://www.zanussi.com.tr/support/user-manuals/",
+    ozet: "Zanussi Türkiye kullanma kılavuzu arama sayfası: cihazın model numarasını yazıp kılavuzu ve ürün belgelerini indiriyorsun.",
+  },
+
+  // ── Beyaz eşya: Whirlpool / Beko Europe grubu ─────────────────────────────
+  "Whirlpool": {
+    url: "https://docs.emeaappliance-docs.eu/",
+    ozet: "Whirlpool'un EMEA belge portalı (docs.whirlpool.eu buraya yönleniyor): ticari kodu yazıp kılavuz, montaj dokümanı ve yasal belgeleri arıyorsun — belge dilini Türkçe seçebiliyorsun, arayüz İngilizce.",
+  },
+  "Hotpoint": {
+    url: "https://docs.hotpoint.eu/",
+    ozet: "Hotpoint'in kendi belge arşivi: ürün kodunu yazıp kılavuz, kurulum dokümanı ve ürün fişine ulaşıyorsun; belge dili Türkçe seçilebiliyor, arayüz İngilizce.",
+  },
+  "Indesit": {
+    url: "https://docs.indesit.com/",
+    ozet: "Indesit belge merkezi: cihazın ticari kodunu girip kullanma kılavuzu ve kurulum belgelerini indiriyorsun; Türkçe belge seçeneği var, arayüz İngilizce.",
+  },
+  "Bauknecht": {
+    url: "https://docs.bauknecht.eu/",
+    ozet: "Bauknecht belge arşivi: ürün kodundan kullanma kılavuzu, montaj ve yasal dokümanlara gidiliyor; belge dili Türkçe seçilebiliyor, arayüz İngilizce.",
+  },
+
+  // ── Beyaz eşya: Candy–Hoover–Haier grubu ──────────────────────────────────
+  "Hoover": {
+    url: "https://www.hoover-home.com/tr_TR/kilavuz-ara/",
+    ozet: "Hoover Türkiye kılavuz arama sayfası: ürün grubunu seçiyor ya da ürün kodunu yazıyorsun; buzdolabı, çamaşır-kurutma, bulaşık ve pişirme kılavuzları bir arada.",
+  },
+  "Candy": {
+    url: "https://www.candy-home.com/en_GB/user-manual/",
+    ozet: "Candy'nin kullanma kılavuzu indirme sayfası: ürün hattını seçip cihaz kodunu yazıyorsun — fırın, ocak, davlumbaz, buzdolabı, bulaşık ve çamaşır kılavuzları listeleniyor. Sayfa İngilizce (Candy'nin Türkçe sitesi yok).",
+  },
+  "Haier": {
+    url: "https://www.haier-europe.com/tr_TR/teknik-destek/kilavuzu/",
+    ozet: "Haier Türkiye kullanma kılavuzu sorgulama sayfası: ürün grubunu, cihaz adını ya da ürün kodunu girip kılavuzu indiriyorsun; kılavuz çıkmazsa talep formu açılıyor.",
+    // Haier'in TR kılavuz sayfasında iklimlendirme ürün grubu yok (soğutma/yıkama/bulaşık/pişirme/küçük ev/TV var).
+    haric: ["Klima"],
+  },
+
+  // ── Beyaz eşya: tekil markalar ────────────────────────────────────────────
+  "Hisense": {
+    url: "https://tr.hisense.com/kullanim-kilavuzlari",
+    ozet: "Hisense Türkiye kullanım kılavuzları sayfası: cihazın bilgi etiketindeki ürün kodunu ya da model adını yazıp kılavuzu buluyorsun.",
+  },
+  "Smeg": {
+    url: "https://www.smeg.com/tr/info/download-manuals",
+    ozet: "Smeg'in Türkçe kılavuz indirme sayfası: cihaz etiketindeki ürün kodunu yazıp dilini seçiyorsun; fırın, ocak, buzdolabı, bulaşık ve küçük ev aletleri kılavuzları bir arada.",
+  },
+  "Liebherr": {
+    url: "https://www.liebherr.com/en-tr/fridges-freezers/operating-instructions-3228324",
+    ozet: "Liebherr'in Türkiye soğutma servisi sayfası: cihazın içindeki etikette yazan 9 haneli servis ya da seri numarasını girip kullanma kılavuzuna, enerji etiketine ve ürün fişine ulaşıyorsun. Sayfa İngilizce.",
+    // Liebherr'in ev tarafı yalnız soğutma (buzdolabı/derin dondurucu/şarap dolabı) üretiyor.
+    haric: ["Çamaşır Makinesi", "Kurutma Makinesi", "Bulaşık Makinesi", "Fırın / Ocak / Aspiratör", "Mikrodalga / Air Fryer"],
+  },
+  "Uğur": {
+    url: "https://www.ugur.com.tr/urunler/ev-urunleri",
+    ozet: "Uğur Soğutma'nın ev ürünleri kataloğu: ürününü bulup sayfasını açtığında kullanım kılavuzu bağlantısı ürün sayfasının altında duruyor.",
+    // Uğur'un ev ürünleri arasında bulaşık makinesi yok.
+    haric: ["Bulaşık Makinesi"],
+  },
+  "Sharp": {
+    url: "https://www.sharpconsumer.com/support/",
+    ozet: "Sharp'ın ürün destek sayfası: model adı ya da anahtar kelimeyle kullanım kılavuzu, hızlı başlangıç rehberi ve garanti belgesi aranıyor. Sayfa İngilizce.",
+    // Sharp'ın tüketici sitesi buzdolabı/çamaşır/kurutma/bulaşık/fırın kapsamıyor;
+    // yalnız TV + mikrodalga/air fryer (ve hava ürünleri/süpürge) var.
+    haric: ["Buzdolabı", "Çamaşır Makinesi", "Kurutma Makinesi", "Bulaşık Makinesi", "Fırın / Ocak / Aspiratör"],
+  },
+  // ── Ankastre (fırın / ocak / davlumbaz) ───────────────────────────────────
+  "Teka": {
+    url: "https://www.teka.com/tr-tr/destek/kilavuzlari-indir/",
+    ozet: "Teka Türkiye'nin kılavuz indirme sayfası: model numaranı yazınca kullanım kılavuzu, montaj talimatı ve teknik çizim birlikte listeleniyor.",
+  },
+  "Franke": {
+    url: "https://www.franke.com/tr/tr/home-solutions/destek.html",
+    ozet: "Franke Türkiye destek merkezi: 'Kılavuzlar' ve 'Kurulum Kılavuzları' bölümlerinden ürün arama sayfasına geçip modelinin dokümanlarını açıyorsun.",
+  },
+  "Silverline": {
+    url: "https://silverline.com/tr-TR/services/product-information-technical-document",
+    ozet: "Silverline 'Ürün Bilgisi / Teknik Belge' sayfası: model numaranı girince cihazına özel teknik bilgi ve kullanım kılavuzu çıkıyor.",
+    // ⚠️ Bu adres komut satırından çağrıldığında ülke seçim ekranına düşüyor (silverline.com/market-selection);
+    //    gerçek tarayıcıda 21 Ağu 2026'da açıldı ve model arama kutusu göründü. Link bakımında curl 200 döner
+    //    ama yönlendirme adresi market-selection'dır — bu ölü link DEĞİLDİR, ülke çerezi kurulmadığı içindir.
+  },
+  "Kumtel": {
+    url: "https://www.kumtel.com/kullanim-kilavuzlari",
+    ozet: "Kumtel'in kullanım kılavuzları sayfası: ürünü model koduyla listeden seçip kılavuzunu açıyorsun (ankastre ve küçük ev aletleri aynı listede).",
+  },
+
+  // ── Küçük ev aleti (mikrodalga / air fryer tarafı) ────────────────────────
+  "Goldmaster": {
+    url: "https://urunkilavuz.goldmaster.com.tr/",
+    ozet: "Goldmaster'ın kılavuz sorgulama servisi: ürün adı, barkod ya da model numarasıyla arayıp kullanım kılavuzunu getiriyorsun.",
+  },
+  "Kenwood": {
+    url: "https://www.kenwoodworld.com/en-gb/manuals",
+    ozet: "Kenwood'un resmî kılavuz arşivi: model numarasıyla arayıp kullanım kılavuzunu açıyorsun (sayfa İngilizce); model etiketi cihazın altındadır.",
+  },
+  "Cosori": {
+    url: "https://cosori.com/pages/user-manuals",
+    ozet: "Cosori kullanım kılavuzları sayfası: air fryer modelleri kategori kategori listeleniyor, model adı ya da numarasıyla da aranıyor (sayfa İngilizce).",
+  },
+  "Russell Hobbs": {
+    url: "https://en.russellhobbs.com/user-manuals",
+    ozet: "Russell Hobbs Avrupa'nın kılavuz sayfası: ürün adını ya da model numarasını yazıp kullanım kılavuzuna ulaşıyorsun (sayfa İngilizce).",
+  },
+  "Braun": {
+    url: "https://www.braunhousehold.com/en/manuals",
+    ozet: "Braun Household kılavuz arşivi: mutfak ve ev aleti modellerinin kullanım kılavuzları model numarasıyla aranıyor (sayfa İngilizce).",
+  },
+  "Rowenta": {
+    url: "https://www.tefal.com.tr/kullanim-kilavuzlari/",
+    ozet: "Rowenta Türkiye'de Groupe SEB çatısındadır ve rowenta.com.tr bu sayfaya yönlendiriyor; kılavuz listesinde Tefal, Krups ve Rowenta ürünleri birlikte duruyor.",
+    // Listede Rowenta tarafı kişisel bakım ürünleriyle sınırlı — süpürge kılavuzu çıkmıyor, o yüzden Süpürge hariç.
+    haric: ["Süpürge"],
+  },
+
+  // ── Süpürge ───────────────────────────────────────────────────────────────
+  "Fantom": {
+    url: "https://www.fantom.com.tr/elektrikli-supurgeler",
+    ozet: "Fantom süpürge modelleri listesi; modelini açtığında 'Kullanma Kılavuzu' bağlantısı ürün sayfasında duruyor (Fantom'da merkezî kılavuz arama kutusu yok).",
+  },
+  "Ecovacs": {
+    url: "https://help.ecovacs.com/tr/support",
+    ozet: "Ecovacs Türkçe destek merkezi: DEEBOT/WINBOT modelini seçince kullanım kılavuzu, sorun giderme ve yazılım başlıkları açılıyor.",
+  },
+  "iRobot": {
+    url: "https://www.irobot.com.tr/indirmek-icin/",
+    ozet: "iRobot Türkiye'nin indirme sayfası: Roomba ve Braava modellerinin kullanım kılavuzları tek listede toplanmış.",
+  },
+  "Eufy": {
+    url: "https://service.eufy.com/",
+    ozet: "eufy destek merkezi: 'Manuals and Downloads' bölümünden robot süpürge modelinin kılavuzunu indiriyorsun (sayfa İngilizce).",
+  },
+  // ── Klima ─────────────────────────────────────────────────────────────────
+  "Carrier": {
+    url: "https://www.alarko-carrier.com.tr/urun-dokumanlari",
+    ozet: "Carrier'ın Türkiye'deki resmî kuruluşu Alarko Carrier'dır; ürün dokümanları sayfasından klima tipini seçip montaj ve kullanım kılavuzuna ulaşıyorsun.",
+  },
+  "Hitachi": {
+    url: "https://www.hitachiaircon.com/tr/kaynaklar/klima",
+    ozet: "Hitachi'nin Türkçe doküman merkezi: içerik türünü 'kullanım kılavuzları' olarak filtreleyip ürün tipine (duvar tipi, ticari, ısı pompası) göre daraltıyorsun.",
+  },
+  "Toshiba": {
+    url: "https://www.toshiba-klima.com.tr/kullanim-kilavuzlari",
+    ozet: "Toshiba klimanın Türkiye kılavuz arşivi: duvar tipi, konsol, multi, ticari ve ısı pompası başlıkları altında modelini bulup kılavuzu açıyorsun.",
+    // Bu adres yalnız klima tarafını karşılıyor (Toshiba TV ve bilgisayar tarafı
+    // Türkiye'de ayrı lisans sahiplerinde; onlar için resmî kılavuz sayfası doğrulanamadı).
+    haric: ["Televizyon / Monitör", "Bilgisayar / Yazıcı"],
+  },
+  "Panasonic": {
+    url: "https://support-tr.panasonic.eu/",
+    ozet: "Panasonic Türkiye destek merkezi: model numaranı yazınca kullanım kılavuzu, yazılım güncellemesi ve servis merkezi bilgisi tek sayfada çıkıyor.",
+  },
+  "Fujitsu": {
+    url: "https://www.generalww.com/global/support/downloads/index.html",
+    ozet: "Fujitsu General'in klimalar için resmî doküman arşivi; model numarasıyla kullanım ve montaj kılavuzu aranıyor (sayfa İngilizce, markanın Türkiye'ye özel sitesi yok).",
+  },
+
+  // ── Kombi / Termosifon ────────────────────────────────────────────────────
+  "Protherm": {
+    url: "https://www.protherm.com.tr/yogusmali-kombiler",
+    ozet: "Kombi modelini listeden seçiyorsun; kullanım kılavuzu ürün sayfasının 'Doküman' bölümünde PDF olarak duruyor (Protherm, Vaillant Group markasıdır).",
+  },
+  "Warmhaus": {
+    url: "https://www.warmhaus.com/tr/urunler/kombiler/yogusmali-kombiler",
+    ozet: "Modeli seçip ürün sayfasını açtığında montaj ve kullanım kılavuzu 'Kılavuz ve Dokümanlar' başlığı altında listeleniyor.",
+  },
+
+  // ── Su arıtma / su sebili ─────────────────────────────────────────────────
+  "A.O. Smith": {
+    url: "https://aosmith.com.tr/dokumanlar/",
+    ozet: "A.O. Smith Türkiye doküman merkezi: ters ozmoz, su yumuşatma, UV ve su sebili ürünlerinin kullanım kılavuzları kategori kategori listeleniyor.",
+  },
+
+  // ── Televizyon ────────────────────────────────────────────────────────────
+  "Sunny": {
+    url: "https://www.sunny.com.tr/televizyon-kullanim-kilavuzlari/",
+    ozet: "Sunny televizyonların kılavuzları ekran boyutu ve yazılım ailesine (WebOS, Android, Tizen) göre gruplanmış; kendi grubunun ortak kılavuzunu indiriyorsun.",
+  },
+  "Onvo": {
+    url: "https://onvo.com.tr/bilgi-merkezi",
+    ozet: "ONVO Bilgi Merkezi: model numaranı arama kutusuna yazınca kullanma kılavuzu, enerji etiketi ve ürün bilgi formu birlikte çıkıyor.",
+  },
+
+  // ── Monitör ───────────────────────────────────────────────────────────────
+  "AOC": {
+    url: "https://www.aoc.com/tr/support",
+    ozet: "AOC Türkiye destek sayfası: modelinin ürün sayfasına geçip 'Drivers & Manuals' bölümünden kullanıcı kılavuzunu ve hızlı başlangıç rehberini indiriyorsun.",
+  },
+  "BenQ": {
+    url: "https://www.benq.com/tr-tr/support/downloads-faq.html",
+    ozet: "BenQ Türkçe destek: modelini seçip kılavuz, sürücü ve sık sorulan soruları aynı sayfadan alıyorsun.",
+  },
+  "ViewSonic": {
+    url: "https://www.viewsonic.com/tr/support/",
+    ozet: "ViewSonic Türkiye destek merkezi: indirme bölümünden modelinin yazılım, sürücü ve kullanım kılavuzu dosyalarına ulaşıyorsun.",
+  },
+  "Iiyama": {
+    url: "https://iiyama.com/tr_tr/support",
+    ozet: "iiyama Türkçe destek sayfası: model adını ya da seri numarasını girip dokümanlara, garanti ve enerji etiketi bilgilerine ulaşıyorsun; seri numarasının nerede yazdığı da anlatılıyor.",
+  },
+
+  // ── Yazıcı ────────────────────────────────────────────────────────────────
+  "Xerox": {
+    url: "https://www.support.xerox.com/tr-tr",
+    ozet: "Xerox Türkçe ürün desteği: yazıcı modelini seçince kullanım kılavuzu, sürücü ve sorun giderme belgeleri tek sayfada toplanıyor.",
+  },
+  "Lexmark": {
+    url: "https://support.lexmark.com/tr_tr.html",
+    ozet: "Lexmark Türkiye destek portalı: model numarasıyla sürücü, yazılım ve ürün dokümanlarına ulaşıyorsun.",
+  },
+  "Ricoh": {
+    url: "https://www.ricoh.com.tr/destek/",
+    ozet: "Ricoh Türkiye destek sayfası: 'Sürücüler ve indirmeler' bölümünde kılavuzlar, bilgi tabanında da kurulum ve sorun giderme adımları var.",
+  },
+  "Pantum": {
+    url: "https://global.pantum.com/support/",
+    ozet: "Pantum'un resmî destek merkezi: model seçip sürücü ve doküman indiriyorsun (sayfa İngilizce, markanın Türkiye'ye özel sitesi yok).",
+  },
+
+  // ── Bilgisayar ────────────────────────────────────────────────────────────
+  "Acer": {
+    url: "https://www.acer.com/tr-tr/support/drivers-and-manuals",
+    ozet: "Acer Türkiye 'Sürücüler ve Kılavuzlar' sayfası: seri numarası, SNID ya da parça numarasıyla cihazını tanıtıp kılavuzuna ulaşıyorsun; seri numarasının yeri de anlatılıyor.",
+  },
+  "MSI": {
+    url: "https://tr.msi.com/support",
+    ozet: "MSI Türkiye destek merkezi: ürün tipini (notebook, monitör, anakart) seçip en yeni yazılım, sürücü ve kılavuzları indiriyorsun.",
+  },
+  "Gigabyte": {
+    url: "https://www.gigabyte.com/tr/Support/Consumer",
+    ozet: "GIGABYTE tüketici destek sayfası: model adını yazıp indirme merkezinden kılavuz ve sürücü dosyalarına geçiyorsun (sayfa büyük ölçüde İngilizce).",
+  },
+  "Monster": {
+    url: "https://support.monsternotebook.com/tr/documentations/",
+    ozet: "Monster Notebook kullanım kılavuzları sayfası: kategori ve model seçerek cihazının kılavuzuna, sürücülerine ve yardımcı programlarına gidiyorsun.",
+  },
+  "Huawei": {
+    url: "https://consumer.huawei.com/tr/support/",
+    ozet: "Huawei Türkiye tüketici destek sayfası: ürününü seçince kullanım kılavuzu, yazılım güncellemesi ve sorun giderme başlıkları çıkıyor.",
+  },
+  "Honor": {
+    url: "https://www.honor.com/tr/support/",
+    ozet: "HONOR Türkiye destek merkezi: laptop, tablet ve telefon başlıkları altında ürün rehberleri, garanti sorgulama ve servis merkezi bilgisi bir arada.",
+  },
+  "Microsoft": {
+    url: "https://support.microsoft.com/tr-tr/surface",
+    ozet: "Microsoft Surface Türkçe destek merkezi: cihaz modelini seçip kurulum, kullanım ve sorun giderme rehberlerine ulaşıyorsun.",
+  },
 };
 
 /**
