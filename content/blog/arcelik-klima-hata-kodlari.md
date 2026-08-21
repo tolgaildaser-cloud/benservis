@@ -28,6 +28,8 @@ faq:
     a: "Çünkü Arçelik klimalarda tek bir kod tablosu yok. Duvar tipi split serilerde E ve P ağırlıklı bir tablo kullanılırken, inverter ve çoklu iç üniteli sistemlerde CH ile başlayan bambaşka bir şema devrededir; ekransız modellerde ise bildirim ışıkların yanıp sönme düzeniyle yapılır. Üstelik dolaşımdaki listelerin bir kısmı markadan bağımsız genel tablolardır ve Arçelik'e ait değildir. Kesin karşılık cihazının kullanım kılavuzundadır."
   - q: "Kod aldıktan sonra klimayı çalıştırmaya devam edebilir miyim?"
     a: "Koduna bağlı. Sensör kaynaklı kodlarda cihaz genelde çalışır ama sıcaklığı doğru okuyamadığı için verimsiz çalışır ve elektrik harcar. Kompresör basıncını, tahliye sıcaklığını ya da aşırı akımı bildiren kodlarda ısrarla çalıştırmak arızayı büyütür; bu kodlarda cihazı kapatıp servisle konuşmak doğru olur. Faz bağlantısını işaret eden kodlarda ise beklemek değil, hemen enerjiyi kesmek gerekir."
+images:
+  coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
 Ağustos sıcağında klima sana bir kod gösteriyor ve internette bulduğun üç liste üç farklı şey söylüyor. Bunun bir sebebi var: **Arçelik klimalarda tek bir kod dili yok, üç tane var.** Duvar tipi split serilerde E ve P ile başlayan bir tablo, inverter ve çoklu iç üniteli sistemlerde CH ile başlayan bambaşka bir şema, ekransız modellerde ise ışıkların yanıp sönme düzeni kullanılıyor. Bu yazıda önce hangi dilde konuştuğunu ayırt etmeyi, sonra birden çok kaynakla doğrulayabildiğimiz karşılıkları anlatıyoruz.

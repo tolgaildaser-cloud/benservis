@@ -28,6 +28,8 @@ faq:
     a: "En sık atlanan sebep su giriş hortumunun makine ya da musluk tarafındaki küçük süzgecinin kireç ve tortuyla dolmasıdır; su gelir ama makinenin beklediği hızda gelemez. İkinci aday hortumun dolap arkasında ezilmiş olmasıdır. Bu ikisi de temiz ve şebeke basıncı normalse şüphe su giriş valfine kayar, orası servis işidir."
   - q: "Makinede su güvenlik sistemi varsa 4C'yi o mu tetikler?"
     a: "Bazı modellerde hortum üzerinde ya da makine tabanında su güvenlik düzeneği bulunur ve sızıntı algılandığında su girişini kilitler; bu durumda makine su alamadığı için farklı bir kod da verebilir. Zeminde ıslaklık, makinenin altında birikinti veya hortum başında kırmızı bir gösterge görüyorsan durumu böyle değerlendir. Fişi çekip musluğu kapatmak ve servisle konuşmak doğru hamledir."
+images:
+  coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
 Makineyi doldurdun, programı seçtin ve başlattın; ama içeriden hiç su sesi gelmedi. Bir süre sonra program durdu ve panelde **4C** belirdi — daha eski modellerde aynı durum **4E** olarak yazar. Samsung bulaşık makinelerinde bu kod **su temini hatasıdır**: makine su istedi, beklediği sürede istediği miktara ulaşamadı ve programı güvenli şekilde durdurdu. Kodun sevindiren tarafı şu: sebeplerin büyük kısmı makinenin gövdesinde değil, tezgâh altındaki bir metrelik hatta gizlidir.

@@ -28,6 +28,8 @@ faq:
     a: "Kod tek seferlik bir köpük ya da taşmadan geldiyse makine kuruduktan sonra normal çalışır ve deneme zararsızdır. Ama içeride aktif bir sızıntı varsa her yeniden başlatma mutfağa daha fazla su indirir; ahşap dolap tabanı ve zemin kaplaması bundan kalıcı zarar görür. Bu yüzden aynı kod kurutmadan sonra ikinci kez geldiyse denemeyi bırakıp gözleme geçmek gerekir."
   - q: "Zeminde hiç su görmüyorum, yine de E01 alıyorum, neden?"
     a: "Algılama dışarı taşan suya değil, makinenin alt bölümünde biriken suya bakar; yani dışarıdan hiçbir şey görünmeden kod düşebilir. Aşırı köpük de aynı sonucu doğurur çünkü köpük sensörü suyla benzer biçimde tetikler. Zeminin kuru olması sorunun olmadığını değil, sızıntının henüz gövdenin dışına çıkmadığını gösterir."
+images:
+  coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
 Makine yıkamanın ortasında sustu, kendi kendine bir tahliye sesi çıkardı ve panelde **E01** yazdı. Arçelik bulaşık makinelerinde bu kod, yaygın serilerde **su güvenliğinin devreye girdiğini** anlatır: cihazın alt bölümünde olmaması gereken yerde su algılanmış, makine de su alımını kesip programı durdurmuştur. Bu bir arıza adı değil, bir korunma davranışıdır — makine "bir parçam bozuldu" demiyor, "burada su var, ilerlemiyorum" diyor. Kodun mantığını bilmek fark yaratır, çünkü sebep bazen iki dakikalık bir kontrolle kapanır, bazen de makineyi zorlamak zarara döner.

@@ -28,6 +28,8 @@ faq:
     a: "Kod tek seferlik bir köpük ya da taşmadan geldiyse makine kuruduktan sonra tekrarlamayabilir; bu durumda reset gerçekten işe yarar. Ama içeride aktif bir sızıntı varsa kod silmek sorunu değil yalnızca ekranı temizler ve hata kısa sürede geri gelir. Aynı kod üçüncü kez geldiğinde artık deneme yapmayı bırakıp belirtiyi not ederek servisle konuşmak doğrusudur."
   - q: "Elde yıkama deterjanı gerçekten bu hataya yol açar mı?"
     a: "Evet, en sık görülen kullanıcı kaynaklı sebeplerden biridir. Elde yıkama deterjanları bol köpük üretecek şekilde üretilir, bulaşık makinesi deterjanları ise köpüğü bastıracak şekilde. Makineye yanlış deterjan girdiğinde köpük tabanı doldurur ve güvenlik algılaması taşma sanıp programı durdurur; parlatıcı ayarının fazla açık olması da benzer bir etki yaratır."
+images:
+  coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
 Program yarıda kesildi, makine kendi kendine bir tahliye sesi çıkardı ve panelde **E01** belirdi. Beko bulaşık makinelerinde bu kod, yaygın serilerde **taşma korumasının devreye girdiğini** anlatır: makinenin alt tavasında olmaması gereken yerde su algılanmıştır. Cihaz bu noktada evini su basmasın diye programı durdurur. Bu kodun mantığını bilmek önemli, çünkü sebebi bazen tek seferlik bir köpük kabarmasıdır ve evde ücretsiz kapanır; bazen de içeride aktif bir sızıntıdır ve makineyi zorlamak zarara döner.
