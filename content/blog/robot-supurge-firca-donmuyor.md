@@ -4,6 +4,21 @@ description: "Robot süpürge fırçası dönmüyorsa sebep çoğu zaman dolanan
 slug: "robot-supurge-firca-donmuyor"
 date: "2026-08-20"
 category: "Süpürge"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Makas", "Robotun kutusundan çıkan temizlik aparatı", "Küçük tornavida (vidalı yan fırça için)"]
+steps:
+  - "Robotu kapat ve ters çevir."
+  - "Alt kapağın mandalını aç ve ana fırçayı yuvasından çıkar."
+  - "Fırçaya dolanan saçı ve ipi makasla kes, sıyır; fırçanın iki ucundaki kapakları da kontrol et."
+  - "Fırça yuvasının içine ve emiş ağzına ışık tut; yabancı cisim varsa elinle al."
+  - "Ana fırçayı tak, kapağı kilitle ve elinle çevirip serbest döndüğünü doğrula."
+  - "Yan fırçayı yerinden al, mile sarılan saçı temizle ve geri tak."
+  - "Toz haznesini boşalt; hazne filtresi tıkalıysa temizle."
+  - "Robotu çalıştır; fırça elle serbest dönüyor ama motorla dönmüyorsa servis gerekir."
 faq:
   - q: "Robot süpürgenin fırçasını ne sıklıkla temizlemeliyim?"
     a: "Evde uzun saçlı biri ya da evcil hayvan varsa haftada bir, yoksa iki haftada bir alt kapağı açıp ana fırçayı kontrol etmek iyi bir ritimdir. Dolanma biriktikçe fırça önce zor döner, sonra hiç dönmez; erken temizlik hem uyarıları hem motorun zorlanmasını önler. Yan fırçayı da aynı turda kontrol et."
@@ -22,6 +37,24 @@ Robot süpürge odayı geziyor, sesi her zamanki gibi, ama arkasında bıraktı�
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 ⚠️ Her kontrolden önce **robotu kapat**; mümkünse uygulamadan da durdur. Dönen fırçaya çalışır hâlde elle müdahale etme.
+
+## Adım adım: fırça temizliği
+
+**1. Robotu kapat.** Cihazı kapat, mümkünse uygulamadan da durdur ve ters çevir. Dönen fırçaya çalışır hâlde elle müdahale etme.
+
+**2. Alt kapağı aç.** Ana fırçanın üzerindeki mandallı kapağı **aletsiz, elle** aç ve ana fırçayı yuvasından kaldır; çoğu modelde fırça yuvaya sadece oturur, çekince çıkar.
+
+**3. Dolanan saçı kes.** Saçı ve ipi **makasla, fırçanın kıllarını kesmemeye dikkat ederek** boydan boya kes ve sıyır. Fırçanın **iki ucundaki kapakları ve yatak bölgesini** de aç ve kontrol et — dolanma en çok orada gizlenir.
+
+**4. Yuvayı kontrol et.** Fırça sökülmüşken yuvasının içine ve emiş kanalının girişine ışık tut. Sıkışmış oyuncak parçası, kablo ucu ya da toz kütlesi varsa elinle al.
+
+**5. Fırçayı geri tak.** Fırçayı yuvasına oturt, kapağı kilitle ve **elinle çevir**: takılmadan, serbest dönüyor mu?
+
+**6. Yan fırçaya bak.** Yan fırçayı elinle çevir; takılıyorsa ya da altından saç sarkıyorsa fırçayı yerinden al (vidalıysa uygun uçlu tornavidayla vidayı sök, kaybetme), mile sarılan saçı temizle ve geri tak. Taktıktan sonra yine elle çevirip sürtünmediğini doğrula.
+
+**7. Hazneyi boşalt.** Toz haznesini boşalt, hazne filtresi tıkalıysa temizle. Tıkalı emiş, fırça bölgesinde sıkışmayı hızlandırır.
+
+**8. Dene ve ayır.** Robotu çalıştır. Fırça **elle serbest dönüyor ama motorla dönmüyorsa** ya da uyarı tekrarlıyorsa iş dolanma değildir; belirtiyi not edip servise git.
 
 ## 1) Ana fırçaya dolanan saç ve ip — vakaların kralı
 

@@ -4,6 +4,21 @@ description: "Sebilden gelen su ılıksa ya da tam tersine iç hazne buz tutuyor
 slug: "su-sebili-sogutmuyor"
 date: "2026-08-19"
 category: "Su sebili / arıtma"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Kuru fırça", "Havlu"]
+steps:
+  - "Damacanayı ne zaman taktığını hatırla; birkaç saatten yeniyse bir gece bekle ve tekrar dene."
+  - "Soğuma sürerken ardı ardına bardak doldurma; hazne sürekli tazelenirse soğuma yetişemez."
+  - "Cihazın arkasına ve alt bölümüne bak, termostat kadranını ya da soğutma düğmesini bul."
+  - "Soğutmanın açık ve kademenin orta ya da yüksek konumda olduğundan emin ol."
+  - "Cihazı duvardan birkaç santim öne çek, arka ızgaranın önünü kapatan her şeyi kaldır."
+  - "Arka ızgaradaki tozu dışarıdan kuru bir fırçayla ya da süpürgenin ucuyla al; kapağı açma."
+  - "İç hazne buz tuttuysa fişi çek, damacanayı al, altına havlu ser ve kendiliğinden çözülmesini bekle."
+  - "Buz çözülünce kademeyi bir basamak düşür, cihaza bir gece ver ve tekrar dene."
 faq:
   - q: "Sebil ne kadar sürede soğutur?"
     a: "Yeni takılan bir damacananın soğuması çoğu modelde birkaç saat sürer; cihaz yeni kurulduysa ya da uzun süre fişten çekik kaldıysa bu süre daha da uzar. Damacanayı takıp yarım saat sonra ılık su geldiğini görmek arıza belirtisi değildir. Hüküm vermeden önce cihaza en az bir gece tanı."
@@ -22,6 +37,25 @@ Bardağı dolduruyorsun ve gelen su soğuk değil, ılık. Ya da tam tersi: iç 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ❄️ **Önce şu ayrımı yap:** su **hiç mi soğumuyor**, yoksa **eskisi kadar mı soğumuyor**? Hiç soğutmama genelde elektrik, ayar ya da soğutma düzeneğinin tamamen durmasını işaret eder. Kademeli zayıflama ise neredeyse her zaman **havalandırma ve ısı atma** tarafını gösterir — ve o taraf büyük ölçüde kendin bakılabilir.
+
+## Adım adım: sebili soğutur hâle getirme kontrolü
+
+**1. Cihaza süre ver.** Damacanayı ne zaman taktığını hatırla. Birkaç saatten yeniyse hüküm verme; **bir gece bekle** ve sabah tekrar dene.
+
+**2. Hazneyi sürekli tazeleme.** Soğuma sürerken ardı ardına bardak doldurma — hazne sürekli oda sıcaklığında suyla dolarsa soğuma hiç yetişemez.
+
+**3. Ayarı bul.** Cihazın arkasına ve alt bölümüne bak: kademeli bir termostat kadranı ya da soğutmayı tamamen kapatan bir düğme var mı?
+
+**4. Ayarı doğru konuma getir.** Soğutmanın açık, kademenin orta ya da yüksek konumda olduğundan emin ol. Kademeyi değiştirdiysen etkisini görmek için yine birkaç saat gerekir.
+
+**5. Cihazı duvardan ayır.** Cihazı **birkaç santim öne çek** ve arka ızgaranın önünü kapatan her şeyi kaldır; ısı dışarı atılamazsa cihaz çalışır ama su soğumaz.
+
+**6. Arka ızgarayı temizle.** Izgarada toz tabakası varsa kuru bir fırçayla ya da süpürgenin ucuyla **dışarıdan** temizle. ⚠️ Kapağı açıp içeri girmek gerekmez ve gerekmemeli.
+
+**7. Buz varsa çözdür.** Hazne buz tuttuysa **fişi çek, damacanayı al** ve cihazın kendiliğinden çözülmesini bekle; altına havlu ser. ⛔ Buzu bıçak, tornavida ya da sivri bir aletle kırmaya çalışma.
+
+**8. Kademeyi düşür ve izle.** Buz çözüldükten sonra ayar kademesini bir basamak düşür, cihaza bir gece ver ve tekrar dene. Kısa sürede yeniden buz tutuyorsa termostat tarafı servis işidir.
+
 
 ## 1) Cihaza yeterli süre verilmemiş
 

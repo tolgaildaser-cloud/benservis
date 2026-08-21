@@ -4,6 +4,21 @@ description: "Kurutma makinesi tank boş olsa da su tankı dolu uyarısı verebi
 slug: "kurutma-makinesi-su-tanki-dolu-uyarisi"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Ilık su", "Yumuşak fırça", "Kuru bez"]
+steps:
+  - "Cihazı kapat ve soğut. Fişi çek; kurutma sonrası bazı iç yüzeyler sıcak olabilir, kondenser bölümüne cihaz soğuduktan sonra bak."
+  - "Tankı çıkar ve boşalt. Genelde ön yüzün üst köşesindeki çekmece tankı sonuna kadar çekip çıkar ve suyunu dök. Her kurutma sonrası boşaltmayı alışkanlık yap."
+  - "Şamandırayı serbestleştir. Tankın içini ılık suyla çalkala; içinde hareket eden bir şamandıra varsa tankı yatırıp sallayarak serbest hareket ettiğini duy ya da gör. Kireçle sıkışan şamandıra, tank boşken bile dolu sinyali üretir."
+  - "Tank ağzını yıka. Tank ağzındaki süzgeç ya da huni kısmında tortu varsa yumuşak fırçayla temizle ve durula."
+  - "Tankı yuvasına tam oturt. Tankı hissedilir şekilde oturana kadar it. Cihaz tankın içini görmez, yuvasına oturuşunu izler; milimetrik eksik itilmiş tank tek başına uyarı sebebidir."
+  - "Hav filtresini temizle. Kapak ağzındaki filtreyi çıkar, keçeleşmiş tabakayı al, gerekiyorsa yıka ve tamamen kuruttuktan sonra yerine tak."
+  - "Kondenser bölümünü temizle. Alt köşedeki kondenser kapağını aç. Yoğuşmalı modellerde kondenser çıkarılıp kılavuzun tarifiyle akan suyla yıkanabilir; ısı pompalı modellerde kapak arkasındaki bölge ve varsa süngerli filtre temizlenir. Peteklere sert cisimle bastırma, kapağı contası düzgün oturacak şekilde kapat."
+  - "Tahliye hortumunu kontrol et ve dene. Gidere bağlı tahliye kullanıyorsan hortumun kıvrılmadığını ve tıkanmadığını kontrol et. Sonra fişi tak ve cihazı yeniden başlat; uyarı bazen yalnız bu kontrollerle söner."
 faq:
   - q: "Kurutma makinesinde su tankı neden doluyor?"
     a: "Kurutma makinesi çamaşırdan aldığı nemi buhar olarak dışarı atmaz; yoğuşturup suya çevirir ve bu su tanka birikir. Yani tankın dolması arıza değil, cihazın çalıştığının kanıtıdır. Tank dolunca cihaz kendini korumak için durur ve uyarı verir; her kurutma sonrası tankı boşaltmak en sağlıklı alışkanlıktır."
@@ -22,6 +37,24 @@ Kurutma tam ortasında duruyor, panelde su tankı simgesi yanıp sönüyor. Tank
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Başlamadan:** kontrollerden önce cihazı kapat ve **fişini çek.** Kurutma sonrası bazı iç yüzeyler sıcak olabilir; kondenser bölümüne cihaz soğuduktan sonra bak. Su ve elektrik aynı cihazda buluştuğu için bu iki dakikalık önlem pazarlıksızdır.
+
+## Adım adım: su uyarısını yerinde çözmek
+
+**1. Cihazı kapat ve soğut.** Fişi çek; kurutma sonrası bazı iç yüzeyler sıcak olabilir, kondenser bölümüne cihaz soğuduktan sonra bak.
+
+**2. Tankı çıkar ve boşalt.** Genelde ön yüzün üst köşesindeki çekmece tankı sonuna kadar çekip çıkar ve suyunu dök. Her kurutma sonrası boşaltmayı alışkanlık yap.
+
+**3. Şamandırayı serbestleştir.** Tankın içini ılık suyla çalkala; içinde hareket eden bir şamandıra varsa tankı yatırıp sallayarak serbest hareket ettiğini duy ya da gör. Kireçle sıkışan şamandıra, tank boşken bile dolu sinyali üretir.
+
+**4. Tank ağzını yıka.** Tank ağzındaki süzgeç ya da huni kısmında tortu varsa yumuşak fırçayla temizle ve durula.
+
+**5. Tankı yuvasına tam oturt.** Tankı hissedilir şekilde oturana kadar it. Cihaz tankın içini görmez, yuvasına oturuşunu izler; milimetrik eksik itilmiş tank tek başına uyarı sebebidir.
+
+**6. Hav filtresini temizle.** Kapak ağzındaki filtreyi çıkar, keçeleşmiş tabakayı al, gerekiyorsa yıka ve tamamen kuruttuktan sonra yerine tak.
+
+**7. Kondenser bölümünü temizle.** Alt köşedeki kondenser kapağını aç. Yoğuşmalı modellerde kondenser çıkarılıp kılavuzun tarifiyle akan suyla yıkanabilir; ısı pompalı modellerde kapak arkasındaki bölge ve varsa süngerli filtre temizlenir. Peteklere sert cisimle bastırma, kapağı contası düzgün oturacak şekilde kapat.
+
+**8. Tahliye hortumunu kontrol et ve dene.** Gidere bağlı tahliye kullanıyorsan hortumun kıvrılmadığını ve tıkanmadığını kontrol et. Sonra fişi tak ve cihazı yeniden başlat; uyarı bazen yalnız bu kontrollerle söner.
 
 ## Önce mantığı anla: bu su nereden geliyor?
 

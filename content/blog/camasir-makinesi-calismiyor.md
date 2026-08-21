@@ -4,6 +4,20 @@ description: "Çamaşır makinesi açılmıyor ya da start almıyorsa sebep ço�
 slug: "camasir-makinesi-calismiyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Fişi kontrol et. Fişin duvar prizine tam oturduğundan emin ol. Fişte ya da kabloda erime, kararma, çatlak görüyorsan makineyi o prizden hiç çalıştırma."
+  - "Prizi test et. Aynı prize telefon şarj aleti gibi başka bir cihaz tak; çalışmıyorsa sorun makinede değil prizdedir. Makine uzatma kablosuna ya da çoklu prize değil, doğrudan duvar prizine bağlı olmalı."
+  - "Sigortaya bak. Sigorta kutusunda çamaşır makinesinin bağlı olduğu hat atmış olabilir; kolu kaldırıp bir kez dene. Sigorta kısa süre sonra yeniden atıyorsa zorlama, o ayrı bir belirtidir."
+  - "Kapağı klik sesiyle kapat. Kapağı aç, araya sıkışan bir çamaşır ucu var mı bak, sonra duyulur bir klik sesi gelene kadar kararlı biçimde kapat. Makine kapağın kilitlendiğini görmeden hiçbir programı başlatmaz."
+  - "Çocuk kilidini ara. Panelde kilit ya da çocuk simgesi yanıp sönüyorsa tuşlar kilitlidir. Açma kombinasyonu markaya göre değişir; genelde iki tuşa aynı anda üç-beş saniye basılı tutulur, kesin yöntem kullanım kılavuzunda yazar."
+  - "Program ve ertelemeyi düzelt. Ekranda geri sayım ya da erteleme simgesi varsa programı iptal edip baştan seç. Program düğmesini iki konum arasında bırakma, tam bir konuma oturt."
+  - "Fişi çek, bekle, tekrar dene. Fişi çek, birkaç dakika bekle, tekrar tak ve kısa bir program başlat. Bu bir çözüm değil deneme adımıdır; makine ancak her seferinde fiş çek-tak ile çalışıyorsa bu servise anlatılacak bir belirtidir."
 faq:
   - q: "Makine hiç tepki vermiyor, ışıklar bile yanmıyor — bozuldu mu?"
     a: "Hemen bozuldu deme. Işıkların hiç yanmaması çoğu zaman makineden önce prizi, sigortayı ya da fişi işaret eder. Aynı prize başka bir cihaz takıp çalışıp çalışmadığına bak; priz sağlamsa ve makine hâlâ tamamen sessizse o zaman elektronik tarafta bir sorun olabilir ve bu servis işidir."
@@ -22,6 +36,22 @@ Sepet dolu, deterjan hazır, tuşa basıyorsun — ve hiçbir şey olmuyor. Maki
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔌 **Önce şu ayrımı yap:** makine **hiç mi tepki vermiyor** (ışık yok, ses yok), yoksa **açılıyor ama start mı almıyor**? İlki neredeyse her zaman elektrik tarafını, ikincisi kapak–kilit–panel tarafını işaret eder. Bu ayrım aşağıdaki kontrol sırasını belirler.
+
+## Adım adım: start almayan makinede evde denenecekler
+
+**1. Fişi kontrol et.** Fişin duvar prizine tam oturduğundan emin ol. Fişte ya da kabloda erime, kararma, çatlak görüyorsan makineyi o prizden hiç çalıştırma.
+
+**2. Prizi test et.** Aynı prize telefon şarj aleti gibi başka bir cihaz tak; çalışmıyorsa sorun makinede değil prizdedir. Makine uzatma kablosuna ya da çoklu prize değil, doğrudan duvar prizine bağlı olmalı.
+
+**3. Sigortaya bak.** Sigorta kutusunda çamaşır makinesinin bağlı olduğu hat atmış olabilir; kolu kaldırıp bir kez dene. Sigorta kısa süre sonra yeniden atıyorsa zorlama, o ayrı bir belirtidir.
+
+**4. Kapağı klik sesiyle kapat.** Kapağı aç, araya sıkışan bir çamaşır ucu var mı bak, sonra duyulur bir klik sesi gelene kadar kararlı biçimde kapat. Makine kapağın kilitlendiğini görmeden hiçbir programı başlatmaz.
+
+**5. Çocuk kilidini ara.** Panelde kilit ya da çocuk simgesi yanıp sönüyorsa tuşlar kilitlidir. Açma kombinasyonu markaya göre değişir; genelde iki tuşa aynı anda üç-beş saniye basılı tutulur, kesin yöntem kullanım kılavuzunda yazar.
+
+**6. Program ve ertelemeyi düzelt.** Ekranda geri sayım ya da erteleme simgesi varsa programı iptal edip baştan seç. Program düğmesini iki konum arasında bırakma, tam bir konuma oturt.
+
+**7. Fişi çek, bekle, tekrar dene.** Fişi çek, birkaç dakika bekle, tekrar tak ve kısa bir program başlat. Bu bir çözüm değil deneme adımıdır; makine ancak her seferinde fiş çek-tak ile çalışıyorsa bu servise anlatılacak bir belirtidir.
 
 ## 1) Elektrik: priz, sigorta, fiş
 

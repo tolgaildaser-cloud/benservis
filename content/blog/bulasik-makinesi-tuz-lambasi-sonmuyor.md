@@ -4,6 +4,21 @@ description: "Tuz lambası tuz koyduğun hâlde sönmüyorsa sebep çoğu zaman 
 slug: "bulasik-makinesi-tuz-lambasi-sonmuyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Bulaşık makinesi tuzu", "Huni", "Temiz kaşık", "Nemli bez", "Kullanım kılavuzu"]
+steps:
+  - "Alt sepeti çek ve tabandaki tuz haznesinin kapağını saat yönünün tersine çevirerek aç."
+  - "Temiz bir kaşığın sapıyla tuza bastır; üstte sert kabuk, altında boşluk varsa kabuğu nazikçe kır ve tuzu karıştır."
+  - "İlk kullanımda hazneyi önce suyla doldur; sonraki dolumlarda su ekleme, haznede zaten su vardır."
+  - "Huniyle yalnızca bulaşık makinesi tuzu doldur; suyun taşması normaldir. Sofra ya da kaya tuzu kullanma, hazneye asla deterjan koyma."
+  - "Kapak contasında biriken tuz kristallerini nemli bezle sil ve kapağı tam turuyla sıkıca kapat."
+  - "Dolumdan hemen sonra bir program çalıştır ki taşan tuzlu su makinenin tabanında beklemesin."
+  - "Kılavuzdan sertlik ayarı bölümünü bul ve bölgenin su sertliğine göre doğru kademede olduğunu doğrula."
+  - "Bir-iki yıkama daha çalıştırıp lambaya ondan sonra bak; hâlâ yanıyorsa ya da tuz hiç eksilmiyorsa servis gerekir."
 faq:
   - q: "Tuz koydum, lamba hemen sönmedi — arıza mı?"
     a: "Çoğu zaman hayır. Tuz göstergesi anlık çalışmaz; haznedeki tuzun suyla çözünüp yoğunluğun yükselmesi zaman alır ve birçok modelde lamba ancak bir-iki yıkamadan sonra söner. Tuzu koyduktan hemen sonra lambaya bakıp hüküm verme; bir-iki program çalıştır, ondan sonra hâlâ yanıyorsa diğer sebeplere bak."
@@ -20,6 +35,24 @@ images:
 Panodaki tuz lambası günlerdir yanıyor. Tuz aldın, hazneye doldurdun, kapağını kapattın — lamba yine yanıyor. Akla ilk gelen "sensör bozuldu" oluyor ama bu göstergenin kendine göre bir çalışma mantığı var ve vakaların çoğunda lamba, gayet haklı olduğu için ya da sadece henüz vakti gelmediği için yanmaya devam ediyor. Önce tuzun bu makinede ne işe yaradığına, sonra lambanın neden hemen sönmediğine bakalım.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: tuzu doğru koy, lambayı doğru oku
+
+**1. Hazneyi aç.** Alt sepeti çek; tabanda, alt sepetin altındaki vidalı kapağı saat yönünün tersine çevirerek aç. Bu haznenin deterjan bölmesiyle ilgisi yoktur.
+
+**2. Kabuk var mı yokla.** Temiz bir kaşığın sapıyla tuzun içine bastır: üstte sert bir kabuk, altında boşluk hissediyor musun? Varsa kabuğu kaşık sapıyla nazikçe kır ve tuzu karıştır. Haznenin içini çizecek sert-sivri aletler kullanma.
+
+**3. İlk kullanımda su koy.** Hazneyi ilk kez dolduruyorsan önce suyla doldur. Sonraki dolumlarda su eklemene gerek yok; haznede her zaman su kalır.
+
+**4. Doğru tuzu doldur.** Huniyle **yalnızca bulaşık makinesi tuzu** doldur; dolum sırasında suyun taşması normaldir. Sofra tuzu ve kaya tuzu bu sistem için uygun değildir. ⚠️ Tuz haznesine asla deterjan koyma.
+
+**5. Kapağı temizle ve sık.** Kapak contasında tuz kristali birikmiş mi bak, varsa nemli bezle sil ve kapağı **tam turuyla** sıkıca kapat. Gevşek kapaktan yıkama suyuna tuz karışır.
+
+**6. Hemen bir program çalıştır.** Dolumdan sonra bir yıkama yap ki taşan tuzlu su makinenin tabanında beklemesin.
+
+**7. Sertlik ayarını doğrula.** Kılavuzdan sertlik ayarı bölümünü bul; bölgenin su sertliğine göre doğru kademede mi? "Tuz çok hızlı bitiyor" şikâyeti çoğu zaman arıza değil, gereğinden yüksek sertlik ayarıdır.
+
+**8. Sabret, sonra hüküm ver.** Gösterge anlık çalışmaz; lamba çoğu modelde bir-iki yıkama sonra söner. Bir-iki program daha çalıştır ve lambaya ondan sonra bak. Hâlâ yanıyorsa ya da haznedeki tuz hiç eksilmiyorsa servis gerekir.
 
 ## Tuz ne işe yarıyor, lamba neyi ölçüyor?
 

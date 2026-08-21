@@ -4,6 +4,21 @@ description: "Dikey süpürgenin süresi kısaldıysa suçlu her zaman batarya d
 slug: "sarjli-supurge-sarj-tutmuyor"
 date: "2026-08-20"
 category: "Süpürge"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Ilık su", "Kuru bez"]
+steps:
+  - "Cihazı kapat ve şarjdan çıkar."
+  - "Toz haznesini boşalt; hazneyi maks çizgisini aşmadan boşaltmayı alışkanlık yap."
+  - "Filtreleri çıkar ve ışığa tut; ışık geçmiyorsa tıkalıdır."
+  - "Yıkanabilir filtreyi ılık suyla, deterjansız durula ve gölgede tamamen kuruyana kadar beklet."
+  - "Boruyu sök, içine bak; başlıktaki fırça rulosuna dolanan saçı temizle."
+  - "Filtre tamamen kuruduktan sonra tak ve cihazı çalıştırıp çekişin toparlayıp toparlamadığına bak."
+  - "Şarj noktası radyatör yanı ya da güneş alan cam önü gibi sıcak bir köşedeyse taşı; adaptörün orijinal ve kablosunun sağlam olduğunu kontrol et."
+  - "Belirtiyi ayır: çekiş de düşükse tıkanıklık, çekiş normal ama süre kısaysa batarya — batarya değişimi servis işidir."
 faq:
   - q: "Şarjlı süpürgenin bataryası kaç yıl gider?"
     a: "Lityum bataryalar için üreticilerin verdiği tipik dayanım 300-500 tam şarj döngüsüdür; düzenli kullanımda bu kabaca 2-3 yıla karşılık gelir. Bu sürenin sonunda batarya birden ölmez, kapasitesi kademeli düşer ve çalışma süresi gözle görülür kısalır. Yavaş kısalma arıza değil, döngüyle gelen doğal yaşlanmadır."
@@ -20,6 +35,24 @@ images:
 Süpürgeyi aldığında bir şarjla evin tamamını bitiriyordun; şimdi salonun yarısında ışık kırmızıya dönüyor. "Batarya bitti, cihaz eskidi" diye düşünmek kolay — ve bazen doğru. Ama dikey süpürgelerde çok bilinmeyen bir bağlantı var: **süre kaybının suçlusu her zaman batarya değildir.** Tıkalı bir filtre motoru zorlar, zorlanan motor daha fazla akım çeker ve aynı batarya çok daha kısa sürede tükenir. Yani "şarj tutmuyor" şikâyetinin arkasından bazen on dakikalık bir filtre temizliği çıkar. Önce gerçekçi beklentiyi kuralım, sonra kontrolleri yapalım.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: süre kısaldığında evde yapılacaklar
+
+**1. Cihazı kapat.** Süpürgeyi kapat ve şarj standından ya da adaptörden ayır. Cihaza sıvı temizlik yapma.
+
+**2. Hazneyi boşalt.** Toz haznesini boşalt. Hazneyi "tamamen dolunca" değil, üzerindeki **maks çizgisine gelince** boşaltmayı alışkanlık hâline getir.
+
+**3. Filtreyi ışığa tut.** Filtreleri çıkar ve ışığa tut: ışık geçmiyorsa filtre tıkalıdır ve motoru zorluyordur.
+
+**4. Filtreyi yıka ve kurut.** Yıkanabilir filtreyi **ılık suyla, deterjansız** durula. ⚠️ Filtreyi ıslak takma; gölgede, tamamen kuruyana kadar (genelde bir gün) beklemeli.
+
+**5. Hava yolunu aç.** Boruyu sök ve içine bak; başlıktaki fırça rulosuna dolanan saçı temizle. Hava yolu daraldıkça motor daha çok akım çeker, süre de kısalır.
+
+**6. Dene.** Filtre tamamen kuruduktan sonra yerine tak ve cihazı çalıştır: çekiş toparladı mı, süre uzadı mı?
+
+**7. Şarj alışkanlığına bak.** Şarj noktası radyatör yanı, güneş alan cam önü gibi sıcak bir köşedeyse taşı. Adaptörün orijinal, kablosunun sağlam olduğundan emin ol.
+
+**8. Belirtiyi ayır.** Çekiş de düşükse tablo **tıkanıklık**, çekiş normal ama süre kısaysa tablo **batarya** demektir. Batarya değişimi servis ve yetkili işidir.
 
 ## 1) Önce gerçekçi beklenti: batarya bir sarf malzemesidir
 

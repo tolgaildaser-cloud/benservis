@@ -4,6 +4,20 @@ description: "Televizyon HDMI girişinde sinyal yok yazıyorsa sorun çoğu zama
 slug: "tv-hdmi-sinyal-yok"
 date: "2026-08-20"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Yedek HDMI kablosu (varsa)"]
+steps:
+  - "Kaynak cihazın televizyonun arkasında hangi numaralı HDMI girişine takılı olduğuna bak."
+  - "Kumandanın kaynak tuşuyla tam o girişi seç."
+  - "Kaynak cihazın bekleme modunda değil gerçekten açık olduğundan emin ol."
+  - "HDMI kablosunu iki uçtan da çıkarıp tam oturacak şekilde tekrar tak; mümkünse başka bir kabloyla dene."
+  - "Aynı kabloyla televizyonun başka bir HDMI girişini dene ve kumandadan o girişi seç."
+  - "Televizyonu ve kaynak cihazı fişten çek, bir dakika bekle; önce televizyonu, sonra kaynağı aç."
+  - "Televizyonun ayarlarından HDMI-CEC özelliğini kapat ve bağlantıyı yeniden dene."
 faq:
   - q: "Sinyal yok uyarısı televizyonun bozulduğu anlamına mı gelir?"
     a: "Çoğu zaman hayır. Bu uyarı yalnızca seçili girişe o an görüntü akmadığını söyler; sebep kapalı bir kaynak cihaz, gevşek bir kablo, yanlış seçilmiş giriş ya da cihazlar arası bir el sıkışma takılması olabilir. Televizyonun kendi menüsü normal açılıyorsa cihazın görüntü tarafı çalışıyor demektir."
@@ -22,6 +36,22 @@ Uydu alıcısı çalışıyor, oyun konsolu açık, ama televizyon ekranında te
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔌 **Önce şu ayrımı yap:** sinyal **hiç mi gelmiyor**, yoksa **gelip gidiyor mu**? Hiç gelmeme genelde seçim, kablo ya da el sıkışma sorunudur; gelip gitme neredeyse hep kablo ve bağlantı kalitesini işaret eder.
+
+## Adım adım: sinyal yok elemesi
+
+**1. Giriş numarasını oku.** Kaynak cihazın televizyonun arkasında **hangi numaralı** HDMI girişine takılı olduğuna bak; girişlerin yanında numara yazar.
+
+**2. Doğru girişi seç.** Kumandanın **kaynak/giriş** tuşuyla tam o girişi seç. "HDMI 1'e taktım ama HDMI 2'yi izliyorum" bu şikâyetin en masum hâlidir.
+
+**3. Kaynağı doğrula.** Kaynak cihaz bekleme ışığında değil, **gerçekten açık** olsun. Mümkünse aynı cihazı başka bir ekrana bağlayıp görüntü verdiğini gör.
+
+**4. Kabloyu ele.** HDMI kablosunu **iki uçtan da** çıkarıp tam oturacak şekilde tekrar tak; mümkünse çalıştığını bildiğin başka bir kabloyla dene.
+
+**5. Başka portu dene.** Aynı kablo ve aynı kaynakla televizyonun **başka bir HDMI girişini** dene, kumandadan o girişi seç. Fişi zorlamadan, düz açıyla tak.
+
+**6. Soğuk başlat.** Televizyonu ve kaynak cihazı **fişten çek**, bir dakika bekle. Önce televizyonu tak ve aç, doğru girişi seç, sonra kaynak cihazı tak ve aç.
+
+**7. CEC'i kapat.** Televizyonun ayarlar menüsünde **HDMI-CEC** özelliğini bul ve kapatıp bağlantıyı yeniden dene; markalar bu özelliğe kendi adlarını verir.
 
 ## 1) Giriş seçimi: en basit, en sık atlanan
 

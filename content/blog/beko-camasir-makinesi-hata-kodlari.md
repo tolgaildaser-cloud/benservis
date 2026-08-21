@@ -4,6 +4,21 @@ description: "Beko çamaşır makinesinde E01, E02, E03, E10, E17, E18 ve H1, H4
 slug: "beko-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Sığ bir kap", "Küçük fırça (eski diş fırçası)"]
+steps:
+  - "Kodu ve belirtiyi not et. Ekranda yanan kodu, makinenin hangi adımda durduğunu ve o sırada ne yaptığını yaz. Bu not, aşağıdaki kontroller sonuç vermezse servise anlatacağın tablonun kendisidir."
+  - "Kodu kılavuzdan teyit et. Beko farklı serilerde farklı kod şemaları kullanır; aynı numara iki ayrı seride farklı anlama gelebilir. Kodun karşılığını kendi modelinin kullanım kılavuzundan doğrula, kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indir."
+  - "Bir kez resetle. Makineyi kapat, fişini çek, birkaç dakika bekle ve yeniden dene. Kod geçici bir takılmadan geldiyse geçer; iki denemeden sonra hâlâ geliyorsa kodu silmeyi bırakıp sebebe bak."
+  - "Kapağı ve contayı kontrol et. Kapağı aç, contaya sıkışmış çamaşır ucu var mı bak ve klik sesini duyana kadar bastırarak kapat. Kapak kodları çoğu zaman program hiç başlamadan gelir."
+  - "Musluk, su ve hortuma bak. Musluk tam açık mı, evde su var mı, giriş hortumu ezilmiş ya da bükülmüş mü? Su alma kodlarının en yaygın sebepleri bu üçüdür."
+  - "Giriş süzgecini temizle. Musluğu kapat, hortumu elinle sök ve makine tarafındaki küçük süzgeci akan suyun altında fırçala; altına havlu ser, bir miktar su gelir. Sonra elle sıkıca geri tak."
+  - "Pompa filtresini temizle. Makine kapalı ve fişi çekiliyken ön alt köşedeki pompa filtresi kapağını aç, yere havlu ve altına sığ bir kap koy. Filtreyi çıkarıp bozuk para, toka, tiftik gibi birikintiyi temizle ve yerine sıkıca tak; tahliye hortumunun bükülmediğine de bak."
+  - "Köpük ve yük dengesini düzelt. Köpük kodunda makineyi deterjansız kısa bir programda bir-iki kez boş çalıştır ve sonraki yıkamalarda dozu azaltıp otomatik makine deterjanı kullan. Dengesiz yük kodunda çamaşırı elle dağıt, tek parça büyük yüke birkaç havlu ekleyip yeniden dene."
 faq:
   - q: "Beko çamaşır makinesinde hata kodu neden her modelde aynı anlama gelmiyor?"
     a: "Beko farklı yıllarda ve farklı serilerde farklı elektronik kartlar kullanır; bu yüzden aynı numaralı kod iki ayrı seride iki ayrı anlama gelebilir. Bu rehberdeki eşleşmeler yaygın serilerde geçerli olanlardır. Kesin karşılığı her zaman kendi makinenin kullanım kılavuzundan teyit et; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
@@ -22,6 +37,24 @@ Makine yıkamanın ortasında durdu, ekranda E ya da H ile başlayan bir kod yan
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ℹ️ **Önce önemli bir uyarı:** Beko, farklı model serilerinde farklı kod şemaları kullanır; aynı numara iki ayrı seride farklı anlama gelebilir. Aşağıdaki eşleşmeler yaygın serilerde geçerli olanlardır. Ekrandaki kodu her zaman **kendi makinenin kılavuzuyla** teyit et — bu tek adım, yanlış yere bakarak vakit kaybetmeni önler.
+
+## Adım adım: kod geldiğinde evde denenecek ücretsiz kontroller
+
+**1. Kodu ve belirtiyi not et.** Ekranda yanan kodu, makinenin hangi adımda durduğunu ve o sırada ne yaptığını yaz. Bu not, aşağıdaki kontroller sonuç vermezse servise anlatacağın tablonun kendisidir.
+
+**2. Kodu kılavuzdan teyit et.** Beko farklı serilerde farklı kod şemaları kullanır; aynı numara iki ayrı seride farklı anlama gelebilir. Kodun karşılığını kendi modelinin kullanım kılavuzundan doğrula, kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indir.
+
+**3. Bir kez resetle.** Makineyi kapat, fişini çek, birkaç dakika bekle ve yeniden dene. Kod geçici bir takılmadan geldiyse geçer; iki denemeden sonra hâlâ geliyorsa kodu silmeyi bırakıp sebebe bak.
+
+**4. Kapağı ve contayı kontrol et.** Kapağı aç, contaya sıkışmış çamaşır ucu var mı bak ve klik sesini duyana kadar bastırarak kapat. Kapak kodları çoğu zaman program hiç başlamadan gelir.
+
+**5. Musluk, su ve hortuma bak.** Musluk tam açık mı, evde su var mı, giriş hortumu ezilmiş ya da bükülmüş mü? Su alma kodlarının en yaygın sebepleri bu üçüdür.
+
+**6. Giriş süzgecini temizle.** Musluğu kapat, hortumu elinle sök ve makine tarafındaki küçük süzgeci akan suyun altında fırçala; altına havlu ser, bir miktar su gelir. Sonra elle sıkıca geri tak.
+
+**7. Pompa filtresini temizle.** Makine kapalı ve fişi çekiliyken ön alt köşedeki pompa filtresi kapağını aç, yere havlu ve altına sığ bir kap koy. Filtreyi çıkarıp bozuk para, toka, tiftik gibi birikintiyi temizle ve yerine sıkıca tak; tahliye hortumunun bükülmediğine de bak.
+
+**8. Köpük ve yük dengesini düzelt.** Köpük kodunda makineyi deterjansız kısa bir programda bir-iki kez boş çalıştır ve sonraki yıkamalarda dozu azaltıp otomatik makine deterjanı kullan. Dengesiz yük kodunda çamaşırı elle dağıt, tek parça büyük yüke birkaç havlu ekleyip yeniden dene.
 
 ## Kapı tarafı: E01
 

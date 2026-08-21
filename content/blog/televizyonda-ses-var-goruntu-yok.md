@@ -4,6 +4,19 @@ description: "Sesi gelen ama ekranı kapkara kalan televizyonda sorun çoğu zam
 slug: "televizyonda-ses-var-goruntu-yok"
 date: "2026-08-20"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Telefon feneri"]
+steps:
+  - "Kumandadan televizyonun kendi menüsünü aç; menü görünüyorsa sorun kaynak cihazda ya da kablodadır."
+  - "HDMI kablosunu iki uçtan çıkarıp yeniden tak ve farklı bir HDMI girişi dene."
+  - "Televizyonu fişten çek, bir-iki dakika bekle, tekrar tak ve aç."
+  - "Açılışta ekranda logo belirip sonra kararıyor mu dikkatle bak ve not al."
+  - "Odayı tamamen karart; televizyon açıkken telefonunun fenerini ekrana birkaç santim mesafeden tut."
+  - "Ekranı farklı noktalardan tara; soluk bir silüet seçebiliyorsan panel sağlam, arka aydınlatma çalışmıyor demektir. Ekrana bastırma."
 faq:
   - q: "Fener testi nedir, nasıl yapılır?"
     a: "Odayı tamamen karart, televizyon açık ve bir kanal ya da menü seçiliyken telefonunun fenerini ekrana çok yakın tut ve dikkatle bak. Camın ardında menünün ya da görüntünün soluk bir silüetini seçebiliyorsan panel görüntüyü üretiyor ama arka aydınlatma çalışmıyor demektir. Hiçbir silüet yoksa sorun aydınlatmadan önce sinyal ya da ana kart tarafında olabilir."
@@ -22,6 +35,20 @@ Akşam televizyonu açıyorsun; kanalın sesi geliyor, spiker konuşuyor, ama ek
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 💡 **Önce şu ayrımı yap:** görüntü **hiç mi yok**, yoksa **çok karanlık ama seçilebiliyor mu**? Tamamen siyah ekran + ses bu yazının konusu. Ekran görünüyor ama loşsa o ayrı bir hikâye — onun kontrol sırası "ekran kararıyor" yazımızda.
+
+## Adım adım: ses var görüntü yok kontrolü
+
+**1. Menü testi yap.** Kumandadan televizyonun **kendi menüsünü** aç. Menü görünüyorsa televizyon görüntü üretebiliyor demektir; sorun kaynak cihazda ya da HDMI hattındadır.
+
+**2. Hattı ele.** HDMI kablosunu iki uçtan çıkarıp yeniden tak, farklı bir HDMI girişi dene.
+
+**3. Fişten çek.** Televizyonu fişten çek, **bir-iki dakika bekle**, tekrar tak ve aç. Bu ücretsiz deneme, yazılım takılmasından gelen siyah ekranı eler.
+
+**4. Açılış logosunu izle.** Ekranda logo belirip sonra kararıyor mu dikkatle bak ve not al; servise anlatacağın değerli bir ayrıntıdır.
+
+**5. Odayı karart ve feneri tut.** Perdeleri kapat, televizyonu ses gelen bir kanalda ya da menüde bırak, telefonunun fenerini ekrana **birkaç santim** mesafeden tut.
+
+**6. Silüeti ara.** Ekranı farklı noktalardan tara. Camın ardında **soluk bir silüet** seçebiliyorsan panel sağlam, arka aydınlatma çalışmıyor demektir; hiç silüet yoksa şüphe sinyal ve kart tarafına kayar. Ekrana bastırma, sert bir cisimle dokunma.
 
 ## 1) Kaynağı ele: sorun televizyonda mı, bağlı cihazda mı?
 

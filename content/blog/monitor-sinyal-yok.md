@@ -4,6 +4,20 @@ description: "Bilgisayar açık ama monitör sinyal yok diyorsa sebep kablo, yan
 slug: "monitor-sinyal-yok"
 date: "2026-08-20"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Yedek görüntü kablosu (varsa)"]
+steps:
+  - "Kasanın ışıkları yanıyor ve fanlar dönüyor mu doğrula."
+  - "Monitörün kendi tuşlarından menüyü aç ve giriş kaynağını kablonun takılı olduğu girişe elle ayarla."
+  - "Monitörün güç ışığının yandığını ve bekleme modunda olmadığını kontrol et."
+  - "Görüntü kablosunu iki uçtan da çıkarıp tam oturacak şekilde yeniden tak; mümkünse başka bir kabloyla dene."
+  - "Ayrı ekran kartı varsa kablonun kasanın alt bölgesindeki yatay çıkışa takılı olduğunu doğrula, değilse oraya taşı."
+  - "Monitörü başka bir cihaza bağlayıp görüntü verip vermediğine bak."
+  - "Kasayı televizyona ya da başka bir ekrana bağlayıp sonucu not et."
 faq:
   - q: "Bilgisayar açılıyor ama ekran kapkara, bozulan hangisi?"
     a: "Bunu tahminle değil elemeyle bulursun: monitörü başka bir cihaza (dizüstü, konsol, medya kutusu) bağla. Orada görüntü veriyorsa monitör sağlamdır ve şüphe kasaya döner; orada da vermiyorsa sorun monitördedir. Bu tek test, iki cihazdan hangisinin servislik olduğunu netleştirir."
@@ -22,6 +36,22 @@ Güç düğmesine basıyorsun; kasanın ışıkları yanıyor, fanlar dönüyor,
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🖥️ **Önce şu ayrımı yap:** bilgisayar **hiç açılmıyor mu** (ışık yok, fan yok), yoksa **açılıyor ama görüntü mü yok**? Işık ve fan yoksa konu güç tarafıdır ve bu yazının kapsamı dışındadır. Işıklar yanıp fanlar dönüyorsa doğru yerdesin.
+
+## Adım adım: monitörde sinyal yok elemesi
+
+**1. Ayrımı yap.** Kasanın ışıkları yanıyor ve fanlar dönüyor mu bak. Işık ve fan yoksa konu güç tarafıdır; bu liste **açılan ama görüntü vermeyen** bilgisayar içindir.
+
+**2. Monitörün girişini elle seç.** Monitörün kendi tuşlarından menüyü aç ve **giriş kaynağını** kablonun takılı olduğu girişe elle ayarla; otomatik seçim her zaman doğru çalışmaz.
+
+**3. Güç ışığını doğrula.** Monitörün güç ışığı yanıyor mu, cihaz bekleme modunda mı kontrol et.
+
+**4. Kabloyu ele.** Görüntü kablosunu **iki uçtan da** çıkarıp tam oturacak şekilde yeniden tak; mümkünse çalıştığını bildiğin başka bir kabloyla dene.
+
+**5. Doğru çıkışa tak.** Kasanın arkasına bak: ayrı ekran kartı varsa kablo **alt bölgedeki yatay çıkışlara** takılı olmalı. Üstteki anakart çıkışındaysa alta taşı — bunun için kasayı açman gerekmez.
+
+**6. Monitörü çapraz test et.** Monitörü **başka bir cihaza** bağla (dizüstü, konsol, medya kutusu). Orada görüntü veriyorsa monitör sağlamdır, şüphe kasaya döner.
+
+**7. Kasayı çapraz test et.** Kasayı televizyona ya da başka bir ekrana bağlayıp görüntü gelip gelmediğine bak; sonucu not et. ⚠️ Buraya kadarki adımların hiçbiri kasayı açmayı gerektirmez; kasa içi kontroller ve dizüstü bilgisayarlar bu listenin dışındadır.
 
 ## 1) Monitörün giriş seçimi
 

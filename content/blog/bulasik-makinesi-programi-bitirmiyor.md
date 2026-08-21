@@ -4,6 +4,21 @@ description: "Makine programı bitirmiyor, saatlerce çalışıyorsa sebep ısı
 slug: "bulasik-makinesi-programi-bitirmiyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kullanım kılavuzu", "Küçük fırça"]
+steps:
+  - "Seçili programın adına ve kılavuzda yazan normal süresine bak; eko programlar üç saati aşabilir."
+  - "Bir yıkamayı baştan sona dinle ve makinenin hangi aşamada saydığını not et: sessiz ısıtma aşaması mı, su sesleri mi?"
+  - "Program ortasında kapak camına elle dokun, ılıklık var mı bak; program biterse tabaklar sıcak mı kontrol et."
+  - "Programı iptal et, makineyi kapat ve fişini çek; tezgâh altında çalışmadan önce musluğu da kapat."
+  - "Musluğun tam açık olduğundan ve giriş hortumunun ezilmediğinden, keskin kıvrım yapmadığından emin ol."
+  - "Tabandaki filtreyi çıkar, fırçayla akan suda yıka ve yerine tak."
+  - "Tahliye hortumunun sifon bağlantısını ve lavabo sifonunu kontrol et; lavabo yavaş süzüyorsa önce onu aç."
+  - "Fişi tak ve kıyas için kısa bir program çalıştır; o da bitmiyorsa ya da bulaşıklar hep soğuk çıkıyorsa servis gerekir."
 faq:
   - q: "Bulaşık makinesi programı normalde ne kadar sürer?"
     a: "Programa göre ciddi fark vardır: kısa programlar yarım saat civarında biterken, eko programlar tasarımları gereği üç saati aşabilir. Eko programın uzun sürmesi arıza değildir; düşük sıcaklıkta uzun süre yıkayarak tasarruf eder. 'Bitirmiyor' hükmünü vermeden önce seçili programın kılavuzda yazan süresine bak."
@@ -20,6 +35,26 @@ images:
 Akşam yattın, sabah kalktın — makine hâlâ çalışıyor. Ya da göstergedeki süre bir saattir aynı rakamda duruyor, makine içeride bir şeyler yapıyor ama bir türlü sona ulaşamıyor. "Programı bitirmiyor" şikâyeti, çamaşır-bulaşık dünyasının en yanıltıcı şikâyetlerinden biridir; çünkü bazen gerçek bir arızadır, bazen de makinenin gayet normal davranışıdır. Önce hangisi olduğunu ayıralım, sonra sırayla sebeplere bakalım.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: takılmayı yerinde ayıkla
+
+**1. Önce beklentiyi düzelt.** Seçili programın adına ve kılavuzda yazan süresine bak. Eko ve otomatik programlar tasarımları gereği uzundur; "bitirmiyor" dediğin süre o programın normal süresinin içinde olabilir.
+
+**2. Bir yıkamayı bilinçli dinle.** Su alma (akan su), yıkama (dalga gibi püskürtme), ısıtma (neredeyse sessiz) ve boşaltma (kısa vınlamalı pompa) aşamalarını ayırt et; makinenin **hangi aşamada saydığını** not et.
+
+**3. Isınmayı elle yokla.** Program ortasında kapak camına ve gövdeye dokun: ılıklık hissediyor musun? Program biterse tabaklar sıcak mı? Her uzayan yıkamada bulaşıklar soğuk çıkıyorsa tablo ısıtma tarafını gösterir.
+
+**4. Güvenliği al.** Programı iptal et, makineyi kapat ve **fişini çek**. Tezgâh altında çalışmadan önce musluğu da kapat.
+
+**5. Musluk ve giriş hortumunu kontrol et.** Musluk **tam açık** mı? Tezgâh altındaki giriş hortumu ezilmiş ya da keskin kıvrım yapmış mı? Yarı açık musluk ve bükülü hortum, su alma-boşaltma döngüsünün klasik sebebidir.
+
+**6. Filtreyi çıkar ve yıka.** Tabandaki filtreyi çıkar, küçük bir fırçayla akan suda temizle ve yerine tak. Tıkalı filtre hem yıkamayı hem boşaltmayı bozar.
+
+**7. Tahliye tarafına bak.** Tahliye hortumunun sifon bağlantısını ve lavabo sifonunun kendisini kontrol et; lavabo yavaş süzüyorsa makinenin suyu da zor gider. Bir de deterjana bak: elde yıkama deterjanı kaçtıysa oluşan köpük sensörleri şaşırtır.
+
+**8. Kısa programla kıyas yap.** Fişi tak ve kısa bir program çalıştır. Kısa program normal süresinde bitiyorsa makinenin temel düzeni çalışıyordur. Kısa program da bitmiyorsa ya da bulaşıklar hep soğuk çıkıyorsa servis gerekir.
+
+⚠️ Bu kontrolleri program iptal edilmiş ve makine durmuşken yap; çalışırken kapıyı açıp elini içeri sokma — içerideki su sıcak olabilir.
 
 ## 1) Önce beklentiyi düzelt: o program gerçekten uzun olabilir
 

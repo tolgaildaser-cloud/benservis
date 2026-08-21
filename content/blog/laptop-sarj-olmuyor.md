@@ -4,6 +4,21 @@ description: "Fişe takılı ama şarj olmuyorsa önce adaptör, kablo ve prizi 
 slug: "laptop-sarj-olmuyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Laptopu başka bir prize tak; çoklu priz ve uzatmayı aradan çıkarıp doğrudan duvar prizini dene."
+  - "Adaptör kutusunu ve kablonun boyunu gözden geçir: ezik, kıvrılmış ya da dışı soyulmuş bölge var mı bak."
+  - "Dışı soyulmuş, teli görünen kabloyu kullanmayı bırak; bantlayarak idare etme."
+  - "Şarj ışığını izle; taktığında hiç yanmıyorsa sorun büyük ihtimalle cihazdan öncedir."
+  - "Varsa uyumlu ikinci bir adaptör ya da kabloyla dene; USB-C ile şarj olan cihazda telefon adaptörü gibi düşük güçlü kaynak kullanma."
+  - "Üreticinin batarya / güç uygulamasını aç ve pil koruma ya da şarj sınırı anahtarını kontrol et — %80'de durmak arıza değildir."
+  - "Laptopu tamamen kapat, adaptörü tak ve kapalıyken şarj ışığını izle; kapalıyken şarj oluyorsa sorun yazılım tarafındadır."
+  - "Bekleyen güncellemeleri kur ve cihazı kapatıp aç; şarj yine gelmiyorsa ya da fiş yuvada oynuyorsa servis gerekir."
 faq:
   - q: "Laptop 'takılı, şarj olmuyor' yazıyor, bozuldu mu?"
     a: "Çoğu zaman hayır. Bu yazı, cihazın adaptörü gördüğünü ama bataryaya akım göndermediğini söyler. En sık iki sebep vardır: batarya koruma modu şarjı belirli bir seviyede bilerek durdurmuştur ya da adaptör cihazın ihtiyacından güçsüzdür. İkisi de arıza değildir; yazıdan önce bu ikisini ele."
@@ -22,6 +37,24 @@ Akşam laptopu fişe taktın, sabah kalktığında pil hâlâ %15. Ya da ekranı
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔌 **Önce şu ayrımı yap:** cihaz **hiç şarj almıyor mu**, yoksa **belirli bir yüzdede mi duruyor**? Hiç şarj almamak adaptör-kablo-soket hattını işaret eder. Belirli bir yüzdede durmak ise çoğu zaman arıza bile değildir — birazdan geleceğiz.
+
+## Adım adım: dıştan içe eleme
+
+**1. Prizi değiştir.** Laptopu **başka bir prize** tak; mümkünse çoklu prizi ve uzatmayı aradan çıkarıp doğrudan duvar prizini dene.
+
+**2. Kabloyu gözden geçir.** Adaptör kutusunun ve kablonun boyunu incele: **ezik, kıvrılmış, dışı soyulmuş** bölge var mı? Özellikle fişe yakın uçtaki ve cihaza giren uçtaki kırışmalar tipiktir.
+
+**3. Hasarlı kabloyu kullanma.** ⚠️ Dışı soyulmuş, teli görünen kabloyu bantlayarak idare etme; kısa devre ve ısınma riskidir, o kablo kullanım dışı kalır.
+
+**4. Şarj ışığını izle.** Adaptörde ya da laptopta şarj ışığı varsa takınca yanıyor mu bak. Hiç yanmıyorsa sorun büyük ihtimalle cihazdan öncedir.
+
+**5. İkinci bir kaynakla dene.** Çevrende uyumlu bir adaptör ya da kablo varsa onunla dene. USB-C ile şarj olan cihazlarda telefon adaptörü gibi **düşük güçlü** bir kaynak "takılı" der ama beslemeye yetmez; cihazın kendi adaptörünün gücünde bir kaynak kullan.
+
+**6. Koruma modunu kontrol et.** Üreticinin cihazla gelen uygulamasını aç (markaya göre adı değişir) ve **batarya / güç** bölümüne bak. "Pil koruma", "şarj sınırı", "conservation" gibi bir anahtar varsa şarj **%60-80 civarında** bilerek durduruluyor demektir — bu arıza değildir; yolculuk öncesi tam şarj istiyorsan geçici kapatabilirsin.
+
+**7. Kapalıyken dene.** Laptopu tamamen kapat, adaptörü tak ve **kapalıyken** şarj ışığını izle. Kapalıyken şarj oluyorsa sorun donanımda değil yazılım tarafındadır.
+
+**8. Güncelle, kapat-aç, ayır.** Bekleyen güncellemeleri kur ve cihazı kapatıp aç. Şarj yine gelmiyorsa ya da **fiş yuvada oynuyorsa** iş şarj soketine gelmiştir; orası servis işidir, elleme.
 
 ## 1) Priz, kablo, adaptör: dış hattı ele
 

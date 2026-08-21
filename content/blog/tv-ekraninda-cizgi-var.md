@@ -4,6 +4,20 @@ description: "Ekrandaki dikey ya da yatay çizgi panelden mi, kablodan mı? Men�
 slug: "tv-ekraninda-cizgi-var"
 date: "2026-08-20"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Telefon kamerası (belgeleme için)"]
+steps:
+  - "Çizgiyi tarif et: dikey mi yatay mı, tek mi çok mu, renkli mi siyah mı, sürekli mi gelip gidiyor mu?"
+  - "Televizyonun kendi menüsünü aç ve çizginin menünün üzerinde de görünüp görünmediğine bak."
+  - "HDMI kablosunu iki uçtan da çıkarıp yeniden tak; mümkünse başka bir kabloyla dene."
+  - "Aynı görüntüyü televizyonun başka bir HDMI girişinden dene."
+  - "Kaynak cihazı kapatıp aç ve çizginin sürüp sürmediğine bak."
+  - "Çizginin fotoğrafını çek, tarih at ve ısınmayla değişip değişmediğini izle. Ekrana bastırarak düzeltmeye çalışma."
+  - "Cihazın garanti kapsamında olup olmadığını kontrol et; kapsamdaysa bekletmeden başvur."
 faq:
   - q: "Ekrandaki çizgi kendiliğinden geçer mi?"
     a: "Kablodan ya da kaynak cihazdan geliyorsa bağlantıyı düzelttiğinde geçer. Panelden geliyorsa genelde geçmez; ısınmayla gelip giden çizgiler bile zamanla kalıcılaşma eğilimindedir. Bu yüzden çizginin kaynağını doğru ayırt etmek, sonraki kararların tamamını belirler."
@@ -22,6 +36,22 @@ Film ortasında ekranda incecik bir dikey çizgi beliriyor; ya da alt yarıda ya
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 📏 **Önce gözlemle:** çizgi **dikey mi yatay mı**, **tek mi çok mu**, **renkli mi siyah mı**, **sürekli mi gelip gidiyor mu**? Bu dört cevabı not et — hem aşağıdaki eleme sırasında hem serviste işine yarayacak.
+
+## Adım adım: çizginin kaynağını bul
+
+**1. Çizgiyi tarif et.** Dikey mi yatay mı, tek mi çok mu, renkli mi siyah mı, sürekli mi gelip gidiyor mu? Bu dört cevabı not et — hem elemede hem serviste işine yarayacak.
+
+**2. Menü testi yap.** Televizyonun **kendi menüsünü** aç ve çizginin menünün üzerinde de görünüp görünmediğine bak. Menü tertemizse çizgi kaynak cihazdan ya da kablodan geliyordur.
+
+**3. Kabloyu ele.** HDMI kablosunu **iki uçtan da** çıkarıp yeniden tak; mümkünse çalıştığını bildiğin başka bir kabloyla dene.
+
+**4. Girişi değiştir.** Aynı görüntüyü televizyonun **başka bir HDMI girişinden** dene.
+
+**5. Kaynağı yeniden başlat.** Uydu alıcısını ya da medya kutusunu kapatıp aç, çizginin sürüp sürmediğine bak.
+
+**6. Gözlemi belgele.** Çizginin fotoğrafını çek, tarih at; sayısı ve konumu değişiyor mu, ısınınca artıyor mu izle. ⛔ Ekrana bastırarak "düzeltme" deneme — baskı hasarlı bölgeye yük bindirir ve çizgiyi çoğaltabilir.
+
+**7. Garantiyi kontrol et.** Cihaz garanti kapsamındaysa bekletmeden başvur; çizgi belgeli olsun.
 
 ## 1) Menü testi: çizgi televizyondan mı, kaynaktan mı?
 

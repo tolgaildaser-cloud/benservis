@@ -4,6 +4,21 @@ description: "Çekmecede su ya da deterjan kalıyorsa sorun çoğu zaman su bas�
 slug: "camasir-makinesi-deterjan-almiyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~40 dakika"
+  totalTime: "PT40M"
+  cost: "Ücretsiz"
+  tools: ["Ilık su", "Eski diş fırçası", "El feneri", "Nemli bez"]
+steps:
+  - "Musluğu sonuna kadar aç. Yarım açık musluk, deterjanı süpürecek suyu baştan zayıflatır. Evdeki diğer musluklardan suyun normal güçte aktığına da bak; genel basınç düşükse sorun makinede değildir."
+  - "Hortumu rahatlat. Su giriş hortumunun makine arkasında kıvrılmadığını, duvara fazla yaklaştırılmış makinenin altında ezilmediğini kontrol et; keskin kıvrımları düzelt."
+  - "Giriş süzgecini temizle. Musluğu kapat, hortumu elinle sök ve ağzında görünen küçük süzgeci akan suyun altında fırçala, sonra elle sıkıca geri tak."
+  - "Çekmeceyi çıkar. Çoğu modelde yumuşatıcı gözü hizasındaki mandala bastırarak çekilir; söküm gerekmez."
+  - "Çekmeceyi ıslat ve fırçala. Ilık su dolu bir kapta yarım saat beklet, sonra eski bir diş fırçasıyla bütün gözleri ve kanalları fırçala. Yumuşatıcı gözünün çıkarılabilir kapağı varsa ayırıp altını da temizle."
+  - "Yuvanın içini sil. El feneriyle çekmece yuvasına bak; üst taraftaki su püskürtme deliklerinde kireç ve deterjan birikintisi varsa nemli bezle ve fırçayla ulaşabildiğin kadarını sil. Yuvaya sivri metal cisim sokma."
+  - "Doğru gözü doğrula, dozu ayarla. Kılavuzdan ya da çekmece üzerindeki simgelerden hangi gözün ana yıkama olduğunu teyit et ve deterjanı oraya koy. Dozu üreticinin önerdiği miktara indir; tablet ya da kapsül kullanıyorsan ambalajı doğrudan tambura konmasını öneriyor olabilir."
+  - "Kurut, tak, dene. Çekmeceyi kuruduktan sonra yerine oturt ve boş bir kısa programla dene. Ayda bir tekrarlamak bu şikâyetin en ucuz sigortasıdır."
 faq:
   - q: "Yıkama bitti ama çekmecede deterjan duruyor, makine yıkamadı mı?"
     a: "Çoğu zaman yıkadı ama deterjansız ya da az deterjanla yıkadı. Deterjanı hazneden söküp tambura taşıyan şey sudur; su çekmeceye yeterince ya da doğru gözden gelmezse deterjan olduğu yerde kalır. Yani bu belirti genelde makinenin yıkamadığını değil, çekmeceye giden su yolunda bir sorun olduğunu gösterir."
@@ -22,6 +37,24 @@ Yıkama bitti, çekmeceyi açtın: deterjan koyduğun gibi duruyor ya da göz su
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🚿 **Sistemi bir kere anla, teşhis kolaylaşsın:** deterjan tambura kendi başına gitmez; makine su alırken suyun bir kısmını çekmecenin üzerinden geçirir ve deterjanı **suyla süpürerek** tambura taşır. Su gelmezse, az gelirse ya da yanlış gözden geçerse deterjan yerinde kalır. Yani bu şikâyetin gerçek adı çoğu zaman "deterjan almıyor" değil, "çekmeceye su doğru gelmiyor"dur.
+
+## Adım adım: çekmeceye suyu geri getirmek
+
+**1. Musluğu sonuna kadar aç.** Yarım açık musluk, deterjanı süpürecek suyu baştan zayıflatır. Evdeki diğer musluklardan suyun normal güçte aktığına da bak; genel basınç düşükse sorun makinede değildir.
+
+**2. Hortumu rahatlat.** Su giriş hortumunun makine arkasında kıvrılmadığını, duvara fazla yaklaştırılmış makinenin altında ezilmediğini kontrol et; keskin kıvrımları düzelt.
+
+**3. Giriş süzgecini temizle.** Musluğu kapat, hortumu elinle sök ve ağzında görünen küçük süzgeci akan suyun altında fırçala, sonra elle sıkıca geri tak.
+
+**4. Çekmeceyi çıkar.** Çoğu modelde yumuşatıcı gözü hizasındaki mandala bastırarak çekilir; söküm gerekmez.
+
+**5. Çekmeceyi ıslat ve fırçala.** Ilık su dolu bir kapta yarım saat beklet, sonra eski bir diş fırçasıyla bütün gözleri ve kanalları fırçala. Yumuşatıcı gözünün çıkarılabilir kapağı varsa ayırıp altını da temizle.
+
+**6. Yuvanın içini sil.** El feneriyle çekmece yuvasına bak; üst taraftaki su püskürtme deliklerinde kireç ve deterjan birikintisi varsa nemli bezle ve fırçayla ulaşabildiğin kadarını sil. Yuvaya sivri metal cisim sokma.
+
+**7. Doğru gözü doğrula, dozu ayarla.** Kılavuzdan ya da çekmece üzerindeki simgelerden hangi gözün ana yıkama olduğunu teyit et ve deterjanı oraya koy. Dozu üreticinin önerdiği miktara indir; tablet ya da kapsül kullanıyorsan ambalajı doğrudan tambura konmasını öneriyor olabilir.
+
+**8. Kurut, tak, dene.** Çekmeceyi kuruduktan sonra yerine oturt ve boş bir kısa programla dene. Ayda bir tekrarlamak bu şikâyetin en ucuz sigortasıdır.
 
 ## 1) Su basıncı ve musluk — suyun yola çıktığı yer
 

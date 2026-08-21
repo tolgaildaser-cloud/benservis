@@ -4,6 +4,21 @@ description: "Yazıcı silik basıyorsa ilk şüpheli tıkalı püskürtme başl
 slug: "yazici-silik-basiyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Bilgisayarda yazıcının bakım / yardımcı program sekmesini aç."
+  - "Püskürtme denetimi (nozzle check) desenini yazdır."
+  - "Deseni ışığa tut; bloklardaki çizgiler kesiksiz mi, eksik satır ya da hiç çıkmayan renk var mı bak."
+  - "Eksik varsa bakım menüsünden temizlik döngüsünü başlat ve bitmesini bekle."
+  - "Deseni yeniden bas ve öncesi-sonrası karşılaştır; gerekirse temizliği en fazla iki-üç kez tekrarla."
+  - "Düzelme yoksa yazıcıyı birkaç saat ya da bir gece dinlendir, ertesi gün bir döngü daha dene; başlığı elle temizlemeye kalkma."
+  - "Desen temizse yazdırma ayarlarına bak: kalite taslak modda kalmasın, kâğıt tipi gerçek kâğıtla eşleşsin."
+  - "Paketten yeni, düzgün bir kâğıtla karşılaştırma çıktısı al; desen hâlâ eksik basıyorsa servis gerekir."
 faq:
   - q: "Yazıcı neden silik basmaya başlar?"
     a: "Mürekkepli yazıcılarda en sık sebep, kâğıda mürekkep püskürten mikroskobik kanalların kurumuş mürekkeple kısmen tıkanmasıdır; uzun süre kullanılmayan yazıcılarda neredeyse kaçınılmazdır. İkinci sırada azalmış ya da kurumuş kartuş, üçüncü sırada yanlış kâğıt ve kalite ayarı gelir. Üçüne de evden, cihazı açmadan bakılabilir."
@@ -22,6 +37,24 @@ images:
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🖨️ **Önce şu ayrımı yap:** silik basma **her yerde mi**, yoksa **belirli bir renkte/şeritte mi**? Sayfanın tamamı soluksa kalite ayarı, kâğıt ya da genel mürekkep durumu öne çıkar. Belirli renk eksikse ya da yatay çizgi/şerit hâlinde boşluklar varsa neredeyse kesin püskürtme kanalı tıkanıklığıdır — bu yazının ana konusu.
+
+## Adım adım: silik baskıda güvenli sıra
+
+**1. Bakım menüsünü aç.** Bilgisayarda yazıcının **bakım / yardımcı program** sekmesini aç (yazıcı özelliklerinde "Bakım", "Maintenance" ya da üreticinin kendi uygulaması). Çoğu modelde aynı işlem yazıcının kendi menüsünden de başlatılabilir.
+
+**2. Nozzle check bas.** **"Püskürtme denetimi" / "Nozzle check"** desenini yazdır. Bu desen, her rengin bütün kanallarını çalıştırıp tıkalı olanları görünür kılar.
+
+**3. Deseni oku.** Deseni ışığa tut: bloklardaki çizgiler **kesiksiz** mi? Boşluk, eksik satır ya da hiç çıkmayan bir renk var mı?
+
+**4. Temizlik döngüsünü çalıştır.** Desende eksik çıktıysa aynı menüden **"Kafa temizleme" / "Head cleaning"** döngüsünü başlat ve bitmesini bekle. Bu tamamen cihazın kendi güvenli prosedürüdür; hiçbir kapak açılmaz.
+
+**5. Karşılaştır ve gerekirse tekrarla.** Deseni yeniden bas, öncesi-sonrası karşılaştır. Boşluklar azaldıysa doğru yoldasın; gerekirse temizliği tekrarla ama **üst üste ikiden-üçten fazla döngü çalıştırma** — her döngü ciddi mürekkep harcar.
+
+**6. Dinlendir.** Düzelme yoksa yazıcıyı **birkaç saat ya da bir gece dinlendir**, ertesi gün bir döngü daha dene; bekleme kurumuş mürekkebin yumuşamasına zaman tanır. ⚠️ Başlığı iğneyle, alkollü-tinerli bezle ya da kazıyarak temizlemeye kalkma.
+
+**7. Ayarlara bak.** Desen tertemiz çıktığı hâlde çıktı soluksa yazdırma penceresinde **kalite** taslak/ekonomik modda kalmış olabilir; "normal" ya da "yüksek" seç. **Kâğıt tipi** ayarı da gerçek kâğıtla eşleşmeli.
+
+**8. Kâğıtla karşılaştır.** Paketten yeni, düzgün bir kâğıtla karşılaştırma çıktısı al. Desen temizlik ve doğru ayara rağmen hâlâ eksik basıyorsa iş servise kalır; nozzle check çıktılarını sakla.
 
 ## 1) Önce fotoğraf çek: nozzle check (püskürtme denetimi)
 

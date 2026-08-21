@@ -4,6 +4,21 @@ description: "Kapı aralık kalıyor ya da kendiliğinden açılıyorsa sebep ç
 slug: "buzdolabi-kapisi-tam-kapanmiyor"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Bir parça kâğıt", "Ilık sabunlu su", "Kuru bez"]
+steps:
+  - "Kapı bir yere çarpıyor mu, yoksa kapanıyor ama tutmuyor mu — önce bunu ayır."
+  - "Kapıyı açıp raf raf bak: taşan şişe, rayına oturmamış çekmece, hizayı aşan poşet var mı?"
+  - "Ağır cam kavanoz ve şişeleri kapı raflarından gövde raflarına al."
+  - "Kâğıt testi yap: kâğıdı kapı ile gövde arasına koy, kapıyı kapat ve çek — kolayca kayıyorsa o noktada sızıntı var."
+  - "Kâğıt testini dört kenarda ve köşelere yakın noktalarda tekrarla, kaçıran bölgeyi belirle."
+  - "Contayı ılık sabunlu suyla sil, kuru bezle kurula; katlanmış ya da içe dönmüş bölümü parmakla düzelt."
+  - "Kapıyı yarım açık bırak: kendiliğinden açılmaya yöneliyorsa cihaz öne eğik demektir."
+  - "Ön alt köşelerdeki denge ayaklarını çevirerek önü bir miktar yükselt ve testi tekrarla; cihazı yatırma."
 faq:
   - q: "Kâğıt testi nasıl yapılır?"
     a: "Bir kâğıt parçasını kapı ile gövde arasına koyup kapıyı kapat, sonra kâğıdı çek. Kâğıt direnç göstererek geliyorsa conta orada tutuyor; kolayca kayıyorsa o noktada sızıntı var demektir. Testi kapının dört kenarında, köşelere yakın birkaç noktada tekrarla — conta genelde tek bölgeden kaçırır."
@@ -22,6 +37,25 @@ Dolabın kapısını kapatıyorsun, mutfaktan çıkarken göz ucuyla bakınca ka
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🚪 **Önce şu ayrımı yap:** kapı **kapanıyor ama tutmuyor mu** (itince kapanıyor, sonra aralanıyor), yoksa **fiziken bir yere mi çarpıyor**? Çarpma neredeyse her zaman içeriden taşan bir şeydir; tutmama ise conta ya da denge tarafını gösterir.
+
+## Adım adım: kapıyı kapanır hâle getirme kontrolü
+
+**1. Belirtiyi ayır.** Kapı **kapanıyor ama tutmuyor mu** (itince kapanıyor, sonra aralanıyor), yoksa **fiziken bir yere mi çarpıyor**? Çarpma içeriden taşan bir şeyi, tutmama conta ya da denge tarafını gösterir.
+
+**2. İçeriye bak.** Kapıyı açıp raf raf göz gezdir: kapı raflarındaki şişeler yatık ya da taşkın mı, çekmeceler rayına tam oturmuş mu, dondurucu poşetleri kapı hizasını aşıyor mu?
+
+**3. Kapı raflarını hafiflet.** Cam kavanoz ve şişelerin ağırlığını gövde raflarına al; aşırı yüklü kapı rafı kapının hizasını da bozabilir.
+
+**4. Kâğıt testini yap.** Bir kâğıt parçasını kapı ile gövde arasına koy, kapıyı kapat ve kâğıdı çek. Direnç göstererek geliyorsa conta görevini yapıyor; **kolayca kayıyorsa o noktada sızıntı var.**
+
+**5. Testi dört kenarda tekrarla.** Conta genelde tek bölgeden kaçırır; kenarların yanı sıra köşelere yakın birkaç noktayı da ayrıca yokla ve kaçıran bölgeyi belirle.
+
+**6. Contayı temizle ve düzelt.** Contayı ılık sabunlu suyla sil, kuru bezle kurula; katlanmış ya da içe dönmüş bölümü parmağınla düzelt. Conta sertleşmiş, yırtık ya da çekmişse temizlik kurtarmaz, değişim gerekir.
+
+**7. Eğimi test et.** Kapıyı yarım açık bırak: kendiliğinden **kapanmaya mı** yöneliyor, **açılmaya mı**? Açılmaya yöneliyorsa cihaz öne eğik demektir.
+
+**8. Ön ayakları ayarla.** Ön alt köşelerdeki denge ayaklarını çevirerek önü bir miktar yükselt, sonra testi tekrarla. ⚠️ Ayaklar cihaz yerinde dururken çevrilir; dolabı yatırmak soğutma düzeneğine zarar verebilir.
+
 
 ## 1) İçeriden taşan bir şey var — en basit ihtimal
 

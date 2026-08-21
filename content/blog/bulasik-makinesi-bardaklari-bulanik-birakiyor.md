@@ -4,6 +4,21 @@ description: "Bardaklar makineden bulanık ve lekeli çıkıyorsa sebep tuz-parl
 slug: "bulasik-makinesi-bardaklari-bulanik-birakiyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Sirke", "Temiz bez", "Bulaşık makinesi tuzu", "Parlatıcı", "Kullanım kılavuzu"]
+steps:
+  - "Bulanık bir bardağı birkaç dakika sirkeye batır ya da sirkeli bezle güçlüce sil ve durula."
+  - "Bulanıklık gittiyse kireç filmidir, ayar adımlarına geç; hiç değişmediyse cam korozyonudur ve o bardak geri dönmez."
+  - "Alt sepeti çek, tabandaki tuz haznesini aç; yalnızca makine tuzuyla doldur ve kapağı tam turuyla kapat."
+  - "Bölgenin su sertliğini öğren ve kılavuzdan makinenin sertlik ayarını o değere getir; bölge değerinin üstüne çıkarma."
+  - "Parlatıcı haznesini kontrol et: damla izi varsa dozu bir kademe artır, gökkuşağı gibi yağlı iz varsa bir kademe azalt."
+  - "Toz deterjan kullanıyorsan paketteki doz önerisine uy; fazla deterjan durulamada atılamaz ve film bırakır."
+  - "Filtreyi ve püskürtme kollarını çıkarıp akan suda temizle."
+  - "Bardak ağırlıklı yıkamaları düşük sıcaklıklı ya da cam programında yap ve her ayar değişikliğini birkaç yıkama boyunca izle."
 faq:
   - q: "Bardaktaki bulanıklığın kireç mi korozyon mu olduğunu nasıl anlarım?"
     a: "Basit bir sirke testi yeterlidir. Bulanık bardağı birkaç dakika sirkeye batır ya da sirkeli bezle sil: bulanıklık gidiyorsa bu kireç kaynaklı bir film tabakasıdır ve tuz-parlatıcı düzeniyle önlenebilir. Bulanıklık hiç değişmiyorsa camın yüzeyi aşınmıştır; bu cam korozyonudur ve geri döndürülemez."
@@ -20,6 +35,24 @@ images:
 Bulaşıklar temiz çıkıyor aslında — tabaklarda yemek artığı yok, yağ yok. Ama bardaklar ışığa tutunca bulanık: üzerlerinde beyaz bir film, su damlası izleri ya da gökkuşağı gibi mat bir perde var. Bu şikâyet "makine temiz yıkamıyor" arızasıyla karıştırılır ama farklı bir konudur: sorun kirde değil, **su kimyasında ve ayarlarda**. Ve burada baştan dürüst olmak gereken bir ayrım var — bulanıklığın bir türü tamamen düzelir, bir türü ise geri dönmez. Önce hangisiyle karşı karşıya olduğunu bulalım.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: bulanıklığı ayırt et ve gider
+
+**1. Sirke testini yap.** Bulanık bir bardağı birkaç dakika sirkeye batır ya da sirkeli bir bezle güçlüce sil ve durula.
+
+**2. Sonucu oku.** Bulanıklık **gittiyse** kireç filmidir; aşağıdaki ayar adımlarıyla önlenir. **Hiç değişmediyse** cam korozyonudur: o bardak için yapılacak bir şey yok, ama kalan bardakları korumak mümkün.
+
+**3. Tuzu ve kapağını kontrol et.** Alt sepeti çek, tabandaki tuz haznesini aç. Hazne dolu mu? Yalnızca **makine tuzu** kullan; sofra ve iri kaya tuzu bu sistem için uygun değildir. Kapağı sıkıca kapat — gevşek kapaktan yıkama suyuna tuz karışır.
+
+**4. Sertlik ayarını suyuna göre kur.** Oturduğun bölgenin su sertliğini su idaresinin yayınladığı değerlerden öğren, kılavuzdan sertlik ayarı bölümünü bul ve ayarı o değere getir. Ayarı bölge değerinin **üstüne çıkarma** — aşırı yumuşatma cam korozyonunu hızlandırır.
+
+**5. Parlatıcı dozunu belirtiye göre ayarla.** Hazne dolu ve kapağı kapalı mı? Nokta nokta damla izleri görüyorsan dozu bir kademe **artır**; gökkuşağı renkli, yağlımsı görünüm varsa bir kademe **azalt**.
+
+**6. Deterjan dozunu düşür.** Tablet kullanıyorsan doz zaten sabittir. Toz deterjanda paketteki doz önerisine gerçekten uyduğundan emin ol; fazla deterjan durulamada atılamaz ve camda film bırakır.
+
+**7. Filtreyi ve kolları temizle.** Tabandaki filtreyi ve püskürtme kollarını çıkarıp akan suda yıka; zayıf durulama da film bırakır.
+
+**8. Programı ve izlemeyi ayarla.** Bardak ağırlıklı yıkamaları düşük sıcaklıklı ya da cam programında yap. Her ayar değişikliğinden sonra birkaç yıkama bekleyip sonucu değerlendir; her yıkamada ayar değiştirmek hangisinin işe yaradığını görmeni engeller.
 
 ## 1) Sirke testi: film mi, korozyon mu?
 

@@ -4,6 +4,21 @@ description: "Arçelik bulaşık makinesinde E01-E09 kodlarının anlamı: taşm
 slug: "arcelik-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kullanım kılavuzu", "Küçük fırça", "Kürdan", "Kuru bez"]
+steps:
+  - "Ekrandaki kodu yaz ve kendi makinenin kullanım kılavuzundan anlamını teyit et."
+  - "Makineyi kapat, fişini çek ve su musluğunu kapat; su ile elektrikle aynı anda uğraşma."
+  - "Zemine bak: makinenin önünde ya da altında ıslaklık, birikintide köpük izi var mı not et."
+  - "Musluğun tam açık olduğunu, evde su olduğunu ve giriş hortumunun bükülmediğini kontrol et."
+  - "Tabandaki filtreyi çıkar, fırçayla akan suda yıka ve yerine tak."
+  - "Alt ve üst pervaneyi yerinden al, deliklerini kürdanla açıp akan suda durula, serbest döndüklerinden emin ol."
+  - "Program sonunda kapaktan buhar çıkıyor mu, bulaşıklar sıcak mı çıkıyor gözle ve bunu not et."
+  - "Fişi tak, birkaç dakika bekleyip kısa bir programla dene; aynı kod tekrar geliyorsa makineyi zorlama, kodu ve gözlemlerini servise aktar."
 faq:
   - q: "Arçelik bulaşık makinesinde E01 hatası ne anlama geliyor?"
     a: "E01, taşma korumasının devreye girdiğini gösterir: makine fazla su almış ya da bir yerden sızan su şasiye inmiştir. Makine bu durumda güvenlik gereği durur ve içindeki suyu tahliye etmeye çalışır. Tek seferlik taşmadan geldiyse kuruma sonrası tekrarlamayabilir; kısa sürede yeniden geliyorsa içeride aktif sızıntı vardır ve kaynağını servisin bulması gerekir."
@@ -22,6 +37,28 @@ Program yarıda kesildi, makine bip'liyor ve panelde E ile başlayan bir kod var
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ℹ️ Kod-anlam eşleşmeleri model serisine göre değişebilir; bu liste yaygın serilerde geçerlidir. Ekrandaki kodu kendi makinenin kullanım kılavuzuyla teyit etmek her zaman en sağlamıdır.
+
+## Adım adım: kod geldiğinde evde denenecekler
+
+Aşağıdaki sıra, hangi kod gelirse gelsin önce denenecek **ücretsiz ve aletsiz** kontrollerdir. Kodun kendi bölümüne inmeden önce bu listeyi yürütmek, çoğu vakada telefonu eline almadan cevabı verir.
+
+**1. Kodu yaz ve kılavuzdan teyit et.** Ekrandaki kodu bir yere not et; kod-anlam eşleşmeleri model serisine göre değiştiği için kendi makinenin kullanım kılavuzundan doğrula.
+
+**2. Güvenliği al.** Makineyi kapat, **fişini çek ve su musluğunu kapat**. Su ve elektrikle aynı anda uğraşma.
+
+**3. Zemini kontrol et.** Makinenin önünde ya da altında ıslaklık var mı? Birikintide köpük ya da beyaz kuruma izi var mı? Bunu not et — taşma kodlarında en değerli bilgi budur.
+
+**4. Musluk, su ve hortum üçlüsüne bak.** Musluk tam açık mı, evde su var mı, giriş hortumu dolap içinde bükülmüş mü? Su alamama kodlarının en yaygın sebebi bu üçünden biridir.
+
+**5. Filtreyi çıkar ve yıka.** Tabandaki filtreyi çıkar, küçük bir fırçayla akan suda temizle ve yerine tak. Tıkalı filtre hem yıkamayı hem ölçümü bozar.
+
+**6. Pervaneleri temizle.** Alt ve üst pervaneyi elinle yerinden al, deliklerini kürdanla açıp akan suda durula, serbestçe döndüklerinden emin ol.
+
+**7. Isıtmayı gözle.** Program sonunda kapağı açtığında buhar çıkıyor mu, bulaşıklar sıcak mı çıkıyor? Bu gözlem tek başına ısıtma tarafındaki kodları ayırt ettirir; not et.
+
+**8. Resetleyip dene.** Fişi tak, birkaç dakika bekle ve kısa bir programla dene. Aynı kod tekrar geliyorsa makineyi zorlamayı bırak: kodu ve yukarıdaki gözlemlerini not ederek servisle konuş.
+
+⛔ Bu listede sökme yok. Gövde içi — rezistans, sensörler, vana, akış ölçer ve elektronik kart — kullanıcı alanı değildir.
 
 ## E01 — taşma koruması
 

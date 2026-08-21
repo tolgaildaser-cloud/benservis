@@ -4,6 +4,21 @@ description: "Su arıtma cihazından su akmıyor ya da çok yavaş akıyorsa seb
 slug: "su-aritma-su-gelmiyor"
 date: "2026-08-08"
 category: "Su sebili / arıtma"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Su bir anda mı kesildi, yoksa günler içinde yavaş yavaş mı azaldı — önce bunu ayır."
+  - "Evye altına bak, arıtma cihazına giden ince hortumun bağlandığı küçük ara vanayı bul."
+  - "Vana kolu boruya paralelse açık, boruyu kesecek şekilde dikse kapalıdır; yarım açıksa tam aç."
+  - "Mutfaktaki normal musluğu aç; oradan da akış zayıfsa sorun cihazda değil evin su basıncındadır."
+  - "Aynı anda çamaşır ya da bulaşık makinesi çalışıyorsa bitmesini bekle ve tekrar dene."
+  - "Filtrenin en son ne zaman değiştiğini hatırla; şeffaf gövdeli modelde kartuşun rengine bak."
+  - "Cihaz yeni kurulduysa ya da filtre yeni değiştiyse tankın dolması için birkaç saat ver."
+  - "Cihaz sürekli çalışıp su üretemiyorsa fişini çek ve servisle konuş."
 faq:
   - q: "Su arıtma cihazının filtresi ne zaman değişir?"
     a: "Tortu ve karbon filtreleri genellikle 6-12 ayda bir, membran ise 2-3 yılda bir değişir. Ama takvim tek başına belirleyici değil: suyun sertliği, kireç oranı ve günlük kullanım miktarı ömrü kısaltabilir. Pratik işaret, akışın yavaşlaması ve suyun tadının değişmesidir."
@@ -22,6 +37,25 @@ Mutfaktaki arıtma cihazının musluğunu açıyorsun ve su ya hiç gelmiyor ya 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 💧 **Önce şu ayrımı yap:** su **bir anda mı kesildi**, yoksa **günler içinde yavaş yavaş mı azaldı**? Ani kesilme genelde vana, basınç ya da elektrik tarafını işaret eder. Kademeli yavaşlama ise neredeyse her zaman **tıkanan filtreyi** gösterir. Bu tek soru, aşağıdaki listede nereden başlayacağını belirler.
+
+## Adım adım: su gelmeme kontrolü
+
+**1. Belirtiyi ayır.** Su **bir anda mı kesildi**, yoksa **günler içinde yavaş yavaş mı azaldı**? Ani kesilme vana ve basınç tarafını, kademeli yavaşlama tıkanan filtreyi gösterir.
+
+**2. Ara vanayı bul.** Evye altına bak; arıtma cihazına giden ince hortumun bağlandığı küçük vana oradadır.
+
+**3. Vananın açık olduğunu doğrula.** Kolu boruya **paralel** ise açık, boruyu **kesecek şekilde dik** ise kapalıdır. Yarım açık kalmış bir vana da akışı ciddi biçimde düşürür — tam aç.
+
+**4. Evin basıncını yokla.** Mutfaktaki normal musluğu aç. Oradan da akış zayıfsa sorun cihazda değil, **evin su basıncındadır.**
+
+**5. Çakışan kullanımı ayır.** Aynı anda çamaşır ya da bulaşık makinesi çalışıyorsa basınç geçici olarak düşmüş olabilir; makineler bitince tekrar dene.
+
+**6. Filtre yaşını hatırla.** Filtrenin en son ne zaman değiştiğini düşün. Şeffaf gövdeli modellerde kartuşun rengi de fikir verir — beyaz kartuş kahverengi/griye dönmüşse ömrünü doldurmuştur.
+
+**7. Tanka süre ver.** Cihaz yeni kurulduysa, filtresi yeni değiştiyse ya da uzun süre kullanılmadıysa tank boş olabilir; birkaç saat verip tankı doldurmasını bekle.
+
+**8. Sürekli çalışıyorsa durdur.** Cihaz durmadan çalışıp su üretemiyorsa **fişini çek** ve servisle konuş — sürekli çalışma pompaya zarar verir.
+
 
 ## 1) Giriş vanası kapalı kalmış olabilir
 
