@@ -4,6 +4,21 @@ description: "15 yıllık dolap değişir mi, tamir mi edilir? Yıllık kWh fark
 slug: "eski-buzdolabini-degistirmek-mantikli-mi"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~24 saat (ölçüm dahil)"
+  totalTime: "PT24H"
+  cost: "Ücretsiz"
+  tools: ["Prize takılan enerji ölçer", "Hesap makinesi"]
+steps:
+  - "Dolabın iç duvarındaki ya da arka gövdedeki tip etiketinden model ve üretim yılını bul."
+  - "Prize takılan basit bir enerji ölçeri dolabın fişiyle priz arasına tak."
+  - "En az 24 saat, mümkünse birkaç gün ölç ve günlük ortalama kWh'i not et."
+  - "Günlük ortalamayı 365 ile çarpıp eski dolabın yıllık gerçek tüketimini çıkar."
+  - "Aday yeni dolabın etiketindeki yıllık kWh değerini yaz ve iki rakamın farkını al."
+  - "Farkı faturandaki güncel birim fiyatla çarpıp yıllık tasarrufu bul."
+  - "Yeni dolabın fiyatını yıllık tasarrufa bölüp amorti süresini hesapla."
+  - "Amorti süresini yeni dolaptan beklediğin ömürle karşılaştır ve kararı ver."
 faq:
   - q: "Buzdolabı kaç yılda değişmeli, sabit bir kural var mı?"
     a: "Sabit bir son kullanma tarihi yok; belirleyici olan yaş tek başına değil, yaş + arıza sıklığı + tüketim üçlüsüdür. Kabaca 15 yaş, kararın ciddi biçimde masaya geldiği eşiktir: bu yaştan sonra büyük bir arıza çıktığında tamire para gömmek çoğu durumda mantığını yitirir. Sorunsuz çalışan ve tüketimi makul bir dolap ise sırf yaşı için emekli edilmez."
@@ -20,6 +35,24 @@ images:
 Mutfaktaki dolap on beş yaşında; ne zaman sustuğunu hatırlamıyorsun çünkü neredeyse hiç susmuyor. Bir yandan "çalışıyor işte, neden para harcayayım" diyorsun, bir yandan her elektrik faturasında içine bir kuşku düşüyor: "Bu dolap bana sessizce kaça mal oluyor?" Bu yazı o kararı duygudan çıkarıp hesaba bağlamak için — kimseye "hemen değiştir" demeden, amortiyi kendi rakamlarınla kurabileceğin bir çerçeve.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: amorti hesabını kendi rakamlarınla kur
+
+**1. Dolabın yaşını bul.** İç duvardaki ya da arka gövdedeki tip etiketine bak; üretim tarihi çoğu modelde seri numarasının içinde kodludur, kılavuz ya da üretici destek sayfası bu kodu çözer.
+
+**2. Ölçeri tak.** Tahmin yerine ölçüm: prize takılan basit bir enerji ölçeri dolabın fişiyle priz arasına yerleştir.
+
+**3. En az 24 saat ölç.** Dolap gece-gündüz döngülü çalışır; tek saatlik ölçüm yanıltır. En az 24 saat, ideali birkaç gün ölç ve günlük ortalamayı not et.
+
+**4. Yıllığa çevir.** Günlük ortalama kWh × 365 = eski dolabın yıllık gerçek tüketimi. Bu tek rakam bütün kararın temelidir.
+
+**5. Farkı al.** Aday yeni dolabın etiketindeki yıllık kWh değerini yaz (QR kodla EPREL kaydından da doğrulanır) ve eski dolabın rakamından çıkar.
+
+**6. Paraya çevir.** Yıllık kWh farkını faturandaki güncel birim fiyatla çarp — kademeli tarifedeysen üst kademe fiyatla. Çıkan sayı yıllık tasarrufun.
+
+**7. Amortiyi böl.** Yeni dolabın fiyatı ÷ yıllık tasarruf = amorti süresi. Hesap kWh üzerinden kurulduğu için tarife değişse de aynı adımlarla yeniden yapılır.
+
+**8. Kararı ver.** Amorti süresi yeni dolaptan beklediğin ömrün belirgin altındaysa değişim kendini finanse ediyordur; ömre yakın ya da üzerindeyse sırf tasarruf için değişim kendini taşımıyordur.
 
 ## Eski dolap neden çok tüketir?
 

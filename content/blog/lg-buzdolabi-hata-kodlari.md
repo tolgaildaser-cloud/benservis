@@ -28,6 +28,8 @@ faq:
     a: "Fan buzla kilitlendiyse yarar, çünkü sorun motorun kendisinde değil pervanenin etrafını saran buzdadır. Üretici bu durumda cihazın enerjisini kesip kapağı sonuna kadar açık bırakmayı ve buzun kendiliğinden çözülmesini beklemeyi öneriyor; bu süre yaz aylarında bir gün, kışın birkaç gün olabilir. Buz çözüldükten sonra kod kaybolup uzun süre geri gelmiyorsa sebep gerçekten buzdu. Kısa sürede geri geliyorsa buzu üreten defrost hattı duruyordur ve orası servis işidir."
   - q: "Ekranda cihazım soğutmadığı hâlde hiçbir arıza kodu yok, ne olabilir?"
     a: "Panel çalışıyor ama cihaz soğutmuyorsa akla ilk gelmesi gereken şey arıza değil, mağaza ve teşhir için tasarlanmış olan kapalı soğutma modudur. Bu modda ekran ve ışıklar çalışır, soğutma devre dışı kalır ve genellikle taşınma ya da temizlik sırasında tuşlara yanlışlıkla uzun basılmasıyla devreye girer. Çıkışı panelden tuş kombinasyonuyla yapılır ve kombinasyon modele göre değiştiği için kılavuza bakmak gerekir."
+images:
+  coverAlt: "Mavi şapkalı benservis ustası buzdolabının önünde elinde telefonla gülümsüyor"
 ---
 
 Buzdolabının ekranında derece yerine iki harf duruyor: Er FF. İnternette aradın, karşına parça isimleri çıktı ama hangisinin senin cihazına ait olduğunu anlayamadın. İyi haber şu: LG'nin kod dili aslında markaların en okunaklısı. Kodlar rastgele numaralar değil, doğrudan **parçanın kısaltmasıdır** — mantığı bir kez kavrayınca listeye bakmadan da tahmin edebilirsin. Bu yazıda o mantığı, birden çok kaynakla doğrulanmış kod tablosunu ve fan kodlarının arkasındaki meşhur buz tuzağını anlatıyoruz.

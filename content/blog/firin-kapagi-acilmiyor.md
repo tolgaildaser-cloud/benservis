@@ -4,6 +4,20 @@ description: "Fırın kapağı kilitli kaldıysa sebep çoğu zaman piroliz sonr
 slug: "firin-kapagi-acilmiyor"
 date: "2026-08-20"
 category: "Fırın / Ocak"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Cihazın kullanım kılavuzu"]
+steps:
+  - "Kapıyı zorlama, çekiştirme."
+  - "Fırın gövdesi hâlâ sıcak mı kontrol et; sıcaksa kilit simgesi sönene kadar bekle."
+  - "Piroliz sonrası soğuma bir saati aşabilir; bu sürede çocukları uzak tut, kapıya yaslanma."
+  - "Ekrana bak: anahtar ya da kilit simgesi varsa çocuk kilidi devrededir."
+  - "Çocuk kilidini kılavuzda yazan tuşla kaldır; rastgele tuş kombinasyonu deneme."
+  - "Fırın tamamen soğuduğu hâlde kilit çözülmediyse cihazın elektriğini sigortadan ya da fişten birkaç dakika kes, sonra geri ver."
+  - "Kilit hâlâ takılıysa kapağı kurcalamadan servisle konuş."
 faq:
   - q: "Piroliz bitti ama kapak hâlâ açılmıyor, normal mi?"
     a: "Evet, büyük ihtimalle normaldir. Pirolizli fırınlar temizlik sırasında çok yüksek sıcaklığa çıkar ve kapı güvenlik gereği otomatik kilitlenir; kilit, program bittiğinde değil fırın güvenli sıcaklığa indiğinde açılır. Bu soğuma süresi bir saati aşabilir. Program bitti diye kapıyı zorlamak yerine fırının soğumasını beklemek gerekir."
@@ -22,6 +36,22 @@ Akşam yemeği fırında, süre doldu, kapıya uzanıyorsun — kapı açılmıy
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔒 **Önce şu ayrımı yap:** ekranda **kilit/anahtar simgesi ya da yazısı var mı**, fırın **kısa süre önce piroliz yaptı mı**, yoksa simge yokken kapı **mekanik olarak mı sıkışık**? İlk ikisi büyük ihtimalle kendiliğinden ya da tuşla çözülür; üçüncüsü mekanik bir konudur.
+
+## Adım adım: kapak kilitli kaldığında
+
+**1. Zorlama.** İçgüdü kapıyı biraz daha kuvvetli çekmek der; doğrusu tam tersi. Kasarak açmaya çalışmak mekanizmayı, menteşeyi ve kapının cam katmanlarını riske atar.
+
+**2. Sıcaklığı kontrol et.** Fırın gövdesi hâlâ sıcak mı? Sıcaksa yapılacak tek şey beklemek — kilit, program bittiğinde değil fırın güvenli sıcaklığa indiğinde açılır.
+
+**3. Soğumaya süre tanı.** Piroliz sonrası soğuma bir saati aşabilir. Bu evrede dış yüzey de normalden sıcak olabilir; çocukları uzak tut, kapıya yaslanma.
+
+**4. Ekrana bak.** Anahtar ya da kilit simgesi görüyorsan büyük ihtimalle **çocuk kilidi** devrededir; kapı fiziken kilitli olmayabilir, tuşlar tepki vermiyordur.
+
+**5. Çocuk kilidini kaldır.** Kilit genelde belirli bir tuşa birkaç saniye basılı tutarak açılır; hangi tuş olduğu markaya göre değişir. Rastgele kombinasyon denemek yerine iki dakikanı **kılavuza** ver.
+
+**6. Elektriği kes-ver.** Fırın tamamen soğuduğu hâlde kilit çözülmediyse (özellikle piroliz yarıda kesildiyse) cihazın elektriğini sigortadan ya da fişten **birkaç dakika kes**, sonra geri ver: elektronik baştan başlar ve çoğu durumda kilidi bırakır.
+
+**7. Sınırı bil.** Kilit hâlâ takılıysa dur. Kapıyı kasmak, tornavidayla kilit pimini itmek, menteşeye yük bindirmek kullanıcı işi değildir — elindeki tarifle servisle konuş.
 
 ## 1) Piroliz sonrası: kilit, soğumadan açılmaz
 

@@ -4,6 +4,21 @@ description: "Profilo çamaşır makinen E17, E18, F21 ya da E23 mü veriyor? BS
 slug: "profilo-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Sığ bir kap", "Küçük fırça"]
+steps:
+  - "Kodu aynen not al. Ekranda ne yazıyorsa olduğu gibi yaz ya da fotoğrafla; E ve F önekleri aynı numarada aynı arızayı gösterir."
+  - "Makineyi kapat ve fişini çek. Su ve elektrikle aynı anda uğraşma; makine sıcaksa bir süre bekle."
+  - "Musluğu ve evdeki suyu kontrol et. Musluk tam açık mı? Su kesintisi ya da düşük basınç var mı — başka bir muslukta dene."
+  - "Giriş hortumuna bak. Makinenin arkasında bükülmüş ya da ezilmiş olmasın; keskin kıvrımları düzelt."
+  - "Giriş süzgecini temizle. Musluğu kapat, giriş hortumunun musluk tarafını sök ve bağlantı ağzındaki küçük süzgeci akan suyun altında temizle."
+  - "Pompa filtresini temizle. Alt ön köşedeki servis kapağını aç, önüne havlu ser ve sığ bir kap tut; filtreyi çevirip çıkar, tüyü ve yabancı cisimleri temizle, sonuna kadar çevirerek sıkıca geri tak."
+  - "Tahliye hortumunu ve gideri kontrol et. Hortum bükülmemiş olsun; bağlandığı gider hattı yavaş akıyorsa önce onu aç."
+  - "Resetleyip kısa bir programla dene. Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve kısa bir program başlat; kod geri geliyorsa servis gerekir."
 faq:
   - q: "Profilo çamaşır makinesi E18 hatası ne demek?"
     a: "E18, tahliye süresinin aşıldığını gösterir: makine içindeki suyu atamıyordur. En sık sebep tüy ya da yabancı cisimle tıkanmış pompa filtresi ve bükülmüş tahliye hortumudur. Filtre ve hortum temizliğiyle çoğu zaman evde, ücretsiz çözülür; temizken tekrar ediyorsa pompa tarafı servisliktir."
@@ -24,6 +39,24 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 > 💡 **BSH ailesi notu:** Profilo, Bosch ve Siemens aynı platformu kullanır; yeni modeller **E**, daha eski modeller **F** önekiyle aynı numarayı gösterir (E18 = F18, E23 = F23). Bir kodun anlamını üç markadan hangisinde bulursan bul, diğerlerinde de geçerlidir.
 
 > ⚠️ Kodların anlamı model ve seriye göre değişebilir; bazı eski ya da farklı üretim serilerinde tablo farklı olabilir. Aşağıdakiler en yaygın anlamlardır; emin olmak için modelini ve kodu Benservis'e yaz.
+
+## Adım adım: kodu görünce evde denenecekler
+
+**1. Kodu aynen not al.** Ekranda ne yazıyorsa olduğu gibi yaz ya da fotoğrafla; E ve F önekleri aynı numarada aynı arızayı gösterir.
+
+**2. Makineyi kapat ve fişini çek.** Su ve elektrikle aynı anda uğraşma; makine sıcaksa bir süre bekle.
+
+**3. Musluğu ve evdeki suyu kontrol et.** Musluk tam açık mı? Su kesintisi ya da düşük basınç var mı — başka bir muslukta dene.
+
+**4. Giriş hortumuna bak.** Makinenin arkasında bükülmüş ya da ezilmiş olmasın; keskin kıvrımları düzelt.
+
+**5. Giriş süzgecini temizle.** **Musluğu kapat**, giriş hortumunun musluk tarafını sök ve bağlantı ağzındaki küçük süzgeci akan suyun altında temizle.
+
+**6. Pompa filtresini temizle.** Alt ön köşedeki servis kapağını aç, önüne havlu ser ve sığ bir kap tut; filtreyi çevirip çıkar, tüyü ve yabancı cisimleri temizle, sonuna kadar çevirerek sıkıca geri tak.
+
+**7. Tahliye hortumunu ve gideri kontrol et.** Hortum bükülmemiş olsun; bağlandığı gider hattı yavaş akıyorsa önce onu aç.
+
+**8. Resetleyip kısa bir programla dene.** Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve kısa bir program başlat; kod geri geliyorsa servis gerekir.
 
 ## Özet tablo
 

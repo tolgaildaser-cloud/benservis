@@ -4,6 +4,21 @@ description: "Vestel çamaşır makinen E01, E02 ya da E03 mü gösteriyor? Kap�
 slug: "vestel-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Sığ bir kap", "Küçük fırça", "Nemli bez"]
+steps:
+  - "Makineyi kapat ve fişini çek. Islak zemin ve elektrik aynı karede olmamalı; makine sıcaksa bir süre bekle."
+  - "Kapağı kontrol et ve tam kapat. Kenarına sıkışmış çamaşır ucu, çorap ya da lastik parçası var mı bak; conta yüzeyindeki kalıntıyı nemli bezle sil ve kapağı \"klik\" sesini duyana kadar bastırarak kapat."
+  - "Musluğu ve basıncı doğrula. Musluk tam açık mı? Su kesintisi ya da düşük basınç var mı — başka bir musluktan test et."
+  - "Giriş hortumuna bak. Makinenin arkasında bükülmüş ya da ezilmiş olmasın."
+  - "Giriş süzgecini temizle. Musluğu kapat, hortumun musluk tarafını sök ve bağlantı ağzındaki küçük süzgeci akan suyun altında fırçala."
+  - "Pompa filtresini çıkar ve temizle. Alt ön köşedeki kapağı aç, önüne geniş bir havlu ser ve sığ bir kap tut; filtreyi saat yönünün tersine çevirip çıkar, tüy ve yabancı cisimleri temizle, yuvasına parmağınla değil gözle bak, sonra sonuna kadar çevirerek sıkıca geri tak."
+  - "Tahliye hortumunu ve gider hattını kontrol et. Hortum makinenin arkasında bükülmüş, ezilmiş ya da halının altında kalmış olmasın; lavabo gideri yavaş akıyorsa önce onu çöz."
+  - "Fişi tak ve kısa bir programla dene. Kod tekrar geliyorsa kapı kilidi, su giriş valfi, tahliye pompası ve elektronik kart tarafı servise aittir."
 faq:
   - q: "Vestel çamaşır makinesi E03 hatası ne demek?"
     a: "E03, makinenin içindeki suyu boşaltamadığını gösteren tahliye hatasıdır. En sık sebep tüy ve yabancı cisimle tıkanmış pompa filtresi ya da bükülmüş/tıkalı tahliye hortumudur. Filtre ve hortum temizliğiyle çoğu zaman evde, ücretsiz çözülür; bunlar temizken tekrar ediyorsa pompa tarafı servis işidir."
@@ -22,6 +37,24 @@ Makine tam sıkmaya geçecekken durdu, ekranda **E03** yazıyor ve kazanın içi
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Vestel'de kod tablosu **modele ve nesle göre değişir**; aynı numara eski ve yeni serilerde farklı anlama gelebilir. Aşağıdakiler en yaygın karşılıklardır. Ekrandaki kodun anlamından emin olmak için model bilginle birlikte Benservis'e yazabilirsin.
+
+## Adım adım: E01, E02 ve E03 için evde denenecekler
+
+**1. Makineyi kapat ve fişini çek.** Islak zemin ve elektrik aynı karede olmamalı; makine sıcaksa bir süre bekle.
+
+**2. Kapağı kontrol et ve tam kapat.** Kenarına sıkışmış çamaşır ucu, çorap ya da lastik parçası var mı bak; conta yüzeyindeki kalıntıyı nemli bezle sil ve kapağı "klik" sesini duyana kadar bastırarak kapat.
+
+**3. Musluğu ve basıncı doğrula.** Musluk tam açık mı? Su kesintisi ya da düşük basınç var mı — başka bir musluktan test et.
+
+**4. Giriş hortumuna bak.** Makinenin arkasında bükülmüş ya da ezilmiş olmasın.
+
+**5. Giriş süzgecini temizle.** **Musluğu kapat**, hortumun musluk tarafını sök ve bağlantı ağzındaki küçük süzgeci akan suyun altında fırçala.
+
+**6. Pompa filtresini çıkar ve temizle.** Alt ön köşedeki kapağı aç, önüne geniş bir havlu ser ve sığ bir kap tut; filtreyi saat yönünün tersine çevirip çıkar, tüy ve yabancı cisimleri temizle, yuvasına parmağınla değil gözle bak, sonra sonuna kadar çevirerek sıkıca geri tak.
+
+**7. Tahliye hortumunu ve gider hattını kontrol et.** Hortum makinenin arkasında bükülmüş, ezilmiş ya da halının altında kalmış olmasın; lavabo gideri yavaş akıyorsa önce onu çöz.
+
+**8. Fişi tak ve kısa bir programla dene.** Kod tekrar geliyorsa kapı kilidi, su giriş valfi, tahliye pompası ve elektronik kart tarafı servise aittir.
 
 ## Özet tablo
 

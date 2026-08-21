@@ -4,6 +4,21 @@ description: "Ocak alevi sarı ya da turuncu yanıyorsa sebep eksik yanmadır; k
 slug: "ocak-alevi-sari-yaniyor"
 date: "2026-08-20"
 category: "Fırın / Ocak"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Sıcak sabunlu su", "Yumuşak fırça", "Kuru bez"]
+steps:
+  - "Alev sürekli sarı yanıyorsa ya da mutfaktakilerde baş ağrısı, bulantı varsa ocağı kapat, pencereyi aç, ortamı havalandır."
+  - "Ocağı tenceresiz yak ve alev oturduktan sonra rengine gündüz ışığında bak."
+  - "Tek göz mü sarı, tüm gözler mi sarı — not et."
+  - "Ocak kapalı ve tamamen soğukken ızgarayı ve brülör başlığını elinle kaldır."
+  - "Başlığı sıcak sabunlu suda yıka; tıkalı kanalları yumuşak fırçayla ya da kürdanla aç, metal tel ve bıçak kullanma."
+  - "Parçaları tamamen kurut ve yuvasına tam oturacak şekilde yerleştir."
+  - "Ocak çevresindeki alüminyum folyoyu ve hava girişini kapatan her şeyi kaldır, mutfağı havalandır."
+  - "Ocağı yeniden yak; alev hâlâ sarıysa ocağı kullanmayı bırak ve yetkili servisi ara."
 faq:
   - q: "Ocak alevi hangi renkte yanmalı?"
     a: "Sağlıklı yanan bir ocakta alev, iç kısmında hafif daha parlak bir çekirdek olan net mavi renktedir. Tencereden taşan su ya da tuzlu damlalar alevde anlık sarı-turuncu parlamalar yapar; bu normaldir. Anormal olan, alevin sürekli ve bütün olarak sarı/turuncu yanması, uçlarının titreyip is bırakmasıdır."
@@ -22,6 +37,24 @@ Tencereyi ocağa koyuyorsun ve alev her zamanki gibi mavi değil: sarı, turuncu
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⛔ **Önce güvenlik — şu durumda ocağı hemen kapat:** Alev sürekli ve bütünüyle sarı/turuncu yanıyorsa, ortamda is kokusu varsa ya da mutfakta bulunanlarda baş ağrısı, sersemlik, bulantı gibi şikâyetler başladıysa **ocağı kapat, pencereyi aç, ortamı havalandır.** Eksik yanmada karbonmonoksit açığa çıkabilir; bu gaz renksiz ve kokusuzdur, varlığını burnunla anlayamazsın. Bu belirtiler üst üste geliyorsa ocağı yeniden yakmayı deneme; önce aşağıdaki kontrolleri alev kapalıyken yap.
+
+## Adım adım: sarı alevde evde denenecekler
+
+**1. Önce güvenliği al.** Alev sürekli ve bütünüyle sarı yanıyorsa, is kokusu varsa ya da mutfaktakilerde baş ağrısı, sersemlik, bulantı başladıysa **ocağı kapat, pencereyi aç, ortamı havalandır.** Kontrolleri alev kapalıyken yap.
+
+**2. Alevi gündüz ışığında izle.** Ocağı tenceresiz yak ve birkaç saniye bekle. Alev oturduktan sonra hâlâ sarıysa sorun var; taşma ve tuz kaynaklı anlık parlamalar birkaç saniyede geçer.
+
+**3. Tek göz mü, hepsi mi?** Yalnız bir göz sarıysa sorun büyük ihtimalle o gözün brülöründedir; tüm gözler sarıysa hava girişi ya da gaz tarafına bakmak gerekir. Not al, servise anlatırken işine yarar.
+
+**4. Soğuk ocakta başlığı kaldır.** Ocak kapalı ve tamamen soğukken ızgarayı ve brülör başlığını elinle kaldır. Bunlar elle alınan parçalardır; hiçbir şey sökülmez.
+
+**5. Kanalları temizle.** Başlığı sıcak sabunlu suda yıka; inatçı tıkanıklığı yumuşak fırçayla ya da kürdanla aç. **Metal telle veya bıçakla kanal kazıma** — kanalın şeklini bozarsan alev kalıcı bozulur.
+
+**6. Kurut ve tam oturt.** Islak başlık da sarı alev yapar. Parçaları tamamen kurut, sonra yuvasına tam oturacak şekilde yerleştir; eğri oturmuş başlık alevi bozar.
+
+**7. Hava girişini aç.** Ocak çevresine serilen alüminyum folyo brülör çevresindeki hava kanallarını kapatır. Folyoyu ve hava girişini kapatan her şeyi kaldır, mutfağı havalandır.
+
+**8. Dene ve sınırı bil.** Ocağı yeniden yak. Alev hâlâ sarıysa tablo gaz ayarı ve enjektör tarafını işaret ediyordur: ⛔ oraya kendin dokunma, ocağı kullanmayı bırak ve yetkili servisi ya da yetkili gaz tesisatçısını ara.
 
 ## Önce ayrımı yap: anlık parlama mı, sürekli sarılık mı?
 

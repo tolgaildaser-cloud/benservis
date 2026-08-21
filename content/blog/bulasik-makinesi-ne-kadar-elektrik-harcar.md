@@ -4,6 +4,21 @@ description: "Bulaşık makinesi program başına kaç kWh ve kaç litre su harc
 slug: "bulasik-makinesi-ne-kadar-elektrik-harcar"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Yumuşak fırça", "Kuru bez"]
+steps:
+  - "Kapak kenarındaki tip etiketinden model numarasını al ve 100 döngü başına kWh değerini bul."
+  - "Bu değeri 100'e bölerek program başına tüketimini hesapla."
+  - "Makineyi tam dolmadan çalıştırma; iki yarım yük yerine bir tam yük planla."
+  - "Eko programı varsayılan seçim yap, yoğun programı gerçekten gerekli günlere sakla."
+  - "Bulaşığı muslukta ön durulama; kaba artıkları sıyırıp doğrudan yerleştir."
+  - "Filtreyi çıkar, akan suda yumuşak fırçayla temizle ve püskürtme kollarının deliklerini kontrol et."
+  - "Tuz ve parlatıcı seviyesini kontrol et, eksikse tamamla."
+  - "Program bitince kapağı arala ve buharın kendi kendine uçmasını bekle."
 faq:
   - q: "Bulaşık makinesi bir yıkamada kaç kWh harcar?"
     a: "Programa göre değişir: verimli makinelerde eko program yıkama başına ~0,5-0,9 kWh, normal programlar ~0,8-1,2 kWh civarındadır. Yüksek sıcaklıklı yoğun ve hızlı programlar üst banda yaklaşır, çünkü elektriğin asıl müşterisi suyu ısıtan rezistanstır. Kendi makinenin değeri enerji etiketinde 100 döngü başına kWh olarak yazar."
@@ -22,6 +37,24 @@ Akşam yemeğinden sonra klasik ev tartışması: **"Makine mi açılsın, elde 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚡ **Kısa özet:** Verimli bir bulaşık makinesi eko programda **~0,5-0,9 kWh** elektrik ve **~9-15 litre** su tüketir. Aynı bulaşığın elde yıkanması **80-120 litreye** çıkabilir. Eko program uzundur ama ucuzdur — elektriği süre değil, suyu ısıtan rezistans yakar. Maliyet = **kWh × faturandaki birim fiyat.**
+
+## Adım adım: bulaşık makinesi tüketimini ölç ve düşür
+
+**1. Etiketi bul.** Kapak kenarındaki tip etiketinden model numarasını al; enerji etiketindeki 100 döngü başına kWh değerine üreticinin sitesinden de ulaşabilirsin.
+
+**2. Program başına çevir.** 100 döngü başına kWh değerini 100'e böl. Çıkan sayı, bir programın makineye ne kadara mal olduğunu gösterir.
+
+**3. Tam yükü kural yap.** İki yarım yük, bir tam yükten hem su hem elektrik olarak pahalıdır. Makineyi dolmadan başlatma.
+
+**4. Eko programı varsayılan yap.** Elektriği süre değil, suyu ısıtan rezistans yakar. Yoğun programı gerçekten yanmış-kurumuş tencere günlerine sakla.
+
+**5. Ön durulamayı bırak.** Kaba artıkları sıyırmak yeter. Bulaşığı makineden önce muslukta yıkamak, makinenin su avantajını sıfırlar.
+
+**6. Filtreyi temizle.** Filtreyi çıkar, akan suda yumuşak fırçayla temizle; püskürtme kollarının deliklerinin açık olduğunu kontrol et. Tıkalı filtre kötü yıkama, kötü yıkama da bir program daha demektir.
+
+**7. Tuzu ve parlatıcıyı tamamla.** Kireç, rezistansın üstünü kaplayınca aynı suyu ısıtmak uzar. Seviyeleri kontrol et, eksikse tamamla.
+
+**8. Kapağı arala.** Program bitince kapağı arala; buhar kendi kendine uçsun. Sıfır kWh'lik kurutma budur.
 
 ## Program başına tipik tüketim
 

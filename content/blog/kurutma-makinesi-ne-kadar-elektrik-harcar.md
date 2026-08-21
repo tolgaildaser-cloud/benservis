@@ -4,6 +4,21 @@ description: "Kurutma makinesi kurutma başına kaç kWh harcar? Isı pompalı v
 slug: "kurutma-makinesi-ne-kadar-elektrik-harcar"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez", "Yumuşak fırça"]
+steps:
+  - "Enerji etiketinden ya da kılavuzdan makinenin ısı pompalı mı kondenserli mi olduğunu öğren."
+  - "Bir haftada kaç kurutma yaptığını say ve etiketteki kWh değeriyle karşılaştır."
+  - "Çamaşırı kurutucuya vermeden önce çamaşır makinesinde yüksek devirde sık."
+  - "Her kurutmadan sonra kapak kenarındaki hav filtresini çıkar ve tüyünü elle sıyır."
+  - "Filtreyi ışığa tut; içini göremiyorsan yıka ve tamamen kurumadan takma."
+  - "Kondenserli modelde kondenseri kılavuzun verdiği aralıkta kontrol et ve temizle."
+  - "Tamburu tam yükle, ama tıka basa doldurma."
+  - "Sabit süreli program yerine sensörlü kuruluk programını seç; ütülenecek çamaşırı ütü nemli kademesinde çıkar."
 faq:
   - q: "Kurutma makinesi bir kurutmada kaç kWh harcar?"
     a: "Teknolojiye göre değişir: ısı pompalı modeller tam yükte kurutma başına tipik olarak ~1,5-2,5 kWh, kondenserli (rezistanslı) modeller ~2,5-3,5 kWh tüketir. Çamaşırın ne kadar ıslak girdiği, yük miktarı ve filtrelerin temizliği bu aralığın neresinde olduğunu belirler."
@@ -22,6 +37,24 @@ Kurutma makinesi eve girdiğinde konfor tartışılmaz — balkonda kuruma bekle
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚡ **Kısa özet:** Kurutma başına tüketim **ısı pompalı** modellerde tipik **~1,5-2,5 kWh**, **kondenserli (rezistanslı)** modellerde **~2,5-3,5 kWh** — fark kabaca iki kata varır. Tıkalı hav filtresi süreyi uzatır, tüketimi artırır. Maliyet = **kWh × faturandaki birim fiyat.**
+
+## Adım adım: kurutma makinesi tüketimini ölç ve düşür
+
+**1. Hangi tip olduğunu öğren.** Enerji etiketine ya da kılavuza bak: ısı pompalı modeller belirgin düşük yıllık kWh değeriyle ayrışır, kılavuzda ısı pompası / heat pump ibaresi geçer.
+
+**2. Kendi kullanımını say.** Bir haftada kaç kurutma yaptığını not et ve etiketteki kWh değeriyle yan yana koy. Fark, hangi alışkanlığın pahalı olduğunu gösterir.
+
+**3. Çamaşırı iyi sıkılmış ver.** Kurutucunun bütün işi nemi uçurmaktır. Çamaşır makinesinde yüksek devirde sıkılan çamaşır, kurutucuda belirgin daha az enerjiyle kurur.
+
+**4. Filtreyi her kurutmada temizle.** Kapak kenarındaki hav filtresini çıkar, tüyü elle sıyır. İki dakikalık bu alışkanlık en ucuz tasarruf hamlesidir.
+
+**5. Filtreyi ışığa tut.** İçini göremiyorsan filtre tıkalıdır: kılavuz izin veriyorsa yıka ve tamamen kurumadan takma.
+
+**6. Kondenseri unutma.** Kondenserli modelde kondenser de tüylenir ve hava dolaşımını boğar. Kılavuzun verdiği aralıkta kontrol et ve temizle.
+
+**7. Tam yükle, ama tıkma.** Yarım yük verimsizdir; aşırı doldurulmuş tambur ise havanın dolaşmasını engeller ve süreyi uzatır.
+
+**8. Doğru programı seç.** Sensörlü kuruluk programı çamaşır kuruyunca durur; sabit süreli program gereğinden uzun çalışır. Ütülenecek çamaşırı ütü nemli kademesinde çıkar.
 
 ## İki teknoloji, iki ayrı fatura
 

@@ -28,6 +28,8 @@ faq:
     a: "Tercih edilmez. Kompresörün yağı normalde dipte durur; cihaz yatırıldığında bu yağ soğutma hattına doğru kayabilir ve yerine geri dönmesi zaman ister. Yağ hattayken cihaz çalıştırılırsa soğutma verimi düşer ve kompresör zorlanır. Merdiven ya da asansör yüzünden yatırmak kaçınılmazsa süreyi kısa tut, hangi yöne yatırıldığını not et ve yeni evde bekleme süresini uzun tarafından uygula."
   - q: "Buzdolabı taşındıktan sonra ne kadar bekletilmeli?"
     a: "Kesin süre kılavuzda yazar ve marka marka değişir; kılavuzların çoğu dik taşınan cihaz için birkaç saat, yatırılarak taşınan cihaz için 24 saate varan bir bekleme önerir. Bekleme, kompresör yağının yerine dönmesi ve soğutma devresindeki basıncın dengelenmesi içindir. Aceleyle fişe takmanın kazandırdığı süre, kompresörü riske atmaya değmez — cihazı yerine koy, fişi takma ve saati not et."
+images:
+  coverAlt: "Mavi şapkalı benservis ustası arkasında salon görünen mutfakta kollarını kavuşturmuş duruyor"
 ---
 
 Nakliye aracı kapıda, kolilerin çoğu inmiş, sıra beyaz eşyalara geldi. Buzdolabı ve çamaşır makinesi çoğu evin en pahalı iki cihazıdır ve taşınma, ikisinin de en çok hasar gördüğü andır. İşin sinir bozucu tarafı şu: bu hasarların neredeyse tamamı **taşınmadan önceki bir saatte, hiç para harcamadan** önlenebilir.

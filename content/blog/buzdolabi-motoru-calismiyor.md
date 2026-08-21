@@ -4,6 +4,20 @@ description: "Lamba yanıyor ama motor kalkmıyorsa sorun elektrik, başlatma r�
 slug: "buzdolabi-motoru-calismiyor"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "İç lamba yanıyor mu bak; lamba da ölüyse konu elektrik tarafıdır."
+  - "Fişin prize tam oturduğunu kontrol et; prize başka bir cihaz takıp prizin canlı olduğunu doğrula."
+  - "Sigorta kutusunda atmış bir sigorta var mı bak."
+  - "Uzatma kablosu ya da çoklu priz varsa kaldır, dolabı doğrudan duvar prizine tak."
+  - "Termostat kadranının ya da dijital ayarın açık ve orta kademede olduğundan emin ol."
+  - "Dolabı duvardan birkaç santim öne çek, arka havalandırmayı rahatlat."
+  - "Cihazı yarım saat - bir saat izle ve sesi tarif etmeye hazırlan: tam sessizlik mi, uğultu-tık döngüsü mü, kaç dakikada bir?"
 faq:
   - q: "Buzdolabı motoru sürekli mi çalışmalı?"
     a: "Hayır. Motor hedef sıcaklığa ulaşınca durur, bölme ısınınca yeniden kalkar; gün içinde durup kalkması tamamen normaldir. O an sessiz olan bir dolap arızalı demek değildir. Motorun çalışmadığına hüküm vermeden önce cihazı yarım saat ile bir saat izlemek gerekir — bu sürede hiç kalkış olmuyorsa bakılmaya değer bir durum vardır."
@@ -22,6 +36,22 @@ Mutfakta bir şeyin eksik olduğunu fark ediyorsun: o alışıdık motor uğultu
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔇 **Önce şu ayrımı yap:** cihaz **tamamen mi sessiz** (lamba da yanmıyor), **lamba yanıyor ama motor mu kalkmıyor**, yoksa **tık sesiyle tekrarlayan kalkış denemeleri mi** var? Bu üç tablo üç ayrı kapıya çıkar ve servise söyleyeceğin ilk cümle budur.
+
+## Adım adım: motor kalkmıyorsa
+
+**1. Lambaya bak.** İç lamba yanıyor mu? Motor da lamba da ölüyse cihaza elektrik gelmiyordur ve sebep çoğu zaman cihazın dışındadır.
+
+**2. Prizi doğrula.** Fişin prize tam oturduğuna bak; prize şarj aleti gibi başka bir cihaz takıp prizin canlı olduğunu doğrula. Fiş ya da priz **erimiş, kararmış, yanık kokuyorsa** o prize tekrar takma.
+
+**3. Sigortayı kontrol et.** Sigorta kutusunda atmış bir sigorta var mı bak.
+
+**4. Uzatmayı kaldır.** Uzatma kablosu ya da çoklu priz kullanılıyorsa dolabı **doğrudan duvar prizine** tak — buzdolabı kendi prizinde çalışmalıdır.
+
+**5. Ayara bak.** Termostat kadranı "0" ya da kapalı konumdaysa motor hiç kalkmaz; temizlik sırasında kapatılıp unutulması klasiktir. Ayarı açık ve orta kademede tut.
+
+**6. Havalandırmayı aç.** Dolabın arkası aşırı sıcaksa ve havalandırması kapalıysa cihazı duvardan birkaç santim öne çek; aşırı ısınan bir motor da korumaya takılabilir.
+
+**7. İzle ve sesi tarif et.** Cihazı **yarım saat - bir saat** izle, kapıyı sık açma. Sonra sesi tarif etmeye hazırlan: tam sessizlik mi, uğultu + tık döngüsü mü, kaç dakikada bir tekrarlıyor?
 
 ## 1) Cihaz tamamen sessiz, lamba da yanmıyor: elektrik
 

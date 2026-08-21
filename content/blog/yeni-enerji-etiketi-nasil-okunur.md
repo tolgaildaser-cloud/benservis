@@ -4,6 +4,21 @@ description: "Eski A+++ cihazlar yeni etikette neden C-D görünüyor? A-G skala
 slug: "yeni-enerji-etiketi-nasil-okunur"
 date: "2026-08-20"
 category: "Genel"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: ["QR kod okuyabilen telefon"]
+steps:
+  - "Etiketin sol üstünden üretici ve model adını oku."
+  - "Etiketteki modelin, baktığın cihazın tip etiketindeki modelle aynı olduğunu doğrula."
+  - "Renkli A-G skalasında siyah okun hangi harfte durduğuna bak."
+  - "Ortadaki büyük rakamı oku: buzdolabında yıllık kWh, çamaşır ve bulaşık makinesinde 100 çevrim başına kWh."
+  - "Alt şeritteki piktogramlardan hacim, kapasite, su tüketimi, program süresi ve gürültü sınıfını al."
+  - "Telefon kamerasını sağ üstteki QR koda tut ve EPREL kaydını aç."
+  - "Açılan sayfadaki model numarasının cihazın model numarasıyla aynı olduğunu doğrula."
+  - "İki cihazı kıyaslarken harfe değil, ortadaki kWh değerine bak."
 faq:
   - q: "Eski A+++ ile yeni etiketteki harfler nasıl eşleşiyor?"
     a: "Birebir sabit bir eşleşme yok, çünkü yeni skala sadece harfleri değil ölçüm yöntemini de değiştirdi. Yine de kaba resim şu: eski A+++ bir cihaz yeni etikette çoğunlukla C-D bandına, eski A+ bir cihaz E-F bandına düşer. Cihaz kötüleşmedi; cetvel sıkılaştı. Bu yüzden iki cihazı harfleri eski-yeni karışık kıyaslamak yanıltır."
@@ -20,6 +35,24 @@ images:
 Mağazadasın, iki çamaşır makinesine bakıyorsun. Evdeki eski makinen A+++'tı; rafta gördüklerin C ve D. İlk tepki doğal: "Bunca yıl sonra cihazlar kötüleşti mi?" Hayır — **cetvel değişti**. Avrupa Birliği, enflasyona uğrayan A+/A++/A+++ sistemini emekliye ayırıp etiketi sade bir **A'dan G'ye** skalaya döndürdü; büyük beyaz eşya gruplarında bu geçiş **1 Mart 2021**'de yapıldı ve Türkiye'de satılan cihazlar da AB uyumu gereği aynı etiket düzenini kullanıyor. Bu yazı, yeni etiketi raf karşısında doğru okumak için.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: yeni enerji etiketini raf karşısında oku
+
+**1. Kimliğe bak.** Etiketin sol üstünde üretici ve model adı yazar. Okumaya buradan başla.
+
+**2. Etiket bu cihaza mı ait?** Teşhirdeki etiketin başka modele ait çıkması sanıldığından sık yaşanır. Etiketteki modeli cihazın tip etiketiyle karşılaştır.
+
+**3. Oku bul.** Renkli A-G skalasında siyah ok cihazın sınıfını gösterir. Harf hızlı bir ilk filtredir, karar değil.
+
+**4. Ortadaki rakamı oku.** Asıl bilgi buradadır: buzdolabında yıllık kWh, çamaşır ve bulaşık makinesinde 100 çevrim başına kWh. Yani 100 yıkamada bu kadar der.
+
+**5. Alt şeridi tara.** Piktogramlar ürün grubuna göre değişir: hacim, kapasite, çevrim başına su, program süresi ve gürültü sınıfı burada yazar.
+
+**6. QR kodu okut.** Sağ üstteki QR kod, cihazın EPREL kaydına açılır. Üreticinin resmi beyanı, etiketten daha ayrıntılı olarak orada durur.
+
+**7. Kaydı doğrula.** Açılan sayfadaki model numarasının, baktığın cihazın model numarasıyla aynı olduğunu teyit et.
+
+**8. Kıyası kWh üzerinden yap.** Sınıflar bant hâlindedir; bandın alt ucuyla üst ucu aynı harfi taşır. İki cihazı karşılaştırırken harfe değil ortadaki kWh rakamına bak.
 
 ## Neden değişti: A+++ enflasyonu
 

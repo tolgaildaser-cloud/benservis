@@ -4,6 +4,20 @@ description: "Kekin altı çiğ, üstü yanıksa sebep tepsi konumu, dönmeyen f
 slug: "firin-esit-pisirmiyor"
 date: "2026-08-20"
 category: "Fırın / Ocak"
+guide:
+  difficulty: "Kolay"
+  time: "~30 dakika"
+  totalTime: "PT30M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Dengesizliğin yönünü belirle. Sonuç hep aynı yönde mi (her seferinde altı çiğ, ya da hep aynı köşe yanık), yoksa tariften tarife mi değişiyor — bunu not al."
+  - "Orta rafta, tek tepsiyle dene. Üst rafa konan kekin üstü erken kızarır, altı geç pişer; aynı anda iki-üç tepsiyle çalışan fırında tepsiler birbirinin ısısını keser."
+  - "Fırın tabanındaki folyoyu ya da tepsiyi kaldır. Taban ısı yüzeyidir, raf değil; kapatıldığında alt ısının yolu tıkanır."
+  - "Ön ısıtma yaparak başla ve kapıyı sık açma. Her kapı açılışında sıcaklık düşer ve en çok alt-orta bölge etkilenir; bu düzeltmelerle aynı tarifi bir kez daha pişir."
+  - "Fanlı modu seç ve arkadan gelen uğultuyu dinle. Ses hiç yoksa, fan takılıp kalıyorsa ya da metalik sürtünme geliyorsa sorun fan tarafındadır. Fanın kendisine dokunmak, panelini sökmek yok — gözlem yeterli."
+  - "Kızarma testini gözle yap. Fırını boşalt, alt-üst (statik) konumu seç, orta sıcaklıkta çalıştır ve yalnızca cam kapaktan izle: üst kıpkızıl olduğu hâlde taban dakikalar sonra bile soğuk kalıyorsa alt taraf devreye girmiyordur. Çalışan fırının içine elini sokma."
+  - "Kapı kenarını ve sonucu not et. Kapı kenarında elle hissedilen sıcak hava kaçağı var mı bak; gözlemlerin (\"üst çalışıyor, alt devreye girmiyor\") servise verilecek en değerli cümledir."
 faq:
   - q: "Kekin altı neden çiğ kalıyor?"
     a: "En sık sebepler tepsinin çok üst rafa konması, fırının aynı anda birden fazla tepsiyle kalabalık çalıştırılması ve koyu-açık renkli kalıp farkıdır. Bunlar elendiği hâlde alt taraf ısrarla çiğ kalıyorsa alt rezistansın devreye girmediği düşünülür; bu belirtiyle fırın hâlâ ısındığı için sorun çoğu zaman geç fark edilir."
@@ -22,6 +36,22 @@ Kek tarifte yazan sürede fırından çıkıyor: üstü kararmış, kürdanı ba
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🎯 **Önce şu ayrımı yap:** dengesizlik **hep aynı yönde mi** (her seferinde altı çiğ, ya da hep aynı köşe yanık), yoksa **tariften tarife değişiyor mu**? Hep aynı yön, cihaz tarafını (rezistans, fan) düşündürür; değişken sonuçlar neredeyse her zaman raf konumu ve kullanım alışkanlığıdır.
+
+## Adım adım: dengesiz pişirmeyi ayıklama sırası
+
+**1. Dengesizliğin yönünü belirle.** Sonuç **hep aynı yönde mi** (her seferinde altı çiğ, ya da hep aynı köşe yanık), yoksa tariften tarife mi değişiyor — bunu not al.
+
+**2. Orta rafta, tek tepsiyle dene.** Üst rafa konan kekin üstü erken kızarır, altı geç pişer; aynı anda iki-üç tepsiyle çalışan fırında tepsiler birbirinin ısısını keser.
+
+**3. Fırın tabanındaki folyoyu ya da tepsiyi kaldır.** Taban ısı yüzeyidir, raf değil; kapatıldığında alt ısının yolu tıkanır.
+
+**4. Ön ısıtma yaparak başla ve kapıyı sık açma.** Her kapı açılışında sıcaklık düşer ve en çok alt-orta bölge etkilenir; bu düzeltmelerle aynı tarifi bir kez daha pişir.
+
+**5. Fanlı modu seç ve arkadan gelen uğultuyu dinle.** Ses hiç yoksa, fan takılıp kalıyorsa ya da metalik sürtünme geliyorsa sorun fan tarafındadır. Fanın kendisine dokunmak, panelini sökmek yok — gözlem yeterli.
+
+**6. Kızarma testini gözle yap.** Fırını boşalt, alt-üst (statik) konumu seç, orta sıcaklıkta çalıştır ve **yalnızca cam kapaktan** izle: üst kıpkızıl olduğu hâlde taban dakikalar sonra bile soğuk kalıyorsa alt taraf devreye girmiyordur. Çalışan fırının içine elini sokma.
+
+**7. Kapı kenarını ve sonucu not et.** Kapı kenarında elle hissedilen sıcak hava kaçağı var mı bak; gözlemlerin ("üst çalışıyor, alt devreye girmiyor") servise verilecek en değerli cümledir.
 
 ## 1) Tepsi konumu ve kalabalık fırın
 

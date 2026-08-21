@@ -4,6 +4,21 @@ description: "Samsung buzdolabı ekranında 5E, 6E, 22E, 84E gibi bir kod mu var
 slug: "samsung-buzdolabi-hata-kodlari"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~30 dakika"
+  totalTime: "PT30M"
+  cost: "Ücretsiz"
+  tools: ["Telefon kamerası", "Kuru fırça", "Kullanım kılavuzu"]
+steps:
+  - "Kodu fotoğrafla. Ekranda ne yazıyorsa olduğu gibi kaydet; servisle konuşurken model numarasıyla birlikte en değerli bilgin bu olacak."
+  - "Fişi çek ve 1-5 dakika bekle. Kart yeniden başlar ve geçici kodlar silinir; elektrik kesintisi sonrası bu durum Samsung'da özellikle yaygındır."
+  - "Fişi tekrar tak ve kodun geri gelip gelmediğine bak. Geri gelmeyen kod çoğunlukla anlık bir takılmaydı; geri gelen kod gerçek bir bildirimdir."
+  - "Ekranda OF OF varsa demo modunu kontrol et. Panel çalışıyor ama cihaz soğutmuyorsa büyük ihtimalle mağaza/demo modundasın; çıkış panelden tuş kombinasyonuyla yapılır, kılavuzundaki \"demo modu / cooling off\" bölümüne bak."
+  - "85E görüyorsan beslemeyi sadeleştir. Buzdolabını uzatma kablosundan değil doğrudan duvar prizinden besle ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak."
+  - "22E görüyorsan cihazı fişten çekip birkaç saat dinlendir. Fanı kilitleyen buz çözülürse kod kaybolur; kısa sürede geri geliyorsa buzu üreten asıl neden duruyordur."
+  - "Arka ızgarayı dışarıdan fırçayla temizle. Izgara tozla kaplıysa temizle ve cihazı duvardan birkaç santim öne çek; bu, kod beklemeden yapılabilecek ücretsiz bir iyileştirmedir."
+  - "Kod hâlâ duruyorsa deneme yapmayı bırak. Kodu ve model numarasını birlikte söyleyerek servisle konuş; panellerin ve iç kapakların arkası servise aittir."
 faq:
   - q: "Samsung buzdolabında hata kodunu nasıl resetlerim?"
     a: "En güvenli yöntem cihazın fişini çekip yaklaşık 1-5 dakika bekledikten sonra tekrar takmaktır; kart yeniden başlar ve geçici kodlar silinir. Bazı modellerde panel üzerindeki iki tuşa birlikte basılı tutarak da reset yapılır, ancak tuş kombinasyonu modele göre değiştiği için kılavuzuna bakmalısın. Reset sonrası kod geri geliyorsa arıza gerçektir ve servise anlatılmalıdır."
@@ -22,6 +37,24 @@ Samsung buzdolapları panel konusunda konuşkandır: bir sensör veri göndereme
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Samsung'da kod tablosu model ailesine göre değişir; aynı kod iki farklı seride farklı anlama gelebilir. Aşağıdakiler yaygın serilerde geçerli, birden çok kaynakla doğrulanmış karşılıklardır. Kesin tablo cihazının kullanım kılavuzundadır.
+
+## Adım adım: kod görünce evde denenecekler
+
+**1. Kodu fotoğrafla.** Ekranda ne yazıyorsa olduğu gibi kaydet; servisle konuşurken model numarasıyla birlikte en değerli bilgin bu olacak.
+
+**2. Fişi çek ve 1-5 dakika bekle.** Kart yeniden başlar ve geçici kodlar silinir; elektrik kesintisi sonrası bu durum Samsung'da özellikle yaygındır.
+
+**3. Fişi tekrar tak ve kodun geri gelip gelmediğine bak.** Geri gelmeyen kod çoğunlukla anlık bir takılmaydı; geri gelen kod gerçek bir bildirimdir.
+
+**4. Ekranda OF OF varsa demo modunu kontrol et.** Panel çalışıyor ama cihaz soğutmuyorsa büyük ihtimalle mağaza/demo modundasın; çıkış panelden tuş kombinasyonuyla yapılır, kılavuzundaki "demo modu / cooling off" bölümüne bak.
+
+**5. 85E görüyorsan beslemeyi sadeleştir.** Buzdolabını uzatma kablosundan değil doğrudan duvar prizinden besle ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak.
+
+**6. 22E görüyorsan cihazı fişten çekip birkaç saat dinlendir.** Fanı kilitleyen buz çözülürse kod kaybolur; kısa sürede geri geliyorsa buzu üreten asıl neden duruyordur.
+
+**7. Arka ızgarayı dışarıdan fırçayla temizle.** Izgara tozla kaplıysa temizle ve cihazı duvardan birkaç santim öne çek; bu, kod beklemeden yapılabilecek ücretsiz bir iyileştirmedir.
+
+**8. Kod hâlâ duruyorsa deneme yapmayı bırak.** Kodu ve model numarasını birlikte söyleyerek servisle konuş; panellerin ve iç kapakların arkası servise aittir.
 
 ## Kod görünce ilk hamle: not al, resetle
 

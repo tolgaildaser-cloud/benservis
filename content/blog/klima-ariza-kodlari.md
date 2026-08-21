@@ -4,6 +4,20 @@ description: "Klima ekranında E2, E5, 88, U4 gibi bir kod mu var? Split klimala
 slug: "klima-ariza-kodlari"
 date: "2026-08-20"
 category: "Klima"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Telefon kamerası", "Ilık su", "Yumuşak fırça"]
+steps:
+  - "Kodu aynen not al. Harfle rakam karışabilir; iç ünitenin göstergesini fotoğraflamak en garantisidir."
+  - "Göstergesiz modelde ışık düzenini videoya al. Ekranı olmayan modellerde ışıkların yanıp sönme düzeni kod yerine geçer; sonra kılavuzun arıza tablosuyla karşılaştır."
+  - "Klimayı kumandadan kapat. Kod okunurken cihazı çalışır durumda bırakma."
+  - "Şalterinden ya da fişinden enerjisini kes ve birkaç dakika bekle. Elektrik kesintisi sonrası cihazın kendini koruma modunda bekletmesi normaldir; süre dolunca kendiliğinden çalışır."
+  - "Enerjiyi geri ver ve klimayı yeniden aç. Elektrik dalgalanması sonrası görülen geçici kodlar bu resetle silinir; şalterin ve kumandanın doğru konumda olduğunu da doğrula."
+  - "Filtreleri çıkar ve temizle. Kirli filtre hava akışını boğar, sensörler gerçek dışı değer okur ve cihaz korumaya geçer; ılık suyla durula, gölgede tamamen kurut ve yerine tak."
+  - "Kod geri geliyorsa cihazı ısrarla çalıştırma. Kodu ve model numarasını not edip servisle konuş; gaz, voltaj ve haberleşme kodları ile dış ünite tarafı tamamen servis işidir."
 faq:
   - q: "Klima hata kodu verdi ama çalışıyor, kullanmaya devam edebilir miyim?"
     a: "Koda göre değişir. Sensör kaynaklı kodlarda cihaz genelde çalışmaya devam eder ama sıcaklığı doğru okuyamadığı için verimsiz çalışır. Gaz kaçağı, yüksek sıcaklık ya da kompresör koruması gibi kodlarda ısrarla çalıştırmak arızayı büyütebilir; bu kodlarda cihazı kapatıp servisle konuşmak doğru olur."
@@ -22,6 +36,22 @@ Ağustos ortası, termometre 35'i gösteriyor ve klima tam sezonun ortasında ek
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Klimada kod tablosu markaya VE model ailesine göre değişir; aynı markanın duvar tipi, salon tipi ve inverter serileri bile farklı tablolar kullanır. Aşağıdaki karşılıklar en yaygın serilere aittir; kesin tablo kullanım kılavuzundadır.
+
+## Adım adım: kod görünce evde denenecekler
+
+**1. Kodu aynen not al.** Harfle rakam karışabilir; iç ünitenin göstergesini fotoğraflamak en garantisidir.
+
+**2. Göstergesiz modelde ışık düzenini videoya al.** Ekranı olmayan modellerde ışıkların yanıp sönme düzeni kod yerine geçer; sonra kılavuzun arıza tablosuyla karşılaştır.
+
+**3. Klimayı kumandadan kapat.** Kod okunurken cihazı çalışır durumda bırakma.
+
+**4. Şalterinden ya da fişinden enerjisini kes ve birkaç dakika bekle.** Elektrik kesintisi sonrası cihazın kendini koruma modunda bekletmesi normaldir; süre dolunca kendiliğinden çalışır.
+
+**5. Enerjiyi geri ver ve klimayı yeniden aç.** Elektrik dalgalanması sonrası görülen geçici kodlar bu resetle silinir; şalterin ve kumandanın doğru konumda olduğunu da doğrula.
+
+**6. Filtreleri çıkar ve temizle.** Kirli filtre hava akışını boğar, sensörler gerçek dışı değer okur ve cihaz korumaya geçer; ılık suyla durula, gölgede tamamen kurut ve yerine tak.
+
+**7. Kod geri geliyorsa cihazı ısrarla çalıştırma.** Kodu ve model numarasını not edip servisle konuş; gaz, voltaj ve haberleşme kodları ile dış ünite tarafı tamamen servis işidir.
 
 ## Split klimada kod nasıl okunur?
 
