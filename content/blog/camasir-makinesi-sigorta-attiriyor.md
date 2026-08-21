@@ -13,6 +13,8 @@ faq:
     a: "Zamanlama servise verilecek en değerli bilgidir. Su ısıtma adımında atıyorsa şüphe ısıtma tarafına, sıkma başlarken atıyorsa motor tarafına, makine daha açılırken atıyorsa elektrik girişine ve karta kayar. Sen bu gözlemi not etmekle yetin; hangi parça olduğunu doğrulamak ölçüm aleti ve söküm gerektirdiği için servis işidir."
   - q: "Evde kaçak akım rölesi olup olmadığını nereden anlarım?"
     a: "Sigorta kutusuna bak: üzerinde test yazan ya da T harfli bir düğme bulunan, diğerlerinden biraz daha geniş anahtar genellikle kaçak akım rölesidir. Test düğmesine basıldığında rölenin düşmesi gerekir; düşmüyorsa röle görevini yapmıyor olabilir ve bunu bir elektrikçiye kontrol ettirmelisin. Islak zeminli mekânlarda çalışan her cihaz için bu röle ciddi bir güvenlik katmanıdır."
+images:
+  coverAlt: "Ev koridorundaki elektrik panosunda sıralı duran sigorta şalterleri"
 ---
 
 Makineyi çalıştırdın, birkaç dakika sonra ev karanlığa gömüldü. Sigortayı kaldırdın, yeniden denedin — yine attı, üstelik yine aynı yerde. Bu yazı, bu blogdaki diğer yazılardan bilerek farklı: burada "şunu temizle, bunu ayarla" listesi yok. Çünkü tekrar tekrar sigorta attıran bir çamaşır makinesi, kullanıcının içini kurcalayacağı bir cihaz değil, **elektriğin sana verdiği bir uyarıdır.** Bu yazının amacı, o uyarıyı doğru okumanı ve servise en işe yarar bilgiyle gitmeni sağlamak.

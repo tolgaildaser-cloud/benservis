@@ -13,6 +13,8 @@ faq:
     a: "Zamanlaması en iyi ipucudur. Su alma sırasında gelen sızıntı musluk ve hortum bağlantısını, yıkama sırasında öne gelen su çekmece taşmasını, tahliye sırasında gelen sızıntı ise filtre kapağını ya da tahliye hortumunu işaret eder. Makinenin altını kurulayıp altına kuru karton sermek, bir sonraki yıkamada ıslak noktanın yerini net gösterir."
   - q: "Sızıntı az, tek tük damla — kullanmaya devam edebilir miyim?"
     a: "Etmemelisin. Az su bugün az görünür ama elektrikli bir cihazın içinde ya da altında biriken her su hem elektrik güvenliği riski hem de zamanla paslanma ve komşu kata sızma riskidir. Kaynağı basit kontrollerle bulamıyorsan makineyi kullanmayı bırakıp servise göstermek, hem cihaz hem ev için en ucuz yoldur."
+images:
+  coverAlt: "Çamaşır makinesinin önündeki fayans zeminde birikmiş su ve kenarına serilmiş havlu"
 ---
 
 Yıkama bitti, makinenin önüne geldin ve zeminde su birikintisi var. Ya da program daha sürerken altından ince bir su izi uzanıyor. İlk his çoğu zaman panik olur — ama sızıntıların azımsanmayacak bir kısmı arıza bile değildir: taşan deterjan, gevşemiş bir hortum bağlantısı ya da tam kapanmamış bir filtre kapağı. Bu yazıda suyun nereden gelebileceğini önden arkaya, basitten teknike doğru izliyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

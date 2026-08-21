@@ -13,6 +13,8 @@ faq:
     a: "Makineyi kapat, fişini çekip yaklaşık beş dakika bekle ve tekrar takıp programı yeniden başlat. Reset kodu siler ama sebebi ortadan kaldırmaz; filtre hâlâ tıkalıysa ya da kapı kilitlenemiyorsa kod geri gelir. Reset, tek seferlik elektronik takılmaları elemek için bir test adımıdır."
   - q: "Ekrandaki kod bu yazıdaki listede yok, ne yapmalıyım?"
     a: "Vestel uzun yıllardır çok sayıda seri üretiyor ve kod tablosu nesilden nesile değişiyor; aynı numara farklı serilerde farklı anlama gelebiliyor. Bu yüzden doğrulayamadığımız kodlara uydurma anlam vermiyoruz. Kodu ve model bilgini Benservis'e yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren."
+images:
+  coverAlt: "Çamaşır makinesinin kumanda paneli ve deterjan çekmecesi alt açıdan"
 ---
 
 Makine tam sıkmaya geçecekken durdu, ekranda **E03** yazıyor ve kazanın içi su dolu. Ya da daha programın başında **E01** verip hiç başlamadı. Vestel çamaşır makineleri arızayı E önekli kodlarla bildirir ve iyi haber şu: en sık çıkan üç kodun — **E01, E02, E03** — üçü de önce evde, hiçbir şey sökmeden yapılabilecek kontrollerle karşılanır. Bu rehberde her kodun anlamını, kendin bakabileceğin yerleri ve işin servise geçtiği çizgiyi anlatıyoruz.

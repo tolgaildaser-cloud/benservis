@@ -13,6 +13,8 @@ faq:
     a: "Yumuşatıcı gözü sifon mantığıyla çalışır ve bu sifon, yoğunlaşmış yumuşatıcı artığıyla kolay tıkanır. Tıkanınca makine gözü boşaltamaz; su ve yumuşatıcı gözde kalır, sonraki dolumda taşar. Çözümü basittir: çekmeceyi çıkarıp sifon başlığını ayırarak ılık suyla yıkamak. MAX çizgisinin üzerinde doldurmamak da taşmayı önler."
   - q: "Çekmece gözlerine kapsül atılır mı?"
     a: "Hayır. Kapsül her zaman doğrudan tamburun içine, çamaşırın altına konur; çekmece gözünde düzgün çözünmez ve kanalı tıkayabilir. Çekmece yalnız toz, sıvı ve yumuşatıcı içindir. Kapsül kullanırken ön yıkama programı seçilmez, çünkü kapsül tek dozdur ve ilk suda çözülür."
+images:
+  coverAlt: "Çamaşır makinesi deterjan çekmecesinin üç bölmesinin yukarıdan görünümü"
 ---
 
 Yeni makine geldi ya da yıllardır kullandığın makinede çamaşırlar son zamanlarda kötü kokuyor; çekmeceyi açtın ve karşında üç göz: birinde **I**, birinde **II**, birinde **çiçek** işareti. Deterjanı yıllardır hangi göze koyduğunu düşünüyorsun ve emin olamıyorsun. Bu yazı o çekmeceyi bir kere ve tamamen netleştirmek için: hangi göz ne için, sıvı deterjan nereye, yumuşatıcı neden taşıyor.

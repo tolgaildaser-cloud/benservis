@@ -13,6 +13,8 @@ faq:
     a: "Makinenin varsa kendi tambur temizleme programını, yoksa en yüksek sıcaklıktaki uzun programı boş makinede çalıştır. Üreticiler bunun için makine temizleme ürünleri ya da programa uygun ev çözümleri önerir; hangi ürüne izin verdiğini kendi kullanım kılavuzundan doğrula. Önemli olan tek seferlik mucize değil, bunu düzenli yapmaktır — ayda bir boş sıcak yıkama, birikintiyi taşlaşmadan söker."
   - q: "Her şeyi temizledim, leke hâlâ geliyor — sırada ne var?"
     a: "Conta temiz, tambur temiz, filtrede cisim yok ama leke sürüyorsa artık gözle göremediğin bir bölgede kalıntı ya da korozyon olabilir: tamburun arkası, ısıtma bölgesi ya da kazan ile tambur arasında sıkışmış bir cisim. Buraların kontrolü söküm gerektirdiği için servis işidir. Lekenin rengini ve hangi programlarda çıktığını not edip servise aktarman teşhisi hızlandırır."
+images:
+  coverAlt: "Çamaşır makinesinin tamburundan sarkan, üzerinde soluk gri lekeler bulunan beyaz havlu"
 ---
 
 Makineden çıkan gömleğin üzerinde siyah-gri, sanki sürülmüş gibi bir iz var. Bir başka yıkamada beyaz çarşafta turuncu-kahverengi bir leke. Çamaşırlar makineye temiz denebilecek hâlde girip **lekeli çıkıyorsa** durum "temiz yıkamıyor"dan farklıdır: makine kiri çıkaramamakla kalmıyor, **kendisi kir veriyor**. İyi haber şu ki bu lekelerin kaynakları sayılıdır, çoğu gözle bulunur ve önemli kısmı söküm gerektirmeden temizlenir. Bu yazıda leke tipinden kaynağa giden yolu izliyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

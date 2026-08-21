@@ -13,6 +13,8 @@ faq:
     a: "Evet — ve fark küçümsenecek gibi değildir. Hav filtresi ya da kondenser tıkandığında hava dolaşımı zayıflar; makine aynı çamaşırı kurutmak için çok daha uzun çalışır, program uzar ve enerji tüketimi artar. Üreticiler hav filtresinin her kurutmadan sonra temizlenmesini önerir; bu iki dakikalık alışkanlık en ucuz tasarruf hamlesidir."
   - q: "Kurutma maliyetini düşürmenin en etkili yolu ne?"
     a: "Üç hamle: çamaşırı makineden yüksek devirde iyice sıkılmış çıkarmak (kurutucunun işi suyu uçurmaktır, ne kadar az su o kadar az enerji), her kurutmadan sonra hav filtresini temizlemek ve makineyi tam yükle çalıştırmak. Sensörlü kuruluk programları da gereğinden uzun çalışmayı önler."
+images:
+  coverAlt: "Bir evin çamaşır köşesinde yan yana duran kurutma makinesi ve çamaşır makinesi"
 ---
 
 Kurutma makinesi eve girdiğinde konfor tartışılmaz — balkonda kuruma bekleyen çamaşır devri kapanır. Ardından ilk fatura gelir ve ikinci tartışma başlar: **"Bu makine ne yakıyor böyle?"** Cevap büyük ölçüde makinenin teknolojisinde saklı: iki kurutma makinesi aynı işi yaparken biri diğerinin **yaklaşık iki katı** elektrik harcayabilir.

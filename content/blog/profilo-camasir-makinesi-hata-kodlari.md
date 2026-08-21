@@ -13,6 +13,8 @@ faq:
     a: "Genelde hayır. F21 motor sistemi arızasıdır; en yaygın sebebi motor kömürlerinin aşınmasıdır ve makine dönmez ya da düzensiz döner. Evde yapılabilecek tek şey fişi çekip bir dakika sonra reset denemektir; kod geri geliyorsa motor bölümüne müdahale servise bırakılmalıdır."
   - q: "Profilo E23 hatasında ilk ne yapmalı?"
     a: "E23, makinenin taban tarafına su indiğini ve sızıntı güvenliğinin devreye girdiğini gösterir. İlk iki hamle fişi çekmek ve musluğu kapatmaktır; ardından makinenin çevresinde görünür ıslaklık olup olmadığına bakılır. Sızıntının kaynağını (conta, hortum, pompa) bulmak servis işidir."
+images:
+  coverAlt: "Dolap nişine yerleştirilmiş beyaz çamaşır makinesi ve üstündeki rafta katlı havlular"
 ---
 
 Yıllardır sorunsuz çalışan Profilo makinen bu sabah programın ortasında durdu ve ekranda daha önce hiç görmediğin bir şey var: **E18**. Türkiye mutfaklarının en yerleşik markalarından Profilo, bugün Bosch ve Siemens ile aynı çatının (BSH) altında üretiliyor ve arızayı onlarla **aynı E/F kodlarıyla** bildiriyor. Bu, senin için iyi haber: kodların anlamı oturmuş, belgelenmiş ve büyük kısmı önce evde kontrol edilebilir cinsten. Bu rehberde Profilo'da en sık çıkan kodları, kendin bakabileceğin noktaları ve işin servise geçtiği çizgiyi anlatıyoruz.
