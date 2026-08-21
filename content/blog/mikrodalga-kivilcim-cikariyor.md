@@ -4,6 +4,21 @@ description: "Mikrodalga içinde kıvılcım görürsen önce cihazı durdur. Me
 slug: "mikrodalga-kivilcim-cikariyor"
 date: "2026-08-20"
 category: "Mikrodalga"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Nemli bez", "Kuru bez"]
+steps:
+  - "Cihazı hemen durdur ve fişini çek."
+  - "Yanık kokusu ya da iç duvarda kararan-eriyen bir nokta varsa cihazı o hâliyle tekrar çalıştırma."
+  - "Kabı çıkar: metal, alüminyum folyo, metal sap ya da yaldızlı kenar var mıydı kontrol et."
+  - "Fişi çekiliyken iç bölmeyi ılık sabunlu suyla nemlendirilmiş bezle sil; aşındırıcı tel ve sert kimyasal kullanma."
+  - "Kapak contasını ve kapak içini de sil, kuru bezle bitir."
+  - "Döner tabla taşıyıcısının yuvasına düzgün oturduğuna bak."
+  - "Mika plakaya yerinden çıkarmadan gözle bak; kararmış, kabarmış ya da delinmiş nokta var mı?"
+  - "Plaka hasarlıysa cihazı kullanma ve servisle konuş; iç bölmenin ötesini asla açma."
 faq:
   - q: "Kıvılcım gördüğümde ne yapmalıyım?"
     a: "Cihazı hemen durdur ve fişini çek. Kıvılcım çakan bir mikrodalgayı 'az kaldı, bitsin' diye çalıştırmaya devam etmek, iç duvarın ve dalga üreten parçanın hasar görmesine yol açabilir. Durdurduktan sonra kabı ve iç yüzeyi kontrol et; sebep kap ise sorun oracıkta biter, değilse temizlik ve mika plaka kontrolüne geç."
@@ -22,6 +37,24 @@ Süt ısıtıyorsun, birden içeriden çıt çıt sesler ve mavi-beyaz kıvılc�
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Şu durumda derhal durdur ve fişi çek:** içeride kıvılcım ya da alev görüyorsan, çıtırtıyla birlikte yanık kokusu geliyorsa ya da iç duvarda kararan/eriyen bir nokta fark ettiysen cihazı durdur, fişini çek ve o hâliyle tekrar çalıştırma. Kıvılcım çakan mikrodalgayı çalıştırmaya devam etmek, iç bölme duvarını deler ve dalga üreten parçayı (magnetron) riske atar — küçük bir temizlik sorununu büyük bir arızaya çevirir.
+
+## Adım adım: kıvılcım gördüğünde
+
+**1. Durdur.** İlk refleks "acaba geçer mi?" diye izlemek olur; doğru refleks tek kelime: **durdur.** Cihazı durdur ve fişini çek.
+
+**2. Çalıştırmayı bırak.** Yanık kokusu geliyorsa ya da iç duvarda kararan-eriyen bir nokta fark ettiysen cihazı o hâliyle **tekrar çalıştırma** — kıvılcım çakan mikrodalgayı sürdürmek iç bölme duvarını deler ve magnetronu riske atar.
+
+**3. Kabı sorgula.** Kabı çıkar ve içeride ne olduğuna bak: çatal-kaşık, alüminyum folyo, metal saplı kap ya da **kenarı altın/gümüş yaldızlı porselen** var mıydı? Yaldız incecik metaldir ve tek başına kıvılcım çıkarır.
+
+**4. İç bölmeyi sil.** Fişi çekili cihazın iç bölmesini ılık sabunlu suyla nemlendirilmiş bezle iyice sil. Aşındırıcı tel ve sert kimyasal kullanma — kaplamayı çizmek yeni kıvılcım noktaları yaratır.
+
+**5. Contayı ve kapağı unutma.** Kapak contası ve kapak içi de dahil temizle, kuru bezle bitir.
+
+**6. Taşıyıcıya bak.** Döner tablanın altındaki metal halkalı taşıyıcı yuvasına düzgün oturmuş mu? Eğri duran taşıyıcı duvara yaklaşıp çıtırtı yapabilir.
+
+**7. Mika plakayı gözle kontrol et.** İç bölmenin yan duvarındaki ya da tavanındaki karton görünümlü gri-bej kapağa **yerinden çıkarmadan** bak: kararmış, kabarmış ya da delinmiş nokta var mı? Yüzey sağlam ve sadece yağlıysa nemli bezle nazikçe sil, tamamen kurumasını bekle.
+
+**8. Sınırı bil.** Plaka kararmış ya da delinmişse temizlik artık çözüm değildir; cihazı kullanmayı bırak ve servisle konuş. Dış kapak vidalarının ötesi — kondansatör, trafo, magnetron — **fiş çekildikten sonra bile** tehlikelidir ve yalnızca servisin alanıdır.
 
 ## 1) İçeride metal var mı? — en masum ve en sık sebep
 

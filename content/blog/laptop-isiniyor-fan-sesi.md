@@ -4,6 +4,21 @@ description: "Laptop ısınıyor, fan sesi kesilmiyorsa sebep çoğu zaman tıka
 slug: "laptop-isiniyor-fan-sesi"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru yumuşak fırça"]
+steps:
+  - "Cihazı sert ve düz bir zemine al; yatak, koltuk ve kucak kullanımını kısa tut."
+  - "Mümkünse arkasını hafif yükselt ya da altı boş bir soğutucu ped kullan."
+  - "Sıcak hava çıkışının önündeki duvar, kitap ya da kılıf gibi engelleri kaldır."
+  - "Cihaz kapalıyken havalandırma ızgaralarını dışarıdan kuru yumuşak bir fırçayla temizle; kapağı açma, basınçlı hava basma."
+  - "Görev Yöneticisi'ni aç ve İşlemci sütununa göre büyükten küçüğe sırala."
+  - "Sürekli yüksek yüzdeyle oturan gereksiz programı sonlandır ve başlangıç uygulamalarından çıkar."
+  - "Tanımadığın bir işlem sürekli tepedeyse adını not et ve tam bir güvenlik taraması çalıştır."
+  - "Sesin türünü not et: vınlama mı, takırtı mı, yoksa hiç ses yok mu?"
 faq:
   - q: "Laptop fanının ses yapması normal mi?"
     a: "Yük altında evet. Oyun, video işleme ya da onlarca sekme açıkken fanın hızlanması cihazın kendini koruması demektir. Anormal olan, cihaz boştayken fanın sürekli yüksek devirde kalması ya da sesin vınlamadan çıkıp takırtıya dönmesidir. Takırtı, fanın fiziksel bir sorununa işaret eder ve servislik bir bulgudur."
@@ -22,6 +37,24 @@ Toplantı ortasında laptopun fanı uçağa kalkış izni verilmiş gibi hızlan
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🌡️ **Önce şu ayrımı yap:** fan **yük altında mı** hızlanıyor (oyun, video, çok sekme), yoksa **cihaz boştayken de mi** susmuyor? Yük altında hızlanmak arıza değil, cihazın görevini yapmasıdır. Boşta susmayan fan ise ya tıkalı bir hava yolunu ya da gizli çalışan bir programı işaret eder — ikisine de kendin bakabilirsin.
+
+## Adım adım: ısınmayı ve fan sesini azalt
+
+**1. Sert zemine al.** Yatak, koltuk, halı ve kucak alttaki hava kanallarını kapatır. Cihazı sert ve düz bir zemine al; yumuşak zemin kullanımını kısa tut.
+
+**2. Altını boşta tut.** Mümkünse cihazın arkasını hafif yükselt ya da altı boş bir soğutucu ped kullan.
+
+**3. Çıkışın önünü aç.** Sıcak hava çıkışının önünde duvar, kitap, kılıf gibi bir engel olmasın.
+
+**4. Izgaraları dışarıdan temizle.** Cihaz kapalıyken havalandırma ızgaralarındaki toz keçesini **dışarıdan**, kuru yumuşak bir fırçayla al. Kapak açılmaz; basınçlı sprey ya da kompresörle içeri hava basma.
+
+**5. Görev Yöneticisi'ni aç.** **Ctrl+Shift+Esc** ile aç, "İşlemler" sekmesinde **İşlemci (CPU)** sütun başlığına tıklayarak büyükten küçüğe sırala ve birkaç dakika izle.
+
+**6. Yoranı kapat.** Sürekli yüksek yüzdeyle oturan ve şu an ihtiyacın olmayan programı sağ tıklayıp sonlandır; kalıcı çözüm için "Başlangıç uygulamaları" sekmesinden otomatik açılmasını kapat.
+
+**7. Tanımadığını tara.** Tanımadığın bir işlem sürekli tepedeyse adını not et ve cihazda tam bir güvenlik taraması çalıştır.
+
+**8. Sesi sınıflandır.** Sessiz bir ortamda dinle: **vınlama** ısı kaynaklıdır, **takırtı-sürtme** mekanik bir bulgudur, **hiç ses yokken cihazın çok sıcak olması** ise daha acil bir durumdur. Son ikisi servis konusudur.
 
 ## 1) Fan neden hızlanır — 30 saniyelik teknik
 

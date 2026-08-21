@@ -4,6 +4,21 @@ description: "Kapalı görünen TV, uydu alıcısı, konsol ve adaptörler prizd
 slug: "cihazlar-bekleme-modunda-elektrik-harcar-mi"
 date: "2026-08-20"
 category: "Genel"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Akşam evde bir tur at; ışığı, saati ya da ekranı sönmeyen cihazları say."
+  - "Listeyi cihaz yaşına göre sırala; eski uydu alıcıları ve TV kutuları başı çeker."
+  - "Elinde enerji ölçer varsa şüpheli cihazı prizle arasına tak ve bekleme watt'ını oku."
+  - "Okuduğun watt değerini 9 ile çarpıp cihazın yıllık kWh'ini bul."
+  - "TV'de hızlı başlatma, konsolda ağdan uyandırma gibi ayarları kullanmıyorsan kapat."
+  - "TV ünitesindeki cihazları anahtarlı bir çoklu prizde topla ve gece tek hareketle kes."
+  - "Seyrek kullandığın cihazların fişini prizde bırakma."
+  - "Boşta belirgin ısınan eski adaptörü kullanmayı bırak."
 faq:
   - q: "Bekleme modundaki cihaz gerçekten elektrik harcar mı?"
     a: "Evet. Kumandayla kapatılan TV, uydu alıcısı, oyun konsolu gibi cihazlar tamamen kapanmaz; kumanda sinyalini dinlemek, saati tutmak ya da ağa bağlı kalmak için düşük güçte çalışmaya devam eder. Bu sürekli küçük tüketime 'vampir yük' denir. Tek tek küçük görünse de günün 24 saati sürdüğü için yıl sonunda kayda değer bir toplama ulaşır."
@@ -22,6 +37,24 @@ Akşam televizyonu kumandayla kapattın, konsol uyku modunda, uydu alıcısını
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚡ **Kısa özet:** Kumandayla kapatılan cihaz kapanmaz, **beklemeye geçer**. Kaba kural: **sürekli prizdeki her 1 W ≈ yılda ~9 kWh.** Eski uydu kutuları ve ağı açık konsollar en belirgin kalemlerdir; modern cihazların derin beklemesi çoğunlukla 1 W'ın altındadır. Çözüm: anahtarlı çoklu priz ya da akıllı priz. Maliyet = **toplam kWh × faturandaki birim fiyat.**
+
+## Adım adım: evdeki bekleme yükünü bul ve kes
+
+**1. Bir tur at ve say.** Akşam evde dolaş; ışığı, saati ya da ekranı sönmeyen kaç cihaz var, tek tek say. Vampir yükü histen çıkarmanın ilk adımı budur.
+
+**2. Şüphelileri sırala.** Listeyi cihaz yaşına göre diz. Eski uydu alıcıları ve TV kutuları klasik şampiyondur; modem gibi bilinçli açık bırakılan cihazları listeden ayır.
+
+**3. Ölçebiliyorsan ölç.** Priz arasına takılan basit bir enerji ölçerin varsa şüpheli cihazı tak ve bekleme watt'ını oku. Yoksa kılavuzdaki bekleme değerini kullan.
+
+**4. Yıllığa çevir.** Kaba kural: sürekli prizdeki her 1 W yılda yaklaşık 9 kWh demektir. Okuduğun watt'ı 9 ile çarp, cihazın yıllık kWh'ini gör.
+
+**5. Ayarları kıs.** TV'de hızlı başlatma, konsolda ağdan uyandırma gibi ayarları kullanmıyorsan kapat. Cihaz aynı kalır, bekleme tüketimi düşer.
+
+**6. Tek anahtarda topla.** TV ünitesindeki ekosistemi anahtarlı bir çoklu prizde topla ve gece tek hareketle kes. Çoklu prizleri zincirleme birbirine takma.
+
+**7. Seyrek kullanılanı çek.** Misafir odasındaki TV'nin ya da ayda bir kullanılan cihazın beklemede durması için sebep yok; fişini prizde bırakma.
+
+**8. Isınan adaptörü ayır.** Boşta belirgin ısınan eski ya da kalitesiz adaptör hem verimsizdir hem güvenlik riskidir; onu kullanmayı bırak.
 
 ## Vampir yük nedir, neden var?
 

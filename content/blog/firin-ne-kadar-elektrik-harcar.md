@@ -4,6 +4,21 @@ description: "Ankastre fırın saatte kaç kWh harcar? Sıcaklık ve sürenin et
 slug: "firin-ne-kadar-elektrik-harcar"
 date: "2026-08-20"
 category: "Fırın / Ocak"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Kılavuzdan fırınının mod sembollerini ve fanlı pişirme kademesini bir kez öğren."
+  - "Tarifi fanlı moda çevirirken sıcaklığı 15-20°C düşür."
+  - "Ön ısıtmayı gerçekten gereken tariflerle sınırla; fırın sinyal verince yemeği içeri al."
+  - "Sıcaklığı tarifin dediğinden yukarı çıkarma."
+  - "Pişirmeyi camdan ve fırın lambasıyla izle, kapağı gereksiz açma."
+  - "Pişirme sırasında kapak kenarından sıcak hava sızıyor mu, conta ezik ya da kopuk mu gözle bak."
+  - "Son birkaç dakikayı fırını kapatıp artık ısıyla tamamla."
+  - "Küçük porsiyonlarda koca fırın hacmini ısıtmak yerine daha küçük hacimli bir cihaz kullan."
 faq:
   - q: "Elektrikli fırın saatte kaç kWh harcar?"
     a: "Çoğu ankastre fırının rezistans gücü 2.000-3.000 W aralığındadır; ancak fırın sürekli tam güç çekmez. 180°C civarındaki standart pişirmede saatlik tüketim tipik olarak ~1,8-2,2 kWh bandındadır; ızgara ya da alt-üst rezistansın birlikte çalıştığı yoğun modlarda ~2,5-3 kWh'e çıkar. Termostat hedef sıcaklığa ulaşınca rezistansı aralıklı çalıştırır, bu yüzden ortalama tüketim etiketteki güçten düşüktür."
@@ -22,6 +37,24 @@ Pazar sabahı börek fırında, fırının lambası yanıyor ve akıllardaki sor
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚡ **Kısa özet:** Ankastre fırın 180°C standart pişirmede tipik **~1,8-2,2 kWh/saat**, ızgara ve yoğun modlarda **~2,5-3 kWh/saat** harcar. Fırını 180°C'ye getirmek tek başına **~0,8-1 kWh** civarıdır. Fanlı mod aynı işi **15-20°C düşük sıcaklıkla** ve daha kısa sürede yapar. Maliyet = **kWh × faturandaki birim fiyat.**
+
+## Adım adım: fırın tüketimini düşür
+
+**1. Modları bir kez öğren.** Fan + rezistans kombinasyonları modelden modele değişir. Kılavuzdan fırınının mod sembollerini ve fanlı pişirme kademesini bir kez oku.
+
+**2. Fanlı modda sıcaklığı düşür.** Fan, sıcak havayı içeride eşit dağıtır; statik tarifteki sıcaklıktan 15-20°C daha düşük ayar aynı sonucu verir. Aynı sıcaklıkta fan yemeği kurutur.
+
+**3. Ön ısıtmayı kısa tut.** Fırın hedef sıcaklığa gelince sinyal verir; on dakika daha garanti olsun diye bekletmek yalnız sayaç döndürür. Fanlı modda çoğu tarifte kısa ön ısıtma yeter.
+
+**4. Sıcaklığı yükseltme.** 220°C, yemeği 180°C'den daha iyi pişirmez; çoğu zaman dışını yakar, tüketimi artırır. Tarifin dediği derecede kal.
+
+**5. Kapağı açma.** Her açılışta iç sıcaklık düşer ve rezistans açığı kapatmak için yeniden tam güce geçer. Kontrolü camdan ve fırın lambasıyla yap.
+
+**6. Contaya gözle bak.** Pişirme sırasında kapak kenarından belirgin sıcak hava sızıyor mu, conta gözle görülür biçimde ezik ya da kopuk mu? Sızdıran conta fırını sürekli çalıştırır.
+
+**7. Artık ısıyı kullan.** Fırın kapatıldıktan sonra dakikalarca sıcak kalır; son birkaç dakikayı artık ısıyla tamamlamak bedava pişirmedir.
+
+**8. Hacmi işe göre seç.** İki dilim ekmek için koca fırını ısıtmak gerekmez; küçük porsiyonlarda mini fırın ya da airfryer aynı işi daha küçük bir hacmi ısıtarak görür.
 
 ## Fırın nasıl tüketir: termostat döngüsü
 

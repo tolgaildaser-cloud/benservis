@@ -4,6 +4,21 @@ description: "Çamaşırlarda siyah-gri leke ya da pas izi varsa kaynak makineni
 slug: "camasir-makinesi-camasirlarda-leke-birakiyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Bez", "Yumuşak fırça", "El feneri", "Sığ bir kap ve havlu"]
+steps:
+  - "Lekenin rengine bak: siyah-gri küf ve birikinti, kahverengi-turuncu pas, beyaz pudramsı deterjan demektir."
+  - "Kapak contasının kıvrımını elinle nazikçe aralayıp içine bak; contayı çekiştirip yerinden oynatma."
+  - "Kıvrımın içini bez ve yumuşak fırçayla, kılavuzun önerdiği temizleyiciyle sil."
+  - "Makine boşken tambur temizleme programını ya da en sıcak uzun programı çalıştır."
+  - "Deterjan miktarını üreticinin önerisine çek ve deterjan çekmecesini temizle."
+  - "Tamburun içini el feneriyle dolaş; deliklere ve tambur kaburgalarının çevresine bak."
+  - "Fiş çekiliyken ön alt köşedeki tahliye filtresini altına kap ve havlu koyarak aç, bulduğun cismi çıkar, filtreyi sıkıca geri tak."
+  - "Her yıkamadan sonra kapağı ve çekmeceyi aralık bırak, contayı kuru bezle kurula."
 faq:
   - q: "Temiz giren çamaşır nasıl lekeli çıkabilir?"
     a: "Çünkü lekenin kaynağı çamaşır değil, makinenin kendisidir. Kapak contasının kıvrımlarında biriken küf, tamburda kalan deterjan-kireç tabakası ya da içeride paslanan küçük bir metal cisim, yıkama sırasında suya karışıp kumaşa iz bırakır. Yani makine kirletmeye başladıysa bu bir temizlik ya da yabancı cisim sorunudur ve kaynağı bulunana kadar her yıkamada tekrarlar."
@@ -22,6 +37,24 @@ Makineden çıkan gömleğin üzerinde siyah-gri, sanki sürülmüş gibi bir iz
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔍 **Önce lekeyi tanı:** rengi ve dokusu sana kaynağını söyler. **Siyah-gri, bazen yağlımsı** lekeler küf ve deterjan birikintisini; **kahverengi-turuncu** izler pası; **beyaz, pudramsı** kalıntılar çözünmemiş deterjan ya da kireci işaret eder. Aşağıdaki sıra bu üç ize göre kurulu.
+
+## Adım adım: lekenin kaynağını bul
+
+**1. Lekeyi tanı.** Rengi kaynağını söyler: **siyah-gri, bazen yağlımsı** küf ve deterjan birikintisi, **kahverengi-turuncu** pas, **beyaz pudramsı** çözünmemiş deterjan ya da kireç.
+
+**2. Contanın içine bak.** Kapak contasının kıvrımını elinle nazikçe aralayıp içine bak — siyah film, birikmiş tüy, hatta unutulmuş çorap bulman muhtemel. Contayı çekiştirip yerinden oynatma.
+
+**3. Contayı sil.** Kıvrımın içini bez ve yumuşak fırçayla, kılavuzun önerdiği temizleyiciyle sil.
+
+**4. Tamburu boş çalıştır.** Makine **boşken** tambur temizleme programını ya da en sıcak uzun programı çalıştır; bunu ayda bir tekrarla.
+
+**5. Deterjanı düzelt.** Miktarı üreticinin önerisine çek — pudramsı iz görüyorsan azalt. Çamurlaşmış deterjan çekmecesi de suya kalıntı verir, onu da temizle.
+
+**6. Tamburu el feneriyle tara.** Deliklere ve tambur kaburgalarının çevresine bak; pas izinin arkasında çoğu zaman cepte unutulmuş bir bozuk para, ataç, toka ya da sütyen teli vardır.
+
+**7. Tahliye filtresini aç.** Makine boş ve **fiş çekiliyken** ön alt köşedeki filtreyi altına kap ve havlu koyarak aç; kaçak cisimlerin önemli bir kısmı burada birikir. Bulduklarını çıkar, filtreyi sıkıca geri tak.
+
+**8. Alışkanlığı kur.** Her yıkamadan sonra kapağı ve çekmeceyi aralık bırak, contayı ara ara kuru bezle kurula — en iyi koruma budur.
 
 ## 1) Kapak contası: siyah lekelerin bir numaralı adresi
 

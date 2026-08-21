@@ -4,6 +4,20 @@ description: "Soğutma kaybı, hiç durmayan motor ve borulardaki yağlı iz gaz
 slug: "buzdolabi-gaz-kacagi-nasil-anlasilir"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Telefon kamerası"]
+steps:
+  - "Kaçaktan ciddi şüphe ediyorsan ortamı havalandır; pencereyi aç."
+  - "Cihazın yakınında çakmak, kibrit ve açık alev kullanma."
+  - "Soğutmanın ne zamandır zayıfladığını not et: günler mi, haftalar mı?"
+  - "Kapı contasını kâğıt testiyle dene, arka havalandırmanın açık ve ayar kademesinin doğru olduğunu doğrula."
+  - "Bir akşam motoru dinle: hiç durmadan mı çalışıyor, yoksa aralıklarla durup kalkıyor mu?"
+  - "Arka bölümdeki borulara yalnızca gözle bak; yağlı iz ya da düzensiz kırağı varsa fotoğrafla."
+  - "Boruya, bağlantıya ve gaz devresine dokunma; topladığın belirti tablosuyla servisle konuş."
 faq:
   - q: "Buzdolabı gazı kokar mı?"
     a: "Çoğu modern buzdolabında kullanılan soğutucu gazlar belirgin bir koku bırakmaz; bu yüzden 'evde koku yok, demek kaçak yok' da 'koku var, demek gaz kaçağı' da güvenilir çıkarımlar değildir. Dolaptan gelen kötü koku çoğu zaman bozulan gıda, tıkanan tahliye kanalı ya da kirli contadan kaynaklanır. Kaçak şüphesi kokuyla değil, soğutma kaybı gibi somut belirtilerle değerlendirilmelidir."
@@ -22,6 +36,22 @@ Dolap çalışıyor, motor sesi geliyor, ama içerisi bir türlü eskisi gibi so
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Koku ve sağlık:** Modern buzdolaplarında yaygın kullanılan soğutucu gazların çoğu belirgin koku bırakmaz; "evde tuhaf koku var" şikâyeti çoğu zaman bozulan gıdadan ya da tıkalı tahliye kanalından çıkar. Yine de bu gazlardan bazıları **yanıcıdır**: kaçaktan ciddi şüphe ediyorsan ortamı havalandır, cihazın yakınında **çakmak, kibrit, açık alev kullanma** ve teşhisi servise bırak. Ev tipi cihazlardaki gaz miktarı azdır — panik değil, tedbir gerekir.
+
+## Adım adım: belirtiyi topla, cihazı güvene al
+
+**1. Havalandır.** Kaçaktan ciddi şüphe ediyorsan pencereyi aç, ortamı havalandır. Ev tipi cihazlardaki gaz miktarı azdır — panik değil, tedbir gerekir.
+
+**2. Alevi uzak tut.** Cihazın yakınında **çakmak, kibrit, açık alev kullanma**; yaygın soğutucuların bazıları yanıcıdır.
+
+**3. Süreyi not et.** Soğutma **ne zamandır** eskisi gibi değil — günler mi, haftalar mı? Gaz kaçağının en tutarlı işareti ani değil kademeli kayıptır.
+
+**4. Masum sebepleri ele.** Kapı contası kâğıt testinden geçiyor mu, arka havalandırma açık mı, ayar kademesi doğru mu? Bunların hepsi "eskisi kadar soğutmuyor" yapar ve hepsi gaz kaçağından çok daha yaygındır.
+
+**5. Motoru dinle.** Bir akşam gözle: motor hiç durmadan mı çalışıyor, yoksa aralıklarla durup kalkıyor mu? Not al — bu bilgi serviste doğrudan işe yarar.
+
+**6. Boruları gözle.** Yalnızca **gözle** bak: arka borularda yağlanmış, toz yapışmış bir bölge var mı, boruların bir kısmı kırağılı bir kısmı kuru mu? Gördüklerini fotoğrafla.
+
+**7. Kurcalama, aktar.** Bağlantı sıkmak, boru kurcalamak, tüpten gaz basmayı denemek kullanıcı işi değildir. Topladığın dört maddeyle servisle konuş — teşhis basınç ölçümü ve kaçak dedektörüyle yapılır.
 
 ## Gerçek belirti 1: Soğutma kademeli olarak zayıfladı
 

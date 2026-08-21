@@ -4,6 +4,20 @@ description: "Teflon tava, ahşap kaşık, kristal bardak, döküm tencere, alü
 slug: "bulasik-makinesine-neler-konmaz"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Tavanın tabanındaki sembollere bak; makine sembolü yoksa elde yıka."
+  - "Ahşap kaşık, kesme tahtası ve ahşap saplı bıçakları ayır."
+  - "Kristal, yaldızlı ve el boyaması bardakları ayır."
+  - "Döküm ve alüminyum kapları ayır."
+  - "Keskin mutfak bıçaklarını ayır; makineye giren sıradan bıçakları ağzı aşağı yerleştir."
+  - "Makinede yıkanabilir işaretli plastikleri yalnız üst sepete koy."
+  - "Yükledikten sonra püskürtme kollarını elinle çevir, serbest döndüğünü gör."
 faq:
   - q: "Teflon tava bulaşık makinesinde yıkanır mı?"
     a: "Üretici 'makinede yıkanabilir' demiyorsa yıkanmamalı. Makinedeki yüksek sıcaklık ve güçlü deterjan, yapışmaz kaplamayı her yıkamada biraz daha yıpratır; kaplama önce matlaşır, sonra yapışmaya başlar ve pul pul kalkabilir. Elde ılık su ve süngerle yıkamak tavanın ömrünü belirgin biçimde uzatır."
@@ -20,6 +34,22 @@ images:
 Hafta sonu misafir sofrası toplandı, her şeyi makineye dizdin: teflon tava, ahşap saplı bıçaklar, çeyizden çıkan kristal kadehler. İki gün sonra tava yapışmaya, kadehler matlaşmaya başladı — ve makine bunu bir gecede yapmadı; her yıkamada azar azar yaptı. Bulaşık makinesi çoğu şey için mükemmeldir ama içindeki ortam sanıldığından serttir: uzun süre yüksek sıcaklıkta su, güçlü alkali deterjan ve tazyik. Bazı malzemeler bu üçlüye dayanmaz. İşte girmemesi gerekenlerin listesi, tek tek gerekçesiyle.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: makineye vermeden önce ayıklama
+
+**1. Sembollere bak.** Tavanın ya da kabın tabanındaki işaretleri kontrol et; **makine sembolü yoksa varsayılan cevap hayırdır** — elde, ılık su ve süngerle yıka.
+
+**2. Ahşabı ayır.** Kaşık, kesme tahtası ve ahşap saplı bıçak makineye girmez; elde kısa temasla yıkanır ve hemen kurulanır.
+
+**3. Değerli camı ayır.** Kristal, yaldızlı ve el boyaması bardakları elde, ılık suda yıka. Günlük sade cam bardaklar için endişe gerekmez.
+
+**4. Döküm ve alüminyumu ayır.** Döküm, koruyucu yağ tabakasını tek yıkamada kaybeder; alüminyum deterjanla tepkimeye girip kalıcı kararır. İkisi de elde.
+
+**5. Bıçakları ayır.** Keskin mutfak bıçağını elde yıka. Makineye giren sıradan sofra bıçakları **daima ağzı aşağı** konur — küçük çocuklu evde bu bir kuraldır.
+
+**6. Plastiği üst sepete koy.** "Makinede yıkanabilir" işareti olan plastikler yalnız **üst sepette**; alt sepet ısıtıcıya yakındır, plastik çarpılır.
+
+**7. Yükü kontrol et.** Kapağı kapatmadan önce püskürtme kollarını elinle çevir; sepetten taşan bir sap kolu kilitliyorsa yükü yeniden diz.
 
 ## 1) Teflon ve yapışmaz kaplamalı tava-tencere
 

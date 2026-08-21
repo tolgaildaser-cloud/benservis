@@ -4,6 +4,20 @@ description: "Vestel bulaşık makinesinde E1, E2, E3 ya da F1 hatası: su alma,
 slug: "vestel-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu", "Küçük fırça", "Sünger"]
+steps:
+  - "Kodu aynen not al. Ekranda yanıp sönen kodu olduğu gibi yaz ya da fotoğrafla; model bilgisiyle birlikte işine yarayacak."
+  - "Makineyi kapat ve fişini çek. Ekranda F1 varsa musluğu da kapat — taşma kodunda ilk iki hamle budur."
+  - "Musluğu ve basıncı doğrula. Makine musluğu tam açık mı? Evdeki genel basıncı başka bir musluktan test et."
+  - "Giriş hortumunu ve süzgecini kontrol et. Tezgâh altındaki hortumda bükülme ya da ezilme olmasın; musluğu kapatıp bağlantı ağzındaki küçük süzgeci akan suyun altında temizle."
+  - "Filtre grubunu çıkar ve temizle. Alt sepeti çıkar, tabandaki silindirik filtre grubunu çevirip sök, yemek artıklarını temizle ve ince süzgeci fırçala; körlemesine elini sokma, önce bak."
+  - "Filtreyi ve tahliye hattını yerine oturt. Filtre grubunu kilitlenene kadar çevir; tahliye hortumunda bükülme olmasın ve bağlandığı lavabo gideri hızlı aksın."
+  - "Fişi tak ve kısa bir programla dene. Kod tekrar geliyorsa deneme yapmayı bırak; ısıtıcı, sensör, pompa ve valf tarafı servise aittir."
 faq:
   - q: "Vestel bulaşık makinesi E1 hatası ne demek?"
     a: "E1, makinenin gereken sürede yeterli su alamadığını gösteren su giriş hatasıdır. En sık sebep kapalı ya da yarım açık musluk, bükülmüş giriş hortumu veya düşük şebeke basıncıdır. Musluk-hortum hattı kontrolüyle çoğu zaman evde çözülür; hepsi normalken tekrar ediyorsa giriş valfi servisliktir."
@@ -22,6 +36,22 @@ Program bitmesine yakın makine durdu, ekranda **E2** yanıp sönüyor ve açtı
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ Vestel bulaşık makinelerinde kod tablosu **seriden seriye değişir**; özellikle F serisinde aynı numara farklı modellerde farklı anlama gelebilir. Aşağıdakiler en yaygın karşılıklardır; kesin karşılık için cihazının kullanım kılavuzuna bak ya da model bilginle Benservis'e yaz.
+
+## Adım adım: kod görünce evde denenecekler
+
+**1. Kodu aynen not al.** Ekranda yanıp sönen kodu olduğu gibi yaz ya da fotoğrafla; model bilgisiyle birlikte işine yarayacak.
+
+**2. Makineyi kapat ve fişini çek.** Ekranda **F1** varsa musluğu da kapat — taşma kodunda ilk iki hamle budur.
+
+**3. Musluğu ve basıncı doğrula.** Makine musluğu tam açık mı? Evdeki genel basıncı başka bir musluktan test et.
+
+**4. Giriş hortumunu ve süzgecini kontrol et.** Tezgâh altındaki hortumda bükülme ya da ezilme olmasın; musluğu kapatıp bağlantı ağzındaki küçük süzgeci akan suyun altında temizle.
+
+**5. Filtre grubunu çıkar ve temizle.** Alt sepeti çıkar, tabandaki silindirik filtre grubunu çevirip sök, yemek artıklarını temizle ve ince süzgeci fırçala; körlemesine elini sokma, önce bak.
+
+**6. Filtreyi ve tahliye hattını yerine oturt.** Filtre grubunu kilitlenene kadar çevir; tahliye hortumunda bükülme olmasın ve bağlandığı lavabo gideri hızlı aksın.
+
+**7. Fişi tak ve kısa bir programla dene.** Kod tekrar geliyorsa deneme yapmayı bırak; ısıtıcı, sensör, pompa ve valf tarafı servise aittir.
 
 ## Özet tablo
 

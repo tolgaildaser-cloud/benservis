@@ -4,6 +4,21 @@ description: "Buzdolabı günde ve yılda kaç kWh harcar? Enerji etiketi nasıl
 slug: "buzdolabi-ne-kadar-elektrik-harcar"
 date: "2026-08-20"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Bir kâğıt parçası", "Kuru bez", "Kuru fırça"]
+steps:
+  - "Cihazın iç yan duvarındaki tip etiketinden model numarasını ve enerji bilgisini oku."
+  - "Etiketteki yıllık kWh değerini 365'e bölerek günlük tüketimini bul."
+  - "Kapıya bir kâğıt sıkıştırıp kapat; kâğıt kayarak çıkıyorsa conta o bölgede tutmuyor demektir."
+  - "Contayı ılık suyla sil ve kuru bezle kurut."
+  - "Dolapla duvar arasında birkaç santim boşluk bırak; fişi çekip arka bölgedeki tozu kuru fırçayla al."
+  - "İç sıcaklığı kılavuzun önerdiği aralığa getir, gereksiz düşük tutma."
+  - "Sıcak yemeği oda sıcaklığına gelene kadar dışarıda beklet."
+  - "Statik modelde buz tabakası oluştuysa buz çözme yap."
 faq:
   - q: "Buzdolabı günde kaç kWh elektrik harcar?"
     a: "Ortalama bir ev tipi buzdolabı günde yaklaşık 0,7-1,5 kWh tüketir; bu da yılda kabaca 240-540 kWh bandına denk gelir. Cihazın yaşı, enerji sınıfı, hacmi ve kullanım alışkanlıkları bu aralığın neresinde olduğunu belirler. Kendi cihazının değeri enerji etiketindeki yıllık kWh satırında yazar."
@@ -22,6 +37,24 @@ Buzdolabı evdeki en güçlü cihaz değildir — ama **hiç kapanmayan tek ciha
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚡ **Kısa özet:** Ortalama bir buzdolabı **günde ~0,7-1,5 kWh**, yılda **~240-540 kWh** harcar. Verimli yeni modeller yılda 100-150 kWh'e inerken eski modeller 400 kWh'i aşabilir. Maliyet = **yıllık kWh × faturandaki birim fiyat.** Tüketimi şişiren dörtlü: yıpranmış conta, nefes alamayan arka bölüm, sıcak yemek, sık açılan kapı.
+
+## Adım adım: buzdolabı tüketimini ölç ve düşür
+
+**1. Etiketi bul.** Cihazın iç yan duvarındaki tip etiketinden model numarasını oku; enerji bilgisine üreticinin sitesinden aynı modelle ulaşabilirsin.
+
+**2. Günlüğe çevir.** Etiketteki yıllık kWh değerini 365'e böl. Elde ettiğin sayı, dolabın günde ne kadar elektrik istediğini gösterir.
+
+**3. Contayı kâğıtla dene.** Kapıya bir kâğıt sıkıştırıp kapat. Kâğıt hafif dirençle değil kayarak çıkıyorsa conta o bölgede tutmuyor demektir.
+
+**4. Contayı temizle.** Contayı ılık suyla sil, kuru bezle kurut. Yumuşayan kirin altındaki conta bazen yeniden tutar; sertleşmiş ve çatlamış conta ise değişim ister.
+
+**5. Arkasını nefes aldır.** Dolapla duvar arasında birkaç santim boşluk bırak. Fişi çek, arka bölgede biriken tozu yalnız dışarıdan, kuru fırçayla al.
+
+**6. Dereceyi doğru ayarla.** İç sıcaklığı kılavuzun önerdiği aralığa getir. Gereksiz düşük derece, dolabı boşuna çalıştırır.
+
+**7. Sıcak yemeği dışarıda soğut.** Soğumadan içeri konan tencere dolabın içini ısıtır ve motoru uzun süre tam yükte tutar.
+
+**8. Buzu çöz.** Statik modelde buz tabakası yalıtım gibi davranır. Buz birikmişse buz çözme yap; kapıyı da ne alacağını bilerek aç.
 
 ## Önce etiketi oku: yıllık kWh satırı
 

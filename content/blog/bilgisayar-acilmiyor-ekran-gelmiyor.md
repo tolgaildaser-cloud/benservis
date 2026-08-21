@@ -4,6 +4,20 @@ description: "Bilgisayar açılıyor, fanlar dönüyor ama ekran siyah mı? Önc
 slug: "bilgisayar-acilmiyor-ekran-gelmiyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Kasada ışık ve fan var mı bak; hiç tepki yoksa konu güç tarafıdır."
+  - "Monitörün kendi güç düğmesine ve güç ışığına bak."
+  - "Monitörün kaynak/input menüsünden girişleri sırayla gez."
+  - "Görüntü kablosunu iki uçtan da çıkarıp yeniden tak; mümkünse başka bir kabloyla dene."
+  - "Ekran kartı olan kasada kablonun anakart çıkışında değil ekran kartının çıkışında olduğunu doğrula."
+  - "Monitörü başka bir cihazla ya da kasayı televizyonla dene."
+  - "Cihazı aç ve 30 saniye dinle-izle: bip desenini ve yanık kalan anakart LED'ini not et."
 faq:
   - q: "Fanlar dönüyorsa bilgisayar sağlam mı demek?"
     a: "Hayır, sadece güç geldiğini gösterir. Fanların dönmesi anakartın, işlemcinin, RAM'in ve ekran kartının sağlıklı çalıştığı anlamına gelmez; bilgisayar açılış testini geçemediğinde de fanlar döner ama ekrana görüntü gelmez. Bu yüzden asıl ipucu fanlar değil, bip sesleri ve uyarı ışıklarıdır."
@@ -22,6 +36,22 @@ Güç düğmesine bastın: kasanın ışıkları yandı, fanlar dönmeye başlad
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🖥️ **Önce şu ayrımı yap:** kasa **hiç mi tepki vermiyor** (ışık yok, fan yok), yoksa **çalışıyor ama görüntü mü yok**? Hiç tepki yoksa konu güç tarafıdır: priz, kablo, güç düğmesi. Bu yazının konusu ikinci durum: güç var, görüntü yok.
+
+## Adım adım: ekran siyah kaldığında
+
+**1. Önce ayrımı yap.** Kasada ışık ve fan var mı? Hiç tepki yoksa konu güç tarafıdır (priz, kablo, güç düğmesi). Güç var görüntü yoksa aşağıdaki sıra senin.
+
+**2. Monitörün gücüne bak.** Monitörün **kendi güç düğmesine** ve güç ışığına bak; ışık hiç yoksa önce monitörün prizini ve kablosunu kontrol et.
+
+**3. Girişi gez.** Monitörün **kaynak/input** menüsünden HDMI-1, HDMI-2, DisplayPort gibi girişleri sırayla dolaş; kasanın takılı olduğu giriş seçili olmalı.
+
+**4. Kabloyu ele.** Görüntü kablosunu **iki uçtan da** çıkarıp yeniden tak. Mümkünse başka bir kabloyla ya da başka bir girişten dene.
+
+**5. Doğru çıkışı doğrula.** Ekran kartı olan kasalarda klasik tuzak: kablo **anakartın** değil **ekran kartının** çıkışında olmalı — kasanın arkasında yatay duran alt gruptaki çıkışlar ekran kartınındır.
+
+**6. Tarafı ayır.** Monitörü başka bir cihazla (laptop, uydu alıcısı) ya da kasayı televizyonla dene; bu, sorunun hangi tarafta olduğunu kesinleştirir.
+
+**7. Sinyalleri oku.** Cihazı aç ve 30 saniye sadece dinle-izle: bip var mı, deseni ne ("bir uzun, iki kısa" gibi not et), anakartta hangi LED yanık kalıyor? Bu iki gözlem hiçbir şey sökmeden yapılabilecek en değerli teşhistir.
 
 ## 1) Monitör ve kablo: görüntünün yolunu ele
 
