@@ -13,6 +13,8 @@ faq:
     a: "Toz deterjan nemle birleşince çekmece kanallarında taşlaşır ve tıkanmanın en sık sebebidir; özellikle düşük sıcaklıkta ve az suyla çalışan programlarda tam çözünmeden kalabilir. Sıvı deterjan tıkamaz ama zamanla yapışkan bir film bırakır. Hangisini kullanırsan kullan, çekmeceyi ayda bir çıkarıp yıkamak bu şikâyetin en ucuz sigortasıdır."
   - q: "Çekmeceyi temizledim, su basıncı da iyi — yine almıyor, sorun ne olabilir?"
     a: "O zaman şüphe suyun çekmeceye dağıtıldığı üst düzenek ile su giriş valfine kayar. Valf birden fazla gözlüdür ve bir gözü zayıf çalışıyorsa su yanlış bölmeye ya da yetersiz gelir; üstteki dağıtım kanalları da kireçlenmiş olabilir. Bu kısımlar gövde içinde kaldığı için teşhisi ve müdahalesi servis işidir."
+images:
+  coverAlt: "Çamaşır makinesinden dışarı çekilmiş, içinde ıslak deterjan kalıntısı bulunan çekmece"
 ---
 
 Yıkama bitti, çekmeceyi açtın: deterjan koyduğun gibi duruyor ya da göz su dolu, deterjan çamur gibi yapışmış. Çamaşırlar da son zamanlarda eskisi kadar temiz kokmuyor. Bu belirti kulağa büyük bir arıza gibi gelse de, çoğu vakada suyun deterjana ulaşamamasından ibarettir — ve suyun yolu üzerindeki ilk iki durak, musluk ile çekmece, tamamen senin bakabileceğin yerlerdir. Bu yazıda suyun izlediği yolu baştan sona takip ediyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

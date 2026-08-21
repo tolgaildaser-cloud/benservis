@@ -13,6 +13,8 @@ faq:
     a: "Evet. 60°C bir program, 30°C programa göre 3-4 kata varan enerji tüketebilir; çünkü rezistans suyu iki kat fazla ısıtmak için çok daha uzun çalışır. Günlük, az kirli çamaşır için 30-40°C ve iyi bir deterjan çoğu durumda yeterlidir; 60°C'yi nevresim, havlu ve hijyen gereken yıkamalara sakla."
   - q: "Eko program uzun sürdüğü hâlde nasıl az yakar?"
     a: "Eko programlar düşük sıcaklıkta çalışır ve süreyi uzatarak deterjanla bekletmeye ağırlık verir; enerji yutan ısıtma kısaldığı için toplam tüketim düşer. Yani sürenin uzunluğu tüketimin arttığı anlamına gelmez — elektriği saat değil, rezistans yakar."
+images:
+  coverAlt: "Duvarda asılı elektrik sayacı ve arkadaki odada duran çamaşır makinesi"
 ---
 
 Makine üç saatlik programı bitirdiğinde akla hep aynı soru gelir: **"Bu kadar süre çalıştı, kim bilir ne yaktı?"** İşin ilginci, cevap sürede değil sıcaklıkta saklı. Çamaşır makinesinde elektriğin asıl müşterisi tamburu döndüren motor değil, **suyu ısıtan rezistanstır** — ve bu tek bilgi, faturayı düşürmenin en kestirme yoludur.

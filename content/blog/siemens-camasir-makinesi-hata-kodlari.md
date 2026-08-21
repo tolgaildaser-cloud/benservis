@@ -13,6 +13,8 @@ faq:
     a: "Genelde hayır. F21 motor sistemiyle ilgili bir arızadır; en sık sebebi motor kömürlerinin (karbon fırça) aşınmasıdır ve makine dönmez ya da düzensiz döner. Resetlemek kodu geçici silebilir ama sebep durduğu için kod geri gelir; kalıcı çözüm servis işidir."
   - q: "Bosch'taki kodlarla Siemens kodları aynı mı?"
     a: "Evet. Siemens ve Bosch aynı grubun (BSH) ortak platformunu kullanır; E/F kodları iki markada da aynı anlama gelir. Bosch için yazdığımız kod listesi Siemens'te, Siemens için yazdıklarımız Bosch'ta da geçerlidir."
+images:
+  coverAlt: "Çamaşır makinesinin program kadranı ve gösterge penceresinin yakın planı"
 ---
 
 Program ortasında makine durdu, ekranda **E18** yazıyor; ya da çamaşırlar sırılsıklam çıktı ve panelde **F21** yanıp sönüyor. Siemens çamaşır makineleri arızayı **E** ya da **F** önekli kodlarla bildirir ve bu kodların bir kısmı beş dakikalık bir kontrolle çözülürken bir kısmı net biçimde servis işidir. Bu rehberde en sık çıkan Siemens kodlarını, anlamlarını ve aradaki sınırı topladık.

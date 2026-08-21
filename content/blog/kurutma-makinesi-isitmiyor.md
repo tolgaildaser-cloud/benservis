@@ -13,6 +13,8 @@ faq:
     a: "Evet, ve bu boş bir kılavuz nasihati değildir. Tek kurutmanın bıraktığı hav tabakası bile hava akışını ölçülebilir biçimde azaltır; birikince kurutma süreleri uzar, enerji tüketimi artar ve iş aşırı ısınma korumasının atmasına kadar gider. Kapak filtresi her kurutmada, kondenser bölgesi ise kılavuzun önerdiği aralıkla temizlenmelidir."
   - q: "Her yeri temizledim, hâlâ ısıtmıyor. Rezistansı kendim değiştirebilir miyim?"
     a: "Hayır. Rezistans, ısı sigortası, termostat ve ısı pompası cihazın panelleri ardındaki elektrikli bölümdedir; hem ölçüm cihazı hem yetki ister. Yanlış takılan bir ısıtıcı yangın riski demektir. Temizlik ve program kontrolü sonuç vermediyse gözlemlerini not et ve servisi ara; hangi parçanın gittiğini ölçerek bulmak servisin işidir."
+images:
+  coverAlt: "Kapağı açık kurutma makinesinin tamburundaki nemli havlular"
 ---
 
 Program bitiyor, kapağı açıyorsun: çamaşırlar dönmüş, havalanmış ama **soğuk ve hâlâ nemli.** Elini kapak açıkken içeri tuttuğunda ısı yok; makine sanki kocaman bir vantilatöre dönmüş. Bu tablo, "makine kurutmuyor" şikâyetinin özel bir hâlidir: cihaz çalışıyor, tambur dönüyor, fan üflüyor — eksik olan tek şey **ısı.** (Genel "kurutmuyor, nemli bırakıyor" tablosu için [ayrı yazımız](/blog/kurutma-makinesi-kurutmuyor/) var; bu yazı yalnız ısıtma tarafına odaklanıyor.) İyi haber: ısıtma arızalarının hikâyesi çoğu zaman ısıtıcıda değil, **hava akışında** başlar — ve orası senin alanın.

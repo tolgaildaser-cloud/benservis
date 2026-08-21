@@ -13,6 +13,8 @@ faq:
     a: "Çünkü ince, uzun ve sivri: tamburun küçük deliklerinden kolayca geçer ama geri çıkamaz. Kazan ile tambur arasında dönerek iki yüzeyi de çizebilir, ısıtma bölgesine ulaşırsa oraya takılabilir, en kötü ihtimalle kazanı delerek su kaçağına yol açabilir. Bu yüzden telli sütyenleri file torbada yıkamak, bu arızanın en ucuz ve en etkili sigortasıdır."
   - q: "Filtreye baktım, cisim yok — kesin servis mi gerekiyor?"
     a: "Ses yoksa acelesi yok: cisim birkaç yıkama içinde tahliyeye sürüklenebilir; her yıkamadan sonra filtreyi yeniden kontrol edebilirsin. Ama dönerken tıkırtı ya da sürtünme sesi geliyorsa cisim tambur ile kazan arasında sıkışmış demektir ve oraya yalnız servis ulaşabilir. Bu durumda makineyi kullanmayı durdurup sesi ve cismin ne olduğunu servise tarif etmek en doğrusu."
+images:
+  coverAlt: "Çamaşır makinesinin alt ön kapağı açık, tahliye filtresi çıkarılmış ve yanına havlu serilmiş"
 ---
 
 Yıkama bitti, sütyenin bir telinin eksik olduğunu fark ettin. Ya da makine dönerken içeriden metalik bir tıkırtı geliyor ve dün cebinde bozuk para unutulmuş bir pantolon yıkandı. "Makineye bir şey kaçtı" telaşı çok yaygındır ama sonu çoğu zaman kötü değildir: cisimlerin önemli bir kısmı ulaşılabilir bir yerde durur ve söküm gerektirmeden çıkar. Bu yazıda cismin makinenin içinde hangi yolu izlediğini, hangi kısmına senin güvenle bakabileceğini ve hangi durumda işin kesin servise kaldığını anlatıyoruz.
