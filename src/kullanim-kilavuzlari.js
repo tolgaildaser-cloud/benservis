@@ -10,7 +10,15 @@
 //    model başına link tutmak binlerce ölü linke ve sürekli bakıma dönerdi. Kullanıcıyı
 //    markanın resmî arama sayfasına gönderiyoruz, modelini orada aratıyor.
 //
-// ✅ DOĞRULAMA (2 Ağu 2026): buradaki her adres HTTP ile denendi ve 200 döndü. Yönlendiren
+// ✅ DOĞRULAMA (21 Ağu 2026, YK link bakımı — 44 adres tek tek HTTP + şüpheliler tarayıcıyla):
+//    🔴 BULGU: `destek.fakir.com.tr/birlikte-cozelim` **502 Bad Gateway** — ölü link, canlıda
+//    duruyordu. Markanın kendi sitesi kılavuz için `/kullanim-kilavuzlari` adresini işaret
+//    ediyor; o adres tarayıcıda "Fakir Kullanım Kılavuzları" arama sayfası olarak AÇILIYOR →
+//    düzeltildi. Ayrıca 9 adres daha, kullanıcıyı kılavuz sayfasına DAHA DOĞRUDAN götüren
+//    resmî adresle değiştirildi (Arzum, HP, Xiaomi, Canon TR, Altus, Vestel, ECA, Vaillant,
+//    Regal). ⚠️ ECA'nın eski adresi PROFESYONEL montaj kılavuzlarıydı — son kullanıcıya
+//    yanlış hedefti; Regal, Vestel destek merkezine gidiyordu, artık kendi sitesine gidiyor.
+// ✅ ÖNCEKİ DOĞRULAMA (2 Ağu 2026): buradaki her adres HTTP ile denendi ve 200 döndü. Yönlendiren
 //    adreslerde YÖNLENDİRMENİN BİTTİĞİ adres yazıldı (kullanıcı zıplamasın, link çürümesin).
 //    Doğrulanamayan markalar bilerek listeye ALINMADI — eksik olmak, ölü link vermekten iyidir.
 //    Not: Arçelik grubu (Arçelik/Beko/Grundig/Altus), Sony ve Canon uçlarında Akamai kenar
@@ -46,11 +54,11 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Grundig ürünlerinin kullanma kılavuzları ve TV yazılım dosyaları model numarasıyla aranır.",
   },
   "Altus": {
-    url: "https://www.altus.com.tr/destek/yardim-merkezi",
+    url: "https://www.altus.com.tr/destek/kullanım-kılavuzları",
     ozet: "Altus yardım merkezi: ürün grubunu seçip kullanım kılavuzuna, garanti ve servis bilgisine aynı sayfadan gidiliyor.",
   },
   "Vestel": {
-    url: "https://www.vestel.com.tr/content/tanitma-ve-kullanma-kilavuzlari",
+    url: "https://destekmerkezi.vestel.com.tr/urunum",
     ozet: "Vestel'in tanıtma ve kullanma kılavuzları listesi; ürün grubunu seçip kılavuzu indiriyorsun.",
   },
   "Profilo": {
@@ -90,7 +98,7 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Viessmann kılavuzlar sayfası: kombi ve ısıtma cihazlarının kullanma/montaj dokümanları.",
   },
   "Vaillant": {
-    url: "https://www.vaillant.com.tr/musterilerimize-ozel/servis-hizmetlerimiz/",
+    url: "https://www.vaillant.com.tr/musterilerimize-ozel/urunler/urun-kategorileri/kombiler/",
     ozet: "Vaillant müşteri hizmetleri: ürün dokümanları, garanti-bakım bilgisi ve yetkili servis yönlendirmesi.",
   },
   "Daikin": {
@@ -106,7 +114,7 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Immergas bakım ve satış sonrası servis sayfası; kombi dokümanları ve servis yönlendirmesi.",
   },
   "ECA": {
-    url: "https://eca.com.tr/profesyoneller/montaj-kilavuzlari",
+    url: "https://eca.com.tr/isitma-sogutma/kombiler",
     ozet: "ECA'nın resmî montaj ve kullanım kılavuzu arşivi (teknik/profesyonel bölümde yayımlanıyor).",
   },
 
@@ -116,11 +124,11 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Dyson destek sayfası: makineyi seçince kullanım kılavuzu, filtre bakımı ve sorun giderme videoları.",
   },
   "Arzum": {
-    url: "https://destek.arzum.com.tr/",
+    url: "https://destek.arzum.com.tr/kullanim-kilavuzlari",
     ozet: "Arzum destek portalı: ürün kullanım kılavuzları, garanti ve yetkili servis bilgisi.",
   },
   "Fakir": {
-    url: "https://destek.fakir.com.tr/birlikte-cozelim",
+    url: "https://destek.fakir.com.tr/kullanim-kilavuzlari",
     ozet: "Fakir destek portalı: ürün seçip kullanım kılavuzuna ve adım adım sorun giderme başlıklarına ulaşıyorsun.",
   },
   "Tefal": {
@@ -132,7 +140,7 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Kärcher hizmetler/destek sayfası: cihaz dokümanları, yedek parça listeleri ve servis yönlendirmesi.",
   },
   "Xiaomi": {
-    url: "https://www.mi.com/tr/support/",
+    url: "https://www.mi.com/tr/support/user-guide/",
     ozet: "Xiaomi Türkiye destek sayfası: ürün kılavuzları, garanti bilgisi ve sorun giderme.",
   },
 
@@ -152,7 +160,7 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Dell destek ana sayfası: servis etiketiyle cihazını tanıtıp kılavuz, sürücü ve garanti bilgisine ulaşıyorsun.",
   },
   "HP": {
-    url: "https://support.hp.com/tr-tr",
+    url: "https://support.hp.com/tr-tr/manuals",
     ozet: "HP Türkiye destek: ürün adı/seri numarasıyla kullanım kılavuzu, sürücü ve sorun giderme.",
   },
   "Lenovo": {
@@ -172,7 +180,7 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Casper destek sayfası: ürün kılavuzları, sürücüler ve yetkili servis yönlendirmesi.",
   },
   "Canon": {
-    url: "https://www.canon-europe.com/support/",
+    url: "https://www.canon.com.tr/support/",
     ozet: "Canon'un resmî tüketici ürünleri destek sayfası: yazıcı/kamera kılavuzları, sürücüler ve yazılımlar.",
   },
   "Epson": {
@@ -187,7 +195,7 @@ export const MARKA_KILAVUZLARI = {
   //    (bot korumalı siteler tarayıcıyla gezilerek teyit edildi); kombi tarafında çoğu markada
   //    merkezî arama kutusu yok, akış "ürün sayfası → Dokümanlar → kılavuz PDF".
   "Regal": {
-    url: "https://destekmerkezi.vestel.com.tr/urunum",
+    url: "https://www.regal-tr.com/content/kullanim-kilavuzlari",
     ozet: "Regal, Vestel çatısındaki markadır; kılavuza cihazın seri numarasıyla Vestel Destek Merkezi üzerinden ulaşılıyor.",
   },
   "Baymak": {
