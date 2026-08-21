@@ -13,8 +13,9 @@
 // çünkü kaynakta Arçelik'e ait tek rehber bile yok, markaya özel eşleştirme imkânsız.
 // Kendi Türkçe rehberlerimizde (B) durum farklı: BSH hata kodu rehberleri gibi markaya bağlı
 // olanlar başlıkta markayı açıkça yazar, anahtar kelimeleri de o koda dar tutulur.
-// Kapsam bilinçli olarak dar: yalnız gerçekten karşılığı olan 4 cihaz kümesi. Buzdolabı,
-// klima, kombi, TV vb. için jenerik rehber YOK → o cihazlarda buton hiç çıkmaz.
+// Kapsam bilinçli olarak dar: yalnız gerçekten karşılığı olan cihaz kümeleri. Kombi, TV vb.
+// için rehber YOK → o cihazlarda buton hiç çıkmaz. (Klima 3 Ağu'da, BUZDOLABI 21 Ağu'da
+// kendi Türkçe rehberimizle girdi; ikisinde de iFixit karşılığı yok.)
 //
 // ⚠️ GÜVENLİK: Bu harita TEK BAŞINA yeterli değil. Buton yalnız `kendinCozebilirMi.mumkun`
 // true iken gösterilmeli (App.jsx'te öyle bağlandı) — klima kapasitörü, magnetron ve gaz
@@ -102,8 +103,22 @@ export const REHBERLER = {
       rehber: G("How+to+service+the+circulation+pump+in+your+dishwasher/198618", "Sirkülasyon pompası bakımı", "Moderate", "25-35 dk", 18) },
     { ara: ["kapı contası", "conta", "sızdır", "seal"],
       rehber: G("How+to+replace+the+door+seals+in+your+dishwasher/198639", "Kapak contası değişimi", "Moderate", "—", 10) },
+    // KENDİ REHBERİMİZ (21 Ağu 2026, PAZ 17 Ağu dönüşüm teslimi). Bir ÜSTTEKİ iFixit
+    // püskürtme-kolu rehberinin ÖNÜNE alındı: aynı işi Türkçe, kendi sayfamızda ve 7
+    // adımda anlatıyor (YK #34: önce kendi rehberimiz). iFixit satırı silinmedi —
+    // "kollar" gibi bu listede olmayan kelimelerde hâlâ karşılık veriyor.
+    { ara: ["püskürtme", "püskürtme kolu", "temiz yıkamıyor", "kireçli", "filtre tıkalı"],
+      rehber: B("bulasik-makinesi-temiz-yikamiyor", "Temiz yıkamayan bulaşık makinesi", "Kolay", "~20 dakika", 7) },
     { ara: ["temiz yıkamıyor", "püskürtme", "yıkamıyor", "kollar"],
       rehber: G("Removing+and+Cleaning+Dishwasher+Spray+Arm/165191", "Püskürtme kolunu sökme ve temizleme", "Very easy", "5 dk", 7) },
+  ],
+  // Buzdolabının haritadaki İLK kaydı (21 Ağu 2026). iFixit'te jenerik ev tipi buzdolabı
+  // rehberi yok; küme yalnız KENDİ Türkçe rehberimizle açıldı. Anahtar kelimeler bilerek
+  // DAR: "soğutmuyor" ve "no-frost" DIŞARIDA — onlar defrost/gaz/kompresör olabilir ve bu
+  // rehber onları çözmez (Klima'da "soğutmuyor"un dışarıda bırakılmasıyla aynı mantık).
+  "Buzdolabı": [
+    { ara: ["kapı contası", "conta", "buzlanma", "buz tutuyor", "kırağı"],
+      rehber: B("buzdolabi-buzlanma-yapiyor", "Buzdolabı contası ve buzlanma", "Kolay", "~20 dakika", 7) },
   ],
   "Fırın / Ocak / Aspiratör": [
     { ara: ["rezistans", "ısıtmıyor", "ısıtıcı"],
