@@ -199,7 +199,14 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);l
    Kapak görseli ARKA PLAN, üstünde koyu perde, içinde başlık + meta + iki kapı.
    Amaç: okuyucu ilk ekranda hem ne okuduğunu hem iki çıkışını görsün.
    wrap'in içinde ama kenar boşluğunu iptal eder: şerit tam genişlik görünür. */
-.yazibasi{position:relative;margin:0 -24px 30px;padding:0;overflow:hidden;border-radius:0;background:${T.NAVY};isolation:isolate}
+/* ⚠️ NEGATİF MARJ .wrap YAN BOŞLUĞUYLA BİREBİR OLMAK ZORUNDA (21 Ağu 2026, FE düzeltmesi).
+   Blok kenara taşsın diye negatif marj kullanılıyor; .wrap padding'i 20px ama marj
+   -24px'ti → 390px'de blok her iki yandan 4px dışarı çıkıyordu (ölçüldü: x=-4,
+   right=394, documentElement.scrollWidth 394 > 390). Sayfada overflow-x:hidden de
+   olmadığı için bu, 171 blog yazısının TAMAMINDA mobilde gerçek bir yatay kaydırmaydı.
+   -20px ile blok tam kenara oturur, taşma sıfırlanır. .wrap padding'i değişirse burası da
+   değişmeli — iki değer birbirine bağlıdır. */
+.yazibasi{position:relative;margin:0 -20px 30px;padding:0;overflow:hidden;border-radius:0;background:${T.NAVY};isolation:isolate}
 @media(min-width:760px){.yazibasi{margin:0 0 34px;border-radius:22px}}
 .yazibasi .yb-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 /* Perde: üstte yoğun (metin orada), altta hafif. Kapaklar açık zeminli çizimler
@@ -208,6 +215,12 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);l
 .yazibasi.yb-fotosuz .yb-perde{background:linear-gradient(180deg,#1E293B 0%,#172033 100%)}
 .yazibasi .yb-ic{position:relative;z-index:2;padding:clamp(26px,4vw,44px) clamp(22px,3.4vw,40px)}
 .yazibasi .yb-ust{margin:0 0 10px;font-size:13px;font-weight:600;color:#93C5FD;letter-spacing:.02em}
+/* Kategori artık link. Görsel dil AYNEN korunur (aynı mavi, aynı ağırlık) — yalnız
+   altı noktalı çizgiyle "tıklanır" işaretlenir, üstüne gelince tam alt çizgi + beyaz.
+   Dokunma hedefi 44px'e ulaşsın diye dikey padding + negatif margin (satır yüksekliği
+   büyümesin); mobilde parmakla vurulabilir olması şart. */
+.yazibasi .yb-ust .yb-kat{color:inherit;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;padding:12px 2px;margin:-12px 0;display:inline-block}
+.yazibasi .yb-ust .yb-kat:hover,.yazibasi .yb-ust .yb-kat:focus-visible{color:#fff;text-decoration-style:solid}
 .yazibasi h1{margin:0 0 16px;color:#fff;font-size:clamp(26px,3.6vw,40px);line-height:1.15}
 /* Meta rozetleri koyu zeminde: mavi kutu yerine cam yüzey. */
 .yazibasi .guide-meta{margin:0 0 20px;background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.16)}
@@ -765,6 +778,26 @@ const postGorsel = (p) => {
   }
   return `<div class="card-ic">${iconSvg(p.category, "")}</div>`;
 };
+// ── KATEGORİ LİNKİ (21 Ağu 2026, FE) ─────────────────────────────────────────────────
+// SORUN (ölçüldü, varsayılmadı): 13 kategori sayfası (`/blog/kategori/<slug>/`) sitemap'te
+// ve /blog/ hub'ından link alıyordu, ama **171 yazı sayfasının HİÇBİRİNDEN** link almıyordu —
+// yazı başındaki kategori adı düz metindi. Yani sitenin en derin ve en kalabalık katmanı
+// kategori katmanına hiç bağlanmıyordu: okuyucu aynı cihazın diğer yazılarına geçemiyor,
+// kategori sayfaları da iç link almadığı için zayıf kalıyordu.
+// ÇÖZÜM: görünen metin AYNEN kalır (⛔ `p.category` etiketi değişmez kuralı korundu),
+// yalnız linke sarılır. Hedef `blogGrubu(p)` ile bulunur; o yüzden her yazı MUTLAKA
+// üretilmiş bir sayfaya gider (grup boşsa yazı zaten o gruba düşmez → kırık link imkânsız).
+// Görünen etiket ile grup adı farklıysa (ör. "Kombi" → "Kombi / Termosifon") hedef
+// `title` içinde yazar, kullanıcı nereye gittiğini tıklamadan görür.
+const katLinki = (p) => {
+  const ad = p.category || "Rehber";
+  const grup = blogGrubu(p);
+  const slug = KAT_AD_SLUG.get(grup);
+  if (!slug) return esc(ad); // eşleşmeyen etiket → eski davranış (düz metin), link uydurulmaz
+  const baslik = grup === ad ? `${ad} yazıları` : `${grup} yazıları`;
+  return `<a class="yb-kat" href="/blog/kategori/${slug}/" title="${esc(baslik)}">${esc(ad)}</a>`;
+};
+
 // Yazı hero'su: kapak varsa gerçek görsel, yoksa mevcut mavi ikon bandı (fallback aynen).
 // width/height sözleşme oranından sabit — CLS için zorunlu, `.hero.kapak` kutusu da
 // aspect-ratio ile aynı oranı tutuyor (kart görselindeki hardcoded ölçü deseniyle aynı).
@@ -780,7 +813,7 @@ const yaziBasi = (p) => {
     gorsel +
     `<div class="yb-perde"></div>` +
     `<div class="yb-ic">` +
-      `<p class="yb-ust">${esc(p.category || "Rehber")} · ${esc(trDate(p.date))}</p>` +
+      `<p class="yb-ust">${katLinki(p)} · ${esc(trDate(p.date))}</p>` +
       `<h1>${esc(p.title)}</h1>` +
       guideMeta(p.guide) +
       KOPRU_SATIRI(p) +
@@ -966,6 +999,87 @@ const tamirGeriSatiri = (p) => {
   return `<p class="tamir-geri">🔧 Bu sayfa <a href="/tamir/${k.slug}/">${esc(k.ad)} hata kodu ve belirti listesinin</a> bir parçası — aynı cihazda başka bir kod ya da belirti arıyorsan oradan devam edebilirsin.</p>`;
 };
 
+// ⬆️ 21 Ağu 2026 (FE): bu iki blok DAHA AŞAĞIDAYDI (KATEGORILER ~1049, eşleme ~1143).
+// Yazı sayfası döngüsü (hemen aşağıda) modül değerlendirmesinde ONLARDAN ÖNCE koşuyor;
+// `yaziBasi` artık kategori linki bastığı için `blogGrubu`/`KAT_AD_SLUG`'a döngü ânında
+// ihtiyaç var. Aşağıda bırakılsalardı TDZ hatası verirdi (ölçüldü, varsayılmadı).
+// İçerik AYNEN taşındı — tek satır bile değişmedi, yalnız sıra öne alındı.
+// ⚠️ KATEGORİ KAYNAĞI (YK #32, 2 Ağu — Tolga: "bizim ürün grupları olmalı, telefon vs olmamalı"):
+// liste ELLE YAZILMAZ, `src/constants.js` → CIHAZLAR'dan türetilir. Uygulamanın cihaz grubu
+// eklenip çıkarıldığında üç merkez de kendiliğinden uyar; ikinci bir liste tutulmaz.
+// ⛔ iFixit'in kategori dünyası (telefon, tablet, konsol, araba, Mac) BİZE GİRMEZ.
+const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: slugify(ad), kaynak: ad }));
+
+// ── BLOG YAZISI → CİHAZ GRUBU EŞLEMESİ ────────────────────────────────────────
+// Yazıların `category` frontmatter'ı serbest metin ("Kombi", "Çamaşır makinesi",
+// "Sürdürülebilirlik"…). Hub 11 CIHAZLAR grubuyla çalıştığı için eşleme burada yapılır.
+// ⛔ UYDURMA KATEGORİ AÇILMAZ: cihaz grubuna oturmayan yazılar (hakkımızda, mevzuat,
+// enerji/fatura…) TEK bir "Genel" toplayıcısına gider.
+// ⛔ Yazının kendi `category` etiketi DEĞİŞMEZ — kartta ve yazı sayfasında aynen görünür;
+// bu eşleme yalnız hub/kategori katmanını besler.
+//
+// 2 Ağu (Tolga, ②): "Sürdürülebilirlik" Genel'den ÇIKTI, kendi konu kategorisine ayrıldı.
+// Gerekçe: 8 yazılık gerçek bir küme + footer'dan doğrudan link veriliyor; Genel'in içinde
+// kalırsa footer linki 22 karışık yazıya düşerdi. Bu YENİ BİR CİHAZ GRUBU DEĞİL —
+// "Genel" gibi bir KONU toplayıcısı, hub'ın 11'li cihaz ızgarasına karışmaz (aşağıya bak).
+const GENEL = "Genel";
+const SURDURULEBILIRLIK = "Sürdürülebilirlik";
+const BLOG_KAT_ESLES = {
+  "camasir-makinesi": "Çamaşır Makinesi",
+  "bulasik-makinesi": "Bulaşık Makinesi",
+  kombi: "Kombi / Termosifon",
+  termosifon: "Kombi / Termosifon",
+  klima: "Klima",
+  buzdolabi: "Buzdolabı",
+  "firin-ocak": "Fırın / Ocak / Aspiratör",
+  firin: "Fırın / Ocak / Aspiratör",
+  ocak: "Fırın / Ocak / Aspiratör",
+  aspirator: "Fırın / Ocak / Aspiratör",
+  televizyon: "Televizyon / Monitör",
+  monitor: "Televizyon / Monitör",
+  supurge: "Süpürge",
+  mikrodalga: "Mikrodalga / Air Fryer",
+  "air-fryer": "Mikrodalga / Air Fryer",
+  "su-sebili": "Su Sebili / Arıtma",
+  aritma: "Su Sebili / Arıtma",
+  bilgisayar: "Bilgisayar / Yazıcı",
+  yazici: "Bilgisayar / Yazıcı",
+};
+// Konu (cihaz-dışı) kategorileri: slug → görünen ad. Cihaz eşlemesinden ÖNCE bakılır ki
+// ileride "Sürdürülebilirlik" adlı bir cihaz grubu açılsa bile burası kaymasın.
+const KONU_ESLES = {
+  surdurulebilirlik: SURDURULEBILIRLIK,
+  "surdurulebilir-tuketim": SURDURULEBILIRLIK,
+  "onarim-hakki": SURDURULEBILIRLIK,
+  "dongusel-ekonomi": SURDURULEBILIRLIK,
+};
+const CIHAZ_SLUG = new Map(KATEGORILER.map((k) => [k.slug, k.ad]));
+// Görünen ad → slug (yukarıdakinin tersi). Yazının kategorisinden gerçek Kling
+// fotoğrafına gitmek için gerekiyor; `merkezFotosu` slug ile çalışıyor.
+const KAT_AD_SLUG = new Map([
+  ...KATEGORILER.map((k) => [k.ad, k.slug]),
+  // KONU kategorileri de eşlendi (Tolga, 20 Ağu: "Genel ve Sürdürülebilirlik
+  // thumbnailleri hâlâ SVG, değiştir"). 22 yazı (Genel 14 + Sürdürülebilirlik 8)
+  // yazının KENDİ çizgi-illüstrasyon kapağına düşüyordu — teknik olarak WebP ama
+  // görsel dil olarak vektörel. 20 Ağu'da bu iki kareye artık gerçek fotoğraf
+  // (orman/oturma odası + elde telefon) bağlı, o yüzden eşleme açılabildi.
+  [GENEL, "genel"],
+  [SURDURULEBILIRLIK, "surdurulebilirlik"],
+]);
+// Yazının kategorisine karşılık gelen fotoğraf. Karşılığı olmayan kategori → null,
+// o zaman yazının kendi kapağına, o da yoksa çizgi ikona düşer.
+const yaziFotosu = (p) => {
+  const slug = KAT_AD_SLUG.get(blogGrubu(p));
+  return slug ? merkezFotosu(slug) : null;
+};
+function blogGrubu(p) {
+  const s = slugify(p.category || "");
+  if (!s) return GENEL;
+  if (KONU_ESLES[s]) return KONU_ESLES[s]; // konu kategorisi (cihaz değil)
+  if (CIHAZ_SLUG.has(s)) return CIHAZ_SLUG.get(s); // birebir cihaz adı
+  return BLOG_KAT_ESLES[s] || GENEL;
+}
+
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
   // Kapağı olan yazı paylaşımda da kendi görselini gösterir; olmayan eski `og.png`de kalır.
@@ -1042,11 +1156,6 @@ const crumb = (items) => ({
   itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, item: x.item })),
 });
 
-// ⚠️ KATEGORİ KAYNAĞI (YK #32, 2 Ağu — Tolga: "bizim ürün grupları olmalı, telefon vs olmamalı"):
-// liste ELLE YAZILMAZ, `src/constants.js` → CIHAZLAR'dan türetilir. Uygulamanın cihaz grubu
-// eklenip çıkarıldığında üç merkez de kendiliğinden uyar; ikinci bir liste tutulmaz.
-// ⛔ iFixit'in kategori dünyası (telefon, tablet, konsol, araba, Mac) BİZE GİRMEZ.
-const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: slugify(ad), kaynak: ad }));
 
 // Slug çakışması sessizce iki kategoriyi aynı sayfaya basar → build'i durdur.
 const slugSay = KATEGORILER.reduce((m, k) => ((m[k.slug] = (m[k.slug] || 0) + 1), m), {});
@@ -1140,75 +1249,6 @@ const katIzgarasi = (items, birim, oncelik = []) =>
     )
     .join("");
 
-// ── BLOG YAZISI → CİHAZ GRUBU EŞLEMESİ ────────────────────────────────────────
-// Yazıların `category` frontmatter'ı serbest metin ("Kombi", "Çamaşır makinesi",
-// "Sürdürülebilirlik"…). Hub 11 CIHAZLAR grubuyla çalıştığı için eşleme burada yapılır.
-// ⛔ UYDURMA KATEGORİ AÇILMAZ: cihaz grubuna oturmayan yazılar (hakkımızda, mevzuat,
-// enerji/fatura…) TEK bir "Genel" toplayıcısına gider.
-// ⛔ Yazının kendi `category` etiketi DEĞİŞMEZ — kartta ve yazı sayfasında aynen görünür;
-// bu eşleme yalnız hub/kategori katmanını besler.
-//
-// 2 Ağu (Tolga, ②): "Sürdürülebilirlik" Genel'den ÇIKTI, kendi konu kategorisine ayrıldı.
-// Gerekçe: 8 yazılık gerçek bir küme + footer'dan doğrudan link veriliyor; Genel'in içinde
-// kalırsa footer linki 22 karışık yazıya düşerdi. Bu YENİ BİR CİHAZ GRUBU DEĞİL —
-// "Genel" gibi bir KONU toplayıcısı, hub'ın 11'li cihaz ızgarasına karışmaz (aşağıya bak).
-const GENEL = "Genel";
-const SURDURULEBILIRLIK = "Sürdürülebilirlik";
-const BLOG_KAT_ESLES = {
-  "camasir-makinesi": "Çamaşır Makinesi",
-  "bulasik-makinesi": "Bulaşık Makinesi",
-  kombi: "Kombi / Termosifon",
-  termosifon: "Kombi / Termosifon",
-  klima: "Klima",
-  buzdolabi: "Buzdolabı",
-  "firin-ocak": "Fırın / Ocak / Aspiratör",
-  firin: "Fırın / Ocak / Aspiratör",
-  ocak: "Fırın / Ocak / Aspiratör",
-  aspirator: "Fırın / Ocak / Aspiratör",
-  televizyon: "Televizyon / Monitör",
-  monitor: "Televizyon / Monitör",
-  supurge: "Süpürge",
-  mikrodalga: "Mikrodalga / Air Fryer",
-  "air-fryer": "Mikrodalga / Air Fryer",
-  "su-sebili": "Su Sebili / Arıtma",
-  aritma: "Su Sebili / Arıtma",
-  bilgisayar: "Bilgisayar / Yazıcı",
-  yazici: "Bilgisayar / Yazıcı",
-};
-// Konu (cihaz-dışı) kategorileri: slug → görünen ad. Cihaz eşlemesinden ÖNCE bakılır ki
-// ileride "Sürdürülebilirlik" adlı bir cihaz grubu açılsa bile burası kaymasın.
-const KONU_ESLES = {
-  surdurulebilirlik: SURDURULEBILIRLIK,
-  "surdurulebilir-tuketim": SURDURULEBILIRLIK,
-  "onarim-hakki": SURDURULEBILIRLIK,
-  "dongusel-ekonomi": SURDURULEBILIRLIK,
-};
-const CIHAZ_SLUG = new Map(KATEGORILER.map((k) => [k.slug, k.ad]));
-// Görünen ad → slug (yukarıdakinin tersi). Yazının kategorisinden gerçek Kling
-// fotoğrafına gitmek için gerekiyor; `merkezFotosu` slug ile çalışıyor.
-const KAT_AD_SLUG = new Map([
-  ...KATEGORILER.map((k) => [k.ad, k.slug]),
-  // KONU kategorileri de eşlendi (Tolga, 20 Ağu: "Genel ve Sürdürülebilirlik
-  // thumbnailleri hâlâ SVG, değiştir"). 22 yazı (Genel 14 + Sürdürülebilirlik 8)
-  // yazının KENDİ çizgi-illüstrasyon kapağına düşüyordu — teknik olarak WebP ama
-  // görsel dil olarak vektörel. 20 Ağu'da bu iki kareye artık gerçek fotoğraf
-  // (orman/oturma odası + elde telefon) bağlı, o yüzden eşleme açılabildi.
-  [GENEL, "genel"],
-  [SURDURULEBILIRLIK, "surdurulebilirlik"],
-]);
-// Yazının kategorisine karşılık gelen fotoğraf. Karşılığı olmayan kategori → null,
-// o zaman yazının kendi kapağına, o da yoksa çizgi ikona düşer.
-const yaziFotosu = (p) => {
-  const slug = KAT_AD_SLUG.get(blogGrubu(p));
-  return slug ? merkezFotosu(slug) : null;
-};
-function blogGrubu(p) {
-  const s = slugify(p.category || "");
-  if (!s) return GENEL;
-  if (KONU_ESLES[s]) return KONU_ESLES[s]; // konu kategorisi (cihaz değil)
-  if (CIHAZ_SLUG.has(s)) return CIHAZ_SLUG.get(s); // birebir cihaz adı
-  return BLOG_KAT_ESLES[s] || GENEL;
-}
 
 const cards = posts
   .filter((p) => p.slug !== "hakkimizda")
