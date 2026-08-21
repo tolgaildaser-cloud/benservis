@@ -363,18 +363,6 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         Arızamı ücretsiz teşhis et →
       </button>
 
-      {/* ═══ ④ GERÇEK SAYILAR ═══ (şişirme yok; hepsi repodan sayıldı) */}
-      <section style={st.bolumDis}><div style={st.bolum}>
-        <div className="vitrin-sayilar" style={st.sayilar}>
-          {SAYILAR.map((x) => (
-            <div key={x.kucuk} style={st.sayiKutu}>
-              <span style={st.sayiBuyuk}>{x.buyuk}</span>
-              <span style={st.sayiKucuk}>{x.kucuk}</span>
-            </div>
-          ))}
-        </div>
-      </div></section>
-
       {/* ═══ ⑤ GEZİNME + SIK SORULANLAR ═══
           18 Ağu'da App.jsx'ten BURAYA taşındı. Orada `s.wrap` (maxWidth 600)
           içindeydi; Tolga "tam sayfa genişliğine al" dedi ve vitrin zaten wrap'in
@@ -465,6 +453,22 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 <span style={st.sssArti} aria-hidden="true">{sssAcik === i ? "–" : "+"}</span>
               </button>
               {sssAcik === i && <p style={st.sssCevap}>{q.c}</p>}
+            </div>
+          ))}
+        </div>
+
+        {/* ═══ GERÇEK SAYILAR ═══ (şişirme yok; hepsi repodan sayıldı)
+            21 Ağu 2026 (Tolga: "bunu sık sorulan sorular altına al"): band ESKİDEN
+            cihaz kartlarının hemen altında, kendi `<section>`'ı olarak duruyordu.
+            Buraya taşındı — artık ⑤ bölümünün İÇİNDE, SSS listesinin altında ve PWA
+            bloğunun üstünde. Kendi section sarmalayıcısı KALDIRILDI (bölüm zaten
+            `st.bolum` kolonunda; ikinci sarmalayıcı çift dolgu yapardı).
+            Üst boşluk SSS başlığının `marginTop` deseniyle aynı ölçekte. */}
+        <div className="vitrin-sayilar" style={{ ...st.sayilar, marginTop: "clamp(36px, 5vw, 56px)" }}>
+          {SAYILAR.map((x) => (
+            <div key={x.kucuk} style={st.sayiKutu}>
+              <span style={st.sayiBuyuk}>{x.buyuk}</span>
+              <span style={st.sayiKucuk}>{x.kucuk}</span>
             </div>
           ))}
         </div>
