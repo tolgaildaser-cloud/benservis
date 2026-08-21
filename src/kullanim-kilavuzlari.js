@@ -30,7 +30,7 @@
 // TEK KAYNAK KURALI: cihaz→marka eşleşmesi burada TEKRAR YAZILMAZ; `CIHAZ_MARKALARI`'ndan
 // türetilir (`kilavuzKayitlari`). Yeni marka constants.js'e eklendiğinde, kılavuz adresi
 // buraya girildiği anda /kilavuzlar/ kendiliğinden uyar; ikinci liste tutulmaz.
-import { CIHAZ_MARKALARI, CIHAZLAR } from "./constants.js";
+import { CIHAZ_MARKALARI, CIHAZLAR, tabloBul, eslesenKategoriler } from "./constants.js";
 
 /**
  * marka → { url, ozet, haric? }
@@ -240,10 +240,15 @@ export const MARKA_KILAVUZLARI = {
 export function kilavuzKayitlari() {
   const kayitlar = [];
   for (const cihaz of CIHAZLAR) {
-    for (const marka of CIHAZ_MARKALARI[cihaz] || []) {
+    // ⚠️ Alias-duyarlı olmak ZORUNDA: cihaz adı birleşince (21 Ağu: "Çamaşır Makinesi /
+    // Kurutma") düz `CIHAZ_MARKALARI[cihaz]` boş döner, o cihazın kılavuz sayfası HİÇ
+    // ÜRETİLMEZ ve YAYINDAKİ /kilavuzlar/camasir-makinesi/ 404'e düşer. Sessiz kırılır:
+    // build hata vermez, yalnız bir dizin eksilir (bu koşuda dist sayımıyla yakalandı).
+    for (const marka of tabloBul(CIHAZ_MARKALARI, cihaz) || []) {
       const k = MARKA_KILAVUZLARI[marka];
       if (!k) continue;
-      if (k.haric?.includes(cihaz)) continue;
+      // `haric` eski adla yazılmış olabilir → alias kümesinin herhangi biri eşleşirse hariç tut.
+      if (k.haric?.some((h) => eslesenKategoriler(cihaz).includes(h))) continue;
       kayitlar.push({ cihaz, marka, url: k.url, ozet: k.ozet });
     }
   }

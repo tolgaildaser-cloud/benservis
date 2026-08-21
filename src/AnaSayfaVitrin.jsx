@@ -33,6 +33,8 @@ import IST from "./site-istatistik.json";
 const IKON = {
   "Buzdolabı": "buzdolabi",
   "Çamaşır Makinesi": "camasir-makinesi",
+  // ⚠️ GRF: kurutma-makinesi.png/.webp HENÜZ YOK — kart şimdilik çizgi ikona düşüyor.
+  "Kurutma Makinesi": "kurutma-makinesi",
   "Bulaşık Makinesi": "bulasik-makinesi",
   "Televizyon / Monitör": "televizyon-monitor",
   "Fırın / Ocak / Aspiratör": "firin-ocak-aspirator",
@@ -58,7 +60,7 @@ const FOTOGRAFLI = new Set([
   // üretimi robot süpürge çıkardığı için elendi).
   // Eksik kalan 3 kart (Kombi · Mikrodalga · Su Sebili) bu teslimle kapandı;
   // artık hiçbir kart çizgi ikonuna düşmüyor.
-  "Buzdolabı", "Çamaşır Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör",
+  "Buzdolabı", "Çamaşır Makinesi", "Kurutma Makinesi", "Bulaşık Makinesi", "Televizyon / Monitör",
   "Fırın / Ocak / Aspiratör", "Klima", "Süpürge", "Bilgisayar / Yazıcı",
   "Kombi / Termosifon", "Mikrodalga / Air Fryer", "Su Sebili / Arıtma",
 ]);

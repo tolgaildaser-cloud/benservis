@@ -6,7 +6,7 @@ import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
 
 
 const CIHAZ_EMOJI = {
-  "Buzdolabı": "🧊", "Çamaşır Makinesi": "🫧", "Bulaşık Makinesi": "🍽️",
+  "Buzdolabı": "🧊", "Çamaşır Makinesi": "🫧", "Kurutma Makinesi": "🌀", "Bulaşık Makinesi": "🍽️",
   "Klima": "❄️", "Televizyon": "📺", "Bilgisayar": "💻",
   "Telefon": "📱", "Fırın": "🔥", "Mikrodalgа": "📡", "default": "🔌",
 };

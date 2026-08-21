@@ -1,3 +1,4 @@
+import { tabloBul } from "./constants.js";
 // hata-kodlari.js — TAMİR MERKEZİ ① KATMAN: HATA KODU / BELİRTİ GİRİŞİ (YK Kararı #35, 3 Ağu 2026)
 //
 // NE İŞE YARAR: kullanıcı `/tamir/<cihaz>/` sayfasına elindeki **hata kodu** ya da **belirti**
@@ -86,9 +87,6 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vestel — E01, E02, E03", tip: "kod",
       anlam: "Kapı, su alma ve tahliye kodlarının anlamı ve evde yapılacak kontroller.",
       yazi: "vestel-camasir-makinesi-hata-kodlari" },
-    { giris: "Kurutma makinesi — Arçelik ve Beko kodları", tip: "kod",
-      anlam: "Arçelik E01-E05 ve Beko F01-F07 kodlarının anlamı; kod vermeyen modellerde ışık dili.",
-      yazi: "kurutma-makinesi-hata-kodlari" },
     { giris: "Çalışmıyor / start almıyor", tip: "belirti",
       anlam: "Çoğu zaman priz, sigorta, kapak kilidi ya da çocuk kilididir; servisten önce bakılacak 5 nokta.",
       yazi: "camasir-makinesi-calismiyor" },
@@ -107,18 +105,28 @@ export const HATA_KODU_KATMANI = {
     { giris: "İçine cisim kaçtı (sütyen teli, madeni bozukluk)", tip: "belirti",
       anlam: "Cismin nereye gittiği, filtreden güvenle nasıl çıkarılacağı ve hangi durumda servisin şart olduğu.",
       yazi: "camasir-makinesine-cisim-kacti" },
-    { giris: "Kurutma makinesi ısıtmıyor / soğuk üflüyor", tip: "belirti",
-      anlam: "Sorun çoğu zaman hava akışında başlar: filtre, kondenser, güvenlik termiği sırasıyla izlenir.",
-      yazi: "kurutma-makinesi-isitmiyor" },
-    { giris: "Kurutma makinesi su tankı dolu uyarısı", tip: "belirti",
-      anlam: "Tank boşken de uyarı verebilir; tankın oturuşu, şamandıra ve kondenser tıkanıklığı kontrol edilir.",
-      yazi: "kurutma-makinesi-su-tanki-dolu-uyarisi" },
     { giris: "Deterjan çekmecesi: hangi göz ne için", tip: "ayar",
       anlam: "I, II ve çiçek sembollerinin anlamı, sıvı deterjanın konacağı göz ve yumuşatıcının taşma sebebi.",
       yazi: "camasir-makinesi-deterjan-cekmecesi-hangi-goz" },
     { giris: "Ne kadar elektrik harcar", tip: "ayar",
       anlam: "Enerjinin çoğu suyu ısıtmaya gider: 30-40-60 derece farkı, eko program gerçeği ve tüketimi düşüren alışkanlıklar.",
       yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
+  ],
+
+  // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
+  // Bu 5 kayıt "Çamaşır Makinesi" altında duruyordu; kurutma ayrı cihaz olunca kendi
+  // /tamir/kurutma-makinesi/ sayfasına taşındı. Kayıtların METNİ ve bağlı YAZISI
+  // değişmedi — yalnız hangi cihazın altında durdukları değişti.
+  "Kurutma Makinesi": [
+    { giris: "Kurutma makinesi — Arçelik ve Beko kodları", tip: "kod",
+      anlam: "Arçelik E01-E05 ve Beko F01-F07 kodlarının anlamı; kod vermeyen modellerde ışık dili.",
+      yazi: "kurutma-makinesi-hata-kodlari" },
+    { giris: "Kurutma makinesi ısıtmıyor / soğuk üflüyor", tip: "belirti",
+      anlam: "Sorun çoğu zaman hava akışında başlar: filtre, kondenser, güvenlik termiği sırasıyla izlenir.",
+      yazi: "kurutma-makinesi-isitmiyor" },
+    { giris: "Kurutma makinesi su tankı dolu uyarısı", tip: "belirti",
+      anlam: "Tank boşken de uyarı verebilir; tankın oturuşu, şamandıra ve kondenser tıkanıklığı kontrol edilir.",
+      yazi: "kurutma-makinesi-su-tanki-dolu-uyarisi" },
     { giris: "Kurutma makinesi filtre ve kondenser temizliği", tip: "ayar",
       anlam: "Kurutma süresi uzadıysa ilk bakılacak yer: kapak filtresi her kurutmada, kondenser ayda bir temizlenir.",
       yazi: "kurutma-makinesi-filtre-ve-kondenser-temizligi" },
@@ -206,7 +214,6 @@ export const HATA_KODU_KATMANI = {
       anlam: "Enerjinin çoğu suyu ısıtmaya gider; aynı programda tüketimin belirgin artması bir sinyal olabilir.",
       yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
   ],
-
   "Bulaşık Makinesi": [
     { giris: "E15 (musluk işareti)", tip: "kod",
       anlam: "Tabanda su var, AquaStop taşma güvenliği devrede. Suyu boşaltmayı kendin yapabilirsin.",
@@ -863,7 +870,8 @@ export const HATA_KODU_KATMANI = {
 export const HATA_KODU_SIRA = ["kod", "belirti", "ayar"];
 
 export function hataKoduKayitlari(cihaz) {
-  const liste = HATA_KODU_KATMANI[cihaz] || [];
+  // Alias-duyarlı (bkz. rehberBul): birleşen cihaz adı eski tablo anahtarına düşer.
+  const liste = tabloBul(HATA_KODU_KATMANI, cihaz) || [];
   return HATA_KODU_SIRA.flatMap((t) => liste.filter((k) => k.tip === t));
 }
 
