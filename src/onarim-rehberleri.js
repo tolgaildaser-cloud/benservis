@@ -144,6 +144,13 @@ export const REHBERLER = {
       rehber: B("klima-filtresi-temizleme", "Klima filtresini temizleme", "Kolay", "~15 dakika", 6) },
   ],
   "Süpürge": [
+    // 22 Ağu 2026 (Tolga onayı, konu #3 → seçenek b): kendi rehberimiz iFixit'in ÖNÜNE alındı.
+    // ⚠️ Kapattığı canlı ihlal: "çekmiyor" diyen kullanıcı bugüne kadar iFixit'in İngilizce,
+    // Difficult, 18 adımlı MOTOR SÖKME rehberine düşüyordu — oysa kendi yazımızın ilk cümlesi
+    // "çoğu zaman arıza değil, tıkanmış hava akışı". YK #31'in doğrudan konusu.
+    // ⛔ Anahtara "motor" EKLENMEDİ (dar anahtar ilkesi) · iFixit satırları SİLİNMEDİ, altta kaldı.
+    { ara: ["çekmiyor", "emiş", "emmiyor", "tıkalı"],
+      rehber: B("supurge-cekmiyor", "Emişi geri getiren 6 kontrol", "Kolay", "~15 dakika", 6) },
     { ara: ["motor", "çekmiyor", "sıkış"],
       rehber: G("How+to+clear+a+jammed+motor+in+your+vacuum+cleaner/198622", "Sıkışan motoru açma", "Difficult", "25-35 dk", 18) },
     { ara: ["fırça", "brush", "rulo"],
