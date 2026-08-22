@@ -300,8 +300,11 @@ export const HATA_KODU_KATMANI = {
     { giris: "Samsung — 4C, 5C, LC, HE", tip: "kod",
       anlam: "4C su temini, 5C tahliye, LC kaçak, HE ısıtıcı demek; özellikle 4C için evde yapılacak kontroller.",
       yazi: "samsung-bulasik-makinesi-hata-kodlari" },
-    { giris: "Vestel — E1, E2, E3, F1", tip: "kod",
-      anlam: "Su alma, tahliye, ısıtma ve taşma kodlarının anlamı ve evde kontrol adımları.",
+    // 22 Ağu (TARAMA-1): Vestel BULAŞIKTA E kodu KULLANMIYOR — 5 resmî kılavuzda E ile
+    // başlayan kod sayısı 0. Tablo F serisi. (E01/E02/E03 Vestel ÇAMAŞIR makinesinin
+    // kodları; iki cihazın tablosu karışmış.) Eski giriş dört koddan üçünü uyduruyordu.
+    { giris: "Vestel — FF, F2, F1, F3 (E kodu yok)", tip: "kod",
+      anlam: "Kılavuzdaki on iki F kodunun anlamı; Vestel yalnız FF ve F2'de evde iş tarif ediyor.",
       yazi: "vestel-bulasik-makinesi-hata-kodlari" },
     { giris: "Siemens — E15 (musluk işareti)", tip: "kod",
       anlam: "Taban tavasına su kaçtı, AquaStop devrede; suyu güvenle boşaltma adımları ve servis sınırı.",
