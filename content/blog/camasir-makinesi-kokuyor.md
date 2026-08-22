@@ -11,13 +11,13 @@ guide:
   time: "~25 dakika"
   totalTime: "PT25M"
   cost: "Ücretsiz"
-  tools: ["Yumuşak bez veya sünger", "Beyaz sirke (1-2 bardak)", "Havlu", "Eldiven (önerilir)"]
+  tools: ["Yumuşak bez veya sünger", "Havlu", "Eldiven (önerilir)"]
 steps:
   - "Tamburu boşalt; içinde çamaşır kalmasın."
   - "Kapı contasının kıvrımlarını aç ve nemli bezle sil; saç, tüy ve kalıntıyı temizle."
   - "Deterjan çekmecesini çıkar, ılık suda yıka, yuvasını da sil ve kurut."
   - "Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar, temizle, sonuna kadar geri tak."
-  - "Tambura 1-2 bardak beyaz sirke ekle ve makineyi boş, 60-90 derece bir programda çalıştır."
+  - "Makineyi boş olarak 60-90 derece bir programda çalıştır; katkı gerekiyorsa kılavuzunun ya da üreticinin önerdiği makine temizleyicisini kullan."
   - "Program bitince contayı ve kapak çevresini kurula, kapağı açık bırak."
 # GRF adım görselleri BAĞLANDI (4 Ağu 2026): public/tamir-gorsel/<slug>/adim-0N.png + kapak.png
 # Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
@@ -28,15 +28,15 @@ images:
     - "Kapı contası kıvrımlarının açılıp nemli bezle silinişini gösteren çizim"
     - "Deterjan çekmecesinin çıkarılıp ılık suda yıkanışını gösteren çizim"
     - "Alt köşedeki tahliye filtresinin havlu ve kapla çıkarılışını gösteren çizim"
-    - "Tambura beyaz sirke eklenip yüksek sıcaklıkta boş programın başlatılışını gösteren çizim"
+    - "Boş çamaşır makinesinde yüksek sıcaklıkta programın başlatılışını gösteren çizim"
     - "Program sonunda contanın kurulanıp kapağın açık bırakılışını gösteren çizim"
 faq:
   - q: "Çamaşır makinesi neden kötü kokar?"
     a: "En sık sebep nemli ortamda üreyen küf ve bakteridir. Kapı contasında biriken kir/nem, deterjan çekmecesindeki kalıntı, tıkalı tahliye filtresi, kireç birikimi ve hep düşük sıcaklıkta yıkamak kokuya yol açar."
   - q: "Çamaşır makinesi kokusu nasıl geçer?"
-    a: "Makineyi boş, en yüksek sıcaklıkta (60-90°) bir program ile çalıştır; tambura 1-2 bardak beyaz sirke ya da makine temizleyici ekle. Ardından kapı contasını, deterjan çekmecesini ve tahliye filtresini temizle. Her yıkamadan sonra kapağı açık bırak."
+    a: "Makineyi boş, en yüksek sıcaklıkta (60-90°) bir program ile çalıştır; gerekirse kılavuzunun önerdiği makine temizleyicisini kullan; sirke gibi ev tarifelerini önermiyoruz, bazı üreticiler lastik parçalara zarar verebileceğini belirtiyor. Ardından kapı contasını, deterjan çekmecesini ve tahliye filtresini temizle. Her yıkamadan sonra kapağı açık bırak."
   - q: "Kapı contasından küf kokusu geliyorsa ne yapmalı?"
-    a: "Ön yüklemeli makinelerde lastik contanın kıvrımlarında su ve kir birikir, küf yapar. Contayı bez ve beyaz sirke/karbonatla sil, kıvrımların arasını temizle ve kuru bırak. Küf lekesi çıkmıyorsa conta değişebilir."
+    a: "Ön yüklemeli makinelerde lastik contanın kıvrımlarında su ve kir birikir, küf yapar. Contayı nemli bezle, gerekirse biraz bulaşık deterjanlı suyla sil, kıvrımların arasını temizle ve kuru bırak. Küf lekesi çıkmıyorsa conta değişebilir."
   - q: "Her şeyi temizledim ama koku geçmiyor, sebebi ne?"
     a: "Conta, çekmece ve filtre temiz olduğu hâlde koku sürüyorsa tahliye hattında (pompa, hortum, sifon) biriken biyofilm ya da tıkanıklık olabilir. Bu genelde servis işidir; kesin tahmini Benservis'ten al."
 ---
@@ -69,7 +69,7 @@ Güvenli ve çoğu zaman ücretsiz:
 
 **4. Alt köşedeki tahliye filtresini havlu ve kap koyarak çıkar, temizle, sonuna kadar geri tak.** Bu adımın ayrıntısı ayrı rehberimizde: [tahliye filtresi nasıl temizlenir](/blog/camasir-makinesi-tahliye-filtresi-temizleme/).
 
-**5. Tambura 1-2 bardak beyaz sirke ekle ve makineyi boş, 60-90 derece bir programda çalıştır.**
+**5. Makineyi boş olarak 60-90 derece bir programda çalıştır.** Kokuyu asıl alan sıcaklıktır; katkı şart değildir. Bir temizleyici kullanacaksan cihazının kullanım kılavuzuna bak — kılavuz bir ürün adı veriyorsa onu, vermiyorsa üreticinin kendi makine temizleyicisini kullan. ⚠️ İnternetteki sirke ve karbonat tariflerini bu sayfada önermiyoruz: bazı üreticiler bunların lastik conta ve hortumlarda yıpranmaya yol açabileceğini açıkça belirtiyor, ve bir uyuşmazlıkta garanti değerlendirmesi kılavuzun metnine bakar.
 
 **6. Program bitince contayı ve kapak çevresini kurula, kapağı açık bırak.**
 
@@ -91,10 +91,10 @@ Temizlik çoğu zaman ücretsizdir. Conta ya da tahliye/pompa arızası çıkars
 Genelde nemde üreyen küf/bakteri; ayrıca conta, çekmece, tıkalı filtre ve kireç.
 
 **Koku nasıl geçer?**
-Boş 60-90° program + sirke/temizleyici; sonra conta, çekmece ve filtre temizliği; kapağı açık bırak.
+Boş 60-90° program (gerekirse üreticinin temizleyicisi); sonra conta, çekmece ve filtre temizliği; kapağı açık bırak.
 
 **Contadan küf kokusu?**
-Kıvrımları sirke/karbonatla sil, kuru bırak; çıkmazsa conta değişebilir.
+Kıvrımları nemli bezle sil, kuru bırak; çıkmazsa conta değişebilir.
 
 **Her şey temiz ama koku sürüyorsa?**
 Tahliye hattında biyofilm/tıkanıklık olabilir — servis işidir.

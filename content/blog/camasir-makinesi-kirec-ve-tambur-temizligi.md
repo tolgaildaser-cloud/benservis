@@ -25,7 +25,7 @@ faq:
   - q: "Bakım yıkaması kaç derecede yapılır?"
     a: "Makinende tambur ya da kazan temizleme programı varsa doğru cevap odur; o program sıcaklığı ve devri bu iş için zaten ayarlanmıştır. Böyle bir program yoksa üreticiler pamuklu programı en yüksek sıcaklıkta, tambur tamamen boşken çalıştırmayı önerir. Düşük sıcaklıkta yapılan bakım yıkaması istenen etkiyi vermez, çünkü asıl mesele yağ ve kalıntının çözülmesidir."
   - q: "Çamaşır makinesine sirke ya da karbonat koymak zararlı mı?"
-    a: "Bu konuda üreticiler aynı şeyi söylemiyor. Bazı büyük markaların destek sayfaları sirkenin lastik conta ve hortumlara zarar verebileceğini belirtip kendi temizleyici ürünlerini önerirken, bazıları ölçülü kullanıma sıcak bakıyor. Kaynaklar çeliştiği için burada tek bir tarif vermiyoruz: geçerli olan senin cihazının kullanım kılavuzudur, çünkü garanti kapsamı da o metne bakar."
+    a: "Bu konuda üreticiler aynı şeyi söylemiyor. Bazı büyük markaların destek sayfaları sirkenin lastik conta ve hortumlara zarar verebileceğini belirtip kendi temizleyici ürünlerini öneriyor; ölçülü kullanılırsa sorun olmayacağı görüşünün arkasında ise bir üretici kaynağı bulamadık. Net bir üretici mutabakatı olmadığı için burada tek bir tarif vermiyoruz: geçerli olan senin cihazının kullanım kılavuzudur, çünkü garanti kapsamı da o metne bakar."
   - q: "Kireç birikmesi makineye ne yapar?"
     a: "Kireç ısıtıcı yüzeyde ve su yollarında birikerek suyun ısınmasını zorlaştırır; makine aynı sıcaklığa ulaşmak için daha uzun çalışır ve elektrik tüketimi artar. Zamanla tamburda ve kalıntıyla birleşerek kokuya, çamaşırda beyazlık kaybına ve leke izlerine yol açar. Düzenli bakım yıkaması ve suyun sertliğine uygun aralıkta kireç çözme bu birikimi kontrol altında tutar."
 images:
@@ -72,7 +72,7 @@ Doğru sayıyı tahmin etmeye gerek yok: **su idarenin yayımladığı su kalite
 
 ## Sirke ve karbonat tartışmasında dürüst duruş
 
-İnternetteki her temizlik tarifinde bu ikisi var. Üreticilerin sayfalarına bakınca tablo bu kadar net değil: **bazı büyük markaların destek sayfaları sirkeye açıkça karşı çıkıyor**, gerekçe olarak lastik conta ve hortumlarda zamanla oluşabilecek yıpranmayı gösteriyor ve kendi makine temizleyicilerini öneriyor. Bazı üreticiler ise ölçülü kullanıma daha sıcak bakıyor.
+İnternetteki her temizlik tarifinde bu ikisi var. Üreticilerin sayfalarına bakınca tablo bu kadar net değil: **bazı büyük markaların destek sayfaları sirkeye açıkça karşı çıkıyor**, gerekçe olarak lastik conta ve hortumlarda zamanla oluşabilecek yıpranmayı gösteriyor ve kendi makine temizleyicilerini öneriyor. İnternette yaygın olan "ölçülü kullanılırsa sorun olmaz" görüşünün arkasında ise bir üretici kaynağı bulamadık.
 
 ⚠️ Kaynaklar birbirini tutmadığı için burada tek bir tarif vermiyoruz. **Geçerli olan senin cihazının kullanım kılavuzudur** — hem üretici o metinden sorumludur hem de bir uyuşmazlıkta garanti değerlendirmesi o metne bakar. Kılavuzun bir ürün adı veriyorsa onu kullan; hiçbir şey demiyorsa üreticinin kendi temizleyicisi en güvenli yoldur. Karbonat için de aynı ilke geçerli.
 
