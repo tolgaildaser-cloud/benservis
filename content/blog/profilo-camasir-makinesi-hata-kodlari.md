@@ -73,7 +73,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|
-| **E17 / F17** | Su alamıyor (musluk, basınç, süzgeç) | 🛠️ Musluğu ve giriş hattını kontrol et |
+| **E17 / F17** | Su alamıyor ⚠️ Profilo SSS'inde "su basıncı yüksek" | 🛠️ Musluğu ve giriş hattını kontrol et |
 | **E18 / F18** | Su atamıyor (tahliye) | 🛠️ Pompa filtresini ve hortumu temizle |
 | **E23 / F23** | Aquastop etkinleştirildi, tabana su indi | 🔧 Servis (sızıntı tespiti) |
 | **E19 / F19** | Isıtma süresi aşıldı | 🔧 Bosch/Siemens: "kendi kendine düzeltilemez" |
@@ -84,6 +84,8 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | **E28 / F28** | Akış sensörü arızası | 🔧 Servis |
 
 ## E17 / F17 — Su alamıyor
+
+> ⚠️ **Bu kodda küçük bir çelişki var, bilmen iyi olur.** Bosch ve Siemens E17'yi *"su besleme süresi aşıldı"* diye tanımlıyor. Profilo'nun kendi SSS sayfası ise aynı kod için **"su basıncı yüksek"** diyor. İkisi de su giriş hattına bakar ama farklı yönü işaret eder. Kontrol listesi değişmiyor — musluk, hortum, süzgeç — yalnız musluğu **sonuna kadar açmak** yerine, basınç şüphesi varsa bir miktar kısmayı da denemeye değer.
 
 Program başlamış ama makine gereken sürede su alamamıştır; sebep çoğu zaman makinenin dışındadır.
 

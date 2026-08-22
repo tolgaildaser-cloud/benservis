@@ -96,8 +96,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "Profilo — E17, E18, E23 (F21 yok)", tip: "kod",
       anlam: "BSH ailesindeki bu kodların anlamı; evde çözülebilenler ve servis gerektirenler.",
       yazi: "profilo-camasir-makinesi-hata-kodlari" },
-    { giris: "Vestel — E01, E02, E03", tip: "kod",
-      anlam: "Kapı, su alma ve tahliye kodlarının anlamı ve evde yapılacak kontroller.",
+    // 22 Ağu (TARAMA-1 kalan tur): E04 eklendi — 5 resmî kılavuzda var, bizde eksikti.
+    // Vestel'in çamaşır tablosu bu dört kodla sınırlı; E05+ resmî kılavuzda yok.
+    { giris: "Vestel — E01, E02, E03, E04", tip: "kod",
+      anlam: "Kapı, su alma, tahliye ve aşırı su kodlarının anlamı ve evde yapılacak kontroller.",
       yazi: "vestel-camasir-makinesi-hata-kodlari" },
     { giris: "Çalışmıyor / start almıyor", tip: "belirti",
       anlam: "Çoğu zaman priz, sigorta, kapak kilidi ya da çocuk kilididir; servisten önce bakılacak 5 nokta.",

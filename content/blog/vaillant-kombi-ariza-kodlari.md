@@ -4,6 +4,15 @@ description: "Vaillant kombi arıza kodları tam liste: F.22 düşük su basınc
 slug: "vaillant-kombi-ariza-kodlari"
 date: "2026-06-19"
 category: "Kombi"
+# 🔴 22 Ağu 2026 — ÜÇ İFADE DÜZELTİLDİ (kod tablosu denetimi, TARAMA-1 kalan tur).
+# Yazı külliyatın en sağlam kombi yazısıydı (12/14 doğru) ama üç yeri hatalıydı:
+#   F.23 / F.24 TEK SATIRDA BİRLEŞTİRİLMİŞTİ. Vaillant ikisini ayırıyor:
+#     F.23 = sıcaklık FARKI çok büyük · F.24 = sıcaklık ARTIŞI çok hızlı. Ayrı arızalar.
+#   F.22'ye "(kuru çalışma)" eklenmişti — Vaillant'ta kuru çalışma AYRI kod: F.83.
+#   F.54 "gaz basıncı düşük" diye daralttılmıştı; Vaillant'ın ifadesi daha geniş:
+#     "gaz besleme arızası" ve genelde F.28/F.29 ile BİRLİKTE görülür. Ayrıca bu kod
+#     resmî kod sayfasında var ama taranan 4 kurulum kılavuzunun hiçbirinde yok →
+#     tek kaynaklı olduğu okura da söylendi.
 faq:
   - q: "Vaillant F.22 ne demek ve nasıl çözülür?"
     a: "F.22 düşük su basıncını gösterir: tesisattaki su azalmıştır. Güvenle kendin çözebilirsin: kombinin altındaki doldurma musluğunu yavaşça açıp manometreyi 1–1.5 bara getir, sonra kapat. Basınç sürekli düşüyorsa kaçak vardır, servis gerekir."
@@ -35,14 +44,16 @@ Vaillant kombin ekranında **F.** ile başlayan bir arıza kodu gösteriyor (F.2
 
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|
-| **F.22** | Düşük su basıncı (kuru çalışma) | 🛠️ Doldurma musluğundan 1–1.5 bara tamamla |
-| **F.23 / F.24** | Su sıcaklık farkı / pompa | 🔧 Servis (pompa/dolaşım) |
+| **F.22** | Düşük su basıncı | 🛠️ Doldurma musluğundan 1–1.5 bara tamamla |
+| **F.23** | Sıcaklık farkı çok büyük | 🔧 Servis (pompa/dolaşım) |
+| **F.24** | Sıcaklık artışı çok hızlı | 🔧 Servis (pompa/dolaşım) |
+| **F.83** | Kuru çalışma | 🔧 Servis (önce basıncı kontrol et) |
 | **F.27** | Gaz yokken alev algılandı | 🔧 Cihazı kapat, servis |
 | **F.28** | Başlangıçta ateşleme yok / gaz yok | 🔧 Gaz vanası açık mı bak, reset; geçmezse servis |
 | **F.29** | Çalışırken alev sönmesi (gaz/topraklama) | 🔧 Servis |
 | **F.32** | Fan arızası | 🔧 Servis |
 | **F.49** | eBUS gerilim hatası | 🔧 Servis |
-| **F.54** | Gaz basıncı düşük | 🔧 Servis (gaz girişi) |
+| **F.54** | Gaz besleme arızası ⚠️ genelde F.28/F.29 ile birlikte | 🔧 Cihazı kapat, servis |
 | **F.61** | Gaz armatürü kumanda arızası | 🔧 Cihazı kapat, servis |
 | **F.62** | Gaz armatürü / elektronik kart | 🔧 Cihazı kapat, servis |
 | **F.73 / F.74** | Su basıncı sensörü hatası | 🔧 Servis |
