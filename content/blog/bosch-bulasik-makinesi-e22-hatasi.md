@@ -1,6 +1,6 @@
 ---
 title: "Bosch bulaşık makinesi E22 hatası: filtre tıkalı"
-description: "Bosch E22: iç (taban) filtre tıkalı, su süzülemiyor. Filtreyi çıkarıp temizleme adımları ve servis sınırı. Siemens/Profilo/Neff'te de aynı."
+description: "Bosch E22: iç (taban) filtre tıkalı, su süzülemiyor. Filtreyi çıkarıp temizleme adımları ve servis sınırı. Siemens ve Profilo'da da aynı."
 slug: "bosch-bulasik-makinesi-e22-hatasi"
 date: "2026-07-22"
 category: "Bulaşık makinesi"
@@ -28,7 +28,7 @@ faq:
   - q: "E22 tamiri kaç para tutar?"
     a: "Sebep sadece tıkalı filtreyse maliyet sıfırdır — temizlik yeterlidir. Filtreyi temizlemene rağmen hata sürüyorsa ve tahliye pompası/hortumu değişimi gerekiyorsa bu genelde düşük-orta maliyetli bir iştir. Belirtini Benservis'e yaz, senin durumun için tahmini fiyatı ücretsiz gör."
   - q: "Siemens/Profilo bulaşık makinesindeki E22 de aynı mı?"
-    a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E22 bu markaların hepsinde 'iç filtre tıkalı' anlamına gelir ve çözümü aynıdır."
+    a: "Siemens ve Profilo'da evet; ikisi de BSH grubundadır ve kendi destek sayfalarında bu kodu aynı anlamla yayımlar. Neff ve Gaggenau için aynı şeyi söyleyemiyoruz: ikisi de BSH markası olmasına rağmen kendi sitelerinde bir hata kodu sayfası yayımlamıyor. Platform ortaklığı belgeli, kod tablosu ortaklığı değil."
 images:
   steps:
     - "Makineyi kapat ve programı iptal et — adımı gösteren çizim"
@@ -43,7 +43,7 @@ images:
 
 > ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**
 
-Bosch bulaşık makinen programı yarıda kesti ve ekranda **E22** yazıyor. İyi haber: E22, Bosch'un en **masum** kodlarından biri. Çoğu zaman pahalı bir arıza değil, makinenin **iç filtresinin tıkandığını** ve temizlik istediğini söylüyor. Bu rehberde E22'nin ne anlama geldiğini, filtreyi evde nasıl temizleyeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı çözüm **Siemens, Profilo, Neff** için de geçerli.
+Bosch bulaşık makinen programı yarıda kesti ve ekranda **E22** yazıyor. İyi haber: E22, Bosch'un en **masum** kodlarından biri. Çoğu zaman pahalı bir arıza değil, makinenin **iç filtresinin tıkandığını** ve temizlik istediğini söylüyor. Bu rehberde E22'nin ne anlama geldiğini, filtreyi evde nasıl temizleyeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı çözüm **Siemens ve Profilo** için de geçerli; Neff ve Gaggenau kendi kod sayfalarını yayımlamadığı için onlar adına aynı şeyi söyleyemiyoruz.
 
 > ⚡ **Kısa özet:** E22 = **tabandaki iç filtre tıkalı**, su süzülemiyor. Çözüm: alt sepeti çıkar → filtreyi saatin tersine çevirip sök → sıcak suyla temizle → yerine kilitle → dene. Genelde **10 dakikada, ücretsiz** çözülür.
 

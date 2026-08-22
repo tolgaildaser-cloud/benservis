@@ -1,27 +1,36 @@
 ---
-title: "Bosch bulaşık makinesi E15 hatası: adım adım çözümü"
-description: "Bosch E15 (musluk işareti): tabanda su var, AquaStop devrede. Suyu boşaltma yöntemi adım adım ve servis sınırı. Siemens/Profilo/Neff'te de aynı."
+title: "Bosch bulaşık makinesi E15 hatası: Bosch ne yapılmasını söylüyor"
+description: "Bosch E15: su koruma sistemi devrede, tabanda su var. Bosch'un kendi talimatı, makineyi eğme tavsiyesinin neden yanlış olduğu ve servis sınırı."
 slug: "bosch-bulasik-makinesi-e15-hatasi"
 date: "2026-07-09"
 category: "Bulaşık makinesi"
+# 🚨 22 Ağu 2026 — GÜVENLİK DÜZELTMESİ (kod tablosu denetimi, TARAMA-1).
+# Yazının guide/steps dizisi makineyi 30-45° EĞMEYİ anlatıyordu — yani HowTo şeması
+# olarak arama sonuçlarında bu talimat çıkıyordu. Bosch'un kendi E15 sayfası:
+#   "Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi
+#    öneririz. Şebeke suyunu kesin ve cihazı kapatın."
+# Kaynak: bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e-15
+# steps, tools, gövde ve SSS Bosch'un talimatına göre yeniden yazıldı. Adım sayısı 6'da
+# tutuldu (frontmatter ↔ gövde hizası korunuyor).
+# 📌 Neff/Gaggenau kod eşitliği iddiası çıkarıldı: neff-home.com'da kod sayfası yok.
 guide:
-  difficulty: "Kolay-Orta"
-  time: "~20 dakika (+ kuruma süresi)"
-  totalTime: "PT20M"
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
   cost: "Ücretsiz"
-  tools: ["Havlu / paspas", "Sığ bir kap veya leğen", "Yardım edecek bir kişi (makineyi eğmek için)"]
+  tools: ["Havlu / paspas", "Kâğıt ve kalem (gözlem notu için)"]
 steps:
-  - "Makineyi kapat, fişini çek ve su musluğunu kapat."
-  - "Makinenin önüne ve altına havlu ser."
-  - "Makineyi bir kişinin yardımıyla öne/yana doğru yaklaşık 30-45° eğ; taban tavasındaki su dışarı boşalacak."
-  - "Su gelmesi durana kadar eğik tut, sonra yavaşça yerine koy."
-  - "Tabanın kuruması için makineyi bir süre bekle (mümkünse birkaç saat)."
-  - "Fişi tak, musluğu aç ve kısa bir programla dene. Hata tekrarlıyorsa sızıntı var demektir — servis gerekir."
+  - "Şebeke suyunu kes. Makinenin musluğunu kapat; Bosch'un E15 talimatındaki ilk hamle budur."
+  - "Cihazı kapat ve fişini çek. Tabanda su varken elektrikle aynı anda uğraşma."
+  - "Makinenin önüne ve altına havlu ser, dışarı sızmış görünür suyu al. Cihazın içine ve altına elini sokma."
+  - "Çevreyi gözle: makinenin altında, yanlarında ve arka bağlantılarda ıslaklık izi ya da damlama var mı bak."
+  - "Son yıkamayı hatırla: aşırı köpük, elde yıkama deterjanı ya da fazla doz kullandın mı not et; tek seferlik taşmaların klasik sebebidir."
+  - "Kodu, modeli ve gözlemini not edip servisten randevu al. Bosch bu kodda evde çözüm denenmesini önermiyor."
 faq:
   - q: "Bosch bulaşık makinesi E15 hatası ne demek?"
     a: "E15, makinenin taban tavasında su biriktiğini ve taşma güvenliğinin (AquaStop / flotör şalteri) devreye girdiğini gösterir. Makine, evi su basmasın diye kendini durdurur ve genelde ekranda musluk işaretiyle birlikte görünür. Yani E15 bir 'koruma' durumudur; asıl soru suyun tabana neden kaçtığıdır."
   - q: "E15 hatası nasıl çözülür?"
-    a: "Fişi çek, musluğu kapat, makineyi bir kişinin yardımıyla öne/yana ~30-45° eğerek taban tavasındaki suyu boşalt, kurumasını bekle ve tekrar dene. Tek seferlik taşma veya aşırı köpükten kaynaklandıysa hata genelde bir daha gelmez. Kısa sürede tekrar E15 veriyorsa içeride aktif bir sızıntı vardır; kaynağını servis bulmalıdır."
+    a: "Bosch'un talimatı net: şebeke suyunu kes, cihazı kapat ve teknisyenden randevu al. Bosch bu kodda sağlık ve güvenlik gerekçesiyle evde çözüm denenmesini önermiyor. Yapabileceğin şey dışarı sızmış suyu kurulamak, çevrede ıslaklık izi aramak ve son yıkamada aşırı köpük olup olmadığını not etmek — bunlar servise anlatacağın tabloyu kurar. İnternette çok yayılan 'makineyi eğip suyu boşalt' tavsiyesi üreticinin talimatına aykırıdır."
   - q: "E15 hatası kendiliğinden geçer mi?"
     a: "Bazen — tabandaki az miktardaki su zamanla buharlaşırsa hata kalkabilir; bazı kullanıcılar makineyi fişten çekip bekleyince düzeldiğini görür. Ama bu, sebebini çözmez. Su boşaltma + kurutma yöntemi daha hızlı ve sağlıklıdır; tekrarlıyorsa mutlaka sızıntı aranmalıdır."
   - q: "E15 tamiri kaç para tutar?"
@@ -30,20 +39,26 @@ faq:
     a: "Evet. Bosch, Siemens, Profilo, Neff ve Gaggenau aynı grubun (BSH) ortak platformunu kullanır; E15 bu markaların hepsinde 'taban tavasında su / taşma güvenliği' anlamına gelir ve çözümü aynıdır."
 images:
   steps:
-    - "Makineyi kapat, fişini çek ve su musluğunu kapat — adımı gösteren çizim"
-    - "Makinenin önüne ve altına havlu ser — adımı gösteren çizim"
-    - "Makineyi bir kişinin yardımıyla öne/yana doğru yaklaşık 30-45° eğ; taban tavasındaki su dışarı boşalacak — adımı gösteren çizim"
-    - "Su gelmesi durana kadar eğik tut, sonra yavaşça yerine koy — adımı gösteren çizim"
-    - "Tabanın kuruması için makineyi bir süre bekle (mümkünse birkaç saat) — adımı gösteren çizim"
-    - "Fişi tak, musluğu aç ve kısa bir programla dene. Hata tekrarlıyorsa sızıntı var demektir — servis gerekir — adımı gösteren çizim"
-  coverAlt: "Eğik tutulan bulaşık makinesinden taban suyunun boşaldığını gösteren çizim"
+    - "Makinenin su musluğunun kapatılışını gösteren çizim; makine soluk, vurgu vanada"
+    - "Cihazın güç tuşundan kapatılışını ve fişin prizden çekilişini gösteren çizim"
+    - "Makinenin önündeki zemine sızmış suyun bezle kurulanışını ve cihazın içine el sokulmaması uyarısını gösteren çizim"
+    - "Makinenin arka bağlantısında ve yanında ıslaklık izi aranışını gösteren çizim"
+    - "Aşırı köpüğün tek seferlik taşmanın sebebi olabileceğini gösteren çizim"
+    - "Kodun, model numarasının ve gözlemin bir kâğıda not edilişini gösteren çizim"
+  coverAlt: "Dik duran bulaşık makinesi, kapatılmış su vanası ve makinenin önünde tabana inmiş suyu gösteren çizim"
 ---
 
 > ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**
 
-Bosch bulaşık makinen çalışmayı kesti, ekranda **E15** yazıyor ve genelde yanında bir **musluk (çeşme) işareti** yanıp sönüyor. Panik yok: E15 çoğu zaman pahalı bir arıza değil, makinenin **taşma güvenliğinin** devreye girmesi. Bu rehberde E15'in tam olarak ne anlama geldiğini, evde nasıl çözeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı çözüm **Siemens, Profilo, Neff** için de geçerli.
+> 🚨 **Önce önemli bir düzeltme.** İnternette çok yayılan bir tavsiye var: *"makineyi 30-45° eğ, taban suyunu boşalt."* **Üreticinin kendi E15 sayfası bunun tersini söylüyor:**
+>
+> *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
+>
+> Bu yazının önceki sürümü de o tavsiyeyi veriyordu, üstelik adım adım. Kaldırdık ve yerine üreticinin kendi talimatını koyduk. Suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
 
-> ⚡ **Kısa özet:** E15 = makinenin **taban tavasına su kaçmış**, taşma şamandırası (AquaStop güvenliği) makineyi durdurmuş. Çözüm: fişi çek → musluğu kapat → makineyi öne/yana **~30-45° eğip taban suyunu boşalt** → kurut → dene. Tekrarlıyorsa sızıntı vardır → servis.
+Bosch bulaşık makinen çalışmayı kesti, ekranda **E15** yazıyor ve genelde yanında bir **musluk (çeşme) işareti** yanıp sönüyor. Panik yok: E15 çoğu zaman pahalı bir arıza değil, makinenin **taşma güvenliğinin** devreye girmesi. Bu rehberde E15'in tam olarak ne anlama geldiğini, evde nasıl çözeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı yaklaşım **Siemens ve Profilo** için de geçerli; Neff ve Gaggenau kendi kod sayfalarını yayımlamadığı için onlar adına aynı şeyi söyleyemiyoruz.
+
+> ⚡ **Kısa özet:** E15 = makinenin **taban tavasına su inmiş**, su koruma sistemi cihazı durdurmuş. Bosch'un talimatı: **şebeke suyunu kes → cihazı kapat → randevu al.** Aradaki üç adım senin için değil, servis için: sızmış suyu kurula, çevreyi gözle, son yıkamayı hatırla.
 
 ## E15 hatası ne demek?
 
@@ -59,23 +74,22 @@ Yani E15 aslında makinenin "bozuldum" demesi değil, **"içimde olmaması gerek
 - **Su giriş valfi sızıntısı** — valf eskiyince damlatabilir.
 - **Filtre/sprey kolu tıkanıklığından taşma** — su doğru dolaşamayınca kenarlardan kaçabilir.
 
-## Adım adım çözüm: taban suyunu boşalt
+## Adım adım: Bosch ne yapılmasını söylüyor
 
 Bu iş için bir yardımcıya ihtiyacın olacak — makine doluyken ağırdır.
 
-**1. Güvenliği al.** Makineyi kapat, **fişini çek** ve **su musluğunu kapat**. Elektrik + su birlikteyken asla çalışma.
+**1. Şebeke suyunu kes.** Makinenin musluğunu kapat. Üreticinin E15 talimatındaki ilk hamle budur ve sebebi basit: kaynağı bilinmeyen bir sızıntıya su gitmeye devam etmemeli.
 
-**2. Önünü hazırla.** Makinenin önüne ve altına havlu/paspas ser; sığ bir kap bulundur.
+**2. Cihazı kapat ve fişini çek.** Tabanda su varken elektrikle aynı anda uğraşma.
 
-**3. Makineyi eğ.** Ankastre ise yuvasından biraz çekmen gerekebilir. Bir kişinin yardımıyla makineyi **öne veya yana doğru ~30-45°** eğ. Taban tavasındaki su alttan dışarı akacak — bu tamamen normal.
+**3. Görünür suyu al.** Makinenin önüne ve altına havlu ser, dışarı sızmış suyu kurula. ⚠️ Cihazın içine ve altına elini sokma — tabandaki su elektrikli bir bölgenin içindedir.
 
-**4. Su bitene kadar bekle.** Akış durunca makineyi yavaşça düzelt.
+**4. Çevreyi gözle.** Makinenin altında, yanlarında ve arka bağlantılarda ıslaklık izi ya da damlama var mı bak. Bu gözlem servise teşhisi kısaltır.
 
-**5. Kurut.** Tabanın tam kuruması için makineyi mümkünse birkaç saat beklet. (Aceleniz varsa 20-30 dk sonra da deneyebilirsin; kuruma ne kadar iyi olursa hatanın "hayalet" tekrarı o kadar az olur.)
+**5. Son yıkamayı hatırla.** Aşırı köpük, elde yıkama deterjanı ya da fazla doz kullandıysan not et; tek seferlik taşmaların klasik sebebidir.
 
-**6. Dene.** Fişi tak, musluğu aç, **kısa bir program** başlat. Hata gelmiyorsa sorun büyük ihtimalle tek seferlik taşma/köpüktü.
+**6. Randevu al.** Kodu, model numarasını ve gözlemini not edip servisle konuş. Üretici bu kodda evde çözüm denenmesini önermiyor — ama elin boş değil, anlatacak somut bir tablon var.
 
-> ⚠️ **Sınırını bil:** Alt paneli sökmek, şamandıra şalterine veya valfe müdahale etmek elektrikli-sulu bir alandır — bu kısım **servis işidir.** Eğme + boşaltma + kurutma senin güvenli alanın; ötesini zorlamana gerek yok.
 
 ## E15 tekrar geliyorsa: sızıntı var demektir
 
@@ -95,7 +109,7 @@ Maliyet açısından iyi haber: E15'in arkasından çıkan işlerin çoğu (cont
 Taban tavasında su birikti, taşma güvenliği (AquaStop/flotör) makineyi durdurdu. Genelde musluk işaretiyle birlikte görünür.
 
 **Nasıl çözülür?**
-Fiş + musluk kapalıyken makineyi ~30-45° eğip taban suyunu boşalt, kurut, tekrar dene.
+Bosch'un talimatı: şebeke suyunu kes, cihazı kapat, randevu al. Makineyi eğme.
 
 **Kendiliğinden geçer mi?**
 Su buharlaşırsa geçebilir ama sebep çözülmez; tekrarlıyorsa sızıntı aranmalı.

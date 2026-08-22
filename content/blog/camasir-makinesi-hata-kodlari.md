@@ -32,8 +32,9 @@ images:
 
 > ⚠️ Önemli: Hata kodlarının anlamı **model ve seriye göre değişebilir**. Aşağıdakiler en yaygın anlamlardır; kesin teşhis için kılavuzuna bak ya da kodu Benservis'e yaz.
 
-## Bosch / Siemens / Neff (F kodları)
-Bu üç marka aynı platformu paylaşır; kodlar büyük ölçüde ortaktır.
+## Bosch / Siemens (F kodları)
+İki marka aynı platformu paylaşır ve tabloları kendi sitelerinde birebir aynı yayımlanır.
+Neff de BSH markasıdır ama kendi hata kodu sayfasını yayımlamıyor; o yüzden başlıktan çıkardık.
 
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|

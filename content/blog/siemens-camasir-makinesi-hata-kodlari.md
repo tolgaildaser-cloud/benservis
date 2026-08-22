@@ -1,9 +1,18 @@
 ---
-title: "Siemens çamaşır makinesi hata kodları: E18, F21, E23"
-description: "Siemens çamaşır makinen E18/F18, F21 ya da E23 mü veriyor? Her kodun anlamı, hangisinin evde çözüldüğü ve hangi noktada servis gerektiği bu rehberde."
+title: "Siemens çamaşır makinesi hata kodları: resmî liste ve F21 meselesi"
+description: "Siemens çamaşır makinen E17, E18 ya da E23 mü veriyor? BSH'nin yayımladığı on kodun anlamı, evde çözülebilenler ve F21'in neden listede olmadığı."
 slug: "siemens-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+# 🔴 22 Ağu 2026 — F21 KALDIRILDI (kod tablosu denetimi, TARAMA-1).
+# "F21 = motor sistemi arızası (kömür)" eşleşmesi BSH'nin hiçbir bölge sitesinde ve
+# kılavuzunda geçmiyor. BSH'nin tahrik/motor kodu E80. F21 yazının BAŞLIĞINDAYDI.
+# Kaynak: bosch-home.com.tr/musteri-hizmetleri/yardim-destek/camasir-makinesi-hatalari
+# + altındaki 10 kod sayfası (bu koşuda tek tek indirildi). Yayımlanan liste tam olarak:
+# E16 E17 E18 E19 E20 E23 E25 E26 E27 E28. Siemens'in kendi tablosu bununla birebir aynı.
+# 📌 "F21 aradıysan" bölümü BİLEREK duruyor: arama gerçek, okuru boşa düşürmüyoruz.
+# ⛔ guide ve steps DEĞİŞMEDİ — sekiz adım kod-bağımsız, hepsi doğru kalıyor.
+
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -24,15 +33,15 @@ faq:
     a: "E18/F18, tahliye süresinin aşıldığını gösterir: makine içindeki suyu atamıyordur. En sık sebep tüy, bozuk para ya da tokayla tıkanmış tahliye filtresi veya bükülmüş tahliye hortumudur. Bu, Siemens'te en sık çıkan ve çoğu zaman evde ücretsiz çözülen koddur."
   - q: "Siemens'te E ve F önekli kodlar farklı mı?"
     a: "Hayır, aynı arızanın iki yazımıdır. Yeni nesil modeller E, daha eski modeller F önekiyle aynı numarayı gösterir; yani E18 ile F18 birebir aynı anlama gelir. Bu yüzden rehberde ikisini birlikte veriyoruz."
-  - q: "Siemens F21 hatası kendiliğinden geçer mi?"
-    a: "Genelde hayır. F21 motor sistemiyle ilgili bir arızadır; en sık sebebi motor kömürlerinin (karbon fırça) aşınmasıdır ve makine dönmez ya da düzensiz döner. Resetlemek kodu geçici silebilir ama sebep durduğu için kod geri gelir; kalıcı çözüm servis işidir."
+  - q: "Siemens F21 hatası ne demek?"
+    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok. İnternette çok dolaşan 'F21 motor kömürü' eşleşmesi Bosch ve Siemens'in hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekranında F21 gördüğünü düşünüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et; motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez ya da sıkmaya geçemez."
   - q: "Bosch'taki kodlarla Siemens kodları aynı mı?"
     a: "Evet. Siemens ve Bosch aynı grubun (BSH) ortak platformunu kullanır; E/F kodları iki markada da aynı anlama gelir. Bosch için yazdığımız kod listesi Siemens'te, Siemens için yazdıklarımız Bosch'ta da geçerlidir."
 images:
   coverAlt: "Çamaşır makinesinin program kadranı ve gösterge penceresinin yakın planı"
 ---
 
-Program ortasında makine durdu, ekranda **E18** yazıyor; ya da çamaşırlar sırılsıklam çıktı ve panelde **F21** yanıp sönüyor. Siemens çamaşır makineleri arızayı **E** ya da **F** önekli kodlarla bildirir ve bu kodların bir kısmı beş dakikalık bir kontrolle çözülürken bir kısmı net biçimde servis işidir. Bu rehberde en sık çıkan Siemens kodlarını, anlamlarını ve aradaki sınırı topladık.
+Program ortasında makine durdu, ekranda **E18** yazıyor; ya da çamaşırlar sırılsıklam çıktı ve panelde başka bir kod yanıp sönüyor. Siemens çamaşır makineleri arızayı **E** ya da **F** önekli kodlarla bildirir ve bu kodların bir kısmı beş dakikalık bir kontrolle çözülürken bir kısmı net biçimde servis işidir. Bu rehberde en sık çıkan Siemens kodlarını, anlamlarını ve aradaki sınırı topladık.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -66,8 +75,13 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 |-----|--------|------------|
 | **E17 / F17** | Su alamıyor (musluk, basınç, giriş süzgeci) | 🛠️ Musluğu ve giriş hortumunu kontrol et |
 | **E18 / F18** | Su atamıyor (tahliye süresi aşıldı) | 🛠️ Tahliye filtresini ve hortumu temizle |
-| **E21 / F21** | Motor sistemi arızası | 🔧 Servis (genelde motor kömürü) |
-| **E23 / F23** | Su kaçağı, taban tavasında su | 🔧 Servis (sızıntı tespiti) |
+| **E23 / F23** | Aquastop etkinleştirildi, taban tavasında su | 🔧 Servis (sızıntı tespiti) |
+| **E19 / F19** | Isıtma süresi aşıldı | 🔧 Bosch/Siemens: "kendi kendine düzeltilemez" |
+| **E20 / F20** | Beklenmeyen ısınma | 🛠️ Makineyi açıp kapatarak sıfırla; düzelmezse servis |
+| **E25 / F25** | Bulanıklık sensörü arızası | 🔧 Servis |
+| **E26 / F26** | Analog basınç sensörü arızası | 🔧 Servis |
+| **E27 / F27** | Basınç sensörü arızası | 🔧 Servis |
+| **E28 / F28** | Akış sensörü arızası | 🔧 Servis |
 
 ## E18 / F18 — Su atamıyor: en sık çıkan kod
 
@@ -87,13 +101,29 @@ E18'in aynadaki yansıması: makine gereken sürede su alamamıştır.
 
 Bunlara rağmen kod sürüyorsa su giriş valfi ya da AquaStop hortumu tarafında iş vardır; orası servise aittir.
 
-## E21 / F21 — Motor arızası
+## "Ben F21 aramıştım" — o kodun durumu
 
-Makine ya hiç dönmez ya düzensiz döner ya da sıkmaya geçemez. F21'in en yaygın sebebi **motor kömürlerinin aşınmasıdır**; devir sensörü ya da elektronik kaynaklı da olabilir.
+Bu bölüm bilerek burada. **"F21 = motor kömürü"** eşleşmesi internette çok yaygın ama
+**BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor.** Aynı durum şu numaralar için de geçerli:
 
-**Kendin kontrol et:** Burada yapılabilecek tek şey basit bir reset denemesidir: makineyi kapat, fişi bir dakika çek, tekrar tak ve kısa bir program dene. Kod geri geliyorsa uğraşma.
+| Aradığın kod | Durumu |
+|---|---|
+| **F21** | BSH listelerinde yok. Tahrik/motor tarafının kodu **E80** |
+| **F31** | Yok. BSH'de köpük kodu **E33 / F33** |
+| **F42 · F43** | Yok |
+| **F61** | Yok. Kapı kodları **E16/F16** ve **E34/F34** |
+| **F63** | Yok |
 
-⛔ **Motor bölümü kullanıcıya kapalıdır.** Arka kapağı söküp motora ulaşmak hem elektrik riski taşır hem de yanlış müdahale basit bir kömür işini kart arızasına çevirebilir. F21'de doğru hamle servistir.
+Bunları listemizden çıkardık. Motor tarafında gerçekten bir sorun varsa belirtisi
+nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez.
+
+**Kendin kontrol et:** Tek güvenli deneme reset: makineyi kapat, fişi bir dakika çek,
+tekrar tak, kısa bir program başlat. Kod geri geliyorsa uğraşma.
+
+⛔ **Motor bölümü kullanıcıya kapalıdır.** Arka kapağı söküp motora ulaşmak elektrik
+riski taşır ve yanlış müdahale basit bir kömür işini kart arızasına çevirebilir.
+Doğru hamle servistir — ama servise giderken "F21 aldım" değil, **makinenin ne
+yapmadığını** anlat.
 
 ## E23 / F23 — Su kaçağı (taban tavasında su)
 
@@ -105,7 +135,7 @@ Makine bir sızıntı algılamış ve alt taban tavasına su inmiştir; güvenli
 
 ## Hata kodu nasıl sıfırlanır?
 
-Çoğu modelde program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve programı yeniden başlat. Şunu bilerek yap: reset, kodu siler ama **sebebi silmez**. Filtre hâlâ tıkalıysa E18, kömür bittiyse F21 geri gelir.
+Çoğu modelde program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve programı yeniden başlat. Şunu bilerek yap: reset, kodu siler ama **sebebi silmez**. Filtre hâlâ tıkalıysa E18 geri gelir.
 
 ## Kodun bu listede yok mu?
 

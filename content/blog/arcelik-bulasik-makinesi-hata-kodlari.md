@@ -1,9 +1,24 @@
 ---
-title: "Arçelik bulaşık makinesi hata kodları: E01'den E09'a tam rehber"
-description: "Arçelik bulaşık makinesinde E01-E09 kodlarının anlamı: taşma, su kesik, ısıtıcı, sensör, vana ve kart hataları. Evde bakılacaklar ve servis sınırı bu yazıda."
+title: "Arçelik bulaşık makinesi hata kodları: üreticinin yayımladığı beş kod"
+description: "Arçelik bulaşık makinesinde E01, E02, E06, E07 ve E26 ne demek? Üreticinin listesi, E03-E05'in neden bu listede olmadığı ve servis sınırı."
 slug: "arcelik-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+# 🔴 22 Ağu 2026 — TABLO BAŞTAN YAZILDI (kod tablosu denetimi, TARAMA-1).
+# Üreticinin yayımladığı bulaşık makinesi listesi BEŞ koddur: E01 · E02 · E06 · E07 · E26.
+# Yazıdaki E03, E04, E05, E08 ve E09 bu listede YOK.
+# En keskin bulgu: E03 ve E04 aslında Arçelik KOMBİ kodlarıdır —
+#   E03 = baca sigortası · E04 = düşük su basıncı. Yani tablo yanlış CİHAZDAN kopyalanmış.
+#   (Aynı desen çamaşırda da çıktı: kombi kodları çamaşır sayfasına taşınmıştı, bkz. #105.)
+# E05 "üç yollu vana", E08 "kart hafıza", E09 "haberleşme" hiçbir üretici yayınında yok.
+# Kaynak (bu koşuda tarayıcı başlık setiyle 200 çekildi):
+#   arcelik.com.tr/blog/bulasik-makinesi-hata-kodlari
+#   beko.com.tr/blog/bulasik-makinesi-hata-kodlari-rehberi   → ikisi BİREBİR aynı liste
+# 📌 Eksik yayındı, eklendi: E07 (sürekli su alma) ve E26.
+# 📌 E26 tartışmalı görünüyor ama üreticinin KENDİ metni: "15°C Üstü Kompresör Arızalı".
+#    Beko'nun sayfası "kompresör veya ısı pompasında bir problem" diyor — yani ısı pompalı
+#    modelleri anlatıyor. Bu nüansla yayımlandı, uydurulmadı.
+# ⛔ guide ve steps DEĞİŞMEDİ — sekiz adım kod-bağımsız (musluk, filtre, pervane, gözlem).
 guide:
   difficulty: "Kolay"
   time: "~15 dakika"
@@ -26,13 +41,13 @@ faq:
     a: "Önce eviyenin altındaki makine musluğunun tam açık olduğunu, sonra evde su olup olmadığını kontrol et — şebeke kesintisi bu kodun en yaygın sebebidir. Giriş hortumunun dolap içinde bükülmediğine de bak. Bu üçü temizken kod sürüyorsa giriş hattının makine tarafında bir sorun vardır ve servisin bakması gerekir."
   - q: "Makine sürekli su alıp duruyor ve E07 veriyor — tehlikeli mi?"
     a: "E07 sürekli su alma durumudur ve genelde su giriş vanası ya da akış ölçer kaynaklıdır. Makinenin güvenlik algoritması fazla suyu tahliye ederek durumu dengelemeye çalışır. Yine de hata sürüyorsa riski büyütmemek için makineyi kapatıp fişini çek ve su musluğunu kapat; bu tablo kullanıcı müdahalesiyle çözülmez, servis gerektirir."
-  - q: "E08 ve E09 kodlarında evde deneyebileceğim bir şey var mı?"
-    a: "Tek güvenli deneme resetlemektir: makineyi kapat, fişten çek, birkaç dakika bekleyip yeniden dene. E08 elektronik kartın hafıza bölümünü, E09 kart ile iç sistemler arasındaki haberleşmeyi işaret eder; ikisi de tamamen elektronik alanındadır. Reset sonrası kod tekrar geliyorsa kartın ölçümü ve onarımı servise aittir, evde yapılacak başka bir şey yoktur."
+  - q: "İnternetteki E03, E04, E05 listeleri neden bu yazıda yok?"
+    a: "Çünkü üreticinin yayımladığı bulaşık makinesi listesinde bu numaralar geçmiyor. İkisinin nereden geldiği de belli: E03 ve E04 aslında Arçelik kombi kodlarıdır — E03 baca sigortası, E04 düşük su basıncı demek. Yani dolaşan tablonun bir kısmı yanlış cihazdan kopyalanmış. Isıtma tarafını arıyorsan doğru kod E06'dır, yani NTC ısı sensörü."
 images:
   coverAlt: "Türk mutfağında kapağı açık bulaşık makinesi ve alt sepetteki temiz tabaklar"
 ---
 
-Program yarıda kesildi, makine bip'liyor ve panelde E ile başlayan bir kod var. Arçelik bulaşık makinelerinde bu kodlar arızanın adresini verir: kimi musluğu işaret eder, kimi gövdenin içini. Aradaki farkı bilmek önemli, çünkü kodların bir kısmı iki dakikalık bir kontrolle çözülürken bir kısmında yapılacak en doğru şey makineye hiç dokunmamaktır. Bu rehberde E01'den E09'a yaygın kodları tek tek açıyoruz.
+Program yarıda kesildi, makine bip'liyor ve panelde E ile başlayan bir kod var. Arçelik bulaşık makinelerinde bu kodlar arızanın adresini verir: kimi musluğu işaret eder, kimi gövdenin içini. Aradaki farkı bilmek önemli, çünkü kodların bir kısmı iki dakikalık bir kontrolle çözülürken bir kısmında yapılacak en doğru şey makineye hiç dokunmamaktır. Bu rehberde üreticinin **kendi sayfasında yayımladığı beş kodu** tek tek açıyoruz — ve internette dolaşan diğer numaraların neden burada olmadığını da söylüyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -60,69 +75,65 @@ Aşağıdaki sıra, hangi kod gelirse gelsin önce denenecek **ücretsiz ve alet
 
 ⛔ Bu listede sökme yok. Gövde içi — rezistans, sensörler, vana, akış ölçer ve elektronik kart — kullanıcı alanı değildir.
 
-## E01 — taşma koruması
+## E01 — taşma
 
-Makine fazla su aldı ya da bir bağlantıdan sızan su alt şasiye indi; güvenlik sistemi programı durdurdu. Makinenin kendi kendine tahliye çalıştırması bu kodun tipik eşlikçisidir.
+Makine fazla su almış ya da bir yerden sızan su şasiye inmiştir; taşma koruması cihazı durdurur.
 
-**Kendin kontrol et:** Makineyi kapat, **fişini çek, musluğu kapat** ve zemine bak: makinenin önünde ya da altında ıslaklık var mı? Aşırı köpük ya da tek seferlik taşmadan geldiyse kuruduktan sonra kod tekrarlamayabilir. Kısa sürede yeniden geliyorsa içeride aktif sızıntı vardır — conta mı, hortum mu, bağlantı mı; onu bulmak servis işidir.
+**Kendin kontrol et:** Makineyi kapat, **fişini çek** ve **su musluğunu kapat**. Zemine bak — makinenin önünde ya da altında ıslaklık var mı? Son yıkamada aşırı köpük ya da yanlış deterjan kullandıysan not et; tek seferlik taşmaların klasik sebebidir. Kod kısa sürede yeniden geliyorsa içeride aktif bir sızıntı vardır ve kaynağını servis bulmalıdır.
 
-⛔ Su + elektrik birlikteyken makinenin altına elle müdahale etme; taban bölgesi servis alanıdır.
+⛔ Şasiye inen suya ulaşmak için alt paneli sökme; orası hem elektrikli hem sulu bir bölgedir.
 
 ## E02 — su kesik
 
-Makine su alamıyor. Kodların en masumudur; sebep çoğu zaman makinenin dışındadır.
+Üreticinin tanımı doğrudan: şebeke suyu kesilmiş ya da makinenin su giriş musluğu açılmamıştır.
 
-**Kendin kontrol et:** Musluk tam açık mı, evde su var mı, giriş hortumu bükülmüş mü? Üçü de temizse ve kod sürüyorsa giriş süzgeci ya da valf tarafına bakılmalıdır — süzgeç temizliği dışındaki her şey servise aittir.
+**Kendin kontrol et:** Önce evyenin altındaki makine musluğunun **tam açık** olduğunu, sonra evde su olup olmadığını kontrol et — şebeke kesintisi bu kodun en yaygın sebebidir. Giriş hortumunun dolap içinde bükülmediğine de bak. Bu üçü temizken kod sürüyorsa giriş hattının makine tarafında bir sorun vardır.
 
-## E03 — ısıtıcı arızası
+## E06 — NTC (ısı sensörü)
 
-Suyu ısıtan rezistans tüpü görevini yapamıyor. Belirtisi nettir: bulaşıklar soğuk yıkanır, yağ çözülmez, kurutma zayıflar, program sonunda kapaktan buhar çıkmaz.
+Makinenin ısı sensörü arızalıdır. Belirtisi nettir: makine **düzgün ve sürekli ısıtma yapmaz**, bulaşıklar soğuk ve yağlı çıkar, deterjan tam çözülmez.
 
-**Kendin kontrol et:** Yalnızca gözlem: buhar var mı, bulaşık sıcak mı çıkıyor? Bu gözlemi not et; rezistans gövde içindedir ve **değişimi servis işidir**.
+**Kendin kontrol et:** Yalnızca gözlem: program sonunda kapaktan buhar çıkıyor mu, bulaşıklar sıcak mı? Bu bilgiyi servise aktarmak teşhisi kısaltır.
 
-## E04 — kirlilik sensörü
-
-Yıkama suyunun bulanıklığını ölçen sensör düzgün okuma yapamıyor. Otomatik programlar bu sensörün verdiği bilgiyle süre ayarladığı için programlar anormal uzayabilir ya da erken bitebilir.
-
-**Kendin kontrol et:** Filtreyi çıkarıp yıka, makineyi boşken sıcak bir programda makine temizleyiciyle çalıştır — sensör yüzeyindeki yağ ve kireç filmi bazı sınır vakaların sebebidir. Kod sürüyorsa sensör servisliktir.
-
-## E05 — üç yollu vana
-
-Suyu alt ve üst pervane arasında yönlendiren vana arızalı. Tipik belirti, üst sepetin sürekli kirli çıkmasıdır.
-
-**Kendin kontrol et:** Pervaneleri elle yerinden al, deliklerini akan suda temizle, serbest döndüklerinden emin ol. Yıkama düzelmiyor ve kod sürüyorsa vana içeridedir — servis işi.
-
-## E06 — NTC sıcaklık sensörü
-
-Su sıcaklığını ölçen sensör arızalı. Makine sıcaklığı bilemeyince ısıtmayı doğru yönetemez; yıkama ve kurutma kalitesi birlikte düşer.
-
-**Kendin kontrol et:** Gözlem dışında yapılacak bir şey yok; sensör gövde içindedir ve ölçümü servis yapar.
+⛔ Sensör ve rezistans gövdenin içindedir; ölçümü ve değişimi servis işidir.
 
 ## E07 — sürekli su alma
 
-Makine almaması gerektiği hâlde su almaya devam ediyor; genelde su giriş vanası ya da akış ölçer kaynaklıdır. Makinenin güvenlik algoritması fazla suyu dışarı atmaya çalışır.
+Makine su almayı durduramıyor. Üreticinin gösterdiği sebep **akış ölçerdeki arızadır**: akış ölçer makinedeki su miktarını ölçüp maksimum seviyeyi kontrol eder; görevini yapamayınca su girişi kesilmez.
 
-**Kendin kontrol et:** Tek yapman gereken durumu güvenliğe almak: makineyi kapat, **fişini çek ve musluğu kapat**. Bu tablo evde çözülmez; vana ve akış ölçer servis alanıdır.
+**Kendin kontrol et:** Burada beklemek doğru değil, çünkü kontrol edilemeyen su girişi taşmaya varır. Yapılacak tek şey durumu güvenliğe almaktır: **makineyi kapat, fişini çek ve musluğu kapat.** Sonrası servis alanıdır — akış ölçer ve vana gövdenin içindedir.
 
-## E08 ve E09 — elektronik kart bölgesi
+## E26 — kompresör (ısı pompalı modeller)
 
-**E08** kartın hafıza (EEPROM) bölümündeki hatayı, **E09** kart ile makinenin iç sistemleri arasındaki haberleşme hatasını gösterir. İkisi de tamamen elektronik alanındadır.
+Üreticinin tanımı: **15°C üstü kompresör arızası.** Kompresörde yeterli soğutucu akışkan olmadığında sıcaklık yükselir ve makinenin performansı düşer. Bu kod **ısı pompalı** modelleri ilgilendirir — üreticinin kendi ifadesiyle "kompresör veya ısı pompasında bir problem" işaretidir.
 
-**Kendin kontrol et:** Tek güvenli deneme reset: kapat, fişten çek, birkaç dakika bekle, yeniden dene. Kod tekrar geliyorsa kartın ölçümü ve onarımı **servis işidir**.
+**Kendin kontrol et:** Bu kodda evde yapılacak bir şey yok. Üreticinin talimatı net: **makineyi durdur ve yetkili servise başvur.** Kapalı soğutucu devresi basınçlıdır; açmak da doldurmak da yetki ve ekipman ister.
+
+## "Ben E03 / E04 / E05 aramıştım" — o kodların durumu
+
+Bu bölüm bilerek burada, çünkü bu numaralar internette çok dolaşıyor. **Üreticinin yayımladığı bulaşık makinesi listesinde hiçbiri yok** — ve ikisinin nereden geldiği belli:
+
+| Aradığın kod | Durumu |
+|---|---|
+| **E03** | Bulaşık listesinde yok. Bu numara Arçelik **kombide** "baca sigortası" demek |
+| **E04** | Bulaşık listesinde yok. Bu numara Arçelik **kombide** "düşük su basıncı" demek |
+| **E05** | Hiçbir üretici yayınında yok |
+| **E08** | Hiçbir üretici yayınında yok |
+| **E09** | Hiçbir üretici yayınında yok |
+
+Yani dolaşan tablonun bir kısmı **yanlış cihazdan kopyalanmış**. Isıtma tarafını arıyorsan doğru kod **E06**'dır (NTC sensörü).
+
+Ekranında gerçekten bu numaralardan birini görüyorsan kodu bir kez daha kontrol et ve kendi modelinin kullanım kılavuzundan teyit et — yanlış kod, yanlış parçaya ve gereksiz masrafa yönlendirir.
 
 ## Kodların özeti
 
-| Kod | Anlamı | Kendin bakılır mı |
+| Kod | Üreticinin karşılığı | Kendin bakılır mı |
 |---|---|---|
-| E01 | Taşma/sızıntı koruması | ⚠️ Fişi çek, kurut; tekrarlarsa servis |
-| E02 | Su kesik | ✅ Musluk, kesinti, hortum |
-| E03 | Isıtıcı | ⛔ Servis |
-| E04 | Kirlilik sensörü | ⚠️ Filtre + iç temizlik; sürerse servis |
-| E05 | Üç yollu vana | ⚠️ Pervane temizliği; sürerse servis |
-| E06 | NTC sensörü | ⛔ Servis |
-| E07 | Sürekli su alma | ⛔ Fişi ve musluğu kapat, servis |
-| E08 | Kart hafıza hatası | ⛔ Reset dene, sürerse servis |
-| E09 | Haberleşme hatası | ⛔ Reset dene, sürerse servis |
+| **E01** | Taşma | ⚠️ Fişi çek, musluğu kapat, zemini kurut; tekrarlarsa servis |
+| **E02** | Su kesik | ✅ Musluk açık mı, evde su var mı, hortum bükülmüş mü |
+| **E06** | NTC (ısı sensörü) arızası | ⛔ Servis |
+| **E07** | Sürekli su alma | ⛔ Fişi ve musluğu kapat, servis |
+| **E26** | 15°C üstü kompresör arızası (ısı pompalı modeller) | ⛔ Makineyi durdur, servis |
 
 ## Hangi noktadan sonra servis işi
 
