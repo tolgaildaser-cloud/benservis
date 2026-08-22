@@ -675,8 +675,10 @@ export const HATA_KODU_KATMANI = {
       anlam: "Hayır: gövdede elektronik kart ve elektrik bağlantısı var, kullanıcı temizliği fırça-süpürge-nemli bezle sınırlıdır.",
       yazi: "klima-dis-unite-temizligi" },
   // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
-    { giris: "Arçelik — E, P ve CH serisi", tip: "kod",
-      anlam: "Üç ayrı kod dili var: E arıza, P koruma, CH inverter tarafı; hangisi servis ister belli.",
+    // 22 Ağu (TARAMA-1): "üç kod dili" çerçevesi uydurma bloklar üzerine kuruluydu.
+    // E ve P serisi Arçelik'in hiçbir yayınında yok; tek tablo CH serisi (34 kod).
+    { giris: "Arçelik — CH serisi (34 kod)", tip: "kod",
+      anlam: "Arçelik'in yayımladığı tek tablo CH'dir; E ve P listeleri markaya ait değil.",
       yazi: "arcelik-klima-hata-kodlari" },
     { giris: "Çalışıyor ama iç ünite üflemiyor", tip: "belirti",
       anlam: "Fan motoru, kanat ayarı ve filtre tıkanması ayrımı; evde bakılacaklar sırayla.",
