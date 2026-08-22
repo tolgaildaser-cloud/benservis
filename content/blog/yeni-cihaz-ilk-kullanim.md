@@ -29,7 +29,7 @@ faq:
   - q: "Model etiketinin fotoğrafını çekmek neden önemli?"
     a: "Kullanım kılavuzu, yedek parça ve servis kaydı model numarası üzerinden yürür ve bu etiket çoğu cihazda kapak kenarında ya da arka yüzeyde, yani sonradan ulaşması zor bir yerdedir. Cihaz yerine oturduktan sonra o etikete bakmak için makineyi çekmek gerekir. Kurulum gününde çekilen tek bir fotoğraf, ileride kılavuz ararken ve servis çağırırken dakikalar kazandırır."
 images:
-  coverAlt: "Mavi tulumlu benservis ustası yeni kurulmuş çamaşır makinesinin bulunduğu mutfakta gülümsüyor"
+  coverAlt: "Yeni kurulmuş çamaşır makinesinin alt gövdesi, kenarında koruyucu film, zeminde açılmış ambalaj"
 ---
 
 Kurulum ekibi işini bitirdi, kutular indi, yeni makinen mutfakta parlıyor. İlk refleks anlaşılır: hemen bir yıkama at, çalıştığını gör. Oysa cihazın ömrünü ve garanti sürecini belirleyen birkaç kontrol tam da bu yarım saatte yapılır — sonradan yapılması ya zor ya imkânsızdır. Bu yazıda kurulumdan sonraki ilk otuz dakikada neyi doğrulaman gerektiğini anlatıyoruz.
