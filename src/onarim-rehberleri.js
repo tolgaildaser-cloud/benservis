@@ -94,7 +94,13 @@ export const REHBERLER = {
     // jenerik bulaşık arızalarını çalmaz.
     { ara: ["koku", "kokuyor", "kokuyu", "lağım"],
       rehber: B("bulasik-makinesi-kokuyor", "Bulaşık makinesi kokusunu giderme", "Kolay", "~20 dakika", 7) },
-    { ara: ["tahliye pompa", "tahliye", "su atmıyor", "boşaltmıyor"],
+    // 🔴 22 Ağu (YK taraması) — ASİMETRİ KAPATILDI. Çamaşır makinesinde "su atmıyor"
+    //    kendi rehberimize gidiyordu, bulaşıkta AYNI İFADE iFixit'in pompa DEĞİŞİMİ
+    //    rehberine düşüyordu (Moderate, 8 adım). Aynı arıza, aynı ürün ailesi, iki sonuç.
+    //    Doğrulandı: rehberBul("Bulaşık Makinesi","Tahliye") → iFixit.
+    { ara: ["tahliye", "su atmıyor", "boşaltmıyor", "tabanda su"],
+      rehber: B("bulasik-makinesi-su-atmiyor", "Tahliye tıkanıklığını açma", "Kolay", "~15 dakika", 6) },
+    { ara: ["tahliye pompa"],
       rehber: G("How+To+Replace+The+Drain+Pump+In+Your+Dishwasher/181830", "Tahliye pompası değişimi", "Moderate", "20-35 dk", 8) },
     { ara: ["su giriş", "su almıyor", "giriş valf", "inlet"],
       rehber: G("How+to+replace+the+inlet+valve+in+your+dishwasher/185599", "Su giriş valfi değişimi", "Moderate", "15-25 dk", 10) },
@@ -128,7 +134,14 @@ export const REHBERLER = {
       rehber: G("How+to+replace+the+temperature+sensor+in+your+stove/198590", "Sıcaklık sensörü değişimi", "Easy", "15-25 dk", 14) },
     { ara: ["fan motoru", "fan", "turbo"],
       rehber: G("How+to+repair+the+ventilation+fan+in+your+stove/198608", "Fırın fanı onarımı", "Difficult", "30 dk", 15) },
-    { ara: ["ateşleme", "kıvılcım", "çakmak", "yanmıyor"],
+    // 🔴 22 Ağu (YK taraması) — "yanmıyor" ÇIKARILDI. Masum bir belirti kelimesiydi ama
+    //    kullanıcıyı GAZ YAKICI cihazın alev/karışım ayarını anlatan yabancı rehbere
+    //    gönderiyordu. Kendi yazımız (`ocak-alevi-sari-yaniyor`) tam tersini söylüyor:
+    //    "İnternetteki 'ayar vidasını çevir' tariflerine girme." Kendimizle çelişiyorduk.
+    //    Doğrulandı: rehberBul("Fırın / Ocak / Aspiratör","Ocak yanmıyor") → iFixit.
+    // 📌 Kalıcı çözüm FE'nin 24 Ağu işinde: `B("ocak-atesleme-yapmiyor", …)` kaydı açılınca
+    //    "yanmıyor" BİZİM rehberimize bağlanır. O güne kadar rehber yok > yanlış rehber.
+    { ara: ["ateşleme", "kıvılcım", "çakmak"],
       rehber: G("How+to+Fix+a+Gas+Stove+With+Uneven+Firing/179476", "Ocak alevini düzeltme", "Easy", "30 dk", 7) },
     // NOT: "lamba"/"ampul" anahtar kelimesi BİLEREK yok. Rehber fırın kapağına ait; SEED'deki
     // "Aspiratör anahtar/kart/lamba" arızasına bağlanırsa kullanıcı alakasız sayfaya düşer
@@ -144,12 +157,21 @@ export const REHBERLER = {
       rehber: B("klima-filtresi-temizleme", "Klima filtresini temizleme", "Kolay", "~15 dakika", 6) },
   ],
   "Süpürge": [
-    // 22 Ağu 2026 (Tolga onayı, konu #3 → seçenek b): kendi rehberimiz iFixit'in ÖNÜNE alındı.
-    // ⚠️ Kapattığı canlı ihlal: "çekmiyor" diyen kullanıcı bugüne kadar iFixit'in İngilizce,
-    // Difficult, 18 adımlı MOTOR SÖKME rehberine düşüyordu — oysa kendi yazımızın ilk cümlesi
-    // "çoğu zaman arıza değil, tıkanmış hava akışı". YK #31'in doğrudan konusu.
-    // ⛔ Anahtara "motor" EKLENMEDİ (dar anahtar ilkesi) · iFixit satırları SİLİNMEDİ, altta kaldı.
-    { ara: ["çekmiyor", "emiş", "emmiyor", "tıkalı"],
+    // 22 Ağu 2026 (Tolga onayı, konu #3 → seçenek b), 22 Ağu akşam DÜZELTİLDİ (YK taraması).
+    //
+    // 🔴 SABAHKİ NOTUM YANLIŞTI — "iFixit'in ÖNÜNE alındı" diye yazmıştım. `rehberBul`
+    //    koşulsuz `bizim || disari` döndürüyor (bkz. fonksiyon): **dizideki sıra hiç etkili
+    //    DEĞİL.** Sabahki düzeltme sıradan değil, ANAHTAR EKLEMEKTEN işe yaramıştı.
+    //    Aynı yöntemle kapatılan bir sonraki vaka sessizce açık kalırdı.
+    //
+    // 🔴 VE DELİK KAPANMAMIŞTI: "motor" anahtarı yalnız iFixit satırındaydı, oysa
+    //    `tarife-seed.js` Süpürge'nin BİRİNCİ arıza adı birebir "Motor". Yani teşhis
+    //    "Motor" derse kullanıcı Difficult/18 adımlık MOTOR SÖKME rehberini görüyordu —
+    //    istisna değil, beklenen yol. Doğrulandı: rehberBul("Süpürge","Motor") → iFixit.
+    // ➡️ "motor" kendi rehberimize EKLENDİ. Yazımızın ilk cümlesi zaten doğru cevap:
+    //    "çoğu zaman arıza değil, tıkanmış hava akışı."
+    // ⛔ iFixit satırları SİLİNMEDİ; artık yalnız bizde karşılığı olmayan sorguları yakalar.
+    { ara: ["motor", "çekmiyor", "emiş", "emmiyor", "tıkalı"],
       rehber: B("supurge-cekmiyor", "Emişi geri getiren 6 kontrol", "Kolay", "~15 dakika", 6) },
     { ara: ["motor", "çekmiyor", "sıkış"],
       rehber: G("How+to+clear+a+jammed+motor+in+your+vacuum+cleaner/198622", "Sıkışan motoru açma", "Difficult", "25-35 dk", 18) },
