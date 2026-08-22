@@ -1,9 +1,13 @@
 ---
 title: "Samsung bulaşık makinesi 4C hatası: su alamıyor — adım adım çözüm"
-description: "Samsung bulaşık makinesi 4C hatası su temini sorunu demek; eski modellerde 4E olarak çıkar. Musluk, hortum ve giriş filtresi kontrolü ve servis sınırı burada."
+description: "Samsung bulaşık makinesi 4C hatası su temini sorunu demek; bazı modellerde 4E olarak çıkar. Musluk, hortum ve giriş filtresi kontrolü ve servis sınırı."
 slug: "samsung-bulasik-makinesi-4c-hatasi"
 date: "2026-08-21"
 category: "Bulaşık makinesi"
+# 📌 22 Ağu 2026 (TARAMA-1): "eski modellerde 4E" ifadesi düzeltildi. Samsung 4C ile
+# 4E arasında eski/yeni ayrımı KURMUYOR; kendi ifadesi "modeline bağlı olarak hata
+# NF veya 1 4C olarak da görünebilir" — yani model varyantı. Kod eşleşmesi doğruydu,
+# uydurma olan kronoloji atfıydı. (Aynı düzeltme çamaşır yazısında da yapıldı.)
 guide:
   difficulty: "Kolay"
   time: "~15 dakika"
@@ -32,7 +36,7 @@ images:
   coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
-Makineyi doldurdun, programı seçtin ve başlattın; ama içeriden hiç su sesi gelmedi. Bir süre sonra program durdu ve panelde **4C** belirdi — daha eski modellerde aynı durum **4E** olarak yazar. Samsung bulaşık makinelerinde bu kod **su temini hatasıdır**: makine su istedi, beklediği sürede istediği miktara ulaşamadı ve programı güvenli şekilde durdurdu. Kodun sevindiren tarafı şu: sebeplerin büyük kısmı makinenin gövdesinde değil, tezgâh altındaki bir metrelik hatta gizlidir.
+Makineyi doldurdun, programı seçtin ve başlattın; ama içeriden hiç su sesi gelmedi. Bir süre sonra program durdu ve panelde **4C** belirdi — bazı modellerde aynı durum **4E** olarak yazar (Samsung bunu model varyantı olarak veriyor, eski/yeni ayrımı olarak değil). Samsung bulaşık makinelerinde bu kod **su temini hatasıdır**: makine su istedi, beklediği sürede istediği miktara ulaşamadı ve programı güvenli şekilde durdurdu. Kodun sevindiren tarafı şu: sebeplerin büyük kısmı makinenin gövdesinde değil, tezgâh altındaki bir metrelik hatta gizlidir.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
