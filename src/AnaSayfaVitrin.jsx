@@ -98,9 +98,11 @@ const SAYILAR = [
   { buyuk: trSayi(IST.marka), kucuk: "marka" },
   { buyuk: trSayi(IST.tarife), kucuk: "onaylı tarife kalemi" },
   // ⬇️ İçerik tarafı (21 Ağu, Tolga: "50+ rehber, 200+ blog, tamir, kılavuz vb").
-  // ⛔ Rakamlar site-istatistik.json'dan GELİR, elle yazılmaz (#77 şişirme yasağı):
-  // gerçek sayım rehber 19 · blog 171 çıktı, "50+/200+" diye YUVARLANMADI.
-  { buyuk: trSayi(IST.blog), kucuk: "blog yazısı" },
+  // ⛔ Rakamlar site-istatistik.json'dan GELİR, elle yazılmaz (#77 şişirme yasağı).
+  // Eşik biçimi (`X+`) yalnız gerçek sayı dağınık/okunaksızken kullanılır (YK #80 emsali):
+  // blog 200'ü aşınca "200+" yazar; rehber · tamir · kılavuz net durdukları için
+  // gerçek sayılarıyla kalır — `50+` yazmak kazanılmış rakamı EKSİLTİRDİ.
+  { buyuk: IST.blog >= 200 ? "200+" : trSayi(IST.blog), kucuk: "blog yazısı" },
   { buyuk: trSayi(IST.rehber), kucuk: "onarım rehberi" },
   { buyuk: trSayi(IST.tamir), kucuk: "tamir kaydı" },
   { buyuk: trSayi(IST.kilavuz), kucuk: "kullanım kılavuzu" },
