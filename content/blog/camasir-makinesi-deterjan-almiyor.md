@@ -30,6 +30,15 @@ faq:
     a: "O zaman şüphe suyun çekmeceye dağıtıldığı üst düzenek ile su giriş valfine kayar. Valf birden fazla gözlüdür ve bir gözü zayıf çalışıyorsa su yanlış bölmeye ya da yetersiz gelir; üstteki dağıtım kanalları da kireçlenmiş olabilir. Bu kısımlar gövde içinde kaldığı için teşhisi ve müdahalesi servis işidir."
 images:
   coverAlt: "Çamaşır makinesinden dışarı çekilmiş, içinde ıslak deterjan kalıntısı bulunan çekmece"
+  steps:
+    - "Yarım açık musluk ile sonuna kadar açık musluğun su akışı bakımından karşılaştırıldığı çizim"
+    - "Duvara dayalı makinenin arkasında ezilen hortum ile rahat kavis yapan hortumun karşılaştırıldığı çizim"
+    - "Hortumun ağzındaki giriş süzgecinin akan su altında fırçalanışını gösteren çizim"
+    - "Yumuşatıcı gözündeki mandala bastırılarak çekmecenin çıkarılışını gösteren çizim"
+    - "Çekmecenin ılık suda bekletilişini ve gözlerinin diş fırçasıyla fırçalanışını gösteren çizim"
+    - "El feneriyle çekmece yuvasındaki püskürtme deliklerine bakılışını ve nemli bezle silinişini gösteren çizim"
+    - "Çekmecenin üç gözünü ve ana yıkama gözünün hangisi olduğunu gösteren çizim"
+    - "Kurutulan çekmecenin yuvasına oturtuluşunu ve boş kısa programla denenişini gösteren çizim"
 ---
 
 Yıkama bitti, çekmeceyi açtın: deterjan koyduğun gibi duruyor ya da göz su dolu, deterjan çamur gibi yapışmış. Çamaşırlar da son zamanlarda eskisi kadar temiz kokmuyor. Bu belirti kulağa büyük bir arıza gibi gelse de, çoğu vakada suyun deterjana ulaşamamasından ibarettir — ve suyun yolu üzerindeki ilk iki durak, musluk ile çekmece, tamamen senin bakabileceğin yerlerdir. Bu yazıda suyun izlediği yolu baştan sona takip ediyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.
