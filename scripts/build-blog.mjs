@@ -425,6 +425,13 @@ a.katkart.yesil:hover{border-color:#16A34A;box-shadow:0 10px 24px -20px rgba(22,
 .bloghead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 8px}
 /* Hub başlığı ana sayfadaki bölüm başlıklarıyla aynı ölçekte (clamp 22→34). */
 .bloghead h1{margin:0;font-size:clamp(28px,4.4vw,42px);line-height:1.1;letter-spacing:-.02em}
+/* Cihaz sayfası araması (22 Ağu 2026, Tolga: "3ünde de ... cihaz seçtikten sonra bir
+   arama bar gerekli"). Hub'da kutu bir başlık satırının (.bloghead) sağında oturur ve
+   360px'te durur; cihaz sayfasında yanında başlık YOK — /tamir/ listesi üç gruba
+   bölündüğü için tek bir "Tüm girişler" başlığı atılamıyordu. O yüzden kutu kendi
+   satırında ve TAM GENİŞLİKTE: mobilde asıl kullanım burası. */
+.katarama{margin:22px 0 6px}
+.katarama .blogsearch{flex:none;max-width:none;width:100%}
 .blogsearch{flex:1 1 220px;max-width:360px;margin:0;padding:12px 15px;border:1px solid ${T.HAIR};border-radius:12px;font-size:15px;font-family:'Hanken Grotesk',system-ui,sans-serif;color:${T.NAVY};background:${T.SURFACE};outline:none}
 .blogsearch:focus{border-color:${T.BLUE};box-shadow:0 0 0 3px rgba(37,99,235,.12)}
 .blogsearch::placeholder{color:${T.FAINT}}
@@ -625,11 +632,26 @@ const PWA_NOT = `<section class="pwa-not"><h3>📱 Benservis'i telefonuna ekle</
 // Kart metnini (kategori+başlık+özet) Türkçe-duyarlı + aksan toleranslı normalize eder,
 // çok kelimeli sorguda HEPSİ eşleşen kartları gösterir.
 // Bilgi Merkezi listesi: kategori düğmeleri + serbest arama (ikisi BİRLİKTE filtreler).
+//
+// 22 Ağu 2026 — AYNI BETİK CİHAZ SAYFALARINDA DA KULLANILIYOR (Tolga: "3ünde de …
+// cihaz seçtikten sonra bir arama bar gerekli"). Yeni betik yazılmadı; tek fark
+// /tamir/<cihaz>/ sayfasının listeyi ÜÇ GRUBA bölmesi (hata kodu · belirti · ayar).
+// Kartları gizlemek tek başına yetmiyordu: bir grubun tüm kartları elenince başlığı
+// ekranda ASILI kalıyor, kullanıcı boş bir "Hata kodları" başlığı görüyordu.
+// Çözüm: her `h2.katbaslik`ın HEMEN ARDINDAKİ kardeşi `.bloglist` ise başlık o listeyle
+// birlikte gizlenir. Eşleşmeyen başlıklara (ör. hub'daki "Cihazını seç" → ardından
+// `.katlar` gelir) dokunulmaz, o yüzden hub davranışı birebir aynı kaldı.
+// `.blogcats` kategori düğmeleri cihaz sayfalarında YOK → `chips` boş dizi, kod sessizce
+// yalnız serbest arama olarak çalışır (ayrı sürüm tutmamak için bilinçli).
 const SEARCH_JS = `(function(){
   var norm=function(s){return (s||"").toLocaleLowerCase("tr").replace(/[ıİ]/g,"i").replace(/ş/g,"s").replace(/ç/g,"c").replace(/ğ/g,"g").replace(/ü/g,"u").replace(/ö/g,"o").replace(/\\s+/g," ").trim();};
   var inp=document.getElementById("blogSearch"),bos=document.getElementById("blogBos");
   var cards=[].slice.call(document.querySelectorAll(".bloglist .card"));
   var chips=[].slice.call(document.querySelectorAll(".blogcats .chip"));
+  var gruplar=[].slice.call(document.querySelectorAll("h2.katbaslik")).map(function(h){
+    var liste=h.nextElementSibling;
+    return (liste&&liste.classList.contains("bloglist"))?{baslik:h,liste:liste}:null;
+  }).filter(Boolean);
   var aktifCat="";
   function uygula(){
     var toks=inp?norm(inp.value).split(" ").filter(Boolean):[],n=0;
@@ -637,6 +659,11 @@ const SEARCH_JS = `(function(){
       var catOk=!aktifCat||c.getAttribute("data-cat")===aktifCat;
       var hay=norm(c.textContent),aramaOk=toks.every(function(t){return hay.indexOf(t)!==-1;});
       var hit=catOk&&aramaOk;c.style.display=hit?"":"none";if(hit)n++;
+    });
+    gruplar.forEach(function(g){
+      var kartlar=[].slice.call(g.liste.querySelectorAll(".card"));
+      var acik=kartlar.some(function(c){return c.style.display!=="none";});
+      g.baslik.style.display=acik?"":"none";g.liste.style.display=acik?"":"none";
     });
     if(bos)bos.style.display=(n===0)?"":"none";
   }
@@ -647,6 +674,33 @@ const SEARCH_JS = `(function(){
     uygula();
   });});
 })();`;
+
+// ── CİHAZ SAYFASI ARAMA KUTUSU — TEK KAYNAK (22 Ağu 2026) ────────────────────────────
+// Tolga: *"3ünde de bilgi merkezi, tamir merkezi ve kullanım kılavuzları. cihaz
+// seçtikten sonra bir arama bar gerekli"* → /blog/kategori/<cihaz>/ · /tamir/<cihaz>/ ·
+// /kilavuzlar/<cihaz>/. Üçünde de aynı kutu, aynı betik, aynı boş-durum satırı; hub'ların
+// (`/blog/`, `/tamir/`) mevcut araması DEĞİŞMEDİ.
+//
+// EŞİK — neden var: sayfa başına kart sayısı 3 ile 43 arasında (ölçüldü, varsayılmadı).
+// 3 kartlık bir listenin üstünde arama kutusu yardım değil gürültüdür: kullanıcı zaten
+// hepsini tek bakışta görüyor. Kutu `ARAMA_ESIGI` kart ve üzerinde basılır.
+// Bugünkü ölçümde eşiğin ALTINDA kalan yalnız 2 sayfa var — ikisi de /blog/kategori/
+// (su-sebili-aritma 3 · mikrodalga-air-fryer 3); 38 cihaz sayfasının 36'sı kutuyu alıyor.
+// İçerik büyüdükçe o ikisi de kendiliğinden kutuya kavuşur, ayrıca iş gerekmez.
+const ARAMA_ESIGI = 6;
+// `yer` = placeholder + aria-label'ın konusu; her merkez kendi diliyle konuşur (kılavuzda
+// "marka", tamirde "hata kodu", blogda "kelime" aranıyor — tek jenerik metin üçüne de
+// yanlış otururdu). `bosMetin` de aynı sebeple merkez başına ayrı.
+const cihazAramasi = (sayi, yer) =>
+  sayi >= ARAMA_ESIGI
+    ? `<div class="katarama"><input id="blogSearch" class="blogsearch" type="search" autocomplete="off" placeholder="${esc(yer)}" aria-label="${esc(yer.replace(/…$/, ""))}"></div>`
+    : "";
+// Boş-durum satırı + betik listenin ARDINDAN gelir; kutu basılmadıysa ikisi de basılmaz
+// (ölü DOM ve gereksiz script bırakmamak için).
+const cihazAramasiSon = (sayi, bosMetin) =>
+  sayi >= ARAMA_ESIGI
+    ? `<p id="blogBos" class="blogbos" style="display:none">${esc(bosMetin)}</p><script>${SEARCH_JS}</script>`
+    : "";
 
 // `robots` = "noindex,follow" verilen sayfalar aramaya SOKULMAZ (ve sitemap'e de eklenmez).
 // İçeriği hazır olmayan bir sayfayı indekslemek site kalitesini düşürür; içerik gelince kalkar.
@@ -1377,7 +1431,7 @@ for (const k of blogKatVeri) {
         : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p><div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p>${cihazAramasi(k.yazilar.length, `${k.ad} yazılarında ara…`)}<div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${cihazAramasiSon(k.yazilar.length, "Aramanı karşılayan yazı yok — farklı bir kelime dene.")}${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
     })
   );
 }
@@ -1636,7 +1690,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${gruplar}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${cihazAramasi(k.kayitlar.length, "Hata kodu ya da belirti ara…")}${gruplar}${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan giriş yok — hata kodunu ya da belirtiyi farklı yaz.")}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
@@ -1877,9 +1931,9 @@ for (const k of kilavuzluKat) {
       desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
-      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}<div class="bloglist">${k.kayitlar
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}${cihazAramasi(k.kayitlar.length, "Marka ara…")}<div class="bloglist">${k.kayitlar
         .map((m) => kilavuzKarti(k, m))
-        .join("")}</div>${KILAVUZ_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `kilavuz-${k.slug}`)}`,
+        .join("")}</div>${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan marka yok — farklı yazmayı dene.")}${KILAVUZ_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `kilavuz-${k.slug}`)}`,
     })
   );
 }
