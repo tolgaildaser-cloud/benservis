@@ -142,8 +142,8 @@ export const HATA_KODU_KATMANI = {
   // /tamir/kurutma-makinesi/ sayfasına taşındı. Kayıtların METNİ ve bağlı YAZISI
   // değişmedi — yalnız hangi cihazın altında durdukları değişti.
   "Kurutma Makinesi": [
-    { giris: "Kurutma makinesi — Arçelik sembolleri ve Beko kodları", tip: "kod",
-      anlam: "Arçelik panelde sembolle konuşur, Beko F01-F07 koduyla; kod vermeyen modellerde ışık dili.",
+    { giris: "Kurutma makinesi — Arçelik ve Beko panel sembolleri", tip: "kod",
+      anlam: "İki markanın kılavuzunda da kod değil sembol var; ekransız modellerde ışık dili.",
       yazi: "kurutma-makinesi-hata-kodlari" },
     { giris: "Kurutma makinesi ısıtmıyor / soğuk üflüyor", tip: "belirti",
       anlam: "Sorun çoğu zaman hava akışında başlar: filtre, kondenser, güvenlik termiği sırasıyla izlenir.",
@@ -472,7 +472,7 @@ export const HATA_KODU_KATMANI = {
 
   // ——— Boşluk dalgası (20 Ağu 2026, YK — 85-konu taraması) ———
     { giris: "Marka fark etmeksizin ekran kodları", tip: "kod",
-      anlam: "No-frost modellerde kod mantığı; Beko E0-E4 ve Vestel E1/E5/88 kodlarının anlamı, servis noktası.",
+      anlam: "No-frost modellerde kod mantığı; Beko E0-E4 kodları ile Vestel SR/LV uyarıları, servis noktası.",
       yazi: "buzdolabi-hata-kodlari" },
     { giris: "Samsung — 5E, 6E, 22E, 84E, OF OF", tip: "kod",
       anlam: "Kodların doğrulanmış anlamları ve OF OF demo modu tuzağı.",

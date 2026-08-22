@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı hata kodları: ekrandaki kod ne anlatıyor, ne zaman servis gerekir"
-description: "Buzdolabı panelinde E harfli kod mu belirdi? No-frost modellerde kod mantığı, Beko E0-E4 ve Vestel E1/E5/88 kodlarının anlamı, hangi noktada servis gerekir."
+description: "Buzdolabı panelinde kod mu belirdi? No-frost modellerde kod mantığı, Beko E0-E4 ile Vestel SR ve LV uyarılarının anlamı, hangi noktada servis gerekir."
 slug: "buzdolabi-hata-kodlari"
 date: "2026-08-20"
 category: "Buzdolabı"
@@ -81,11 +81,15 @@ E4 dışındakiler sensör bildirimidir; E4 ise karlanmayı çözen ısıtıcı 
 
 **Kendin kontrol et:** Sensör kodlarında kullanıcı tarafında yapılacak şey resetten ibarettir. Kod kalıcıysa parça teşhisi ve değişimi servis işidir — sensörler cihazın iç panellerinin arkasındadır.
 
-## Vestel modellerinde E1, E5 ve 88
+## Vestel modellerinde SR ve LV uyarıları
 
-Vestel'in yaygın model gruplarında iki kod öne çıkar: **E1**, sıcaklık sensörünün veri gönderemediğini bildirir; cihaz iç sıcaklığı algılayamadığı için soğutma düzensizleşir. **E5** fan motoru arızasını işaret eder; no-frost sistemde soğuk havayı bölmelere dağıtan fan durduğunda dondurucu soğuk kalıp soğutucu bölme ılıklaşabilir.
+Vestel'in no-frost buzdolabı kullanma kılavuzlarında numaralı bir arıza kodu tablosu yok. Kılavuzun "kontrol uyarıları" bölümünde iki kısaltma geçiyor; ikisi de panelde, dondurucu ve soğutucu bölme ayar göstergelerinde beliriyor.
 
-Ekranda **88** görünmesi ise çoğunlukla evaporatör sensörü arızasını ya da sensör ile elektronik kart arasındaki bağlantının kopmasını gösterir. Kablo oksitlenmesi ve nem kaynaklı temassızlık tipik nedenlerdir; sonuçta cihaz sıcaklığı okuyamaz, kompresör ya hiç durmaz ya da hiç kalkmaz. Vestel'de de bazı kodların anlamı model ailesine göre değişir; emin olmak için kılavuza bak.
+**SR — arıza uyarısı.** Cihazın bir ya da birkaç parçası görevini yapamadığında veya soğutma sisteminde bir sorun olduğunda kırmızı yanar ve sesli alarm verir. Kılavuzun buradaki tavsiyesi tek cümledir: en kısa zamanda servise haber ver. Alarm düğmesine basmak yalnızca sesi susturur; kırmızı uyarı, sorun giderilene kadar yanmaya devam eder.
+
+**LV — düşük voltaj uyarısı.** Buzdolabını besleyen şebeke gerilimi 170 voltun altına düştüğünde cihaz bekleme konumuna geçer ve bu uyarıyı verir. Bu bir arıza değil, kompresörü düşük gerilimden koruyan bir önlemdir; gerilim uygun seviyeye döndüğünde cihaz kendiliğinden çalışmaya başlar ve uyarı söner. Yani LV gördüğünde bakılacak yer cihaz değil, evin elektriğidir.
+
+Bazı modellerde bu uyarılar harf yerine sembolle gösterilir ve tabloya iki durum daha eklenir: bölmenin yeterince soğuk olmaması ve soğutucu bölmenin fazla soğuması. İlkinde kılavuz, uyarı kalkana kadar daha soğuk bir ayarda ya da hızlı dondurma/soğutma modunda çalıştırmayı ve bu arada bölmeye taze gıda koymamayı söyler; erimiş ürün varsa tekrar dondurmamak gerekir. İkincisinde hızlı soğutma iptal edilip bir kademe daha ılık ayara geçilir. Panelinde hangi gösterimin kullanıldığı model ailesine göre değişir; kesin tablo cihazının kılavuzundadır.
 
 ⛔ **Arka paneli ve iç kapakları sökme.** Sensörler, fan ve defrost ısıtıcısı panellerin arkasındadır; orada hem 220V elektrik hem de delinmesi cihazı bitiren soğutucu hatlar var. Kullanıcıya ait alan kapak ve panel seviyesidir, tablanın altı servise aittir.
 
@@ -95,7 +99,7 @@ Ekran temiz diye cihaz sağlam demek değildir. Kompresör sesi hiç gelmiyorsa,
 
 ## Hangi noktadan sonra servis işi
 
-Reset sonrası kod geri geliyorsa, cihaz hiç soğutmuyorsa ya da 88 gibi bağlantı kaynaklı bir kodla birlikte kompresör davranışı bozulduysa iş servisindir. Sensör, fan ve defrost ısıtıcısı değişimi panel sökümü gerektirir; bu hem elektrik hem soğutucu devre riski taşır ve kullanıcı tarafında denenmemelidir. Senin elinde bu noktada değerli bir şey var: kodun kendisi. Servisi ararken kodu ve markayı söylemek, doğru parçayla gelinmesini ve işin tek seferde bitmesini kolaylaştırır.
+Reset sonrası kod geri geliyorsa, cihaz hiç soğutmuyorsa ya da bir arıza uyarısıyla birlikte kompresör davranışı bozulduysa iş servisindir. Sensör, fan ve defrost ısıtıcısı değişimi panel sökümü gerektirir; bu hem elektrik hem soğutucu devre riski taşır ve kullanıcı tarafında denenmemelidir. Senin elinde bu noktada değerli bir şey var: kodun kendisi. Servisi ararken kodu ve markayı söylemek, doğru parçayla gelinmesini ve işin tek seferde bitmesini kolaylaştırır.
 
 Samsung kullanıyorsan kodlar bambaşka bir dil konuşur; benservis.com blogundaki Samsung buzdolabı hata kodları yazısı o aileyi ayrıca anlatıyor.
 

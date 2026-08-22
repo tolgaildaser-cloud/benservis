@@ -1,6 +1,6 @@
 ---
-title: "Kurutma makinesi hata kodları: Arçelik ve Beko'da kod ve ışık dili"
-description: "Kurutma makinesi hata mı verdi? Arçelik'in sembol dili, Beko F01-F07 kodları, kod vermeyen modellerde uyarı ışıklarının anlamı ve gerçek servis sınırı."
+title: "Kurutma makinesi hata kodları: Arçelik ve Beko'da sembol ve ışık dili"
+description: "Kurutma makinesi uyarı mı verdi? Arçelik ve Beko kılavuzlarında kod değil sembol var: su tankı ve filtre uyarılarının anlamı ve gerçek servis sınırı."
 slug: "kurutma-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
@@ -20,7 +20,7 @@ steps:
   - "Kapağı tam kapat, fişi tak ve yeniden dene. Aynı kod geri geliyorsa, makine hiç ısıtmıyorsa ya da tank boşken uyarı sönmüyorsa iş servisindir."
 faq:
   - q: "Kurutma makinesi kod verdi, hemen servis mi çağırmalıyım?"
-    a: "Önce iki basit kontrolü yap: su tankını boşalt ve tüm filtreleri temizle. Kurutma makinesi kodlarının önemli bir kısmı dolu tank ya da tıkalı filtre/kondanser kaynaklıdır ve bu ikisi tamamen kullanıcı işidir. Kontroller sonrası kod devam ediyorsa o zaman gerçek bir arıza bildirimi vardır ve servisle konuşmak gerekir."
+    a: "Önce iki basit kontrolü yap: su tankını boşalt ve tüm filtreleri temizle. Kurutma makinesi uyarılarının önemli bir kısmı dolu tank ya da tıkalı filtre/kondanser kaynaklıdır ve bu ikisi tamamen kullanıcı işidir. Kontroller sonrası kod devam ediyorsa o zaman gerçek bir arıza bildirimi vardır ve servisle konuşmak gerekir."
   - q: "Makinem hata kodu göstermiyor ama ışıklar yanıp sönüyor, bu ne demek?"
     a: "Ekransız modellerde makine derdini ışık kombinasyonlarıyla anlatır: hangi ışıkların birlikte yandığı ya da yanıp söndüğü belirli bir duruma karşılık gelir. Su tankı ve filtre uyarı ışıkları en yaygın olanlarıdır ve bakım hatırlatmasıdır. Kombinasyonların tam karşılığı modele özeldir; kullanım kılavuzundaki arıza tablosuna bakmak en doğrusu."
   - q: "Su tankı ışığı her seferinde yanıyor, arıza mı?"
@@ -31,11 +31,11 @@ images:
   coverAlt: "Kapağı açık beyaz kurutma makinesi ve üzerindeki hasır sepette katlı havlular"
 ---
 
-Kurutma makinesi programın ortasında durdu; ekranda F ile başlayan bir kod var, panelde bir sembol yanıp sönüyor ya da ekranı olmayan modelde ışıklar anlamsız görünen bir düzende. Çamaşır makinesinin yanında sessiz sedasız çalışan bu cihaz aslında az konuşur ama net konuşur: kodlarının ve ışıklarının büyük kısmı iki şeyi işaret eder — dolu su tankı ve tıkalı hava yolu. İkisi de kullanıcının beş dakikada çözebileceği şeylerdir. Bu yazıda Arçelik'in sembol dilini, Beko'nun kodlarını ve gerçek servis sınırını anlatıyoruz.
+Kurutma makinesi programın ortasında durdu; panelde bir sembol yanıp sönüyor ya da ekranı olmayan modelde ışıklar anlamsız görünen bir düzende. Çamaşır makinesinin yanında sessiz sedasız çalışan bu cihaz aslında az konuşur ama net konuşur: uyarılarının ve ışıklarının büyük kısmı iki şeyi işaret eder — dolu su tankı ve tıkalı hava yolu. İkisi de kullanıcının beş dakikada çözebileceği şeylerdir. Bu yazıda Arçelik'in ve Beko'nun sembol dilini, ekransız modellerdeki ışık dilini ve gerçek servis sınırını anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ Her marka kodla konuşmaz: bazı üreticiler paneldeki sembollerle anlatır. Kod kullananlarda da tablo model ailesine göre değişir, aynı kod farklı seride farklı anlama gelebilir. Aşağıdakiler üreticinin kendi kılavuzunda doğrulanabilen karşılıklardır; kesin tablo cihazınla gelen kullanım kılavuzundadır.
+> ⚠️ Her marka kodla konuşmaz: bu iki üretici de derdini paneldeki sembollerle anlatır. Sembollerin görünümü ve karşılığı model ailesine göre değişebilir. Aşağıdakiler üreticinin kendi kılavuzunda doğrulanabilen karşılıklardır; kesin tablo cihazınla gelen kullanım kılavuzundadır.
 
 ## Adım adım: kod ya da uyarı ışığı görünce
 
@@ -53,11 +53,11 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **7. Kapağı tam kapat, fişi tak ve yeniden dene.** Aynı kod geri geliyorsa, makine hiç ısıtmıyorsa ya da tank boşken uyarı sönmüyorsa iş servisindir.
 
-## Kurutma makinesi neden bu kadar çok "bakım" kodu verir?
+## Kurutma makinesi neden bu kadar çok "bakım" uyarısı verir?
 
-Isı pompalı ve kondanserli kurutucularda hava kapalı bir devrede döner: nemli hava filtrelerden geçer, kondanserde suyunu bırakır, ısınıp tekrar tambura döner. Bu devrenin herhangi bir yerindeki tıkanıklık — hav filtresi, kapak filtresi, kondanser — sıcaklığı ve nemi ölçen sensörlerin anormal değer okumasına yol açar. Makine de haklı olarak durur ve kod verir. Yani kodların çoğu "bozuldum" değil, "önümü aç" mesajıdır.
+Isı pompalı ve kondanserli kurutucularda hava kapalı bir devrede döner: nemli hava filtrelerden geçer, kondanserde suyunu bırakır, ısınıp tekrar tambura döner. Bu devrenin herhangi bir yerindeki tıkanıklık — hav filtresi, kapak filtresi, kondanser — sıcaklığı ve nemi ölçen sensörlerin anormal değer okumasına yol açar. Makine de haklı olarak durur ve uyarı verir. Yani uyarıların çoğu "bozuldum" değil, "önümü aç" mesajıdır.
 
-**Kendin kontrol et:** Hangi kodu görürsen gör, ilk turun hep aynı: su tankını boşalt, kapak filtresini her kurutmada olduğu gibi temizle, kondanser/alt filtre bölümünü kılavuzda tarif edilen şekilde yıka, makinenin arkasının duvara tam dayalı olmadığından emin ol. Sonra fişi çekip birkaç dakika bekle ve yeniden dene.
+**Kendin kontrol et:** Hangi uyarıyı görürsen gör, ilk turun hep aynı: su tankını boşalt, kapak filtresini her kurutmada olduğu gibi temizle, kondanser/alt filtre bölümünü kılavuzda tarif edilen şekilde yıka, makinenin arkasının duvara tam dayalı olmadığından emin ol. Sonra fişi çekip birkaç dakika bekle ve yeniden dene.
 
 ## Arçelik kurutma makinelerinde kod değil sembol
 
@@ -73,19 +73,19 @@ Arçelik'in kurutma makinesi kullanma kılavuzlarında E ile başlayan bir arız
 
 Listenin tamamına dikkat et: hepsi kullanıcıya ait. Sembollerin hangi modelde nasıl göründüğü kılavuzun panel bölümünde yazar; marka özelindeki ayrıntılı anlatım ise benservis.com blogundaki Arçelik kurutma makinesi hata kodları yazısındadır.
 
-## Beko kurutma makinelerinde F kodları
+## Beko kurutma makinelerinde de kod değil sembol
 
-| Kod | Karşılığı |
-|---|---|
-| F01 | Isıtma elemanı sorunu |
-| F02 | Hedef sıcaklığa ulaşılamıyor |
-| F03 | Nem sensörü arızası |
-| F04 | Motor devri normalin altında |
-| F05 | Su tankı dolu |
-| F06 | Kapak açık |
-| F07 | Elektrik bağlantı sorunu |
+Beko'nun kurutma makinesi kullanma kılavuzlarında da E ya da F ile başlayan bir arıza kodu tablosu yok; makine derdini yine **panel sembolleriyle** anlatıyor. Üstelik kılavuz aynı sembolün düz yanmasıyla yanıp sönmesi arasına net bir ayrım koyuyor — asıl bilgi tam orada.
 
-F05 ve F06 tamamen kullanıcı tarafıdır: tankı boşalt, kapağı tam kapat. F02 her zaman parça arızası değildir — tıkalı filtre ve kondanser da makinenin hedef sıcaklığa ulaşmasını engeller; önce temizlik turunu at. F01, F03 ve F04 kalıcıysa parça tarafına geçilmiştir ve iş servisindir.
+**Filtre temizleme sembolü.** Program tamamlandığında düz yanıyorsa lif filtresi temizlenmemiştir; bu bir arıza değil, rutin bakım uyarısıdır. **Yanıp sönüyorsa** tıkanıklık daha derindedir: kılavuz sırasıyla filtre yuvasını, filtre gözeneklerinde oluşan tabakayı (ılık suyla yıkanır) ve yoğuşturucuyu işaret eder.
+
+**Su tankı sembolü.** Program sonunda yanması tankın boşaltılması gerektiğini söyler. Program sürerken **yanıp sönmeye başlarsa** tank dolmuş ve makine beklemeye geçmiştir; suyu boşaltıp Başla/Bekle düğmesine bastığında program kaldığı yerden devam eder. Cihaz doğrudan su giderine bağlıysa kılavuz ikinci bir ihtimal daha veriyor: su boşaltma hortumu katlanmış olabilir.
+
+**Filtre çekmecesi sembolü.** Belirli aralıklarla yanıp sönerek çekmecenin temizlenme zamanının geldiğini hatırlatır. Bu da baştan sona kullanıcı işidir.
+
+**Yükleme kapağı.** Kapak kendiliğinden açılıyorsa tam kapanmamıştır; kapanma sesini duyana kadar itmek gerekir.
+
+Kılavuzun kendi koyduğu sınır da net: **aynı anda birçok ışık birlikte yanıyor ya da yanıp sönüyorsa** hatalı bir çalışma veya arıza var demektir. Tek tek sembolleri kovalamayı orada bırak.
 
 ## Kod vermeyen modellerde ışık dili
 
