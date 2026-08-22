@@ -1,6 +1,6 @@
 ---
 title: "Kurutma makinesi hata kodları: Arçelik ve Beko'da kod ve ışık dili"
-description: "Kurutma makinesi hata mı verdi? Arçelik E01-E05 ve Beko F01-F07 kodlarının doğrulanmış anlamları, kod vermeyen modellerde ışık dili ve servis sınırı."
+description: "Kurutma makinesi hata mı verdi? Arçelik'in sembol dili, Beko F01-F07 kodları, kod vermeyen modellerde uyarı ışıklarının anlamı ve gerçek servis sınırı."
 slug: "kurutma-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
@@ -31,11 +31,11 @@ images:
   coverAlt: "Kapağı açık beyaz kurutma makinesi ve üzerindeki hasır sepette katlı havlular"
 ---
 
-Kurutma makinesi programın ortasında durdu, ekranda E ya da F ile başlayan bir kod var; ya da ekranı olmayan modelde ışıklar anlamsız görünen bir düzenle yanıp sönüyor. Çamaşır makinesinin yanında sessiz sedasız çalışan bu cihaz aslında az konuşur ama net konuşur: kodlarının ve ışıklarının büyük kısmı iki şeyi işaret eder — dolu su tankı ve tıkalı hava yolu. İkisi de kullanıcının beş dakikada çözebileceği şeylerdir. Bu yazıda Arçelik ve Beko'nun doğrulanmış kodlarını, ışık dilini ve gerçek servis sınırını anlatıyoruz.
+Kurutma makinesi programın ortasında durdu; ekranda F ile başlayan bir kod var, panelde bir sembol yanıp sönüyor ya da ekranı olmayan modelde ışıklar anlamsız görünen bir düzende. Çamaşır makinesinin yanında sessiz sedasız çalışan bu cihaz aslında az konuşur ama net konuşur: kodlarının ve ışıklarının büyük kısmı iki şeyi işaret eder — dolu su tankı ve tıkalı hava yolu. İkisi de kullanıcının beş dakikada çözebileceği şeylerdir. Bu yazıda Arçelik'in sembol dilini, Beko'nun kodlarını ve gerçek servis sınırını anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ Kod tablosu model ailesine göre değişir; aynı markanın farklı serilerinde aynı kod farklı anlama gelebilir. Aşağıdakiler yaygın serilerde birden çok kaynakla doğrulanmış karşılıklardır; kesin tablo kullanım kılavuzundadır.
+> ⚠️ Her marka kodla konuşmaz: bazı üreticiler paneldeki sembollerle anlatır. Kod kullananlarda da tablo model ailesine göre değişir, aynı kod farklı seride farklı anlama gelebilir. Aşağıdakiler üreticinin kendi kılavuzunda doğrulanabilen karşılıklardır; kesin tablo cihazınla gelen kullanım kılavuzundadır.
 
 ## Adım adım: kod ya da uyarı ışığı görünce
 
@@ -59,16 +59,19 @@ Isı pompalı ve kondanserli kurutucularda hava kapalı bir devrede döner: neml
 
 **Kendin kontrol et:** Hangi kodu görürsen gör, ilk turun hep aynı: su tankını boşalt, kapak filtresini her kurutmada olduğu gibi temizle, kondanser/alt filtre bölümünü kılavuzda tarif edilen şekilde yıka, makinenin arkasının duvara tam dayalı olmadığından emin ol. Sonra fişi çekip birkaç dakika bekle ve yeniden dene.
 
-## Arçelik kurutma makinelerinde E kodları
+## Arçelik kurutma makinelerinde kod değil sembol
 
-| Kod | Karşılığı | İlk hamle |
-|---|---|---|
-| E01 | Su tankı dolu / tahliye sorunu | Tankı boşalt, tekrar dene |
-| E02 | Filtre ya da kondanser tıkanıklığı | Tüm filtreleri ve kondanseri temizle |
-| E04 | Isıtıcı (rezistans) hatası | Fişi çek, servisle konuş |
-| E05 | Sıcaklık sensörü (NTC) hatası | Reset dene, sürerse servis |
+Arçelik'in kurutma makinesi kullanma kılavuzlarında E ile başlayan bir arıza kodu listesi yok — sorun giderme bölümü baştan sona belirtiler ve **panel sembolleri** üzerinden ilerliyor. İnternette dolaşan üçüncü taraf listeler ise aynı numaraya birbirinden farklı anlamlar veriyor. Doğrulayamadığımız bir karşılığı yazıp seni yanlış parçaya yönlendirmektense üreticinin fiilen kullandığı dili veriyoruz.
 
-E01 ve E02 çoğu durumda kullanıcı tarafında biter. E04 ve E05 ise ısı hattının kodlarıdır: makine ya ısıtamıyordur ya da ısıyı ölçemiyordur. Bu ikisinde tekrar tekrar program başlatmak yerine cihazı dinlendirip servise anlatmak doğru olur.
+**Su tankı uyarısı.** Düz yanıyorsa program bitmiştir ve tankın boşaltılması gerekir; bu bir arıza değil, her kurutmadan sonraki rutindir. Yanıp sönüyorsa tank program sırasında dolmuştur ve makine kendini korumak için durmuştur — suyu boşaltıp başlat düğmesine bastığında program kaldığı yerden devam eder.
+
+**Filtre temizleme uyarısı.** Program sonunda düz yanması "filtreyi temizle" demektir. Sürekli yanıp sönmesi ise hava yolunun daha derinde tıkandığını bildirir; filtre yuvası, filtre gözenekleri ve filtre çekmecesi sırayla geçilir.
+
+**Yükleme kapağı uyarısı.** Kapak tam kapanmamıştır; kapanma sesini duyana kadar itmek gerekir. Program nedensiz yarıda kesiliyorsa ilk bakılacak yer de burasıdır.
+
+**Çocuk kilidi göstergesi.** Kilit devredeyken program başlatılamaz. Makine "açılmıyor" diye servis aranan durumların bir kısmı budur.
+
+Listenin tamamına dikkat et: hepsi kullanıcıya ait. Sembollerin hangi modelde nasıl göründüğü kılavuzun panel bölümünde yazar; marka özelindeki ayrıntılı anlatım ise benservis.com blogundaki Arçelik kurutma makinesi hata kodları yazısındadır.
 
 ## Beko kurutma makinelerinde F kodları
 

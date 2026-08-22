@@ -142,8 +142,8 @@ export const HATA_KODU_KATMANI = {
   // /tamir/kurutma-makinesi/ sayfasına taşındı. Kayıtların METNİ ve bağlı YAZISI
   // değişmedi — yalnız hangi cihazın altında durdukları değişti.
   "Kurutma Makinesi": [
-    { giris: "Kurutma makinesi — Arçelik ve Beko kodları", tip: "kod",
-      anlam: "Arçelik E01-E05 ve Beko F01-F07 kodlarının anlamı; kod vermeyen modellerde ışık dili.",
+    { giris: "Kurutma makinesi — Arçelik sembolleri ve Beko kodları", tip: "kod",
+      anlam: "Arçelik panelde sembolle konuşur, Beko F01-F07 koduyla; kod vermeyen modellerde ışık dili.",
       yazi: "kurutma-makinesi-hata-kodlari" },
     { giris: "Kurutma makinesi ısıtmıyor / soğuk üflüyor", tip: "belirti",
       anlam: "Sorun çoğu zaman hava akışında başlar: filtre, kondenser, güvenlik termiği sırasıyla izlenir.",
@@ -607,8 +607,8 @@ export const HATA_KODU_KATMANI = {
       yazi: "klima-koku-yapiyor" },
 
   // ——— Boşluk dalgası (20 Ağu 2026, YK — 85-konu taraması) ———
-    { giris: "Vestel · Arçelik · Daikin — E2, E5, 88, U4", tip: "kod",
-      anlam: "Split klimalarda kod okuma mantığı, üç markanın doğrulanmış kodları ve servis sınırı.",
+    { giris: "Vestel · Arçelik · Daikin — kod okuma mantığı", tip: "kod",
+      anlam: "Split klimalarda kod nasıl okunur; üç markada üreticinin kendi kılavuzuyla doğrulanabilen karşılıklar ve servis sınırı.",
       yazi: "klima-ariza-kodlari" },
     { giris: "Dış ünite temizliği", tip: "ayar",
       anlam: "Sökmeden, dışarıdan temizliğin yolu; hortumla yıkamanın neden yasak olduğu ve yükseklik uyarısı.",
