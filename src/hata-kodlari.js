@@ -52,8 +52,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "LG — IE, OE, UE, dE", tip: "kod",
       anlam: "LG panelindeki iki harfli kodların anlamı ve hangisini kendin çözebilirsin.",
       yazi: "lg-camasir-makinesi-hata-kodlari" },
-    { giris: "Samsung — 4E/4C, 5E/5C, UE", tip: "kod",
-      anlam: "Samsung'un su alma, tahliye ve denge kodlarının karşılığı.",
+    // 22 Ağu (TARAMA-1): "C yeni / E eski" kronolojisi yazıdan kaldırıldı — Samsung
+    // bunu model VARYANTI olarak veriyor ("modeline bağlı olarak NF veya 1 4C").
+    { giris: "Samsung — 4E/4C, 5E/5C, UE (TR'de E1, E2, E4)", tip: "kod",
+      anlam: "Samsung'un su alma, tahliye ve denge kodlarının karşılığı ve model varyantları.",
       yazi: "samsung-camasir-makinesi-hata-kodlari" },
     { giris: "Marka fark etmeksizin en sık kodlar", tip: "kod",
       anlam: "Markası listede yoksa buradan bak: en sık kodların ortak anlamı.",
@@ -510,8 +512,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "Marka fark etmeksizin ekran kodları", tip: "kod",
       anlam: "No-frost modellerde kod mantığı; Beko E0-E4 kodları ile Vestel SR/LV uyarıları, servis noktası.",
       yazi: "buzdolabi-hata-kodlari" },
-    { giris: "Samsung — 5E, 6E, 22E, 84E, OF OF", tip: "kod",
-      anlam: "Kodların doğrulanmış anlamları ve OF OF demo modu tuzağı.",
+    // 22 Ağu (TARAMA-1): 85E ile 86E AYRI kodlar — 85E düşük, 86E yüksek voltaj.
+    // Yazı ikisini tek satırda birleştirmişti. 21E dondurucu fanı, 22E soğutucu fanı.
+    { giris: "Samsung — 5E, 6E, 21E/22E, 84E, 85E/86E, OF OF", tip: "kod",
+      anlam: "Kodların doğrulanmış anlamları, düşük/yüksek voltaj ayrımı ve OF OF demo modu tuzağı.",
       yazi: "samsung-buzdolabi-hata-kodlari" },
     { giris: "Motor çalışmıyor / tık sesi geliyor", tip: "belirti",
       anlam: "Lamba yanıyor ama motor kalkmıyorsa elektrik, başlatma rölesi ya da kompresör; tık döngüsü ne anlatır.",

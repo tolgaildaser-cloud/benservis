@@ -1,9 +1,15 @@
 ---
 title: "Samsung bulaşık makinesi hata kodları: 4C, 5C, LC ve HE ne demek"
-description: "Samsung bulaşık makinesinde 4C su temini, 5C tahliye, LC kaçak, HE ısıtıcı hatası demek. Özellikle 4C için evde yapılacak kontroller ve servis sınırı burada."
+description: "Samsung bulaşık makinesinde 4C su temini, 5C tahliye, LC kaçak, HE ısıtma devresi sorunu demek. Özellikle 4C için evde yapılacak kontroller ve servis sınırı burada."
 slug: "samsung-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
+# 🔴 22 Ağu 2026 — HE'nin KESİNLİĞİ YUMUŞATILDI (kod tablosu denetimi, TARAMA-1).
+# Yazı HE'yi "rezistans arızası" kesinliğiyle veriyordu. Samsung kendi bölge
+# sayfaları arasında ÇELİŞİYOR: AE sayfası "heating element" derken CA sayfası
+# HE'yi "incorrect temperature detection", HC'yi "overheating" diye tanımlıyor;
+# TR sayfası ölü. Doğru ifade "ısıtma devresi" — hangi parça olduğu koda bakarak
+# söylenemez. Bunu okura da açıkça yazdık.
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -21,13 +27,13 @@ steps:
   - "Hortumu tak, musluğu aç ve kısa bir programla dene. Bağlantıdan damlama olmadığını kontrol et, fişi tak ve dene; kod tekrar geliyorsa valf, pompa ve rezistans tarafı servis işidir."
 faq:
   - q: "Samsung bulaşık makinesinde 4C hatası ne demek?"
-    a: "4C, makinenin ihtiyaç duyduğu suya ulaşamadığını gösteren su temini hatasıdır; eski modellerde aynı durum 4E olarak görünür. Sebep çoğu zaman makinenin dışındadır: kapalı ya da kısık musluk, su kesintisi, bükülmüş giriş hortumu veya tıkanmış giriş filtresi. Bu dış kontroller temizken 4C sürüyorsa su giriş valfi tarafına servisin bakması gerekir."
+    a: "4C, makinenin ihtiyaç duyduğu suya ulaşamadığını gösteren su temini hatasıdır; aynı durum bazı modellerde 4E olarak görünür — Samsung bunu eski/yeni ayrımı değil, model varyantı olarak veriyor. Sebep çoğu zaman makinenin dışındadır: kapalı ya da kısık musluk, su kesintisi, bükülmüş giriş hortumu veya tıkanmış giriş filtresi. Bu dış kontroller temizken 4C sürüyorsa su giriş valfi tarafına servisin bakması gerekir."
   - q: "LC hatası geldi ama ortada su görünmüyor — makine yanlış mı algılıyor?"
     a: "LC (bazı modellerde LE), kaçak sensörünün makinenin alt bölümünde nem ya da su algıladığını gösterir; makine bu durumda güvenlik gereği kendini tahliye etmeye çalışır. Zeminde su görünmemesi kaçak olmadığı anlamına gelmez — az miktarda sızıntı yalnızca alt tavada birikebilir. Fişi çek, musluğu kapat ve makineyi kurumaya bırak; kod tekrar geliyorsa sızıntının kaynağını servis bulmalıdır."
   - q: "5C tahliye hatasında evde ne yapabilirim?"
     a: "5C, makinenin suyu boşaltamadığını gösterir. İlk bakılacak yer makinenin içindeki filtredir: çıkar, yemek artıklarından arındır, yerine tak. Sonra tahliye hortumunun bükülmediğini ve gider bağlantısının tıkalı olmadığını kontrol et. Bu üçü temizken hata sürüyorsa tahliye pompası tarafında sorun vardır ve o bölge servise aittir."
   - q: "HE hatası kendiliğinden düzelir mi?"
-    a: "HE, suyun hedef sıcaklığa getirilemediğini gösteren ısıtıcı hatasıdır. Bir kez resetleyip normal bir programla denemek makul bir ilk adımdır; kod geçici bir okumadan gelmiş olabilir. Ama tekrar geliyorsa rezistans ya da sıcaklık ölçüm tarafında gerçek bir arıza vardır; bu parçalar gövde içindedir ve onarımı kesin olarak servis işidir."
+    a: "HE, ısıtma devresinde bir sorun olduğunu gösterir: su hedef sıcaklığa getirilemiyordur. Hangi parçanın sorumlu olduğu koda bakarak söylenemez, çünkü Samsung'un bölge sayfaları bu kodda kendi içinde çelişiyor — biri ısıtıcı elemanı, diğeri sıcaklığın yanlış ölçülmesini gösteriyor. Bir kez resetleyip normal bir programla denemek makul bir ilk adımdır; kod geçici bir okumadan gelmiş olabilir. Ama tekrar geliyorsa rezistans ya da sıcaklık ölçüm tarafında gerçek bir arıza vardır; bu parçalar gövde içindedir ve onarımı kesin olarak servis işidir."
 images:
   coverAlt: "Bulaşık makinesinin üst kenarındaki kumanda şeridi"
 ---
@@ -90,7 +96,9 @@ Beş adım da temiz çıktıysa ve 4C sürüyorsa, şüphe makinenin **su giriş
 
 ## HE — ısıtıcı hatası
 
-**HE**, suyun hedef sıcaklığa getirilemediğini gösterir: rezistans ya da sıcaklık ölçüm tarafında sorun vardır. Belirtisi sessizdir — makine çalışır ama bulaşıklar soğuk yıkanır, yağ çözülmez, kurutma zayıflar.
+**HE**, ısıtma devresinde bir sorun olduğunu gösterir: su hedef sıcaklığa getirilemiyordur.
+
+⚠️ Burada dürüst olmak gerekiyor: **Samsung'un bölge sayfaları bu kodda kendi içinde çelişiyor.** Bir sayfa HE'yi doğrudan ısıtıcı elemana bağlarken, bir diğeri "sıcaklığın yanlış ölçülmesi" diyor ve aşırı ısınmayı ayrı bir koda (HC) veriyor. Bu yüzden HE'ye bakarak "rezistans bozuldu" demiyoruz — söylenebilecek kesin şey, sorunun ısıtma devresinde olduğudur. Belirtisi sessizdir — makine çalışır ama bulaşıklar soğuk yıkanır, yağ çözülmez, kurutma zayıflar.
 
 **Kendin kontrol et:** Bir kez resetleyip normal bir programla dene; kod geçici bir okumadan gelmiş olabilir. Tekrar geliyorsa gözlemini not et (buhar yok, bulaşık soğuk) ve orada dur: rezistans ve sensör gövde içindedir, **onarımı servis işidir**.
 
@@ -101,7 +109,7 @@ Beş adım da temiz çıktıysa ve 4C sürüyorsa, şüphe makinenin **su giriş
 | 4C / 4E | Su temini | ✅ Musluk, kesinti, hortum, giriş filtresi |
 | 5C / 5E | Tahliye | ✅ İç filtre, tahliye hortumu, gider |
 | LC / LE | Kaçak algılandı | ⚠️ Fişi ve musluğu kapat, kurut; tekrarlarsa servis |
-| HE | Isıtıcı | ⛔ Reset dene, sürerse servis |
+| HE | Isıtma devresi (parça koda göre belirlenemez) | ⛔ Reset dene, sürerse servis |
 
 ## Hangi noktadan sonra servis işi
 

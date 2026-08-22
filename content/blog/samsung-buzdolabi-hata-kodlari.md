@@ -4,6 +4,15 @@ description: "Samsung buzdolabı ekranında 5E, 6E, 22E, 84E gibi bir kod mu var
 slug: "samsung-buzdolabi-hata-kodlari"
 date: "2026-08-20"
 category: "Buzdolabı"
+# 🔴 22 Ağu 2026 — 85E DÜZELTİLDİ, 86E EKLENDİ (kod tablosu denetimi, TARAMA-1).
+# Yazı 85E'yi "besleme voltajı çok düşük YA DA ÇOK YÜKSEK" diye veriyordu. Samsung
+# ikisini AYIRIYOR: 85E "Compressor Under Voltage Error" (yalnız DÜŞÜK, brown-out),
+# 86E "Compressor Over Voltage Error" (YÜKSEK, power surge). Tek satırda iki kod
+# birleştirilmişti; okur yüksek voltaj vakasında karşılığını bulamıyordu.
+# 22E'nin tanımı da gevşekti: Samsung 21E = dondurucu fanı, 22E = SOĞUTUCU fanı diyor;
+# yazı "iç/evaporatör fanı" diyerek ikisini birbirine karıştırıyordu.
+# Kaynak: samsung.com/us/support/troubleshooting/TSG10007315
+# 📌 Eksik yayındı, eklendi: 21E · 83E · 85C (85C zararsızdır, OK 3 sn ile silinir).
 guide:
   difficulty: "Kolay"
   time: "~30 dakika"
@@ -15,7 +24,7 @@ steps:
   - "Fişi çek ve 1-5 dakika bekle. Kart yeniden başlar ve geçici kodlar silinir; elektrik kesintisi sonrası bu durum Samsung'da özellikle yaygındır."
   - "Fişi tekrar tak ve kodun geri gelip gelmediğine bak. Geri gelmeyen kod çoğunlukla anlık bir takılmaydı; geri gelen kod gerçek bir bildirimdir."
   - "Ekranda OF OF varsa demo modunu kontrol et. Panel çalışıyor ama cihaz soğutmuyorsa büyük ihtimalle mağaza/demo modundasın; çıkış panelden tuş kombinasyonuyla yapılır, kılavuzundaki \"demo modu / cooling off\" bölümüne bak."
-  - "85E görüyorsan beslemeyi sadeleştir. Buzdolabını uzatma kablosundan değil doğrudan duvar prizinden besle ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak."
+  - "85E, 86E ya da 85C görüyorsan beslemeyi sadeleştir. Buzdolabını uzatma kablosundan değil doğrudan duvar prizinden besle ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak."
   - "22E görüyorsan cihazı fişten çekip birkaç saat dinlendir. Fanı kilitleyen buz çözülürse kod kaybolur; kısa sürede geri geliyorsa buzu üreten asıl neden duruyordur."
   - "Arka ızgarayı dışarıdan fırçayla temizle. Izgara tozla kaplıysa temizle ve cihazı duvardan birkaç santim öne çek; bu, kod beklemeden yapılabilecek ücretsiz bir iyileştirmedir."
   - "Kod hâlâ duruyorsa deneme yapmayı bırak. Kodu ve model numarasını birlikte söyleyerek servisle konuş; panellerin ve iç kapakların arkası servise aittir."
@@ -25,7 +34,7 @@ faq:
   - q: "Ekranda OF OF yazıyor ve buzdolabı soğutmuyor, bozuldu mu?"
     a: "Büyük ihtimalle bozulmadı. OF OF, soğutmanın kapalı olduğu mağaza/demo modunun göstergesidir; bu modda panel çalışır ama cihaz soğutmaz. Genellikle taşınma ya da temizlik sırasında tuşlara yanlışlıkla basılı tutulmasıyla devreye girer ve panelden yine tuş kombinasyonuyla kapatılır. Kombinasyon modele göre değiştiği için kılavuzdaki demo modu bölümüne bakmak en sağlıklısı."
   - q: "22E kodu varken cihazı kullanmaya devam edebilir miyim?"
-    a: "22E fan tarafını işaret eder ve çoğu durumda arkasında fanı kilitleyen buzlanma vardır. Cihaz bir süre daha kısmen soğutabilir ama sorun kendiliğinden düzelmez; fan dönemedikçe soğuk hava bölmelere dağıtılamaz. Fişi çekip cihazı birkaç saat dinlendirmek buzu çözerek kodu geçici olarak giderebilir; kod tekrar geliyorsa defrost hattı için servis gerekir."
+    a: "22E soğutucu bölmenin fanını işaret eder (dondurucu fanı ayrı bir koddur: 21E) ve çoğu durumda arkasında fanı kilitleyen buzlanma vardır. Cihaz bir süre daha kısmen soğutabilir ama sorun kendiliğinden düzelmez; fan dönemedikçe soğuk hava bölmelere dağıtılamaz. Fişi çekip cihazı birkaç saat dinlendirmek buzu çözerek kodu geçici olarak giderebilir; kod tekrar geliyorsa defrost hattı için servis gerekir."
   - q: "Kod listelerinde cihazımın kodu yok, ne yapmalıyım?"
     a: "Samsung'un kod tablosu model ailesine ve üretim yılına göre ciddi biçimde değişir; her listede her kod bulunmaz. Kodu aynen not et ve model numaranla birlikte üreticinin destek sayfasından ya da kullanım kılavuzundan doğrula. Servisle konuşurken kodu ve model numarasını birlikte söylemen doğru teşhis için yeterlidir."
 images:
@@ -48,7 +57,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **4. Ekranda OF OF varsa demo modunu kontrol et.** Panel çalışıyor ama cihaz soğutmuyorsa büyük ihtimalle mağaza/demo modundasın; çıkış panelden tuş kombinasyonuyla yapılır, kılavuzundaki "demo modu / cooling off" bölümüne bak.
 
-**5. 85E görüyorsan beslemeyi sadeleştir.** Buzdolabını uzatma kablosundan değil doğrudan duvar prizinden besle ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak.
+**5. 85E, 86E ya da 85C görüyorsan beslemeyi sadeleştir.** Buzdolabını uzatma kablosundan değil doğrudan duvar prizinden besle ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak.
 
 **6. 22E görüyorsan cihazı fişten çekip birkaç saat dinlendir.** Fanı kilitleyen buz çözülürse kod kaybolur; kısa sürede geri geliyorsa buzu üreten asıl neden duruyordur.
 
@@ -66,15 +75,23 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 |---|---|---|
 | 5E | Buz çözme (defrost) sensörü hatası | Karlanma çözülemez, soğutma zayıflar |
 | 6E | Ortam sensörü hatası | Genelde elektrik kesintisi sonrası görülür |
-| 22E | Fan hatası (iç/evaporatör fanı) | Soğuk hava dağıtılamaz, bölmeler ılıklaşır |
+| 21E | Dondurucu fanı hatası | Dondurucuya soğuk hava dağıtılamaz |
+| 22E | Soğutucu fanı hatası | Soğutucu bölmeye soğuk hava dağıtılamaz |
+| 83E | Kompresöre anormal akım algılandı | Cihaz kendini korumaya alır |
 | 84E | Kompresör kilitli / kalkamıyor | Soğutma tamamen durabilir |
-| 85E | Besleme voltajı çok düşük ya da çok yüksek | Cihaz kendini korumaya alır |
+| 85E | Kompresör **düşük** voltaj hatası (brown-out) | Cihaz kendini korumaya alır |
+| 86E | Kompresör **yüksek** voltaj hatası (ani yükselme) | Cihaz kendini korumaya alır |
+| 85C | Beslemede düşük voltaj algılandı | ⚠️ Arıza değil — OK tuşuna 3 sn basınca silinir |
 
 **5E ve 22E** aynı hattın iki ucudur: defrost sistemi karlanmayı çözemezse buz zamanla fanı kilitler ve fan koduna da yol açabilir. Bu yüzden 22E gören birçok kullanıcı fişi çekip cihazı birkaç saat dinlendirdiğinde kodun kaybolduğunu görür — buz çözülmüştür. Ama kod kısa sürede geri geliyorsa buzu üreten asıl neden (defrost hattı) duruyordur; bu servis işidir.
 
-**6E** çoğunlukla masum çıkar: elektrik kesintisi sonrası ortam sensörü verisi karışmıştır ve reset ile silinir. **84E ve 85E** ise ciddi tarafın kodlarıdır; 84E kompresörün kalkamadığını, 85E şebeke geriliminin cihazın çalışma aralığı dışında olduğunu bildirir.
+**6E** çoğunlukla masum çıkar: elektrik kesintisi sonrası ortam sensörü verisi karışmıştır ve reset ile silinir. **84E, 85E ve 86E** ise ciddi tarafın kodlarıdır; 84E kompresörün kalkamadığını bildirir.
 
-**Kendin kontrol et:** 85E görüyorsan buzdolabını uzatma kablosundan değil doğrudan duvar prizinden beslediğinden emin ol ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak. Bina kaynaklı gerilim sorunu varsa bu buzdolabının değil tesisatın konusudur.
+**85E ile 86E'yi karıştırma** — Samsung bunları ayrı ayrı tanımlıyor ve ikisi zıt durumları anlatıyor: **85E** şebeke geriliminin cihazın çalışma aralığının **altına** düştüğünü (brown-out), **86E** ise **üstüne** çıktığını (ani gerilim yükselmesi) bildirir. İnternetteki listelerin ikisini tek satırda birleştirmesinin Samsung tarafında bir dayanağı yok.
+
+Bir de kolayca panik yaratan bir kod var: **85C**. Bu bir arıza değil, beslemede düşük voltaj algılandığını söyleyen bir bilgi mesajıdır ve Samsung'a göre **OK tuşuna 3 saniye basınca silinir**.
+
+**Kendin kontrol et:** 85E, 86E ya da 85C görüyorsan buzdolabını uzatma kablosundan değil doğrudan duvar prizinden beslediğinden emin ol ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak. Bina kaynaklı gerilim sorunu varsa bu buzdolabının değil tesisatın konusudur — ve tekrarlayan gerilim dalgalanmaları zamanla kompresörü yıpratır.
 
 ## OF OF: arıza değil, demo modu
 
