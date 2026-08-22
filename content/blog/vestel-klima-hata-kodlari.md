@@ -28,6 +28,8 @@ faq:
     a: "Vestel klimalarda hata mesajı önce Er ibaresi, ardından o hataya özel iki haneli sayı görünerek verilir. Kılavuzlar bu sayıların tek tek karşılığını kullanıcıya açmaz; onun yerine net bir talimat verir: cihaza herhangi bir şey yapma ve yetkili servisle iletişime geç. Bu yüzden biz de internette dolaşan sayı karşılıklarını buraya kopyalamıyoruz. Sayıyı doğru not etmek ise önemlidir, çünkü servis için teşhisi kısaltan asıl bilgi odur."
   - q: "Kod ekranda ne kadar kalıyor, kaçırırsam ne olur?"
     a: "Vestel klimalarda mesaj önce koda özel sayıda yanıp söner, ardından otuz beş ile kırk saniye arası sabit görünür. Sorun giderilene kadar da görüntülenmeye devam eder, yani mesajı kaçırdıysan bir sonraki tura yetişirsin. Yine de en garantisi telefonla video çekmektir: Er ibaresiyle sayı sırayla göründüğü için tek fotoğrafta ikisi birden yakalanmayabilir."
+images:
+  coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
 Klima durdu, iç ünitenin ön yüzündeki küçük göstergede bir şeyler yanıp sönüyor ama tam olarak ne yazdığı anlaşılmıyor. Vestel klimalarda bu göstergenin kendine ait bir dili var ve dilin en önemli kuralı şu: **ekranda gördüğün her mesaj arıza değil.** Bir kısmı, cihazın kendini koruduğunu söyleyen bilgilendirmedir. Bu yazıda mesajın nasıl okunacağını, hangi mesajın gerçekten arıza olduğunu ve hangisinde beklemenin yeterli olduğunu anlatıyoruz.

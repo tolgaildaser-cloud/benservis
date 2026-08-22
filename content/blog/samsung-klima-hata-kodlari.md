@@ -28,6 +28,8 @@ faq:
     a: "Bu ayrımı üretici kendi destek içeriğinde net yapıyor. Fan hatası ara ara gelip kayboluyorsa, iç ünite fan motoru besleme gerilimi normal aralığın dışına çıktığı için kendini koruma moduna almış olabilir; gerilim düzelince sorun geçer. Ama cihazı kapatıp açtığında hata on saniye içinde geri geliyorsa fan motoru ya da kart tarafında kalıcı bir sorun var demektir ve bu teşhis servise aittir. İki durumu ayırmanın pratik yolu, kapat-aç denemesinden sonra kodun ne kadar sürede döndüğünü ölçmektir."
   - q: "İnternetteki Samsung klima kod listeleri neden farklı farklı?"
     a: "Çünkü dolaşan listelerin bir kısmı markadan bağımsız genel tablolardır ve Samsung'a ait değildir. Bir de gerçek bir ayrım var: duvar tipi ev klimalarıyla çoklu iç üniteli ticari sistemler farklı şema kullanır, ticari tarafta kodlar üç haneli olur ve karşılıkları örtüşmez. Biz bu yazıda yalnızca üreticinin kendi destek içeriğinde birden çok bölgede aynı şekilde geçen kodları yazdık. Kesin tablo cihazının kullanım kılavuzundadır."
+images:
+  coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
 Samsung klimada kod okumaya çalışırken insanı ilk şaşırtan şey şu olur: gösterge tek bir şey yazmaz, iki şeyi sırayla gösterip döner. Önce bir harf grubu, sonra iki haneli bir sayı. Bu iki parça ayrı kodlar değildir — **tek bir kodun iki yarısıdır** ve yalnızca ikisi birlikte anlam taşır. Bu yazıda önce hangi bildirimlerin arıza bile olmadığını, sonra doğrulayabildiğimiz gerçek kod karşılıklarını anlatıyoruz.

@@ -28,6 +28,8 @@ faq:
     a: "Parça aynı olsa bile işçilik farklıdır. Ankastre fırın dolabın içine gömülüdür ve çoğu arızada cihazın dolaptan öne çekilmesi, bazı modellerde tamamen çıkarılması gerekir; cihaz ağırdır ve elektrik bağlantısı sabit hatta yapılmıştır. Solo fırında bu hazırlık yoktur. Aynı parça için ankastrede daha uzun bir işçilik süresi ortaya çıkar."
   - q: "Fırını tamir mi ettirmeli, yenisini mi almalı?"
     a: "Üç ölçüt birlikte bakılır: cihazın yaşı, yedek parçanın bulunabilirliği ve aynı anda arızalanan kalem sayısı. Cihaz on yaşın altındaysa ve tek bir hafif kalem arızalıysa tamir neredeyse her zaman doğru karardır. Cihaz eskiyse, parça tedarik edilemiyorsa ya da kart ile birlikte ikinci bir kalem daha bozulduysa yenileme masaya gelir."
+images:
+  coverAlt: "Mutfak dolapları arasına gömülü ankastre fırın"
 ---
 
 Fırın ısınmayı bıraktı ya da pişirme artık eskisi gibi değil. Aklına gelen ilk soru herkeste aynı: "Bu iş kaç paraya patlar?" Bu sayfada rakam bulamayacaksın — çünkü fırın tamiri diye tek bir iş yok. Bir program ayarının düzeltilmesiyle elektronik kartın değişmesi arasında birkaç kat fark var. Bu yazı rakam yerine **karar** veriyor: bedeli ne belirliyor, hangi arıza hangi bantta duruyor, tamirle yenileme arasındaki eşik nerede.

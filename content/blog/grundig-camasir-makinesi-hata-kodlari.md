@@ -28,6 +28,8 @@ faq:
     a: "Çünkü çoğu liste hangi model serisini anlattığını söylemiyor ve farklı kuşakların tabloları birbirine karışıyor. Aynı numaraya bir listede ısıtma, bir başkasında tahliye anlamı veriliyor. Üstelik markanın kendi kullanma kılavuzlarında kod tablosu değil, belirti tablosu bulunuyor. Bu yüzden doğrulayamadığımız kodları yazmıyoruz; yanlış kod, yanlış parçaya yönlendirir ve pahalıya patlar."
   - q: "Ekranda tek haneli E1, E2 gibi kodlar görüyorum, aynı tablo mu geçerli?"
     a: "Hayır, tek haneli gösterim genelde farklı bir kuşağa aittir ve iki haneli tabloyla birebir örtüşmez. Tek haneli listelerde aynı numaraya bambaşka anlamlar verildiğini görüyoruz, bu yüzden o gruba dair karşılık yazmıyoruz. Ekranda E1 ya da E2 görüyorsan tek güvenilir kaynak kendi modelinin kullanma kılavuzudur; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
+images:
+  coverAlt: "Çamaşır makinesinin kumanda paneli ve deterjan çekmecesi alt açıdan"
 ---
 
 Program yarıda kesildi, tambur durdu ve ekranda **E03** yanıp sönüyor. Telefonla arattığın anda önüne birbirini tutmayan listeler çıkıyor: bir sayfa bu kodu tahliyeye, bir başkası ısıtmaya bağlıyor. Grundig çamaşır makinelerinde durum tam olarak budur ve bunun bir sebebi var. Bu yazıda **iki bağımsız kaynakla doğrulayabildiğimiz** kodları, markanın kendi kılavuzunun doğruladığı belirti-sebep eşleşmelerini ve evde ücretsiz yapabileceğin kontrolleri anlatıyoruz. Doğrulayamadıklarımızı ise yazmıyoruz — nedenini de açıkça söylüyoruz.

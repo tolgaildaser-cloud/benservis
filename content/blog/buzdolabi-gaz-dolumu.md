@@ -28,6 +28,8 @@ faq:
     a: "Fark montajdan gelir. Split klimada iç ve dış ünite arasındaki bakır hat sahada döşenir ve bağlantı noktaları sahada sıkılır; bu birleşme noktaları soğutucu kaybının bilinen ve yaygın yeridir. Buzdolabında ise devre fabrikada kapatılıp mühürlenir, sahada açılan bir bağlantı yoktur. Bu yüzden buzdolabında gaz kaybı istisnadır, klimada ise montaja bağlı bir olasılıktır."
   - q: "Soğutmuyor diyorlar, hemen gaz mı doldurmalı?"
     a: "Hayır, gaz sıranın sonundadır. Önce ayar kademesi, kapı contası, havalandırma boşluğu ve kondenser tozu gibi bedelsiz sebepler elenir; sonra kompresör, termostat ve defrost hattı değerlendirilir. Gaz kaybı ancak bunlar elendikten ve serviste ölçüm yapıldıktan sonra gündeme gelmelidir. Cihazına özel tahmini maliyeti Benservis'ten ücretsiz alabilirsin."
+images:
+  coverAlt: "Bir evin mutfağında duran buzdolabı"
 ---
 
 Dolap eskisi gibi soğutmuyor, birine soruyorsun ve cevap hazır geliyor: "Gazı bitmiştir, doldurtursun." Bu cümle o kadar yerleşmiş ki "buzdolabı gaz dolumu" tek başına satılan bir hizmet hâline gelmiş. Oysa buzdolabında gaz, arabanın benzini gibi tükenen bir şey değildir. Bu yazı tek bir ayrımın üstüne kurulu — ve o ayrım, gereksiz bir işe ödeme yapmakla asıl arızayı çözdürmek arasındaki farkı belirliyor.
