@@ -28,6 +28,8 @@ faq:
     a: "Bu konuda üreticiler aynı şeyi söylemiyor. Bazı büyük markaların destek sayfaları sirkenin lastik conta ve hortumlara zarar verebileceğini belirtip kendi temizleyici ürünlerini önerirken, bazıları ölçülü kullanıma sıcak bakıyor. Kaynaklar çeliştiği için burada tek bir tarif vermiyoruz: geçerli olan senin cihazının kullanım kılavuzudur, çünkü garanti kapsamı da o metne bakar."
   - q: "Kireç birikmesi makineye ne yapar?"
     a: "Kireç ısıtıcı yüzeyde ve su yollarında birikerek suyun ısınmasını zorlaştırır; makine aynı sıcaklığa ulaşmak için daha uzun çalışır ve elektrik tüketimi artar. Zamanla tamburda ve kalıntıyla birleşerek kokuya, çamaşırda beyazlık kaybına ve leke izlerine yol açar. Düzenli bakım yıkaması ve suyun sertliğine uygun aralıkta kireç çözme bu birikimi kontrol altında tutar."
+images:
+  coverAlt: "Çamaşır makinesinin gri kapak lastiği aralanmış, arkasındaki kat görünüyor"
 ---
 
 Çamaşırlar temiz çıkıyor, makine hata da vermiyor. Ama kapağı açtığında lastiğin kıvrımında koyulaşmış bir çizgi, çekmecenin köşesinde kurumuş yumuşatıcı, tamburun kenarında tebeşirimsi beyaz bir iz var. Hiçbiri bugün arıza değil — hepsi altı ay sonrasının arızasının hammaddesi. Çamaşır makinesinin içini temizlemek bir kriz müdahalesi değil, **takvime bağlanan bir bakım işidir**. Bu yazı da tam olarak o takvimi kuruyor: neyi, ne zaman, hangi ayarla.

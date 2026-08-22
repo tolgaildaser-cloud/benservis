@@ -28,6 +28,8 @@ faq:
     a: "Çoğu televizyonda ses menüsünde bir sıfırlama seçeneği bulunur ve yanlış kalmış bir çıkış ayarını ya da bozulmuş bir ses kipini tek hamlede düzeltir. Cihazın tamamını fabrika ayarına döndürmeye gerek yoktur; önce yalnız ses ayarlarını sıfırla, sonuç alamazsan diğer adımlara geç."
   - q: "Ses kısıkken cızırtı ya da çatırtı geliyorsa bu iyi mi kötü mü?"
     a: "Bozuk da olsa ses gelmesi, ses devresinin çalıştığını ama bir yerde bozulma olduğunu gösterir; hoparlör konisi yıpranmış ya da ses yükselteci zorlanıyor olabilir. Sesi sonuna kadar açıp cihazı bu hâlde çalıştırmak durumu kötüleştirir. Sesi düşür, kaynağı değiştirerek aynı cızırtının her kaynakta olup olmadığını doğrula ve servisle konuş."
+images:
+  coverAlt: "Duvara asılı televizyonun altındaki priz ve bağlantı kabloları yakın plan"
 ---
 
 Diziyi açıyorsun, görüntü akıyor, altyazılar geçiyor ama televizyondan hiçbir ses çıkmıyor. Kumandanın ses tuşuna basıyorsun, ekranda çubuk yükseliyor, yine sessizlik. İlk düşünülen "hoparlör gitti" olur; oysa vakaların çoğu ayar, kaynak ya da unutulmuş bir kablosuz eşleşme kaynaklıdır ve **cihazın kapağı hiç açılmadan** çözülür.

@@ -28,6 +28,8 @@ faq:
     a: "Piroliz programı, normal pişirme sıcaklıklarının çok üzerine çıkarak kir kalıntısını küle çevirir. Bu sıcaklıkta kapının açılabilmesi ciddi bir yanık riski olurdu, bu yüzden kapı program başlarken otomatik kilitlenir. Kritik nokta şudur: kilit, program bittiğinde değil fırın güvenli sıcaklığa indiğinde çözülür ve bu bekleme bir saati aşabilir. Kapı kilidi konusunu fırın kapağı açılmıyor yazımızda ayrıntılı anlattık."
   - q: "Kapak camının iki katmanı arasındaki kir nasıl temizlenir?"
     a: "Bu bir kullanıcı işi değildir. Fırın kapağı birden fazla cam katmanından oluşur ve aralarına giren yağ buharı ancak kapak açılarak temizlenebilir; kapak ise gergin menteşe yaylarıyla taşınır ve bu yaylar kontrolsüz boşaldığında yaralanma riski taşır. Camların dış ve iç yüzünü rahatlıkla silebilirsin, ama aradaki lekeyi servise bırak."
+images:
+  coverAlt: "Kapağı açık ankastre fırın, boş telleri yarıya kadar çekilmiş, iç bölme temiz"
 ---
 
 Fırının kapağını açıyorsun ve tabanda geçen haftanın kızarmış damlaları, yan duvarlarda kahverengileşmiş bir sıçrama izi, cam kapakta ise her açılışta biraz daha koyulaşan bir bulanıklık var. İlk refleks mutfak dolabındaki en güçlü spreye uzanmak oluyor. Bekle. Fırın temizliğinde **doğru yöntem cihazın tipine göre değişir** — ve yanlış tipe uygulanan doğru ürün, temizlemek yerine kalıcı hasar bırakır. Önce fırınının hangi sınıfta olduğunu belirleyelim, sonra her birinin kendi yolunu anlatalım.

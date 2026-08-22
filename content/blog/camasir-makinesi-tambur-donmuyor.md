@@ -27,6 +27,8 @@ faq:
     a: "Evet, ve bu düşünüldüğünden sık görülür. Makine kapağın güvenli biçimde kilitlendiğini doğrulamadan tamburu döndürmez. Contaya sıkışmış bir çorap ya da tam oturmayan bir kapak, kilidin kapanmasını engeller. Kapağı açıp kuvvetlice yeniden kapatmak ve conta çevresini elle yoklamak bu ihtimali ücretsiz biçimde eler."
   - q: "Motor sesi var ama tambur dönmüyor, sebep ne olabilir?"
     a: "Bu tarif genelde motorun çalıştığını ama hareketin tambura ulaşmadığını gösterir; kayış gevşemiş veya kasnaktan çıkmış olabilir. Bazı makinelerde motor kömürleri aşındığında motor zorlanır, ses verir ama yükü döndürecek gücü üretemez. Her iki ihtimal de gövdenin içindedir ve kullanıcı tarafında denenecek bir adım kalmamıştır; belirtiyi not edip servise aktarmak en hızlı yoldur."
+images:
+  coverAlt: "Kapağı açık çamaşır makinesinin tamburu, ıslak çamaşır bir tarafa yığılmış"
 ---
 
 Programı başlattın, su sesi geldi, gösterge ilerliyor — ama kapaktan baktığında tambur kımıldamıyor. Çamaşırlar suyun içinde öylece duruyor. Bu tablo, "makine tamamen bozuldu" gibi görünse de aslında **iyi haber içerir**: su alması, elektriğin, kartın ve su hattının çalıştığını gösterir. Sorun yalnız hareket halkasındadır ve o halkanın ilk birkaç adımı **cihazın içine hiç girmeden** kontrol edilir.
