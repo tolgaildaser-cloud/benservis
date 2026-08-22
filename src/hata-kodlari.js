@@ -397,8 +397,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "DemirDöküm — F.22, F.28, F.29", tip: "kod",
       anlam: "Düşük su basıncı, ateşleme ve alev sönmesi kodlarının anlamı.",
       yazi: "demirdokum-kombi-ariza-kodlari" },
-    { giris: "Baymak — E01, E04, E05", tip: "kod",
-      anlam: "Ateşleme, düşük su basıncı ve fan kodlarının anlamı.",
+    // 22 Ağu 2026 (TARAMA-1): "E04" ÇIKARILDI — Baymak'ta böyle bir kod yok.
+    // Gerçek düşük su basıncı kodu F37 (Lunatec/Startec'te H.02.07).
+    { giris: "Baymak — E01, E05, F37", tip: "kod",
+      anlam: "Ateşleme, fan ve düşük su basıncı kodlarının anlamı.",
       yazi: "baymak-kombi-ariza-kodlari" },
     { giris: "Marka fark etmeksizin en sık kodlar", tip: "kod",
       anlam: "Markası listede yoksa buradan bak; hangi kodda güvenle ne yapabilirsin.",
@@ -418,7 +420,10 @@ export const HATA_KODU_KATMANI = {
 
   // ——— Kayıt genişletmesi (21 Ağu 2026, YK #80 · hedef 200+) ———
     { giris: "Ekranda düşük su basıncı kodu var", tip: "kod",
-      anlam: "Her markanın en sık kodu budur (Vaillant F.22, DemirDöküm F.22/F.37, Baymak E04) ve doldurma musluğuyla güvenle çözülür.",
+      // 22 Ağu 2026 (TARAMA-1) — ÇİFTE TAKAS düzeltildi: F.37 Baymak'ın kodudur,
+      // DemirDöküm'e yazılmıştı; Baymak'a ise var olmayan E04 verilmişti.
+      // DemirDöküm'ün ikinci platformunda (Atron/Nitron) karşılık F10.
+      anlam: "Her markanın en sık kodu budur (Vaillant F.22, DemirDöküm F.22, Baymak F37) ve doldurma musluğuyla güvenle çözülür.",
       yazi: "kombi-ariza-kodlari" },
     { giris: "Sürekli su basmam gerekiyor", tip: "belirti",
       anlam: "Su eklemek geçici çözümdür; kaynak tesisat kaçağı, genleşme tankı ya da emniyet ventili olabilir.",

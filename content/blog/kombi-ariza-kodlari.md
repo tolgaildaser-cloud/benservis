@@ -6,9 +6,9 @@ date: "2026-06-19"
 category: "Kombi"
 faq:
   - q: "Kombi arıza kodları markaya göre değişir mi?"
-    a: "Evet. Vaillant ve DemirDöküm 'F' önekli kodlar (F.22, F.28, F.29) kullanır; Baymak gibi markalar genelde 'E' önekli kodlar (E01, E04) verir. Aynı arıza farklı markada farklı kodla gösterilir."
+    a: "Evet. Vaillant ve DemirDöküm 'F' önekli kodlar (F.22, F.28, F.29) kullanır; Baymak'ta ise düzen seriye göre değişir: Duotec/Eco serisi E01 gibi kodlar, Lunatec/Startec serisi H.02.07 gibi noktalı kodlar verir. Aynı arıza farklı markada farklı kodla gösterilir."
   - q: "En sık çıkan kombi arıza kodu hangisi?"
-    a: "Düşük su basıncı kodları (Vaillant F.22, ECA/Baymak'ta su basıncı kodu) en sıktır ve genelde güvenle evde çözülür: kombinin altındaki doldurma musluğundan basıncı 1–1.5 bara getirmek yeterlidir."
+    a: "Düşük su basıncı kodları (Vaillant F.22, Baymak F37) en sıktır ve genelde güvenle evde çözülür: kombinin altındaki doldurma musluğundan basıncı 1–1.5 bara getirmek yeterlidir."
   - q: "Kombi arıza kodunu kendim çözebilir miyim?"
     a: "Güvenle yapabileceğin tek şey düşük su basıncında su eklemek ve reset'tir. Gaz, alev, fan, baca veya elektronik kart kodlarında cihazı kapat ve yetkili servise başvur — gazla ilgili işe kendin müdahale etme."
   - q: "Kod tekrar tekrar çıkıyorsa ne yapmalıyım?"
@@ -24,7 +24,7 @@ Kombin ekranında bir **arıza kodu** gösteriyor (F.22, F.28, E01…) ve ne dem
 > ⚠️ Kodların anlamı model ve seriye göre değişebilir; aşağıdakiler en yaygın anlamlardır. Kesin teşhis için modelini ve kodu [Benservis'e](/) yaz.
 
 ## Her markada en sık: düşük su basıncı
-Kombi en sık "düşük su basıncı" kodu verir (Vaillant **F.22**, DemirDöküm **F.22/F.37**, Baymak **E04**). Çözümü genelde basit ve güvenli:
+Kombi en sık "düşük su basıncı" kodu verir (Vaillant **F.22**, DemirDöküm **F.22** — Atron/Nitron platformunda **F10**, Baymak **F37**). Çözümü genelde basit ve güvenli:
 1. Manometreye (basınç göstergesi) bak — **1 barın altındaysa** düşüktür.
 2. Kombinin altındaki **doldurma (su ekleme) musluğunu** yavaşça aç.
 3. İbre **1–1.5 bar** olunca musluğu kapat.
@@ -37,7 +37,7 @@ Basınç sürekli düşüyorsa **kaçak** vardır (petek, vana, kombi içi) → 
 |-------|----------|----------------|
 | Vaillant | F. (F.22, F.28, F.29, F.75) | [Vaillant kombi arıza kodları](/blog/vaillant-kombi-ariza-kodlari/) |
 | DemirDöküm | F (F22, F28, F29) | [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) |
-| Baymak | E (E01, E04, E05) | [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/) |
+| Baymak | Seriye göre E ya da noktalı H (E01, E05, F37) | [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/) |
 
 ## Arıza türüne göre genel anlamlar
 🛠️ = güvenle kendin · 🔧 = yetkili servis (gaz/elektronik)
@@ -62,7 +62,7 @@ Kombine ve arızaya göre tahmini tamir maliyetini [Benservis](/) saniyede söyl
 ## Sık sorulan sorular
 
 **Kodlar markaya göre değişir mi?**
-Evet — Vaillant/DemirDöküm "F", Baymak "E" önekli kodlar kullanır.
+Evet — Vaillant/DemirDöküm "F" önekli kodlar kullanır; Baymak'ta düzen seriye göre değişir (Duotec/Eco "E", Lunatec/Startec noktalı "H").
 
 **En sık kod hangisi?**
 Düşük su basıncı; genelde su ekleyerek güvenle çözülür.
