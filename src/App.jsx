@@ -112,16 +112,18 @@ const BASLANGIC_EKRAN = (() => {
   } catch { return "vitrin"; }
 })();
 
-const TARIFE_YEDEK = { "Kurutma Makinesi": "Çamaşır Makinesi" };
-
 function refMetni(cihaz) {
-  // ⚠️ GEÇİCİ TARİFE KÖPRÜSÜ — kurutma makinesinin Supabase'de KENDİ satırı henüz yok
-  // (21 Ağu 2026'da ölçüldü: SEED'de rezistans/nem sensörü/kondenser pompası/kayış YOK).
-  // Köprü olmasaydı kurutma teşhisi tamamen çıpasız kalırdı ve fiyat saf AI tahminine
-  // düşerdi — YK #46 hattında en istenmeyen durum. Şimdilik çamaşır makinesi çıpalarına
-  // dayanır; parçalar birebir aynı değil, bu yüzden AÇIK KALEM olarak kayıtlı.
-  // 📌 /tarife'de kurutma satırları onaylanınca bu satır SİLİNİR (tabloBul yeter).
-  const arr = tabloBul(SEED, cihaz) || tabloBul(SEED, TARIFE_YEDEK[cihaz]) || [];
+  // ✅ GEÇİCİ TARİFE KÖPRÜSÜ KALDIRILDI (22 Ağu 2026, YK #83 — Tolga onayı).
+  // Kurutma makinesinin Supabase'de artık KENDİ 13 satırı var (rezistans, ısı pompası
+  // grubu, nem sensörü, kondenser pompası, kayış, tambur takımı, fan, motor grubu,
+  // motor kondansatörü, kart tamiri/değişimi, kapak kilidi) → `tabloBul` tek başına yeter.
+  //
+  // ⚠️ KÖPRÜNÜN NEDEN KALKMASI GEREKİYORDU (22 Ağu toplama turu ölçtü): köprü kurutma
+  // teşhisini çamaşır makinesi çıpalarına düşürüyordu ve 13 kalemin 10'unda YANLIŞTI.
+  // En ağırı ısı pompalı modelin kompresör grubu: kullanıcı 2.500-4.500 görüyordu,
+  // gerçek 5.500-14.800 → tavanda 10.300 TL eksik. Bu, cihazın "tamir mi ettireyim,
+  // atayım mı" kararını doğrudan ters çeviriyordu.
+  const arr = tabloBul(SEED, cihaz) || [];
   if (!arr.length) return "Bu cihaz için referans tarife yok; Türkiye 2026 piyasasına göre makul tahmin yürüt.";
   return arr.map(([ad, pmin, pmax, isc]) => `- ${ad}: parça ${pmin}-${pmax} TL, işçilik ~${isc} TL`).join("\n");
 }
