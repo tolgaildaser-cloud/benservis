@@ -29,6 +29,14 @@ faq:
     a: "Hortum temizse sıra sırasıyla dolu hazne veya torba, tıkalı filtre, aşınmış emici baş ve motor tarafına gelir. Hortumu tamamen çıkarıp cihazı çalıştırmak ve giriş ağzına elini tutmak bu ayrımı yapar: gövdenin kendi emişi güçlüyse sorun hortum hattındadır, gövde de zayıf çekiyorsa mesele filtre ya da motor tarafındadır. Sitemizdeki süpürge çekmiyor yazısı bu ikinci yolu ayrıntılı anlatıyor."
 images:
   coverAlt: "Süpürgeden sökülmüş gri hortum parke zeminde kıvrılmış, süpürge gövdesi arkada"
+  steps:
+    - "Süpürgenin güç düğmesinin kapatılışını ve fişinin prizden çekilişini gösteren çizim"
+    - "Hortumun gövdeden ve emici baştan iki uçtan el gücüyle ayrılışını gösteren çizim"
+    - "Düz gerdirilmiş hortumun bir ucunun ışığa tutulup öbür uçtan içine bakılışını ve iki olası sonucu gösteren çizim"
+    - "Hortumun baştan sona elle sıvazlanarak tıkanmanın sert noktasının bulunuşunu gösteren çizim"
+    - "Uzatma borusunun hortuma yakın uçtan girip tıkanmayı dışarı doğru itişini gösteren kesit çizim"
+    - "Uzatma borusu ve emici başın ışığa tutulup boğaz kısmının kontrol edilişini gösteren çizim"
+    - "Hortumun ılık suyla yıkanışını ve askıda kurumaya bırakılışını gösteren çizim"
 ---
 
 Halının üzerinde gezdiriyorsun ama süpürge tozu almıyor. Motor eskisi gibi, hatta daha yüksek sesle çalışıyor; emiş ise yok denecek kadar az. Bir gün önce her şey normaldi. Bu ani düşüşün en yaygın sebebi tek bir yerde birikir: **hortumun içinde** takılı kalmış bir şey. Çorap, mendil, çocuk oyuncağı, saç ve tüy yumağı, hatta bir kâğıt parçası — hortumun kıvrımlı yapısı bunları geçirmez, tutar. İyi haber şu ki bu kontrol tamamen ücretsizdir ve cihazın içine hiç girmeyi gerektirmez.
