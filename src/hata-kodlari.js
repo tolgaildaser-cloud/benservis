@@ -855,9 +855,13 @@ export const HATA_KODU_KATMANI = {
   ],
 
   "Süpürge": [
+    // 22 Ağu 2026 (Tolga onayı, konu #3 → b): yazı rehbere yükseltildi → `rehber: true`.
+    // YK #35 ② katman denetimi bunu ŞART koşuyor: kendi rehberimiz bir giriş satırından
+    // erişilebilir olmalı, yoksa build DURUR (22 Ağu'da fiilen durdurdu).
+    // ⛔ YK #31 kapsamı: 6 adımın hepsi ücretsiz/bakım seviyesi — söküm ve parça değişimi yok.
     { giris: "Çekmiyor / emiş zayıf", tip: "belirti",
       anlam: "Dolu hazne, tıkalı filtre, tıkanan hortum, aşınmış fırça ve motor ayrımı.",
-      yazi: "supurge-cekmiyor" },
+      yazi: "supurge-cekmiyor", rehber: true },
     { giris: "Şarj tutmuyor", tip: "belirti",
       anlam: "Batarya döngü ömrü ve tıkalı filtrenin süreye etkisi; gerçekçi beklenti ve değişim yolu.",
       yazi: "sarjli-supurge-sarj-tutmuyor" },
