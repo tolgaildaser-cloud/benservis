@@ -27,6 +27,8 @@ faq:
     a: "Evet, hortum yıkanabilir; ama iki kural var. Birincisi ılık su kullan, kaynar su bazı hortumların iç yapısını sertleştirir. İkincisi ve daha önemlisi, hortum içeriden tamamen kuruyana kadar cihaza takılmamalıdır. Nemli bir hortum hem tozu iç yüzeye yapıştırıp yeni tıkanmaya davetiye çıkarır hem de kısa sürede koku yapar. Asılı hâlde bir gün beklemek en güvenli yöntemdir."
   - q: "Hortumu temizledim ama emiş hâlâ zayıf, sırada ne var?"
     a: "Hortum temizse sıra sırasıyla dolu hazne veya torba, tıkalı filtre, aşınmış emici baş ve motor tarafına gelir. Hortumu tamamen çıkarıp cihazı çalıştırmak ve giriş ağzına elini tutmak bu ayrımı yapar: gövdenin kendi emişi güçlüyse sorun hortum hattındadır, gövde de zayıf çekiyorsa mesele filtre ya da motor tarafındadır. Sitemizdeki süpürge çekmiyor yazısı bu ikinci yolu ayrıntılı anlatıyor."
+images:
+  coverAlt: "Süpürgeden sökülmüş gri hortum parke zeminde kıvrılmış, süpürge gövdesi arkada"
 ---
 
 Halının üzerinde gezdiriyorsun ama süpürge tozu almıyor. Motor eskisi gibi, hatta daha yüksek sesle çalışıyor; emiş ise yok denecek kadar az. Bir gün önce her şey normaldi. Bu ani düşüşün en yaygın sebebi tek bir yerde birikir: **hortumun içinde** takılı kalmış bir şey. Çorap, mendil, çocuk oyuncağı, saç ve tüy yumağı, hatta bir kâğıt parçası — hortumun kıvrımlı yapısı bunları geçirmez, tutar. İyi haber şu ki bu kontrol tamamen ücretsizdir ve cihazın içine hiç girmeyi gerektirmez.

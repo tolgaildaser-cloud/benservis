@@ -28,6 +28,8 @@ faq:
     a: "Kesin bir sayı vermek yerine şu ölçüyü kullan: disk neredeyse tamamen doluysa ve boş alan çubuğu kırmızı görünüyorsa sistem sıkışmıştır. İşletim sistemi geçici dosyalar ve bellek takası için diskte hareket alanına ihtiyaç duyar; bu alan kalmadığında yavaşlama ani ve belirgin olur. Büyük video dosyalarını harici bir diske almak çoğu vakada tek başına yeter."
   - q: "Toz yavaşlamayı gerçekten etkiler mi?"
     a: "Evet, dolaylı ama net biçimde. Havalandırma delikleri tıkandığında sıcaklık yükselir ve işlemci kendini korumak için hızını düşürür. Kullanıcının gördüğü, özellikle ağır işlerde birkaç dakika sonra başlayan tempo düşüşüdür. Fan sesinin artması ve gövdenin ısınması bu tabloyu doğrular; deliklerin dışarıdan temizlenmesi çoğu zaman farkı hemen hissettirir."
+images:
+  coverAlt: "Pencere önündeki ahşap çalışma masasında ekranı kapalı dizüstü bilgisayar ve boş sandalye"
 ---
 
 Aynı bilgisayar, aynı işler, ama artık her şey daha uzun sürüyor: açılış dakikaları buluyor, tarayıcı sekmeleri geç yükleniyor, tıkladığın pencere birkaç saniye sonra tepki veriyor. Yavaşlama nadiren tek bir sebepten olur; genelde küçük yüklerin üst üste binmesidir. Bu rehberde **hiçbir parça değiştirmeden**, tamamen ücretsiz kontrollerle nereden ne kadar hız kazanabileceğini sırayla anlatıyoruz.

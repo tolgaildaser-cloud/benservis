@@ -27,6 +27,8 @@ faq:
     a: "Bu durumda iç ünitedeki alıcı pencere ya kirlidir, ya bir eşyayla kapanmıştır ya da araya güçlü bir ışık kaynağı girmiştir. Kızılötesi sinyalin görüş hattına ihtiyacı vardır: perde, dolap kapağı, açık bir raf kapısı yeterlidir. Pencereye doğrudan vuran güneş ışığı da sinyali bastırabilir. Bir-iki metreden, doğrudan nişan alarak denemek bu ihtimallerin çoğunu eler."
   - q: "Kumanda kayboldu ya da tamamen öldüyse klimayı açabilir miyim?"
     a: "Çoğu iç ünitenin kapağı altında ya da yan yüzeyinde küçük bir açma düğmesi bulunur; kılavuzda genelde acil veya elle çalıştırma başlığıyla geçer. Bu düğme cihazı önceden tanımlı bir kipte çalıştırır ve sıcaklık ayarı yapmaya izin vermez. Teşhis açısından da değerlidir: düğmeyle cihaz açılıyorsa klimanın kendisi sağlam demektir ve arıza kumanda tarafında sınırlanmıştır."
+images:
+  coverAlt: "Ahşap sehpada duran klima kumandası ve yanında açılmış pil kapağı"
 ---
 
 Kumandaya basıyorsun, ekranı yanıyor, sıcaklık değişiyor — ama klima hiçbir şey duymuyor. Ya da ekran hiç yanmıyor ve kumanda tamamen ölü. Bu şikâyet, klima çağrılarının şaşırtıcı biçimde büyük bir kısmını oluşturur ve **neredeyse tamamı ücretsizdir**: pil, temas ucu, kirli bir pencere ya da araya giren bir eşya. Üstelik kumandanın sağlam olup olmadığını, cebindeki telefonla iki dakikada kesin olarak öğrenebilirsin.

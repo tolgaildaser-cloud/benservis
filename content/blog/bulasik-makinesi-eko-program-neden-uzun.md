@@ -28,6 +28,8 @@ faq:
     a: "Eko programın bilinen tek zayıf noktası kurutmadır. Son durulama daha düşük sıcaklıkta bittiği için tabaklarda buharlaşmayı sağlayacak ısı kalmaz, özellikle plastik kaplar nemli çıkar. Çözüm program değiştirmek değil; parlatıcı kademesini artırmak ve program biter bitmez kapağı aralık bırakmaktır. Bu ikisi hiç elektrik harcamadan sonucu düzeltir."
   - q: "Her yıkamada eko program kullanılabilir mi?"
     a: "Günlük bulaşığın neredeyse tamamı için evet, eko doğru varsayılan programdır. İstisnalar dipte yanmış tencere, uzun süre bekleyip kurumuş yağlı tabak ve hastalık sonrası hijyen istediğin yüklerdir; bu durumlarda yüksek sıcaklıklı program daha isabetlidir. Kalan günlerde eko seçmek hem faturayı hem makinenin yükünü düşürür."
+images:
+  coverAlt: "Program bitmiş bulaşık makinesinin kapağı aralık bırakılmış, sepette temiz tabaklar"
 ---
 
 Akşam bulaşığını makineye dizdin, program listesine baktın ve eko programın yanında **3 saat 20 dakika** yazdığını gördün. Hemen yanında ise 60 dakikalık bir program duruyor. Sezgi net konuşuyor: uzun olan çok yakar, kısa olan az. Bulaşık makinesinde bu sezgi tersine çalışır — **eko, listedeki en uzun ve aynı zamanda en az elektrik harcayan programdır.** Bu yazıda bunun nedenini, uzun sürenin gerçekte ne işe yaradığını ve eko programın hangi durumlarda doğru seçim olmadığını anlatıyoruz.

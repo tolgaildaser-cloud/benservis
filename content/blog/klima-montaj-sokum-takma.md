@@ -28,6 +28,8 @@ faq:
     a: "Sistemdeki soğutucu akışkan atmosfere kaçar. Bu hem çevresel olarak sakıncalıdır hem de yeni adreste sıfırdan gaz şarjı gerektirir; yani sökümde tasarruf ettiğini sandığın süre, takmada ek maliyet olarak geri döner. Doğru yöntem, gazın dış ünite içinde toplanmasıdır ve bu işlem yetkili kişinin işidir."
   - q: "Montajı yetkili servise yaptırmak zorunlu mu?"
     a: "Yeni alınan klimalarda büyük ölçüde evet. Üreticiler garantinin geçerli olabilmesi için kurulumun yetkili servis tarafından yapılmasını şart koşar; yetkisiz kişilerce yapılan montajda cihaz garanti kapsamı dışında kalabilir. Bunun ötesinde, montaj kalitesi cihazın ömrünü doğrudan belirlediği için burada ucuza kaçmanın bedeli genelde daha sonra ödenir."
+images:
+  coverAlt: "Bina dış cephesinde konsola monte klima dış ünitesi, bakır boru ve drenaj hattı duvar boyunca"
 ---
 
 Yeni klima aldın ya da taşınıyorsun. Teklifler birbirini tutmuyor: kimi tek rakam söylüyor, kimi kalem kalem yazıyor, kimi "boru metresi ayrı" diyor. Sebebi basit — **klima montajı tek bir iş değil, birkaç işin toplamıdır** ve hangilerinin teklife dahil olduğu adresten adrese değişir. Bu yazıda ne satın aldığını ve taşınmada nelerin gözden kaçtığını anlatıyoruz. Montaj tarifi yok; **doğru soruları sorma** rehberi var.

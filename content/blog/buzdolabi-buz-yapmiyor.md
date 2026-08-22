@@ -27,6 +27,8 @@ faq:
     a: "Evet, ve etkisi tahmin edilenden büyüktür. Kapı her açıldığında dondurucuya oda sıcaklığında ve nemli hava girer; cihaz önce bu havayı soğutmakla uğraşır, buz üretimi geri plana düşer. Kalabalık bir günde ya da kapısı tam kapanmayan bir dolapta hazne günlerce boş kalabilir. Kapı contasının temiz ve kapanmanın kararlı olması bu yüzden ayar kadar önemlidir."
   - q: "Buz haznesinde topak hâlinde buz varsa ne anlama gelir?"
     a: "Küpler ayrı ayrı düşmek yerine tek bir blok hâline gelmişse cihaz genelde buz üretiyor ama kimse tüketmiyor demektir; bekleyen buz zamanla birbirine yapışır. Ayrıca kapı sık açıldığında giren nemli hava bu yapışmayı hızlandırır. Hazneyi boşaltıp yeniden takmak sorunu çözüyorsa arıza yoktur. Aynı topaklaşma birkaç günde bir tekrarlıyorsa dondurucu içindeki sıcaklık dalgalanmasına bakılır."
+images:
+  coverAlt: "Dondurucu rafında duran boş şeffaf buz kalıbı, bölme duvarlarında ince kırağı"
 ---
 
 Bardağa buz koymak için hazneyi çekiyorsun ve içi boş. Ya da klasik buz kabındaki su günlerdir olduğu gibi duruyor. Dolabın geri kalanı normal çalışıyor: süt soğuk, dondurucudaki gıdalar donmuş durumda. Bu tablo çoğu kişiye "buzmatik bozuldu" dedirtir; oysa buz üretimi, dolabın en çok **ayara ve alışkanlığa** bağlı işlevidir. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

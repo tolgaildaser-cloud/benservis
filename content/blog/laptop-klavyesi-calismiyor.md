@@ -28,6 +28,8 @@ faq:
     a: "Hemen kapat, adaptörü çıkar ve cihazı kesinlikle tekrar açma. Ters çevirip yüzü aşağı bakacak şekilde havlu üzerine koy ve sıvının akmasını sağla. Saç kurutma makinesiyle ısıtma, pirince gömme gibi yöntemler işe yaramaz. Sıvı temasında zamana karşı yarışılır ve doğru adres servistir; cihazı çalıştırmayı denemek kurtarılabilir bir durumu kalıcı hasara çevirir."
   - q: "Klavye bazen çalışıp bazen susuyorsa bu ne demek?"
     a: "Kesintili çalışma neredeyse her zaman bir temas sorununa işaret eder: klavyeyi anakarta bağlayan ince bağlantı gevşemiş ya da yıpranmış olabilir. Bu tür arızalar ısıyla ve kapak açılıp kapandıkça değişir, bu yüzden bir gün normal bir gün sorunlu görünür. Kendiliğinden düzeleceğini beklemek yerine belirtiyi not edip servise aktarmak doğru olur."
+images:
+  coverAlt: "Dizüstü bilgisayarın klavyesi ve dokunmatik yüzeyi yandan yakın plan"
 ---
 
 Şifreyi yazıyorsun, harfler ekrana düşmüyor. Ya da daha sinsi hâli: klavyenin çoğu çalışıyor da üç beş tuş inatla susuyor. Dizüstü klavyesi arızalarında en büyük hata, teşhis yapmadan doğrudan "klavye gitti" diye düşünmektir; çünkü aynı belirtiyi bir ayar seçeneği, bir sürücü takılması ya da tuş altına kaçmış bir kırıntı da üretir. Bu rehberde arızanın **yazılımda mı yoksa klavyenin kendisinde mi** olduğunu evde ayıracak sırayı anlatıyoruz.

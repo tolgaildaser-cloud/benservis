@@ -27,6 +27,8 @@ faq:
     a: "Beklenenden çok. İç ünitenin çektiği havanın tamamı filtrelerden geçer; toz tabakası kalınlaştıkça fan aynı devirde dönse bile odaya ulaşan hava belirgin biçimde azalır. Yanında genelde soğutma performansında düşüş, artan çalışma süresi ve zamanla koku da görülür. Filtre temizliği kapak seviyesinde, aletsiz ve ücretsiz yapılabilen tek bakımdır; sezon içinde birkaç haftada bir tekrarlanması önerilir."
   - q: "Kanatlar açılmıyorsa fan da durur mu?"
     a: "Bazı modellerde evet: cihaz yönlendirme kanadının açık konuma geldiğini doğrulayamazsa üflemeyi başlatmaz ya da hemen durdurur. Kanadın elle zorlanmış, taşınma sırasında eğilmiş veya perde arkasında sıkışmış olması bu duruma yol açabilir. Kanadın önünü açmak ve elle zorlanmadığından emin olmak ücretsiz bir kontroldür; kanat mekanizmasına müdahale ise servis işidir."
+images:
+  coverAlt: "Duvar tipi klima iç ünitesinin ön kapağı açık, hava filtresi yuvasında görünüyor"
 ---
 
 Kumandaya basıyorsun, iç ünitede ışık yanıyor, cihaz açıldığını gösteren sesi çıkarıyor — ama elini ızgaranın önüne tuttuğunda hiç hava yok. Dış ünite belki çalışıyor, belki değil. Oda ise olduğu gibi sıcak kalıyor. Bu tablo çoğu kişiye "fan motoru gitti" dedirtir; oysa **iç ünite üflemiyor** şikâyetlerinin büyük bölümü kumanda ayarı, filtre ve kanat üçgeninde çözülür. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.
