@@ -601,11 +601,17 @@ export const HATA_KODU_KATMANI = {
       anlam: "Kısa tatilde çekilmez, tatil modu ya da ekonomik kademe kullanılır; aylarca boş kalacaksa boşalt, temizle, kapıyı aralık bırak.",
       yazi: "tatile-cikarken-buzdolabi-ve-cihazlar" },
   // ——— 21 Ağu boşluk dalgası tur-2 (25 yeni yazı) ———
-    { giris: "Arçelik — E, F, S ve D kodları", tip: "kod",
-      anlam: "Arçelik iki ayrı kod şeması kullanıyor; önce hangisiyle konuştuğunu ayırt ediyorsun.",
+    // 22 Ağu (TARAMA-1): "iki ayrı kod şeması" tezi ÇÖKTÜ — üretici YİRMİ kodluk TEK
+    // liste yayımlıyor. F, S ve D ile başlayan kod hiç yok; "kodlar toplanır" (E3=E1+E2)
+    // mekanizması da hiçbir üretici belgesinde geçmiyor. Hepsi çıkarıldı.
+    { giris: "Arçelik — E0'dan E24'e 20 kod", tip: "kod",
+      anlam: "Üreticinin yayımladığı tam liste: bölme sensörleri, defrost, fanlar ve buzmatik.",
       yazi: "arcelik-buzdolabi-hata-kodlari" },
-    { giris: "Beko — E0, E1, E4", tip: "kod",
-      anlam: "Üçü de aynı defrost (buz çözme) hattının farklı durakları; evde buz çözdürme adımı dahil.",
+    // 22 Ağu (TARAMA-1): E2 ve E3 EKLENDİ — yazı ikisini "doğrulanamıyor" diye
+    // atlıyordu, oysa üreticinin resmî listesinde net. Ters yönde bir hataydı:
+    // fazla iddia değil, EKSİK YAYIN.
+    { giris: "Beko — E0, E1, E2, E3, E4", tip: "kod",
+      anlam: "Defrost hattı ve soğutucu bölme sensörleri; evde buz çözdürme adımı dahil.",
       yazi: "beko-buzdolabi-hata-kodlari" },
     { giris: "Bosch — alarm mı, kod mu", tip: "kod",
       anlam: "Bosch buzdolabı çoğu zaman kodla değil alarmla konuşur; tatil modu en sık karışan durum.",
