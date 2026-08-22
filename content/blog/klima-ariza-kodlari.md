@@ -2,6 +2,12 @@
 title: "Klima arıza kodları: Vestel, Arçelik ve Daikin'de ekrandaki kod ne diyor"
 description: "Klima ekranında E1, U4 ya da F3 gibi bir kod mu var? Split klimalarda kod okuma mantığı, Vestel, Arçelik ve Daikin'de doğrulanmış karşılıklar ve servis sınırı."
 slug: "klima-ariza-kodlari"
+# 🔴 22 Ağu 2026 — ARÇELİK BÖLÜMÜ DEĞİŞTİ (kod tablosu denetimi, TARAMA-1).
+# "E1-E4 bandı sıcaklık sensörü" iddiası 6 Arçelik klima kılavuzunda ve Arçelik'in
+# kendi kod sayfasında yok; E serisi jenerik OEM listesi. Arçelik'in yayımladığı tek
+# tablo CH serisidir. Bölüm doğrusuyla değiştirildi.
+# 📌 #93 bu bloğu "canlı arcelik-klima yazısıyla birebir uyumlu" diye bırakmıştı —
+#    ama o yazı da aynı uydurma kaynaktan besleniyordu. İç tutarlılık doğrulama değildir.
 date: "2026-08-20"
 category: "Klima"
 guide:
@@ -69,11 +75,21 @@ Er ile başlamayan iki harfli mesajlar ise arıza bildirimi değil koruma bildir
 
 ⚠️ Kod şeması seriye ve modele göre değişir; kesin karşılık cihazınla gelen kullanım kılavuzundadır. Ekranda gördüğünü kılavuzunla teyit etmeden bir parçaya karar verme.
 
-## Arçelik klimalarda E1-E4 bandı
+## Arçelik klimalarda CH serisi
 
-Arçelik'in yaygın split serilerinde E1'den E4'e kadar olan bant, sıcaklık sensörleri tarafındaki hataları bildirir: iç ortam, iç ünite borusu ve dış taraftaki sensörlerden birinin kablosu kopmuş, oksitlenmiş ya da sensör kısa devre yapmıştır. Hangi E'nin hangi sensöre denk geldiği model ailesine göre değiştiği için tek tek eşleştirme vermiyoruz; kesin karşılık kılavuzdadır.
+Burada da dürüst olmak gerekiyor, çünkü bu markada yaygın bir yanlış var: **Arçelik'in yayımladığı tek klima kod tablosu CH serisidir.** İnternette çok dolaşan **E** ve **P** serisi listeler Arçelik klima kullanım kılavuzlarında ve Arçelik'in kendi kod sayfasında geçmez; markadan bağımsız genel OEM tablolarıdır ve birbirinden kopyalanırken anlamları kaymıştır.
 
-Kullanıcı açısından pratik sonuç aynıdır: sensör kodları resetle silinmiyorsa parça teşhisi servis işidir. Sensörler iç ünitenin ve dış ünitenin gövdesi içindedir.
+CH tablosu otuz dört kod içerir ve `CH01` ile `CH93` arasında **atlamalı** gider — yani CH07, CH08 ya da CH11 gibi numaralar tabloda bulunmaz. En sık görülenlerden birkaçı:
+
+| Kod | Arçelik'in karşılığı |
+|---|---|
+| CH01 | İç ünite oda sıcaklık sensör hatası |
+| CH05 | İç ünite ve dış ünite arasında iletişim hatası |
+| CH10 | İç ünite BLDC motor pervane kilidi |
+| CH29 | Kompresör faz hatası, aşırı akım hatası |
+| CH36 – CH38 | Soğutucu akışkan gaz kaçak hatası |
+
+Kullanıcı açısından pratik sonuç net: **Arçelik, otuz dört kodun her birinde yetkili servisle iletişime geçilmesini yazıyor.** Yani kendi kapatacağın bir CH kodu tanımlı değil. Evde yapabileceğin şey kodu silmek değil, koda yol açabilecek durumu ortadan kaldırmak — enerjiyi kesip yeniden vermek, filtreye bakmak, dış ünitenin önünü açmak. Tam listeyi benservis.com blogundaki Arçelik klima hata kodları yazısında topladık.
 
 ## Daikin klimalarda U4, E7 ve F3
 
