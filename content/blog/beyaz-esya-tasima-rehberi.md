@@ -29,7 +29,7 @@ faq:
   - q: "Buzdolabı taşındıktan sonra ne kadar bekletilmeli?"
     a: "Kesin süre kılavuzda yazar ve marka marka değişir; kılavuzların çoğu dik taşınan cihaz için birkaç saat, yatırılarak taşınan cihaz için 24 saate varan bir bekleme önerir. Bekleme, kompresör yağının yerine dönmesi ve soğutma devresindeki basıncın dengelenmesi içindir. Aceleyle fişe takmanın kazandırdığı süre, kompresörü riske atmaya değmez — cihazı yerine koy, fişi takma ve saati not et."
 images:
-  coverAlt: "Mavi şapkalı benservis ustası arkasında salon görünen mutfakta kollarını kavuşturmuş duruyor"
+  coverAlt: "Streç filme sarılı çamaşır makinesi boşaltılmış odada taşıma battaniyesi üzerinde, yanında koli bandı ve streç rulosu"
 ---
 
 Nakliye aracı kapıda, kolilerin çoğu inmiş, sıra beyaz eşyalara geldi. Buzdolabı ve çamaşır makinesi çoğu evin en pahalı iki cihazıdır ve taşınma, ikisinin de en çok hasar gördüğü andır. İşin sinir bozucu tarafı şu: bu hasarların neredeyse tamamı **taşınmadan önceki bir saatte, hiç para harcamadan** önlenebilir.

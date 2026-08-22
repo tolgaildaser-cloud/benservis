@@ -28,6 +28,8 @@ faq:
     a: "Koyduğun yüke göre azaltmak gerekir. Hızlı programda hem su hem durulama sayısı azdır; tam yük dozunda deterjan koyarsan artan kısım kumaşın içinde kalır. Bunun tipik sonuçları çamaşırda beyazımsı iz, sertleşme ve hassas ciltlerde tahriştir. Makine köpüğü fark ederse fazladan durulama ekler ve programın hızlı olma avantajı da ortadan kalkar."
   - q: "Sürekli hızlı program kullanmak makineye zarar verir mi?"
     a: "Doğrudan bir parçayı bozmaz ama zamanla koku ve tortu sorunu üretir. Düşük sıcaklıkta çalışan makinelerde deterjan artığı ve yağ tabandaki ve kapak lastiğindeki yüzeylerde birikir; bu birikinti kokunun ve çamaşırdaki gri lekelenmenin kaynağıdır. Panzehiri basit: ayda bir kez makineyi boşken yüksek sıcaklıklı bir programda çalıştırmak."
+images:
+  coverAlt: "Zeminde hasır sepette az sayıda hafif giysi, arkada çamaşır makinesinin açık kapağı"
 ---
 
 Sabah kapıdan çıkmadan önce fark ettin: giymek istediğin gömlek kirli sepette. Panelde **30 dakika** yazan program tam da bu an için konmuş gibi duruyor. Peki o otuz dakika ne yapıyor, ne yapamıyor? Hızlı program çok işe yarayan ama çok yanlış kullanılan bir programdır — sınırları zorlandığında hem çamaşırı hem makineyi yorar.

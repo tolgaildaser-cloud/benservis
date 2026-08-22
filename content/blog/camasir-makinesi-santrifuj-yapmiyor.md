@@ -14,7 +14,7 @@ faq:
   - q: "Makinenin dengesiz durması santrifüjü etkiler mi?"
     a: "Etkiler. Makine yüksek devirde titreşimi ayaklarına dağıtır; ayaklardan biri boşta kalıyorsa ya da zemin düz değilse makine sallanır ve kendini korumak için devri düşürür. Ayakların dördünün de yere tam basıp basmadığı elle itilerek kontrol edilir. Yeni taşınmış bir makinede ayrıca taşıma cıvatalarının sökülmüş olması gerekir; sökülmediyse makine ne düzgün döner ne de santrifüj yapar."
 images:
-  coverAlt: "Islak mavi kumaşı iki eliyle sıkan kişi, havada savrulan su damlaları"
+  coverAlt: "Banyo zemininde leğende sırılsıklam çamaşır, altında biriken su, arkada makinenin açık kapağı"
 ---
 
 Program bitti, makine durdu, kapağı açtın — çamaşırlar sırılsıklam. Suyunu bırakmıyor, asıldığında damlıyor.

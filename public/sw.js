@@ -46,7 +46,7 @@
 // ederdi. Yol SWR listesine alındı, sürüm artışı geriye dönük temizliği yapıyor.
 // v5 → v6 (20 Ağu, Kling dalga 3): camasir-kac-derecede-yikanir + camasir-makinesi-
 // ses-titresim kapakları AYNI adla değişti (kusurlu kareler yenilendi) → 19 Ağu kuralı.
-const SURUM = "benservis-v6";
+const SURUM = "benservis-v7";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;
