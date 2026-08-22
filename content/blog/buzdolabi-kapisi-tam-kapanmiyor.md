@@ -30,6 +30,15 @@ faq:
     a: "Temizlik ve katlanan bölümü düzeltme kullanıcı işidir; sertleşmiş, yırtılmış ya da çekmiş bir contanın değişimi ise modele uygun parça gerektirir ve kanala düzgün oturtulmazsa sızıntı devam eder. Doğru parçayla değişim servisin kısa sürede yaptığı bir iştir; teşhisten çıkan belirtiyle birlikte talep etmek işi hızlandırır."
 images:
   coverAlt: "Mutfakta duran buzdolabının alt bölümü"
+  steps:
+    - "İki kesit yan yana: solda kapı, raftan taşan şişeye çarpıp açık kalıyor; sağda kapı contaya değiyor ama tutmayıp aralanıyor."
+    - "Açık buzdolabı iç görünümü; taşan şişe, hizayı aşan poşet ve rayına oturmamış çekmece gri çarpılar ve etiketlerle işaretli."
+    - "Kapı rafındaki ağır cam kavanoz ve şişeler mavi okla gövde rafına taşınıyor; kapı rafı gri, gövde rafı mavi çizilmiş."
+    - "Kâğıt testinin üç aşaması yan yana: kâğıdı kapı ile gövde arasına koy, kapıyı kapat, kâğıdı çek; altta 'direnç var' tik kutusu ve 'kolayca kayıyor' çarpı kutusu."
+    - "Kapının önden görünümü; dört kenar ve dört köşedeki test noktalarından yedisi mavi tik, sol alt köşedeki biri gri çarpı ile kaçıran bölge olarak işaretli."
+    - "Dört adımlık şerit: ılık sabunlu su, kuru bez, içe dönmüş conta kesiti ve düzeltilmiş conta kesiti; altta gri kutuda conta değişiminin servis işi olduğu yazıyor."
+    - "İki buzdolabı yan yana: solda öne eğik gövdede kapı kendiliğinden açılıyor, sağda hafif arkaya eğik gövdede kapı kendiliğinden kapanıyor."
+    - "Buzdolabının ön alt köşesindeki denge ayakları, çevirme oku ve önü yükselten yukarı ok; sağda gri kutuda yatırılmış cihaz çarpı ile eleniyor."
 ---
 
 Dolabın kapısını kapatıyorsun, mutfaktan çıkarken göz ucuyla bakınca kapı parmak kalınlığında aralık. Ya da gece bir tıkırtıyla iniyorsun: kapı yine kendiliğinden açılmış, içeride lamba yanıyor. Kapı sorunu masum görünür ama sonucu masum değildir — sızan sıcak hava motoru durmaksızın çalıştırır, buzlanmayı azdırır ve yiyecekleri riske atar. Neyse ki bu şikâyetin arkasından çıkan sebeplerin çoğu alet bile gerektirmeden, birkaç dakikada kendin bulabileceğin şeylerdir.

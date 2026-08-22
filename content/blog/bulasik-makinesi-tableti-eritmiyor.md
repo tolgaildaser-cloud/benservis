@@ -30,6 +30,15 @@ faq:
     a: "Hayır, burası servis sınırıdır. Bölme düzeneği kapı panelinin içindedir ve ona ulaşmak kapı iç sacını sökmeyi gerektirir. Kullanıcı tarafında yapılacaklar kapağın serbest hareket ettiğini kontrol etmek ve bölme çevresindeki deterjan kalıntısını temizlemektir; yay ya da mekanizma değişimi servise aittir."
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin iç bölümü ve sepetleri"
+  steps:
+    - "Kapağın iç yüzü; tablet bölmesi mavi vurgulu, yanında soluk gri parlatıcı haznesi ve bölmeye yönelen nemli bez"
+    - "Solda bezle kurulanan tablet bölmesi ve mavi tik, sağda kuru elle tutulan tablet; altta gri çarpılı ıslak el"
+    - "Solda dolapta duran kapalı tablet kutusu ve tik, sağda makinenin yanındaki açık kutu ve gri çarpı"
+    - "Kapağı açık makine; kapağın iç yüzündeki tablet bölmesinden yukarı uzanan kesikli hiza çizgisi ve o hizadaki soluk gri tepsi"
+    - "Makinenin içi; üst ve alt püskürtme kolu dönüş oklarıyla, üstte gri takılı tencere kulpu, altta kolu çeviren el"
+    - "Püskürtme kolunun üstten görünüşü; iki tıkalı delik gri, kürdan bir deliğe uzanıyor, altta akan suyun altında durulanan kol"
+    - "Musluğun altında elle tutulan taban filtresi yakın planda; sağda makinenin tabanındaki filtre yuvası ve çevirme oku"
+    - "Panelde program seçimi vurgulu makine; sağda elle dokunulan tabak ve soluk gri ile mavi termometre karşılaştırması"
 ---
 
 Program bitti, kapıyı açıyorsun ve tablet ya olduğu gibi bölmede duruyor ya da yarı erimiş, hamur gibi bir kütle hâlinde kapağa yapışmış. Bulaşıklar da tahmin edileceği gibi kirli. Bu şikâyet ilk bakışta "makine bozuldu"ya benzese de, vakaların büyük kısmında sebep makinenin içinde hiç sökülmeden bulunabilir: yerleştirme, bölmenin durumu ya da su sıcaklığı. Basitten teknike doğru gidelim.

@@ -29,6 +29,14 @@ faq:
     a: "Bu tarif genelde motorun çalıştığını ama hareketin tambura ulaşmadığını gösterir; kayış gevşemiş veya kasnaktan çıkmış olabilir. Bazı makinelerde motor kömürleri aşındığında motor zorlanır, ses verir ama yükü döndürecek gücü üretemez. Her iki ihtimal de gövdenin içindedir ve kullanıcı tarafında denenecek bir adım kalmamıştır; belirtiyi not edip servise aktarmak en hızlı yoldur."
 images:
   coverAlt: "Kapağı açık çamaşır makinesinin tamburu, ıslak çamaşır bir tarafa yığılmış"
+  steps:
+    - "Çamaşır makinesinin program düğmesinin kapatılışını ve fişin prizden çekilişini gösteren çizim"
+    - "Kapağı açık makinede çamaşırların çıkarılışını ve boş tamburun elle çevrilişini gösteren çizim"
+    - "Tamburun serbest dönmesi, bir noktada takılması ve boşta gelmesi hâllerinin yan yana karşılaştırıldığı çizim"
+    - "Tek parça ağır çamaşır ile eşit dağıtılmış yarım yükün tamburda karşılaştırıldığı çizim"
+    - "Contası arasında kumaş kalmış kapak ile tam kapanıp kilitlenmiş kapağın karşılaştırıldığı çizim"
+    - "Fişin prize takılışını, kısa programın başlatılışını ve motor sesinin dinlenişini gösteren çizim"
+    - "Motor sesi geldiği hâlde dönmeyen tamburu ve gövde içinin servis işi olduğunu gösteren çizim"
 ---
 
 Programı başlattın, su sesi geldi, gösterge ilerliyor — ama kapaktan baktığında tambur kımıldamıyor. Çamaşırlar suyun içinde öylece duruyor. Bu tablo, "makine tamamen bozuldu" gibi görünse de aslında **iyi haber içerir**: su alması, elektriğin, kartın ve su hattının çalıştığını gösterir. Sorun yalnız hareket halkasındadır ve o halkanın ilk birkaç adımı **cihazın içine hiç girmeden** kontrol edilir.

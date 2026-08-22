@@ -15,6 +15,11 @@ faq:
     a: "Filtre/pompa/hortum ucuz, tamir mantıklı. Motor veya elektronik kart pahalıysa ve makine eskiyse yenisi değerlendirilebilir."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin cam kapağı ardında, tahliye edilmemiş suyun içinde duran ıslak çamaşırlar"
+  checks:
+    - "Tamburunda su kalmış makinenin alt kapağı açılıp tahliye filtresinin sığ kap ve havluyla çevrilip çıkarılışını gösteren çizim"
+    - "Bükülmüş tahliye hortumu ile gider ağzına düz oturan hortumun karşılaştırıldığı çizim"
+    - "Tek parça ağır çamaşır ile bölünüp eşit dağıtılmış yükün tamburda karşılaştırıldığı çizim"
+    - "Fişin prizden çekilip bir dakika beklenişini ve programın yeniden denenişini gösteren çizim"
 ---
 
 Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir bozucu ama çoğu zaman sebep basit ve evde, dakikalar içinde çözülüyor. Bu yazıda nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve iş servise kaldığında ne beklemen gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

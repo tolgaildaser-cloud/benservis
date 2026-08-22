@@ -29,6 +29,14 @@ faq:
     a: "Küpler ayrı ayrı düşmek yerine tek bir blok hâline gelmişse cihaz genelde buz üretiyor ama kimse tüketmiyor demektir; bekleyen buz zamanla birbirine yapışır. Ayrıca kapı sık açıldığında giren nemli hava bu yapışmayı hızlandırır. Hazneyi boşaltıp yeniden takmak sorunu çözüyorsa arıza yoktur. Aynı topaklaşma birkaç günde bir tekrarlıyorsa dondurucu içindeki sıcaklık dalgalanmasına bakılır."
 images:
   coverAlt: "Dondurucu rafında duran boş şeffaf buz kalıbı, bölme duvarlarında ince kırağı"
+  steps:
+    - "Buzmatik iki hâlde: solda açma kolu yukarıda ve kapalı, sağda kol aşağıda ve açık; altta alternatif olarak kar taneli panel düğmesi gösteriliyor."
+    - "Dondurucu bölmesi vurgulu buzdolabı ve yanında -18 °C rozeti; sağ altta ekonomi ve tatil kipi düğmeleri gri çarpılarla kapatılması gerektiğini gösteriyor."
+    - "Açık su musluğu ve ondan çıkan bükülmüş gri hortum çarpı ile eleniyor; sağda düz ve serbest mavi hortum tik ile onaylanıyor."
+    - "Buz haznesi üç aşamada: topaklaşmış buzla dolu hâli, ters çevrilip boşaltılması ve yerine tam oturacak şekilde geri konması."
+    - "İki kapı kesiti: solda contaya girmiş poşet köşesi çarpı ile işaretli, sağda conta boyunca temiz ve kapı tam kapanıyor."
+    - "Saat ikonu 24 saatlik süreyi, ortadaki kapı gereksiz açmanın çarpı ile elendiğini, sağdaki hazne süre sonunda bakılacak buz seviyesini gösteriyor."
+    - "Bir gün sonunda boş kalan buz haznesi, yanında belirtinin yazılacağı not kâğıdı ve soluk gri kutuda bu noktadan sonrasının panel seviyesinin altında olduğu notu."
 ---
 
 Bardağa buz koymak için hazneyi çekiyorsun ve içi boş. Ya da klasik buz kabındaki su günlerdir olduğu gibi duruyor. Dolabın geri kalanı normal çalışıyor: süt soğuk, dondurucudaki gıdalar donmuş durumda. Bu tablo çoğu kişiye "buzmatik bozuldu" dedirtir; oysa buz üretimi, dolabın en çok **ayara ve alışkanlığa** bağlı işlevidir. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

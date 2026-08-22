@@ -30,6 +30,15 @@ faq:
     a: "Önce iç ünite filtrelerinin temiz olduğundan emin ol; soğutma şikâyetlerinin en yaygın sebebi orasıdır. İki taraf da temizken soğutma hâlâ zayıfsa gaz miktarı, kompresör ya da fan motoru tarafında bir sorun olabilir. Bunlar basınç ölçümü ve yetkili müdahale gerektirir; bu noktada doğru hamle servisle konuşmaktır."
 images:
   coverAlt: "Klima ünitesi ve montaj bölgesi"
+  steps:
+    - "Kumanda kapalı, sigorta panosunda şalter aşağı indiriliyor, sağdaki dış ünitenin fanı soluk gri ve çarpılı"
+    - "Zemine oturan dış ünite; solunda kutu ve saksı, sağında yaprak yığını, iki yana açılan mavi boşluk okları"
+    - "Dış ünite ön ızgarasının yakın planı: solda kanatçıklı yüzey, üstte yumuşak fırça ve yüzey boyunca aşağı inen mavi ok, alt yarıda soluk toz tabakası"
+    - "Süpürgenin ince ucu ızgaranın önünde hafif aralıkla duruyor; tozun uca doğru geldiğini gösteren mavi ok, yanda kapak açmayı yasaklayan gri çarpı"
+    - "Dış ünite gövdesi önce hafif nemli, sonra kuru bezle siliniyor; sağ üstte hortumla yıkamayı yasaklayan gri çarpı"
+    - "Ünitenin alt kenarı iki hâlde: solda tahliye çıkışının önü yaprak ve çamurla kapalı, sağda temizlenmiş çıkıştan su serbestçe damlıyor"
+    - "Duvar konsoluna oturan dış ünite, iki yanında soluk titreşim dalgaları; göz simgesi cıvatadaki boşluğu gösteriyor, anahtar gri çarpıyla yasaklı"
+    - "Sigorta kaldırılıyor, dış ünitenin fanı mavi dönüş okuyla çalışıyor; üstte düzgün uğultu onaylı, altta metalik takırtı gri çarpılı"
 ---
 
 Klima çalışıyor ama eski gücünde değil; dış üniteye baktığında ızgarasında gri bir toz keçesi, önünde birikmiş yapraklar, bahardan kalma sarı bir polen tabakası görüyorsun. Dış ünite yazın kavurucu sıcakta, kışın yağmurda dışarıda çalışan taraftır ve ızgarası tıkandıkça klimanın ısı atma gücü düşer. Önemli bir not: bu rehber **dış ünite** içindir ve her şey **dışarıdan**, hiçbir kapak açmadan yapılır — iç ünitedeki filtre temizliği ayrı bir iştir, onu [klima filtresi temizliği rehberinde](/blog/klima-filtresi-temizleme/) adım adım anlattık.

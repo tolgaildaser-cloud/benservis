@@ -29,6 +29,14 @@ faq:
     a: "Bazı modellerde evet: cihaz yönlendirme kanadının açık konuma geldiğini doğrulayamazsa üflemeyi başlatmaz ya da hemen durdurur. Kanadın elle zorlanmış, taşınma sırasında eğilmiş veya perde arkasında sıkışmış olması bu duruma yol açabilir. Kanadın önünü açmak ve elle zorlanmadığından emin olmak ücretsiz bir kontroldür; kanat mekanizmasına müdahale ise servis işidir."
 images:
   coverAlt: "Duvar tipi klima iç ünitesinin ön kapağı açık, hava filtresi yuvasında görünüyor"
+  steps:
+    - "Klima kumandası ve yanında üç kademeli fan hızı çubuğu; en yüksek kademe mavi işaretli, ok fandan çıkan hava dalgalarını gösteriyor"
+    - "Dikey sıcaklık skalası: üstte soluk gri oda sıcaklığı imleci, altta mavi ayar imleci ve aşağı ok; yanında birkaç dakika beklemeyi anlatan saat"
+    - "Klima iç ünitesinin yandan kesiti: ön kapak yukarı kalkmış, filtre öne doğru çekiliyor, yanında yumuşak fırça"
+    - "Filtre üç aşamada: ılık suyla yıkama, gölgede kuruma, ardından iç ünitedeki yuvasına tam oturtulması"
+    - "İç ünitenin yönlendirme kanadı mavi vurgulu, iki yana açılma okları; solda perde, sağda mobilya soluk gri okla kenara çekiliyor"
+    - "Kumandadan kapatma, sigortayı indirme, beş dakika bekleme ve sigortayı tekrar kaldırma sırası"
+    - "Soluk gri iç ünite: en yüksek kademede bile kanattan hava çıkmadığını gösteren kesik gri çizgiler, gri çarpı ve mavi ahize"
 ---
 
 Kumandaya basıyorsun, iç ünitede ışık yanıyor, cihaz açıldığını gösteren sesi çıkarıyor — ama elini ızgaranın önüne tuttuğunda hiç hava yok. Dış ünite belki çalışıyor, belki değil. Oda ise olduğu gibi sıcak kalıyor. Bu tablo çoğu kişiye "fan motoru gitti" dedirtir; oysa **iç ünite üflemiyor** şikâyetlerinin büyük bölümü kumanda ayarı, filtre ve kanat üçgeninde çözülür. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

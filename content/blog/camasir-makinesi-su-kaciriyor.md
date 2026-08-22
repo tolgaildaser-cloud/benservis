@@ -30,6 +30,15 @@ faq:
     a: "Etmemelisin. Az su bugün az görünür ama elektrikli bir cihazın içinde ya da altında biriken her su hem elektrik güvenliği riski hem de zamanla paslanma ve komşu kata sızma riskidir. Kaynağı basit kontrollerle bulamıyorsan makineyi kullanmayı bırakıp servise göstermek, hem cihaz hem ev için en ucuz yoldur."
 images:
   coverAlt: "Çamaşır makinesinin önündeki fayans zeminde birikmiş su ve kenarına serilmiş havlu"
+  steps:
+    - "Fişin prizden çekilişini ve musluğun kapatılışını gösteren çizim"
+    - "Makinenin altına kuru karton serilişini ve zemindeki suyun kurulanışını gösteren çizim"
+    - "Deterjan çekmecesinin çıkarılıp diş fırçasıyla temizlenişini gösteren çizim"
+    - "Ölçüyü aşan deterjan dozu ile ölçü çizgisindeki dozun karşılaştırıldığı çizim"
+    - "Musluk ile makine arasındaki hortum rakorunun elle çevrilişini gösteren çizim"
+    - "Tahliye hortumunun giderden çıkmış ve ağzına oturmuş hâllerini karşılaştıran çizim"
+    - "Ön alt köşedeki tahliye filtresinin sığ kap ve havluyla açılışını gösteren çizim"
+    - "Filtrenin saat yönünde oturtuluşunu ve kartondaki ıslak noktanın izlenişini gösteren çizim"
 ---
 
 Yıkama bitti, makinenin önüne geldin ve zeminde su birikintisi var. Ya da program daha sürerken altından ince bir su izi uzanıyor. İlk his çoğu zaman panik olur — ama sızıntıların azımsanmayacak bir kısmı arıza bile değildir: taşan deterjan, gevşemiş bir hortum bağlantısı ya da tam kapanmamış bir filtre kapağı. Bu yazıda suyun nereden gelebileceğini önden arkaya, basitten teknike doğru izliyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

@@ -30,6 +30,15 @@ faq:
     a: "Kireç ısıtıcı yüzeyde ve su yollarında birikerek suyun ısınmasını zorlaştırır; makine aynı sıcaklığa ulaşmak için daha uzun çalışır ve elektrik tüketimi artar. Zamanla tamburda ve kalıntıyla birleşerek kokuya, çamaşırda beyazlık kaybına ve leke izlerine yol açar. Düzenli bakım yıkaması ve suyun sertliğine uygun aralıkta kireç çözme bu birikimi kontrol altında tutar."
 images:
   coverAlt: "Çamaşır makinesinin gri kapak lastiği aralanmış, arkasındaki kat görünüyor"
+  steps:
+    - "İçinde tek parça çamaşır kalmış tambur ile tamamen boş tamburun karşılaştırıldığı çizim"
+    - "Kapak lastiğinin geriye kıvrılışını ve kıvrım ceplerinde biriken tüyü kesitle gösteren çizim"
+    - "Deterjan çekmecesinin çıkarılıp ılık suda yıkanışını ve boş yuvanın silinişini gösteren çizim"
+    - "Alt ön köşedeki tahliye filtresinin kontrol edilip saat yönünde sonuna kadar takılışını gösteren çizim"
+    - "Tambur temizleme programı ile en yüksek sıcaklıktaki pamuklu programın iki seçenek olarak sunulduğu çizim"
+    - "Kullanım kılavuzunu, kılavuzdaki ölçüye kadar doldurulmuş ölçeği ve boş çalışan makineyi gösteren çizim"
+    - "Kapak lastiğinin kurulanışını, kapağın ve deterjan çekmecesinin aralık bırakılışını gösteren çizim"
+    - "Bakım yıkaması, kireç çözme ve su sertliğine göre aralığı özetleyen takvim çizimi"
 ---
 
 Çamaşırlar temiz çıkıyor, makine hata da vermiyor. Ama kapağı açtığında lastiğin kıvrımında koyulaşmış bir çizgi, çekmecenin köşesinde kurumuş yumuşatıcı, tamburun kenarında tebeşirimsi beyaz bir iz var. Hiçbiri bugün arıza değil — hepsi altı ay sonrasının arızasının hammaddesi. Çamaşır makinesinin içini temizlemek bir kriz müdahalesi değil, **takvime bağlanan bir bakım işidir**. Bu yazı da tam olarak o takvimi kuruyor: neyi, ne zaman, hangi ayarla.
