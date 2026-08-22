@@ -172,10 +172,35 @@ describe("onarim-rehberleri: SEED adlarına bağlılık", () => {
     expect(rehberBul("Su Sebili / Arıtma", "Tam filtre seti")).toBe(null);
   });
 
-  it("genel anahtar spesifik olanı ezmez ve kendi rehberimiz önceliklidir", () => {
+  // 🔴 22 Ağu 2026 — BU TESTİN BEKLENTİSİ TERSİNE ÇEVRİLDİ (YK #31 taraması).
+  // Eskiden `rehberBul("Bulaşık Makinesi","Tahliye pompası tıkalı")` çıktısının
+  // iFixit'in "Tahliye pompası değişimi" (Moderate, 8 adım) olmasını ŞART koşuyordu —
+  // yani testin kendisi YK #31 ihlalini KİLİTLİYORDU. Testin adı zaten "kendi rehberimiz
+  // önceliklidir" diyordu; iddiası adıyla çelişiyordu. Doğrusu: "pompa tıkalı" diyen
+  // kullanıcının işi filtre/pompa yuvası temizliğidir, pompa DEĞİŞİMİ değil.
+  //
+  // ⚠️ Not: "en uzun anahtar kazanır" kuralı yalnız AYNI havuz içinde çalışır.
+  // Havuzlar arasında sıralama da uzunluk da etkisiz — `rehberBul` koşulsuz
+  // `bizim || disari` döndürür. Test bu ikisini artık ayrı ayrı ölçüyor.
+  it("kendi rehberimiz iFixit'i her hâlükârda yener (havuz önceliği)", () => {
+    // iFixit'in anahtarı ("tahliye pompa", 13 hane) bizimkinden ("tahliye", 7) UZUN.
+    // Buna rağmen bizim kazanmalı — uzunluk havuzlar arasında hükümsüz.
     const r = rehberBul("Bulaşık Makinesi", "Tahliye pompası tıkalı");
-    expect(r.baslik).toBe("Tahliye pompası değişimi"); // "tahliye pompa" > "tahliye"
+    expect(r.kendi).toBe(true);
+    expect(r.baslik).toBe("Tahliye tıkanıklığını açma");
     expect(rehberBul("Bulaşık Makinesi", "E22 hatası — iç filtre tıkalı").kendi).toBe(true);
+  });
+
+  // YK #31 taramasının üç onaylı ihlali — bir daha açılırsa build kırılsın.
+  it("YK #31: geniş belirti kelimeleri söküm rehberine düşmez", () => {
+    // SEED'de Süpürge'nin BİRİNCİ arıza adı birebir "Motor" → beklenen yol, istisna değil.
+    expect(rehberBul("Süpürge", "Motor").kendi).toBe(true);
+    expect(rehberBul("Süpürge", "Motor arızası").kendi).toBe(true);
+    // Gazlı ocak: "yanmıyor" hiçbir dış alev/karışım ayarı rehberine bağlanamaz.
+    expect(rehberBul("Fırın / Ocak / Aspiratör", "Ocak yanmıyor")).toBe(null);
+    // Bulaşık ↔ çamaşır asimetrisi: aynı belirti iki cihazda da BİZE gelmeli.
+    expect(rehberBul("Bulaşık Makinesi", "Su atmıyor").kendi).toBe(true);
+    expect(rehberBul("Çamaşır Makinesi", "Su atmıyor").kendi).toBe(true);
   });
 
   it("eşleşme yoksa null (boş/yanlış link üretilmez)", () => {

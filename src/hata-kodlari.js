@@ -262,9 +262,11 @@ export const HATA_KODU_KATMANI = {
     { giris: "Marka fark etmeksizin en sık kodlar", tip: "kod",
       anlam: "Arçelik, Beko ve diğer markalarda en sık kodların ortak anlamı.",
       yazi: "bulasik-makinesi-hata-kodlari" },
+    // 22 Ağu (YK taraması): yazı kendin-çöz rehberi olarak kaydedildi → `rehber: true`.
+    // YK #35 ② katman denetimi bunu ŞART koşuyor; olmadan build DURUR.
     { giris: "Su atmıyor / tabanda su kalıyor", tip: "belirti",
       anlam: "En sık sebep tıkalı filtre ya da pompa; kendin bakabileceğin noktalar var.",
-      yazi: "bulasik-makinesi-su-atmiyor" },
+      yazi: "bulasik-makinesi-su-atmiyor", rehber: true },
     { giris: "Su almıyor", tip: "belirti",
       anlam: "Musluk, giriş filtresi ve valf sırayla kontrol edilir.",
       yazi: "bulasik-makinesi-su-almiyor" },
