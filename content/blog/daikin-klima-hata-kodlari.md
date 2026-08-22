@@ -28,6 +28,8 @@ faq:
     a: "Evet, A5 kullanıcının en çok şansı olan kodlardan biridir. Bu kod soğutmada donma korumasını, ısıtmada ise yüksek basınç kontrolünü bildirir ve Daikin'in kendi arıza tablosunda muhtemel sebep olarak iç ünite hava filtresinin tıkanması ile hava akışının kısa devre yapması gösterilir. Filtreyi çıkarıp temizlemek ve iç ünitenin üfleme yolunu kapatan perde, mobilya gibi engelleri kaldırmak bu kodun önemli bir kısmını ücretsiz kapatır. Kod filtre temizliğinden sonra da geliyorsa sensör tarafı gündeme gelir ve teşhis servise kalır."
   - q: "İnternette bulduğum Daikin kod listeleri neden birbirini tutmuyor?"
     a: "Çünkü Daikin tek bir ürün ailesi değil: duvar tipi ev klimalarıyla salon tipi, kanallı ve çoklu iç üniteli sistemler aynı harf-rakam mantığını kullansa da tablonun kapsamı ve bazı kodların karşılığı seriye göre değişir. Üstelik dolaşan listelerin bir kısmı markadan bağımsız genel tablolardır. Biz bu yazıda yalnızca birden çok kaynakla aynı şekilde doğrulayabildiğimiz kodları yazdık; çelişen kodları hiç yazmadık. Kesin tablo cihazının kullanım kılavuzundadır."
+images:
+  coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
 Klima tam sezonun ortasında durdu, iç ünitede iki karakterlik bir kod var ve o kod ne söylüyor belli değil. Daikin'de işin iyi tarafı şu: kodlar rastgele harf değil, **ilk harf arızanın hangi ünitede olduğunu söylüyor.** Bu yazıda önce kodu kumandadan nasıl okuyacağını, sonra birden çok kaynakla doğrulayabildiğimiz karşılıkları, en sonda da hangi kodda ne yapabileceğini anlatıyoruz.

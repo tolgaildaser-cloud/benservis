@@ -27,6 +27,8 @@ faq:
     a: "Panel ve arka aydınlatma tarafında evet, belirgin biçimde. Ekran büyüdükçe panelin kendisi, içindeki aydınlatma şeritlerinin sayısı ve işi yapmak için gereken alan, ekipman ve kişi sayısı artar. Buna karşılık güç kartı ya da anakart gibi kalemlerde boyutun etkisi çok daha sınırlı kalır."
   - q: "Ekranı çatlayan televizyon garantiden karşılanır mı?"
     a: "Hayır. Kırık, çatlak ve baskı izi üreticiler tarafından fiziksel darbe kaynaklı, yani kullanıcı hatası sayılan hasarlardır ve garanti kapsamı dışındadır. Aynı televizyonda güç kartı ya da anakart arızası garanti süresi içinde karşılanabilirken kırık panel ücretli işlem olarak kalır; bu yüzden kırığı olan bir cihazda kararı ekonomiye bakarak vermek gerekir."
+images:
+  coverAlt: "Salonda sehpa üstünde duran televizyon"
 ---
 
 Televizyon bozulunca ilk düşünce hep aynıdır: "Tamiri kaç para tutar, yoksa yenisini mi almalıyım?" Tek bir cevabı yok — çünkü televizyonda "arıza" tek bir şey değil. Gevşemiş bir kablodan cihazın kalbi sayılan panele kadar bambaşka ağırlıkta kalemler var. Bu yazıda rakam vermeden bedeli neyin belirlediğini, kalemlerin ucuzdan pahalıya sırasını ve panel kararının nasıl kurulduğunu anlatıyoruz.

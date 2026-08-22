@@ -28,6 +28,8 @@ faq:
     a: "Bu şikâyetin sebeplerinin çoğu cihazın kendisinde değil, hava yolunda ve yerleşiminde olur. Lif filtresinin gözenekleri ya da filtre çekmecesi tıkanmış olabilir, makinenin önündeki havalandırma ızgaralarının önü kapalı olabilir, cihazın kurulduğu alan dar olduğu için oda fazla ısınıyor olabilir. Nem sensörünün üzerinde kireç tabakası oluşması da süreyi uzatır. Ayrıca çamaşır makinesinde düşük devirde sıkılan çamaşır kurutucuya fazla su taşır ve programı uzatır."
   - q: "Kurutma makinesinin tahliye filtresi nerede?"
     a: "Kurutma makinesinde çamaşır makinesindeki gibi bir tahliye pompası filtresi yoktur; bu iki cihazı karıştırmak yaygın bir hatadır. Kurutucuda kullanıcıya ait üç nokta vardır: kapağın içindeki lif filtresi, alttaki filtre çekmecesi ve su tankı. Tahliye pompası filtresi, ön alt kapaktan çıkan tiftikli filtre ve bozuk para hikâyesi çamaşır makinesine aittir. Kurutucuda karşılığı lif filtresi ve filtre çekmecesidir."
+images:
+  coverAlt: "Kapağı açık beyaz kurutma makinesi ve üzerindeki hasır sepette katlı havlular"
 ---
 
 Kurutma programı yarıda durdu, panelde damla ya da filtre şeklinde bir işaret yanıp sönüyor ve sen ekranda bir kod arıyorsun. Kılavuzu açıyorsun, arıza kodu tablosu yok. İnternette arattığında ise aynı numaraya bambaşka anlamlar veren listeler çıkıyor. Bunun bir sebebi var ve aslında iyi bir haber: **Arçelik kurutma makineleri derdini çoğu modelde kodla değil sembolle anlatır** ve bu sembollerin karşılığı üreticinin kendi kullanma kılavuzunda net biçimde yazar. Bu yazıda o sembol dilini, kılavuzun doğruladığı belirti-sebep eşleşmelerini ve nerede durman gerektiğini anlatıyoruz.

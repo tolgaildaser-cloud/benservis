@@ -27,6 +27,8 @@ faq:
     a: "Büyük ölçüde evet, çünkü iki marka da aynı grubun (BSH) ortak platformunu kullanır; Profilo ve Neff de aynı aileden gelir. E22, E24, E25 gibi kodlar bu markaların hepsinde aynı durumu anlatır. Farklılaşan şey kodun anlamı değil, panelin onu nasıl gösterdiğidir: bazı Siemens modellerinde kod kalan süre göstergesinde belirir, bazılarında kapak açılınca görünür. Yine de kod şeması model kuşağına göre değişebildiği için kesin tablo kendi kılavuzundadır."
   - q: "E12 kodunu bir daha görmemek için ne yapmalıyım?"
     a: "E12, ısıtıcının üzerinde kireç ya da kir tabakası oluştuğunu bildirir; sert sulu bölgelerde bu tabaka zamanla kaçınılmaz biçimde birikir. Kalıcı çözüm makinenin su yumuşatma tarafını doğru kurmaktan geçer: tuz haznesini boş bırakmamak, sertlik ayarını bölgenin suyuna göre yapmak ve düzenli aralıklarla makine temizleyicisiyle boş bir program çalıştırmak. Bu üçü birlikte yapıldığında hem kod uzaklaşır hem de yıkama kalitesi belirgin biçimde düzelir."
+images:
+  coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
 Akşam programını kurdun, makine birkaç dakika çalıştı ve durdu. Kapağı açtın, tabanda su birikmiş, ekranda ise **E24** yazıyor. Ya da hiç durmadı ama bulaşıklar soğuk ve yağlı çıktı, panelde **E09** duruyor. Siemens bulaşık makineleri arızayı bu kısa kodlarla anlatır ve bu kodların iyi tarafı şu: büyük bir kısmı bir parçanın yandığını değil, suyun ya da havanın gitmesi gereken yere gidemediğini söyler. Bu yazıda Siemens'te **birden çok kaynakla doğrulayabildiğimiz** kodları, hangisinin evde ücretsiz çözüldüğünü ve nerede durman gerektiğini anlatıyoruz.
