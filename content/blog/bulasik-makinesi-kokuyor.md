@@ -11,14 +11,14 @@ guide:
   time: "~20 dakika"
   totalTime: "PT20M"
   cost: "Ücretsiz"
-  tools: ["Sünger veya yumuşak bez", "Beyaz sirke (1-2 bardak)", "Eldiven (önerilir)"]
+  tools: ["Sünger veya yumuşak bez", "Eldiven (önerilir)"]
 steps:
   - "Makineyi kapat ve boşalt; içinde bulaşık kalmasın."
   - "Taban filtresini çevirip çıkar, altındaki süzgeci de al."
   - "Filtreyi ve süzgeci akan suyun altında sünger yardımıyla temizle, yemek artıklarını at."
   - "Filtre yuvasını ve tabandaki durgun suyu bezle sil, sonra parçaları yerine tak."
   - "Kapı contasının kıvrımlarını nemli bezle sil — kalıntı orada birikir."
-  - "Hazneye 1-2 bardak beyaz sirke koy ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır."
+  - "Makineyi boş olarak en yüksek sıcaklıktaki programda çalıştır; katkı gerekiyorsa kılavuzunun ya da üreticinin önerdiği makine temizleyicisini kullan."
   - "Program bittikten sonra kapağı aralık bırak; nem çıkmadan koku geri gelir."
 # GRF adım görselleri BAĞLANDI (4 Ağu 2026): public/tamir-gorsel/<slug>/adim-0N.png + kapak.png
 # Sıra ÖNEMLİ: images.steps[N-1] ↔ adim-0N.png ↔ yukarıdaki steps[N-1].
@@ -30,13 +30,13 @@ images:
     - "Filtre ve süzgecin akan su altında süngerle temizlenişini gösteren çizim"
     - "Filtre yuvasının ve tabandaki durgun suyun bezle silinişini gösteren çizim"
     - "Kapı contası kıvrımlarının nemli bezle silinişini gösteren çizim"
-    - "Hazneye beyaz sirke konulup boş, yüksek sıcaklıkta programın başlatılışını gösteren çizim"
+    - "Boş bulaşık makinesinde yüksek sıcaklıkta programın başlatılışını gösteren çizim"
     - "Program sonunda bulaşık makinesi kapağının aralık bırakılışını gösteren çizim"
 faq:
   - q: "Bulaşık makinesi neden kokar?"
     a: "En sık sebep taban filtresinde ve süzgeçte biriken yemek artıklarının çürümesidir. Ayrıca kireç ve yağ birikimi, kapı contasındaki kalıntı, tıkalı püskürtme kolları ve tahliye hattındaki tıkanıklık kokuya yol açar."
   - q: "Bulaşık makinesi kokusu nasıl geçer?"
-    a: "Önce taban filtresini çıkar, yemek artıklarını temizle. Sonra makineyi boş, en yüksek sıcaklıkta bir programda çalıştır; hazneye 1-2 bardak beyaz sirke ya da makine temizleyici koy. Kapı contasını sil, tuz ve parlatıcıyı kontrol et, her yıkamadan sonra kapağı aralık bırak."
+    a: "Önce taban filtresini çıkar, yemek artıklarını temizle. Sonra makineyi boş, en yüksek sıcaklıkta bir programda çalıştır; gerekirse kılavuzunun önerdiği makine temizleyicisini kullan; sirke gibi ev tarifelerini önermiyoruz. Kapı contasını sil, tuz ve parlatıcıyı kontrol et, her yıkamadan sonra kapağı aralık bırak."
   - q: "Lağım gibi kokuyorsa sebebi ne?"
     a: "Keskin lağım kokusu genelde tahliye hortumunda ya da tahliye bağlantısında biriken kir/biyofilm veya tıkanıklıktan gelir. Filtre ve iç temizlik çözmüyorsa tahliye hattı kontrol edilmelidir; bu genelde servis işidir."
   - q: "Bulaşıklar temiz ama makine kokuyorsa ne yapmalı?"
@@ -73,7 +73,7 @@ Güvenli ve çoğu zaman ücretsiz:
 
 **5. Kapı contasının kıvrımlarını nemli bezle sil — kalıntı orada birikir.**
 
-**6. Hazneye 1-2 bardak beyaz sirke koy ve makineyi boş, en yüksek sıcaklıktaki programda çalıştır.**
+**6. Makineyi boş olarak en yüksek sıcaklıktaki programda çalıştır.** İşi yapan sıcaklıktır. Katkı kullanacaksan kılavuzuna bak; kılavuz bir ürün adı veriyorsa onu, vermiyorsa üreticinin kendi makine temizleyicisini kullan. ⚠️ Sirke ve benzeri ev tarifelerini önermiyoruz — bazı üreticiler kapı contası ve sızdırmazlık parçalarında yıpranmaya yol açabileceğini belirtiyor.
 
 **7. Program bittikten sonra kapağı aralık bırak; nem çıkmadan koku geri gelir.**
 
@@ -95,7 +95,7 @@ Temizlik ücretsizdir. Tahliye/pompa arızası çıkarsa işin kapsamı: [Bulaş
 Genelde filtredeki yemek artığı çürümesi; ayrıca yağ/kireç, conta, tıkalı kollar, tahliye.
 
 **Koku nasıl geçer?**
-Filtre temizliği + boş sıcak program (sirke) + conta silme + tuz/parlatıcı + kapağı aralık bırak.
+Filtre temizliği + boş sıcak program + conta silme + tuz/parlatıcı + kapağı aralık bırak.
 
 **Lağım gibi kokuyorsa?**
 Genelde tahliye hattında biyofilm/tıkanıklık — iç temizlik çözmezse servis.

@@ -46,7 +46,14 @@
 // ederdi. Yol SWR listesine alındı, sürüm artışı geriye dönük temizliği yapıyor.
 // v5 → v6 (20 Ağu, Kling dalga 3): camasir-kac-derecede-yikanir + camasir-makinesi-
 // ses-titresim kapakları AYNI adla değişti (kusurlu kareler yenilendi) → 19 Ağu kuralı.
-const SURUM = "benservis-v7";
+// v7 → v8 (22 Ağu, sirke kuralı): bulasik-makinesi-kokuyor kapak + adim-01/03/06 ve
+// camasir-makinesi-kokuyor adim-05 AYNI adla değişti. Buradaki fark, önceki dört
+// artıştan daha ağır: değişiklik bir kare tazelemesi değil, "makineye zarar verebilir"
+// düzeltmesi. SWR bıraksaydık metin İLK açılışta yeni gelir (HTML network-first),
+// görsel ise BİR açılış eski kalırdı → kullanıcı "sirke önermiyoruz" cümlesini sirke
+// şişeli kareyle birlikte görürdü; bulaşıkta o kare kapağın kendisi, yani og:image.
+// Bedeli (tüm cache boşalır, herkes yeniden indirir) bu pencereye tercih edildi.
+const SURUM = "benservis-v8";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;
