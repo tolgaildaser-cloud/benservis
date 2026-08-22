@@ -4,6 +4,13 @@ description: "Siemens bulaşık makinesinde E22, E24, E25, E12 ve E09 kodların�
 slug: "siemens-bulasik-makinesi-hata-kodlari"
 date: "2026-08-21"
 category: "Bulaşık makinesi"
+# 🔴 22 Ağu 2026 — E08 ve E11 KALDIRILDI (kod tablosu denetimi, TARAMA-1).
+# İkisi de BSH'nin yayımladığı bulaşık makinesi kod sayfalarında geçmiyor.
+# Bosch TR'nin yayımladığı liste: E09 E12 E14 E15 E16/E17 E18 E22 E23 E24 E25 + "diğer".
+# BSH E16 ile E17'yi TEK sayfada, TEK anlamla veriyor: "su alma sisteminde hata veya
+# temiz su girişinde hata". E18'in anlamı da "su seviyesi düşük" değil: "su şebeke
+# bağlantısındaki filtreler veya AquaStop hortumu tıkanmış".
+# 📌 Neff iddiası yumuşatıldı: neff-home.com'da hata kodu sayfası yok.
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -24,7 +31,7 @@ faq:
   - q: "E24 ile E25 arasındaki fark ne?"
     a: "İkisi de suyun dışarı atılamadığını söyler ama farklı noktayı işaret eder. E24 daha çok makinenin dışındaki hattı anlatır: tıkalı ya da bükülmüş tahliye hortumu, kapalı sifon bağlantısı, yağla dolmuş gider. E25 ise tahliye pompasının önünün kapandığını, yabancı bir cismin ya da tıkanıklığın pompayı bloke ettiğini bildirir. Bu yüzden E24'te önce hortum ve gider, E25'te önce filtre bölgesi kontrol edilir."
   - q: "Siemens ve Bosch bulaşık makinelerinde kodlar gerçekten aynı mı?"
-    a: "Büyük ölçüde evet, çünkü iki marka da aynı grubun (BSH) ortak platformunu kullanır; Profilo ve Neff de aynı aileden gelir. E22, E24, E25 gibi kodlar bu markaların hepsinde aynı durumu anlatır. Farklılaşan şey kodun anlamı değil, panelin onu nasıl gösterdiğidir: bazı Siemens modellerinde kod kalan süre göstergesinde belirir, bazılarında kapak açılınca görünür. Yine de kod şeması model kuşağına göre değişebildiği için kesin tablo kendi kılavuzundadır."
+    a: "Siemens, Bosch ve Profilo için büyük ölçüde evet: üçü de BSH grubunun ortak platformunu kullanır ve E22, E24, E25 gibi kodlar bu üçünde aynı durumu anlatır. Farklılaşan şey kodun anlamı değil, panelin onu nasıl gösterdiğidir. Neff ve Gaggenau için aynı şeyi söyleyemiyoruz; ikisi de kendi sitelerinde bir hata kodu sayfası yayımlamıyor, dolayısıyla kod tablosu ortaklığının belgesi yok."
   - q: "E12 kodunu bir daha görmemek için ne yapmalıyım?"
     a: "E12, ısıtıcının üzerinde kireç ya da kir tabakası oluştuğunu bildirir; sert sulu bölgelerde bu tabaka zamanla kaçınılmaz biçimde birikir. Kalıcı çözüm makinenin su yumuşatma tarafını doğru kurmaktan geçer: tuz haznesini boş bırakmamak, sertlik ayarını bölgenin suyuna göre yapmak ve düzenli aralıklarla makine temizleyicisiyle boş bir program çalıştırmak. Bu üçü birlikte yapıldığında hem kod uzaklaşır hem de yıkama kalitesi belirgin biçimde düzelir."
 images:
@@ -55,7 +62,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ## Aynı kod dili, farklı panel
 
-Siemens, Bosch, Profilo ve Neff aynı grubun (BSH) ortak platformu üzerinde çalışır. Bunun pratik sonucu şu: **kodların anlamı bu markalarda ortaktır**, değişen şey panelin o kodu nasıl gösterdiğidir.
+Siemens, Bosch ve Profilo aynı grubun (BSH) ortak platformu üzerinde çalışır ve üçünün kod tabloları da yayımlanmıştır. Bunun pratik sonucu şu: **kodların anlamı bu üç markada ortaktır**, değişen şey panelin o kodu nasıl gösterdiğidir. Neff ve Gaggenau da aynı gruptandır ama kendi kod sayfalarını yayımlamıyorlar; onlar için aynı kesinlikle konuşamayız.
 
 Siemens'te kod çoğu zaman kalan süreyi gösteren rakamların yerinde belirir. Tam ankastre modellerde gösterge kapağın üst kenarındadır ve kapak kapalıyken görünmez; bazı modellerde kodla birlikte bir uyarı sembolü de yanar.
 
@@ -76,17 +83,21 @@ Sıralama önemli: **E22 filtreyi**, **E24 makinenin dışındaki hattı**, **E2
 
 **Kendin kontrol et:** Filtreyi çıkardığında haznenin dibine bak. Su duruyorsa tıkanıklık filtrenin arkasındadır ve E24/E25 tarafını düşünmelisin. Hazne boş, filtre tertemiz ve kod hâlâ geliyorsa artık ölçüm ya da pompa tarafındasın — orası senin alanın değil.
 
-## Su alma tarafı: E18 ve E08
+## Su alma tarafı: E16, E17 ve E18
 
 **E18**, makineye giren su akışının yetersiz kaldığını bildirir. Sebep neredeyse her zaman makinenin dışındadır: kısık musluk, ezilmiş giriş hortumu ya da hortumun makine tarafındaki küçük süzgecinde biriken kireç ve tortu.
 
-**E08**, durulama için gereken su seviyesine ulaşılamadığını gösterir. Gözden kaçan bir sebebi var: yanlış yerleştirilmiş büyük bir tencere ya da tepsi, püskürtme kolunu engelleyerek suyun dolaşımını bozabilir.
+**E16 ve E17** BSH'nin sayfalarında **tek başlık altında ve tek anlamla** verilir: su alma sisteminde ya da temiz su girişinde hata. Üreticinin çözümü de tek: temiz su girişini kontrol et — köşe vana açık mı, giriş hortumu bükülmemiş mi. Bu hatayla sık karşılaşıyorsan cihazda gerçek bir arıza olma ihtimali yüksektir ve teknisyen ister.
+
+⚠️ İnternetteki listelerin bu iki koda ayrı ve birbirine zıt anlamlar vermesinin (biri "beklenmedik su alma", diğeri "şamandıra") üretici tarafında bir dayanağı yok.
 
 **Kendin kontrol et:** Musluğu kapat, giriş hortumunu elinle sök ve makine tarafındaki süzgeci akan suda fırçala; altına havlu ser, bir miktar su gelir. Sonra elle sıkıca geri tak.
 
-## Isıtma tarafı: E09, E11 ve E12
+## Isıtma tarafı: E09 ve E12
 
-**E09** ve **E11** aynı bölgeyi anlatır: makine suyu ısıtamıyor. Belirtisi klasiktir — program normal görünür ama bulaşıklar yağlı ve soğuk çıkar. Bu iki kodda kullanıcı tarafında yapılacak anlamlı bir kontrol yoktur.
+**E09** ısıtma bölgesine bakar. BSH bu kod için ayrı bir sayfa yayımlıyor ve talimatı net: *sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denemeyin, şebeke suyunu kesin ve cihazı kapatın.* Belirtisi klasiktir — program normal görünür ama bulaşıklar yağlı ve soğuk çıkar.
+
+📌 İnternette bu bölgeye yerleştirilen **E11** kodu BSH'nin yayımladığı listelerde geçmiyor; o yüzden burada yer vermiyoruz.
 
 **E12** ise farklıdır ve Türkiye'nin sert sulu bölgelerinde özellikle tanıdıktır: ısıtıcının üzerinde **kireç ya da kir tabakası** oluşmuştur. Bu bir parça arızası değil, bakım eksikliğidir.
 
@@ -113,6 +124,6 @@ Siemens için dolaşan listelerin bir kısmı birbirini tutmuyor. Örneğin **E1
 
 ## Hangi noktadan sonra servis işi
 
-Filtre temiz, hortum düz, gider açık ve musluk sonuna kadar açıkken aynı kod üçüncü kez geldiyse zorlamayı bırak. E23, E09, E11, E20 ve E21 zaten baştan servis konusudur.
+Filtre temiz, hortum düz, gider açık ve musluk sonuna kadar açıkken aynı kod üçüncü kez geldiyse zorlamayı bırak. E23 ve E09 zaten baştan servis konusudur; BSH listenin dışındaki tüm kodlar için de "elektronik arıza, teknisyen ister" diyor.
 
 Ama elin boş değil: kod, model numarası, makinenin hangi adımda durduğu ve filtreden ne çıktığı bilgisi servise arızayı yarı yarıya teşhis ettirir. Cihazının koduna ve belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.

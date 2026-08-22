@@ -61,7 +61,7 @@
 // değişiyor. Değişenlerden biri kare 1'in "tambura elini sokmadan önce" etiketi; canlıda
 // duran hâli buydu, yenisi "dokunmadan" diyor. SWR'de sürüm artmazsa mevcut ziyaretçi
 // düzeltmeyi bir açılış boyunca görmez — 19 Ağu'dan beri işleyen kural burada da geçerli.
-const SURUM = "benservis-v10";
+const SURUM = "benservis-v11";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;

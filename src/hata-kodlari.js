@@ -89,7 +89,9 @@ export const HATA_KODU_KATMANI = {
     { giris: "Siemens — E18, F21, E23", tip: "kod",
       anlam: "Her kodun anlamı, hangisinin evde çözüldüğü ve hangi noktada servis gerektiği.",
       yazi: "siemens-camasir-makinesi-hata-kodlari" },
-    { giris: "Profilo — E17, E18, F21, E23", tip: "kod",
+    // 22 Ağu (TARAMA-1): F21 çıkarıldı — BSH'nin hiçbir bölge sitesinde ve kılavuzunda
+    // yok. Tahrik/motor kodu E80. Bosch TR'nin yayımladığı liste: E16-E20, E23, E25-E28.
+    { giris: "Profilo — E17, E18, E23 (F21 yok)", tip: "kod",
       anlam: "BSH ailesindeki bu kodların anlamı; evde çözülebilenler ve servis gerektirenler.",
       yazi: "profilo-camasir-makinesi-hata-kodlari" },
     { giris: "Vestel — E01, E02, E03", tip: "kod",
@@ -258,7 +260,13 @@ export const HATA_KODU_KATMANI = {
   ],
   "Bulaşık Makinesi": [
     { giris: "E15 (musluk işareti)", tip: "kod",
-      anlam: "Tabanda su var, AquaStop taşma güvenliği devrede. Suyu boşaltmayı kendin yapabilirsin.",
+      // 🚨 22 Ağu (TARAMA-1): "suyu boşaltmayı kendin yapabilirsin" KALDIRILDI.
+      // Bosch'un E15 sayfası: "Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza
+      // çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."
+      // 📌 `rehber: true` KALDI: yazı hâlâ geçerli bir rehber — ama artık "suyu boşalt"
+      // değil, "suyu kes, gözle, not al, servisi ara" adımlarını anlatıyor. Kaldırmak
+      // kullanıcıyı rehbersiz bırakırdı; ② katman denetimi de bunu şart koşuyor.
+      anlam: "Su koruma sistemi devrede, tabanda su var. Bosch: şebeke suyunu kes, cihazı kapat, servisi ara.",
       yazi: "bosch-bulasik-makinesi-e15-hatasi", rehber: true },
     { giris: "E22", tip: "kod",
       anlam: "İç (taban) filtre tıkalı, su süzülemiyor. Filtreyi çıkarıp temizleyebilirsin.",
@@ -307,7 +315,9 @@ export const HATA_KODU_KATMANI = {
       anlam: "Kılavuzdaki on iki F kodunun anlamı; Vestel yalnız FF ve F2'de evde iş tarif ediyor.",
       yazi: "vestel-bulasik-makinesi-hata-kodlari" },
     { giris: "Siemens — E15 (musluk işareti)", tip: "kod",
-      anlam: "Taban tavasına su kaçtı, AquaStop devrede; suyu güvenle boşaltma adımları ve servis sınırı.",
+      // 🚨 22 Ağu (TARAMA-1): "suyu güvenle boşaltma adımları" ifadesi kaldırıldı; BSH
+      // bu kodda evde çözüm denenmesini önermiyor (bkz. bosch-…-e15 kaydındaki not).
+      anlam: "Su koruma sistemi devrede, tabanda su var. Üretici: şebeke suyunu kes, cihazı kapat, servisi ara.",
       yazi: "siemens-bulasik-makinesi-e15-hatasi" },
     { giris: "Alttan su kaçırıyor", tip: "belirti",
       anlam: "Sebep çoğu zaman kapı contası, hortum bağlantısı ya da taşma emniyetidir; kendin kontrol edeceklerin belli.",

@@ -1,9 +1,18 @@
 ---
-title: "Profilo çamaşır makinesi hata kodları: E17, E18, F21, E23"
-description: "Profilo çamaşır makinen E17, E18, F21 ya da E23 mü veriyor? BSH ailesindeki bu kodların anlamı, evde çözülebilenler ve servis gerektirenler bu rehberde."
+title: "Profilo çamaşır makinesi hata kodları: BSH listesi ve F21 meselesi"
+description: "Profilo çamaşır makinen E17, E18 ya da E23 mü veriyor? BSH'nin yayımladığı on kodun anlamı, evde çözülebilenler ve F21'in neden listede olmadığı."
 slug: "profilo-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+# 🔴 22 Ağu 2026 — F21 KALDIRILDI (kod tablosu denetimi, TARAMA-1).
+# "F21 = motor sistemi arızası (kömür)" eşleşmesi BSH'nin hiçbir bölge sitesinde ve
+# kılavuzunda geçmiyor. BSH'nin tahrik/motor kodu E80. F21 yazının BAŞLIĞINDAYDI.
+# Kaynak: bosch-home.com.tr/musteri-hizmetleri/yardim-destek/camasir-makinesi-hatalari
+# + altındaki 10 kod sayfası (bu koşuda tek tek indirildi). Yayımlanan liste tam olarak:
+# E16 E17 E18 E19 E20 E23 E25 E26 E27 E28. Siemens'in kendi tablosu bununla birebir aynı.
+# 📌 "F21 aradıysan" bölümü BİLEREK duruyor: arama gerçek, okuru boşa düşürmüyoruz.
+# ⛔ guide ve steps DEĞİŞMEDİ — sekiz adım kod-bağımsız, hepsi doğru kalıyor.
+
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -23,9 +32,9 @@ faq:
   - q: "Profilo çamaşır makinesi E18 hatası ne demek?"
     a: "E18, tahliye süresinin aşıldığını gösterir: makine içindeki suyu atamıyordur. En sık sebep tüy ya da yabancı cisimle tıkanmış pompa filtresi ve bükülmüş tahliye hortumudur. Filtre ve hortum temizliğiyle çoğu zaman evde, ücretsiz çözülür; temizken tekrar ediyorsa pompa tarafı servisliktir."
   - q: "Profilo'da çıkan kodlar Bosch ve Siemens'tekiyle aynı mı?"
-    a: "Evet. Profilo, Bosch ve Siemens ile aynı grubun (BSH) çatısı altındadır ve aynı platformu kullanır; E17, E18, F21 ve E23 gibi kodlar üç markada da aynı anlama gelir. Bu yüzden Bosch için yazılmış kod listesi Profilo sahipleri için de geçerli bir başvurudur."
-  - q: "Profilo F21 hatası evde çözülür mü?"
-    a: "Genelde hayır. F21 motor sistemi arızasıdır; en yaygın sebebi motor kömürlerinin aşınmasıdır ve makine dönmez ya da düzensiz döner. Evde yapılabilecek tek şey fişi çekip bir dakika sonra reset denemektir; kod geri geliyorsa motor bölümüne müdahale servise bırakılmalıdır."
+    a: "Evet. Profilo, Bosch ve Siemens ile aynı grubun (BSH) çatısı altındadır ve aynı platformu kullanır; E17, E18 ve E23 gibi kodlar üç markada da aynı anlama gelir. Bu yüzden Bosch için yayımlanmış kod listesi Profilo sahipleri için de geçerli bir başvurudur. Dikkat: o listede F21 diye bir kod yok."
+  - q: "Profilo F21 hatası ne demek?"
+    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok. İnternette çok dolaşan 'F21 motor kömürü' eşleşmesi Bosch, Siemens ve Profilo'nun hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez — ve o iş servise aittir."
   - q: "Profilo E23 hatasında ilk ne yapmalı?"
     a: "E23, makinenin taban tarafına su indiğini ve sızıntı güvenliğinin devreye girdiğini gösterir. İlk iki hamle fişi çekmek ve musluğu kapatmaktır; ardından makinenin çevresinde görünür ıslaklık olup olmadığına bakılır. Sızıntının kaynağını (conta, hortum, pompa) bulmak servis işidir."
 images:
@@ -66,8 +75,13 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 |-----|--------|------------|
 | **E17 / F17** | Su alamıyor (musluk, basınç, süzgeç) | 🛠️ Musluğu ve giriş hattını kontrol et |
 | **E18 / F18** | Su atamıyor (tahliye) | 🛠️ Pompa filtresini ve hortumu temizle |
-| **F21 / E21** | Motor sistemi arızası | 🔧 Servis (genelde motor kömürü) |
-| **E23 / F23** | Su kaçağı, tabana su indi | 🔧 Servis (sızıntı tespiti) |
+| **E23 / F23** | Aquastop etkinleştirildi, tabana su indi | 🔧 Servis (sızıntı tespiti) |
+| **E19 / F19** | Isıtma süresi aşıldı | 🔧 Bosch/Siemens: "kendi kendine düzeltilemez" |
+| **E20 / F20** | Beklenmeyen ısınma | 🛠️ Makineyi açıp kapatarak sıfırla; düzelmezse servis |
+| **E25 / F25** | Bulanıklık sensörü arızası | 🔧 Servis |
+| **E26 / F26** | Analog basınç sensörü arızası | 🔧 Servis |
+| **E27 / F27** | Basınç sensörü arızası | 🔧 Servis |
+| **E28 / F28** | Akış sensörü arızası | 🔧 Servis |
 
 ## E17 / F17 — Su alamıyor
 
@@ -94,13 +108,29 @@ Makine suyu gereken sürede boşaltamamıştır; çamaşırlar su içinde bekler
 
 Filtre ve hortum temizken E18 tekrar ediyorsa tahliye pompasının kendisi zayıflamış ya da pervanesine cisim kaçmış olabilir — pompa, tablanın altında kalan servis alanıdır.
 
-## F21 / E21 — Motor arızası
+## "Ben F21 aramıştım" — o kodun durumu
 
-Kazan dönmüyor, düzensiz dönüyor ya da sıkma hiç başlamıyorsa ve ekranda F21 varsa, motor sistemi görevini yapamıyor demektir. En yaygın sebep **motor kömürlerinin aşınmasıdır**; devir sensörü ya da elektronik de suçlu olabilir.
+Bu bölüm bilerek burada. **"F21 = motor kömürü"** eşleşmesi internette çok yaygın ama
+**BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor.** Aynı durum şu numaralar için de geçerli:
 
-**Kendin kontrol et:** Tek güvenli deneme reset: makineyi kapat, fişi bir dakika çek, tekrar tak, kısa bir program başlat. Kod geri geliyorsa mesele elektronik bir takılma değil, gerçek bir motor arızasıdır.
+| Aradığın kod | Durumu |
+|---|---|
+| **F21** | BSH listelerinde yok. Tahrik/motor tarafının kodu **E80** |
+| **F31** | Yok. BSH'de köpük kodu **E33 / F33** |
+| **F42 · F43** | Yok |
+| **F61** | Yok. Kapı kodları **E16/F16** ve **E34/F34** |
+| **F63** | Yok |
 
-⛔ **Motor bölümüne kullanıcı girmez.** Arka kapağı söküp motora uzanmak elektrik riski taşır ve yanlış müdahale basit bir kömür işini kart arızasına büyütebilir. F21'de doğru adres servistir.
+Bunları listemizden çıkardık. Motor tarafında gerçekten bir sorun varsa belirtisi
+nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez.
+
+**Kendin kontrol et:** Tek güvenli deneme reset: makineyi kapat, fişi bir dakika çek,
+tekrar tak, kısa bir program başlat. Kod geri geliyorsa uğraşma.
+
+⛔ **Motor bölümü kullanıcıya kapalıdır.** Arka kapağı söküp motora ulaşmak elektrik
+riski taşır ve yanlış müdahale basit bir kömür işini kart arızasına çevirebilir.
+Doğru hamle servistir — ama servise giderken "F21 aldım" değil, **makinenin ne
+yapmadığını** anlat.
 
 ## E23 / F23 — Su kaçağı: tabana su indi
 
@@ -112,7 +142,7 @@ Makine bir sızıntı algılamış, taban tarafına su inmiş ve güvenlik siste
 
 ## Hata kodu nasıl sıfırlanır?
 
-Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve programı yeniden başlat. Reset kodu siler ama sebebi silmez; filtre tıkalıysa E18, kömür bittiyse F21 geri gelir. Reset, tek seferlik elektronik takılmaları elemek için bir test adımıdır, tedavi değildir.
+Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve programı yeniden başlat. Reset kodu siler ama sebebi silmez; filtre tıkalıysa E18 geri gelir. Reset, tek seferlik elektronik takılmaları elemek için bir test adımıdır, tedavi değildir.
 
 ## Hangi noktadan sonra servis işi?
 
