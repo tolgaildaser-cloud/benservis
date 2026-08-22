@@ -6,7 +6,7 @@ date: "2026-06-19"
 category: "Kombi"
 faq:
   - q: "Kombi arıza kodları markaya göre değişir mi?"
-    a: "Evet. Vaillant ve DemirDöküm 'F' önekli kodlar (F.22, F.28, F.29) kullanır; Baymak'ta ise düzen seriye göre değişir: Duotec/Eco serisi E01 gibi kodlar, Lunatec/Startec serisi H.02.07 gibi noktalı kodlar verir. Aynı arıza farklı markada farklı kodla gösterilir."
+    a: "Evet. Vaillant 'F' önekli noktalı kodlar (F.22, F.28, F.29) kullanır; DemirDöküm'ün iki ailesi vardır — Nitromix/ademiX noktalı (F.22), Atron/Nitron noktasız (F10); Baymak'ta ise düzen seriye göre değişir: Duotec/Eco serisi E01 gibi kodlar, Lunatec/Startec serisi H.02.07 gibi noktalı kodlar verir. Aynı arıza farklı markada farklı kodla gösterilir."
   - q: "En sık çıkan kombi arıza kodu hangisi?"
     a: "Düşük su basıncı kodları (Vaillant F.22, Baymak F37) en sıktır ve genelde güvenle evde çözülür: kombinin altındaki doldurma musluğundan basıncı 1–1.5 bara getirmek yeterlidir."
   - q: "Kombi arıza kodunu kendim çözebilir miyim?"
@@ -36,7 +36,7 @@ Basınç sürekli düşüyorsa **kaçak** vardır (petek, vana, kombi içi) → 
 | Marka | Kod tipi | Detaylı rehber |
 |-------|----------|----------------|
 | Vaillant | F. (F.22, F.28, F.29, F.75) | [Vaillant kombi arıza kodları](/blog/vaillant-kombi-ariza-kodlari/) |
-| DemirDöküm | F (F22, F28, F29) | [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) |
+| DemirDöküm | İki aile: noktalı (F.22, F.28) ve noktasız (F04, F05, F10) | [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) |
 | Baymak | Seriye göre E ya da noktalı H (E01, E05, F37) | [Baymak kombi arıza kodları](/blog/baymak-kombi-ariza-kodlari/) |
 
 ## Arıza türüne göre genel anlamlar
@@ -62,7 +62,7 @@ Kombine ve arızaya göre tahmini tamir maliyetini [Benservis](/) saniyede söyl
 ## Sık sorulan sorular
 
 **Kodlar markaya göre değişir mi?**
-Evet — Vaillant/DemirDöküm "F" önekli kodlar kullanır; Baymak'ta düzen seriye göre değişir (Duotec/Eco "E", Lunatec/Startec noktalı "H").
+Evet — Vaillant "F" önekli noktalı kodlar kullanır; DemirDöküm'ün iki ailesi var (noktalı ve noktasız); Baymak'ta düzen seriye göre değişir (Duotec/Eco "E", Lunatec/Startec noktalı "H").
 
 **En sık kod hangisi?**
 Düşük su basıncı; genelde su ekleyerek güvenle çözülür.

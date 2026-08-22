@@ -420,8 +420,11 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vaillant — F.22, F.28, F.29, F.75", tip: "kod",
       anlam: "Vaillant panelindeki F kodlarının tam listesi ve karşılıkları.",
       yazi: "vaillant-kombi-ariza-kodlari" },
-    { giris: "DemirDöküm — F.22, F.28, F.29", tip: "kod",
-      anlam: "Düşük su basıncı, ateşleme ve alev sönmesi kodlarının anlamı.",
+    // 22 Ağu (TARAMA-1): DemirDöküm'ün İKİ kod ailesi var ve yazı ikisini karıştırmıştı.
+    // Nitromix/ademiX → noktalı (Vaillant platformu) · Atron/Nitron → noktasız F04/F05/F10.
+    // F.04 ve F.05'in anlamı TERSTİ: F04 ateşleme (fan değil), F05 baca (NTC değil).
+    { giris: "DemirDöküm — F.22 · F.28 · F10 · F04 (iki aile)", tip: "kod",
+      anlam: "Noktalı ve noktasız iki kod ailesi; hangi seride hangisi geçerli ve karşılıkları.",
       yazi: "demirdokum-kombi-ariza-kodlari" },
     // 22 Ağu 2026 (TARAMA-1): "E04" ÇIKARILDI — Baymak'ta böyle bir kod yok.
     // Gerçek düşük su basıncı kodu F37 (Lunatec/Startec'te H.02.07).

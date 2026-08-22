@@ -1,64 +1,127 @@
 ---
-title: "DemirDöküm kombi arıza kodları ve anlamları"
-description: "DemirDöküm kombi arıza kodları: F.22 düşük su basıncı, F.28 ateşleme, F.29 alev sönmesi ve diğer kodların anlamı, güvenle kendin yapabileceklerin ve çözümler. Bil, gör, çağır."
+title: "DemirDöküm kombi arıza kodları: iki ayrı kod ailesi var"
+description: "DemirDöküm'de noktalı (F.22, F.28) ve noktasız (F04, F05, F10) iki kod ailesi var. Hangi seride hangisi geçerli, kılavuzdaki anlamları ve servis sınırı."
 slug: "demirdokum-kombi-ariza-kodlari"
 date: "2026-06-19"
+updated: "2026-08-22"
 category: "Kombi"
+# 🔴 22 Ağu 2026 — TABLO BAŞTAN YAZILDI (kod tablosu denetimi, TARAMA-1).
+# Altı kod satırı dayanaksızdı ve ikisinin anlamı TERSTİ. Gaz cihazı → A önceliği.
+#
+# Kaynak (bu koşuda indirildi, pdftotext ile okundu):
+#   demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf  (31 kod)
+#   demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf         (41 kod)
+#   demirdokum.com.tr/downloads/products-1/kullanma-kilavuzu-1772624.pdf (Atron Condense)
+#
+# 📌 ASIL BULGU: DemirDöküm'ün İKİ AYRI kod ailesi var ve yazı ikisini karıştırmıştı.
+#   ① Vaillant platformu (Nitromix, ademiX) → NOKTALI  F.22 · F.28 · F.29 …
+#   ② Kendi platformu (Atron Condense, Nitron Plus) → NOKTASIZ  F04 · F05 · F10
+#   Yazı noktasız ailenin numaralarını alıp noktalı yazmış ve anlamlarını uydurmuş.
+#
+# Anlamı TERS olan ikisi (kılavuzdan birebir):
+#   F04 → "NTC/sıcaklık sensörü" DEĞİL; gerçek: ateşleme arızası, üç denemeden sonra
+#         arıza konumu. Kılavuzun çözümü: RESET TUŞUNA BAS. Yani kullanıcı işi.
+#   F05 → "Fan arızası" DEĞİL; gerçek: atık gaz hattında (baca) arıza. Fan = F.32.
+# Diğer dayanaksızlar: F.07 (gaz valfi → gerçekte F.26/F.61/F.62) · F.08 (kart →
+#   F.63/F.64/F.65) · F.15 (pompa → F.75) · F.30 (baca → F.77, Atron'da F05).
+#
+# 🔴 "F.22 (bazı modellerde F.37)" ÇIKARILDI: F37 DemirDöküm kodu DEĞİL, BAYMAK'ın
+#    kodu. İkinci platformda düşük basıncın karşılığı F10. (Aynı takas #104'te genel
+#    kombi yazısından da temizlenmişti.)
+# 📌 "F.28 (bazı modellerde F.01)" da çıkarıldı: F.01 = dönüş sıcaklık sensöründe kesinti.
 faq:
   - q: "DemirDöküm kombi düşük su basıncı kodu nedir, nasıl çözülür?"
-    a: "Düşük su basıncı genelde F.22 (bazı modellerde F.37) ile gösterilir. Güvenle çözebilirsin: kombinin altındaki doldurma musluğundan manometreyi 1–1.5 bara getir, sonra kapat. Basınç sürekli düşüyorsa kaçak vardır, servis gerekir."
-  - q: "DemirDöküm ve Vaillant kodları neden benzer?"
-    a: "DemirDöküm, Vaillant Group bünyesindedir; bu yüzden birçok modelde Vaillant'a benzer 'F' kodları (F.22, F.28, F.29) kullanır. Yine de model serisine göre numaralandırma değişebilir."
+    a: "Serine göre değişir: Nitromix ve ademiX gibi noktalı kod kullanan modellerde F.22, Atron Condense ve Nitron Plus gibi noktasız kod kullanan modellerde F10. İkisi de aynı şeyi söyler ve ikisini de güvenle çözebilirsin: kombinin altındaki doldurma musluğundan manometreyi 1–1.5 bara getir, sonra kapat. Basınç sürekli düşüyorsa kaçak vardır ve servis gerekir."
+  - q: "DemirDöküm'de neden iki farklı kod ailesi var?"
+    a: "Çünkü DemirDöküm iki ayrı elektronik platform kullanıyor. Nitromix ve ademiX gibi modeller Vaillant Group platformundan gelir ve kodları noktalıdır: F.22, F.28, F.29 gibi. Atron Condense ve Nitron Plus gibi modeller ise kendi platformunu kullanır ve kodları noktasızdır: F04, F05, F10. Aynı numara iki ailede farklı anlama gelebildiği için önce ekranındaki kodun noktalı mı noktasız mı olduğuna bakmak gerekir."
   - q: "DemirDöküm kombi ateşleme yapmıyor, hangi kod?"
-    a: "Ateşleme/gaz yok durumunda genelde F.28 (bazı modellerde F.01) çıkar. Önce gaz vanasının açık olduğunu kontrol et ve reset'le; geçmezse gazla ilgili bir arızadır ve servis gerekir."
-  - q: "Kod yerine sadece uyarı/ışık varsa?"
-    a: "Bazı modeller kod yerine basınç ya da arıza ikonu gösterir. Modelini ve belirtiyi Benservis'e yazarsan olası arızayı ve tahmini maliyeti söyler."
+    a: "Noktalı ailede F.28 'ateşleme başarısız' demektir. Noktasız ailede karşılığı F04'tür: kombi üç ateşleme denemesinden sonra arıza konumuna geçer ve kılavuz burada reset tuşuna basmayı söyler. İki kodda da önce gaz vanasının açık olduğunu kontrol et ve bir kez resetle; kod geri geliyorsa gazla ilgili bir arıza vardır ve yetkili servis gerekir."
+  - q: "İnternette gördüğüm F.07, F.08, F.15 kodları neden bu yazıda yok?"
+    a: "Çünkü bu numaralar DemirDöküm'ün kendi kılavuzlarında geçmiyor. Doğruları başka numaralarda: gaz armatürü tarafı F.26, F.61 ve F.62; elektronik kart F.63, F.64 ve F.65; pompa F.75. Doğrulayamadığımız bir kod için anlam yazmıyoruz, çünkü yanlış kod yanlış parçaya yönlendirir ve gaz cihazında bunun bedeli büyük olur."
 images:
   coverAlt: "Kombi çizimi, ekranında hata göstergesi; yanında basınç göstergesi ve kod listesi"
 ---
 
-DemirDöküm kombin ekranında bir arıza kodu (F.22, F.28…) gösteriyor. DemirDöküm **Vaillant Group** bünyesinde olduğu için birçok modelde Vaillant'a benzer **F** kodları kullanır. Bu rehberde en sık kodları, anlamlarını ve hangisini **güvenle kendin** çözebileceğini topladık.
+DemirDöküm kombin ekranında bir arıza kodu gösteriyor. Bu markada internetteki listelerin birbirini tutmamasının somut bir sebebi var ve bilmen işini kolaylaştırır:
 
-> 🔥 **Güvenlik:** Kombi gaz ve basınçlı sıcak su ile çalışır. Güvenle yapabileceğin tek şey **su basıncı eklemek** ve **reset**'tir. Gaz/alev/fan/kart kodlarında **cihazı kapat ve yetkili servise** başvur.
-
-> ⚠️ Kod numaraları model serisine göre değişebilir; aşağıdakiler en yaygın anlamlardır. Kesin teşhis için modelini ve kodu [Benservis'e](/) yaz.
-
-## ⚡ En sık karşılaşılan 3 durum
-> **Düşük su basıncı (F.22)** → 🛠️ doldurma musluğundan 1–1.5 bara getir
+> ⚠️ **DemirDöküm'ün iki ayrı kod ailesi var.**
 >
-> **Ateşleme yok / gaz yok (F.28)** → 🔧 gaz vanası + reset; geçmezse servis
+> **① Noktalı aile** — `F.22`, `F.28`, `F.29` biçiminde. Nitromix, ademiX gibi **Vaillant Group platformundan** gelen modeller.
 >
-> **Alev sönmesi (F.29)** → 🔧 servis
+> **② Noktasız aile** — `F04`, `F05`, `F10` biçiminde. Atron Condense, Nitron Plus gibi **kendi platformunu** kullanan modeller.
+>
+> Aynı numara iki ailede farklı anlama gelebilir. Önce ekrandaki kodun **noktalı mı noktasız mı** olduğuna bak.
 
-## DemirDöküm kombi arıza kodları (sık liste)
+> 🔥 **Güvenlik:** Kombi gaz ve basınçlı sıcak su ile çalışır. Güvenle yapabileceğin şey **su basıncı eklemek** ve **reset**'tir. Gaz, alev, baca, fan ve kart kodlarında **cihazı kapat ve yetkili servise** başvur.
+
+## ⚡ En sık karşılaşılan üç durum
+> **Düşük su basıncı** — noktalıda `F.22`, noktasızda `F10` → 🛠️ doldurma musluğundan 1–1.5 bara getir
+>
+> **Ateşleme başarısız** — noktalıda `F.28`, noktasızda `F04` → 🛠️ bir kez reset; geçmezse servis
+>
+> **Atık gaz / baca** — noktalıda `F.77`, noktasızda `F05` → 🔧 servis
+
+## ① Noktalı aile — Nitromix, ademiX ve benzeri
 🛠️ = güvenle kendin · 🔧 = yetkili servis
 
-| Kod | Anlamı | Ne yapmalı |
-|-----|--------|------------|
-| **F.22** | Düşük su basıncı | 🛠️ Doldurma musluğundan 1–1.5 bara tamamla |
-| **F.28** | Ateşleme yok / gaz yok | 🔧 Gaz vanası açık mı bak, reset; geçmezse servis |
-| **F.29** | Çalışırken alev sönmesi | 🔧 Servis (gaz/topraklama) |
-| **F.04** | NTC / sıcaklık sensörü arızası | 🔧 Servis |
-| **F.05** | Fan arızası | 🔧 Servis |
-| **F.07** | Gaz valfi hatası | 🔧 Cihazı kapat, servis |
-| **F.08** | Elektronik kart hatası | 🔧 Servis |
-| **F.15** | Pompa arızası | 🔧 Servis |
-| **F.20 / F.24** | Aşırı ısınma / güvenlik kapatması | 🔧 Servis |
-| **F.30** | Baca / baca gazı arızası | 🔧 Servis |
+| Kod | Kılavuzdaki tanım | Ne yapmalı |
+|-----|-------------------|------------|
+| **F.22** | Tesisat basıncı çok düşük | 🛠️ Doldurma musluğundan 1–1.5 bara tamamla |
+| **F.20** | Sıcaklık sınırlayıcı emniyet kapatması | 🔧 Servis |
+| **F.23** | Emniyet kapatması: sıcaklık | 🔧 Servis |
+| **F.26** | Gaz armatürü işlevsiz | 🔧 Cihazı kapat, servis |
+| **F.27** | Sahte alev emniyet kapatması | 🔧 Cihazı kapat, servis |
+| **F.28** | Ateşleme başarısız | 🛠️ Gaz vanası açık mı bak, bir kez reset; geçmezse 🔧 |
+| **F.29** | İşletim sırasında alev sönmesi | 🔧 Servis |
+| **F.32** | Fan arızası | 🔧 Servis |
+| **F.61 / F.62** | Gaz emniyet ventili arızası | 🔧 Cihazı kapat, servis |
+| **F.63 / F.64 / F.65** | EEPROM ve elektronik arızaları | 🔧 Servis |
+| **F.73 / F.74** | Su basıncı sensörü sinyali hatalı | 🔧 Servis |
+| **F.75** | Pompa arızası / su eksikliği | 🔧 Servis (önce basıncı kontrol et) |
+| **F.77** | Atık gaz klapesi arızalı | 🔧 Servis |
+
+Bu ailenin tam listesi daha uzundur ve sensör kodlarını da içerir (`F.00`, `F.01`, `F.10`, `F.11`, `F.71`, `F.72`, `F.83`–`F.86`). Ekranındaki kod yukarıda yoksa kendi modelinin kılavuzuna bak; hepsi servis konusudur.
+
+## ② Noktasız aile — Atron Condense, Nitron Plus ve benzeri
+
+| Kod | Kılavuzdaki tanım | Ne yapmalı |
+|-----|-------------------|------------|
+| **F10** | Isıtma sisteminde yetersiz su; tesisat basıncı izin verilen aralığın dışında | 🛠️ Isıtma sistemini doldur (1–1.5 bar) |
+| **F04** | Ateşleme arızası — üç denemeden sonra cihaz arıza konumuna geçer | 🛠️ Kılavuzun çözümü: **reset tuşuna bas** |
+| **F05** | Atık gaz hattında (baca) arıza | 🔧 Yetkili servis |
+
+> 📌 **Dikkat:** bu üç numara noktalı ailede bambaşka şeyler anlatır. Noktasız `F05` baca demektir; noktalı ailede baca kodu `F.77`'dir ve fan `F.32`'dir.
 
 ## Öne çıkan durumlar
 
-### Düşük su basıncı (F.22)
-En sık ve en kolay: manometre 1 barın altındaysa, kombinin altındaki **doldurma musluğunu** yavaşça aç, **1–1.5 bar** olunca kapat, reset'le. Basınç sürekli düşüyorsa **kaçak** vardır → servis.
+### Düşük su basıncı — F.22 ya da F10
+Manometre 1 barın altındaysa: kombinin altındaki **doldurma musluğunu** yavaşça aç, **1–1.5 bar** olunca kapat, reset'le. Isıtma sistemi birden fazla kata dağıldıysa kılavuz daha yüksek bir sistem basıncının gerekebileceğini söylüyor — o durumda yetkili bayiye danış.
 
-### Ateşleme yok (F.28)
-Önce **gaz vanasının açık** olduğunu kontrol et, **reset**'le. Geçmezse ateşleme/gaz armatürü arızasıdır → servis. Gaz işine kendin müdahale etme.
+Basınç sürekli düşüyorsa **kaçak** vardır → servis.
 
-### Sensör / fan / kart kodları
-F.04, F.05, F.07, F.08 gibi kodlar donanım arızasıdır ve yetkili servis ister.
+### Ateşleme başarısız — F.28 ya da F04
+Kombi yanmıyor. Noktasız ailede kılavuzun verdiği çözüm doğrudan **reset tuşuna basmaktır**; cihaz üç başarısız denemeden sonra kendini kilitler ve reset onu tekrar devreye alır.
+
+Önce **gaz vanasının açık** olduğunu ve doğalgaz girişini kontrol et, sonra **bir kez** resetle. Kod geri geliyorsa ateşleme ya da gaz tarafında gerçek bir arıza vardır. Gaz işine kendin müdahale etme.
+
+### Atık gaz ve baca — F.77 ya da F05
+Bu kodlarda beklemek doğru değil: atık gaz yolundaki bir arıza yanma ürünlerinin doğru tahliye edilmediği anlamına gelebilir. Kılavuzun talimatı net — **yetkili servis tarafından giderilmesi** gerekir.
+
+### "F.07, F.08, F.15 aramıştım"
+Bu numaralar DemirDöküm'ün kendi kılavuzlarında geçmiyor. Doğruları başka yerde:
+
+| Aradığın kod | Gerçek karşılığı |
+|---|---|
+| **F.07** "gaz valfi" | Gaz armatürü tarafı: **F.26 · F.61 · F.62** |
+| **F.08** "elektronik kart" | Kart tarafı: **F.63 · F.64 · F.65** |
+| **F.15** "pompa" | Pompa: **F.75** |
+| **F.30** "baca" | Baca: **F.77** (noktasız ailede **F05**) |
+| **F.04** "NTC sensörü" | F04 **ateşleme** arızasıdır; sensör kodları `F.00`/`F.01`/`F.71`/`F.72` |
+| **F.05** "fan" | F05 **baca** arızasıdır; fan **F.32**'dir |
+| **F.37** | DemirDöküm kodu değil — **Baymak**'ın düşük basınç kodudur |
 
 ## Reset nasıl yapılır?
-Reset tuşuna birkaç saniye bas; önce su basıncını (1–1.5 bar) kontrol et. Kod tekrar çıkarsa arıza sürüyordur.
+Reset tuşuna birkaç saniye bas; önce su basıncını (1–1.5 bar) kontrol et. Kod tekrar çıkarsa arıza sürüyordur — resetlemeyi tekrarlamak sorunu büyütebilir.
 
 ## Tahmini maliyet
 DemirDöküm modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler; sonra yakınındaki yüksek puanlı servisi ara.
@@ -68,13 +131,13 @@ DemirDöküm modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler;
 ## Sık sorulan sorular
 
 **Düşük su basıncı kodu nasıl çözülür?**
-F.22 (bazı modellerde F.37); doldurma musluğundan 1–1.5 bara getir. Sürekli düşüyorsa kaçak → servis.
+Noktalıda F.22, noktasızda F10; doldurma musluğundan 1–1.5 bara getir. Sürekli düşüyorsa kaçak → servis.
 
-**Vaillant'a neden benziyor?**
-DemirDöküm Vaillant Group bünyesinde; birçok modelde benzer F kodları kullanır.
+**Neden iki kod ailesi var?**
+Nitromix/ademiX Vaillant platformundan gelir (noktalı), Atron/Nitron kendi platformunu kullanır (noktasız).
 
 **Ateşleme yapmıyor, hangi kod?**
-Genelde F.28; gaz vanası + reset, geçmezse servis.
+Noktalıda F.28, noktasızda F04. Gaz vanası + bir kez reset; geçmezse servis.
 
-**Kod yerine ikon varsa?**
-Modelini ve belirtiyi Benservis'e yaz; olası arıza + maliyeti söyler.
+**F.07 / F.08 / F.15 ne demek?**
+Bu numaralar DemirDöküm kılavuzlarında yok. Doğruları F.26/F.61/F.62, F.63/F.64/F.65 ve F.75.
