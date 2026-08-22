@@ -1,6 +1,6 @@
 ---
 title: "Klima arıza kodları: Vestel, Arçelik ve Daikin'de ekrandaki kod ne diyor"
-description: "Klima ekranında E2, E5, 88, U4 gibi bir kod mu var? Split klimalarda kod okuma mantığı, Vestel, Arçelik ve Daikin'in doğrulanmış kodları, servis sınırı."
+description: "Klima ekranında E1, U4 ya da F3 gibi bir kod mu var? Split klimalarda kod okuma mantığı, Vestel, Arçelik ve Daikin'de doğrulanmış karşılıklar ve servis sınırı."
 slug: "klima-ariza-kodlari"
 date: "2026-08-20"
 category: "Klima"
@@ -22,16 +22,16 @@ faq:
   - q: "Klima hata kodu verdi ama çalışıyor, kullanmaya devam edebilir miyim?"
     a: "Koda göre değişir. Sensör kaynaklı kodlarda cihaz genelde çalışmaya devam eder ama sıcaklığı doğru okuyamadığı için verimsiz çalışır. Gaz kaçağı, yüksek sıcaklık ya da kompresör koruması gibi kodlarda ısrarla çalıştırmak arızayı büyütebilir; bu kodlarda cihazı kapatıp servisle konuşmak doğru olur."
   - q: "Elektrik kesintisinden sonra klima çalışmıyor, bozuldu mu?"
-    a: "Hemen hüküm verme. Birçok klima elektrik kesintisi sonrası kendini birkaç dakikalığına koruma moduna alır; bazı Vestel modellerinde bu bekleme ekranda 88 ile gösterilir. Koruma süresi dolunca cihaz kendiliğinden normale döner. Birkaç dakika bekledikten sonra hâlâ çalışmıyorsa şalteri ve kumandayı kontrol et, sonra koda bak."
+    a: "Hemen hüküm verme. Birçok klima elektrik kesintisi sonrası kendini birkaç dakikalığına koruma moduna alır ve bu bekleme sırasında göstergede bir mesaj görünebilir. Koruma süresi dolunca cihaz kendiliğinden normale döner. Birkaç dakika bekledikten sonra hâlâ çalışmıyorsa şalteri ve kumandayı kontrol et, sonra koda bak."
   - q: "Aynı kod her klima markasında aynı anlama mı gelir?"
-    a: "Hayır. E1 bir markada haberleşme hatasıyken başka bir markada sensör arızası olabilir; aynı markanın salon tipi ve duvar tipi modellerinde bile tablo değişir. Bu yüzden kodun kesin karşılığı için cihazının kullanım kılavuzuna ya da üreticinin destek sayfasına bakmak şart."
+    a: "Hayır. Markalar aynı şeyi bile farklı biçimde yazar: biri tek harf ve rakam, biri Er ile başlayan iki hane, biri harf grubu kullanır. Aynı karakter dizisi bir markada haberleşme hatasıyken başka bir markada sensör arızası olabilir; aynı markanın salon tipi ve duvar tipi modellerinde bile tablo değişir. Bu yüzden kodun kesin karşılığı için cihazının kullanım kılavuzuna ya da üreticinin destek sayfasına bakmak şart."
   - q: "Kod silindikten sonra klima normale döndü, servise gerek var mı?"
     a: "Kod bir daha gelmiyorsa büyük ihtimalle geçici bir korumaydı ve izlemek yeterli. Ama aynı kod tekrar tekrar geliyorsa cihaz aynı devreden sürekli hata okuyor demektir; bu kendiliğinden düzelmez. Tekrarlayan kodu ve model numarasını not edip servise iletmek, doğru parçayla tek seferde çözüm ihtimalini artırır."
 images:
   coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
-Ağustos ortası, termometre 35'i gösteriyor ve klima tam sezonun ortasında ekrana bir kod düşürüp duruyor. Sıcakta kod çözmeye çalışmak sinir bozucudur ama işin aslı şu: split klimalarda kodlar rastgele değildir, cihaz sana hangi devresinden veri alamadığını söyler. Bu yazıda kod okuma mantığını, Türkiye'de yaygın üç markanın birden çok kaynakla doğrulanmış kodlarını ve hangi noktadan sonra işin servise kaldığını anlatıyoruz.
+Ağustos ortası, termometre 35'i gösteriyor ve klima tam sezonun ortasında ekrana bir kod düşürüp duruyor. Sıcakta kod çözmeye çalışmak sinir bozucudur ama işin aslı şu: split klimalarda kodlar rastgele değildir, cihaz sana hangi devresinden veri alamadığını söyler. Bu yazıda kod okuma mantığını, Türkiye'de yaygın üç markada üreticinin kendi kılavuzuyla doğrulanabilen karşılıkları ve hangi noktadan sonra işin servise kaldığını anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -59,23 +59,15 @@ Kod, iç ünitenin dijital göstergesinde belirir — normalde sıcaklık ya da 
 
 **Kendin kontrol et:** Kodu not ettikten sonra klimayı kumandadan kapat, şalterinden ya da fişinden enerjisini kes, birkaç dakika bekle ve yeniden aç. Elektrik dalgalanması sonrası görülen geçici kodlar bu resetle silinir. Kod geri geliyorsa gerçek bir bildirimdir.
 
-## Vestel klimalarda E kodları ve 88
+## Vestel klimalarda mesaj biçimi: Er + iki hane
 
-Vestel'in yaygın LCD ekranlı split serisinde doğrulanmış tablo şöyle:
+Vestel'in güncel inverter kullanım kılavuzlarında iç ünitenin göstergesindeki mesaj tek bir biçimde verilir: önce **Er** ibaresi, ardından o hataya özel iki haneli sayı. Mesaj önce koda özel sayıda yanıp söner, sonra otuz beş ile kırk saniye arası sabit kalır ve sorun giderilene kadar bu tur tekrarlanır — yani mesajı bir kere kaçırmak sorun değil.
 
-| Kod | Karşılığı |
-|---|---|
-| E2 | İç ünite oda sıcaklık sensörü hatası |
-| E3 | İç ünite boru (evaporatör) sensörü hatası |
-| E4 | İç ünite fan hatası |
-| E5 | Gaz kaçağı |
-| E6 | Besleme voltajı düşük ya da yüksek |
-| E7 | Elektronik kart hafıza hatası |
-| 88 | Elektrik kesintisi koruması (bekleme) |
+Burada dürüst olmak gerekiyor: **kılavuzlar bu sayıların tek tek karşılığını kullanıcıya açmıyor.** Verdikleri talimat net — cihaza herhangi bir şey yapma, yetkili servisle iletişime geç. Bu yüzden bu yazıda Er sayılarının doğrulanmamış bir karşılığını vermiyoruz. Sayıyı doğru not etmek yine de değerlidir; servis için teşhisi kısaltan asıl bilgi odur.
 
-**88** aslında arıza bile değildir: elektrik kesintisi sonrası cihaz kendini yaklaşık üç dakika koruma modunda bekletir ve süre dolunca kendiliğinden çalışır. E1'in karşılığı ise Vestel'de model ailesine göre değişir (bir seride haberleşme, başka seride sensör); o yüzden E1 için tek bir anlam söylemek yanıltıcı olur — kılavuza bak.
+Er ile başlamayan iki harfli mesajlar ise arıza bildirimi değil koruma bildirimidir; **Er11 ve Er13** de kılavuzda açıkça hata mesajı değil, kompresörü aşırı akımdan koruma mesajı olarak tanımlanır. Bu ayrımın tamamını benservis.com blogundaki Vestel klima hata kodları yazısında bulabilirsin.
 
-E5 (gaz kaçağı) ve E6 (voltaj) görüyorsan cihazı ısrarla çalıştırma; ikisi de büyüyebilen sorunlardır.
+⚠️ Kod şeması seriye ve modele göre değişir; kesin karşılık cihazınla gelen kullanım kılavuzundadır. Ekranda gördüğünü kılavuzunla teyit etmeden bir parçaya karar verme.
 
 ## Arçelik klimalarda E1-E4 bandı
 
