@@ -29,6 +29,14 @@ faq:
     a: "Çoğu makinede panelde bir kilit ya da çocuk yüzü simgesi vardır; kilit devredeyken tuşa bastığında bu simge yanıp söner ya da makine kısa bir uyarı sesi verir ama komutu almaz. Açma yöntemi markadan markaya değişir — genelde iki tuşa aynı anda birkaç saniye basılı tutulur. Kesin kombinasyon için kendi modelinin kullanım kılavuzuna bak."
 images:
   coverAlt: "Banyoda duvara dayalı duran beyaz çamaşır makinesi ve yanındaki priz"
+  steps:
+    - "Hasarlı bir fiş ile prize tam oturmuş sağlam fişin karşılaştırıldığı çizim"
+    - "Aynı prize test için başka bir cihaz takılışını ve çoklu prizin uygun olmadığını gösteren çizim"
+    - "Sigorta kutusunda kolu düşmüş hat ile kaldırılmış hattın karşılaştırıldığı çizim"
+    - "Kilit dili yuvaya girmeyen kapak ile klik sesiyle kilitlenen kapağın karşılaştırıldığı çizim"
+    - "Panelde yanan çocuk kilidi simgesini ve iki tuşa aynı anda basılışını gösteren çizim"
+    - "Program düğmesinin iki konum arasında kalışı ile tam konuma oturuşunun karşılaştırıldığı çizim"
+    - "Fişi çekip bekledikten sonra tekrar takma denemesini ve servis sınırını gösteren çizim"
 ---
 
 Sepet dolu, deterjan hazır, tuşa basıyorsun — ve hiçbir şey olmuyor. Makine ya tamamen sessiz, ya da ışıklar yanıyor ama program bir türlü başlamıyor. "Çalışmıyor" tek cümle gibi görünse de aslında birkaç farklı durumun ortak adıdır ve bunların önemli bir kısmı makineye hiç dokunmadan, birkaç dakikalık kontrolle çözülür. Bu yazıda en basitten en teknik olana doğru gidiyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.

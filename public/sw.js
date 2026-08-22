@@ -53,7 +53,15 @@
 // görsel ise BİR açılış eski kalırdı → kullanıcı "sirke önermiyoruz" cümlesini sirke
 // şişeli kareyle birlikte görürdü; bulaşıkta o kare kapağın kendisi, yani og:image.
 // Bedeli (tüm cache boşalır, herkes yeniden indirir) bu pencereye tercih edildi.
-const SURUM = "benservis-v8";
+// v8 → v9 (22 Ağu, adım görseli dalga 1 tur-2): GRF'nin teslim föyü *"SW sürüm artışı
+// gerekmez — dördünde de klasör boştu, hepsi yeni dosya"* diyordu. **Üçü için doğru,
+// `camasir-makinesi-tambur-donmuyor` için DEĞİL:** föy 12:54'te yazıldı, o kareler
+// 12:49'da PR #99 ile zaten girmişti (föyün "klasörde 0 dosya" okuması 5 dakika bayattı).
+// GRF sonra 13:00'te aynı yazıyı QC düzeltmeleriyle yeniden bastı → 7 kare AYNI ADLA
+// değişiyor. Değişenlerden biri kare 1'in "tambura elini sokmadan önce" etiketi; canlıda
+// duran hâli buydu, yenisi "dokunmadan" diyor. SWR'de sürüm artmazsa mevcut ziyaretçi
+// düzeltmeyi bir açılış boyunca görmez — 19 Ağu'dan beri işleyen kural burada da geçerli.
+const SURUM = "benservis-v9";
 const KABUK_CACHE = `${SURUM}-kabuk`;
 const STATIK_CACHE = `${SURUM}-statik`;
 const DIZIN_CACHE = `${SURUM}-servis-dizini`;
