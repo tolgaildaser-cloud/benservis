@@ -4,6 +4,12 @@ description: "Vestel çamaşır makinen E01, E02 ya da E03 mü gösteriyor? Kap�
 slug: "vestel-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+# 🔴 22 Ağu 2026 — İKİ DÜZELTME (kod tablosu denetimi, TARAMA-1 kalan tur).
+# Kaynak: 5 resmî Vestel kılavuzu, "10. OTOMATİK ARIZA UYARILARI" tablosu (birebir aynı).
+#   E01 → "ya da kilit devreye girmiyor" ibaresi Vestel metninde YOK. Vestel'in
+#         ifadesi tek cümle: "Makinenizin kapısı açık kalmış." Kilit iddiası bizimdi.
+#   E04 → EKSİK YAYINDI, eklendi: "Makinenizde aşırı miktarda su var."
+# 📌 Vestel çamaşır tablosu yalnız E01-E04'ten ibaret; E05 ve sonrası resmî kılavuzda yok.
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -23,7 +29,7 @@ faq:
   - q: "Vestel çamaşır makinesi E03 hatası ne demek?"
     a: "E03, makinenin içindeki suyu boşaltamadığını gösteren tahliye hatasıdır. En sık sebep tüy ve yabancı cisimle tıkanmış pompa filtresi ya da bükülmüş/tıkalı tahliye hortumudur. Filtre ve hortum temizliğiyle çoğu zaman evde, ücretsiz çözülür; bunlar temizken tekrar ediyorsa pompa tarafı servis işidir."
   - q: "Vestel E01 hatası neden çıkar?"
-    a: "E01, kapının açık kaldığını ya da kapı kilidinin kilitlenemediğini bildirir; makine güvenlik gereği başlamaz. Çoğu zaman kapağa sıkışan bir çamaşır ucu ya da tam kapanmamış kapak suçludur. Kapağı 'klik' sesiyle tam kapatmak genelde yeterlidir; kapak tam kapandığı hâlde kod sürüyorsa kilit mekanizması servislik olabilir."
+    a: "Vestel'in kendi ifadesi tek cümle: makinenizin kapısı açık kalmış. Makine güvenlik gereği başlamaz. Çoğu zaman kapağa sıkışan bir çamaşır ucu ya da tam kapanmamış kapak suçludur; kapağı 'klik' sesiyle tam kapatmak genelde yeterlidir. Kapak tam kapandığı hâlde kod sürüyorsa kilit mekanizması servislik olabilir — ama bunu kod söylemiyor, biz eleme yoluyla varıyoruz."
   - q: "Vestel çamaşır makinesinde hata kodu nasıl sıfırlanır?"
     a: "Makineyi kapat, fişini çekip yaklaşık beş dakika bekle ve tekrar takıp programı yeniden başlat. Reset kodu siler ama sebebi ortadan kaldırmaz; filtre hâlâ tıkalıysa ya da kapı kilitlenemiyorsa kod geri gelir. Reset, tek seferlik elektronik takılmaları elemek için bir test adımıdır."
   - q: "Ekrandaki kod bu yazıdaki listede yok, ne yapmalıyım?"
@@ -62,9 +68,12 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|
-| **E01** | Kapı açık ya da kilit devreye girmiyor | 🛠️ Kapağı "klik" sesiyle tam kapat |
+| **E01** | Kapı açık kalmış | 🛠️ Kapağı "klik" sesiyle tam kapat |
 | **E02** | Su alamıyor (musluk, basınç, giriş süzgeci) | 🛠️ Musluğu, hortumu ve süzgeci kontrol et |
 | **E03** | Su atamıyor (tahliye) | 🛠️ Pompa filtresini ve hortumu temizle |
+| **E04** | Makinede aşırı miktarda su var | 🔧 Programı iptal et, servisle konuş |
+
+> 📌 Vestel'in yayımladığı çamaşır makinesi tablosu bu **dört kodla sınırlıdır**; `E05` ve sonrası resmî kılavuzda geçmez. `E04` bu yazıda ilk kez yayımlanıyor — beş resmî kılavuzda da var, bizde eksikti.
 
 ## E01 — Kapı kapanmadı ya da kilitlenmedi
 
