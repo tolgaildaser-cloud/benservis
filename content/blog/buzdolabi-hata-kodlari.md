@@ -75,7 +75,7 @@ Beko'nun yaygın model ailelerinde E ile başlayan kodlar ağırlıklı olarak s
 | E1 | Dondurucu evaporatör (defrost) sensörü hatası |
 | E2 | Soğutucu bölme evaporatör sensörü hatası |
 | E3 | Soğutucu bölme hava sensörü hatası |
-| E4 | Defrost ısıtıcısı ya da termal sigorta hatası |
+| E4 | Freezer defrost sistem hatası |
 
 E4 dışındakiler sensör bildirimidir; E4 ise karlanmayı çözen ısıtıcı hattını işaret eder ve tipik belirtisi dondurucu çalışırken alt bölmenin giderek zayıf soğutmasıdır. Bu serinin dışındaki bazı kodların karşılığı model ailesine göre değiştiği için burada tek tek saymıyoruz; kılavuzun tablosu esastır.
 

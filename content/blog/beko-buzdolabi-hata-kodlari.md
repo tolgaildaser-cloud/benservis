@@ -1,9 +1,19 @@
 ---
 title: "Beko buzdolabı hata kodları: kodu gördün, şimdi ne yapacaksın"
-description: "Beko buzdolabında E0, E1 ve E4 kodlarının doğrulanmış anlamı, defrost hattının mantığı, evde güvenle yapılabilen buz çözdürme ve hangi noktada servis gerekir."
+description: "Beko buzdolabında E0, E1, E2, E3 ve E4 kodlarının üreticideki karşılığı, defrost hattının mantığı, evde buz çözdürme ve servis sınırı."
 slug: "beko-buzdolabi-hata-kodlari"
 date: "2026-08-21"
 category: "Buzdolabı"
+# 🔴 22 Ağu 2026 — EKSİK YAYIN GİDERİLDİ (kod tablosu denetimi, TARAMA-1).
+# Yazı yalnız E0, E1 ve E4'ü veriyor ve E2/E3 için "kaynaklar birbirini tutmuyor"
+# gerekçesiyle susuyordu. Bu gerekçe HATALIYDI: ikisi de üreticinin resmî listesinde
+# ve servis el kitabında net. Doğrulanamayanı yazmamak doğru ilke, ama doğrulanabiliri
+# "doğrulanamıyor" diye atlamak da bir hata — burada ikincisi olmuş.
+# Kaynak: beko.com.tr/blog/buzdolabi-hata-kodlari-rehberi (Arçelik birebir aynı liste).
+# 📌 "Kod şeması seriye göre değişir" ifadesi de yumuşatıldı: üretici YİRMİ kodluk
+#    TEK bir liste yayımlıyor (E0-E5, E8-E20, E24; E6/E7/E21-E23 tabloda yok).
+# 📌 E4'teki "termal sigorta" ibaresi üreticide geçmiyor; üreticinin ifadesi
+#    "Freezer Defrost Sistem Hatası".
 guide:
   difficulty: "Kolay"
   time: "~25 dakika"
@@ -36,7 +46,7 @@ Buzdolabının panelinde derece yerine bir kod var, dondurucu hâlâ soğuk ama 
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ **Uyarı:** Beko'da kod şeması seriye göre değişir; aynı kod iki farklı model ailesinde farklı anlama gelebilir. Aşağıdakiler yaygın no-frost serilerde geçerli, birden çok kaynakla doğrulanmış karşılıklardır. Kesin tablo cihazının kullanım kılavuzundadır.
+> ℹ️ Beko ve Arçelik buzdolabı kod tablosunu kendi sitelerinde **birebir aynı** yayımlar; yirmi kodluk tek bir liste vardır ve her kod tek bir şeyi bildirir. Aşağıdakiler defrost hattını ilgilendiren beş kod. Kesin karşılık için üreticinin listesine ya da kendi cihazının kullanım kılavuzuna bak.
 
 ## Adım adım: Beko buzdolabında kod sonrası ilk 25 dakika
 
@@ -64,7 +74,13 @@ Yaygın no-frost serilerde birden çok kaynakla doğrulayabildiğimiz üç kod v
 |---|---|---|
 | E0 | Dondurucu bölme hava sensörü hatası | Sıcaklık düzensizleşir, kompresör ya çok çalışır ya hiç kalkmaz |
 | E1 | Dondurucu evaporatörü defrost sensörü hatası | Arka duvarda kalınlaşan karlanma |
-| E4 | Defrost ısıtıcısı ya da termal sigorta arızası | Dondurucu soğuk kalırken soğutucu bölme ılıklaşır |
+| E2 | Fresh food (soğutucu) bölmesi evaporatör sensörü hatası | Soğutucu bölme düzensiz soğur |
+| E3 | Fresh food (soğutucu) bölmesi hava sensörü hatası | Bölme sıcaklığı doğru ölçülemez |
+| E4 | Freezer defrost sistem hatası | Dondurucu soğuk kalırken soğutucu bölme ılıklaşır |
+
+**E2 ile E3'ün farkı** sensörün nerede durduğudur: **E2** soğutma serpantinini (evaporatör), **E3** bölme içindeki havayı ölçen sensörü işaret eder. İkisi de soğutucu bölme tarafına bakar.
+
+> 📌 Üreticinin yayımladığı liste bu beşle sınırlı değil; buzmatik, joker bölme ve fan tarafını da kapsayan **yirmi kod** var (`E0`–`E5`, `E8`–`E20`, `E24`). Tam liste ve gruplandırılmış hâli için: [Arçelik buzdolabı hata kodları](/blog/arcelik-buzdolabi-hata-kodlari/) — Beko aynı tabloyu kullanır.
 
 Hattı şöyle düşün: **E0** bölmenin havasını ölçen sensörü, **E1** buzu ne zaman eriteceğini söyleyen sensörü, **E4** ise buzu fiilen eriten ısıtıcıyı işaret eder. Ölçüm bozulduğunda ya da ısıtıcı görevini yapmadığında sonuç aynı yere çıkar: evaporatörde buz birikir, hava kanalları daralır ve soğuk hava bölmelere dağıtılamaz.
 
