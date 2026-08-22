@@ -30,6 +30,15 @@ faq:
     a: "Hemen değil. Bölme sıcaklığının yeni ayara oturması saatler alır; sağlıklı karşılaştırma için cihaza 12-24 saat vermek gerekir. Ayarı değiştirip bir saat sonra hâlâ donma görünce tekrar oynamak, cihazı sürekli dengesiz çalıştırır ve neyin işe yaradığını anlamayı imkânsızlaştırır."
 images:
   coverAlt: "Buzdolabının iç rafları ve sebzelik bölümü"
+  steps:
+    - "İki buzdolabı iç görünümü yan yana: solda tüm raflarda kırağı ile 'her yerde donma → ayar tarafı', sağda yalnız sebzelik bölgesinde kırağı ile 'tek bölgede donma → hava akışı tarafı'."
+    - "Solda tırtıllı kademe kadranı, ibresi orta kademeye alınıyor ve 'en soğuk' konumu gri çarpı ile eleniyor; sağda dijital gösterge +4 °C değerini gösteriyor."
+    - "Kar taneli süper soğutma düğmesi açık hâlden kapalı hâle geçiyor; açık hâlin yanında gri çarpı, kapalı hâlin yanında mavi tik var."
+    - "İki raf kesiti: solda yiyecekler arka duvara dayalı ve üzerlerinde kırağı var, sağda öne çekilmiş ve arka duvarla aralarında 'birkaç parmak' ölçü oku bulunuyor."
+    - "Buzdolabının arka iç duvarında ızgara ve delik görünümlü hava kanalı ağızları; önündeki poşet okla kenara alınıyor, ağızdan soğuk hava okları çıkıyor."
+    - "Kapı kesiti ile gövde arasına sıkıştırılmış kâğıt şeridi ve çekme oku; conta profili etiketli, yanında 'direnç varsa tutuyor' tiki var."
+    - "Conta şeridinin üstten görünümü, ortasında gri katlanmış bölüm; yanında ılık su süngeri ve iki büyütme dairesinde contanın ezik ve düzeltilmiş kesiti."
+    - "Saat ikonu 12-24 saatlik bekleme süresini, yanındaki iç görünüm kırağısız hâli gösteriyor; altta soluk gri kutuda damper ve termostatın servis işi olduğu yazıyor."
 ---
 
 Sabah dolabı açıyorsun: marul cam gibi olmuş, domatesin içi buz kristalli, sütün üstünde ince bir buz tabakası var. Şikâyet "soğutmuyor"un tam tersi — cihaz görevini fazlasıyla yapıyor. İyi haber şu: aşırı soğutma vakalarının büyük kısmı arıza değil, ayar ve yerleşim meselesidir ve cihazın içine hiç girmeden çözülür. Bu yazıda en basit ihtimalden en teknik olana doğru gidiyoruz.

@@ -29,6 +29,14 @@ faq:
     a: "Çoğu iç ünitenin kapağı altında ya da yan yüzeyinde küçük bir açma düğmesi bulunur; kılavuzda genelde acil veya elle çalıştırma başlığıyla geçer. Bu düğme cihazı önceden tanımlı bir kipte çalıştırır ve sıcaklık ayarı yapmaya izin vermez. Teşhis açısından da değerlidir: düğmeyle cihaz açılıyorsa klimanın kendisi sağlam demektir ve arıza kumanda tarafında sınırlanmıştır."
 images:
   coverAlt: "Ahşap sehpada duran klima kumandası ve yanında açılmış pil kapağı"
+  steps:
+    - "Kumandanın arka yüzü ve pil yuvası; yanında iki yeni pil onay işaretiyle, karşısında eski-yeni pil karışımı gri çarpıyla"
+    - "Pil yuvasının yakın planı: sol temas ucunda soluk gri yeşillenme lekesi, sağ uç sağlam; yanında kuru bez ve onay işareti"
+    - "Solda kumandanın ucundaki kızılötesi göz, sağda iç ünitedeki alıcı pencere; ikisi de kuru bezle siliniyor"
+    - "Telefon arkadan kamera merceğiyle, karşısında kumandanın ucu ve aradaki kesikli kızılötesi ışın; sağda boş ekran kesitinde soyut parlama"
+    - "İç ünite solda, kumanda sağda: alıcı pencereye doğrudan giden kesikli sinyal çizgisi, üstte bir-iki metre ölçüsü, altta kenara çekilen perde ve dolap kapağı"
+    - "Pillerin çıkarılması, bir dakika bekleme, geri takılması ve testin tekrarlanması sırası"
+    - "İç ünitenin kapağı kalkmış, altındaki elle çalıştırma düğmesine basılıyor; cihaz açılıyor, sağdaki kumanda soluk gri ve çarpılı"
 ---
 
 Kumandaya basıyorsun, ekranı yanıyor, sıcaklık değişiyor — ama klima hiçbir şey duymuyor. Ya da ekran hiç yanmıyor ve kumanda tamamen ölü. Bu şikâyet, klima çağrılarının şaşırtıcı biçimde büyük bir kısmını oluşturur ve **neredeyse tamamı ücretsizdir**: pil, temas ucu, kirli bir pencere ya da araya giren bir eşya. Üstelik kumandanın sağlam olup olmadığını, cebindeki telefonla iki dakikada kesin olarak öğrenebilirsin.

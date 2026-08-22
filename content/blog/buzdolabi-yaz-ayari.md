@@ -30,6 +30,15 @@ faq:
     a: "Birkaç haftalık tatilde çekmeye gerek yoktur: bozulacakları boşalt, kapıyı kapat ve cihazı normal ayarında bırak. Kapalı ve az açılan bir buzdolabı bu dönemde zaten en az çalıştığı hâlindedir. Bir ayı aşan uzun yokluklarda ise içini tamamen boşaltmak, temizleyip kurulamak, fişi çekmek ve kapağı aralık bırakmak doğru olanıdır — kapalı bırakılan boş bir dolapta küf ve koku kaçınılmazdır."
 images:
   coverAlt: "Açık buzdolabının içi: raflarda kapaklı kaseler ve cam şişeler, iç aydınlatma yanıyor"
+  steps:
+    - "Buzdolabının orta rafında içinde termometre bulunan bir bardak su; yanda saat ikonu birkaç saat beklemeyi, gri kutu ise kapı açılır açılmaz okunan hava sıcaklığının yanıltıcı olduğunu gösteriyor."
+    - "Gri '+4 °C üstü' ölçüm rozetinden tırtıllı kadrana ok; kadran bir basamak yukarı alınıyor, sağda mavi +3 °C dijital hedef rozeti var."
+    - "Değişmiş kadran, takvimde işaretli bir gün ve tekrar ölçüm için bardak ile termometre; yarım saat sonra ölçmek gri çarpı ile eleniyor."
+    - "Buzdolabı duvardan öne çekilmiş; sırtındaki arka ızgara etiketli ve duvarla arasındaki 'birkaç santim' boşluk ölçü oku ile gösteriliyor."
+    - "Tozlu arka ızgara ve ona uzanan süpürge ucu; sağdaki gri kutuda kapağı açmanın ve içeri girmenin gerekmediği çarpı ile belirtiliyor."
+    - "Kapı köşesinin üç boyutlu görünümü: nemli bez contayı siliyor; sağda aynı kapıda kâğıt testi yapılıyor, altta kolayca çıkan kâğıdın contanın tutmadığını gösterdiği not var."
+    - "Kapı raflarında toplanmış içecekler tik ile onaylanıyor; sağda kapısı kısa süre açılan buzdolabı ve saat ikonu sonucu gösteriyor."
+    - "İki tatil senaryosu yan yana: birkaç haftalık yoklukta fişi çekmeden çalışmaya devam, bir ayı aşan yoklukta tamamen boşaltıp fişi çekip kapağı aralık bırakma."
 ---
 
 Temmuz sıcağında mutfak otuz dereceyi geçmiş, buzdolabı sabahtan beri neredeyse hiç durmuyor ve dün akşam koyduğun süt bugün ılık gibi. Cihaz bozuldu mu? Çoğu zaman hayır: buzdolabı **aynı işi çok daha ağır koşullarda** yapmaya çalışıyordur. Bu yazıda mevsime özel olanı anlatıyoruz — sıcak aylarda ayar nereye gelir, hangi alışkanlık faturayı şişirir, tatile çıkarken ne yapılır.

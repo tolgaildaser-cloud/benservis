@@ -30,6 +30,15 @@ faq:
     a: "Nadiren. Tek seferlik taşma bazen yanlış deterjandan kaynaklanan köpükten olur ve tekrarlamaz; ama conta, hortum ya da iç bağlantı kaynaklı sızıntılar tipik olarak aralıklı başlar ve zamanla sıklaşır. Bir kez su gördüysen sonraki birkaç yıkamada makinenin altını bilinçli olarak kontrol et; ikinci kez tekrarlarsa kaynağı ciddiye al."
 images:
   coverAlt: "Mutfakta ahşap tezgâh altına yerleşik bulaşık makinesi"
+  steps:
+    - "Bulaşık makinesi, kolu dik kapalı su vanası ve prizden çekilen fiş; panelde durdur tuşu mavi vurgulu"
+    - "Makinenin önündeki zemin birikintisi; yanında karşılaştırma için mavi köpük kümesi ve soluk gri kuruma izi"
+    - "Açık kapının ön görünüşü; kapı contası mavi çerçeveyle vurgulanmış, el conta boyunca ilerliyor, sağda nemli bez"
+    - "Makinenin yan kesiti; kapı hizası kesikli çizgiyle işaretli, hizayı aşan soluk gri tepsi ve içeri alma oku"
+    - "Kapalı makinenin panelinde yanan damla göstergesi ve gövdenin altından çıkan ses dalgaları"
+    - "Tezgâh altı görünümü; musluk bağlantısı, hortum ve sifon kelepçesi üzerinde kesikli halkalarla işaretli ıslaklık noktaları"
+    - "İki bağlantı noktası yakın planda: üstte kuru kağıt havlu sarılı, altta havlunun ıslanan noktası mavi ile vurgulu"
+    - "Fişi takılı makine, kapı altına serilmiş kuru havlu ve gri çarpıyla gösterilen servis sınırı"
 ---
 
 Yıkama bitmiş, mutfağa giriyorsun ve makinenin önünde ya da altında bir su birikintisi seni karşılıyor. İlk refleks paspası kapıp silmek — ama suyun **nereden** geldiğini anlamadan silmek, aynı manzarayı birkaç gün sonra yeniden görmek demek. Bu yazıda sızıntının en sık görülen sebeplerini basitten teknike doğru sıralıyoruz: hangilerine kendin bakabilirsin, hangi noktadan sonra iş servise kalır.

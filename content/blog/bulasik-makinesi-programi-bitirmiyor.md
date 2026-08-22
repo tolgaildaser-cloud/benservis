@@ -30,6 +30,15 @@ faq:
     a: "Tek seferlik iptal zarar vermez; makineler program iptali için tasarlanmıştır ve çoğu model iptalde önce suyu boşaltır. Kapıyı aniden açmak yerine iptal/sıfırlama adımını kullan — içeride sıcak su ve buhar olabilir. Ama makineyi her yıkamada elle kapatmak zorunda kalıyorsan bu artık bir kullanım şekli değil, servise anlatılması gereken bir belirtidir."
 images:
   coverAlt: "Bulaşık makinesinin kumanda paneli yakın plan"
+  steps:
+    - "Panelde program seçimi vurgulu makine, açık kılavuz ve kısa program ile eko programı kıyaslayan iki ilerleme çubuğu"
+    - "Makinenin solundan çıkan mavi ses dalgaları, sağında gri çarpılı sessizlik ve ısı dalgaları; altta dört aşamalı şerit, ısıtma seçili"
+    - "Kapağa dokunan el ve ısı dalgaları; sağda soğuk-sıcak termometre kıyası ve elle yoklanan tabak"
+    - "Kumanda paneli yakın planda, başlat tuşuna basılı tutan el; altta prizden çekilen fiş ve kapatılan su vanası"
+    - "Üstte kolu yatay tam açık vana; altta gri çarpılı keskin kıvrımlı hortum ile mavi tikli düz hortum karşılaştırması"
+    - "İkiye bölünmüş kare: solda makinenin tabanından çevrilerek çıkarılan filtre, sağda akan suyun altında fırçalanan filtre"
+    - "Lavabo sifonu, yavaş süzülen su seviyesi ve makineden gelen mavi tahliye hortumunun sifon bağlantısı; sağda gri çarpılı elde yıkama deterjanı"
+    - "Panelde program seçimi vurgulu makine ve iki ilerleme çubuğu: tikli tamamlanan kısa program, gri çarpılı yarıda duran program"
 ---
 
 Akşam yattın, sabah kalktın — makine hâlâ çalışıyor. Ya da göstergedeki süre bir saattir aynı rakamda duruyor, makine içeride bir şeyler yapıyor ama bir türlü sona ulaşamıyor. "Programı bitirmiyor" şikâyeti, çamaşır-bulaşık dünyasının en yanıltıcı şikâyetlerinden biridir; çünkü bazen gerçek bir arızadır, bazen de makinenin gayet normal davranışıdır. Önce hangisi olduğunu ayıralım, sonra sırayla sebeplere bakalım.

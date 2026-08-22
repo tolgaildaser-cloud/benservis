@@ -30,6 +30,15 @@ faq:
     a: "İki ihtimal var. Bazı makinelerde sertlik ayarı en düşük kademeye alındığında tuz sistemi ve göstergesi devre dışı kalır; suyun gerçekten yumuşak olduğu bölgede bu normaldir. Ama suyun sert olduğu bir bölgede lamba hiç yanmıyor ve bardaklarda kireç filmi görülüyorsa gösterge ya da ayar tarafında sorun olabilir; ayarı kılavuzdan kontrol etmek ilk adımdır."
 images:
   coverAlt: "Mutfakta bulaşık makinesi ve çevresindeki dolaplar"
+  steps:
+    - "Kapağı açık makinenin tabanındaki tuz haznesi kapağı, saat yönünün tersine dönüş okuyla"
+    - "Tuz haznesinin kesiti; üstte gri sert kabuk, altında kesikli çizgiyle işaretli boşluk, yukarıdan bastıran kaşık sapı"
+    - "İkiye bölünmüş kare: solda ilk kullanımda su dolduran sürahi ve tik, sağda gri sürahi ve çarpı ile haznede zaten duran su"
+    - "Huniyle tuz haznesine dolan tuz taneleri ve taşan damlalar; sağ altta gri çarpılı sofra tuzu, kaya tuzu ve deterjan"
+    - "Vidalı hazne kapağı yakın planda; contası mavi halkayla, üzerindeki tuz kristalleri gri işaretli, nemli bez ve tam tur dönüş oku"
+    - "Kapağı açık makinenin tabanında biriken taşan tuzlu su ve dışarı yönelen ok; panelde başlat tuşu vurgulu"
+    - "Açık kullanım kılavuzu ve yanında damla sayısıyla artan su sertliği kademeleri, biri mavi ile seçili"
+    - "Panelinde tuz lambası yanan makine, altında iki dönüş okuyla bir-iki yıkama; sağda gri çarpıyla servis sınırı"
 ---
 
 Panodaki tuz lambası günlerdir yanıyor. Tuz aldın, hazneye doldurdun, kapağını kapattın — lamba yine yanıyor. Akla ilk gelen "sensör bozuldu" oluyor ama bu göstergenin kendine göre bir çalışma mantığı var ve vakaların çoğunda lamba, gayet haklı olduğu için ya da sadece henüz vakti gelmediği için yanmaya devam ediyor. Önce tuzun bu makinede ne işe yaradığına, sonra lambanın neden hemen sönmediğine bakalım.
