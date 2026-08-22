@@ -1,9 +1,16 @@
 ---
 title: "Beko çamaşır makinesi hata kodları: hangi kod ne demek, ne yapmalı"
-description: "Beko çamaşır makinesinde E01, E02, E03, E10, E17, E18 ve H1, H4, H5 kodları ne anlama geliyor? Evde bakılacaklar ve servis sınırı bu rehberde."
+description: "Beko çamaşır makinesinde E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC ne anlama geliyor? Evde bakılacaklar ve servis sınırı bu rehberde."
 slug: "beko-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
+# 🔴 22 Ağu 2026 — KOD BÖLÜMLERİ BAŞTAN YAZILDI (kod tablosu denetimi, TARAMA-1).
+# Eski hâli E01/E02/E03/E05/E06/E10 ve H1/H4/H5 üzerine kurulmuştu; bunların hiçbiri
+# Beko'nun yayımladığı listede yok. H notasyonu 25+ kılavuzda ve 4 destek sayfasında
+# hiç geçmiyor. Kaynak: beko.com.tr/blog/camasir-makinesi-hata-kodlari-rehberi
+# (Arçelik aynı listeyi birebir yayımlıyor).
+# ⛔ `guide` ve `steps` DEĞİŞTİRİLMEDİ — sekiz adım kod-bağımsız, hepsi doğru kalıyor;
+#    gövdedeki **1.–**8. numaralı paragraflar da birebir korundu (rehber denetimi şartı).
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -20,8 +27,8 @@ steps:
   - "Pompa filtresini temizle. Makine kapalı ve fişi çekiliyken ön alt köşedeki pompa filtresi kapağını aç, yere havlu ve altına sığ bir kap koy. Filtreyi çıkarıp bozuk para, toka, tiftik gibi birikintiyi temizle ve yerine sıkıca tak; tahliye hortumunun bükülmediğine de bak."
   - "Köpük ve yük dengesini düzelt. Köpük kodunda makineyi deterjansız kısa bir programda bir-iki kez boş çalıştır ve sonraki yıkamalarda dozu azaltıp otomatik makine deterjanı kullan. Dengesiz yük kodunda çamaşırı elle dağıt, tek parça büyük yüke birkaç havlu ekleyip yeniden dene."
 faq:
-  - q: "Beko çamaşır makinesinde hata kodu neden her modelde aynı anlama gelmiyor?"
-    a: "Beko farklı yıllarda ve farklı serilerde farklı elektronik kartlar kullanır; bu yüzden aynı numaralı kod iki ayrı seride iki ayrı anlama gelebilir. Bu rehberdeki eşleşmeler yaygın serilerde geçerli olanlardır. Kesin karşılığı her zaman kendi makinenin kullanım kılavuzundan teyit et; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
+  - q: "Beko çamaşır makinesi hata kodları kaç tane ve nereden doğrulanır?"
+    a: "Beko kendi sitesinde on kodluk tek bir liste yayımlar: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. Arçelik de aynı listeyi birebir yayımlar, çünkü iki marka aynı grubun elektronik ailesini kullanır. İnternette çok dolaşan E01, E02, E03, E10 gibi iki haneli kodlar ve H1, H4, H5 gösterimi bu listede geçmez; kesin karşılığı her zaman kendi makinenin kullanım kılavuzundan teyit et."
   - q: "Hata kodunu silmek için makineyi fişten çekmek işe yarar mı?"
     a: "Geçici bir takılmaysa evet: makineyi kapatıp fişten çek, birkaç dakika bekle ve yeniden dene. Ama kod tekrar geliyorsa bu bir elektronik hıçkırık değil, gerçek bir durum bildirimi demektir. Kodu tekrar tekrar silip programı zorlamak, altta yatan sorunu büyütebilir; iki denemeden sonra sebebe bakmak gerekir."
   - q: "E17 köpük hatasında ne yapmalıyım?"
@@ -32,11 +39,11 @@ images:
   coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
 ---
 
-Makine yıkamanın ortasında durdu, ekranda E ya da H ile başlayan bir kod yanıp sönüyor ve kılavuz her zamanki gibi ortada yok. İyi haber: bu kodlar rastgele değil, makinenin hangi bölgesinde sorun olduğunu söyleyen kısa mesajlardır. Bu yazıda Beko çamaşır makinelerinde yaygın görülen kodları bölge bölge topluyoruz: hangisi kapıyla, hangisi suyla, hangisi motorla ilgili — ve her birinde evde neye bakabileceğini, nerede durman gerektiğini söylüyoruz.
+Makine yıkamanın ortasında durdu, ekranda bir kod yanıp sönüyor ve kılavuz her zamanki gibi ortada yok. İyi haber: bu kodlar rastgele değil, makinenin hangi bölgesinde sorun olduğunu söyleyen kısa mesajlardır. Bu yazıda Beko'nun **kendi yayımladığı on kodu** tek tek ele alıyoruz: her birinde evde neye bakabileceğini ve nerede durman gerektiğini söylüyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ℹ️ **Önce önemli bir uyarı:** Beko, farklı model serilerinde farklı kod şemaları kullanır; aynı numara iki ayrı seride farklı anlama gelebilir. Aşağıdaki eşleşmeler yaygın serilerde geçerli olanlardır. Ekrandaki kodu her zaman **kendi makinenin kılavuzuyla** teyit et — bu tek adım, yanlış yere bakarak vakit kaybetmeni önler.
+> ⚠️ **Önce bir düzeltme:** İnternette dolaşan Beko listelerinin çoğu **E01, E02, E03, E10** gibi iki haneli kodlar ve **H1, H4, H5** gösterimi sıralar. Bunlar Beko'nun yayımladığı listede geçmez. Gerçek liste on kodludur ve tek hanelidir: **E5, E8, E12, E17, E18, E27, E29, E84, Err, SC.** Arçelik de aynı listeyi birebir yayımlar. Ekrandaki kodu yine de kendi kılavuzunla teyit et.
 
 ## Adım adım: kod geldiğinde evde denenecek ücretsiz kontroller
 
@@ -56,69 +63,69 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **8. Köpük ve yük dengesini düzelt.** Köpük kodunda makineyi deterjansız kısa bir programda bir-iki kez boş çalıştır ve sonraki yıkamalarda dozu azaltıp otomatik makine deterjanı kullan. Dengesiz yük kodunda çamaşırı elle dağıt, tek parça büyük yüke birkaç havlu ekleyip yeniden dene.
 
-## Kapı tarafı: E01
+## Tahliye tarafı: E5
 
-**E01**, yaygın serilerde kapak kilidinin kapanmadığını ya da kilit mekanizmasının kapandığını doğrulayamadığını gösterir. Makine kapıdan emin olmadan asla su almaz; bu yüzden E01 çoğu zaman program hiç başlamadan gelir.
+**E5**, üreticinin kendi ifadesiyle **"pompa tıkalı"** demektir. Makine suyu dışarı atamıyor. Sebep çoğu zaman pompanın kendisi değil, önünü tıkayan birikintidir.
 
-**Kendin kontrol et:** Kapağı aç, contaya sıkışmış çamaşır ucu var mı bak, kapıyı "klik" sesini duyana kadar bastırarak kapat ve programı yeniden başlat. Kapı tam kapandığı hâlde kod sürüyorsa kilit mekanizması ya da elektronik tarafta iş var demektir — orası servis alanıdır.
-
-## Su alma tarafı: E02, E10 ve H4
-
-Bu üç kod aynı bölgeyi işaret eder: makine istediği suya ulaşamıyor.
-
-- **E02** — su alma hatası: makineye su girmiyor ya da çok yavaş giriyor.
-- **E10** — su alma zaman aşımı: makine belirlenen sürede hedef su seviyesine ulaşamadı. Genelde musluk, hortum ya da giriş süzgeci kaynaklıdır; sebep içerideyse su giriş valfi tarafındadır.
-- **H4** — eski serilerde su alma/giriş valfi tarafındaki elektronik arızayı gösterir.
-
-**Kendin kontrol et:** Musluk tam açık mı, evde su var mı, hortum ezilmiş ya da bükülmüş mü? Bu üçü temizse musluğu kapatıp hortumun makine tarafındaki küçük süzgecini kontrol etmek çoğu vakayı çözer. E10 için ayrı ve adım adım bir yazımız var; orada bu kontrollerin hepsini sırayla anlattık.
-
-## Tahliye tarafı: E03 ve H5
-
-- **E03** — yaygın serilerde suyun boşaltılamadığını gösterir.
-- **H5** — eski serilerde pompa arızası anlamına gelir; çoğu zaman sebep pompanın kendisi değil, önünü tıkayan birikintidir.
-
-**Kendin kontrol et:** Ön alt köşedeki pompa filtresi kapağını aç (önce yere havlu ser — su gelir), filtreyi çıkarıp bozuk para, toka, tiftik gibi birikintiyi temizle ve yerine sıkıca tak. Tahliye hortumunun bükülmediğinden ve gider bağlantısının tıkalı olmadığından emin ol. Filtre temiz olduğu hâlde su atmıyorsa pompa motoru ya da elektronik taraf servis işidir.
+**Kendin kontrol et:** Ön alt köşedeki pompa filtresi kapağını aç (önce yere havlu ser ve altına sığ bir kap koy — su gelir), filtreyi çıkarıp bozuk para, toka, tiftik gibi birikintiyi temizle ve yerine sıkıca tak. Tahliye hortumunun bükülmediğinden ve gider bağlantısının tıkalı olmadığından emin ol. Filtre temiz olduğu hâlde su atmıyorsa pompa motoru ya da elektronik taraf servis işidir.
 
 ⚠️ Filtreyi açmadan önce makineyi **kapat ve fişini çek**; içeride su varken elektrikle çalışan hiçbir kontrolü yapma.
 
-## Isıtma tarafı: E05 ve H1
+## Su alma tarafı: E8
 
-- **E05** — yaygın serilerde ısıtma hattını işaret eder: makine suyu ısıtamıyor ya da sıcaklığı doğru ölçemiyor.
-- **H1** — sıcaklık sensörünün (NTC) arızalandığını gösterir; sensör suyun sıcaklığını ölçemeyince makine ısıtmayı doğru yönetemez.
+**E8**, "makine su almıyor" demektir. Makine yıkamaya başlayabilmek için suya ihtiyaç duyar; su gelmediğinde ya da çok yavaş geldiğinde bu kod düşer.
 
-Bu bölgede kullanıcı tarafına düşen kontrol azdır: rezistans, sensör ve kart, gövdenin içindedir.
+**Kendin kontrol et:** Önce en basitinden başla — evde su kesik mi? Değilse musluk tam açık mı, giriş hortumu mobilya arkasında ezilmiş ya da bükülmüş mü? Bu ikisi temizse musluğu kapatıp hortumun makine tarafındaki küçük süzgecini temizlemek vakaların çoğunu kapatır. Dış hattın tamamı temiz olduğu hâlde kod tekrarlıyorsa şüphe su giriş valfine kayar — orası servis alanıdır.
 
-**Kendin kontrol et:** Yalnızca şunu gözle: soğuk yıkama programında bu kod gelmiyor, sıcak programda geliyorsa şüphe ısıtma hattında güçlenir. Bu bilgiyi servise aktarman teşhisi hızlandırır; kapağı açıp içeri girmek sana düşmez.
+## Aquastop: E12
 
-⛔ Rezistans ve sensör değişimi **elektrikli bir iç bölge işidir**; burada kendin-çöz sınırı biter.
+**E12**, "su seviyesi aquastop seviyesinde" demektir. Aquastop, su kaçaklarını önlemek için kurulmuş bir güvenlik sistemidir; makine bir sızıntı algıladığında devreye girer.
 
-## Motor ve denge: E06 ve E18
+**Kendin kontrol et:** Önce **fişi çek**, sonra makinenin altını kontrol et ve su varsa temizle. Ardından makineyi yeniden çalıştırıp sorunun geçip geçmediğine bak. Su tekrar birikiyorsa gerçek bir kaçak vardır ve teşhisi servise aittir.
 
-- **E06** — motor tarafında sorun algılandığını gösterir. Program ortasında tamburun hiç dönmemesi ya da kesik kesik dönmesiyle birlikte gelir.
-- **E18** — dengesiz yük: çamaşır tek tarafa yığılmış ya da tek parça büyük bir yük (yorgan gibi) sıkmayı engelliyor.
+## Tahliye bağlantısı: E27
 
-**Kendin kontrol et:** E18'de kapağı aç, çamaşırı elle dağıt, tek parça büyük yüke birkaç havlu ekleyip yeniden dene — çoğu zaman bu kadar. E06'da ise kullanıcı tarafında yapılacak anlamlı bir şey yoktur; motor, kömür ve sürücü elektroniği servis alanıdır.
+**E27**, "su seviyesi yükselmiyor, kapı kilitli sinyali gelmiyor" demektir. Üreticinin gösterdiği ilk sebep, tahliye hortumunun gidere düzgün bağlanmamış olmasıdır — hortum gidere fazla derin sokulduğunda makine aldığı suyu farkına varmadan geri boşaltır.
 
-## Köpük: E17
+**Kendin kontrol et:** Tahliye hortumunun gider bağlantısını gözden geçir; hortumun ucunun gidere doğru yükseklikte ve düzgün oturduğundan emin ol.
 
-**E17**, tambur içinde aşırı köpük oluştuğunu gösterir. Makine köpüğü atana kadar programı uzatır ya da durdurur. Sebep neredeyse her zaman deterjandır: fazla doz, yanlış tip ya da elde yıkama deterjanı.
+## Köpük ve denge: E17, E18
 
-**Kendin kontrol et:** Makineyi deterjansız kısa bir programda boş çalıştır, köpük kalıntısı temizlensin. Sonraki yıkamalarda dozu azalt. Doz normalken E17 tekrarlıyorsa durumu servise anlat.
+Bu ikisi parça arızası değil, **kullanım kaynaklı** durumlardır. İkisinin de üreticideki karşılığı "sıkma yapmadan program bitti" ile biter.
+
+- **E17** — köpük sebebiyle sıkma yapmadan program bitti. Sebep neredeyse her zaman deterjandır: fazla doz, nemli ortamda beklemiş deterjan ya da elde yıkama deterjanı.
+- **E18** — dengesiz yük sebebiyle sıkma yapmadan program bitti. Tek bir yorgan ya da bir tarafa yığılmış çamaşır tamburu dengesiz bırakır.
+
+**Kendin kontrol et:** E17'de makineyi deterjansız kısa bir programda bir-iki kez boş çalıştır, köpük kalıntısı atılsın; sonraki yıkamalarda dozu azalt. E18'de kapağı aç, çamaşırı elle dağıt; yük azsa birkaç parça ekle. Doz ve yük normalken kod tekrarlıyorsa durumu servise anlat.
+
+## Gerilim, ağ ve uyarı kodları: E29, E84, Err, SC
+
+- **E29** — çalışma gerilimi limit dışı. Şebeke gerilimi makinenin çalışma bandının dışına çıkmış. Üreticinin önerdiği hamle: **o anda aktif olan programı iptal et** (program seçim düğmesini çevirip başka bir program seçerek).
+- **E84** — ağ bağlantısı yapılamıyor. Bu bir arıza değil: HomeWhiz özelliğinin Wi-Fi'a bağlanamadığını söyler. Yıkamayı etkilemez.
+- **Err** — üründe güvenlik algoritması çalışıyor. Önce ekrandaki yazının geçmesini bekle, ardından **1. ve 2. yardımcı fonksiyon tuşlarına** basarak ekranda görüntülenen bilgiyi kontrol et.
+- **SC** — yapılan kontroller sonrasında şikâyet giderilmedi. Bu kod doğrudan **yetkili servise başvur** demektir; evde denenecek bir adım kalmamıştır.
+
+## Aradığın kod listede yoksa
+
+İnternetteki listelerin verdiği kapı kilidi, ısıtma ve motor kodları Beko'nun yayımladığı bu on kodun içinde **yoktur.** Bu, o arızaların olmadığı anlamına gelmez — makinen ısıtmıyor ya da tambur dönmüyor olabilir. Anlamı şu: üretici bu durumlar için kullanıcıya ayrı bir kod göstermiyor. O yüzden kodu değil **belirtiyi** anlat: "soğuk yıkıyor", "tambur hiç dönmüyor", "program başlamıyor" cümleleri servise kodlardan daha çok şey söyler.
 
 ## Kodların özeti
 
-| Kod | Bölge | Kendin bakılır mı |
+| Kod | Üreticinin karşılığı | Kendin bakılır mı |
 |---|---|---|
-| E01 | Kapak kilidi | ✅ Conta/kapanma kontrolü |
-| E02, E10, H4 | Su alma | ✅ Musluk, hortum, süzgeç |
-| E03, H5 | Tahliye/pompa | ✅ Pompa filtresi temizliği |
-| E05, H1 | Isıtma/sensör | ⛔ Servis |
-| E06 | Motor | ⛔ Servis |
-| E17 | Köpük | ✅ Deterjan dozu |
-| E18 | Dengesiz yük | ✅ Çamaşırı dağıt |
+| E5 | Pompa tıkalı | ✅ Pompa filtresi temizliği |
+| E8 | Makine su almıyor | ✅ Musluk, hortum, süzgeç |
+| E12 | Su seviyesi aquastop seviyesinde | ✅ Fişi çek, altını kontrol et |
+| E17 | Köpük sebebiyle sıkma yapılmadı | ✅ Deterjan dozu |
+| E18 | Dengesiz yük sebebiyle sıkma yapılmadı | ✅ Çamaşırı dağıt |
+| E27 | Su seviyesi yükselmiyor | ✅ Tahliye hortumu gider bağlantısı |
+| E29 | Çalışma gerilimi limit dışı | ✅ Programı iptal et |
+| E84 | Ağ bağlantısı yapılamıyor | ✅ Wi-Fi ayarı |
+| Err | Güvenlik algoritması çalışıyor | ✅ Bekle, yardımcı fonksiyon tuşları |
+| SC | Şikâyet giderilmedi | ⛔ Servis |
 
 ## Hangi noktadan sonra servis işi
 
 Musluk, hortum, süzgeç, pompa filtresi, kapı contası, deterjan dozu ve yük dengesi — bunların hepsi senin alanın. Kapağın ötesi, yani rezistans, sensörler, valf, motor ve elektronik kart, hem elektrik hem su barındıran iç bölgedir ve servise aittir. Kodu iki kez silip denedin, evdeki kontrolleri yaptın ve hata üçüncü kez geldiyse artık zorlamayı bırak: ekrandaki kodu ve makinenin ne yaptığını not et, öyle ara — doğru tarif, doğru parçayla gelinmesini sağlar.
 
-E10 hatasını ayrıntılı ele aldığımız Beko çamaşır makinesi E10 hatası yazısında evde denenecek adımların hepsi sırayla var. Cihazının belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.
+Su alma tarafını adım adım ele aldığımız Beko çamaşır makinesi su alamama yazısında evde denenecek kontrollerin hepsi sırayla var. Cihazının belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.

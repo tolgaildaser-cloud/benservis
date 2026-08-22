@@ -38,10 +38,16 @@ import { tabloBul } from "./constants.js";
 export const HATA_KODU_KATMANI = {
   "Çamaşır Makinesi": [
     { giris: "Bosch · Siemens · Neff — E ve F kodları", tip: "kod",
-      anlam: "E16, E17, E18, F21, F23, F63… hangi kod ne demek, hangisi evde çözülür hangisi servis ister.",
+      // 22 Ağu (TARAMA-1): F21 ve F63 çıkarıldı — ikisi de 5 BSH bölge sitesinde ve
+      // 5 kılavuzda yok. BSH'nin tahrik kodu E80. (Yazının gövdesi ayrıca ele alınacak.)
+      anlam: "E16, E17, E18, E23, E80… hangi kod ne demek, hangisi evde çözülür hangisi servis ister.",
       yazi: "bosch-camasir-makinesi-hata-kodlari" },
-    { giris: "Arçelik · Beko · Grundig kodları", tip: "kod",
-      anlam: "Su alma, tahliye, ısıtma, kapı ve motor arızalarının kod karşılıkları.",
+    // 22 Ağu 2026 (TARAMA-1): kod ailesi düzeltildi. Üreticinin çamaşır makinesi listesi
+    // TEK HANELİ (E5·E8·E12·E17·E18·E27·E29·E84·Err·SC); E01–E11 bandı ve H1/H4/H5 yok.
+    // Listede ayrı bir KAPI KİLİDİ ve ayrı bir ISITMA kodu da yok — eski giriş ikisini
+    // de sayıyordu. Grundig kendi kod tablosunu yayımlamadığı için başlıktan çıkarıldı.
+    { giris: "Arçelik · Beko — E5, E8, E12, E17, E18", tip: "kod",
+      anlam: "Üreticinin yayımladığı on kodun karşılığı; hangisi evde çözülür, hangisi servis ister.",
       yazi: "arcelik-camasir-makinesi-hata-kodlari" },
     { giris: "LG — IE, OE, UE, dE", tip: "kod",
       anlam: "LG panelindeki iki harfli kodların anlamı ve hangisini kendin çözebilirsin.",
@@ -72,11 +78,13 @@ export const HATA_KODU_KATMANI = {
       yazi: "camasir-kac-derecede-yikanir" },
 
   // ——— Boşluk dalgası (20 Ağu 2026, YK — 85-konu taraması) ———
-    { giris: "Beko — E ve H kodları", tip: "kod",
-      anlam: "E01, E02, E03, E10, E17, E18 ve H1, H4, H5 kodlarının karşılığı; evde bakılacaklar ve servis sınırı.",
+    { giris: "Beko — E5, E8, E12, E27, E29, Err, SC", tip: "kod",
+      anlam: "Beko'nun yayımladığı on kodun karşılığı; evde bakılacaklar ve servis sınırı.",
       yazi: "beko-camasir-makinesi-hata-kodlari" },
-    { giris: "Beko — E10 (su alamıyor)", tip: "kod",
-      anlam: "Su alamama demek; musluk, hortum ve giriş süzgeci kontrolüyle çoğu zaman evde çözülür.",
+    // 22 Ağu (TARAMA-1): Beko listesinde E10 YOK — su alma kodu E8. Yazının adresi
+    // korundu (arama gerçek), girişi doğrusuna çevrildi.
+    { giris: "Beko — su alamıyor (aranan kod E10, doğrusu E8)", tip: "kod",
+      anlam: "Musluk, hortum ve giriş süzgeci kontrolüyle çoğu zaman evde çözülür.",
       yazi: "beko-camasir-makinesi-e10-hatasi" },
     { giris: "Siemens — E18, F21, E23", tip: "kod",
       anlam: "Her kodun anlamı, hangisinin evde çözüldüğü ve hangi noktada servis gerektiği.",
@@ -129,8 +137,10 @@ export const HATA_KODU_KATMANI = {
   //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
   //    ihlal ediyor (build 21 Ağu'da 3 sayfada yakaladı). Mevcut "…kaç para" yazıları da
   //    aynı sebeple bu ağaçta yok — istisna açılmadı. O yazılar /blog/ tarafında yaşıyor.
-    { giris: "Grundig — E01, E02, E03, E04, E06, E17", tip: "kod",
-      anlam: "Grundig, Arçelik grubunun kod şemasını paylaşıyor; farklar ve tek haneli eski şema ayrımı.",
+    // 22 Ağu (TARAMA-1): Grundig kendi kod tablosunu YAYIMLAMIYOR; kılavuzlarında kod
+    // değil belirti tablosu var. Eski giriş doğrulanmamış altı kod sayıyordu.
+    { giris: "Grundig — kod tablosu yok, belirti tablosu var", tip: "kod",
+      anlam: "Grubun yayımladığı ortak liste, kılavuzdaki belirti-sebep tablosu ve evdeki kontroller.",
       yazi: "grundig-camasir-makinesi-hata-kodlari" },
     { giris: "Kireç ve tambur temizliği (planlı bakım)", tip: "ayar",
       anlam: "Boş bakım yıkaması ne sıklıkta, kapak lastiğinin katları ve suyun sertliğiyle ilişkisi.",
