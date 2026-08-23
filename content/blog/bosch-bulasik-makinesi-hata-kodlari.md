@@ -50,7 +50,7 @@ Bosch bulaşık makinen **E** ile başlayan bir hata kodu gösteriyor. Bu rehber
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> 🚨 **Önce bir düzeltme.** İnternette çok yayılan bir tavsiye var: *"E15'te makineyi ~30° yana yatır, taban suyunu boşalt."* **Bosch'un kendi sayfası bunun tersini söylüyor:** *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."* Bu yazının önceki sürümü de o tavsiyeyi veriyordu; kaldırdık.
+> 🚨 **Önce bir düzeltme.** İnternette çok yayılan bir tavsiye var: *"E15'te makineyi ~30° yana yatır, taban suyunu boşalt."* **Bosch'un kendi sayfası bunun tersini söylüyor:** *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
 
 ## ⚡ En sık karşılaşılan 3 kod
 > **E24** — Pompa tıkanıklığı → 🛠️ kendin

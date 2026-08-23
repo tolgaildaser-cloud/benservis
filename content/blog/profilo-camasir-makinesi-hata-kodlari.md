@@ -123,7 +123,7 @@ Bu bölüm bilerek burada. **"F21 = motor kömürü"** eşleşmesi internette ç
 | **F61** | Yok. Kapı kodları **E16/F16** ve **E34/F34** |
 | **F63** | Yok |
 
-Bunları listemizden çıkardık. Motor tarafında gerçekten bir sorun varsa belirtisi
+Motor tarafında gerçekten bir sorun varsa belirtisi
 nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez.
 
 **Kendin kontrol et:** Tek güvenli deneme reset: makineyi kapat, fişi bir dakika çek,

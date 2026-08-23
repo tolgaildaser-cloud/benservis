@@ -113,7 +113,7 @@ Bu bölüm bilerek burada. **"Bosch F21 motor kömürü"** eşleşmesi internett
 | **F61** | Yok. Kapı kodları **E16/F16** ve **E34/F34** |
 | **F63** | Yok |
 
-Bunları listemizden çıkardık. Ekranında gerçekten bu numaralardan birini görüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et — çünkü yanlış kod, yanlış parçaya ve gereksiz masrafa yönlendirir.
+Ekranında gerçekten bu numaralardan birini görüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et — çünkü yanlış kod, yanlış parçaya ve gereksiz masrafa yönlendirir.
 
 ## Hata kodu nasıl sıfırlanır?
 Çoğu modelde: program düğmesini **"Kapalı"ya** al, makineyi **fişten 1 dakika** çek, tekrar tak. Arızanın kaynağı düzelmediyse kod tekrar çıkar.

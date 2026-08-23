@@ -119,30 +119,21 @@ Arçelik ve Beko bu tabloyu kendi sitelerinde **birebir aynı** yayımlıyor. Yi
 | **E8** | Buzmatik hava sensörü hatası |
 | **E9** | Buzmatik motor hatası |
 
+> 📌 **E2 ile E3 kolayca karışır.** İkisi de soğutucu bölme tarafına bakar; fark, sensörün nerede durduğudur — **E2** soğutma serpantinini (evaporatör), **E3** bölme içindeki havayı ölçer.
+>
 > 📌 **Liste atlamalı.** `E6`, `E7`, `E21`, `E22` ve `E23` üreticinin yayımladığı tabloda **yok**. İnternette bu numaralara verilen karşılıkların dayanağı da yok.
 
 ## "Kodlar toplanarak üretilir" iddiasının durumu
 
-İnternette çok yayılan bir açıklama var: kartın üç sensörü izlediği ve birden fazlası hata verdiğinde ekrana **toplamlarının** düştüğü — yani `E3 = E1 + E2`, `E7 = üçünün toplamı` gibi. Bu yazının önceki sürümü de bu şemayı anlatıyordu.
+İnternette çok yayılan bir açıklama var: kartın üç sensörü izlediği ve birden fazlası hata verdiğinde ekrana **toplamlarının** düştüğü — yani `E3 = E1 + E2`, `E7 = üçünün toplamı` gibi.
 
 **Böyle bir mekanizma hiçbir üretici belgesinde geçmiyor.** Ve tablonun kendisi de bunu doğrulamıyor: üreticiye göre `E2` **fresh food evaporatör sensörü**, `E3` ise **fresh food hava sensörü** demek — ikisi de ayrı, tek başına arızalar. `E6` ve `E7` ise listede hiç yok.
 
 Yüksek bir numara gördüğünde de aynı şey geçerli: `E17` "flap fan hatası" demektir, "on yedi şey birden bozuldu" değil.
 
-## Daha önce yazmadığımız iki kod: E2 ve E3
+## S ya da D ile başlayan bir kod gördüysen
 
-Bu yazının önceki sürümü **E2 ve E3 için "kaynaklar birbirini tutmuyor, yazmıyoruz"** diyordu. Bu gerekçe hatalıydı: iki kod da üreticinin kendi resmî listesinde ve servis el kitabında net olarak tanımlı.
-
-- **E2** — fresh food bölmesi **evaporatör** sensörü hatası
-- **E3** — fresh food bölmesi **hava** sensörü hatası
-
-İkisi de soğutucu bölme tarafına bakar. Aradaki fark, sensörün nerede durduğudur: biri soğutma serpantinini, diğeri bölme içindeki havayı ölçer.
-
-Doğrulanamayan bir kodu yazmamak doğru bir ilkedir — ama doğrulanabilir bir kodu "doğrulanamıyor" diye atlamak da bir hatadır. Burada ikincisi olmuş.
-
-## S ve D ile başlayan bildirimler
-
-Bu yazının önceki sürümü **S1, S2, S5** ve **D1, D2, D3, D6** kodlarını da veriyordu. Bu numaralar üreticinin yayımladığı listede ve taranan servis el kitaplarında **geçmiyor**; anlamları doğrulanamadığı için çıkarıldı.
+İnternette bu markaya **S1, S2, S5** ve **D1, D2, D3, D6** gibi kodlar da atfediliyor. Bu numaralar üreticinin yayımladığı listede ve taranan servis el kitaplarında **geçmiyor**.
 
 Ekranında E dışında bir harfle başlayan bir bildirim varsa tek güvenilir kaynak kendi modelinin kullanım kılavuzudur.
 

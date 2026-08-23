@@ -43,7 +43,7 @@ Akşam bulaşığını yükledin, program başladı ve birkaç dakika sonra maki
 >
 > *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
 >
-> Bu yazının önceki sürümü de o tavsiyeyi veriyordu, üstelik adım adım. Kaldırdık ve yerine üreticinin kendi talimatını koyduk. Suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
+> Suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
