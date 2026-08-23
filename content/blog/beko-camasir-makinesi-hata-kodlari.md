@@ -37,6 +37,15 @@ faq:
     a: "Çoğu zaman değildir. Tek bir yorgan ya da bir tarafa yığılmış çamaşır, sıkma sırasında tamburu dengesiz bıraktığı için makine kendini korumaya alır ve E18 verir. Çamaşırı elle dağıtıp birkaç parça daha ekleyerek yeniden dene. Neredeyse boş ya da dengeli yüklerde bile sürekli tekrarlıyorsa amortisör veya sensör tarafına servisin bakması gerekir."
 images:
   coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
+  steps:
+    - "Ekrandaki kodun yanına hangi adımda durduğunu ve o sırada ne yapıldığını not almayı gösteren çizim"
+    - "Aynı kod numarasının iki farklı seride farklı karşılığı olabileceğini iki kılavuzla gösteren çizim"
+    - "Fişi çekip bekledikten sonra iki denemeyle sınırlı kalmak gerektiğini sayaçla gösteren çizim"
+    - "Program hiç ilerlememişken gelen kapak kodunu ve kapağı klik sesine kadar bastırmayı gösteren çizim"
+    - "Su alma kodunun üç sebebini — yarım açık musluk, evde su olmaması, ezik hortum — yan yana gösteren çizim"
+    - "Giriş süzgecinin hortumun makine tarafındaki ucunda olduğunu ve akan suda fırçalanışını gösteren çizim"
+    - "Pompa filtresindeki birikinti ile tahliye hortumunun bükümünü tek karede gösteren çizim"
+    - "Aşırı köpük için deterjansız boş program, dengesiz yük için çamaşırı elle dağıtmayı gösteren çizim"
 ---
 
 Makine yıkamanın ortasında durdu, ekranda bir kod yanıp sönüyor ve kılavuz her zamanki gibi ortada yok. İyi haber: bu kodlar rastgele değil, makinenin hangi bölgesinde sorun olduğunu söyleyen kısa mesajlardır. Bu yazıda Beko'nun **kendi yayımladığı on kodu** tek tek ele alıyoruz: her birinde evde neye bakabileceğini ve nerede durman gerektiğini söylüyoruz.

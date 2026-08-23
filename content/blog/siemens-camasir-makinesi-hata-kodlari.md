@@ -39,6 +39,15 @@ faq:
     a: "Evet. Siemens ve Bosch aynı grubun (BSH) ortak platformunu kullanır; E/F kodları iki markada da aynı anlama gelir. Bosch için yazdığımız kod listesi Siemens'te, Siemens için yazdıklarımız Bosch'ta da geçerlidir."
 images:
   coverAlt: "Çamaşır makinesinin program kadranı ve gösterge penceresinin yakın planı"
+  steps:
+    - "Aynı numaranın yeni modellerde E, eski modellerde F önekiyle gösterildiğini iki ekranla karşılaştıran çizim"
+    - "Program düğmesini kapatma, fişi bir dakika çekme ve yeniden başlatma sırasını üç adımda gösteren çizim"
+    - "Alt kapağı açmadan önceki üç şartı — fiş çekili, cihaz soğuk, havlu ve sığ kap hazır — gösteren çizim"
+    - "Tahliye filtresinin çevrilerek çıkarılışını ve klik sesiyle oturana kadar geri takılışını gösteren çizim"
+    - "Tahliye hortumunun bükümünü ve gider ağzına bağlandığı noktayı iki ayrı yakın planda gösteren çizim"
+    - "Makinenin musluğunu ve akışın evin genelinde zayıf olup olmadığını başka bir muslukta denemeyi gösteren çizim"
+    - "Süzgecin musluk tarafındaki eşini, hortumun o uçtan ayrılıp akan suda temizlenişiyle gösteren çizim"
+    - "Makinenin altındaki ıslaklık izine bakmayı ve fazla deterjan kullanımını not etmeyi gösteren çizim"
 ---
 
 Program ortasında makine durdu, ekranda **E18** yazıyor; ya da çamaşırlar sırılsıklam çıktı ve panelde başka bir kod yanıp sönüyor. Siemens çamaşır makineleri arızayı **E** ya da **F** önekli kodlarla bildirir ve bu kodların bir kısmı beş dakikalık bir kontrolle çözülürken bir kısmı net biçimde servis işidir. Bu rehberde en sık çıkan Siemens kodlarını, anlamlarını ve aradaki sınırı topladık.

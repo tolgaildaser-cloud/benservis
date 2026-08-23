@@ -30,6 +30,15 @@ faq:
     a: "Hayır, ikisi ayrı şikâyetlerdir. Temiz yıkamama, tabaklarda yemek artığı ve yağ kalmasıdır; genelde filtre, püskürtme kolları ya da deterjan tarafına işaret eder. Bardak bulanıklığı ise bulaşık aslında temizken camın üstünde film ya da matlaşma görünmesidir ve su kimyası ile ayarlarla ilgilidir."
 images:
   coverAlt: "Bulaşık makinesi sepetinde duran tabak ve bardaklar"
+  steps:
+    - "Bulanık bir bardağın sirke dolu bir kaba batırılışını ve sirkeli bezle silinişini gösteren çizim"
+    - "Testten sonra temizlenen ve değişmeyen iki bardağı, kireç filmi ile cam korozyonunun yüzey kesitleriyle karşılaştıran çizim"
+    - "Tuz haznesinin yeri ile gevşek kapağın yıkama suyuna tuz karıştırıp yeni leke bırakmasını zincir hâlinde gösteren çizim"
+    - "Su sertliği ölçeğinde bölge değerine kadar olan doğru aralığı ve üstündeki aşırı yumuşatma bölgesini gösteren çizim"
+    - "Damla izli ve gökkuşağı görünümlü iki bardağı, parlatıcı dozunu artırma ve azaltma yönleriyle karşılaştıran çizim"
+    - "Sabit dozlu tablet ile ölçüsü elle belirlenen toz deterjanı, paket ölçüsü ve fazla doz çizgisiyle karşılaştıran çizim"
+    - "Tabandaki filtre ile püskürtme kollarını, zayıf durulamanın kaynağı olarak yan yana gösteren çizim"
+    - "Cam programının seçili olduğu program şeridini ve tek ayar değiştirip birkaç yıkama bekleme kuralını gösteren çizim"
 ---
 
 Bulaşıklar temiz çıkıyor aslında — tabaklarda yemek artığı yok, yağ yok. Ama bardaklar ışığa tutunca bulanık: üzerlerinde beyaz bir film, su damlası izleri ya da gökkuşağı gibi mat bir perde var. Bu şikâyet "makine temiz yıkamıyor" arızasıyla karıştırılır ama farklı bir konudur: sorun kirde değil, **su kimyasında ve ayarlarda**. Ve burada baştan dürüst olmak gereken bir ayrım var — bulanıklığın bir türü tamamen düzelir, bir türü ise geri dönmez. Önce hangisiyle karşı karşıya olduğunu bulalım.

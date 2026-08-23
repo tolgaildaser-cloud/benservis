@@ -29,6 +29,14 @@ faq:
     a: "Reset kodu siler ama arızayı tamir etmez. Kod bir daha gelmiyorsa büyük ihtimalle geçici bir elektronik takılmaydı ve sorun yoktur. Kısa aralıklarla tekrar geliyorsa cihaz sana ısrarla aynı şeyi söylüyor demektir; bu durumda resetlemeye devam etmek yalnızca teşhisi geciktirir."
 images:
   coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"
+  steps:
+    - "Ekranda E harfi ile 8 rakamının karışabileceğini ve paneli telefonla fotoğraflamayı gösteren çizim"
+    - "Geniş ve sürekli açılan kapı ile az açılan kapıyı, içeride kalan soğuk yük üzerinden karşılaştıran çizim"
+    - "Fişin çekilip 5-10 dakika beklenmesini saat ile gösteren çizim"
+    - "Fiş takıldıktan sonra kodun geri gelmemesi ile geri gelmesini iki ayrı sonuç olarak gösteren çizim"
+    - "Kılavuz elde yoksa model numarasıyla üreticinin destek sayfasından kılavuz indirmeyi gösteren çizim"
+    - "Bozulabilir yiyeceklerin başka bir soğuk ortama taşınmasını ve sıcak yiyecek konmamasını gösteren çizim"
+    - "Sensör, fan ve defrost ısıtıcısının panellerin arkasında olduğunu ve servise ne söyleneceğini gösteren çizim"
 ---
 
 Akşam buzdolabından su alacaksın, panelde sıcaklık yerine E harfli bir kod yanıp sönüyor. İçeride üç günlük yemek var, cihaz ses çıkarıyor ama soğutup soğutmadığından emin değilsin. İlk refleks panik ya da hemen servis aramak oluyor; oysa kodların çoğu "cihaz bozuldu" değil, "şu parçamdan doğru veri alamıyorum" mesajıdır. Bu yazıda kod mantığını, Türkiye'de en yaygın iki markanın doğrulanmış kodlarını ve hangi noktadan sonra işin servise kaldığını anlatıyoruz.
