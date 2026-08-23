@@ -480,6 +480,13 @@ ACİLİYET ÖLÇÜTÜ (belirtiye göre değerlendir, varsayılan "orta"ya KAÇMA
 - "düşük": kozmetik/konfor sorunu, risk yok, beklemeye dayanır.
 - "belirsiz": belirti teşhis için yetersiz / arıza netleşmiyor. kararOnerisi "belirsiz" ise aciliyet de MUTLAKA "belirsiz" olmalı — uydurma aciliyet verme, ek soru iste.
 
+KENDİN ÇÖZEBİLİR Mİ ÖLÇÜTÜ (YK #31 — varsayılan "true"ya KAÇMA):
+- "mumkun": true = YALNIZ ücretsiz, alet gerektirmeyen, BAKIM/KONTROL/GÖZLEM seviyesi bir iş varsa. Kapak, çekmece, filtre kapağı, pompa filtresi, musluk, hortum, süzgeç, priz, sigorta, program/ayar ve gözlem bu seviyededir.
+- "mumkun": false = parça DEĞİŞİMİ, gövde/panel SÖKÜMÜ, vida çözme, şebeke gerilimli hat (rezistans, motor, elektronik kart, açma-kapama anahtarı, su giriş valfi, kapak kilidi) ya da GAZ devresi gerekiyorsa. Bu durumda "ipuclari" boş dizi [] olsun.
+- "ipuclari" içinde ŞU İŞLER YASAK: sökme, vida/tornavida kullanımı, klemens ya da kablo bağlantısı, kondansatör, enjektör, gaz vanası/karışım ayarı, arka kapak ya da panel açma, cihazı yatırma/eğme.
+- Cihazın İÇİNE bakmayı gerektiren hiçbir adım ipucu olamaz; "gözlem" dışarıdan bakmaktır.
+- EMİN DEĞİLSEN false VER. Bu bilerek asimetrik bir kural: yanlış "true" kullanıcıyı elektriğin ve suyun bir arada olduğu bir bölgeye çeker; yanlış "false" ise yalnızca bir butonu eksik gösterir.
+
 Teşhis yap. SADECE şu JSON'u döndür, başka hiçbir şey yazma:
 
 {
@@ -688,7 +695,16 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     
               {/* Kendin çözmek ister misin? — "Tamir ettirmek ister misin?" ile AYNI format.
                   İki güvenlik kapısı korunuyor: yalnız kendinCozebilirMi.mumkun=true iken ve
-                  yalnız küratörlü haritada rehber karşılığı varsa çıkar; ikisi yoksa blok yok. */}
+                  yalnız küratörlü haritada rehber karşılığı varsa çıkar; ikisi yoksa blok yok.
+
+                  📌 23 Ağu 2026 — İKİ KAPI DA ARTIK TANIMLI:
+                  ① BİRİNCİ KAPI (bu satır): 22 Ağu taramasına kadar promptta
+                     `kendinCozebilirMi.mumkun` için TEK BİR sınır cümlesi yoktu; YK #31 promptta
+                     hiç geçmiyordu. Yani model "mümkün"ün ne demek olduğunu kendi kestiriyordu.
+                     Artık "KENDİN ÇÖZEBİLİR Mİ ÖLÇÜTÜ" bloğu promptta (bkz. yukarısı) ve
+                     emin olunamayan durumda `false` vermeyi ŞART koşuyor.
+                  ② İKİNCİ KAPI (rehberBul): 23 Ağu'da (PR #112) haritadaki 20 dış söküm
+                     rehberi kaldırıldı; artık yalnız kendi bakım-seviyesi yazılarımız var. */}
               {(() => {
                 if (!sonuc.kendinCozebilirMi?.mumkun) return null;
                 const r = rehberBul(cihaz, sonuc.olasiArizalar?.[0]?.ad);
