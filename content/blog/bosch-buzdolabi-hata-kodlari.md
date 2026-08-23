@@ -82,7 +82,7 @@ Bu mod genellikle temizlik sırasında ya da panele yanlışlıkla basılmasıyl
 
 ## Peki harfli kodlar?
 
-Bosch buzdolaplarında harfli kodlar da vardır, ama tablo model ailesine göre değişir ve dolaşımdaki listeler aynı kod için birbiriyle çelişen karşılıklar veriyor. Birden çok bağımsız kaynakla doğrulayabildiğimiz tek kod **E1**: sıcaklık sensörü hattında bir sorun olduğunu bildirir. Kaynakların hangi bölmenin sensörü olduğu konusunda bile ayrıştığını dürüstçe söyleyelim — bu yüzden E1'i "bir sıcaklık sensörü veri gönderemiyor" diye okumak doğru olur.
+Bosch buzdolaplarında harfli kodlar da vardır ama tablo model ailesine göre değişir. Birden çok bağımsız kaynakla doğrulayabildiğimiz tek kod **E1**: sıcaklık sensörü hattında bir sorun olduğunu bildirir. Hangi bölmenin sensörü olduğu kaynaklar arasında ayrıştığı için E1'i "bir sıcaklık sensörü veri gönderemiyor" diye okumak doğru olur.
 
 Diğer kodlar için tek güvenilir adres kılavuzun kendisidir. Uydurma bir eşleştirme seni yanlış parçaya, gereksiz masrafa ve kaybedilmiş zamana götürür; o riski almıyoruz.
 

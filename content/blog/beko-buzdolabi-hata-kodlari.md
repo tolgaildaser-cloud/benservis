@@ -36,7 +36,7 @@ faq:
     a: "Genellikle eder ama performansı düşerek eder. E4, karlanmayı eriten defrost ısıtıcısını ya da onun termal sigortasını işaret eder; kompresör çalışmaya devam ettiği için cihaz bir süre daha soğutur. Ancak evaporatör üzerindeki buz kalınlaştıkça hava kanalları daralır ve özellikle soğutucu bölme belirgin biçimde ılıklaşır. Bu yüzden E4'ü ertelemek, tabloyu iyileştirmez."
   - q: "Fişi çekip buz çözdürmek kodu tamamen giderir mi?"
     a: "Kodu geçici olarak silebilir ama sebebini ortadan kaldırmaz. Buz çözüldüğünde fan yeniden rahat döner ve cihaz bir süre normal çalışır; buzu üreten asıl neden defrost hattındaysa aynı kod haftalar içinde geri gelir. Buz çözdürmeyi kalıcı çözüm değil, hem yiyeceği kurtaran hem de teşhisi netleştiren bir ara adım olarak düşün."
-  - q: "Listelerde gördüğüm E5, E6, E7 kodları neden birbirini tutmuyor?"
+  - q: "Ekranımdaki kodun karşılığını nereden kesin öğrenirim?"
     a: "Çünkü Beko buzdolaplarında kod şeması model ailesine göre değişir ve internetteki listeler çoğu zaman hangi seriyi anlattığını söylemez. Aynı kod bir seride tek bir sensörü, başka bir seride birden fazla sensörün birleşimini bildirebilir. Bu yüzden düşük kodların ötesine geçtiğinde tek güvenilir kaynak cihazının kendi kullanım kılavuzudur; kodu ve model numarasını birlikte servise iletmek de aynı işi görür."
 images:
   coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"

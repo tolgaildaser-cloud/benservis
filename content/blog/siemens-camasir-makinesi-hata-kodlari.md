@@ -115,7 +115,7 @@ Makine bir sızıntı algılamış ve alt taban tavasına su inmiştir; güvenli
 
 ## Kodun bu listede yok mu?
 
-Siemens yüzlerce model üretir; bazı kodlar yalnız belirli serilerde çıkar ve anlamı modele göre değişir. Doğrulayamadığımız koda uydurma bir anlam vermeyiz — yanlış teşhis sana pahalıya patlar. Ekrandaki kodu ve cihazının model bilgisini Benservis'e yaz; olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyet bandını ücretsiz gör.
+Siemens yüzlerce model üretir; bazı kodlar yalnız belirli serilerde çıkar ve anlamı modele göre değişir. Ekrandaki kodu ve cihazının model bilgisini Benservis'e yaz; olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyet bandını ücretsiz gör.
 
 ## Hangi noktadan sonra servis işi?
 

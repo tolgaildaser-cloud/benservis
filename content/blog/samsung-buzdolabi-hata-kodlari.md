@@ -41,7 +41,7 @@ images:
   coverAlt: "Buzdolabı kapağındaki gösterge paneli"
 ---
 
-Samsung buzdolapları panel konusunda konuşkandır: bir sensör veri gönderemediğinde ya da bir fan dönmediğinde ekrana 5E, 6E, 22E gibi bir kod düşer. Sorun şu ki bu kodların dili kullanıcıya hiçbir şey söylemez ve internette her listede farklı bir karşılık dolaşır. Bu yazıda yalnızca birden çok kaynakla doğrulayabildiğimiz kodları anlatıyoruz; emin olamadıklarımızı da dürüstçe söylüyoruz. Bir de neredeyse arıza sanılan ama arıza olmayan meşhur bir ekran var: OF OF.
+Samsung buzdolapları panel konusunda konuşkandır: bir sensör veri gönderemediğinde ya da bir fan dönmediğinde ekrana 5E, 6E, 22E gibi bir kod düşer. Sorun şu ki bu kodların dili kullanıcıya kendi başına hiçbir şey söylemez. Bu yazıda kodların karşılıklarını topladık. Bir de neredeyse arıza sanılan ama arıza olmayan meşhur bir ekran var: OF OF.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

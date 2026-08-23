@@ -77,7 +77,7 @@ Er ile başlamayan iki harfli mesajlar ise arıza bildirimi değil koruma bildir
 
 ## Arçelik klimalarda CH serisi
 
-Burada da dürüst olmak gerekiyor, çünkü bu markada yaygın bir yanlış var: **Arçelik'in yayımladığı tek klima kod tablosu CH serisidir.** İnternette çok dolaşan **E** ve **P** serisi listeler Arçelik klima kullanım kılavuzlarında ve Arçelik'in kendi kod sayfasında geçmez; markadan bağımsız genel OEM tablolarıdır ve birbirinden kopyalanırken anlamları kaymıştır.
+Arçelik'in yayımladığı klima kod tablosu **CH serisidir** ve otuz dört kod içerir.
 
 CH tablosu otuz dört kod içerir ve `CH01` ile `CH93` arasında **atlamalı** gider — yani CH07, CH08 ya da CH11 gibi numaralar tabloda bulunmaz. En sık görülenlerden birkaçı:
 

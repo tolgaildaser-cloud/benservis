@@ -38,7 +38,7 @@ faq:
   - q: "Bosch çamaşır makinesinde köpük (kabarcık) işareti ne demek?"
     a: "Köpük/kabarcık sembolü aşırı köpük algılandığını gösterir; bir hata kodu değildir. Daha az ve makineye uygun deterjan kullan — program köpüğü atmak için kendini uzatabilir. Sürekli çıkıyorsa deterjan dozunu ve cinsini gözden geçir."
   - q: "Ekrandaki kod bu listede yok, ne yapmalıyım?"
-    a: "Bosch yüzlerce model üretir ve yayımladığı liste on kodludur. Bu listenin dışında kalan numaraların anlamını uydurmayız; yanlış teşhis pahalıya patlar. Ekrandaki kodu ve cihaz modelini Benservis'e yaz, olası arızayı ve tahmini maliyeti saniyede söyleyelim."
+    a: "Bosch yüzlerce model üretir ve yayımladığı liste on kodludur. Ekrandaki kodu ve cihaz modelini Benservis'e yaz, olası arızayı ve tahmini maliyeti saniyede söyleyelim."
 images:
   coverAlt: "Çamaşır odasında yan yana duran iki ön yüklemeli makine ve arkalarındaki mavi duvar"
 ---

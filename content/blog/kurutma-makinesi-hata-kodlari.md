@@ -61,7 +61,7 @@ Isı pompalı ve kondanserli kurutucularda hava kapalı bir devrede döner: neml
 
 ## Arçelik kurutma makinelerinde kod değil sembol
 
-Arçelik'in kurutma makinesi kullanma kılavuzlarında E ile başlayan bir arıza kodu listesi yok — sorun giderme bölümü baştan sona belirtiler ve **panel sembolleri** üzerinden ilerliyor. İnternette dolaşan üçüncü taraf listeler ise aynı numaraya birbirinden farklı anlamlar veriyor. Doğrulayamadığımız bir karşılığı yazıp seni yanlış parçaya yönlendirmektense üreticinin fiilen kullandığı dili veriyoruz.
+Arçelik'in kurutma makinesi kullanma kılavuzlarında E ile başlayan bir arıza kodu listesi yok — sorun giderme bölümü baştan sona belirtiler ve **panel sembolleri** üzerinden ilerliyor. Bu yazı da üreticinin fiilen kullandığı dili izliyor.
 
 **Su tankı uyarısı.** Düz yanıyorsa program bitmiştir ve tankın boşaltılması gerekir; bu bir arıza değil, her kurutmadan sonraki rutindir. Yanıp sönüyorsa tank program sırasında dolmuştur ve makine kendini korumak için durmuştur — suyu boşaltıp başlat düğmesine bastığında program kaldığı yerden devam eder.
 

@@ -60,7 +60,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 Vestel klimalarda mesaj iç ünitenin ön yüzündeki göstergede belirir ve gösterim biçiminin kendisi standarttır: mesaj **önce o koda özel sayıda yanıp söner, ardından otuz beş ile kırk saniye arası sabit kalır.** Sorun giderilene kadar bu tur tekrarlanır — yani mesajı bir kere kaçırmak sorun değil.
 
-Hata mesajları **Er** ibaresi ve ardından gelen iki haneli sayı biçimindedir. Burada dürüst olmak gerekiyor: **markanın kullanım kılavuzları bu sayıların tek tek karşılığını kullanıcıya açmıyor.** Onun yerine net bir talimat veriyor — cihaza herhangi bir şey yapma, yetkili servisle iletişime geç. Bu yüzden bu yazıda Er sayılarının uydurma bir karşılığını vermiyoruz. Sayıyı doğru not etmek yine de değerlidir; servis için teşhisi kısaltan asıl bilgi odur.
+Hata mesajları **Er** ibaresi ve ardından gelen iki haneli sayı biçimindedir. Markanın kullanım kılavuzları bu sayıların tek tek karşılığını kullanıcıya açmıyor; onun yerine net bir talimat veriyor — cihaza herhangi bir şey yapma, yetkili servisle iletişime geç. Sayıyı doğru not etmek yine de değerlidir; servis için teşhisi kısaltan asıl bilgi odur.
 
 ## Koruma mesajları: arıza olmayanlar
 

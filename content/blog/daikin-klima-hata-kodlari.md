@@ -26,8 +26,8 @@ faq:
     a: "U0, sistemdeki soğutucu akışkanın azaldığını bildirir. Arkasında çoğu zaman bir kaçak ya da eksik şarj vardır ve cihaz bu durumda soğutmayı yeterince yapamaz. Kodla birlikte klimayı zorlamak kompresörü yorar, o yüzden cihazı kapatmak doğru olur. Soğutucu devresi basınçlı ve kapalı bir sistemdir; hem kaçak arama hem de dolum yetkili kişinin işidir."
   - q: "A5 kodunu gördüm, servis çağırmadan bir şey yapabilir miyim?"
     a: "Evet, A5 kullanıcının en çok şansı olan kodlardan biridir. Bu kod soğutmada donma korumasını, ısıtmada ise yüksek basınç kontrolünü bildirir ve Daikin'in kendi arıza tablosunda muhtemel sebep olarak iç ünite hava filtresinin tıkanması ile hava akışının kısa devre yapması gösterilir. Filtreyi çıkarıp temizlemek ve iç ünitenin üfleme yolunu kapatan perde, mobilya gibi engelleri kaldırmak bu kodun önemli bir kısmını ücretsiz kapatır. Kod filtre temizliğinden sonra da geliyorsa sensör tarafı gündeme gelir ve teşhis servise kalır."
-  - q: "İnternette bulduğum Daikin kod listeleri neden birbirini tutmuyor?"
-    a: "Çünkü Daikin tek bir ürün ailesi değil: duvar tipi ev klimalarıyla salon tipi, kanallı ve çoklu iç üniteli sistemler aynı harf-rakam mantığını kullansa da tablonun kapsamı ve bazı kodların karşılığı seriye göre değişir. Üstelik dolaşan listelerin bir kısmı markadan bağımsız genel tablolardır. Biz bu yazıda yalnızca birden çok kaynakla aynı şekilde doğrulayabildiğimiz kodları yazdık; çelişen kodları hiç yazmadık. Kesin tablo cihazının kullanım kılavuzundadır."
+  - q: "Ekranımdaki kodun karşılığını nereden kesin öğrenirim?"
+    a: "Daikin tek bir ürün ailesi değil: duvar tipi ev klimalarıyla salon tipi, kanallı ve çoklu iç üniteli sistemler aynı harf-rakam mantığını kullansa da tablonun kapsamı ve bazı kodların karşılığı seriye göre değişir. Bu yazıda birden çok kaynakla aynı şekilde doğrulanan kodlar var. Kesin tablo cihazının kullanım kılavuzundadır."
 images:
   coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---

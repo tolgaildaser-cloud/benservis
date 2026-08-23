@@ -26,8 +26,8 @@ faq:
     a: "Hayır, tek bir kodun iki yarısıdır. Samsung klimalarda bazı bildirimler göstergede önce harf grubunu sonra iki haneli sayıyı gösterip döner. C1 ile birlikte yanan 54, fanın dönmediğini bildirir. Bu koda bakarken iki parçayı birlikte not etmek şart, çünkü aynı harfle farklı sayılar bambaşka anlamlara gelir. Bazı model serilerinde aynı bildirim C1 yerine E1 harf grubuyla görünür."
   - q: "Fan hatası aldım ama klima bir süre sonra normale döndü, servise gerek var mı?"
     a: "Bu ayrımı üretici kendi destek içeriğinde net yapıyor. Fan hatası ara ara gelip kayboluyorsa, iç ünite fan motoru besleme gerilimi normal aralığın dışına çıktığı için kendini koruma moduna almış olabilir; gerilim düzelince sorun geçer. Ama cihazı kapatıp açtığında hata on saniye içinde geri geliyorsa fan motoru ya da kart tarafında kalıcı bir sorun var demektir ve bu teşhis servise aittir. İki durumu ayırmanın pratik yolu, kapat-aç denemesinden sonra kodun ne kadar sürede döndüğünü ölçmektir."
-  - q: "İnternetteki Samsung klima kod listeleri neden farklı farklı?"
-    a: "Çünkü dolaşan listelerin bir kısmı markadan bağımsız genel tablolardır ve Samsung'a ait değildir. Bir de gerçek bir ayrım var: duvar tipi ev klimalarıyla çoklu iç üniteli ticari sistemler farklı şema kullanır, ticari tarafta kodlar üç haneli olur ve karşılıkları örtüşmez. Biz bu yazıda yalnızca üreticinin kendi destek içeriğinde birden çok bölgede aynı şekilde geçen kodları yazdık. Kesin tablo cihazının kullanım kılavuzundadır."
+  - q: "Ev tipi ve ticari Samsung klimalarda kodlar aynı mı?"
+    a: "Hayır. Duvar tipi ev klimalarıyla çoklu iç üniteli ticari sistemler farklı şema kullanır; ticari tarafta kodlar üç haneli olur ve karşılıkları ev tipiyle örtüşmez. Bu yazıdaki tablo ev tipi içindir ve üreticinin kendi destek içeriğinde birden çok bölgede aynı şekilde geçen kodlardan oluşur. Kesin tablo cihazının kullanım kılavuzundadır."
 images:
   coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
@@ -105,7 +105,7 @@ Bazı model serilerinde sensör bildirimleri sayı eşliği olmadan tek başına
 
 ## Yazmadığımız kodlar
 
-Samsung klima için dolaşan listelerde tek harfli E kodlarına gaz basıncı, kompresör aşırı yükü gibi karşılıklar veriliyor. Bunları buraya kopyalamadık: elimizdeki kaynaklar bu kodlarda birbirini tutmadı ve üreticinin kendi destek içeriğinde bu karşılıklar geçmiyor. Aynı şekilde çoklu iç üniteli ticari sistemlerin üç haneli kodlarını da ev tipi tabloya karıştırmadık — o şema ayrıdır. Yanlış kod, yanlış parçayla gelen servis demektir; az ama doğru bilgi burada daha değerli.
+Bu yazıdaki tablo **ev tipi** klimalar içindir. Çoklu iç üniteli ticari sistemler üç haneli kodlar kullanır ve o şema ayrıdır; ikisini aynı tabloda okumak yanlış parçaya götürür. Ticari bir sistemin kodunu arıyorsan cihazının kendi kullanım kılavuzuna bak.
 
 ⛔ **Soğutucu devresine ve dış üniteye dokunma.** Klimanın gaz hattı basınçlı ve kapalı bir devredir; kaçak aramak da doldurmak da yetki, belge ve ekipman ister. Dış ünite ayrıca 220V beslenir ve fanı güçlüdür. Kullanıcıya ait alan kumanda, şalter ve filtre kapağı seviyesidir; panelin ötesi servise aittir.
 

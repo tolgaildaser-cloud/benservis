@@ -80,7 +80,7 @@ Gaz, temiz yanmak için doğru oranda havayla karışmak zorundadır. Ocağın �
 
 Ocaklar fabrikadan doğalgaza ya da LPG'ye (tüp) göre ayarlı çıkar; iki gazın basıncı ve enjektörü farklıdır. **Dönüşümü yapılmamış ya da yanlış dönüştürülmüş** bir ocak sürekli sarı ve isli yanar. Aynı şekilde gaz-hava karışımını belirleyen enjektör ve ayar vidaları zamanla ya da yanlış müdahaleyle bozulmuş olabilir.
 
-⛔ **Kendin-çöz sınırı burada biter.** Enjektör değişimi, gaz dönüşümü ve karışım ayarı; gazlı sistemde çalışmayı gerektirir ve bu işin yetkisi **yetkili servis ya da yetkili gaz tesisatçısındadır.** İnternetteki "ayar vidasını çevir" tariflerine girme: yanlış ayar eksik yanmayı gizleyebilir ama riski ortadan kaldırmaz. Temizlik ve hava kontrolü sonuç vermediyse ocağı kullanmayı bırak ve servisi ara.
+⛔ **Kendin-çöz sınırı burada biter.** Enjektör değişimi, gaz dönüşümü ve karışım ayarı; gazlı sistemde çalışmayı gerektirir ve bu işin yetkisi **yetkili servis ya da yetkili gaz tesisatçısındadır.** Ocağın ayar vidasına dokunma: yanlış ayar eksik yanmayı gizleyebilir ama riski ortadan kaldırmaz. Temizlik ve hava kontrolü sonuç vermediyse ocağı kullanmayı bırak ve servisi ara.
 
 ## Belirti tablosu
 
