@@ -32,7 +32,7 @@ images:
   coverAlt: "Loş mutfakta buzdolabının kapısı aralık bırakılmış, iç aydınlatma raflara ve zemine vuruyor"
 ---
 
-Buzdolabının ekranında derece yerine iki harf duruyor: Er FF. İnternette aradın, karşına parça isimleri çıktı ama hangisinin senin cihazına ait olduğunu anlayamadın. İyi haber şu: LG'nin kod dili aslında markaların en okunaklısı. Kodlar rastgele numaralar değil, doğrudan **parçanın kısaltmasıdır** — mantığı bir kez kavrayınca listeye bakmadan da tahmin edebilirsin. Bu yazıda o mantığı, birden çok kaynakla doğrulanmış kod tablosunu ve fan kodlarının arkasındaki meşhur buz tuzağını anlatıyoruz.
+Buzdolabının ekranında derece yerine iki harf duruyor: Er FF. İyi haber şu: LG'nin kod dili aslında markaların en okunaklısı. Kodlar rastgele numaralar değil, doğrudan **parçanın kısaltmasıdır** — mantığı bir kez kavrayınca listeye bakmadan da tahmin edebilirsin. Bu yazıda o mantığı, birden çok kaynakla doğrulanmış kod tablosunu ve fan kodlarının arkasındaki meşhur buz tuzağını anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

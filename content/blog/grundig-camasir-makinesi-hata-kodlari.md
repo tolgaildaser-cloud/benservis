@@ -34,7 +34,7 @@ faq:
     a: "Grundig kendi sitesinde çamaşır makinesi için bir kod tablosu yayımlamıyor; Türkçe kullanma kılavuzlarındaki sorun giderme bölümünde de kod tablosu değil belirti-sebep-çözüm tablosu bulunuyor. Grundig, Arçelik grubunun markasıdır ve grubun Arçelik ile Beko adına yayımladığı on kodluk ortak liste vardır. O listeyi aşağıda veriyoruz, ama Grundig'in kendi belgesiyle teyit edilmediğini de açıkça söylüyoruz."
   - q: "E17 kodunda ne yapmalıyım?"
     a: "E17 tambur içinde aşırı köpük oluştuğunu bildirir ve sebebi neredeyse her zaman deterjandır: fazla doz, yanlış tip ya da elde yıkama deterjanı. Makineyi hiç deterjan koymadan kısa bir programda bir-iki kez boş çalıştır, köpük kalıntısı atılsın. Sonraki yıkamalarda dozu azalt ve mutlaka otomatik makine deterjanı kullan. Doz normalken kod tekrar ediyorsa durumu servise anlatmak gerekir."
-  - q: "İnternetteki Grundig kod listeleri neden birbirini tutmuyor?"
+  - q: "Ekranımdaki kodun karşılığını nerede kesin öğrenirim?"
     a: "Çünkü çoğu liste kaynağını göstermiyor ve hangi model serisini anlattığını söylemiyor. Aynı numaraya bir listede ısıtma, bir başkasında tahliye anlamı veriliyor. Üstelik markanın kendi kullanma kılavuzlarında kod tablosu değil belirti tablosu bulunuyor, yani o listelerin dayanacağı bir Grundig belgesi yok. Bu yüzden doğrulayamadığımız kodları yazmıyoruz; yanlış kod, yanlış parçaya yönlendirir ve pahalıya patlar."
   - q: "Ekranda iki haneli E01, E02 gibi kodlar görüyorum, karşılığı ne?"
     a: "Grubun yayımladığı liste tek hanelidir: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. İki haneli E01–E11 bandı bu listede geçmez ve o numaralar grubun başka cihazlarına aittir; örneğin E01 kombide alev yok, bulaşık makinesinde taşma demektir. Ekranda iki haneli bir kod gördüğünü düşünüyorsan bir kez daha bak, sonra kendi modelinin kullanma kılavuzundan teyit et."
@@ -42,9 +42,9 @@ images:
   coverAlt: "Çamaşır makinesinin kumanda paneli ve deterjan çekmecesi alt açıdan"
 ---
 
-Program yarıda kesildi, tambur durdu ve ekranda bir kod yanıp sönüyor. Telefonla arattığın anda önüne birbirini tutmayan listeler çıkıyor: bir sayfa kodu tahliyeye, bir başkası ısıtmaya bağlıyor. Grundig'de durum tam olarak budur ve bunun somut bir sebebi var: **Grundig çamaşır makinesi için bir kod tablosu yayımlamıyor.** Dolaşan listelerin dayanacağı bir marka belgesi yok.
+Program yarıda kesildi, tambur durdu ve ekranda bir kod yanıp sönüyor.
 
-Bu yazıda dayanağını gösterebildiğimiz iki şeyi veriyoruz: grubun yayımladığı ortak kod listesi ve Grundig'in **kendi kılavuzundaki belirti tablosu**. Doğrulayamadıklarımızı ise yazmıyoruz — nedenini de açıkça söylüyoruz.
+Grundig, Arçelik grubunun markasıdır ve grup kod tablosunu Arçelik ile Beko adına yayımlar. Bu yazıda iki şey var: **grubun yayımladığı ortak kod listesi** ve Grundig'in **kendi kılavuzundaki belirti tablosu**.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -103,14 +103,6 @@ Grundig'in Türkçe kullanma kılavuzlarındaki sorun giderme bölümünde bir k
 Bu liste kodun anlattığının aynısını, ama daha güvenilir biçimde söyler. Ekrandaki numara ile buradaki belirti aynı bölgeyi işaret ediyorsa teşhisin doğrudur.
 
 **Kendin kontrol et:** Yeni taşınmış ya da yeni kurulmuş bir makinede ses ve titreşim şikâyeti varsa ilk bakılacak yer nakliye emniyet cıvatalarıdır. Takılı kalmış cıvatalarla çalışan bir makine hem gürültü yapar hem de zamanla gerçek arıza üretir.
-
-## Neden bazı kodları hiç yazmadık
-
-Grundig için dolaşan listelerde **E01, E02, E03, E04, E06, E09, E11** gibi iki haneli kodlar sıralanıyor ve bunlara birbirine zıt anlamlar veriliyor: bir kaynak E05'i ısıtma, bir diğeri tahliye diye tanımlıyor; E07 bir listede su seviye sensörü, bir başkasında motor oluyor.
-
-Bu bandın tamamı grubun çamaşır makinesi listesinde geçmiyor. Numaralar grubun **başka cihazlarına** ait: E01 kombide "alev yok", bulaşık makinesinde "taşma"; E06 ve E07 yalnız bulaşık makinesinde var. Yani bu listeler yalnızca doğrulanmamış değil, büyük olasılıkla **yanlış cihazdan kopyalanmış**.
-
-Bu kodlara bir anlam yazmak, seni yanlış parçaya ve gereksiz masrafa yönlendirir. Az ama doğru bilgi, çok ama uydurma bilgiden iyidir. Bu bantta tek güvenilir kaynak kendi makinenin kullanma kılavuzudur; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir.
 
 ⛔ **Kapağın ötesi servise ait.** Rezistans, sıcaklık sensörü, su giriş valfi, motor ve elektronik kart, 220V hattın suyla aynı gövdede bulunduğu iç bölgededir. Kural sade: **kapak, çekmece ve pompa filtresi seviyesi kullanıcıya, tablanın altı servise aittir.**
 

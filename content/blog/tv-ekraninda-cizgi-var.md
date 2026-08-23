@@ -75,7 +75,7 @@ Tipik davranışlar:
 
 **Kendin kontrol et:** Yapılacak tek şey gözlem ve kayıttır: çizginin fotoğrafını çek, tarih at, sayısı ve konumu değişiyor mu izle. Cihaz garanti kapsamındaysa bekletmeden başvur — çizgi belgeli olsun.
 
-⛔ **Ekrana bastırarak "düzeltme" deneme.** Baskıyla çizginin kaybolması internette sık anlatılır; gerçekte bu, hasarlı bölgeye yük bindirir ve çizgiyi çoğaltabilir. Panel baskı kaldırmaz.
+⛔ **Ekrana bastırarak "düzeltme" deneme.** Baskı, hasarlı bölgeye yük bindirir ve çizgiyi çoğaltabilir. Panel baskı kaldırmaz.
 
 ## 4) Yatay çizgi ve bantlar ne anlatır?
 

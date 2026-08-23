@@ -43,7 +43,7 @@ Makine yıkamanın ortasında durdu, ekranda bir kod yanıp sönüyor ve kılavu
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ **Önce bir düzeltme:** İnternette dolaşan Beko listelerinin çoğu **E01, E02, E03, E10** gibi iki haneli kodlar ve **H1, H4, H5** gösterimi sıralar. Bunlar Beko'nun yayımladığı listede geçmez. Gerçek liste on kodludur ve tek hanelidir: **E5, E8, E12, E17, E18, E27, E29, E84, Err, SC.** Arçelik de aynı listeyi birebir yayımlar. Ekrandaki kodu yine de kendi kılavuzunla teyit et.
+> ⚠️ **Liste on kodludur ve tek hanelidir:** `E5` · `E8` · `E12` · `E17` · `E18` · `E27` · `E29` · `E84` · `Err` · `SC`. Arçelik de aynı listeyi birebir yayımlar. Ekrandaki kodu kendi kılavuzunla teyit et; iki haneli gördüğünü düşünüyorsan bir kez daha bak.
 
 ## Adım adım: kod geldiğinde evde denenecek ücretsiz kontroller
 
@@ -107,7 +107,7 @@ Bu ikisi parça arızası değil, **kullanım kaynaklı** durumlardır. İkisini
 
 ## Aradığın kod listede yoksa
 
-İnternetteki listelerin verdiği kapı kilidi, ısıtma ve motor kodları Beko'nun yayımladığı bu on kodun içinde **yoktur.** Bu, o arızaların olmadığı anlamına gelmez — makinen ısıtmıyor ya da tambur dönmüyor olabilir. Anlamı şu: üretici bu durumlar için kullanıcıya ayrı bir kod göstermiyor. O yüzden kodu değil **belirtiyi** anlat: "soğuk yıkıyor", "tambur hiç dönmüyor", "program başlamıyor" cümleleri servise kodlardan daha çok şey söyler.
+Beko'nun yayımladığı bu on kod arasında ayrı bir kapı kilidi, ısıtma ya da motor kodu **yok**. Bu, o arızaların olmadığı anlamına gelmez — makinen ısıtmıyor ya da tambur dönmüyor olabilir. Anlamı şu: üretici bu durumlar için kullanıcıya ayrı bir kod göstermiyor. O yüzden kodu değil **belirtiyi** anlat: "soğuk yıkıyor", "tambur hiç dönmüyor", "program başlamıyor" cümleleri servise kodlardan daha çok şey söyler.
 
 ## Kodların özeti
 

@@ -101,30 +101,6 @@ E18'in aynadaki yansıması: makine gereken sürede su alamamıştır.
 
 Bunlara rağmen kod sürüyorsa su giriş valfi ya da AquaStop hortumu tarafında iş vardır; orası servise aittir.
 
-## "Ben F21 aramıştım" — o kodun durumu
-
-Bu bölüm bilerek burada. **"F21 = motor kömürü"** eşleşmesi internette çok yaygın ama
-**BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor.** Aynı durum şu numaralar için de geçerli:
-
-| Aradığın kod | Durumu |
-|---|---|
-| **F21** | BSH listelerinde yok. Tahrik/motor tarafının kodu **E80** |
-| **F31** | Yok. BSH'de köpük kodu **E33 / F33** |
-| **F42 · F43** | Yok |
-| **F61** | Yok. Kapı kodları **E16/F16** ve **E34/F34** |
-| **F63** | Yok |
-
-Bunları listemizden çıkardık. Motor tarafında gerçekten bir sorun varsa belirtisi
-nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez.
-
-**Kendin kontrol et:** Tek güvenli deneme reset: makineyi kapat, fişi bir dakika çek,
-tekrar tak, kısa bir program başlat. Kod geri geliyorsa uğraşma.
-
-⛔ **Motor bölümü kullanıcıya kapalıdır.** Arka kapağı söküp motora ulaşmak elektrik
-riski taşır ve yanlış müdahale basit bir kömür işini kart arızasına çevirebilir.
-Doğru hamle servistir — ama servise giderken "F21 aldım" değil, **makinenin ne
-yapmadığını** anlat.
-
 ## E23 / F23 — Su kaçağı (taban tavasında su)
 
 Makine bir sızıntı algılamış ve alt taban tavasına su inmiştir; güvenlik sistemi cihazı durdurur. Sızıntının kaynağı conta, hortum bağlantısı ya da pompa tarafı olabilir.
@@ -139,7 +115,7 @@ Makine bir sızıntı algılamış ve alt taban tavasına su inmiştir; güvenli
 
 ## Kodun bu listede yok mu?
 
-Siemens yüzlerce model üretir; bazı kodlar yalnız belirli serilerde çıkar ve anlamı modele göre değişir. Doğrulayamadığımız koda uydurma bir anlam vermeyiz — yanlış teşhis sana pahalıya patlar. Ekrandaki kodu ve cihazının model bilgisini Benservis'e yaz; olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyet bandını ücretsiz gör.
+Siemens yüzlerce model üretir; bazı kodlar yalnız belirli serilerde çıkar ve anlamı modele göre değişir. Ekrandaki kodu ve cihazının model bilgisini Benservis'e yaz; olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyet bandını ücretsiz gör.
 
 ## Hangi noktadan sonra servis işi?
 

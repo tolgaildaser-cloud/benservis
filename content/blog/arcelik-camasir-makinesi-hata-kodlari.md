@@ -27,9 +27,9 @@ images:
   coverAlt: "Çatı katı mutfağında tezgâh altına yerleştirilmiş ön yüklemeli çamaşır makinesi"
 ---
 
-Arçelik çamaşır makinen ekranında bir hata kodu ya da yanıp sönen ışık deseni gösteriyor. İnternette arattığında karşına çıkan listelerin çoğu birbirini tutmaz — ve büyük kısmı **Arçelik'in kendi yayımladığı listede hiç bulunmayan** kodlar sıralar. Bu rehberde yalnız üreticinin kendi sayfasında birebir geçen kodları veriyoruz.
+Arçelik çamaşır makinen ekranında bir hata kodu ya da yanıp sönen ışık deseni gösteriyor. Bu rehberde üreticinin kendi sayfasında yayımladığı kodları veriyoruz.
 
-> ⚠️ **Kodlar tek hanelidir.** Çok yayılan **E01–E11** bandı Arçelik'in çamaşır makinesi listesinde geçmez. O numaralar başka cihazlara aittir: E01 Arçelik **kombide** "alev yok", **bulaşık makinesinde** "taşma" demektir. Ekranında iki haneli bir kod gördüğünü düşünüyorsan bir kez daha bak — E5'i E05 diye okumak yaygın bir yanılgıdır.
+> ⚠️ **Kodlar tek hanelidir.** Ekranında iki haneli bir kod gördüğünü düşünüyorsan bir kez daha bak — `E5`'i `E05` diye okumak kolaydır.
 
 ## ⚡ En sık karşılaşılan üç kod
 > **E5** — Pompa tıkalı → 🛠️ pompa filtresini temizle

@@ -33,7 +33,7 @@ faq:
   - q: "Vestel çamaşır makinesinde hata kodu nasıl sıfırlanır?"
     a: "Makineyi kapat, fişini çekip yaklaşık beş dakika bekle ve tekrar takıp programı yeniden başlat. Reset kodu siler ama sebebi ortadan kaldırmaz; filtre hâlâ tıkalıysa ya da kapı kilitlenemiyorsa kod geri gelir. Reset, tek seferlik elektronik takılmaları elemek için bir test adımıdır."
   - q: "Ekrandaki kod bu yazıdaki listede yok, ne yapmalıyım?"
-    a: "Vestel uzun yıllardır çok sayıda seri üretiyor ve kod tablosu nesilden nesile değişiyor; aynı numara farklı serilerde farklı anlama gelebiliyor. Bu yüzden doğrulayamadığımız kodlara uydurma anlam vermiyoruz. Kodu ve model bilgini Benservis'e yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren."
+    a: "Vestel uzun yıllardır çok sayıda seri üretiyor ve kod tablosu nesilden nesile değişiyor; aynı numara farklı serilerde farklı anlama gelebiliyor. Bu yazıda anlamı yaygın biçimde sabit olan kodlar var. Kodu ve model bilgini Benservis'e yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren."
 images:
   coverAlt: "Çamaşır makinesinin kumanda paneli ve deterjan çekmecesi alt açıdan"
 ---
@@ -112,7 +112,7 @@ Filtre ve hortum temizken E03 tekrar ediyorsa sıra **tahliye pompasına** gelir
 
 ## Kodun listede yok mu? (E04 ve sonrası)
 
-Vestel'in farklı nesillerinde E04 ve üzeri kodlar **aynı numarayla farklı arızaları** gösterebiliyor; bir seride ısıtma sorununu bildiren numara, başka seride başka anlama gelebiliyor. Bu yüzden burada yalnızca anlamı yaygın biçimde sabit olan üç kodu açıkladık; gerisi için tek güvenilir kaynak cihazının kendi kullanım kılavuzu ve model bazlı teşhistir. Ekrandaki kodu ve makinenin model bilgisini Benservis'e yaz; uydurma anlam yerine modeline göre olası arızayı ve tahmini maliyet bandını ücretsiz gör.
+Vestel'in farklı nesillerinde `E04` ve üzeri kodlar **aynı numarayla farklı arızaları** gösterebiliyor. Bu yüzden burada anlamı yaygın biçimde sabit olan kodlar açıklandı; gerisi için tek güvenilir kaynak cihazının kendi kullanım kılavuzu ve model bazlı teşhistir. Ekrandaki kodu ve makinenin model bilgisini Benservis'e yaz; modeline göre olası arızayı ve tahmini maliyet bandını ücretsiz gör.
 
 ## Hangi noktadan sonra servis işi?
 

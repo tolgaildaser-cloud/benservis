@@ -109,22 +109,6 @@ Makine su almayı durduramıyor. Üreticinin gösterdiği sebep **akış ölçer
 
 **Kendin kontrol et:** Bu kodda evde yapılacak bir şey yok. Üreticinin talimatı net: **makineyi durdur ve yetkili servise başvur.** Kapalı soğutucu devresi basınçlıdır; açmak da doldurmak da yetki ve ekipman ister.
 
-## "Ben E03 / E04 / E05 aramıştım" — o kodların durumu
-
-Bu bölüm bilerek burada, çünkü bu numaralar internette çok dolaşıyor. **Üreticinin yayımladığı bulaşık makinesi listesinde hiçbiri yok** — ve ikisinin nereden geldiği belli:
-
-| Aradığın kod | Durumu |
-|---|---|
-| **E03** | Bulaşık listesinde yok. Bu numara Arçelik **kombide** "baca sigortası" demek |
-| **E04** | Bulaşık listesinde yok. Bu numara Arçelik **kombide** "düşük su basıncı" demek |
-| **E05** | Hiçbir üretici yayınında yok |
-| **E08** | Hiçbir üretici yayınında yok |
-| **E09** | Hiçbir üretici yayınında yok |
-
-Yani dolaşan tablonun bir kısmı **yanlış cihazdan kopyalanmış**. Isıtma tarafını arıyorsan doğru kod **E06**'dır (NTC sensörü).
-
-Ekranında gerçekten bu numaralardan birini görüyorsan kodu bir kez daha kontrol et ve kendi modelinin kullanım kılavuzundan teyit et — yanlış kod, yanlış parçaya ve gereksiz masrafa yönlendirir.
-
 ## Kodların özeti
 
 | Kod | Üreticinin karşılığı | Kendin bakılır mı |

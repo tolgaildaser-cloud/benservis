@@ -89,15 +89,12 @@ Sıralama önemli: **E22 filtreyi**, **E24 makinenin dışındaki hattı**, **E2
 
 **E16 ve E17** BSH'nin sayfalarında **tek başlık altında ve tek anlamla** verilir: su alma sisteminde ya da temiz su girişinde hata. Üreticinin çözümü de tek: temiz su girişini kontrol et — köşe vana açık mı, giriş hortumu bükülmemiş mi. Bu hatayla sık karşılaşıyorsan cihazda gerçek bir arıza olma ihtimali yüksektir ve teknisyen ister.
 
-⚠️ İnternetteki listelerin bu iki koda ayrı ve birbirine zıt anlamlar vermesinin (biri "beklenmedik su alma", diğeri "şamandıra") üretici tarafında bir dayanağı yok.
 
 **Kendin kontrol et:** Musluğu kapat, giriş hortumunu elinle sök ve makine tarafındaki süzgeci akan suda fırçala; altına havlu ser, bir miktar su gelir. Sonra elle sıkıca geri tak.
 
 ## Isıtma tarafı: E09 ve E12
 
 **E09** ısıtma bölgesine bakar. BSH bu kod için ayrı bir sayfa yayımlıyor ve talimatı net: *sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denemeyin, şebeke suyunu kesin ve cihazı kapatın.* Belirtisi klasiktir — program normal görünür ama bulaşıklar yağlı ve soğuk çıkar.
-
-📌 İnternette bu bölgeye yerleştirilen **E11** kodu BSH'nin yayımladığı listelerde geçmiyor; o yüzden burada yer vermiyoruz.
 
 **E12** ise farklıdır ve Türkiye'nin sert sulu bölgelerinde özellikle tanıdıktır: ısıtıcının üzerinde **kireç ya da kir tabakası** oluşmuştur. Bu bir parça arızası değil, bakım eksikliğidir.
 
@@ -113,8 +110,6 @@ Sıralama önemli: **E22 filtreyi**, **E24 makinenin dışındaki hattı**, **E2
 E19'da denenecek ücretsiz bir şey var: haznenin kapağının önünde duran uzun bir tabak ya da tepsi, kapağın açılmasını fiziksel olarak engelleyebilir. Yükleme düzenini değiştirip yeniden dene. E20, E21 ve E07 ise gövdenin içindeki bölgeyi anlatır.
 
 ## Nerede durduk ve neden
-
-Siemens için dolaşan listelerin bir kısmı birbirini tutmuyor. Örneğin **E14**, **E16** ve **E17** için kaynaklar birbirine zıt anlamlar veriyor; **E01-E06** bandında bir liste elektrik hatası derken bir diğeri sensör ya da su alma diyor. Bu kodlara doğrulanmamış bir anlam yazıp seni yanlış parçaya yönlendirmektense burada durmayı tercih ediyoruz. Yapılacak şey basit: kodu model numarasıyla birlikte not et ve kılavuzun arıza tablosuyla karşılaştır.
 
 ## E27: sorun makinede değil olabilir
 

@@ -102,7 +102,7 @@ Desen tertemiz çıktığı hâlde çıktılar soluksa mürekkep tarafını bır
 
 Temizlik döngüleri, dinlendirme, gerekirse yeni kartuş ve doğru ayarlara rağmen desen hâlâ eksik basıyorsa tıkanıklık yazılımın sökebileceği seviyeyi aşmış demektir — ya da sorun başlığın kendisinde/besleme hattındadır.
 
-⛔ **Kendin-çöz sınırı burasıdır.** Başlık sökmek, kimyasalla bekletmek gibi internette dolaşan yöntemler hem cihazı hem garantiyi riske atar; atık mürekkep dolumu ve besleme hattı işleri de tamamen servis alanıdır. Elindeki nozzle check çıktılarını sakla — öncesi-sonrası desenler, servise "silik basıyor" cümlesinden çok daha fazlasını anlatır ve işi hızlandırır.
+⛔ **Kendin-çöz sınırı burasıdır.** Başlık sökmek ve kimyasalla bekletmek hem cihazı hem garantiyi riske atar; atık mürekkep dolumu ve besleme hattı işleri de tamamen servis alanıdır. Elindeki nozzle check çıktılarını sakla — öncesi-sonrası desenler, servise "silik basıyor" cümlesinden çok daha fazlasını anlatır ve işi hızlandırır.
 
 ## Servis çağırmadan önce üç dakika
 
