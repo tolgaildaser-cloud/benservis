@@ -5,6 +5,7 @@
 //   ② SATIR BÖLÜNDÜKTEN sonra (aynı anahtar kelimeyi taşıyan iki satır) davranış hâlâ
 //      belirleyici olsun — sessizce "dizide önce gelen" seçilmesin.
 import { describe, it, expect } from "vitest";
+import { readFileSync } from "node:fs";
 import { seedSatirBul, seedEslestir, seedBeklenen, satirBeklenen } from "./seed-eslesme.js";
 import { SEED } from "./tarife-seed.js";
 import { rehberBul, REHBERLER } from "./onarim-rehberleri.js";
@@ -189,6 +190,21 @@ describe("onarim-rehberleri: SEED adlarına bağlılık", () => {
     expect(r.kendi).toBe(true);
     expect(r.baslik).toBe("Tahliye tıkanıklığını açma");
     expect(rehberBul("Bulaşık Makinesi", "E22 hatası — iç filtre tıkalı").kendi).toBe(true);
+  });
+
+  // 23 Ağu (YK #31): BİRİNCİ güvenlik kapısının promptta tanımlı kalması şart.
+  // 22 Ağu taramasına kadar `kendinCozebilirMi.mumkun` için promptta tek bir sınır
+  // cümlesi YOKTU; model "mümkün"ün ne demek olduğunu kendi kestiriyordu. Blok geri
+  // silinirse bu test build'i kırar — sessizce kaybolmasın diye.
+  it("YK #31: kendinCozebilirMi sınırı promptta tanımlı", () => {
+    const src = readFileSync(new URL("./App.jsx", import.meta.url), "utf8");
+    expect(src).toContain("KENDİN ÇÖZEBİLİR Mİ ÖLÇÜTÜ");
+    // kuralın çekirdeği: emin olunamayan durumda false
+    expect(src).toContain("EMİN DEĞİLSEN false VER");
+    // yasak iş listesi duruyor mu
+    for (const k of ["parça DEĞİŞİMİ", "gövde/panel SÖKÜMÜ", "GAZ devresi"]) {
+      expect(src).toContain(k);
+    }
   });
 
   // 23 Ağu (YK #31 seçenek c): asıl güvence — haritada TEK BİR iFixit kaydı kalmamalı.
