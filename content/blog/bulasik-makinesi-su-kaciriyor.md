@@ -43,6 +43,12 @@ images:
 
 Yıkama bitmiş, mutfağa giriyorsun ve makinenin önünde ya da altında bir su birikintisi seni karşılıyor. İlk refleks paspası kapıp silmek — ama suyun **nereden** geldiğini anlamadan silmek, aynı manzarayı birkaç gün sonra yeniden görmek demek. Bu yazıda sızıntının en sık görülen sebeplerini basitten teknike doğru sıralıyoruz: hangilerine kendin bakabilirsin, hangi noktadan sonra iş servise kalır.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **kapak contasına ya da taban tavasına**
+> geldiğinde iş servise aittir: sızıntının kaynağını bulmak cihazın açılmasını gerektirir ve tabandaki su elektrikli bir bölgenin içindedir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 ⛔ **Önce güvenlik:** su ve elektrik aynı zeminde buluşmuş durumda. Herhangi bir kontrole başlamadan önce **programı durdur, musluktan suyu kapat ve makinenin fişini çek.** Fişe ıslak elle ya da birikintinin içinde durarak dokunma; priz su birikintisinin yakınındaysa önce sigortadan o hattı kapatmak daha güvenlidir. Bu yazıdaki her adım, fiş çekili ve musluk kapalıyken yapılır.

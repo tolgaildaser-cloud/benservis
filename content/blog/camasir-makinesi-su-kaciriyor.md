@@ -43,6 +43,12 @@ images:
 
 Yıkama bitti, makinenin önüne geldin ve zeminde su birikintisi var. Ya da program daha sürerken altından ince bir su izi uzanıyor. İlk his çoğu zaman panik olur — ama sızıntıların azımsanmayacak bir kısmı arıza bile değildir: taşan deterjan, gevşemiş bir hortum bağlantısı ya da tam kapanmamış bir filtre kapağı. Bu yazıda suyun nereden gelebileceğini önden arkaya, basitten teknike doğru izliyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **kapak contasına (körük)**
+> geldiğinde iş servise aittir: conta değişimi ön panelin ve kelepçenin sökülmesini gerektirir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 ⛔ **Önce güvenlik, sonra teşhis.** Su ve elektrik bir aradayken hiçbir kontrol yapılmaz. Sırayla: programı durdur → **fişi çek** (ıslak zemine basmadan, ıslak elle değil; fişe güvenle ulaşamıyorsan sigortadan makinenin hattını kapat) → **musluğu kapat** → zemini kurula. Kaynak aramaya ancak bundan sonra başla.

@@ -25,6 +25,12 @@ images:
 
 Bulaşıkların tertemiz ama sırılsıklam mı çıkıyor? İyi haber: bulaşık makinesi kurutmama sorunlarının çoğu basit ve ücretsiz çözülür — çünkü en sık sebep bir arıza değil, biten **parlatıcı** ya da yanlış program. Bu yazıda makinenin neden kurutmadığını 6 başlıkta açıklıyor, **servisi aramadan önce kendin kontrol edebileceklerini** ve iş servise kaldığında ne beklemen gerektiğini paylaşıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **ısıtıcıya (rezistans) ya da sıcaklık sensörüne**
+> geldiğinde iş servise aittir: ikisi de tablanın altında, suyun ve elektriğin bir arada olduğu bölgededir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 > 💡 **Kirli mi çıkıyor, ıslak mı?** Bulaşıkların kirli/kireçli/kumlu çıkması ayrı bir konudur → [Bulaşık makinesi temiz yıkamıyor](/blog/bulasik-makinesi-temiz-yikamiyor/). Bu yazı, bulaşıklar **temiz ama ıslak** çıktığında içindir.
 
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Samsung, Profilo gibi bulaşık makinelerinde kurutma mantığı ve nedenler büyük ölçüde benzerdir.

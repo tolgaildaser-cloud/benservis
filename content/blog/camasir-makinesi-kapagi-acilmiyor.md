@@ -19,6 +19,12 @@ images:
 
 Program bitti, makine sustu, ama kapak açılmıyor. İçeride çamaşır var, belki su da var. Bu durumda **kapağı zorlamak en pahalı seçenektir** — kilit dili ve menteşe kırılırsa basit bir bekleme meselesi parça değişimine döner.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **kapak kilidi mekanizmasına**
+> geldiğinde iş servise aittir: kilit, kapağın arkasında ve şebeke gerilimli hattın üzerindedir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 > ⚡ **Kısa özet:** Önce **1-3 dakika bekle** — kilit programın bitişinden sonra gecikmeli çözülür. Açılmıyorsa **içeride su olup olmadığına** bak; su varsa makine kapağı bilerek açmaz, önce tahliye filtresinden boşaltılır. Elektrik kesildiyse ya da kilit hâlâ çözülmüyorsa alt kapağın arkasındaki **acil açma kolunu** kullan. Kapağı asla zorlama.
 
 ## Sırayla ne denenir

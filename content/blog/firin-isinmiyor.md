@@ -19,6 +19,12 @@ images:
 
 Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısınıyor — yemek pişmiyor. Sinir bozucu ama sebep çoğu zaman birkaç parçadan biridir ve teşhisi kolaydır. Bu yazıda fırının neden ısınmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi parçanın servis işi olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **rezistansa, termostata ya da kapak contasına**
+> geldiğinde iş servise aittir: üçü de gövdenin içinde ve şebeke gerilimli bölgededir; hangisinin sorumlu olduğu ölçü aletiyle belirlenir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo, Vestel, Silverline gibi ankastre/solo fırınlarda nedenler benzerdir.
 
 ## Fırın neden ısınmaz? Olası nedenler

@@ -39,6 +39,12 @@ images:
 
 Süpürgeni çalıştırıyorsun ama **çekmiyor ya da emişi eskisi gibi güçlü değil.** İyi haber: emiş sorunlarının çoğu bir arıza değil, **tıkanmış hava akışıdır** ve evde dakikalar içinde çözülür. Bu yazıda nedenleri, adım adım çözümü ve gerçekten servis gereken durumları anlatıyoruz.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **motora ya da fırça rulosunun miline**
+> geldiğinde iş servise aittir: gövde içi hem elektrik hem dönen parça barındırır. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 **Marka fark etmez:** Arçelik, Fakir, Bosch, Philips, Dyson, Samsung gibi torbalı, toz hazneli (bagless) ve dikey/şarjlı süpürgelerde nedenler benzerdir.
 
 ## Süpürge neden çekmez? Olası nedenler

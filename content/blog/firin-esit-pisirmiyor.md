@@ -33,6 +33,12 @@ images:
 
 Kek tarifte yazan sürede fırından çıkıyor: üstü kararmış, kürdanı batırınca ortası ve altı hamur. Ya da tepsi böreğin bir köşesi nar gibi, diğer köşesi beyaz. "Fırın ısınmıyor" diyemezsin — ısınıyor, hem de fazlasıyla; ama ısıyı **eşit dağıtmıyor**. Bu şikâyet, ısınmama arızasından ayrı bir yazıyı hak ediyor çünkü sebeplerin yarısı cihazda değil kullanımda çıkar ve o yarısı bugün, hiçbir alet olmadan düzelir. Diğer yarısı içinse elinde basit ama etkili bir gözlem aracı var: kızarma testi.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **turbo fan motoruna**
+> geldiğinde iş servise aittir: fan, fırının arka panelinin arkasındadır ve elektrikli bir bölgededir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🎯 **Önce şu ayrımı yap:** dengesizlik **hep aynı yönde mi** (her seferinde altı çiğ, ya da hep aynı köşe yanık), yoksa **tariften tarife değişiyor mu**? Hep aynı yön, cihaz tarafını (rezistans, fan) düşündürür; değişken sonuçlar neredeyse her zaman raf konumu ve kullanım alışkanlığıdır.

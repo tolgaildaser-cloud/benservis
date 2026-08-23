@@ -25,6 +25,12 @@ images:
 
 Çamaşırları koydun, programı başlattın ama makine su almıyor — ya hiç, ya da yarım. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin 5 kontrolü** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **su giriş valfine**
+> geldiğinde iş servise aittir: valf şebeke gerilimiyle çalışan bir solenoiddir ve gövdenin içindedir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 **Marka fark etmez:** Arçelik, Beko, Bosch, Siemens, Samsung, LG, Profilo gibi makinelerde nedenler benzerdir. Ekranda hata kodu varsa markana özel rehber: [Bosch](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Arçelik](/blog/arcelik-camasir-makinesi-hata-kodlari/) · [marka marka](/blog/camasir-makinesi-hata-kodlari/).
 
 ## Çamaşır makinesi neden su almaz? 6 olası neden

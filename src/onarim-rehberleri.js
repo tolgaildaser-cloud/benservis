@@ -55,21 +55,21 @@ export const ZORLUK_TR = {
 export const REHBERLER = {
   "Çamaşır Makinesi": [
     { ara: ["su giriş", "su almıyor", "giriş valf", "inlet"],
-      rehber: G("How+To+Replace+The+Inlet+Valve+In+Your+Washing+Machine/181828", "Su giriş valfi değişimi", "Moderate", "15-25 dk", 8) },
+      rehber: B("camasir-makinesi-su-almiyor", "Su almayan makinede 5 kontrol", "Kolay", "~15 dakika", 5) },
     // KENDİ REHBERİMİZ — iFixit'in 17 adımlık İngilizce tahliye teşhisi yerine, kullanıcının
     // ilk yapması gereken işi anlatan Türkçe sayfamız açılır (aynı belirti, daha basit ilk adım).
     { ara: ["tahliye", "pompa", "su atmıyor", "boşaltmıyor", "su boşalt"],
       rehber: B("camasir-makinesi-tahliye-filtresi-temizleme", "Tahliye filtresini temizleme", "Kolay", "~10 dakika", 6) },
-    { ara: ["rulman", "keçe", "bearing"],
-      rehber: G("How+to+replace+the+drum+bearings+in+your+washing+machine/198640", "Kazan rulmanı değişimi", "Difficult", "35-45 dk", 15) },
+    // rulman ve amortisör TEK yazıya bağlandı: ikisi de aynı belirtiyle gelir
+    // (ses + titreşim) ve yazının işi zaten bu ikisini birbirinden AYIRMAK.
+    { ara: ["rulman", "keçe", "bearing", "amortisör", "titreşim", "sarsıl", "zıpl"],
+      rehber: B("camasir-makinesi-ses-titresim", "Ses ve titreşimde 5 kontrol", "Kolay", "~20 dakika", 5) },
     { ara: ["kapı contası", "conta", "körük", "seal"],
-      rehber: G("How+to+replace+the+door+seal+in+your+washing+machine/198596", "Kapak contası değişimi", "Moderate", "15-25 dk", 11) },
+      rehber: B("camasir-makinesi-su-kaciriyor", "Su kaçağının kaynağını bulma", "Kolay", "~25 dakika", 8) },
     { ara: ["kapı kilidi", "kilit", "kapak kilidi"],
-      rehber: G("How+To+Replace+The+Door+Lock+In+Your+Washing+Machine/181826", "Kapak kilidi değişimi", "Easy", "7-10 dk", 7) },
+      rehber: B("camasir-makinesi-kapagi-acilmiyor", "Kapağı açılmayan makinede 6 kontrol", "Kolay", "~20 dakika", 6) },
     { ara: ["rezistans", "ısıtıcı", "ısıtmıyor"],
-      rehber: G("How+to+replace+the+heating+element+and+temperature+sensor+in+your+washing+machine/198599", "Rezistans ve sıcaklık sensörü değişimi", "Moderate", "15-20 dk", 15) },
-    { ara: ["amortisör", "titreşim", "sarsıl", "zıpl"],
-      rehber: G("How+to+replace+the+shock+absorbers+in+your+washing+machine/198630", "Amortisör değişimi", "Difficult", "30-40 dk", 14) },
+      rehber: B("camasir-makinesi-isitmiyor", "Isıtmayan makinede ücretsiz eleme", "Kolay", "~20 dakika", 8) },
     // KENDİ REHBERİMİZ (3 Ağu 2026, YK #34 Faz 2) — yerini aldığı iFixit kaydı
     // ("How to Remove Mold and Odors…", 8 adım) BİLEREK kaldırıldı: kendi rehberimiz
     // rehberBul içinde daima öncelikli olduğu için o satır artık erişilemez ölü koddu.
@@ -100,24 +100,27 @@ export const REHBERLER = {
     //    Doğrulandı: rehberBul("Bulaşık Makinesi","Tahliye") → iFixit.
     { ara: ["tahliye", "su atmıyor", "boşaltmıyor", "tabanda su"],
       rehber: B("bulasik-makinesi-su-atmiyor", "Tahliye tıkanıklığını açma", "Kolay", "~15 dakika", 6) },
-    { ara: ["tahliye pompa"],
-      rehber: G("How+To+Replace+The+Drain+Pump+In+Your+Dishwasher/181830", "Tahliye pompası değişimi", "Moderate", "20-35 dk", 8) },
+    // 23 Ağu: "Tahliye pompası değişimi" iFixit kaydı KALDIRILDI. Tek anahtarı
+    // "tahliye pompa" idi; üstteki kendi kaydımız "tahliye" ile zaten yakalıyor ve
+    // `bizim || disari` yüzünden daima kazanıyordu → erişilemez ölü koddu.
     { ara: ["su giriş", "su almıyor", "giriş valf", "inlet"],
-      rehber: G("How+to+replace+the+inlet+valve+in+your+dishwasher/185599", "Su giriş valfi değişimi", "Moderate", "15-25 dk", 10) },
+      rehber: B("bulasik-makinesi-su-almiyor", "Su almayan makinede 6 kontrol", "Kolay", "~15 dakika", 6) },
     { ara: ["rezistans", "ısıtıcı", "kurutmuyor", "ısıtmıyor"],
-      rehber: G("How+to+Replace+the+Heater+in+Your+Dishwasher/180876", "Isıtıcı değişimi", "Difficult", "30-40 dk", 18) },
-    { ara: ["sirkülasyon", "yıkama motoru", "devir daim"],
-      rehber: G("How+to+service+the+circulation+pump+in+your+dishwasher/198618", "Sirkülasyon pompası bakımı", "Moderate", "25-35 dk", 18) },
+      rehber: B("bulasik-makinesi-kurutmuyor", "Kurutmayan makinede 5 kontrol", "Kolay", "~15 dakika", 5) },
     { ara: ["kapı contası", "conta", "sızdır", "seal"],
-      rehber: G("How+to+replace+the+door+seals+in+your+dishwasher/198639", "Kapak contası değişimi", "Moderate", "—", 10) },
+      rehber: B("bulasik-makinesi-su-kaciriyor", "Su kaçağının kaynağını bulma", "Kolay", "~25 dakika", 8) },
     // KENDİ REHBERİMİZ (21 Ağu 2026, PAZ 17 Ağu dönüşüm teslimi). Bir ÜSTTEKİ iFixit
     // püskürtme-kolu rehberinin ÖNÜNE alındı: aynı işi Türkçe, kendi sayfamızda ve 7
     // adımda anlatıyor (YK #34: önce kendi rehberimiz). iFixit satırı silinmedi —
     // "kollar" gibi bu listede olmayan kelimelerde hâlâ karşılık veriyor.
-    { ara: ["püskürtme", "püskürtme kolu", "temiz yıkamıyor", "kireçli", "filtre tıkalı"],
+    // "sirkülasyon / yıkama motoru / devir daim" anahtarları buraya taşındı: belirti
+    // aynı (temiz yıkamıyor) ve yazı önce ücretsiz sebepleri eliyor.
+    { ara: ["püskürtme", "püskürtme kolu", "temiz yıkamıyor", "kireçli", "filtre tıkalı",
+            "sirkülasyon", "yıkama motoru", "devir daim"],
       rehber: B("bulasik-makinesi-temiz-yikamiyor", "Temiz yıkamayan bulaşık makinesi", "Kolay", "~20 dakika", 7) },
-    { ara: ["temiz yıkamıyor", "püskürtme", "yıkamıyor", "kollar"],
-      rehber: G("Removing+and+Cleaning+Dishwasher+Spray+Arm/165191", "Püskürtme kolunu sökme ve temizleme", "Very easy", "5 dk", 7) },
+    // 23 Ağu: "Püskürtme kolunu sökme ve temizleme" iFixit kaydı KALDIRILDI.
+    // Temizlik seviyesindeydi (YK #31 ihlali değildi) ama anahtarları üstteki kendi
+    // kaydımızla birebir örtüştüğü için hiç tetiklenemiyordu → ölü kod.
   ],
   // Buzdolabının haritadaki İLK kaydı (21 Ağu 2026). iFixit'te jenerik ev tipi buzdolabı
   // rehberi yok; küme yalnız KENDİ Türkçe rehberimizle açıldı. Anahtar kelimeler bilerek
@@ -128,26 +131,30 @@ export const REHBERLER = {
       rehber: B("buzdolabi-buzlanma-yapiyor", "Buzdolabı contası ve buzlanma", "Kolay", "~20 dakika", 7) },
   ],
   "Fırın / Ocak / Aspiratör": [
-    { ara: ["rezistans", "ısıtmıyor", "ısıtıcı"],
-      rehber: G("How+to+replace+the+heating+elements+in+your+stove+oven/198604", "Fırın rezistansı değişimi", "Moderate", "20-30 dk", 13) },
-    { ara: ["termostat", "sıcaklık sensör", "sensör"],
-      rehber: G("How+to+replace+the+temperature+sensor+in+your+stove/198590", "Sıcaklık sensörü değişimi", "Easy", "15-25 dk", 14) },
+    // rezistans · termostat/sensör · kapak contası → HEPSİ firin-isinmiyor'a bağlandı;
+    // yazı bu üç sebebi zaten yan yana eliyor ve hangisinin servis olduğunu söylüyor.
+    { ara: ["rezistans", "ısıtmıyor", "ısıtıcı", "termostat", "sıcaklık sensör", "sensör",
+            "fırın kapak conta", "fırın contası"],
+      rehber: B("firin-isinmiyor", "Isınmayan fırında 5 kontrol", "Kolay", "~15 dakika", 5) },
     { ara: ["fan motoru", "fan", "turbo"],
-      rehber: G("How+to+repair+the+ventilation+fan+in+your+stove/198608", "Fırın fanı onarımı", "Difficult", "30 dk", 15) },
+      rehber: B("firin-esit-pisirmiyor", "Eşit pişirmeyen fırında 7 kontrol", "Kolay", "~20 dakika", 7) },
     // 🔴 22 Ağu (YK taraması) — "yanmıyor" ÇIKARILDI. Masum bir belirti kelimesiydi ama
     //    kullanıcıyı GAZ YAKICI cihazın alev/karışım ayarını anlatan yabancı rehbere
     //    gönderiyordu. Kendi yazımız (`ocak-alevi-sari-yaniyor`) tam tersini söylüyor:
     //    "İnternetteki 'ayar vidasını çevir' tariflerine girme." Kendimizle çelişiyorduk.
     //    Doğrulandı: rehberBul("Fırın / Ocak / Aspiratör","Ocak yanmıyor") → iFixit.
-    // 📌 Kalıcı çözüm FE'nin 24 Ağu işinde: `B("ocak-atesleme-yapmiyor", …)` kaydı açılınca
-    //    "yanmıyor" BİZİM rehberimize bağlanır. O güne kadar rehber yok > yanlış rehber.
-    { ara: ["ateşleme", "kıvılcım", "çakmak"],
-      rehber: G("How+to+Fix+a+Gas+Stove+With+Uneven+Firing/179476", "Ocak alevini düzeltme", "Easy", "30 dk", 7) },
+    // ✅ 23 Ağu: KAPANDI. iFixit'in GAZ ocağı alev ayarı rehberi kaldırıldı ve "yanmıyor"
+    //    dahil tüm ateşleme anahtarları kendi yazımıza bağlandı. Not: `ocak-atesleme-yapmiyor`
+    //    gövde/gaz devresine hiç girmez — başlık temizliği, gaz vanası ve kıvılcım gözlemi.
+    { ara: ["ateşleme", "kıvılcım", "çakmak", "yanmıyor", "ateşleme bujisi", "buji"],
+      rehber: B("ocak-atesleme-yapmiyor", "Ateşleme yapmayan ocakta 4 kontrol", "Kolay", "~15 dakika", 4) },
     // NOT: "lamba"/"ampul" anahtar kelimesi BİLEREK yok. Rehber fırın kapağına ait; SEED'deki
     // "Aspiratör anahtar/kart/lamba" arızasına bağlanırsa kullanıcı alakasız sayfaya düşer
     // (test sırasında bu yanlış eşleşme yakalandı ve kapatıldı). Aspiratör için rehber YOK.
-    { ara: ["fırın kapak conta", "kapı contası", "fırın contası"],
-      rehber: G("How+to+replace+the+door+gasket+and+light+bulb+in+your+stove/198592", "Fırın kapak contası değişimi", "Moderate", "15-25 dk", 9) },
+    // "fırın kapak conta" ve "fırın contası" anahtarları yukarıdaki firin-isinmiyor
+    // kaydına taşındı: yıpranmış conta ısı kaçırır ve yazı bunu zaten 3. maddede eliyor.
+    { ara: ["kapı contası"],
+      rehber: B("firin-isinmiyor", "Isınmayan fırında 5 kontrol", "Kolay", "~15 dakika", 5) },
   ],
   // Klima kümesinde iFixit'te jenerik ev tipi klima rehberi YOK — bu cihaz haritaya
   // yalnız KENDİ Türkçe rehberimizle girdi. Anahtar kelimeler bilerek DAR tutuldu:
@@ -170,15 +177,13 @@ export const REHBERLER = {
     //    istisna değil, beklenen yol. Doğrulandı: rehberBul("Süpürge","Motor") → iFixit.
     // ➡️ "motor" kendi rehberimize EKLENDİ. Yazımızın ilk cümlesi zaten doğru cevap:
     //    "çoğu zaman arıza değil, tıkanmış hava akışı."
-    // ⛔ iFixit satırları SİLİNMEDİ; artık yalnız bizde karşılığı olmayan sorguları yakalar.
-    { ara: ["motor", "çekmiyor", "emiş", "emmiyor", "tıkalı"],
+    // ✅ 23 Ağu (YK #31 seçenek c): iFixit satırları ARTIK YOK — üçü de kendi
+    //    yazılarımıza bağlandı. "fırça / brush / rulo" buraya, "anahtar / düğme /
+    //    açılmıyor / switch" yeni `supurge-calismiyor` yazısına taşındı.
+    { ara: ["motor", "çekmiyor", "emiş", "emmiyor", "tıkalı", "fırça", "brush", "rulo"],
       rehber: B("supurge-cekmiyor", "Emişi geri getiren 6 kontrol", "Kolay", "~15 dakika", 6) },
-    { ara: ["motor", "çekmiyor", "sıkış"],
-      rehber: G("How+to+clear+a+jammed+motor+in+your+vacuum+cleaner/198622", "Sıkışan motoru açma", "Difficult", "25-35 dk", 18) },
-    { ara: ["fırça", "brush", "rulo"],
-      rehber: G("Vacuum+Cleaner+Brush+Roll+Replacement/55785", "Fırça rulosu değişimi", "Moderate", "20 dk", 7) },
     { ara: ["anahtar", "düğme", "açılmıyor", "switch"],
-      rehber: G("How+to+repair+the+faulty+switch+in+your+vacuum+cleaner/193178", "Arızalı açma/kapama anahtarı onarımı", "Moderate", "15-25 dk", 13) },
+      rehber: B("supurge-calismiyor", "Hiç açılmayan süpürgede ücretsiz eleme", "Kolay", "~15 dakika", 8) },
   ],
 };
 

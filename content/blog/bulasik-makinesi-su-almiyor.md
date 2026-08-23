@@ -26,6 +26,12 @@ images:
 
 Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozucu ama iyi haber: en sık nedenler basit ve çoğu zaman evde, ücretsiz çözülüyor. Bu yazıda olası nedenleri, **servis çağırmadan önce kendin yapabileceğin kontrolleri** ve hangi adımda durman gerektiğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **su giriş valfine**
+> geldiğinde iş servise aittir: valf şebeke gerilimiyle çalışır ve gövdenin içindedir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
 
 ## Bulaşık makinesi neden su almaz? Olası nedenler
