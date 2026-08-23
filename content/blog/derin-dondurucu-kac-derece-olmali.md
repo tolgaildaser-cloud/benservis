@@ -1,6 +1,6 @@
 ---
-title: "Derin dondurucu kaç derece olmalı? Doğru ayar ve 3 kural"
-description: "Tek bir doğru ayar var — ve çoğu evde yanlış. Şoklama ne zaman açılır, dondurucu dolu mu boş mu daha az elektrik yakar, kesintide gıda kaç saat dayanır?"
+title: "Derin dondurucu kaç derece olmalı? -18 °C ve 3 kural"
+description: "Derin dondurucu -18 °C'de çalışır. Kademeli düğmede hangi kademe, şoklama ne zaman açılır, dolu mu boş mu az elektrik yakar, kesintide gıda kaç saat dayanır?"
 slug: "derin-dondurucu-kac-derece-olmali"
 date: "2026-07-14"
 category: "Buzdolabı"

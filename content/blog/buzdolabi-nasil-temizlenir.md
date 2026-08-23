@@ -76,9 +76,13 @@ Rafları ve çekmeceleri çıkar — hepsi elle, alet gerektirmeden çıkacak ş
 
 Bir kapta **1 ölçek beyaz sirke + 2 ölçek ılık su** karıştır. Mikrofiber bezi bu karışıma batırıp iç duvarları, tavanı, tabanı ve kapı iç yüzeyini sil. Sirke yağ filmini çözer, kurumuş damlaları yumuşatır ve kokuyu nötrler; geride kimyasal kalıntı bırakmaz.
 
+📌 **Peki neden çamaşır ve bulaşık makinesinde sirke önermiyoruz?** Çünkü orada sirke **makinenin içine dökülüp program çalıştırılıyor**: sıvı pompadan, hortumlardan ve lastik contalardan geçiyor ve bazı üreticiler bunun yıpranma yaptığını açıkça belirtiyor. Buzdolabında böyle bir şey yok — cihaz fişten çekik, sirke seyreltilmiş hâlde yalnız **plastik ve cam yüzeye** sürülüp siliniyor, hiçbir sisteme girmiyor. Aradaki fark malzeme değil, **sıvının nereye gittiği**.
+
 İnatçı, kurumuş lekelerde bezi lekenin üzerinde bir dakika bekletip sonra sil. Kazıma aletine gerek kalmaz.
 
 Arka iç duvarın alt kısmındaki **küçük tahliye deliğini** de kontrol et; buzdolabının çalışma sırasında oluşan yoğuşma suyu buradan tahliye olur. Delik tıkalıysa su içeride birikir ve koku yapar. Görünen kısmını nemli bezle ya da kulak çubuğuyla temizlemen yeterli — içine sert bir şey sokup zorlamana gerek yok.
+
+⛔ **Şunları asla kullanma:** çamaşır suyu, amonyak, aseton, tiner, benzen ve alkol bazlı çözücüler. Üreticiler bunlara açıkça karşı çıkıyor — iç yüzeyin koruyucu kaplamasını aşındırır, plastikte çatlama yapar ve gıdayla temas eden bir hacimde kalıntı bırakır. Buzdolabı temizliğinde sert kimyasala gerek yok; seyreltilmiş sirke ve karbonat işi görür.
 
 ## Kapı contası: karbonatın sahnesi
 
