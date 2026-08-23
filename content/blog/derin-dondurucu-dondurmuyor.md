@@ -30,6 +30,15 @@ faq:
     a: "Gıdaların güvenle saklanması için -18 °C önerilir. Sıcaklık ayarı ve ölçümü için ayrı rehberimize bakabilirsin."
 images:
   coverAlt: "Ev tipi dondurucu bölmesinde iki raf dolusu istiflenmiş buz kalıbı"
+  steps:
+    - "Hiç soğutmayan ve soğutup dondurmayan iki dondurucuyu, hangi tarafın servis işi olduğuyla birlikte karşılaştıran çizim"
+    - "Kapak contasından dirençsiz çıkan kâğıdı ve aynı kenarda oluşan kırağıyı gösteren kesit çizimi"
+    - "Contanın önce gözenekli süngerle ılık sabunlu suyla silinip sonra kuru bezle kurulanmasını gösteren çizim"
+    - "İnce kırağı ile 5 milimetreden kalın buz katmanını yan yana ölçekleyerek karşılaştıran kesit çizimi"
+    - "Boşaltılmış, fişi çekilmiş ve kapağı açık bırakılmış dondurucuyu, sivri alet kullanma yasağıyla birlikte gösteren çizim"
+    - "Termostat kadranının orta-yüksek kademeye alınışını, -18 santigrat hedefini ve 24 saatlik bekleme süresini gösteren çizim"
+    - "Kapalı iç hava kanalı, duvarla arasındaki 5-10 santimlik boşluk ve tozlu arka ızgarayı üç sütunda gösteren çizim"
+    - "Hiç ses gelmeyen ve metalik sürtünme duyulan iki fan durumunu, ikisinde de durmak gerektiğiyle gösteren çizim"
 ---
 
 Derin dondurucun çalışıyor, motor sesi geliyor, hatta dışı ılık — ama içerideki gıdalar tam donmuyor. Bu, "cihaz bozuldu" demenin her zaman doğru olmadığı arızalardan biri: sebeplerin bir kısmı **birkaç dakikalık kontrolle** anlaşılıyor, bir kısmı ise gerçekten servis işi. Bu yazıda 6 olası nedeni, servis çağırmadan önce kendin kontrol edebileceklerini ve hangi noktadan sonra durman gerektiğini anlatıyoruz.

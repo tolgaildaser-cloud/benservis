@@ -29,6 +29,14 @@ faq:
     a: "Evet. Bazı modellerde motor, durduktan hemen sonra yeniden kalkmaz; sistemdeki basıncın dengelenmesi için birkaç dakikalık gecikme normaldir. Kesinti sonrası dolabın birkaç dakika sessiz kalması arıza değildir. Bu yüzden fişi çekip takarak yapılan denemelerde de motora kalkış için birkaç dakika tanınmalıdır."
 images:
   coverAlt: "Buzdolabının arka bölümü ve motor kısmı"
+  steps:
+    - "İç lambası sönük ve yanan iki buzdolabını, hangi adımlara yönlendirdikleriyle karşılaştıran çizim"
+    - "Fişin prize tam oturtulmasını, prizin başka bir cihazla denenmesini ve yanık prize takmama uyarısını gösteren çizim"
+    - "Sigorta kutusunda atmış sigortanın kolunun diğerlerinin hizasından çıktığını gösteren çizim"
+    - "Üstünde başka cihazlar olan çoklu prizle, doğrudan duvar prizine tek başına takılı fişi karşılaştıran çizim"
+    - "Kapalı sıfır konumundaki termostat kadranını ve orta kademeye alınmış hâlini karşılaştıran çizim"
+    - "Sırtı duvara dayalı buzdolabında çıkamayan sıcak havayı ve ısınma-koruma-tık zincirini gösteren çizim"
+    - "Tam sessizlik, arada çalışıp susma ve uğultu-tık döngüsü olmak üzere üç ses tablosunu zaman şeridinde gösteren çizim"
 ---
 
 Mutfakta bir şeyin eksik olduğunu fark ediyorsun: o alışıdık motor uğultusu yok. Dolabın lambası yanıyor, ama içerisi ılımaya başlamış. Ya da daha sinir bozucu senaryo: birkaç dakikada bir kısa bir uğultu, ardından "tık", sonra sessizlik — ve aynı döngü tekrar tekrar. Bu yazı "hiç durmuyor" şikâyetinin tam tersi için: motor kalkış yapmıyor. Sebep bazen prizde biter, bazen küçük bir parçada, bazen işin kalbi olan kompresörde. Sırayla gidelim.
