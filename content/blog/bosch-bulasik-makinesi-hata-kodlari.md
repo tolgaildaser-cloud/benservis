@@ -50,7 +50,7 @@ Bosch bulaşık makinen **E** ile başlayan bir hata kodu gösteriyor. Bu rehber
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> 🚨 **Önce bir düzeltme.** İnternette çok yayılan bir tavsiye var: *"E15'te makineyi ~30° yana yatır, taban suyunu boşalt."* **Bosch'un kendi sayfası bunun tersini söylüyor:** *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
+> 🚨 **E15'te Bosch'un talimatı net:** *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
 
 ## ⚡ En sık karşılaşılan 3 kod
 > **E24** — Pompa tıkanıklığı → 🛠️ kendin
@@ -78,7 +78,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 "Bosch ne diyor" sütunu bizim yorumumuz değil — Bosch'un kendi sayfalarındaki çözüm cümlesinin özeti.
 
-> 📌 **E16 ile E17 aynı sayfada.** Bosch bu iki kodu ayırmıyor; ikisine de tek anlam veriyor. İnternetteki listelerin bu ikisine ayrı ve birbirine zıt anlamlar vermesinin bir dayanağı yok.
+> 📌 **E16 ile E17 aynı sayfada.** Bosch bu iki kodu ayırmıyor; ikisine de tek anlam veriyor.
 
 ## Öne çıkan kodlar
 
@@ -91,7 +91,7 @@ Bosch'un talimatı iki cümledir ve evde denenecek bir adım içermez:
 2. **Cihazı kapat.**
 3. Teknisyenden randevu al.
 
-⛔ **Makineyi yatırma.** Bu tavsiye internette çok dolaşıyor ama Bosch açıkça sağlık ve güvenlik gerekçesiyle evde müdahaleyi önermiyor. Sebebi de mantıklı: tabandaki su elektrikli bir bölgenin içindedir ve suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz — su tekrar birikir, bu sefer sen orada olmadan.
+⛔ **Makineyi yatırma.** Bosch bu kodda sağlık ve güvenlik gerekçesiyle evde müdahaleyi önermiyor. Sebebi de mantıklı: tabandaki su elektrikli bir bölgenin içindedir ve suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz — su tekrar birikir, bu sefer sen orada olmadan.
 
 Bu kodu sebep sebep ele aldığımız ayrıntılı rehber: [Bosch bulaşık makinesi E15 hatası](/blog/bosch-bulasik-makinesi-e15-hatasi/)
 
@@ -123,7 +123,7 @@ Isıtma sisteminde kireç birikmiş. Bosch, ısıtma sistemine zarar vermemek i�
 ## Kodun listede yok mu?
 Bosch yüzlerce model üretir ve yayımladığı liste yukarıdakiyle sınırlı. Bosch bu listenin dışı için tek cümlelik bir hüküm veriyor: **"Diğer hata kodlarının tamamı elektronik arızalarıyla ilgilidir"** ve deneyimli bir teknisyen ister.
 
-Biz de listenin dışındaki numaralara **uydurma bir anlam vermeyiz** — yanlış teşhis sana pahalıya patlar. Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
+Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
 
 > 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 

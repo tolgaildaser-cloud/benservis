@@ -36,8 +36,6 @@ faq:
     a: "Çünkü DemirDöküm iki ayrı elektronik platform kullanıyor. Nitromix ve ademiX gibi modeller Vaillant Group platformundan gelir ve kodları noktalıdır: F.22, F.28, F.29 gibi. Atron Condense ve Nitron Plus gibi modeller ise kendi platformunu kullanır ve kodları noktasızdır: F04, F05, F10. Aynı numara iki ailede farklı anlama gelebildiği için önce ekranındaki kodun noktalı mı noktasız mı olduğuna bakmak gerekir."
   - q: "DemirDöküm kombi ateşleme yapmıyor, hangi kod?"
     a: "Noktalı ailede F.28 'ateşleme başarısız' demektir. Noktasız ailede karşılığı F04'tür: kombi üç ateşleme denemesinden sonra arıza konumuna geçer ve kılavuz burada reset tuşuna basmayı söyler. İki kodda da önce gaz vanasının açık olduğunu kontrol et ve bir kez resetle; kod geri geliyorsa gazla ilgili bir arıza vardır ve yetkili servis gerekir."
-  - q: "İnternette gördüğüm F.07, F.08, F.15 kodları neden bu yazıda yok?"
-    a: "Çünkü bu numaralar DemirDöküm'ün kendi kılavuzlarında geçmiyor. Doğruları başka numaralarda: gaz armatürü tarafı F.26, F.61 ve F.62; elektronik kart F.63, F.64 ve F.65; pompa F.75. Doğrulayamadığımız bir kod için anlam yazmıyoruz, çünkü yanlış kod yanlış parçaya yönlendirir ve gaz cihazında bunun bedeli büyük olur."
 images:
   coverAlt: "Kombi çizimi, ekranında hata göstergesi; yanında basınç göstergesi ve kod listesi"
 ---
@@ -106,19 +104,6 @@ Kombi yanmıyor. Noktasız ailede kılavuzun verdiği çözüm doğrudan **reset
 
 ### Atık gaz ve baca — F.77 ya da F05
 Bu kodlarda beklemek doğru değil: atık gaz yolundaki bir arıza yanma ürünlerinin doğru tahliye edilmediği anlamına gelebilir. Kılavuzun talimatı net — **yetkili servis tarafından giderilmesi** gerekir.
-
-### "F.07, F.08, F.15 aramıştım"
-Bu numaralar DemirDöküm'ün kendi kılavuzlarında geçmiyor. Doğruları başka yerde:
-
-| Aradığın kod | Gerçek karşılığı |
-|---|---|
-| **F.07** "gaz valfi" | Gaz armatürü tarafı: **F.26 · F.61 · F.62** |
-| **F.08** "elektronik kart" | Kart tarafı: **F.63 · F.64 · F.65** |
-| **F.15** "pompa" | Pompa: **F.75** |
-| **F.30** "baca" | Baca: **F.77** (noktasız ailede **F05**) |
-| **F.04** "NTC sensörü" | F04 **ateşleme** arızasıdır; sensör kodları `F.00`/`F.01`/`F.71`/`F.72` |
-| **F.05** "fan" | F05 **baca** arızasıdır; fan **F.32**'dir |
-| **F.37** | DemirDöküm kodu değil — **Baymak**'ın düşük basınç kodudur |
 
 ## Reset nasıl yapılır?
 Reset tuşuna birkaç saniye bas; önce su basıncını (1–1.5 bar) kontrol et. Kod tekrar çıkarsa arıza sürüyordur — resetlemeyi tekrarlamak sorunu büyütebilir.

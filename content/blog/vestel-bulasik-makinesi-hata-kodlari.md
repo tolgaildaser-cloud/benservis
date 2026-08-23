@@ -1,6 +1,6 @@
 ---
-title: "Vestel bulaşık makinesi hata kodları: F serisi, E değil"
-description: "Vestel bulaşık makinesi E kodu kullanmaz. Kılavuzdaki on iki F kodunun anlamı, Vestel'in kendi çözüm sütunu, nesil farkı ve evde yapılacak kontroller."
+title: "Vestel bulaşık makinesi hata kodları: F serisinin tamamı"
+description: "Vestel bulaşık makinesi kılavuzundaki on iki F kodunun anlamı, Vestel'in kendi çözüm sütunu, nesil farkı ve evde yapılacak kontroller."
 slug: "vestel-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
@@ -40,7 +40,7 @@ steps:
   - "Fişi tak ve kısa bir programla dene. Kod tekrar geliyorsa deneme yapmayı bırak; ısıtıcı, sensör, pompa ve valf tarafı servise aittir."
 faq:
   - q: "Vestel bulaşık makinesinde E1, E2 gibi kodlar var mı?"
-    a: "Yok. Vestel bulaşık makinesi kullanım kılavuzlarında E ile başlayan tek bir hata kodu geçmiyor; tablo tamamen F serisidir. İnternette dolaşan E1, E2, E3 listeleri Vestel'in kendi belgelerine dayanmıyor. Karıştırılmasının bir sebebi var: Vestel çamaşır makinesi gerçekten E01, E02, E03 kullanır. İki cihazın tabloları birbirine karışmış görünüyor. Ekranındaki kodu bir kez daha kontrol et."
+    a: "Vestel bulaşık makinesinin kod tablosu F serisidir: FF, F1, F2, F3, F5, F6, F7, F8, F9, FE, HI ve LO. Ekranındaki kodu kendi modelinin kullanım kılavuzundan teyit et; Vestel tabloyu nesiller arasında değiştirmiştir ve ayrıntısı bu yazıda var."
   - q: "Vestel bulaşık makinesi F2 hatası nasıl çözülür?"
     a: "F2, kılavuzda 'Su tahliye edilmiyor' demektir ve Vestel'in kendi çözümü şu: su tahliye hortumu ve filtreler tıkanmış olabilir, programı iptal edin. Pratikte alt sepetin altındaki filtre grubunu çıkarıp yıkamak, tahliye hortumunun bükülmediğini ve lavabo giderinin tıkalı olmadığını kontrol etmek çoğu vakayı kapatır. Arıza devam ederse tahliye pompası servis işidir."
   - q: "Vestel bulaşık makinesinde F1 hatası ciddi mi?"
@@ -53,7 +53,7 @@ images:
 
 Program bitmesine yakın makine durdu, ekranda bir kod yanıp sönüyor ve açtığında tabanda kirli su bekliyor.
 
-Önce yaygın bir yanlışı düzeltelim: **Vestel bulaşık makinesi E ile başlayan kod kullanmaz.** Beş resmî Vestel bulaşık makinesi kullanım kılavuzunda E ile başlayan tek bir hata kodu geçmiyor; tablo tamamen **F serisidir**. İnternette dolaşan "Vestel bulaşık E1, E2, E3" listeleri markanın kendi belgelerine dayanmıyor.
+Vestel bulaşık makinesinin kod tablosu **F serisidir**. Beş resmî kullanım kılavuzunda yayımlanan liste on iki koddan oluşur: `FF` `F1` `F2` `F3` `F5` `F6` `F7` `F8` `F9` `FE` `HI` `LO`.
 
 Karışıklığın sebebi de tahmin edilebilir: **Vestel çamaşır makinesi** gerçekten E01, E02, E03 kullanır. İki cihazın tabloları birbirine karışmış görünüyor.
 

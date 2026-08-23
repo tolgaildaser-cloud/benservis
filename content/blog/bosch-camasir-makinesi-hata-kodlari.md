@@ -81,7 +81,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | **E29 / F29** | Su yok / yetersiz şebeke basıncı | Bosch US sayfası "E17, F17 or F29" diyerek su alma grubuna koyuyor |
 | **E34 / F34** | Kapak düzgün kilitlenmedi | "E16, E34, F16 or F34" grubunda; E16'nın kardeşi |
 
-Bunlar uydurma kodlar değil, ama **Bosch'un Türkiye sayfasında geçmiyorlar.** Kendi modelinin kılavuzundan teyit et.
+Bu iki kod Bosch'un Türkiye sayfasında yer almıyor; kendi modelinin kılavuzundan teyit et.
 
 ## Öne çıkan kodlar
 
@@ -101,20 +101,6 @@ Makine bir su kaçağı algılamış ve Aquastop güvenliği devreye girmiştir.
 ### E20 / F20 — Beklenmeyen ısınma
 Listedeki en az bilinen koddur ve iyi haber taşır: Bosch burada önce **makineyi açıp kapatarak sıfırlamayı** öneriyor. Yani her E20 bir arıza değildir; geçici bir okuma hatasından da gelebilir. Reset sonrası tekrar geliyorsa servis.
 
-## "Ben F21 aramıştım" — o kodun durumu
-
-Bu bölüm bilerek burada. **"Bosch F21 motor kömürü"** eşleşmesi internette çok yaygın ama **BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor.** Aynı durum şu numaralar için de geçerli:
-
-| Aradığın kod | Durumu |
-|---|---|
-| **F21** | BSH listelerinde yok. Tahrik/motor tarafının kodu **E80** |
-| **F31** | Yok. BSH'de köpük kodu **E33 / F33** |
-| **F42 · F43** | Yok |
-| **F61** | Yok. Kapı kodları **E16/F16** ve **E34/F34** |
-| **F63** | Yok |
-
-Ekranında gerçekten bu numaralardan birini görüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et — çünkü yanlış kod, yanlış parçaya ve gereksiz masrafa yönlendirir.
-
 ## Hata kodu nasıl sıfırlanır?
 Çoğu modelde: program düğmesini **"Kapalı"ya** al, makineyi **fişten 1 dakika** çek, tekrar tak. Arızanın kaynağı düzelmediyse kod tekrar çıkar.
 
@@ -132,7 +118,7 @@ Ekrandaki her uyarı bir hata kodu değildir; bazı **semboller** normal bilgi v
 Sembolün ne olduğundan emin değilsen modelini yaz, [Benservis](/) söylesin.
 
 ## Kodun listede yok mu?
-Bosch yüzlerce farklı model üretir ve yayımladığı liste on kodludur. Bu listenin dışındaki numaralara **uydurma bir anlam vermeyiz** — yanlış teşhis sana pahalıya patlar. Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
+Bosch yüzlerce farklı model üretir ve yayımladığı liste on kodludur. Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin çözüp çözemeyeceğini ve tahmini maliyeti saniyede söyleyelim.
 
 > 🔧 **Servis çağırmadan önce:** Cihazının markasını ve belirtiyi yaz — Benservis olası arızayı ve **tahmini maliyet aralığını** ücretsiz söylesin, sonra sana en yakın Google puanlı servisleri göstersin. [Ücretsiz teşhis et →](/)
 

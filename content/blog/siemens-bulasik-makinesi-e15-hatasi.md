@@ -39,11 +39,9 @@ images:
 
 Akşam bulaşığını yükledin, program başladı ve birkaç dakika sonra makine sustu: ekranda **E15**, yanında yanıp sönen bir **musluk işareti**. Belki bir de alttan gelen inatçı bir vızıltı. Siemens bulaşık makinelerinde E15, kullanıcıyı en çok telaşlandıran ama çoğu zaman en masum biten kodlardan biridir: makine arızalandığı için değil, **evini korumak için** durmuştur. Bu rehberde E15'in ne olduğunu, üreticinin ne yapılmasını söylediğini ve neden makineyi eğmemen gerektiğini anlatıyoruz.
 
-> 🚨 **Önce önemli bir düzeltme.** İnternette çok yayılan bir tavsiye var: *"makineyi 30-45° eğ, taban suyunu boşalt."* **Üreticinin kendi E15 sayfası bunun tersini söylüyor:**
+> 🚨 **Üreticinin bu kodda verdiği talimat net:** *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
 >
-> *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
->
-> Suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
+> Tabandaki suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

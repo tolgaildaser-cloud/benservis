@@ -1,6 +1,6 @@
 ---
-title: "Arçelik klima hata kodları: CH serisi ve internetteki listelerin sorunu"
-description: "Arçelik'in yayımladığı tek klima kod tablosu CH serisidir. Otuz dört kodun karşılığı, E ve P listelerinin neden Arçelik'e ait olmadığı ve servis sınırı."
+title: "Arçelik klima hata kodları: CH serisi, 34 kodun tamamı"
+description: "Arçelik'in yayımladığı klima kod tablosu: CH01'den CH93'e otuz dört kodun karşılığı, evde yapılabilecek kontroller ve servis sınırı."
 slug: "arcelik-klima-hata-kodlari"
 date: "2026-08-21"
 category: "Klima"
@@ -41,7 +41,7 @@ faq:
     a: "Arçelik'in kendi yayımladığı tek klima kod tablosu CH serisidir ve otuz dört kod içerir: CH01'den başlayıp CH93'e kadar atlamalı olarak gider. İnternette çok dolaşan E ve P serisi listeler Arçelik klima kılavuzlarında ve Arçelik'in kendi kod sayfasında geçmez; bunlar markadan bağımsız genel OEM tablolarıdır. Ekranındaki kod E ya da P ile başlıyorsa cihazının Arçelik olduğundan ve kodu doğru okuduğundan emin ol."
   - q: "CH kodu aldım, evde çözebileceğim bir şey var mı?"
     a: "Arçelik, yayımladığı otuz dört CH kodunun her birinde yetkili servisle iletişime geçilmesi gerektiğini yazıyor; yani kullanıcının kendi çözeceği bir CH kodu tanımlamıyor. Evde yapabileceğin şey kodun sebebini ortadan kaldırmayı denemek: enerjiyi kesip yeniden vermek, iç ünite filtresine bakmak ve dış ünitenin önünü açmak. Bunlar kodu değil, koda yol açabilecek durumu hedefler ve hiçbiri paneli sökmeyi gerektirmez."
-  - q: "İnternette gördüğüm Arçelik klima listeleri neden birbirini tutmuyor?"
+  - q: "Ekransız modelde kod yerine ışık yanıp sönüyor, ne yapmalıyım?"
     a: "Çünkü dolaşımdaki listelerin büyük kısmı Arçelik'e ait değil. E ve P serisi tablolar farklı üreticilerin OEM şemalarından geliyor ve birbirinden kopyalanırken anlamlar da kayıyor; aynı numaraya bir listede kompresör koruması, bir başkasında sensör hatası deniyor. Arçelik'in kendi sayfasındaki CH tablosu ise tek ve tutarlıdır. Ekransız modellerde kod yerine ışık deseni kullanıldığı için o modellerde tek kaynak kılavuzdur."
   - q: "Kod aldıktan sonra klimayı çalıştırmaya devam edebilir miyim?"
     a: "Koduna bağlı. Sensör kaynaklı kodlarda cihaz genelde çalışır ama sıcaklığı doğru okuyamadığı için verimsiz çalışır ve elektrik harcar. Basınç, aşırı akım, kompresör pozisyonu ya da gaz kaçağı bildiren kodlarda ısrarla çalıştırmak arızayı büyütür; bu kodlarda cihazı kapatıp servisle konuşmak doğru olur. Gaz kaçağını işaret eden kodlarda beklemek değil, cihazı kapatmak gerekir."
@@ -49,7 +49,7 @@ images:
   coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
-Ağustos sıcağında klima sana bir kod gösteriyor ve internette bulduğun üç liste üç farklı şey söylüyor. Bunun sebebi klimanın karmaşıklığı değil: **dolaşımdaki listelerin çoğu Arçelik'e ait değil.**
+Ağustos sıcağında klima sana bir kod gösteriyor. Arçelik'in yayımladığı klima kod tablosu **CH serisidir** ve otuz dört kod içerir.
 
 Arçelik'in kendi yayımladığı tek klima kod tablosu **CH serisidir**. Çok yayılan **E** ve **P** serisi listeler ne Arçelik klima kullanım kılavuzlarında ne de Arçelik'in kendi kod sayfasında geçer; bunlar markadan bağımsız genel OEM tablolarıdır ve birbirinden kopyalanırken anlamları da kaymıştır.
 
@@ -57,7 +57,7 @@ Bu yazıda Arçelik'in yayımladığı **otuz dört CH kodunun tamamını** veri
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ **Ekranındaki kod E ya da P ile başlıyorsa** önce kodu doğru okuduğundan emin ol. Bu iki seri Arçelik'in yayımladığı listede yok; internette bulacağın karşılıkları da doğrulanamıyor. Ekransız modellerde bildirim kod yerine ışıkların yanıp sönme düzeniyle yapılır ve o eşleştirme tamamen modele özeldir — tek kaynak kılavuzdur.
+> ⚠️ **Ekranındaki kod CH ile başlamıyorsa** kodu bir kez daha kontrol et; yayımlanan tablo CH serisidir. Ekransız modellerde bildirim kod yerine ışıkların yanıp sönme düzeniyle yapılır ve o eşleştirme tamamen modele özeldir — tek kaynak kılavuzdur.
 
 ## Adım adım: Arçelik klimada kod okuma
 
@@ -144,7 +144,7 @@ Bu, evde yapacak bir şeyin olmadığı anlamına gelmiyor — ama ne yaptığı
 | **CH45** | Kondenser orta boru sensörü hatası |
 | **CH46** | Emme hattı boru sensörü hatası |
 
-> 📌 **Tablodaki boşluklar tabloda yok demektir.** Arçelik'in listesi atlamalıdır: CH07, CH08, CH11 gibi numaralar yayımlanan tabloda bulunmaz. İnternette bu numaralara verilen karşılıkların dayanağı yoktur.
+> 📌 **Liste atlamalıdır:** CH07, CH08, CH11 gibi numaralar yayımlanan tabloda bulunmaz.
 
 ## Öne çıkan iki kod
 

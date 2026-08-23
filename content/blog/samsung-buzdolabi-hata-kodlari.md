@@ -87,8 +87,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **6E** çoğunlukla masum çıkar: elektrik kesintisi sonrası ortam sensörü verisi karışmıştır ve reset ile silinir. **84E, 85E ve 86E** ise ciddi tarafın kodlarıdır; 84E kompresörün kalkamadığını bildirir.
 
-**85E ile 86E'yi karıştırma** — Samsung bunları ayrı ayrı tanımlıyor ve ikisi zıt durumları anlatıyor: **85E** şebeke geriliminin cihazın çalışma aralığının **altına** düştüğünü (brown-out), **86E** ise **üstüne** çıktığını (ani gerilim yükselmesi) bildirir. İnternetteki listelerin ikisini tek satırda birleştirmesinin Samsung tarafında bir dayanağı yok.
-
+**85E ile 86E'yi karıştırma** — Samsung bunları ayrı ayrı tanımlıyor ve ikisi zıt durumları anlatıyor: **85E** şebeke geriliminin cihazın çalışma aralığının **altına** düştüğünü (brown-out), **86E** ise **üstüne** çıktığını (ani gerilim yükselmesi) bildirir. 
 Bir de kolayca panik yaratan bir kod var: **85C**. Bu bir arıza değil, beslemede düşük voltaj algılandığını söyleyen bir bilgi mesajıdır ve Samsung'a göre **OK tuşuna 3 saniye basınca silinir**.
 
 **Kendin kontrol et:** 85E, 86E ya da 85C görüyorsan buzdolabını uzatma kablosundan değil doğrudan duvar prizinden beslediğinden emin ol ve evde başka cihazların da etkilendiği bir voltaj sorunu olup olmadığına bak. Bina kaynaklı gerilim sorunu varsa bu buzdolabının değil tesisatın konusudur — ve tekrarlayan gerilim dalgalanmaları zamanla kompresörü yıpratır.

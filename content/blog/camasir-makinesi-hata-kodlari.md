@@ -46,8 +46,7 @@ Neff de BSH markasıdır ama kendi hata kodu sayfasını yayımlamadığı için
 | E80 | Tahrik (motor) tarafı | Servis gerekir |
 
 ## Arçelik / Beko (tek haneli E kodları)
-İki marka aynı listeyi kendi sitelerinde birebir yayımlar. **Kodlar tek hanelidir** —
-çok yayılan E01–E11 bandı ve H1/H4/H5 gösterimi bu listede geçmez.
+İki marka aynı listeyi kendi sitelerinde birebir yayımlar ve **kodlar tek hanelidir.**
 
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|

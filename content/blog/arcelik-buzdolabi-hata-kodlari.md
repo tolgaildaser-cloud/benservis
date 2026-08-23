@@ -39,12 +39,12 @@ steps:
   - "Dondurucunun arka duvarında kalın karlanma var mı diye bak, varsa fotoğrafla."
   - "Kod, model numarası ve gördüğün belirtiyi tek bir nota topla ve servise onu ilet."
 faq:
-  - q: "Arçelik buzdolabında aynı kod neden her listede farklı yazıyor?"
-    a: "Çünkü dolaşımdaki listelerin çoğu üreticinin kendi tablosuna dayanmıyor. Arçelik ve Beko yirmi kodluk tek bir liste yayımlıyor ve her kod tek bir şeyi bildiriyor: örneğin E2 fresh food bölmesinin evaporatör sensörü, E3 aynı bölmenin hava sensörü demek. İnternette çok yayılan kodların toplanarak üretildiği açıklamasının ise hiçbir üretici belgesinde karşılığı yok. Kesin karşılık için üreticinin listesine ya da kendi cihazının kullanım kılavuzuna bak."
+  - q: "Arçelik buzdolabında kodların karşılığını nereden kesin öğrenirim?"
+    a: "Arçelik ve Beko yirmi kodluk tek bir liste yayımlıyor ve her kod tek bir şeyi bildiriyor: örneğin E2 fresh food bölmesinin evaporatör sensörü, E3 aynı bölmenin hava sensörü demek. Bu yazıdaki tablo o listedir. Kendi cihazının kullanım kılavuzu da her zaman geçerli bir kaynaktır."
   - q: "Hata kodu görünce buzdolabını fişten çekmek zararlı mı?"
     a: "Hayır, kısa süreli bir reset zararsızdır ve teşhisin ilk adımıdır. Fişi çekip 5-10 dakika bekledikten sonra tekrar takmak, elektrik dalgalanması sonrası kartta kalan geçici kodları siler. Bu süre boyunca kapıyı açmazsan içerideki soğuk yük de korunur. Tekrar takınca kod geri geliyorsa artık geçici bir takılmayla değil gerçek bir bildirimle karşı karşıyasın."
   - q: "Ekranda E harfi yerine S ya da D ile başlayan bir şey var, bu da hata kodu mu?"
-    a: "Olabilir ama biz o kodlara anlam yazmıyoruz. Üreticinin yayımladığı listede ve taranan servis el kitaplarında S ya da D ile başlayan bir kod bulunmuyor; internette bu harflerle dolaşan karşılıkların dayanağını doğrulayamadık. Ekranında böyle bir bildirim varsa tek güvenilir kaynak kendi modelinin kullanım kılavuzudur; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
+    a: "Üreticinin yayımladığı listede ve taranan servis el kitaplarında S ya da D ile başlayan bir kod bulunmuyor. Ekranında böyle bir bildirim varsa tek güvenilir kaynak kendi modelinin kullanım kılavuzudur; kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
   - q: "Kodu not ettim, servisi aramadan önce başka ne yapabilirim?"
     a: "Kodun yanına model numarasını, kodun ilk ne zaman göründüğünü ve cihazın o sırada nasıl davrandığını yaz. Dondurucu soğutup soğutucu ılıklaşıyor mu, arka duvarda kalın karlanma var mı, kompresör sesi geliyor mu gibi gözlemler kodun kendisi kadar değerlidir. Bu notla arayan bir kullanıcı, servisin doğru parçayla gelme ihtimalini belirgin biçimde artırır."
 images:
@@ -121,21 +121,7 @@ Arçelik ve Beko bu tabloyu kendi sitelerinde **birebir aynı** yayımlıyor. Yi
 
 > 📌 **E2 ile E3 kolayca karışır.** İkisi de soğutucu bölme tarafına bakar; fark, sensörün nerede durduğudur — **E2** soğutma serpantinini (evaporatör), **E3** bölme içindeki havayı ölçer.
 >
-> 📌 **Liste atlamalı.** `E6`, `E7`, `E21`, `E22` ve `E23` üreticinin yayımladığı tabloda **yok**. İnternette bu numaralara verilen karşılıkların dayanağı da yok.
-
-## "Kodlar toplanarak üretilir" iddiasının durumu
-
-İnternette çok yayılan bir açıklama var: kartın üç sensörü izlediği ve birden fazlası hata verdiğinde ekrana **toplamlarının** düştüğü — yani `E3 = E1 + E2`, `E7 = üçünün toplamı` gibi.
-
-**Böyle bir mekanizma hiçbir üretici belgesinde geçmiyor.** Ve tablonun kendisi de bunu doğrulamıyor: üreticiye göre `E2` **fresh food evaporatör sensörü**, `E3` ise **fresh food hava sensörü** demek — ikisi de ayrı, tek başına arızalar. `E6` ve `E7` ise listede hiç yok.
-
-Yüksek bir numara gördüğünde de aynı şey geçerli: `E17` "flap fan hatası" demektir, "on yedi şey birden bozuldu" değil.
-
-## S ya da D ile başlayan bir kod gördüysen
-
-İnternette bu markaya **S1, S2, S5** ve **D1, D2, D3, D6** gibi kodlar da atfediliyor. Bu numaralar üreticinin yayımladığı listede ve taranan servis el kitaplarında **geçmiyor**.
-
-Ekranında E dışında bir harfle başlayan bir bildirim varsa tek güvenilir kaynak kendi modelinin kullanım kılavuzudur.
+> 📌 **Liste atlamalıdır:** `E6`, `E7`, `E21`, `E22` ve `E23` üreticinin yayımladığı tabloda yer almaz.
 
 **Kendin kontrol et:** `E4` ya da `E12` gördüysen dondurucunun arka duvarına bak. Kalın, düzgün bir buz tabakası birikmişse defrost hattı karlanmayı çözemiyor demektir; belirti kodu doğruluyor. Bölmenin giderek zayıf soğuması da aynı tabloya işaret eder. Fan kodlarında (`E13`–`E18`) ise sesi dinle: fan sesi tamamen kesildiyse ya da sürtünmeli bir ses geliyorsa pervaneye buz değiyor olabilir.
 

@@ -56,8 +56,7 @@ Bu markalarda kodlar model serisine göre değişir (genelde su alma, tahliye ve
 | Isıtma hatası | Su ısınmıyor | Servis (rezistans/sensör) |
 
 > Beko/Arçelik modelinde kod yerine yanıp sönen ışık deseni de olabilir; kesin anlamı kılavuzdan ya da Benservis'ten doğrula.
->
-> ⚠️ İnternette bu markalar için dolaşan **H1/H4/H5** notasyonunun üreticide karşılığı yok.
+
 
 ## Kendin çözebileceğin kodlar
 Filtre (E22), tahliye (E24) ve taban suyu (E15) en sık ve en kolay çözülenlerdir:

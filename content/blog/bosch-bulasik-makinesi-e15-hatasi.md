@@ -50,11 +50,9 @@ images:
 
 > ↑ Tüm kodlar: **[Bosch bulaşık makinesi hata kodları — E tam liste](/blog/bosch-bulasik-makinesi-hata-kodlari/)**
 
-> 🚨 **Önce önemli bir düzeltme.** İnternette çok yayılan bir tavsiye var: *"makineyi 30-45° eğ, taban suyunu boşalt."* **Üreticinin kendi E15 sayfası bunun tersini söylüyor:**
+> 🚨 **Bosch'un bu kodda verdiği talimat net:** *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
 >
-> *"Sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz. Şebeke suyunu kesin ve cihazı kapatın."*
->
-> Suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
+> Tabandaki suyu boşaltmak sızıntının **kaynağını** ortadan kaldırmaz; su tekrar birikir, bu sefer sen orada olmadan.
 
 Bosch bulaşık makinen çalışmayı kesti, ekranda **E15** yazıyor ve genelde yanında bir **musluk (çeşme) işareti** yanıp sönüyor. Panik yok: E15 çoğu zaman pahalı bir arıza değil, makinenin **taşma güvenliğinin** devreye girmesi. Bu rehberde E15'in tam olarak ne anlama geldiğini, evde nasıl çözeceğini (adım adım) ve hangi durumda servise ihtiyacın olduğunu anlatıyoruz. Aynı yaklaşım **Siemens ve Profilo** için de geçerli; Neff ve Gaggenau kendi kod sayfalarını yayımlamadığı için onlar adına aynı şeyi söyleyemiyoruz.
 

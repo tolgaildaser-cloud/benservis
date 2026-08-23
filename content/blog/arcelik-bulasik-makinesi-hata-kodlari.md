@@ -41,8 +41,6 @@ faq:
     a: "Önce eviyenin altındaki makine musluğunun tam açık olduğunu, sonra evde su olup olmadığını kontrol et — şebeke kesintisi bu kodun en yaygın sebebidir. Giriş hortumunun dolap içinde bükülmediğine de bak. Bu üçü temizken kod sürüyorsa giriş hattının makine tarafında bir sorun vardır ve servisin bakması gerekir."
   - q: "Makine sürekli su alıp duruyor ve E07 veriyor — tehlikeli mi?"
     a: "E07 sürekli su alma durumudur ve genelde su giriş vanası ya da akış ölçer kaynaklıdır. Makinenin güvenlik algoritması fazla suyu tahliye ederek durumu dengelemeye çalışır. Yine de hata sürüyorsa riski büyütmemek için makineyi kapatıp fişini çek ve su musluğunu kapat; bu tablo kullanıcı müdahalesiyle çözülmez, servis gerektirir."
-  - q: "İnternetteki E03, E04, E05 listeleri neden bu yazıda yok?"
-    a: "Çünkü üreticinin yayımladığı bulaşık makinesi listesinde bu numaralar geçmiyor. İkisinin nereden geldiği de belli: E03 ve E04 aslında Arçelik kombi kodlarıdır — E03 baca sigortası, E04 düşük su basıncı demek. Yani dolaşan tablonun bir kısmı yanlış cihazdan kopyalanmış. Isıtma tarafını arıyorsan doğru kod E06'dır, yani NTC ısı sensörü."
 images:
   coverAlt: "Türk mutfağında kapağı açık bulaşık makinesi ve alt sepetteki temiz tabaklar"
 ---
@@ -108,22 +106,6 @@ Makine su almayı durduramıyor. Üreticinin gösterdiği sebep **akış ölçer
 Üreticinin tanımı: **15°C üstü kompresör arızası.** Kompresörde yeterli soğutucu akışkan olmadığında sıcaklık yükselir ve makinenin performansı düşer. Bu kod **ısı pompalı** modelleri ilgilendirir — üreticinin kendi ifadesiyle "kompresör veya ısı pompasında bir problem" işaretidir.
 
 **Kendin kontrol et:** Bu kodda evde yapılacak bir şey yok. Üreticinin talimatı net: **makineyi durdur ve yetkili servise başvur.** Kapalı soğutucu devresi basınçlıdır; açmak da doldurmak da yetki ve ekipman ister.
-
-## "Ben E03 / E04 / E05 aramıştım" — o kodların durumu
-
-Bu bölüm bilerek burada, çünkü bu numaralar internette çok dolaşıyor. **Üreticinin yayımladığı bulaşık makinesi listesinde hiçbiri yok** — ve ikisinin nereden geldiği belli:
-
-| Aradığın kod | Durumu |
-|---|---|
-| **E03** | Bulaşık listesinde yok. Bu numara Arçelik **kombide** "baca sigortası" demek |
-| **E04** | Bulaşık listesinde yok. Bu numara Arçelik **kombide** "düşük su basıncı" demek |
-| **E05** | Hiçbir üretici yayınında yok |
-| **E08** | Hiçbir üretici yayınında yok |
-| **E09** | Hiçbir üretici yayınında yok |
-
-Yani dolaşan tablonun bir kısmı **yanlış cihazdan kopyalanmış**. Isıtma tarafını arıyorsan doğru kod **E06**'dır (NTC sensörü).
-
-Ekranında gerçekten bu numaralardan birini görüyorsan kodu bir kez daha kontrol et ve kendi modelinin kullanım kılavuzundan teyit et — yanlış kod, yanlış parçaya ve gereksiz masrafa yönlendirir.
 
 ## Kodların özeti
 
