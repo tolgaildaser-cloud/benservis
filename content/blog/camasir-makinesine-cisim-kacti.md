@@ -29,6 +29,14 @@ faq:
     a: "Ses yoksa acelesi yok: cisim birkaç yıkama içinde tahliyeye sürüklenebilir; her yıkamadan sonra filtreyi yeniden kontrol edebilirsin. Ama dönerken tıkırtı ya da sürtünme sesi geliyorsa cisim tambur ile kazan arasında sıkışmış demektir ve oraya yalnız servis ulaşabilir. Bu durumda makineyi kullanmayı durdurup sesi ve cismin ne olduğunu servise tarif etmek en doğrusu."
 images:
   coverAlt: "Çamaşır makinesinin alt ön kapağı açık, tahliye filtresi çıkarılmış ve yanına havlu serilmiş"
+  steps:
+    - "Kaçan cismin tamburdan kazan boşluğuna, oradan tahliye filtresine giden yolunu gösteren kesit çizimi"
+    - "Tamburun el feneriyle aydınlatılıp eldivenli elle yavaşça çevrilerek taranmasını gösteren çizim"
+    - "Kapak contasının alt kıvrımının aralanıp içindeki bozuk para ve tokanın görünmesini gösteren çizim"
+    - "Delikten düz çıkan telin çekilebileceğini, kancalanmış telin bırakılması gerektiğini karşılaştıran çizim"
+    - "Filtre kapağı açılmış, altına sığ bir kap ve havlu yerleştirilmiş, damlayan suyu gösteren çizim"
+    - "Filtrenin üstündeki cisimleri ve el feneriyle aydınlatılan filtre yuvasının derinliğini gösteren çizim"
+    - "Ses yok, ritmik tıkırtı ve metalik sürtünme durumlarını üç ayrı kararla karşılaştıran çizim"
 ---
 
 Yıkama bitti, sütyenin bir telinin eksik olduğunu fark ettin. Ya da makine dönerken içeriden metalik bir tıkırtı geliyor ve dün cebinde bozuk para unutulmuş bir pantolon yıkandı. "Makineye bir şey kaçtı" telaşı çok yaygındır ama sonu çoğu zaman kötü değildir: cisimlerin önemli bir kısmı ulaşılabilir bir yerde durur ve söküm gerektirmeden çıkar. Bu yazıda cismin makinenin içinde hangi yolu izlediğini, hangi kısmına senin güvenle bakabileceğini ve hangi durumda işin kesin servise kaldığını anlatıyoruz.
