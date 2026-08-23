@@ -744,9 +744,14 @@ export const HATA_KODU_KATMANI = {
     { giris: "Ocak ateşleme yapmıyor / kıvılcım yok", tip: "belirti",
       anlam: "Çakmak çakıyor ama ocak yanmıyorsa önce başlık temizliği, buji ve gaz akışı.",
       yazi: "ocak-atesleme-yapmiyor", rehber: true },
+    // 23 Ağu: `rehber: true` eklendi — gövde 6 adıma çevrildi ve `guide:` bloğu kondu.
+    // YK #31 kapsamı KONTROL EDİLDİ: altı adımın altısı da kapak/başlık seviyesi, hiçbiri
+    // söküm ya da parça değişimi değil; bujinin KENDİ değişimi sayfada zaten servis işi
+    // olarak işaretli kalıyor. Yani rehber, değişimi değil değişimden ÖNCEKİ ücretsiz
+    // kontrolleri anlatıyor — #31'in yasakladığı şey değil.
     { giris: "Ateşleme bujisi değişmeli mi", tip: "belirti",
-      anlam: "Bujiyi değiştirmeden önce denenecek 3 şey ve bu işin neden servis işi olduğu.",
-      yazi: "ocak-atesleme-bujisi-degisimi" },
+      anlam: "Bujiyi değiştirmeden önce denenecek 6 ücretsiz kontrol ve bu işin neden servis işi olduğu.",
+      yazi: "ocak-atesleme-bujisi-degisimi", rehber: true },
     { giris: "Fırın ısınmıyor ya da geç ısınıyor", tip: "belirti",
       anlam: "Rezistans, termostat, fan ve kart ayrımı; servis çağırmadan önce kontroller.",
       yazi: "firin-isinmiyor", rehber: true },

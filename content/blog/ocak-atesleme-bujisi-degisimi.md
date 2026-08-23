@@ -1,11 +1,17 @@
 ---
 title: "Ocak ateşleme bujisi değişimi: kendin yapılır mı?"
-description: "Ocak kıvılcım çıkarmıyor mu? Bujiyi değiştirmeden önce ücretsiz denenecek 3 şey ve bu işin neden servis işi olduğu. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Ocak kıvılcım çıkarmıyor mu? Bujiyi değiştirmeden önce ücretsiz denenecek 6 kontrol ve bu işin neden servis işi olduğu. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "ocak-atesleme-bujisi-degisimi"
 date: "2026-08-02"
 category: "Fırın / Ocak"
 # PAZ rehber dönüşümü (19 Ağu). ⛔ slug · date · gövde DEĞİŞMEDİ — kazanılmış SEO korunur.
 # Adımlar buji DEĞİŞİMİNİ değil, değişimden önceki ÜCRETSİZ kontrolleri anlatır (YK #31 sınırı).
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez", "Yumuşak fırça", "Ilık su"]
 steps:
   - "Önce ayır: kıvılcım çıkıyor ama ocak yanmıyorsa sorun gaz tarafındadır, buji değil."
   - "Ocağı tamamen soğut ve tüm düğmelerin kapalı olduğundan emin ol."
@@ -43,32 +49,32 @@ Ocağın düğmesine basıyorsunuz, tık tık sesi geliyor ama kıvılcım yok �
 
 Bu sayfa tam olarak o soruya cevap veriyor: **buji gerçekten değişmeli mi, değişirse ne kadar tutar, ve öncesinde ücretsiz denenebilecek ne var?**
 
-> ⚡ **Kısa cevap:** Değişime gitmeden önce dur — vakaların önemli bir bölümünde buji sağlamdır; sorun ıslaklık, kirlilik ya da yerine oturmamış bir başlıktır. Aşağıdaki üç kontrol ücretsizdir ve 10 dakika sürer. Değişim gerekiyorsa maliyeti cihazına göre [ücretsiz öğrenebilirsin](/).
+> ⚡ **Kısa cevap:** Değişime gitmeden önce dur — vakaların önemli bir bölümünde buji sağlamdır; sorun ıslaklık, kirlilik ya da yerine oturmamış bir başlıktır. Aşağıdaki altı kontrol ücretsizdir ve 10 dakika sürer. Değişim gerekiyorsa maliyeti cihazına göre [ücretsiz öğrenebilirsin](/).
 
 ## Önce şunu ayırın: kıvılcım var mı, yok mu?
 
 Bu ayrım, doğru işi doğru yere yönlendirdiği için en önemli adım.
 
 - **Kıvılcım çıkıyor ama ocak yanmıyorsa** — ateşleme sistemi çalışıyor demektir. Buji suçlu değil. Sorun gaz tarafındadır: vana, tüp, regülatör ya da hortum. Bu durumda buji değişimi para kaybıdır.
-- **Hiç kıvılcım çıkmıyorsa** — o zaman ateşleme tarafına bakılır. Ama bu, "buji bitti" demek değil; aşağıdaki üç sebep bujiden çok daha sık çıkıyor.
+- **Hiç kıvılcım çıkmıyorsa** — o zaman ateşleme tarafına bakılır. Ama bu, "buji bitti" demek değil; aşağıdaki adımlarda göreceğin sebepler bujiden çok daha sık çıkıyor.
 
-## Buji değiştirmeden önce ücretsiz denenecek 3 şey
+## Adım adım: buji değiştirmeden önce ücretsiz denenecek 6 kontrol
 
-### 1. Buji ucunu ve başlık çevresini kurutun
+Altısı da cihazın içine girmeden, kapak ve başlık seviyesinde yapılır. Toplam süre yaklaşık 10 dakika.
 
-Ateşleme bujisi, brülör başlığının hemen yanındaki küçük seramik uçtur. Üzerine yemek taşması, deterjanlı su ya da temizlik sırasında ıslaklık geldiyse kıvılcım oluşmaz — buji sağlam olsa bile.
+**1. Önce kıvılcım var mı yok mu ayır.** Düğmeye bastığında kıvılcım çıkıyor ama ocak yanmıyorsa ateşleme sistemi çalışıyor demektir — sorun gaz tarafındadır, buji değil. Bu durumda aşağıdaki adımlar da, buji değişimi de işe yaramaz; vana, tüp, regülatör ve hortum tarafına bakılır. Hiç kıvılcım çıkmıyorsa 2. adımdan devam et.
 
-Ocak tamamen soğukken ve düğmeler kapalıyken, buji ucunu **kuru** bir bezle silin. Islak bez kullanmayın. Yeni temizlik yaptıysanız cihazın kuruması için bir süre bekleyin. Bu tek adım, "hiç kıvılcım yok" şikâyetlerinin çok yaygın bir sebebini ortadan kaldırıyor.
+**2. Ocağı tamamen soğut ve düğmeleri kapat.** Bütün kontrollere başlamadan önce ocağın soğuduğundan ve tüm düğmelerin kapalı konumda olduğundan emin ol. Sıcak yüzeyde ya da açık düğmeyle çalışılmaz.
 
-### 2. Brülör başlığını doğru oturtun
+**3. Buji ucunu ve başlık çevresini kuru bezle sil.** Ateşleme bujisi, brülör başlığının hemen yanındaki küçük seramik uçtur. Üzerine yemek taşması, deterjanlı su ya da temizlik sırasında ıslaklık geldiyse kıvılcım oluşmaz — buji sağlam olsa bile. **Kuru** bir bezle sil; ıslak bez kullanma. Yeni temizlik yaptıysan cihazın kuruması için bir süre bekle. Bu tek adım, "hiç kıvılcım yok" şikâyetlerinin çok yaygın bir sebebini ortadan kaldırıyor.
 
-Başlık (kapak) yerinden oynamışsa ya da yamuk oturmuşsa kıvılcım gaza ulaşamaz. Başlığı kaldırıp yeniden, düz ve tam oturacak şekilde yerleştirin. Temizlik sonrası parçaların karışması da sık görülür: her gözün başlığı kendi yerine gitmelidir.
+**4. Brülör başlığını kaldır ve düzgün yerleştir.** Başlık (kapak) yerinden oynamışsa ya da yamuk oturmuşsa kıvılcım gaza ulaşamaz. Başlığı kaldırıp yeniden, düz ve tam oturacak şekilde yerleştir. Temizlik sonrası parçaların karışması da sık görülür: her gözün başlığı kendi yerine gitmelidir.
 
-### 3. Başlık deliklerini açın
+**5. Başlığı yıka ve gaz deliklerini aç.** Brülör başlığındaki küçük gaz delikleri yemek artığıyla tıkanmış olabilir. Başlığı çıkarıp ılık suda yıka, delikleri yumuşak bir fırçayla aç.
 
-Brülör başlığındaki küçük gaz delikleri yemek artığıyla tıkanmış olabilir. Başlığı çıkarıp ılık suda yıkayın, delikleri yumuşak bir fırçayla açın ve **tamamen kuruttuktan sonra** yerine takın. Nemli takılan bir başlık, birinci maddedeki sorunu yeniden yaratır.
+**6. Tamamen kuruttuktan sonra tak ve kıvılcımı dene.** Nemli takılan bir başlık, 3. adımdaki sorunu yeniden yaratır — bu yüzden acele etme. Başlık tam kuruduğunda yerine tak ve düğmeye basarak kıvılcımı dene.
 
-Bu üç adımdan sonra hâlâ kıvılcım yoksa, sıra gerçekten ateşleme parçasındadır.
+Bu altı adımdan sonra hâlâ kıvılcım yoksa, sıra gerçekten ateşleme parçasındadır.
 
 ## Tamir maliyeti ne kadar olur?
 
