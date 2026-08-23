@@ -1,0 +1,390 @@
+{
+ "tarih": "2026-08-23T05:03:01.524Z",
+ "not": "tarife-sayac-denetimi --uygula öncesi otomatik yedek",
+ "satirlar": [
+  {
+   "id": 1,
+   "kalem": "Buzdolabı · Termostat/sensör",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 2,
+   "kalem": "Buzdolabı · Gaz kaçağı/dolum",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 3,
+   "kalem": "Buzdolabı · Kompresör değişimi",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 4,
+   "kalem": "Buzdolabı · Fan motoru (no-frost)",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 5,
+   "kalem": "Çamaşır Makinesi · Su giriş valfi",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 6,
+   "kalem": "Çamaşır Makinesi · Tahliye pompası",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 9,
+   "kalem": "Çamaşır Makinesi · Kapı kilidi",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 10,
+   "kalem": "Bulaşık Makinesi · Tahliye pompası",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 11,
+   "kalem": "Bulaşık Makinesi · Su giriş valfi",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 12,
+   "kalem": "Bulaşık Makinesi · Rezistans/ısıtıcı",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 13,
+   "kalem": "Bulaşık Makinesi · Sirkülasyon (yıkama) motoru",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 14,
+   "kalem": "Fırın / Ocak / Aspiratör · Rezistans",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 15,
+   "kalem": "Fırın / Ocak / Aspiratör · Termostat",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 16,
+   "kalem": "Fırın / Ocak / Aspiratör · Fan motoru",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 17,
+   "kalem": "Fırın / Ocak / Aspiratör · Aspiratör motoru (fan)",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 18,
+   "kalem": "Fırın / Ocak / Aspiratör · Aspiratör lamba / anahtar / kart",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 19,
+   "kalem": "Klima · Gaz dolumu",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 21,
+   "kalem": "Klima · Kompresör",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 22,
+   "kalem": "Kombi / Termosifon · 3 yollu vana",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 23,
+   "kalem": "Kombi / Termosifon · Sirkülasyon pompası",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 24,
+   "kalem": "Kombi / Termosifon · Eşanjör",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 25,
+   "kalem": "Kombi / Termosifon · Rezistans (termosifon)",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 26,
+   "kalem": "Kombi / Termosifon · Termostat",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 27,
+   "kalem": "Televizyon / Monitör · Backlight LED bar",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 28,
+   "kalem": "Televizyon / Monitör · Besleme kartı",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 30,
+   "kalem": "Televizyon / Monitör · Monitör paneli",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 31,
+   "kalem": "Televizyon / Monitör · TV paneli",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 32,
+   "kalem": "Mikrodalga / Air Fryer · Magnetron (mikrodalga)",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 33,
+   "kalem": "Mikrodalga / Air Fryer · Izgara / ısıtıcı rezistansı (grill mikrodalga · air fryer)",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 34,
+   "kalem": "Mikrodalga / Air Fryer · Fan/termostat/kart",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 35,
+   "kalem": "Süpürge · Motor",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 36,
+   "kalem": "Süpürge · Batarya (şarjlı)",
+   "veri_noktasi_sayisi": 1,
+   "guven": "yuksek"
+  },
+  {
+   "id": 37,
+   "kalem": "Süpürge · Fırça/sensör/anakart",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 39,
+   "kalem": "Su Sebili / Arıtma · Pompa/membran",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 40,
+   "kalem": "Bilgisayar / Yazıcı · Güç kaynağı / şarj soketi",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 41,
+   "kalem": "Bilgisayar / Yazıcı · Ekran kartı (GPU) / RAM / disk",
+   "veri_noktasi_sayisi": 2,
+   "guven": "yuksek"
+  },
+  {
+   "id": 45,
+   "kalem": "Bilgisayar / Yazıcı · Kağıt besleme/merdane",
+   "veri_noktasi_sayisi": 0,
+   "guven": "yuksek"
+  },
+  {
+   "id": 46,
+   "kalem": "Bilgisayar / Yazıcı · Yazıcı kafası temizliği",
+   "veri_noktasi_sayisi": 2,
+   "guven": "dusuk"
+  },
+  {
+   "id": 47,
+   "kalem": "Bilgisayar / Yazıcı · Yazıcı kafası / kartuş değişimi",
+   "veri_noktasi_sayisi": 1,
+   "guven": "dusuk"
+  },
+  {
+   "id": 48,
+   "kalem": "Su Sebili / Arıtma · Filtre değişimi (tekli)",
+   "veri_noktasi_sayisi": 1,
+   "guven": "dusuk"
+  },
+  {
+   "id": 49,
+   "kalem": "Su Sebili / Arıtma · Filtre seti değişimi (komple)",
+   "veri_noktasi_sayisi": 1,
+   "guven": "dusuk"
+  },
+  {
+   "id": 50,
+   "kalem": "Televizyon / Monitör · Anakart tamiri",
+   "veri_noktasi_sayisi": 2,
+   "guven": "dusuk"
+  },
+  {
+   "id": 51,
+   "kalem": "Televizyon / Monitör · Anakart değişimi",
+   "veri_noktasi_sayisi": 2,
+   "guven": "dusuk"
+  },
+  {
+   "id": 52,
+   "kalem": "Çamaşır Makinesi · Rulman/keçe değişimi (vidalı)",
+   "veri_noktasi_sayisi": 4,
+   "guven": "orta"
+  },
+  {
+   "id": 53,
+   "kalem": "Çamaşır Makinesi · Kazan komple değişimi (presli)",
+   "veri_noktasi_sayisi": 2,
+   "guven": "orta"
+  },
+  {
+   "id": 54,
+   "kalem": "Çamaşır Makinesi · Elektronik kart tamiri",
+   "veri_noktasi_sayisi": 2,
+   "guven": "dusuk"
+  },
+  {
+   "id": 55,
+   "kalem": "Çamaşır Makinesi · Elektronik kart değişimi",
+   "veri_noktasi_sayisi": 2,
+   "guven": "dusuk"
+  },
+  {
+   "id": 56,
+   "kalem": "Bilgisayar / Yazıcı · Anakart tamiri",
+   "veri_noktasi_sayisi": 3,
+   "guven": "orta"
+  },
+  {
+   "id": 57,
+   "kalem": "Bilgisayar / Yazıcı · Anakart değişimi",
+   "veri_noktasi_sayisi": 2,
+   "guven": "orta"
+  },
+  {
+   "id": 58,
+   "kalem": "Bilgisayar / Yazıcı · Ekran paneli değişimi (laptop)",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 59,
+   "kalem": "Bilgisayar / Yazıcı · Menteşe tamiri (laptop)",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 60,
+   "kalem": "Kurutma Makinesi · Rezistans / ısıtıcı grubu (kondenserli-vantilasyonlu)",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 61,
+   "kalem": "Kurutma Makinesi · Isı pompası / kompresör grubu (ısı pompalı)",
+   "veri_noktasi_sayisi": 3,
+   "guven": "orta"
+  },
+  {
+   "id": 62,
+   "kalem": "Kurutma Makinesi · Nem sensörü / NTC / termostat",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 63,
+   "kalem": "Kurutma Makinesi · Tahliye / kondenser pompası",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 64,
+   "kalem": "Kurutma Makinesi · Kayış",
+   "veri_noktasi_sayisi": 3,
+   "guven": "yuksek"
+  },
+  {
+   "id": 65,
+   "kalem": "Kurutma Makinesi · Tambur tekerleği / arka yatak (tekli)",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 66,
+   "kalem": "Kurutma Makinesi · Tambur keçe + tekerlek takımı (komple)",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 67,
+   "kalem": "Kurutma Makinesi · Fan pervanesi / proses-soğutma fanı",
+   "veri_noktasi_sayisi": 2,
+   "guven": "orta"
+  },
+  {
+   "id": 68,
+   "kalem": "Kurutma Makinesi · Motor grubu (tambur-fan motoru) değişimi",
+   "veri_noktasi_sayisi": 2,
+   "guven": "orta"
+  },
+  {
+   "id": 69,
+   "kalem": "Kurutma Makinesi · Motor kondansatörü",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 70,
+   "kalem": "Kurutma Makinesi · Elektronik kart tamiri",
+   "veri_noktasi_sayisi": 2,
+   "guven": "orta"
+  },
+  {
+   "id": 71,
+   "kalem": "Kurutma Makinesi · Elektronik kart değişimi",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  },
+  {
+   "id": 72,
+   "kalem": "Kurutma Makinesi · Kapak kilidi / mandal",
+   "veri_noktasi_sayisi": 4,
+   "guven": "yuksek"
+  }
+ ]
+}
