@@ -146,7 +146,18 @@ export const REHBERLER = {
     // ✅ 23 Ağu: KAPANDI. iFixit'in GAZ ocağı alev ayarı rehberi kaldırıldı ve "yanmıyor"
     //    dahil tüm ateşleme anahtarları kendi yazımıza bağlandı. Not: `ocak-atesleme-yapmiyor`
     //    gövde/gaz devresine hiç girmez — başlık temizliği, gaz vanası ve kıvılcım gözlemi.
-    { ara: ["ateşleme", "kıvılcım", "çakmak", "yanmıyor", "ateşleme bujisi", "buji"],
+    // 🔀 23 Ağu — ANAHTAR BÖLÜNMESİ. Tek kayıt buji sorgularını da geniş yazıya
+    //    gönderiyordu; artık iki ayrı hat var: DAR (buji) ve GENİŞ (ateşleme).
+    //    ⚠️ Sıra DEĞİL uzunluk karar veriyor: `rehberBul` havuz içinde EN UZUN eşleşen
+    //    anahtarı seçiyor (yukarıdaki "İKİ AŞAMALI SEÇİM" notu). O yüzden ayrım
+    //    kelimelerin kendisiyle kuruldu — "ateşleme bujisi" (15) ve "buji" (4) dar hatta,
+    //    "ateşleme"/"kıvılcım"/"çakmak"/"yanmıyor" (6-8) geniş hatta.
+    //    Sonuç: "ateşleme bujisi tamiri" → 15 > 8 → DAR yazı ✓ · "ocak ateşleme yapmıyor"
+    //    → yalnız "ateşleme" eşleşir → GENİŞ yazı ✓. (Dar kayıt okunabilirlik için
+    //    önce yazıldı; işlevi sıradan gelmiyor.)
+    { ara: ["ateşleme bujisi", "buji"],
+      rehber: B("ocak-atesleme-bujisi-degisimi", "Buji değişmeden önce 6 ücretsiz kontrol", "Kolay", "~10 dakika", 6) },
+    { ara: ["ateşleme", "kıvılcım", "çakmak", "yanmıyor"],
       rehber: B("ocak-atesleme-yapmiyor", "Ateşleme yapmayan ocakta 4 kontrol", "Kolay", "~15 dakika", 4) },
     // NOT: "lamba"/"ampul" anahtar kelimesi BİLEREK yok. Rehber fırın kapağına ait; SEED'deki
     // "Aspiratör anahtar/kart/lamba" arızasına bağlanırsa kullanıcı alakasız sayfaya düşer
