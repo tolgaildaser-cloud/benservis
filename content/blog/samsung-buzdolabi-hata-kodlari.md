@@ -108,7 +108,7 @@ Ekran temiz diye cihaz sağlam demek değildir; kod sistemi yalnızca elektronik
 
 Reset ve demo modu kontrolünden sonra hâlâ kod varsa sıra teşhise gelir. 5E ve 22E kalıcıysa defrost/fan hattında parça değişimi gerekir; 84E kompresör tarafını işaret eder ve kesinlikle kullanıcı işi değildir. Servisle konuşurken elindeki en değerli bilgi kodun kendisi ve model numarasıdır — ikisini birlikte söylediğinde doğru parçayla gelinme ihtimali belirgin şekilde artar.
 
-Bir not: bazı listelerde geçen ama farklı kaynaklarda farklı anlamlar verilen kodları (örneğin kapı sensörü / buz yapıcı karışan 8E gibi) bu yazıya bilerek almadık; onlarda tek doğru adres kılavuz ve yetkili servistir.
+**8E** gibi model ailesine göre değişen kodlarda tek doğru adres cihazının kullanım kılavuzu ve yetkili servistir.
 
 Markadan bağımsız kod mantığını ve Beko ile Vestel modellerinin kodlarını merak ediyorsan, benservis.com blogundaki buzdolabı hata kodları yazısı geniş resmi anlatıyor.
 

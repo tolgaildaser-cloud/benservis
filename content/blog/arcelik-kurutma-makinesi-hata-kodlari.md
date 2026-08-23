@@ -36,7 +36,7 @@ Kurutma programı yarıda durdu, panelde damla ya da filtre şeklinde bir işare
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ **Neden burada kod tablosu yok:** Arçelik'in kurutma makinesi kullanma kılavuzlarındaki sorun giderme bölümü kod değil, uyarı sembolleri ve belirtiler üzerinden ilerliyor. Dolaşan üçüncü taraf listeler ise birbiriyle çelişiyor — aynı numaraya bir yerde su tankı, bir başka yerde sensör arızası deniyor. Doğrulayamadığımız bir karşılığı yazıp seni yanlış parçaya yönlendirmektense sembol dilini vermeyi tercih ediyoruz. Markadan bağımsız genel tabloyu merak ediyorsan kurutma makinesi hata kodları yazımız o işi ayrıca yapıyor.
+> ⚠️ **Bu markada kod değil, sembol dili geçerli:** Arçelik'in kurutma makinesi kullanma kılavuzlarındaki sorun giderme bölümü **uyarı sembolleri ve belirtiler** üzerinden ilerliyor — bu yüzden aşağıda sembollerin karşılığını veriyoruz. Markadan bağımsız genel tabloyu merak ediyorsan kurutma makinesi hata kodları yazımız o işi ayrıca yapıyor.
 
 ## Adım adım: sembol yandığında ilk 20 dakika
 
@@ -105,7 +105,7 @@ Son maddenin etkisi sanıldığından büyüktür: sıkma devrini yükseltmek, k
 
 ## Kurutucuyu çamaşır makinesiyle karıştırma
 
-Bu iki cihaz yan yana durur ama parçaları farklıdır ve internetteki tarifler sürekli birbirine karışır.
+Bu iki cihaz yan yana durur ama parçaları farklıdır.
 
 - **Tahliye pompası filtresi, bozuk para ve tiftik hikâyesi** çamaşır makinesine aittir. Kurutucuda böyle bir kapak yoktur.
 - **Lif filtresi, filtre çekmecesi, su tankı ve yoğuşturucu** kurutma makinesine aittir.

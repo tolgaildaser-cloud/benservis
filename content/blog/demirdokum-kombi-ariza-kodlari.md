@@ -40,7 +40,7 @@ images:
   coverAlt: "Kombi çizimi, ekranında hata göstergesi; yanında basınç göstergesi ve kod listesi"
 ---
 
-DemirDöküm kombin ekranında bir arıza kodu gösteriyor. Bu markada internetteki listelerin birbirini tutmamasının somut bir sebebi var ve bilmen işini kolaylaştırır:
+DemirDöküm kombin ekranında bir arıza kodu gösteriyor. Bu markada kodu okumadan önce bilmen gereken bir ayrım var, işini kolaylaştırır:
 
 > ⚠️ **DemirDöküm'ün iki ayrı kod ailesi var.**
 >

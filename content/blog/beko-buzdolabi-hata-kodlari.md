@@ -37,12 +37,12 @@ faq:
   - q: "Fişi çekip buz çözdürmek kodu tamamen giderir mi?"
     a: "Kodu geçici olarak silebilir ama sebebini ortadan kaldırmaz. Buz çözüldüğünde fan yeniden rahat döner ve cihaz bir süre normal çalışır; buzu üreten asıl neden defrost hattındaysa aynı kod haftalar içinde geri gelir. Buz çözdürmeyi kalıcı çözüm değil, hem yiyeceği kurtaran hem de teşhisi netleştiren bir ara adım olarak düşün."
   - q: "Ekranımdaki kodun karşılığını nereden kesin öğrenirim?"
-    a: "Çünkü Beko buzdolaplarında kod şeması model ailesine göre değişir ve internetteki listeler çoğu zaman hangi seriyi anlattığını söylemez. Aynı kod bir seride tek bir sensörü, başka bir seride birden fazla sensörün birleşimini bildirebilir. Bu yüzden düşük kodların ötesine geçtiğinde tek güvenilir kaynak cihazının kendi kullanım kılavuzudur; kodu ve model numarasını birlikte servise iletmek de aynı işi görür."
+    a: "Çünkü Beko buzdolaplarında kod şeması model ailesine göre değişir. Aynı kod bir seride tek bir sensörü, başka bir seride birden fazla sensörün birleşimini bildirebilir. Bu yüzden düşük kodların ötesine geçtiğinde tek güvenilir kaynak cihazının kendi kullanım kılavuzudur; kodu ve model numarasını birlikte servise iletmek de aynı işi görür."
 images:
   coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"
 ---
 
-Buzdolabının panelinde derece yerine bir kod var, dondurucu hâlâ soğuk ama alt bölme sabahtan beri ılık. İnternette baktığın listeler birbirini tutmuyor ve içeride bir haftalık alışveriş duruyor. Bu yazıda Beko buzdolaplarında birden çok kaynakla doğrulayabildiğimiz kodları, o kodların arkasındaki hattın nasıl çalıştığını ve **kodu gördükten sonra evde güvenle yapabileceğin şeyleri** sırayla anlatıyoruz.
+Buzdolabının panelinde derece yerine bir kod var, dondurucu hâlâ soğuk ama alt bölme sabahtan beri ılık. İçeride bir haftalık alışveriş duruyor. Bu yazıda Beko buzdolaplarında birden çok kaynakla doğrulayabildiğimiz kodları, o kodların arkasındaki hattın nasıl çalıştığını ve **kodu gördükten sonra evde güvenle yapabileceğin şeyleri** sırayla anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -90,7 +90,7 @@ Bu yüzden Beko'da "dondurucu buz gibi ama alt raflar ılık" şikâyeti klasikt
 
 ## E0-E4 bandının ötesi: neden burada duruyoruz
 
-Yüksek numaralı kodlar için Beko'da tek bir tablo yok. Bazı serilerde kodlar tek tek arızaları, bazılarında birden fazla sensörün birleşimini bildirir; bu yüzden aynı kod için birbirini tutmayan cevaplar dolaşıyor. Doğrulayamadığımız bir karşılığı yazıp seni yanlış parçaya yönlendirmektense burada durmayı tercih ediyoruz.
+Yüksek numaralı kodlar için Beko'da tek bir tablo yok: bazı serilerde kodlar tek tek arızaları, bazılarında birden fazla sensörün birleşimini bildirir. Bu yüzden yüksek kodlarda tek doğru adres cihazının kendi kullanım kılavuzudur.
 
 Yapılacak şey basit: kodu aynen, model numarasıyla birlikte not et ve kılavuzun arıza tablosuyla karşılaştır. Kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir. E0-E4 bandının tam listesini benservis.com blogundaki buzdolabı hata kodları yazısında bulabilirsin.
 

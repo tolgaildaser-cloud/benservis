@@ -60,7 +60,7 @@ Baymak kombin ekranında bir arıza kodu gösteriyor. Bu rehberde Baymak'ın **k
 | **E21** | Elektronik kart arızası | 🔧 Servis |
 | **F52** | Kullanım suyu sensörü | 🔧 Servis |
 
-Duotec Compact 24 ve Eco CT 20 kılavuzlarındaki tam E listesi şudur: **E01, E02, E03, E05, E09, E12, E15, E16, E17, E18, E21, E33, E35.** Tabloya yalnız anlamı kılavuzda birebir teyit edilenleri aldık; **E12, E16 ve E17'nin anlamını doğrulayamadığımız için yazmıyoruz.** Ekranında bu üçünden biri varsa modelinle birlikte [Benservis'e](/) yaz.
+Duotec Compact 24 ve Eco CT 20 kılavuzlarındaki tam E listesi şudur: **E01, E02, E03, E05, E09, E12, E15, E16, E17, E18, E21, E33, E35.** **E12, E16 ve E17** için karşılık cihazının kendi kullanım kılavuzundadır; ekranında bu üçünden biri varsa modelinle birlikte [Benservis'e](/) yaz.
 
 Sirkülasyon tarafındaki kodlar noktalı düzende gelir: **E.01.17** ve **H.01.18**.
 
