@@ -34,7 +34,7 @@ images:
 
 ## Bosch / Siemens (F kodları)
 İki marka aynı platformu paylaşır ve tabloları kendi sitelerinde birebir aynı yayımlanır.
-Neff de BSH markasıdır ama kendi hata kodu sayfasını yayımlamıyor; o yüzden başlıktan çıkardık.
+Neff de BSH markasıdır ama kendi hata kodu sayfasını yayımlamadığı için bu tablo onun adına konuşmuyor.
 
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|
