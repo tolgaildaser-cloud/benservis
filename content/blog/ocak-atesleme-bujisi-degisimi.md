@@ -1,5 +1,5 @@
 ---
-title: "Ocak ateşleme bujisi değişimi: kendin yapılır mı?"
+title: "Ocak ateşleme bujisi: değiştirmeden önce 6 ücretsiz kontrol"
 description: "Ocak kıvılcım çıkarmıyor mu? Bujiyi değiştirmeden önce ücretsiz denenecek 6 kontrol ve bu işin neden servis işi olduğu. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "ocak-atesleme-bujisi-degisimi"
 date: "2026-08-02"
