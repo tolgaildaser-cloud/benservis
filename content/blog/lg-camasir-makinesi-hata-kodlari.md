@@ -4,15 +4,23 @@ description: "LG çamaşır makinende IE, OE, UE, dE gibi bir hata kodu mu var? 
 slug: "lg-camasir-makinesi-hata-kodlari"
 date: "2026-06-21"
 category: "Çamaşır makinesi"
+# 🔴 22 Ağu 2026 — ÜÇ İFADE DÜZELTİLDİ (kod tablosu denetimi, TARAMA-1 kalan tur).
+# Kaynak: LG WM8900HBA Owner's Manual, "Error Messages" s.43-45 (media.us.lg.com).
+#   dE → "kapı KİLİTLENMİYOR" yanlıştı. LG'nin ifadesi "DOOR OPEN ERROR — door is
+#        not secured", yani kapı TAM KAPANMADI. Kilit arızası AYRI kod: dE2 / E30.
+#        Fark pratik: biri kullanıcının kapatmasıyla geçer, diğeri parça işidir.
+#   LE → "genelde ağır yük" LG'nin ifadesi değil, bizim yorumumuzdu; çıkarıldı.
+#   CE → resmî kılavuz PDF'inde yok, yalnız LG help-library'de geçiyor → tek kaynak
+#        olduğu okura söylendi.
 faq:
   - q: "LG IE hatası ne demek?"
     a: "IE (Inlet Error) makinenin su alamadığını gösterir: su gelmiyor ya da basınç düşük. Musluğun açık, giriş hortumunun bükülmemiş ve filtrenin tıkalı olmadığını kontrol et."
   - q: "LG OE hatası nedir, nasıl çözülür?"
     a: "OE (Outlet Error) makinenin suyu boşaltamadığını gösterir. Genelde tahliye hortumu bükük/tıkalı ya da tahliye filtresi tıkalıdır; filtreyi temizlemek çoğu zaman çözer."
   - q: "LG UE ve LE arasındaki fark ne?"
-    a: "UE dengesiz yük (çamaşır eşit dağılmamış), LE ise motorun kilitlenmesidir (genelde aşırı/ağır yük). İkisi de çoğu zaman yükü düzenleyince geçer; LE tekrarlarsa servis gerekir."
+    a: "UE dengesiz yük demektir: çamaşır tambur içinde eşit dağılmamıştır. LE ise motorun kilitlendiğini gösterir. İkisi de çoğu zaman yükü düzenleyince geçer; LE tekrarlarsa servis gerekir. Not: LE'yi doğrudan ağır yüke bağlayan açıklamalar yaygın ama LG bunu kendi kılavuzunda öyle tanımlamıyor, o yüzden sebep atfı yapmıyoruz."
   - q: "LG dE hatası neden olur?"
-    a: "dE (Door Error) kapının kilitlenemediğini gösterir. Genelde kapı arasında bir şey sıkışmıştır ya da kapı tam kapanmamıştır; kontrol edip tekrar kapat."
+    a: "dE, LG'nin kendi ifadesiyle bir kapı açık hatasıdır: kapı tam kapanmamıştır. Genelde kapı arasında bir şey sıkışmıştır; kontrol edip tekrar, klik sesini duyana kadar kapat. Dikkat: bu kod kilit mekanizmasının arızalandığını söylemez — kilit arızasının ayrı bir kodu var (dE2 ya da E30). Aradaki fark pratik: dE çoğu zaman kullanıcının kapıyı düzgün kapatmasıyla geçer, dE2 ise parça işidir."
 images:
   coverAlt: "Üst üste katlanmış temiz beyaz havlu istifi"
 ---
@@ -36,12 +44,13 @@ LG çamaşır makinen ekranında bir hata kodu gösteriyor (IE, OE, UE…) ve ne
 | **IE** | Su alamıyor (musluk, basınç, hortum) | 🛠️ Musluğu aç, giriş hortumunu/süzgeci kontrol et |
 | **OE** | Su atamıyor (tahliye) | 🛠️ Tahliye filtresini ve hortumu temizle |
 | **UE** | Dengesiz yük | 🛠️ Yükü dengele (çok az yük de olabilir, parça ekle) |
-| **dE** | Kapı kilitlenmiyor | 🛠️ Kapağı tam kapat, arada bir şey var mı bak |
-| **LE** | Motor kilitli (genelde ağır yük) | 🛠️ Yükü azalt; tekrarlarsa 🔧 servis |
+| **dE** | Kapı tam kapanmadı | 🛠️ Kapağı tam kapat, arada bir şey var mı bak |
+| **dE2 / E30** | Kapı kilidi arızası | 🔧 Servis |
+| **LE** | Motor kilitli | 🛠️ Yükü azalt; tekrarlarsa 🔧 servis |
 | **FE** | Aşırı su alma (taşma) | 🔧 Servis (giriş valfi) |
 | **PE** | Su seviye sensörü (basınç anahtarı) | 🔧 Servis |
 | **tE** | Sıcaklık / NTC sensörü | 🔧 Servis |
-| **CE** | Aşırı akım (motor) | 🔧 Servis |
+| **CE** | Aşırı akım (motor) ⚠️ tek kaynak | 🔧 Servis |
 
 ## Öne çıkan kodlar
 
@@ -52,7 +61,7 @@ Musluğu sonuna kadar aç, giriş hortumunun bükük/ezik olmadığını ve uçt
 Alt ön kapaktaki **tahliye filtresini** çıkarıp temizle (havlu hazırla), tahliye hortumunu kontrol et. En sık ve en kolay çözülen LG kodu.
 
 ### UE / LE — Yük sorunları
-UE'de çamaşırı dağıt; çok az yük varsa birkaç parça ekle. LE'de yükü azalt — sürekli tekrarlarsa motor/rulman olabilir, servis gerekir.
+UE'de çamaşırı dağıt; çok az yük varsa birkaç parça ekle. LE'de yükü azaltmayı dene — sürekli tekrarlarsa motor tarafı servis işidir. (LG, LE'yi ağır yüke bağlayan bir açıklama yapmıyor; yük denemesi pratik bir eleme adımıdır, üreticinin tanımı değil.)
 
 ## Hata kodu nasıl sıfırlanır?
 Çoğu modelde: makineyi **kapat**, **fişten 1 dakika** çek, tekrar tak. Arızanın kaynağı düzelmediyse kod tekrar çıkar.

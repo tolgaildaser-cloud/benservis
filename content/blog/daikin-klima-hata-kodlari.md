@@ -80,7 +80,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | E6 | Standart kompresör motorunda aşırı akım ya da kilitlenme |
 | E7 | Dış ünite fan motoru sistemi arızası |
 | F3 | Basma borusu sıcaklığı anormal |
-| F6 | Soğutmada aşırı yüksek basınç ya da fazla soğutucu şarjı |
+| F6 | Aşırı yüksek basınç ya da fazla soğutucu şarjı |
 | H9 | Dış ortam hava sıcaklık sensörü arızası |
 | J3 | Basma borusu sıcaklık sensörü arızası |
 | J6 | Isı değiştirici sıcaklık sensörü arızası |

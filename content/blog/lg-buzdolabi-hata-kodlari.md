@@ -83,7 +83,7 @@ LG kodları iki parçadan oluşur. İlk harf **hangi bölge**, ikinci harf **han
 
 | Kod | Karşılığı |
 |---|---|
-| Er dH | Buz çözme çevrimi hedef sıcaklığa süresi içinde ulaşamadı |
+| Er dH | Buz çözme çevrimi hedef sıcaklığa süresi içinde ulaşamadı ⚠️ LG'nin ölçütü: 80 dakikada 5 °C artış olmaması |
 | Er CO | Ana kart ile gösterge kartı arasında iletişim kopukluğu |
 | Er gF | Su akış sensörü hatası |
 | Er tt | Su tankı yerinde değil ya da doğru oturmamış |
