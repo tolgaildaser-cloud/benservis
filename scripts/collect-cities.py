@@ -31,7 +31,8 @@ FIELD_MASK = (
 )
 
 CITY_DISPLAY = {"istanbul": "İstanbul", "izmir": "İzmir", "ankara": "Ankara",
-                "bursa": "Bursa", "adana": "Adana", "eskisehir": "Eskişehir", "trabzon": "Trabzon"}
+                "bursa": "Bursa", "adana": "Adana", "eskisehir": "Eskişehir", "trabzon": "Trabzon",
+                "gaziantep": "Gaziantep"}
 CITY_DISTRICTS = {
     "istanbul": ["Adalar","Arnavutköy","Ataşehir","Avcılar","Bağcılar","Bahçelievler","Bakırköy",
         "Başakşehir","Bayrampaşa","Beşiktaş","Beykoz","Beylikdüzü","Beyoğlu","Büyükçekmece","Çatalca",
@@ -52,6 +53,10 @@ CITY_DISTRICTS = {
         "Saimbeyli","Sarıçam","Seyhan","Tufanbeyli","Yumurtalık","Yüreğir"],
     "eskisehir": ["Alpu","Beylikova","Çifteler","Günyüzü","Han","İnönü","Mahmudiye","Mihalgazi",
         "Mihalıççık","Odunpazarı","Sarıcakaya","Seyitgazi","Sivrihisar","Tepebaşı"],
+    # 23 Ağu 2026 (Tolga: "ok ekle") — 8. il, 9 ilçe. Google Places Enterprise SKU:
+    #   9 ilçe x 10 sorgu x 1 sayfa = 90 çağrı; aylık ilk 1.000 çağrı ücretsiz.
+    "gaziantep": ["Araban","İslahiye","Karkamış","Nizip","Nurdağı","Oğuzeli","Şahinbey",
+        "Şehitkamil","Yavuzeli"],
     "trabzon": ["Akçaabat","Araklı","Arsin","Beşikdüzü","Çarşıbaşı","Çaykara","Dernekpazarı","Düzköy",
         "Hayrat","Köprübaşı","Maçka","Of","Ortahisar","Sürmene","Şalpazarı","Tonya","Vakfıkebir","Yomra"],
 }
