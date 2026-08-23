@@ -42,7 +42,7 @@ Akşam programını kurdun, makine birkaç dakika çalıştı ve durdu. Kapağı
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ **Uyarı:** Kod şeması model kuşağına göre değişebilir; aşağıdakiler yaygın serilerde birden çok bağımsız kaynakla doğrulanmış karşılıklardır. Kesin tablo cihazının kullanım kılavuzundadır. Doğrulayamadığımız kodları bilerek yazmadık — nedenini aşağıda ayrı bir başlıkta anlattık.
+> ⚠️ **Uyarı:** Kod şeması model kuşağına göre değişebilir; aşağıdakiler yaygın serilerde birden çok bağımsız kaynakla doğrulanmış karşılıklardır. Kesin tablo cihazının kullanım kılavuzundadır.
 
 ## Adım adım: kod geldiğinde ilk 20 dakika
 
@@ -108,8 +108,6 @@ Sıralama önemli: **E22 filtreyi**, **E24 makinenin dışındaki hattı**, **E2
 - **E07** — kurutma tarafında sorun: fan çalışmıyor ya da hava yolu engellenmiş.
 
 E19'da denenecek ücretsiz bir şey var: haznenin kapağının önünde duran uzun bir tabak ya da tepsi, kapağın açılmasını fiziksel olarak engelleyebilir. Yükleme düzenini değiştirip yeniden dene. E20, E21 ve E07 ise gövdenin içindeki bölgeyi anlatır.
-
-## Nerede durduk ve neden
 
 ## E27: sorun makinede değil olabilir
 

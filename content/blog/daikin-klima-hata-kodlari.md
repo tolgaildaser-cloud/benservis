@@ -102,11 +102,11 @@ Bu grupta iki kod ayrıca dikkat çeker. **E3** için üreticinin tablosunda ilk
 
 **U1**, yeni montajdan, taşınmadan ya da elektrik panosunda yapılan bir işten hemen sonra görülür; bu kodda beklemek değil, enerjiyi kesip montajı yapan tarafla konuşmak doğru hamledir. **U2** çoğu zaman şebeke kaynaklıdır ve gerilim normale dönünce geçer. **U4** ise iç ve dış ünite birbirini duyamıyor demektir; şalteri kapatıp açmak bazen çözer, çözmüyorsa ara kablo ve kart tarafı servis işidir.
 
-## Yazmadığımız kodlar
+## Kılavuzdan teyit edilmesi gereken kodlar
 
-Kod listelerini uzatmak kolay, doğru tutmak zor. Elimizdeki kaynaklar **UA** ve **E0** kodlarında birbiriyle örtüşmedi — biri farklı, diğeri daha genel bir anlam veriyor. Bu iki kodu bilerek yazmadık; şeması seriye göre değişiyor, kılavuzunla teyit et.
+**UA** ve **E0** kodlarının şeması seriye göre değişir; karşılığını cihazının kendi kullanım kılavuzundan teyit et.
 
-**P ile başlayan kodlar** da bu yazıda yok. Bu bandın büyük kısmı gaz dolumu ve devreye alma işlemleriyle ilgilidir; kullanıcı açısından pratik bir karşılığı olmadığı için servis alanında bırakıyoruz.
+**P ile başlayan kodlar** gaz dolumu ve devreye alma işlemleriyle ilgilidir — kullanıcı alanında değil, servis alanındadır.
 
 ⛔ **Soğutucu devresine dokunma.** Klimanın gaz hattı basınçlı ve kapalı bir devredir; kaçak aramak da doldurmak da yetki, belge ve ekipman ister. Dış ünite ayrıca 220V beslenir ve fanı güçlüdür. Kullanıcıya ait alan kumanda, şalter ve filtre kapağı seviyesidir; panelin ötesi servise aittir.
 

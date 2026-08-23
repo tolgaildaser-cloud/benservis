@@ -31,7 +31,7 @@ steps:
   - "Fişi tak ve kısa bir programla dene; hata tekrarlıyorsa servis gerekir."
 faq:
   - q: "Beko çamaşır makinesinde E10 hatası ne demek?"
-    a: "Beko'nun kendi sitesinde yayımladığı on kodluk listede E10 diye bir kod yok. Su alma tarafının kodu E8'dir ve karşılığı 'Makine su almıyor'dur. E10 çok sayıda üçüncü taraf sitede tekrarlandığı için yaygınlaşmış görünüyor. Ekranındaki kodu bir kez daha kontrol et; ne olursa olsun makinen su almıyorsa bu sayfadaki kontrol listesi senin için geçerlidir."
+    a: "Beko'nun kendi sitesinde yayımladığı on kodluk listede E10 diye bir kod yok. Su alma tarafının kodu E8'dir ve karşılığı 'Makine su almıyor'dur. Ekranındaki kodu bir kez daha kontrol et; ne olursa olsun makinen su almıyorsa bu sayfadaki kontrol listesi senin için geçerlidir."
   - q: "Su alma hatası fişten çekince geçer mi?"
     a: "Kod geçici bir takılmadan geldiyse geçebilir: makineyi kapatıp fişten çek, birkaç dakika bekle ve yeniden dene. Ama suyun gelmesini engelleyen gerçek bir sebep varsa kod aynı noktada tekrar gelir. Bu yüzden resetlemeyi tek başına çözüm değil, kontrollerin sonundaki deneme adımı olarak kullan."
   - q: "Musluk açık, su var ama makine yine su almıyor — neden?"
@@ -44,7 +44,7 @@ images:
 
 Programı başlattın, makine birkaç saniye sessiz bekledi, sonra durdu. Tambur kuru, yıkama hiç başlamamış. Kodu arattığında karşına **E10** çıkıyor.
 
-Önce bir düzeltme: **Beko'nun kendi sitesinde yayımladığı on kodluk listede E10 diye bir kod yok.** Su alma tarafının kodu **E8**'dir ve üreticinin karşılığı "Makine su almıyor"dur. E10, çok sayıda üçüncü taraf serviste tekrarlandığı için yaygınlaşmış görünüyor — bu sayfaya da muhtemelen o yüzden geldin.
+**Beko'nun kendi sitesinde yayımladığı on kodluk listede E10 diye bir kod yok.** Su alma tarafının kodu **E8**'dir ve üreticinin karşılığı "Makine su almıyor"dur.
 
 İyi haber şu ki bu ayrım çözümü değiştirmiyor. Makinen su almıyorsa, en yaygın sebepler makinenin **içinde değil dışındadır**: musluk, hortum ve süzgeç üçgeninde. Bu rehberde evde güvenle yapabileceğin kontrolleri sırayla anlatıyoruz ve işin nerede servise devrolduğunu açıkça söylüyoruz.
 

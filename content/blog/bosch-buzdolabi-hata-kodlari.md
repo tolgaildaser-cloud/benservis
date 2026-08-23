@@ -27,12 +27,12 @@ faq:
   - q: "Ekranda HO yazıyor, bu hangi arıza?"
     a: "HO bir arıza değil, tatil modunun göstergesidir. Bu modda soğutucu bölme kasten daha yüksek bir sıcaklıkta, yaklaşık artı on dört derece civarında tutulur; dondurucu tarafı normal çalışmaya devam eder. Uzun süre evde olunmayacağı zaman enerji tasarrufu için tasarlanmıştır ve genellikle panele yanlışlıkla basılmasıyla devreye girer. Sütün bozulduğu ama dondurucunun sorunsuz olduğu vakaların şaşırtıcı biçimde büyük bir kısmı budur."
   - q: "Bosch buzdolabında E ile başlayan kodların anlamını nereden öğrenirim?"
-    a: "Tek güvenilir kaynak cihazının kullanım kılavuzudur. Bosch buzdolaplarında kod tablosu model ailesine göre değişir ve internetteki listeler aynı kod için birbiriyle çelişen karşılıklar veriyor. Kodu aynen fotoğrafla, model numarasını yanına yaz ve kılavuzun arıza bölümüyle karşılaştır. Kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
+    a: "Tek güvenilir kaynak cihazının kullanım kılavuzudur. Bosch buzdolaplarında kod tablosu model ailesine göre değişir. Kodu aynen fotoğrafla, model numarasını yanına yaz ve kılavuzun arıza bölümüyle karşılaştır. Kılavuz elinde yoksa model numarasıyla üreticinin destek sayfasından indirilebilir."
 images:
   coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"
 ---
 
-Mutfakta bir bip sesi, panelde yanıp sönen bir ışık ve sen internette "Bosch buzdolabı hata kodları" arıyorsun. Bulduğun listeler birbirini tutmuyor, üstelik senin ekranında zaten harfli bir kod yok — sadece bir alarm var. Aslında sorun burada başlıyor: **Bosch buzdolapları çoğunlukla kodla değil, alarmla konuşur.** Bu yazıda önce ekrandaki şeyin ne olduğunu ayırt etmeyi, sonra arıza sanılan ama arıza olmayan iki tuzağı, en sonda da doğrulayabildiğimiz kodu anlatıyoruz.
+Mutfakta bir bip sesi, panelde yanıp sönen bir ışık ve sen internette "Bosch buzdolabı hata kodları" arıyorsun. Ama senin ekranında zaten harfli bir kod yok — sadece bir alarm var. Aslında sorun burada başlıyor: **Bosch buzdolapları çoğunlukla kodla değil, alarmla konuşur.** Bu yazıda önce ekrandaki şeyin ne olduğunu ayırt etmeyi, sonra arıza sanılan ama arıza olmayan iki tuzağı, en sonda da doğrulayabildiğimiz kodu anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

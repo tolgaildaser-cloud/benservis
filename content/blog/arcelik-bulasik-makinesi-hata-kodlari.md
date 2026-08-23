@@ -45,7 +45,7 @@ images:
   coverAlt: "Türk mutfağında kapağı açık bulaşık makinesi ve alt sepetteki temiz tabaklar"
 ---
 
-Program yarıda kesildi, makine bip'liyor ve panelde E ile başlayan bir kod var. Arçelik bulaşık makinelerinde bu kodlar arızanın adresini verir: kimi musluğu işaret eder, kimi gövdenin içini. Aradaki farkı bilmek önemli, çünkü kodların bir kısmı iki dakikalık bir kontrolle çözülürken bir kısmında yapılacak en doğru şey makineye hiç dokunmamaktır. Bu rehberde üreticinin **kendi sayfasında yayımladığı beş kodu** tek tek açıyoruz — ve internette dolaşan diğer numaraların neden burada olmadığını da söylüyoruz.
+Program yarıda kesildi, makine bip'liyor ve panelde E ile başlayan bir kod var. Arçelik bulaşık makinelerinde bu kodlar arızanın adresini verir: kimi musluğu işaret eder, kimi gövdenin içini. Aradaki farkı bilmek önemli, çünkü kodların bir kısmı iki dakikalık bir kontrolle çözülürken bir kısmında yapılacak en doğru şey makineye hiç dokunmamaktır. Bu rehberde üreticinin **kendi sayfasında yayımladığı beş kodu** tek tek açıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

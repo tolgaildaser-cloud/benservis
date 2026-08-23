@@ -69,7 +69,7 @@ Kod, iç ünitenin dijital göstergesinde belirir — normalde sıcaklık ya da 
 
 Vestel'in güncel inverter kullanım kılavuzlarında iç ünitenin göstergesindeki mesaj tek bir biçimde verilir: önce **Er** ibaresi, ardından o hataya özel iki haneli sayı. Mesaj önce koda özel sayıda yanıp söner, sonra otuz beş ile kırk saniye arası sabit kalır ve sorun giderilene kadar bu tur tekrarlanır — yani mesajı bir kere kaçırmak sorun değil.
 
-Burada dürüst olmak gerekiyor: **kılavuzlar bu sayıların tek tek karşılığını kullanıcıya açmıyor.** Verdikleri talimat net — cihaza herhangi bir şey yapma, yetkili servisle iletişime geç. Bu yüzden bu yazıda Er sayılarının doğrulanmamış bir karşılığını vermiyoruz. Sayıyı doğru not etmek yine de değerlidir; servis için teşhisi kısaltan asıl bilgi odur.
+**Kılavuzlar bu sayıların tek tek karşılığını kullanıcıya açmıyor.** Verdikleri talimat net — cihaza herhangi bir şey yapma, yetkili servisle iletişime geç. Sayıyı doğru not etmek yine de değerlidir; servis için teşhisi kısaltan asıl bilgi odur.
 
 Er ile başlamayan iki harfli mesajlar ise arıza bildirimi değil koruma bildirimidir; **Er11 ve Er13** de kılavuzda açıkça hata mesajı değil, kompresörü aşırı akımdan koruma mesajı olarak tanımlanır. Bu ayrımın tamamını benservis.com blogundaki Vestel klima hata kodları yazısında bulabilirsin.
 
