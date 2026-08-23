@@ -37,6 +37,10 @@ import { tabloBul } from "./constants.js";
 
 export const HATA_KODU_KATMANI = {
   "Çamaşır Makinesi": [
+    // ——— 23 Ağu 2026, YK #31 seçenek (c): yeni rehber ———
+    { giris: "Çamaşırlar soğuk yıkanıyor / makine ısıtmıyor", tip: "belirti",
+      anlam: "Makine kod vermeden soğuk yıkar; rezistans, sensör ve kart ayrımı ile ücretsiz eleme.",
+      yazi: "camasir-makinesi-isitmiyor", rehber: true },
     { giris: "Bosch · Siemens · Neff — E ve F kodları", tip: "kod",
       // 22 Ağu (TARAMA-1): F21 ve F63 çıkarıldı — ikisi de 5 BSH bölge sitesinde ve
       // 5 kılavuzda yok. BSH'nin tahrik kodu E80. (Yazının gövdesi ayrıca ele alınacak.)
@@ -68,10 +72,10 @@ export const HATA_KODU_KATMANI = {
       yazi: "camasir-makinesi-tahliye-filtresi-temizleme", rehber: true },
     { giris: "Su almıyor", tip: "belirti",
       anlam: "Önce musluk, giriş filtresi ve hortum kontrol edilir.",
-      yazi: "camasir-makinesi-su-almiyor" },
+      yazi: "camasir-makinesi-su-almiyor", rehber: true },
     { giris: "Sıkarken ses ve titreşim", tip: "belirti",
       anlam: "Nakliye cıvatası, dengesizlik, yabancı cisim ve rulman ayrımı nasıl yapılır.",
-      yazi: "camasir-makinesi-ses-titresim" },
+      yazi: "camasir-makinesi-ses-titresim", rehber: true },
     { giris: "Küf / rutubet kokusu", tip: "belirti",
       anlam: "Kapı contası, deterjan çekmecesi, filtre ve kireç kaynaklı kokunun nedenleri.",
       yazi: "camasir-makinesi-kokuyor", rehber: true },
@@ -109,7 +113,7 @@ export const HATA_KODU_KATMANI = {
       yazi: "camasir-makinesi-sigorta-attiriyor" },
     { giris: "Su kaçırıyor / alttan su sızdırıyor", tip: "belirti",
       anlam: "Kaynak çoğu zaman deterjan çekmecesi, hortum bağlantıları ya da filtre kapağıdır; güvenli kontrol sırası.",
-      yazi: "camasir-makinesi-su-kaciriyor" },
+      yazi: "camasir-makinesi-su-kaciriyor", rehber: true },
     { giris: "Çamaşırlarda leke bırakıyor", tip: "belirti",
       anlam: "Siyah-gri leke ve pas izinin kaynağı makinenin kendisidir: conta küfü, kirli tambur ya da içeride kalmış cisim.",
       yazi: "camasir-makinesi-camasirlarda-leke-birakiyor" },
@@ -177,7 +181,7 @@ export const HATA_KODU_KATMANI = {
   // ——— Kayıt genişletmesi (21 Ağu 2026, YK #80 · hedef 200+) ———
     { giris: "Program bitti ama kapak açılmıyor", tip: "belirti",
       anlam: "Kilit program bitiminden 1-3 dakika sonra çözülür; kazanda su varsa makine kapağı bilerek açmaz.",
-      yazi: "camasir-makinesi-kapagi-acilmiyor" },
+      yazi: "camasir-makinesi-kapagi-acilmiyor", rehber: true },
     { giris: "Sıkma yapmıyor, çamaşırlar sırılsıklam çıkıyor", tip: "belirti",
       anlam: "Çoğu zaman makinenin kendini koruma davranışıdır: yük dengesi, seçili devir, kalan su ve makinenin terazisi sırayla bakılır.",
       yazi: "camasir-makinesi-santrifuj-yapmiyor" },
@@ -291,10 +295,10 @@ export const HATA_KODU_KATMANI = {
       yazi: "bulasik-makinesi-su-atmiyor", rehber: true },
     { giris: "Su almıyor", tip: "belirti",
       anlam: "Musluk, giriş filtresi ve valf sırayla kontrol edilir.",
-      yazi: "bulasik-makinesi-su-almiyor" },
+      yazi: "bulasik-makinesi-su-almiyor", rehber: true },
     { giris: "Kurutmuyor / bulaşıklar ıslak çıkıyor", tip: "belirti",
       anlam: "Parlatıcıdan rezistansa 6 olası neden ve hangisini kendin çözebilirsin.",
-      yazi: "bulasik-makinesi-kurutmuyor" },
+      yazi: "bulasik-makinesi-kurutmuyor", rehber: true },
     { giris: "Temiz yıkamıyor", tip: "belirti",
       anlam: "Püskürtme kolu, filtre, kireç ve yerleştirme kaynaklı 6 neden.",
       yazi: "bulasik-makinesi-temiz-yikamiyor", rehber: true },
@@ -328,7 +332,7 @@ export const HATA_KODU_KATMANI = {
       yazi: "siemens-bulasik-makinesi-e15-hatasi" },
     { giris: "Alttan su kaçırıyor", tip: "belirti",
       anlam: "Sebep çoğu zaman kapı contası, hortum bağlantısı ya da taşma emniyetidir; kendin kontrol edeceklerin belli.",
-      yazi: "bulasik-makinesi-su-kaciriyor" },
+      yazi: "bulasik-makinesi-su-kaciriyor", rehber: true },
     { giris: "Programı bitirmiyor / sürekli çalışıyor", tip: "belirti",
       anlam: "Isıtma, su alma-boşaltma döngüsü ya da sensör kaynaklı olabilir; hangi ses normal, ne zaman servis gerekir.",
       yazi: "bulasik-makinesi-programi-bitirmiyor" },
@@ -739,20 +743,20 @@ export const HATA_KODU_KATMANI = {
   "Fırın / Ocak / Aspiratör": [
     { giris: "Ocak ateşleme yapmıyor / kıvılcım yok", tip: "belirti",
       anlam: "Çakmak çakıyor ama ocak yanmıyorsa önce başlık temizliği, buji ve gaz akışı.",
-      yazi: "ocak-atesleme-yapmiyor" },
+      yazi: "ocak-atesleme-yapmiyor", rehber: true },
     { giris: "Ateşleme bujisi değişmeli mi", tip: "belirti",
       anlam: "Bujiyi değiştirmeden önce denenecek 3 şey ve bu işin neden servis işi olduğu.",
       yazi: "ocak-atesleme-bujisi-degisimi" },
     { giris: "Fırın ısınmıyor ya da geç ısınıyor", tip: "belirti",
       anlam: "Rezistans, termostat, fan ve kart ayrımı; servis çağırmadan önce kontroller.",
-      yazi: "firin-isinmiyor" },
+      yazi: "firin-isinmiyor", rehber: true },
     { giris: "Aspiratör çekmiyor ya da koku yapıyor", tip: "belirti",
       anlam: "Bu arıza için kendin-çöz adımı yayınlamadık; ölçüm ve yetki isteyen bir iş." },
 
   // ——— Boşluk dalgası (20 Ağu 2026, YK — 85-konu taraması) ———
     { giris: "Fırın eşit pişirmiyor (altı çiğ, üstü yanık)", tip: "belirti",
       anlam: "Tepsi konumu, dönmeyen fan ya da alt rezistans olabilir; kızarma testiyle ayrımı kendin yaparsın.",
-      yazi: "firin-esit-pisirmiyor" },
+      yazi: "firin-esit-pisirmiyor", rehber: true },
     { giris: "Fırın kapağı açılmıyor / kilitli kaldı", tip: "belirti",
       anlam: "Çoğu zaman piroliz sonrası soğuma süresi ya da çocuk kilididir; kapıyı zorlamadan kontrol sırası.",
       yazi: "firin-kapagi-acilmiyor" },
@@ -905,6 +909,10 @@ export const HATA_KODU_KATMANI = {
   ],
 
   "Süpürge": [
+    // ——— 23 Ağu 2026, YK #31 seçenek (c): yeni rehber ———
+    { giris: "Hiç açılmıyor / tuşa basınca tepki yok", tip: "belirti",
+      anlam: "Priz, sigorta, kablo ve termik koruma elemesi; anahtar işinin neden servis olduğu.",
+      yazi: "supurge-calismiyor", rehber: true },
     // 22 Ağu 2026 (Tolga onayı, konu #3 → b): yazı rehbere yükseltildi → `rehber: true`.
     // YK #35 ② katman denetimi bunu ŞART koşuyor: kendi rehberimiz bir giriş satırından
     // erişilebilir olmalı, yoksa build DURUR (22 Ağu'da fiilen durdurdu).

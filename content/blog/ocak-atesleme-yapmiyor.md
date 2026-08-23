@@ -24,6 +24,12 @@ images:
 
 Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bir türlü yanmıyor. İyi haber: çoğu zaman sebep basit ve **evde, dakikalar içinde** çözülüyor. Bu yazıda nedenleri, **kendin yapabileceklerini** ve gerektiğinde servisten ne isteyeceğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **ateşleme bujisine ya da gaz hattına**
+> geldiğinde iş servise aittir: gazlı bir cihazda tablanın altı yalnız yetkili servisin ve yetkili gaz tesisatçısının alanıdır. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo, Franke, Silverline gibi ankastre ve set üstü gazlı ocaklarda nedenler benzerdir.
 
 ## Ocak neden ateşleme yapmaz? Olası nedenler

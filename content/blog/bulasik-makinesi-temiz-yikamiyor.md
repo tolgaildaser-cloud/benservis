@@ -36,6 +36,12 @@ images:
 
 Programı çalıştırdın ama bulaşıklar kirli, kireçli ya da ıslak çıktı. İyi haber: "temiz yıkamama" sorunlarının büyük kısmı arıza değil, **bakım ve kullanım** kaynaklı — yani evde, ücretsiz çözülüyor. Bu yazıda 6 olası nedeni, **adım adım kendi yapabileceğin çözümü** ve servis gerekirse hangi parçanın konuşulduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
+> ⚠️ **Bu belirtinin arkasında uzmanlık gerektiren bir iş olabilir.**
+>
+> Aşağıdaki kontrollerin hepsi **ücretsiz** ve tamamen senin alanında. Ama sıra **sirkülasyon (yıkama) pompasına**
+> geldiğinde iş servise aittir: pompa tablanın altındadır ve teşhisi ölçüm gerektirir. Bu yazıda **parça değişimi tarif etmiyoruz** ve
+> tarif eden kaynaklara da yönlendirmiyoruz.
+
 **Marka fark etmez:** Bosch, Siemens, Arçelik, Beko, Profilo gibi bulaşık makinelerinde nedenler ve çözüm benzerdir. Ekranda hata kodu varsa: [Bosch](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [marka marka](/blog/bulasik-makinesi-hata-kodlari/).
 
 ## Bulaşık makinesi neden temiz yıkamaz? 6 olası neden

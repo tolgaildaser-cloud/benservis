@@ -7,7 +7,7 @@
 import { describe, it, expect } from "vitest";
 import { seedSatirBul, seedEslestir, seedBeklenen, satirBeklenen } from "./seed-eslesme.js";
 import { SEED } from "./tarife-seed.js";
-import { rehberBul } from "./onarim-rehberleri.js";
+import { rehberBul, REHBERLER } from "./onarim-rehberleri.js";
 
 // Bölme SONRASI hipotetik SEED (YK #38 üç bölme). Bantlar temsilîdir — test davranışı
 // ölçer, fiyatı değil. Gerçek bölme Supabase'de /tarife onayıyla yapılır.
@@ -191,13 +191,26 @@ describe("onarim-rehberleri: SEED adlarına bağlılık", () => {
     expect(rehberBul("Bulaşık Makinesi", "E22 hatası — iç filtre tıkalı").kendi).toBe(true);
   });
 
+  // 23 Ağu (YK #31 seçenek c): asıl güvence — haritada TEK BİR iFixit kaydı kalmamalı.
+  // 20 parça değişimi / söküm kaydı kendi Türkçe yazılarımızla değiştirildi. Bu test,
+  // ileride yeniden bir dış söküm rehberi eklenirse build'i kırar.
+  it("YK #31: haritada dış söküm rehberi YOK, hepsi kendi yazımız", () => {
+    const hepsi = Object.values(REHBERLER).flat();
+    const disari = hepsi.filter((k) => !k.rehber.kendi);
+    expect(disari).toEqual([]);
+    expect(hepsi.length).toBeGreaterThan(20);
+  });
+
   // YK #31 taramasının üç onaylı ihlali — bir daha açılırsa build kırılsın.
   it("YK #31: geniş belirti kelimeleri söküm rehberine düşmez", () => {
     // SEED'de Süpürge'nin BİRİNCİ arıza adı birebir "Motor" → beklenen yol, istisna değil.
     expect(rehberBul("Süpürge", "Motor").kendi).toBe(true);
     expect(rehberBul("Süpürge", "Motor arızası").kendi).toBe(true);
     // Gazlı ocak: "yanmıyor" hiçbir dış alev/karışım ayarı rehberine bağlanamaz.
-    expect(rehberBul("Fırın / Ocak / Aspiratör", "Ocak yanmıyor")).toBe(null);
+    // 23 Ağu (YK #31 seçenek c): artık `null` DEĞİL — kendi yazımıza bağlandı.
+    // Beklenti yükseltildi: rehber var VE bizim olmak zorunda.
+    expect(rehberBul("Fırın / Ocak / Aspiratör", "Ocak yanmıyor").kendi).toBe(true);
+    expect(rehberBul("Fırın / Ocak / Aspiratör", "Ateşleme bujisi").kendi).toBe(true);
     // Bulaşık ↔ çamaşır asimetrisi: aynı belirti iki cihazda da BİZE gelmeli.
     expect(rehberBul("Bulaşık Makinesi", "Su atmıyor").kendi).toBe(true);
     expect(rehberBul("Çamaşır Makinesi", "Su atmıyor").kendi).toBe(true);
