@@ -30,6 +30,15 @@ faq:
     a: "Conta temiz, tambur temiz, filtrede cisim yok ama leke sürüyorsa artık gözle göremediğin bir bölgede kalıntı ya da korozyon olabilir: tamburun arkası, ısıtma bölgesi ya da kazan ile tambur arasında sıkışmış bir cisim. Buraların kontrolü söküm gerektirdiği için servis işidir. Lekenin rengini ve hangi programlarda çıktığını not edip servise aktarman teşhisi hızlandırır."
 images:
   coverAlt: "Çamaşır makinesinin tamburundan sarkan, üzerinde soluk gri lekeler bulunan beyaz havlu"
+  steps:
+    - "Küf, pas ve deterjan lekelerinin kumaş üzerinde nasıl göründüğünü karşılaştıran çizim"
+    - "Kapak contasının kıvrımının elle aralanıp içindeki kalıntıya bakılışını gösteren çizim"
+    - "Conta kıvrımının bez ve yumuşak fırçayla silinişini gösteren çizim"
+    - "Boş tamburu ve panelde seçilen tambur temizleme programını gösteren çizim"
+    - "Ölçüsünde deterjan dozunu ve temizlenmesi gereken çekmeceyi gösteren çizim"
+    - "Tamburun içinin el feneriyle, delikler ve kaburga çevresi taranarak incelenişini gösteren çizim"
+    - "Tahliye filtresinden çıkan bozuk para, toka gibi metal cisimleri gösteren çizim"
+    - "Kapağın ve çekmecenin aralık bırakılışını, contanın kuru bezle kurulanışını gösteren çizim"
 ---
 
 Makineden çıkan gömleğin üzerinde siyah-gri, sanki sürülmüş gibi bir iz var. Bir başka yıkamada beyaz çarşafta turuncu-kahverengi bir leke. Çamaşırlar makineye temiz denebilecek hâlde girip **lekeli çıkıyorsa** durum "temiz yıkamıyor"dan farklıdır: makine kiri çıkaramamakla kalmıyor, **kendisi kir veriyor**. İyi haber şu ki bu lekelerin kaynakları sayılıdır, çoğu gözle bulunur ve önemli kısmı söküm gerektirmeden temizlenir. Bu yazıda leke tipinden kaynağa giden yolu izliyoruz ve hangi noktadan sonra işin servise kaldığını açıkça söylüyoruz.
