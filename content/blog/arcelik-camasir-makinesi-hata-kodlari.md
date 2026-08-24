@@ -16,9 +16,9 @@ category: "Çamaşır makinesi"
 # 📌 Üreticinin listesinde KAPI KİLİDİ ve ISITMA kodu yok; eski tablo ikisini de uyduruyordu.
 faq:
   - q: "Arçelik çamaşır makinesi kodları neden tek haneli?"
-    a: "Çünkü üreticinin yayımladığı liste tek hanelidir: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. İnternette çok yayılan E01–E11 bandı Arçelik'in çamaşır makinesi listesinde geçmez; o numaralar başka cihazlara aittir. Örneğin E01, Arçelik kombide 'alev yok', bulaşık makinesinde 'taşma' demektir."
+    a: "Çünkü üreticinin yayımladığı liste tek hanelidir: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. İki haneli E01–E11 bandı Arçelik'in çamaşır makinesi listesinde geçmez; o numaralar başka cihazlara aittir. Örneğin E01, Arçelik kombide 'alev yok', bulaşık makinesinde 'taşma' demektir."
   - q: "Arçelik makinesi su atmıyor, hangi kodu verir?"
-    a: "E5 kodunu verir; üreticinin karşılığı 'Pompa Tıkalı'dır. En sık sebep tıkalı pompa filtresidir — alt ön kapaktaki filtreyi temizlemek çoğu zaman ücretsiz çözer. Dikkat: internetteki bazı listeler E5'i ısıtma sanıyor; üreticide ısıtma tarafı için kullanıcıya gösterilen ayrı bir kod yoktur."
+    a: "E5 kodunu verir; üreticinin karşılığı 'Pompa Tıkalı'dır. En sık sebep tıkalı pompa filtresidir — alt ön kapaktaki filtreyi temizlemek çoğu zaman ücretsiz çözer. Dikkat: üreticinin kullanıcıya gösterdiği kodlar arasında ısıtma/rezistans için ayrı bir kod yoktur — E5 tahliye tarafını anlatır. Makinen ısıtmıyorsa aradığın şey bir kod değil, belirtinin kendisidir."
   - q: "Kod yerine ışıklar yanıp sönüyorsa?"
     a: "Bazı Arçelik/Beko modelleri kod yerine yanıp sönen ışık deseni gösterir. Hangi ışığın kaç kez yandığı arızayı işaret eder; kılavuzdaki tabloya bak ya da belirtiyi Benservis'e yaz."
   - q: "Beko ve Grundig'te de aynı kodlar mı?"
@@ -54,7 +54,7 @@ Arçelik çamaşır makinen ekranında bir hata kodu ya da yanıp sönen ışık
 | **Err** | Üründe güvenlik algoritması çalışıyor | 🛠️ Yazının geçmesini bekle, 1. ve 2. yardımcı fonksiyon tuşuna bas |
 | **SC** | Yapılan kontroller sonrasında şikâyet giderilmedi | 🔧 Doğrudan yetkili servise başvur |
 
-> 📌 **Listede olmayan iki şeye dikkat:** üreticinin kullanıcıya gösterdiği kodlar arasında **ayrı bir kapı kilidi kodu** ve **ayrı bir ısıtma/rezistans kodu yoktur.** İnternetteki listelerin bu ikisi için verdiği numaralar doğrulanamıyor. Makinen ısıtmıyorsa kodu değil belirtiyi anlat.
+> 📌 **Listede olmayan iki şeye dikkat:** üreticinin kullanıcıya gösterdiği kodlar arasında **ayrı bir kapı kilidi kodu** ve **ayrı bir ısıtma/rezistans kodu yoktur.** Bu iki arıza üreticide kod olarak değil belirti olarak karşılanır. Makinen ısıtmıyorsa kodu değil belirtiyi anlat.
 
 ## Öne çıkan kodlar
 

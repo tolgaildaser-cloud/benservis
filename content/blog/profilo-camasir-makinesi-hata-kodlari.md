@@ -34,7 +34,7 @@ faq:
   - q: "Profilo'da çıkan kodlar Bosch ve Siemens'tekiyle aynı mı?"
     a: "Evet. Profilo, Bosch ve Siemens ile aynı grubun (BSH) çatısı altındadır ve aynı platformu kullanır; E17, E18 ve E23 gibi kodlar üç markada da aynı anlama gelir. Bu yüzden Bosch için yayımlanmış kod listesi Profilo sahipleri için de geçerli bir başvurudur. Dikkat: o listede F21 diye bir kod yok."
   - q: "Profilo F21 hatası ne demek?"
-    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok. İnternette çok dolaşan 'F21 motor kömürü' eşleşmesi Bosch, Siemens ve Profilo'nun hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez — ve o iş servise aittir."
+    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok — Bosch, Siemens ve Profilo'nun hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez — ve o iş servise aittir."
   - q: "Profilo E23 hatasında ilk ne yapmalı?"
     a: "E23, makinenin taban tarafına su indiğini ve sızıntı güvenliğinin devreye girdiğini gösterir. İlk iki hamle fişi çekmek ve musluğu kapatmaktır; ardından makinenin çevresinde görünür ıslaklık olup olmadığına bakılır. Sızıntının kaynağını (conta, hortum, pompa) bulmak servis işidir."
 images:

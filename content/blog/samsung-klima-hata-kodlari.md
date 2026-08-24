@@ -103,7 +103,7 @@ Bazı model serilerinde sensör bildirimleri sayı eşliği olmadan tek başına
 
 Üçü de sensör kaynaklıdır ve resetle silinmiyorsa parça teşhisi servis işidir. Sensörler iç ve dış ünitenin gövdesi içindedir, panelin arkasındadır.
 
-## Yazmadığımız kodlar
+## Bu tablonun kapsamı: ev tipi klimalar
 
 Bu yazıdaki tablo **ev tipi** klimalar içindir. Çoklu iç üniteli ticari sistemler üç haneli kodlar kullanır ve o şema ayrıdır; ikisini aynı tabloda okumak yanlış parçaya götürür. Ticari bir sistemin kodunu arıyorsan cihazının kendi kullanım kılavuzuna bak.
 
