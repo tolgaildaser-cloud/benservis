@@ -79,9 +79,9 @@ Türkiye'de şebeke suyunun sertliği ilden ile, hatta ilçeden ilçeye değişi
 
 Doğru sayıyı tahmin etmeye gerek yok: **su idarenin yayımladığı su kalitesi raporunda** senin bölgenin sertlik değeri yazar. Değer yüksek çıkıyorsa kireç çözme aralığını altı aydan daha kısaya çek; düşük çıkıyorsa altı ay rahatlıkla yeterlidir. Deterjanların içindeki su yumuşatıcılar bu işi kısmen üstlenir, ama sert suda tek başına yetmez.
 
-## Sirke ve karbonat tartışmasında dürüst duruş
+## Sirke ve karbonat: kılavuz ne diyor
 
-İnternetteki her temizlik tarifinde bu ikisi var. Üreticilerin sayfalarına bakınca tablo bu kadar net değil: **bazı büyük markaların destek sayfaları sirkeye açıkça karşı çıkıyor**, gerekçe olarak lastik conta ve hortumlarda zamanla oluşabilecek yıpranmayı gösteriyor ve kendi makine temizleyicilerini öneriyor. İnternette yaygın olan "ölçülü kullanılırsa sorun olmaz" görüşünün arkasında ise bir üretici kaynağı bulamadık.
+Sirke ve karbonat, ev temizliğinin en bilinen iki katkısı — ama çamaşır makinesinin içi için üreticiler bu ikisini ayrı değerlendiriyor. **Bazı büyük markaların destek sayfaları sirkeye açıkça karşı çıkıyor**, gerekçe olarak lastik conta ve hortumlarda zamanla oluşabilecek yıpranmayı gösteriyor ve kendi makine temizleyicilerini öneriyor. Üreticilerin ortak biçimde önerdiği yöntem katkı maddesi değil: **yüksek sıcaklıkta boş program.**
 
 ⚠️ **Geçerli olan senin cihazının kullanım kılavuzudur** — hem üretici o metinden sorumludur hem de bir uyuşmazlıkta garanti değerlendirmesi o metne bakar. Kılavuzun bir ürün adı veriyorsa onu kullan; hiçbir şey demiyorsa üreticinin kendi temizleyicisi en güvenli yoldur. Karbonat için de aynı ilke geçerli.
 

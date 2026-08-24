@@ -28,7 +28,7 @@ steps:
   - "Köpük ve yük dengesini düzelt. Köpük kodunda makineyi deterjansız kısa bir programda bir-iki kez boş çalıştır ve sonraki yıkamalarda dozu azaltıp otomatik makine deterjanı kullan. Dengesiz yük kodunda çamaşırı elle dağıt, tek parça büyük yüke birkaç havlu ekleyip yeniden dene."
 faq:
   - q: "Beko çamaşır makinesi hata kodları kaç tane ve nereden doğrulanır?"
-    a: "Beko kendi sitesinde on kodluk tek bir liste yayımlar: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. Arçelik de aynı listeyi birebir yayımlar, çünkü iki marka aynı grubun elektronik ailesini kullanır. İnternette çok dolaşan E01, E02, E03, E10 gibi iki haneli kodlar ve H1, H4, H5 gösterimi bu listede geçmez; kesin karşılığı her zaman kendi makinenin kullanım kılavuzundan teyit et."
+    a: "Beko kendi sitesinde on kodluk tek bir liste yayımlar: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. Arçelik de aynı listeyi birebir yayımlar, çünkü iki marka aynı grubun elektronik ailesini kullanır. İki haneli E01, E02, E03, E10 kodları ve H1, H4, H5 gösterimi bu listede geçmez — o numaralar grubun başka cihazlarına aittir; örneğin E01 kombide alev yok, bulaşık makinesinde taşma demektir. Kesin karşılığı her zaman kendi makinenin kullanım kılavuzundan teyit et."
   - q: "Hata kodunu silmek için makineyi fişten çekmek işe yarar mı?"
     a: "Geçici bir takılmaysa evet: makineyi kapatıp fişten çek, birkaç dakika bekle ve yeniden dene. Ama kod tekrar geliyorsa bu bir elektronik hıçkırık değil, gerçek bir durum bildirimi demektir. Kodu tekrar tekrar silip programı zorlamak, altta yatan sorunu büyütebilir; iki denemeden sonra sebebe bakmak gerekir."
   - q: "E17 köpük hatasında ne yapmalıyım?"

@@ -51,7 +51,7 @@ images:
   coverAlt: "Ahşap dolaplı mutfakta duran, alt bölmesi derin dondurucu olan iki kapılı buzdolabı"
 ---
 
-Sabah kapağı açtın, panelde derece yerine E ile başlayan bir şey yanıp sönüyor. Telefonla arattın ve işler daha da karıştı: aynı kod için üç ayrı sitede üç ayrı cevap var. Bu kafa karışıklığı senin hatan değil — Arçelik buzdolaplarında gerçekten birden fazla kod şeması kullanılıyor ve listelerin çoğu hangisini anlattığını söylemiyor. Bu yazıda **üreticinin kendi sayfasında yayımladığı yirmi kodu** veriyoruz — ve internette çok yayılan "kodlar toplanarak üretilir" açıklamasının neden doğru olmadığını da söylüyoruz.
+Sabah kapağı açtın, panelde derece yerine E ile başlayan bir şey yanıp sönüyor. Telefonla arattın ve işler daha da karıştı: aynı kod için üç ayrı sitede üç ayrı cevap var. Bu kafa karışıklığı senin hatan değil — Arçelik buzdolaplarında gerçekten birden fazla kod şeması kullanılıyor ve listelerin çoğu hangisini anlattığını söylemiyor. Bu yazıda **üreticinin kendi sayfasında yayımladığı yirmi kodu** veriyoruz — hangi kodun hangi şemaya ait olduğunu da ayırarak.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

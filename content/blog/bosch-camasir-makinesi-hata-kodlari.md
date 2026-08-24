@@ -32,7 +32,7 @@ faq:
   - q: "Bosch'ta E ve F kodları arasındaki fark ne?"
     a: "Aynı arıza, model neslinine göre farklı önekle gösterilir: yeni Bosch modelleri 'E', eski modeller 'F' önekiyle aynı numarayı verir. Yani E18 ile F18 aynı anlama gelir. Bosch kendi sayfalarında da kodları 'E18 veya F18' biçiminde ikili yazar."
   - q: "Bosch F21 kodu ne anlama gelir?"
-    a: "Bosch'un yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok. İnternette çok dolaşan 'F21 motor kömürü' eşleşmesi BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekranında F21 gördüğünü düşünüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et."
+    a: "Bosch'un yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok — BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekranında F21 gördüğünü düşünüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et: listedeki kodlar E ve F biçimiyle eşli yazılır (E16/F16, E17/F17, E18/F18 gibi) ve bu eşlerin arasında 21 yoktur."
   - q: "Siemens ve Neff'te de aynı kodlar mı geçerli?"
     a: "Siemens'te evet: Siemens'in kendi destek sayfalarındaki tablo Bosch'unkiyle kelime kelime aynıdır. Neff için aynı şeyi söyleyemiyoruz; Neff BSH grubunun markası olmasına rağmen kendi sitesinde bir hata kodu sayfası yayımlamıyor. Platform ortaklığı belgeli, kod tablosu ortaklığı değil."
   - q: "Bosch çamaşır makinesinde köpük (kabarcık) işareti ne demek?"

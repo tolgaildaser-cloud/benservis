@@ -32,7 +32,7 @@ images:
   coverAlt: "Kapağı açık beyaz kurutma makinesi ve üzerindeki hasır sepette katlı havlular"
 ---
 
-Kurutma programı yarıda durdu, panelde damla ya da filtre şeklinde bir işaret yanıp sönüyor ve sen ekranda bir kod arıyorsun. Kılavuzu açıyorsun, arıza kodu tablosu yok. İnternette arattığında ise aynı numaraya bambaşka anlamlar veren listeler çıkıyor. Bunun bir sebebi var ve aslında iyi bir haber: **Arçelik kurutma makineleri derdini çoğu modelde kodla değil sembolle anlatır** ve bu sembollerin karşılığı üreticinin kendi kullanma kılavuzunda net biçimde yazar. Bu yazıda o sembol dilini, kılavuzun doğruladığı belirti-sebep eşleşmelerini ve nerede durman gerektiğini anlatıyoruz.
+Kurutma programı yarıda durdu, panelde damla ya da filtre şeklinde bir işaret yanıp sönüyor ve sen ekranda bir kod arıyorsun. Kılavuzu açıyorsun, arıza kodu tablosu yok. Aradığın şey orada olmadığı için değil, **başka bir dille anlatıldığı** için bulamıyorsun — ve bu aslında iyi bir haber: **Arçelik kurutma makineleri derdini çoğu modelde kodla değil sembolle anlatır** ve bu sembollerin karşılığı üreticinin kendi kullanma kılavuzunda net biçimde yazar. Bu yazıda o sembol dilini, kılavuzun doğruladığı belirti-sebep eşleşmelerini ve nerede durman gerektiğini anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 

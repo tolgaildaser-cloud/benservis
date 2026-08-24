@@ -21,7 +21,7 @@ faq:
   - q: "Samsung 5E (5C) hatası nedir?"
     a: "5E (5C) makinenin suyu boşaltamadığını (tahliye) gösterir. Genelde tıkalı tahliye filtresi ya da bükük/tıkalı tahliye hortumu sebeptir."
   - q: "Samsung'da E ve C kodları arasındaki fark ne?"
-    a: "Samsung aynı arızayı modele göre farklı biçimde gösterebiliyor: 4E, 4C, hatta bazı modellerde NF ya da 1 4C. Samsung'un kendi ifadesi şu: modeline bağlı olarak hata NF veya 1 4C olarak da görünebilir. Yani bu bir eski/yeni ayrımı değil, model varyantı meselesidir — internetteki 'C yeni, E eski' açıklamasının Samsung tarafında bir dayanağı yok. Pratikte önemli olan: aynı numaranın farklı biçimleri aynı arızayı anlatır."
+    a: "Samsung aynı arızayı modele göre farklı biçimde gösterebiliyor: 4E, 4C, hatta bazı modellerde NF ya da 1 4C. Samsung'un kendi ifadesi şu: modeline bağlı olarak hata NF veya 1 4C olarak da görünebilir. Yani bu bir eski/yeni ayrımı değil, model varyantı meselesidir: Samsung'un kendi metni harfi tarihe değil modele bağlar. Pratikte önemli olan: aynı numaranın farklı biçimleri aynı arızayı anlatır."
   - q: "UE kodu nasıl çözülür?"
     a: "UE dengesiz yük demektir. Çamaşırları yeniden dağıt, tek ağır parçayı (battaniye, halı) böl veya yanına birkaç parça ekle. Genelde evde çözülür."
 images:

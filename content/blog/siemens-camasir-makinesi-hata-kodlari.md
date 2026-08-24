@@ -34,7 +34,7 @@ faq:
   - q: "Siemens'te E ve F önekli kodlar farklı mı?"
     a: "Hayır, aynı arızanın iki yazımıdır. Yeni nesil modeller E, daha eski modeller F önekiyle aynı numarayı gösterir; yani E18 ile F18 birebir aynı anlama gelir. Bu yüzden rehberde ikisini birlikte veriyoruz."
   - q: "Siemens F21 hatası ne demek?"
-    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok. İnternette çok dolaşan 'F21 motor kömürü' eşleşmesi Bosch ve Siemens'in hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekranında F21 gördüğünü düşünüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et; motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez ya da sıkmaya geçemez."
+    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok — Bosch ve Siemens'in hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekranında F21 gördüğünü düşünüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et; motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez ya da sıkmaya geçemez."
   - q: "Bosch'taki kodlarla Siemens kodları aynı mı?"
     a: "Evet. Siemens ve Bosch aynı grubun (BSH) ortak platformunu kullanır; E/F kodları iki markada da aynı anlama gelir. Bosch için yazdığımız kod listesi Siemens'te, Siemens için yazdıklarımız Bosch'ta da geçerlidir."
 images:

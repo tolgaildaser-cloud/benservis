@@ -25,7 +25,7 @@ faq:
   - q: "Ekranda HL yazıyor, klima bozuldu mu?"
     a: "HL bir arıza kodu değil, gerilim koruma bildirimidir. Klima çalışırken şebeke geriliminde aşırı düşme ya da yükselme olursa cihaz kendini durdurur ve göstergede HL görünür. Gerilim normale döndüğünde klima yeniden çalışmaya başlar; senin bir şey yapmana gerek yoktur. Bu durum çok sık tekrarlıyorsa sorun klimada değil, evin elektrik beslemesinde olabilir."
   - q: "Vestel klimada Er kodunun sayısı ne anlama geliyor?"
-    a: "Vestel klimalarda hata mesajı önce Er ibaresi, ardından o hataya özel iki haneli sayı görünerek verilir. Kılavuzlar bu sayıların tek tek karşılığını kullanıcıya açmaz; onun yerine net bir talimat verir: cihaza herhangi bir şey yapma ve yetkili servisle iletişime geç. Bu yüzden biz de internette dolaşan sayı karşılıklarını buraya kopyalamıyoruz. Sayıyı doğru not etmek ise önemlidir, çünkü servis için teşhisi kısaltan asıl bilgi odur."
+    a: "Vestel klimalarda hata mesajı önce Er ibaresi, ardından o hataya özel iki haneli sayı görünerek verilir. Kılavuzlar bu sayıların tek tek karşılığını kullanıcıya açmaz; onun yerine net bir talimat verir: cihaza herhangi bir şey yapma ve yetkili servisle iletişime geç. Bu tabloda da kılavuzun açtığı kadarı var. Sayıyı doğru not etmek ise önemlidir, çünkü servis için teşhisi kısaltan asıl bilgi odur."
   - q: "Kod ekranda ne kadar kalıyor, kaçırırsam ne olur?"
     a: "Vestel klimalarda mesaj önce koda özel sayıda yanıp söner, ardından otuz beş ile kırk saniye arası sabit görünür. Sorun giderilene kadar da görüntülenmeye devam eder, yani mesajı kaçırdıysan bir sonraki tura yetişirsin. Yine de en garantisi telefonla video çekmektir: Er ibaresiyle sayı sırayla göründüğü için tek fotoğrafta ikisi birden yakalanmayabilir."
 images:
