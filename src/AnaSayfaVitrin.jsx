@@ -79,30 +79,33 @@ const POPULER = [
   { etiket: "Klima soğutmuyor", cihaz: "Klima" },
 ];
 
-// 20 Ağu 2026 (Tolga): "buraya il de ekleyelim … 10.000+ olarak gösterelim, arkada biz
-// tam sayıyı takip edelim" → band artık src/site-istatistik.json'dan beslenir (üreten:
-// scripts/site-istatistik.mjs — her sayı services-data.json + tarife-seed.js'ten SAYILIR,
-// elle yazılmaz; şişirme yasağı korunur). TAM servis sayısı o dosyada durur; vitrin
-// 10.000'i aşınca "10.000+" yazar, aşmadıkça gerçek sayıyı gösterir.
+// Band src/site-istatistik.json'dan beslenir (üreten: scripts/site-istatistik.mjs — her
+// sayı services-data.json + tarife-seed.js'ten SAYILIR, elle yazılmaz; #77 şişirme
+// yasağı korunur). JSON kaldırılan kartların verisini de TUTMAYA DEVAM EDER (puanli ·
+// serbis · cihaz · tarife) — vitrinde göstermiyoruz ama arkada takip ediyoruz.
+//
+// 🔴 24 Ağu 2026 (Tolga) — BAND SADELEŞTİ: 12 kutu → 8 kutu ve iki EŞİK KALKTI.
+//   ÇIKAN 4 kart: Google puanlı · SERBİS'te doğrulanmış · cihaz türü · onaylı tarife kalemi.
+//   EŞİK KALKTI (Tolga: "gerçek servis sayısını yaz", "blog yazısı gerçek sayı yaz"):
+//   servis artık `10.000+` değil TAM SAYI, blog artık `200+` değil TAM SAYI.
+//   ⚠️ Bu, 20 Ağu'nun "10.000+ gösterelim, arkada tam sayıyı takip edelim" ve 21 Ağu'nun
+//   "blog 200'ü aşınca 200+ yazar" hükümlerini YÜRÜRLÜKTEN KALDIRIR — ikisi de aynı
+//   sahibin (Tolga) sonraki talimatıyla değişti. Eşik mantığı geri istenirse buradan döner.
+//   ⛔ Şişirme yasağı GEVŞEMEDİ, tersine sıkılaştı: `X+` yuvarlaması bir yaklaşıktı,
+//   artık ekranda sayılan gerçek değer duruyor.
+//
+// Kapsam/ızgara: kutu sayısı 12'den 8'e indi. 12, `auto-fit` ile 2/3/4/6 sütunun hepsinde
+// tam satır veriyordu; 8 ise yalnız 2 ve 4'te tam çıkar (6 sütunda son satırda 4 boşluk
+// kalırdı). Bu yüzden App.jsx'te ızgara ≥521px'te 4 sütuna SABİTLENDİ (≤520px'te zaten
+// 2 sütun) → 8 kutu her ekranda tam satır. Kutu sayısı değişirse o kural da gözden geçirilir.
 const trSayi = (n) => n.toLocaleString("tr-TR");
 const SAYILAR = [
-  { buyuk: IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis), kucuk: "servis kaydı" },
-  { buyuk: trSayi(IST.puanli), kucuk: "Google puanlı" },
-  // ⬇️ Hero güven satırından TAŞINDI (21 Ağu): satırın aşağıda karşılığı olmayan tek verisi buydu.
-  { buyuk: trSayi(IST.serbis), kucuk: "SERBİS'te doğrulanmış" },
+  { buyuk: trSayi(IST.servis), kucuk: "servis kaydı" },
   { buyuk: trSayi(IST.il), kucuk: "il" },
   { buyuk: trSayi(IST.ilce), kucuk: "ilçe" },
-  // Kapsam: ızgara `auto-fit` olduğu için kutu sayısı 12 tutuluyor — 2/3/4/6 sütunun
-  // hepsinde tam satır çıkar (10 kutuyken 6'lı dizilimde son satırda 2 boşluk kalıyordu).
-  { buyuk: trSayi(IST.cihaz), kucuk: "cihaz türü" },
   { buyuk: trSayi(IST.marka), kucuk: "marka" },
-  { buyuk: trSayi(IST.tarife), kucuk: "onaylı tarife kalemi" },
   // ⬇️ İçerik tarafı (21 Ağu, Tolga: "50+ rehber, 200+ blog, tamir, kılavuz vb").
-  // ⛔ Rakamlar site-istatistik.json'dan GELİR, elle yazılmaz (#77 şişirme yasağı).
-  // Eşik biçimi (`X+`) yalnız gerçek sayı dağınık/okunaksızken kullanılır (YK #80 emsali):
-  // blog 200'ü aşınca "200+" yazar; rehber · tamir · kılavuz net durdukları için
-  // gerçek sayılarıyla kalır — `50+` yazmak kazanılmış rakamı EKSİLTİRDİ.
-  { buyuk: IST.blog >= 200 ? "200+" : trSayi(IST.blog), kucuk: "blog yazısı" },
+  { buyuk: trSayi(IST.blog), kucuk: "blog yazısı" },
   { buyuk: trSayi(IST.rehber), kucuk: "onarım rehberi" },
   { buyuk: trSayi(IST.tamir), kucuk: "tamir kaydı" },
   { buyuk: trSayi(IST.kilavuz), kucuk: "kullanım kılavuzu" },

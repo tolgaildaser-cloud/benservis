@@ -1431,6 +1431,13 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
   .vitrin-kartlar { grid-template-columns: repeat(2, 1fr) !important; }
   .vitrin-sayilar { grid-template-columns: repeat(2, 1fr) !important; }
 }
+/* Sayı bandı 24 Ağu'da 12 kutudan 8'e indi (Tolga). auto-fit serbest bırakılsa geniş
+   ekranda 6 sütun seçiyor ve son satırda 4 boşluk kalıyordu. 8 kutu yalnız 2 ve 4
+   sütunda tam satır verir → 521px ve üstünde 4'e sabitlendi (520px altı zaten 2).
+   ⛔ Bu blok bir JS şablon dizesinin İÇİNDE — yorum metnine backtick yazma, build kırılır. */
+@media (min-width: 521px) {
+  .vitrin-sayilar { grid-template-columns: repeat(4, 1fr) !important; }
+}
 @keyframes anspin { to { transform: rotate(360deg); } }
 @keyframes anrise { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:none;} }
 input:focus, textarea:focus, select:focus { outline: none; border-color: ${AMBER} !important; box-shadow: 0 0 0 3px rgba(37,99,235,.13); }
