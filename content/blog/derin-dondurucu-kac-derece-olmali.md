@@ -13,6 +13,10 @@ faq:
     a: "Dolu — donmuş gıdalar soğuk kütle olarak davranır, kapı açıldığında sıcaklık daha az oynar ve motor daha az çalışır. Yarı boş dondurucuda araya su şişeleri koymak bile verimi artırır. Ancak hava sirkülasyonunu tamamen engelleyecek kadar tıkış tıkış doldurma."
   - q: "Elektrik kesintisinde dondurucudaki gıdalar ne kadar dayanır?"
     a: "Kapı hiç açılmazsa dolu bir derin dondurucu gıdayı yaklaşık 48 saat, yarı dolu ise yaklaşık 24 saat güvenli tutabilir. Kural: kesintide kapıyı açma. Çözülüp yeniden donan gıdada buz kristalleri ve koku kontrolü yap; şüphelendiğinden ye deme, at."
+  - q: "Derin dondurucu yazın kaç derece olmalı?"
+    a: "Yazın da -18°C. Hedef mevsimle değişmez; değişen, cihazın o hedefi tutmak için harcadığı efordur. Kadranı yazın bir kademe soğuğa almak gıdaya katkı sağlamaz, yalnızca tüketimi artırır. Yazın asıl bakılacak yer cihazın durduğu yer: ısı kaynaklarından en az 30 cm, elektrikli fırından en az 5 cm uzak, doğrudan güneş almayan, arkasında ve girintili yerleşimde tavanla yan duvarlarla arasında en az 5 cm boşluk olan bir konum. Ayrıca cihazın anma plakasındaki iklim sınıfına bak: SN 10-32°C, N 16-32°C, ST 16-38°C, T 16-43°C arası için tasarlanmıştır. Garaj ya da balkon gibi yazın 32°C'yi aşan bir yerde duran SN/N sınıfı bir cihazın -18'i tutamaması arıza değil, ortam meselesidir."
+  - q: "Difriz kaç derece olmalı?"
+    a: "Difriz, derin dondurucunun günlük konuşmadaki adıdır — aynı cihaz, aynı cevap: -18°C. Şoklama kuralı ve dolu dondurucunun daha verimli çalıştığı da difriz için geçerli. Sandıklı (yatay) modelde bakılacak tek ek şey defrost tarafıdır: cihazın no-frost olup olmadığı kullanma kılavuzunda yazar, no-frost değilse karlanma biriktikçe elle buz çözme ister."
 images:
   coverAlt: "Çekmeceli derin dondurucu ve yanında düşük sıcaklık gösteren termometre çizimi"
 ---
@@ -24,6 +28,23 @@ Buzdolabının [soğutucu bölmesi için +4°C kuralını](/blog/buzdolabi-kac-d
 ## Neden -18°C?
 
 -18°C, mikroorganizma faaliyetinin fiilen durduğu ve gıdaların aylarca güvenle saklanabildiği uluslararası standarttır. Daha soğuğa ayarlamak gıdaya ekstra fayda sağlamaz; her ilave derece yalnızca [elektrik faturasına](/blog/elektrik-faturasi-neden-yuksek/) yazar. Kademeli düğmeli modellerde orta-üstü ayar genelde -18'e karşılık gelir; emin olmak için dondurucu termometresi en net yöntemdir.
+
+## Yazın ayarı değişir mi?
+
+Hayır — **hedef yaz kış -18°C'dir.** Mevsimle değişen şey ayar değil, cihazın o ayarı tutmak için harcadığı efor: dışarısı sıcakken motor daha uzun çalışır, kapı her açılışta içeri giren sıcak hava daha fazladır. Bu yüzden yazın kadranı bir kademe daha soğuğa almak yaygın bir refleks, ama gıdaya kazandırdığı bir şey yok; yalnızca faturayı büyütür.
+
+Yazın gerçekten fark yaratan şey **cihazın durduğu yerdir.** Üretici kılavuzu bunu sayıyla tarif ediyor: ürün ocak, kalorifer peteği ve soba gibi ısı kaynaklarından **en az 30 cm**, elektrikli fırınlardan **en az 5 cm** uzakta durmalı; doğrudan güneş ışığı almamalı; arka yüzeyi ile duvar arasında ve girintili yerleşimlerde tavan ile yan duvarlarla arasında **en az 5 cm** boşluk kalmalı. Bu boşluklar cihazın ısıyı dışarı atma yolu — kapandıklarında sıcak günde ilk bozulan şey soğutma performansı olur.
+
+Bir de her cihazın **iklim sınıfı** var; anma değerleri plakasında yazar ve o cihazın hangi ortam sıcaklığı aralığı için tasarlandığını söyler:
+
+| İklim sınıfı | Tasarlandığı ortam sıcaklığı |
+|---|---|
+| SN | 10°C – 32°C |
+| N | 16°C – 32°C |
+| ST | 16°C – 38°C |
+| T | 16°C – 43°C |
+
+Dondurucun **garaj, balkon, kiler ya da camlı bir mutfak köşesi** gibi yazın 32°C'yi aşan bir yerdeyse ve plakasında SN veya N yazıyorsa, cihaz tasarım aralığının dışında çalışıyor demektir: -18'i tutamaması bir arıza değil, ortam meselesidir. Ölçmenin en net yolu dondurucu termometresi — kadranın kademesi değil, içerideki gerçek sıcaklık.
 
 ## Şoklama / süper dondurma ne işe yarar?
 
@@ -42,6 +63,8 @@ Yaz kesintilerinde en kritik kural: **dondurucunun kapısını açma.** Kapalı 
 ## Ayar doğru ama dondurmuyor / aşırı karlanıyorsa
 
 -18'e ayarlı ama dondurma yumuşak, ya da tam tersi her yer kar mı? Bunlar ayar değil cihaz sinyali: kapı contası, fan, termostat veya no-frost sisteminin defrost arızası olabilir. Rehberler: [buzdolabı buzlanma yapıyor](/blog/buzdolabi-buzlanma-yapiyor/) · [no-frost alt bölme sorunu](/blog/no-frost-buzdolabi-alt-bolme-sogutmuyor/) · [buzdolabı tamiri kaç para?](/blog/buzdolabi-tamiri-kac-para/)
+
+📌 **"Difriz" diye arıyorsan doğru yerdesin:** difriz, derin dondurucunun günlük konuşmada yerleşmiş adı — ayrı bir cihaz değil, aynı cihaz. Bu yazıdaki -18°C hedefi, şoklama kuralı ve doluluk tavsiyesi difriz için de birebir geçerli. Sandıklı (yatay) modellerde bakılacak tek ek şey defrost tarafı: cihazın no-frost olup olmadığı kullanma kılavuzunda yazar, no-frost değilse karlanma biriktikçe elle buz çözme ister — adımları [derin dondurucu buz çözme](/blog/derin-dondurucu-buz-cozme/) yazısında.
 
 Kestirme yol her zamanki: [Benservis'e](/) belirtiyi yaz ("dondurucu -18'de ama dondurma yumuşak" gibi); yapay zeka olası arızayı ve **tahmini tamir maliyetini ücretsiz** söylesin. Önce öğren, sonra çağır.
 
