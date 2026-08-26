@@ -36,6 +36,15 @@ faq:
     a: "Kireç tek başına ısıtmayı tamamen durdurmaz ama zayıflatır ve rezistansın ömrünü kısaltır: kireç tabakası ısının suya geçmesini engellediği için rezistans kendi üstünde daha çok ısınır. Sert su bölgesindeysen düzenli bakım yıkaması bu yüzden önemlidir. Ama makine hiç ısıtmıyorsa sebep genelde kireç değil, hattın kendisidir."
 images:
   coverAlt: "Çamaşır makinesi çizimi ve yanında cıvası dipte kalmış termometre"
+  steps:
+    - "Çamaşır makinesi kontrol paneli çizimi: ekranda 20 derece yazıyor, yanındaki sıcaklık düğmesine ok gidiyor"
+    - "Program kadranı çizimi: ibre hızlı programın üzerinde, kadranın sağındaki mavi kademe sıcak programı gösteriyor"
+    - "Panel çizimi: yanan çocuk kilidi simgesi ve yanıt vermeyen sıcaklık tuşu"
+    - "Çamaşır makinesi çizimi: bir el kapak camına elinin dışıyla kısa süre dokunuyor, camın içinde ısı dalgaları"
+    - "İki çamaşır parçası çizimi: birinde beyaz deterjan kalıntısı, diğerinde çıkmayan yağlı leke"
+    - "Çamaşır makinesi çizimi: tambur boş ve deterjan çekmecesi boş — bakım yıkaması"
+    - "Sigorta kutusu çizimi: iki şalter açık, üçüncüsü düşmüş"
+    - "Not kâğıdı çizimi: hangi program, ekrandaki derece, camın ısınması ve sigorta için dört satırlık gözlem listesi"
 ---
 
 Çamaşırlar makineden çıkıyor ama bir şey eksik: beyazlar grileşmeye başladı, yağlı lekeler çözülmüyor, deterjan kokusu üstlerinde kalıyor. Makine hata vermiyor, program normal bitiyor — ama su ısınmıyor.
