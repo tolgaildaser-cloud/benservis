@@ -161,11 +161,16 @@ export const REHBERLER = {
       rehber: B("ocak-atesleme-yapmiyor", "Ateşleme yapmayan ocakta 4 kontrol", "Kolay", "~15 dakika", 4) },
     // NOT: "lamba"/"ampul" anahtar kelimesi BİLEREK yok. Rehber fırın kapağına ait; SEED'deki
     // "Aspiratör anahtar/kart/lamba" arızasına bağlanırsa kullanıcı alakasız sayfaya düşer
-    // (test sırasında bu yanlış eşleşme yakalandı ve kapatıldı). Aspiratör için rehber YOK.
+    // (test sırasında bu yanlış eşleşme yakalandı ve kapatıldı).
     // "fırın kapak conta" ve "fırın contası" anahtarları yukarıdaki firin-isinmiyor
     // kaydına taşındı: yıpranmış conta ısı kaçırır ve yazı bunu zaten 3. maddede eliyor.
     { ara: ["kapı contası"],
       rehber: B("firin-isinmiyor", "Isınmayan fırında 5 kontrol", "Kolay", "~15 dakika", 5) },
+    // 26 Ağu 2026: aspiratör tarafı ilk kez rehberle karşılandı (eskiden "rehber YOK"tu).
+    // Anahtarlar DAR (PAZ föyü §4): "koku" BİLEREK dışarıda — tek başına klima/çamaşır/
+    // bulaşık koku rehberlerine de çarpar. "lamba"/"ampul" hâlâ dışarıda (üstteki not).
+    { ara: ["davlumbaz", "aspiratör", "yağ filtresi", "karbon filtre", "çekiş"],
+      rehber: B("davlumbaz-cekmiyor", "Davlumbaz çekişini geri getirme", "Kolay", "~20 dakika", 7) },
   ],
   // Klima kümesinde iFixit'te jenerik ev tipi klima rehberi YOK — bu cihaz haritaya
   // yalnız KENDİ Türkçe rehberimizle girdi. Anahtar kelimeler bilerek DAR tutuldu:
