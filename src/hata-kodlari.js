@@ -779,9 +779,12 @@ export const HATA_KODU_KATMANI = {
       yazi: "firin-ne-kadar-elektrik-harcar" },
 
   // ——— Kayıt genişletmesi (21 Ağu 2026, YK #80 · hedef 200+) ———
+    // 26 Ağu 2026: yazı rehbere dönüştü (PAZ föyü, 7 adım) → `rehber: true` eklendi.
+    // ZORUNLU, tercih değil: build'in `/tamir/` ② katman kapısı (YK #35) her `kendi: true`
+    // rehberin bir giriş satırından erişilebilir olmasını ister, yoksa `process.exit(1)`.
     { giris: "Davlumbaz zayıf çekiyor", tip: "belirti",
       anlam: "En sık sebep doymuş metal yağ filtresidir; ayda bir yıkanır ve çoğu model bulaşık makinesine girer.",
-      yazi: "davlumbaz-cekmiyor" },
+      yazi: "davlumbaz-cekmiyor", rehber: true },
     { giris: "Çekiyor ama mutfakta koku kalıyor", tip: "belirti",
       anlam: "Bu ayrı bir belirtidir ve karbon filtreyi işaret eder; karbon filtre yıkanmaz, 3-6 ayda bir değiştirilir.",
       yazi: "davlumbaz-cekmiyor" },

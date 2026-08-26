@@ -4,6 +4,20 @@ description: "Davlumbaz zayıf çekiyor ya da koku gitmiyor mu? İkisi farklı s
 slug: "davlumbaz-cekmiyor"
 date: "2026-08-10"
 category: "Fırın / Ocak / Aspiratör"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Sıcak sabunlu su", "Yumuşak fırça", "Kuru bez"]
+steps:
+  - "Davlumbazı elektrikten ayır."
+  - "Metal yağ filtresinin kasetini mandalından çıkar."
+  - "Filtreyi sıcak sabunlu suda beklet, yumuşak fırçayla yağı çöz ve iyice durula."
+  - "Filtreyi tamamen kuruyana kadar beklet, sonra yerine tak."
+  - "Bacasız kurulumdaysan karbon filtrenin yaşına bak; altı ayı geçtiyse değiştir."
+  - "Davlumbazı en yüksek kademede dene."
+  - "Bacalı kurulumdaysan baca borusunda ezilme ya da kıvrım olup olmadığını kontrol et."
 faq:
   - q: "Davlumbaz neden çekmiyor?"
     a: "En sık sebep tıkanmış yağ (metal) filtresidir; yağ doyunca hava geçişi düşer ve çekiş belirgin zayıflar. Diğer sebepler: baca klapesinin açılmaması, kanal içinde birikme, fan kanatlarının yağ tutması ve hız kademesinin düşük kalması. Filtre temizliği çoğu evde sorunu çözer."
@@ -69,15 +83,29 @@ Filtreler temiz, karbon yeniyse ve sorun sürüyorsa şunlara bak:
 
 > 🔧 **Sınır net:** filtre temizliği ve karbon filtre değişimi ev işidir. **Motor, kanat, kart ve baca tesisatı servis işidir** — davlumbaz elektrikli ve tavana asılı bir cihaz, sökmeye kalkma.
 
-## Servisi aramadan önce
+## Adım adım: davlumbaz çekişini geri getirme
 
-1. Metal filtreyi çıkar, yıka, **tam kurut**, tak.
-2. Bacasızsan karbon filtrenin yaşına bak — 6 ayı geçtiyse değiştir.
-3. En yüksek kademede dene; alt kademede kalmış olabilir.
-4. Bacalıysan boruda ezilme/kıvrım var mı bak.
-5. Ocak üstündeki yüksekliği kontrol et — çok yüksek montaj çekişi düşürür.
+Aşağıdaki sıra **ücretsiz ve bakım seviyesindedir** — hiçbir adımda cihaz sökülmez. Toplam ~20 dakika sürer; filtrenin kuruma süresi buna dahil değildir.
 
-Bunlardan sonra da düzelmiyorsa belirtiyi [Benservis'e](/) yaz — olası arızayı ve tahmini maliyeti **ücretsiz** öğren. Önce öğren, sonra çağır.
+**1. Davlumbazı elektrikten ayır.** Fişliyse fişini çek, değilse mutfak aydınlatmasının bağlı olduğu sigortayı kapat. Davlumbaz tavana asılı ve elektrikli bir cihaz; filtre çıkarılırken motor kesinlikle çalışmamalı.
+
+**2. Metal yağ filtresinin kasetini çıkar.** Filtre, davlumbazın alt yüzeyinde mandallı bir kaset hâlinde durur. Mandalı bastır ve kaseti kendine doğru indir. Çoğu modelde tek elle çıkar; zorlama gerekiyorsa yanlış yerden tutuyorsun demektir.
+
+**3. Filtreyi sıcak sabunlu suda beklet ve yıka.** Yağ doymuş filtrede fırçayla başlamak işe yaramaz — önce **beklet**, yağ çözülsün. Sonra yumuşak fırçayla petek aralarını temizle ve iyice durula. Çoğu model bulaşık makinesinde de yıkanabilir; kılavuzunda yazıyorsa tek başına ve yoğun programda.
+
+**4. Filtreyi tamamen kuruyana kadar beklet, sonra tak.** Nemli takılan filtre hem koku yapar hem de tuttuğu yağı damlatır. Acele etme; kuruma bu işin en uzun ama en kolay adımı.
+
+**5. Bacasız kurulumdaysan karbon filtrenin yaşına bak.** Karbon filtre **yıkanmaz, değiştirilir**. Günlük kullanımda ömrü 3-6 aydır; altı ayı geçtiyse yenile. Bacalı kurulumdaysan bu adımı atla — orada karbon filtre zaten olmamalı.
+
+**6. Davlumbazı en yüksek kademede dene.** Çekiş ölçümü daima en üst kademede yapılır. Cihaz temizlik öncesinde alt kademede kalmış olabilir; "çekmiyor" şikâyetinin bir kısmı bu kadar basit çıkıyor.
+
+**7. Bacalı kurulumdaysan baca borusunda ezilme ya da kıvrım olup olmadığını kontrol et.** Dolabın içinde kıvrılmış ya da ezilmiş bir boru, filtresi tertemiz bir davlumbazın çekişini de düşürür. Boruya **dışarıdan bakarak** kontrol et; kanal içine girmek ya da baca tesisatına müdahale etmek servis işidir.
+
+Bir de montaj yüksekliği var: ocak üstündeki mesafe üreticinin verdiği aralığın üzerindeyse çekiş düşer. Bu bir ayar değil kurulum meselesidir — ölçüsü cihazın kendi kılavuzunda yazar.
+
+Bu yediden sonra da düzelmiyorsa belirtiyi [Benservis'e](/) yaz — olası arızayı ve tahmini maliyeti **ücretsiz** öğren. Önce öğren, sonra çağır.
+
+Filtrenin kendisini adım adım yıkamak istersen: [Davlumbaz yağ filtresi nasıl temizlenir](/blog/davlumbaz-yag-filtresi-nasil-temizlenir/)
 
 İlgili: [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Beyaz eşya servis ücreti nasıl belirlenir](/blog/beyaz-esya-servis-ucreti/)
 
