@@ -15,6 +15,8 @@ faq:
     a: "Hayır. Philips HD963x kılavuzu tavanın kesinlikle yağ ile doldurulmaması gerektiğini, bunun yangın tehlikesine yol açabileceğini yazıyor. Air fryer bir fritöz değil, sıcak havayla çalışan bir pişiricidir. Yiyeceği pişirmeden önce az miktarda yağla harmanlamak farklı bir şeydir; hazneye yağ doldurmak değildir."
   - q: "Duman gelmeye devam ediyorsa ne zaman servis gerekir?"
     a: "Cihaz tamamen temizlendiği, tabanda biriken yağ boşaltıldığı ve yağsız bir yiyecekle denendiği hâlde duman geliyorsa, ya da dumana yanık plastik kokusu, kıvılcım, anormal ses veya sigorta attırma eşlik ediyorsa iş elektriksel tarafa geçmiştir. Bu noktada cihazı çalıştırmayı bırak, fişini çek ve yetkili servise götür."
+images:
+  coverAlt: "Air fryer'dan yükselen duman ve ayrı çizilmiş sepetin tabanında biriken yağ çizimi"
 ---
 
 Air fryer'dan duman gelince ilk düşünce genelde "bozuldu" oluyor. Oysa iki büyük üreticinin kendi kılavuzu, dumanın belirli durumlarda **normal** olduğunu açıkça yazıyor. Asıl mesele hangi dumanın normal, hangisinin uyarı olduğunu ayırabilmek.

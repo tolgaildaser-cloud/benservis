@@ -6,25 +6,28 @@
 // Ana sayfa "Sık sorulanlar" — görünen metin ve index.html FAQPage JSON-LD BİRE BİR aynı olmalı.
 // YAPI (hibrit): ilk 2 = evergreen güven soruları (SABİT). Son 3 = HAFTALIK belirti soruları,
 // FE koşusunda content/blog/ taramasından en çok işlenen sorunlara göre güncellenir; her
-// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 20 Ağu 2026.
+// güncellemede index.html'deki FAQPage JSON-LD de birebir yenilenmeli. Son güncelleme: 27 Ağu 2026.
 export const SSS = [
   // — evergreen (sabit) —
   { s: "Teşhis için ücret ödüyor muyum?", c: "Hayır, tamamen ücretsiz. Cihazını ve belirtiyi yaz; olası arızayı ve tahmini maliyeti anında öğren." },
   { s: "Sonuçtaki fiyat kesin mi?", c: "Tahminidir; parça ve işçilik dahil bir aralık verir. Kesin fiyat, yerinde tespitte netleşir." },
-  // — haftalık belirti soruları (blog verisinden; 20 Ağu taraması, 93 yazının frontmatter
-  //   `category` sayımı — slugify normalizasyonu sonrası cihaz kümeleri: çamaşır 16 ·
-  //   bulaşık 11 · buzdolabı 10 · kombi 9 · klima 8 · fırın-ocak(+aspiratör) 5 · su sebili 3.
-  //   (Genel 16 · sürdürülebilirlik 8 · kurumsal 1 cihaz kümesi değil, rotasyona girmez.)
-  //   ÇIKAN: buzdolabı çalışıyor ama soğutmuyor — 4 Ağu'dan beri sette, **16 gün**; git
-  //   geçmişinden ölçüldü (e19e18b) ve kombinin 14 Ağu'da çıkmasına yol açan 10 günlük
-  //   rekoru açık ara geçti. Küme hâlâ büyük (10 yazı), sorun temsil değil görev süresi.
-  //   GİREN: klima hiç açılmıyor — klima, temsil edilmeyen EN BÜYÜK cihaz kümesi (8 yazı)
-  //   ve mevsim penceresi hâlâ açık. Kombi (9) daha büyük ama ⛔ kapalı: Tolga 13 Ağu,
-  //   "kış/kombi ekimden önce yazma artık" — 14 Ağu'da kombiyi çıkaran gerekçe yürürlükte.
-  //   Soru metni bu setde HİÇ kullanılmadı (git -S ile doğrulandı, 0 eşleşme); klimanın
-  //   daha önce dönen iki sorusu soğutmuyor (27 Tem çıktı) ve su damlatıyor (7 Ağu çıktı).
-  //   Kaynak yazı: `klima-calismiyor`. —
+  // — haftalık belirti soruları (blog verisinden; 27 Ağu taraması, 216 yazının frontmatter
+  //   `category` sayımı — büyük/küçük harf normalizasyonu sonrası cihaz kümeleri: çamaşır 44 ·
+  //   bulaşık 31 · buzdolabı 29 · klima 17 · fırın-ocak(+aspiratör) 13 · bilgisayar-yazıcı 11 ·
+  //   televizyon 10 · kombi 10 · süpürge 7 · mikrodalga 5 · su sebili 3.
+  //   (Genel 27 · sürdürülebilirlik 8 · kurumsal 1 cihaz kümesi değil, rotasyona girmez.)
+  //   ÇIKAN: çamaşır makinesi su atmıyor — 7 Ağu'dan beri sette, **20 gün**; git geçmişinden
+  //   ölçüldü (ac71ef9) ve buzdolabının 20 Ağu'da çıkmasına yol açan 16 günlük rekoru geçti.
+  //   Küme külliyatın en büyüğü (44 yazı), sorun temsil değil görev süresi.
+  //   GİREN: buzdolabı ses yapıyor — buzdolabı, temsil edilmeyen EN BÜYÜK cihaz kümesi
+  //   (29 yazı; çamaşır bu turda çıkarıldığı için hariç — 20 Ağu'daki seçim de aynı şekilde
+  //   o turda çıkan kümeyi hariç tutmuştu). Soru metni bu sette HİÇ kullanılmadı (git -S ile
+  //   doğrulandı, 0 eşleşme); buzdolabının daha önce dönen sorusu "çalışıyor ama soğutmuyor"
+  //   idi (20 Ağu çıktı) — aynı küme, AYRI belirti. Kaynak yazı: `buzdolabi-ses-yapiyor`
+  //   (cevaptaki her adım o yazının "servisi aramadan önce kendin kontrol et" listesinden).
+  //   📌 Sıradaki rotasyona not: KOMBİ damarı YK #98 (26 Ağu) ile açıldı, 14 Ağu'da onu
+  //   çıkaran yasak artık yürürlükte değil — küme 10 yazı, mevsim penceresi açılıyor. —
   { s: "Klima hiç açılmıyor, tepki vermiyor — önce neye bakmalıyım?", c: "Önce uzaktan kumandanın pilini değiştir; klimanın açılmama şikâyetinin en sık sebebi budur — yeni pil tak, soğutma (Cool) moduna ve düşük sıcaklığa ayarla. Sonra panodaki sigortayı ve şalteri kontrol et; taşınabilir modelde fişin prize tam oturduğuna bak, cihaz hiç enerji almıyor olabilir. Klimayı şalterden 5 dakika kapatıp yeniden açmak da koruma modunu sıfırlar. Pil, sigorta ve priz sağlamken klima hâlâ açılmıyorsa ya da iç ünite çalıştığı hâlde dış ünite hiç devreye girmiyorsa sıra marş kapasitörüne ve elektronik karta gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
   { s: "Bulaşık makinesi temiz yıkamıyor, tabaklar kirli çıkıyor — önce neye bakmalıyım?", c: "Önce alt ve üst püskürtme kollarını çıkar: deliklerini kürdanla aç, takınca elinle çevirip serbestçe döndüklerinden emin ol — su bulaşığa ulaşamıyorsa en sık sebep budur. Sonra tabandaki filtreyi çıkarıp yıka, tuz ve parlatıcı haznelerini doldur; tuz bitince kireç, parlatıcı bitince leke bırakır. Bulaşıkları da üst üste bindirmeden diz, derin kapları ters çevir. Kollar ve filtre temiz, tuz ile parlatıcı tamken hâlâ kirli çıkıyorsa ya da su hiç ısınmıyorsa sıra rezistansa gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
-  { s: "Çamaşır makinesi su atmıyor, çamaşırlar ıslak çıkıyor — önce neye bakmalıyım?", c: "Önce makinenin alt kapağındaki tahliye filtresini çıkarıp temizle; su atmama şikâyetinin en sık sebebi budur. Altına havlu ve geniş bir kap koy, çünkü içeride kalan su filtreyi açar açmaz gelir. Sonra arkadaki tahliye hortumunu kontrol et: bükülmüş, ezilmiş ya da giderin içinde çok derine itilmiş olabilir. Filtre temiz ve hortum açıkken makine hâlâ suyu boşaltmıyor ya da santrifüje hiç geçmiyorsa sıra tahliye pompasına gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
+  { s: "Buzdolabı ses yapıyor, gürültüsü arttı — önce neye bakmalıyım?", c: "Önce dolabın dengesini ayarla: ön ayakları çevirerek hafif arkaya yatır ve sallanmadığından emin ol — gürültü şikâyetinin en sık sebebi dengesiz duruştur. Sonra teması kes; dolabı duvardan ve yan eşyalardan 5-10 cm uzaklaştır, üstünde duran şişe ve kutuları al, eğik zeminde ayaklarına takoz koy. Mırıltı, fokurtu ve no-frost modellerde hafif fan sesi normaldir; onları kovalamana gerek yok. Denge ve temas düzeltildiği hâlde gürültü sürüyorsa, sert metalik vuruntu geliyorsa ya da tiz bir çığlık duyulup dolap soğutmuyorsa sıra kompresör askı lastiklerine ve no-frost fan motoruna gelir — belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren." },
 ];
