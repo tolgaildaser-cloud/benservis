@@ -15,6 +15,8 @@ faq:
     a: "Kazımadan, bekleterek. Philips kılavuzu tava, yağ azaltıcı ya da sepete yapışan yemek kalıntıları için bu parçaların sıcak suda veya bulaşık deterjanlı suda 10-15 dakika bekletilmesini tarif eder; bekletme kalıntıyı yumuşatır ve temizlenmesini kolaylaştırır. Sertleşmiş kalıntıyı bıçakla ya da metal süngerle çıkarmaya çalışmak kaplamayı bitirir."
   - q: "Isıtıcının üstüne yapışan kalıntıya dokunulur mu?"
     a: "Dokunulur, ama aletine dikkat ederek. Philips kılavuzu ısıtma parçasına yapışan yemek kalıntılarının yumuşak ya da orta sertlikte bir fırçayla temizlenebileceğini, çelik telli veya sert fırça kullanılmaması gerektiğini söyler — aksi hâlde ısıtma parçasının kaplaması zarar görür. Bu iş cihaz tamamen soğuduktan sonra yapılır."
+images:
+  coverAlt: "Sepeti çıkarılmış air fryer, yanında sabunlu su kabı ve üzeri çizili metal alet çizimi"
 ---
 
 Air fryer'ın en çok atlanan tarafı pişirmesi değil, temizliği. Cihaz "az yağla pişiriyor" diye bilindiği için yağ biriktirmediği sanılıyor; oysa yemekten süzülen yağ tavanın tabanında tek bir yerde toplanıyor ve orada bırakılıyor. Bir sonraki pişirmede ısınan da o yağ oluyor.
