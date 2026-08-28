@@ -10,6 +10,7 @@ import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { SEED } from "./tarife-seed.js";
 import { seedEslestir } from "./seed-eslesme.js";
+import { teshisImzasi, teshisKapisi } from "./teshis-onbellek.js";
 import { NAVY as INK, BG as CREAM, BLUE as AMBER, BG, SURFACE, MUTED, FAINT, HAIR } from "./theme.js";
 
 // YK #35 ŞART 2 — HUNİYİ UÇTAN UCA BAĞLA. `/tamir/` sayfalarındaki "servis çağır"
@@ -426,21 +427,35 @@ export default function App() {
     });
   };
 
+  // YK #99 (28 Ağu) — TEŞHİS ÖNBELLEĞİ. Son koşunun girdi imzası + sonucu burada durur.
+  // Aynı imzada teşhis TEKRAR KOŞMAZ: ne `/api/diagnose` ne `/api/teshis/log`.
+  // ⛔ Sıfırlanma yolu TEK: `formuTemizle()`. İkinci bir sıfırlama yolu AÇMA — 27 Ağu'daki
+  //    (#133) hatanın kök sebebi tam olarak aynı işin iki yerde tutulmasıydı.
+  const onbellekRef = useRef(null);
+
   const tesisEt = async () => {
     if (!cihaz) { setHataMsg("Cihaz türünü seç."); return; }
     if (!marka) { setHataMsg("Marka seçimi zorunludur — teşhis ve fiyat için gerekli."); return; }
     if (belirti.trim().length < 4) { setHataMsg("Arıza belirtisini birkaç kelimeyle yaz."); return; }
-    // Offline (ör. ana ekrandan uçak modunda açıldı): teşhis AI çağrısı gerektirir — sessiz
-    // hata yerine net mesaj (YK #26 / PWA planı adım 3, IT gizlilik+UX kuralı).
-    if (typeof navigator !== "undefined" && navigator.onLine === false) {
-      setHataMsg("Teşhis için internet gerekiyor. Bağlanınca tekrar dene — kayıtlı servis listesi çevrimdışı da açılır.");
-      return;
-    }
     setHataMsg("");
-    setAdim("loading");
-    track("diagnose_start", { cihaz, marka, gelis: GELIS }); // funnel: kullanıcı teşhis istedi
 
-    const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
+    const imza = teshisImzasi({ cihaz, marka, markaDiger, yas, belirti });
+
+    // Ağ tarafının TAMAMI burada: online kapısı, model çağrısı, fiyat guard'ları. İmza
+    // öncekiyle aynıysa bu fonksiyon HİÇ çağrılmaz (aşağıdaki `teshisKapisi`) →
+    // fetch yok, log yok, "loading" ekranı bile yok; duran sonuç anında gösterilir.
+    // Offline kapısı da bilerek içeride: önbellekten gelen sonuç internet istemiyor.
+    const calistir = async () => {
+      // Offline (ör. ana ekrandan uçak modunda açıldı): teşhis AI çağrısı gerektirir — sessiz
+      // hata yerine net mesaj (YK #26 / PWA planı adım 3, IT gizlilik+UX kuralı).
+      if (typeof navigator !== "undefined" && navigator.onLine === false) {
+        setHataMsg("Teşhis için internet gerekiyor. Bağlanınca tekrar dene — kayıtlı servis listesi çevrimdışı da açılır.");
+        return null;
+      }
+      setAdim("loading");
+      track("diagnose_start", { cihaz, marka, gelis: GELIS }); // funnel: kullanıcı teşhis istedi
+
+      const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
 
 Cihaz: ${cihaz}
 Marka: ${efektifMarka}
@@ -511,83 +526,95 @@ MALİYET KURALI (fiyatı SİSTEM hesaplar — sen sadece doğru satırı seç):
 
 Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100, kararOnerisi sadece "tamir"/"yenisi"/"belirsiz"/"gerek_yok", aciliyet sadece "düşük"/"orta"/"yüksek"/"belirsiz" ve mutlaka yukarıdaki ölçüte göre (kararOnerisi "belirsiz" ise aciliyet de "belirsiz"), aciliyetNot tek cümle, en fazla 4 ipucu, en fazla 3 ek soru. Kısa yaz.`;
 
-    const ctrl = new AbortController();
-    const zamanAsimi = setTimeout(() => ctrl.abort(), 28000); // 28sn sonra iptal → istek asılı kalmasın
-    try {
-      const res = await fetch("/api/diagnose", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt }),
-        signal: ctrl.signal,
-      });
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
-      const parsed = extractJSON(data.text || "");
-      // FİYAT DETERMİNİSTİK + SIRA/JITTER-BAĞIMSIZ (guard'lardan ÖNCE): beklenen'i SEED'den hesapla.
-      // En olası İKİ arıza olasılıkça YAKINSA (≤15 puan) ve #2 daha UCUZ/yaygınsa onu fiyatla —
-      // böylece AI en-olasıyı gaz↔kompresör arasında çevirse bile fiyat SIÇRAMAZ (tutarlı). Net
-      // baskın arızada (>15 puan fark) #1 kalır. #1 için seedRef (güvenilir), #2 için arıza adı
-      // (kelime skoru ile eşleşir). Eşleşme yoksa YA DA iki satır beraberse (belirsiz) AI
-      // beklenen'ine düşülür — yanlış satırdan fiyat üretilmez. gerek_yok'ta atla.
-      if (parsed && parsed.kararOnerisi !== "gerek_yok" && Array.isArray(parsed.olasiArizalar) && parsed.olasiArizalar.length) {
-        const kademe = markaKademe(efektifMarka);
-        const f = parsed.olasiArizalar;
-        const e1 = seedEslestir(cihaz, parsed.seedRef || f[0]?.ad, kademe);
-        const e2 = f[1] ? seedEslestir(cihaz, f[1].ad, kademe) : { beklenen: null, durum: "yok", adaylar: [] };
-        const p1 = e1.beklenen, p2 = e2.beklenen;
-        // Belirsizlik SESSİZ kalmasın: kaç vakada iki satır berabere kalıyor ölçülsün.
-        // ⛔ Serbest metin (kullanıcı/AI cümlesi) GÖNDERİLMEZ — yalnız cihaz + aday sayısı.
-        if (e1.durum === "belirsiz") { try { track("seed_belirsiz", { cihaz, aday: e1.adaylar.length }); } catch {} }
-        const w1 = Number(f[0]?.olasilik) || 0, w2 = Number(f[1]?.olasilik) || 0;
-        let sec = p1;
-        if (p1 != null && p2 != null && w1 - w2 <= 15 && p2 < p1) sec = p2; // yakın + daha ucuz kök neden
-        if (sec != null) parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: sec };
-      }
-      // Savunma: beklenen 0/yok iken karar "tamir"/"yenisi" geldiyse bu bir çelişkidir
-      // (model kozmetik olduğunu anladı ama yanlış badge verdi) → "gerek_yok" say.
-      if (parsed) {
-        const ham = parsed.tahminiMaliyet?.beklenen;
-        const beklenenYok = ham == null || Number(ham) === 0;
-        if (beklenenYok && (parsed.kararOnerisi === "tamir" || parsed.kararOnerisi === "yenisi")) {
-          parsed.kararOnerisi = "gerek_yok";
+      const ctrl = new AbortController();
+      const zamanAsimi = setTimeout(() => ctrl.abort(), 28000); // 28sn sonra iptal → istek asılı kalmasın
+      try {
+        const res = await fetch("/api/diagnose", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt }),
+          signal: ctrl.signal,
+        });
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
+        const parsed = extractJSON(data.text || "");
+        // FİYAT DETERMİNİSTİK + SIRA/JITTER-BAĞIMSIZ (guard'lardan ÖNCE): beklenen'i SEED'den hesapla.
+        // En olası İKİ arıza olasılıkça YAKINSA (≤15 puan) ve #2 daha UCUZ/yaygınsa onu fiyatla —
+        // böylece AI en-olasıyı gaz↔kompresör arasında çevirse bile fiyat SIÇRAMAZ (tutarlı). Net
+        // baskın arızada (>15 puan fark) #1 kalır. #1 için seedRef (güvenilir), #2 için arıza adı
+        // (kelime skoru ile eşleşir). Eşleşme yoksa YA DA iki satır beraberse (belirsiz) AI
+        // beklenen'ine düşülür — yanlış satırdan fiyat üretilmez. gerek_yok'ta atla.
+        if (parsed && parsed.kararOnerisi !== "gerek_yok" && Array.isArray(parsed.olasiArizalar) && parsed.olasiArizalar.length) {
+          const kademe = markaKademe(efektifMarka);
+          const f = parsed.olasiArizalar;
+          const e1 = seedEslestir(cihaz, parsed.seedRef || f[0]?.ad, kademe);
+          const e2 = f[1] ? seedEslestir(cihaz, f[1].ad, kademe) : { beklenen: null, durum: "yok", adaylar: [] };
+          const p1 = e1.beklenen, p2 = e2.beklenen;
+          // Belirsizlik SESSİZ kalmasın: kaç vakada iki satır berabere kalıyor ölçülsün.
+          // ⛔ Serbest metin (kullanıcı/AI cümlesi) GÖNDERİLMEZ — yalnız cihaz + aday sayısı.
+          if (e1.durum === "belirsiz") { try { track("seed_belirsiz", { cihaz, aday: e1.adaylar.length }); } catch {} }
+          const w1 = Number(f[0]?.olasilik) || 0, w2 = Number(f[1]?.olasilik) || 0;
+          let sec = p1;
+          if (p1 != null && p2 != null && w1 - w2 <= 15 && p2 < p1) sec = p2; // yakın + daha ucuz kök neden
+          if (sec != null) parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: sec };
         }
-        // gerek_yok → maliyet sıfır, aciliyet düşük (model kaçırsa bile garanti).
-        if (parsed.kararOnerisi === "gerek_yok") {
-          parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: 0 };
-          if (!parsed.aciliyet || parsed.aciliyet === "belirsiz") parsed.aciliyet = "düşük";
+        // Savunma: beklenen 0/yok iken karar "tamir"/"yenisi" geldiyse bu bir çelişkidir
+        // (model kozmetik olduğunu anladı ama yanlış badge verdi) → "gerek_yok" say.
+        if (parsed) {
+          const ham = parsed.tahminiMaliyet?.beklenen;
+          const beklenenYok = ham == null || Number(ham) === 0;
+          if (beklenenYok && (parsed.kararOnerisi === "tamir" || parsed.kararOnerisi === "yenisi")) {
+            parsed.kararOnerisi = "gerek_yok";
+          }
+          // gerek_yok → maliyet sıfır, aciliyet düşük (model kaçırsa bile garanti).
+          if (parsed.kararOnerisi === "gerek_yok") {
+            parsed.tahminiMaliyet = { ...(parsed.tahminiMaliyet || {}), beklenen: 0 };
+            if (!parsed.aciliyet || parsed.aciliyet === "belirsiz") parsed.aciliyet = "düşük";
+          }
         }
+        const teshis = normalizeMaliyet(parsed);
+        // Karar belirsizse aciliyet de belirsiz (kullanıcı kuralı) — AI kaçırsa bile garanti.
+        if (teshis && teshis.kararOnerisi === "belirsiz") teshis.aciliyet = "belirsiz";
+        // Girdi geçerli bir arıza tarifi değilse (anlamsız/alakasız) → teşhis/fiyat/Servis Bul GÖSTERME.
+        const gecerli = !(teshis && teshis.gecerliAriza === false);
+        return { teshis, gecerli };
+      } catch (e) {
+        setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
+        setAdim("hata");
+        return null;
+      } finally {
+        clearTimeout(zamanAsimi);
       }
-      const teshis = normalizeMaliyet(parsed);
-      // Karar belirsizse aciliyet de belirsiz (kullanıcı kuralı) — AI kaçırsa bile garanti.
-      if (teshis && teshis.kararOnerisi === "belirsiz") teshis.aciliyet = "belirsiz";
-      setSonuc(teshis);
-      // Girdi geçerli bir arıza tarifi değilse (anlamsız/alakasız) → teşhis/fiyat/Servis Bul GÖSTERME.
-      const gecerli = !(teshis && teshis.gecerliAriza === false);
-      setAdim(gecerli ? "sonuc" : "gecersiz");
-      track("diagnose_result", { gecerli, karar: teshis?.kararOnerisi || null }); // funnel: sonuç ekranı gösterildi
-      // Anonim istatistik logu (best-effort; akışı ASLA bloklamaz; PII yok)
-      if (gecerli && teshis) {
-        fetch("/api/teshis/log", {
-          method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            cihaz, marka: efektifMarka,
-            ariza: teshis.olasiArizalar?.[0]?.ad || null,
-            maliyet_min: teshis.tahminiMaliyet?.min ?? null,
-            maliyet_max: teshis.tahminiMaliyet?.max ?? null,
-            karar: teshis.kararOnerisi || null,
-            aciliyet: teshis.aciliyet || null,
-            yas: yas || null,
-          }),
-        }).then((r) => (r.ok ? r.json() : null)).then((d) => {
-          if (d?.id) setTeshisLogId(d.id);
-          if (d?.il) setIpIl(d.il); // konum köprüsü — sunucu tahmini, kullanıcıya hiç sorulmadı
-        }).catch(() => {});
-      }
-    } catch (e) {
-      setHataMsg("Teşhis sırasında bir sorun oldu. Tekrar dener misin?");
-      setAdim("hata");
-    } finally {
-      clearTimeout(zamanAsimi);
+    };
+
+    // ÖNBELLEK KAPISI (YK #99). İmza aynıysa `calistir` çağrılmaz → fetch yok, log yok.
+    const cikti = await teshisKapisi({ onbellek: onbellekRef.current, imza, calistir });
+    if (!cikti) return; // hata/offline — ekranı `calistir` kurdu
+    const { teshis, gecerli, onbellekten } = cikti;
+
+    setSonuc(teshis);
+    setAdim(gecerli ? "sonuc" : "gecersiz");
+    if (onbellekten) return; // ⛔ ölçüm sayaçları da artmaz: yeni bir teşhis KOŞMADI
+
+    track("diagnose_result", { gecerli, karar: teshis?.kararOnerisi || null }); // funnel: sonuç ekranı gösterildi
+    onbellekRef.current = { imza, teshis, gecerli };
+    // Anonim istatistik logu (best-effort; akışı ASLA bloklamaz; PII yok)
+    if (gecerli && teshis) {
+      fetch("/api/teshis/log", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          cihaz, marka: efektifMarka,
+          ariza: teshis.olasiArizalar?.[0]?.ad || null,
+          maliyet_min: teshis.tahminiMaliyet?.min ?? null,
+          maliyet_max: teshis.tahminiMaliyet?.max ?? null,
+          karar: teshis.kararOnerisi || null,
+          aciliyet: teshis.aciliyet || null,
+          yas: yas || null,
+        }),
+      }).then((r) => (r.ok ? r.json() : null)).then((d) => {
+        if (d?.id) setTeshisLogId(d.id);
+        if (d?.il) setIpIl(d.il); // konum köprüsü — sunucu tahmini, kullanıcıya hiç sorulmadı
+      }).catch(() => {});
     }
   };
 
@@ -621,6 +648,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   const formuTemizle = () => {
     setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz("");
     setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo("");
+    onbellekRef.current = null; // YK #99 — teşhis önbelleğinin TEK sıfırlama yolu burasıdır
   };
 
   // Tarayici geri/ileri tusu. pushState ile gelen adres degisimini React'e
