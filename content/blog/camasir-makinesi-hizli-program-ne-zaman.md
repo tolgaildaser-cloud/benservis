@@ -30,6 +30,15 @@ faq:
     a: "Doğrudan bir parçayı bozmaz ama zamanla koku ve tortu sorunu üretir. Düşük sıcaklıkta çalışan makinelerde deterjan artığı ve yağ tabandaki ve kapak lastiğindeki yüzeylerde birikir; bu birikinti kokunun ve çamaşırdaki gri lekelenmenin kaynağıdır. Panzehiri basit: ayda bir kez makineyi boşken yüksek sıcaklıklı bir programda çalıştırmak."
 images:
   coverAlt: "Zeminde hasır sepette az sayıda hafif giysi, arkada çamaşır makinesinin açık kapağı"
+  steps:
+    - "İki çamaşır parçası: solda az kirli olan, sağda lekeli olan ve üzerinde gri yasak işareti"
+    - "Açık kılavuz: sağ sayfadaki program tablosunun bir satırı vurgulu, üzerinde büyüteç"
+    - "Tamburun önden görünümü: çamaşır yük sınırının altında, üstte bir el boşluk"
+    - "İki ölçü kabı: solda yasak işaretli tam dolu kap, sağda yarıya kadar doldurulmuş kap"
+    - "Yumuşatıcı gözünün iki hâli: solda azaltılmış seviye, sağda boş"
+    - "Kapağı aralık bırakılmış tambur ve dışarı doğru hava okları"
+    - "Boş tambur ve yanında yüksek seviyeyi gösteren termometre"
+    - "İki süre çubuğu: alttaki belirgin biçimde daha uzun, yanında not kâğıdı"
 ---
 
 Sabah kapıdan çıkmadan önce fark ettin: giymek istediğin gömlek kirli sepette. Panelde **30 dakika** yazan program tam da bu an için konmuş gibi duruyor. Peki o otuz dakika ne yapıyor, ne yapamıyor? Hızlı program çok işe yarayan ama çok yanlış kullanılan bir programdır — sınırları zorlandığında hem çamaşırı hem makineyi yorar.
