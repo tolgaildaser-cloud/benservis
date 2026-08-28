@@ -614,19 +614,38 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     setKopyalandi(true); setTimeout(() => setKopyalandi(false), 1800);
   };
 
+  // Teshis oturumunu bitiren TEK kaynak. Ayri durdugu icin ana sayfaya donusun her
+  // yolu ayni listeyi kullanir — liste iki yerde tutulup ayri dusemez (bu hatanin
+  // kok sebebi tam olarak buydu). `vitrineDon()` BILEREK icinde degil: geri tusu
+  // yolunun adres yazmasi gerekmiyor.
+  const formuTemizle = () => {
+    setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz("");
+    setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo("");
+  };
+
   // Tarayici geri/ileri tusu. pushState ile gelen adres degisimini React'e
   // yansitir; boylece /teshis'ten geri basinca vitrin acilir (sunucuya gidilmez).
+  // 🔴 27 Ağu — Tolga (tester): *"ana sayfa diyerek döndüm yeni seçim yaptım eskisini
+  // tutuyor"*. Ana sayfaya donusun UC yolu vardi, ikisi formu HIC temizlemiyordu:
+  // logo `sifirla()` cagiriyordu (temizler), ama "← Ana sayfa" linki ve GERI TUSU
+  // yalniz ekrani degistiriyordu. Vitrin isleyicileri (`onCihazSec`/`onDertYaz`)
+  // secimi BILEREK koruyor — dogru davranis, ama ancak oturum ana sayfada bitiyorsa.
+  // Bitmeyince kullanici yeni cihaz seciyor, eski marka/belirti/yas uzerinde kaliyor.
+  // ⛔ Burada `sifirla()` CAGRILMAZ: o `vitrineDon()` -> `pushState` yapar, geri
+  // tusunun ortasinda yeni gecmis kaydi acar ve kullanici geride sikisir. Yalnizca
+  // alanlari temizleyen `formuTemizle()` cagrilir; adres zaten tarayicida degisti.
   useEffect(() => {
     const gez = () => {
       const teshisMi = window.location.pathname.replace(/\/+$/, "") === "/teshis";
       setEkran(teshisMi ? "teshis" : "vitrin");
+      if (!teshisMi) formuTemizle();
       window.scrollTo(0, 0);
     };
     window.addEventListener("popstate", gez);
     return () => window.removeEventListener("popstate", gez);
   }, []);
 
-  const sifirla = () => { setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz(""); setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo(""); vitrineDon(); };
+  const sifirla = () => { formuTemizle(); vitrineDon(); };
   const detayEkle = () => setAdim("form");
 
   const acilRenk = { "düşük": "#22C55E", "orta": "#EA580C", "yüksek": "#DC2626", "belirsiz": "#64748B" };
@@ -843,11 +862,15 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           mevcut formun `belirti` alanına indirir, cihazı tahmin edebilirse seçer ve
           forma kaydırır. Teşhis akışının kendisine tek satır dokunulmadı. */}
 
-      {/* Teşhis ekranının geri kapısı. Logo da ana sayfaya döner ama formu
-          sıfırlar; bu satır aynı şeyi AÇIKÇA söyler — kullanıcı ayrı bir adreste
-          olduğunu buradan anlar. Tam sayfa yüklemesi yok: SPA içi geçiş. */}
+      {/* Teşhis ekranının geri kapısı. Logo da ana sayfaya döner ve formu sıfırlar;
+          bu satır aynı şeyi AÇIKÇA söyler — kullanıcı ayrı bir adreste olduğunu
+          buradan anlar. Tam sayfa yüklemesi yok: SPA içi geçiş.
+          🔴 27 Ağu düzeltmesi: bu buton `vitrineDon()` çağırıyordu, yani yukarıdaki
+          yorumun "formu sıfırlar" iddiasını KARŞILAMIYORDU — ekranı değiştirip
+          bırakıyordu. Ana sayfaya dönmek oturumu bitirmeli, yoksa kullanıcı yeni
+          cihaz seçtiğinde eski marka/belirti/yaş üzerinde kalıyor (Tolga bildirdi). */}
       {ekran === "teshis" && !showServisler && (
-        <button type="button" onClick={() => vitrineDon()} style={s.geriLink}>
+        <button type="button" onClick={sifirla} style={s.geriLink}>
           ← Ana sayfa
         </button>
       )}
