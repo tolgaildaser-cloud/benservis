@@ -30,6 +30,15 @@ faq:
     a: "Eko programlar düşük sıcaklıkta çalışır ve süreyi uzatarak deterjanla bekletmeye ağırlık verir; enerji yutan ısıtma kısaldığı için toplam tüketim düşer. Yani sürenin uzunluğu tüketimin arttığı anlamına gelmez — elektriği saat değil, rezistans yakar."
 images:
   coverAlt: "Duvarda asılı elektrik sayacı ve arkadaki odada duran çamaşır makinesi"
+  steps:
+    - "Enerji etiketi kartında vurgulanmış kWh satırı, yanında 100'e bölme ve boş bırakılmış sonuç kutusu"
+    - "Yedi satırlık haftalık çizelge: bir sütun yıkama işareti, bir sütun derece için boş"
+    - "Yan yana iki kademe sütunu: sağdaki soldakinden bir kademe daha düşük"
+    - "Üç ayrı çamaşır parçasından tek bir dolu tambura giden oklar"
+    - "Program kadranında işaretli eko konumu ve yanında saat"
+    - "Yan yana iki tambur: solda yarım yük, sağda tam yük"
+    - "İki ölçü kabı: solda ölçülmüş doz ve tek damla, sağda yasak işaretli fazla doz ve üç damla"
+    - "Program kadranı ve yukarı ok, yanında bir günü işaretli takvim"
 ---
 
 Makine üç saatlik programı bitirdiğinde akla hep aynı soru gelir: **"Bu kadar süre çalıştı, kim bilir ne yaktı?"** İşin ilginci, cevap sürede değil sıcaklıkta saklı. Çamaşır makinesinde elektriğin asıl müşterisi tamburu döndüren motor değil, **suyu ısıtan rezistanstır** — ve bu tek bilgi, faturayı düşürmenin en kestirme yoludur.

@@ -30,6 +30,15 @@ faq:
     a: "Hayır. Kapsül her zaman doğrudan tamburun içine, çamaşırın altına konur; çekmece gözünde düzgün çözünmez ve kanalı tıkayabilir. Çekmece yalnız toz, sıvı ve yumuşatıcı içindir. Kapsül kullanırken ön yıkama programı seçilmez, çünkü kapsül tek dozdur ve ilk suda çözülür."
 images:
   coverAlt: "Çamaşır makinesi deterjan çekmecesinin üç bölmesinin yukarıdan görünümü"
+  steps:
+    - "Deterjan çekmecesinin yukarıdan görünümü: I, II ve çiçek işaretli üç göz"
+    - "Toz kutusu ve sıvı deterjan şişesinden iki ok, vurgulanmış II gözüne iniyor"
+    - "Aynı gözün iki kesiti: solda plaka indirilmiş ve altında sıvı, sağda plaka kaldırılmış ve dipte toz taneleri"
+    - "Deterjan kutusundaki doz tablosu, çizgisine kadar dolu ölçü kabı ve yanında yasak işaretli taşan kap"
+    - "Çekmece çizimi: I gözü kesikli çizgiyle boş gösteriliyor, diğer iki göz dolu çizgide"
+    - "Yumuşatıcı gözünün kesiti: sıvı seviyesi MAX çizgisinin altında"
+    - "Solda yasak işaretli kapsül ve çekmece, sağda tamburun içinde çamaşırın altına konmuş kapsül"
+    - "Çekmece, ayrılmış sifon başlığı ve açık musluk — ayda bir yıkama"
 ---
 
 Yeni makine geldi ya da yıllardır kullandığın makinede çamaşırlar son zamanlarda kötü kokuyor; çekmeceyi açtın ve karşında üç göz: birinde **I**, birinde **II**, birinde **çiçek** işareti. Deterjanı yıllardır hangi göze koyduğunu düşünüyorsun ve emin olamıyorsun. Bu yazı o çekmeceyi bir kere ve tamamen netleştirmek için: hangi göz ne için, sıvı deterjan nereye, yumuşatıcı neden taşıyor.
