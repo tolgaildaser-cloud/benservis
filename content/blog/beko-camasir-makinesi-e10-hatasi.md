@@ -40,6 +40,13 @@ faq:
     a: "Dış kontroller temiz olduğu hâlde tekrarlayan su alma hatasında başlıca adaylar su giriş valfi, su seviyesini ölçen sensör ve bunları yöneten elektronik karttır. Bu parçaların hepsi gövdenin içindedir ve teşhisi ölçü aletiyle yapılır; kullanıcı tarafında denenecek bir şey kalmamıştır. Belirtiyi not edip servise aktarmak en hızlı yoldur."
 images:
   coverAlt: "Fayans duvardaki krom musluğa bağlı beyaz çamaşır makinesi su giriş hortumu"
+  steps:
+    - "Kuru bir çamaşır makinesi tamburu, prizden çekilen fiş ve ardından gelen musluk: önce elektrik, sonra su sırası"
+    - "Yarı açık musluktan ince, sonuna kadar açık musluktan kalın akan suyu karşılaştıran çizim"
+    - "Kuşbakışı iki sahne: duvara dayalı makinenin arkasında yassılmış giriş hortumu ve boşluk bırakılınca serbest kalan hortum"
+    - "Kireç tutmuş giriş süzgecinden ince, temizlenmiş süzgeçten kalın akan suyu karşılaştıran çizim"
+    - "Su giriş hortumunun bağlantısını elle çeviren el, altında kuru kalan havlu ve üzeri çizili anahtar"
+    - "Musluk, hortum ve giriş süzgeci işaretli dış hat listesinden gövde içindeki valf, seviye ölçümü ve karta uzanan ok"
 ---
 
 Programı başlattın, makine birkaç saniye sessiz bekledi, sonra durdu. Tambur kuru, yıkama hiç başlamamış. Kodu arattığında karşına **E10** çıkıyor.

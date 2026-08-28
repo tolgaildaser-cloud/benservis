@@ -30,6 +30,15 @@ faq:
     a: "Kapağı zorlamadan önce suyu boşaltman gerekir, çünkü çoğu makine içeride su varken kilidi açmaz. Ön alttaki kapağı açıp acil boşaltma hortumundan suyu sığ bir kaba alarak seviyeyi düşürebilirsin; bu işlem kaç kez tekrarlanabilir. Su bittikten sonra kilit birkaç dakika içinde çözülür ve çamaşırları rahatça alırsın."
 images:
   coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
+  steps:
+    - "Dibinde su duran kilitli çamaşır makinesi kapağı ve yanında prizden çekilen fiş"
+    - "Tahliye hortumunun üç sorunlu durumu: mobilya ayağı altında ezilme, keskin büküm ve gidere fazla itilmiş uç"
+    - "Lavabo, tortuyla dolmuş sifon ve makine hortumunun bağlandığı gider ağzını gösteren tesisat kesiti"
+    - "Ön alt kapağı açılmış çamaşır makinesi, önüne serilmiş havlu, geniş sığ kap ve bekleme süresini anlatan saat"
+    - "Acil boşaltma hortumunun tıpası çekilerek suyun kaba alınması, ardından pompa filtresinin elle çevrilmesi"
+    - "Akan suyun altında fırçalanan pompa filtresi ve filtreden çıkan tüy, düğme, bozuk para"
+    - "Yarım turda kalmış ve altından damlayan filtre ile sonuna kadar çevrilmiş filtrenin karşılaştırması"
+    - "Kısa program kadranı ve denemenin iki sonucu: program ilerliyor ya da aynı noktada duruyor"
 ---
 
 Program bitti sandın, kapağı açmaya gittin ama kilit açılmadı; camdan bakınca kazanın dibinde su duruyor, çamaşırlar sırılsıklam. Panelde ise **E18** yazıyor. Bosch çamaşır makinelerinde bu kod **suyun dışarı atılamadığını** anlatır: makine tahliyeyi başlattı, ama verilen sürede içeriyi boşaltamadı ve güvenli şekilde durdu. İyi haber, bu kodun en yaygın sebeplerinin makinenin gövdesinde değil, tahliye hattının kolay ulaşılan ucunda olmasıdır.
