@@ -755,8 +755,13 @@ export const HATA_KODU_KATMANI = {
     { giris: "Fırın ısınmıyor ya da geç ısınıyor", tip: "belirti",
       anlam: "Rezistans, termostat, fan ve kart ayrımı; servis çağırmadan önce kontroller.",
       yazi: "firin-isinmiyor", rehber: true },
-    { giris: "Aspiratör çekmiyor ya da koku yapıyor", tip: "belirti",
-      anlam: "Bu arıza için kendin-çöz adımı yayınlamadık; ölçüm ve yetki isteyen bir iş." },
+    // 29 Ağu 2026: eski metin ("kendin-çöz adımı yayınlamadık") PR #130 ile yanlışlandı —
+    // `davlumbaz-cekmiyor` artık 7 adımlık rehber. PAZ föyü (2026-08-29) ile giriş, rehberin
+    // kendi §"Filtre değilse: servis işaretleri" bölümüne daraltıldı. `rehber: true` YOK:
+    // bu satır kendin-çöz vaadi taşımıyor (emsal: 788. satırdaki koku girişi).
+    { giris: "Aspiratör sesi arttı ya da fan hiç dönmüyor", tip: "belirti",
+      anlam: "Filtreler temizken süren çekiş kaybı fan kanadını, rulmanı, anahtarı ya da baca klapesini işaret eder; bu taraf servis işidir.",
+      yazi: "davlumbaz-cekmiyor" },
 
   // ——— Boşluk dalgası (20 Ağu 2026, YK — 85-konu taraması) ———
     { giris: "Fırın eşit pişirmiyor (altı çiğ, üstü yanık)", tip: "belirti",
