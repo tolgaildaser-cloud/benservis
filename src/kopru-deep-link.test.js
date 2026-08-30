@@ -42,6 +42,22 @@ const KOPRU_ARIZA = tabloOku("scripts/build-blog.mjs", "KOPRU_ARIZA");
 const BELIRTILER = tabloOku("src/App.jsx", "BELIRTILER");
 const EK_BELIRTI = tabloOku("src/App.jsx", "EK_BELIRTI");
 
+// build-blog.mjs'in `slugify`si ile BİREBİR aynı olmak zorunda — köprü aramasının anahtarı bu.
+// (App.jsx'in `slugla`sından ayrı: o Türkçe-duyarlı toLocaleLowerCase yolunu kullanıyor,
+// bu ise harf eşlemesini ÖNCE yapıyor. İkisi de aynı sonucu verir; kopyalanan taraf, her
+// tablonun kendi üreticisiyle ölçülsün diye ayrı tutuldu.)
+const TR_HARF = { ı: "i", İ: "i", ş: "s", Ş: "s", ğ: "g", Ğ: "g", ü: "u", Ü: "u", ö: "o", Ö: "o", ç: "c", Ç: "c" };
+const slugify = (s) =>
+  String(s ?? "").replace(/[ıİşŞğĞüÜöÖçÇ]/g, (c) => TR_HARF[c])
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const KOPRU_CIHAZ_SLUG = Object.fromEntries(
+  Object.entries(KOPRU_CIHAZ).map(([ad, slug]) => [slugify(ad), slug])
+);
+// Kategori dizesinden cihaz slug'ı — build-blog'daki `kopruCihazSlug` ile aynı sözleşme.
+const kategoriCihaz = (kategori) => KOPRU_CIHAZ_SLUG[slugify(kategori)] || "";
+// Cihazı BİLEREK olmayan kategoriler (build-blog'daki `KOPRU_CIHAZSIZ` ile aynı liste).
+const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(slugify));
+
 const CIHAZ_SLUG = Object.fromEntries(
   Object.keys(BELIRTILER).flatMap((c) => [[cihazSlug(c), c], [slugla(c), c]])
 );
@@ -70,7 +86,7 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
     const kategori = Object.fromEntries(yazilar.map((y) => [y.slug, y.category]));
     const olu = [];
     for (const [yaziSlug, ariza] of Object.entries(KOPRU_ARIZA)) {
-      const cihazSlug = KOPRU_CIHAZ[kategori[yaziSlug]];
+      const cihazSlug = kategoriCihaz(kategori[yaziSlug]);
       // Yazısı silinmiş/kategorisi değişmiş kayıt da bir ayrışmadır — ayrıca raporlanır.
       if (!cihazSlug) { olu.push(`${yaziSlug} → cihaz bağlamı yok (yazı silindi ya da kategorisi değişti)`); continue; }
       const cihaz = CIHAZ_SLUG[cihazSlug];
@@ -88,6 +104,30 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
   it("bilinmeyen ariza değeri kırmaz, boş döner", () => {
     expect(belirtiCoz("Çamaşır Makinesi", "boyle-bir-belirti-yok")).toBe("");
     expect(belirtiCoz("Çamaşır Makinesi", "")).toBe("");
+  });
+
+  // ── 30 Ağu 2026 REGRESYON KİLİDİ ────────────────────────────────────────────────────
+  // Bu dosya bugüne kadar yalnız "basılan slug ÖLÜ MÜ" diye sordu; "basılması gereken slug
+  // BASILIYOR MU" diye hiç sormadı. Külliyat 70 → 216 yazıya çıkarken dört yeni kategori
+  // dizesi doğdu, köprü tablosu büyümedi ve 16 yazı sessizce köprüsüz kaldı — testler
+  // yeşil, build yeşil. Aşağıdaki iki test o kör noktayı kapatır.
+  it("her yazının kategorisi ya cihaza eşlenmiş ya da BİLEREK cihazsız", () => {
+    const kararsiz = [...new Set(
+      yazilar.filter((y) => !kategoriCihaz(y.category) && !KOPRU_CIHAZSIZ.has(slugify(y.category)))
+        .map((y) => y.category)
+    )];
+    expect(kararsiz, "bu kategoride ilk-ekran köprüsü HİÇ basılmaz — KOPRU_CIHAZ'a ya da KOPRU_CIHAZSIZ'a karar yaz").toEqual([]);
+  });
+
+  it("kategori araması harf farkına düşmez (aynı cihazın iki yazımı aynı slug'a çözülür)", () => {
+    // 27 Ağu'da tam bu ayrışma vardı: `blogGrubu()` slugify'dan geçiyordu, köprü ise TAM
+    // DİZE arıyordu → "Çamaşır Makinesi" (büyük M) doğru kümede ama köprüsüz kalıyordu.
+    expect(kategoriCihaz("Çamaşır makinesi")).toBe("camasir-makinesi");
+    expect(kategoriCihaz("Çamaşır Makinesi")).toBe("camasir-makinesi");
+    expect(kategoriCihaz("ÇAMAŞIR MAKİNESİ")).toBe("camasir-makinesi");
+    // Cihazsız kategori yine boş dönmeli — normalize etmek kapsamı genişletmez.
+    expect(kategoriCihaz("Genel")).toBe("");
+    expect(kategoriCihaz("Sürdürülebilirlik")).toBe("");
   });
 
   it("#68 ③ vakası: Tolga'nın açtığı yazı belirti taşır", () => {

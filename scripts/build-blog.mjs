@@ -473,6 +473,21 @@ const KILAVUZ_CTA = (cihazSlug, kaynak) =>
 // blog kategorisi → cihaz slug'ı elle eşlenir çünkü blog kategorileri daha kaba
 // ("Kombi" → "Kombi / Termosifon"). Kategorisi eşleşmeyen (Genel · Sürdürülebilirlik ·
 // Kurumsal) yazı bağlam TAŞIMAZ — o yazıların tek bir cihazı yoktur, uydurmak yanlış olur.
+//
+// 🔴 30 AĞU 2026 — TABLO KÜLLİYATIN GERİSİNDE KALMIŞTI (FE ölçtü). Bu tablo 15 Ağu'da
+// yazıldı ve o günkü 70 yazının 12 kategorisini TAM kapsıyordu. Külliyat 216'ya çıkarken
+// DÖRT yeni kategori dizesi doğdu ve hiçbiri tabloya girmedi; `KOPRU_CIHAZ[p.category]`
+// TAM DİZE eşleşmesi olduğu için o yazılarda köprü SESSİZCE düştü — build kırılmadı,
+// uyarı çıkmadı. Ölçülen sonuç: 16 yazıda ilk-ekran köprüsü HİÇ basılmıyordu ve
+// kapanış kartı + servis + sticky bağlantıları cihaz ön-seçimi TAŞIMIYORDU.
+//   · "Çamaşır Makinesi" (büyük M, 1 yazı)          → 27 Ağu'da "kozmetik" diye ölçülmüştü;
+//     o ölçüm `blogGrubu()`/`slugify()` yolunu denetledi, BU tam-dize aramasını atladı.
+//   · "Fırın / Ocak / Aspiratör" (davlumbaz, 1 yazı) → App.jsx'teki CİHAZ ADIYLA birebir aynı.
+//   · "Bilgisayar / yazıcı" (11 yazı)                → CIHAZLAR'da var, /tamir/ sayfası var.
+//   · "Su sebili / arıtma" (3 yazı)                  → CIHAZLAR'da var, /tamir/ sayfası var.
+// ⛔ Kategori DİZESİ değiştirilmedi — taksonomi PAZ'ın alanı (YK #25). Düzeltme kod
+//    tarafında: tablo genişletildi + arama slug üzerinden yapılıyor (büyük/küçük harf
+//    farkı bir daha köprü düşürmesin) + aşağıda BUILD KAPISI var, sessiz düşüş bitti.
 const KOPRU_CIHAZ = {
   "Buzdolabı": "buzdolabi",
   "Çamaşır makinesi": "camasir-makinesi",
@@ -480,10 +495,26 @@ const KOPRU_CIHAZ = {
   "Klima": "klima",
   "Kombi": "kombi-termosifon",
   "Fırın / Ocak": "firin-ocak-aspirator",
+  "Fırın / Ocak / Aspiratör": "firin-ocak-aspirator",
   "Televizyon": "televizyon-monitor",
   "Süpürge": "supurge",
   "Mikrodalga": "mikrodalga-air-fryer",
+  "Bilgisayar / yazıcı": "bilgisayar-yazici",
+  "Su sebili / arıtma": "su-sebili-aritma",
 };
+// Aramanın NORMALİZE hâli. Kategori dizesi insan yazımıdır ("Çamaşır makinesi" /
+// "Çamaşır Makinesi"); köprünün bir harf farkına düşmesi kabul edilemez.
+// `slugify` zaten Türkçe-duyarlı ve `blogGrubu()` de aynısını kullanıyor → gruplama ile
+// köprü artık AYNI anahtarı görüyor (27 Ağu'da ayrıştıkları nokta buydu).
+const KOPRU_CIHAZ_SLUG = Object.fromEntries(
+  Object.entries(KOPRU_CIHAZ).map(([ad, slug]) => [slugify(ad), slug])
+);
+// ⛔ Cihazı BİLEREK olmayan kategoriler. Build kapısı bu listeyi tanımayan yeni bir
+//    kategori gördüğünde patlar — "yeni kategori açıldı, köprü unutuldu" bir daha sessiz
+//    kalmasın. Yeni bir cihaz kategorisi eklendiğinde doğru hamle burayı değil
+//    KOPRU_CIHAZ'ı büyütmektir.
+const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(slugify));
+const kopruCihazSlug = (p) => KOPRU_CIHAZ_SLUG[slugify(p.category)] || "";
 // Yazı slug'ı → o cihazın HIZLI BELİRTİ listesindeki karşılık (App.jsx `BELIRTILER`).
 // ⛔ Bulanık eşleştirme YAPILMADI, tablo elle kürasyon: "kombi-yanmiyor" listedeki hiçbir
 // belirtiye tam oturmuyor (en yakını "petekler ısınmıyor" ama aynı şey değil) → yazılmadı,
@@ -542,10 +573,27 @@ const KOPRU_ARIZA = {
   "televizyon-goruntu-gelmiyor": "goruntu-yok",
   "supurge-cekmiyor": "cekis-zayif",
   "mikrodalga-isitmiyor": "isitmiyor-pisirmiyor",
+  // ── 30 Ağu 2026: köprüsü yeni açılan üç kategori. Kürasyon ilkesi AYNEN geçerli —
+  // yalnız çözen taraftaki belirtiye BİREBİR oturanlar yazıldı, gerisi cihaz ön-seçimiyle
+  // yetinir. Elenenler ve sebepleri: `laptop-sarj-olmuyor` · `laptop-klavyesi-calismiyor`
+  // (listede karşılığı yok) · `yazici-silik-basiyor` (yazıcı YAZIYOR, "Yazdırmıyor" değil)
+  // · `yazici-kagit-cekmiyor` ("Kağıt sıkışması" başka arıza, kağıt sıkışmıyor) ·
+  // `yazici-kartus-tanimiyor` (karşılığı yok) · `camasir-makinesi-program-sureleri`
+  // ("kaç sürer" yazısı, tek bir belirtisi yok — `…-kac-para` emsali).
+  "davlumbaz-cekmiyor": "aspirator-cekmiyor-koku",
+  "bilgisayar-acilmiyor-ekran-gelmiyor": "acilmiyor",
+  "bilgisayar-yavas-calisiyor": "donma-yavaslama",
+  "laptop-isiniyor-fan-sesi": "asiri-isinma-ses",
+  "yazici-kagit-sikisti": "kagit-sikismasi",
+  "yazici-wifi-baglanmiyor": "baglanti-sorunu",
+  "yazici-cevrimdisi-gorunuyor": "baglanti-sorunu",
+  "su-aritma-su-gelmiyor": "su-gelmiyor",
+  "su-sebili-altinda-su-birikiyor": "su-akitiyor",
+  "su-sebili-sogutmuyor": "sogutmuyor-isitmiyor",
 };
 function kopruHref(p) {
   const q = new URLSearchParams();
-  const cihaz = KOPRU_CIHAZ[p.category];
+  const cihaz = kopruCihazSlug(p);
   if (cihaz) {
     q.set("cihaz", cihaz);
     const ariza = KOPRU_ARIZA[p.slug];
@@ -562,7 +610,7 @@ function kopruHref(p) {
 // 31 Ağu okumasında "hangi yazı servise ulaştırdı" ayrı ayrı sayılabilir.
 function servisHref(p) {
   const q = new URLSearchParams();
-  const cihaz = KOPRU_CIHAZ[p.category];
+  const cihaz = kopruCihazSlug(p);
   if (cihaz) q.set("cihaz", cihaz);
   q.set("servis", "1");
   q.set("k", `blog-${p.slug}`);
@@ -570,7 +618,7 @@ function servisHref(p) {
 }
 // Cihaz adı kullanıcıya görünen metinde geçecek → blog kategorisi zaten insan diliyle
 // yazılmış ("Çamaşır makinesi"), ikinci bir görünen-ad tablosu tutmuyoruz.
-const kopruCihazAdi = (p) => (KOPRU_CIHAZ[p.category] ? String(p.category).toLocaleLowerCase("tr") : "");
+const kopruCihazAdi = (p) => (kopruCihazSlug(p) ? String(p.category).toLocaleLowerCase("tr") : "");
 
 // ① İLK EKRAN — "cevabı bul, çık" kullanıcısını sona inmeden yakalayan tek satır.
 // Kurul notu: yazının ilk ekranına bağlamlı bir satır konmalı. Bağlam yoksa satır HİÇ
@@ -1035,7 +1083,33 @@ function kapakDenetimi(posts) {
   console.log(`[build-blog] ✓ YK #65 kapak sayacı: ${kapakli}/${posts.length} yazıda gerçek kapak (kalan ${posts.length - kapakli} yazı ikon hero'sunda).`);
 }
 
+// ── KÖPRÜ KAPSAM KAPISI (build'i durdurur) ──────────────────────────────────────────────
+// 30 Ağu 2026'da açıldı. Köprü tablosu külliyatla birlikte büyümediği için 16 yazı köprüsüz
+// kalmıştı ve HİÇBİR uyarı çıkmamıştı: `KOPRU_CIHAZ[p.category]` sadece `undefined` dönüyor,
+// `KOPRU_SATIRI` boş dize basıyor, build yeşil kalıyordu. Sessiz düşüşü gürültülü hâle getirir.
+// ⛔ Kapı kategori DİZESİNE hüküm vermez (taksonomi PAZ'ın) — yalnız "bu kategori ya cihaza
+//    eşlenmiş ya da bilerek cihazsız" der. Kararı vermeden geçmeye izin vermez.
+function kopruKapsamDenetimi(posts) {
+  const bilinmeyen = new Map(); // kategori → yazı sayısı
+  for (const p of posts) {
+    const k = slugify(p.category);
+    if (!k || kopruCihazSlug(p) || KOPRU_CIHAZSIZ.has(k)) continue;
+    bilinmeyen.set(p.category, (bilinmeyen.get(p.category) || 0) + 1);
+  }
+  if (bilinmeyen.size) {
+    console.error("[build-blog] ✗ KÖPRÜ KAPSAM DENETİMİ BAŞARISIZ — bu kategoriler köprü tablosunda YOK:");
+    for (const [ad, n] of bilinmeyen) console.error(`  · "${ad}" (${n} yazı) — cihazı varsa KOPRU_CIHAZ'a, yoksa KOPRU_CIHAZSIZ'a ekle`);
+    console.error("  Karar verilmeden geçilmez: eşlenmemiş kategoride ilk-ekran köprüsü hiç basılmaz.");
+    process.exit(1);
+  }
+  const cihazli = posts.filter((p) => kopruCihazSlug(p));
+  const arizali = cihazli.filter((p) => KOPRU_ARIZA[p.slug]);
+  console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +
+    `(${posts.length - cihazli.length}'i bilerek cihazsız), ${arizali.length}'inde belirti de ön-dolu.`);
+}
+
 rehberDenetimi(posts); // fail-fast: sayfa yazılmadan önce dursun
+kopruKapsamDenetimi(posts); // fail-fast: köprüsü olmayan kategori sessizce geçmesin
 kontrolDenetimi(posts); // uyarır, durdurmaz — eksik görsel yayını bloklamaz ama sessiz de geçmez
 kapakDenetimi(posts); // uyarır + YK #65 ilerleme sayacını basar
 
