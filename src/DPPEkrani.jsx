@@ -42,8 +42,18 @@ async function uploadFatura(file, cihazId) {
     .upload(path, file, { contentType: file.type, upsert: false });
   if (error) throw new Error(error.message);
 
-  const { data } = supabase.storage.from("DPP Faturalar").getPublicUrl(path);
-  return data.publicUrl;
+  // ⛔ `getPublicUrl()` BİLEREK KULLANILMIYOR (YK Kararı #114 ③, 30 Ağu 2026).
+  // Eskiden burada üretilen KALICI PUBLIC URL doğrudan DB'ye yazılıyordu; fatura
+  // böylece seri numarasını bilen herkese açık hâle geliyordu (KVKK kişisel veri).
+  // Artık yalnız bucket içi OBJE YOLU dönüyor ve DB'ye o yazılıyor.
+  //
+  // ❓ NEDEN `createSignedUrl()` DE ÇAĞRILMIYOR — 30 Ağu 2026'da ÖLÇÜLDÜ, varsayım
+  //    değil: anon anahtarla `POST /storage/v1/object/sign/DPP Faturalar/…` isteği
+  //    **404 NoSuchKey** dönüyor (RLS objeyi anon'dan gizliyor). Yani imzayı
+  //    TARAYICIDA üretmek bugün ÇALIŞMIYOR — çağrıyı yine de yazmak, #114'ün tam
+  //    olarak uyardığı "bozuk ve sessiz" hâli üretirdi. İmza, sahibi doğrulayan bir
+  //    sunucu ucundan üretilmelidir; öyle bir yetkili yüzey bugün YOK (Faz 3).
+  return path;
 }
 
 // Tasarım token'ları (App.jsx ile tutarlı)
@@ -187,7 +197,12 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
     uzatilmis_garanti_bitis: "",
   });
   const [fotograflar, setFotograflar] = useState([]);
-  const [faturaUrl, setFaturaUrl] = useState(null);
+  // #114 ③: kalıcı public URL yerine bucket içi obje YOLU tutulur (DB'ye bu gider).
+  // `faturaOnizleme` yalnız YÜKLEYENİN kendi oturumundaki yerel blob önizlemesidir —
+  // hiçbir yere kaydedilmez, sunucudan gelmez, sekme kapanınca biter.
+  const [faturaYolu, setFaturaYolu] = useState(null);
+  const [faturaOnizleme, setFaturaOnizleme] = useState(null);
+  const [faturaAdi, setFaturaAdi] = useState("");
   const [faturaYukleniyor, setFaturaYukleniyor] = useState(false);
   const [faturaHata, setFaturaHata] = useState("");
   const faturaRef = React.useRef(null);
@@ -202,8 +217,16 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
     setFaturaHata("");
     setFaturaYukleniyor(true);
     try {
-      const url = await uploadFatura(f, null);
-      setFaturaUrl(url);
+      const yol = await uploadFatura(f, null);
+      setFaturaYolu(yol);
+      setFaturaAdi(f.name);
+      // Önizleme kullanıcının KENDİ seçtiği dosyadan üretilir (blob), sunucudan
+      // değil: yükleyen kişiye kendi dosyasını göstermek sızıntı değildir ve bu yol
+      // hiçbir public/imzalı URL doğurmaz.
+      setFaturaOnizleme((onceki) => {
+        if (onceki) URL.revokeObjectURL(onceki);
+        return URL.createObjectURL(f);
+      });
     } catch (err) {
       setFaturaHata(err.message);
     } finally {
@@ -230,7 +253,9 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
         garanti_bitis_tarihi: form.garanti_bitis_tarihi || null,
         uzatilmis_garanti: form.uzatilmis_garanti,
         uzatilmis_garanti_bitis: form.uzatilmis_garanti_bitis || null,
-        fatura_url: faturaUrl || null,
+        // Kolon adı `fatura_url` ama içerik artık bucket içi OBJE YOLU (#114 ③).
+        // Doğru ad `fatura_path`; yeniden adlandırma şema değişikliği → YK/Tolga.
+        fatura_url: faturaYolu || null,
         fotograflar,
       };
       const res = await fetch("/api/dpp/cihaz", {
@@ -331,11 +356,17 @@ function YeniCihazForm({ seriNo, teshisContext, onOlusturuldu }) {
       </div>
 
       <label style={s.label}>Fatura <span style={s.opt}>(PDF veya fotoğraf, max 10 MB, opsiyonel)</span></label>
-      {faturaUrl ? (
+      {faturaYolu ? (
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-          <a href={faturaUrl} target="_blank" rel="noopener noreferrer"
-            style={{ fontSize: 13, color: AMBER, fontWeight: 600 }}>📄 Fatura Görüntüle</a>
-          <button type="button" onClick={() => setFaturaUrl(null)}
+          {/* Bağlantı YEREL blob'a gider — public/imzalı URL üretilmez (#114 ③). */}
+          <a href={faturaOnizleme} target="_blank" rel="noopener noreferrer"
+            style={{ fontSize: 13, color: AMBER, fontWeight: 600 }}>
+            📄 {faturaAdi || "Fatura"} — önizle
+          </a>
+          <button type="button" onClick={() => {
+            if (faturaOnizleme) URL.revokeObjectURL(faturaOnizleme);
+            setFaturaYolu(null); setFaturaOnizleme(null); setFaturaAdi("");
+          }}
             style={{ fontSize: 11, color: "#DC2626", background: "none", border: "none", cursor: "pointer" }}>Kaldır</button>
         </div>
       ) : (
@@ -424,12 +455,15 @@ function PasaportGorunum({ pasaport, onTamirEkle, onYenile }) {
                 )}
               </div>
             ))}
-            {cihaz.fatura_url && (
-              <div style={{ marginTop: 6 }}>
-                <a href={cihaz.fatura_url} target="_blank" rel="noopener noreferrer"
-                  style={{ fontSize: 12, color: AMBER, fontWeight: 600 }}>📄 Fatura Görüntüle</a>
-              </div>
-            )}
+            {/* ⛔ FATURA BAĞLANTISI KALDIRILDI — #114 ③'ün metninden SAPMA, gerekçesi ölçüm.
+                #114 bu ekranı "sahibinin kendi ekranı" sayıp bağlantının imzalı URL ile
+                kalabileceğini yazmıştı. 30 Ağu 2026 ölçümü bu varsayımı çürüttü: bu ekran
+                `App.jsx`ten `showDPP` anahtarıyla açılıyor, ARAMA EKRANI seri numarasını
+                yazan HERKESE aynı yetkisiz `/api/dpp/cihaz` cevabını getiriyor — yani
+                burası sahibe özel değil, DPPPublicPage ile aynı anonim yüzey.
+                Bağlantıyı burada bırakmak sızıntıyı kapatmaz, yalnız yerini değiştirirdi.
+                Ayrıca API artık `fatura_url` döndürmüyor → basacak veri de yok.
+                Sahibi doğrulayan yetkili yüzey Faz 3'ün işi. */}
           </div>
         )}
         <div style={s.seriNo}>SN: {cihaz.seri_no}</div>
