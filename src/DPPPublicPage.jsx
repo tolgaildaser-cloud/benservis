@@ -205,16 +205,15 @@ export default function DPPPublicPage() {
                     )}
                   </div>
                 ))}
-                {pasaport.cihaz.fatura_url && (
-                  <a
-                    href={pasaport.cihaz.fatura_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ fontSize: 12, color: AMBER, fontWeight: 600, display: "block", marginTop: 6 }}
-                  >
-                    📄 Fatura Görüntüle
-                  </a>
-                )}
+                {/* ⛔ FATURA BAĞLANTISI BİLEREK BASILMIYOR (YK Kararı #114, 30 Ağu 2026).
+                    Bu sayfa YETKİSİZ: seri numarasını bilen/deneyen herkes açar. Fatura
+                    görselinde ad-soyad, adres, kart son hanesi olabilir → KVKK'da kişisel
+                    veri. Bağlantı burada basıldığı sürece fatura, kazara değil TASARIMIN
+                    GEREĞİ olarak anonim erişime açıktı.
+                    `/api/dpp/cihaz` de artık `fatura_url` DÖNDÜRMÜYOR (aynı karar, halka ①)
+                    — yani bu blok geri eklenirse veri de bulamaz. Sızıntının sessizce geri
+                    gelmediğini `src/dpp-fatura-sizinti.test.js` kilitler.
+                    Sahibin faturasını görebileceği yetkili yüzey Faz 3'ün işi. */}
               </div>
             )}
 
