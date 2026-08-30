@@ -1108,9 +1108,47 @@ function kopruKapsamDenetimi(posts) {
     `(${posts.length - cihazli.length}'i bilerek cihazsız), ${arizali.length}'inde belirti de ön-dolu.`);
 }
 
+// ── TESLİM DENETİMİ (uyarır, durdurmaz) ─────────────────────────────────────────────────
+// 30 Ağu 2026'da açıldı. Mevcut denetimlerin HEPSİ tek yönlü: "frontmatter söz verdi, dosya
+// var mı?" Hiçbiri tersini sormuyordu: "DOSYA var, frontmatter onu biliyor mu?"
+// `adimGorselleriEkle` ilk satırında `if (!p.images?.steps?.length) return p.html`,
+// `kontrolGorselleriEkle` ise `if (!k) continue` diyor → GRF'nin teslim ettiği kare repoya
+// girer, alt metin işlenmeyi unutulur ve kare ÖMÜR BOYU basılmaz. Ne build ne test görür.
+// (GRF bu tuzağı 28 Ağu'da kendi tarafından yazmıştı: "PNG'leri repoya koymak tek başına
+// YETMİYOR." Karşı kapı bugüne kadar konmamıştı.)
+// ⛔ Durdurmaz: atıl bir dosya yayını bloklamamalı — ama SESSİZ de kalmaz.
+function teslimDenetimi(posts) {
+  const bySlug = new Map(posts.map((p) => [p.slug, p]));
+  const kok = path.join(ROOT, "public", "tamir-gorsel");
+  if (!fs.existsSync(kok)) return;
+  const uyari = [];
+  for (const d of fs.readdirSync(kok, { withFileTypes: true })) {
+    if (!d.isDirectory()) continue;
+    const p = bySlug.get(d.name);
+    if (!p) continue; // yazısı olmayan klasör (kategori/merkez gibi ortak varlıklar) — konu dışı
+    const dosyalar = fs.readdirSync(path.join(kok, d.name));
+    const say = (onek) => new Set(
+      dosyalar.filter((f) => f.startsWith(onek)).map((f) => f.replace(/\.[a-z0-9]+$/i, ""))
+    ).size;
+    const adim = say("adim-"), kontrol = say("kontrol-");
+    if (adim && !p.images?.steps?.length)
+      uyari.push(`${p.slug}: ${adim} adım karesi DİSKTE ama images.steps yok → hiç basılmıyor`);
+    if (kontrol && !p.images?.checks?.length)
+      uyari.push(`${p.slug}: ${kontrol} kontrol karesi DİSKTE ama images.checks yok → hiç basılmıyor`);
+  }
+  if (uyari.length) {
+    console.warn(`[build-blog] ⚠️  TESLİM EDİLMİŞ AMA BAĞLANMAMIŞ GÖRSEL (${uyari.length}):`);
+    for (const u of uyari) console.warn("  · " + u);
+    console.warn("  Alt metin GRF'nin teslim notunda; bağlama FE'de. Kare atıl duruyorsa kararı GRF/PAZ verir.");
+  } else {
+    console.log("[build-blog] ✓ teslim denetimi: diskteki her adım/kontrol karesi frontmatter'da bildirilmiş.");
+  }
+}
+
 rehberDenetimi(posts); // fail-fast: sayfa yazılmadan önce dursun
 kopruKapsamDenetimi(posts); // fail-fast: köprüsü olmayan kategori sessizce geçmesin
 kontrolDenetimi(posts); // uyarır, durdurmaz — eksik görsel yayını bloklamaz ama sessiz de geçmez
+teslimDenetimi(posts); // uyarır — TERS yön: diskte kare var, frontmatter bilmiyor
 kapakDenetimi(posts); // uyarır + YK #65 ilerleme sayacını basar
 
 // ── PİLOT GİRİŞ NOKTASI (YK #35): en çok gösterim alan sayfalar ① katmanın kapısı olsun ──
