@@ -170,3 +170,5 @@ Sıra **hata koduna** geldiğinde durum değişir: kod tekrar ediyorsa, program 
 ⚠️ Yanık kokusu, kumanda panelinde ısınma ya da makineden anormal ses geliyorsa cihazı çalıştırmayı bırak ve fişini çek.
 
 Belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren. Önce öğren, sonra çağır.
+
+İlgili: [Bosch çamaşır makinesi hata kodları](/blog/bosch-camasir-makinesi-hata-kodlari/) · [Çamaşır makinesi ışık yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)

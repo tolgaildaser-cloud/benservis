@@ -130,7 +130,7 @@ Ekrandaki kodu ve cihaz modelini [Benservis'e yaz](/); olası arızayı, kendin 
 ## Tahmini tamir maliyeti
 Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Bulaşık makinesi tamirinde fiyatı ne belirler?](/blog/bulasik-makinesi-tamiri-kac-para/)
 
-İlgili: [Bulaşık makinesi hata kodları (marka marka)](/blog/bulasik-makinesi-hata-kodlari/) · [Su atmıyor](/blog/bulasik-makinesi-su-atmiyor/) · [Temiz yıkamıyor](/blog/bulasik-makinesi-temiz-yikamiyor/) · [Su almıyor](/blog/bulasik-makinesi-su-almiyor/)
+İlgili: [Bulaşık makinesi hata kodları (marka marka)](/blog/bulasik-makinesi-hata-kodlari/) · [Su atmıyor](/blog/bulasik-makinesi-su-atmiyor/) · [Temiz yıkamıyor](/blog/bulasik-makinesi-temiz-yikamiyor/) · [Su almıyor](/blog/bulasik-makinesi-su-almiyor/) · [Bosch bulaşık makinesi sembolleri ve anlamları](/blog/bosch-bulasik-makinesi-sembolleri-ve-anlamlari/)
 
 ## Sık sorulan sorular
 

@@ -125,7 +125,7 @@ Bosch yüzlerce farklı model üretir ve yayımladığı liste on kodludur. Ekra
 ## Tahmini tamir maliyeti
 Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
 
-İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
+İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/) · [Bosch çamaşır makinesi sembolleri ve anlamları](/blog/bosch-camasir-makinesi-sembolleri-ve-anlamlari/)
 
 ## Sık sorulan sorular
 
