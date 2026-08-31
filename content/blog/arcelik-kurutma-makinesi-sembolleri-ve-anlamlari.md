@@ -142,3 +142,5 @@ Sıra şuraya geldiğinde durum değişir: **filtre temizliği sembolü temizlik
 ⚠️ Yanık kokusu, aşırı ısınma ya da makineden anormal ses geliyorsa cihazı çalıştırmayı bırak ve fişini çek.
 
 Belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren. Önce öğren, sonra çağır.
+
+İlgili: [Arçelik kurutma makinesi hata kodları](/blog/arcelik-kurutma-makinesi-hata-kodlari/) · [Kurutma makinesi kurutmuyor](/blog/kurutma-makinesi-kurutmuyor/)

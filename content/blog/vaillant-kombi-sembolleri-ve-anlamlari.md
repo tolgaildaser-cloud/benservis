@@ -143,3 +143,5 @@ Sıra şuraya geldiğinde durum değişir ve **cihazın içi kullanıcının ala
 ⚠️ **Gaz kokusu alırsan cihazı çalıştırma, gaz kesme vanasını kapat, elektrik düğmelerine dokunma, ortamı havalandır ve doğalgaz acil hattına haber ver.** Yanık kokusu, isli/sarı alev ya da bacadan geri tepme belirtisinde de cihazı kullanmayı bırak.
 
 Belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren. Önce öğren, sonra çağır.
+
+İlgili: [Vaillant kombi arıza kodları](/blog/vaillant-kombi-ariza-kodlari/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)

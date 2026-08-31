@@ -125,3 +125,5 @@ Sıra **hata koduna** geldiğinde durum değişir. Kod tekrar ediyorsa, makine h
 ⚠️ Makinenin altında su birikintisi, yanık kokusu ya da panelde ısınma varsa cihazı çalıştırmayı bırak, fişini çek ve su musluğunu kapat.
 
 Belirtiyi yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren. Önce öğren, sonra çağır.
+
+İlgili: [Bosch bulaşık makinesi hata kodları](/blog/bosch-bulasik-makinesi-hata-kodlari/) · [Bulaşık makinesi temiz yıkamıyor](/blog/bulasik-makinesi-temiz-yikamiyor/)

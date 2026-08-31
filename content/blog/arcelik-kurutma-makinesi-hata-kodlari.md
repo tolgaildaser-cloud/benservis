@@ -120,3 +120,5 @@ Bu ayrımı bilmek, yanlış yerde kapak arayarak vakit kaybetmeni önler.
 Tank boşaltıldı, üç filtre noktası da temizlendi, havalandırma açıldı ve makine yine durup uyarıyorsa evde denenecekler bitmiştir. Makine hiç ısıtmıyorsa, tamburdan sürtme ya da gıcırdama sesi geliyorsa, tank bariz boşken uyarı sönmüyorsa iş servisindir.
 
 Elin boş değil ama: panel fotoğrafı, model numarası, hangi adımda durduğu ve son temizlikte filtrelerden ne çıktığı bilgisi doğru parçayla gelinmesini sağlar. Cihazının belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.
+
+İlgili: [Arçelik kurutma makinesi sembolleri ve anlamları](/blog/arcelik-kurutma-makinesi-sembolleri-ve-anlamlari/) · [Kurutma makinesi kurutmuyor](/blog/kurutma-makinesi-kurutmuyor/)
