@@ -58,6 +58,7 @@ Kombine ve arızaya göre tahmini tamir maliyetini [Benservis](/) saniyede söyl
 - [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/)
 - [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/)
 - [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/)
+- [Petekler ısınmıyor: kombi yanıyor ama radyatörler soğuk](/blog/petekler-isinmiyor/)
 
 ## Sık sorulan sorular
 
