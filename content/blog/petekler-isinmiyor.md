@@ -82,7 +82,7 @@ Peteğin **kendisi sıcak ama oda ısınmıyorsa** bu bir ısıtma arızası de�
 
 Bunlardan sonra da petekler ısınmıyorsa belirtiyi [Benservis'e](/) yaz — olası arızayı ve tahmini maliyeti **ücretsiz** öğren. Önce öğren, sonra çağır.
 
-İlgili: [Kombi yanmıyor](/blog/kombi-yanmiyor/) · [Kombi basıncı düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi arıza kodları](/blog/kombi-ariza-kodlari/)
+İlgili: [Kombi yanmıyor](/blog/kombi-yanmiyor/) · [Kombi basıncı düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi arıza kodları](/blog/kombi-ariza-kodlari/) · [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/)
 
 ## Sık sorulan sorular
 

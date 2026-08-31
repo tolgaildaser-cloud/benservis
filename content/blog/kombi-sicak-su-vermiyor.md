@@ -52,7 +52,7 @@ Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyo
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
-İlgili: [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/)
+İlgili: [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/) · [Kombi yanmıyor / ateşlemiyor](/blog/kombi-yanmiyor/) · [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Petekler ısınmıyor](/blog/petekler-isinmiyor/)
 
 ## Sık sorulan sorular
 

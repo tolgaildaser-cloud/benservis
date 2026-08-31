@@ -56,7 +56,7 @@ Güvenli adımlar:
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
-İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/) · [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/)
+İlgili: [Kombi arıza kodları (marka marka)](/blog/kombi-ariza-kodlari/) · [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) · [Kombi sıcak su vermiyor](/blog/kombi-sicak-su-vermiyor/) · [Kombi tamirinde fiyatı ne belirler?](/blog/kombi-tamiri-kac-para/) · [Petekler ısınmıyor](/blog/petekler-isinmiyor/)
 
 ## Sık sorulan sorular
 
