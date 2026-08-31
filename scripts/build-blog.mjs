@@ -562,6 +562,10 @@ const KOPRU_ARIZA = {
   "klima-calismiyor": "hic-calismiyor",
   "kombi-sicak-su-vermiyor": "sicak-su-gelmiyor",
   "kombi-basinc-dusuyor": "basinc-dusuyor",
+  // 31 Ağu 2026 — yayınlanan `petekler-isinmiyor` yazısı. Kürasyon değil, BİREBİR eşleşme:
+  // yazının slug'ı ile Kombi belirti listesindeki "Petekler ısınmıyor"un slug'ı aynı dize.
+  // (14 Ağu'daki kış yasağı yüzünden yazı beklemedeydi; YK #98 ile yasak kalktı.)
+  "petekler-isinmiyor": "petekler-isinmiyor",
   "kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "baymak-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "vaillant-kombi-ariza-kodlari": "ariza-kodu-veriyor",
