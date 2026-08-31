@@ -477,6 +477,11 @@ export const HATA_KODU_KATMANI = {
     { giris: "Petekler ısınıyor ama su ısınmıyor", tip: "belirti",
       anlam: "Isıtma çalışırken sıcak su yoksa sorun sıcak su devresindedir: eşanjör, 3 yollu vana ya da akış sensörü.",
       yazi: "kombi-sicak-su-vermiyor" },
+    // 31 Ağu 2026 (FE, Tolga talimatı) — listede en sık vaka EKSİKTİ: yukarıdaki kaydın
+    // AYNA HÂLİ. "Isıtma var, sıcak su yok" vardı; "sıcak su var, ısıtma yok" yoktu.
+    { giris: "Kombi yanıyor, sıcak su var ama petekler soğuk", tip: "belirti",
+      anlam: "Sıcak su üretiliyor ama tesisatta dolaşmıyordur; peteğin neresinin soğuk olduğu sebebi ayırır: üstü soğuksa içinde hava, altı soğuksa dipte tortu, hiçbiri ısınmıyorsa sirkülasyon pompası, vana ya da oda termostatı.",
+      yazi: "petekler-isinmiyor" },
     { giris: "Petekler de soğuk, sıcak su da yok", tip: "belirti",
       anlam: "İkisi birden yoksa sorun sıcak su tarafında değil, kombinin yanmasındadır.",
       yazi: "kombi-yanmiyor" },
