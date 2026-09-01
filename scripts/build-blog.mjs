@@ -594,6 +594,70 @@ const KOPRU_ARIZA = {
   "su-aritma-su-gelmiyor": "su-gelmiyor",
   "su-sebili-altinda-su-birikiyor": "su-akitiyor",
   "su-sebili-sogutmuyor": "sogutmuyor-isitmiyor",
+  // ── 1 Eyl 2026: HATA KODU AİLESİ — tablo kural olarak değil TEK TEK büyüdüğü için
+  // külliyattaki marka hata-kodu sayfaları dışarıda kalmıştı. Kural zaten kuruluydu
+  // (`camasir-makinesi-hata-kodlari` · `arcelik-camasir-…` · `bosch-bulasik-…-e15-hatasi`
+  // 15 Ağu'da yazılmış); eksik olan kuralın kendisi değil, KAPSAMIYDI. Aynı kural,
+  // aynı biçim: `*-hata-kodlari` ve `*-<kod>-hatasi` sayfaları belirtiyi ön-doldurur.
+  // ⛔ `*-sembolleri-ve-anlamlari` sayfaları BİLEREK DIŞARIDA: o sayfaların kendi hükmü
+  //    "ekrandaki simgelerin çoğu arıza değil" — belirtiyi "hata kodu veriyor" diye
+  //    ön-doldurmak sayfanın söylediğinin tersini forma yazardı.
+  "arcelik-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "arcelik-bulasik-makinesi-e01-hatasi": "hata-kodu-veriyor",
+  "beko-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "beko-bulasik-makinesi-e01-hatasi": "hata-kodu-veriyor",
+  "samsung-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "samsung-bulasik-makinesi-4c-hatasi": "hata-kodu-veriyor",
+  "siemens-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "siemens-bulasik-makinesi-e15-hatasi": "hata-kodu-veriyor",
+  "vestel-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "beko-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "beko-camasir-makinesi-e10-hatasi": "hata-kodu-veriyor",
+  "bosch-camasir-makinesi-e18-hatasi": "hata-kodu-veriyor",
+  "grundig-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "profilo-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "siemens-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "vestel-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "vestel-camasir-makinesi-e03-hatasi": "hata-kodu-veriyor",
+  // Kurutma yazıları `category: Çamaşır makinesi` taşıyor → çözen tarafta cihaz
+  // "Çamaşır Makinesi" olur. "Hata kodu veriyor" o cihazın EK_BELIRTI'sinde var;
+  // kurutmaya ÖZEL belirtiler (su tankı · filtre/kondenser) bu cihazda çözülmediği
+  // için o yazılar cihaz ön-seçimiyle yetinmeye devam eder.
+  "kurutma-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "arcelik-kurutma-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "arcelik-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "beko-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "bosch-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "lg-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "samsung-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "klima-ariza-kodlari": "hata-kodu-veriyor",
+  "arcelik-klima-hata-kodlari": "hata-kodu-veriyor",
+  "daikin-klima-hata-kodlari": "hata-kodu-veriyor",
+  "samsung-klima-hata-kodlari": "hata-kodu-veriyor",
+  "vestel-klima-hata-kodlari": "hata-kodu-veriyor",
+  // ── 1 Eyl 2026: BİREBİR ÇİP EŞLEŞMESİ — kürasyon değil, dize eşleşmesi. Her biri
+  // kendi cihazının HIZLI BELİRTİ çipine tam oturuyor; hiçbiri yorum gerektirmedi.
+  // ⛔ Elenenler ve sebepleri (yorum gerektirdiği için yazılmadı — yanlış ön-doldurma,
+  //    ön-doldurmamaktan kötüdür): `robot-supurge-sarj-olmuyor` ("Şarj tutmuyor" başka
+  //    arıza: şarj oluyor ama tutmuyor) · `supurge-hortumu-tikandi` ("Çekiş zayıf"
+  //    sonucu, belirtisi değil) · `tv-ekrani-karariyor` ("Görüntü yok" ile arka aydınlatma
+  //    arasında ayrılmıyor) · `monitor-sinyal-yok` ("Bağlantı sorunu" ve "Görüntü yok"
+  //    arasında ikiye bölünüyor) · `tv-ses-gelmiyor` · `camasir-makinesi-isitmiyor` ·
+  //    `camasir-makinesi-kapagi-acilmiyor` · `klima-fan-donmuyor` · `ocak-alevi-sari-yaniyor`
+  //    (çözen tarafta o cihaz için karşılığı yok) · `airfryer-duman-cikariyor`
+  //    ("Fan sesi/koku" duman değil) · `bulasik-makinesi-bardaklari-bulanik-birakiyor`
+  //    ("Temiz yıkamıyor" değil, su sertliği yazısı).
+  "camasir-makinesi-santrifuj-yapmiyor": "sikmiyor-donmuyor",
+  "camasir-makinesi-tambur-donmuyor": "sikmiyor-donmuyor",
+  "televizyonda-ses-var-goruntu-yok": "goruntu-yok",
+  "tv-ekraninda-cizgi-var": "ekranda-cizgiler",
+  "tv-hdmi-sinyal-yok": "baglanti-sorunu",
+  "supurge-calismiyor": "calismiyor",
+  "sarjli-supurge-sarj-tutmuyor": "sarj-tutmuyor",
+  "airfryer-isitmiyor": "isitmiyor-pisirmiyor",
+  "cam-seramik-ocak-isinmiyor": "isinmiyor",
+  "firin-kapagi-acilmiyor": "kapi-cam-sorunu",
 };
 function kopruHref(p) {
   const q = new URLSearchParams();
