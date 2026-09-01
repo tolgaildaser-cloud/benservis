@@ -73,11 +73,17 @@ const BELIRTILER = {
 // Bu değerler ÇİP DEĞİLDİR (formdaki hızlı-belirti butonları `BELIRTILER`den gelir, değişmedi);
 // yalnız blogdan gelen deep-link'i çözmeye yarar. Cihaz kapsamı korunur: bir belirti yalnız
 // kendi cihazında geçerlidir, `?cihaz=klima&ariza=kurutmuyor` eşleşmez.
+// 1 Eyl 2026 — Buzdolabı ve Klima'ya "Hata kodu veriyor" eklendi. Üreten tarafta 11 marka
+// hata-kodu sayfası (`buzdolabi-hata-kodlari` · `klima-ariza-kodlari` · marka türevleri)
+// bu iki cihazda çözülemediği için belirtisiz açılıyordu; Çamaşır/Kurutma/Bulaşık'ta aynı
+// belirti 15 Ağu'dan beri zaten var — eksik olan kural değil, iki cihazlık kapsamdı.
+// ⛔ Çip eklenmedi: hızlı-belirti butonları `BELIRTILER`den gelir, form görünümü değişmez.
 const EK_BELIRTI = {
   "Çamaşır Makinesi": ["Hata kodu veriyor", "Kötü kokuyor"],
   "Kurutma Makinesi": ["Hata kodu veriyor", "Kötü kokuyor", "Filtre/kondenser tıkalı"],
   "Bulaşık Makinesi": ["Kurutmuyor", "Kötü kokuyor"],
-  "Buzdolabı": ["Buzlanma yapıyor"],
+  "Buzdolabı": ["Buzlanma yapıyor", "Hata kodu veriyor"],
+  "Klima": ["Hata kodu veriyor"],
 };
 const belirtiCoz = (cihaz, slug) =>
   [...(BELIRTILER[cihaz] || []), ...(EK_BELIRTI[cihaz] || [])].find((b) => slugla(b) === slug) || "";
