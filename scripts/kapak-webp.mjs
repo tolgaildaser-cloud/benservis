@@ -1,8 +1,10 @@
-// scripts/kapak-webp.mjs — png-only kapak klasörlerini KAYIPSIZ webp'ye çevirir.
+// scripts/kapak-webp.mjs — png-only görselleri KAYIPSIZ webp'ye çevirir (kapak + adım kareleri).
 //
-//   node scripts/kapak-webp.mjs            → aday tarar, RAPOR verir, HİÇBİR ŞEY YAZMAZ
-//   node scripts/kapak-webp.mjs --yaz      → geçen adayları diske yazar
-//   node scripts/kapak-webp.mjs --yaz petekler-isinmiyor kombi-yanmiyor   → yalnız bu slug'lar
+//   node scripts/kapak-webp.mjs             → kapak adayları, RAPOR, HİÇBİR ŞEY YAZMAZ
+//   node scripts/kapak-webp.mjs --yaz       → geçen kapak adaylarını diske yazar
+//   node scripts/kapak-webp.mjs --adim      → adım/kontrol kareleri (adim-0N, kontrol-0N)
+//   node scripts/kapak-webp.mjs --tumu      → klasörlerdeki TÜM png-only dosyalar
+//   node scripts/kapak-webp.mjs --yaz petekler-isinmiyor kombi-yanmiyor   → yalnız bu slug'ların kapağı
 //
 // ── NEDEN VAR (1 Eyl 2026, Tolga: "betiği repoya al") ────────────────────────────────
 // `build-blog.mjs` kapağı DİSKTE arıyor (`GORSEL_UZANTILARI = ["webp","png","svg"]`,
@@ -11,6 +13,14 @@
 // 7 klasör çevrildi, 210.488 B → 86.744 B (−%59).
 // İş elle yapıldığı sürece her yeni GRF teslimi png-only girme riskini taşıyordu;
 // betik o riski tek komuta indiriyor.
+//
+// ── KAPSAM GENİŞLEDİ (2 Eyl 2026, FE koşusu) ────────────────────────────────────────
+// `gorselUrl(slug, "adim-0N")` da AYNI webp→png→svg sırasını izliyor (build-blog.mjs
+// satır ~1007) — yani adım kareleri de png-only kaldıkları sürece 2-3 kat büyük
+// servis ediliyordu. Kapak tarafı 1 Eyl'de kapandı, adım tarafı açık kalmıştı:
+// 41 rehber klasöründe **256 png-only adım karesi + 4 kontrol karesi = 15,8 MB**.
+// Rehber sayfası 6-8 kare basıyor, yani ağırlık kapak sayfasınınkinden büyük.
+// Betiğin çekirdeği (üç kapı) değişmedi; değişen yalnız HANGİ dosyaların taranacağı.
 //
 // ── ⛔ BU BETİK BUILD'E BAĞLANMADI ───────────────────────────────────────────────────
 // #112'nin `site-istatistik.mjs` için verdiği gerekçe burada da geçerli: build'i ikili
@@ -179,19 +189,40 @@ export function araclarVar() {
 }
 
 // ── ADAY TARAMA ──────────────────────────────────────────────────────────────────────
-// Aday = `kapak.png` VAR, `kapak.webp` YOK. Mevcut bir webp'nin ÜZERİNE YAZILMAZ:
+// Aday = `<ad>.png` VAR, `<ad>.webp` YOK. Mevcut bir webp'nin ÜZERİNE YAZILMAZ:
 // oradaki dosya elle üretilmiş/onaylanmış olabilir, betiğin işi boşluğu doldurmak.
-export function adaylar(kok = GORSEL_KOK) {
+//
+// Desenler, `build-blog.mjs`'in FİİLEN ÇÖZDÜĞÜ adları karşılar — uydurma değil:
+//   kapak      → `kapakUrl()`            (satır ~918)
+//   adim-0N    → `adimGorselUrl()`       (satır ~1007)
+//   kontrol-0N → `kontrolGorselUrl()`    (satır ~1061)
+// Üçü de aynı `gorselUrl` üstünden webp→png→svg sırasını izliyor.
+export const DESENLER = {
+  kapak: /^kapak\.png$/,
+  adim: /^(?:adim|kontrol)-\d{2}\.png$/,
+  tumu: /\.png$/,
+};
+
+/** Dosya düzeyinde aday listesi: `[{slug, ad}]` (ad = uzantısız dosya adı). */
+export function dosyaAdaylari(kok = GORSEL_KOK, desen = DESENLER.kapak) {
   const kokYol = yolaCevir(kok);
   const dizin = fs.existsSync(kokYol) ? fs.readdirSync(kokYol, { withFileTypes: true }) : [];
-  return dizin
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-    .filter((ad) => {
-      const p = path.join(kokYol, ad);
-      return fs.existsSync(path.join(p, "kapak.png")) && !fs.existsSync(path.join(p, "kapak.webp"));
-    })
-    .sort();
+  const cikti = [];
+  for (const d of dizin.filter((d) => d.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const klasor = path.join(kokYol, d.name);
+    for (const dosya of fs.readdirSync(klasor).sort()) {
+      if (!desen.test(dosya)) continue;
+      const ad = dosya.replace(/\.png$/, "");
+      if (fs.existsSync(path.join(klasor, `${ad}.webp`))) continue;
+      cikti.push({ slug: d.name, ad });
+    }
+  }
+  return cikti;
+}
+
+/** Geriye dönük yüzey: yalnız KAPAK adaylarının slug listesi. */
+export function adaylar(kok = GORSEL_KOK) {
+  return dosyaAdaylari(kok, DESENLER.kapak).map((g) => g.slug);
 }
 
 // ── KODLAMA + ① PİKSEL KAPISI ────────────────────────────────────────────────────────
@@ -221,31 +252,35 @@ export function enIyiWebp(pngYolu) {
 // ── ANA AKIŞ ─────────────────────────────────────────────────────────────────────────
 // `yaz=false` (varsayılan) → yalnız ölçer ve raporlar. Yazma AÇIK BİR BAYRAK ister:
 // varlık üreten bir betiğin kazara koşup repoyu değiştirmesi istenmez.
-export function donustur(slugListesi, { yaz = false, kok = GORSEL_KOK } = {}) {
+// Giriş ya düz slug (→ o klasörün kapağı, eski çağrı biçimi) ya da `{slug, ad}`.
+const girisNormalize = (g) => (typeof g === "string" ? { slug: g, ad: "kapak" } : g);
+
+export function donustur(liste, { yaz = false, kok = GORSEL_KOK } = {}) {
   const kokYol = yolaCevir(kok);
   const sonuclar = [];
-  for (const slug of slugListesi) {
-    const pngYolu = path.join(kokYol, slug, "kapak.png");
-    const webpYolu = path.join(kokYol, slug, "kapak.webp");
-    if (!fs.existsSync(pngYolu)) { sonuclar.push({ slug, durum: "ATLANDI", not: "kapak.png yok" }); continue; }
-    if (fs.existsSync(webpYolu)) { sonuclar.push({ slug, durum: "ATLANDI", not: "kapak.webp zaten var" }); continue; }
+  for (const giris of liste) {
+    const { slug, ad } = girisNormalize(giris);
+    const pngYolu = path.join(kokYol, slug, `${ad}.png`);
+    const webpYolu = path.join(kokYol, slug, `${ad}.webp`);
+    if (!fs.existsSync(pngYolu)) { sonuclar.push({ slug, ad, durum: "ATLANDI", not: `${ad}.png yok` }); continue; }
+    if (fs.existsSync(webpYolu)) { sonuclar.push({ slug, ad, durum: "ATLANDI", not: `${ad}.webp zaten var` }); continue; }
 
     const pngBoyut = fs.statSync(pngYolu).size;
     let aday;
     try {
       aday = enIyiWebp(pngYolu);
     } catch (e) {
-      sonuclar.push({ slug, durum: "HATA", not: e.message });
+      sonuclar.push({ slug, ad, durum: "HATA", not: e.message });
       continue;
     }
-    if (!aday) { sonuclar.push({ slug, durum: "RED", not: "hiçbir ayarda piksel-birebir çıkmadı" }); continue; }
+    if (!aday) { sonuclar.push({ slug, ad, durum: "RED", not: "hiçbir ayarda piksel-birebir çıkmadı" }); continue; }
     // ② kazanç kapısı
     if (aday.veri.length >= pngBoyut) {
-      sonuclar.push({ slug, durum: "RED", not: `kazanç yok (${aday.veri.length} ≥ ${pngBoyut})` });
+      sonuclar.push({ slug, ad, durum: "RED", not: `kazanç yok (${aday.veri.length} ≥ ${pngBoyut})` });
       continue;
     }
     if (!yaz) {
-      sonuclar.push({ slug, durum: "HAZIR", pngBoyut, webpBoyut: aday.veri.length, ayar: aday.ayar });
+      sonuclar.push({ slug, ad, durum: "HAZIR", pngBoyut, webpBoyut: aday.veri.length, ayar: aday.ayar });
       continue;
     }
 
@@ -255,10 +290,10 @@ export function donustur(slugListesi, { yaz = false, kok = GORSEL_KOK } = {}) {
     const pam = execFileSync("dwebp", ["-quiet", "-pam", webpYolu, "-o", "-"], { maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "ignore"] });
     if (diskten.length !== aday.veri.length || pikselMd5(pamCoz(pam)) !== aday.md5) {
       fs.rmSync(webpYolu, { force: true }); // yarım/bozuk dosya BIRAKILMAZ
-      sonuclar.push({ slug, durum: "HATA", not: "diske yazılan dosya doğrulamayı geçmedi, silindi" });
+      sonuclar.push({ slug, ad, durum: "HATA", not: "diske yazılan dosya doğrulamayı geçmedi, silindi" });
       continue;
     }
-    sonuclar.push({ slug, durum: "YAZILDI", pngBoyut, webpBoyut: aday.veri.length, ayar: aday.ayar, md5: aday.md5 });
+    sonuclar.push({ slug, ad, durum: "YAZILDI", pngBoyut, webpBoyut: aday.veri.length, ayar: aday.ayar, md5: aday.md5 });
   }
   return sonuclar;
 }
@@ -273,22 +308,31 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   }
   const argv = process.argv.slice(2);
   const yaz = argv.includes("--yaz");
+  const desenAdi = argv.includes("--tumu") ? "tumu" : argv.includes("--adim") ? "adim" : "kapak";
   const secilen = argv.filter((a) => !a.startsWith("--"));
-  const liste = secilen.length ? secilen : adaylar();
+  // Slug verildiyse eski davranış: o klasörlerin KAPAĞI. Desen bayrağıyla birlikte
+  // verilirse seçim slug'a daraltılır (ör. `--adim kombi-basinc-dusuyor`).
+  const liste = secilen.length
+    ? (desenAdi === "kapak"
+        ? secilen
+        : dosyaAdaylari(GORSEL_KOK, DESENLER[desenAdi]).filter((g) => secilen.includes(g.slug)))
+    : dosyaAdaylari(GORSEL_KOK, DESENLER[desenAdi]);
 
   if (!liste.length) {
-    console.log("✓ png-only kapak yok — çevrilecek bir şey bulunmadı.");
+    console.log(`✓ png-only dosya yok (desen: ${desenAdi}) — çevrilecek bir şey bulunmadı.`);
     process.exit(0);
   }
+  console.log(`Desen: ${desenAdi} · aday: ${liste.length} dosya${yaz ? "" : " (kuru koşu)"}\n`);
   const sonuclar = donustur(liste, { yaz });
   let toplamPng = 0, toplamWebp = 0;
   for (const s of sonuclar) {
+    const etiket = s.ad && s.ad !== "kapak" ? `${s.slug}/${s.ad}` : s.slug;
     if (s.durum === "YAZILDI" || s.durum === "HAZIR") {
       toplamPng += s.pngBoyut; toplamWebp += s.webpBoyut;
       const kazanc = Math.round((100 * (s.pngBoyut - s.webpBoyut)) / s.pngBoyut);
-      console.log(`${s.durum.padEnd(8)} ${s.slug}: ${s.pngBoyut} → ${s.webpBoyut} B (−%${kazanc}) ${s.ayar}`);
+      console.log(`${s.durum.padEnd(8)} ${etiket}: ${s.pngBoyut} → ${s.webpBoyut} B (−%${kazanc}) ${s.ayar}`);
     } else {
-      console.log(`${s.durum.padEnd(8)} ${s.slug}: ${s.not}`);
+      console.log(`${s.durum.padEnd(8)} ${etiket}: ${s.not}`);
     }
   }
   if (toplamPng) {

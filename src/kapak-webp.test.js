@@ -18,7 +18,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import zlib from "node:zlib";
-import { pngCoz, pamCoz, pikselMd5, adaylar, donustur, araclarVar } from "../scripts/kapak-webp.mjs";
+import { pngCoz, pamCoz, pikselMd5, adaylar, dosyaAdaylari, DESENLER, donustur, araclarVar } from "../scripts/kapak-webp.mjs";
 
 // ── Sentetik PNG üreteci ─────────────────────────────────────────────────────────────
 // Fikstür dosyası COMMIT ETMİYORUZ: ikili fikstür bozulduğunda kimse fark etmez ve
@@ -217,6 +217,67 @@ describe("aday taraması ve yazma kapıları", () => {
     const kok = kur();
     donustur(adaylar(kok), { yaz: false, kok });
     expect(fs.existsSync(path.join(kok, "png-only", "kapak.webp"))).toBe(false);
+  });
+});
+
+// ── ADIM/KONTROL KARELERİ (2 Eyl 2026) ───────────────────────────────────────────────
+// NE KORUYOR: kapsam genişlerken iki sessiz hata mümkün — ① desen fazla geniş kalıp
+// kapağı da "adım" sayması (kapak iki kez işlenirdi), ② desen fazla dar kalıp
+// `kontrol-0N`'i ıskalaması (build onu da çözüyor, gözden kaçardı). İkisi de build'i
+// kırmaz, testi kırmaz — tam olarak #110/#112'nin sessiz-düşüş sınıfı.
+describe("adım/kontrol kareleri — desen ve dosya düzeyi tarama", () => {
+  const kurAdim = () => {
+    const kok = fs.mkdtempSync(path.join(os.tmpdir(), "adim-test-"));
+    const yaz = (slug, dosyalar) => {
+      fs.mkdirSync(path.join(kok, slug), { recursive: true });
+      for (const [ad, veri] of Object.entries(dosyalar)) fs.writeFileSync(path.join(kok, slug, ad), veri);
+    };
+    const png = pngYap(RGB_PIKSEL);
+    yaz("rehber", {
+      "kapak.png": png, "kapak.webp": Buffer.from("varolan"),
+      "adim-01.png": png,
+      "adim-02.png": png, "adim-02.webp": Buffer.from("varolan"),
+      "kontrol-01.png": png,
+      "adim-3.png": png,            // iki haneli değil → desen dışı (build de böyle üretmiyor)
+      "notlar.txt": Buffer.from("x"),
+    });
+    return kok;
+  };
+
+  it("adım deseni: png VAR + webp YOK olanları, klasör/ad çifti olarak veriyor", () => {
+    expect(dosyaAdaylari(kurAdim(), DESENLER.adim)).toEqual([
+      { slug: "rehber", ad: "adim-01" },
+      { slug: "rehber", ad: "kontrol-01" },
+    ]);
+  });
+
+  it("adım deseni KAPAĞI kapsamıyor (çift işlem olmaz)", () => {
+    const kok = fs.mkdtempSync(path.join(os.tmpdir(), "adim-test-"));
+    fs.mkdirSync(path.join(kok, "rehber"));
+    fs.writeFileSync(path.join(kok, "rehber", "kapak.png"), pngYap(RGB_PIKSEL));
+    expect(dosyaAdaylari(kok, DESENLER.adim)).toEqual([]);
+    expect(dosyaAdaylari(kok, DESENLER.kapak)).toEqual([{ slug: "rehber", ad: "kapak" }]);
+  });
+
+  it("`--tumu` deseni hepsini toplar, mevcut webp'si olanı yine atlar", () => {
+    expect(dosyaAdaylari(kurAdim(), DESENLER.tumu).map((g) => g.ad)).toEqual([
+      "adim-01", "adim-3", "kontrol-01",
+    ]);
+  });
+
+  it("eski çağrı biçimi (düz slug) hâlâ KAPAĞI hedefliyor", () => {
+    // `donustur(["slug"])` çağrısı repoda ve alışkanlıkta var; kapsam genişledi diye
+    // sessizce başka bir dosyayı işlemeye başlaması regresyon olurdu.
+    const sonuc = donustur(["rehber"], { yaz: true, kok: kurAdim() });
+    expect(sonuc[0]).toMatchObject({ slug: "rehber", ad: "kapak", durum: "ATLANDI" });
+  });
+
+  it("{slug, ad} girişinde var olan webp'nin üzerine YAZILMIYOR", () => {
+    const kok = kurAdim();
+    const once = fs.readFileSync(path.join(kok, "rehber", "adim-02.webp"));
+    const sonuc = donustur([{ slug: "rehber", ad: "adim-02" }], { yaz: true, kok });
+    expect(sonuc[0].durum).toBe("ATLANDI");
+    expect(fs.readFileSync(path.join(kok, "rehber", "adim-02.webp")).equals(once)).toBe(true);
   });
 });
 
