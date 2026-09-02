@@ -4,6 +4,20 @@ description: "Kombinin su basıncı sürekli düşüyor, sık sık su mu ekliyor
 slug: "kombi-basinc-dusuyor"
 date: "2026-06-19"
 category: "Kombi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kuru bez"]
+steps:
+  - "Kombi ve petekler soğukken basınç göstergesini oku."
+  - "Doldurma musluğunu açıp basıncı soğukken 1–1.5 bara getir."
+  - "Doldurma musluğunu tam kapat."
+  - "Radyatör vanalarının altını, rakorları ve kombinin altını kuru bezle kontrol et."
+  - "Emniyet ventilinin dış tahliye borusundan su damlayıp damlamadığına bak."
+  - "Aynı göstergeyi bir de tesisat ısınmışken oku."
+  - "Sınırı aşan belirtilerde dur ve yetkili servis çağır."
 faq:
   - q: "Kombinin su basıncı neden sürekli düşer?"
     a: "En sık sebep tesisatta bir kaçaktır (radyatör vanası, rakor, kombi içi conta). Ayrıca genleşme tankının basıncını yitirmesi ve emniyet (tahliye) ventilinin su kaçırması da basıncı düşürür. Sürekli su eklemek geçici çözümdür; kaynak bulunmalıdır."
@@ -15,6 +29,14 @@ faq:
     a: "Radyatör vanalarının altını, tesisat rakorlarını ve kombinin altını kuru bezle kontrol et; ıslaklık/damla var mı bak. Görünür kaçak yoksa kombi içi olabilir — servis gerekir."
 images:
   coverAlt: "Kombi çizimi ve yanında ibresi düşük basınç göstergesi"
+  steps:
+    - "Basınç göstergesi çizimi; ibre, doğru aralığı gösteren mavi bandın altında duruyor"
+    - "Doldurma musluğu açık; oklar suyun boru içinden tesisata girdiğini gösteriyor, yanındaki gösterge ibresi banda giriyor"
+    - "Doldurma musluğunun kolu boruya dik konumda, yani tam kapalı; yanında onay işareti"
+    - "Boru rakoru çizimi; birleşme yerinin altında bir damla ve zeminde ıslaklık lekesi"
+    - "Emniyet ventili ve dışarı çıkan tahliye borusu; borunun ucundan su damlıyor"
+    - "Yan yana iki gösterge: soğukken ibre bantta, ısınınca bandın üstünde; yanlarında membranı yırtık genleşme tankı"
+    - "Servis çağırmayı gerektiren dört durumun listelendiği kart"
 ---
 
 Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sorun çoğu zaman küçük bir kaçaktan kaynaklanır ve kaynağı bulununca kalıcı çözülür. Bu yazıda nedenleri, güvenle yapabileceğin kontrolleri ve hangi noktadan sonra yetkili servis gerektiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -33,20 +55,21 @@ Kombine sık sık su ekliyorsun ama **basınç yine düşüyor**. Bu yaygın sor
 
 **5. Doldurma musluğu / çek valf.** Doldurma vanası tam kapanmazsa ya da çek valf arızalıysa basınç oynar.
 
-## Servisi aramadan önce kendin kontrol et
+## Adım adım
 
-1. **Basıncı düzelt.** Doldurma musluğundan **1–1.5 bara** getir (soğukken).
-2. **Görünür kaçak ara.** Radyatör vanalarının altı, rakorlar ve kombinin altı kuru mu? Bez gez, ıslaklık/damla var mı bak.
-3. **Emniyet tahliyesini kontrol et.** Kombinin dış tahliye borusundan su damlıyorsa ventil ya da genleşme tankı şüphesi.
-4. **Düşme hızını izle.** Yavaş mı (günlerde) yoksa hızlı mı (saatlerde) düşüyor — servise tarif et.
-5. **Isıtma–soğuma davranışı.** Isınınca aşırı yükselip soğuyunca düşüyorsa genleşme tankı şüphesi.
+**1. Önce soğukken oku.** Kombi ve petekler soğukken göstergeye bak. Sıcakken basınç zaten yükselir; sıcak okuma seni yanıltır. İbre, doğru aralığı gösteren bandın altındaysa basınç düşüktür.
 
-## Ne zaman mutlaka servis çağırmalısın?
+**2. Doldurma musluğunu aç.** Kombinin altındaki doldurma musluğunu yavaşça aç; su tesisata girer. Göstergeyi izleyerek soğukken **1–1.5 bara** getir.
 
-- Görünür kaçak yokken basınç **sürekli düşüyorsa** (kombi içi/genleşme tankı)
-- Emniyet ventilinden **sürekli su boşalıyorsa**
-- Isınınca basınç **çok yükselip** ventilden taşıyorsa (genleşme tankı)
-- Radyatör/tesisat kaçağı **gözle görülüyorsa** (tesisat işi)
+**3. Musluğu tam kapat.** Yarım kapalı kalan doldurma vanası basıncı kendiliğinden oynatır. Çek valf arızası da aynı sonucu verir.
+
+**4. Görünür kaçak ara.** Radyatör vanalarının altı, rakorlar ve kombinin altı kuru mu? Kuru bezle gez, ıslaklık ya da damla var mı bak. Tesisat kaçağı basıncı en çok düşüren nedendir.
+
+**5. Dış tahliyeye bak.** Emniyet ventilinin dışarı çıkan borusundan su damlıyorsa basınç oradan gidiyor demektir. Ventil ya da genleşme tankı şüphesi; ikisi de servis işi.
+
+**6. Isınınca ne olduğunu izle.** Aynı göstergeyi bir de tesisat ısındıktan sonra oku. Isınınca bandın üstüne çıkıp soğuyunca yine düşüyorsa genleşme tankı şüphesi güçlenir. Bu davranış kaçak aramakla çözülmez, parça şüphesidir.
+
+**7. Burada dur, servis çağır.** Görünür kaçak yokken basınç sürekli düşüyorsa, emniyet ventilinden sürekli su boşalıyorsa, ısınınca çok yükselip ventilden taşıyorsa ya da radyatör/tesisat kaçağı gözle görülüyorsa kendin uğraşma. Basıncın ne kadar sürede düştüğünü de söyle — günlerde mi, saatlerde mi. Bu tarif servisin doğru parçayla gelmesini sağlar.
 
 ## Tamir maliyeti ne kadar olur?
 
