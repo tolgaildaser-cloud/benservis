@@ -1,6 +1,34 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
-import DPPEkrani from "./DPPEkrani.jsx";
+
+// ——— KOD BÖLME, main.jsx'te açılan işin eksik kalan yarısı (2 Eyl 2026) ———
+// `main.jsx` 11 rotayı lazy'ye çevirmiş ve gerekçesini yazmıştı: *"ana sayfaya gelen
+// kullanıcı ... DPP'yi ... de indiriyordu — hiçbirini açmayacakken."* Orada `DPPPublicPage`
+// (/dpp/ rotası) lazy'ye alındı, ama uygulamanın İÇİNDEKİ DPP paneli — `DPPEkrani` —
+// App.jsx'ten STATİK import ediliyordu ve o kapı açık kaldı.
+//
+// 🔬 ÖLÇÜLEN BEDEL: `DPPEkrani`, `@supabase/supabase-js`'i ana chunk'a çeken TEK modüldü.
+// Supabase'i import eden üç dosya var (DPPEkrani · ServisPanel · ServisAdmin); diğer ikisi
+// zaten kendi parçasında. Yani tüm Supabase SDK'sı (auth + postgrest + storage + realtime +
+// phoenix) ana chunk'ın büyük bölümünü tutuyordu ve ana sayfaya gelen HERKES indiriyordu —
+// teşhis akışı Supabase'e hiç dokunmadığı hâlde (`/api/diagnose` serverless üstünden gider).
+//
+// ⚠️ SUSPENSE BURADA YEREL OLMAK ZORUNDA: `App` zaten main.jsx'teki Suspense'in içinde,
+// yani sınır konmazsa parça inerken TÜM uygulama "Yükleniyor…" ile değişirdi — kullanıcı
+// DPP'yi teşhis SONUCU ekranından açıyor ve o ekranı kaybederdi. Yerel sınır, yalnız
+// panelin yerini kaplar; arkadaki sonuç ekranı durur.
+const DPPEkrani = lazy(() => import("./DPPEkrani.jsx"));
+
+// Panel tam ekran bir overlay; fallback de öyle olmalı, yoksa tıklamadan sonra
+// ekranda hiçbir şey olmuyormuş gibi görünürdü. Spinner yok — main.jsx'in `Yukleniyor`
+// gerekçesi burada da geçerli: parça küçük, dönen ikon "bir şey yavaş" hissi verir.
+const DPPYukleniyor = () => (
+  <div style={{
+    position: "fixed", inset: 0, zIndex: 100, background: "rgba(15,23,42,.55)",
+    display: "flex", alignItems: "center", justifyContent: "center",
+    color: "#F8FAFC", fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontSize: 14,
+  }}>DPP Pasaport açılıyor…</div>
+);
 import { CIHAZLAR, MARKALAR, markalarForCihaz, cihazSlug, tabloBul } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
@@ -860,11 +888,13 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         />
       )}
       {showDPP && (
-        <DPPEkrani
-          initialSeriNo={dppInitialSeriNo}
-          teshisContext={adim === "sonuc" ? { cihaz, marka: efektifMarka } : null}
-          onKapat={() => { setShowDPP(false); setDppInitialSeriNo(""); }}
-        />
+        <Suspense fallback={<DPPYukleniyor />}>
+          <DPPEkrani
+            initialSeriNo={dppInitialSeriNo}
+            teshisContext={adim === "sonuc" ? { cihaz, marka: efektifMarka } : null}
+            onKapat={() => { setShowDPP(false); setDppInitialSeriNo(""); }}
+          />
+        </Suspense>
       )}
       <style>{CSS}</style>
       <div style={s.grain} />
