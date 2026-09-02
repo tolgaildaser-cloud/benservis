@@ -1,34 +1,13 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 
-// ——— KOD BÖLME, main.jsx'te açılan işin eksik kalan yarısı (2 Eyl 2026) ———
-// `main.jsx` 11 rotayı lazy'ye çevirmiş ve gerekçesini yazmıştı: *"ana sayfaya gelen
-// kullanıcı ... DPP'yi ... de indiriyordu — hiçbirini açmayacakken."* Orada `DPPPublicPage`
-// (/dpp/ rotası) lazy'ye alındı, ama uygulamanın İÇİNDEKİ DPP paneli — `DPPEkrani` —
-// App.jsx'ten STATİK import ediliyordu ve o kapı açık kaldı.
-//
-// 🔬 ÖLÇÜLEN BEDEL: `DPPEkrani`, `@supabase/supabase-js`'i ana chunk'a çeken TEK modüldü.
-// Supabase'i import eden üç dosya var (DPPEkrani · ServisPanel · ServisAdmin); diğer ikisi
-// zaten kendi parçasında. Yani tüm Supabase SDK'sı (auth + postgrest + storage + realtime +
-// phoenix) ana chunk'ın büyük bölümünü tutuyordu ve ana sayfaya gelen HERKES indiriyordu —
-// teşhis akışı Supabase'e hiç dokunmadığı hâlde (`/api/diagnose` serverless üstünden gider).
-//
-// ⚠️ SUSPENSE BURADA YEREL OLMAK ZORUNDA: `App` zaten main.jsx'teki Suspense'in içinde,
-// yani sınır konmazsa parça inerken TÜM uygulama "Yükleniyor…" ile değişirdi — kullanıcı
-// DPP'yi teşhis SONUCU ekranından açıyor ve o ekranı kaybederdi. Yerel sınır, yalnız
-// panelin yerini kaplar; arkadaki sonuç ekranı durur.
-const DPPEkrani = lazy(() => import("./DPPEkrani.jsx"));
-
-// Panel tam ekran bir overlay; fallback de öyle olmalı, yoksa tıklamadan sonra
-// ekranda hiçbir şey olmuyormuş gibi görünürdü. Spinner yok — main.jsx'in `Yukleniyor`
-// gerekçesi burada da geçerli: parça küçük, dönen ikon "bir şey yavaş" hissi verir.
-const DPPYukleniyor = () => (
-  <div style={{
-    position: "fixed", inset: 0, zIndex: 100, background: "rgba(15,23,42,.55)",
-    display: "flex", alignItems: "center", justifyContent: "center",
-    color: "#F8FAFC", fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontSize: 14,
-  }}>DPP Pasaport açılıyor…</div>
-);
+// ⛔ DPP PANELİ (`DPPEkrani`) BU EKRANDAN KALDIRILDI — 2 Eyl 2026, Tolga: "ölü kodu temizle".
+// Panel Haziran pivotuyla (`2730fac` — "havuz/DPP/ikinci-el ana akıştan çıktı") erişilemez
+// hâle gelmişti: banner ve "Cihazı Kaydet" butonu kaldırılmış, ama `showDPP` state'i,
+// kapatma handler'ı, `dppBanner*` stilleri ve 2 Eyl'de eklenen lazy sınırı geride kalmıştı.
+// `setShowDPP(true)` HİÇBİR YERDE çağrılmıyordu → blok hiç render edilmiyordu.
+// ✅ `/dpp/` rotası (`DPPPublicPage`) AYRI ve CANLI — ona dokunulmadı.
+// 📌 `DPPEkrani.jsx` dosyası duruyor: Faz 3 iskeleti + #114 fatura-sızıntı testi onu okuyor.
 import { CIHAZLAR, MARKALAR, markalarForCihaz, cihazSlug, tabloBul } from "./constants.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
@@ -237,8 +216,6 @@ export default function App() {
   // Sunucunun IP'den tahmin ettiği il (Vercel coğrafi başlığı; izin istemi YOK, çerez YOK).
   // İki yerde kullanılır: CTA'yı kişiselleştirmek + servis ekranında il seçicisini ön-seçmek.
   const [ipIl, setIpIl] = useState(null);
-  const [showDPP, setShowDPP] = useState(false);
-  const [dppInitialSeriNo, setDppInitialSeriNo] = useState("");
 
   // --- Sesli girdi (STT) — ses SAKLANMAZ: kaydet → /api/stt (Whisper) → belirtiye ekle ---
   const [sesDurumu, setSesDurumu] = useState("bosta"); // "bosta" | "kaydediyor" | "isliyor"
@@ -681,7 +658,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
   // yolunun adres yazmasi gerekmiyor.
   const formuTemizle = () => {
     setSonuc(null); setBelirti(""); setMarka(""); setMarkaDiger(""); setYas(""); setCihaz("");
-    setAdim("form"); setShowServisler(false); setTeshisLogId(null); setShowDPP(false); setDppInitialSeriNo("");
+    setAdim("form"); setShowServisler(false); setTeshisLogId(null);
     onbellekRef.current = null; // YK #99 — teşhis önbelleğinin TEK sıfırlama yolu burasıdır
   };
 
@@ -886,15 +863,6 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
           teshisLogId={teshisLogId}
           baslangicIl={ipIl}
         />
-      )}
-      {showDPP && (
-        <Suspense fallback={<DPPYukleniyor />}>
-          <DPPEkrani
-            initialSeriNo={dppInitialSeriNo}
-            teshisContext={adim === "sonuc" ? { cihaz, marka: efektifMarka } : null}
-            onKapat={() => { setShowDPP(false); setDppInitialSeriNo(""); }}
-          />
-        </Suspense>
       )}
       <style>{CSS}</style>
       <div style={s.grain} />
@@ -1641,24 +1609,6 @@ const s = {
   footHukukLink: { color: FAINT, textDecoration: "none", fontWeight: 600 },
   footSocial: { display: "flex", justifyContent: "center", gap: 18, marginTop: 12 },
   footSocialLink: { color: FAINT, display: "inline-flex", transition: "color .15s ease, transform .15s ease" },
-  dppBanner: {
-    position: "relative", zIndex: 1, marginBottom: 14,
-    background: SURFACE, border: `1px solid ${HAIR}`, borderRadius: 14,
-    padding: "13px 16px", display: "flex", justifyContent: "space-between",
-    alignItems: "center", gap: 12, flexWrap: "wrap",
-  },
-  dppBannerText: { fontSize: 13, fontWeight: 700, color: INK },
-  dppBannerSag: { display: "flex", gap: 8, flex: 1, maxWidth: 280 },
-  dppBannerInput: {
-    flex: 1, padding: "9px 12px", borderRadius: 10,
-    border: `1px solid ${HAIR}`, background: BG, fontSize: 13,
-    fontFamily: "'Hanken Grotesk', sans-serif", color: INK, letterSpacing: "0.04em",
-  },
-  dppBannerBtn: {
-    padding: "9px 16px", borderRadius: 10, border: "none",
-    background: INK, color: "#fff", fontSize: 13, fontWeight: 700,
-    fontFamily: "'Hanken Grotesk', sans-serif", whiteSpace: "nowrap", cursor: "pointer",
-  },
   ikinciElBanner: {
     position: "relative", zIndex: 1,
     display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10,
