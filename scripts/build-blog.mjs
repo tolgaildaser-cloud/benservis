@@ -491,6 +491,10 @@ const KILAVUZ_CTA = (cihazSlug, kaynak) =>
 const KOPRU_CIHAZ = {
   "Buzdolabı": "buzdolabi",
   "Çamaşır makinesi": "camasir-makinesi",
+  // 3 Eyl 2026 — kurutma frontmatter'ı normalize edilirse (PAZ'ın alanı) köprü hazır olsun
+  // diye tabloda duruyor; BUGÜNKÜ 6 yazının hiçbirinin kategorisi bu değil, eşleşmeyi
+  // aşağıdaki `KURUTMA_ONEK` kuralı sağlıyor.
+  "Kurutma Makinesi": "kurutma-makinesi",
   "Bulaşık makinesi": "bulasik-makinesi",
   "Klima": "klima",
   "Kombi": "kombi-termosifon",
@@ -514,7 +518,25 @@ const KOPRU_CIHAZ_SLUG = Object.fromEntries(
 //    kalmasın. Yeni bir cihaz kategorisi eklendiğinde doğru hamle burayı değil
 //    KOPRU_CIHAZ'ı büyütmektir.
 const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(slugify));
-const kopruCihazSlug = (p) => KOPRU_CIHAZ_SLUG[slugify(p.category)] || "";
+// ── KURUTMA: SLUG ÖN EKİ (21 Ağu'da GRUPLAMAYA girdi, KÖPRÜYE girmemişti) ─────────────
+// 21 Ağu'da kurutma ayrı cihaz oldu ve `blogGrubu()` slug ön ekinden kurutma grubuna
+// yönlendirmeye başladı. Aynı kural KÖPRÜYE İŞLENMEDİ: `kopruCihazSlug` yalnız
+// `p.category`'ye bakıyordu, 6 kurutma yazısının 5'inin kategorisi "Çamaşır makinesi",
+// 1'i "Genel". Sonuç 13 gün boyunca canlıda şuydu — build yeşil, uyarı yok:
+//   · 5 yazı köprüyü `?cihaz=camasir-makinesi` ile basıyordu → form YANLIŞ CİHAZLA açılıyor,
+//     tahmini tutar çamaşır makinesi tarifesinden çıkıyordu (kurutmanın Supabase'de KENDİ
+//     13 satırı var, App.jsx:131) → kullanıcı yanlış rakam görüyordu.
+//   · 1 yazı (`kurutma-makinesi-kurutmuyor`) hiç cihaz taşımıyordu → ilk-ekran köprüsü
+//     HİÇ basılmıyordu (GSC'de 41 gösterim).
+// Kodun kendi ilkesi bunu zaten yasaklıyordu: "Yanlış ön-doldurma, ön-doldurmamaktan kötüdür."
+// ⛔ İçeriğe/frontmatter'a dokunulmadı (PAZ'ın alanı) — düzeltme eşleşme mantığında.
+// Ön ek TEK KAYNAK: `blogGrubu()` de aşağıda bunu kullanır, ikisi bir daha ayrışamaz;
+// üstelik altta BUILD KAPISI ikisinin hizasını her koşuda doğruluyor.
+const KURUTMA_ONEK = "kurutma-makinesi-";
+const kopruCihazSlug = (p) =>
+  (p.slug?.startsWith(KURUTMA_ONEK) ? "kurutma-makinesi" : "") ||
+  KOPRU_CIHAZ_SLUG[slugify(p.category)] ||
+  "";
 // Yazı slug'ı → o cihazın HIZLI BELİRTİ listesindeki karşılık (App.jsx `BELIRTILER`).
 // ⛔ Bulanık eşleştirme YAPILMADI, tablo elle kürasyon: "kombi-yanmiyor" listedeki hiçbir
 // belirtiye tam oturmuyor (en yakını "petekler ısınmıyor" ama aynı şey değil) → yazılmadı,
@@ -551,6 +573,16 @@ const KOPRU_ARIZA = {
   "lg-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "samsung-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "camasir-makinesi-isik-yanip-sonuyor": "hata-kodu-veriyor", // yazının kendi konusu: yanıp sönme = hata kodu
+  // ── KURUTMA MAKİNESİ (3 Eyl 2026) ────────────────────────────────────────────────
+  // Cihaz köprüsü bugün açıldığı için belirti eşleşmesi de ilk kez yazılabildi. Beşi de
+  // App.jsx'in KENDİ listesinden birebir çıktı (BELIRTILER + EK_BELIRTI["Kurutma Makinesi"]),
+  // uydurma slug yok. 6. yazı (`kurutma-makinesi-ne-kadar-elektrik-harcar`) bilerek DIŞARIDA:
+  // tüketim yazısı, tek bir belirtiye oturmuyor → yalnız cihaz taşır (kürasyon ilkesi aynen).
+  "kurutma-makinesi-kurutmuyor": "kurutmuyor-nem-kaliyor",
+  "kurutma-makinesi-isitmiyor": "isitmiyor-soguk-ufluyor",
+  "kurutma-makinesi-su-tanki-dolu-uyarisi": "su-tanki-dolu-uyarisi",
+  "kurutma-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "kurutma-makinesi-filtre-ve-kondenser-temizligi": "filtre-kondenser-tikali",
   "buzdolabi-sogutmuyor-nedenleri": "sogutmuyor",
   "buzdolabi-buzlanma-yapiyor": "buzlanma-yapiyor",
   "no-frost-buzdolabi-alt-bolme-sogutmuyor": "sogutmuyor",
@@ -619,11 +651,16 @@ const KOPRU_ARIZA = {
   "siemens-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "vestel-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "vestel-camasir-makinesi-e03-hatasi": "hata-kodu-veriyor",
-  // Kurutma yazıları `category: Çamaşır makinesi` taşıyor → çözen tarafta cihaz
-  // "Çamaşır Makinesi" olur. "Hata kodu veriyor" o cihazın EK_BELIRTI'sinde var;
-  // kurutmaya ÖZEL belirtiler (su tankı · filtre/kondenser) bu cihazda çözülmediği
-  // için o yazılar cihaz ön-seçimiyle yetinmeye devam eder.
-  "kurutma-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  // 🔁 3 Eyl 2026 — BU YORUM HATANIN KENDİSİYDİ, DÜZELTİLDİ. Eski hâli şunu diyordu:
+  // *"Kurutma yazıları `category: Çamaşır makinesi` taşıyor → çözen tarafta cihaz
+  // 'Çamaşır Makinesi' olur … kurutmaya ÖZEL belirtiler bu cihazda çözülmediği için o
+  // yazılar cihaz ön-seçimiyle yetinir."* Yani belirtinin düşmesi doğru teşhis edilmiş
+  // ama SEBEBİ veri gerçeği sanılmıştı; oysa cihazın çamaşır makinesi olması BUG'dı.
+  // Köprü artık kurutmayı kendi cihazına yolluyor → beş kurutma belirtisi yukarıda açıldı
+  // ve `kurutma-makinesi-hata-kodlari` satırı oraya taşındı (burada mükerrer kalmıştı).
+  // ⚠️ `arcelik-kurutma-makinesi-hata-kodlari` ön eki tutmadığı için HÂLÂ çamaşır grubunda
+  //    (marka ön ekli tek kurutma yazısı) — bulanık eşleştirmeye açmamak için dokunulmadı,
+  //    kalem PAZ'ın frontmatter normalizasyonuna bağlı.
   "arcelik-kurutma-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "buzdolabi-hata-kodlari": "hata-kodu-veriyor",
   "arcelik-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
@@ -686,7 +723,14 @@ function servisHref(p) {
 }
 // Cihaz adı kullanıcıya görünen metinde geçecek → blog kategorisi zaten insan diliyle
 // yazılmış ("Çamaşır makinesi"), ikinci bir görünen-ad tablosu tutmuyoruz.
-const kopruCihazAdi = (p) => (kopruCihazSlug(p) ? String(p.category).toLocaleLowerCase("tr") : "");
+// ⚠️ Bugün yalnız TRUTHINESS KAPISI olarak kullanılıyor (görünen cümle 15 Ağu'da Tolga'nın
+// talimatıyla kaldırıldı, buton kaldı). Yine de kaynağı köprüyle hizaladım: `p.category`
+// kurutma yazılarında "çamaşır makinesi" der; cümle bir gün geri gelirse yazının üstünde
+// yanlış cihaz adı basardı.
+const kopruCihazAdi = (p) =>
+  kopruCihazSlug(p)
+    ? String(p.slug?.startsWith(KURUTMA_ONEK) ? "Kurutma Makinesi" : p.category).toLocaleLowerCase("tr")
+    : "";
 
 // ① İLK EKRAN — "cevabı bul, çık" kullanıcısını sona inmeden yakalayan tek satır.
 // Kurul notu: yazının ilk ekranına bağlamlı bir satır konmalı. Bağlam yoksa satır HİÇ
@@ -1317,7 +1361,9 @@ const yaziFotosu = (p) => {
 // kurutma grubuna düşer. Deterministik, bulanık eşleştirme yok, tek satırda geri alınabilir.
 // ⛔ `bulasik-makinesi-kurutmuyor` BİLEREK dışarıda: o bulaşık makinesi yazısı, ön ek tutmuyor.
 // 📌 PAZ frontmatter'ları normalize edince bu kural gereksizleşir ve silinir.
-const KURUTMA_ONEK = "kurutma-makinesi-";
+// 🔁 3 Eyl 2026: `KURUTMA_ONEK` buradan YUKARI taşındı (KOPRU_CIHAZSIZ'in hemen altına).
+//    Sebep: kural 13 gün boyunca YALNIZ bu fonksiyonda vardı, köprüde yoktu — gruplama
+//    "Kurutma Makinesi" derken köprü "Çamaşır Makinesi" basıyordu. Tek tanım = tek hüküm.
 function blogGrubu(p) {
   if (p.slug?.startsWith(KURUTMA_ONEK)) return "Kurutma Makinesi";
   const s = slugify(p.category || "");
@@ -1326,6 +1372,38 @@ function blogGrubu(p) {
   if (CIHAZ_SLUG.has(s)) return CIHAZ_SLUG.get(s); // birebir cihaz adı
   return BLOG_KAT_ESLES[s] || GENEL;
 }
+
+// ── GRUP ↔ KÖPRÜ HİZA KAPISI (build'i durdurur) — 3 Eyl 2026 ────────────────────────────
+// Bu kapı, bugün bulunan hatanın SINIFINI kapatır; tek bir kurutma yamasını değil.
+// Sitede bir yazının cihazını söyleyen İKİ ayrı yol var ve 13 gün boyunca ayrı hüküm
+// verdiler: `blogGrubu()` (kategori sayfası, breadcrumb, kapak fotoğrafı) "Kurutma
+// Makinesi" derken `kopruCihazSlug()` (köprü/servis/sticky adresleri) "camasir-makinesi"
+// basıyordu. İkisi de kendi içinde tutarlıydı, build yeşildi, tek uyarı çıkmadı — kullanıcı
+// ise formu YANLIŞ CİHAZLA açıyordu. #110 (köprü) ve #112 (sayaç) ile aynı sınıf.
+// ⛔ Kapı taksonomiye hüküm vermez (PAZ'ın alanı): kategori dizesinin ne olduğuna değil,
+//    yalnız "iki yol aynı cihazı mı söylüyor" sorusuna bakar.
+// 📌 GENEL/SÜRDÜRÜLEBİLİRLİK/KURUMSAL grupları cihaz değildir; onlarda köprünün cihazsız
+//    olması BEKLENEN davranıştır (kapı orada susar).
+function kopruGrupHizasiDenetimi(posts) {
+  const grupSlug = new Map(KATEGORILER.map((k) => [k.ad, k.slug])); // cihaz grupları
+  const uyumsuz = [];
+  for (const p of posts) {
+    const beklenen = grupSlug.get(blogGrubu(p));
+    if (!beklenen) continue; // konu grubu (Genel/Sürdürülebilirlik) — cihaz aranmaz
+    const basilan = kopruCihazSlug(p);
+    if (basilan !== beklenen) uyumsuz.push({ slug: p.slug, beklenen, basilan: basilan || "(YOK)" });
+  }
+  if (uyumsuz.length) {
+    console.error("[build-blog] ✗ GRUP ↔ KÖPRÜ HİZA DENETİMİ BAŞARISIZ — yazının grubu ile köprüsü FARKLI cihaz söylüyor:");
+    for (const u of uyumsuz) console.error(`  · ${u.slug}: grup "${u.beklenen}" ↔ köprü "${u.basilan}"`);
+    console.error("  Yanlış ön-doldurma, ön-doldurmamaktan kötüdür: kullanıcı formu yanlış cihazla açar,");
+    console.error("  tahmini tutar yanlış tarifeden çıkar. KOPRU_CIHAZ / KURUTMA_ONEK ile hizala.");
+    process.exit(1);
+  }
+  const cihazli = posts.filter((p) => grupSlug.has(blogGrubu(p)));
+  console.log(`[build-blog] ✓ grup ↔ köprü hizası: ${cihazli.length} cihaz yazısının tamamında iki yol AYNI cihazı söylüyor.`);
+}
+kopruGrupHizasiDenetimi(posts); // fail-fast: gruplama ile köprü bir daha ayrışamaz
 
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;

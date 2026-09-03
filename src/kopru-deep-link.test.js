@@ -53,8 +53,24 @@ const slugify = (s) =>
 const KOPRU_CIHAZ_SLUG = Object.fromEntries(
   Object.entries(KOPRU_CIHAZ).map(([ad, slug]) => [slugify(ad), slug])
 );
-// Kategori dizesinden cihaz slug'ı — build-blog'daki `kopruCihazSlug` ile aynı sözleşme.
+// Kategori dizesinden cihaz slug'ı — build-blog'daki `kopruCihazSlug`ın KATEGORİ ayağı.
 const kategoriCihaz = (kategori) => KOPRU_CIHAZ_SLUG[slugify(kategori)] || "";
+
+// ── 3 Eyl 2026: ÖN EK AYAĞI ─────────────────────────────────────────────────────────────
+// Köprü artık yalnız `category`ye bakmıyor: slug'ı `kurutma-makinesi-` ile başlayan yazı,
+// kategorisi ne derse desin kurutma cihazına gider (frontmatter'da 5'i "Çamaşır makinesi",
+// 1'i "Genel" yazıyor — o metadata PAZ'ın alanı). Bu test dosyası üreteni İTHAL EDEMİYOR
+// (build-blog.mjs import edilince koşuyor), o yüzden sözleşmeyi AYNADAN ölçer; aynanın
+// kaymaması için ön ek dizesi kaynaktan OKUNUR, elle kopyalanmaz.
+const KURUTMA_ONEK = (() => {
+  const src = readFileSync(new URL("../scripts/build-blog.mjs", import.meta.url), "utf8");
+  const m = src.match(/const KURUTMA_ONEK = "([^"]+)";/);
+  if (!m) throw new Error("build-blog.mjs içinde KURUTMA_ONEK bulunamadı — köprünün ön ek ayağı taşınmış olabilir.");
+  return m[1];
+})();
+// build-blog'daki `kopruCihazSlug(p)` ile BİREBİR aynı sıra: önce ön ek, sonra kategori.
+const yaziCihaz = (y) =>
+  (y.slug?.startsWith(KURUTMA_ONEK) ? "kurutma-makinesi" : "") || kategoriCihaz(y.category);
 // Cihazı BİLEREK olmayan kategoriler (build-blog'daki `KOPRU_CIHAZSIZ` ile aynı liste).
 const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(slugify));
 
@@ -83,10 +99,10 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
 
   it("basılan her ariza değeri kendi cihazında bir belirtiye çözülür (ölü slug yok)", () => {
     // Cihazı olmayan yazıda `ariza` zaten basılmaz; tabloyu yazının kategorisiyle eşleyerek denetle.
-    const kategori = Object.fromEntries(yazilar.map((y) => [y.slug, y.category]));
+    const yaziyla = Object.fromEntries(yazilar.map((y) => [y.slug, y]));
     const olu = [];
     for (const [yaziSlug, ariza] of Object.entries(KOPRU_ARIZA)) {
-      const cihazSlug = kategoriCihaz(kategori[yaziSlug]);
+      const cihazSlug = yaziyla[yaziSlug] ? yaziCihaz(yaziyla[yaziSlug]) : "";
       // Yazısı silinmiş/kategorisi değişmiş kayıt da bir ayrışmadır — ayrıca raporlanır.
       if (!cihazSlug) { olu.push(`${yaziSlug} → cihaz bağlamı yok (yazı silindi ya da kategorisi değişti)`); continue; }
       const cihaz = CIHAZ_SLUG[cihazSlug];
@@ -113,7 +129,7 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
   // yeşil, build yeşil. Aşağıdaki iki test o kör noktayı kapatır.
   it("her yazının kategorisi ya cihaza eşlenmiş ya da BİLEREK cihazsız", () => {
     const kararsiz = [...new Set(
-      yazilar.filter((y) => !kategoriCihaz(y.category) && !KOPRU_CIHAZSIZ.has(slugify(y.category)))
+      yazilar.filter((y) => !yaziCihaz(y) && !KOPRU_CIHAZSIZ.has(slugify(y.category)))
         .map((y) => y.category)
     )];
     expect(kararsiz, "bu kategoride ilk-ekran köprüsü HİÇ basılmaz — KOPRU_CIHAZ'a ya da KOPRU_CIHAZSIZ'a karar yaz").toEqual([]);
@@ -128,6 +144,37 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
     // Cihazsız kategori yine boş dönmeli — normalize etmek kapsamı genişletmez.
     expect(kategoriCihaz("Genel")).toBe("");
     expect(kategoriCihaz("Sürdürülebilirlik")).toBe("");
+  });
+
+  // ── 3 EYL 2026 REGRESYON KİLİDİ — KURUTMA YANLIŞ CİHAZA GİDİYORDU ──────────────────
+  // 21 Ağu'da kurutma ayrı cihaz oldu; slug ön eki kuralı GRUPLAMAYA (`blogGrubu`) girdi
+  // ama KÖPRÜYE girmedi. 13 gün boyunca canlıda: 5 kurutma yazısı köprüyü
+  // `?cihaz=camasir-makinesi` ile basıyordu → form yanlış cihazla açılıyor, tahmini tutar
+  // kurutmanın kendi tarifesi yerine çamaşır makinesininkinden çıkıyordu. Build yeşildi,
+  // tek uyarı yoktu — bu testler o sessizliği bitirir.
+  it("kurutma yazıları KENDİ cihazına gider (kategorileri 'Çamaşır makinesi' olsa bile)", () => {
+    const kurutma = yazilar.filter((y) => y.slug.startsWith(KURUTMA_ONEK));
+    expect(kurutma.length, "kurutma yazısı hiç bulunamadı — test kör noktaya düşmüş olabilir").toBeGreaterThan(0);
+    const sapan = kurutma.filter((y) => yaziCihaz(y) !== "kurutma-makinesi")
+      .map((y) => `${y.slug} → ${yaziCihaz(y) || "(cihaz YOK)"}`);
+    expect(sapan, "kurutma yazısı başka cihazın formunu açıyor — yanlış tarife, yanlış tutar").toEqual([]);
+  });
+
+  it("kurutmanın kendi belirtileri App tarafında çözülür (çamaşır makinesinde çözülmezdi)", () => {
+    // Hatanın somut bedeli buydu: bu üç belirti "Çamaşır Makinesi"nde karşılıksız olduğu
+    // için ya hiç basılmıyor ya da basılsa boş açılıyordu.
+    expect(belirtiCoz("Kurutma Makinesi", "kurutmuyor-nem-kaliyor")).toBe("Kurutmuyor / nem kalıyor");
+    expect(belirtiCoz("Kurutma Makinesi", "isitmiyor-soguk-ufluyor")).toBe("Isıtmıyor / soğuk üflüyor");
+    expect(belirtiCoz("Kurutma Makinesi", "su-tanki-dolu-uyarisi")).toBe("Su tankı dolu uyarısı");
+    expect(belirtiCoz("Kurutma Makinesi", "filtre-kondenser-tikali")).toBe("Filtre/kondenser tıkalı");
+    // Sızma kapısı aynen duruyor: bunlar çamaşır makinesinin belirtisi DEĞİL.
+    expect(belirtiCoz("Çamaşır Makinesi", "su-tanki-dolu-uyarisi")).toBe("");
+  });
+
+  it("ön ek kuralı bulanık değil: 'kurutma' geçen her yazıyı kapmaz", () => {
+    // 21 Ağu'nun kendi şerhi: `bulasik-makinesi-kurutmuyor` BİLEREK dışarıda.
+    const bulasik = yazilar.find((y) => y.slug === "bulasik-makinesi-kurutmuyor");
+    if (bulasik) expect(yaziCihaz(bulasik)).toBe("bulasik-makinesi");
   });
 
   it("#68 ③ vakası: Tolga'nın açtığı yazı belirti taşır", () => {
