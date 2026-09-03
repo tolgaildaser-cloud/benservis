@@ -62,15 +62,26 @@ const kategoriCihaz = (kategori) => KOPRU_CIHAZ_SLUG[slugify(kategori)] || "";
 // 1'i "Genel" yazıyor — o metadata PAZ'ın alanı). Bu test dosyası üreteni İTHAL EDEMİYOR
 // (build-blog.mjs import edilince koşuyor), o yüzden sözleşmeyi AYNADAN ölçer; aynanın
 // kaymaması için ön ek dizesi kaynaktan OKUNUR, elle kopyalanmaz.
+const BUILD_BLOG_SRC = readFileSync(new URL("../scripts/build-blog.mjs", import.meta.url), "utf8");
 const KURUTMA_ONEK = (() => {
-  const src = readFileSync(new URL("../scripts/build-blog.mjs", import.meta.url), "utf8");
-  const m = src.match(/const KURUTMA_ONEK = "([^"]+)";/);
+  const m = BUILD_BLOG_SRC.match(/const KURUTMA_ONEK = "([^"]+)";/);
   if (!m) throw new Error("build-blog.mjs içinde KURUTMA_ONEK bulunamadı — köprünün ön ek ayağı taşınmış olabilir.");
   return m[1];
 })();
-// build-blog'daki `kopruCihazSlug(p)` ile BİREBİR aynı sıra: önce ön ek, sonra kategori.
-const yaziCihaz = (y) =>
-  (y.slug?.startsWith(KURUTMA_ONEK) ? "kurutma-makinesi" : "") || kategoriCihaz(y.category);
+// 3 Eyl 2026 — marka ön ekli kurutma yazıları (`arcelik-…`) ön eki tutmadığı için ELLE
+// kürasyonla eklendi (Tolga: "arçelik kurutma yazısını da düzelt"). Ayna bu kümeyi de
+// kaynaktan okur; elle kopyalansaydı küme büyüdüğünde test sessizce eski hükmü ölçerdi.
+const KURUTMA_SABIT = (() => {
+  const m = BUILD_BLOG_SRC.match(/const KURUTMA_SABIT = new Set\(\[([\s\S]*?)\]\);/);
+  if (!m) throw new Error("build-blog.mjs içinde KURUTMA_SABIT bulunamadı — kürasyon kümesi taşınmış olabilir.");
+  const uyeler = [...m[1].matchAll(/"([^"]+)"/g)].map((x) => x[1]);
+  if (!uyeler.length) throw new Error("KURUTMA_SABIT boş okundu — ayna kör noktaya düşerdi.");
+  return new Set(uyeler);
+})();
+// build-blog'daki `kurutmaYazisi(p)` ile BİREBİR aynı yüklem.
+const kurutmaYazisi = (y) => Boolean(y.slug) && (y.slug.startsWith(KURUTMA_ONEK) || KURUTMA_SABIT.has(y.slug));
+// build-blog'daki `kopruCihazSlug(p)` ile BİREBİR aynı sıra: önce kurutma, sonra kategori.
+const yaziCihaz = (y) => (kurutmaYazisi(y) ? "kurutma-makinesi" : "") || kategoriCihaz(y.category);
 // Cihazı BİLEREK olmayan kategoriler (build-blog'daki `KOPRU_CIHAZSIZ` ile aynı liste).
 const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(slugify));
 
@@ -153,11 +164,32 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
   // kurutmanın kendi tarifesi yerine çamaşır makinesininkinden çıkıyordu. Build yeşildi,
   // tek uyarı yoktu — bu testler o sessizliği bitirir.
   it("kurutma yazıları KENDİ cihazına gider (kategorileri 'Çamaşır makinesi' olsa bile)", () => {
-    const kurutma = yazilar.filter((y) => y.slug.startsWith(KURUTMA_ONEK));
+    const kurutma = yazilar.filter((y) => kurutmaYazisi(y));
     expect(kurutma.length, "kurutma yazısı hiç bulunamadı — test kör noktaya düşmüş olabilir").toBeGreaterThan(0);
     const sapan = kurutma.filter((y) => yaziCihaz(y) !== "kurutma-makinesi")
       .map((y) => `${y.slug} → ${yaziCihaz(y) || "(cihaz YOK)"}`);
     expect(sapan, "kurutma yazısı başka cihazın formunu açıyor — yanlış tarife, yanlış tutar").toEqual([]);
+  });
+
+  // ── 3 EYL 2026 · İKİNCİ TUR (Tolga: "arçelik kurutma yazısını da düzelt") ────────────
+  // İlk tur ön eki tutan 6 yazıyı kurtardı ama MARKA ÖN EKLİ ikisini kaçırdı; ikisinin de
+  // hem grubu hem köprüsü "çamaşır makinesi" dediği için hiza kapısı da susuyordu.
+  // Bu test o kör noktayı adıyla kilitler.
+  it("konusu kurutma olan HİÇBİR yazı başka cihaza düşmez (marka ön ekliler dahil)", () => {
+    const izli = yazilar.filter((y) => /kurutma[- ]makinesi/i.test(y.slug));
+    expect(izli.length, "kurutma izli yazı bulunamadı — ayna bozulmuş olabilir").toBeGreaterThan(6);
+    const sapan = izli.filter((y) => yaziCihaz(y) !== "kurutma-makinesi").map((y) => `${y.slug} → ${yaziCihaz(y) || "(YOK)"}`);
+    expect(sapan, "kurutma yazısı hâlâ başka cihazın formunu açıyor").toEqual([]);
+  });
+
+  it("kürasyon kümesi kaynakla senkron: her KURUTMA_SABIT üyesi gerçekten var ve ön eki tutmuyor", () => {
+    // Ölü satır (silinmiş yazı) ve gereksiz satır (ön eki zaten tutan yazı) ikisi de
+    // kümenin çürümesidir — sessizce büyüyen bir istisna listesi kimsenin okumadığı listedir.
+    const mevcut = new Set(yazilar.map((y) => y.slug));
+    const olu = [...KURUTMA_SABIT].filter((s) => !mevcut.has(s));
+    const gereksiz = [...KURUTMA_SABIT].filter((s) => s.startsWith(KURUTMA_ONEK));
+    expect(olu, "KURUTMA_SABIT'te olmayan yazı var — küme çürümüş").toEqual([]);
+    expect(gereksiz, "bu satır gereksiz: ön ek kuralı zaten yakalıyor").toEqual([]);
   });
 
   it("kurutmanın kendi belirtileri App tarafında çözülür (çamaşır makinesinde çözülmezdi)", () => {

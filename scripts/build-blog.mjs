@@ -533,8 +533,25 @@ const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(sl
 // Ön ek TEK KAYNAK: `blogGrubu()` de aşağıda bunu kullanır, ikisi bir daha ayrışamaz;
 // üstelik altta BUILD KAPISI ikisinin hizasını her koşuda doğruluyor.
 const KURUTMA_ONEK = "kurutma-makinesi-";
+// ── MARKA ÖN EKLİ KURUTMA YAZILARI (Tolga, 3 Eyl: "arçelik kurutma yazısını da düzelt") ──
+// Slug `arcelik-` ile başladığı için ön ek kuralı bunları KAÇIRIYORDU; ikisi de canlıda
+// `?cihaz=camasir-makinesi` basıyordu (ölçüldü). Talimat tek yazı için geldi ama tarama
+// İKİ yazı buldu — ikincisi sitenin en iyi CTR'li sayfalarından:
+//   · arcelik-kurutma-makinesi-hata-kodlari            → 123 gös · CTR %3,25 · poz 7,71
+//   · arcelik-kurutma-makinesi-sembolleri-ve-anlamlari →  56 gös · CTR %5,36 · poz 5,75
+//     (31 Ağu sembol kaleminin dayanak sayfalarından; site ortalaması %0,87)
+// ⛔ ÇÖZÜM ELLE KÜRASYON, ÖN EKİ GEVŞETMEK DEĞİL. `/kurutma/` gibi bir kalıp
+//    `camasir-makinesi-kurutma-programi` türü yazıları da kapardı — 21 Ağu'nun şerhi
+//    ("deterministik, bulanık eşleştirme yok") aynen korunuyor. Her satır bir karardır.
+// 📌 PAZ frontmatter'ları normalize edince hem bu küme hem ön ek kuralı gereksizleşir.
+const KURUTMA_SABIT = new Set([
+  "arcelik-kurutma-makinesi-hata-kodlari",
+  "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari",
+]);
+// TEK YÜKLEM — köprü de gruplama da bunu çağırır, ikisi bir daha ayrışamaz.
+const kurutmaYazisi = (p) => Boolean(p.slug) && (p.slug.startsWith(KURUTMA_ONEK) || KURUTMA_SABIT.has(p.slug));
 const kopruCihazSlug = (p) =>
-  (p.slug?.startsWith(KURUTMA_ONEK) ? "kurutma-makinesi" : "") ||
+  (kurutmaYazisi(p) ? "kurutma-makinesi" : "") ||
   KOPRU_CIHAZ_SLUG[slugify(p.category)] ||
   "";
 // Yazı slug'ı → o cihazın HIZLI BELİRTİ listesindeki karşılık (App.jsx `BELIRTILER`).
@@ -729,7 +746,7 @@ function servisHref(p) {
 // yanlış cihaz adı basardı.
 const kopruCihazAdi = (p) =>
   kopruCihazSlug(p)
-    ? String(p.slug?.startsWith(KURUTMA_ONEK) ? "Kurutma Makinesi" : p.category).toLocaleLowerCase("tr")
+    ? String(kurutmaYazisi(p) ? "Kurutma Makinesi" : p.category).toLocaleLowerCase("tr")
     : "";
 
 // ① İLK EKRAN — "cevabı bul, çık" kullanıcısını sona inmeden yakalayan tek satır.
@@ -1365,7 +1382,7 @@ const yaziFotosu = (p) => {
 //    Sebep: kural 13 gün boyunca YALNIZ bu fonksiyonda vardı, köprüde yoktu — gruplama
 //    "Kurutma Makinesi" derken köprü "Çamaşır Makinesi" basıyordu. Tek tanım = tek hüküm.
 function blogGrubu(p) {
-  if (p.slug?.startsWith(KURUTMA_ONEK)) return "Kurutma Makinesi";
+  if (kurutmaYazisi(p)) return "Kurutma Makinesi"; // ön ek + marka ön ekli sabit küme (tek yüklem)
   const s = slugify(p.category || "");
   if (!s) return GENEL;
   if (KONU_ESLES[s]) return KONU_ESLES[s]; // konu kategorisi (cihaz değil)
@@ -1400,8 +1417,25 @@ function kopruGrupHizasiDenetimi(posts) {
     console.error("  tahmini tutar yanlış tarifeden çıkar. KOPRU_CIHAZ / KURUTMA_ONEK ile hizala.");
     process.exit(1);
   }
+  // ── KURUTMA ADAYI KAPISI (3 Eyl 2026, Tolga'nın "arçelik kurutma yazısını da düzelt"i) ──
+  // Yukarıdaki hiza kapısı iki YOLUN çelişmesini yakalar; ikisi de AYNI yanlışı söylerse
+  // (marka ön ekli kurutma yazısının hem grubu hem köprüsü "çamaşır makinesi" olması) susar.
+  // Tolga'nın işaret ettiği iki yazı tam bu kör noktadaydı. Bu kapı onu kapatır: konusu
+  // kurutma olan ama kurutmaya YÖNLENDİRİLMEMİŞ yazı gördüğünde build durur.
+  // ⛔ Kapı yazıyı otomatik taşımaz — KARAR ister: ya `KURUTMA_SABIT`'e ekle, ya bilerek
+  //    dışarıda tutuyorsan `KURUTMA_ADAYI_DEGIL`'e yaz. Sessiz üçüncü yol yok.
+  const KURUTMA_ADAYI_DEGIL = new Set([]); // bilerek kurutma sayılmayan yazılar (bugün boş)
+  const kurutmaIzi = (p) => /kurutma[- ]makinesi|kurutucu/i.test(`${p.slug} ${p.title || ""}`);
+  const kacan = posts.filter((p) => kurutmaIzi(p) && blogGrubu(p) !== "Kurutma Makinesi" && !KURUTMA_ADAYI_DEGIL.has(p.slug));
+  if (kacan.length) {
+    console.error("[build-blog] ✗ KURUTMA ADAYI DENETİMİ BAŞARISIZ — konusu kurutma ama kurutmaya yönlendirilmemiş yazı:");
+    for (const p of kacan) console.error(`  · ${p.slug} → şu an "${blogGrubu(p)}" grubunda`);
+    console.error("  Karar verilmeden geçilmez: KURUTMA_SABIT'e ekle ya da KURUTMA_ADAYI_DEGIL'e gerekçesiyle yaz.");
+    process.exit(1);
+  }
   const cihazli = posts.filter((p) => grupSlug.has(blogGrubu(p)));
-  console.log(`[build-blog] ✓ grup ↔ köprü hizası: ${cihazli.length} cihaz yazısının tamamında iki yol AYNI cihazı söylüyor.`);
+  console.log(`[build-blog] ✓ grup ↔ köprü hizası: ${cihazli.length} cihaz yazısının tamamında iki yol AYNI cihazı söylüyor ` +
+    `(konusu kurutma olan ${posts.filter(kurutmaIzi).length} yazının tamamı kurutma cihazında).`);
 }
 kopruGrupHizasiDenetimi(posts); // fail-fast: gruplama ile köprü bir daha ayrışamaz
 
