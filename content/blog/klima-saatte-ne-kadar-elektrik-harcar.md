@@ -1,6 +1,6 @@
 ---
-title: "Klima saatte ne kadar elektrik harcar? Basit hesap"
-description: "Klima saatte kaç kWh yakar, aylık maliyet nasıl hesaplanır? 9000-12000-18000 BTU aralıkları, inverter farkı ve tüketimi düşüren 5 etken."
+title: "Klima saatte kaç kWh yakar? 9000, 12000 ve 18000 BTU"
+description: "9.000 BTU inverter klima saatte 0,5-0,9 kWh, 12.000 BTU 0,8-1,2 kWh, 18.000 BTU 1,2-1,8 kWh harcar. Kendi birim fiyatınla saatlik hesabı tek formülle yap."
 slug: "klima-saatte-ne-kadar-elektrik-harcar"
 date: "2026-07-14"
 category: "Klima"
