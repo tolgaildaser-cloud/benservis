@@ -648,9 +648,12 @@ const KOPRU_ARIZA = {
   // (`camasir-makinesi-hata-kodlari` · `arcelik-camasir-…` · `bosch-bulasik-…-e15-hatasi`
   // 15 Ağu'da yazılmış); eksik olan kuralın kendisi değil, KAPSAMIYDI. Aynı kural,
   // aynı biçim: `*-hata-kodlari` ve `*-<kod>-hatasi` sayfaları belirtiyi ön-doldurur.
-  // ⛔ `*-sembolleri-ve-anlamlari` sayfaları BİLEREK DIŞARIDA: o sayfaların kendi hükmü
-  //    "ekrandaki simgelerin çoğu arıza değil" — belirtiyi "hata kodu veriyor" diye
-  //    ön-doldurmak sayfanın söylediğinin tersini forma yazardı.
+  // 🔁 ~~`*-sembolleri-ve-anlamlari` sayfaları BİLEREK DIŞARIDA~~ — **BU HÜKÜM 3 EYL 2026'DA
+  //    KALKTI** (Tolga: *"sembolleri yazısına da belirti ekle"*). Eski gerekçe: sayfaların
+  //    kendi hükmü *"ekrandaki simgelerin çoğu arıza değil"*. Dördü de aşağıda eklendi;
+  //    tam metin ve kapsam ölçümü orada. Bu satır bayat kalmasın diye güncellendi —
+  //    org'un kendi dersi: değişiklik okunmakta olan yüzeyde işaretlenmezse sonraki koşu
+  //    kararı değil yüzeyi okur.
   "arcelik-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "arcelik-bulasik-makinesi-e01-hatasi": "hata-kodu-veriyor",
   "beko-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
@@ -668,6 +671,24 @@ const KOPRU_ARIZA = {
   "siemens-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "vestel-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "vestel-camasir-makinesi-e03-hatasi": "hata-kodu-veriyor",
+  // ── SEMBOL YAZILARI (Tolga, 3 Eyl: "sembolleri yazısına da belirti ekle") ──────────
+  // ⚖️ BU BİR HÜKÜM DEĞİŞİKLİĞİ, kayda geçiyor. FE bunları bilerek boş bırakmıştı:
+  // sayfaların kendi çerçevesi *"ekrandaki simgelerin çoğu arıza değil"* diyor, kod
+  // belirtisi ön-doldurmak o çerçeveyle çelişir gerekçesiyle. **Tolga aksini söyledi**,
+  // hüküm onun. Gerekçesi de savunulabilir: kullanıcı bu sayfaya panelde bir işaret
+  // gördüğü için geliyor; forma "kod/işaret var" bağlamıyla düşmesi boş düşmesinden yakın.
+  // 📏 Kapsam ÖLÇÜLDÜ: talimat tek yazı içindi, külliyatta **dört** sembol yazısı var ve
+  //    dördü de aynı durumdaydı (hepsi `ariza` YOK). Aynı çerçeve → aynı hüküm.
+  // 🔤 Kombi'de belirti "ARIZA kodu veriyor", diğer üçünde "HATA kodu veriyor" —
+  //    slug'lar App.jsx'in kendi listesinden birebir alındı, tek harf uydurulmadı.
+  // ⛔ Metne/başlığa/description'a DOKUNULMADI: bu bir CTA sorgu parametresi. Google'ın
+  //    gördüğü hiçbir şey değişmiyor → 31 Ağu sembol ölçümü (taban: iki Bosch sembol
+  //    sayfası 0 gösterim) KİRLENMİYOR. PR #156'nın Bosch'ta durduğu yer `title`'dı,
+  //    yani ölçülen büyüklüğün ta kendisi; burada ölçülen büyüklüğe temas yok.
+  "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "bosch-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "bosch-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "vaillant-kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
   // 🔁 3 Eyl 2026 — BU YORUM HATANIN KENDİSİYDİ, DÜZELTİLDİ. Eski hâli şunu diyordu:
   // *"Kurutma yazıları `category: Çamaşır makinesi` taşıyor → çözen tarafta cihaz
   // 'Çamaşır Makinesi' olur … kurutmaya ÖZEL belirtiler bu cihazda çözülmediği için o
