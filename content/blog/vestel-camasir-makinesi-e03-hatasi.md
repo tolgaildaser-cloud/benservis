@@ -1,5 +1,5 @@
 ---
-title: "Vestel çamaşır makinesi E03 hatası: suyu atamıyor — adım adım çözüm"
+title: "Vestel çamaşır makinesi E03 hatası: 8 adımda çözüm"
 description: "Vestel çamaşır makinesi E03 hatası tahliye edememek demek. Pompa filtresi, hortum yüksekliği ve gider hattı kontrolüyle çoğu vaka evde ücretsiz kapanır."
 slug: "vestel-camasir-makinesi-e03-hatasi"
 date: "2026-08-21"

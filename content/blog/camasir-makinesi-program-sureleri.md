@@ -1,6 +1,6 @@
 ---
-title: "Çamaşır makinesi programları kaç saat sürer? Süre rehberi"
-description: "Pamuklu 60, sentetik 40, karışık 30 kaç sürer? Programı uzatan sebepler ve süre birden uzadıysa bunun ne zaman arıza belirtisi olduğu. Bil, gör, çağır."
+title: "Çamaşır makinesi program süreleri: pamuklu 60, sentetik 40"
+description: "Pamuklu 60 kılavuzlarda 1 saat 50 dakika ile 3 saat 35 dakika arasında, sentetik 40 yaklaşık 2 saat 15 dakika. Süre birden uzadıysa ne zaman arıza belirtisi?"
 slug: "camasir-makinesi-program-sureleri"
 date: "2026-08-10"
 category: "Çamaşır Makinesi"
