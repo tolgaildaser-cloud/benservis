@@ -733,6 +733,75 @@ const KOPRU_ARIZA = {
   "airfryer-isitmiyor": "isitmiyor-pisirmiyor",
   "cam-seramik-ocak-isinmiyor": "isinmiyor",
   "firin-kapagi-acilmiyor": "kapi-cam-sorunu",
+  // ═══ 5 EYL 2026 — SÖZLÜK AÇILDI, ÜSTTEKİ ELEMELERİN ÇOĞU ARTIK GEÇERSİZ ═══════════
+  // 1 Eyl'in eleme listesi O GÜNKÜ sözlüğe göre DOĞRUYDU: eşleşme yoktu çünkü çözen
+  // tarafta o belirtinin karşılığı yoktu. Bu koşuda 79 belirtisiz yazının tamamı tek tek
+  // okundu ve darboğazın kürasyon değil KAPSAM olduğu görüldü → `EK_BELIRTI` yedi yeni
+  // cihazda açıldı (App.jsx). Aşağıdaki satırlar o açılmanın karşılığıdır.
+  // ⛔ 1 EYL'İN AYRIMLARI KORUNDU, ÇİPE ZORLAMA YAPILMADI: `robot-supurge-sarj-olmuyor`
+  //    "Şarj tutmuyor"a, `supurge-hortumu-tikandi` "Çekiş zayıf"a, `tv-ekrani-karariyor`
+  //    "Görüntü yok"a, `bulasik-…-bardaklari-bulanik` "Temiz yıkamıyor"a BAĞLANMADI —
+  //    dördü de kendi karşılığını aldı. Eleme haklıydı; çözüm sözlüğü büyütmekti.
+  // ⛔ HÂLÂ DIŞARIDA (tek belirtisi yok — kürasyon ilkesi aynen): …-tamiri-kac-para (5) ·
+  //    …-ne-kadar-elektrik-harcar (5) · …-kac-derece-olmali (2) · …-nasil-temizlenir (5) ·
+  //    bakım/ayar/kıyas/rehber yazıları (buzdolabi-yaz-ayari · camasir-kac-derecede-yikanir ·
+  //    bulasik-makinesi-eko-program-neden-uzun · klima-montaj-sokum-takma · kombi-yazin-
+  //    kapatilir-mi · eski-buzdolabini-degistirmek-mantikli-mi …). Bunlar cihaz taşır, belirti taşımaz.
+  // ── Çamaşır makinesi ──
+  "camasir-makinesi-calismiyor": "calismiyor-start-almiyor",
+  "camasir-makinesi-isitmiyor": "isitmiyor",
+  "camasir-makinesi-kapagi-acilmiyor": "kapagi-acilmiyor",
+  "camasir-makinesi-su-kaciriyor": "su-kaciriyor",
+  "camasir-makinesi-deterjan-almiyor": "deterjani-almiyor",
+  "camasir-makinesi-sigorta-attiriyor": "sigorta-attiriyor",
+  "camasir-makinesi-camasirlarda-leke-birakiyor": "camasirlarda-leke-birakiyor",
+  "camasir-makinesine-cisim-kacti": "icine-cisim-kacti",
+  // ── Bulaşık makinesi ──
+  "bulasik-makinesi-su-kaciriyor": "su-kaciriyor",
+  "bulasik-makinesi-programi-bitirmiyor": "programi-bitirmiyor",
+  "bulasik-makinesi-tableti-eritmiyor": "tableti-eritmiyor",
+  "bulasik-makinesi-bardaklari-bulanik-birakiyor": "bardaklari-bulanik-birakiyor",
+  "bulasik-makinesi-tuz-lambasi-sonmuyor": "tuz-lambasi-sonmuyor",
+  // ── Buzdolabı / derin dondurucu ──
+  // `derin-dondurucu-dondurmuyor` yazısının KENDİ cümlesi "soğutuyor ama dondurmuyor"
+  // diyor → "Soğutmuyor" eşleşmesi yazının hükmüyle çelişirdi; ayrı karşılık yazıldı.
+  "buzdolabi-buz-yapmiyor": "buz-yapmiyor",
+  "buzdolabi-cok-sogutuyor": "cok-sogutuyor-donduruyor",
+  "buzdolabi-hic-durmuyor": "hic-durmuyor-surekli-calisiyor",
+  "buzdolabi-motoru-calismiyor": "motoru-calismiyor",
+  "buzdolabi-kapisi-tam-kapanmiyor": "kapisi-tam-kapanmiyor",
+  "derin-dondurucu-dondurmuyor": "dondurmuyor",
+  // ── Klima ──
+  "klima-fan-donmuyor": "fan-donmuyor-uflemiyor",
+  "klima-kumandasi-calismiyor": "kumanda-calismiyor",
+  // ── Kombi ──
+  // ⚖️ HÜKÜM DEĞİŞİKLİĞİ, sessizce değil: yukarıdaki kürasyon notu `kombi-yanmiyor` için
+  //    "listedeki hiçbir belirtiye tam oturmuyor" diyordu — gerekçe SÖZLÜK DARLIĞIYDI ve
+  //    bu koşuda giderildi. Yazının başlığı belirtiyi birebir söylüyor: "yanmıyor / ateşlemiyor".
+  "kombi-yanmiyor": "yanmiyor-ateslemiyor",
+  // ── Fırın / Ocak / Aspiratör ──
+  "firin-esit-pisirmiyor": "esit-pisirmiyor",
+  "ocak-alevi-sari-yaniyor": "ocak-alevi-sari-yaniyor",
+  "ocak-gaz-emniyeti-sonduruyor": "ocak-elini-cekince-sonuyor",
+  // ── Televizyon / Monitör ──
+  "tv-ses-gelmiyor": "ses-gelmiyor",
+  "tv-ekrani-karariyor": "ekran-karariyor",
+  "monitor-sinyal-yok": "sinyal-yok",
+  "smart-tv-uygulama-acilmiyor": "uygulama-acilmiyor",
+  // ── Süpürge ──
+  "supurge-hortumu-tikandi": "hortum-tikali",
+  "robot-supurge-sarj-olmuyor": "sarj-olmuyor",
+  "robot-supurge-firca-donmuyor": "firca-donmuyor",
+  "robot-supurge-haritalama-sorunu": "haritalama-sorunu",
+  // ── Mikrodalga / Air Fryer ──
+  "mikrodalga-kivilcim-cikariyor": "kivilcim-cikariyor",
+  "airfryer-duman-cikariyor": "duman-cikariyor",
+  // ── Bilgisayar / Yazıcı ──
+  "yazici-kagit-cekmiyor": "kagit-cekmiyor",
+  "yazici-kartus-tanimiyor": "kartusu-tanimiyor",
+  "yazici-silik-basiyor": "silik-basiyor",
+  "laptop-sarj-olmuyor": "sarj-olmuyor",
+  "laptop-klavyesi-calismiyor": "klavye-calismiyor",
 };
 function kopruHref(p) {
   const q = new URLSearchParams();

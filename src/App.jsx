@@ -85,12 +85,48 @@ const BELIRTILER = {
 // bu iki cihazda çözülemediği için belirtisiz açılıyordu; Çamaşır/Kurutma/Bulaşık'ta aynı
 // belirti 15 Ağu'dan beri zaten var — eksik olan kural değil, iki cihazlık kapsamdı.
 // ⛔ Çip eklenmedi: hızlı-belirti butonları `BELIRTILER`den gelir, form görünümü değişmez.
+// 5 Eyl 2026 — SÖZLÜK KÜLLİYATIN GERİSİNDE KALMIŞTI (FE ölçtü, YK #106 ② dönüşüm hattı).
+// 217 yazının 102'si belirti ön-dolu açılıyordu; 79'u cihaz taşıyıp BELİRTİSİZ, 36'sı
+// bilerek bağlamsız (Genel · Sürdürülebilirlik · Kurumsal). 79'un tek tek okunmasıyla
+// çıkan sonuç 15 Ağu'nunkiyle AYNI: eksik olan kürasyon değil, SÖZLÜK KAPSAMI —
+// yazının konusu (kapağı açılmıyor · sigorta attırıyor · kartuşu tanımıyor …) çözen
+// tarafta hiç yoktu, o yüzden üreten taraf `ariza`yı basamıyordu.
+// ⛔ KÜRASYON İLKESİ GEVŞEMEDİ — "yanlış ön-doldurma, ön-doldurmamaktan kötüdür":
+//   · Her satır, yazının KENDİ başlığında geçen belirtidir; çıkarım yapılmadı.
+//   · Yazının hükmüyle ÇELİŞEN eşleşme yazılmadı: `derin-dondurucu-dondurmuyor`
+//     "soğutuyor AMA dondurmuyor" diyor → "Soğutmuyor"a değil, ayrı "Dondurmuyor"a bağlandı.
+//     `tv-ekrani-karariyor` görüntünün SÖNÜKLEŞMESİNİ anlatıyor → "Görüntü yok" değil.
+//   · Tek belirtisi olmayan yazılar (…-tamiri-kac-para · …-ne-kadar-elektrik-harcar ·
+//     …-kac-derece-olmali · …-nasil-temizlenir · bakım/rehber/kıyas yazıları) DIŞARIDA kaldı.
+// ⛔ Çip eklenmedi (bu tablo yalnız `belirtiCoz`ta okunur): form görünümü değişmiyor,
+//    URL yine tek slug taşıyor, görünen metin uygulamanın KENDİ tablosundan geliyor.
 const EK_BELIRTI = {
-  "Çamaşır Makinesi": ["Hata kodu veriyor", "Kötü kokuyor"],
+  "Çamaşır Makinesi": ["Hata kodu veriyor", "Kötü kokuyor",
+    "Çalışmıyor / start almıyor", "Isıtmıyor", "Kapağı açılmıyor", "Su kaçırıyor",
+    "Deterjanı almıyor", "Sigorta attırıyor", "Çamaşırlarda leke bırakıyor", "İçine cisim kaçtı"],
   "Kurutma Makinesi": ["Hata kodu veriyor", "Kötü kokuyor", "Filtre/kondenser tıkalı"],
-  "Bulaşık Makinesi": ["Kurutmuyor", "Kötü kokuyor"],
-  "Buzdolabı": ["Buzlanma yapıyor", "Hata kodu veriyor"],
-  "Klima": ["Hata kodu veriyor"],
+  "Bulaşık Makinesi": ["Kurutmuyor", "Kötü kokuyor",
+    "Su kaçırıyor", "Programı bitirmiyor", "Tableti eritmiyor",
+    "Bardakları bulanık bırakıyor", "Tuz lambası sönmüyor"],
+  "Buzdolabı": ["Buzlanma yapıyor", "Hata kodu veriyor",
+    "Çok soğutuyor, donduruyor", "Hiç durmuyor, sürekli çalışıyor", "Motoru çalışmıyor",
+    "Kapısı tam kapanmıyor", "Dondurmuyor", "Buz yapmıyor"],
+  "Klima": ["Hata kodu veriyor", "Fan dönmüyor, üflemiyor", "Kumanda çalışmıyor"],
+  // ── 5 Eyl 2026'da sözlüğü İLK KEZ açılan yedi cihaz ──────────────────────────────
+  "Kombi / Termosifon": ["Yanmıyor, ateşlemiyor"],
+  "Fırın / Ocak / Aspiratör": ["Eşit pişirmiyor", "Ocak alevi sarı yanıyor", "Ocak elini çekince sönüyor"],
+  "Televizyon / Monitör": ["Ses gelmiyor", "Ekran kararıyor", "Sinyal yok", "Uygulama açılmıyor"],
+  // ⚠️ "Şarj olmuyor" ve "Hortum tıkalı" AYRI satır — 1 Eyl koşusu bu iki yazıyı bilerek
+  //    elemişti ("Şarj tutmuyor" başka arıza: şarj oluyor ama tutmuyor · "Çekiş zayıf"
+  //    hortum tıkanmasının SONUCU, belirtisi değil). O ayrım doğruydu ve korunuyor:
+  //    mevcut çipe zorlanmadı, sözlüğe kendi karşılıkları yazıldı.
+  "Süpürge": ["Fırça dönmüyor", "Haritalama sorunu", "Şarj olmuyor", "Hortum tıkalı"],
+  "Mikrodalga / Air Fryer": ["Kıvılcım çıkarıyor", "Duman çıkarıyor"],
+  // ⚠️ "Kağıt" DÜZELTME İŞARETSİZ yazıldı: `slugla` haritasında `â` YOK, düzeltme işaretli
+  //    "Kâğıt" slug'ı `k-git-cekmiyor`a düşürürdü (aynı `â` tuzağı 22 Ağu'da ASCII
+  //    tarayıcısında da çıkmıştı). Mevcut çip "Kağıt sıkışması" da işaretsiz.
+  "Bilgisayar / Yazıcı": ["Kağıt çekmiyor", "Kartuşu tanımıyor", "Silik basıyor",
+    "Şarj olmuyor", "Klavye çalışmıyor"],
 };
 const belirtiCoz = (cihaz, slug) =>
   [...(BELIRTILER[cihaz] || []), ...(EK_BELIRTI[cihaz] || [])].find((b) => slugla(b) === slug) || "";
