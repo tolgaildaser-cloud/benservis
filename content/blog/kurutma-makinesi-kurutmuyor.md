@@ -95,7 +95,3 @@ Bu noktada iki şey işinize yarar: **hangi arızanın muhtemel olduğu** ve **n
 - [Çamaşır makinesi tahliye filtresi temizleme](/blog/camasir-makinesi-tahliye-filtresi-temizleme/)
 - [Çamaşır makinesi kokuyor](/blog/camasir-makinesi-kokuyor/)
 - [Elektrik faturası neden yüksek?](/blog/elektrik-faturasi-neden-yuksek/)
-
----
-
-> **Taslak notu (yayın öncesi FE/Tolga için):** ⭐ **Kategori boşluğu:** canlı 78 yazının tamamı tarandı — **kurutma makinesi hakkında tek bir sayfa yok.** Çamaşır (13), bulaşık (11), klima (9), kombi (9), buzdolabı (8) kümeleri doluyken bu cihaz sınıfı tamamen boşta; long-tail için temiz bir giriş noktası. Frontmatter title 38 karakter / description 148 karakter. İç link hedefleri canlı slug listesinden doğrulandı. **Argo taraması:** "sıkılmış/sıkma" kelimeleri ASCII'de sorunlu görünebildiği için gövdede "su alınmış / devir" tercih edildi ([[feedback_kelime_secimi]]); başlıkta ve slug'da geçmiyor. Marka/model iddiası yok, hata kodu yok — kaynak doğrulama gerektiren sayısal iddia içermiyor.

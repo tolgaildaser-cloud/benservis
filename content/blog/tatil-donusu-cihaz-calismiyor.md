@@ -93,7 +93,3 @@ Amaç şu: telefonu elinize aldığınızda ne olduğunu ve ne kadar tutabilece�
 - [Elektrik kesintisi sonrası cihaz arızaları](/blog/elektrik-kesintisi-sonrasi-cihaz-arizalari/)
 - [Çamaşır makinesi kokuyor, evde ne yapabilirim?](/blog/camasir-makinesi-kokuyor/)
 - [Buzdolabı soğutmuyor: nedenleri](/blog/buzdolabi-sogutmuyor-nedenleri/)
-
----
-
-> **Taslak notu (yayın öncesi FE/Tolga için):** Bu yazı 29 Tem C2 carousel'inin ("Tatilden döndün, cihaz çalışmıyor") uzun hâlidir; carousel yayınlandığında bu sayfaya trafik gelmesi beklenir. İç link hedefleri canlı slug'larla doğrulandı. Kategori "Genel". Frontmatter title 41 karakter / description 152 karakter (SERP limitleri içinde — bkz. `2026-07-23-ctr-baslik-meta-optimizasyon.md`).
