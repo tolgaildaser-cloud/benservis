@@ -332,6 +332,15 @@ footer.site .wm-s{color:${T.BLUE};font-weight:600}
 /* Yazı sayfasındaki ① katman geri-linki (YK #35 pilot): başlığın hemen altında, metnin
    akışını kesmeyen tek satır. */
 .tamir-geri{margin:0 0 22px;padding:11px 14px;border-left:3px solid ${T.BLUE};background:#EFF4FF;border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.55;color:${T.NAVY}}
+/* İlgili yazılar — ÇIKMAZ SAYFA ONARIMI (6 Eyl 2026, FE). Yalnız kendi gövdesinde hiç
+   iç bağ olmayan yazılara basılır; elle küratörlük yapılmış yazılara DOKUNULMAZ.
+   Görsel yok → LCP adayı değil; sabit yükseklik yok ama akışın SONUNDA olduğu için
+   CLS'e girmiyor (CTA ile altbilgi arasında, üstündeki hiçbir şeyi itmiyor). */
+.ilgili{margin:14px 0 8px;padding:16px 18px;border-radius:14px;background:#F8FAFC;border:1px solid ${T.HAIR}}
+.ilgili h3{font-family:'Fraunces',serif;font-weight:600;margin:0 0 10px;font-size:16px;color:${T.NAVY}}
+.ilgili ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.ilgili a{display:block;font-size:14.5px;line-height:1.5;color:${T.BLUE};text-decoration:none}
+.ilgili a:hover{text-decoration:underline}
 /* /tamir/ hub — cihaz kategorisi ızgarası (YK #32 format kararı, ① katman).
    Rehberi OLAN kategori <a> (tıklanır), olmayan <div class="yok"> (dürüst boş hâl, link yok). */
 /* Thumb ölçüsü ana sayfayla BİREBİR (Tolga, 19 Ağu): kolon .wrap üzerinden
@@ -1529,6 +1538,88 @@ function kopruGrupHizasiDenetimi(posts) {
 }
 kopruGrupHizasiDenetimi(posts); // fail-fast: gruplama ile köprü bir daha ayrışamaz
 
+// ── İLGİLİ YAZILAR: ÇIKMAZ SAYFA ONARIMI (6 Eyl 2026, FE) ───────────────────────────────
+// 📊 ÖLÇÜM (canlıdan okundu, iddia değil — 217 sayfanın HTML'i tek tek çekildi):
+//    · 107 yazının gövdesinden çıkan TEK blog bağı altbilginin `/blog/hakkimizda/` linkiydi
+//      → yazının kendi konusuyla ilgili gidilecek HİÇBİR yer yok (107/107 doğrulandı).
+//    · 118 yazının hiç GELEN editoryal bağı yok (yalnız /blog/ listesinden erişiliyor).
+//    · Şablonda ilgili-yazı mekanizması HİÇ YOKTU; 110 yazıdaki "İlgili:" satırları elle yazılmış.
+// Google'dan inen okur formu doldurmaya hazır değilse tek çıkışı geri tuşu — ve dönüşüm
+// darboğazı (#106) tam burada. Kardeş belirtiye geçen okur, köprüsü olan bir sayfaya düşer.
+//
+// ⛔ KAPSAM BİLEREK DAR: blok YALNIZ gövdesinde sıfır iç bağ olan yazıya basılır.
+//    Elle küratörlük yapılmış 110 yazıya DOKUNULMAZ — otomatik seçim, insan seçimini ezmez.
+// ⛔ İÇERİĞE, frontmatter'a, URL'ye, başlığa dokunulmuyor; 301 gerekmiyor.
+// 🎯 SEÇİM DETERMİNİSTİK **ve DAĞITICI** — ikisi birden gerekiyordu:
+//    Grubu tek bir sıraya dizip HERKESE ilk 3'ü vermek ilk denemeydi ve ölçüm onu çürüttü:
+//    29 buzdolabı yazısının 29'u da AYNI üç sayfaya bağlanıyordu, öksüz sayısı 118→77'de
+//    takılıyordu. Onarmak istediğimiz eşitsizliği bu kez otomatik olarak yeniden üretiyorduk.
+//    Çözüm: grubu deterministik sıraya diz, sonra her yazıya KENDİ sırasından SONRAKİ 3
+//    kardeşi ver (halka, sona gelince başa döner). Aynı girdi → aynı çıktı, rastgelelik yok;
+//    ama gelen bağ grubun tamamına yayılıyor.
+// SIRA ÖLÇÜTÜ: ① köprüsünde belirti olan kardeşler önce (okuru ön-dolu forma taşır)
+//              ② sonra yeni tarih  ③ sonra slug — üçü de eşitse alfabetik.
+const ILGILI_SAYI = 3;
+const govdeIcBagYok = (p) => !/href="\/blog\/[a-z0-9-]+\/"/.test(p.html || "");
+const grupSirasi = new Map();
+for (const p of posts) {
+  const g = blogGrubu(p);
+  if (!grupSirasi.has(g)) grupSirasi.set(g, []);
+  grupSirasi.get(g).push(p);
+}
+for (const [, uyeler] of grupSirasi) {
+  uyeler.sort((a, b) =>
+    (KOPRU_ARIZA[b.slug] ? 1 : 0) - (KOPRU_ARIZA[a.slug] ? 1 : 0) ||
+    String(b.date || "").localeCompare(String(a.date || "")) ||
+    a.slug.localeCompare(b.slug, "tr"));
+}
+function ilgiliSecimi(p) {
+  if (!govdeIcBagYok(p)) return []; // kendi küratörlüğü var → karışma
+  const uyeler = grupSirasi.get(blogGrubu(p)) || [];
+  const i = uyeler.findIndex((k) => k.slug === p.slug);
+  if (i < 0 || uyeler.length < 2) return [];
+  const secim = [];
+  for (let adim = 1; adim < uyeler.length && secim.length < ILGILI_SAYI; adim++) {
+    secim.push(uyeler[(i + adim) % uyeler.length]); // halka: kendinden sonraki kardeşler
+  }
+  return secim;
+}
+const ilgiliYazilar = (p) => {
+  const secim = ilgiliSecimi(p);
+  // Tek kardeşle "ilgili yazılar" başlığı atmak olur — 2'nin altında blok basılmaz.
+  if (secim.length < 2) return "";
+  const grup = blogGrubu(p);
+  return `<section class="ilgili"><h3>${esc(grup)} hakkında okumaya devam et</h3><ul>` +
+    secim.map((k) => `<li><a href="/blog/${k.slug}/">${esc(k.title)}</a></li>`).join("") +
+    `</ul></section>`;
+};
+// ── KAPI: üretilen her bağ GERÇEK bir yazıya gitmeli, kendine gitmemeli ───────────────
+// #110/#112/#114'ün ortak dersi: "build yeşil, test yeşil, uyarı yok" ama yüzey fiilen ölü.
+// Bu blok 107 sayfaya birden basıldığı için tek bir ölü slug 107 kırık bağ demektir.
+(function ilgiliBagDenetimi() {
+  const varOlan = new Set(posts.map((x) => x.slug));
+  const kirik = [];
+  let basilan = 0;
+  for (const p of posts) {
+    const secim = ilgiliSecimi(p);
+    if (secim.length < 2) continue;
+    basilan++;
+    for (const k of secim) {
+      if (!varOlan.has(k.slug)) kirik.push(`${p.slug} → ${k.slug} (yazı yok)`);
+      if (k.slug === p.slug) kirik.push(`${p.slug} → kendine bağlanıyor`);
+    }
+  }
+  if (kirik.length) {
+    console.error("[build-blog] ✗ İLGİLİ YAZILAR DENETİMİ BAŞARISIZ:");
+    for (const s of kirik) console.error(`  · ${s}`);
+    process.exit(1);
+  }
+  const cikmaz = posts.filter(govdeIcBagYok).length;
+  console.log(`[build-blog] ✓ ilgili yazılar: ${basilan} çıkmaz sayfaya blok basıldı ` +
+    `(gövdesinde iç bağı olmayan ${cikmaz} yazıdan; kalanında grupta 2 kardeş yok). ` +
+    `Elle küratörlüğü olan ${posts.length - cikmaz} yazıya dokunulmadı; ölü/kendine bağ 0.`);
+})();
+
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
   // Kapağı olan yazı paylaşımda da kendi görselini gösterir; olmayan eski `og.png`de kalır.
@@ -1581,7 +1672,9 @@ for (const p of posts) {
   // Yeni sıra: kapak ARKA PLAN olur, başlık + meta + iki kapı onun üstünde tek
   // yüzeyde toplanır. "Servis bul" ile "tahmini maliyet" ilk ekranda birlikte görünür
   // — Tolga'nın güç metriği (servise ulaşma) ilk ekranda karar alabilsin.
-  const body = `<article>${yaziBasi(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}${tamirGeriSatiri(p)}</article>${STICKY(p)}`;
+  // SIRA: ilgili yazılar CTA'nın ALTINDA. Birincil eylem (teşhis/servis) metnin hemen
+  // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
+  const body = `<article>${yaziBasi(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
