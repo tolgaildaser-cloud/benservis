@@ -78,7 +78,7 @@ Program düğmesini **"Kapalı"ya** al, makineyi **fişten 1 dakika** çek, çoc
 ## Tahmini tamir maliyeti
 Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tamirinde fiyatı ne belirler?](/blog/camasir-makinesi-tamiri-kac-para/)
 
-İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
+İlgili: [Arçelik çamaşır makinesi sembolleri ve anlamları](/blog/arcelik-camasir-makinesi-sembolleri-ve-anlamlari/) · [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/)
 
 ## Sık sorulan sorular
 

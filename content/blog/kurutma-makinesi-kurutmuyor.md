@@ -91,6 +91,7 @@ Bu noktada iki şey işinize yarar: **hangi arızanın muhtemel olduğu** ve **n
 
 ## İlgili yazılar
 
+- [Bosch kurutma makinesi sembolleri ve anlamları](/blog/bosch-kurutma-makinesi-sembolleri-ve-anlamlari/)
 - [Çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/)
 - [Çamaşır makinesi tahliye filtresi temizleme](/blog/camasir-makinesi-tahliye-filtresi-temizleme/)
 - [Çamaşır makinesi kokuyor](/blog/camasir-makinesi-kokuyor/)
