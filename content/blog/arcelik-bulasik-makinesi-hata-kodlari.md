@@ -122,3 +122,5 @@ Makine su almayı durduramıyor. Üreticinin gösterdiği sebep **akış ölçer
 Çizgi net: musluk, hortum, filtre, pervane ve iç temizlik kapak seviyesindedir ve sana aittir. Rezistans, sensörler, vana, akış ölçer ve elektronik kart gövde içindedir; hem elektrik hem su barındırır ve ölçü aleti ister. Evdeki kontrollerden sonra aynı kod ikinci-üçüncü kez geldiyse makineyi tekrar tekrar zorlamak yalnızca zaman kaybettirir — kodu ve gözlemlerini not et, öyle ara.
 
 Markadan bağımsız genel bakış için bulaşık makinesi hata kodları rehberimizde tüm markaların listesi var. Cihazının belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.
+
+İlgili: [Arçelik bulaşık makinesi sembolleri ve anlamları](/blog/arcelik-bulasik-makinesi-sembolleri-ve-anlamlari/) · [Bulaşık makinesi hata kodları (marka marka)](/blog/bulasik-makinesi-hata-kodlari/)

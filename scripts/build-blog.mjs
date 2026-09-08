@@ -507,6 +507,11 @@ const KOPRU_CIHAZ = {
   "Bulaşık makinesi": "bulasik-makinesi",
   "Klima": "klima",
   "Kombi": "kombi-termosifon",
+  // 7 Eyl 2026: `kombi-basinci-kac-olmali` kategorisini "Kombi/Termosifon" yazıyor; diğer 11
+  // kombi yazısı düz "Kombi". Kapsam kapısı yakaladı — taslağın frontmatter'ına DOKUNULMADI
+  // (kategori metni PAZ'ın alanı), köprü tablosu genişletildi. `slugify` ikisini de aynı
+  // anahtara indirir, o yüzden tek satır iki yazımı birden karşılar.
+  "Kombi / Termosifon": "kombi-termosifon",
   "Fırın / Ocak": "firin-ocak-aspirator",
   "Fırın / Ocak / Aspiratör": "firin-ocak-aspirator",
   "Televizyon": "televizyon-monitor",
@@ -1427,6 +1432,12 @@ const BLOG_KAT_ESLES = {
   "bulasik-makinesi": "Bulaşık Makinesi",
   kombi: "Kombi / Termosifon",
   termosifon: "Kombi / Termosifon",
+  // 7 Eyl 2026: `kombi-basinci-kac-olmali` frontmatter'ı "Kombi/Termosifon" yazıyor
+  // (boşluksuz eğik çizgi) — diğer 11 kombi yazısı düz "Kombi" diyor. Kapı bunu yakaladı.
+  // ⛔ Taslağın frontmatter'ı DÜZELTİLMEDİ: kategori metni PAZ'ın alanı ([[feedback_rol_siniri]]).
+  //    Eşleşme MANTIĞI FE'nin — `KURUTMA_ONEK`'te kurulan emsalin aynısı. PAZ frontmatter'ları
+  //    normalize ederse bu satır gereksizleşir ve silinir.
+  "kombi-termosifon": "Kombi / Termosifon",
   klima: "Klima",
   buzdolabi: "Buzdolabı",
   "firin-ocak": "Fırın / Ocak / Aspiratör",

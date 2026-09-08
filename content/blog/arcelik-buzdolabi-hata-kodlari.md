@@ -136,3 +136,5 @@ Kod sistemi yalnızca kartın izleyebildiği devreleri görür. Gaz kaybı gibi 
 Reset sonrası geri gelen her kod, kompresörü işaret eden bildirimler ve kalın karlanmanın eşlik ettiği defrost kodları servis konusudur. Sensör, fan ve ısıtıcı değişimi panel sökümü gerektirir; bu hem elektrik hem soğutucu devre riski taşır. Sende kalan iş, kodu ve model numarasını doğru aktarmak — bu ikisi, işin ilk seferde bitmesini kolaylaştıran en ucuz hazırlıktır.
 
 Markalar arası genel kod mantığını benservis.com blogundaki buzdolabı hata kodları yazısında, Samsung kullanıyorsan bambaşka işleyen o tabloyu Samsung buzdolabı hata kodları yazısında bulabilirsin. Cihazının koduna ve belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.
+
+İlgili: [Arçelik buzdolabı sembolleri ve anlamları](/blog/arcelik-buzdolabi-sembolleri-ve-anlamlari/) · [Buzdolabı hata kodları (marka marka)](/blog/buzdolabi-hata-kodlari/)
