@@ -703,6 +703,24 @@ const KOPRU_ARIZA = {
   "bosch-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "bosch-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "vaillant-kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
+  // 🔴 8 EYL 2026 — HÜKÜM UYGULANDI AMA BOŞLUK YENİDEN AÇILDI (FE ölçtü).
+  // 3 Eyl'de Tolga *"sembolleri yazısına da belirti ekle"* dedi; o gün külliyatta DÖRT
+  // sembol yazısı vardı ve dördü de yukarıya yazıldı. **8 Eyl'de dört sembol yazısı daha
+  // yayına girdi** ([PR #163](…/pull/163), `5f50c0d`) ve hiçbiri tabloda değildi →
+  // dördü de belirtisiz açılıyordu. Hüküm doğruydu, uygulanması ANLIK fotoğrafa yapılmıştı;
+  // boruhattı yeni sayfa ürettikçe aynı boşluk kendiliğinden geri geldi.
+  // ⛔ Bu, org'un tanıdığı sınıfın aynısı: *build yeşil, test yeşil, uyarı yok, yüzey ölü.*
+  //    Bu yüzden bu koşuda yalnız dört satır yazılmadı — aşağıya SEMBOL KAPSAM KAPISI
+  //    kondu; bundan sonra tabloya girmemiş bir sembol yazısı build'i DURDURUR.
+  // 🔤 Dördünde de "Hata kodu veriyor": slug'lar App.jsx'in kendi listelerinden birebir
+  //    doğrulandı — Bulaşık `BELIRTILER`, Buzdolabı/Çamaşır/Kurutma `EK_BELIRTI`.
+  //    Kombi'nin "ARIZA kodu veriyor" ayrımı korunuyor (bu partide kombi sembolü yok).
+  // ⛔ Metne/başlığa/description'a yine DOKUNULMADI: bu bir CTA sorgu parametresi,
+  //    Google'ın gördüğü hiçbir şey değişmiyor → 31 Ağu sembol ölçümü kirlenmiyor.
+  "arcelik-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "arcelik-buzdolabi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "arcelik-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "bosch-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   // 🔁 3 Eyl 2026 — BU YORUM HATANIN KENDİSİYDİ, DÜZELTİLDİ. Eski hâli şunu diyordu:
   // *"Kurutma yazıları `category: Çamaşır makinesi` taşıyor → çözen tarafta cihaz
   // 'Çamaşır Makinesi' olur … kurutmaya ÖZEL belirtiler bu cihazda çözülmediği için o
@@ -1335,10 +1353,33 @@ function kopruKapsamDenetimi(posts) {
     console.error("  Karar verilmeden geçilmez: eşlenmemiş kategoride ilk-ekran köprüsü hiç basılmaz.");
     process.exit(1);
   }
+  // ── SEMBOL KAPSAM KAPISI (build'i durdurur) — 8 Eyl 2026 ───────────────────────────
+  // Tolga'nın 3 Eyl hükmü (*"sembolleri yazısına da belirti ekle"*) o günkü DÖRT sayfaya
+  // uygulanmıştı; 8 Eyl'de dört sembol sayfası daha yayına girdi ve hiçbiri tabloda yoktu →
+  // hüküm sessizce yarıya düştü. Kapı, hükmü anlık fotoğraftan KURALA çevirir: konusu
+  // sembol olan her yazı ya `KOPRU_ARIZA`'da olur ya da gerekçesiyle istisnaya yazılır.
+  // ⛔ Kapı belirti SEÇMEZ (kürasyon FE'nin kararı, otomatik eşleştirme yok) — yalnız
+  //    "karar verilmiş mi" diye sorar. Sessiz üçüncü yol yok.
+  // 📌 Neden yalnız sembol ailesi: bu ailenin hükmü Tolga tarafından AÇIKÇA verildi ve
+  //    ailenin tamamı tek bir belirtiye ("kod/işaret var") oturuyor. Külliyatın geri
+  //    kalanında belirtisizlik BİLEREK'tir (…-kac-para · …-nasil-temizlenir · …-kac-derece
+  //    gibi 41 yazı) — oraya kapı koymak kürasyon ilkesini bozardı.
+  const SEMBOL_ISTISNA = new Set([]); // bilerek belirtisiz bırakılan sembol yazısı (bugün boş)
+  const sembolYazisi = (p) => /sembolleri-ve-anlamlari$/.test(p.slug || "");
+  const sembolKacan = posts.filter((p) => sembolYazisi(p) && !KOPRU_ARIZA[p.slug] && !SEMBOL_ISTISNA.has(p.slug));
+  if (sembolKacan.length) {
+    console.error("[build-blog] ✗ SEMBOL KAPSAM DENETİMİ BAŞARISIZ — sembol yazısı belirti ön-doldurmuyor:");
+    for (const p of sembolKacan) console.error(`  · ${p.slug} → cihaz "${kopruCihazSlug(p) || "(YOK)"}", belirti (YOK)`);
+    console.error("  Tolga'nın 3 Eyl hükmü: sembol sayfaları da belirti ön-doldurur.");
+    console.error("  KOPRU_ARIZA'ya cihazın KENDİ listesinden bir slug yaz, ya da SEMBOL_ISTISNA'ya gerekçesiyle ekle.");
+    process.exit(1);
+  }
   const cihazli = posts.filter((p) => kopruCihazSlug(p));
   const arizali = cihazli.filter((p) => KOPRU_ARIZA[p.slug]);
   console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +
-    `(${posts.length - cihazli.length}'i bilerek cihazsız), ${arizali.length}'inde belirti de ön-dolu.`);
+    `(${posts.length - cihazli.length}'i bilerek cihazsız), ${arizali.length}'inde belirti de ön-dolu ` +
+    `(sembol ailesi: ${posts.filter((p) => sembolYazisi(p) && KOPRU_ARIZA[p.slug]).length}/` +
+    `${posts.filter(sembolYazisi).length} belirti taşıyor, gerisi gerekçeli istisna).`);
 }
 
 // ── TESLİM DENETİMİ (uyarır, durdurmaz) ─────────────────────────────────────────────────
