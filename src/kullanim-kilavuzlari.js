@@ -24,6 +24,19 @@
 //    Not: Arçelik grubu (Arçelik/Beko/Grundig/Altus), Sony ve Canon uçlarında Akamai kenar
 //    koruması komut satırı isteklerini 403'lüyor; bu dördü gerçek tarayıcıyla doğrulandı (200).
 //
+// 🤖 BOT KORUMALI UÇLARIN TAM LİSTESİ (10 Eyl 2026 — tek yerde, link denetimi bunu okusun):
+//    curl'ün 403/000/401 aldığı ama TARAYICIDA doğru sayfayı açan 16 uç. Bunlar ölü link DEĞİL;
+//    denetimde "şüpheli → tarayıcıyla teyit" sınıfına düşer, arıza sayılmaz.
+//    · 403 — Arçelik · Beko · Grundig · Altus · Sony · Canon · Dell · Roborock ·
+//            Hisense · Iiyama · MSI · Gigabyte
+//    · 000 — Electrolux · Zanussi · Acer (Akamai HTTP/2 INTERNAL_ERROR; HTTP/1.1 de kurtarmıyor)
+//    · 401 — Panasonic (Chrome UA'da 401, sade `Mozilla/5.0` ile 200)
+//    ⚠️ Iiyama: sayfanın metin dökümü (`get_page_text`) en üstte 19 ülkelik bir liste gösterir —
+//       o liste başlıktaki GİZLİ dil menüsüdür, sayfa değildir. 10 Eyl'de çerezsiz temiz oturumla
+//       açıldı: adres `/tr_tr/support#product-support`'a iner, ilk ekranda Türkçe "DESTEK" başlığı
+//       ve model/seri no arama kutusu var. Metin dökümüne bakıp "ülke seçicisine düşüyor" demek
+//       yanlış alarm üretir; hüküm ekran görüntüsünden verilir.
+//
 // ⚠️ BAKIM: link çürümesi bu listenin ana riski. `benservis-kontrolor` koşusunda ya da
 //    kılavuz sayısı değiştiğinde adresler yeniden 200 denenmelidir.
 //

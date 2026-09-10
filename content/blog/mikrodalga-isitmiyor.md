@@ -54,7 +54,7 @@ Bunlar çözmüyorsa sorun iç devrededir (magnetron/kapasitör) → **servis ge
 
 Bu arızanın maliyeti markaya, modele ve gerçek arızaya göre değişir; bu sayfada aralık vermiyoruz. **[Cihazına göre tahmini maliyeti ücretsiz öğren →](/)** Belirtiyi yaz, olası arızayı ve tahmini maliyeti saniyede gör.
 
-İlgili: [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Bilgi Merkezi](/blog/)
+İlgili: [Mikrodalgada tabla dönmüyor](/blog/mikrodalga-tabla-donmuyor/) · [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Bilgi Merkezi](/blog/)
 
 ## Sık sorulan sorular
 

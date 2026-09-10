@@ -4,6 +4,19 @@ description: "Fırın ısınmıyor ya da geç mi ısınıyor? Rezistans, termost
 slug: "firin-isinmiyor"
 date: "2026-06-23"
 category: "Fırın / Ocak"
+updated: "2026-09-08"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Fırının program düğmesini alt-üst ya da turbo konumuna al."
+  - "Programlı modelde saati ayarla ve kurulu zamanlayıcıyı iptal et."
+  - "Kapağı tam kapat ve contayı ezik ya da yırtık var mı diye gözle kontrol et."
+  - "Sigorta kutusundan fırının sigortasını ve prizini kontrol et."
+  - "Fişi 1 dakika çek, tekrar tak ve fırını yeniden dene."
 faq:
   - q: "Fırın neden ısınmıyor?"
     a: "En sık sebep alt/üst rezistansın (ısıtıcı) yanmasıdır. Ayrıca termostat/sensör arızası, fanlı fırınlarda turbo motoru, kapı contası ve elektronik kart da ısınmayı engelleyebilir."
@@ -15,6 +28,12 @@ faq:
     a: "Arızaya göre değişir: rezistans, termostat/sensör, fan motoru ve elektronik kart çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
   coverAlt: "Fırın çizimi ve yanında ısı dalgaları"
+  steps:
+    - "Fırın program düğmesi çizimi; ibre alt-üst ısıtma sembolünün üzerinde, yanında turbo sembolü"
+    - "Fırın gösterge paneli çizimi; saat alanı ayarlı, zamanlayıcı sembolünün üstünde iptal işareti"
+    - "Kapalı fırın kapağı ve çerçevedeki conta yakın planı; contanın ezik bölümü işaretli"
+    - "Sigorta kutusu çizimi; fırının sigortası atmış konumda, yanında priz"
+    - "Fişin prizden çekilmiş hâli ve yanında 1 dakikayı gösteren süre işareti"
 ---
 
 Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısınıyor — yemek pişmiyor. Sinir bozucu ama sebep çoğu zaman birkaç parçadan biridir ve teşhisi kolaydır. Bu yazıda fırının neden ısınmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi parçanın servis işi olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -39,13 +58,17 @@ Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısını
 
 **5. Elektronik kart / zaman ayarı.** Programlı modellerde kart arızası ya da saatin ayarlı olmaması ısıtmayı kilitleyebilir.
 
-## Servisi aramadan önce kendin kontrol et
+## Adım adım kendin kontrol et
 
-1. **Doğru fonksiyonu seç.** Bazı modeller yalnızca belirli programlarda (alt-üst, turbo) ısıtır; ızgara/yalnız-fan modunda farklı davranır.
-2. **Saati/programı ayarla.** Programlı fırınlar saat ayarlı değilken ya da zamanlayıcı kuruluyken ısıtmaz.
-3. **Kapağı tam kapat, contayı kontrol et.** Conta ezik/yırtık mı bak.
-4. **Sigorta ve prizi kontrol et.** Fırın yüksek güç çeker; sigorta atmış olabilir.
-5. **Resetle.** Fişi 1 dakika çek, tekrar dene.
+**1. Doğru fonksiyonu seç.** Bazı modeller yalnızca belirli programlarda ısıtır: alt-üst ya da turbo konumunu seç. Izgara ve yalnız-fan modunda fırın farklı davranır; bu modlarda "ısınmıyor" sandığın şey cihazın normal çalışması olabilir.
+
+**2. Saati ve programı ayarla.** Programlı fırınlar saat ayarlı değilken ısıtmaz. Kurulu bir zamanlayıcı varsa da ısıtmayı kilitler — panelde zamanlayıcı sembolü yanıyorsa iptal et ve yeniden dene.
+
+**3. Kapağı tam kapat, contayı gözle kontrol et.** Kapağın tam kapandığından emin ol. Sonra çerçevedeki contayı gez: ezik, yırtık ya da sertleşmiş bir bölge var mı bak. Conta yıpranmışsa ısı kaçar ve fırın bir türlü sıcaklığa ulaşamaz. ⛔ Burada iş gözle kontrolde biter — conta değişimi servis işidir.
+
+**4. Sigortayı ve prizi kontrol et.** Fırın yüksek güç çeker; kendi sigortası atmış olabilir. Sigorta kutusuna bak, prizin çalıştığını başka bir cihazla dene.
+
+**5. Resetle.** Fişi 1 dakika çek, tekrar tak ve fırını yeniden dene. Elektronik kartın kilitlendiği durumların bir kısmı bu basit adımla açılır.
 
 ## Ne zaman mutlaka servis çağırmalısın?
 

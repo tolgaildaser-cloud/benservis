@@ -514,6 +514,11 @@ const KOPRU_CIHAZ = {
   "Kombi / Termosifon": "kombi-termosifon",
   "Fırın / Ocak": "firin-ocak-aspirator",
   "Fırın / Ocak / Aspiratör": "firin-ocak-aspirator",
+  // 10 Eyl 2026: `davlumbaz-gurultulu-calisiyor` kategorisini "Davlumbaz" yazıyor; diğer iki
+  // davlumbaz yazısı "Fırın / Ocak / Aspiratör" ve "Fırın / Ocak". Kapsam kapısı yakaladı —
+  // frontmatter'a DOKUNULMADI (kategori metni PAZ'ın alanı), 7 Eyl kombi emsaliyle tablo
+  // genişletildi. Teşhiste davlumbazın cihazı "Fırın / Ocak / Aspiratör".
+  "Davlumbaz": "firin-ocak-aspirator",
   "Televizyon": "televizyon-monitor",
   "Süpürge": "supurge",
   "Mikrodalga": "mikrodalga-air-fryer",
@@ -1485,6 +1490,9 @@ const BLOG_KAT_ESLES = {
   firin: "Fırın / Ocak / Aspiratör",
   ocak: "Fırın / Ocak / Aspiratör",
   aspirator: "Fırın / Ocak / Aspiratör",
+  // 10 Eyl 2026: `davlumbaz-gurultulu-calisiyor` kategorisini "Davlumbaz" yazıyor — köprü
+  // tablosundaki eşiyle aynı gerekçe; frontmatter PAZ'ın alanı, eşleşme mantığı FE'nin.
+  davlumbaz: "Fırın / Ocak / Aspiratör",
   televizyon: "Televizyon / Monitör",
   monitor: "Televizyon / Monitör",
   supurge: "Süpürge",
