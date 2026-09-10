@@ -107,7 +107,7 @@ Bu yediden sonra da düzelmiyorsa belirtiyi [Benservis'e](/) yaz — olası arı
 
 Filtrenin kendisini adım adım yıkamak istersen: [Davlumbaz yağ filtresi nasıl temizlenir](/blog/davlumbaz-yag-filtresi-nasil-temizlenir/)
 
-İlgili: [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Beyaz eşya servis ücreti nasıl belirlenir](/blog/beyaz-esya-servis-ucreti/)
+İlgili: [Davlumbaz gürültülü çalışıyor](/blog/davlumbaz-gurultulu-calisiyor/) · [Ocak ateşleme yapmıyor](/blog/ocak-atesleme-yapmiyor/) · [Fırın ısınmıyor](/blog/firin-isinmiyor/) · [Beyaz eşya servis ücreti nasıl belirlenir](/blog/beyaz-esya-servis-ucreti/)
 
 ## Sık sorulan sorular
 
