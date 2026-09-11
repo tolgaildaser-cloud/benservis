@@ -15,6 +15,7 @@ import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
 import AnaSayfaVitrin from "./AnaSayfaVitrin.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
+import { gelisEtiketi } from "./gelis.js";
 import { SEED } from "./tarife-seed.js";
 import { seedEslestir } from "./seed-eslesme.js";
 import { teshisImzasi, teshisKapisi } from "./teshis-onbellek.js";
@@ -25,13 +26,11 @@ import { NAVY as INK, BG as CREAM, BLUE as AMBER, BG, SURFACE, MUTED, FAINT, HAI
 // etiket uygulamadaki teşhis/servis olaylarına `gelis` alanı olarak eklenir. Böylece
 // "hata kodu sayfasından gelen kullanıcı gerçekten servis çağırdı mı" ölçülebilir hâle gelir
 // (kurulun `rehber_click` ölü sayacı itirazının karşılığı).
-// ⛔ Serbest metin ALINMAZ: yalnız [a-z0-9-] ve en fazla 32 karakter — analitiğe çöp ya da
-// kişisel veri sızmasın; desene uymayan değer sessizce atılır.
+// ⛔ Serbest metin ALINMAZ — desen ve `kaynak`→`k` sırası TEK yerde: src/gelis.js.
+// (11 Eyl 2026: burası yalnız `kaynak` okuyordu, blog köprüleri yalnız `k` basıyordu →
+// `diagnose_start`/`servis_click` olaylarının tamamı atıfsız düşüyordu. Ayrıntı gelis.js'te.)
 const GELIS = (() => {
-  try {
-    const v = new URLSearchParams(window.location.search).get("kaynak") || "";
-    return /^[a-z0-9-]{1,32}$/.test(v) ? v : "";
-  } catch { return ""; }
+  try { return gelisEtiketi(window.location.search); } catch { return ""; }
 })();
 
 
@@ -252,6 +251,13 @@ export default function App() {
   // Sunucunun IP'den tahmin ettiği il (Vercel coğrafi başlığı; izin istemi YOK, çerez YOK).
   // İki yerde kullanılır: CTA'yı kişiselleştirmek + servis ekranında il seçicisini ön-seçmek.
   const [ipIl, setIpIl] = useState(null);
+  // Çift kapının ÖLÇÜMÜ: `?servis=1` ile doğrudan açılan servis ekranı hiçbir olay
+  // düşürmüyordu (servis_click yalnız düğme tıklamasında) → site başlığındaki "Yakın
+  // Servisler" ve yazı içi servis CTA'larından gelenler Vercel'de görünmüyordu.
+  // `kaynak: "servis_link"` düğme tıklamalarından ayrışsın diye; `gelis` hangi sayfa.
+  useEffect(() => {
+    if (ONSECIM.servis) { try { track("servis_click", { kaynak: "servis_link", cihaz: ONSECIM.cihaz, gelis: GELIS }); } catch {} }
+  }, []);
 
   // --- Sesli girdi (STT) — ses SAKLANMAZ: kaydet → /api/stt (Whisper) → belirtiye ekle ---
   const [sesDurumu, setSesDurumu] = useState("bosta"); // "bosta" | "kaydediyor" | "isliyor"
