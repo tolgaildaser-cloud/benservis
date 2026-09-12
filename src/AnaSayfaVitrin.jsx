@@ -275,7 +275,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 ⚠️ <a> olduğu için ≤640px'te üst bar kuralıyla GİZLENİR (aynı kural üç metin
                 bağını da gizliyor; 375px'te logo+düğme zaten 334px dolduruyor, beşinci öğe
                 barı ikinci satıra taşırdı). Mobil karşılığı footer'daki "Servis Kaydı". */}
-            <a href="/servis-kayit?kaynak=anasayfa-ust" style={st.ustKayit}>Servis Kaydı</a>
+            <a className="ustbar-kayit" href="/servis-kayit?kaynak=anasayfa-ust" style={st.ustKayit}>Servis Kaydı</a>
           </nav>
         </div>
 
