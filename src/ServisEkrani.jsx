@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { track } from "@vercel/analytics";
+import { gelisEtiketi } from "./gelis.js";
 
 /**
  * İki koordinat arasındaki mesafeyi km olarak hesaplar (Haversine formülü).
@@ -394,11 +395,10 @@ function FallbackIlce({ ilIlceMap, secili, onSec, baslangicIl }) {
 // Aramaya/WhatsApp'a basıldığında bu etiket olayla birlikte yazılır — böylece
 // "hangi tamir sayfası servise ULAŞMA üretiyor" sorusu ölçülebilir hale gelir.
 // Adres parametresi yoksa "dogrudan" yazılır; tahmin YAPILMAZ.
+// Okuma App.jsx `GELIS` ile AYNI yardımcıdan (src/gelis.js): 11 Eyl'e kadar burası yalnız
+// `k`, App yalnız `kaynak` okuyordu ve huninin iki ucu farklı etiket yazıyordu.
 const GELIS_KAYNAGI = (() => {
-  try {
-    const k = new URLSearchParams(window.location.search).get("k");
-    return k ? String(k).slice(0, 60) : "dogrudan";
-  } catch { return "dogrudan"; }
+  try { return gelisEtiketi(window.location.search) || "dogrudan"; } catch { return "dogrudan"; }
 })();
 
 export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayfa, teshisLogId, baslangicIl }) {
