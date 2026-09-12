@@ -32,13 +32,30 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
   });
 
-  it("üst bar düğmesi mobilde GERÇEKTEN gizleniyor (satır içi display'i yenen kural)", () => {
+  it("üst bar düğmesi MOBİLDE DE görünür, yer açılarak (Tolga: 'ikisi de')", () => {
     const vitrin = oku("src/AnaSayfaVitrin.jsx");
     const app = oku("src/App.jsx");
-    // Bağ sınıf taşımalı, kural da `!important` olmalı: satır içi `display:inline-flex`
-    // olmasaydı gerek yoktu, ama var — 12 Eyl'de 375px'te 100px taşma olarak ölçüldü.
     expect(vitrin).toContain('className="ustbar-kayit"');
-    expect(app).toMatch(/\.vitrin-ustmenu a\.ustbar-kayit \{ display: none !important; \}/);
+    // Mobilde yer açan üç kural: logo 130px · "Yakın " gizli · etiket "Kayıt"a düşer.
+    expect(app).toMatch(/\.ustbar-logo svg \{ width: 130px !important; \}/);
+    expect(app).toMatch(/\.ustcta-yakin \{ display: none; \}/);
+    expect(app).toMatch(/display: inline-flex !important/); // satır içi display'i ezer
+    expect(vitrin).toContain('className="kayit-kisa"');
+    expect(vitrin).toContain('className="kayit-uzun"');
+    // Kısaltma erişilebilirliği bozmasın: tam ad aria-label'de kalır.
+    expect(vitrin).toContain('aria-label="Servis kaydı"');
+  });
+
+  it("mobil şerit hero'nun altında ve YALNIZ mobilde açık", () => {
+    const vitrin = oku("src/AnaSayfaVitrin.jsx");
+    const app = oku("src/App.jsx");
+    expect(vitrin).toContain('href="/servis-kayit?kaynak=anasayfa-serit"');
+    // Şerit hero'dan SONRA, cihaz kartlarından ÖNCE durmalı (ölçüm: ~1 ekran aşağı).
+    expect(vitrin.indexOf("kaynak=anasayfa-serit")).toBeLessThan(vitrin.indexOf("② CİHAZ KARTLARI"));
+    // Varsayılan kapalı, mobilde açık — `display` satır içi stile YAZILMAMALI.
+    expect(app).toMatch(/\.vitrin-kayit-serit \{ display: none; \}/);
+    expect(app).toMatch(/\.vitrin-kayit-serit \{ display: block; \}/);
+    expect(vitrin).not.toMatch(/kayitSerit: \{[^}]*display:/);
   });
 
   it("mobilde gizlenen üst bar düğmesinin footer karşılığı var", () => {

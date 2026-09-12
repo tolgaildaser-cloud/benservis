@@ -1419,15 +1419,32 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    ⛔ Bağlantılar SİLİNMEDİ, yalnız bu genişlikte gizlendi: aynı üç bölüme
    sayfanın altındaki gezinme şeritleri götürüyor, yani mobil kullanıcı hiçbir
    yere erişimini kaybetmiyor. HTML'de durdukları için tarama katmanı da aynı. */
+/* Servis sahibine açılan iki yüzeyin VARSAYILANI (masaüstü): üst barda tam etiket,
+   mobil şerit kapalı. Mobil karşılıkları aşağıdaki 640px bloğunda.
+   (Bu blok bir JS şablon dizesi: yoruma ters tırnak YAZILMAZ, dizeyi kapatır.) */
+.kayit-kisa { display: none; }
+.vitrin-kayit-serit { display: none; }
+
 @media (max-width: 640px) {
   .vitrin-ustmenu a { display: none; }
-  /* ⚠️ 12 Eyl 2026 — ÜSTTEKİ KURAL "Servis Kaydı" DÜĞMESİNİ GİZLEYEMİYOR, ölçüldü:
-     o bağın SATIR İÇİ stili display:inline-flex taşıyor ve satır içi stil, stil
-     sayfasındaki kuralı ezer (özgüllük değil, sıralama meselesi). Sonuç canlıda
-     görüldü: 375px'te düğme x=366'da başlayıp 475'te bitiyordu → 100px ekran
-     dışında, kırpık. !important inline stili yenen tek yol.
-     (Bu blok bir JS şablon dizesi: yoruma ters tırnak YAZILMAZ, dizeyi kapatır.) */
-  .vitrin-ustmenu a.ustbar-kayit { display: none !important; }
+  /* ⚠️ 12 Eyl 2026 — ÜST BARDA YER AÇMA (Tolga: "mobilde servis kaydı yok mu?" → "ikisi de").
+     375px'te bar iç genişliği 335px ve canlı sayfada ölçüldü:
+       mevcut uzun etiketler .................. 449px → 114 taşıyor
+       logo 130 + "Servisler" + "Servis Kaydı"  354px →  19 taşıyor
+       logo 130 + "Servisler" + "Kayıt" ....... 321px →  14 PAY ✓
+     Bu yüzden mobilde: logo 130px, "Yakın " gizlenir, kayıt etiketi "Kayıt"a düşer.
+     Tam ad aria-label'de ve hero altındaki şeritte duruyor.
+     ⚠️ Kayıt bağının satır içi stilinde display:inline-flex var → onu ezmek için
+     !important gerekiyor (PR #175'te 100px taşma olarak ölçülen tuzak). */
+  .ustbar-logo svg { width: 130px !important; }
+  .ustcta-yakin { display: none; }
+  .vitrin-ustmenu a.ustbar-kayit {
+    display: inline-flex !important;
+    font-size: 13px !important; padding: 7px 13px !important; margin-left: 6px !important;
+  }
+  .kayit-uzun { display: none; }
+  .kayit-kisa { display: inline; }
+  .vitrin-kayit-serit { display: block; }
   /* Logo + düğme TEK SATIR: ölçüldü, 375 px'te logo 172 + düğme 146 + boşluk 16
      = 334 px < 375, yani sarmaya gerek yok. Sarınca düğme alta düşüp sola
      yaslanıyor ve bar 103 px'e çıkıyordu; nowrap ile bar yarı yarıya iniyor. */
