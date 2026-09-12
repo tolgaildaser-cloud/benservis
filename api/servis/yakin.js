@@ -7,6 +7,7 @@ import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { eslesenKategoriler } from "../../src/constants.js";
+import { ilSlug } from "../../src/ilce-il.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 let SERVISLER = [];
@@ -28,7 +29,7 @@ function haversine(lat1, lng1, lat2, lng2) {
 
 export default function handler(req, res) {
   try {
-    const { cihaz, lat, lng, ilce, q } = req.query || {};
+    const { cihaz, lat, lng, ilce, il, q } = req.query || {};
 
     // İsimle arama (servis paneli kurulumu — servis kendini bulur). Kategori/telefon filtresi YOK.
     if (q) {
@@ -62,7 +63,13 @@ export default function handler(req, res) {
           .map((x) => x.s);
       }
     } else if (ilce) {
-      list = list.filter((s) => s.ilce === ilce).slice(0, 80);
+      // ⚠️ İLÇE ADI TEK BAŞINA KİMLİK DEĞİL (12 Eyl 2026, Tolga: "aynı ilçe adı farklı
+      // illerde olabilir"). Veride ölçüldü: "Yenişehir" 133 kayıt (Bursa · Diyarbakır ·
+      // Mersin), "Ereğli" 80 (Konya · Zonguldak), "Gölbaşı" 76, "Kemalpaşa" 66, "Kemer" 48.
+      // Eski filtre yalnız ada bakıyordu → Bursa'nın Yenişehir'ini seçen kullanıcıya
+      // Mersin'inki de geliyordu. İl verildiyse ÇİFT olarak eşleştirilir.
+      const ilS = il ? ilSlug(il) : "";
+      list = list.filter((s) => s.ilce === ilce && (!ilS || s.sehir === ilS)).slice(0, 80);
     } else {
       list = [];
     }

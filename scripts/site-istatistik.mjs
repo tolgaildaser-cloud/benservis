@@ -47,8 +47,15 @@ export async function istatistikHesapla() {
   const { kilavuzKayitlari } = await import("../src/kullanim-kilavuzlari.js");
   const { CIHAZLAR, MARKALAR } = await import("../src/constants.js");
 
-  const iller = new Set(servisler.map((s) => s.sehir));
-  const ilceler = new Set(servisler.map((s) => `${s.sehir}|${s.ilce}`));
+  // KAPSAM = sistematik taradığımız iller (src/kapsam-iller.js). Veride 26 il görünür ama
+  // 12 dışındakiler Google'ın sorgu dışından döndürdüğü DAĞINIK kayıtlardır (toplam 38);
+  // o illerde ilçe ilçe taranmadı → vitrinde "oradayız" iddiası üretmezler (12 Eyl 2026).
+  // İlçe sayacı da aynı çizgide: yalnız kapsanan illerin ilçeleri sayılır.
+  const { KAPSAM_ILLER, kapsamdaMi } = await import("../src/kapsam-iller.js");
+  const iller = new Set(Object.keys(KAPSAM_ILLER));
+  const ilceler = new Set(
+    servisler.filter((s) => kapsamdaMi(s.sehir) && s.ilce).map((s) => `${s.sehir}|${s.ilce}`)
+  );
   const puanli = servisler.filter((s) => s.puan != null && s.puan !== "").length;
   const serbis = servisler.filter((s) => s.serbis).length;
   const tarife = Object.values(SEED).reduce((n, satirlar) => n + satirlar.length, 0);
