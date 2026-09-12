@@ -1,6 +1,6 @@
 ---
-title: "Beko çamaşır makinesi hata kodları: hangi kod ne demek, ne yapmalı"
-description: "Beko çamaşır makinesinde E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC ne anlama geliyor? Evde bakılacaklar ve servis sınırı bu rehberde."
+title: "Beko çamaşır makinesi hata kodları"
+description: "E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC ne anlama geliyor? Evde bakılacaklar ve servis sınırı tek listede toplandı."
 slug: "beko-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
