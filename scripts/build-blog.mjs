@@ -880,6 +880,35 @@ const kopruCihazAdi = (p) =>
     ? String(kurutmaYazisi(p) ? "Kurutma Makinesi" : p.category).toLocaleLowerCase("tr")
     : "";
 
+// ═══ DÖNÜŞÜM KAPISI — MESAJ NİYETE EŞLENİR (12 Eyl 2026, Tolga: "ziyaretçiyi teşhise geçir") ═══
+// 📏 TABAN (13 Ağu–12 Eyl, Vercel ziyaretçi × teshis_log `kaynak=blog-ici`, ilk 100 blog yolu):
+//     sınıf           sayfa  ziyaretçi  teşhis   oran
+//     HATA KODU/SEMBOL   30       487       3    %0,6   ← en büyük trafik, en düşük dönüşüm
+//     ARIZA              34       344       9    %2,6
+//     BİLGİ/BAKIM        17       303       5    %1,7
+// Köprünün YERİ sorun değil: mobilde (%92) üç sınıfta da aynı — ilk ekranda çift kapı
+// (~0,5 ekran), sonda çift kapı, ve her kaydırmada görünen sabit alt bant. Görünürlük doymuş.
+// Fark MESAJDA: üç sınıfa da "Tahmini maliyeti/fiyatı" deniyordu. Hata kodunun ya da
+// sembolün anlamını az önce öğrenmiş okurun sıradaki sorusu fiyat değil, "servis mi gerekir,
+// kendim mi çözerim?" — teşhis ekranı bunu tam olarak cevaplıyor (Karar rozeti: Tamir ettir /
+// Tamir gerekmez · "Kendin çözmek ister misin?" bölümü; src/App.jsx'te render ediliyor).
+// 🧪 TEK DEĞİŞKEN: yalnız HATA KODU/SEMBOL sınıfında teşhis düğmesinin METNİ değişir.
+//    Adres (k=blog-<slug>, ön-dolu belirti), konum, servis düğmesi, başlık AYNEN kalır.
+//    ARIZA ve BİLGİ sınıfları dokunulmadan EŞZAMANLI KONTROL grubu olur (aynı mevsim,
+//    aynı trafik kaynağı) → 4 hafta sonra "sınıf oranı değişti mi, kontrol sabit mi" okunur.
+// ⛔ #46: metinde fiyat/TL YOK. #89: katman/pop-up YOK, yalnız mevcut düğmenin metni.
+// 📐 Sabit alt bant tek satır varsayar (boşluk 64px): etiket 16px/700 Hanken Grotesk ile
+//    canlıda ölçüldü → 259px; 375px'te 343, 320px'te 288 px kullanılabilir → sarmaz.
+const KOD_SEMBOL_DESENI = /(-hata-kodlari|-hatasi|-sembolleri-ve-anlamlari)$/;
+const kodSembolYazisi = (p) => KOD_SEMBOL_DESENI.test(String(p?.slug || ""));
+const TESHIS_ETIKET = "Tahmini maliyeti ücretsiz öğren →"; // kontrol grubu — değişmedi
+const STICKY_ETIKET = "Tahmini fiyatı gör →"; // kontrol grubu — değişmedi
+const TESHIS_ETIKET_KOD = "Servis mi gerekir? Ücretsiz teşhis →";
+const teshisEtiketi = (p) => (kodSembolYazisi(p) ? TESHIS_ETIKET_KOD : TESHIS_ETIKET);
+const stickyEtiketi = (p) => (kodSembolYazisi(p) ? TESHIS_ETIKET_KOD : STICKY_ETIKET);
+// DOM'da hangi mesajın basıldığı okunabilsin (doğrulama + ileride olay kırılımı). Görünmez.
+const mesajOzniteligi = (p) => (kodSembolYazisi(p) ? ` data-mesaj="kod-servis-mi"` : "");
+
 // ① İLK EKRAN — "cevabı bul, çık" kullanıcısını sona inmeden yakalayan tek satır.
 // Kurul notu: yazının ilk ekranına bağlamlı bir satır konmalı. Bağlam yoksa satır HİÇ
 // basılmaz (jenerik satır gürültüdür; sayfa sonundaki kart zaten duruyor).
@@ -896,7 +925,7 @@ const KOPRU_SATIRI = (p) => {
   // sağ = tahmini maliyet (mevcut köprü). Sıra bilinçli: Tolga'nın önceliği servis.
   return `<div class="kopru kopru-cift">` +
     `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="servis-ilk">📍 Yakınımdaki servisi bul →</a>` +
-    `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="ilk-ekran">Tahmini maliyeti ücretsiz öğren →</a>` +
+    `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="ilk-ekran"${mesajOzniteligi(p)}>${teshisEtiketi(p)}</a>` +
   `</div>`;
 };
 
@@ -919,7 +948,7 @@ const YAZI_CTA = (p) => {
   return `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
     `<div class="kopru-cift">` +
       `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="son-kart-servis">📍 Yakınımdaki servisi bul →</a>` +
-      `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="son-kart">Tahmini maliyeti ücretsiz öğren →</a>` +
+      `<a class="kopru-btn kopru-teshis" href="${kopruHref(p)}" data-kopru="son-kart"${mesajOzniteligi(p)}>${teshisEtiketi(p)}</a>` +
     `</div></div>`;
 };
 
@@ -929,7 +958,7 @@ const YAZI_CTA = (p) => {
 // Yalnız yazı sayfalarında ve yalnız dar ekranda görünür (masaüstünde sona kadar okuma
 // deseni farklı; orada son kart yeterli).
 const STICKY = (p) =>
-  `<div class="sticky-bosluk"></div><a class="sticky-kopru" href="${kopruHref(p)}" data-kopru="sticky">Tahmini fiyatı gör →</a>`;
+  `<div class="sticky-bosluk"></div><a class="sticky-kopru" href="${kopruHref(p)}" data-kopru="sticky"${mesajOzniteligi(p)}>${stickyEtiketi(p)}</a>`;
 
 // PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
 // Pasif blok: ana CTA'nın altında, yazının akışını kesmez; uygulama ana ekrandan açıldıysa
