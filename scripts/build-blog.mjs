@@ -255,6 +255,16 @@ article .lead{display:block;margin-bottom:3px}
 table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
 th,td{border:1px solid ${T.HAIR};padding:10px 12px;text-align:left}
 th{background:${T.BG}}
+/* TABLO TAŞMASI (13 Eyl 2026, Tolga: "tablo taşmasını da düzelt"). Canlıda iframe ile
+   TAM SAYIM: 110 tablolu yazının 28'i 320px'te, 2'si 375px'te sayfayı yana taşırıyordu
+   (1-97px, 28'inin kaynağı da tablo). Dar ekranda hücre dolgusu 12'den 8'e iner ve uzun
+   kelime YALNIZ sığmadığında kırılır (anywhere; break-all gibi her yerde değil) - aynı
+   kural 28 sayfaya canlıda enjekte edilip ölçüldü: 320 ve 375'te taşma 28/28 sıfır.
+   Kapsayıcı güvenlik ağıdır: bugün hiçbir tablo kutu içinde kaydırma istemiyor (ölçüldü),
+   ama gelecekte gerçekten geniş bir tablo gelirse sayfa değil kendi kutusu kayar. */
+.tablo-kap{overflow-x:auto;max-width:100%;margin:18px 0}
+.tablo-kap table{margin:0}
+@media(max-width:640px){th,td{padding:8px;overflow-wrap:anywhere}}
 blockquote{margin:18px 0;padding:12px 16px;background:#EFF4FF;border-left:3px solid ${T.BLUE};color:${T.NAVY}}
 blockquote p{margin:0}
 .cta{display:block;margin:36px 0 8px;padding:24px;border-radius:16px;background:${T.BLUE};color:#fff;text-decoration:none;transition:background .15s,transform .15s}
@@ -1118,7 +1128,12 @@ const posts = serpistir(
       const { data, content } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"));
       // Paragraf/madde BAŞINDAKİ bold lead-in'e .lead sınıfı ver (blok yapılacak); cümle
       // ORTASINDAKİ bold (<p>metin <strong>) eşleşmez → inline kalır.
-      const html = marked.parse(content).replace(/<(p|li)><strong>/g, '<$1><strong class="lead">');
+      // Tablolar kaydırılabilir kapsayıcıya alınır (taşma güvenlik ağı; gerekçe CSS'te .tablo-kap).
+      // marked tabloyu özniteliksiz <table> olarak basıyor (dist'te 154/154 ölçüldü).
+      const html = marked.parse(content)
+        .replace(/<(p|li)><strong>/g, '<$1><strong class="lead">')
+        .replace(/<table>/g, '<div class="tablo-kap"><table>')
+        .replace(/<\/table>/g, "</table></div>");
       return { ...data, html };
     })
     .filter((p) => p.slug && p.title)
