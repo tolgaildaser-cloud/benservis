@@ -12,7 +12,7 @@ Kullanım (proje kökünde):
   GOOGLE_PLACES_API_KEY=xxx RESET=1 python3 -u scripts/collect-cities.py    # progress sıfırla, baştan
   (ONLY=Beykoz tek ilçe testi · PAGES=2 daha derin)
 """
-import os, json, time, shutil, requests
+import os, re, json, time, shutil, requests
 
 API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
 if not API_KEY:
@@ -77,20 +77,54 @@ CITY_DISTRICTS = {
 }
 ALL_CITIES = list(CITY_DISTRICTS.keys())
 CITIES = [c for c in ALL_CITIES if not CITIES_SEL or c in CITIES_SEL]
-# ⚠️ 12 Eyl 2026 — ÇİFT ANLAMLI İLÇE ADI SESSİZCE VERİ BOZUYORDU (ölçüldü, bu koşuda yakalandı).
-# "Yenişehir" HEM Bursa'nın HEM Mersin'in ilçesi. Eski satır son kazanan ili yazıyordu
-# (dict sırası) → Mersin eklenir eklenmez, adresinde "Bursa" yazan **36 Bursa kaydı**
-# `sehir: mersin` oldu. Aşağıdaki mislabel turu bunu "düzeltme" sanıp uyguluyordu.
-# ÇÖZÜM: geriye dönük şehir düzeltmesi YALNIZ tek ile ait ilçe adları için yapılır.
-# Çift anlamlı ad hiçbir yöne çekilmez — toplama anında `sehir` zaten sorgulanan ilden gelir.
-_ilce_sayaci = {}
-for _c, _ds in CITY_DISTRICTS.items():
-    for _d in _ds:
-        _ilce_sayaci[_d.lower()] = _ilce_sayaci.get(_d.lower(), 0) + 1
-DISTRICT2CITY = {d.lower(): c for c, ds in CITY_DISTRICTS.items() for d in ds if _ilce_sayaci[d.lower()] == 1}
-_cift = sorted(d for d, n in _ilce_sayaci.items() if n > 1)
-if _cift:
-    print(f"ℹ️  çift anlamlı ilçe adı (şehir düzeltmesi dışında): {', '.join(_cift)}", flush=True)
+# ⚠️ 12 Eyl 2026 — İLÇE ADI TEK BAŞINA KİMLİK DEĞİL (Tolga: "aynı ilçe adı farklı illerde
+# olabilir"). Aynı gün iki kanama ölçüldü: ① ilçe→il sözlüğü "Yenişehir"i son gelen ile
+# yazıyordu → adresinde Bursa yazan 36 kayıt Mersin'e taşındı ② ilçe, adres metninde ALT DİZE
+# aranıyordu → "Kemalpaşa Cd., Bağcılar/İstanbul" kaydı izmir/Kemalpaşa oldu (439 kayıtta
+# ilçe, 133 kayıtta il yanlıştı). ÇÖZÜM: il ve ilçe ADRESİN "<İlçe>/<İl>" kuyruğundan okunur
+# ve resmî listeyle ÇİFT olarak doğrulanır. Tek kaynak: src/tr-iller.js (81 il · 972 ilçe) —
+# aynı kural JS tarafında src/ilce-il.js'te, iki tarafın ayrışmasını
+# src/ilce-il-tutarlilik.test.js yakalar. Geriye dönük onarım artık bu betiğin işi DEĞİL:
+# scripts/ilce-il-duzelt.mjs (API çağrısı yapmaz, idempotent).
+_TR_HARF = str.maketrans({"ı": "i", "İ": "i", "ş": "s", "Ş": "s", "ğ": "g", "Ğ": "g",
+                          "ü": "u", "Ü": "u", "ö": "o", "Ö": "o", "ç": "c", "Ç": "c", "̇": ""})
+
+
+def norm_tr(s):
+    return re.sub(r"\s+", " ", str(s or "").translate(_TR_HARF).lower().strip())
+
+
+def _tr_iller_oku():
+    """src/tr-iller.js içindeki resmî 81 il · ilçe tablosunu okur (tek kaynak)."""
+    yol = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "src", "tr-iller.js"))
+    metin = open(yol, encoding="utf-8").read()
+    govde = re.search(r"TR_IL_ILCE = \{(.*)\n\};", metin, re.S).group(1)
+    tablo = {il: re.findall(r'"([^"]+)"', ic) for il, ic in re.findall(r'"([^"]+)":\s*\[(.*?)\]', govde, re.S)}
+    if len(tablo) != 81:
+        raise SystemExit(f"tr-iller.js beklenmedik: {len(tablo)} il okundu (81 olmalı)")
+    return tablo
+
+
+TR_IL_ILCE = _tr_iller_oku()
+IL_ADI = {norm_tr(il): il for il in TR_IL_ILCE}
+ILCE_ADI = {(norm_tr(il), norm_tr(d)): d for il, ds in TR_IL_ILCE.items() for d in ds}
+IL_SLUG = lambda il: re.sub(r"[^a-z0-9]+", "-", norm_tr(il)).strip("-")
+# Google adresi "… 07100 Muratpaşa/Antalya, Türkiye" ile biter; ilçe/il adlarında rakam yok.
+KUYRUK = re.compile(r"([^,/0-9]+?)\s*/\s*([^,/0-9]+?)\s*(?:,\s*t[üu]rkiye)?\s*$", re.I)
+
+
+def adres_il_ilce(adres):
+    """Adres kuyruğundan (il, ilçe, slug) döner; çözemezse None — TAHMİN ETMEZ."""
+    m = KUYRUK.search(str(adres or "").strip())
+    if not m:
+        return None
+    il = IL_ADI.get(norm_tr(m.group(2)))
+    if not il:
+        return None
+    ilce = ILCE_ADI.get((norm_tr(il), norm_tr(m.group(1))))
+    if not ilce:
+        return None
+    return il, ilce, IL_SLUG(il)
 
 SEARCHES = [
     ("beyaz eşya teknik servisi", ["Buzdolabı","Çamaşır Makinesi","Bulaşık Makinesi","Fırın / Ocak"]),
@@ -114,12 +148,18 @@ def log(*a):
     print(*a, flush=True)
 
 
-def extract_ilce(address, districts):
-    a = (address or "").lower()
-    for d in sorted(districts, key=len, reverse=True):
-        if d.lower() in a:
-            return d
-    return ""
+def yer_coz(addr, city, district):
+    """(ilce, sehir) — önce adres kuyruğu (kesin), çözülemezse sorgulanan ilçe/il (zorunlu tahmin).
+
+    ⛔ Eski `extract_ilce` ilçe adını adresin HER YERİNDE arıyordu; sokak adı ilçe sanılıyordu.
+    Google sorgusu ilçe dışından işletme döndürebildiği için sorgulanan ilçe de kesin değildir —
+    bu yüzden adres varsa DAİMA adres kazanır.
+    """
+    coz = adres_il_ilce(addr)
+    if coz:
+        il, ilce, slug = coz
+        return ilce, slug
+    return district, city
 
 
 def norm_phone(p):
@@ -143,9 +183,10 @@ def parse_place(p, cats, city, district):
     name = p.get("displayName", {}).get("text", "")
     addr = p.get("formattedAddress", "")
     rating = p.get("rating"); count = p.get("userRatingCount", 0)
+    ilce_adi, sehir_slug = yer_coz(addr, city, district)
     return {
         "id": p.get("id", ""), "ad": name, "kategoriler": cats, "telefon": norm_phone(p),
-        "adres": addr, "ilce": extract_ilce(addr, CITY_DISTRICTS[city]) or district, "sehir": city,
+        "adres": addr, "ilce": ilce_adi, "sehir": sehir_slug,
         "lat": p.get("location", {}).get("latitude"), "lng": p.get("location", {}).get("longitude"),
         "puan": rating, "yorumSayisi": count, "googleMapsUrl": p.get("googleMapsUri", ""),
         "yetkili": "yetkili" in name.lower() or "authorized" in name.lower(),
@@ -189,14 +230,21 @@ if os.path.exists(PROGRESS):
 if done:
     log(f"RESUME: {len(done)} ilçe zaten bitmiş, atlanacak.")
 
-# ---- mevcut veri + mislabel temizliği ----
+# ---- mevcut veri + il/ilçe normalizasyonu ----
+# Eski tur ilçe adına bakıp şehir yazıyordu ve çift anlamlı adlarda veriyi BOZUYORDU
+# (36 Bursa kaydı Mersin'e taşınmıştı). Artık ölçüt adres: kuyruğu çözülen kayıtta il+ilçe
+# resmî listeden yeniden yazılır, çözülemeyene DOKUNULMAZ. Aynı iş ayrıca tek başına
+# koşulabilir: scripts/ilce-il-duzelt.mjs
 existing = json.load(open(PATH, encoding="utf-8"))
 by_id = {s["id"]: s for s in existing if s.get("id")}
 fixed = 0
 for s in by_id.values():
-    real = DISTRICT2CITY.get((s.get("ilce") or "").lower())
-    if real and s.get("sehir") != real:
-        s["sehir"] = real; fixed += 1
+    coz = adres_il_ilce(s.get("adres"))
+    if not coz:
+        continue
+    il, ilce, slug = coz
+    if s.get("sehir") != slug or s.get("ilce") != ilce:
+        s["sehir"] = slug; s["ilce"] = ilce; fixed += 1
 shutil.copy(PATH, PATH + ".bak")  # koşu öncesi snapshot (tek sefer)
 before = {c: sum(1 for s in by_id.values() if s.get("sehir") == c) for c in ALL_CITIES}
 
@@ -230,7 +278,7 @@ for i, (city, district) in enumerate(todo, 1):
     log(f"     +{da} yeni · toplam {len(by_id)} · çağrı {total_calls}")
 
 after = {c: sum(1 for s in by_id.values() if s.get("sehir") == c) for c in ALL_CITIES}
-log(f"\n✅ BİTTİ · API çağrısı: {total_calls} · yeni servis: {added} · mislabel: {fixed}")
+log(f"\n✅ BİTTİ · API çağrısı: {total_calls} · yeni servis: {added} · il/ilçe adresten düzeltilen: {fixed}")
 for c in ALL_CITIES:
     log(f"   {CITY_DISPLAY[c]}: {before[c]} → {after[c]}")
 log(f"   Toplam: {len(by_id)} · yazıldı (yedek: services-data.json.bak)")
