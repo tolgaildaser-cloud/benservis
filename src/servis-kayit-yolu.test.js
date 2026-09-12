@@ -39,6 +39,17 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(oku("src/App.jsx")).toContain(".vitrin-ustmenu a { display: none; }");
   });
 
+  it("kayıt sayfasından ana sayfaya DÖNÜŞ var — logo, karakter değil", () => {
+    const src = oku("src/ServisKayit.jsx");
+    expect(src).toContain('from "./BenservisLogo.jsx"');
+    expect(src).toMatch(/<a href="\/" aria-label="Benservis ana sayfası"/);
+    // Eski hata: logo yerine `◑` karakteri vardı, tıklanabilir olduğu anlaşılmıyordu.
+    const kod = src.replace(/\/\*[\s\S]*?\*\//g, ""); // yorumlar hariç
+    expect(kod).not.toContain("◑");
+    // Form ekranı ve BAŞARI ekranı aynı barı kullanır (başarı ekranında hiç yoktu).
+    expect((src.match(/<UstBar \/>/g) || []).length).toBe(2);
+  });
+
   it("rota ve rewrite duruyor (yol açık kalsın)", () => {
     expect(oku("src/main.jsx")).toContain('path === "/servis-kayit"');
     expect(oku("vercel.json")).toContain('"/servis-kayit"');

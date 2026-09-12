@@ -6,6 +6,21 @@ import { CIHAZLAR, MARKALAR } from "./constants.js";
 import KvkkNotu from "./KvkkNotu.jsx";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, FAINT as GRAY, RED } from "./theme.js";
 import { GELIS_DESENI } from "./gelis.js";
+import BenservisLogo from "./BenservisLogo.jsx";
+
+// Üst bar — form ekranı ve başarı ekranı AYNI barı kullanır (başarı ekranında hiç yoktu).
+// Logo TAMAMI tek bağ: koyu zeminde beyaz "ben" + açık mavi "servis", ana sayfaya döner.
+// Sağdaki etiket sayfanın neresi olduğunu söyler (gezinme değil, bağlam).
+function UstBar() {
+  return (
+    <div style={{ background: INK, color: CREAM, padding: "12px 20px", display: "flex", alignItems: "center", gap: 10 }}>
+      <a href="/" aria-label="Benservis ana sayfası" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", lineHeight: 0 }}>
+        <BenservisLogo style={{ height: 34, width: "auto", display: "block" }} benColor="#FFFFFF" servisColor="#93C5FD" showMotto={false} />
+      </a>
+      <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>Servis Kaydı</span>
+    </div>
+  );
+}
 
 // 📏 Başvuru HANGİ YOLDAN geldi (12 Eyl 2026). Kayıt sayfası 3 aydır çalışıyordu ama
 // siteden erişilemiyordu (tek link rotadan kalkmış LandingPage'deydi); yollar açıldı ve
@@ -180,7 +195,10 @@ export default function ServisKayit() {
   if (basarili) {
     return (
       <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
-        
+        {/* 12 Eyl 2026: bu ekranda başlık HİÇ YOKTU — başvuruyu gönderen kullanıcının
+            ana sayfaya dönüşü tamamen kapalıydı (tek düğme /panel'e gidiyordu). */}
+        <UstBar />
+
         <div style={{ maxWidth: 480, margin: "0 auto", padding: "80px 20px", textAlign: "center" }}>
           <div style={{ fontSize: 52, marginBottom: 20 }}>🎉</div>
           <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 26, fontWeight: 700, color: INK, marginBottom: 12 }}>
@@ -216,12 +234,12 @@ export default function ServisKayit() {
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif" }}>
       
 
-      {/* Header */}
-      <div style={{ background: INK, color: CREAM, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10 }}>
-        <a href="/" style={{ color: CREAM, textDecoration: "none", fontSize: 20 }}>◑</a>
-        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>Benservis</span>
-        <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>Servis Kaydı</span>
-      </div>
+      {/* Header — 12 Eyl 2026 (Tolga: "servis kaydından ana sayfaya dönüş yok, en üstte
+          solda benservis logo yok"). Eskiden logo yerine `◑` KARAKTERİ vardı ve yanındaki
+          "Benservis" yazısı bağ değildi: dönüş bağı teknik olarak duruyordu ama logo gibi
+          görünmediği için kimse tıklanabilir olduğunu anlamıyordu. Artık gerçek marka
+          logosu ve TAMAMI tek bağ. */}
+      <UstBar />
 
       <div style={{ maxWidth: 540, margin: "0 auto", padding: "28px 20px 60px" }}>
 
