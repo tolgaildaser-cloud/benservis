@@ -5,6 +5,18 @@ import React, { useState } from "react";
 import { CIHAZLAR, MARKALAR } from "./constants.js";
 import KvkkNotu from "./KvkkNotu.jsx";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, FAINT as GRAY, RED } from "./theme.js";
+import { GELIS_DESENI } from "./gelis.js";
+
+// 📏 Başvuru HANGİ YOLDAN geldi (12 Eyl 2026). Kayıt sayfası 3 aydır çalışıyordu ama
+// siteden erişilemiyordu (tek link rotadan kalkmış LandingPage'deydi); yollar açıldı ve
+// hangi bağın başvuru getirdiği bu etiketle ayrışır. Desen teşhisteki `kaynak` ile ORTAK
+// (src/gelis.js) — serbest metin girmez; sunucu ayrıca kendi denetimini yapar.
+const KAYNAK = (() => {
+  try {
+    const v = new URLSearchParams(window.location.search).get("kaynak") || "";
+    return GELIS_DESENI.test(v) ? v : "dogrudan";
+  } catch { return "dogrudan"; }
+})();
 
 
 
@@ -151,6 +163,7 @@ export default function ServisKayit() {
         body: JSON.stringify({
           ...form,
           yetkili_markalar: form.yetkili ? form.yetkili_markalar : [],
+          kaynak: KAYNAK, // hangi bağdan gelindi (sunucu ayrıca desen denetler)
         }),
       });
       const data = await res.json();
