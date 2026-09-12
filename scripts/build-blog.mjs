@@ -662,6 +662,10 @@ const KOPRU_ARIZA = {
   "su-aritma-su-gelmiyor": "su-gelmiyor",
   "su-sebili-altinda-su-birikiyor": "su-akitiyor",
   "su-sebili-sogutmuyor": "sogutmuyor-isitmiyor",
+  // 12 Eyl 2026: sıcak su tarafı. App'teki belirti tek kalem ("Soğutmuyor/ısıtmıyor"),
+  // yani soğutmayan sebille aynı slug'a düşer — ayrı belirti uydurulmadı (#67 ② kuralı:
+  // slug App'in KENDİ tablosunda karşılık bulmalı, yoksa köprü ariza'yı hiç basmaz).
+  "su-sebili-sicak-su-vermiyor": "sogutmuyor-isitmiyor",
   // ── 1 Eyl 2026: HATA KODU AİLESİ — tablo kural olarak değil TEK TEK büyüdüğü için
   // külliyattaki marka hata-kodu sayfaları dışarıda kalmıştı. Kural zaten kuruluydu
   // (`camasir-makinesi-hata-kodlari` · `arcelik-camasir-…` · `bosch-bulasik-…-e15-hatasi`
