@@ -21,6 +21,8 @@ faq:
     a: "Kılavuzların bu konuda ayrı bir uyarı kutusu var ve başlığı maddi hasar. Condens 1200 W ve 2200i W kılavuzları aynı cümleyi kuruyor: sıcak kombiye soğuk ısıtma suyu eklenirken, termik gerilmeler gerilme nedeniyle çatlaklara yol açabilir. Talimatı da birebir veriyorlar: ısıtma tesisatını sadece soğuk durumdayken doldurun, maksimum gidiş suyu sıcaklığı 40 derece. Yani kombi yeni çalışmışken su eklemek kılavuzun açıkça uyardığı bir hata. Cihazın soğumasını beklemek gerekiyor."
   - q: "Basınç sürekli düşüyorsa bu normal mi?"
     a: "Hayır. Yukarıdaki her şey basıncın bir kez düşmesiyle ilgili. Doldurulduktan sonra tekrar tekrar düşüyorsa konu artık basınç okuması değil, suyun nereye gittiğidir ve bu panelden anlaşılmaz. Kılavuzlar da bu noktadan sonra kullanıcıya bir işlem tarif etmiyor. Tesisatta ya da cihazın içinde kaçak araması, eşanjör ve genleşme tankı kontrolü servis işidir."
+images:
+  coverAlt: "Kombi tesisatına bağlı basınç göstergesi; kadranın üst kısmında mavi işaretli normal aralık, ibre bu aralığın alt sınırına yakın duruyor"
 ---
 
 Manometrede iğne nerede olmalı sorusunun kısa cevabı var: **1 ile 2 bar arası.** Bosch'un üç ayrı kombi kılavuzu da bu aralığı veriyor.
