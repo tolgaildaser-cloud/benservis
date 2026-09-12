@@ -28,9 +28,9 @@ faq:
   - q: "Siemens bulaşık makinesi E15 hatası ne anlama gelir?"
     a: "E15, makinenin taban tavasında su biriktiğini ve taşma güvenliğinin (AquaStop / şamandıra) devreye girdiğini gösterir. Ekranda genelde yanıp sönen bir musluk işaretiyle birlikte görünür. Makine bozulduğu için değil, mutfağını su basmasın diye durmuştur; asıl soru suyun tabana neden indiğidir."
   - q: "E15 varken makine neden sürekli ses çıkarıyor?"
-    a: "Şamandıra devreye girdiğinde birçok modelde tahliye pompası, tabandaki suyu atmaya çalışmak için aralıklı ya da sürekli çalışır. Bu vızıltı arızanın kendisi değil, güvenlik sisteminin çalıştığının işaretidir. Taban suyu boşaltılıp kuruduğunda ses de kesilir."
+    a: "Şamandıra devreye girdiğinde birçok modelde tahliye pompası, tabandaki suyu atmaya çalışmak için aralıklı ya da sürekli çalışır. Bu vızıltı arızanın kendisi değil, güvenlik sisteminin çalıştığının işaretidir. Makine kapatılınca ses de kesilir."
   - q: "E15 hatası bekleyince kendiliğinden geçer mi?"
-    a: "Tabandaki su azsa buharlaşınca kod kalkabilir; fişten çekip bekleyince düzeldiğini görenler bu yüzden vardır. Ama bu, suyun tabana neden kaçtığı sorusunu yanıtlamaz. Eğip boşaltmak ve kurutmak hem daha hızlıdır hem de tekrar edip etmediğini net gösterir; kısa sürede geri geliyorsa sızıntı var demektir."
+    a: "Tabandaki su azsa buharlaşınca kod kalkabilir; fişten çekip bekleyince düzeldiğini görenler bu yüzden vardır. Ama bu, suyun tabana neden kaçtığı sorusunu yanıtlamaz. Üretici bu kodda evde çözüm denenmesini önermiyor: şebeke suyunu kes, cihazı kapat ve kod tekrar ederse randevu al."
   - q: "Bosch ve Profilo'daki E15 ile aynı mı?"
     a: "Siemens, Bosch ve Profilo'da evet: üçü de BSH grubundadır ve E15 hepsinde su koruma sisteminin devreye girdiğini anlatır. Neff ve Gaggenau için aynı şeyi söyleyemiyoruz; ikisi de kendi sitelerinde bir hata kodu sayfası yayımlamıyor. Platform ortaklığı belgeli, kod tablosu ortaklığı değil."
 images:
@@ -80,7 +80,7 @@ Aşağıdaki adımların hiçbiri makineyi hareket ettirmeyi ya da eğmeyi gerek
 
 ## E15 tekrar geliyorsa: artık sızıntı arıyoruz
 
-Suyu boşalttın, kuruttun, makine bir iki yıkama sonra yine E15 verdi. Bu tablo, içeride **aktif bir sızıntının** işaretidir: conta, hortum, pompa ya da valf. Suyu tekrar tekrar boşaltarak idare etmek çözüm değildir; hem mutfak zeminine hem makinenin elektronik aksamına zarar verme riski büyür.
+Suyu kestin, cihazı kapattın, makine bir iki yıkama sonra yine E15 verdi. Bu tablo, içeride **aktif bir sızıntının** işaretidir: conta, hortum, pompa ya da valf. Kodu her seferinde bekleyerek geçiştirmek çözüm değildir; hem mutfak zeminine hem makinenin elektronik aksamına zarar verme riski büyür.
 
 **Kendin kontrol et:** Servisi aramadan önce iki gözlem yap, teşhisi hızlandırır: kapı contasında görünür yıpranma ya da kopma var mı; son dönemde deterjan tipini ya da dozunu değiştirdin mi? Bu iki cevabı belirtinle birlikte not et.
 
@@ -90,6 +90,6 @@ E15'in en sık sebebi taşma ve köpük olduğu için üç basit alışkanlık r
 
 ## Hangi noktadan sonra servis işi?
 
-Tek seferlik E15'i boşaltma-kurutma yöntemiyle kendin kapatabilirsin; bu tamamen kullanıcı seviyesinde bir iştir. Kod tekrar ediyorsa, tabana inen suyun kaynağını bulmak — conta, hortum, valf, pompa — servisin işidir ve çoğu zaman makineyi emekli etmeyi gerektirmeyen, yerinde çözülen işlerdendir. Maliyet sorusu aklındaysa tahmini bandı ücretsiz teşhiste görebilirsin.
+Tek seferlik E15'te kullanıcının payı dışarı sızan suyu kurulamak, çevreyi gözlemek ve son yıkamayı not etmektir; makineyi eğmek ve tabandaki suya müdahale etmek bu paya girmez. Kod tekrar ediyorsa, tabana inen suyun kaynağını bulmak — conta, hortum, valf, pompa — servisin işidir ve çoğu zaman makineyi emekli etmeyi gerektirmeyen, yerinde çözülen işlerdendir. Maliyet sorusu aklındaysa tahmini bandı ücretsiz teşhiste görebilirsin.
 
 Bu yazının kardeşi olan Bosch bulaşık makinesi E15 hatası rehberi sitemizde ayrıca yer alıyor; makinen Bosch etiketliyse oradaki anlatım birebir senin için. Belirtini benservis.com'a yaz, olası kaynağı ve tahmini maliyeti ücretsiz gör, sonra yakınındaki puanlı servislerden birini çağır. Bil, gör, çağır.
