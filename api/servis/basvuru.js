@@ -20,8 +20,14 @@ export default async function handler(req, res) {
   const {
     ad, sahip_ad, email, telefon, il, ilce, adres,
     kategoriler, yetkili, yetkili_markalar, notlar,
-    lat, lng,
+    lat, lng, kaynak,
   } = req.body || {};
+
+  // 📏 KAYNAK — başvuru hangi yüzeyden geldi (12 Eyl 2026). Kayıt sayfası 3 ay boyunca
+  // siteden erişilemiyordu; yollar açıldı ve "hangi bağ getirdi" sorusu bu alanla yanıtlanır.
+  // ⛔ Serbest metin ALINMAZ: teşhisteki `kaynak` deseninin aynısı ([a-z0-9-], ≤32) — desene
+  // uymayan değer sessizce "dogrudan"a düşer, analitiğe çöp ya da kişisel veri sızmaz.
+  const kaynakTemiz = /^[a-z0-9-]{1,32}$/.test(String(kaynak ?? "")) ? String(kaynak) : "dogrudan";
 
   // ── Zorunlu alan kontrolleri ────────────────────────────────────
   if (!ad?.trim())       return res.status(400).json({ error: "Servis adı zorunludur." });
@@ -68,6 +74,7 @@ export default async function handler(req, res) {
       notlar:           notlar?.trim() || null,
       lat:              (lat != null && !isNaN(Number(lat))) ? Number(lat) : null,
       lng:              (lng != null && !isNaN(Number(lng))) ? Number(lng) : null,
+      kaynak:           kaynakTemiz,
     })
     .select("id, created_at")
     .single();

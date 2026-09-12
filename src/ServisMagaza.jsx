@@ -224,6 +224,16 @@ export default function ServisMagaza() {
             </a>
           </div>
         )}
+
+        {/* Servis sahibine yol (12 Eyl 2026) — mağaza sayfası da bir servis yüzeyi.
+            ⚠️ Bu sayfa YALNIZ başvurusu olan servisler için var (`/api/servis/liste`
+            `servis_basvurulari`'yı okur), yani bugün erişimi dar; asıl hacim uygulama
+            içindeki servis profilinde (ServisEkrani). Yine de ayrı `kaynak` ile ölçülür. */}
+        <div style={{ marginTop: 20, paddingTop: 14, borderTop: "1px solid #E2E8F0", textAlign: "center" }}>
+          <a href="/servis-kayit?kaynak=servis-magaza" style={{ fontSize: 12.5, color: "#64748B", textDecoration: "none", lineHeight: 1.45 }}>
+            Servis misiniz? <strong style={{ color: AMBER }}>Benservis'te yer alın →</strong>
+          </a>
+        </div>
       </div>
     </div>
   );

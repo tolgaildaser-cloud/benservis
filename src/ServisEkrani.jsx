@@ -334,6 +334,20 @@ function ServisProfil({ servis, onGeri }) {
             </a>
           </div>
         )}
+
+        {/* SERVİS SAHİBİNE AÇILAN YOL (12 Eyl 2026, Tolga: "register fazını devreye alsak").
+            Kayıt sayfası 3 aydır çalışıyordu ama siteden ERİŞİLEMİYORDU: tek link 17 Haz
+            pivotunda rotadan kaldırılan LandingPage'deydi. Bu, dizindeki bir işletmenin
+            KENDİ sayfası — sahibinin kendini gördüğü tek yüzey, bağ için en güçlü yer.
+            ⛔ Kullanıcı akışının ALTINDA: ara/yol tarifi/yorum hep yukarıda kalır. */}
+        <div style={{ marginTop: 28, paddingTop: 16, borderTop: "1px solid #E2E8F0" }}>
+          <a
+            href="/servis-kayit?kaynak=servis-profil"
+            style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, textDecoration: "none", color: "#64748B", fontSize: 13, lineHeight: 1.45 }}
+          >
+            <span>Bu işletme sizin mi? <strong style={{ color: "#2563EB" }}>Profilinizi yönetin →</strong></span>
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -673,6 +687,18 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
             onSec={(s) => { setSeciliServis(s); setEkran("profil"); }}
           />
         ))}
+
+        {/* İKİNCİL yol — listenin SONUNDA, düşük vurgulu (12 Eyl 2026).
+            Kullanıcı akışını bozmaz: servis arayan zaten yukarıdaki kartlarla işini görür,
+            bu satırı ancak listeyi sonuna kadar kaydıran görür. Servis sahibi de buradan geçer. */}
+        {locationState === "success" && gosterilenServisler.length > 0 && (
+          <a
+            href="/servis-kayit?kaynak=servis-listesi"
+            style={{ display: "block", textAlign: "center", margin: "18px 0 4px", padding: "10px 12px", fontSize: 12.5, color: "#64748B", textDecoration: "none", lineHeight: 1.45 }}
+          >
+            Servis misiniz? <strong style={{ color: "#2563EB" }}>Benservis'te yer alın →</strong>
+          </a>
+        )}
 
         {/* Konum izni reddedildi — ilçe fallback.
             Konum köprüsünün asıl kazandığı yer BURASI: kullanıcının konumu bilinmiyor,
