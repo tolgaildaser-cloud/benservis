@@ -252,7 +252,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             üzerine binsin armuttaki gibi ve menuler de binsin"). Şeffaf zemin, beyaz
             logo; koyu hero üstünde kendi kutusu yok — Armut deseni. */}
         <div className="vitrin-ustbar" style={st.ustBar}>
-          <button onClick={onLogo} aria-label="Ana sayfa" style={st.ustLogoBtn}>
+          <button onClick={onLogo} aria-label="Ana sayfa" className="ustbar-logo" style={st.ustLogoBtn}>
             <BenservisLogo style={st.ustLogo} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
           </button>
           <nav className="vitrin-ustmenu" style={st.ustMenu} aria-label="Ana menü">
@@ -266,7 +266,9 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" />
               </svg>
-              Yakın Servisler
+              {/* "Yakın " mobilde gizlenir (≤640px): bar 375px'te üç öğeyi ancak böyle
+                  taşır — canlıda ölçüldü, aşağıdaki kayıt düğmesinin yorumunda tablo var. */}
+              <span className="ustcta-yakin">Yakın </span>Servisler
             </button>
             {/* SERVİS SAHİBİNE KAPI (12 Eyl 2026, Tolga: "ana sayfada en üstte servis
                 kayıtın sağ tarafına servisler için kayıt ol butonu yap").
@@ -275,7 +277,19 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 ⚠️ <a> olduğu için ≤640px'te üst bar kuralıyla GİZLENİR (aynı kural üç metin
                 bağını da gizliyor; 375px'te logo+düğme zaten 334px dolduruyor, beşinci öğe
                 barı ikinci satıra taşırdı). Mobil karşılığı footer'daki "Servis Kaydı". */}
-            <a className="ustbar-kayit" href="/servis-kayit?kaynak=anasayfa-ust" style={st.ustKayit}>Servis Kaydı</a>
+            {/* 📏 MOBİLDE DE GÖRÜNÜR (Tolga, 12 Eyl: "mobilde servis kaydı yok mu?" → "ikisi de").
+                375px'te bar iç genişliği 335px; canlı sayfada ölçülen denemeler:
+                  mevcut uzun etiketler .................. 449px → 114 taşıyor
+                  logo 130 + "Servisler" + "Servis Kaydı"  354px →  19 taşıyor
+                  logo 130 + "Servisler" + "Kayıt" ....... 321px →  14 PAY ✓
+                Bu yüzden mobilde etiket "Kayıt"a düşer; `aria-label` tam adı korur, yani
+                ekran okuyucu ve erişilebilirlik tarafı kısaltmadan etkilenmez.
+                ⛔ Satır içi stile `display` YAZILMAZ: satır içi stil CSS kuralını ezer ve
+                12 Eyl'de tam bu yüzden düğme mobilde 100px dışarı taşmıştı (PR #175). */}
+            <a className="ustbar-kayit" href="/servis-kayit?kaynak=anasayfa-ust" aria-label="Servis kaydı" style={st.ustKayit}>
+              <span className="kayit-uzun">Servis Kaydı</span>
+              <span className="kayit-kisa">Kayıt</span>
+            </a>
           </nav>
         </div>
 
@@ -326,6 +340,16 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           }
         </div>
       </section>
+
+      {/* ═══ SERVİS SAHİBİNE ŞERİT — YALNIZ MOBİL (Tolga, 12 Eyl: "ikisi de") ═══
+          Mobilde üst bardaki düğme "Kayıt"a kısalıyor; bu şerit tam adı söyleyen ikinci
+          yüzey. Hero'nun HEMEN ALTINDA duruyor: ölçüm (375px) → gezinme ızgarası 3,3 ekran,
+          footer bağı 7,3 ekran aşağıdaydı; burası ~1 ekran. Masaüstünde GİZLİ (üst bardaki
+          tam etiketli düğme orada zaten var, ikinci kez göstermek gürültü olur).
+          ⛔ `display` satır içi stile yazılmaz — CSS ile açılıp kapanıyor (PR #175 dersi). */}
+      <a className="vitrin-kayit-serit" href="/servis-kayit?kaynak=anasayfa-serit" style={st.kayitSerit}>
+        Servis misiniz? <strong style={{ color: BLUE }}>Benservis'te yer alın →</strong>
+      </a>
 
       {/* ═══ ② CİHAZ KARTLARI ═══ */}
       <section style={st.bolumDis}><div style={st.bolum}>
@@ -540,6 +564,14 @@ const st = {
     color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none",
     padding: "8px 15px", marginLeft: 8, borderRadius: 999,
     border: "1.5px solid rgba(255,255,255,.55)", whiteSpace: "nowrap",
+  },
+  // Mobil şerit — `display` BİLEREK YOK: açılıp kapanması CSS'in işi (PR #175 dersi:
+  // satır içi display, media query kuralını ezer). Hero ile cihaz kartları arasında
+  // ince bir bant; kullanıcı akışını kesmez, servis sahibine tam adı söyler.
+  kayitSerit: {
+    textAlign: "center", padding: "11px 16px", fontSize: 13, lineHeight: 1.45,
+    color: "#475569", textDecoration: "none",
+    background: "#F1F5F9", borderTop: "1px solid #E2E8F0", borderBottom: "1px solid #E2E8F0",
   },
   rozetler: { display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", marginBottom: 22 },
   rozet: {
