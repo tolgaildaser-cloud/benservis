@@ -32,7 +32,8 @@ FIELD_MASK = (
 
 CITY_DISPLAY = {"istanbul": "İstanbul", "izmir": "İzmir", "ankara": "Ankara",
                 "bursa": "Bursa", "adana": "Adana", "eskisehir": "Eskişehir", "trabzon": "Trabzon",
-                "gaziantep": "Gaziantep"}
+                "gaziantep": "Gaziantep",
+                "antalya": "Antalya", "konya": "Konya", "mersin": "Mersin", "kocaeli": "Kocaeli"}
 CITY_DISTRICTS = {
     "istanbul": ["Adalar","Arnavutköy","Ataşehir","Avcılar","Bağcılar","Bahçelievler","Bakırköy",
         "Başakşehir","Bayrampaşa","Beşiktaş","Beykoz","Beylikdüzü","Beyoğlu","Büyükçekmece","Çatalca",
@@ -59,10 +60,37 @@ CITY_DISTRICTS = {
         "Şehitkamil","Yavuzeli"],
     "trabzon": ["Akçaabat","Araklı","Arsin","Beşikdüzü","Çarşıbaşı","Çaykara","Dernekpazarı","Düzköy",
         "Hayrat","Köprübaşı","Maçka","Of","Ortahisar","Sürmene","Şalpazarı","Tonya","Vakfıkebir","Yomra"],
+    # 12 Eyl 2026 (YK talimatı: "servis kapsamını 8 ilden 12 ile çıkar") — 4 yeni il, 75 ilçe.
+    #   75 ilçe x 10 sorgu x 1 sayfa = 750 çağrı; aylık ilk 1.000 çağrı ücretsiz (PAGES=1 ŞART).
+    #   İlçe adları UYDURULMADI: `src/tr-iller.js` (uygulamanın 81 il listesi) ile programatik
+    #   karşılaştırıldı — dördünde de sapma 0 (19 · 31 · 13 · 12). Yanlış ad = boş sorgu = kayıp çağrı.
+    "antalya": ["Akseki","Aksu","Alanya","Demre","Döşemealtı","Elmalı","Finike","Gazipaşa","Gündoğmuş",
+        "İbradı","Kaş","Kemer","Kepez","Konyaaltı","Korkuteli","Kumluca","Manavgat","Muratpaşa","Serik"],
+    "konya": ["Ahırlı","Akören","Akşehir","Altınekin","Beyşehir","Bozkır","Cihanbeyli","Çeltik","Çumra",
+        "Derbent","Derebucak","Doğanhisar","Emirgazi","Ereğli","Güneysınır","Hadim","Halkapınar","Hüyük",
+        "Ilgın","Kadınhanı","Karapınar","Karatay","Kulu","Meram","Sarayönü","Selçuklu","Seydişehir",
+        "Taşkent","Tuzlukçu","Yalıhüyük","Yunak"],
+    "mersin": ["Akdeniz","Anamur","Aydıncık","Bozyazı","Çamlıyayla","Erdemli","Gülnar","Mezitli","Mut",
+        "Silifke","Tarsus","Toroslar","Yenişehir"],
+    "kocaeli": ["Başiskele","Çayırova","Darıca","Derince","Dilovası","Gebze","Gölcük","İzmit","Kandıra",
+        "Karamürsel","Kartepe","Körfez"],
 }
 ALL_CITIES = list(CITY_DISTRICTS.keys())
 CITIES = [c for c in ALL_CITIES if not CITIES_SEL or c in CITIES_SEL]
-DISTRICT2CITY = {d.lower(): c for c, ds in CITY_DISTRICTS.items() for d in ds}
+# ⚠️ 12 Eyl 2026 — ÇİFT ANLAMLI İLÇE ADI SESSİZCE VERİ BOZUYORDU (ölçüldü, bu koşuda yakalandı).
+# "Yenişehir" HEM Bursa'nın HEM Mersin'in ilçesi. Eski satır son kazanan ili yazıyordu
+# (dict sırası) → Mersin eklenir eklenmez, adresinde "Bursa" yazan **36 Bursa kaydı**
+# `sehir: mersin` oldu. Aşağıdaki mislabel turu bunu "düzeltme" sanıp uyguluyordu.
+# ÇÖZÜM: geriye dönük şehir düzeltmesi YALNIZ tek ile ait ilçe adları için yapılır.
+# Çift anlamlı ad hiçbir yöne çekilmez — toplama anında `sehir` zaten sorgulanan ilden gelir.
+_ilce_sayaci = {}
+for _c, _ds in CITY_DISTRICTS.items():
+    for _d in _ds:
+        _ilce_sayaci[_d.lower()] = _ilce_sayaci.get(_d.lower(), 0) + 1
+DISTRICT2CITY = {d.lower(): c for c, ds in CITY_DISTRICTS.items() for d in ds if _ilce_sayaci[d.lower()] == 1}
+_cift = sorted(d for d, n in _ilce_sayaci.items() if n > 1)
+if _cift:
+    print(f"ℹ️  çift anlamlı ilçe adı (şehir düzeltmesi dışında): {', '.join(_cift)}", flush=True)
 
 SEARCHES = [
     ("beyaz eşya teknik servisi", ["Buzdolabı","Çamaşır Makinesi","Bulaşık Makinesi","Fırın / Ocak"]),
