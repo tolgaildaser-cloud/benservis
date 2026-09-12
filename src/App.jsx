@@ -1421,6 +1421,13 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    yere erişimini kaybetmiyor. HTML'de durdukları için tarama katmanı da aynı. */
 @media (max-width: 640px) {
   .vitrin-ustmenu a { display: none; }
+  /* ⚠️ 12 Eyl 2026 — ÜSTTEKİ KURAL "Servis Kaydı" DÜĞMESİNİ GİZLEYEMİYOR, ölçüldü:
+     o bağın SATIR İÇİ stili display:inline-flex taşıyor ve satır içi stil, stil
+     sayfasındaki kuralı ezer (özgüllük değil, sıralama meselesi). Sonuç canlıda
+     görüldü: 375px'te düğme x=366'da başlayıp 475'te bitiyordu → 100px ekran
+     dışında, kırpık. !important inline stili yenen tek yol.
+     (Bu blok bir JS şablon dizesi: yoruma ters tırnak YAZILMAZ, dizeyi kapatır.) */
+  .vitrin-ustmenu a.ustbar-kayit { display: none !important; }
   /* Logo + düğme TEK SATIR: ölçüldü, 375 px'te logo 172 + düğme 146 + boşluk 16
      = 334 px < 375, yani sarmaya gerek yok. Sarınca düğme alta düşüp sola
      yaslanıyor ve bar 103 px'e çıkıyordu; nowrap ile bar yarı yarıya iniyor. */

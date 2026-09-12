@@ -32,6 +32,15 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
   });
 
+  it("üst bar düğmesi mobilde GERÇEKTEN gizleniyor (satır içi display'i yenen kural)", () => {
+    const vitrin = oku("src/AnaSayfaVitrin.jsx");
+    const app = oku("src/App.jsx");
+    // Bağ sınıf taşımalı, kural da `!important` olmalı: satır içi `display:inline-flex`
+    // olmasaydı gerek yoktu, ama var — 12 Eyl'de 375px'te 100px taşma olarak ölçüldü.
+    expect(vitrin).toContain('className="ustbar-kayit"');
+    expect(app).toMatch(/\.vitrin-ustmenu a\.ustbar-kayit \{ display: none !important; \}/);
+  });
+
   it("mobilde gizlenen üst bar düğmesinin footer karşılığı var", () => {
     // ≤640px'te `.vitrin-ustmenu a { display:none }` üst bardaki bağları gizliyor;
     // trafiğin %92'si mobil olduğu için footer bağı bu boşluğu kapatır.
