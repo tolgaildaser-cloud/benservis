@@ -1,6 +1,6 @@
 ---
-title: "Vestel bulaşık makinesi hata kodları: F serisinin tamamı"
-description: "Vestel bulaşık makinesi kılavuzundaki on iki F kodunun anlamı, Vestel'in kendi çözüm sütunu, nesil farkı ve evde yapılacak kontroller."
+title: "Vestel bulaşık makinesi hata kodları"
+description: "Kılavuzdaki on iki F kodunun anlamı, Vestel'in kendi çözüm sütunu, nesil farkı ve evde yapabileceğin kontroller tek yazıda toplandı."
 slug: "vestel-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"

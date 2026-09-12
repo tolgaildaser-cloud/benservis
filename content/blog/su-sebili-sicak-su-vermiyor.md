@@ -1,5 +1,5 @@
 ---
-title: "Su sebili sıcak su vermiyor: sebebi ve çözümü"
+title: "Su sebili sıcak su vermiyor"
 description: "Sebilden ılık su mu geliyor, hiç mi gelmiyor? Arçelik ve Beko kılavuzlarına göre ısıtma anahtarı, kırmızı ışık, damacana ve servis sınırı."
 slug: "su-sebili-sicak-su-vermiyor"
 date: "2026-09-11"

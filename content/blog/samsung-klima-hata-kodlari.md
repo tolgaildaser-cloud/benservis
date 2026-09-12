@@ -1,6 +1,6 @@
 ---
-title: "Samsung klima hata kodları: CF, dF, C1 21 ve C1 54 ne demek"
-description: "Samsung klimada CF filtre, dF buz çözme demek ve arıza değil. C1 ya da E1 ile dönüşümlü yanan 21, 22, 54, 63 sayıları ise gerçek arızayı bildirir."
+title: "Samsung klima hata kodları"
+description: "CF filtre, dF buz çözme demek ve arıza değil. C1 ya da E1 ile dönüşümlü yanan 21, 22, 54, 63 sayıları ise gerçek arızayı bildirir."
 slug: "samsung-klima-hata-kodlari"
 date: "2026-08-21"
 category: "Klima"

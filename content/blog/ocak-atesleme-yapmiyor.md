@@ -1,6 +1,6 @@
 ---
-title: "Ocak ateşleme yapmıyor: buji, gaz ve 3 ücretsiz kontrol"
-description: "Çakmak çakıyor ama ocak yanmıyor mu? Ateşleme bujisi, kirli başlık ve gaz akışı — ankastre ve tüplü ocakta çoğu sebep evde ücretsiz çözülür."
+title: "Ocak ateşleme yapmıyor"
+description: "Çakmak çakıyor ama ocak yanmıyor mu? Ateşleme bujisi, kirli başlık ve gaz akışı — ankastre ve tüplü ocakta 3 kontrol evde, ücretsiz yapılır."
 slug: "ocak-atesleme-yapmiyor"
 date: "2026-06-23"
 updated: "2026-07-09"

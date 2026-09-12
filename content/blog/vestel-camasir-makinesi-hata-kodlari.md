@@ -1,6 +1,6 @@
 ---
-title: "Vestel çamaşır makinesi hata kodları: E01, E02, E03"
-description: "Vestel çamaşır makinen E01, E02 ya da E03 mü gösteriyor? Kapı, su alma ve tahliye kodlarının anlamı, evde yapılacak kontroller ve servis sınırı."
+title: "Vestel çamaşır makinesi hata kodları"
+description: "E01, E02 ya da E03 mü gösteriyor? Kapı, su alma ve tahliye kodlarının anlamı, evde yapılacak kontroller ve servisin başladığı yer."
 slug: "vestel-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"

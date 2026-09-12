@@ -1,6 +1,6 @@
 ---
-title: "Vestel klima hata kodları: Er11, Er13, HL, AE ve DF ne demek"
-description: "Vestel klimada mesaj Er ile iki haneden oluşur. Er11 ve Er13 arıza değil koruma; HL gerilim dalgalanması, AE ark kontrolü, DF buz çözme anlamına gelir."
+title: "Vestel klima hata kodları"
+description: "Er11, Er13, HL, AE ve DF ne demek? Vestel klimada Er ile başlayan iki haneli mesajların anlamı, hangisi arıza değil koruma ve servis sınırı."
 slug: "vestel-klima-hata-kodlari"
 date: "2026-08-21"
 category: "Klima"

@@ -1,6 +1,6 @@
 ---
-title: "Buzdolabı gaz dolumu: gerçekten gaz mı bitti?"
-description: "Buzdolabı kapalı devredir; gaz normal kullanımda azalmaz. Eksildiyse kaçak vardır, kaçak bulunmadan dolum kalıcı olmaz. Doğru teşhis sıralaması."
+title: "Buzdolabı gaz dolumu"
+description: "Gerçekten gaz mı bitti? Buzdolabı kapalı devredir, gaz kendiliğinden azalmaz; kaçak bulunmadan dolum kalıcı olmaz. Doğru teşhis sıralaması."
 slug: "buzdolabi-gaz-dolumu"
 date: "2026-08-21"
 category: "Buzdolabı"

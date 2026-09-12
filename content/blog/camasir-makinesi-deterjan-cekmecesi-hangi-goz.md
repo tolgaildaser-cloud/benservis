@@ -1,6 +1,6 @@
 ---
-title: "Çamaşır makinesi deterjan çekmecesi: hangi göz ne için? (I, II ve çiçek)"
-description: "Çekmecedeki I, II ve çiçek sembolleri ne anlama geliyor, sıvı deterjan hangi göze konur, yumuşatıcı neden taşar? Üç gözün doğru kullanımı tek yazıda."
+title: "Çamaşır makinesi deterjan çekmecesi hangi göz?"
+description: "I, II ve çiçek sembolleri ne anlama geliyor, sıvı deterjan hangi göze konur, yumuşatıcı neden taşar? Üç gözün doğru kullanımı tek yazıda."
 slug: "camasir-makinesi-deterjan-cekmecesi-hangi-goz"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
