@@ -25,6 +25,20 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(oku("src/ServisMagaza.jsx")).toContain('href="/servis-kayit?kaynak=servis-magaza"');
   });
 
+  it("ANA SAYFA üst barında kayıt düğmesi var (Tolga, 12 Eyl)", () => {
+    const src = oku("src/AnaSayfaVitrin.jsx");
+    expect(src).toContain('href="/servis-kayit?kaynak=anasayfa-ust"');
+    // "Yakın Servisler" dolgulu CTA'nın SAĞINDA durmalı — sırayı kilitle.
+    expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
+  });
+
+  it("mobilde gizlenen üst bar düğmesinin footer karşılığı var", () => {
+    // ≤640px'te `.vitrin-ustmenu a { display:none }` üst bardaki bağları gizliyor;
+    // trafiğin %92'si mobil olduğu için footer bağı bu boşluğu kapatır.
+    expect(oku("src/App.jsx")).toContain('href="/servis-kayit?kaynak=anasayfa-footer"');
+    expect(oku("src/App.jsx")).toContain(".vitrin-ustmenu a { display: none; }");
+  });
+
   it("rota ve rewrite duruyor (yol açık kalsın)", () => {
     expect(oku("src/main.jsx")).toContain('path === "/servis-kayit"');
     expect(oku("vercel.json")).toContain('"/servis-kayit"');

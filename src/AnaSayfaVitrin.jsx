@@ -268,6 +268,14 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               </svg>
               Yakın Servisler
             </button>
+            {/* SERVİS SAHİBİNE KAPI (12 Eyl 2026, Tolga: "ana sayfada en üstte servis
+                kayıtın sağ tarafına servisler için kayıt ol butonu yap").
+                Dolgulu DEĞİL, çerçeveli: "Yakın Servisler" sitenin ikinci ana kapısı
+                (kullanıcı akışı) ve onunla yarışmamalı — bu düğme servis sahibine bakar.
+                ⚠️ <a> olduğu için ≤640px'te üst bar kuralıyla GİZLENİR (aynı kural üç metin
+                bağını da gizliyor; 375px'te logo+düğme zaten 334px dolduruyor, beşinci öğe
+                barı ikinci satıra taşırdı). Mobil karşılığı footer'daki "Servis Kaydı". */}
+            <a href="/servis-kayit?kaynak=anasayfa-ust" style={st.ustKayit}>Servis Kaydı</a>
           </nav>
         </div>
 
@@ -523,6 +531,15 @@ const st = {
   ustLink: {
     color: "#DBEAFE", fontSize: 13.5, fontWeight: 600, textDecoration: "none",
     padding: "8px 12px", borderRadius: 999, whiteSpace: "nowrap",
+  },
+  // Servis sahibine açılan kapı — dolgulu CTA'nın YANINDA ama onun altında bir kademe:
+  // şeffaf zemin + beyaz çerçeve. Hero fotoğrafın üstünde okunur, "Yakın Servisler"in
+  // dolgulu beyazıyla yarışmaz (kullanıcı akışı birinci, servis kaydı ikinci).
+  ustKayit: {
+    display: "inline-flex", alignItems: "center",
+    color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none",
+    padding: "8px 15px", marginLeft: 8, borderRadius: 999,
+    border: "1.5px solid rgba(255,255,255,.55)", whiteSpace: "nowrap",
   },
   rozetler: { display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", marginBottom: 22 },
   rozet: {

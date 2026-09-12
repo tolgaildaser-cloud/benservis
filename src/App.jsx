@@ -1232,6 +1232,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
         <div style={s.footNav}>
           <span style={s.footNavUnit}><a href="/blog/hakkimizda/" style={s.footLink}>Hakkımızda</a><span style={s.footSep} aria-hidden="true">·</span></span>
           <span style={s.footNavUnit}><a href="/blog/kategori/surdurulebilirlik/" style={s.footLink}>Sürdürülebilirlik</a><span style={s.footSep} aria-hidden="true">·</span></span>
+          {/* 12 Eyl 2026: üst bardaki "Servis Kaydı" düğmesi ≤640px'te gizleniyor (bar
+              taşıyor). Trafiğin %92'si mobil olduğu için servis sahibinin mobil karşılığı
+              BURASI. Dış link (SERBİS) satırın sonunda kalsın diye ondan önce duruyor. */}
+          <span style={s.footNavUnit}><a href="/servis-kayit?kaynak=anasayfa-footer" style={s.footLink}>Servis Kaydı</a><span style={s.footSep} aria-hidden="true">·</span></span>
           <span style={s.footNavUnit}><a href="https://www.servis.gov.tr/Genel/Sorgu" target="_blank" rel="noopener noreferrer" style={s.footLink}>SERBİS'te Doğrula</a></span>
         </div>
         {/* KVKK paketi (YK #45, 14 Ağu) — hukuk linkleri gezinme satırının ALTINDA, kendi
