@@ -1,6 +1,6 @@
 ---
-title: "Beko bulaşık makinesi E01 hatası: taşma koruması devrede — ne yapmalı"
-description: "Beko bulaşık makinesi E01 hatası yaygın serilerde taşma korumasını gösterir. Köpük, zemin ıslaklığı ve süzgeç kontrolü nasıl yapılır, servis sınırı nerede?"
+title: "Beko bulaşık makinesi E01 hatası"
+description: "Beko'nun kendi kılavuzunda E01 şasiye su dolma hatasıdır. Ne yapılır, hangi adımda elektrik ve vana kapatılır, servis sınırı nerede başlar?"
 slug: "beko-bulasik-makinesi-e01-hatasi"
 date: "2026-08-21"
 category: "Bulaşık makinesi"
