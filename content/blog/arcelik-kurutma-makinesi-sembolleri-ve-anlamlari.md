@@ -19,6 +19,12 @@ faq:
     a: "Aynı değil ve bunu üreticinin kendisi söylüyor. Arçelik kılavuzu uyarı sembolleri bölümüne şu notu koyuyor: Uyarı sembolleri makinenizin modeline göre farklılık gösterebilir. Karşılaştırdığımız iki Arçelik kılavuzunun sembol listeleri de birebir aynı değil. Kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Çamaşır kurutma makinesinin ekranı ve kumanda düğmeleri"
+video:
+  youtubeId: "Q_BaXMLz0mE"
+  title: "Arçelik kurutma makinesi sembolleri ve anlamları"
+  description: "Arçelik kurutma makinesinde su tankı ve filtre simgesinin sabit yanması ile yanıp sönmesi arasındaki fark."
+  uploadDate: "2026-09-13T05:16:33Z"
+  duration: "PT1M16S"
 ---
 
 Kurutma makinesinin ekranında bir uyarı simgesi belirdiğinde ilk refleks çoğu zaman "arıza mı?" oluyor. Arçelik'in kendi kullanma kılavuzlarına bakıldığında ise bu simgelerin neredeyse tamamının anlattığı şey aynı: **makine bakım istiyor.** Su tankı dolmuş, filtre tıkanmış, çekmece temizlenmeli, kapak açık kalmış.

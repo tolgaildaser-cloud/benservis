@@ -16,6 +16,7 @@ import { CIHAZLAR, cihazSlug } from "../src/constants.js";
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
 // ① HATA KODU / BELİRTİ KATMANI (YK #35, 3 Ağu) — kayıtlar tek kaynakta, burada liste tutulmaz.
 import { hataKoduKayitlari, TIP_BASLIK, TIP_ETIKET, HATA_KODU_SIRA } from "../src/hata-kodlari.js";
+import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -1758,6 +1759,18 @@ const ilgiliYazilar = (p) => {
     `Elle küratörlüğü olan ${posts.length - cikmaz} yazıya dokunulmadı; ölü/kendine bağ 0.`);
 })();
 
+// VİDEO DENETİMİ (build'i durdurur) — PAZ föyü 13 Eyl: `video` alanı bozuksa ya da aynı
+// video iki sayfaya girmişse sessizce yanlış basmaktansa dur.
+{
+  const sorunlar = videoDenetimi(posts);
+  if (sorunlar.length) {
+    console.error("[build-blog] ✗ VİDEO DENETİMİ BAŞARISIZ:");
+    for (const s of sorunlar) console.error("  · " + s);
+    process.exit(1);
+  }
+  console.log(`[build-blog] ✓ video denetimi: ${posts.filter((p) => p.video).length} yazıda video bloğu + VideoObject.`);
+}
+
 for (const p of posts) {
   const canonical = `${SITE}/blog/${p.slug}/`;
   // Kapağı olan yazı paylaşımda da kendi görselini gösterir; olmayan eski `og.png`de kalır.
@@ -1803,6 +1816,7 @@ for (const p of posts) {
     };
     head += `<script type="application/ld+json">${JSON.stringify(howto)}</script>`;
   }
+  if (p.video) head += `<script type="application/ld+json">${JSON.stringify(videoLd(p))}</script>${VIDEO_CSS}`;
   // TASARIM (18 Ağu, backlog "TAMİR SAYFASI YENİDEN TASARIMI"): sayfa başı artık
   // dağınık bir yığın değil, TEK KARAR EKRANI. Eskiden sıra şuydu: kapak → küçük
   // meta satırı → başlık → guide kutusu → köprü butonları; okuyucu başlığı görmek
@@ -1812,7 +1826,7 @@ for (const p of posts) {
   // — Tolga'nın güç metriği (servise ulaşma) ilk ekranda karar alabilsin.
   // SIRA: ilgili yazılar CTA'nın ALTINDA. Birincil eylem (teşhis/servis) metnin hemen
   // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
-  const body = `<article>${yaziBasi(p)}${kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) })}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}`;
+  const body = `<article>${yaziBasi(p)}${videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p)}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));

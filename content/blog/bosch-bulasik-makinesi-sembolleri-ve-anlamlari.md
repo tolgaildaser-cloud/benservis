@@ -19,6 +19,12 @@ faq:
     a: "Aynı değil. Bosch kılavuzunun kendisi kumanda paneli listesinde birçok kalemin yanına bulaşık makinenizin donanım modellerine göre notunu düşüyor ve program tuşlarının adedinin bile modele göre değiştiğini yazıyor. Ayrıca ekranın kendisi de cihazın donanımına göre değişir. Kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Bulaşık makinesinin kumanda paneli ve gösterge ışıkları"
+video:
+  youtubeId: "pzY0f0YwcW0"
+  title: "Bosch bulaşık makinesi sembolleri ve anlamları"
+  description: "Bosch bulaşık makinesi panelindeki musluk, tuz, parlatıcı, makine temizliği ve tuş kilidi göstergeleri ne istiyor."
+  uploadDate: "2026-09-13T05:16:37Z"
+  duration: "PT1M19S"
 ---
 
 Bulaşık makinesinin panelinde bir ışık yandığında ilk düşünce genelde "arıza" oluyor. Oysa Bosch'un kendi kullanma kılavuzlarına bakıldığında paneldeki göstergelerin büyük bölümü arıza değil — **ikmal uyarısı, kontrol uyarısı veya bakım hatırlatması**. Yani makine bir şey istiyor, bozulduğunu söylemiyor.

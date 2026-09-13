@@ -41,6 +41,12 @@ faq:
     a: "Bosch yüzlerce model üretir ve yayımladığı liste on kodludur. Ekrandaki kodu ve cihaz modelini Benservis'e yaz, olası arızayı ve tahmini maliyeti saniyede söyleyelim."
 images:
   coverAlt: "Çamaşır odasında yan yana duran iki ön yüklemeli makine ve arkalarındaki mavi duvar"
+video:
+  youtubeId: "0uQV4Y_hjXY"
+  title: "Bosch çamaşır makinesi hata kodları"
+  description: "Bosch çamaşır makinesinde E16, E17 ve E18'de kullanıcının yapabilecekleri; üreticinin servise yönlendirdiği kodlar."
+  uploadDate: "2026-09-13T05:16:52Z"
+  duration: "PT1M16S"
 ---
 
 Bosch çamaşır makinen ekranında bir hata kodu gösteriyor ve ne demek olduğunu çözmek istiyorsun. Bu rehberde **Bosch'un kendi destek sayfalarında yayımladığı on kodu**, Bosch'un verdiği çözümle birlikte topladık.
