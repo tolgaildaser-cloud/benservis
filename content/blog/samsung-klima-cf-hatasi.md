@@ -21,6 +21,12 @@ faq:
     a: "İki ihtimal var: sıfırlama adımı yapılmamış olabilir (kumandadan filtre sıfırla) ya da sıfırlama onaylanmamış olabilir. Gösterge sıfırlamaya rağmen kalıyorsa ve cihazda başka bir belirti de varsa konu hatırlatıcıyı aşar; o noktada yetkili servise başvurulur."
 images:
   coverAlt: "Duvar tipi klimanın açık ön kapağı; çıkarılmış hava filtresi elde tutuluyor, iç ünite ekranında iki harfli gösterge yanıyor"
+video:
+  youtubeId: "5lVkaoLa5DI"
+  title: "Samsung klima CF hatası"
+  description: "Samsung klimada CF göstergesi arıza değil, filtre temizleme hatırlatıcısı. Filtre temizliğinin sırası ve göstergeyi sıfırlama."
+  uploadDate: "2026-09-13T05:15:35Z"
+  duration: "PT1M10S"
 ---
 
 Samsung klimanın ekranında **CF** yazıyor ve ilk düşünce genelde aynı oluyor: "arıza mı çıktı?"

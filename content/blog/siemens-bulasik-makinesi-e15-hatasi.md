@@ -35,6 +35,12 @@ faq:
     a: "Siemens, Bosch ve Profilo'da evet: üçü de BSH grubundadır ve E15 hepsinde su koruma sisteminin devreye girdiğini anlatır. Neff ve Gaggenau için aynı şeyi söyleyemiyoruz; ikisi de kendi sitelerinde bir hata kodu sayfası yayımlamıyor. Platform ortaklığı belgeli, kod tablosu ortaklığı değil."
 images:
   coverAlt: "Bulaşık makinesinin taban bölümü ve su tahliye alanı"
+video:
+  youtubeId: "XdW4u_2MBcQ"
+  title: "Siemens bulaşık makinesi E15 hatası"
+  description: "E15 ve yanıp sönen musluk işareti: tabanda su birikti, su koruma sistemi devrede. Üreticinin talimatı ve servis sınırı."
+  uploadDate: "2026-09-13T05:16:54Z"
+  duration: "PT1M2S"
 ---
 
 Akşam bulaşığını yükledin, program başladı ve birkaç dakika sonra makine sustu: ekranda **E15**, yanında yanıp sönen bir **musluk işareti**. Belki bir de alttan gelen inatçı bir vızıltı. Siemens bulaşık makinelerinde E15, kullanıcıyı en çok telaşlandıran ama çoğu zaman en masum biten kodlardan biridir: makine arızalandığı için değil, **evini korumak için** durmuştur. Bu rehberde E15'in ne olduğunu, üreticinin ne yapılmasını söylediğini ve neden makineyi eğmemen gerektiğini anlatıyoruz.
