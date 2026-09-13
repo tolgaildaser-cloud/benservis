@@ -532,6 +532,10 @@ const KOPRU_CIHAZ = {
   "Televizyon": "televizyon-monitor",
   "Süpürge": "supurge",
   "Mikrodalga": "mikrodalga-air-fryer",
+  // 13 Eyl 2026: `mikrodalgada-hangi-kaplar-kullanilir` kategorisini "Mikrodalga / Air Fryer"
+  // yazıyor (App'in CIHAZLAR adı); diğer üç mikrodalga yazısı "Mikrodalga". Kapsam kapısı
+  // yakaladı — frontmatter'a DOKUNULMADI (kategori metni PAZ'ın alanı), davlumbaz emsali.
+  "Mikrodalga / Air Fryer": "mikrodalga-air-fryer",
   "Bilgisayar / yazıcı": "bilgisayar-yazici",
   "Su sebili / arıtma": "su-sebili-aritma",
 };
@@ -762,6 +766,16 @@ const KOPRU_ARIZA = {
   "daikin-klima-hata-kodlari": "hata-kodu-veriyor",
   "samsung-klima-hata-kodlari": "hata-kodu-veriyor",
   "vestel-klima-hata-kodlari": "hata-kodu-veriyor",
+  // 13 Eyl 2026: PAZ'ın 12 Eyl yayın kuyruğu — hata kodu ailesinin aynı kuralı. Slug'ların
+  // üçü de App'in KENDİ tablosunda var (#67 ②, uydurma yok): Klima + Çamaşır Makinesi →
+  // EK_BELIRTI "Hata kodu veriyor" · Bulaşık Makinesi → BELIRTILER "Hata kodu veriyor".
+  // Serie 4 sembol yazısı SEMBOL KAPSAM KAPISI'na tabi (satırsız build durur).
+  // ⛔ `mikrodalgada-hangi-kaplar-kullanilir` BİLEREK YOK: arıza değil kullanım bilgisi;
+  //    "Kıvılcım çıkarıyor" gibi bir satır okurun durumunu uydururdu → yalnız cihaz basılır.
+  "samsung-klima-cf-hatasi": "hata-kodu-veriyor",
+  "bosch-camasir-makinesi-e61-hatasi": "hata-kodu-veriyor",
+  "profilo-camasir-makinesi-e17-hatasi": "hata-kodu-veriyor",
+  "bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   // ── 1 Eyl 2026: BİREBİR ÇİP EŞLEŞMESİ — kürasyon değil, dize eşleşmesi. Her biri
   // kendi cihazının HIZLI BELİRTİ çipine tam oturuyor; hiçbiri yorum gerektirmedi.
   // ⛔ Elenenler ve sebepleri (yorum gerektirdiği için yazılmadı — yanlış ön-doldurma,
@@ -1558,6 +1572,9 @@ const BLOG_KAT_ESLES = {
   monitor: "Televizyon / Monitör",
   supurge: "Süpürge",
   mikrodalga: "Mikrodalga / Air Fryer",
+  // 13 Eyl 2026: köprü tablosundaki eşiyle aynı gerekçe — tam ad slug'ı da aynı gruba düşer,
+  // kategori sayfası ikiye bölünmez.
+  "mikrodalga-air-fryer": "Mikrodalga / Air Fryer",
   "air-fryer": "Mikrodalga / Air Fryer",
   "su-sebili": "Su Sebili / Arıtma",
   aritma: "Su Sebili / Arıtma",
