@@ -1,6 +1,6 @@
 ---
-title: "Siemens bulaşık makinesi E15 hatası: musluk işareti ve çözümü"
-description: "Siemens bulaşık makinesinde E15 ve musluk işareti: taban tavasına su kaçtı, AquaStop devrede. Suyu güvenle boşaltma adımları ve servis sınırı."
+title: "Siemens bulaşık makinesi E15 hatası"
+description: "E15, suyun zemin teknesinde olduğunu bildirir; musluk işareti de bununla yanar. Suyu güvenle boşaltma adımları ve servisin başladığı yer."
 slug: "siemens-bulasik-makinesi-e15-hatasi"
 date: "2026-08-20"
 category: "Bulaşık makinesi"

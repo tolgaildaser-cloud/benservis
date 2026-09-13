@@ -1,6 +1,6 @@
 ---
-title: "Bosch çamaşır makinesi E18 hatası: su atamıyor — adım adım çözüm"
-description: "Bosch çamaşır makinesi E18 hatası suyu atamamak demek. Tahliye filtresi, hortum ve gider kontrolüyle çoğu zaman evde çözülür; adım adım yol ve servis sınırı."
+title: "Bosch çamaşır makinesi E18 hatası"
+description: "E18, makinenin atık suyu tahliye edemediğini gösterir; Bosch aynı arızayı F18 ve d02 olarak da veriyor. Pompa, hortum ve gider kontrolü."
 slug: "bosch-camasir-makinesi-e18-hatasi"
 date: "2026-08-21"
 category: "Çamaşır makinesi"
