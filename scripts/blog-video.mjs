@@ -107,10 +107,24 @@ export const VIDEO_CSS = `<style>
 // Tıklama → buton yerine youtube-nocookie iframe'i. referrerpolicy açık yazıldı: YouTube,
 // Referer'sız gömmede "Error 153" veriyor (13 Eyl, file:// denemesinde görüldü). Ölçüm: Vercel olayı (MCP'den okunur) +
 // GA4 olayı; consent default-denied bloğu sayfada zaten var, çerez yazılmaz.
+//
+// ARKA PLANDA DURAKLAT (13 Eyl 18:1x, Tolga: "shorts düğmesine basıp youtube a geçersen her
+// ikisi de çalışmaya devam ediyor"). Oynatıcıdaki YouTube/Shorts düğmesi yeni sekme ya da
+// YouTube uygulaması açar; sayfadaki video durmuyordu → iki ses üst üste.
+//   · `enablejsapi=1` + `origin` → sayfa oynatıcıya postMessage ile komut gönderebilir.
+//   · Sayfa gizlenince (visibilitychange → hidden; mobilde ayrıca pagehide) kurduğumuz her
+//     oynatıcıya `pauseVideo`. Canlıda ölçüldü: komut el sıkışması (listening) istemiyor.
+//   · ⛔ window.blur KULLANILMAZ: iframe'e tıklamak da pencereyi blur'lar, video başlarken durur.
+//   · Bilinen bedel: PiP sayfada çalışır, ama sayfadan çıkınca (sekme/uygulama değişimi) o da
+//     duraklar — "YouTube'a geçti" ile "ana ekrana geçti" aynı sinyal, ayırt edilemiyor.
+//     Otomatik devam YOK: geri dönen okur kaldığı yerden kendisi başlatır.
 export const VIDEO_JS = (slug) => `<script>(function(){var S=${JSON.stringify(slug)};
+function durdur(){var l=document.querySelectorAll("iframe[data-yt-oynatici]");for(var i=0;i<l.length;i++){try{l[i].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}',"https://www.youtube-nocookie.com");}catch(_){}}}
+document.addEventListener("visibilitychange",function(){if(document.hidden)durdur();});
+window.addEventListener("pagehide",durdur);
 document.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;var b=t.closest("button[data-yt]");if(!b)return;
 var id=b.getAttribute("data-yt");if(!/^[A-Za-z0-9_-]{11}$/.test(id))return;
-var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&playsinline=1";
+var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&playsinline=1&enablejsapi=1&origin="+encodeURIComponent(location.origin);f.setAttribute("data-yt-oynatici","");
 f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture");f.setAttribute("allowfullscreen","");f.setAttribute("referrerpolicy","strict-origin-when-cross-origin");f.title=b.getAttribute("data-yt-baslik")||"";
 b.parentNode.replaceChild(f,b);
 try{window.va&&window.va("event",{name:"video_oynat",data:{slug:S}});}catch(_){}
