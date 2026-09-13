@@ -1,6 +1,6 @@
 ---
 title: "Samsung klima hata kodları"
-description: "CF filtre, dF buz çözme demek ve arıza değil. C1 ya da E1 ile dönüşümlü yanan 21, 22, 54, 63 sayıları ise gerçek arızayı bildirir."
+description: "CF filtre, C1 otomatik temizleme, DF buz çözme demek; arıza değil. E ile başlayan üç haneli kodlar (E121, E154 gibi) ise servis gerektiren hatadır."
 slug: "samsung-klima-hata-kodlari"
 date: "2026-08-21"
 category: "Klima"
@@ -11,101 +11,82 @@ guide:
   cost: "Ücretsiz"
   tools: ["Uzaktan kumanda", "Telefon kamerası", "Kâğıt ve kalem"]
 steps:
-  - "Göstergeyi birkaç saniye izle; Samsung'da kod tek parça değil, dönüşümlü iki parça olabilir."
-  - "Gördüğün harfi ve sayıyı birlikte not et, ikisi tek bir kodun iki yarısıdır."
-  - "CF görüyorsan iç ünite filtresini temizle ya da değiştir, sonra hatırlatıcıyı kumandadan sıfırla."
-  - "dF görüyorsan bekle; buz çözme bitince gösterge kendiliğinden temizlenir."
-  - "CL görüyorsan otomatik temizleme çalışıyordur, istersen kumandadan kapatabilirsin."
-  - "C1 ile bir sayı dönüşümlü yanıyorsa klimayı kapat, kısa süre bekle ve yeniden çalıştır."
-  - "Kod on saniye içinde geri geliyorsa cihazı zorlama, kalıcı bir bildirim var demektir."
-  - "Kodun iki parçasını, model numarasını ve hangi modda geldiğini yetkili servise ilet."
+  - "Göstergedeki kodun tüm harf ve rakamlarını not et; gerekirse telefonla fotoğrafını çek."
+  - "CF görüyorsan iç ünite filtresini temizle, sonra filtre hatırlatıcısını kumandadan sıfırla."
+  - "C1 görüyorsan klima otomatik temizleme yapıyordur; bu bir bilgi kodudur."
+  - "DF görüyorsan bekle; buz çözme 5-12 dakika sürebilir."
+  - "E ile başlayan bir kod görüyorsan cihazı zorlama; bu bir hata kodudur."
+  - "Kodun karşılığını modelinin kullanım kılavuzundan kontrol et; kodlar modele göre değişebilir."
+  - "Kodu ve model numarasını not edip Samsung yetkili servisine ilet."
 faq:
   - q: "Samsung klimada CF yazıyor, klima bozuldu mu?"
-    a: "Hayır, CF bir arıza kodu değil filtre temizleme hatırlatıcısıdır. Cihaz belirli bir çalışma süresini doldurduğunda bu uyarıyı verir. Yapman gereken iç ünitenin filtrelerini temizlemek ya da değiştirmek, sonra da hatırlatıcıyı uzaktan kumandadan sıfırlamaktır. Filtreyi temizlemeden uyarıyı sıfırlarsan gösterge susar ama tıkalı filtre soğutma performansını düşürmeye ve elektrik tüketimini artırmaya devam eder."
-  - q: "Ekranda C1 ile 54 dönüşümlü yanıyor, bu iki ayrı kod mu?"
-    a: "Hayır, tek bir kodun iki yarısıdır. Samsung klimalarda bazı bildirimler göstergede önce harf grubunu sonra iki haneli sayıyı gösterip döner. C1 ile birlikte yanan 54, fanın dönmediğini bildirir. Bu koda bakarken iki parçayı birlikte not etmek şart, çünkü aynı harfle farklı sayılar bambaşka anlamlara gelir. Bazı model serilerinde aynı bildirim C1 yerine E1 harf grubuyla görünür."
-  - q: "Fan hatası aldım ama klima bir süre sonra normale döndü, servise gerek var mı?"
-    a: "Bu ayrımı üretici kendi destek içeriğinde net yapıyor. Fan hatası ara ara gelip kayboluyorsa, iç ünite fan motoru besleme gerilimi normal aralığın dışına çıktığı için kendini koruma moduna almış olabilir; gerilim düzelince sorun geçer. Ama cihazı kapatıp açtığında hata on saniye içinde geri geliyorsa fan motoru ya da kart tarafında kalıcı bir sorun var demektir ve bu teşhis servise aittir. İki durumu ayırmanın pratik yolu, kapat-aç denemesinden sonra kodun ne kadar sürede döndüğünü ölçmektir."
-  - q: "Ev tipi ve ticari Samsung klimalarda kodlar aynı mı?"
-    a: "Hayır. Duvar tipi ev klimalarıyla çoklu iç üniteli ticari sistemler farklı şema kullanır; ticari tarafta kodlar üç haneli olur ve karşılıkları ev tipiyle örtüşmez. Bu yazıdaki tablo ev tipi içindir ve üreticinin kendi destek içeriğinde birden çok bölgede aynı şekilde geçen kodlardan oluşur. Kesin tablo cihazının kullanım kılavuzundadır."
+    a: "Hayır, CF bir arıza kodu değil filtre temizleme hatırlatıcısıdır. Cihaz belirli bir çalışma süresini doldurduğunda bu uyarıyı verir. Yapman gereken iç ünitenin filtrelerini temizlemek ya da değiştirmek, sonra da hatırlatıcıyı uzaktan kumandadan sıfırlamaktır. Filtreyi temizlemeden uyarıyı sıfırlarsan gösterge susar ama tıkalı filtre cihazın hatalı çalışmasına neden olabilir."
+  - q: "Samsung klimada C1 yazıyor, arıza mı?"
+    a: "Hayır. Samsung Türkiye'nin destek sayfasına göre C1 bir bilgi kodudur: klima otomatik temizleme işlemi yaptığında ekranda görünür. Arıza bildiren kodlar E ile başlar ve üç hanelidir; örneğin E121 iç ünite oda sensörü, E154 iç fan motoru hız hatasıdır."
+  - q: "Ekranımdaki kod bu tabloda yok, ne yapmalıyım?"
+    a: "Samsung, hata kodlarının her klima modelinde farklı olabileceğini belirtiyor. Kodun karşılığını cihazının model numarasıyla kullanım kılavuzundan kontrol et. Kod sık sık tekrarlanıyorsa kodu ve model numarasını not edip Samsung yetkili servisine ilet."
 images:
   coverAlt: "Oturma odasında duvara monte edilmiş beyaz split klima iç ünitesi"
 ---
 
-Samsung klimada kod okumaya çalışırken insanı ilk şaşırtan şey şu olur: gösterge tek bir şey yazmaz, iki şeyi sırayla gösterip döner. Önce bir harf grubu, sonra iki haneli bir sayı. Bu iki parça ayrı kodlar değildir — **tek bir kodun iki yarısıdır** ve yalnızca ikisi birlikte anlam taşır. Bu yazıda önce hangi bildirimlerin arıza bile olmadığını, sonra doğrulayabildiğimiz gerçek kod karşılıklarını anlatıyoruz.
+Samsung klimanın göstergesinde görünen kodlar iki gruba ayrılır. Bir kısmı arıza değil bilgi kodudur: filtre hatırlatması, otomatik temizleme ya da buz çözme. Arıza bildiren kodlar ise E ile başlar ve üç hanelidir. Bu yazıda önce arıza olmayan kodları, sonra Samsung Türkiye'nin yayımladığı hata kodlarını anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚠️ Samsung'un duvar tipi ev klimalarıyla çoklu iç üniteli ticari sistemleri farklı kod şeması kullanır; ticari tarafta kodlar üç haneli olur ve karşılıkları örtüşmez. Aşağıdakiler ev tipi iç ünitelerde geçerlidir; kesin tablo cihazının kullanım kılavuzundadır.
+> ⚠️ Samsung, hata kodlarının her klima modelinde farklı olabileceğini belirtiyor. Aşağıdaki tablolar Samsung Türkiye'nin destek sayfasından; kesin karşılık cihazının kullanım kılavuzundadır.
 
 ## Adım adım: Samsung klimada kod okuma
 
-**1. Göstergeyi birkaç saniye izle.** Kodun tek parça mı yoksa dönüşümlü iki parça mı olduğunu ancak bir tur bekleyerek anlarsın.
+**1. Kodu eksiksiz not et.** Göstergedeki kodun tüm harf ve rakamlarını not et; gerekirse telefonla fotoğrafını çek.
 
-**2. Harfi ve sayıyı birlikte not et.** C1 ile 54 ayrı iki bildirim değil, tek kodun iki yarısıdır. Video çekmek en garantisi.
+**2. CF görüyorsan filtreye git.** CF görüyorsan iç ünite filtresini temizle, sonra filtre hatırlatıcısını kumandadan sıfırla.
 
-**3. CF görüyorsan filtreye git.** İç ünitenin filtrelerini temizle ya da değiştir, sonra hatırlatıcıyı **kumandadan sıfırla**.
+**3. C1 görüyorsan panik yapma.** C1 görüyorsan klima otomatik temizleme yapıyordur; bu bir bilgi kodudur.
 
-**4. dF görüyorsan bekle.** Otomatik buz çözme çalışıyor demektir; işlem bitince gösterge kendiliğinden temizlenir.
+**4. DF görüyorsan bekle.** DF görüyorsan bekle; buz çözme 5-12 dakika sürebilir.
 
-**5. CL görüyorsan panik yapma.** Otomatik temizleme işlevi devrededir; istersen bu işlevi kumandadan kapatabilirsin.
+**5. E ile başlıyorsa zorlama.** E ile başlayan bir kod görüyorsan cihazı zorlama; bu bir hata kodudur.
 
-**6. C1 ve sayı görüyorsan resetle.** Klimayı kapat, kısa bir süre bekle ve yeniden çalıştır.
+**6. Kılavuza bak.** Kodun karşılığını modelinin kullanım kılavuzundan kontrol et; kodlar modele göre değişebilir.
 
-**7. Dönüş süresini ölç.** Kod **on saniye içinde** geri geliyorsa geçici bir koruma değil kalıcı bir bildirim var demektir; cihazı zorlama.
+**7. Kodu servise aktar.** Kodu ve model numarasını not edip Samsung yetkili servisine ilet.
 
-**8. Kodu eksiksiz aktar.** Kodun iki parçasını, model numarasını ve hangi modda geldiğini yetkili servise ilet.
-
-## Arıza olmayan üç kod: CF, CL ve dF
+## Arıza olmayan üç kod: CF, C1 ve DF
 
 Samsung göstergesinde en sık görülen üç bildirim aslında hiç arıza değildir. Bunları arıza sanıp servis çağırmak, en çok yapılan boşa masraftır.
 
 | Kod | Karşılığı | Ne yapmalı |
 |---|---|---|
-| CF | Filtre temizleme hatırlatıcısı | Filtreyi temizle ya da değiştir, hatırlatıcıyı kumandadan sıfırla |
-| CL | Otomatik temizleme işlevi çalışıyor | Gerekmiyorsa kumandadan kapat |
-| dF | Otomatik buz çözme çalışıyor | Bekle, işlem bitince kendiliğinden geçer |
+| CF | Filtre temizleme hatırlatıcısı; 14 günlük periyotlarla görünür | Filtreyi temizle, ardından hatırlatıcıyı kumandadan sıfırla |
+| C1 | Klima otomatik temizleme yapıyor | Bilgi kodudur, arıza değil |
+| DF | Buz çözme; dış ısı eşanjöründeki buzu gidermek için 5-12 dakika çalışır | Buz çözme bitene kadar bekle |
 
-**Kendin kontrol et:** CF gördüğünde hatırlatıcıyı sıfırlamakla yetinme, filtreyi gerçekten temizle. Tıkalı filtre soğutma performansını düşürür, elektrik tüketimini artırır ve iç ünitede koku ile buğulanmanın da bilinen sebeplerindendir. Filtreyi çıkarıp tozunu almak ve gölgede kurutmak, ekipman gerektirmeyen ve gerçekten işe yarayan tek kullanıcı bakımıdır.
+**Kendin kontrol et:** CF gördüğünde hatırlatıcıyı sıfırlamakla yetinme, önce filtreyi gerçekten temizle. Samsung'a göre tıkalı hava filtreleri cihazın hatalı çalışmasına neden olabilir. Filtreyi kaydırarak çıkarmak, yumuşak fırça ya da süpürgeyle tozunu almak, su ve yumuşak deterjanla yıkayıp doğrudan güneşe bırakmadan kurutmak kullanıcının yapabileceği bakımdır.
 
-## C1 ya da E1 ile dönüşümlü yanan sayılar
+## E ile başlayan hata kodları
 
-Bu grup gerçek arıza bildirimidir. Harf grubu model serisine göre **C1** ya da **E1** olarak görünür; anlamı belirleyen kısım yanındaki sayıdır.
-
-| Kod | Karşılığı |
-|---|---|
-| C1 (ya da E1) ve 21 | Oda sıcaklık sensörü arızası |
-| C1 (ya da E1) ve 22 | Isı değiştirici sıcaklık sensörü arızası |
-| C1 (ya da E1) ve 54 | Fan dönmüyor: fan motoru ya da kondansatörü |
-| C1 (ya da E1) ve 63 | Ana kontrol kartındaki kayıtlı veri hatalı ya da silinmiş |
-
-**21 ve 22** sensör kodlarıdır. Bu kodlarda cihaz genelde çalışmaya devam eder ama sıcaklığı doğru okuyamadığı için verimsiz çalışır ve boşuna elektrik harcar; oda istediğin sıcaklığa gelmez ya da klima erken durur.
-
-**63** ise kartın hafızasındaki ayar verisinin bozulduğunu söyler. Bu koda karşı kullanıcının yapabileceği bir şey yoktur, teşhis doğrudan servise aittir.
-
-## 54 kodunda kritik ayrım: kesikli mi, sürekli mi?
-
-Fan kodunun içinde kullanıcının işine yarayan bir ayrım saklı ve bunu üreticinin kendi destek içeriği yapıyor.
-
-**Kod ara ara gelip kayboluyorsa**, iç ünite fan motoru besleme gerilimi normal aralığın dışına çıktığı için kendini koruma moduna almış olabilir. Gerilim düzeldiğinde sorun kendiliğinden geçer; bu bir arıza değil, korumadır.
-
-**Kod kapat-aç sonrası on saniye içinde geri geliyorsa** durum farklıdır: fan motorunda ya da kart tarafında kalıcı bir sorun var demektir ve bakılması gerekir. Yani teşhisin anahtarı kodun kendisi değil, **kodun ne kadar sürede geri döndüğü.** Servisi ararken bu bilgiyi vermek teşhisi ciddi biçimde kısaltır.
-
-## Isı değiştirici ve ısıtıcı sensörü kodları
-
-Bazı model serilerinde sensör bildirimleri sayı eşliği olmadan tek başına görünür:
+Bu grup gerçek arıza bildirimidir. Samsung Türkiye bu kodlar görüntülendiğinde destek alınmasını öneriyor.
 
 | Kod | Karşılığı |
 |---|---|
-| E5 | İç ünite ısı değiştirici sensöründe kopukluk ya da kısa devre |
-| E6 | Dış ünite ısı değiştirici sensöründe kopukluk ya da kısa devre |
-| E7 | Isıtıcı sıcaklık sensöründe kopukluk ya da kısa devre |
+| E101 | İç ve dış ünite arasında 1 dakika boyunca iletişim sağlanamaması |
+| E121 | İç ünite oda sensörü hatası |
+| E122 | İç ünite boru sensörü hatası |
+| E154 | İç fan motoru hız hatası |
+| E162 | EEPROM hatası |
+| E458 | Dış fan hatası |
+| E461 | Kompresör start hatası |
+| E554 | Gaz kaçak hatası |
 
-Üçü de sensör kaynaklıdır ve resetle silinmiyorsa parça teşhisi servis işidir. Sensörler iç ve dış ünitenin gövdesi içindedir, panelin arkasındadır.
+Listede dış ünite ve kompresörle ilgili başka kodlar da var; tamamı Samsung Türkiye'nin destek sayfasında.
 
-## Bu tablonun kapsamı: ev tipi klimalar
+**E121 ve E122** sensör kodlarıdır. Bu kodlarda klima sıcaklığı doğru okuyamaz; oda istediğin sıcaklığa gelmeyebilir.
 
-Bu yazıdaki tablo **ev tipi** klimalar içindir. Çoklu iç üniteli ticari sistemler üç haneli kodlar kullanır ve o şema ayrıdır; ikisini aynı tabloda okumak yanlış parçaya götürür. Ticari bir sistemin kodunu arıyorsan cihazının kendi kullanım kılavuzuna bak.
+E162 EEPROM hatasıdır; kullanıcının yapabileceği bir şey yoktur, teşhis servise aittir.
+
+## Kod tabloda yoksa
+
+Samsung, hata kodlarının modele göre değişebileceğini belirtiyor. Ekranındaki kod burada yoksa model numaranla kullanım kılavuzuna bak; kod sık sık tekrarlanıyorsa Samsung yetkili servisine başvur.
 
 ⛔ **Soğutucu devresine ve dış üniteye dokunma.** Klimanın gaz hattı basınçlı ve kapalı bir devredir; kaçak aramak da doldurmak da yetki, belge ve ekipman ister. Dış ünite ayrıca 220V beslenir ve fanı güçlüdür. Kullanıcıya ait alan kumanda, şalter ve filtre kapağı seviyesidir; panelin ötesi servise aittir.
 
