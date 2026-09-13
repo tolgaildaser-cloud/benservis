@@ -19,6 +19,12 @@ faq:
     a: "Filtre, yoğuşturucu, hazne ve yükleme kontrollerine rağmen sonuç değişmiyorsa ısıtıcı, nem sensörü, termostat veya fan tarafında bir arıza olabilir. Bu noktada Benservis'in ücretsiz teşhis aracıyla muhtemel arızayı ve tahmini maliyet aralığını görüp yakın servisleri listeleyebilirsiniz."
 images:
   coverAlt: "Çamaşır ipine mandallarla asılmış turkuaz ve turuncu havlular"
+video:
+  youtubeId: "41pY0h2bfNM"
+  title: "Program bitti, çamaşır hâlâ nemli. Servisi aramadan önce 4 ücretsiz kontrol"
+  description: "Kurutma makinesi çalışıyor ama çamaşır nemli çıkıyorsa sebep çoğu zaman hava akışının kısıtlanmasıdır. Dört kontrol: tiftik filtresi, yoğuşma haznesi, yoğuşturucu ve tamburun üçte birini boş bırakmak."
+  uploadDate: "2026-09-13T03:46:36Z"
+  duration: "PT1M33S"
 ---
 
 Kurutma makinesi çalışıyor, program dönüyor, süre doluyor — ama kapağı açtığınızda çamaşırlar hâlâ nemli. Bu, kurutma makinelerinde en sık karşılaşılan şikâyet ve iyi haber şu: çoğu zaman sebebi bir arıza değil, **hava akışının kısıtlanması**.
