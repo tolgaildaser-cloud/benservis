@@ -2625,6 +2625,9 @@ fs.writeFileSync(
 // ✅ noindex YOK ve sitemap'e giriyor: aydınlatma metninin bulunabilir olması KVKK
 //    md.10'un amacı — arama sonucunda çıkması lehimize.
 const HUKUK_SON_GUNCELLEME = "5 Ağustos 2026";
+// Gizlilik ayrıldı (14 Eyl 2026, YK #136 garanti hatırlatıcısı eklemeleri): koşullar metni
+// değişmediği için onun tarihi 5 Ağustos'ta kalır. Kaynak: `benservis-icerik/2026-09-14-YK-KVKK-GARANTI-HATIRLATICI-METNI.md` A-D.
+const GIZLILIK_SON_GUNCELLEME = "14 Eylül 2026";
 
 // İki sayfada da tekrarlayan kapanış: kullanıcı hukuk metninden çıkarken huniye dönsün.
 const HUKUK_CAPRAZ = (oteki) =>
@@ -2632,7 +2635,7 @@ const HUKUK_CAPRAZ = (oteki) =>
 
 const GIZLILIK_GOVDE = `<article>
 <h1>Gizlilik ve Kişisel Verilerin Korunması</h1>
-<p class="meta">Son güncelleme: ${HUKUK_SON_GUNCELLEME}</p>
+<p class="meta">Son güncelleme: ${GIZLILIK_SON_GUNCELLEME}</p>
 <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca aydınlatma yükümlülüğümüzü yerine getirmek için hazırlanmıştır.</p>
 
 <h2>Veri sorumlusu</h2>
@@ -2646,6 +2649,7 @@ const GIZLILIK_GOVDE = `<article>
 <tr><td><strong>Servis talebi/iş kaydı oluşturduğunuzda</strong></td><td>Ad-soyad, telefon, adres, ilçe, cihaz ve arıza bilgisi</td><td>Talebinizi uygun servise iletmek, sizinle iletişim kurmak</td></tr>
 <tr><td><strong>İkinci el ilanı veya alım talebi verdiğinizde</strong></td><td>Ad-soyad, telefon, e-posta, ürün ve fiyat bilgisi</td><td>İlanı yayınlamak, alıcı-satıcı eşleştirmesi yapmak</td></tr>
 <tr><td><strong>Servis olarak başvurduğunuzda</strong></td><td>İşletme/kişi adı, telefon, hizmet bölgesi</td><td>Servis ağına dahil etmek, iş yönlendirmek</td></tr>
+<tr><td><strong>Cihazınızı garanti hatırlatması için kaydettiğinizde</strong></td><td>E-posta adresi; cihaz türü, marka ve model; satın alma tarihi ve <strong>sizin girdiğiniz</strong> garanti bitiş tarihi</td><td>Garanti bitişinden önce size hatırlatma e-postası göndermek. Garanti süresini biz hesaplamayız; yalnız sizin yazdığınız tarihi hatırlatırız. Adınız, telefonunuz, faturanız veya seri numaranız istenmez.</td></tr>
 <tr><td><strong>Sipariş/ödeme adımında</strong></td><td>Sipariş ve ödeme kaydı</td><td>Kaydı tutmak, yasal saklama yükümlülüğünü yerine getirmek</td></tr>
 </tbody></table>
 <p><strong>Toplamadığımız veriler:</strong> T.C. kimlik numarası, kart bilgisi (ödeme sağlayıcısında işlenir, bize gelmez), sağlık verisi, biyometrik veri ve KVKK md.6 kapsamındaki diğer özel nitelikli veriler.</p>
@@ -2656,12 +2660,14 @@ const GIZLILIK_GOVDE = `<article>
 <li><strong>Meşru menfaat (md.5/2-f):</strong> hizmetin çalıştığını ölçmek (anonim teşhis kaydı), kötüye kullanımı önlemek (istek sınırlama), hizmet kalitesini geliştirmek</li>
 <li><strong>Hukuki yükümlülük (md.5/2-ç):</strong> mali kayıtların yasal süre boyunca saklanması</li>
 <li><strong>Açık rıza (md.5/1):</strong> yalnızca ticari elektronik ileti göndermemiz gerektiğinde — bu rıza olmadan tanıtım mesajı gönderilmez</li>
+<li><strong>Açık rıza (md.5/1) — garanti hatırlatması:</strong> hatırlatma e-postası yalnızca kayıt formundaki onay kutusunu işaretlerseniz gönderilir. Bu e-posta tanıtım içermez; sizin istediğiniz tarih bilgisini içerir. Onayınızı istediğiniz zaman geri alabilirsiniz (aşağıdaki &quot;Haklarınız&quot; bölümü).</li>
 </ul>
 
 <h2>Kimlerle paylaşıyoruz</h2>
 <ul>
 <li><strong>Talebinizi ilettiğiniz servis(ler)le</strong> — yalnızca işi yapabilmesi için gereken kadarıyla (ad, telefon, adres, arıza bilgisi)</li>
 <li><strong>Altyapı sağlayıcılarımızla (yurt dışı sunucu barındırma dahil):</strong> Supabase (veritabanı), Vercel (barındırma), Upstash (istek sınırlama), OpenAI (sesin metne çevrilmesi ve teşhis metni üretimi)</li>
+<li>Hatırlatma e-postaları, alan adımızın e-posta altyapısı (<strong>İsimtescil Bilişim A.Ş., Türkiye</strong>) üzerinden gönderilir; e-posta adresiniz bu amaç dışında kimseyle paylaşılmaz.</li>
 <li><strong>Yasal olarak zorunlu olduğunda</strong> yetkili kamu kurum ve kuruluşlarıyla</li>
 <li><strong>Reklam/veri satışı yapmıyoruz.</strong> Verileriniz üçüncü taraflara pazarlama amacıyla satılmaz veya kiralanmaz.</li>
 </ul>
@@ -2671,6 +2677,7 @@ const GIZLILIK_GOVDE = `<article>
 <table><thead><tr><th>Veri</th><th>Süre</th></tr></thead><tbody>
 <tr><td>Servis talebi / iş kaydı</td><td>İşin tamamlanmasından itibaren <strong>2 yıl</strong> (uyuşmazlık zamanaşımı)</td></tr>
 <tr><td>İkinci el ilan ve talepleri</td><td>İlanın kaldırılmasından itibaren <strong>1 yıl</strong></td></tr>
+<tr><td>Garanti hatırlatma kaydı (e-posta, cihaz, tarihler)</td><td>Girdiğiniz garanti bitiş tarihinden itibaren <strong>1 yıl</strong>; talep ederseniz hemen silinir</td></tr>
 <tr><td>Sipariş ve ödeme kayıtları</td><td><strong>10 yıl</strong> (vergi ve ticaret mevzuatı)</td></tr>
 <tr><td>Anonim teşhis kaydı</td><td>Süresiz (kişisel veri içermez)</td></tr>
 <tr><td>Ses kaydı</td><td><strong>Saklanmaz</strong> — çeviri anında silinir</td></tr>
