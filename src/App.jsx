@@ -13,6 +13,7 @@ import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
 import AnaSayfaVitrin from "./AnaSayfaVitrin.jsx";
+import GarantiHatirlatici from "./GarantiHatirlatici.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { gelisEtiketi } from "./gelis.js";
@@ -849,6 +850,11 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
                 </div>
               </div>
     
+              {/* Garanti hatırlatıcısı (YK #136, 14 Eyl 2026) — YALNIZ sonuç ekranında; teşhis
+                  akışına (sonuç öncesi) hiçbir şey eklenmez (#177 deneyi). `key`: yeni teşhiste
+                  form sıfırlansın, önceki cihazın marka/e-postası taşınmasın. */}
+              <GarantiHatirlatici key={`${cihaz}|${efektifMarka}`} cihaz={cihaz} marka={efektifMarka} />
+
               <div style={s.altBtns}>
                 <button style={s.copyBtn} onClick={kopyala}>{kopyalandi ? "✓ Kopyalandı" : "⧉ Özeti kopyala"}</button>
                 <button style={s.reset} onClick={sifirla}>↺ Yeni arıza</button>
