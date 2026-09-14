@@ -3,7 +3,7 @@
 // Metinler ve doğrulama `garanti-hatirlatici.js`'ten — form ile sunucu aynı kuralı okur.
 import { useState } from "react";
 import { track } from "@vercel/analytics";
-import { METIN, garantiKaydiDogrula } from "./garanti-hatirlatici.js";
+import { METIN, garantiKaydiDogrula, oneriBitis } from "./garanti-hatirlatici.js";
 import { NAVY, BLUE, BG, SURFACE, MUTED, HAIR, SLATE, RED } from "./theme.js";
 
 const GREEN_OK = "#16A34A";
@@ -15,6 +15,14 @@ export default function GarantiHatirlatici({ cihaz, marka }) {
   const [durum, setDurum] = useState("bos"); // bos | gonderiliyor | tamam
   const [hata, setHata] = useState("");
   const set = (k) => (e) => setF((x) => ({ ...x, [k]: e.target.value }));
+  // Bitiş tarihi önerisi (Tolga, 14 Eyl): satın alma girilince +2 yıl gelir. Kullanıcı bitişi
+  // elle değiştirdiyse satın alma sonradan değişse bile onun tarihi EZİLMEZ.
+  const [bitisElle, setBitisElle] = useState(false);
+  const satinDegisti = (e) => {
+    const v = e.target.value;
+    setF((x) => ({ ...x, satin_alma_tarihi: v, ...(bitisElle ? {} : { garanti_bitis_tarihi: oneriBitis(v) }) }));
+  };
+  const bitisDegisti = (e) => { setBitisElle(true); set("garanti_bitis_tarihi")(e); };
 
   const gonder = async (e) => {
     e.preventDefault();
@@ -59,10 +67,10 @@ export default function GarantiHatirlatici({ cihaz, marka }) {
           <input style={s.girdi} value={f.model} onChange={set("model")} maxLength={80} autoComplete="off" />
         </label>
         <label style={s.etiket}>{METIN.satinAlma}
-          <input style={s.girdi} type="month" value={f.satin_alma_tarihi} onChange={set("satin_alma_tarihi")} required />
+          <input style={s.girdi} type="month" value={f.satin_alma_tarihi} onChange={satinDegisti} required />
         </label>
         <label style={s.etiket}>{METIN.garantiBitis}
-          <input style={s.girdi} type="date" value={f.garanti_bitis_tarihi} onChange={set("garanti_bitis_tarihi")} required aria-describedby="garanti-yardim" />
+          <input style={s.girdi} type="date" value={f.garanti_bitis_tarihi} onChange={bitisDegisti} required aria-describedby="garanti-yardim" />
         </label>
       </div>
       <p id="garanti-yardim" style={s.yardim}>{METIN.garantiYardim}</p>
