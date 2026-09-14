@@ -1136,6 +1136,12 @@ function serpistir(list) {
   return out;
 }
 
+// URL hijyeni (#193) ile aynı dizin listesi: vercel.json redirect'leri bu dizinlerde slashsız adresi 308'le.
+function icBagSlash(html) {
+  return html.replace(/href="(\/(?:blog|tamir|kilavuzlar|gizlilik|kullanim-kosullari)(?:\/[^"#?]*)?)([#?][^"]*)?"/g, (m, yol, ek = "") =>
+    yol.endsWith("/") || /\.[a-z0-9]+$/i.test(yol) ? m : `href="${yol}/${ek}"`);
+}
+
 const posts = serpistir(
   fs.readdirSync(CONTENT)
     .filter((f) => f.endsWith(".md"))
@@ -1145,7 +1151,11 @@ const posts = serpistir(
       // ORTASINDAKİ bold (<p>metin <strong>) eşleşmez → inline kalır.
       // Tablolar kaydırılabilir kapsayıcıya alınır (taşma güvenlik ağı; gerekçe CSS'te .tablo-kap).
       // marked tabloyu özniteliksiz <table> olarak basıyor (dist'te 154/154 ölçüldü).
-      const html = marked.parse(content)
+      // İç bağ slash normalizasyonu (14 Eyl 2026, URL hijyeni #193 sonrası): markdown'da
+      // `/blog/x` diye yazılmış bağ artık 308 atlaması yapıyor (canlıda 9 dosyada 19 bağ). Metne
+      // dokunulmaz; yalnız üretilen href'e `/` eklenir. Uzantılı dosya (`.png`) ve kök dizin
+      // dışındaki yollar dokunulmaz; `#` ve `?` eki korunur.
+      const html = icBagSlash(marked.parse(content))
         .replace(/<(p|li)><strong>/g, '<$1><strong class="lead">')
         .replace(/<table>/g, '<div class="tablo-kap"><table>')
         .replace(/<\/table>/g, "</table></div>");
