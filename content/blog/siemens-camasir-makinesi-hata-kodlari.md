@@ -1,6 +1,6 @@
 ---
 title: "Siemens çamaşır makinesi hata kodları"
-description: "E17, E18 ya da E23 mü veriyor? BSH'nin yayımladığı on kodun anlamı, evde çözülebilenler ve F21'in neden listede olmadığı tek yazıda."
+description: "Siemens çamaşır makinesinde E18 ile F18 aynı arıza mı? E ve F önekli kodların anlamı, tahliye filtresi temizliği ve F21'in neden listede olmadığı."
 slug: "siemens-camasir-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Çamaşır makinesi"
