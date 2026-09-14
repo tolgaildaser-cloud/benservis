@@ -1512,7 +1512,9 @@ kapakDenetimi(posts); // uyarır + YK #65 ilerleme sayacını basar
 // katmanında, mevcut CTA/PWA blokları gibi eklenir. URL'ler değişmez.
 const TAMIR_GERI = new Map();
 for (const ad of CIHAZLAR) {
-  for (const g of hataKoduKayitlari(ad)) if (g.yazi) TAMIR_GERI.set(g.yazi, { ad, slug: slugify(ad) });
+  // cihazSlug: /tamir/ sayfaları bu slug'la basılıyor (KATEGORILER ile aynı kaynak). Tek cihaz kuralı
+  // src/hata-kodlari-cihaz.test.js'te — bir yazı iki cihaz tablosunda olursa son yazılan kazanırdı (14 Eyl vakası).
+  for (const g of hataKoduKayitlari(ad)) if (g.yazi) TAMIR_GERI.set(g.yazi, { ad, slug: cihazSlug(ad) });
 }
 const tamirGeriSatiri = (p) => {
   const k = TAMIR_GERI.get(p.slug);

@@ -155,30 +155,11 @@ export const HATA_KODU_KATMANI = {
     { giris: "Kireç ve tambur temizliği (planlı bakım)", tip: "ayar",
       anlam: "Boş bakım yıkaması ne sıklıkta, kapak lastiğinin katları ve suyun sertliğiyle ilişkisi.",
       yazi: "camasir-makinesi-kirec-ve-tambur-temizligi" },
-  ],
-
-  // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
-  // Bu 5 kayıt "Çamaşır Makinesi" altında duruyordu; kurutma ayrı cihaz olunca kendi
-  // /tamir/kurutma-makinesi/ sayfasına taşındı. Kayıtların METNİ ve bağlı YAZISI
-  // değişmedi — yalnız hangi cihazın altında durdukları değişti.
-  "Kurutma Makinesi": [
-    { giris: "Kurutma makinesi — Arçelik ve Beko panel sembolleri", tip: "kod",
-      anlam: "İki markanın kılavuzunda da kod değil sembol var; ekransız modellerde ışık dili.",
-      yazi: "kurutma-makinesi-hata-kodlari" },
-    { giris: "Kurutma makinesi ısıtmıyor / soğuk üflüyor", tip: "belirti",
-      anlam: "Sorun çoğu zaman hava akışında başlar: filtre, kondenser, güvenlik termiği sırasıyla izlenir.",
-      yazi: "kurutma-makinesi-isitmiyor" },
-    { giris: "Kurutma makinesi su tankı dolu uyarısı", tip: "belirti",
-      anlam: "Tank boşken de uyarı verebilir; tankın oturuşu, şamandıra ve kondenser tıkanıklığı kontrol edilir.",
-      yazi: "kurutma-makinesi-su-tanki-dolu-uyarisi" },
-    { giris: "Kurutma makinesi filtre ve kondenser temizliği", tip: "ayar",
-      anlam: "Kurutma süresi uzadıysa ilk bakılacak yer: kapak filtresi her kurutmada, kondenser ayda bir temizlenir.",
-      yazi: "kurutma-makinesi-filtre-ve-kondenser-temizligi" },
-    { giris: "Kurutma makinesi ne kadar elektrik harcar", tip: "ayar",
-      anlam: "Isı pompalı ve kondenserli modellerin farkı; tıkalı filtre tüketimi artırır.",
-      yazi: "kurutma-makinesi-ne-kadar-elektrik-harcar" },
-
-  // ——— Kayıt genişletmesi (21 Ağu 2026, YK #80 · hedef 200+) ———
+  // ——— 14 Eyl 2026 (FE, PAZ bulgusu): bu 22 kayıt 21 Ağu genişletmesinde YANLIŞLIKLA
+  // "Kurutma Makinesi" dizisine girmişti — hepsinin yazısı `camasir-makinesi-*`. Sonuç:
+  // /tamir/kurutma-makinesi/ 22 çamaşır girişi listeliyordu, 4 çamaşır yazısı çamaşır
+  // sayfasında hiç yoktu, çamaşır yazılarının alt bağı kurutma hub'ına gidiyordu.
+  // METİN AYNEN taşındı; yalnız hangi cihazın altında durdukları değişti.
     { giris: "Program bitti ama kapak açılmıyor", tip: "belirti",
       anlam: "Kilit program bitiminden 1-3 dakika sonra çözülür; kazanda su varsa makine kapağı bilerek açmaz.",
       yazi: "camasir-makinesi-kapagi-acilmiyor", rehber: true },
@@ -191,9 +172,6 @@ export const HATA_KODU_KATMANI = {
     { giris: "Program kaç saat sürer (pamuklu 60, sentetik 40)", tip: "ayar",
       anlam: "Üretici kılavuzlarından derlenen gerçekçi süre bantları; ekrandaki ilk süre bir tahmindir, makine yükü tartınca güncellenir.",
       yazi: "camasir-makinesi-program-sureleri" },
-    { giris: "Kurutma programı bitti, çamaşır hâlâ nemli", tip: "belirti",
-      anlam: "Sebep çoğu zaman hava akışının kısıtlanmasıdır: tiftik filtresi, yoğuşma haznesi ve yoğuşturucu sırayla kontrol edilir.",
-      yazi: "kurutma-makinesi-kurutmuyor" },
     { giris: "Suyu boşaltmadan durdu", tip: "belirti",
       anlam: "Tahliye tarafında tıkanıklık işareti: filtre, hortum ve yük dengesi kontrol edilir.",
       yazi: "camasir-makinesi-su-atmiyor" },
@@ -245,6 +223,36 @@ export const HATA_KODU_KATMANI = {
     { giris: "Yumuşatıcı gözü taşıyor", tip: "ayar",
       anlam: "Taşmanın anatomisi: doğru göz, doğru seviye ve sık yapılan üç yanlış.",
       yazi: "camasir-makinesi-deterjan-cekmecesi-hangi-goz" },
+    { giris: "Elektrik tüketimi birden arttı", tip: "ayar",
+      anlam: "Enerjinin çoğu suyu ısıtmaya gider; aynı programda tüketimin belirgin artması bir sinyal olabilir.",
+      yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
+  ],
+
+  // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
+  // Bu 5 kayıt "Çamaşır Makinesi" altında duruyordu; kurutma ayrı cihaz olunca kendi
+  // /tamir/kurutma-makinesi/ sayfasına taşındı. Kayıtların METNİ ve bağlı YAZISI
+  // değişmedi — yalnız hangi cihazın altında durdukları değişti.
+  "Kurutma Makinesi": [
+    { giris: "Kurutma makinesi — Arçelik ve Beko panel sembolleri", tip: "kod",
+      anlam: "İki markanın kılavuzunda da kod değil sembol var; ekransız modellerde ışık dili.",
+      yazi: "kurutma-makinesi-hata-kodlari" },
+    { giris: "Kurutma makinesi ısıtmıyor / soğuk üflüyor", tip: "belirti",
+      anlam: "Sorun çoğu zaman hava akışında başlar: filtre, kondenser, güvenlik termiği sırasıyla izlenir.",
+      yazi: "kurutma-makinesi-isitmiyor" },
+    { giris: "Kurutma makinesi su tankı dolu uyarısı", tip: "belirti",
+      anlam: "Tank boşken de uyarı verebilir; tankın oturuşu, şamandıra ve kondenser tıkanıklığı kontrol edilir.",
+      yazi: "kurutma-makinesi-su-tanki-dolu-uyarisi" },
+    { giris: "Kurutma makinesi filtre ve kondenser temizliği", tip: "ayar",
+      anlam: "Kurutma süresi uzadıysa ilk bakılacak yer: kapak filtresi her kurutmada, kondenser ayda bir temizlenir.",
+      yazi: "kurutma-makinesi-filtre-ve-kondenser-temizligi" },
+    { giris: "Kurutma makinesi ne kadar elektrik harcar", tip: "ayar",
+      anlam: "Isı pompalı ve kondenserli modellerin farkı; tıkalı filtre tüketimi artırır.",
+      yazi: "kurutma-makinesi-ne-kadar-elektrik-harcar" },
+
+  // ——— Kayıt genişletmesi (21 Ağu 2026, YK #80 · hedef 200+) ———
+    { giris: "Kurutma programı bitti, çamaşır hâlâ nemli", tip: "belirti",
+      anlam: "Sebep çoğu zaman hava akışının kısıtlanmasıdır: tiftik filtresi, yoğuşma haznesi ve yoğuşturucu sırayla kontrol edilir.",
+      yazi: "kurutma-makinesi-kurutmuyor" },
     { giris: "Kurutma süresi eskisinden çok uzadı", tip: "ayar",
       anlam: "İlk durak kapak filtresi, ikinci durak kondenser; hav birikimi hava akışını düşürür.",
       yazi: "kurutma-makinesi-filtre-ve-kondenser-temizligi" },
@@ -254,9 +262,6 @@ export const HATA_KODU_KATMANI = {
     { giris: "Tankı boşalttım ama uyarı gitmiyor", tip: "belirti",
       anlam: "Tankın yuvasına tam oturması, şamandıra ve kondenser tıkanıklığı sırayla kontrol edilir.",
       yazi: "kurutma-makinesi-su-tanki-dolu-uyarisi" },
-    { giris: "Elektrik tüketimi birden arttı", tip: "ayar",
-      anlam: "Enerjinin çoğu suyu ısıtmaya gider; aynı programda tüketimin belirgin artması bir sinyal olabilir.",
-      yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
   // ——— 21 Ağu tur-3: tıklama odaklı kod + karar dalgası (12 yazı) ———
   // ⛔ `firin-tamiri-kac-para` ve `televizyon-tamiri-kac-para` BİLEREK BAĞLANMADI:
   //    başlıklarındaki "para" kelimesi kategori sayfasına sızıyor ve YK #35 şart 1'i
