@@ -3,14 +3,14 @@
 // NE KORUYOR:
 //  ① Onay kutusu boşken kayıt YOK (föy G kabul: "onay kutusu boşken kayıt 4xx") — sunucu ve
 //     form aynı fonksiyonu okuyor, test fonksiyonu ve API ucunu ayrı ayrı sınar.
-//  ② Tarih HESAPLANMAZ: kayıttaki bitiş tarihi kullanıcının girdiğiyle birebir.
+//  ② Bitiş tarihi ÖNERİLİR (satın alma + 2 yıl, Tolga 14 Eyl) ama kayıttaki tarih kullanıcının onayladığıyla birebir.
 //  ③ Kayıt her zaman `kaynak='garanti-hatirlatici'` + rıza sürümü taşır; seri no yazılmaz.
 //  ④ Metin föyle birebir (başlık, onay cümlesi, başarı mesajı).
 //  ⑤ E-posta DPP public alan listesine girmedi (sızıntı kalkanı, #114 deseni).
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
-import { garantiKaydiDogrula, METIN, RIZA_METIN_V } from "./garanti-hatirlatici.js";
+import { garantiKaydiDogrula, METIN, RIZA_METIN_V, oneriBitis } from "./garanti-hatirlatici.js";
 
 const BUGUN = "2026-09-14";
 const gecerli = {
@@ -52,6 +52,30 @@ describe("garantiKaydiDogrula", () => {
     const { kayit } = garantiKaydiDogrula({ ...gecerli, marka: "", model: "x".repeat(300) }, BUGUN);
     expect(kayit.marka).toBeNull();
     expect(kayit.model).toHaveLength(80);
+  });
+});
+
+describe("oneriBitis — satın alma + yasal asgari 2 yıl (Tolga, 14 Eyl)", () => {
+  it("ay/yıl girişinde ayın 1'i + 2 yıl", () => {
+    expect(oneriBitis("2025-03")).toBe("2027-03-01");
+    expect(oneriBitis("2026-12")).toBe("2028-12-01");
+  });
+  it("tam gün girişi korunur; 29 Şubat taşmaz", () => {
+    expect(oneriBitis("2025-07-19")).toBe("2027-07-19");
+    expect(oneriBitis("2024-02-29")).toBe("2026-02-28");
+  });
+  it("boş/bozuk girişte öneri yok", () => {
+    expect(oneriBitis("")).toBe("");
+    expect(oneriBitis("2025-13")).toBe("");
+  });
+  it("öneri doğrulamadan geçer, kullanıcının değiştirdiği tarih de birebir kaydedilir", () => {
+    const bitis = oneriBitis(gecerli.satin_alma_tarihi);
+    expect(garantiKaydiDogrula({ ...gecerli, garanti_bitis_tarihi: bitis }, BUGUN).kayit.garanti_bitis_tarihi).toBe("2027-03-01");
+    expect(garantiKaydiDogrula({ ...gecerli, garanti_bitis_tarihi: "2028-03-01" }, BUGUN).kayit.garanti_bitis_tarihi).toBe("2028-03-01");
+  });
+  it("yardım metni öneriyi ve değiştirilebilirliği söylüyor; rıza metni sürümü 2", () => {
+    expect(METIN.garantiYardim).toBe("Satın alma tarihine yasal asgari 2 yıl eklenerek önerildi; üreticinin verdiği ek süre varsa garanti belgenize bakıp değiştirin.");
+    expect(RIZA_METIN_V).toBe(2);
   });
 });
 

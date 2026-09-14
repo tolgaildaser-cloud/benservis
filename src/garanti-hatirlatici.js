@@ -3,15 +3,19 @@
 // Formun ve sunucunun AYNI kuralı okuduğu tek yer: istemci göndermeden, sunucu yazmadan
 // bu fonksiyondan geçer (föy G: "onay kutusu işaretlenmeden istek gönderilmez — istemci + sunucu").
 // Metinler föyden BİREBİR: `benservis-icerik/2026-09-14-YK-KVKK-GARANTI-HATIRLATICI-METNI.md` §E.
+// İstisna: `garantiYardim` 14 Eyl'de Tolga'nın onayladığı yeni metin (bitiş önerisi); föyün YK'da güncellenmesi bekleniyor.
 //
 // ⛔ ÜÇ KURAL (#136):
-//   ① Tarih HESAPLANMAZ — kullanıcının girdiği bitiş tarihi hatırlatılır. Burada yalnız
-//      biçim/tutarlılık denetlenir (gerçek tarih mi, bitiş bugünden sonra mı); süre üretilmez.
+//   ① ~~Tarih HESAPLANMAZ~~ → DEĞİŞTİ (Tolga, 14 Eyl 2026: "satın alma tarihini girince garanti
+//      bitiş tarihi 2 yıl olarak otomatik gelsin, değiştirmek isteyen değiştirir" + önerilen metin
+//      onayı). Form satın alma + yasal asgari 2 yılı ÖNERİR (`oneriBitis`); kullanıcı değiştirebilir,
+//      KAYDEDİLEN tarih kullanıcının onayladığı tarihtir. Sunucu yine yalnız biçim/tutarlılık denetler.
+//      Metin değiştiği için RIZA_METIN_V 1 → 2.
 //   ② Form yalnız teşhis SONUÇ ekranında (#177 deney grubu değişmez).
 //   ③ `/gizlilik/` eklemeleri yayında olmadan form açılmaz — PR #190 ile 14 Eyl'de yayında.
 // ⛔ Fatura, fotoğraf, seri numarası, ad, telefon İSTENMEZ.
 
-export const RIZA_METIN_V = 1;
+export const RIZA_METIN_V = 2;
 
 // Metin değişirse RIZA_METIN_V artar — kayıttaki sürüm, kullanıcının hangi metni onayladığını gösterir.
 export const METIN = {
@@ -19,7 +23,7 @@ export const METIN = {
   alt: "Cihazınızı kaydedin; garanti bitişinden 30 gün önce e-posta gönderelim. Ücretsiz, tanıtım yok.",
   satinAlma: "Satın alma tarihi",
   garantiBitis: "Garanti bitiş tarihi",
-  garantiYardim: "Türkiye'de tüketici ürünlerinde yasal garanti en az 2 yıldır; üreticinin verdiği ek süre için garanti belgenize bakın. Tarihi siz girersiniz, biz hesaplamayız.",
+  garantiYardim: "Satın alma tarihine yasal asgari 2 yıl eklenerek önerildi; üreticinin verdiği ek süre varsa garanti belgenize bakıp değiştirin.",
   eposta: "E-posta",
   onayOnce: "Girdiğim e-posta adresine garanti bitiş hatırlatması gönderilmesini istiyorum. Verilerimin ",
   onayLink: "Gizlilik Politikası",
@@ -46,6 +50,20 @@ function satinAlmaGunu(s) {
   const t = String(s || "").trim();
   if (AY.test(t)) return gercekGun(`${t}-01`);
   return gercekGun(t);
+}
+
+// Yasal asgari garanti süresi (yıl) — öneri için; kullanıcı değiştirebilir.
+export const YASAL_ASGARI_YIL = 2;
+
+// Satın alma ("YYYY-MM" ya da "YYYY-MM-DD") → önerilen bitiş "YYYY-MM-DD". Geçersizse "".
+// 29 Şubat + 2 yıl → 28 Şubat (ay taşmaz).
+export function oneriBitis(satinAlma) {
+  const g = satinAlmaGunu(satinAlma);
+  if (!g) return "";
+  const [y, m, d] = g.split("-").map(Number);
+  const yil = y + YASAL_ASGARI_YIL;
+  const sonGun = new Date(Date.UTC(yil, m, 0)).getUTCDate();
+  return `${yil}-${String(m).padStart(2, "0")}-${String(Math.min(d, sonGun)).padStart(2, "0")}`;
 }
 
 const kirp = (v, n) => String(v ?? "").trim().slice(0, n);
