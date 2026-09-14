@@ -1535,6 +1535,13 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
   }
   .vitrin-surdur:hover img, .vitrin-surdur:hover svg { transform: scale(1.06); }
 }
+/* Aile gorseli (14 Eyl) — SSS altindaki kapanis karesi. Kaynak 16:9.
+   Genis ekranda 2:1 kesit (bant cok yuksek durmasin), dar ekranda kare tam gorunur.
+   Oran burada: satir ici stil medya sorgusunu ezerdi. */
+.vitrin-aile img { aspect-ratio: 2 / 1; }
+@media (max-width: 720px) {
+  .vitrin-aile img { aspect-ratio: 16 / 9; }
+}
 .vitrin-surdur:focus-visible { transform: translateY(-2px); border-color: #86EFAC !important; }
 @media (prefers-reduced-motion: reduce) {
   .vitrin-surdur, .vitrin-surdur img, .vitrin-surdur svg { transition: none; }

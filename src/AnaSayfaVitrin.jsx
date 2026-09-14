@@ -494,6 +494,23 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           ))}
         </div>
 
+        {/* ═══ AİLE GÖRSELİ ═══ (Tolga, 14 Eyl 2026: "mevcut hero kalsın, downloads'taki
+            görseli en alta bir yerlere yerleştir"). Kling üretimi, mutfak masasında aile.
+            Yer: SSS'nin altı, gerçek sayıların üstü — sayfanın kapanışında güven anı.
+            Metinsiz, tıklanmaz: süs değil sahne; alt metin kareyi anlatır.
+            Oran CSS sınıfında (App.jsx .vitrin-aile): masaüstü 2:1, ≤720px 16:9 (tam kare).
+            Satır içi aspect-ratio YOK — satır içi stil medya sorgusunu ezerdi. */}
+        <figure className="vitrin-aile" style={st.aileDis}>
+          <img
+            src="/anasayfa/aile-kahvalti-1440.webp"
+            srcSet="/anasayfa/aile-kahvalti-720.webp 720w, /anasayfa/aile-kahvalti-1080.webp 1080w, /anasayfa/aile-kahvalti-1440.webp 1440w, /anasayfa/aile-kahvalti-2160.webp 2160w"
+            sizes="(max-width: 1080px) calc(100vw - 40px), 1040px"
+            alt="Mutfak masasında çay eşliğinde kahvaltı eden anne, baba ve oğul"
+            width="2160" height="1220" loading="lazy" decoding="async"
+            style={st.aileFoto}
+          />
+        </figure>
+
         {/* ═══ GERÇEK SAYILAR ═══ (şişirme yok; hepsi repodan sayıldı)
             21 Ağu 2026 (Tolga: "bunu sık sorulan sorular altına al"): band ESKİDEN
             cihaz kartlarının hemen altında, kendi `<section>`'ı olarak duruyordu.
@@ -752,6 +769,10 @@ const st = {
   },
   sssArti: { color: BLUE, fontSize: 24, fontWeight: 400, lineHeight: 1, flexShrink: 0 },
   sssCevap: { margin: 0, padding: "0 18px 16px", fontSize: "clamp(14.5px, 1.5vw, 16.5px)", lineHeight: 1.65, color: MUTED },
+
+  aileDis: { margin: "clamp(36px, 5vw, 56px) 0 0", padding: 0, borderRadius: 20, overflow: "hidden", border: `1px solid ${HAIR}`, background: HAIR },
+  // objectPosition 50% 30%: 2:1 kesitte babanın saçı üstten, çay ince belleri alttan kesilmesin.
+  aileFoto: { display: "block", width: "100%", height: "auto", objectFit: "cover", objectPosition: "50% 30%" },
 
   sayilar: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 14 },
   sayiKutu: {
