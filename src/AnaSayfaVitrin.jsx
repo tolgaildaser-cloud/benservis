@@ -497,9 +497,12 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         {/* ═══ AİLE GÖRSELİ ═══ (Tolga, 14 Eyl 2026: "mevcut hero kalsın, downloads'taki
             görseli en alta bir yerlere yerleştir"). Kling üretimi, mutfak masasında aile.
             Yer: SSS'nin altı, gerçek sayıların üstü — sayfanın kapanışında güven anı.
-            Metinsiz, tıklanmaz: süs değil sahne; alt metin kareyi anlatır.
+            Tıklanmaz: süs değil sahne; alt metin kareyi anlatır.
             Oran CSS sınıfında (App.jsx .vitrin-aile): masaüstü 2:1, ≤720px 16:9 (tam kare).
-            Satır içi aspect-ratio YOK — satır içi stil medya sorgusunu ezerdi. */}
+            Satır içi aspect-ratio YOK — satır içi stil medya sorgusunu ezerdi.
+            YAZI (Tolga, 14 Eyl: "hafif perde koyup üzerine … yazsak" → "ilkini uygula"):
+            tam perde değil ALTTAN degrade — yüzler karenin üst yarısında, aydınlık kalsın.
+            Buton yok: sabit teşhis düğmesi zaten altta; görsel tıklanmaz kalır. */}
         <figure className="vitrin-aile" style={st.aileDis}>
           <img
             src="/anasayfa/aile-kahvalti-1440.webp"
@@ -509,6 +512,8 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             width="2160" height="1220" loading="lazy" decoding="async"
             style={st.aileFoto}
           />
+          <div style={st.ailePerde} aria-hidden="true" />
+          <figcaption style={st.aileYazi}>Cihaz bozulur, ev düzeni bozulmasın.</figcaption>
         </figure>
 
         {/* ═══ GERÇEK SAYILAR ═══ (şişirme yok; hepsi repodan sayıldı)
@@ -770,7 +775,14 @@ const st = {
   sssArti: { color: BLUE, fontSize: 24, fontWeight: 400, lineHeight: 1, flexShrink: 0 },
   sssCevap: { margin: 0, padding: "0 18px 16px", fontSize: "clamp(14.5px, 1.5vw, 16.5px)", lineHeight: 1.65, color: MUTED },
 
-  aileDis: { margin: "clamp(36px, 5vw, 56px) 0 0", padding: 0, borderRadius: 20, overflow: "hidden", border: `1px solid ${HAIR}`, background: HAIR },
+  aileDis: { position: "relative", margin: "clamp(36px, 5vw, 56px) 0 0", padding: 0, borderRadius: 20, overflow: "hidden", border: `1px solid ${HAIR}`, background: HAIR },
+  // Alttan degrade: üst %45 tamamen açık (yüzler), dipte lacivert %70 (yazı okunur).
+  ailePerde: { position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(15,23,42,0) 45%, rgba(15,23,42,.35) 70%, rgba(15,23,42,.72) 100%)" },
+  aileYazi: {
+    position: "absolute", left: "clamp(16px, 3vw, 36px)", right: "clamp(16px, 3vw, 36px)", bottom: "clamp(12px, 2.6vw, 30px)",
+    margin: 0, color: "#fff", fontFamily: "Fraunces, Georgia, serif", fontWeight: 600,
+    fontSize: "clamp(16px, 2.8vw, 32px)", lineHeight: 1.2, letterSpacing: "-.01em", textShadow: "0 1px 12px rgba(15,23,42,.45)",
+  },
   // objectPosition 50% 30%: 2:1 kesitte babanın saçı üstten, çay ince belleri alttan kesilmesin.
   aileFoto: { display: "block", width: "100%", height: "auto", objectFit: "cover", objectPosition: "50% 30%" },
 
