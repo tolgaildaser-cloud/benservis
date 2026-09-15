@@ -1086,9 +1086,8 @@ function page({ title, desc, canonical, head = "", body, robots = "", image = ""
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">${robots ? `\n<meta name="robots" content="${esc(robots)}">` : ""}
-<link rel="canonical" href="${canonical}">
-<meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
-<meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canonical}">
+${canonical ? `<link rel="canonical" href="${canonical}">\n` : ""}<meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">${canonical ? `<meta property="og:url" content="${canonical}">` : ""}
 <meta property="og:site_name" content="Benservis"><meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">${image ? `\n<meta property="og:image" content="${esc(image)}"><meta name="twitter:image" content="${esc(image)}">` : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 ${GA4}
@@ -2769,6 +2768,37 @@ for (const h of HUKUK_SAYFALARI) {
   );
 }
 console.log(`[build-blog] ✓ KVKK paketi: /${HUKUK_SAYFALARI.map((h) => h.dizin).join("/ · /")}/ basıldı (indexlenebilir, sitemap'te).`);
+
+// ——— 404 SAYFASI (FE, 15 Eyl 2026 · YK #106 ② dönüşüm) ———
+// SORUN (canlıda ölçüldü): olmayan her adres (`/blog/klima-isitmiyor/`, `/tamir/yok/`) Vercel'in
+// çıplak "The page could not be found · NOT_FOUND" metnine düşüyordu — logo, menü, teşhis
+// kapısı YOK. Eski/yanlış yazılmış bir bağdan gelen ziyaretçi için tek seçenek sekmeyi kapatmaktı.
+// ÇÖZÜM: Vercel, çıktı kökündeki `404.html`'i eşleşmeyen her adreste 404 DURUM KODUYLA sunar →
+// durum kodu değişmez (soft-404 yok), yalnız gövde markalı olur.
+// · `noindex` + canonical YOK (her adreste aynı gövde; kendi adresi yok) · sitemap'e girmez.
+// · Kapanış kapısı hub'larla BİREBİR aynı (`BLOG_CTA`) — yeni buton/metin icat edilmedi.
+//   Ölçüm etiketi `kaynak=sayfa-bulunamadi` (src/gelis.js deseni) → 404'ten gelen teşhis ayrı sayılır,
+//   #177'nin `blog-*` serisine karışmaz.
+fs.writeFileSync(
+  path.join(DIST, "404.html"),
+  page({
+    title: "Sayfa bulunamadı — Benservis",
+    desc: "Aradığın sayfa taşınmış ya da kaldırılmış olabilir.",
+    canonical: "",
+    robots: "noindex,follow",
+    body:
+      `<a class="geri" href="/">← Ana sayfa</a>` +
+      `<h1>Aradığın sayfa burada değil</h1>` +
+      `<p class="meta">Adres taşınmış, kaldırılmış ya da yanlış yazılmış olabilir. Cihazının sorununu buradan bulabilirsin:</p>` +
+      `<ul>` +
+        `<li><a href="/blog/">Bilgi Merkezi</a> — arıza nedenleri ve kontroller</li>` +
+        `<li><a href="/tamir/">Tamir Merkezi</a> — hata kodları ve belirtiler</li>` +
+        `<li><a href="/kilavuzlar/">Kullanım Kılavuzları</a> — cihazına göre kılavuzlar</li>` +
+      `</ul>` +
+      BLOG_CTA("", "sayfa-bulunamadi"),
+  })
+);
+console.log("[build-blog] ✓ 404.html basıldı (noindex, canonical yok, kapanış kapısı `kaynak=sayfa-bulunamadi`).");
 
 // lastmod = frontmatter `updated` varsa onu, yoksa `date`'i kullan (Vercel checkout dosya
 // mtime'ını sıfırladığı için frontmatter sabit/güvenilir kaynaktır). Date objesi gelirse ISO'ya çevir.
