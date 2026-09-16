@@ -129,6 +129,10 @@ export const REHBERLER = {
   "Buzdolabı": [
     { ara: ["kapı contası", "conta", "buzlanma", "buz tutuyor", "kırağı"],
       rehber: B("buzdolabi-buzlanma-yapiyor", "Buzdolabı contası ve buzlanma", "Kolay", "~20 dakika", 7) },
+    // 15 Eyl 2026: altta/sebze gözünde su birikmesi. Anahtarlar DAR — "tahliye" tek başına
+    // buzlanma kaydının alanına da girer; "conta" üstteki kayıtta kalır.
+    { ara: ["su birik", "tahliye deliği"],
+      rehber: B("buzdolabi-altinda-su-birikiyor", "Buzdolabında biriken suya 7 adım", "Kolay", "~15 dakika", 7) },
   ],
   "Fırın / Ocak / Aspiratör": [
     // rezistans · termostat/sensör · kapak contası → HEPSİ firin-isinmiyor'a bağlandı;

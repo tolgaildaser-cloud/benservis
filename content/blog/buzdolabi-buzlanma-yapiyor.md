@@ -10,13 +10,13 @@ guide:
   time: "~20 dakika"
   totalTime: "PT20M"
   cost: "Ücretsiz"
-  tools: ["Bir yaprak kâğıt", "Ilık sabunlu su ve bez", "Yumuşak tel ya da pipet", "Kurulama bezi"]
+  tools: ["Bir yaprak kâğıt", "Ilık sabunlu su ve bez", "Pamuk uçlu çubuk", "Kurulama bezi"]
 steps:
   - "Buzdolabının fişini çek ve kapağını kapalı tut; bu işlerin tamamı yirmi dakikada bitiyor."
   - "Bir yaprak kâğıdı kapağın arasına koy, kapağı kapat ve kâğıdı çek; direnç hissetmiyorsan conta o noktada sızdırıyor."
   - "Contanın kıvrımlarını aç, ılık sabunlu suya batırdığın bezle sil ve kalıntıyı temizle."
   - "Contanın ezilmiş ya da içe kıvrılmış bölümünü parmağınla dışa doğru düzelt, sonra kuru bezle kurula."
-  - "Arka alt taraftaki buz çözme tahliye deliğini yumuşak bir tel ya da pipetle nazikçe aç."
+  - "Arka iç duvardaki buz çözme tahliye deliğini, içindeki çubukla ya da pamuk uçlu bir çubukla temizle."
   - "Sıcaklık ayarını bir kademe yukarı al; dolap bölmesi için dört derece iyi bir hedeftir."
   - "Fişi tak, kapağın tam kapandığını kontrol et ve yirmi dört saat sonra buzlanmanın tekrar edip etmediğine bak."
 faq:
@@ -62,7 +62,7 @@ Aşağıdaki yedi adım sırayla yapılır; hiçbiri alet ya da söküm gerektir
 
 **4. Ezilmiş bölümü düzelt.** Contanın içe kıvrılmış ya da yatmış bölümünü parmağınla dışa doğru nazikçe düzelt, sonra kuru bezle kurula. Nemli conta kapağa yapışır ve yeniden kıvrılır.
 
-**5. Buz çözme tahliye deliğini aç.** Arka alt taraftaki küçük deliği yumuşak bir tel ya da pipetle nazikçe aç. Bu delik tıkalıysa eriyen su akamaz, arka duvarda donar.
+**5. Buz çözme tahliye deliğini temizle.** Arka iç duvardaki küçük deliği, içinde duran çubukla ya da pamuk uçlu bir çubukla temizle. ⛔ Tel, şiş ya da bıçak gibi sivri ve keskin bir şey kullanma: soğutma devresine zarar verebilir. Bu delik tıkalıysa eriyen su akamaz, arka duvarda donar.
 
 **6. Ayarı bir kademe yukarı al.** Aşırı düşük ayar nemle birleşince buzlanmayı hızlandırır. Dolap bölmesi için dört derece iyi bir hedeftir.
 
