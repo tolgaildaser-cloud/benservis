@@ -34,6 +34,12 @@ images:
     - "Kapalı fırın kapağı ve çerçevedeki conta yakın planı; contanın ezik bölümü işaretli"
     - "Sigorta kutusu çizimi; fırının sigortası atmış konumda, yanında priz"
     - "Fişin prizden çekilmiş hâli ve yanında 1 dakikayı gösteren süre işareti"
+video:
+  youtubeId: "9mtHhzREmfI"
+  title: "Fırın ısınmıyor? Servisi aramadan önce 5 ücretsiz kontrol"
+  description: "Fırın ısınmıyorsa servisi aramadan önce evde, alet kullanmadan yapılabilecek beş kontrol: fonksiyon, saat ayarı, kapak contası, sigorta ve fiş. Beşi de tamamsa rezistans, termostat ya da conta servis işidir."
+  uploadDate: "2026-09-16T08:44:36Z"
+  duration: "PT1M12S"
 ---
 
 Fırınını çalıştırdın ama içerisi ısınmıyor ya da çok geç ısınıyor — yemek pişmiyor. Sinir bozucu ama sebep çoğu zaman birkaç parçadan biridir ve teşhisi kolaydır. Bu yazıda fırının neden ısınmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi parçanın servis işi olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.

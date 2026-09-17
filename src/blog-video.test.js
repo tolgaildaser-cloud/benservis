@@ -187,7 +187,7 @@ describe("gerçek içerik (content/blog)", () => {
   });
   const videolu = posts.filter((p) => p.video);
 
-  it("föylerdeki 6 eşleme birebir, başka sayfada video yok", () => {
+  it("föylerdeki 7 eşleme birebir, başka sayfada video yok", () => {
     const esleme = Object.fromEntries(videolu.map((p) => [p.slug, p.video.youtubeId]));
     expect(esleme).toEqual({
       "samsung-klima-cf-hatasi": "5lVkaoLa5DI",
@@ -196,6 +196,7 @@ describe("gerçek içerik (content/blog)", () => {
       "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari": "Q_BaXMLz0mE",
       "bosch-camasir-makinesi-hata-kodlari": "0uQV4Y_hjXY",
       "kurutma-makinesi-kurutmuyor": "41pY0h2bfNM",
+      "firin-isinmiyor": "9mtHhzREmfI",
     });
   });
   it("tüm video kayıtları denetimden geçer", () => {
