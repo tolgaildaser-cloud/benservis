@@ -47,6 +47,14 @@ faq:
     a: "Tahliye/defrost temizliği ile kapı contası değişimi farklı işlerdir; maliyet arızaya ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
   coverAlt: "Buzdolabının altında zeminde biriken su ve düşen damla çizimi"
+  steps:
+    - "Buzdolabının fişi prizden çekilmiş hâlde"
+    - "Çıkarılmış sebze gözü ve kuru bezle silinen iç taban"
+    - "Arka iç duvardaki oluk ve tahliye deliği; delikte duran plastik çubuk ya da pamuk uçlu çubuk"
+    - "Kapı contası temiz, nemli bezle siliniyor"
+    - "Ön ayağın çevrilmesi; dolabın ön tarafı hafif yükselmiş"
+    - "Su pınarının altındaki damlama tepsisi bezle siliniyor"
+    - "Fiş takılı, kapı kapalı, kurulanan taban"
 ---
 
 Buzdolabının altında, sebze gözünde ya da önünde su görmek çoğu zaman **evde, ücretsiz bakılabilen** bir durumdur. Bir kısmı normal yoğuşmadır, bir kısmı küçük bir tıkanıklık. Bu yazıda suyun nereden geldiğini, **adım adım kendin neye bakacağını** ve servisin nerede başladığını anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
