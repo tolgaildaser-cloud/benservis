@@ -2327,7 +2327,7 @@ for (const k of tamirliKat) {
     dosya,
     page({
       title: `${k.ad} hata kodları ve arıza belirtileri — ne demek, ne yapmalı`,
-      desc: `${k.ad} için hata kodlarının ve sık belirtilerin karşılığı: elindeki kodu ya da belirtiyi seç, ne demek olduğunu gör, kendin deneyebileceğin adım varsa uygula — yoksa yakınındaki servise ulaş.`,
+      desc: `${k.ad} hata kodları ve belirtileri: kodu ya da belirtiyi seç, anlamını gör, kendin yapabileceğin adımı uygula ya da servise ulaş.`,
       canonical,
       head,
       body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${cihazAramasi(k.kayitlar.length, "Hata kodu ya da belirti ara…")}${gruplar}${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan giriş yok — hata kodunu ya da belirtiyi farklı yaz.")}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
@@ -2364,7 +2364,7 @@ fs.writeFileSync(
   tamirHub,
   page({
     title: "Tamir Merkezi — hata kodu, belirti ve kendin-çöz adımları",
-    desc: "Cihazının hata kodu ne demek, belirtisi neyi işaret ediyor, kendin ne yapabilirsin? Cihazını seç; kodundan ya da belirtinden başla, gerekiyorsa yakınındaki servise ulaş.",
+    desc: "Cihazının hata kodu ne demek, belirtisi neyi gösteriyor? Cihazını seç; koddan ya da belirtiden başla, gerekirse yakınındaki servise ulaş.",
     canonical: `${SITE}/tamir/`,
     head:
       ldTag({
@@ -2568,7 +2568,7 @@ for (const k of kilavuzluKat) {
     path.join(DIST, "kilavuzlar", k.slug, "index.html"),
     page({
       title: `${k.ad} kullanım kılavuzları — üreticinin resmî sayfası`,
-      desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları, Türkçe özetleriyle. Kılavuzu üreticinin kendi sitesinde açarsın; burada PDF barındırmıyoruz.`,
+      desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları ve Türkçe özetleri. Kılavuz üreticinin sitesinde açılır; PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
       body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}${cihazAramasi(k.kayitlar.length, "Marka ara…")}<div class="bloglist">${k.kayitlar
@@ -2614,7 +2614,7 @@ fs.writeFileSync(
   path.join(DIST, "kilavuzlar", "index.html"),
   page({
     title: "Kullanım Kılavuzları — üreticinin resmî kılavuzuna git",
-    desc: "Beyaz eşya ve elektronik cihazların kullanım kılavuzları: üreticinin resmî kılavuz sayfasına giden doğrulanmış linkler ve Türkçe özetler. PDF barındırmıyoruz, üreticiye yönlendiriyoruz.",
+    desc: "Beyaz eşya ve elektronik kullanım kılavuzları: üreticinin resmî kılavuz sayfasına doğrulanmış linkler ve Türkçe özetler. PDF barındırmıyoruz.",
     canonical: `${SITE}/kilavuzlar/`,
     robots: kilavuzRobots,
     genis: true,
