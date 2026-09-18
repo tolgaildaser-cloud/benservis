@@ -3,7 +3,21 @@ title: "Kombi yazın kapatılır mı? Yaz modu nedir, nasıl kullanılır"
 description: "Kombi yazın şalterden mi kapatılmalı, yaz moduna mı alınmalı? Yaz modu ne yapar, uzun kapalı kombide pompa sıkışması riski ve kışa dönüş kontrolleri."
 slug: "kombi-yazin-kapatilir-mi"
 date: "2026-07-14"
+updated: "2026-09-17"
 category: "Kombi"
+# --- 17 Eyl 2026 · BASINÇ KÜMESİ ÜRETİCİ BELGESİYLE DOĞRULANDI (YK #88) — yayında görünmez ---
+# Belgeler 2026-09-17 curl -sL ile indirildi (hepsi HTTP 200), pdftotext ile okundu.
+# 1) Vaillant ecoTEC plus VU/VUW/VUI ..6/5-5 F A Kullanma Kılavuzu 0020228719_00
+#    https://www.vaillant.com.tr/pdf/ecotecplus5-5-813748.pdf
+#    HTTP 200 · 16 sf · md5 c999bf8603f8fc703b823341ebcae02d · soğukta 1,0-2,0 bar s.9
+# 2) DemirDöküm Nitromix Kullanma Kılavuzu 0020309468_01
+#    https://www.demirdokum.com.tr/downloads/nitromix-kk-0020309468-01-2557203.pdf
+#    HTTP 200 · 16 sf · md5 3340a11b923b7332f8eb8685297970b6 · soğukta 1,0-1,5 bar s.12
+# 3) Baymak Duotec Compact 24 Montaj & Kullanma Kılavuzu 300032317
+#    https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf
+#    HTTP 200 · 27 sf · md5 df4c42a6604e3ec39b2d152606464cb0 · kombi soğukken 0,7-1,5 bar s.14
+# Kapsam: yalnız üç basınç parantezi. Sayfanın diğer iddiaları (pompa sıkışması, anti-blokaj, sezon fiyatı vb.) bu turda denetlenmedi.
+# Belgede olmadığı için ÇIKARILDI: "1-1,5 bar" (tek aralık)
 faq:
   - q: "Kombi yazın tamamen kapatılmalı mı?"
     a: "Sıcak suyu kombiden alıyorsan hayır — tamamen kapatırsan musluktan sıcak su da akmaz. Doğru yöntem yaz modu: ısıtma (petek) devresi kapanır, sıcak su devresi çalışmaya devam eder. Sıcak suyu ayrı bir cihazdan (termosifon, güneş enerjisi) alıyorsan kombiyi kapatabilirsin; ama uzun süre tamamen kapalı kalan kombilerde pompa sıkışması görülebilir."
@@ -12,7 +26,7 @@ faq:
   - q: "Kombi uzun süre kapalı kalırsa ne olur?"
     a: "Aylarca hiç çalışmayan kombide sirkülasyon pompası sıkışabilir, contalar kuruyabilir ve kışın ilk çalıştırmada arıza çıkabilir. Tamamen kapatmayı tercih ediyorsan ayda bir kez birkaç dakika çalıştırmak bu riski büyük ölçüde azaltır."
   - q: "Tatile giderken kombi ne yapılmalı?"
-    a: "Kısa tatilde yaz modu yeterli. Uzun tatilde kombiyi kapatıp gaz vanasını kapatabilirsin; dönüşte basıncı kontrol et (1-1,5 bar) ve sıcak su alarak çalıştığını doğrula. Basınç sık düşüyorsa serviste kontrol ettir."
+    a: "Kısa tatilde yaz modu yeterli. Uzun tatilde kombiyi kapatıp gaz vanasını kapatabilirsin; dönüşte basıncı kontrol et (kombinin kılavuzundaki aralık) ve sıcak su alarak çalıştığını doğrula. Basınç sık düşüyorsa serviste kontrol ettir."
 images:
   coverAlt: "Kombi ve yanında güneş çizimi"
 ---
@@ -41,7 +55,7 @@ Modern kombilerin çoğunda bunu önleyen **pompa koruma (anti-blokaj)** fonksiy
 ## Tatile giderken ne yapmalı?
 
 - **Kısa tatil (1-2 hafta):** Yaz modu yeter; hiçbir şey yapmana gerek yok.
-- **Uzun tatil:** Kombiyi kapatıp **gaz vanasını** kapatabilirsin. Dönüşte sırayla: gaz vanasını aç → [basıncı kontrol et (1-1,5 bar)](/blog/kombi-basinc-dusuyor/) → sıcak su akıtarak çalıştığını doğrula. Genel tatil hazırlığı için: [tatile çıkarken buzdolabı ve cihazlar](/blog/tatile-cikarken-buzdolabi-ve-cihazlar/).
+- **Uzun tatil:** Kombiyi kapatıp **gaz vanasını** kapatabilirsin. Dönüşte sırayla: gaz vanasını aç → [basıncı kontrol et (kombinin kılavuzundaki aralık)](/blog/kombi-basinc-dusuyor/) → sıcak su akıtarak çalıştığını doğrula. Genel tatil hazırlığı için: [tatile çıkarken buzdolabı ve cihazlar](/blog/tatile-cikarken-buzdolabi-ve-cihazlar/).
 
 ## Yaz, aslında kombi bakımının en akıllı zamanı
 
@@ -63,4 +77,4 @@ Isıtmayı kapatır, sıcak suyu açık bırakır; gaz israfı biter.
 Pompa sıkışabilir, contalar kuruyabilir — kışın ilk çalıştırmada arıza riski.
 
 **Tatilde?**
-Kısa tatilde yaz modu; uzun tatilde kapat + gaz vanası, dönüşte basınç kontrolü (1-1,5 bar).
+Kısa tatilde yaz modu; uzun tatilde kapat + gaz vanası, dönüşte basınç kontrolü (kılavuzdaki aralık).

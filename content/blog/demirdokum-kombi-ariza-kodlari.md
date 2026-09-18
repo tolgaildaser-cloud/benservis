@@ -3,7 +3,7 @@ title: "DemirDöküm kombi arıza kodları: iki ayrı kod ailesi var"
 description: "DemirDöküm'de noktalı (F.22, F.28) ve noktasız (F04, F05, F10) iki kod ailesi var. Hangi seride hangisi geçerli, kılavuzdaki anlamları ve servis sınırı."
 slug: "demirdokum-kombi-ariza-kodlari"
 date: "2026-06-19"
-updated: "2026-08-22"
+updated: "2026-09-17"
 category: "Kombi"
 # 🔴 22 Ağu 2026 — TABLO BAŞTAN YAZILDI (kod tablosu denetimi, TARAMA-1).
 # Altı kod satırı dayanaksızdı ve ikisinin anlamı TERSTİ. Gaz cihazı → A önceliği.
@@ -29,9 +29,26 @@ category: "Kombi"
 #    kodu. İkinci platformda düşük basıncın karşılığı F10. (Aynı takas #104'te genel
 #    kombi yazısından da temizlenmişti.)
 # 📌 "F.28 (bazı modellerde F.01)" da çıkarıldı: F.01 = dönüş sıcaklık sensöründe kesinti.
+# --- 17 Eyl 2026 · BASINÇ KÜMESİ ÜRETİCİ BELGESİYLE DOĞRULANDI (YK #88) — yayında görünmez ---
+# Belgeler 2026-09-17 curl -sL ile indirildi (hepsi HTTP 200), pdftotext ile okundu.
+# 1) DemirDöküm Nitromix Kullanma Kılavuzu 0020309468_01
+#    https://www.demirdokum.com.tr/downloads/nitromix-kk-0020309468-01-2557203.pdf
+#    HTTP 200 · 16 sf · md5 3340a11b923b7332f8eb8685297970b6 · soğukta 1,0-1,5 bar, çok katlı, <0,4 bar kapanır F.22, <1,0 doldur, doldurma vanasını yavaşça aç, uyarı kendiliğinden söner s.12 · F.22 tesisat basıncı çok düşük; F.28 reset 1 sn, ≤3 deneme s.15
+# 2) DemirDöküm ademiX Montaj ve Bakım Kılavuzu 0020313926_02
+#    https://www.demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf
+#    HTTP 200 · 44 sf · md5 5bc84f7e4bc6a4fe70867bd0682dbb9e · dolum 1,00-1,40 bar s.15 · F.22 Tesisat basıncı çok düşük s.33
+# 3) DemirDöküm Atron Condense Kullanma Kılavuzu 0020281171_00
+#    https://www.demirdokum.com.tr/downloads/products-1/kullanma-kilavuzu-1772624.pdf
+#    HTTP 200 · 12 sf · md5 7746b6a9d980072b5109b1b27926bd81 · 1,0-2,0 bar, <0,80 doldur, F10 aralık dışı, çok katlı s.7-8 · F10 yetersiz su, F04 reset + 3 deneme s.10
+# 4) DemirDöküm Nitron Plus Kullanma Kılavuzu 0020193908_03
+#    https://www.demirdokum.com.tr/products-2/nitronplus/nitronplus-klavuz-466829.pdf
+#    HTTP 200 · 20 sf · md5 51e63dec4da2dcf111d41350fa586e65 · F10 aralık dışı, 1,0-2,0 bar, <0,80 doldur, çok katlı s.11 · F10 yetersiz su, F04 reset + 3 deneme s.16
+# Kapsam: basınç kümesi (F.22/F10 anlamı ve seri eşlemesi, doldurma tarifi, reset). Seri eşlemesi doğrulandı: F.22 Nitromix KK s.15 + ademiX MK s.33 · F10 Atron s.7/s.10 + Nitron Plus s.11/s.16.
+# Kod tablosunun geri kalanı 22 Ağu denetimindedir, bu turda yeniden denetlenmedi.
+# Belgede olmadığı için ÇIKARILDI: "1-1.5 bar" (Nitromix'te 1,0-1,5; Atron/Nitron Plus'ta 1,0-2,0) · "1 barın altındaysa" (Atron/Nitron Plus'ta 0,80) · "kombinin altındaki doldurma musluğu" (Atron/Nitron Plus: soğuk su borusundaki vana) · "en sık" · "birkaç saniye" reset · "resetlemeyi tekrarlamak sorunu büyütebilir" · "basınç sürekli düşüyorsa kaçak vardır" (DemirDöküm belgelerinde yok)
 faq:
   - q: "DemirDöküm kombi düşük su basıncı kodu nedir, nasıl çözülür?"
-    a: "Serine göre değişir: Nitromix ve ademiX gibi noktalı kod kullanan modellerde F.22, Atron Condense ve Nitron Plus gibi noktasız kod kullanan modellerde F10. İkisi de aynı şeyi söyler ve ikisini de güvenle çözebilirsin: kombinin altındaki doldurma musluğundan manometreyi 1–1.5 bara getir, sonra kapat. Basınç sürekli düşüyorsa kaçak vardır ve servis gerekir."
+    a: "Serine göre değişir: Nitromix ve ademiX gibi noktalı kod kullanan modellerde F.22, Atron Condense ve Nitron Plus gibi noktasız kod kullanan modellerde F10. İkisinde de kılavuzun çözümü ısıtma sistemini doldurmaktır; hedef değer modele göre değişir: Nitromix kılavuzu soğuk sistemde 1,0–1,5 bar, Atron Condense ve Nitron Plus kılavuzları 1,0–2,0 bar veriyor. Doldurma vanasını yavaşça aç, değere gelince kapat. Arızayı gideremiyorsan yetkili servise başvur."
   - q: "DemirDöküm'de neden iki farklı kod ailesi var?"
     a: "Çünkü DemirDöküm iki ayrı elektronik platform kullanıyor. Nitromix ve ademiX gibi modeller Vaillant Group platformundan gelir ve kodları noktalıdır: F.22, F.28, F.29 gibi. Atron Condense ve Nitron Plus gibi modeller ise kendi platformunu kullanır ve kodları noktasızdır: F04, F05, F10. Aynı numara iki ailede farklı anlama gelebildiği için önce ekranındaki kodun noktalı mı noktasız mı olduğuna bakmak gerekir."
   - q: "DemirDöküm kombi ateşleme yapmıyor, hangi kod?"
@@ -50,10 +67,10 @@ DemirDöküm kombin ekranında bir arıza kodu gösteriyor. Bu markada kodu okum
 >
 > Aynı numara iki ailede farklı anlama gelebilir. Önce ekrandaki kodun **noktalı mı noktasız mı** olduğuna bak.
 
-> 🔥 **Güvenlik:** Kombi gaz ve basınçlı sıcak su ile çalışır. Güvenle yapabileceğin şey **su basıncı eklemek** ve **reset**'tir. Gaz, alev, baca, fan ve kart kodlarında **cihazı kapat ve yetkili servise** başvur.
+> 🔥 **Güvenlik:** Kombi gaz ve basınçlı sıcak su ile çalışır. Kılavuzların kullanıcıya bıraktığı işler **gaz vanasının açık olduğuna bakmak**, **su basıncını kontrol edip ısıtma sistemini doldurmak** ve **reset**'tir. Gaz, alev, baca, fan ve kart kodlarında **cihazı kapat ve yetkili servise** başvur.
 
-## ⚡ En sık karşılaşılan üç durum
-> **Düşük su basıncı** — noktalıda `F.22`, noktasızda `F10` → 🛠️ doldurma musluğundan 1–1.5 bara getir
+## ⚡ Öne çıkan üç durum
+> **Düşük su basıncı** — noktalıda `F.22`, noktasızda `F10` → 🛠️ ısıtma sistemini kılavuzdaki değere kadar doldur
 >
 > **Ateşleme başarısız** — noktalıda `F.28`, noktasızda `F04` → 🛠️ bir kez reset; geçmezse servis
 >
@@ -64,7 +81,7 @@ DemirDöküm kombin ekranında bir arıza kodu gösteriyor. Bu markada kodu okum
 
 | Kod | Kılavuzdaki tanım | Ne yapmalı |
 |-----|-------------------|------------|
-| **F.22** | Tesisat basıncı çok düşük | 🛠️ Doldurma musluğundan 1–1.5 bara tamamla |
+| **F.22** | Tesisat basıncı çok düşük | 🛠️ Isıtma sistemini doldur (Nitromix: soğukken 1,0–1,5 bar) |
 | **F.20** | Sıcaklık sınırlayıcı emniyet kapatması | 🔧 Servis |
 | **F.23** | Emniyet kapatması: sıcaklık | 🔧 Servis |
 | **F.26** | Gaz armatürü işlevsiz | 🔧 Cihazı kapat, servis |
@@ -84,7 +101,7 @@ Bu ailenin tam listesi daha uzundur ve sensör kodlarını da içerir (`F.00`, `
 
 | Kod | Kılavuzdaki tanım | Ne yapmalı |
 |-----|-------------------|------------|
-| **F10** | Isıtma sisteminde yetersiz su; tesisat basıncı izin verilen aralığın dışında | 🛠️ Isıtma sistemini doldur (1–1.5 bar) |
+| **F10** | Isıtma sisteminde yetersiz su; tesisat basıncı izin verilen aralığın dışında | 🛠️ Isıtma sistemini doldur (1,0–2,0 bar) |
 | **F04** | Ateşleme arızası — üç denemeden sonra cihaz arıza konumuna geçer | 🛠️ Kılavuzun çözümü: **reset tuşuna bas** |
 | **F05** | Atık gaz hattında (baca) arıza | 🔧 Yetkili servis |
 
@@ -93,9 +110,14 @@ Bu ailenin tam listesi daha uzundur ve sensör kodlarını da içerir (`F.00`, `
 ## Öne çıkan durumlar
 
 ### Düşük su basıncı — F.22 ya da F10
-Manometre 1 barın altındaysa: kombinin altındaki **doldurma musluğunu** yavaşça aç, **1–1.5 bar** olunca kapat, reset'le. Isıtma sistemi birden fazla kata dağıldıysa kılavuz daha yüksek bir sistem basıncının gerekebileceğini söylüyor — o durumda yetkili bayiye danış.
+Basıncı sistem soğukken oku ve modelinin kılavuzundaki değerle karşılaştır:
 
-Basınç sürekli düşüyorsa **kaçak** vardır → servis.
+- **Nitromix:** 1,0–1,5 bar; 1,0 barın altındaysa doldur. Basınç 0,4 barın altına düşerse ürün kapanır ve ekranda F.22 görünür.
+- **Atron Condense ve Nitron Plus:** 1,0–2,0 bar; 0,80 barın altındaysa doldur. Basınç izin verilen aralığın dışındaysa ekranda F10 görünür.
+
+**Doldurma vanasını** yavaşça aç, göstergede gerekli değere gelince kapat; ardından radyatörlerin havasını alıp basıncı yeniden kontrol et. Nitromix kılavuzuna göre yeterince su eklediğinde uyarı kendiliğinden söner. Isıtma sistemi birden fazla kata dağıldıysa kılavuz daha yüksek bir sistem basıncının gerekebileceğini söylüyor — o durumda yetkili bayiye danış.
+
+Arızayı bu adımlarla gideremiyorsan yetkili servise başvur.
 
 ### Ateşleme başarısız — F.28 ya da F04
 Kombi yanmıyor. Noktasız ailede kılavuzun verdiği çözüm doğrudan **reset tuşuna basmaktır**; cihaz üç başarısız denemeden sonra kendini kilitler ve reset onu tekrar devreye alır.
@@ -106,7 +128,7 @@ Kombi yanmıyor. Noktasız ailede kılavuzun verdiği çözüm doğrudan **reset
 Bu kodlarda beklemek doğru değil: atık gaz yolundaki bir arıza yanma ürünlerinin doğru tahliye edilmediği anlamına gelebilir. Kılavuzun talimatı net — **yetkili servis tarafından giderilmesi** gerekir.
 
 ## Reset nasıl yapılır?
-Reset tuşuna birkaç saniye bas; önce su basıncını (1–1.5 bar) kontrol et. Kod tekrar çıkarsa arıza sürüyordur — resetlemeyi tekrarlamak sorunu büyütebilir.
+Önce su basıncını kontrol et. Nitromix kılavuzu ateşleme arızasında **reset tuşuna 1 saniye** basmayı söylüyor; Atron Condense ve Nitron Plus kılavuzları **reset tuşuna basmayı** söylüyor. Üç kılavuz da ateşleme arızası üç denemede gitmiyorsa yetkili servise ya da bayiye başvurmayı söylüyor; denemeye devam etme.
 
 ## Tahmini maliyet
 DemirDöküm modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler; sonra yakınındaki yüksek puanlı servisi ara.
@@ -116,7 +138,7 @@ DemirDöküm modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler;
 ## Sık sorulan sorular
 
 **Düşük su basıncı kodu nasıl çözülür?**
-Noktalıda F.22, noktasızda F10; doldurma musluğundan 1–1.5 bara getir. Sürekli düşüyorsa kaçak → servis.
+Noktalıda F.22, noktasızda F10; ısıtma sistemini modelinin kılavuzundaki değere kadar doldur (Nitromix 1,0–1,5 bar · Atron/Nitron Plus 1,0–2,0 bar). Gideremiyorsan servis.
 
 **Neden iki kod ailesi var?**
 Nitromix/ademiX Vaillant platformundan gelir (noktalı), Atron/Nitron kendi platformunu kullanır (noktasız).

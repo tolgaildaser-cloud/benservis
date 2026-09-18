@@ -3,7 +3,18 @@ title: "Kombi sıcak su vermiyor: olası arızalar ve ne yapmalı"
 description: "Kombin ısıtma yapıyor ama musluktan sıcak su gelmiyor mu? Plakalı eşanjör kireci, 3 yollu vana ve akış sensörü kaynaklı nedenler + kendin kontroller. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "kombi-sicak-su-vermiyor"
 date: "2026-06-19"
+updated: "2026-09-17"
 category: "Kombi"
+# --- 17 Eyl 2026 · BASINÇ KÜMESİ ÜRETİCİ BELGESİYLE DOĞRULANDI (YK #88) — yayında görünmez ---
+# Belgeler 2026-09-17 curl -sL ile indirildi (hepsi HTTP 200), pdftotext ile okundu.
+# 1) Vaillant ecoTEC plus VU/VUW/VUI ..6/5-5 F A Kullanma Kılavuzu 0020228719_00
+#    https://www.vaillant.com.tr/pdf/ecotecplus5-5-813748.pdf
+#    HTTP 200 · 16 sf · md5 c999bf8603f8fc703b823341ebcae02d · 'Ürün çalışmıyor: sıcak su yok' tablosunda yetersiz su / F.22 s.13; soğukta 1,0-2,0 bar s.9
+# 2) Baymak Duotec Compact 24 Montaj & Kullanma Kılavuzu 300032317
+#    https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf
+#    HTTP 200 · 27 sf · md5 df4c42a6604e3ec39b2d152606464cb0 · kombi soğukken 0,7-1,5 bar s.14
+# Kapsam: yalnız basınç satırı. Sayfanın diğer iddiaları bu turda denetlenmedi.
+# Belgede olmadığı için ÇIKARILDI: "1-1.5 bar" (tek aralık)
 faq:
   - q: "Kombi ısıtma yapıyor ama sıcak su gelmiyor, neden?"
     a: "Radyatörler ısınıp musluktan sıcak su gelmiyorsa sorun genelde sıcak su tarafındadır: en sık sebep plakalı (sıcak su) eşanjörün kireçlenmesi, 3 yollu vananın ısıtmada takılı kalması ya da akış (debi) sensörü arızasıdır."
@@ -38,7 +49,7 @@ Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyo
 1. **Sıcak su ayarını yükselt.** Kombi panelinden sıcak su (musluk) sıcaklığını artır.
 2. **Aeratörü temizle.** Musluk ucundaki süzgeci sök, kireci temizle, tak — debi artar.
 3. **Birden çok musluk dene.** Sadece bir muslukta mı, hepsinde mi sorun var?
-4. **Su basıncını kontrol et** (1–1.5 bar).
+4. **Su basıncını kontrol et:** göstergedeki değer kombinin kılavuzundaki aralıkta mı bak ([değer modele göre değişir](/blog/kombi-basinc-dusuyor/)).
 5. **Reset'le** ve tekrar dene.
 
 ## Ne zaman mutlaka servis çağırmalısın?
