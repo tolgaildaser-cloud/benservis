@@ -39,6 +39,12 @@ faq:
     a: "Öyle olabilir ama önce adaptörü ele. Cihazı doğrudan adaptöre bağla ve şarj göstergesinin yanıp yanmadığına bak. Gösterge hiç yanmıyorsa sorun cihazda değil adaptörde ya da prizde olabilir. Gösterge yanıyor ama cihaz uzun şarjdan sonra da çalışmıyorsa pil paketi ömrünü tamamlamış olabilir; pil değişimi servis işidir."
 images:
   coverAlt: "Elektrikli süpürge çizimi, sönük güç düğmesi ve prizden ayrı duran fiş"
+video:
+  youtubeId: "h851xyTv5e8"
+  title: "Süpürge çalışmıyor? Servisi aramadan önce 4 ücretsiz kontrol"
+  description: "Çalışırken duran süpürgede çoğu zaman termik koruma devrededir. Dört kontrol: soğumaya bırakmak, hazne, filtre ve hortumu temizlemek, priz ve sigortaya bakmak, kabloyu gözden geçirmek. Sigorta tekrar düşüyorsa süpürgeyi takma."
+  uploadDate: "2026-09-18T05:53:25Z"
+  duration: "PT1M23S"
 ---
 
 Fişi taktın, ayağınla açma tuşuna bastın — hiçbir şey olmadı. Ses yok, ışık yok, tıkırtı bile yok.
