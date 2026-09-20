@@ -40,7 +40,7 @@ steps:
 #    https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf
 #    HTTP 200 · 48 sf · md5 28a5d7565ffbc9c1faaf1e97e45553d9 · soğukken 1,5-2 bar, doldurma vanasını mutlaka kapatın (tesisat suyu akarak zarar verebilir), basınç sık düşüyorsa su kaçağı / tesisatçı s.25
 # Kapsam: basınç kümesi (değer, doldurma tarifi, 'en sık'). Genleşme tankı / emniyet ventili / çek valf / kombi içi conta mekanizmaları bu turda DENETLENMEDİ (❓).
-# ⚠️ images.steps[1] alt metni rakamsız; ama public/tamir-gorsel/kombi-basinc-dusuyor/adim-02 karesinin üzerinde 'soğukken 1-1.5 bara getir' yazıyor → GRF yeniden basmalı.
+# ✅ 19 Eyl: public/tamir-gorsel/kombi-basinc-dusuyor/adim-02 GRF 18 Eyl basımıyla değişti — karede artık 'soğukken kombinin kılavuzundaki değere getir' yazıyor (md5 png 64c6df3b… / webp fda4968b…).
 # Belgede olmadığı için ÇIKARILDI: "1-1.5 bar" (tek aralık) · "en sık sebep" / "en çok düşüren" / "çoğu zaman" · "kombinin altındaki doldurma musluğu" · "bunu güvenle kendin yapabilirsin" · "yarım kapalı vana basıncı kendiliğinden oynatır, çek valf de aynı sonucu verir"
 faq:
   - q: "Kombinin su basıncı neden sürekli düşer?"
