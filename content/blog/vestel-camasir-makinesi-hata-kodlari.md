@@ -10,6 +10,17 @@ category: "Çamaşır makinesi"
 #         ifadesi tek cümle: "Makinenizin kapısı açık kalmış." Kilit iddiası bizimdi.
 #   E04 → EKSİK YAYINDI, eklendi: "Makinenizde aşırı miktarda su var."
 # 📌 Vestel çamaşır tablosu yalnız E01-E04'ten ibaret; E05 ve sonrası resmî kılavuzda yok.
+# 🔴 22 Eyl 2026 — E02 + E03 KAYNAĞA ÇEKİLDİ (#88). Kılavuz A (CMI 86201, md5 7a5f38c8…) ve
+# D (KCMI 98142 WIFI, md5 9e654374…) bu koşuda statik.vestel.com.tr'den yeniden indirildi,
+# md5 2/2 20-22 Eyl kayıtlarıyla birebir; "10. OTOMATİK ARIZA UYARILARI" tablosu 2/2 aynı.
+#   E02 → "gereken sürede içeri su girmemiştir" ibaresi kılavuzda YOK. Vestel'in MUHTEMEL ARIZA
+#         sütunu: "Makinenizin su basıncı veya kazan su seviyesi düşük." Süre iddiası bizimdi.
+#   E03 → "gereken sürede boşaltılamadığını söyler" ibaresi kılavuzda YOK ve yönü de sapıyordu:
+#         Vestel doğrudan parça adı veriyor — "Pompa arızalı yada pompa filtresi tıkalı yada
+#         pompa elektriksel bağlantısı arızalı." Tahliye hortumu ve gider hattı E03 satırında
+#         GEÇMİYOR; gövdede pratik kontrol olarak kaldı ama kodun anlamı diye sunulmuyor.
+#   Kod tablosunun "Anlamı" sütunu da aynı iki satırda kılavuza çekildi (E01 ve E04 zaten birebirdi).
+# 📌 #89: "E04 bizde eksikti" editoryal itirafı gövdeden çıkarıldı, yerine okur bilgisi kondu.
 guide:
   difficulty: "Kolay"
   time: "~20 dakika"
@@ -69,11 +80,11 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | Kod | Anlamı | Ne yapmalı |
 |-----|--------|------------|
 | **E01** | Kapı açık kalmış | 🛠️ Kapağı "klik" sesiyle tam kapat |
-| **E02** | Su alamıyor (musluk, basınç, giriş süzgeci) | 🛠️ Musluğu, hortumu ve süzgeci kontrol et |
-| **E03** | Su atamıyor (tahliye) | 🛠️ Pompa filtresini ve hortumu temizle |
+| **E02** | Su basıncı ya da kazan su seviyesi düşük | 🛠️ Musluğu, hortumu ve süzgeci kontrol et |
+| **E03** | Pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı | 🛠️ Pompa filtresini ve hortumu temizle |
 | **E04** | Makinede aşırı miktarda su var | 🔧 Programı iptal et, servisle konuş |
 
-> 📌 Vestel'in yayımladığı çamaşır makinesi tablosu bu **dört kodla sınırlıdır**; `E05` ve sonrası resmî kılavuzda geçmez. `E04` bu yazıda ilk kez yayımlanıyor — beş resmî kılavuzda da var, bizde eksikti.
+> 📌 Vestel'in yayımladığı çamaşır makinesi tablosu bu **dört kodla sınırlıdır**; `E05` ve sonrası resmî kılavuzda geçmez. Ekranda bu dördünün dışında bir kod görüyorsan kodun karşılığını kendi modelinin kılavuzundan doğrulaman gerekir.
 
 ## E01 — Kapı kapanmadı ya da kilitlenmedi
 
@@ -83,7 +94,7 @@ Makine, kapı kilidinden "kilitlendim" sinyali almadan asla su almaz; E01 bu sin
 
 ## E02 — Su alamıyor
 
-Makine programı başlatmış ama gereken sürede içeri su girmemiştir.
+Vestel'in kendi tablosunda E02'nin karşılığı tek cümle: makinenin **su basıncı ya da kazan su seviyesi düşük**. Kılavuz burada bir parça adı vermiyor, bu yüzden kontrol sırası da makinenin içinden değil musluktan başlıyor.
 
 **Kendin kontrol et:** Önce en basiti: musluk tam açık mı? Evde su kesintisi ya da düşük basınç var mı — başka bir musluktan test et. Ardından makinenin arkasındaki giriş hortumuna bak: bükülmüş ya da ezilmiş olmasın. Son adım giriş süzgecidir: musluğu kapat, hortumun musluk tarafını sök ve bağlantı ağzındaki küçük süzgeci akan suyun altında fırçala. Bunların hepsi kullanıcı seviyesinde işlerdir.
 
@@ -93,7 +104,7 @@ Musluk açık, basınç normal, hortum ve süzgeç temiz — kod hâlâ geliyors
 
 ## E03 — Su atamıyor: en sık ve en çok kendin çözülen kod
 
-E03, yıkama suyunun gereken sürede boşaltılamadığını söyler. Vestel kullanıcılarının en sık gördüğü kodlardan biridir ve suçlu neredeyse her zaman şu üçünden biridir: **pompa filtresi, tahliye hortumu, gider hattı**.
+Vestel'in tablosu E03 için üç olasılığı yan yana veriyor: **pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı**. Kılavuzun bu koda verdiği tek ev içi talimat pompa filtresinin temizlenmesi; sorun sürerse yetkili servise yönlendiriyor. Filtreyle birlikte tahliye hortumuna ve gider hattına da bakmak işe yarar, çünkü üçü aynı tahliye yolunun üstündedir — ama kod bu ikisini adlandırmaz.
 
 **Kendin kontrol et — filtre temizliği:**
 
