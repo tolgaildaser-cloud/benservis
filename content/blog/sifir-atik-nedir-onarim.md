@@ -1,6 +1,6 @@
 ---
 title: "Sıfır atık nedir? Evde sıfır atığın en somut adımı: onarım"
-description: "Sıfır atık nedir, atık hiyerarşisi nasıl işler ve neden onarım geri dönüşümden önce gelir? Evde uygulanabilir adımlar ve elektronik cihazlarda onarımın rolü. Bil, gör, çağır."
+description: "Sıfır atık nedir, atık hiyerarşisi nasıl işler ve neden onarım geri dönüşümden önce gelir? Evde uygulanabilir adımlar. Bil, gör, çağır."
 slug: "sifir-atik-nedir-onarim"
 date: "2026-06-21"
 category: "Sürdürülebilirlik"

@@ -1,6 +1,6 @@
 ---
 title: "Su sebili soğuk su vermiyor ya da üstü buz tutuyor: ne yapmalı"
-description: "Sebilden gelen su ılıksa ya da tam tersine iç hazne buz tutuyorsa sebep çoğu zaman havalandırma boşluğu, ayar kademesi veya yeni takılan damacanadır. Neyi kendin kontrol edebilirsin, hangi noktadan sonra servis gerekir."
+description: "Sebilden ılık su geliyor ya da iç hazne buz tutuyorsa sebep çoğu zaman havalandırma boşluğu, ayar kademesi veya yeni damacanadır. Kontrol sırası."
 slug: "su-sebili-sogutmuyor"
 date: "2026-08-19"
 category: "Su sebili / arıtma"

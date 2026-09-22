@@ -1,6 +1,6 @@
 ---
 title: "Robot süpürge şarj olmuyor: dock'a gidiyor ama sabah boş"
-description: "Robot süpürge dock'ta ama şarj olmuyorsa sebep çoğu zaman temas pinlerindeki kir ya da istasyonun yeri. Neyi kendin kontrol edersin, batarya ne zaman servise kalır."
+description: "Robot süpürge dock'ta ama şarj olmuyorsa sebep çoğu zaman temas pinlerindeki kir ya da istasyonun yeridir. Batarya ne zaman servise kalır?"
 slug: "robot-supurge-sarj-olmuyor"
 date: "2026-08-20"
 category: "Süpürge"

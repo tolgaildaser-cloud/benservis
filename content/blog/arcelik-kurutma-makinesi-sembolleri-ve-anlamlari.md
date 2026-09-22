@@ -1,6 +1,6 @@
 ---
 title: "Arçelik kurutma makinesi sembolleri ve anlamları"
-description: "Su tankı, filtre temizliği ve yoğuşturucu simgeleri arıza değil, bakım uyarısı. Arçelik'in kendi kılavuzlarındaki ekran sembolleri — ve filtre simgesinin sabit yanmasıyla sürekli yanıp sönmesi arasındaki fark, ki bu ikisi aynı şey değil."
+description: "Su tankı, filtre ve yoğuşturucu simgeleri arıza değil, bakım uyarısı. Arçelik kılavuzlarındaki semboller; sabit yanma ile yanıp sönme aynı şey değil."
 slug: "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Çamaşır makinesi"

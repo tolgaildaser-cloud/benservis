@@ -1,6 +1,6 @@
 ---
 title: "Televizyonda görüntü var ses yok: sessiz moddan hoparlöre sırayla kontrol"
-description: "Ekran çalışıyor ama televizyondan ses gelmiyorsa sebep çoğu zaman sessiz mod, yanlış ses çıkışı ayarı ya da unutulmuş bir kablosuz eşleşmedir. Sırayla nasıl bulunur."
+description: "Ekran çalışıyor ama televizyondan ses gelmiyorsa sebep çoğu zaman sessiz mod, yanlış ses çıkışı ya da unutulmuş bir eşleşmedir. Sırayla nasıl bulunur?"
 slug: "tv-ses-gelmiyor"
 date: "2026-08-21"
 category: "Televizyon"

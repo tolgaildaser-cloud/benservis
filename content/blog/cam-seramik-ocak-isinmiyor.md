@@ -1,6 +1,6 @@
 ---
 title: "Cam seramik ocak ısınmıyor: tuş kilidi mi, tencere mi, arıza mı?"
-description: "Elektrikli ya da indüksiyonlu ocak ısıtmıyor mu? Tek göz mü hepsi mi çalışmıyor, tencere uyumlu mu, panel kilitli mi — sebebi ayıran kontroller ve servis sınırı."
+description: "Elektrikli ya da indüksiyonlu ocak ısıtmıyor mu? Tek göz mü hepsi mi, tencere uyumlu mu, panel kilitli mi: sebebi ayıran kontroller."
 slug: "cam-seramik-ocak-isinmiyor"
 date: "2026-08-13"
 category: "Fırın / Ocak"

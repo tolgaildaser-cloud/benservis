@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi alttan su kaçırıyor: sırayla neye bakmalı"
-description: "Makinenin altından su geliyorsa sebep çoğu zaman kapı contası, hortum bağlantısı ya da taşma emniyetidir. Neyi kendin kontrol edeceğini ve servis sınırını anlattık."
+description: "Makinenin altından su geliyorsa sebep çoğu zaman kapı contası, hortum bağlantısı ya da taşma emniyetidir. Kontroller ve servis sınırı burada."
 slug: "bulasik-makinesi-su-kaciriyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"

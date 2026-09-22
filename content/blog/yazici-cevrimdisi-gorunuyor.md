@@ -1,6 +1,6 @@
 ---
 title: "Yazıcı çevrimdışı görünüyor: bilgisayar yazıcıyı neden bulmuyor"
-description: "Yazıcı açık olduğu hâlde bilgisayarda çevrimdışı görünüyorsa sebep çoğu zaman ağ değişikliği, uyku modu ya da yanlış seçilmiş varsayılan yazıcıdır. Sırayla neyi kendin kontrol edebilirsin, hangi noktadan sonra servis gerekir."
+description: "Yazıcı açıkken çevrimdışı görünüyorsa sebep çoğu zaman ağ değişikliği, uyku modu ya da yanlış varsayılan yazıcıdır. Neyi kendin kontrol edebilirsin?"
 slug: "yazici-cevrimdisi-gorunuyor"
 date: "2026-08-19"
 category: "Bilgisayar / yazıcı"

@@ -1,6 +1,6 @@
 ---
 title: "Bilgisayar yavaş çalışıyor: parça değiştirmeden hızlandıran kontroller"
-description: "Bilgisayar yavaşladıysa sebep çoğu zaman başlangıç programları, dolan sistem diski, arka planda süren güncelleme ya da toz kaynaklı ısınmadır. Sırayla nasıl bulunur."
+description: "Bilgisayar yavaşladıysa sebep çoğu zaman başlangıç programları, dolan disk, arka plandaki güncelleme ya da toz kaynaklı ısınmadır. Sırayla bulunur."
 slug: "bilgisayar-yavas-calisiyor"
 date: "2026-08-21"
 category: "Bilgisayar / yazıcı"

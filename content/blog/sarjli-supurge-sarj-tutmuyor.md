@@ -1,6 +1,6 @@
 ---
 title: "Şarjlı dikey süpürge şarj tutmuyor: batarya mı bitti, filtre mi tıkalı?"
-description: "Dikey süpürgenin süresi kısaldıysa suçlu her zaman batarya değil; tıkalı filtre motoru zorlar, süreyi de düşürür. Gerçekçi batarya ömrü ve evde yapılacak kontroller."
+description: "Dikey süpürgenin süresi kısaldıysa suçlu her zaman batarya değil; tıkalı filtre motoru zorlar. Batarya ömrü ve evde yapılacak kontroller."
 slug: "sarjli-supurge-sarj-tutmuyor"
 date: "2026-08-20"
 category: "Süpürge"

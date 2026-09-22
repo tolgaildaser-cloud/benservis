@@ -1,6 +1,6 @@
 ---
 title: "Su arıtma cihazından su gelmiyor: sebepleri ve ne yapmalı"
-description: "Su arıtma cihazından su akmıyor ya da çok yavaş akıyorsa sebep çoğu zaman tıkalı filtre, kapalı vana ya da düşük şebeke basıncıdır. Neyi kendin kontrol edebilirsin, ne zaman servis gerekir."
+description: "Su arıtmadan su akmıyor ya da çok yavaş akıyorsa sebep çoğu zaman tıkalı filtre, kapalı vana ya da düşük şebeke basıncıdır. Ne zaman servis gerekir?"
 slug: "su-aritma-su-gelmiyor"
 date: "2026-08-08"
 category: "Su sebili / arıtma"

@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi su almıyor: 5 kontrol ve servis sınırı"
-description: "Çamaşır makinen su almıyor mu? Önce kendin kontrol et: musluk, filtre, hortum. Olası nedenler ve servisin hangi noktada gerektiği. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Çamaşır makinen su almıyor mu? Önce kendin kontrol et: musluk, filtre, hortum. Servis hangi noktada gerekir? Ücretsiz teşhis. Bil, gör, çağır."
 slug: "camasir-makinesi-su-almiyor"
 date: "2026-06-17"
 category: "Çamaşır makinesi"

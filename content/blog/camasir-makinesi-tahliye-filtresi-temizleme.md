@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi tahliye filtresi nasıl temizlenir?"
-description: "Çamaşır makinesi su atmıyor, ıslak çıkıyor ya da kötü kokuyorsa çözüm çoğu zaman tahliye filtresidir. 6 adımda kendin temizle — ücretsiz, ~10 dakika. Bil, gör, çağır."
+description: "Çamaşır makinesi su atmıyor, ıslak çıkıyor ya da kokuyorsa çözüm çoğu zaman tahliye filtresidir. 6 adımda kendin temizle. Bil, gör, çağır."
 slug: "camasir-makinesi-tahliye-filtresi-temizleme"
 date: "2026-06-21"
 category: "Çamaşır makinesi"

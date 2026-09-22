@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi sigorta attırıyor: önce güvenlik, sonra teşhis"
-description: "Çamaşır makinesi sigorta attırıyorsa bu bir elektrik güvenliği uyarısıdır: fişi çek, tekrar deneme. Olası nedenler ve neden teşhisin servise ait olduğu bu yazıda."
+description: "Çamaşır makinesi sigorta attırıyorsa bu bir elektrik güvenliği uyarısıdır: fişi çek, tekrar deneme. Teşhis neden servise ait, bu yazıda."
 slug: "camasir-makinesi-sigorta-attiriyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"

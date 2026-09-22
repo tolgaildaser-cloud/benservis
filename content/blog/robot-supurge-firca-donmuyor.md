@@ -1,6 +1,6 @@
 ---
 title: "Robot süpürgenin fırçası dönmüyor: dolanan saçtan motor arızasına"
-description: "Robot süpürge fırçası dönmüyorsa sebep çoğu zaman dolanan saç ve iptir; motor arızası nadirdir. Hangi temizliği güvenle kendin yaparsın, nerede servise bırakırsın."
+description: "Robot süpürge fırçası dönmüyorsa sebep çoğu zaman dolanan saç ve iptir; motor arızası nadirdir. Hangi temizliği güvenle kendin yaparsın?"
 slug: "robot-supurge-firca-donmuyor"
 date: "2026-08-20"
 category: "Süpürge"

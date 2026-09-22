@@ -1,6 +1,6 @@
 ---
 title: "Robot süpürge haritalama sorunu: harita silindi, karıştı ya da robot kayboluyor"
-description: "Robot süpürgenin haritası silindi ya da odalar üst üste bindiyse sebep çoğu zaman sensör kiri, ayna-cam etkisi veya taşınan dock. Sıfırlamadan önce şunları dene."
+description: "Robot süpürgenin haritası silindi ya da odalar üst üste bindiyse sebep sensör kiri, ayna-cam etkisi veya taşınan dock olabilir."
 slug: "robot-supurge-haritalama-sorunu"
 date: "2026-08-20"
 category: "Süpürge"

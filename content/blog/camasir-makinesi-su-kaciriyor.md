@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi su kaçırıyor: sızıntının kaynağını bulma rehberi"
-description: "Makine alttan su sızdırıyorsa kaynak çoğu zaman deterjan çekmecesi, hortum bağlantıları ya da filtre kapağıdır. Güvenli kontrol sırası ve servis sınırı bu yazıda."
+description: "Makine alttan su sızdırıyorsa kaynak çoğu zaman deterjan çekmecesi, hortum bağlantıları ya da filtre kapağıdır. Kontrol sırası ve servis sınırı."
 slug: "camasir-makinesi-su-kaciriyor"
 date: "2026-08-20"
 category: "Çamaşır makinesi"

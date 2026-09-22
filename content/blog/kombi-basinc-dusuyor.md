@@ -1,6 +1,6 @@
 ---
 title: "Kombi basıncı sürekli düşüyor: sebebi ve çözümü"
-description: "Kombinin su basıncı sürekli düşüyor, sık sık su mu ekliyorsun? Tesisat kaçağı, genleşme tankı ve emniyet ventili kaynaklı nedenler + servis sınırı. Bil, gör, çağır."
+description: "Kombinin su basıncı sürekli düşüyor, sık sık su mu ekliyorsun? Tesisat kaçağı, genleşme tankı, emniyet ventili ve servis sınırı. Bil, gör, çağır."
 slug: "kombi-basinc-dusuyor"
 date: "2026-06-19"
 updated: "2026-09-17"

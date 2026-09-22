@@ -1,6 +1,6 @@
 ---
 title: "Arçelik çamaşır makinesi sembolleri ve anlamları"
-description: "Kapak kilidi simgesinin yanması, yanıp sönmesi ve sönmesi üç ayrı durumdur — ve bunu Arçelik'in kendi kılavuzu söylüyor. Ekrandaki simgeler üreticinin kendi adlandırmalarıyla, hata kodlarından ayrılarak."
+description: "Kapak kilidi simgesinin yanması, yanıp sönmesi ve sönmesi üç ayrı durumdur. Arçelik kılavuzundaki simgeler, hata kodlarından ayrılarak anlatıldı."
 slug: "arcelik-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-09-02"
 category: "Çamaşır makinesi"

@@ -1,6 +1,6 @@
 ---
 title: "LG buzdolabı hata kodları: iki harfin arkasındaki parça hangisi"
-description: "LG buzdolabında Er FF, Er rF, Er CF, Er dH, Er CO gibi kodlar doğrudan parçayı söyler. Kodların doğrulanmış anlamı, fan kodlarındaki buz tuzağı ve servis sınırı."
+description: "LG buzdolabında Er FF, Er rF, Er CF, Er dH, Er CO kodları doğrudan parçayı söyler. Kodların anlamı ve fan kodlarındaki buz tuzağı."
 slug: "lg-buzdolabi-hata-kodlari"
 date: "2026-08-21"
 category: "Buzdolabı"

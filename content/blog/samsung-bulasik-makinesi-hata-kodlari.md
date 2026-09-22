@@ -1,6 +1,6 @@
 ---
 title: "Samsung bulaşık makinesi hata kodları: 4C, 5C, LC ve HE ne demek"
-description: "Samsung bulaşık makinesinde 4C su temini, 5C tahliye, LC kaçak, HE ısıtma devresi sorunu demek. Özellikle 4C için evde yapılacak kontroller ve servis sınırı burada."
+description: "Samsung bulaşık makinesinde 4C su temini, 5C tahliye, LC kaçak, HE ısıtma demek. 4C için evde yapılacak kontroller ve servis sınırı burada."
 slug: "samsung-bulasik-makinesi-hata-kodlari"
 date: "2026-08-20"
 category: "Bulaşık makinesi"

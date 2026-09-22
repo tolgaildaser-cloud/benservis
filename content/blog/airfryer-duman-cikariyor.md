@@ -1,6 +1,6 @@
 ---
 title: "Air fryer duman çıkarıyor: hangisi normal, hangisi değil"
-description: "Air fryer'dan duman gelmesi her zaman arıza değil — ilk kullanımda ve yağlı yiyecek pişirirken üreticiler bunu normal sayıyor. Dumanın kaynağını ayırmanın yolu ve tabanda biriken yağı boşaltmanın doğru sırası."
+description: "Air fryer'dan duman her zaman arıza değil: üreticiler ilk kullanımda ve yağlı yiyecekte bunu normal sayıyor. Kaynağı ayırmanın ve yağı boşaltmanın yolu."
 slug: "airfryer-duman-cikariyor"
 date: "2026-08-25"
 category: "Mikrodalga"

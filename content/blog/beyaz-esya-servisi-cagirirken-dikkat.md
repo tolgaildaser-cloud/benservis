@@ -1,6 +1,6 @@
 ---
 title: "Beyaz eşya servisi çağırırken dikkat edilecek 7 şey (2026)"
-description: "Beyaz eşya servisi çağırırken nelere dikkat etmeli? Güvenli servis seçimi, sahte servisten korunma, şeffaf fiyat ve servis teslim fişi — 7 pratik kural. Bil, gör, çağır."
+description: "Beyaz eşya servisi çağırırken nelere dikkat etmeli? Güvenli servis seçimi, sahte servisten korunma ve teslim fişi: 7 kural. Bil, gör, çağır."
 slug: "beyaz-esya-servisi-cagirirken-dikkat"
 date: "2026-07-03"
 category: "Genel"

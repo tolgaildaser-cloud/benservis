@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı kapısı tam kapanmıyor: conta, menteşe ve denge kontrolü"
-description: "Kapı aralık kalıyor ya da kendiliğinden açılıyorsa sebep çoğu zaman conta, denge ayağı ya da taşan raflar. Kâğıt testiyle contayı yokla, kendin düzelteceğini gör."
+description: "Kapı aralık kalıyor ya da kendiliğinden açılıyorsa sebep çoğu zaman conta, denge ayağı ya da taşan raflardır. Kâğıt testiyle contayı yokla."
 slug: "buzdolabi-kapisi-tam-kapanmiyor"
 date: "2026-08-20"
 category: "Buzdolabı"

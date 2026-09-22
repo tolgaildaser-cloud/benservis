@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi bardakları bulanık bırakıyor: beyaz film mi, kalıcı matlaşma mı?"
-description: "Bardaklar makineden bulanık ve lekeli çıkıyorsa sebep tuz-parlatıcı ayarı, kireç ya da cam korozyonu olabilir. Hangisi düzelir, hangisi kalıcı — dürüstçe anlattık."
+description: "Bardaklar bulanık ve lekeli çıkıyorsa sebep tuz-parlatıcı ayarı, kireç ya da cam korozyonu olabilir. Hangisi düzelir, hangisi kalıcı?"
 slug: "bulasik-makinesi-bardaklari-bulanik-birakiyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"
