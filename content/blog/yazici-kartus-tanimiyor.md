@@ -1,6 +1,6 @@
 ---
 title: "Yazıcı kartuşu tanımıyor: çıkar-tak'tan sürücü sıfırlamaya dürüst bir yol haritası"
-description: "Yazıcı kartuşu tanımıyorsa çoğu zaman temas noktası kirli ya da çip sorunludur. Çıkar-tak ve kuru bezle temizlik, dolum kartuş gerçeği ve sürücü sıfırlama adımları."
+description: "Yazıcı kartuşu tanımıyorsa çoğu zaman temas noktası kirli ya da çip sorunludur. Çıkar-tak, kuru bezle temizlik ve sürücü sıfırlama adımları."
 slug: "yazici-kartus-tanimiyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"

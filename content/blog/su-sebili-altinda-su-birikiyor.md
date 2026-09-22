@@ -1,6 +1,6 @@
 ---
 title: "Su sebilinin altında su birikiyor: sebepleri ve ne yapmalı"
-description: "Su sebilinin altında ya da arkasında su birikiyorsa sebep çoğu zaman dolan damlama tepsisi, tam oturmamış damacana ya da kapanmayan musluktur. Neyi kendin kontrol edebilirsin, hangi noktadan sonra servis gerekir."
+description: "Sebilin altında su birikiyorsa sebep çoğu zaman dolan damlama tepsisi, tam oturmamış damacana ya da kapanmayan musluktur. Neyi kendin kontrol edersin?"
 slug: "su-sebili-altinda-su-birikiyor"
 date: "2026-08-19"
 category: "Su sebili / arıtma"

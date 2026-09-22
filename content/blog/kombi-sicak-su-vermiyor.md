@@ -1,6 +1,6 @@
 ---
 title: "Kombi sıcak su vermiyor: olası arızalar ve ne yapmalı"
-description: "Kombin ısıtma yapıyor ama musluktan sıcak su gelmiyor mu? Plakalı eşanjör kireci, 3 yollu vana ve akış sensörü kaynaklı nedenler + kendin kontroller. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Kombin ısıtıyor ama musluktan sıcak su gelmiyor mu? Plakalı eşanjör kireci, 3 yollu vana ve akış sensörü. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "kombi-sicak-su-vermiyor"
 date: "2026-06-19"
 updated: "2026-09-17"

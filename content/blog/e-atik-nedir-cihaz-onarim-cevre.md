@@ -1,6 +1,6 @@
 ---
 title: "Elektronik atık (e-atık) nedir? Onarımın çevre etkisi"
-description: "E-atık nedir, Türkiye'de ne kadar elektronik atık üretiliyor ve neden sadece %5-6'sı geri dönüşüyor? Bir cihazı atmak yerine onarmanın çevre ve karbon etkisi. Bil, gör, çağır."
+description: "E-atık nedir, Türkiye ne kadar elektronik atık üretiyor ve neden sadece %5-6'sı geri dönüşüyor? Onarmanın çevre etkisi. Bil, gör, çağır."
 slug: "e-atik-nedir-cihaz-onarim-cevre"
 date: "2026-07-04"
 category: "Sürdürülebilirlik"

@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi tableti eritmiyor: bölmede ıslak duran tabletin sebebi"
-description: "Tablet bölmesinde eriyip dağılmıyorsa sebep çoğu zaman yükleme hatası, kapağı engelleyen bir parça ya da ısınmayan sudur. Kendin bakabileceğin kontroller burada."
+description: "Tablet bölmesinde eriyip dağılmıyorsa sebep çoğu zaman yükleme hatası, kapağı engelleyen bir parça ya da ısınmayan sudur."
 slug: "bulasik-makinesi-tableti-eritmiyor"
 date: "2026-08-20"
 category: "Bulaşık makinesi"

@@ -1,6 +1,6 @@
 ---
 title: "Air fryer nasıl temizlenir? Bulaşık makinesine atılır mı"
-description: "Air fryer sepetini bulaşık makinesine atmak modele göre değişir — bazı üreticiler açıkça izin verir, bazıları elde yıkamayı tarif eder. Yapışmaz kaplamayı yakmadan temizlemenin sırası ve her kullanımdan sonra atlanmaması gereken tek adım."
+description: "Air fryer sepetini bulaşık makinesine atmak modele göre değişir: bazı üreticiler izin verir, bazıları elde yıkamayı tarif eder. Doğru temizlik sırası."
 slug: "airfryer-nasil-temizlenir"
 date: "2026-08-25"
 category: "Mikrodalga"

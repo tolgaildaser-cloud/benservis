@@ -1,6 +1,6 @@
 ---
 title: "Bilgisayar açılıyor ama ekran gelmiyor: fanlar dönüyor, ekran siyah"
-description: "Bilgisayar açılıyor, fanlar dönüyor ama ekran siyah mı? Önce monitörü ve kabloyu ele, sonra bip ve ışık sinyallerini oku. Hangi kontrol sana ait, hangisi servise."
+description: "Bilgisayar açılıyor, fanlar dönüyor ama ekran siyah mı? Önce monitörü ve kabloyu ele, sonra bip ve ışık sinyallerini oku."
 slug: "bilgisayar-acilmiyor-ekran-gelmiyor"
 date: "2026-08-20"
 category: "Bilgisayar / yazıcı"

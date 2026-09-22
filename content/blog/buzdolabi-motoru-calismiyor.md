@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı motoru çalışmıyor: tık sesi, sessizlik ve röle meselesi"
-description: "Lamba yanıyor ama motor kalkmıyorsa sorun elektrik, başlatma rölesi ya da kompresör olabilir. Tık döngüsü ne anlatır, neyi kendin kontrol edersin, ne servise kalır."
+description: "Lamba yanıyor ama motor kalkmıyorsa sorun elektrik, başlatma rölesi ya da kompresör olabilir. Tık döngüsü ne anlatır, ne servise kalır?"
 slug: "buzdolabi-motoru-calismiyor"
 date: "2026-08-20"
 category: "Buzdolabı"

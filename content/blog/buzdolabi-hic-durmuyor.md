@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı hiç durmuyor, sürekli çalışıyor: önce nelere bakılır"
-description: "Buzdolabın hiç susmuyor mu? Yazın uzun çalışma normaldir — ama sürekli çalışma değil. Servisi aramadan önce ücretsiz kontrol edebileceğin 7 şey ve sınırın nerede bittiği."
+description: "Buzdolabın hiç susmuyor mu? Yazın uzun çalışma normaldir, sürekli çalışma değil. Servisi aramadan önce ücretsiz kontrol edebileceğin 7 şey."
 slug: "buzdolabi-hic-durmuyor"
 date: "2026-08-18"
 category: "Buzdolabı"

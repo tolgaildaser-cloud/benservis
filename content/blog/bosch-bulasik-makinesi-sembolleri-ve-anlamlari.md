@@ -1,6 +1,6 @@
 ---
 title: "Bosch bulaşık makinesi sembolleri ve anlamları"
-description: "Musluk, tuz ve parlatıcı simgeleri arıza değil, ikmal ve kontrol uyarısı. Bosch'un kendi kılavuzlarındaki gösterge tablosu: hangi simge ne ister, tuş kilidi neden tuşları kilitler ve makine temizliği uyarısı ne demek."
+description: "Musluk, tuz ve parlatıcı simgeleri arıza değil, ikmal uyarısı. Bosch kılavuzlarındaki gösterge tablosu: hangi simge ne ister, tuş kilidi ne yapar."
 slug: "bosch-bulasik-makinesi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Bulaşık makinesi"

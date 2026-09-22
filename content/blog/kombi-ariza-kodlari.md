@@ -1,6 +1,6 @@
 ---
 title: "Kombi arıza kodları ne demek? (marka marka rehber)"
-description: "Kombinde bir arıza kodu mu var? Vaillant, DemirDöküm, Baymak kodlarının anlamı, düşük su basıncında kılavuzdaki değer ve ne zaman servis gerektiği. Bil, gör, çağır."
+description: "Kombinde arıza kodu mu var? Vaillant, DemirDöküm, Baymak kodlarının anlamı, düşük su basıncında kılavuzdaki değer ve servis sınırı. Bil, gör, çağır."
 slug: "kombi-ariza-kodlari"
 date: "2026-06-19"
 updated: "2026-09-17"

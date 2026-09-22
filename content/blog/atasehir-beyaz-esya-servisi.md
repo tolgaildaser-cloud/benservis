@@ -1,6 +1,6 @@
 ---
 title: "Ataşehir'de güvenilir beyaz eşya servisi nasıl bulunur?"
-description: "Ataşehir'de buzdolabı, çamaşır veya bulaşık makinesi servisi mi arıyorsun? Güvenilir servisi seçmenin kuralları + fiyatı çağırmadan önce öğrenme. Bil, gör, çağır."
+description: "Ataşehir'de buzdolabı, çamaşır veya bulaşık makinesi servisi mi arıyorsun? Güvenilir servisi seçmenin kuralları. Bil, gör, çağır."
 slug: "atasehir-beyaz-esya-servisi"
 date: "2026-06-19"
 category: "Genel"

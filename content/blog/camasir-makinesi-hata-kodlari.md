@@ -1,6 +1,6 @@
 ---
 title: "Çamaşır makinesi hata kodları ne demek? (marka marka)"
-description: "Çamaşır makinende hata kodu mu çıktı? Bosch, Siemens, Arçelik, Beko en sık kodların anlamı, kendin çözebileceklerin ve servisin hangi noktada gerektiği. Bil, gör, çağır."
+description: "Çamaşır makinende hata kodu mu çıktı? Bosch, Siemens, Arçelik, Beko en sık kodların anlamı ve servis sınırı. Bil, gör, çağır."
 slug: "camasir-makinesi-hata-kodlari"
 # 🔴 22 Ağu 2026 — İKİ TABLO DA DÜZELTİLDİ (kod tablosu denetimi, TARAMA-1).
 # Arçelik/Beko bloğu: E01/E02/E03/E07 ve H1 üreticide yok; gerçek aile tek haneli.

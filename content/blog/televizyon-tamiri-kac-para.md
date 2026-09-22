@@ -1,6 +1,6 @@
 ---
 title: "Televizyon tamiri kaç para? Bedeli ne belirler, panel ne zaman anlamsız"
-description: "Televizyon tamirinde kablo, güç kartı, anakart, arka aydınlatma ve panel farklı ağırlıkta işlerdir. Hangi belirti hangi kaleme işaret eder, panel ne zaman anlamsız?"
+description: "Televizyon tamirinde kablo, güç kartı, anakart, arka aydınlatma ve panel farklı ağırlıkta işlerdir. Hangi belirti hangi kaleme işaret eder?"
 slug: "televizyon-tamiri-kac-para"
 date: "2026-08-21"
 category: "Televizyon"

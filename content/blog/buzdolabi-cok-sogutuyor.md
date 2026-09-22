@@ -1,6 +1,6 @@
 ---
 title: "Buzdolabı çok soğutuyor, sebzeler donuyor: sebebi ve çözümü"
-description: "Sebzeler donuyor, süt buz tutuyorsa sebep çoğu zaman ayar kademesi, arka duvara değen yiyecek ya da kapalı hava kanalı. Neyi kendin düzeltirsin, ne servise kalır."
+description: "Sebzeler donuyor, süt buz tutuyorsa sebep çoğu zaman ayar kademesi, arka duvara değen yiyecek ya da kapalı hava kanalıdır. Ne servise kalır?"
 slug: "buzdolabi-cok-sogutuyor"
 date: "2026-08-20"
 category: "Buzdolabı"

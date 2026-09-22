@@ -1,6 +1,6 @@
 ---
 title: "TV ekranında çizgi var: dikey mi yatay mı olduğu neyi anlatıyor?"
-description: "Ekrandaki dikey ya da yatay çizgi panelden mi, kablodan mı? Menü testiyle kaynağı ayırt et, çizgi tipinin ne anlattığını ve hangi noktada servis gerektiğini öğren."
+description: "Ekrandaki dikey ya da yatay çizgi panelden mi, kablodan mı? Menü testiyle kaynağı ayırt et, çizgi tipinin ne anlattığını öğren."
 slug: "tv-ekraninda-cizgi-var"
 date: "2026-08-20"
 category: "Televizyon"

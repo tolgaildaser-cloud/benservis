@@ -1,6 +1,6 @@
 ---
 title: "Vaillant kombi sembolleri ve anlamları"
-description: "Ekrandaki simgelerin çoğu arıza değil, çalışma durumu. Vaillant'ın kendi kılavuzlarındaki gösterge tablosu: yanıp sönen radyatör simgesi brülörün yandığını söylüyor, anahtar simgesi bakım istiyor — ve ikisi de arıza değil."
+description: "Ekrandaki simgelerin çoğu arıza değil, çalışma durumu. Vaillant kılavuzlarındaki gösterge tablosu: radyatör simgesi, anahtar simgesi ve anlamları."
 slug: "vaillant-kombi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Kombi"

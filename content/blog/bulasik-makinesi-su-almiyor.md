@@ -1,6 +1,6 @@
 ---
 title: "Bulaşık makinesi su almıyor: olası nedenler ve kontroller"
-description: "Bulaşık makinen su almıyor mu? En sık sebepler musluk, giriş filtresi ve valf. Kendin yapabileceğin kontroller ve ne zaman servis gerekir. Ücretsiz teşhis. Bil, gör, çağır."
+description: "Bulaşık makinen su almıyor mu? En sık sebepler musluk, giriş filtresi ve valf. Kendin yapabileceğin kontroller. Ücretsiz teşhis. Bil, gör, çağır."
 slug: "bulasik-makinesi-su-almiyor"
 date: "2026-06-19"
 category: "Bulaşık makinesi"

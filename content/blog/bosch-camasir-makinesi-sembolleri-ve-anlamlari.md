@@ -1,6 +1,6 @@
 ---
 title: "Bosch çamaşır makinesi sembolleri ve anlamları"
-description: "Ekrandaki simgelerin çoğu arıza değil, program durumu. Bosch'un kendi kılavuzlarındaki gösterge tablosu: kapak, musluk, çocuk kilidi, tambur temizleme ve köpük simgeleri — ve aynı simgenin sabit yanmasıyla yanıp sönmesi arasındaki fark."
+description: "Ekrandaki simgelerin çoğu arıza değil, program durumu. Bosch kılavuzlarındaki gösterge tablosu: kapak, musluk, çocuk kilidi, tambur temizleme, köpük."
 slug: "bosch-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Çamaşır makinesi"

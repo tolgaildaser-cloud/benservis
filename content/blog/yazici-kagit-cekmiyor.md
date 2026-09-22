@@ -1,6 +1,6 @@
 ---
 title: "Yazıcı kâğıt çekmiyor: sebepleri ve ne yapmalı"
-description: "Yazıcı çalışıyor ama kâğıdı tepsiden almıyorsa sebep çoğu zaman nemli kâğıt, yanlış ayarlanmış tepsi kılavuzu ya da kâğıt yolunda kalan bir parçadır. Neyi kendin kontrol edebilirsin, hangi noktadan sonra servis gerekir."
+description: "Yazıcı çalışıyor ama kâğıdı almıyorsa sebep çoğu zaman nemli kâğıt, yanlış tepsi kılavuzu ya da yolda kalan bir parçadır. Kontrol sırası burada."
 slug: "yazici-kagit-cekmiyor"
 date: "2026-08-19"
 category: "Bilgisayar / yazıcı"

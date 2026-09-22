@@ -1,6 +1,6 @@
 ---
 title: "Fırın kapağı açılmıyor: kilit simgesi, piroliz ve bekleme süresi"
-description: "Fırın kapağı kilitli kaldıysa sebep çoğu zaman piroliz sonrası soğuma süresi ya da çocuk kilididir. Kapıyı zorlamadan önce hangi sırayla kontrol edeceğini anlattık."
+description: "Fırın kapağı kilitli kaldıysa sebep çoğu zaman piroliz sonrası soğuma süresi ya da çocuk kilididir. Kapıyı zorlamadan önceki kontrol sırası."
 slug: "firin-kapagi-acilmiyor"
 date: "2026-08-20"
 category: "Fırın / Ocak"
