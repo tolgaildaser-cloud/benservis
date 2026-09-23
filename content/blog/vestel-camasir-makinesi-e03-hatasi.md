@@ -1,6 +1,6 @@
 ---
 title: "Vestel çamaşır makinesi E03 hatası"
-description: "E03 tahliye edememek demek. Pompa filtresi, hortum yüksekliği ve gider hattı kontrolüyle çoğu vaka evde, 8 adımda ve ücretsiz kapanır."
+description: "Vestel E03 hatası: kılavuza göre pompa filtresi tıkalı, pompa ya da pompa bağlantısı arızalı. Filtre temizliği ve hortum kontrolü adım adım."
 slug: "vestel-camasir-makinesi-e03-hatasi"
 date: "2026-08-21"
 category: "Çamaşır makinesi"
@@ -11,81 +11,75 @@ guide:
   cost: "Ücretsiz"
   tools: ["Havlu", "Sığ bir kap", "Küçük fırça (eski diş fırçası)"]
 steps:
-  - "Programı iptal et, makineyi kapat ve fişini çek."
-  - "Tahliye hortumunun gidere bağlandığı yüksekliği kontrol et; çok alçak ya da çok yüksek olmamalı."
-  - "Hortumu boydan boya izle; bükülme, ezilme ya da gidere fazla itilmiş uç var mı bak."
+  - "Makineyi kapat ve fişini çek."
+  - "Tahliye hortumunun yüksekliğini kontrol et; Vestel'e göre yerden en fazla 100 cm yükseğe takılabilir."
+  - "Hortumu boydan boya izle; katlanma, kıvrılma ya da ezilme var mı bak."
   - "Gider ağzını ve sifonu kontrol et, saç ve yağ tıkanıklığı varsa aç."
-  - "Ön alttaki kapağı aç, havlu ser ve sığ kabı yerleştir, kalan suyu boşaltma hortumundan al."
-  - "Pompa filtresini elinle çevirerek çıkar, tüy ve yabancı cisimleri temizle."
-  - "Filtreyi ve oturduğu yuvayı fırçayla temizleyip tam sıkılacak şekilde geri tak."
-  - "Fişi tak, yalnız sıkma ya da kısa programla dene; hata tekrarlıyorsa servis gerekir."
+  - "Ön alttaki pompa kapağını aç, önüne havlu ser ve filtre kapağının önüne bir kap koy."
+  - "Filtre kapağını saat yönünün tersine çevirerek gevşet ve çekerek çıkar; kap dolarsa boşaltıp tekrarla."
+  - "Filtredeki yabancı maddeleri fırçayla temizle, kapağı yerine takıp saat yönünde çevirerek sıkıştır."
+  - "Fişi tak ve kısa bir programla dene; E03 sürerse en yakın yetkili servise başvur."
 faq:
   - q: "Vestel çamaşır makinesi E03 hatası ne demek?"
-    a: "E03, makinenin içindeki suyu ayrılan sürede boşaltamadığını gösteren tahliye hatasıdır. Kod bir parçanın arızasını değil, suyun gitmediğini bildirir. En sık sebepler tüy ve yabancı cisimle tıkanmış pompa filtresi, bükülmüş tahliye hortumu ve tıkalı gider hattıdır. Bu üçü de kapak seviyesinde, ücretsiz kontrol edilebilir."
+    a: "Vestel'in kullanım kılavuzlarındaki otomatik arıza uyarıları tablosunda E03'ün karşılığı üç ihtimaldir: pompa arızalı, pompa filtresi tıkalı ya da pompa elektriksel bağlantısı arızalı. Tablonun önerdiği işlem pompa filtresini temizlemek; sorun devam ederse en yakın yetkili servise başvurmak. Üç ihtimalden yalnızca filtre temizliği kullanıcı seviyesindedir."
   - q: "E03 aldığımda çamaşırlar suyun içinde kaldı, ne yapmalıyım?"
-    a: "Makinenin içinde su varken kapak kilidi çoğunlukla açılmaz, bu bir arıza değil güvenlik davranışıdır. Ön alttaki küçük kapağı açıp acil boşaltma hortumundan suyu sığ bir kaba alarak seviyeyi düşürebilirsin; kap dolunca tıpayı takıp boşaltır ve tekrarlarsın. Su bittikten birkaç dakika sonra kilit çözülür ve çamaşırları alabilirsin."
+    a: "Vestel'in pompa filtresi talimatı bu durumu da kapsıyor: filtre kapağını açmadan önce önüne bir kap koy, makinenin içinde kalan su bu kaba akar. Su miktarına göre kabı birkaç kez boşaltman gerekebilir. Kılavuzun uyarısı: pompa içerisindeki su sıcak olabilir, önce soğumasını bekle."
   - q: "Tahliye hortumunun yüksekliği neden önemli?"
-    a: "Hortumun gidere bağlandığı nokta gereğinden alçaksa makine suyu tutamaz ve sürekli boşalır; gereğinden yüksekse pompa suyu yukarı itmekte zorlanır ve süre dolduğu için E03 düşer. Taşınma, mobilya değişimi veya tesisat işi sonrası bu yükseklik farkında olmadan değişmiş olabilir. Hortumun ucunun gidere gereğinden fazla itilmesi de suyun geri emilmesine yol açar."
+    a: "Vestel kılavuzları tahliye hortumunun yerden en fazla 100 cm yükseğe takılabileceğini yazıyor. Hortumun ucu makineye göre çok alçaktaysa da makine su dolar dolmaz boşaltabilir; kılavuzun çözümü hortumu uygun yüksekliğe yerleştirmek. Aynı bölüm hortumun katlanmamasını, kıvrılmamasını, ezilmemesini ve ekleme yapılarak uzatılmamasını istiyor. Taşınma veya mobilya değişimi sonrası bu yükseklik farkında olmadan değişmiş olabilir."
   - q: "Filtre temiz olduğu hâlde E03 devam ediyorsa sorun nerede?"
-    a: "Dış hattın tamamı temizken tekrar eden E03'te akla gelen ilk aday tahliye pompasıdır; pervanesi kırılmış, yatağı sıkışmış ya da motoru zayıflamış olabilir. İkinci aday su seviyesini okuyan sensör, üçüncüsü ise pompayı süren elektronik karttır. Bu üçünün de teşhisi ölçü aletiyle ve tablanın altına inilerek yapılır, yani kullanıcı tarafında denenecek bir şey kalmamıştır."
+    a: "Kılavuzun tablosunda geriye kalan iki ihtimal pompanın kendisi ve pompanın elektriksel bağlantısıdır. Vestel'in talimatı bu noktada net: sorun devam ederse en yakın yetkili servise başvurun. İkisi de makinenin içindedir; kullanıcı tarafında denenecek bir şey kalmamıştır."
 images:
   coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
 ---
 
-Makine tam sıkmaya geçecekken durdu; kazanın içi su dolu, çamaşırlar ağırlaşmış ve panelde **E03** yazıyor. Vestel çamaşır makinelerinde bu kod **suyun boşaltılamadığını** anlatır: makine tahliye komutunu verdi ama beklenen sürede seviye inmedi, o da programı güvenli şekilde durdurdu. Bu, Vestel kullanıcılarının en sık gördüğü kodlardan biridir ve aynı zamanda en çok kendi çözdüğü kodlardan biridir — çünkü suçlu neredeyse her zaman makinenin gövdesinde değil, tahliye hattının kolay ulaşılan ucundadır.
+Makine tam sıkmaya geçecekken durdu; kazanın içi su dolu, çamaşırlar ağırlaşmış ve panelde **E03** yazıyor. Vestel'in kullanım kılavuzlarındaki otomatik arıza uyarıları tablosunda bu kodun karşılığı üç ihtimaldir: **pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı.** Tablonun ilk talimatı pompa filtresini temizlemektir. Üç ihtimalden yalnızca filtre kullanıcı seviyesinde olduğu için işe makinenin ön altındaki filtreden ve ona su taşıyan tahliye hattından başlanır.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚡ **Kısa özet:** E03 = tahliye zaman aşımı. Sıra şu: hortum yüksekliği ve bükülme → gider ve sifon → pompa filtresinin temizliği → resetleyip sıkma programıyla deneme. Hepsi temizse ve hata sürüyorsa iş tahliye pompası tarafındadır → servis.
+> ⚡ **Kısa özet:** Vestel'e göre E03 = pompa filtresi tıkalı, pompa arızalı ya da pompanın elektrik bağlantısı arızalı. Sıra şu: hortum yüksekliği ve kıvrım → gider ve sifon → pompa filtresinin temizliği → kısa programla deneme. Filtre temiz olduğu hâlde hata sürüyorsa kılavuzun talimatı yetkili servistir.
 
 ## Adım adım: evde denenecekler
 
-**1. Güvenliği al.** Programı iptal et, makineyi kapat ve **fişini çek**. Su ve elektrikle aynı anda uğraşma.
+**1. Güvenliği al.** Makineyi kapat ve **fişini çek**. Su ve elektrikle aynı anda uğraşma.
 
-**2. Hortumun yüksekliğine bak.** Tahliye hortumunun gidere ya da lavabo bağlantısına girdiği nokta ne çok alçak ne çok yüksek olmalıdır. Kılavuzda bu aralık yazar; taşınma veya dolap değişimi sonrası hortum farkında olmadan aşağı kaymış ya da yukarı çekilmiş olabilir.
+**2. Hortumun yüksekliğine bak.** Vestel kılavuzlarına göre tahliye hortumu yerden **en fazla 100 cm** yükseğe takılabilir; hortumun ucu makineye göre çok alçaktaysa da makine su dolar dolmaz boşaltabilir. Taşınma veya dolap değişimi sonrası hortum farkında olmadan aşağı kaymış ya da yukarı çekilmiş olabilir.
 
-**3. Hortumu boydan boya izle.** Makinenin arkasında keskin bir kıvrım, mobilya altında ezilme ya da duvarla dolap arasında sıkışma var mı bak. Hortumun ucunun gidere gereğinden fazla itilmesi de sık görülen bir hatadır.
+**3. Hortumu boydan boya izle.** Makinenin arkasında keskin bir kıvrım, mobilya altında ezilme ya da duvarla dolap arasında sıkışma var mı bak. Kılavuz hortumun katlanmamasını, kıvrılmamasını, ezilmemesini ve ekleme yapılarak uzatılmamasını istiyor.
 
 **4. Gideri ve sifonu kontrol et.** Bağlantının yapıldığı gider ağzı veya sifon saç, yağ ve tortuyla tıkanmış olabilir. Aynı hattaki başka bir gider de yavaş boşalıyorsa sorun makinede değil tesisattadır.
 
-**5. Kapağı aç ve suyu boşalt.** Ön alt köşedeki küçük kapağı aç, önüne **havlu ser** ve sığ bir kap koy. İçerideki ince acil boşaltma hortumunun tıpasını çekip suyu al; kap dolunca tıpayı geri tak, boşalt ve tekrarla.
+**5. Kabı hazırla.** Ön alttaki pompa kapağını aç; Vestel bunun için makineyle gelen sıvı deterjan seviye plakasının ucunun kapak boşluğuna takılıp geriye bastırılmasını tarif ediyor. Önüne **havlu ser** ve filtre kapağının önüne bir kap koy; makinenin içinde kalan su bu kaba akacak.
 
-**6. Pompa filtresini temizle.** Su bitince filtreyi **elinle çevirerek** çıkar. Tüy, düğme, bozuk para, çorap parçası ve kürdan burada toplanır. Filtreyi akan suyun altında durula.
+**6. Filtreyi çıkar.** Filtre kapağını **saat yönünün tersine** çevirerek gevşet ve çekerek çıkar. Makinedeki su miktarına göre kabı birkaç kez boşaltman gerekebilir. Filtrenin görevi çamaşırlardan arta kalan ipliklerin ve küçük nesnelerin pompaya girmesini önlemektir; onlar burada toplanır.
 
-**7. Yuvayı da temizle ve geri tak.** Filtrenin oturduğu yuvanın ağzını küçük bir fırçayla temizle, sonra filtreyi dişine tam oturacak şekilde çevirip sıkıştır. Yarım turda kalan filtre çalışırken su sızdırır.
+**7. Temizle ve geri tak.** Filtrenin içindeki yabancı maddeleri bir fırçayla temizle, sonra kapağı yerine takıp **saat yönünde** çevirerek sıkıştır.
 
-**8. Resetleyip dene.** Fişi tak, yalnız **sıkma** ya da kısa bir program başlat. Su gidiyorsa ve program sonuna kadar ilerliyorsa sorun filtre ya da hattaydı.
+**8. Dene.** Fişi tak ve kısa bir program başlat. E03 yeniden geliyorsa Vestel'in talimatı nettir: en yakın yetkili servise başvur.
 
-⚠️ Program yeni durduysa içerideki su sıcak olabilir; filtreyi açmadan önce cihaza yarım saat ver.
+⚠️ Vestel'in uyarısı: pompa içerisindeki su sıcak olabilir; filtreyi açmadan önce soğumasını bekle.
 
-## E03 tam olarak neyi ölçüyor?
+## Kılavuz E03 için ne diyor?
 
-Tahliye başlatıldığında makine su seviyesinin düşmesini izler. Süre dolduğu hâlde seviye inmemişse program durur ve kod ekrana gelir. Yani E03 "pompa bozuldu" demez, "su gitmedi" der. Bu ayrım pratikte çok işe yarar: suyun gitmemesinin sebebi çoğu zaman pompanın kendisi değil, önündeki tıkanıklıktır.
+Vestel'in tablosu E03 için üç ihtimal sayar ve ilk sıraya pompanın kendisini koyar: **pompa arızalı, pompa filtresi tıkalı ya da pompa elektriksel bağlantısı arızalı.** Yapılacak işlem sütununda tek bir kullanıcı adımı vardır: pompa filtresini temizlemek. Filtre dışındaki iki ihtimal makinenin içindedir. Aynı kılavuzun sorun giderme tablosu, su boşaltmayan makine için iki sebep daha sayar: **boşaltma hortumunun tıkanmış veya kıvrılmış olması** ve **pompa filtresinin tıkalı olması** — yani hortum kontrolü de kılavuzun kendi listesindedir.
 
 Bir not: kod şeması seriye ve model yılına göre değişebilir. Kendi makinenin kılavuzundan E03'ün karşılığını teyit etmek en sağlam yoldur. Vestel çamaşır makinesi hata kodları yazımızda E01, E02 ve E03'ün karşılıkları, hangisinde ne yapılacağı ve servis sınırının nerede başladığı tek tek anlatılıyor.
 
-## Tam tıkanıklık mı, yarı tıkanıklık mı?
-
-Bu ayrım tamiri hızlandırır. **Tam tıkanıklıkta** makine tahliye sesi çıkarır ama gider tarafında hiç su hareketi olmaz; hata her programda aynı noktada gelir. **Yarı tıkanıklıkta** su gider ama yavaş gider; bazı programlar tamamlanır, bazıları E03 verir ve şikâyet "arada bir oluyor" hâlini alır.
-
-**Kendin kontrol et:** Filtreyi çıkardığında yuvanın dibine bak. Hazne su doluysa tıkanıklık filtrenin arkasında ya da hortumdadır. Hazne boş, filtre tertemiz ve makine yine de E03 veriyorsa artık dış hattı bırakıp pompa ve sensör tarafını düşünmek gerekir.
-
 ## Tüy yükü meselesi
 
-Havlu, kilim, peluş ve tüylü tekstilin çok yıkandığı evlerde filtre şaşırtıcı hızla dolar. Bu evlerde pompa filtresini **üç ayda bir** temizlemek E03'ü büyük ölçüde ortadan kaldırır. Yıkama öncesi cepleri boşaltmak ve küçük parçaları file torbada yıkamak da aynı derecede ucuz bir sigortadır — filtrenin içinden çıkanların listesi genelde ceplerden başlar.
+Vestel, pompa filtresinin **2 ayda bir** temizlenmesini tavsiye ediyor; filtre pompanın ömrünü uzatmak için iplikleri ve küçük nesneleri tutar. Havlu, kilim ve tüylü tekstilin çok yıkandığı evlerde bu takvime uymak özellikle önemlidir. Yıkama öncesi cepleri boşaltmak da ucuz bir sigortadır.
 
 ## Sınır nerede biter
 
-Hortum düz ve doğru yükseklikte, gider açık, filtre tertemiz olduğu hâlde E03 tekrarlıyorsa şüphe **tahliye pompasına**, **seviye sensörüne** ve bunları yöneten **elektronik karta** kayar.
+Hortum düz ve doğru yükseklikte, gider açık, filtre tertemiz olduğu hâlde E03 tekrarlıyorsa kılavuzun kalan iki ihtimali geçerli olur: **pompanın kendisi** ya da **pompanın elektriksel bağlantısı**. Vestel'in talimatı bu noktada en yakın yetkili servise başvurmaktır.
 
-⛔ **Kendin-çöz sınırı burada biter.** Pompaya ulaşmak makineyi yatırmayı ve tablanın altına inmeyi gerektirir; orada hem su hem elektrik vardır. Kural basit: **kapak ve panel seviyesi kullanıcıya, tablanın altı servise aittir.**
+⛔ **Kendin-çöz sınırı burada biter.** Pompa ve elektrik bağlantısı makinenin içindedir; orada hem su hem elektrik vardır. Kural basit: **filtre kapağı ve panel seviyesi kullanıcıya, gövdenin içi servise aittir.**
 
 ## Servisi aramadan önce iki dakikalık özet
 
 1. Tahliye hortumu düz mü, gidere giriş yüksekliği doğru mu?
 2. Gider ve sifon açık mı, aynı hattaki diğer giderler normal mi?
 3. Pompa filtresi çıkarılıp temizlendi mi, içinden ne çıktı?
-4. Sıkma programıyla tekrar denendi mi, hata aynı noktada mı geldi?
+4. Kısa bir programla tekrar denendi mi, hata aynı noktada mı geldi?
 
 Bu dördüne cevabın varsa artık elinde "makine su atmıyor" gibi tek cümlelik bir tarif değil, servise anlatabileceğin somut bir tablo var. Bu da hem doğru parçayla gelinmesini hem de işin ilk seferde bitmesini sağlar.
 
