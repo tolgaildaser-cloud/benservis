@@ -82,13 +82,13 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | **E01** | Kapı açık kalmış | 🛠️ Kapağı "klik" sesiyle tam kapat |
 | **E02** | Su basıncı ya da kazan su seviyesi düşük | 🛠️ Musluğu, hortumu ve süzgeci kontrol et |
 | **E03** | Pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı | 🛠️ Pompa filtresini ve hortumu temizle |
-| **E04** | Makinede aşırı miktarda su var | 🔧 Programı iptal et, servisle konuş |
+| **E04** | Makinede aşırı miktarda su var | 🔧 Makine suyu kendi boşaltır; sonra kapat, fişini çek, musluğu kapat ve servisi ara |
 
 > 📌 Vestel'in yayımladığı çamaşır makinesi tablosu bu **dört kodla sınırlıdır**; `E05` ve sonrası resmî kılavuzda geçmez. Ekranda bu dördünün dışında bir kod görüyorsan kodun karşılığını kendi modelinin kılavuzundan doğrulaman gerekir.
 
 ## E01 — Kapı kapanmadı ya da kilitlenmedi
 
-Makine, kapı kilidinden "kilitlendim" sinyali almadan asla su almaz; E01 bu sinyalin gelmediğini söyler.
+Vestel'in kılavuzundaki karşılığı tek cümle: makinenin kapısı açık kalmış. Aynı kılavuzlara göre kapı tam olarak kapatılmazsa makine yıkama işlemini başlatmaz.
 
 **Kendin kontrol et:** Kapağı aç ve kenarına sıkışmış çamaşır ucu, çorap ya da lastik parçası olup olmadığına bak. Kapağı bu kez bilinçli biçimde, "klik" sesini duyana kadar bastırarak kapat. Conta yüzeyinde kapanmayı engelleyen kalıntı varsa nemli bezle sil. Kapı tam kapandığı hâlde kod sürüyorsa kilit mekanizması ya da elektroniği görevini yapmıyor olabilir — orası servis işidir; kilidi zorlamak ya da kurcalamak kapağı açılamaz hâle getirebilir.
 
@@ -100,7 +100,7 @@ Vestel'in kendi tablosunda E02'nin karşılığı tek cümle: makinenin **su bas
 
 ⚠️ Hortumu sökmeden önce musluğu mutlaka kapat; aksi hâlde basınçlı su etrafa dağılır.
 
-Musluk açık, basınç normal, hortum ve süzgeç temiz — kod hâlâ geliyorsa su giriş valfi tarafında iş vardır; valf servise aittir.
+Musluk açık, basınç normal, hortum ve süzgeç temiz — kod hâlâ geliyorsa kılavuzun talimatı nettir: makineyi kapat, fişini çek, musluğunu kapat ve yetkili servise başvur.
 
 İki filtrenin yeri ve temizliği dahil adım adım anlatım: [Vestel çamaşır makinesi E02 hatası](/blog/vestel-camasir-makinesi-e02-hatasi/).
 
