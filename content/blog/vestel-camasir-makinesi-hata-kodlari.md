@@ -102,6 +102,8 @@ Vestel'in kendi tablosunda E02'nin karşılığı tek cümle: makinenin **su bas
 
 Musluk açık, basınç normal, hortum ve süzgeç temiz — kod hâlâ geliyorsa su giriş valfi tarafında iş vardır; valf servise aittir.
 
+İki filtrenin yeri ve temizliği dahil adım adım anlatım: [Vestel çamaşır makinesi E02 hatası](/blog/vestel-camasir-makinesi-e02-hatasi/).
+
 ## E03 — Su atamıyor: en sık ve en çok kendin çözülen kod
 
 Vestel'in tablosu E03 için üç olasılığı yan yana veriyor: **pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı**. Kılavuzun bu koda verdiği tek ev içi talimat pompa filtresinin temizlenmesi; sorun sürerse yetkili servise yönlendiriyor. Filtreyle birlikte tahliye hortumuna ve gider hattına da bakmak işe yarar, çünkü üçü aynı tahliye yolunun üstündedir — ama kod bu ikisini adlandırmaz.
