@@ -39,6 +39,12 @@ faq:
     a: "Ön yüklemeli makinelerde lastik contanın kıvrımlarında su ve kir birikir, küf yapar. Contayı nemli bezle, gerekirse biraz bulaşık deterjanlı suyla sil, kıvrımların arasını temizle ve kuru bırak. Küf lekesi çıkmıyorsa conta değişebilir."
   - q: "Her şeyi temizledim ama koku geçmiyor, sebebi ne?"
     a: "Conta, çekmece ve filtre temiz olduğu hâlde koku sürüyorsa tahliye hattında (pompa, hortum, sifon) biriken biyofilm ya da tıkanıklık olabilir. Bu genelde servis işidir; kesin tahmini Benservis'ten al."
+video:
+  youtubeId: "lqjEgj488SY"
+  title: "Çamaşır makinesi kokuyor? Evde 4 adımda gider"
+  description: "Kapı contası, deterjan çekmecesi, tahliye filtresi ve boş sıcak programla çamaşır makinesi kokusunu evde gidermenin dört adımı."
+  uploadDate: "2026-09-23T06:22:46Z"
+  duration: "PT57S"
 ---
 
 Temiz yıkadığın çamaşırlar makineden **rutubet, küf ya da lağım gibi** kokuyla çıkıyorsa yalnız değilsin — bu en sık şikâyetlerden biri ve iyi haber: çoğu zaman evde, ücretsiz çözülür. Bu yazıda çamaşır makinesi kokusunun nedenlerini, adım adım temizleme yöntemini ve kokunun geçmediği durumlarda ne yapman gerektiğini anlatıyoruz.

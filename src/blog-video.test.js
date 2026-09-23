@@ -187,7 +187,7 @@ describe("gerçek içerik (content/blog)", () => {
   });
   const videolu = posts.filter((p) => p.video);
 
-  it("föylerdeki 8 eşleme birebir, başka sayfada video yok", () => {
+  it("föylerdeki 9 eşleme birebir, başka sayfada video yok", () => {
     const esleme = Object.fromEntries(videolu.map((p) => [p.slug, p.video.youtubeId]));
     expect(esleme).toEqual({
       "samsung-klima-cf-hatasi": "5lVkaoLa5DI",
@@ -198,6 +198,7 @@ describe("gerçek içerik (content/blog)", () => {
       "kurutma-makinesi-kurutmuyor": "41pY0h2bfNM",
       "firin-isinmiyor": "9mtHhzREmfI",
       "supurge-calismiyor": "h851xyTv5e8",
+      "camasir-makinesi-kokuyor": "lqjEgj488SY",
     });
   });
   it("tüm video kayıtları denetimden geçer", () => {
