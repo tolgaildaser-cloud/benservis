@@ -316,7 +316,7 @@ export const MARKA_KILAVUZLARI = {
     haric: ["Çamaşır Makinesi", "Kurutma Makinesi", "Bulaşık Makinesi", "Fırın / Ocak / Aspiratör", "Mikrodalga / Air Fryer"],
   },
   "Uğur": {
-    url: "https://www.ugur.com.tr/urunler/ev-urunleri",
+    url: "https://ugur.com.tr/ev-urunleri",
     ozet: "Uğur Soğutma'nın ev ürünleri kataloğu: ürününü bulup sayfasını açtığında kullanım kılavuzu bağlantısı ürün sayfasının altında duruyor.",
     // Uğur'un ev ürünleri arasında bulaşık makinesi yok.
     haric: ["Bulaşık Makinesi"],
