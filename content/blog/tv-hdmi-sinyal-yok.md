@@ -29,6 +29,12 @@ faq:
     a: "Aralıklı sinyal kaybının en yaygın sebebi kablodur; özellikle uzun, eski ya da kıvrılmış kablolar yüksek çözünürlükte zorlanır. İkinci aday, fişin yuvada gevşek durmasıdır. Kablo değişimiyle geçmiyorsa ve aynı girişte sürüyorsa port tarafına şüphe kayar; bu da servislik bir kontroldür."
 images:
   coverAlt: "Televizyon ve bağlantı kabloları"
+video:
+  youtubeId: "PxC_OC8Qoj0"
+  title: "TV'de \"Sinyal yok\" yazıyor? Servisi aramadan önce 4 kontrol"
+  description: "Televizyonda Sinyal yok uyarısında giriş seçimi, kaynak cihaz, HDMI kablosu ve fişten çekip yeniden açma kontrolleri."
+  uploadDate: "2026-09-25T03:45:37Z"
+  duration: "PT1M8S"
 ---
 
 Uydu alıcısı çalışıyor, oyun konsolu açık, ama televizyon ekranında tek satır: "Sinyal yok". Bu uyarı, televizyonun bozulduğunu değil, yalnızca **seçili girişe o an görüntü akmadığını** söyler — ve arada dört ayrı şüpheli vardır: kaynak cihaz, kablo, giriş seçimi ve televizyonun kendisi. Rastgele kurcalamak yerine doğru sırayla elersen, sebebi çoğu zaman birkaç dakikada evde bulursun. Sıra şöyle.
