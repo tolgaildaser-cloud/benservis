@@ -1,6 +1,6 @@
 ---
 title: "Samsung bulaşık makinesi 4C hatası: su alamıyor — adım adım çözüm"
-description: "Samsung bulaşık makinesi 4C hatası su temini sorunu demek; bazı modellerde 4E olarak çıkar. Musluk, hortum ve giriş filtresi kontrolü ve servis sınırı."
+description: "Samsung bulaşık makinesinde 4C (4E) su tedariki sorunu demek. Kılavuzdaki musluk, şebeke, giriş hortumu ve donma kontrolleri ile servis sınırı."
 slug: "samsung-bulasik-makinesi-4c-hatasi"
 date: "2026-08-21"
 category: "Bulaşık makinesi"
@@ -8,89 +8,96 @@ category: "Bulaşık makinesi"
 # 4E arasında eski/yeni ayrımı KURMUYOR; kendi ifadesi "modeline bağlı olarak hata
 # NF veya 1 4C olarak da görünebilir" — yani model varyantı. Kod eşleşmesi doğruydu,
 # uydurma olan kronoloji atfıydı. (Aynı düzeltme çamaşır yazısında da yapıldı.)
+# 📌 25 Eyl 2026 (PAZ, #88 düzeltmesi): sayfa #88 öncesi yazılmıştı. Kaynaklar artık YALNIZ Samsung'un kendi belgeleri:
+#   (1) Samsung TR "Bulaşık Makinesi Hakkında SSS" (faq-dishwasher, 200, md5 cbeee153…): "4C/4E: Su tedariki sorunları"
+#   (2) Kılavuz DW5500MM, DD81-02615C-11 TR 2024 (md5 2ad54a56…): s.56 bilgi kodları tablosu 4C "Su besleme kontrolü" satırı + NOT ·
+#       s.38 "Temizlikten veya bakım gerçekleştirmeden önce, fişi prizden mutlaka çıkarın" · kontrol paneli "Sıfırla: BAŞLAT 3 sn" ·
+#       güvenlik bölümü "su besleme hattı 0,04 ve 1 MPa" · "Su kaynağının uygun basınçta açıldığını kontrol edin" ·
+#       kurulum s.43-44: giriş hortumu bükülmesin/sıkışmasın, uzatılmaz/kısaltılmaz, su emniyeti sistemi, yeni boru → suyu akıt
+# KALDIRILANLAR (Samsung belgesinde yok): giriş hortumu SÜZGECİ (iki kılavuzda da geçmiyor) + hortumu sökme adımları ·
+#   "beklenen sürede/miktarda" mekanizması · "akış ölçer yanlış sayıyor / kart valfi sürmüyor" teşhisi · basınç
+#   dalgalanması senaryoları · "kireçli bölgede yılda bir-iki kez" · "en sık / en çok işe yarayan" sayım iddiaları ·
+#   FAQ'taki "yeni makinede 4C, eskide 4E" kronolojisi (gövdede 22 Ağu'da düzeltilmiş, FAQ'a işlenmemişti).
 guide:
   difficulty: "Kolay"
-  time: "~15 dakika"
-  totalTime: "PT15M"
+  time: "~10 dakika"
+  totalTime: "PT10M"
   cost: "Ücretsiz"
-  tools: ["Havlu", "Küçük fırça (eski diş fırçası)", "Sığ bir kap"]
+  tools: ["El feneri"]
 steps:
-  - "Programı iptal et, makineyi kapat ve fişini çek."
-  - "Tezgâh altındaki su musluğunun tam açık olduğunu kontrol et."
-  - "Evde su akıyor mu bak; başka bir musluğu açıp şebekeyi doğrula."
-  - "Su giriş hortumunu izle, bükülme veya dolap arkasında ezilme varsa düzelt."
-  - "Musluğu kapat, hortumu elinle sök ve altına havlu ile sığ kap koy."
-  - "Hortum girişindeki küçük süzgeci akan suda fırçayla temizle."
-  - "Hortumu geri tak, musluğu aç ve bağlantıdan damlama olmadığını kontrol et."
-  - "Fişi tak, kısa bir programla dene; hata tekrarlıyorsa servis gerekir."
+  - "Programı iptal etmek için BAŞLAT düğmesini üç saniye basılı tut."
+  - "Makineyi kapat ve fişini prizden çıkar."
+  - "Makineyi besleyen su vanasının (ara musluğun) tam açık olduğunu kontrol et."
+  - "Mutfakta başka bir musluğu açıp evde su olup olmadığına bak."
+  - "Su giriş hortumunu musluktan makineye kadar izle; bükülme ya da sıkışma varsa düzelt."
+  - "Soğuk havada hortumun ya da hattın donmuş olabileceğini değerlendir."
+  - "Fişi tak ve programı yeniden başlat; kod sürerse Samsung servisine başvur."
 faq:
   - q: "Samsung bulaşık makinesinde 4C hatası ne demek?"
-    a: "4C, makinenin ihtiyaç duyduğu suya beklenen sürede ulaşamadığını gösteren su temini hatasıdır. Su hiç gelmiyor, çok yavaş geliyor ya da basınç yetersiz olabilir. Kodun sebepleri büyük çoğunlukla makinenin dışındadır: kapalı musluk, şebeke kesintisi, bükülmüş hortum veya tıkanmış giriş süzgeci. Bu yüzden 4C, evde en çok çözülen kodlardandır."
+    a: "Samsung, 4C'yi (bazı modellerde 4E) su tedariki sorunu olarak tanımlıyor: makine ihtiyaç duyduğu suyu alamıyor. Kılavuz bu kodda su besleme vanasının kapalı olup olmadığına, suyun kesilip kesilmediğine ve su giriş vanası ya da hattının donup donmadığına veya yabancı maddeyle tıkanıp tıkanmadığına bakılmasını söylüyor."
   - q: "4C ile 4E arasında fark var mı?"
-    a: "İkisi aynı durumu anlatır; Samsung model kuşağına göre kodun harfini değiştirmiştir. Daha yeni makinelerde 4C, daha eski makinelerde 4E görürsün ama anlatılan şey aynıdır: su temini sağlanamadı. Kod şeması seriye göre değişebildiğinden ekranda gördüğün yazıyı kendi kılavuzunla teyit etmek yine de en sağlamıdır."
+    a: "Samsung'un Türkiye destek sayfasındaki kod listesinde iki kod birlikte, 4C/4E olarak ve aynı anlamla geçiyor. Samsung bunu eski ve yeni makine ayrımı olarak değil, modele göre değişen gösterim olarak veriyor. Ekranda gördüğün kodu kendi modelinin kılavuzuyla teyit etmek yine en sağlamıdır."
   - q: "Musluk açık ve evde su var, 4C neden geçmiyor?"
-    a: "En sık atlanan sebep su giriş hortumunun makine ya da musluk tarafındaki küçük süzgecinin kireç ve tortuyla dolmasıdır; su gelir ama makinenin beklediği hızda gelemez. İkinci aday hortumun dolap arkasında ezilmiş olmasıdır. Bu ikisi de temiz ve şebeke basıncı normalse şüphe su giriş valfine kayar, orası servis işidir."
+    a: "Su giriş hortumunun dolap arkasında bükülmüş ya da sıkışmış olmadığına bak; Samsung kılavuzu hortumun bükülmemesini ve sıkışmamasını şart koşuyor. Soğuk havada hattın donmuş olma ihtimali de kılavuzda sayılıyor. Bunlar düzgünse kod makinenin içindeki su giriş tarafını gösterir ve kılavuzun önerisi yetkili Samsung servisine başvurmaktır."
   - q: "Makinede su güvenlik sistemi varsa 4C'yi o mu tetikler?"
-    a: "Bazı modellerde hortum üzerinde ya da makine tabanında su güvenlik düzeneği bulunur ve sızıntı algılandığında su girişini kilitler; bu durumda makine su alamadığı için farklı bir kod da verebilir. Zeminde ıslaklık, makinenin altında birikinti veya hortum başında kırmızı bir gösterge görüyorsan durumu böyle değerlendir. Fişi çekip musluğu kapatmak ve servisle konuşmak doğru hamledir."
+    a: "Samsung kılavuzuna göre su besleme hortumunda bir su emniyeti sistemi bulunur (bazı modeller hariç): giriş hortumunda sızıntı olursa emniyet vanası akan suyu keser. Hortum ya da emniyet vanası hasar görmüşse değiştirilmesi gerekir. Zeminde ıslaklık görüyorsan musluğu kapat, fişi çek ve servisle görüş."
 images:
   coverAlt: "Bulaşık makinesi çizimi, panelinde yanıp sönen hata göstergesi ve yanında kod listesi"
 ---
 
-Makineyi doldurdun, programı seçtin ve başlattın; ama içeriden hiç su sesi gelmedi. Bir süre sonra program durdu ve panelde **4C** belirdi — bazı modellerde aynı durum **4E** olarak yazar (Samsung bunu model varyantı olarak veriyor, eski/yeni ayrımı olarak değil). Samsung bulaşık makinelerinde bu kod **su temini hatasıdır**: makine su istedi, beklediği sürede istediği miktara ulaşamadı ve programı güvenli şekilde durdurdu. Kodun sevindiren tarafı şu: sebeplerin büyük kısmı makinenin gövdesinde değil, tezgâh altındaki bir metrelik hatta gizlidir.
+Makineyi doldurdun, programı seçtin ve başlattın; ama içeriden su sesi gelmedi ve panelde **4C** belirdi. Bazı modellerde aynı durum **4E** olarak görünür (Samsung bunu model varyantı olarak veriyor, eski/yeni ayrımı olarak değil). Samsung bu kodu **su tedariki sorunu** olarak tanımlıyor: makine ihtiyaç duyduğu suyu alamıyor.
+
+Kılavuzun bu kod için saydığı kontrollerin çoğu makinenin dışındadır: su vanası, şebeke, giriş hortumu ve soğuk havada donma.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
-> ⚡ **Kısa özet:** 4C = su temini sağlanamadı. Sıra şu: musluk tam açık mı → evde su var mı → hortumda bükülme var mı → giriş süzgeci temiz mi → resetleyip kısa programla deneme. Hepsi temizse ve kod sürüyorsa iş su giriş valfindedir → servis.
+> ⚡ **Kısa özet:** 4C / 4E = su tedariki sorunu. Sıra şu: programı iptal et → fişi çek → ara musluk tam açık mı → evde su var mı → giriş hortumunda bükülme ya da sıkışma var mı → soğuk havada donma ihtimali → yeniden dene. Kod sürerse servis.
 
 ## Adım adım: evde denenecekler
 
-**1. Güvenliği al.** Programı iptal et, makineyi kapat ve **fişini çek**. Su hattıyla uğraşırken cihaz elektriksiz olsun.
+**1. Programı iptal et.** Samsung kılavuzuna göre çalışan bir programı iptal etmek için **BAŞLAT** düğmesini **üç saniye** basılı tutarsın.
 
-**2. Musluğu kontrol et.** Tezgâh altındaki ara musluk tam açık mı? Tesisat işi, dolap düzenlemesi ya da tatil öncesi kapatılıp unutulmuş olabilir. Bu, 4C'nin en sık ve en masum sebebidir.
+**2. Fişi çek.** Kılavuz açık: kontrol ya da bakım yapmadan önce **fişi prizden çıkar.**
 
-**3. Şebekeyi doğrula.** Mutfakta başka bir musluğu aç. Su gelmiyorsa ya da cılız geliyorsa sorun makinede değil binadadır; kesinti bitince kod da biter.
+**3. Su vanasını kontrol et.** Makineyi besleyen ara musluk (su besleme vanası) **tam açık** mı? Samsung'un 4C için saydığı ilk kontrol budur.
 
-**4. Hortumu izle.** Su giriş hortumunu musluktan makineye kadar gözünle takip et. Dolap arkasında keskin bir kıvrım, makinenin arkasında ezilme ya da bir mobilya ayağının altında sıkışma su geçişini daraltır.
+**4. Şebekeyi doğrula.** Mutfakta başka bir musluğu aç. Su gelmiyorsa sorun makinede değil şebekededir; kesinti bitince yeniden dene. Kılavuz, makinenin çalışması için su kaynağının **uygun basınçta** açık olmasını istiyor (su besleme hattı **0,04–1 MPa** arasını desteklemeli).
 
-**5. Musluğu kapat ve hortumu sök.** **Önce musluğu kapat.** Hortumun makine tarafındaki somununu elinle çevirerek gevşet; altına havlu ser ve sığ bir kap koy, bir miktar su gelecektir.
+**5. Giriş hortumunu izle.** Su giriş hortumunu musluktan makineye kadar gözünle takip et. Kılavuz hortumun **bükülmemesini ve sıkışmamasını** şart koşuyor: dolap arkasındaki keskin bir kıvrım ya da bir mobilyanın altında ezilme suyu keser.
 
-**6. Süzgeci temizle.** Hortum girişinde küçük bir süzgeç göreceksin; kireç, kum ve tortu burada birikir. Süzgeci akan suyun altında küçük bir fırçayla temizle. Bu, en çok atlanan ve en çok işe yarayan adımdır.
+**6. Soğuk havayı hesaba kat.** Samsung, 4C için su giriş vanasının ya da hattının **donmuş olabileceğini** de sayıyor. Makine soğuk bir yerde duruyorsa bu ihtimali göz önünde tut; ortam ısınmadan makineyi zorlama.
 
-**7. Geri tak, sızdırmazlığı kontrol et.** Hortumu elinle sıkıca tak, musluğu yavaşça aç ve bağlantıdan damlama olmadığından emin ol. Aletle zorlamana gerek yok; bu bağlantılar el gücüyle çözülüp takılacak şekilde tasarlanmıştır.
+**7. Yeniden dene.** Fişi tak, programı başlat. Su alma sesi geliyor ve program ilerliyorsa sorun giderilmiştir.
 
-**8. Resetleyip dene.** Fişi tak, kısa bir program başlat. Su alma sesi geliyorsa ve program ilerliyorsa sorun süzgeç ya da hortumdu.
+⚠️ Hortumu uzatmaya ya da kısaltmaya çalışma: Samsung kılavuzu giriş hortumunun **uzatılmamasını veya kısaltılmamasını** söylüyor.
 
-⚠️ Hortumu sökerken musluk **mutlaka kapalı** olsun. Kapalı olduğundan emin değilsen bir bardak suyla test et.
+## Kılavuz 4C için ne diyor?
 
-## 4C tam olarak neyi ölçüyor?
+Samsung'un DW5500MM serisi kullanım kılavuzundaki bilgi kodu tablosunda 4C satırı şöyle özetlenebilir: **su besleme kontrolü.** Su besleme vanasının kapalı olup olmadığı, suyun kesilip kesilmediği, su giriş vanasının ya da hattının donup donmadığı veya yabancı maddeyle tıkanıp tıkanmadığı kontrol edilir; sorun devam ederse **Samsung servis merkezine** başvurulur.
 
-Makine su alma aşamasında hem süreyi hem gelen miktarı izler. Belirlenen sürede beklenen miktara ulaşılamazsa program durdurulur ve kod gösterilir. Yani 4C "bir parça yandı" demek değil, "su bana ulaşmıyor" demektir. Bu ayrım yüzünden kodun çözümü çoğu zaman ücretsizdir ve beş dakika sürer.
+Bu listede senin evden bakabileceklerin vana, şebeke, hortum ve donmadır. Makinenin içindeki **su giriş vanası** ise kullanıcı bakımına dahil değildir.
 
-Samsung bulaşık makinesi hata kodları yazımızda 4C dışındaki yaygın kodların — tahliye, kaçak ve ısıtıcı tarafının — karşılıkları ve her birinde ne yapılacağı tek tek anlatılıyor.
+Samsung bulaşık makinesi hata kodları yazımızda 4C dışındaki kodların — tahliye, sızıntı ve ısıtma tarafının — Samsung'un kendi listesindeki karşılıkları anlatılıyor.
 
-## Basınç meselesi: kod var ama arıza yok
+## Su emniyeti sistemi ve yeni tesisat
 
-Bazı 4C vakalarında makine bozuk değildir, o anda su yeterince güçlü gelmemektedir. Tipik senaryolar tanıdıktır: aynı anda banyoda duş alınıyordur, çamaşır makinesi su alıyordur ya da bina deposu doluyordur. Üst katlarda ve akşam saatlerinde basınç dalgalanması bilinen bir durumdur; makine bunu "su gelmiyor" olarak okur.
+Samsung'un su besleme hortumlarında (kılavuzun istisna tuttuğu model dışında) bir **su emniyeti sistemi** bulunur: giriş hortumunda bir sızıntı olursa emniyet vanası akan suyu keser. Hortum ya da emniyet vanası hasar görmüşse kılavuz **değiştirilmesini** söylüyor. Zeminde ıslaklık ya da makinenin altında birikinti görüyorsan musluğu kapat, fişi çek ve servisle görüş.
 
-**Kendin kontrol et:** Kodun geldiği saatleri not et. Hep aynı yoğun saatlerde çıkıyorsa makineyi evde başka su tüketimi yokken tek başına çalıştır. Kod gelmiyorsa elinde bir arıza değil, bir basınç meselesi var demektir — ve bunun çözümü servis değil, program saatini kaydırmaktır.
-
-## Kireçli bölgede yaşıyorsan
-
-Türkiye'nin pek çok bölgesinde şebeke suyu serttir ve giriş süzgeci hızlı tıkanır. Kireçli suyun olduğu evlerde bu süzgeci **yılda bir-iki kez** temizlemek 4C'yi büyük ölçüde tarihe karıştırır. Aynı şekilde makinenin tuz ve parlatıcı seviyesini takip etmek, iç filtrelerin altında biriken tortuyu düzenli almak da suyun makine içindeki yolculuğunu rahatlatır. Bunların hepsi kapak seviyesinde, ücretsiz ve güvenli işlerdir.
+Tesisat **yeniyse** ya da borular uzun süre kullanılmadıysa kılavuzun bir uyarısı daha var: makineyi bağlamadan önce suyun temiz aktığından emin olmak için suyu bir süre akıtmak gerekir; aksi hâlde **su girişi tıkanabilir** ve cihaz hasar görebilir. Tadilattan sonra 4C görüyorsan bunu kurulumu yapan kişiyle konuş.
 
 ## Sınır nerede biter
 
-Musluk açık, şebeke normal, hortum düz ve süzgeç tertemiz olduğu hâlde 4C tekrarlıyorsa şüphe makinenin içine kayar: **su giriş valfi** açılma komutunu yerine getiremiyor olabilir, **akış ölçer** yanlış sayıyor olabilir ya da elektronik kart valfi sürmüyor olabilir. Bu üçünün teşhisi ölçü aletiyle yapılır.
+Vana açık, şebekede su var, hortum düz ve donma ihtimali yok; ama 4C tekrarlıyorsa evde yapılacak iş bitmiştir. Samsung'un kılavuzu, herhangi bir bilgi kodu ekranda görünmeye devam ederse **yetkili bir Samsung servis merkezine** başvurulmasını söylüyor.
 
-⛔ **Kendin-çöz sınırı burada biter.** Gövdenin içi hem elektrik hem su barındırır; valf ve sensör tarafına kullanıcı müdahalesi ne güvenlidir ne de gereklidir. Bu noktada doğru hamle fişi çekip musluğu kapatmak ve yaptığın kontrolleri servise aktarmaktır.
+⛔ **Kendin-çöz sınırı burada biter.** Makinenin gövdesinin içi hem elektrik hem su barındırır; su giriş vanasına ve iç parçalara kullanıcı müdahalesi ne güvenlidir ne de gereklidir. Doğru hamle fişi çekip musluğu kapatmak ve yaptığın kontrolleri servise aktarmaktır.
 
 ## Servisi aramadan önce iki dakikalık özet
 
 1. Ara musluk tam açık mı, evde su var mı?
-2. Giriş hortumu düz mü, ezilme var mı?
-3. Giriş süzgeci sökülüp temizlendi mi, içinden ne çıktı?
-4. Fişten çekip kısa programla tekrar denendi mi?
+2. Giriş hortumu düz mü, bükülme ya da sıkışma var mı?
+3. Soğuk hava ya da yeni tesisat gibi bir durum var mı?
+4. Fişten çekip yeniden denendi mi?
 
-"Musluk açık, süzgeç temiz, hortum düz, yine 4C" cümlesi servise arızayı yarı yarıya teşhis ettirir. Bu da hem doğru parçayla gelinmesini hem de işin ilk seferde bitmesini sağlar.
+Bu dört cevabı ve ekrandaki kodu (4C ya da 4E) servise söylemek, arızanın makinenin içinde mi dışında mı olduğunu baştan ayırır.
 
 Cihazının belirtisine göre tahmini maliyeti görmek ve yakınındaki puanlı servisleri listelemek için benservis.com'daki ücretsiz teşhisi kullanabilirsin. Bil, gör, çağır.
