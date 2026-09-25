@@ -300,7 +300,9 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             {/* 21 Ağu 2026: rozet ELLE "96" yazıyordu, aşağıdaki bant ise 160 diyordu —
                 aynı sayfada aynı veri için İKİ FARKLI RAKAM. Rozet de tek kaynağa bağlandı
                 (#77 şişirme yasağı: sayı elle yazılmaz, site-istatistik.json'dan gelir). */}
-            <span style={st.rozet}>◎ {trSayi(IST.ilce)} ilçe verisi</span>
+            {/* 25 Eyl 2026 (Tolga): "240 ilçe verisi yerine 10.000+ servis". Sayı yine
+                site-istatistik.json'a bağlı: kayıt 10.000'in altına düşerse tam sayı yazar. */}
+            <span style={st.rozet}>◎ {IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis)} servis</span>
           </div>
 
           <h1 style={st.h1}>{VAAT.h1}</h1>
