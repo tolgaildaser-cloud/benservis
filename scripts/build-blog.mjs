@@ -1066,8 +1066,10 @@ const cihazAramasiSon = (sayi, bosMetin) =>
 
 // `robots` = "noindex,follow" verilen sayfalar aramaya SOKULMAZ (ve sitemap'e de eklenmez).
 // İçeriği hazır olmayan bir sayfayı indekslemek site kalitesini düşürür; içerik gelince kalkar.
-// `image` = mutlak görsel adresi (YK #65 kapağı). Verilmeyen sayfalarda og:image hiç
-// basılmaz ve twitter kartı eskisi gibi `summary` kalır — mevcut paylaşım görüntüsü bozulmaz.
+// `image` = mutlak görsel adresi (YK #65 kapağı). Verilmeyen sayfalar (kategori, kılavuz/tamir
+// dizinleri vb.) 25 Eyl 2026'ya kadar og:image'sız basılıyordu → WhatsApp/sosyal paylaşımda
+// görselsiz kart (43 sayfa). Artık ana sayfanın marka görseli `og.png` (1200×630) varsayılan.
+const OG_VARSAYILAN = "https://www.benservis.com/og.png";
 // Site başlığındaki "Yakın Servisler" düğmesi — 265 sayfanın ORTAK dönüşüm yolu. 11 Eyl'e
 // kadar çıplak `/?servis=1`'di: hangi sayfadan basıldığı hiçbir yere yazılmıyordu.
 // Etiket sayfanın canonical yolundan türetilir (`/blog/x/` → `nav-blog-x`); `nav-` öneki
@@ -1082,6 +1084,7 @@ const navServisHref = (canonical) => {
 };
 
 function page({ title, desc, canonical, head = "", body, robots = "", image = "", genis = false }) {
+  image = image || OG_VARSAYILAN;
   return `<!doctype html><html lang="tr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
