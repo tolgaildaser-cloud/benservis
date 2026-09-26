@@ -16,16 +16,15 @@
 // Ayrıca YK #35 kapısı için: her satırda kıyası besleyen **bağımsız host** sayısı gösterilir
 // (aynı alan adının iki sayfası TEK kaynak sayılır). Host < 2 ise aksiyon önerilmez.
 import supabase from "../api/_supabase.js";
-import { medyan, aykiriEle } from "../api/_tarife-hesap.js";
-
-const GIDIS = 1500; // App.jsx SERVIS_GIDIS_BEDELI ile aynı; final fiyata sabit eklenir.
+import { sapmaSatiri, celiskiliMi, parcaGuvensiz, hostAdi as host, GIDIS } from "../api/_tarife-hesap.js";
+import { seedAriza } from "../src/tarife-esleme.js";
 
 // Bu rapor "bizim SEED'imiz vs WEB piyasası" kıyasıdır → YALNIZ kaynak='web' noktaları.
 // (4 Ağu 2026, IT) Panelin "Veri gir" formu `kaynak='saha'` yazar; bölme sırasında yeni satırı
 // panelde görünür kılmak için atılan TOHUM noktaları da öyle. Onlar bizim kendi rakamımızdır —
 // kıyasa girerlerse kendimizi kendimizle doğrular, YK #35 host sayımını da şişiririz.
 const { data: veriler, error: e1 } = await supabase
-  .from("tarife_veri").select("cihaz, marka, ariza, parca_tl, iscilik_tl, toplam_tl, kaynak_url, notlar")
+  .from("tarife_veri").select("id, cihaz, marka, ariza, parca_tl, iscilik_tl, toplam_tl, kaynak_url, notlar")
   .eq("kaynak", "web");
 if (e1) { console.error("Supabase hatası (tarife_veri):", e1.message); process.exit(1); }
 
@@ -34,68 +33,37 @@ if (e1) { console.error("Supabase hatası (tarife_veri):", e1.message); process.
 // listesi okumuştur → noktanın PARÇA ekseni güvenilmezdir. Aynı satırın gerçek `toplam_tl`
 // (all-in) değeri varsa o SAĞLAMDIR, kıyasa girmeye devam eder. Nokta silinmez (kanıt kalır);
 // yalnız parça medyanını ve YK #35 host sayımını beslemez, raporun altında ayrıca listelenir.
-const parcaGuvensiz = (v) => /dusuk-guven=sayfa-ici-makas/.test(v.notlar || "");
 const dusukGuven = (veriler || []).filter(parcaGuvensiz);
 
 const { data: onaylar, error: e2 } = await supabase
   .from("tarife").select("cihaz, marka, ariza, onayli_parca_min, onayli_parca_max, onayli_iscilik").eq("durum", "onayli");
 if (e2) { console.error("Supabase hatası (tarife):", e2.message); process.exit(1); }
 
+// YK #143 (26 Eyl): ham grup adı SEED adına çevrilir (src/tarife-esleme.js — panel de aynı
+// tabloyu kullanır). Eşlemesi olmayan ham ad kendi adıyla kalır → onaylı satırla eşleşmez,
+// raporun altında "SEED dışı" olarak listelenir (sessizce kaybolmaz).
 const grupMap = new Map();
+const seedDisi = new Map();
 for (const v of veriler || []) {
-  const k = `${v.cihaz}|${v.marka}|${v.ariza}`;
+  const hedef = seedAriza(v.cihaz, v.ariza);
+  if (!hedef) seedDisi.set(`${v.cihaz} · ${v.ariza}`, (seedDisi.get(`${v.cihaz} · ${v.ariza}`) || 0) + 1);
+  const k = `${v.cihaz}|${v.marka}|${hedef || v.ariza}`;
   if (!grupMap.has(k)) grupMap.set(k, []);
   grupMap.get(k).push(v);
 }
 const onayMap = new Map((onaylar || []).map((o) => [`${o.cihaz}|${o.marka}|${o.ariza}`, o]));
-const orta = (a, b) => (a != null && b != null ? (Number(a) + Number(b)) / 2 : null);
-
-// Bir URL'in alan adı (www. atılır). Bağımsızlık ölçütü = farklı host.
-const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u || "?"; } };
-// Aykırı eleme politikası TEK YERDE: api/_tarife-hesap.js `aykiriEle` (Tukey/MAD; n≤2'de eleme
-// yok — eski medyan×[0,4–2,5] kuralı n=2'de çöpü tutup doğruyu atıyordu). Kopya kural YOK.
+// Aykırı eleme + elma-elma eksen + host sayımı + aksiyon kuralı TEK YERDE:
+// api/_tarife-hesap.js `sapmaSatiri` (panel "öneri var" etiketi de onu kullanır). Kopya kural YOK.
+// `celiskili` işaretli noktalar (IT 26 Eyl) orada dışlanır.
 
 const satirlar = [];
 const veriYok = [];
 for (const [k, pts] of grupMap) {
   const mev = onayMap.get(k);
   if (!mev) continue;
-  const seedParca = orta(mev.onayli_parca_min, mev.onayli_parca_max);
-  if (seedParca == null) continue;
-  const seedIscilik = Number(mev.onayli_iscilik) || 0;
-
-  // ② ELMA-ELMA: all-in yalnız GERÇEK toplam_tl'den gelir; parça+işçilik toplam sayılmaz.
-  const allinPts = pts.filter((p) => p.toplam_tl != null && Number(p.toplam_tl) > 0);
-  const parcaPts = pts.filter((p) => p.parca_tl != null && Number(p.parca_tl) > 0 && !parcaGuvensiz(p));
-
-  let eksen, biz, web, kullanilan;
-  if (allinPts.length) {
-    eksen = "all-in";
-    kullanilan = allinPts;
-    biz = Math.round(seedParca + seedIscilik + GIDIS);
-    web = Math.round(medyan(aykiriEle(allinPts.map((p) => Number(p.toplam_tl)))));
-  } else if (parcaPts.length) {
-    eksen = "parça";
-    kullanilan = parcaPts;
-    biz = Math.round(seedParca);
-    web = Math.round(medyan(aykiriEle(parcaPts.map((p) => Number(p.parca_tl)))));
-  } else {
-    veriYok.push(k.replace(/\|/g, " · "));
-    continue;
-  }
-  if (!biz || web == null) { veriYok.push(k.replace(/\|/g, " · ")); continue; }
-
-  // YK #35 kapısı: kıyası BESLEYEN noktaların bağımsız host sayısı (tüm grubunki değil).
-  const hostlar = new Set(kullanilan.map((p) => host(p.kaynak_url)));
-  satirlar.push({
-    ad: k.replace(/\|/g, " · "),
-    eksen, biz, web,
-    sapma: Math.round(((web - biz) / biz) * 100),
-    hostSayisi: hostlar.size,
-    nokta: kullanilan.length,
-    // ① Taban kayıt bazlı: gidiş + o işin kendi işçiliği. Bunun altına inilmez (YK #15).
-    taban: GIDIS + seedIscilik,
-  });
+  const s = sapmaSatiri(pts, mev);
+  if (!s) { veriYok.push(k.replace(/\|/g, " · ")); continue; }
+  satirlar.push({ ad: k.replace(/\|/g, " · "), ...s });
 }
 
 satirlar.sort((a, b) => b.sapma - a.sapma); // en çok DÜŞÜK KALDIĞIMIZ (web > biz) en üstte
@@ -112,20 +80,13 @@ if (!satirlar.length) {
 console.log("| Cihaz · Arıza | Eksen | Bizim | Web | Sapma | Host | Nokta | Aksiyon |");
 console.log("|---|:--:|--:|--:|--:|:--:|--:|:--|");
 for (const s of satirlar) {
-  let aksiyon;
-  if (s.hostSayisi < 2) {
-    // YK #15: "tek kaynakla asla". Sapma ne olursa olsun aksiyon önerilmez.
-    aksiyon = "🔒 TEK KAYNAK — aksiyon yok, veri topla";
-  } else if (s.sapma > 20) {
-    aksiyon = "⚠️ DÜŞÜK KALMIŞIZ → yükselt";
-  } else if (s.sapma < -20) {
-    // ① ÇİFT YÖNLÜ (YK #15): floor yalnız TABAN işleri korur.
-    aksiyon = (s.eksen === "all-in" && s.web < s.taban)
-      ? `floor korunur (taban ${s.taban})`
-      : "🔻 PAHALI KALMIŞIZ → düşürme serbest";
-  } else {
-    aksiyon = "✓ ±%20";
-  }
+  const aksiyon = {
+    "tek-kaynak": "🔒 TEK KAYNAK — aksiyon yok, veri topla", // YK #15: "tek kaynakla asla"
+    yukselt: "⚠️ DÜŞÜK KALMIŞIZ → yükselt",
+    dusur: "🔻 PAHALI KALMIŞIZ → düşürme serbest",           // YK #15 çift yönlü
+    floor: `floor korunur (taban ${s.taban})`,
+    uyumlu: "✓ ±%20",
+  }[s.aksiyon];
   console.log(`| ${s.ad} | ${s.eksen} | ${s.biz} | ${s.web} | %${s.sapma > 0 ? "+" : ""}${s.sapma} | ${s.hostSayisi} | ${s.nokta} | ${aksiyon} |`);
 }
 
@@ -135,7 +96,13 @@ const celiskili = (veriler || []).filter(
 );
 if (celiskili.length) {
   console.log(`\n**⚠️ Çelişkili nokta (parça > toplam — LLM çıkarımı yanlış slotlamış, ${celiskili.length} adet):**`);
-  for (const v of celiskili) console.log(`- ${v.cihaz} · ${v.ariza} — parça ${v.parca_tl} > toplam ${v.toplam_tl} · ${host(v.kaynak_url)}`);
+  for (const v of celiskili) console.log(`- ${v.cihaz} · ${v.ariza} — parça ${v.parca_tl} > toplam ${v.toplam_tl} · ${host(v.kaynak_url)}${celiskiliMi(v) ? " · işaretli → kıyasa katılmadı" : " · ⚠️ İŞARETSİZ — kıyasa giriyor, `notlar`'a `celiskili` yaz"}`);
+}
+
+if (seedDisi.size) {
+  console.log(`\n**⚠️ SEED dışı ham grup adı — hiçbir onaylı satırla kıyaslanmadı (${seedDisi.size} grup):**`);
+  for (const [ad, n] of seedDisi) console.log(`- ${ad} — ${n} nokta`);
+  console.log("_Tek anlamlıysa `src/tarife-esleme.js`'ye eşleme ekle; iki SEED satırına denk geliyorsa /tarife panelinde onay sırasında satır seçilir._");
 }
 
 if (dusukGuven.length) {

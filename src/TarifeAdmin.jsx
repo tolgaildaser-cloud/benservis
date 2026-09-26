@@ -114,6 +114,8 @@ function Onayla() {
   const [hata, setHata] = useState("");
   const [acik, setAcik] = useState(null);
   const [duzen, setDuzen] = useState({});
+  // YK #143: SEED dışı grubun hangi SEED satırını güncelleyeceği (grupKey → SEED arıza adı).
+  const [hedef, setHedef] = useState({});
 
   const yukle = async () => {
     setHata("");
@@ -123,6 +125,20 @@ function Onayla() {
   useEffect(() => { yukle(); }, []);
 
   const grupKey = (g) => `${g.cihaz}|${g.marka}|${g.ariza}`;
+  // SEED dışı grupta onay seçilen SEED satırına yazılır → fark/form o satırın bandıyla çalışır.
+  const hedefGrup = (g) => {
+    const secim = hedef[grupKey(g)];
+    if (!g.seedDisi) return g;
+    if (!secim) return null;
+    return gruplar.find((x) => x.cihaz === g.cihaz && x.marka === g.marka && x.ariza === secim)
+      || { cihaz: g.cihaz, marka: g.marka, ariza: secim, mevcut: null };
+  };
+  const hedefSec = (g, secim) => {
+    const k = grupKey(g);
+    setHedef({ ...hedef, [k]: secim });
+    const hg = gruplar.find((x) => x.cihaz === g.cihaz && x.marka === g.marka && x.ariza === secim);
+    setDuzen({ ...duzen, [k]: formDegerleri(hg?.mevcut) });
+  };
   // ⛔ Form DAİMA mevcut onaylı bantla açılır — web önerisi forma OTOMATİK basılmaz.
   // Eski davranış (`g.oneri || g.mevcut`) kullanıcıya "bandı gözden geçiriyorum" dedirtirken
   // aslında web taslağını onaylatıyordu (3 Ağu IT bulgusu).
@@ -140,9 +156,11 @@ function Onayla() {
     const d = duzen[k] || {};
     // Düğme zaten pasif, ama kayıt kaybı geri alınamaz — ikinci kapı burada.
     if (eksikler(d).length) return setHata("Zorunlu alan boş: " + eksikler(d).join(", "));
+    if (g.seedDisi && !hedef[k]) return setHata("SEED dışı grup — önce güncellenecek SEED satırını seç");
     try {
       await api("onayla", { method: "POST", body: JSON.stringify({
         cihaz: g.cihaz, marka: g.marka, ariza: g.ariza,
+        ...(g.seedDisi ? { hedef_ariza: hedef[k] } : {}),
         // Ham veri yoksa öneri de yok — mevcut kaydın güveni/nokta sayısı sıfırlanmasın.
         veri_noktasi_sayisi: noktaSayisi(g),
         guven: g.oneri?.guven || g.mevcut?.guven || undefined,
@@ -168,9 +186,22 @@ function Onayla() {
               <div>
                 <strong style={{ color: INK }}>{g.cihaz}</strong> · {g.ariza}
                 {g.marka !== "Genel" && <span style={{ color: SLATE }}> ({g.marka})</span>}
-                <div style={{ fontSize: 12, color: SLATE }}>{g.nokta} veri noktası</div>
+                <div style={{ fontSize: 12, color: SLATE }}>
+                  {g.nokta} veri noktası
+                  {g.hamAdlar?.length > 0 && <> · ham ad: {g.hamAdlar.join(", ")}</>}
+                </div>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", justifyContent: "flex-end" }}>
+                {g.oneriVar && (
+                  <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 6, background: "#DBEAFE", color: "#1E40AF" }}>
+                    {g.sapma.aksiyon === "yukselt" ? "⬆️" : "🔻"} öneri var · %{g.sapma.sapma > 0 ? "+" : ""}{g.sapma.sapma}
+                  </span>
+                )}
+                {g.seedDisi && (
+                  <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 6, background: "#FEE2E2", color: "#991B1B" }}>
+                    SEED DIŞI
+                  </span>
+                )}
                 {g.oneri?.guven && (
                   <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 6,
                     background: g.oneri.guven === "yuksek" ? "#DCFCE7" : g.oneri.guven === "orta" ? "#FEF9C3" : "#FEE2E2",
@@ -185,8 +216,9 @@ function Onayla() {
               </div>
             </div>
             {acik === k && (() => {
+              const hg = hedefGrup(g);
               const eksik = eksikler(d);
-              const fark = farklar(g.mevcut, d);
+              const fark = farklar(hg?.mevcut, d);
               const nokta = noktaSayisi(g);
               const tekKaynak = nokta < TEK_KAYNAK_ESIGI;
               const yaz = (v) => (v == null ? "—" : v);
@@ -194,9 +226,24 @@ function Onayla() {
               const bant = (min, max) => (min == null && max == null ? "yok" : `${yaz(min)}–${yaz(max)}`);
               return (
               <div style={{ marginTop: 12, display: "grid", gap: 8 }}>
+                {/* YK #143: SEED dışı ad onaylanırsa yeni (mükerrer) satır açılırdı — önce SEED satırı seçilir. */}
+                {g.seedDisi && (
+                  <div style={{ fontSize: 12.5, color: "#991B1B", background: "#FEF2F2", border: "1px solid #FECACA", borderRadius: 8, padding: "8px 11px", display: "grid", gap: 7 }}>
+                    <div><strong>SEED dışı grup adı.</strong> Bu ad teşhis tarifesinde yok; onay, aşağıda seçtiğin SEED satırını günceller — yeni satır açılmaz.</div>
+                    <select style={inp} value={hedef[k] || ""} onChange={(e) => hedefSec(g, e.target.value)}>
+                      <option value="">Güncellenecek SEED satırını seç…</option>
+                      {g.seedSecenekleri.map((a) => <option key={a} value={a}>{a}</option>)}
+                    </select>
+                  </div>
+                )}
+                {g.oneriVar && (
+                  <div style={{ fontSize: 12.5, color: "#1E3A8A", background: "#EFF6FF", border: "1px solid #BFDBFE", borderRadius: 8, padding: "8px 11px" }}>
+                    <strong>Rapor önerisi ({g.sapma.eksen}):</strong> bizim {g.sapma.biz} · web {g.sapma.web} · sapma %{g.sapma.sapma > 0 ? "+" : ""}{g.sapma.sapma} · {g.sapma.hostSayisi} bağımsız kaynak → {g.sapma.aksiyon === "yukselt" ? "yükseltmeyi değerlendir" : "düşürme serbest"} (YK #15).
+                  </div>
+                )}
                 <div style={{ fontSize: 12, color: SLATE }}>
-                  {g.mevcut
-                    ? <>Form <strong style={{ color: INK }}>mevcut onaylı bantla</strong> dolu: parça {bant(g.mevcut.onayli_parca_min, g.mevcut.onayli_parca_max)}, işçilik {yaz(g.mevcut.onayli_iscilik)}, beklenen {yaz(g.mevcut.onayli_beklenen)}</>
+                  {g.seedDisi && !hg ? <>Önce SEED satırını seç — form o satırın onaylı bandıyla dolar.</> : hg?.mevcut
+                    ? <>Form <strong style={{ color: INK }}>{g.seedDisi ? `"${hg.ariza}" satırının` : "mevcut"} onaylı bantla</strong> dolu: parça {bant(hg.mevcut.onayli_parca_min, hg.mevcut.onayli_parca_max)}, işçilik {yaz(hg.mevcut.onayli_iscilik)}, beklenen {yaz(hg.mevcut.onayli_beklenen)}</>
                     : <>Bu grubun <strong style={{ color: INK }}>onaylı kaydı yok</strong> — form boş açıldı.</>}
                 </div>
 
@@ -251,8 +298,8 @@ function Onayla() {
                 )}
 
                 <button
-                  style={{ ...btn, ...(eksik.length ? { background: HAIR, color: SLATE, cursor: "not-allowed" } : {}) }}
-                  disabled={eksik.length > 0}
+                  style={{ ...btn, ...(eksik.length || !hg ? { background: HAIR, color: SLATE, cursor: "not-allowed" } : {}) }}
+                  disabled={eksik.length > 0 || !hg}
                   onClick={() => onayla(g)}
                 >Onayla</button>
               </div>
