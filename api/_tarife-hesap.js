@@ -50,6 +50,56 @@ export function mertebeDisi(deger, ref) {
   return k > MERTEBE || k < 1 / MERTEBE;
 }
 
+// ── Veri kalitesi işaretleri (`tarife_veri.notlar`) — rapor ve panel AYNI yüklemleri kullanır ──
+// `celiskili` (IT, 26 Eyl · YK #143): parça > toplam gibi mantıken imkânsız nokta. Silinmez
+// (kanıt), ama ne öneriyi ne kıyası besler — hiçbir eksende.
+export const celiskiliMi = (v) => /celiskili/.test(v?.notlar || "");
+// `dusuk-guven=sayfa-ici-makas-*` (K3, 4 Ağu): noktanın yalnız PARÇA ekseni güvenilmez.
+export const parcaGuvensiz = (v) => /dusuk-guven=sayfa-ici-makas/.test(v?.notlar || "");
+
+// Bir URL'in alan adı (www. atılır). Bağımsızlık ölçütü = farklı host (YK #35).
+export const hostAdi = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u || "?"; } };
+
+// App.jsx SERVIS_GIDIS_BEDELI ile aynı; final fiyata sabit eklenir.
+export const GIDIS = 1500;
+
+// Bizim onaylı bant vs web — elma-elma sapma satırı (scripts/tarife-rapor.mjs + /tarife paneli).
+// pts: YALNIZ kaynak='web' noktaları. mevcut: `tarife` onaylı satırı.
+// Dönüş null → kıyas yok (onaylı bant eksik ya da fiyat alanı boş).
+// aksiyon: "yukselt" | "dusur" | "floor" | "tek-kaynak" | "uyumlu"
+export function sapmaSatiri(pts, mevcut, gidis = GIDIS) {
+  if (!mevcut || mevcut.onayli_parca_min == null || mevcut.onayli_parca_max == null) return null;
+  const seedParca = (Number(mevcut.onayli_parca_min) + Number(mevcut.onayli_parca_max)) / 2;
+  const seedIscilik = Number(mevcut.onayli_iscilik) || 0;
+  const temiz = (pts || []).filter((p) => !celiskiliMi(p));
+
+  // ELMA-ELMA: all-in yalnız GERÇEK toplam_tl'den gelir; parça+işçilik toplam sayılmaz.
+  const allinPts = temiz.filter((p) => p.toplam_tl != null && Number(p.toplam_tl) > 0);
+  const parcaPts = temiz.filter((p) => p.parca_tl != null && Number(p.parca_tl) > 0 && !parcaGuvensiz(p));
+
+  let eksen, biz, web, kullanilan;
+  if (allinPts.length) {
+    eksen = "all-in"; kullanilan = allinPts;
+    biz = Math.round(seedParca + seedIscilik + gidis);
+    web = Math.round(medyan(aykiriEle(allinPts.map((p) => Number(p.toplam_tl)))));
+  } else if (parcaPts.length) {
+    eksen = "parça"; kullanilan = parcaPts;
+    biz = Math.round(seedParca);
+    web = Math.round(medyan(aykiriEle(parcaPts.map((p) => Number(p.parca_tl)))));
+  } else return null;
+  if (!biz || web == null || isNaN(web)) return null;
+
+  const sapma = Math.round(((web - biz) / biz) * 100);
+  const hostSayisi = new Set(kullanilan.map((p) => hostAdi(p.kaynak_url))).size;
+  const taban = gidis + seedIscilik; // YK #15: kayıt bazlı taban, altına inilmez
+  let aksiyon;
+  if (hostSayisi < 2) aksiyon = "tek-kaynak";          // YK #15: tek kaynakla asla
+  else if (sapma > 20) aksiyon = "yukselt";
+  else if (sapma < -20) aksiyon = eksen === "all-in" && web < taban ? "floor" : "dusur";
+  else aksiyon = "uyumlu";
+  return { eksen, biz, web, sapma, hostSayisi, nokta: kullanilan.length, taban, aksiyon };
+}
+
 // Güven: nokta sayısı + dağılım. yuksek = 3+ & düşük varyans; orta = 2 veya 3+ yüksek varyans; dusuk = ≤1.
 export function guvenSeviyesi(parcalar) {
   const n = parcalar.length;
