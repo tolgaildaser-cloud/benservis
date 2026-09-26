@@ -229,6 +229,9 @@ tamamlandi/iptal) · atanan_servis · gercek_tutar · komisyon · puan · yorum 
 
 ## 10. Claude Code için kurallar / notlar
 
+- **Strateji kaynağı:** bu dosyadaki faz/iş modeli bölümleri tarihseldir. Güncel strateji private
+  repoda: `tolgaildaser-cloud/benservis-plan` (bulut oturumunda `add_repo` ile ekle). Public
+  özet: `docs/IS-PLANI.md`. Private içerik (hedef, trafik, finansman, exit) public repoya **kopyalanmaz**.
 - **Marka:** Benservis. **Dil:** Türkçe arayüz.
 - **Tasarım token'ları (KURUMSAL marka paleti — logo, 17 Haz 2026):** mavi `#2563EB` (ana aksan/CTA),
   lacivert `#1E293B` (ink/koyu yüzey), kâğıt `#F8FAFC` (zemin), beyaz `#fff` (kart), güven yeşili
