@@ -4,6 +4,19 @@ description: "Çamaşır makinen su almıyor mu? Önce kendin kontrol et: musluk
 slug: "camasir-makinesi-su-almiyor"
 date: "2026-06-17"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Küçük fırça", "Havlu"]
+steps:
+  - "Su musluğunun sonuna kadar açık olduğunu kontrol et."
+  - "Musluğu kapat, giriş hortumunu musluk tarafından ayır ve içindeki küçük süzgeci çıkar."
+  - "Süzgeçteki kireç ve tortuyu fırçayla temizle, süzgeci ve hortumu yerine tak, musluğu aç."
+  - "Hortumun bükülmediğini ve makinenin arkasında ezilmediğini kontrol et."
+  - "Kapağı klik sesini duyana kadar kapat."
+  - "Fişi 1 dakika çekip tak, çocuk kilidinin açık olup olmadığına bak ve programı yeniden başlat."
 faq:
   - q: "Çamaşır makinesi su almıyor, ilk ne kontrol edilir?"
     a: "Önce su musluğunun tam açık olduğunu, giriş hortumundaki süzgecin tıkalı olmadığını ve hortumun bükülmediğini kontrol et. Sorunların çoğu bu üç noktadan biridir."
@@ -46,6 +59,20 @@ images:
 **5. Basınç anahtarı (su seviye sensörü) arızası.** Makine yanlışlıkla "su dolu" sanıp almayı durdurur.
 
 **6. Kapak kilidi kapanmıyor.** Kapı tam kilitlenmezse program başlamaz, dolayısıyla su almaz.
+
+## Adım adım: evde denenecekler
+
+**1.** Su musluğunun sonuna kadar açık olduğunu kontrol et.
+
+**2.** Musluğu kapat, giriş hortumunu musluk tarafından ayır ve içindeki küçük süzgeci çıkar.
+
+**3.** Süzgeçteki kireç ve tortuyu fırçayla temizle, süzgeci ve hortumu yerine tak, musluğu aç.
+
+**4.** Hortumun bükülmediğini ve makinenin arkasında ezilmediğini kontrol et.
+
+**5.** Kapağı klik sesini duyana kadar kapat.
+
+**6.** Fişi 1 dakika çekip tak, çocuk kilidinin açık olup olmadığına bak ve programı yeniden başlat.
 
 ## Servisi aramadan önce kendin kontrol et
 

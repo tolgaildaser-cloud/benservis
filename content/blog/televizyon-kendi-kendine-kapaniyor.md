@@ -4,6 +4,20 @@ description: "4 saat tuşa basılmayınca, sinyal kesilince ya da kurulu bir zam
 slug: "televizyon-kendi-kendine-kapaniyor"
 date: "2026-09-13"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Uzaktan kumanda"]
+steps:
+  - "Televizyon açılırken ekranda kapanma sebebini yazan bir mesaj çıkıyorsa oku."
+  - "Güç ayarlarında Otomatik Kapanma süresini Kapalı'ya al; bu seçenek yoksa en uzun süreyi seç."
+  - "HDMI'daki cihazın açık olduğunu ve görüntü verdiğini kontrol et, sinyal yokken kapanma süresini değiştir."
+  - "Uyku zamanlayıcısının kurulu olup olmadığına bak."
+  - "Zamanlayıcı menüsünde kapanma zamanını Kapalı konumuna getir."
+  - "HDMI cihazlarını ayır ve televizyonu yalnız antenle izleyerek dene."
+  - "Kapanma belirli bir süreye ya da saate bağlı olmadan sürüyorsa arka kapağı açma, servise başvur."
 faq:
   - q: "Televizyon neden kendi kendine kapanıyor?"
     a: "Çoğu zaman bir arıza değil, televizyonun kendi güç ayarıdır. Arçelik ve Philips kılavuzlarında üç ayrı otomatik kapanma var: bir süre hiçbir tuşa basılmazsa, bir süre hiç sinyal gelmezse ve kullanıcının kurduğu uyku ya da kapanma zamanlayıcısının süresi dolunca televizyon bekleme moduna geçer. Kapanmanın hangi durumda olduğunu not etmek, hangisinin devrede olduğunu gösterir."
@@ -30,6 +44,22 @@ Film tam ortasında, maç uzatmada — televizyon kendini kapatıyor. Çoğu ins
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Bu yazı ayar ve kullanım rehberidir, tamir değil.** Aşağıdaki ayarların hiçbiri kapanmayı açıklamıyorsa iş servise aittir; televizyonun arka kapağı açılmaz.
+
+## Adım adım: evde denenecekler
+
+**1.** Televizyon açılırken ekranda kapanma sebebini yazan bir mesaj çıkıyorsa oku.
+
+**2.** Güç ayarlarında Otomatik Kapanma süresini Kapalı'ya al; bu seçenek yoksa en uzun süreyi seç.
+
+**3.** HDMI'daki cihazın açık olduğunu ve görüntü verdiğini kontrol et, sinyal yokken kapanma süresini değiştir.
+
+**4.** Uyku zamanlayıcısının kurulu olup olmadığına bak.
+
+**5.** Zamanlayıcı menüsünde kapanma zamanını Kapalı konumuna getir.
+
+**6.** HDMI cihazlarını ayır ve televizyonu yalnız antenle izleyerek dene.
+
+**7.** Kapanma belirli bir süreye ya da saate bağlı olmadan sürüyorsa arka kapağı açma, servise başvur.
 
 ## Önce şunu not et: televizyon ne zaman kapanıyor?
 

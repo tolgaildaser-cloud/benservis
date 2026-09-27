@@ -4,6 +4,19 @@ description: "Buzluk soğuk ama alt bölme soğumuyor mu? No-frost modellerde kl
 slug: "no-frost-buzdolabi-alt-bolme-sogutmuyor"
 date: "2026-06-19"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~24 saat (bekleme dahil)"
+  totalTime: "PT24H"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Alt bölmenin sıcaklık ayarını kontrol et; yaklaşık 4 °C olmalı."
+  - "Kapıyı aç ve fan sesini ya da hava akışını dinle."
+  - "Defrost testi için dolabı boşalt ve fişini çek."
+  - "Kapağı açık bırak ve buzların çözülmesi için 24 saat bekle."
+  - "Fişi tak, cihazı çalıştır ve alt bölmenin yeniden soğuyup soğumadığını izle."
+  - "Birkaç gün takip et; sorun kısa sürede tekrarlıyorsa servis çağır."
 faq:
   - q: "Buzluk soğuk ama alt bölme neden soğumuyor?"
     a: "No-frost modellerde soğuk hava buzluktaki evaporatörden fanla alt bölmeye üflenir. Fan durursa ya da buz çözme (defrost) arızası evaporatörü buzla kaplarsa, buzluk soğur ama alt bölmeye soğuk hava gitmez."
@@ -37,6 +50,20 @@ No-frost bir buzdolabında **buzluğun buz gibi, alt bölmenin ise ılık** olma
 **4. Damper / klape arızası.** Alt bölmeye giden hava miktarını ayarlayan klape kapalı kalırsa soğuk hava geçmez.
 
 **5. Sensör / kart arızası.** Sıcaklık sensörü yanlış okursa sistem alt bölmeyi yeterince soğutmaz.
+
+## Adım adım: evde denenecekler
+
+**1.** Alt bölmenin sıcaklık ayarını kontrol et; yaklaşık 4 °C olmalı.
+
+**2.** Kapıyı aç ve fan sesini ya da hava akışını dinle.
+
+**3.** Defrost testi için dolabı boşalt ve fişini çek.
+
+**4.** Kapağı açık bırak ve buzların çözülmesi için 24 saat bekle.
+
+**5.** Fişi tak, cihazı çalıştır ve alt bölmenin yeniden soğuyup soğumadığını izle.
+
+**6.** Birkaç gün takip et; sorun kısa sürede tekrarlıyorsa servis çağır.
 
 ## Servisi aramadan önce kendin kontrol et
 

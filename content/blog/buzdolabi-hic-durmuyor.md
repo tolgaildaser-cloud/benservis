@@ -4,6 +4,21 @@ description: "Buzdolabın hiç susmuyor mu? Yazın uzun çalışma normaldir, s�
 slug: "buzdolabi-hic-durmuyor"
 date: "2026-08-18"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Bir parça kâğıt", "Süpürgenin fırça ucu", "Ilık sabunlu bez"]
+steps:
+  - "Buzdolabını arka duvardan 5-10 cm öne çek; üstünü ve yanlarını boş bırak."
+  - "Kâğıdı kapak ile gövde arasına koy, kapağı kapat ve kâğıdı çek; dört kenarda tekrarla."
+  - "Contada kir ya da yağ varsa ılık sabunlu bezle sil, kuruyunca kâğıt denemesini tekrarla."
+  - "Kapağa dayanan kavanoz, tam itilmemiş çekmece ya da öne kaymış raf olup olmadığına bak."
+  - "Fişi çek, cihazı öne al ve arka ızgaradaki tozu süpürgenin fırça ucuyla temizle; ıslak bez kullanma."
+  - "Fişi tak ve cihazı arkada boşluk bırakarak yerine it."
+  - "Derece ayarını kontrol et: soğutucu 4-5 °C, dondurucu −18 °C civarında olmalı."
+  - "Sıcak yemeği soğumadan koyma ve kapağı gereğinden uzun açık tutma."
 faq:
   - q: "Buzdolabı günde kaç saat çalışır, ne kadarı normal?"
     a: "Modern bir buzdolabında kompresörün toplam çalışma oranı genellikle günün yarısı ile dörtte üçü arasındadır; yani günde 12-18 saat çalışması tek başına arıza göstergesi değildir. Yaz aylarında mutfak sıcaklığı yükseldiği için bu oran doğal olarak artar. Asıl belirti süre değil, ritimdir: cihaz arada bir hiç durmuyorsa, yani hiç sessiz kalmıyorsa bakmaya değer."
@@ -22,6 +37,24 @@ Buzdolabı soğutuyor, içindekiler bozulmuyor, görünürde bir sorun yok — a
 Bu, çoğu zaman bir arıza değil bir **denge** meselesidir: cihaz istediği sıcaklığı yakalayamadığı için dinlenmeye geçemiyordur. Sebeplerin büyük kısmı ise mutfağın kendisinde, cihazın içinde değil.
 
 > ⚡ **Kısa özet:** Önce **ne kadar çalıştığını değil, hiç durup durmadığını** izle. Sonra sırayla bak: mutfak sıcaklığı ve **havalandırma boşluğu** · **kapı contası** (kâğıt denemesi) · kapının tam kapanıp kapanmadığı · **arka ızgaranın tozu** · derece ayarı · sıcak yemek ve sık kapı açma alışkanlığı. Bunlar ücretsiz ve alet gerektirmez. Buzlanma, ısınan kenarlar ya da hiç değişmeyen bir tabloda sınır biter — gaz, kompresör ve fan yetkili servis işidir.
+
+## Adım adım: evde denenecekler
+
+**1.** Buzdolabını arka duvardan 5-10 cm öne çek; üstünü ve yanlarını boş bırak.
+
+**2.** Kâğıdı kapak ile gövde arasına koy, kapağı kapat ve kâğıdı çek; dört kenarda tekrarla.
+
+**3.** Contada kir ya da yağ varsa ılık sabunlu bezle sil, kuruyunca kâğıt denemesini tekrarla.
+
+**4.** Kapağa dayanan kavanoz, tam itilmemiş çekmece ya da öne kaymış raf olup olmadığına bak.
+
+**5.** Fişi çek, cihazı öne al ve arka ızgaradaki tozu süpürgenin fırça ucuyla temizle; ıslak bez kullanma.
+
+**6.** Fişi tak ve cihazı arkada boşluk bırakarak yerine it.
+
+**7.** Derece ayarını kontrol et: soğutucu 4-5 °C, dondurucu −18 °C civarında olmalı.
+
+**8.** Sıcak yemeği soğumadan koyma ve kapağı gereğinden uzun açık tutma.
 
 ## Önce şunu ayır: uzun çalışma mı, hiç durmama mı?
 

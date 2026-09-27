@@ -4,6 +4,20 @@ description: "Air fryer'dan duman her zaman arıza değil: üreticiler ilk kulla
 slug: "airfryer-duman-cikariyor"
 date: "2026-08-25"
 category: "Mikrodalga"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Fırın eldiveni", "Kauçuk uçlu maşa", "Yumuşak fırça"]
+steps:
+  - "Yoğun duman, alev ya da yanık plastik kokusu varsa fişi çek, cihazı soğumaya bırak ve kullanma."
+  - "Cihaz yeniyse temizledikten sonra pencereyi aç ve basit bir yiyecekle bir tur çalıştır."
+  - "Pişirme arasında sepeti ısıya dayanıklı bir yüzeye koy, tavayı fırın eldiveniyle kaldır."
+  - "Yağ ayırıcıyı kauçuk uçlu maşayla çıkar, biriken yağı çöpe dök ve parçaları yerine yerleştir."
+  - "Tavaya yağ doldurma, cihazı sepetsiz ya da yağ azaltıcısız çalıştırma."
+  - "Sepeti maksimum seviyenin üstünde doldurma; cihazın üstünü ve kenarlarını boş bırak."
+  - "Her kullanımdan sonra fişi çek, soğumasını bekle, parçaları yıka ve ısıtma elemanını yumuşak fırçayla temizle."
 faq:
   - q: "Air fryer ilk kullanımda duman çıkarırsa arıza mı?"
     a: "Hayır. Hem Philips'in HD963x kılavuzu hem Arçelik'in FitFry FR 6032 A kılavuzu aynı cümleyi kullanıyor: cihaz ilk kez kullanıldığında biraz duman çıkarabilir, bu durum normaldir. Üretim sırasında parçalarda kalan koruyucu madde ilk ısınmada uçar. Birkaç kullanımda geçmiyorsa durum değişir."
@@ -26,6 +40,22 @@ Bu yazıda dumanı üç kaynağa ayırıyoruz, ikisini evde ücretsiz çözüyor
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 🔥 **Önce güvenlik:** Arçelik FitFry kılavuzu yangın çıkması durumunda yapılacak ilk şeyi tek cümleyle koyuyor — **cihazın fişini prizden çek.** Aynı kılavuz, kullanım sırasında odanın yeterince havalandırılmış olmasını da istiyor. Duman yoğunsa, alev varsa ya da yanık plastik kokusu geliyorsa aşağıdaki adımlarla uğraşma: fişi çek, cihazı soğumaya bırak ve servise götür.
+
+## Adım adım: evde denenecekler
+
+**1.** Yoğun duman, alev ya da yanık plastik kokusu varsa fişi çek, cihazı soğumaya bırak ve kullanma.
+
+**2.** Cihaz yeniyse temizledikten sonra pencereyi aç ve basit bir yiyecekle bir tur çalıştır.
+
+**3.** Pişirme arasında sepeti ısıya dayanıklı bir yüzeye koy, tavayı fırın eldiveniyle kaldır.
+
+**4.** Yağ ayırıcıyı kauçuk uçlu maşayla çıkar, biriken yağı çöpe dök ve parçaları yerine yerleştir.
+
+**5.** Tavaya yağ doldurma, cihazı sepetsiz ya da yağ azaltıcısız çalıştırma.
+
+**6.** Sepeti maksimum seviyenin üstünde doldurma; cihazın üstünü ve kenarlarını boş bırak.
+
+**7.** Her kullanımdan sonra fişi çek, soğumasını bekle, parçaları yıka ve ısıtma elemanını yumuşak fırçayla temizle.
 
 ## 1) İlk kullanım dumanı — iki üretici de normal diyor
 

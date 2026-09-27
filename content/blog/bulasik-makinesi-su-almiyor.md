@@ -4,6 +4,20 @@ description: "Bulaşık makinen su almıyor mu? En sık sebepler musluk, giriş 
 slug: "bulasik-makinesi-su-almiyor"
 date: "2026-06-19"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Küçük fırça", "Havlu"]
+steps:
+  - "Su musluğunun sonuna kadar açık olduğunu kontrol et."
+  - "Musluğu kapat, giriş hortumunu musluk tarafından ayır ve bağlantıdaki küçük süzgeci çıkar."
+  - "Süzgeçteki kireci fırçayla temizle, süzgeci ve hortumu yerine tak, musluğu aç."
+  - "Hortumun bükülmediğini ve dolap arkasında ezilmediğini kontrol et."
+  - "Kapağı klik sesini duyana kadar kapat."
+  - "Makinenin tabanında su varsa kurula ve yeniden dene; su yeniden birikiyorsa servis çağır."
+  - "Fişi 1 dakika çek, çocuk kilidinin açık olup olmadığına bak ve programı yeniden başlat."
 faq:
   - q: "Bulaşık makinesi su almıyor, ilk ne kontrol edilir?"
     a: "Önce su musluğunun açık olduğunu, giriş hortumundaki süzgecin tıkalı olmadığını ve hortumun bükülmediğini kontrol et. Sorunların çoğu bu üç noktadan biridir."
@@ -47,6 +61,22 @@ Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozuc
 **5. Aquastop hortum kilidi devrede.** Güvenlik sistemi sızıntı algılarsa suyu keser; aquastoplu modellerde sık görülür.
 
 **6. Tabanda su → taşma güvenliği.** Makinenin tabanında su birikirse şamandıra (flotör) devreye girer ve su almayı durdurur.
+
+## Adım adım: evde denenecekler
+
+**1.** Su musluğunun sonuna kadar açık olduğunu kontrol et.
+
+**2.** Musluğu kapat, giriş hortumunu musluk tarafından ayır ve bağlantıdaki küçük süzgeci çıkar.
+
+**3.** Süzgeçteki kireci fırçayla temizle, süzgeci ve hortumu yerine tak, musluğu aç.
+
+**4.** Hortumun bükülmediğini ve dolap arkasında ezilmediğini kontrol et.
+
+**5.** Kapağı klik sesini duyana kadar kapat.
+
+**6.** Makinenin tabanında su varsa kurula ve yeniden dene; su yeniden birikiyorsa servis çağır.
+
+**7.** Fişi 1 dakika çek, çocuk kilidinin açık olup olmadığına bak ve programı yeniden başlat.
 
 ## Servisi aramadan önce kendin kontrol et
 

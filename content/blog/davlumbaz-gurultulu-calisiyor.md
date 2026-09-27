@@ -4,6 +4,20 @@ description: "Davlumbaz sesli mi çalışıyor? Kılavuz sesi artıran kurulumu 
 slug: "davlumbaz-gurultulu-calisiyor"
 date: "2026-09-09"
 category: "Davlumbaz"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Sıvı deterjan", "Kuru bez", "Şerit metre"]
+steps:
+  - "Davlumbazın fişini çek; gövdeyi açma, motora dokunma."
+  - "Cam kapağı aç ve alüminyum filtreyi yuvasından çıkar."
+  - "Davlumbaz bacaya bağlıysa filtrenin arkasına bak; karbon filtre takılıysa çıkar."
+  - "Alüminyum filtreyi sıvı deterjanlı suda yıka ve durula; bulaşık makinesinde en çok 70 °C'de yıkanabilir."
+  - "Filtre tamamen kuruduktan sonra yerine tak."
+  - "Baca borusunu gözle izle: dirsek, ezik ya da daralan bölüm varsa montajı yapan tarafa bildir."
+  - "Ocak ile davlumbazın alt yüzeyi arasını ölç; mesafe 65 cm'den az olmamalı."
 faq:
   - q: "Davlumbaz neden gürültülü çalışır?"
     a: "Arçelik'in ADE 604-1 B kılavuzu sebeplerden birini doğrudan adıyla yazıyor: ürünün karbon filtreli kullanımında ses seviyesi artmakta ve debi performansı azalmaktadır. Yani hava dışarı atılmak yerine karbon filtreden süzülüp odaya geri verildiğinde cihaz hem daha sesli hem daha zayıf çalışır. Bu bir arıza değil, çalışma biçiminin sonucudur."
@@ -32,6 +46,22 @@ Bu yazıda sesi artıran kurulumu, servisi aramadan önce yapabileceğin kontrol
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Her kontrolden önce: fişi çek.** Aşağıdaki adımların hepsi cam kapak ve filtre yuvası seviyesinde kalır. **Davlumbazın gövdesi açılmaz, motora dokunulmaz** — kılavuz tamir, bakım ve temizlik işlemlerinin sınırını da bu noktada çiziyor.
+
+## Adım adım: evde denenecekler
+
+**1.** Davlumbazın fişini çek; gövdeyi açma, motora dokunma.
+
+**2.** Cam kapağı aç ve alüminyum filtreyi yuvasından çıkar.
+
+**3.** Davlumbaz bacaya bağlıysa filtrenin arkasına bak; karbon filtre takılıysa çıkar.
+
+**4.** Alüminyum filtreyi sıvı deterjanlı suda yıka ve durula; bulaşık makinesinde en çok 70 °C'de yıkanabilir.
+
+**5.** Filtre tamamen kuruduktan sonra yerine tak.
+
+**6.** Baca borusunu gözle izle: dirsek, ezik ya da daralan bölüm varsa montajı yapan tarafa bildir.
+
+**7.** Ocak ile davlumbazın alt yüzeyi arasını ölç; mesafe 65 cm'den az olmamalı.
 
 ## Kılavuzun doğrudan söylediği cümle
 

@@ -4,6 +4,20 @@ description: "Bulaşıklar yıkanıyor ama ıslak mı çıkıyor? Parlatıcıdan
 slug: "bulasik-makinesi-kurutmuyor"
 date: "2026-07-01"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Parlatıcı", "Bulaşık makinesi tuzu"]
+steps:
+  - "Parlatıcı haznesini doldur; gösterge dolu olduğunu göstermeli."
+  - "Parlatıcı dozu düşük ayarlıysa ayarı artır."
+  - "Eco ya da hızlı program yerine Yoğun ya da Ekstra Kurutma seçeneğini kullan."
+  - "Bardak ve kâseleri eğik ya da ters yerleştir; tabanlarında su birikmesin."
+  - "Plastik kapları üst sepete al."
+  - "Tuz haznesini kontrol et, bitmişse doldur."
+  - "Program bitince kapağı birkaç santim arala ve buharın çıkmasını bekle."
 faq:
   - q: "Bulaşık makinesi neden kurutmaz?"
     a: "En sık sebep biten parlatıcıdır; parlatıcı suyun damla yapmadan akmasını sağlar, olmazsa bulaşık ıslak kalır. Ayrıca ekonomik/kısa programlar kurutma yapmaz, plastikler zaten geç kurur ve fanlı olmayan (kondenser) modeller doğal kurumaya güvenir."
@@ -48,6 +62,22 @@ Bulaşıkların tertemiz ama sırılsıklam mı çıkıyor? İyi haber: bulaşı
 **5. Yükleme hatası.** Ters durmayan bardak ve kâseler tabanlarında su biriktirir; sıkışık yerleştirme hava akışını engeller. Doğru dizilim kurumayı belirgin artırır.
 
 **6. Isıtıcı (rezistans) veya fan arızası.** Su yeterince ısınmazsa buharlaşma ve dolayısıyla kurutma olmaz. Fanlı modellerde fan/termostat arızası da kurutmayı durdurur. Bunlar servis işidir.
+
+## Adım adım: evde denenecekler
+
+**1.** Parlatıcı haznesini doldur; gösterge dolu olduğunu göstermeli.
+
+**2.** Parlatıcı dozu düşük ayarlıysa ayarı artır.
+
+**3.** Eco ya da hızlı program yerine Yoğun ya da Ekstra Kurutma seçeneğini kullan.
+
+**4.** Bardak ve kâseleri eğik ya da ters yerleştir; tabanlarında su birikmesin.
+
+**5.** Plastik kapları üst sepete al.
+
+**6.** Tuz haznesini kontrol et, bitmişse doldur.
+
+**7.** Program bitince kapağı birkaç santim arala ve buharın çıkmasını bekle.
 
 ## Servisi aramadan önce kendin kontrol et
 

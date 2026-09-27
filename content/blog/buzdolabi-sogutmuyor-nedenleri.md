@@ -4,6 +4,20 @@ description: "Buzdolabın çalışıyor ama soğutmuyor mu? 6 olası neden, kend
 slug: "buzdolabi-sogutmuyor-nedenleri"
 date: "2026-06-17"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Bir parça kâğıt", "Süpürge"]
+steps:
+  - "Sıcaklık ayarını kontrol et: dolap yaklaşık 4 °C, buzluk yaklaşık −18 °C olmalı."
+  - "Kâğıdı kapak ile gövde arasına koy, kapağı kapat ve çek; direnç hissetmiyorsan conta sızdırıyordur."
+  - "Cihazın arkasındaki ve altındaki tozu süpür."
+  - "Dolabı duvardan 5-10 cm uzakta tut."
+  - "Dolap aşırı doluysa biraz boşalt, fanın önünü açık bırak."
+  - "Dolap yatık taşındıysa çalıştırmadan önce 4-6 saat dik beklet."
+  - "Buzluk soğuk ama dolap soğumuyorsa bunu not et ve servis çağır; bu fan ya da defrost tarafıdır."
 faq:
   - q: "Buzdolabı çalışıyor ama soğutmuyor, en sık sebep ne?"
     a: "Çoğu zaman no-frost modellerde fan ya da buz çözme (defrost) arızası, ya da gaz azalmasıdır. Önce sıcaklık ayarını, kapı contasını ve arkadaki tozu kontrol et; düzelmezse servis gerekir."
@@ -41,6 +55,22 @@ Buzdolabını açtın, ışık yanıyor, motor sesi de geliyor — ama içerisi 
 **5. Gaz azalması / gaz kaçağı.** Soğutucu gaz düşerse kompresör çalışır ama soğutamaz. Gaz kapalı sistemdir; azalıyorsa bir kaçak vardır.
 
 **6. Kompresör arızası.** Buzdolabının "kalbi" zayıfladıysa hiç soğutmaz. En maliyetli arıza türüdür.
+
+## Adım adım: evde denenecekler
+
+**1.** Sıcaklık ayarını kontrol et: dolap yaklaşık 4 °C, buzluk yaklaşık −18 °C olmalı.
+
+**2.** Kâğıdı kapak ile gövde arasına koy, kapağı kapat ve çek; direnç hissetmiyorsan conta sızdırıyordur.
+
+**3.** Cihazın arkasındaki ve altındaki tozu süpür.
+
+**4.** Dolabı duvardan 5-10 cm uzakta tut.
+
+**5.** Dolap aşırı doluysa biraz boşalt, fanın önünü açık bırak.
+
+**6.** Dolap yatık taşındıysa çalıştırmadan önce 4-6 saat dik beklet.
+
+**7.** Buzluk soğuk ama dolap soğumuyorsa bunu not et ve servis çağır; bu fan ya da defrost tarafıdır.
 
 ## Servisi aramadan önce kendin kontrol et
 

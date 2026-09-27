@@ -4,6 +4,19 @@ description: "Elektrikli ya da indüksiyonlu ocak ısıtmıyor mu? Tek göz mü 
 slug: "cam-seramik-ocak-isinmiyor"
 date: "2026-08-13"
 category: "Fırın / Ocak"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Mutfak mıknatısı"]
+steps:
+  - "Camda çatlak olup olmadığına bak; çatlak varsa ocağı kullanma."
+  - "Panelde anahtar ya da çocuk simgesi yanıyorsa kilit simgesinin yanındaki tuşa birkaç saniye basılı tut."
+  - "Panel hiç tepki vermiyorsa ocağın kendi sigortasını kontrol et; tekrar tekrar atıyorsa servise başvur."
+  - "Hiçbir gözün mü, yoksa tek gözün mü çalışmadığını not et."
+  - "İndüksiyon ocakta mıknatısı tencerenin dış tabanına tut; sağlam yapışmıyorsa o tencere bu ocakta çalışmaz."
+  - "Tencereyi, tabanı göz çapına yakın olacak şekilde başka bir gözde dene."
 faq:
   - q: "İndüksiyon ocakta tencere neden ısınmıyor?"
     a: "İndüksiyon yalnız manyetik tabanlı tencereyi ısıtır. Alüminyum, bakır ve bazı paslanmaz çelik tencereler manyetik değildir ve ocak onları algılamaz; gösterge çoğu modelde tencere yok uyarısı verir ya da kısa süre sonra kendini kapatır. Basit test: mutfak mıknatısı tencerenin dış tabanına sağlam yapışıyorsa tencere uyumludur."
@@ -20,6 +33,20 @@ images:
 Ocağı açtın, gösterge yanıyor ama tencere ısınmıyor. Ya da hiçbir göz çalışmıyor. Cam seramik ve indüksiyonlu ocaklarda bu tabloların çoğu **arıza değil**: tuş kilidi, uyumsuz tencere ya da besleme kaynaklı olabilir. Sırayla ayırmak servis çağrısından önce birkaç dakika alır.
 
 > ⚡ **Kısa özet:** **Hiçbir göz çalışmıyorsa** önce sigortaya ve panel kilidine bak. **Tek göz çalışmıyorsa** besleme sağlamdır, o gözün ısıtıcısı ya da devresi servis işidir. **İndüksiyonda** tencere manyetik değilse ocak hiç ısıtmaz — mıknatıs tabana yapışıyorsa tencere uyumludur.
+
+## Adım adım: evde denenecekler
+
+**1.** Camda çatlak olup olmadığına bak; çatlak varsa ocağı kullanma.
+
+**2.** Panelde anahtar ya da çocuk simgesi yanıyorsa kilit simgesinin yanındaki tuşa birkaç saniye basılı tut.
+
+**3.** Panel hiç tepki vermiyorsa ocağın kendi sigortasını kontrol et; tekrar tekrar atıyorsa servise başvur.
+
+**4.** Hiçbir gözün mü, yoksa tek gözün mü çalışmadığını not et.
+
+**5.** İndüksiyon ocakta mıknatısı tencerenin dış tabanına tut; sağlam yapışmıyorsa o tencere bu ocakta çalışmaz.
+
+**6.** Tencereyi, tabanı göz çapına yakın olacak şekilde başka bir gözde dene.
 
 ## Önce ocağının türünü bil
 

@@ -4,6 +4,19 @@ description: "Bulaşık makinen suyu boşaltmıyor, tabanında su mu kalıyor? E
 slug: "bulasik-makinesi-su-atmiyor"
 date: "2026-06-19"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Bardak", "Sünger", "Eldiven", "Havlu"]
+steps:
+  - "Makinenin fişini çek."
+  - "Tabanda kalan suyu bardak ya da süngerle boşalt."
+  - "Eldiven giy, tabandaki filtreyi çevirerek çıkar, içindeki artıkları temizle ve yerine tak."
+  - "Arkadaki tahliye hortumunun bükülmediğini ve ezilmediğini kontrol et."
+  - "Evye sifonunu kontrol et; sifon yeni takıldıysa bağlantı tapasının çıkarıldığından emin ol."
+  - "Fişi tak ve tahliye programını yeniden dene."
 faq:
   - q: "Bulaşık makinesi su atmıyor, ilk ne kontrol edilir?"
     a: "Önce tabandaki filtreyi çıkar ve temizle; en sık sebep tıkalı filtre ve pompa kapağındaki yabancı cisimdir (cam kırığı, çekirdek, etiket)."
@@ -41,6 +54,20 @@ Program bitti ama bulaşık makinesinin **tabanında su kaldı** — makine suyu
 **5. Tahliye pompası arızası.** Pompa çalışmazsa (ses gelir ama dönmez) su boşalmaz. Servis işidir.
 
 **6. Elektronik kart.** Yukarıdakiler yokken pompa hiç devreye girmiyorsa kart şüphesi olabilir.
+
+## Adım adım: evde denenecekler
+
+**1.** Makinenin fişini çek.
+
+**2.** Tabanda kalan suyu bardak ya da süngerle boşalt.
+
+**3.** Eldiven giy, tabandaki filtreyi çevirerek çıkar, içindeki artıkları temizle ve yerine tak.
+
+**4.** Arkadaki tahliye hortumunun bükülmediğini ve ezilmediğini kontrol et.
+
+**5.** Evye sifonunu kontrol et; sifon yeni takıldıysa bağlantı tapasının çıkarıldığından emin ol.
+
+**6.** Fişi tak ve tahliye programını yeniden dene.
 
 ## Servisi aramadan önce kendin kontrol et
 

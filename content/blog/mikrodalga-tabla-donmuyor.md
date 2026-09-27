@@ -4,6 +4,21 @@ description: "Mikrodalgada cam tabla dönmüyor mu? Sebebin çoğu bakım seviye
 slug: "mikrodalga-tabla-donmuyor"
 date: "2026-09-08"
 category: "Mikrodalga"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Sabunlu su", "Yumuşak sünger", "Kuru bez"]
+steps:
+  - "Mikrodalganın fişini çek; gövdeyi hiçbir koşulda açma."
+  - "Cam tablayı kaldır, döner desteği çıkar, yuvaya yeniden yerleştir ve hafifçe bastır."
+  - "Yandan bak: döner desteğin bütün tekerlekleri zemine değmeli."
+  - "Cam tablayı ters olmayacak biçimde yerine koy ve boşken elinle çevir; serbestçe dönmeli."
+  - "Takılma ya da ses varsa cam tablayı ve döner desteği sabunlu suda yıka, durula ve kurula."
+  - "Temizlikte aşındırıcı temizleyici, bulaşık teli ya da pürüzlü bez kullanma."
+  - "Kabı daima cam tablanın üstüne koy; tablanın dönüşünü engelleyen büyük kap kullanma."
+  - "Cam tabla ya da destek çatlak veya kırıksa kullanma, yetkili servise başvur."
 faq:
   - q: "Mikrodalgada tabla neden dönmez?"
     a: "En sık sebep parçaların yerine tam oturmamasıdır. Arçelik'in MD 574 kılavuzu fırını çalıştırmadan önce döner cam tepsi ile döner desteğin yerine oturduğundan emin olmayı, özellikle döner desteğin alt kısımdaki yuvaya tam geçtiğini kontrol etmeyi şart koşuyor. Grundig'in GMI 31141 B kılavuzu ise cam tablanın hareketinin asla kısıtlanmaması gerektiğini yazıyor. Kısıtlayan şey çoğu zaman taşan bir kap ya da yanlış oturmuş bir parçadır."
@@ -28,6 +43,24 @@ Yemeği koydun, süreyi kurdun, mikrodalga çalışıyor — ama cam tabla dönm
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Her kontrolden önce: fişi çek.** Arçelik'in MD 574 kılavuzu temizlik öncesi fırının fişinin prizden çekilmesini şart koşuyor. Mikrodalgada bu sıradan bir tedbir değil: cihazın içinde yüksek gerilim çalışan bir bölge var ve **gövde açılmaz.** Aşağıdaki adımların hepsi kapak açılarak, fırının **içine uzanmadan** yapılır.
+
+## Adım adım: evde denenecekler
+
+**1.** Mikrodalganın fişini çek; gövdeyi hiçbir koşulda açma.
+
+**2.** Cam tablayı kaldır, döner desteği çıkar, yuvaya yeniden yerleştir ve hafifçe bastır.
+
+**3.** Yandan bak: döner desteğin bütün tekerlekleri zemine değmeli.
+
+**4.** Cam tablayı ters olmayacak biçimde yerine koy ve boşken elinle çevir; serbestçe dönmeli.
+
+**5.** Takılma ya da ses varsa cam tablayı ve döner desteği sabunlu suda yıka, durula ve kurula.
+
+**6.** Temizlikte aşındırıcı temizleyici, bulaşık teli ya da pürüzlü bez kullanma.
+
+**7.** Kabı daima cam tablanın üstüne koy; tablanın dönüşünü engelleyen büyük kap kullanma.
+
+**8.** Cam tabla ya da destek çatlak veya kırıksa kullanma, yetkili servise başvur.
 
 ## Önce parçaların adı — üçü birden gerekiyor
 

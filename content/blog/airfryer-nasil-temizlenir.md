@@ -4,6 +4,20 @@ description: "Air fryer sepetini bulaşık makinesine atmak modele göre değiş
 slug: "airfryer-nasil-temizlenir"
 date: "2026-08-25"
 category: "Mikrodalga"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Kauçuk uçlu maşa", "Aşındırıcı olmayan sünger", "Yumuşak fırça", "Nemli bez"]
+steps:
+  - "Cihazı kapat, fişini çek ve tamamen soğumasını bekle."
+  - "Yağ azaltıcıyı kauçuk uçlu maşayla çıkar, tavanın tabanındaki yağı lavaboya değil çöpe dök."
+  - "Çıkarılabilir parçaları, kılavuzun izin veriyorsa bulaşık makinesinde, değilse sıcak su, deterjan ve aşındırıcı olmayan süngerle yıka."
+  - "Yapışan kalıntıyı kazıma; parçaları deterjanlı sıcak suda 10-15 dakika beklet."
+  - "Hazne üstündeki ısıtma elemanını yumuşak ya da orta sert bir fırçayla temizle; çelik telli fırça kullanma."
+  - "Cihazın dışını nemli bezle sil ve kurula; motorlu gövdeyi suyla yıkama."
+  - "Bütün parçalar tamamen kuruyunca yerine tak ve cihazı kaldır."
 faq:
   - q: "Air fryer sepeti bulaşık makinesinde yıkanır mı?"
     a: "Modele göre değişir, genel bir cevabı yoktur. Philips'in HD963x serisi kılavuzu tavayı, sepeti ve yağ azaltıcıyı bulaşık makinesinde yıkamayı doğrudan tarif eder. Arçelik'in FitFry FR 6032 A kılavuzu ise çıkarılabilir pişirme sepetini ve sepet çekmecesini sabunlu ılık suyla temizlemeyi ve sonrasında tamamen kurutmayı söyler; bulaşık makinesinden hiç söz etmez. Karar verecek tek belge kendi cihazının kılavuzudur."
@@ -26,6 +40,22 @@ Bu yazıda temizliğin doğru sırasını, hangi parçanın nasıl yıkanacağı
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Her şeyden önce: soğumasını bekle.** Philips'in HD963x kılavuzu temizliğe başlamadan önce sepetin, tavanın, yağ azaltıcının ve cihazın iç kısmının **tamamen soğumasını** beklemeyi şart koşuyor. Arçelik'in FitFry kılavuzu da aynı sırayı veriyor: cihazı kapat, fişi çek, tamamen soğumasını bekle. Sıcak parçayla çalışmak hem yanık riski hem de ıslak bezin kaplamada bıraktığı hasar demek.
+
+## Adım adım: evde denenecekler
+
+**1.** Cihazı kapat, fişini çek ve tamamen soğumasını bekle.
+
+**2.** Yağ azaltıcıyı kauçuk uçlu maşayla çıkar, tavanın tabanındaki yağı lavaboya değil çöpe dök.
+
+**3.** Çıkarılabilir parçaları, kılavuzun izin veriyorsa bulaşık makinesinde, değilse sıcak su, deterjan ve aşındırıcı olmayan süngerle yıka.
+
+**4.** Yapışan kalıntıyı kazıma; parçaları deterjanlı sıcak suda 10-15 dakika beklet.
+
+**5.** Hazne üstündeki ısıtma elemanını yumuşak ya da orta sert bir fırçayla temizle; çelik telli fırça kullanma.
+
+**6.** Cihazın dışını nemli bezle sil ve kurula; motorlu gövdeyi suyla yıkama.
+
+**7.** Bütün parçalar tamamen kuruyunca yerine tak ve cihazı kaldır.
 
 ## Bulaşık makinesi sorusunun tek doğru cevabı yok
 

@@ -4,6 +4,20 @@ description: "Termosifon suyu ısıtmıyor mu? Üretici kılavuzlarına göre ş
 slug: "termosifon-suyu-isitmiyor"
 date: "2026-09-10"
 category: "Kombi/Termosifon"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Termosifonun şalterine bak, kapalıysa aç; sigorta tekrar tekrar atıyorsa zorlama."
+  - "Isıtma lambasının ya da ekran simgesinin yanıp yanmadığına bak."
+  - "Ayarı değiştireceksen en az 4 °C farkla değiştir; ECO konumu üreticinin önerdiği konumdur."
+  - "Ayarı yükselttiysen musluğu açarken dikkat et; 50 °C üzerindeki su yanığa yol açabilir."
+  - "Ekranlı modelde zaman programındaki boşlukları, saati ve çocuk kilidini kontrol et."
+  - "Ekranda kod varsa not et ve yalnız kılavuzun izin verdiği adımı uygula."
+  - "Sıcak su musluğunu aç; su akıyorsa depo doludur."
 faq:
   - q: "Termosifon neden suyu ısıtmaz?"
     a: "Arçelik'in T 7350 ST kılavuzundaki sorun giderme tablosu, termosifonun hiç çalışmamasını üç sebebe bağlıyor: şalterin kapalı olması, elektriğin kesik olması ya da bina ana sigortasının atmış olması. Suyu geç ısıtıyorsa tablo iki sebep yazıyor: gerilimin düşük olması ve rezistansın kireç bağlamış olması. Elektrik geldiği ve ayar doğru olduğu hâlde su hiç ısınmıyorsa kılavuzun tek çözümü servis çağırmaktır."
@@ -32,6 +46,22 @@ Bu yazıda servisi aramadan önce yapabileceğin kontrolleri ve işin hangi nokt
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Termosifonun kapağı açılmaz.** Aşağıdaki kontrollerin hepsi şalter, düğme, ekran tuşları ve emniyet ventili mandalı seviyesinde kalır. Arçelik kılavuzunun kendi cümlesi: *"Elektrik çarpma riskine karşı, cihazın herhangi bir yerini açmayın."* Aynı kılavuz, arızalı bir ürünün yetkili servis onarmadan çalıştırılmamasını da istiyor.
+
+## Adım adım: evde denenecekler
+
+**1.** Termosifonun şalterine bak, kapalıysa aç; sigorta tekrar tekrar atıyorsa zorlama.
+
+**2.** Isıtma lambasının ya da ekran simgesinin yanıp yanmadığına bak.
+
+**3.** Ayarı değiştireceksen en az 4 °C farkla değiştir; ECO konumu üreticinin önerdiği konumdur.
+
+**4.** Ayarı yükselttiysen musluğu açarken dikkat et; 50 °C üzerindeki su yanığa yol açabilir.
+
+**5.** Ekranlı modelde zaman programındaki boşlukları, saati ve çocuk kilidini kontrol et.
+
+**6.** Ekranda kod varsa not et ve yalnız kılavuzun izin verdiği adımı uygula.
+
+**7.** Sıcak su musluğunu aç; su akıyorsa depo doludur.
 
 ## Termosifonun sana verdiği sinyal
 
