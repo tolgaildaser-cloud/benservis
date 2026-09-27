@@ -4,6 +4,19 @@ description: "Samsung klimada CF arıza değil, filtre temizleme hatırlatıcıs
 slug: "samsung-klima-cf-hatasi"
 date: "2026-09-12"
 category: "Klima"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika (kuruma hariç)"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Yumuşak fırça", "Yumuşak deterjan", "Uzaktan kumanda"]
+steps:
+  - "Filtreyi kaydırarak iç üniteden çıkar."
+  - "Toz ve kalıntıyı yumuşak bir fırçayla ya da elektrikli süpürgeyle al."
+  - "Filtreyi su ve yumuşak deterjanla yıka."
+  - "Doğrudan güneş almayan, iyi havalanan bir yerde tamamen kurumaya bırak."
+  - "Kuruyan filtreyi yerine tak."
+  - "Kumandada menü tuşuna bas, Filtre sıfırla seçeneğini seç ve onayla."
 faq:
   - q: "Samsung klimada CF ne demek?"
     a: "Samsung'un kendi destek sayfasındaki ifade net: 14 günlük periyodlarda klimanızın iç ünitesinde CF kodu görüntülenir ve bu kod filtre temizleme hatırlatıcısıdır. Yani CF bir arıza kodu değil, bakım hatırlatıcısıdır. Cihaz çalışmaya devam eder; sana filtreyi temizleme zamanının geldiğini söyler."
@@ -36,6 +49,20 @@ Hayır. CF bir arıza kodu değil.
 Samsung'un kendi destek sayfasındaki ifade birebir şöyle: *"14 günlük periyodlarda klimanızın iç ünitesinde CF kodu görüntülenir. Bu kod filtre temizleme hatırlatıcısıdır."* Yani cihaz bozulduğu için değil, **takvimi geldiği için** yazıyor. Samsung bu göstergenin WindFree™ klimalarında bulunduğunu belirtiyor.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: evde denenecekler
+
+**1.** Filtreyi kaydırarak iç üniteden çıkar.
+
+**2.** Toz ve kalıntıyı yumuşak bir fırçayla ya da elektrikli süpürgeyle al.
+
+**3.** Filtreyi su ve yumuşak deterjanla yıka.
+
+**4.** Doğrudan güneş almayan, iyi havalanan bir yerde tamamen kurumaya bırak.
+
+**5.** Kuruyan filtreyi yerine tak.
+
+**6.** Kumandada menü tuşuna bas, Filtre sıfırla seçeneğini seç ve onayla.
 
 ## CF ne zaman çıkar?
 

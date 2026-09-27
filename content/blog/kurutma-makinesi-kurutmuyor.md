@@ -4,6 +4,21 @@ description: "Kurutma makinesi çalışıyor ama çamaşırlar nemli çıkıyor.
 slug: "kurutma-makinesi-kurutmuyor"
 date: "2026-07-27"
 category: "Genel"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Ilık su", "Nemli bez"]
+steps:
+  - "Tiftik filtresini çıkar ve üzerindeki tiftik tabakasını elinle al."
+  - "Filtreyi ılık suyla yıka, iyice kurut ve kuruyunca yerine tak."
+  - "Yoğuşma haznesini çıkar, boşalt ve yerine tam oturt."
+  - "Makine gidere bağlıysa tahliye hortumunun kıvrılmadığını ve tıkalı olmadığını kontrol et."
+  - "Tamburun yaklaşık üçte birini boş bırak, benzer kalınlıktaki çamaşırları birlikte koy."
+  - "Damlayan çamaşırı koyma; çamaşır makinesinde kumaşa uygun en yüksek devri kullan."
+  - "Program kademesine bak: ütü kuruluğu çamaşırı bilerek hafif nemli bırakır."
+  - "Sensörlü modelde tamburun iç yüzeyini nemli bezle sil."
 faq:
   - q: "Kurutma makinesi çalışıyor ama çamaşırlar nemli çıkıyor, sebebi ne olabilir?"
     a: "En yaygın sebep hava akışının kısıtlanmasıdır. Tıkalı tiftik filtresi, kirlenmiş yoğuşturucu (kondenser) veya dolu yoğuşma haznesi makinenin nemi dışarı atmasını engeller; makine ısıtır ama nem gidemediği için çamaşır kurumaz. Bu üç noktayı temizlemek çoğu durumda sorunu çözer."
@@ -34,6 +49,24 @@ Kurutma makinesi aslında tek bir iş yapar: sıcak havayı çamaşırın içind
 Servis çağırmadan önce aşağıdaki altı kontrolü yapın.
 
 > ⚡ **Kısa özet:** Tiftik filtresi → yoğuşma haznesi → yoğuşturucu → yükleme miktarı → giren çamaşırın nemi → program seçimi. Sorunun büyük bölümü ilk üç maddede çıkıyor.
+
+## Adım adım: evde denenecekler
+
+**1.** Tiftik filtresini çıkar ve üzerindeki tiftik tabakasını elinle al.
+
+**2.** Filtreyi ılık suyla yıka, iyice kurut ve kuruyunca yerine tak.
+
+**3.** Yoğuşma haznesini çıkar, boşalt ve yerine tam oturt.
+
+**4.** Makine gidere bağlıysa tahliye hortumunun kıvrılmadığını ve tıkalı olmadığını kontrol et.
+
+**5.** Tamburun yaklaşık üçte birini boş bırak, benzer kalınlıktaki çamaşırları birlikte koy.
+
+**6.** Damlayan çamaşırı koyma; çamaşır makinesinde kumaşa uygun en yüksek devri kullan.
+
+**7.** Program kademesine bak: ütü kuruluğu çamaşırı bilerek hafif nemli bırakır.
+
+**8.** Sensörlü modelde tamburun iç yüzeyini nemli bezle sil.
 
 ## 1. Tiftik filtresini temizleyin
 

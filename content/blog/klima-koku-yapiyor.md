@@ -4,6 +4,19 @@ description: "Klima açınca küf, rutubet ya da yanık kokusu mu geliyor? Hangi
 slug: "klima-koku-yapiyor"
 date: "2026-06-19"
 category: "Klima"
+guide:
+  difficulty: "Kolay"
+  time: "~1 saat (kurutma dahil)"
+  totalTime: "PT1H"
+  cost: "Ücretsiz"
+  tools: ["Ilık su"]
+steps:
+  - "Yanık, plastik ya da elektrik kokusu varsa klimayı hemen kapat, fişini ya da şalterini kes ve servis çağır."
+  - "Küf ya da rutubet kokusunda filtreyi çıkar ve ılık suyla yıka."
+  - "Filtre tamamen kuruyunca yerine tak."
+  - "Klimayı 30-60 dakika yalnız Fan modunda çalıştırarak iç üniteyi kurut."
+  - "Tahliye hortumunun ucunun tıkalı olmadığını kontrol et."
+  - "Filtre temizken koku geçmiyorsa ya da koku su damlamasıyla birlikteyse servis çağır."
 faq:
   - q: "Klimadan neden kötü koku gelir?"
     a: "En sık sebep iç ünitedeki nemde üreyen küf ve bakteridir. Kirli filtre, tıkalı tahliye hattındaki durgun su ve uzun süre kapalı kalma da koku yapar."
@@ -37,6 +50,20 @@ Klimayı açtığın anda odaya yayılan küf, rutubet ya da kötü koku hem rah
 **4. Uzun süre kapalı kalma.** Kışın hiç çalışmayan klima ilk açılışta birikmiş kokuyu verir; birkaç saat fan modunda çalışınca genelde azalır.
 
 **5. Yanık / plastik / elektrik kokusu (TEHLİKE).** Bu koku küf değil; aşırı ısınan motor, kondansatör ya da kablo demektir. Hemen kapat — aşağıda anlatıyoruz.
+
+## Adım adım: evde denenecekler
+
+**1.** Yanık, plastik ya da elektrik kokusu varsa klimayı hemen kapat, fişini ya da şalterini kes ve servis çağır.
+
+**2.** Küf ya da rutubet kokusunda filtreyi çıkar ve ılık suyla yıka.
+
+**3.** Filtre tamamen kuruyunca yerine tak.
+
+**4.** Klimayı 30-60 dakika yalnız Fan modunda çalıştırarak iç üniteyi kurut.
+
+**5.** Tahliye hortumunun ucunun tıkalı olmadığını kontrol et.
+
+**6.** Filtre temizken koku geçmiyorsa ya da koku su damlamasıyla birlikteyse servis çağır.
 
 ## Servisi aramadan önce kendin kontrol et
 

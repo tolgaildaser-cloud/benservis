@@ -4,6 +4,19 @@ description: "Çamaşır makinen suyu atmıyor, çamaşırlar ıslak mı çıkı
 slug: "camasir-makinesi-su-atmiyor"
 date: "2026-06-17"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Sığ bir kap", "Havlu"]
+steps:
+  - "Makineyi kapat ve fişini çek."
+  - "Alt ön kapağı aç, su geleceği için altına kap ve havlu hazırla."
+  - "Tahliye filtresini çevirerek çıkar, içindeki tüy ve parçaları temizle, yerine tak."
+  - "Arkadaki tahliye hortumunun bükülmediğini ve giderin tıkalı olmadığını kontrol et."
+  - "Tek ağır parça varsa yükü böl ve dengele."
+  - "Fişi tak ve programı yeniden dene."
 faq:
   - q: "Çamaşır makinesi su atmıyor, ilk ne kontrol edilir?"
     a: "Önce alt kapaktaki tahliye filtresine bak. Makine suyu boşaltamazsa son su atma adımına geçemez; en sık sebep tıkalı filtredir."
@@ -37,6 +50,20 @@ Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir
 **4. Dengesiz yük.** Tek parça ağır çamaşır topaklanır; makine güvenlik için son su atma adımını azaltır/durdurur, çamaşır ıslak çıkar.
 
 **5. Kayış veya motor (özellikle eski modeller).** Kayış gevşemiş/kopmuş ya da motor kömürleri bitmiş olabilir.
+
+## Adım adım: evde denenecekler
+
+**1.** Makineyi kapat ve fişini çek.
+
+**2.** Alt ön kapağı aç, su geleceği için altına kap ve havlu hazırla.
+
+**3.** Tahliye filtresini çevirerek çıkar, içindeki tüy ve parçaları temizle, yerine tak.
+
+**4.** Arkadaki tahliye hortumunun bükülmediğini ve giderin tıkalı olmadığını kontrol et.
+
+**5.** Tek ağır parça varsa yükü böl ve dengele.
+
+**6.** Fişi tak ve programı yeniden dene.
 
 ## Servisi aramadan önce kendin kontrol et
 

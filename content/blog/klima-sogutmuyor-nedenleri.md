@@ -5,6 +5,20 @@ slug: "klima-sogutmuyor-nedenleri"
 date: "2026-06-17"
 updated: "2026-06-29"
 category: "Klima"
+guide:
+  difficulty: "Kolay"
+  time: "~30 dakika"
+  totalTime: "PT30M"
+  cost: "Ücretsiz"
+  tools: ["Ilık su", "Uzaktan kumanda"]
+steps:
+  - "İç ünitenin kapağını aç, filtreleri çıkar ve ılık suyla yıka."
+  - "Filtreler kuruyunca yerine tak."
+  - "Modu Soğutma'ya al, sıcaklığı 16-22 °C'ye çek ve fan hızını yükselt."
+  - "Dış ünitenin önünde eşya, branda ya da bitki varsa kaldır."
+  - "Klimanın sigortasını ya da şalterini kontrol et."
+  - "Klimayı açtıktan sonra tam soğutma için 15 dakika bekle."
+  - "Filtre temiz ve ayarlar doğruyken hâlâ soğutmuyorsa servis çağır."
 faq:
   - q: "Klima dışarı hava üflüyor ama soğutmuyor, neden?"
     a: "Genelde gaz seviyesi düşüktür ya da kompresör/dış ünite kaynaklı bir sorun vardır. Önce filtreyi ve termostatı kontrol et; düzelmezse servis gerekir."
@@ -41,6 +55,22 @@ Yaz geldi, klimayı açtın ama oda bir türlü serinlemiyor. Panikleyip hemen s
 **5. Fan motoru arızası.** İç veya dış ünitedeki fan dönmüyorsa, soğuk hava odaya dağılmaz veya ısı dışarı atılamaz.
 
 **6. Kompresör arızası.** Klimanın "kalbi" olan kompresör zayıfladıysa ya da devreye girmiyorsa soğutma tamamen durur. En maliyetli arıza türüdür.
+
+## Adım adım: evde denenecekler
+
+**1.** İç ünitenin kapağını aç, filtreleri çıkar ve ılık suyla yıka.
+
+**2.** Filtreler kuruyunca yerine tak.
+
+**3.** Modu Soğutma'ya al, sıcaklığı 16-22 °C'ye çek ve fan hızını yükselt.
+
+**4.** Dış ünitenin önünde eşya, branda ya da bitki varsa kaldır.
+
+**5.** Klimanın sigortasını ya da şalterini kontrol et.
+
+**6.** Klimayı açtıktan sonra tam soğutma için 15 dakika bekle.
+
+**7.** Filtre temiz ve ayarlar doğruyken hâlâ soğutmuyorsa servis çağır.
 
 ## Servisi aramadan önce kendin kontrol et
 

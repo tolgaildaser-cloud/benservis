@@ -4,6 +4,21 @@ description: "Program bitti ama çamaşırlar sırılsıklam mı? Yük dengesi, 
 slug: "camasir-makinesi-santrifuj-yapmiyor"
 date: "2026-08-18"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu"]
+steps:
+  - "Kapağı aç, çamaşırları kazana elle eşit dağıt ve yalnız santrifüj programını çalıştır."
+  - "Tek parça yıkıyorsan kazana birkaç havlu ekle."
+  - "Programı başlatmadan önce göstergedeki devir değerine bak; elle düşürülmüşse yükselt."
+  - "Durulamada beklet seçeneğinin açık olup olmadığına bak."
+  - "Program bitince kapak camından bak; kazanda su kaldıysa önce tahliye filtresini temizle."
+  - "Tahliye hortumunun ezilmediğini ve gider bağlantısının tıkalı olmadığını kontrol et."
+  - "Makinenin köşelerini sırayla it; boşluk yapan ayağı elle çevirerek ayarla."
+  - "Aynı programda yarım yükle ince bir çamaşır yıka; kuru çıkıyorsa makinede sorun yoktur."
 faq:
   - q: "Çamaşır makinesi neden santrifüj yapmıyor?"
     a: "En yaygın sebep yükün kazan içinde dengesiz dağılmasıdır. Makine yüksek devre çıkmadan önce yükü tartar; dengesizlik algılarsa güvenlik için devri düşürür ya da santrifüjü hiç yapmaz. Bunun dışında suyun tam boşalmamış olması, düşük devirli bir programın seçilmiş olması ve makinenin dengesiz durması sık görülen sebeplerdir. Kazanı elle düzeltip programı tekrarlamak vakaların büyük kısmını çözer."
@@ -22,6 +37,24 @@ Program bitti, makine durdu, kapağı açtın — çamaşırlar sırılsıklam. 
 Bu tabloda ilk akla gelen genellikle motor arızası olur. Oysa sebeplerin büyük çoğunluğu **makinenin kendini koruma davranışıdır**: makine yüksek devre çıkmayı bilerek reddediyordur ve bunun neredeyse her zaman görünür bir sebebi vardır.
 
 > ⚡ **Kısa özet:** Önce belirtiyi ayır — hiç mi dönmüyor, yoksa yavaş mı dönüyor? Sonra sırayla bak: **yükü elle dağıt** (en sık sebep) · seçili **programın devir değeri** · kazanda **su kalıp kalmadığı** · **tahliye filtresi** · makinenin **ayakları ve terazisi** · yeni taşındıysa **taşıma cıvataları**. Hepsi ücretsiz. Kayış, motor kömürü ve rulman yetkili servis işidir.
+
+## Adım adım: evde denenecekler
+
+**1.** Kapağı aç, çamaşırları kazana elle eşit dağıt ve yalnız santrifüj programını çalıştır.
+
+**2.** Tek parça yıkıyorsan kazana birkaç havlu ekle.
+
+**3.** Programı başlatmadan önce göstergedeki devir değerine bak; elle düşürülmüşse yükselt.
+
+**4.** Durulamada beklet seçeneğinin açık olup olmadığına bak.
+
+**5.** Program bitince kapak camından bak; kazanda su kaldıysa önce tahliye filtresini temizle.
+
+**6.** Tahliye hortumunun ezilmediğini ve gider bağlantısının tıkalı olmadığını kontrol et.
+
+**7.** Makinenin köşelerini sırayla it; boşluk yapan ayağı elle çevirerek ayarla.
+
+**8.** Aynı programda yarım yükle ince bir çamaşır yıka; kuru çıkıyorsa makinede sorun yoktur.
 
 ## Önce belirtiyi ayır
 

@@ -4,6 +4,19 @@ description: "E17 su besleme süresinin aşıldığını gösterir: makine yeter
 slug: "profilo-camasir-makinesi-e17-hatasi"
 date: "2026-09-12"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Su musluğunun tam açık olduğundan emin ol."
+  - "Başka bir musluğu açarak evde su ve yeterli basınç olduğunu kontrol et."
+  - "Makinenin arkasındaki giriş hortumunun kıvrılmadığını ya da ezilmediğini kontrol et."
+  - "Musluğu kapat, hortumun musluk tarafını ayır ve bağlantı ağzındaki süzgeci akan suyun altında temizle."
+  - "Hortumu yerine tak, musluğu aç, makineyi resetle ve kısa bir program başlat."
+  - "E17 hâlâ sürüyorsa gövdeyi açma, müşteri hizmetlerine başvur."
 faq:
   - q: "Profilo çamaşır makinesinde E17 ne demek?"
     a: "BSH'nin Türkiye destek sayfasındaki tanım şu: su besleme süresi aşıldı, yani makine belirtilen süre içinde yeterli su alamamıştır. Profilo, Bosch ve Siemens aynı grubun (BSH) markalarıdır ve aynı kod ailesini kullanır; bu yüzden E17 üç markada da aynı arızayı gösterir. Kodun anlamı bir arıza teşhisi değil, bir zaman aşımıdır: su gelmedi ya da yeterince hızlı gelmedi."
@@ -32,6 +45,20 @@ Bu bir teşhis değil, bir **zaman aşımı**: makine "su beklediğim sürede ge
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > 💡 **BSH ailesi notu:** Profilo, Bosch ve Siemens aynı grubun markalarıdır ve aynı kod ailesini kullanır. Yeni modeller **E**, daha eski modeller **F** önekiyle aynı numarayı gösterir: **E17 = F17**.
+
+## Adım adım: evde denenecekler
+
+**1.** Su musluğunun tam açık olduğundan emin ol.
+
+**2.** Başka bir musluğu açarak evde su ve yeterli basınç olduğunu kontrol et.
+
+**3.** Makinenin arkasındaki giriş hortumunun kıvrılmadığını ya da ezilmediğini kontrol et.
+
+**4.** Musluğu kapat, hortumun musluk tarafını ayır ve bağlantı ağzındaki süzgeci akan suyun altında temizle.
+
+**5.** Hortumu yerine tak, musluğu aç, makineyi resetle ve kısa bir program başlat.
+
+**6.** E17 hâlâ sürüyorsa gövdeyi açma, müşteri hizmetlerine başvur.
 
 ## Servisi aramadan önce dört kontrol
 

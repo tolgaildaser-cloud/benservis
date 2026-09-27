@@ -4,6 +4,20 @@ description: "Isıtmada ilk dakikalarda hava gelmemesi ve buz çözme molası ç
 slug: "klima-sicak-hava-uflemiyor"
 date: "2026-09-14"
 category: "Klima"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Uzaktan kumanda", "Yedek pil"]
+steps:
+  - "Kumandanın ısıtma modunda olduğunu gör ve ayar sıcaklığını oda sıcaklığının üstüne çıkar."
+  - "Kumanda ekranı silik ya da boşsa pilleri kontrol et; kurulu bir zamanlayıcı olup olmadığına bak."
+  - "Klimayı kapatıp hemen açtıysan 3 dakika kumandaya basmadan bekle."
+  - "Isıtmayı açtıktan sonra birkaç dakika bekle; iç fan ısınınca üflemeye başlar."
+  - "Isıtırken durduysa ve dış üniteden buhar çıkıyorsa buz çözme için yaklaşık 10 dakika bekle; dış üniteye su dökme, buzu kazıma."
+  - "Klimayı durdur, elektriğini kes, filtreyi yıka ve gölgede kurut; 40 °C ya da daha sıcak su kullanma."
+  - "İç ve dış ünitenin önünde engel olup olmadığına yalnız gözle bak; dış üniteye tırmanma."
 faq:
   - q: "Klimayı ısıtmaya aldım, neden hemen sıcak hava gelmiyor?"
     a: "Çoğu zaman bu bir koruma davranışıdır. Beko kılavuzuna göre hava akımı sıcaklık yükselmeden başlarsa istenmeyen bir soğutma etkisi görülür; bunu önlemek için hava akımı, sıcaklık yeterli dereceye ulaştıktan sonra başlar. Arçelik'in bir modelinin kılavuzunda iç fanın, iç boru sıcaklığı 22 °C'den fazla olana kadar çalışmadığı yazıyor. Daikin kılavuzunda ise ısıtma modunda hava debisinin soğuk hava oluşmasını önlemek için düştüğü belirtiliyor. Birkaç dakika bekle."
@@ -47,6 +61,22 @@ Sonbaharın ilk serin akşamı klimayı ısıtmaya alıyorsun, kumandada güneş
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Bu yazı kullanım ve kontrol rehberidir, tamir değil.** Gaz, dış ünite, elektrik ve iç kısımlar servis işidir. Menü adları ve süreler modele göre değişir; **kendi modelinin kılavuzu esastır.**
+
+## Adım adım: evde denenecekler
+
+**1.** Kumandanın ısıtma modunda olduğunu gör ve ayar sıcaklığını oda sıcaklığının üstüne çıkar.
+
+**2.** Kumanda ekranı silik ya da boşsa pilleri kontrol et; kurulu bir zamanlayıcı olup olmadığına bak.
+
+**3.** Klimayı kapatıp hemen açtıysan 3 dakika kumandaya basmadan bekle.
+
+**4.** Isıtmayı açtıktan sonra birkaç dakika bekle; iç fan ısınınca üflemeye başlar.
+
+**5.** Isıtırken durduysa ve dış üniteden buhar çıkıyorsa buz çözme için yaklaşık 10 dakika bekle; dış üniteye su dökme, buzu kazıma.
+
+**6.** Klimayı durdur, elektriğini kes, filtreyi yıka ve gölgede kurut; 40 °C ya da daha sıcak su kullanma.
+
+**7.** İç ve dış ünitenin önünde engel olup olmadığına yalnız gözle bak; dış üniteye tırmanma.
 
 ## Önce şunu ayır: ne zaman sıcak hava gelmiyor?
 

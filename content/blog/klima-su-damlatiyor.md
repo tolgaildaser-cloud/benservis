@@ -4,6 +4,18 @@ description: "Klima iç ünitesi su damlatıyor mu? En sık sebep tıkalı tahli
 slug: "klima-su-damlatiyor"
 date: "2026-06-19"
 category: "Klima"
+guide:
+  difficulty: "Kolay"
+  time: "~30 dakika"
+  totalTime: "PT30M"
+  cost: "Ücretsiz"
+  tools: ["Kap", "Ilık su"]
+steps:
+  - "Damlama sürüyorsa klimayı kapat."
+  - "İç ünitenin kapağını aç, filtreleri çıkar, yıka ve kuruyunca yerine tak."
+  - "Tahliye hortumunun dış ucunda bükülme, ezilme ya da yaprak ve böcek tıkanması olup olmadığına bak."
+  - "Buzlanma varsa 15-20 dakika bekle ve filtre temizliğinden sonra yeniden dene."
+  - "Damlama yoğunsa ya da su prize veya karta yakınsa altına kap koy ve servis çağır."
 faq:
   - q: "Klima neden su damlatır?"
     a: "En sık sebep tahliye (drenaj) hattının tıkanmasıdır; su dışarı akamayınca iç üniteden taşar. Yanlış montaj eğimi, kirli filtreden kaynaklı buzlanma ve gaz azlığı da damlamaya yol açar."
@@ -40,6 +52,18 @@ Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğ
 **5. Tahliye pompası veya tava arızası.** Pompalı sistemlerde pompa çalışmazsa, ya da yoğuşma tavası çatlak/kaymışsa su taşar.
 
 **6. Aşırı nem (yoğuşma).** Çok nemli havada borularda dış yoğuşma olabilir; boru izolasyonu eskimişse damlama görülür.
+
+## Adım adım: evde denenecekler
+
+**1.** Damlama sürüyorsa klimayı kapat.
+
+**2.** İç ünitenin kapağını aç, filtreleri çıkar, yıka ve kuruyunca yerine tak.
+
+**3.** Tahliye hortumunun dış ucunda bükülme, ezilme ya da yaprak ve böcek tıkanması olup olmadığına bak.
+
+**4.** Buzlanma varsa 15-20 dakika bekle ve filtre temizliğinden sonra yeniden dene.
+
+**5.** Damlama yoğunsa ya da su prize veya karta yakınsa altına kap koy ve servis çağır.
 
 ## Servisi aramadan önce kendin kontrol et
 

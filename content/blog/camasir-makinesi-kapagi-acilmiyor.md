@@ -4,6 +4,20 @@ description: "Program bitti ama kapak açılmıyor mu? İçeride su var mı, ço
 slug: "camasir-makinesi-kapagi-acilmiyor"
 date: "2026-08-13"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Geniş ve alçak bir kap", "Havlu"]
+steps:
+  - "Kapağı zorlama; program bittikten sonra 1-3 dakika bekle ve kilit simgesinin sönmesini izle."
+  - "Yüksek sıcaklıkta yıkama yapıldıysa makinenin soğumasını bekle."
+  - "Tuşlar tepki vermiyor ve çocuk kilidi simgesi yanıyorsa panelde gösterilen iki tuşa birlikte birkaç saniye basarak kilidi aç."
+  - "Kazanda su varsa makineyi kapat ve fişini çek."
+  - "Alt ön kapağı aç, ince boşaltma hortumunu çıkar, tıpasını aç ve suyu geniş, alçak bir kaba al."
+  - "Su bitince tıpayı kapat, hortumu yerine tak ve kapağı yeniden dene."
+  - "Elektrik kesildiyse alt kapağın arkasındaki acil açma dilini aşağı çek; modelinde yoksa servise danış."
 faq:
   - q: "Program bitti ama kapak açılmıyor, neden?"
     a: "Çoğu makinede kapak kilidi programın bitişinden 1-3 dakika sonra çözülür; bu bir arıza değil, güvenlik gecikmesidir. Ayrıca kazanda su kaldıysa ya da sıcaklık yüksekse makine kapağı bilerek açmaz. Önce birkaç dakika bekle, gösterge üzerindeki kilit simgesinin sönmesini izle."
@@ -26,6 +40,22 @@ Program bitti, makine sustu, ama kapak açılmıyor. İçeride çamaşır var, b
 > tarif eden kaynaklara da yönlendirmiyoruz.
 
 > ⚡ **Kısa özet:** Önce **1-3 dakika bekle** — kilit programın bitişinden sonra gecikmeli çözülür. Açılmıyorsa **içeride su olup olmadığına** bak; su varsa makine kapağı bilerek açmaz, önce tahliye filtresinden boşaltılır. Elektrik kesildiyse ya da kilit hâlâ çözülmüyorsa alt kapağın arkasındaki **acil açma kolunu** kullan. Kapağı asla zorlama.
+
+## Adım adım: evde denenecekler
+
+**1.** Kapağı zorlama; program bittikten sonra 1-3 dakika bekle ve kilit simgesinin sönmesini izle.
+
+**2.** Yüksek sıcaklıkta yıkama yapıldıysa makinenin soğumasını bekle.
+
+**3.** Tuşlar tepki vermiyor ve çocuk kilidi simgesi yanıyorsa panelde gösterilen iki tuşa birlikte birkaç saniye basarak kilidi aç.
+
+**4.** Kazanda su varsa makineyi kapat ve fişini çek.
+
+**5.** Alt ön kapağı aç, ince boşaltma hortumunu çıkar, tıpasını aç ve suyu geniş, alçak bir kaba al.
+
+**6.** Su bitince tıpayı kapat, hortumu yerine tak ve kapağı yeniden dene.
+
+**7.** Elektrik kesildiyse alt kapağın arkasındaki acil açma dilini aşağı çek; modelinde yoksa servise danış.
 
 ## Sırayla ne denenir
 
