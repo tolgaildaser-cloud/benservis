@@ -226,6 +226,19 @@ export const HATA_KODU_KATMANI = {
     { giris: "Elektrik tüketimi birden arttı", tip: "ayar",
       anlam: "Enerjinin çoğu suyu ısıtmaya gider; aynı programda tüketimin belirgin artması bir sinyal olabilir.",
       yazi: "camasir-makinesi-ne-kadar-elektrik-harcar" },
+    // ——— 27 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264687_k.pdf · md5 7a5f38c8ae4890b1b1e7e691f2de1950
+    { giris: "Vestel — E01", tip: "kod",
+      anlam: "Vestel'e göre kapı açık kalmış: kapağı kilitlendiğini duyana kadar kapat; sürerse fişi çek, yetkili servis.",
+      yazi: "vestel-camasir-makinesi-e01-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264687_k.pdf · md5 7a5f38c8ae4890b1b1e7e691f2de1950
+    { giris: "Vestel — E02", tip: "kod",
+      anlam: "Su basıncı ya da kazan su seviyesi düşük: musluğu sonuna kadar aç, su kesik mi bak; sürerse fişi çek, musluğu kapat, servis.",
+      yazi: "vestel-camasir-makinesi-e02-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264687_k.pdf · md5 7a5f38c8ae4890b1b1e7e691f2de1950
+    { giris: "Vestel — E04", tip: "kod",
+      anlam: "Makinede aşırı miktarda su var: makine suyu kendisi boşaltır; sonra kapat, fişi çek, musluğu kapat, danışma hattını ara.",
+      yazi: "vestel-camasir-makinesi-hata-kodlari" },
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -427,6 +440,43 @@ export const HATA_KODU_KATMANI = {
     { giris: "Siemens — E07…E27", tip: "kod",
       anlam: "Siemens ve Bosch aynı kod dilini konuşuyor, panel farklı; hangi kod evde çözülür belli.",
       yazi: "siemens-bulasik-makinesi-hata-kodlari" },
+    // ——— 27 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=DW60M5052FW&CttFileID=10095923&CDCttType=UM&VPath=UM%2F202503%2F20250306111731926%2FDW5500MM_DD81-02615C-11_KA_TR_EN_241108.pdf · md5 2ad54a56734b93dbaeefbcd4fdc3b385
+    { giris: "Samsung — LC (LE)", tip: "kod",
+      anlam: "Sızıntı kontrolü: su vanası ve şalter kapatılır; parlatıcı taşması, deterjan ve denge evde kontrol edilir.",
+      yazi: "samsung-bulasik-makinesi-lc-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=DW60M5052FW&CttFileID=10095923&CDCttType=UM&VPath=UM%2F202503%2F20250306111731926%2FDW5500MM_DD81-02615C-11_KA_TR_EN_241108.pdf · md5 2ad54a56734b93dbaeefbcd4fdc3b385
+    { giris: "Samsung — HC (HE)", tip: "kod",
+      anlam: "Yüksek sıcaklıkta ısıtma kontrolü: boş makinede deterjanla bir program denenir, sürerse şalter ve servis.",
+      yazi: "samsung-bulasik-makinesi-hc-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=DW60M5052FW&CttFileID=10095923&CDCttType=UM&VPath=UM%2F202503%2F20250306111731926%2FDW5500MM_DD81-02615C-11_KA_TR_EN_241108.pdf · md5 2ad54a56734b93dbaeefbcd4fdc3b385
+    { giris: "Samsung — bC2 (bE2)", tip: "kod",
+      anlam: "Düğme kontrolü: bir tuşa uzun süre basılmış; paneldeki su ve kir kontrol edilip nemli bezle silinir.",
+      yazi: "samsung-bulasik-makinesi-bc2-hatasi" },
+    // kaynak: https://www.samsung.com/tr/home-appliances/faq-dishwasher/ · md5 800f3dae1021411046adba7cc8ad8cc6
+    { giris: "Samsung — 5C (5E)", tip: "kod",
+      anlam: "Tahliye sorunu: filtre temizliği ve boşaltma hortumu kontrolü evde yapılıyor.",
+      yazi: "samsung-bulasik-makinesi-5c-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=DW60M5052FW&CttFileID=10095923&CDCttType=UM&VPath=UM%2F202503%2F20250306111731926%2FDW5500MM_DD81-02615C-11_KA_TR_EN_241108.pdf · md5 2ad54a56734b93dbaeefbcd4fdc3b385
+    { giris: "Samsung — düğmeler çalışmıyor (kontrol kilidi)", tip: "belirti",
+      anlam: "Kapak açıksa GÜÇ dışındaki tuşlar çalışmaz; kontrol kilidi 3 saniye basılı tutarak açılır.",
+      yazi: "samsung-bulasik-makinesi-bc2-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9fefe3c49867c92fa7e66e410
+    { giris: "Vestel — F2", tip: "kod",
+      anlam: "Su tahliye edilmiyor: programı iptal et, filtre grubunu ve tahliye hortumunu temizle; sürerse servis.",
+      yazi: "vestel-bulasik-makinesi-f2-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9fefe3c49867c92fa7e66e410
+    { giris: "Vestel — F1", tip: "kod",
+      anlam: "Taşma: Vestel'in talimatı makineyi ve musluğu kapatıp servisle iletişime geçmek; evde tarif edilen adım yok.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9fefe3c49867c92fa7e66e410
+    { giris: "Vestel — F3", tip: "kod",
+      anlam: "Sürekli su girişi: Vestel'in talimatı musluğu kapatıp servisle iletişime geçmek.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" },
+    // kaynak: https://static.vestel.com.tr/kullanimkilavuzlari/20218379-KK.pdf · md5 ebe98e45d57fc21fc293e5c88ab47b8e
+    { giris: "Vestel — FE", tip: "kod",
+      anlam: "Yeni nesilde arızalı elektronik kart (servis); eski nesilde voltaj düşmesine bağlı parametre hatası, program yeniden çalıştırılır.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" },
   ],
 
   "Kombi / Termosifon": [
@@ -499,6 +549,171 @@ export const HATA_KODU_KATMANI = {
     { giris: "Tatile giderken kombi ne yapılmalı", tip: "ayar",
       anlam: "Kısa tatilde yaz modu yeter; uzun tatilde gaz vanası kapatılır ve dönüşte basınç kontrol edilir.",
       yazi: "kombi-yazin-kapatilir-mi" },
+    // ——— 27 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/6a-ariza-kodu/ · md5 37b9f9e083b4ed3c4a05a2e8d79e9b77
+    { giris: "Buderus — 6A", tip: "kod",
+      anlam: "Buderus'a göre ateşleme sorunu: önce gaz vanaları, sonra bir kez reset; sürerse yetkili servis.",
+      yazi: "buderus-kombi-6a-hatasi" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/227-ariza-kodu/ · md5 78fdc8c86fe5f4afb99a1b6860c9dc7b
+    { giris: "Buderus — 227", tip: "kod",
+      anlam: "GB022i ve GB122i'de alev algılanmıyor; Buderus'un ilk kontrolü kombinin gaz vanasının açık olması.",
+      yazi: "buderus-kombi-227-hatasi" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/4c-ariza-kodu/ · md5 8a0b1be67aa3ad1ee8a298e6dffab4e4
+    { giris: "Buderus — 4C", tip: "kod",
+      anlam: "Logamax U serisinde aşırı ısınma, kombi kendini bloke eder; sıra basınç, kalorifer vanaları, reset.",
+      yazi: "buderus-kombi-4c-hatasi" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/4l-ariza-kodu/ · md5 65e0394f91c93fae8616f2df80090f41
+    { giris: "Buderus — 4L", tip: "kod",
+      anlam: "Tesisat su basıncı düşük; Buderus basıncın 1,2 bar'a yükseltilmesini ve yetkili servise başvurulmasını istiyor.",
+      yazi: "buderus-kombi-4l-hatasi" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/2e-ariza-kodu/ · md5 6c4c0cb755e0225c6a9b3bdb7ef61449
+    { giris: "Buderus — 2E", tip: "kod",
+      anlam: "Logamax U022/U072'de tesisat su basıncı düşük; 4L ile aynı tanım ve çözüm.",
+      yazi: "buderus-kombi-4l-hatasi" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/1017-ariza-kodu/ · md5 c7cf660b1fd59a2e5889b8ef2bf81954
+    { giris: "Buderus — 1017", tip: "kod",
+      anlam: "GB022i ve GB122i'de su basıncı çok düşük; basınç kontrol edilir, gerekirse su ilave edilir.",
+      yazi: "buderus-kombi-1017-hatasi" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/2971-ariza-kodu/ · md5 f3a5b14293cd51c09d4c1ea8a79ff60e
+    { giris: "Buderus — 2971", tip: "kod",
+      anlam: "GB022i ve GB122i'de çalışma basıncı çok düşük; önce ısıtma tesisatının havası alınır, sonra basınç kontrol edilir.",
+      yazi: "buderus-kombi-1017-hatasi" },
+    // kaynak: https://buderus-tr-tr-b.boschhc-documents.com/download/file/file/6721852623.pdf · md5 e2c3f95692c0e3c1e3a2ea3b59997420
+    { giris: "Buderus — LoPr", tip: "kod",
+      anlam: "GB172i.2 kılavuzuna göre çalışma basıncı çok düşük; 0,3 bar altında ısıtma bloke olur, tesisat doldurulur.",
+      yazi: "buderus-kombi-4l-hatasi" },
+    // kaynak: https://buderus-tr-tr-b.boschhc-documents.com/download/file/file/6721852623.pdf · md5 e2c3f95692c0e3c1e3a2ea3b59997420
+    { giris: "Buderus — 2980", tip: "kod",
+      anlam: "GB172i.2 kılavuzuna göre tekrarlanan reset denemeleri sonrası güvenlik blokajı; yalnız uzman ya da müşteri hizmetleri kaldırır.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/ep-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/fd-ariza-kodu/ · md5 0f4991fe2a78afb35b78a04b24ae26ec · 8a03ca4fe9343798913b698d8c9b43b6
+    { giris: "Buderus — EP · Fd", tip: "kod",
+      anlam: "Reset tuşuna uzun süre basılmış; Buderus tuşa 30 saniyeyi aşmayacak şekilde basılmasını istiyor.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/7-c-l-ariza-kodu/ · md5 125b51cb9aeb4aea280311e3a1e9c254
+    { giris: "Buderus — 7 C-L", tip: "kod",
+      anlam: "Elektrik voltaj düşüklüğü hataları; reset tuşu 30 saniyeyi aşmadan basılır, sürerse yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/356-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/2972-ariza-kodu/ · md5 30a4e31c88ab79c1645cf462c4d1c405 · f4bb5d53bdc13344db6e4b819e11e2ba
+    { giris: "Buderus — 356 · 2972", tip: "kod",
+      anlam: "GB022i ve GB122i'de besleme ya da şebeke gerilimi çok düşük; elektrik tarafı yetkili servis işi.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/6c-ariza-kodu/ · md5 fa89e59de8fa4faff9197f7d84fe59b1
+    { giris: "Buderus — 6C", tip: "kod",
+      anlam: "Gaz kesildikten sonra alev algılanıyor; Buderus'un tek çözümü yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/3a-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/3-a-y-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/c7-ariza-kodu/ · md5 ed61b732c0fb91e51c345f9b63936ca4 · 5633fcd81dff92f5244e239352a52371 · a38f38d8e5ebd533f939beddd78c30c3
+    { giris: "Buderus — 3A · 3 A-Y · C7", tip: "kod",
+      anlam: "Fan devir sayısı düşük ya da fan çalışmıyor; voltaj düşük olabilir, yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/3c-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/3y-ariza-kodu/ · md5 7e99f509d9f181fe8d9a57d0b17362d3 · de734392c9dda9f5b83a75cd4b45d1a2
+    { giris: "Buderus — 3C · 3Y", tip: "kod",
+      anlam: "Diferansiyel basınç şalteri kapatmıyor ya da açılmıyor; yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/0y-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/4y-ariza-kodu/ · md5 e16fb207d19727838dc0fd32388deeda · 931d05c50b93528ecd459ffcfabd01d7
+    { giris: "Buderus — 0Y · 4Y", tip: "kod",
+      anlam: "Sensör sıcaklık artışı yüksek (0Y) ya da gidiş suyu sensörü kontrol edilmeli (4Y); yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/cl-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/h11-ariza-kodu/ · md5 3071f702bcb0bfa566a50c971d20d0fe · 1f02213250cb33f760a86b767b598f46
+    { giris: "Buderus — CL · H11", tip: "kod",
+      anlam: "Kullanım suyu sensörü kontrol edilmeli; yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/cc-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/ec-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/--ariza-kodu/ · md5 174e2af032fcb84f40f8c61c34c0ac24 · a60ef16c99ed9fa7944cbd935c99e02c · 698efdc0b9e5f488674b213c75820d96
+    { giris: "Buderus — CC · EC · -", tip: "kod",
+      anlam: "Dış hava sensörü algılanmıyor; sensör ve bağlantı kablosu kontrolü yetkili servis işi.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/5l-ariza-kodu/ · md5 8bb72fc82226b66b3a78882966480784
+    { giris: "Buderus — 5L", tip: "kod",
+      anlam: "BUS iletişiminde kesinti; termostat kablosu kontrolü için yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/2-e-y-ariza-kodu/ · md5 33e2e6b51b0b4fbe5aa95ebb9fcb8e62
+    { giris: "Buderus — 2 E-Y", tip: "kod",
+      anlam: "Kalorifer tesisatında sirkülasyon problemleri; 2E'den farklı kod, yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/9c-ariza-kodu/ · md5 6788131aa37a74d812e1286d028d2a9b
+    { giris: "Buderus — 9C", tip: "kod",
+      anlam: "Kod anahtarı algılanmıyor; gaz vanası ve gaz bağlantı basıncı kontrolüyle birlikte yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/9p-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/9-u-l-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/el-ariza-kodu/ · md5 ae958904ca4c56869f452dfe499d5b91 · bdf7b363f68f7812e3316131662b6dbb · 9775f17fbcebabba262eb77a749646c6
+    { giris: "Buderus — 9P · 9 U-L · EL", tip: "kod",
+      anlam: "KIM algılanmadı (9U-L'de ayrıca gaz armatürü hatası) ya da KIM veya Logamatic BC20 arızalı; yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/b3-ariza-kodu/ · md5 33e13b6e90aa1ab8f39317adcdac8e10
+    { giris: "Buderus — B3", tip: "kod",
+      anlam: "Yoğuşma eşanjöründe su seviye sensörü hatası; yoğuşma gideri kontrolü için yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/d7-ariza-kodu/ · md5 5f0b31b833f84165ccb66ccf1d5573a6
+    { giris: "Buderus — d7", tip: "kod",
+      anlam: "Gaz grubu kontrol edilmeli; yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/el-8y-ariza-kodu/ · md5 aed663f1b27f4e1027919bb783fdb686
+    { giris: "Buderus — EL-8Y", tip: "kod",
+      anlam: "Dahili arıza; yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/p-ariza-kodu/ · https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/i-i-ariza-kodu/ · md5 59996932019fe92b7a6ce540ebdd3e18 · cc142b04097640a91a88804c99eab555
+    { giris: "Buderus — P · I I", tip: "kod",
+      anlam: "Cihaz tipi tanımlanmamış (P) ya da fan devir ayarı seçilmemiş (I I); yetkili servis.",
+      yazi: "buderus-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-intro-24-28-kw_1452962.pdf · md5 2ad2ae698770f850da164d67e3ac3637
+    { giris: "Vaillant — F.28 / F.028", tip: "kod",
+      anlam: "Ateşleme başarısız: arka arkaya üç (ecoTEC plus/exclusive'te beş) ateşleme denemesi tutmayınca kombi arıza konumuna geçer; önce gaz kesme vanası, sonra kılavuzdaki sınırla reset.",
+      yazi: "vaillant-kombi-f28-hatasi" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-plus-26-40-kw_1491931.pdf · md5 7019a6c065efd6227ebac697dc91f175
+    { giris: "Vaillant — F.281", tip: "kod",
+      anlam: "ecoTEC plus/exclusive'te alev stabilizasyon süresi boyunca söndü; adımlar F.028 ile aynı: gaz kesme vanası, reset en fazla 3 kez, olmazsa yetkili servis.",
+      yazi: "vaillant-kombi-f28-hatasi" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-intro-24-28-kw_1452962.pdf · md5 2ad2ae698770f850da164d67e3ac3637
+    { giris: "Vaillant — F.22 / F.022", tip: "kod",
+      anlam: "Tesisat basıncı çok düşük, ısıtma sistemindeki su yetersiz; dolum basıncı kontrol edilir ve ısıtma sistemi kılavuzdaki değere kadar doldurulur.",
+      yazi: "vaillant-kombi-f22-hatasi" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.29", tip: "kod",
+      anlam: "Çalışma sırasında sönen alev yeniden yakılamadı; kullanma kılavuzu kullanıcıya adım vermiyor, yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.75", tip: "kod",
+      anlam: "Pompa arızası / su eksikliği: pompa çalışırken yeterli basınç artışı algılanmadı; kontrolü yetkili servis işidir.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.83", tip: "kod",
+      anlam: "Kuru yanma: brülör çalışırken gidiş/dönüş sensöründe beklenen sıcaklık değişimi görülmedi; olası nedenlerden biri üründe az su, kontrolü yetkili servis işidir.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/6135864VBA00011_1.pdf · md5 5513c22c39f416336369c7d3cbe6d0fe
+    { giris: "Viessmann — E3", tip: "kod",
+      anlam: "Vitodens 100-W/111-W/111-F ve Connect/Trend'de arıza değil: ViCare'de Evde tatil ya da Tatil programı açık; eski Vitotronic'li 200-W/300-W'de anlamı farklı.",
+      yazi: "viessmann-kombi-e3-hatasi" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/6135864VBA00011_1.pdf · md5 5513c22c39f416336369c7d3cbe6d0fe
+    { giris: "Viessmann — E10", tip: "kod",
+      anlam: "WLAN kurulurken ana ağ bağlantısı kurulamadı; modem bağlantısı, 2,4 GHz ağ ve Wi-Fi şifresi kontrol edilir.",
+      yazi: "viessmann-kombi-e10-hatasi" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/6135864VBA00011_1.pdf · md5 5513c22c39f416336369c7d3cbe6d0fe
+    { giris: "Viessmann — E12", tip: "kod",
+      anlam: "WLAN kurulurken sunucu bağlantısı kurulamadı; Viessmann bağlantının daha sonra yeniden kurulmasını istiyor.",
+      yazi: "viessmann-kombi-e10-hatasi" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/6173992VBA00005_1.pdf · md5 5c0d0900f6f66d9eb9dc09855ae7cb04
+    { giris: "Viessmann — CL", tip: "kod",
+      anlam: "Brülör bir arıza nedeniyle kilitlendi; arıza numarası not edilip kilit ön paneldeki ok düğmeleriyle açılır, tekrarlarsa servis.",
+      yazi: "viessmann-kombi-cl-hatasi" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/6135864VBA00011_1.pdf · md5 5513c22c39f416336369c7d3cbe6d0fe
+    { giris: "Ekranda uyarı üçgeni var (Viessmann)", tip: "belirti",
+      anlam: "Sabit üçgende arıza kodu servise bildirilir; üçgen ve kod yanıp sönüp brülör çalışmıyorsa kilit kullanıcı tarafından açılabilir.",
+      yazi: "viessmann-kombi-cl-hatasi" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/5791986VBA00002_1.pdf · md5 5806d06b45d167c0b6e7ebe1ce6c0721
+    { giris: "Viessmann Vitopend — F02, F03, F04, F05, F07, F08", tip: "kod",
+      anlam: "Vitopend 100-W'de resetlenebilen kodlar: MODE ve OK aynı anda; arıza göstergesi geri gelirse servis.",
+      yazi: "viessmann-vitopend-kombi-hata-kodlari" },
+    // kaynak: https://static.viessmann-climatesolutions.com/resources/technical_documents/TR/tr/VBA/5791986VBA00002_1.pdf · md5 5806d06b45d167c0b6e7ebe1ce6c0721
+    { giris: "Viessmann Vitopend — F10, F30, F98 ve anahtar sembollü kodlar", tip: "kod",
+      anlam: "0C, A0, CC, F10–F98 grubunda kilit kullanıcı tarafından açılamaz; Viessmann doğrudan yetkili servis istiyor.",
+      yazi: "viessmann-vitopend-kombi-hata-kodlari" },
+    // kaynak: https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 fe253fad0bb4e49ce18f1a297ef42cab
+    { giris: "Viessmann Vitodens 200-W/300-W — F1, F2, b0, b8, E5", tip: "kod",
+      anlam: "Vitotronic kontrol üniteli eski serilerde brülörü durduran kodlar; Viessmann önlemleri yetkili yükleniciye bırakıyor.",
+      yazi: "viessmann-kombi-ariza-kodlari" },
+    // kaynak: https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 fe253fad0bb4e49ce18f1a297ef42cab
+    { giris: "Viessmann Vitodens 200-W/300-W — C1…CF, d6, d7, d8, E0 (normal çalışma)", tip: "kod",
+      anlam: "Bu kodlarda Viessmann sistemin davranışını normal çalışma olarak veriyor; kod iletişim modülü, uzantı ya da harici giriş hatasını gösterir.",
+      yazi: "viessmann-kombi-ariza-kodlari" },
   ],
 
   "Buzdolabı": [
@@ -649,6 +864,27 @@ export const HATA_KODU_KATMANI = {
     { giris: "Gaz bitti mi, kaçak mı", tip: "belirti",
       anlam: "Buzdolabı kapalı devredir, gaz kullanımla azalmaz; azaldıysa kaçak var ve kaçak bulunmadan dolum kalıcı olmaz.",
       yazi: "buzdolabi-gaz-dolumu" },
+    // ——— 27 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://statik.vestel.com.tr/webfiles/20263682_k.pdf · md5 686a18210032057be328243bd73f033b
+    { giris: "Vestel — E09", tip: "kod",
+      anlam: "Dondurucu yeterince soğuk değil, özellikle uzun kesinti sonrası: çözülen gıdayı tekrar dondurma, daha soğuk ayar ya da hızlı dondurma.",
+      yazi: "vestel-buzdolabi-e09-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20263704_k.pdf · md5 70b85e8c382ca01b421f743d8117c15a
+    { giris: "Vestel — E10", tip: "kod",
+      anlam: "Soğutucu yeterince soğuk değil: daha soğuk ayar ya da hızlı soğutma, hava kanalı ve sensör önünü aç, kapıyı sık açma.",
+      yazi: "vestel-buzdolabi-e10-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20263682_k.pdf · md5 686a18210032057be328243bd73f033b
+    { giris: "Vestel — E11", tip: "kod",
+      anlam: "Soğutucu gereğinden soğuk, gıdalar donmaya başlar: hızlı soğutmayı kapat, ayarı normal kullanım derecesine getir.",
+      yazi: "vestel-buzdolabi-e11-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20263682_k.pdf · md5 686a18210032057be328243bd73f033b
+    { giris: "Vestel — E08", tip: "kod",
+      anlam: "Düşük voltaj uyarısı (170 V altı): arıza değil, gerilim düzelince kendiliğinden kalkar; sürerse Vestel iletişim merkezi.",
+      yazi: "vestel-buzdolabi-e09-hatasi" },
+    // kaynak: https://statik.vestel.com.tr/webfiles/20263682_k.pdf · md5 686a18210032057be328243bd73f033b
+    { giris: "Vestel — E01, E02, E03, E06, E07", tip: "kod",
+      anlam: "Sensör hatası uyarısı: Vestel'in talimatı en kısa zamanda iletişim merkezini arayıp teknik destek istemek.",
+      yazi: "vestel-buzdolabi-e09-hatasi" },
   ],
 
   "Klima": [

@@ -151,19 +151,20 @@ export const MARKALAR = [...new Set([
 ])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
-  "Buzdolabı": BEYAZ_ESYA,
+  // 27 Eyl 2026 (Sprint #144 kılavuz föyü): ortak diziye DEĞİL, yalnız kılavuzu doğrulanan cihaza eklendi.
+  "Buzdolabı": [...BEYAZ_ESYA, "Onvo"].sort(trSort),
   "Çamaşır Makinesi": BEYAZ_ESYA,
   // Kurutma makinesi markaları çamaşır makinesiyle aynı üretici kümesi (TR piyasasında
   // kurutmayı satan her marka çamaşır da satıyor) — ayrı liste tutmak ikinci kaynak olurdu.
   "Kurutma Makinesi": BEYAZ_ESYA,
-  "Bulaşık Makinesi": BEYAZ_ESYA,
+  "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke"].sort(trSort),
   "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK])].sort(trSort),
-  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel"])].sort(trSort),
-  "Klima": KLIMA,
-  "Kombi / Termosifon": KOMBI,
-  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR])].sort(trSort),
-  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot"])].sort(trSort),
-  "Su Sebili / Arıtma": SU_ARITMA,
+  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo"])].sort(trSort),
+  "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm"].sort(trSort),
+  "Kombi / Termosifon": [...KOMBI, "Regal", "Vestel", "Daikin"].sort(trSort),
+  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier"])].sort(trSort),
+  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot", "Hoover", "Siemens", "Profilo", "AEG", "Onvo"])].sort(trSort),
+  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur"].sort(trSort),
   "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI])].sort(trSort),
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };

@@ -82,7 +82,8 @@ export const MARKA_KILAVUZLARI = {
     url: "https://www.bosch-home.com.tr/musteri-hizmetleri/kullanim-kilavuzlari",
     ozet: "Bosch ev aletleri kılavuz arşivi: model numarasını yazınca kullanım kılavuzu ve montaj dokümanı birlikte çıkıyor.",
     // Bosch ev aletleri sitesi ısıtma/iklimlendirme ürünlerini kapsamıyor (o taraf ayrı şirket).
-    haric: ["Klima", "Kombi / Termosifon"],
+    // 27 Eyl 2026: klima kılavuzları bu arşivde (E-Nr yardımcısı "Ev Konforu → Klimalar"); kombi hâlâ ayrı şirkette.
+    haric: ["Kombi / Termosifon"],
   },
   "Siemens": {
     url: "https://www.siemens-home.bsh-group.com/tr/musteri-hizmetleri/destek-merkezi/kullanim-kilavuzlari",
@@ -116,7 +117,7 @@ export const MARKA_KILAVUZLARI = {
   },
   "Daikin": {
     url: "https://www.daikin.com.tr/daikin-kullanim-kilavuzlari",
-    ozet: "Daikin Türkiye kullanım kılavuzları arşivi; klima ve ısı pompası modellerinin kılavuzları.",
+    ozet: "Daikin Türkiye kullanım kılavuzları arşivi: klima serilerinin yanında NDJ ve CSU Premix kombi kılavuzları da listeleniyor.",
   },
   "Alarko": {
     url: "https://www.alarko-carrier.com.tr/urun-dokumanlari",
@@ -186,7 +187,7 @@ export const MARKA_KILAVUZLARI = {
   },
   "Apple": {
     url: "https://support.apple.com/tr-tr/docs",
-    ozet: "Apple'ın resmî kullanım kılavuzu arşivi (Mac, iPad, iPhone ve aksesuarlar) — Türkçe.",
+    ozet: "Apple'ın resmî kullanım kılavuzu arşivi (Mac, iPad, iPhone, ekranlar ve aksesuarlar) — Türkçe.",
   },
   "Casper": {
     url: "https://www.casper.com.tr/destek",
@@ -216,8 +217,9 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Kombi modelini listeden seçiyorsun; montaj ve kullanma kılavuzu ürün sayfasının doküman bölümünde PDF olarak duruyor.",
   },
   "Demirdöküm": {
-    url: "https://www.demirdokum.com.tr/urunler/kombiler/",
-    ozet: "Model sayfasını açtığında kullanım kılavuzu ürün dokümanları arasında listeleniyor; model adı kombinin alt kapağı içindeki etikette yazar.",
+    // 27 Eyl 2026: kombi+klima tek adreste (/urunler/, 200) — eski /urunler/kombiler/ klimayı kapsamıyordu.
+    url: "https://www.demirdokum.com.tr/urunler/",
+    ozet: "DemirDöküm ürünler sayfası: kombi ya da klima modelini açtığında kullanım kılavuzu ürün dokümanları arasında PDF olarak listeleniyor; kombide model adı alt kapağın içindeki etikette yazar.",
   },
   "Ariston": {
     url: "https://www.ariston.com/tr-tr/indirme-alani/",
@@ -287,7 +289,7 @@ export const MARKA_KILAVUZLARI = {
   // ── Beyaz eşya: Candy–Hoover–Haier grubu ──────────────────────────────────
   "Hoover": {
     url: "https://www.hoover-home.com/tr_TR/kilavuz-ara/",
-    ozet: "Hoover Türkiye kılavuz arama sayfası: ürün grubunu seçiyor ya da ürün kodunu yazıyorsun; buzdolabı, çamaşır-kurutma, bulaşık ve pişirme kılavuzları bir arada.",
+    ozet: "Hoover Türkiye kılavuz arama sayfası: ürün kategorisini (süpürme, yıkama-kurutma, pişirme, soğutma) seçip modelini ya da ürün kodunu giriyorsun; kılavuz PDF olarak iniyor.",
   },
   "Candy": {
     url: "https://www.candy-home.com/en_GB/user-manual/",
@@ -509,6 +511,35 @@ export const MARKA_KILAVUZLARI = {
   "Microsoft": {
     url: "https://support.microsoft.com/tr-tr/surface",
     ozet: "Microsoft Surface Türkçe destek merkezi: cihaz modelini seçip kurulum, kullanım ve sorun giderme rehberlerine ulaşıyorsun.",
+  },
+  // ── 27 Eyl 2026, Sprint #144 (PAZ kılavuz föyü A): 7 yeni marka, adresler koşuda curl 200 ──
+  "Airfel": {
+    url: "https://airfel.com/tr/tr/category/kombiler",
+    ozet: "Airfel kombi modelleri listesi; modeli seçince ürün sayfasındaki 'Doküman' sekmesinden kullanım ve kurulum kılavuzu PDF'i indiriliyor.",
+  },
+  "Gree": {
+    url: "https://www.gree.com.tr/kategori/klima-modelleri-fiyatlari",
+    ozet: "Gree Türkiye klima modelleri; ürün sayfasındaki 'Dokümanlar' bölümünde kullanım, kumanda ve Wi-Fi kurulum kılavuzları ile CE belgesi var (site Türkiye distribütörü TLC Klima'nın).",
+  },
+  "Elica": {
+    url: "https://www.elica.com/TR-tr/downloads",
+    ozet: "Elica Türkiye indirme alanı: ürün kodunu (PRF…) aratınca modelin kullanım kılavuzu ve teknik veri föyü PDF olarak çıkıyor; katalog da burada.",
+  },
+  "King": {
+    url: "https://www.king.com.tr/pages/dokumanlar",
+    ozet: "King ürünlerinin kullanım kılavuzu ve garanti belgesi listesi; airfryer ve fritöz dahil modeli bulup 'İndir' ya da 'Görüntüle' ile PDF açılıyor.",
+  },
+  "Ninja": {
+    url: "https://www.sharkninja.com.tr/pages/destek",
+    ozet: "SharkNinja Türkiye destek sayfası; kategoriden ürününe geçince ürün sayfasındaki 'Kullanım Kılavuzu' sekmesinden PDF açılıyor, servis noktaları ve ürün kaydı da burada.",
+  },
+  "Brita": {
+    url: "https://www.brita.com.tr/kullanim-kilavuzlari",
+    ozet: "BRITA Türkiye indirme merkezi: sebil ve profesyonel filtre sistemlerinin (PURITY, AquaGusto vb.) Türkçe kullanma kılavuzları ve veri dokümanları PDF olarak.",
+  },
+  "Aura (İhlas)": {
+    url: "https://www.iea.com.tr/tr/urunler/su-aritmalar/aura-cebilon-unique/107",
+    ozet: "İhlas Ev Aletleri'nin Aura Cebilon su arıtma sayfası; her modelin (Unique, Platinum, Silver, D-Flow) sayfasının altındaki kılavuz bağlantısından PDF açılıyor.",
   },
 };
 
