@@ -514,8 +514,10 @@ export const MARKA_KILAVUZLARI = {
   },
   // ── 27 Eyl 2026, Sprint #144 (PAZ kılavuz föyü A): 7 yeni marka, adresler koşuda curl 200 ──
   "Airfel": {
-    url: "https://airfel.com/tr/tr/category/kombiler",
-    ozet: "Airfel kombi modelleri listesi; modeli seçince ürün sayfasındaki 'Doküman' sekmesinden kullanım ve kurulum kılavuzu PDF'i indiriliyor.",
+    // 28 Eyl 2026: kombi+klima tek adreste (ana sayfa menüsü: Kombiler + Klimalar; curl 200) —
+    // eski /category/kombiler klimayı kapsamıyordu, ortak ürün dizini yok (/urunler 404).
+    url: "https://airfel.com/tr/tr/",
+    ozet: "Airfel kombi ve klima modelleri; menüden kategoriyi ve modeli seçince ürün sayfasındaki 'Doküman' bölümünden kullanım kılavuzu PDF'i indiriliyor.",
   },
   "Gree": {
     url: "https://www.gree.com.tr/kategori/klima-modelleri-fiyatlari",
@@ -540,6 +542,26 @@ export const MARKA_KILAVUZLARI = {
   "Aura (İhlas)": {
     url: "https://www.iea.com.tr/tr/urunler/su-aritmalar/aura-cebilon-unique/107",
     ozet: "İhlas Ev Aletleri'nin Aura Cebilon su arıtma sayfası; her modelin (Unique, Platinum, Silver, D-Flow) sayfasının altındaki kılavuz bağlantısından PDF açılıyor.",
+  },
+  // ── 28 Eyl 2026, Sprint #144 (PAZ kılavuz föyü): 4 yeni marka, adresler koşuda curl 200 ──
+  "Tineco": {
+    url: "https://www.tineco.com.tr/support/instruction-manual",
+    ozet: "Tineco Türkiye kullanım kılavuzları sayfası: FLOOR ONE, PURE ONE, PWRHERO ve iFLOOR serisi şarjlı süpürgelerin kılavuzları model adına göre listeleniyor.",
+  },
+  // Shark = SharkNinja'nın süpürge markası; Ninja ile aynı destek adresi.
+  "Shark": {
+    url: "https://www.sharkninja.com.tr/pages/destek",
+    ozet: "SharkNinja Türkiye destek sayfası; kategoriden süpürgene geçince ürün sayfasındaki 'Kullanım Kılavuzu' sekmesinden PDF açılıyor, servis noktaları ve ürün kaydı da burada.",
+  },
+  "Sinbo": {
+    url: "https://www.sinbo.com.tr/urunler/supurgeler",
+    ozet: "Sinbo süpürge modelleri; alt kategoriden modelini açtığında 'Kullanım Kılavuzu' PDF'i çoğu ürün sayfasında duruyor (Sinbo'da merkezî kılavuz arama sayfası yok).",
+    // Adres süpürge kategorisi; Sinbo KUCUK_EV'de olduğu için mikrodalga/air fryer satırı üretilmesin.
+    haric: ["Mikrodalga / Air Fryer"],
+  },
+  "Kyocera": {
+    url: "https://www.kyoceradocumentsolutions.com.tr/tr/support/downloads.html",
+    ozet: "Kyocera Türkiye ürün destek ve indirme merkezi: yazıcı ya da çok fonksiyonlu cihazını listeden seçip sürücü, yardımcı program ve kullanım kılavuzlarına ulaşıyorsun.",
   },
 };
 
