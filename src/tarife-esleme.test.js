@@ -112,3 +112,27 @@ describe("api/tarife/onayla — SEED kapısı (YK #143)", () => {
     expect(upsert.mock.calls[0][0].ariza).toBe("Gaz dolumu");
   });
 });
+
+// ── YK #143 şerhi (26 Eyl): boş alan onaylanamaz — snapshot o satırı atlar, arıza SEED'den düşer ──
+describe("api/tarife/onayla — zorunlu alan kapısı (YK #143 şerhi)", () => {
+  beforeEach(() => { process.env.ADMIN_TOKEN = "T"; upsert.mockClear(); });
+
+  for (const alan of ["onayli_parca_min", "onayli_parca_max", "onayli_iscilik"]) {
+    it(`${alan} null → 400, upsert YOK`, async () => {
+      const res = sahteRes();
+      await onayla(istek({ cihaz: "Klima", ariza: "Gaz dolumu", ...bant, [alan]: null }), res);
+      expect(res.kod).toBe(400);
+      expect(upsert).not.toHaveBeenCalled();
+    });
+  }
+  it("boş dize de boş sayılır", async () => {
+    const res = sahteRes();
+    await onayla(istek({ cihaz: "Klima", ariza: "Gaz dolumu", ...bant, onayli_iscilik: "" }), res);
+    expect(res.kod).toBe(400);
+  });
+  it("bedelsiz iş için 0 geçerli", async () => {
+    const res = sahteRes();
+    await onayla(istek({ cihaz: "Klima", ariza: "Gaz dolumu", ...bant, onayli_iscilik: 0 }), res);
+    expect(res.kod).toBe(200);
+  });
+});

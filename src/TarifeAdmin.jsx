@@ -1,6 +1,7 @@
 // src/TarifeAdmin.jsx — Tarife veri giriş + onay paneli. /tarife?token=ADMIN_TOKEN
 import React, { useState, useEffect } from "react";
 import { CIHAZLAR } from "./constants.js";
+import { yonDenetimi, GIDIS } from "../api/_tarife-hesap.js";
 import { NAVY as INK, BG as PAPER, BLUE, GREEN, SLATE, HAIR, SURFACE as WHITE } from "./theme.js";
 
 
@@ -163,7 +164,7 @@ function Onayla() {
         ...(g.seedDisi ? { hedef_ariza: hedef[k] } : {}),
         // Ham veri yoksa öneri de yok — mevcut kaydın güveni/nokta sayısı sıfırlanmasın.
         veri_noktasi_sayisi: noktaSayisi(g),
-        guven: g.oneri?.guven || g.mevcut?.guven || undefined,
+        guven: g.guven || g.mevcut?.guven || undefined,
         ...d,
       })});
       await yukle();
@@ -202,11 +203,16 @@ function Onayla() {
                     SEED DIŞI
                   </span>
                 )}
-                {g.oneri?.guven && (
+                {g.aksiyon?.aksiyon === "floor" && (
+                  <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 6, background: "#F1F5F9", color: SLATE }}>
+                    floor · taban {g.aksiyon.taban}
+                  </span>
+                )}
+                {g.guven && (
                   <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 6,
-                    background: g.oneri.guven === "yuksek" ? "#DCFCE7" : g.oneri.guven === "orta" ? "#FEF9C3" : "#FEE2E2",
-                    color: g.oneri.guven === "yuksek" ? "#166534" : g.oneri.guven === "orta" ? "#854D0E" : "#991B1B" }}>
-                    güven: {g.oneri.guven}
+                    background: g.guven === "yuksek" ? "#DCFCE7" : g.guven === "orta" ? "#FEF9C3" : "#FEE2E2",
+                    color: g.guven === "yuksek" ? "#166534" : g.guven === "orta" ? "#854D0E" : "#991B1B" }}>
+                    güven: {g.guven}
                   </span>
                 )}
                 <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 8px", borderRadius: 6,
@@ -220,6 +226,9 @@ function Onayla() {
               const eksik = eksikler(d);
               const fark = farklar(hg?.mevcut, d);
               const nokta = noktaSayisi(g);
+              // YK #143 şerhi: Onayla'dan önce all-in yönü raporun aksiyonuyla kıyaslanır.
+              const yon = hg?.mevcut ? yonDenetimi(g.sapma?.aksiyon, hg.mevcut, d) : null;
+              const aksiyonlu = g.sapma?.aksiyon === "yukselt" || g.sapma?.aksiyon === "dusur";
               const tekKaynak = nokta < TEK_KAYNAK_ESIGI;
               const yaz = (v) => (v == null ? "—" : v);
               // İkisi de boşken "———" gibi okunmaz bir bant basmayalım.
@@ -259,11 +268,18 @@ function Onayla() {
                   </div>
                 )}
 
-                {/* Web önerisi SALT OKUNUR — forma ancak düğmeyle taşınır (3 Ağu düzeltmesi). */}
+                {g.aksiyon?.aksiyon === "floor" && (
+                  <div style={{ fontSize: 12.5, color: SLATE, background: PAPER, border: `1px solid ${HAIR}`, borderRadius: 8, padding: "8px 11px" }}>
+                    <strong style={{ color: INK }}>Floor:</strong> web ({g.sapma.web}) tabanın ({g.aksiyon.taban} = gidiş + işçilik) altında — YK #15 gereği bant düşürülmez, öneri yok.
+                  </div>
+                )}
+
+                {/* Öneri SALT OKUNUR — forma ancak düğmeyle taşınır (3 Ağu düzeltmesi).
+                    YK #143 şerhi: öneri raporun aksiyonundan türetilir (hedef − gidiş, işçilik sabit). */}
                 {g.oneri && (
                   <div style={{ background: PAPER, border: `1px solid ${HAIR}`, borderRadius: 8, padding: "9px 11px", display: "grid", gap: 7 }}>
                     <div style={{ fontSize: 12, color: SLATE }}>
-                      <strong style={{ color: INK }}>Web diyor ki</strong> ({g.nokta} veri noktası): parça {bant(g.oneri.onayli_parca_min, g.oneri.onayli_parca_max)}, işçilik {yaz(g.oneri.onayli_iscilik)}, beklenen {yaz(g.oneri.onayli_beklenen)}
+                      <strong style={{ color: INK }}>Rapor aksiyonuna göre öneri</strong> (hedef all-in {g.sapma.eksen === "all-in" ? g.sapma.web : g.oneri.onayli_beklenen + GIDIS}): parça {bant(g.oneri.onayli_parca_min, g.oneri.onayli_parca_max)}, işçilik {yaz(g.oneri.onayli_iscilik)} (mevcut), beklenen {yaz(g.oneri.onayli_beklenen)} + gidiş
                     </div>
                     <button
                       onClick={() => oneriyiUygula(g)}
@@ -288,6 +304,16 @@ function Onayla() {
                     {fark.map((f) => (
                       <div key={f.alan}>{f.alan}: <span style={{ color: SLATE }}>{yaz(f.eski)}</span> → <strong>{yaz(f.yeni)}</strong></div>
                     ))}
+                  </div>
+                )}
+
+                {yon && (
+                  <div style={{ fontSize: 12.5, borderRadius: 8, padding: "8px 11px",
+                    ...(aksiyonlu && !yon.tutarli
+                      ? { color: "#991B1B", background: "#FEE2E2", border: "1px solid #FECACA" }
+                      : { color: INK, background: PAPER, border: `1px solid ${HAIR}` }) }}>
+                    Beklenen all-in: {yon.once} → <strong>{yon.sonra}</strong> ({yon.yon === "yukselir" ? "yükselir" : yon.yon === "duser" ? "düşer" : "değişmez"})
+                    {aksiyonlu && !yon.tutarli && <> — ⚠ rapor <strong>{g.sapma.aksiyon === "yukselt" ? "yükselt" : "düşür"}</strong> diyor, form ters yönde.</>}
                   </div>
                 )}
 
