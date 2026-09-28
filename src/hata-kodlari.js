@@ -239,6 +239,147 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vestel — E04", tip: "kod",
       anlam: "Makinede aşırı miktarda su var: makine suyu kendisi boşaltır; sonra kapat, fişi çek, musluğu kapat, danışma hattını ara.",
       yazi: "vestel-camasir-makinesi-hata-kodlari" },
+    // ——— 28 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e16-veya-f16-camasir-makinesi · md5 5795d9056ffddd2465eaad88731efc7a
+    { giris: "Bosch — E16 / F16", tip: "kod",
+      anlam: "Bosch'a göre kapak açık: kapağı kapat, arada çamaşır kalmış mı bak; düzelmezse servis randevusu.",
+      yazi: "bosch-camasir-makinesi-e16-hatasi" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e17-veya-f17-camasir-makinesi · md5 d8552693d09f4df45a60591f84d4cd8b
+    { giris: "Bosch — E17 / F17", tip: "kod",
+      anlam: "Su besleme süresi aşıldı: musluk, giriş hortumu ve giriş süzgeci kontrolüyle başlanır.",
+      yazi: "bosch-camasir-makinesi-e17-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001709506_A.pdf · md5 23d5ed1b30b9787b05f53f1137de1679
+    { giris: "Bosch — E:30-10 (musluk sembolü)", tip: "kod",
+      anlam: "Yeni nesil modellerde su girişi sorunu: musluk, hortum, basınç ve süzgeç; makine boşaltır, 5 dakika sonra kapat-aç.",
+      yazi: "bosch-camasir-makinesi-e30-10-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001709506_A.pdf · md5 23d5ed1b30b9787b05f53f1137de1679
+    { giris: "Bosch — E:30-20", tip: "kod",
+      anlam: "Yeni nesil modellerde manyetik valf ya da kritik fonksiyon arızası; Bosch musluğu kapatıp müşteri hizmetlerini aramayı istiyor.",
+      yazi: "bosch-camasir-makinesi-e30-10-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001709506_A.pdf · md5 23d5ed1b30b9787b05f53f1137de1679
+    { giris: "Bosch — E:30-80 / E:36-10", tip: "kod",
+      anlam: "Yeni nesil modellerde su tahliye edilemiyor: hortum, 1 metre yükseklik sınırı ve pis su pompası temizliği.",
+      yazi: "bosch-camasir-makinesi-e30-80-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001708433_H.pdf · md5 a02d83edad66dc95cd9392b467b767f1
+    { giris: "Bosch — E:36-25 / E:38-25", tip: "kod",
+      anlam: "Deterjanlı su pompası tıkanmış: pompa temizliği; E:38'de önce tambur temizliği.",
+      yazi: "bosch-camasir-makinesi-e30-80-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001006315_I.pdf · md5 ae469964e1edcc11a031b297303113a8
+    { giris: "Bosch — E32 / H:32 / E:60-2B", tip: "kod",
+      anlam: "Bosch'a göre arıza değil: çamaşırlar eşit dağılmadığı için sıkma durdu; yeniden dağıtıp yeniden sık.",
+      yazi: "bosch-camasir-makinesi-e32-hatasi" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e19-veya-f19-camasir-makinesi · md5 d785aec574d9f7542dd4197503e711ae
+    { giris: "Bosch — E19 / F19", tip: "kod",
+      anlam: "Isıtma süresi aşıldı; Bosch'a göre kendi kendine düzeltilemez, servis randevusu gerekir.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e20-veya-f20-camasir-makinesi · md5 58441d17d072e53212a29d43c2b3e6ae
+    { giris: "Bosch — E20 / F20", tip: "kod",
+      anlam: "Beklenmeyen ısınma; Bosch önce makineyi açıp kapatarak sıfırlamayı öneriyor, sürerse servis.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e23-veya-f23-camasir-makinesi · md5 30a2705ab6ade4ad766649c8b2dc5947
+    { giris: "Bosch — E23 / F23", tip: "kod",
+      anlam: "Aquastop etkinleştirildi; Bosch'a göre kendi kendine düzeltilemez, servis randevusu gerekir.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e25-veya-f25-camasir-makinesi · md5 73c8fdca3fe6c6db673e26748d2c59d2
+    { giris: "Bosch — E25 / F25", tip: "kod",
+      anlam: "Bulanıklık sensörü arızası; Bosch'a göre kendi kendine düzeltilemez, servis randevusu gerekir.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e26-veya-f26-camasir-makinesi · md5 60045540fd2fc0c0f3b9a94407c83519
+    { giris: "Bosch — E26 / F26", tip: "kod",
+      anlam: "Analog basınç sensörü arızası; Bosch'a göre kendi kendine düzeltilemez, servis randevusu gerekir.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-f27-camasir-makinesi · md5 c607d5230441e5183de6423bf9f4b7bc
+    { giris: "Bosch — E27 / F27", tip: "kod",
+      anlam: "Basınç sensörü arızası; Bosch'a göre kendi kendine düzeltilemez, servis randevusu gerekir.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-e28-veya-f28-camasir-makinesi · md5 76473b475f649260c9310e28e0d9f2ed
+    { giris: "Bosch — E28 / F28", tip: "kod",
+      anlam: "Akış sensörü arızası; Bosch'a göre kendi kendine düzeltilemez, servis randevusu gerekir.",
+      yazi: "bosch-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — IE (1E)", tip: "kod",
+      anlam: "Su yeterli gelmiyor ya da yavaş giriyor: evde su var mı, musluk tam açık mı, hortum kıvrık mı bak; musluğu kapatıp giriş filtresini temizle.",
+      yazi: "lg-camasir-makinesi-ie-hatasi" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — OE", tip: "kod",
+      anlam: "Su boşalmıyor ya da yavaş boşalıyor: tahliye hortumunu düzelt ve temizle, tahliye pompası filtresini kontrol edip temizle.",
+      yazi: "lg-camasir-makinesi-oe-hatasi" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — UE", tip: "kod",
+      anlam: "Dengesizlik algılandı, sıkma durdu: çamaşırı yeniden dağıt; tek ağır eşya varsa 1-2 parça ekle, kapıyı kapatıp Başlat/Durdur.",
+      yazi: "lg-camasir-makinesi-ue-hatasi" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — dE, dE1, dE2, dE4", tip: "kod",
+      anlam: "Kapı hatası: önce kapağın tam kapandığını kontrol et; kılavuza göre sürerse kapak sensörü arızası, LG servisi.",
+      yazi: "lg-camasir-makinesi-de-hatasi" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — LE", tip: "kod",
+      anlam: "Motorda aşırı yüklenme: motor soğuyana kadar 30 dakika beklet, sonra programı yeniden başlat; sürerse servis.",
+      yazi: "lg-camasir-makinesi-le-hatasi" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — tE", tip: "kod",
+      anlam: "Kontrol hatası: LG'nin talimatı fişi çekip servisi aramak.",
+      yazi: "lg-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — FE", tip: "kod",
+      anlam: "Olası arızalı su vanası nedeniyle aşırı su doluyor: su musluğunu kapat, fişi çek, servisi ara.",
+      yazi: "lg-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9b4f42dcd592ca465a4b4c739
+    { giris: "LG — PE", tip: "kod",
+      anlam: "Su seviyesi sensörü hatalı: su musluğunu kapat, fişi çek, servisi ara.",
+      yazi: "lg-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-is-the-4e-4c-or-e1-info-code-shown-on-the-screen-of-my-samsung-washing-machine/ · md5 815a74d098a0a21806bece697733e5fa
+    { giris: "Samsung — 4C (4E, E1)", tip: "kod",
+      anlam: "Makine su alamıyor; musluk, su basıncı, giriş hortumu, donma ve tel filtre kontrol edilir.",
+      yazi: "samsung-camasir-makinesi-4c-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90CGC04DAE&CttFileID=9399472&CDCttType=UM&VPath=UM%2F202312%2F20231201172141976%2FDC68-04481M-00_IB_WW5000C-MD_TR_230919.pdf · md5 a6bdee67278bfcc9d0f6b252d4b5fb3a
+    { giris: "Samsung — 4C2", tip: "kod",
+      anlam: "Soğuk su besleme hortumu soğuk su musluğuna sıkıca bağlı olmalı; sıcağa bağlıysa bazı programlarda çamaşır deforme olabilir.",
+      yazi: "samsung-camasir-makinesi-4c-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-should-i-do-if-my-samsung-washing-machine-fails-5e-5c-or-e2/ · md5 1528149223232c2cdd70e94bab475cda
+    { giris: "Samsung — 5C (5E, E2)", tip: "kod",
+      anlam: "Makine suyu tahliye edemiyor; tahliye hortumu ve kalıntı filtresi kontrol edilir.",
+      yazi: "samsung-camasir-makinesi-5c-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/why-does-the-ue-ub-or-e4-information-code-appear-on-my-samsung-washing-machine/ · md5 21a26adbf9068280efd40d31e820c3e6
+    { giris: "Samsung — UE / Ub (E4)", tip: "kod",
+      anlam: "Çamaşır yükü dengesiz; yükü yeniden dağıt, tek parçanın yanına küçük havlu ekle, düşük devirle dene.",
+      yazi: "samsung-camasir-makinesi-ue-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90CGC04DAE&CttFileID=9399472&CDCttType=UM&VPath=UM%2F202312%2F20231201172141976%2FDC68-04481M-00_IB_WW5000C-MD_TR_230919.pdf · md5 a6bdee67278bfcc9d0f6b252d4b5fb3a
+    { giris: "Samsung — dC (dE)", tip: "kod",
+      anlam: "Makine kapak açık olarak çalıştırılıyor; kapağı düzgün kapat, kapağa çamaşır sıkışmadığına bak.",
+      yazi: "samsung-camasir-makinesi-dc-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90T4020CE&CttFileID=8758571&CDCttType=UM&VPath=UM%2F202209%2F20220901164943477%2FWW4000T-MD_UM_DC68-04203B-03_TR.pdf · md5 2a8fa3df96d4d49f5da7294316f4a2ae
+    { giris: "Samsung — DDC / ddC", tip: "kod",
+      anlam: "AddWash kapağı Başlat/Duraklat'a basılmadan açılmış; AddWash kapağını kapatıp yeniden başlat.",
+      yazi: "samsung-camasir-makinesi-dc-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90T4020CE&CttFileID=8758571&CDCttType=UM&VPath=UM%2F202209%2F20220901164943477%2FWW4000T-MD_UM_DC68-04203B-03_TR.pdf · md5 2a8fa3df96d4d49f5da7294316f4a2ae
+    { giris: "Samsung — DC1 / DC3", tip: "kod",
+      anlam: "Ana kapağın (DC1) ya da AddWash kapağının (DC3) kilitleme işlemi düzgün çalışmıyor; yeniden başlat, kalırsa servis.",
+      yazi: "samsung-camasir-makinesi-dc-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/camasir-makinesi-oe-veya-oc-hatasi-veriyor-ne-yapabilirim/ · md5 875ce6238370f12ab74175e7daa6dbaf
+    { giris: "Samsung — OC (OE)", tip: "kod",
+      anlam: "Su seviyesi fazla algılandı; sıkma programıyla ya da acil boşaltma hortumuyla suyu boşalt.",
+      yazi: "samsung-camasir-makinesi-oc-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/camasir-makinem-uc-hatasi-veriyor-ne-yapabilirim/ · md5 82cb663b700b3aff18fb2753ee02afb0
+    { giris: "Samsung — UC", tip: "kod",
+      anlam: "Makineye gelen elektrik voltajı uygun değil; çoklu prizden çıkarıp doğrudan prize takarak dene.",
+      yazi: "samsung-camasir-makinesi-uc-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90CGC04DAE&CttFileID=9399472&CDCttType=UM&VPath=UM%2F202312%2F20231201172141976%2FDC68-04481M-00_IB_WW5000C-MD_TR_230919.pdf · md5 a6bdee67278bfcc9d0f6b252d4b5fb3a
+    { giris: "Samsung — LC / LC1", tip: "kod",
+      anlam: "Samsung boşaltma hortumunun kontrolünü ister: hortum ucu yere konmamış ve tıkalı olmamalı; kod kalırsa servis.",
+      yazi: "samsung-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90CGC04DAE&CttFileID=9399472&CDCttType=UM&VPath=UM%2F202312%2F20231201172141976%2FDC68-04481M-00_IB_WW5000C-MD_TR_230919.pdf · md5 a6bdee67278bfcc9d0f6b252d4b5fb3a
+    { giris: "Samsung — 3C", tip: "kod",
+      anlam: "Motorun çalışıp çalışmadığı kontrol edilmeli; programı yeniden başlat, kod kalırsa servis.",
+      yazi: "samsung-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90CGC04DAE&CttFileID=9399472&CDCttType=UM&VPath=UM%2F202312%2F20231201172141976%2FDC68-04481M-00_IB_WW5000C-MD_TR_230919.pdf · md5 a6bdee67278bfcc9d0f6b252d4b5fb3a
+    { giris: "Samsung — HC", tip: "kod",
+      anlam: "Yüksek sıcaklıkta ısıtma kontrolü; Samsung'a göre kod kalırsa servis.",
+      yazi: "samsung-camasir-makinesi-hata-kodlari" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=WW90CGC04DAE&CttFileID=9399472&CDCttType=UM&VPath=UM%2F202312%2F20231201172141976%2FDC68-04481M-00_IB_WW5000C-MD_TR_230919.pdf · md5 a6bdee67278bfcc9d0f6b252d4b5fb3a
+    { giris: "Samsung — ekranda 0 kalıyor", tip: "belirti",
+      anlam: "Arıza değil: Temiz Kazan hatırlatması; makine normal çalışır, temizlik için programın çalıştırılması önerilir.",
+      yazi: "samsung-camasir-makinesi-hata-kodlari" },
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -477,6 +618,62 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vestel — FE", tip: "kod",
       anlam: "Yeni nesilde arızalı elektronik kart (servis); eski nesilde voltaj düşmesine bağlı parametre hatası, program yeniden çalıştırılır.",
       yazi: "vestel-bulasik-makinesi-hata-kodlari" },
+    // ——— 28 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9fefe3c49867c92fa7e66e410
+    { giris: "Vestel — FF", tip: "kod",
+      anlam: "Su giriş sistemi arızası: musluk açık mı, su akıyor mu bak; giriş hortumunu ayırıp filtresini temizle; sürerse servis.",
+      yazi: "vestel-bulasik-makinesi-ff-hatasi" },
+    // kaynak: https://static.vestel.com.tr/kullanimkilavuzlari/20218379-KK.pdf · md5 ebe98e45d57fc21fc293e5c88ab47b8e
+    { giris: "Vestel — F5", tip: "kod",
+      anlam: "Nesle göre değişir: eski nesilde su girişi yetersiz (musluk ve hortum filtresi), yeni nesilde basınç sistemi arızası (servis).",
+      yazi: "vestel-bulasik-makinesi-f5-hatasi" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e-12 · md5 4a50323b3f8d7e7da92d4fd2c1f48e99
+    { giris: "Bosch — E12", tip: "kod",
+      anlam: "Isıtma sisteminde kireç birikmiş; boş makinede bulaşık makinesi kireç çözücüsüyle temizlik, ardından tuz ve su sertliği ayarı kontrolü.",
+      yazi: "bosch-bulasik-makinesi-e12-hatasi" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e18 · md5 a511e9a65caf6341d7b8aa78e01ae480
+    { giris: "Bosch — E18", tip: "kod",
+      anlam: "Su girişinde engel: giriş hortumu bükük, musluk tarafındaki filtre ya da AquaStop tıkalı veya musluk basıncı düşük; kontrolü evde yapılır.",
+      yazi: "bosch-bulasik-makinesi-e18-hatasi" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e25 · md5 1785df81fc675f558d3b6f01669a1f79
+    { giris: "Bosch — E25", tip: "kod",
+      anlam: "Pompa yabancı cisimle tıkanmış ya da pompa kapağı yerine oturmamış; Bosch pompa temizliğini adım adım tarif ediyor.",
+      yazi: "bosch-bulasik-makinesi-e25-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001626280_A.pdf · md5 8392c0fbccf9c23bb06945067b41989d
+    { giris: "Bosch Serie 4 — E:61-02", tip: "kod",
+      anlam: "Atık su pompası bloke olmuş ya da pompa kapağı gevşek; pompa temizlenir, kapak duyulur şekilde oturtulur.",
+      yazi: "bosch-bulasik-makinesi-e25-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001626280_A.pdf · md5 8392c0fbccf9c23bb06945067b41989d
+    { giris: "Bosch Serie 4 — E:61-03", tip: "kod",
+      anlam: "Su boşaltılmıyor: tahliye hortumu bükük ya da tıkalı, sifon bağlantısı kapalı veya pompa kapağı gevşek; üçü de evde kontrol edilir.",
+      yazi: "bosch-bulasik-makinesi-e61-03-hatasi" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001626280_A.pdf · md5 8392c0fbccf9c23bb06945067b41989d
+    { giris: "Bosch Serie 4 — E:32-00", tip: "kod",
+      anlam: "Su girişi göstergesiyle aynı satır: besleme hortumu bükük, musluk kapalı ya da kireçlenmiş veya giriş süzgeci tıkalı.",
+      yazi: "bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari" },
+    // kaynak: https://media3.bosch-home.com/Documents/9001626280_A.pdf · md5 8392c0fbccf9c23bb06945067b41989d
+    { giris: "Bosch Serie 4 — E:92-40", tip: "kod",
+      anlam: "Süzgeçler kirlenmiş ya da tıkanmış; süzgeç sistemi çıkarılıp akan su altında temizlenir.",
+      yazi: "bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e23 · md5 9f00e0e3d7a34ec65414d798c5c13362
+    { giris: "Bosch — E23", tip: "kod",
+      anlam: "Atık su pompasında hata; Bosch yalnız deneyimli bir teknisyenin giderebileceğini söylüyor.",
+      yazi: "bosch-bulasik-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-kodu-09 · md5 2b9470f4f0245f5abef7b1713a557291
+    { giris: "Bosch — E09", tip: "kod",
+      anlam: "Bosch evde çözmeyi denememeyi öneriyor: şebeke suyunu kes, cihazı kapat, teknisyen randevusu al.",
+      yazi: "bosch-bulasik-makinesi-hata-kodlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-kodu-19 · md5 14525d86e14a9c796dda907d93c50bec
+    { giris: "Bosch — E19", tip: "kod",
+      anlam: "Sorun stok kabında ya da iç vanada olabilir; Bosch: evde çözmeyi deneme, şebeke suyunu kes, cihazı kapat, teknisyen çağır." },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/ekranda-su-muslugu-hatasi · md5 ec824c71ef99eb691d60d9ee87136cc0
+    { giris: "Bosch — musluk (su girişi) sembolü yanıyor", tip: "belirti",
+      anlam: "Bosch'a göre bükülmüş ya da tıkanmış hortum, düşük su basıncı veya giriş filtresi tıkanıklığı; üçü de makinenin dışında kontrol edilir.",
+      yazi: "bosch-bulasik-makinesi-sembolleri-ve-anlamlari" },
+    // kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/az-tuz-isigi-yaniyor · md5 901ed2096039c2537612c0467edf0c99
+    { giris: "Bosch — tuz koydum, tuz ışığı sönmüyor", tip: "belirti",
+      anlam: "Bosch'a göre sensör tablet tuzları algılamıyor; tablet dışında bir özel tuz kullanılır.",
+      yazi: "bosch-bulasik-makinesi-sembolleri-ve-anlamlari" },
   ],
 
   "Kombi / Termosifon": [
@@ -714,6 +911,71 @@ export const HATA_KODU_KATMANI = {
     { giris: "Viessmann Vitodens 200-W/300-W — C1…CF, d6, d7, d8, E0 (normal çalışma)", tip: "kod",
       anlam: "Bu kodlarda Viessmann sistemin davranışını normal çalışma olarak veriyor; kod iletişim modülü, uzantı ya da harici giriş hatasını gösterir.",
       yazi: "viessmann-kombi-ariza-kodlari" },
+    // ——— 28 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E02", tip: "kod",
+      anlam: "Duotec ve Eco'da hatalı alev oluşumu; RESET'e basılır, sorun devam ederse yetkili servis.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E03", tip: "kod",
+      anlam: "Duotec ve Eco'da aşırı ısınma hatası; RESET'e basılır, sorun devam ederse yetkili servis.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E09", tip: "kod",
+      anlam: "Duotec ve Eco'da gaz valfi geri besleme hatası; yetkili servis işi.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E15", tip: "kod",
+      anlam: "Duotec ve Eco'da sensör sıcaklık değişim hatası; yetkili servis işi.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E18 · E33 · E35", tip: "kod",
+      anlam: "Sıcaklık sensörü kodları: E18 NTC sensör test hatası, E33 dönüş, E35 çıkış sıcaklık sensörü arızası; yetkili servis işi.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E21", tip: "kod",
+      anlam: "Duotec ve Eco'da elektronik kart arızası; yetkili servis işi.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — F52", tip: "kod",
+      anlam: "Duotec ve Eco'da kullanım suyu sensör arızası; yetkili servis işi.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/5622/baymak-lunatec-tam-yogusmali-kombi-kullanma-kilavuzu.pdf · md5 dec11a69fd55c366d613da7ba31d6d98
+    { giris: "Baymak Lunatec — H.01.18 · E.01.17", tip: "kod",
+      anlam: "Su sirkülasyonu yok (H.01.18 geçici) ya da eksik (E.01.17 kalıcı); sirkülasyon ve pompa kontrolleri yetkili servis işi.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · https://www.baymak.com.tr/media/5622/baymak-lunatec-tam-yogusmali-kombi-kullanma-kilavuzu.pdf · md5 df4c42a6604e3ec39b2d152606464cb0 · dec11a69fd55c366d613da7ba31d6d98
+    { giris: "Baymak kombi nasıl resetlenir", tip: "ayar",
+      anlam: "Duotec ve Eco'da hata kodunda RESET tuşuna basılır; Lunatec'te E kodlarında RESET'e 1 saniye basılır, H kodları kendiliğinden kaybolur.",
+      yazi: "baymak-kombi-ariza-kodlari" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/nitromix-kk-0020309468-01-2557203.pdf · md5 3340a11b923b7332f8eb8685297970b6
+    { giris: "DemirDöküm — F.22", tip: "kod",
+      anlam: "Nitromix, ademiX, vintomiX'te tesisat basıncı çok düşük, ısıtma sisteminde su yetersiz; kılavuzun tedbiri sistemi doldurmak.",
+      yazi: "demirdokum-kombi-f22-hatasi" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/nitromix-kk-0020309468-01-2557203.pdf · md5 3340a11b923b7332f8eb8685297970b6
+    { giris: "DemirDöküm — F.28", tip: "kod",
+      anlam: "Nitromix, ademiX, vintomiX'te ateşleme başarısız: önce gaz kesme vanası, sonra modele göre sınırlı reset; sürerse yetkili servis.",
+      yazi: "demirdokum-kombi-f28-hatasi" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/products-1/kullanma-kilavuzu-1772624.pdf · md5 7746b6a9d980072b5109b1b27926bd81
+    { giris: "DemirDöküm — F10", tip: "kod",
+      anlam: "Atron Condense ve Nitron Plus'ta ısıtma sisteminde yetersiz su; sistem 1,0–2,0 bar aralığına kadar doldurulur.",
+      yazi: "demirdokum-kombi-f10-hatasi" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/products-1/kullanma-kilavuzu-1772624.pdf · md5 7746b6a9d980072b5109b1b27926bd81
+    { giris: "DemirDöküm — F04", tip: "kod",
+      anlam: "Atron Condense ve Nitron Plus'ta ateşleme arızası: gaz kesme vanaları ve reset tuşu; üç denemede gitmezse yetkili servis.",
+      yazi: "demirdokum-kombi-f04-hatasi" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/products-1/kullanma-kilavuzu-1772624.pdf · md5 7746b6a9d980072b5109b1b27926bd81
+    { giris: "DemirDöküm — F05", tip: "kod",
+      anlam: "Atron Condense ve Nitron Plus'ta atık gaz hattında arıza; kılavuzun tek talimatı yetkili servis tarafından giderilmesi.",
+      yazi: "demirdokum-kombi-ariza-kodlari" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff16276288ebddd6c6cbf82d47c864
+    { giris: "DemirDöküm — F.29", tip: "kod",
+      anlam: "Noktalı kod ailesinde işletim sırasında alev sönüyor; kullanma kılavuzunda kullanıcı adımı yok, yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" },
+    // kaynak: https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff16276288ebddd6c6cbf82d47c864
+    { giris: "DemirDöküm — F.77", tip: "kod",
+      anlam: "Noktalı kod ailesinde atık gaz klapesi arızalı; kullanma kılavuzunda kullanıcı adımı yok, yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" },
   ],
 
   "Buzdolabı": [
@@ -885,6 +1147,67 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vestel — E01, E02, E03, E06, E07", tip: "kod",
       anlam: "Sensör hatası uyarısı: Vestel'in talimatı en kısa zamanda iletişim merkezini arayıp teknik destek istemek.",
       yazi: "vestel-buzdolabi-e09-hatasi" },
+    // ——— 28 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153392536506/ · md5 ea2246077e177b4518d4ce48b4c389e6
+    { giris: "LG — Er FF", tip: "kod",
+      anlam: "Dondurucu fan motoru normal çalışmıyor ya da çevresindeki buzla kilitlenmiş: önce 5 dakikalık enerji sıfırlaması, kod dönerse fiş çekili ve kapaklar açık yazın bir, kışın üç gün buz çözdürme.",
+      yazi: "lg-buzdolabi-er-ff-hatasi" },
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153392536506/ · md5 ea2246077e177b4518d4ce48b4c389e6
+    { giris: "LG — Er rF", tip: "kod",
+      anlam: "Buzdolabı bölmesi fan motoru normal çalışmıyor: fişi çekip ya da sigortayı kapatıp yaklaşık 5 dakika sonra yeniden çalıştır; aynı kod tekrarlarsa LG servisi.",
+      yazi: "lg-buzdolabi-er-ff-hatasi" },
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153392527392/ · md5 a27d0f3747455faf9ff2f8e730e6b6ab
+    { giris: "LG — Er dH, F dH, r dH", tip: "kod",
+      anlam: "Buz çözme arızası: sebep buzla tıkanmış drenaj deliğiyse fişi çek, kapıları ardına kadar aç, buzun erimesi için yazın bir, kışın üç gün bekle; tekrarlarsa LG servisi.",
+      yazi: "lg-buzdolabi-er-dh-hatasi" },
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153392410431/ · md5 d360c4dd41be2932ee8c30e9b24d58e7
+    { giris: "LG — Ekranda OFF yazıyor, soğutmuyor", tip: "kod",
+      anlam: "Arıza değil, mağaza teşhiri için olan özel işlev: ekran çalışır, soğutma çalışmaz; fişi çekip 10 saniye sonra enerjiyi geri verince kalkar.",
+      yazi: "lg-buzdolabi-off-hatasi" },
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153392534839/ · md5 4bda47ba0ba3c965563415a8e61a998c
+    { giris: "LG — Er CH / Er CL", tip: "kod",
+      anlam: "Soğutma gücü düştü: yeni kurulum ya da taşınma sonrasıysa LG servisi; kullanım sırasındaysa kapıyı kontrol edip 5 dakikalık enerji sıfırlaması yap.",
+      yazi: "lg-buzdolabi-er-ch-cl-hatasi" },
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153397197210/ · md5 89ad768ec0df351f408beb3319b251a0
+    { giris: "LG — Er CF", tip: "kod",
+      anlam: "Arkadaki kompresörün ısısını dağıtan fan motoru çalışmıyor (bazı modellerde ekranda yalnız C); enerji sıfırlamasıyla silinir ama 3 saat sonra dönebilir, tekrarlarsa LG servisi.",
+      yazi: "lg-buzdolabi-hata-kodlari" },
+    // kaynak: https://www.lg.com/tr/destek/product-support/troubleshoot/help-library/cs-CT52000193-20153397191231/ · md5 3cdf1f299166477df4cc034caad904ee
+    { giris: "LG — Er CO", tip: "kod",
+      anlam: "Ana kart ile ekran kartı arasında iletişim yok; kararsız elektrikten geçici olabilir: 5 dakikalık enerji sıfırlaması, aynı kod tekrarlarsa LG servisi.",
+      yazi: "lg-buzdolabi-hata-kodlari" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=RB52DS33ESA&CttFileID=9806489&CDCttType=UM&VPath=UM%2F202407%2F20240716135728126%2FRB52DS_User_Manual_re_TR.pdf · md5 edae9a5819b091bc55152ce19142f777
+    { giris: "Samsung — E09", tip: "kod",
+      anlam: "Dondurucu yeterince soğuk değil, özellikle uzun kesinti sonrası: çözülen gıdayı tekrar dondurma, daha soğuk ayar ya da hızlı dondurma.",
+      yazi: "samsung-buzdolabi-e09-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=RB52DS33ESA&CttFileID=9806489&CDCttType=UM&VPath=UM%2F202407%2F20240716135728126%2FRB52DS_User_Manual_re_TR.pdf · md5 edae9a5819b091bc55152ce19142f777
+    { giris: "Samsung — E10", tip: "kod",
+      anlam: "Soğutucu yeterince soğuk değil: +4 °C'ye gelene kadar hızlı soğutma, kapıyı sık açma, hava dolaşımını kapatma.",
+      yazi: "samsung-buzdolabi-e10-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=RB52DS33ESA&CttFileID=9806489&CDCttType=UM&VPath=UM%2F202407%2F20240716135728126%2FRB52DS_User_Manual_re_TR.pdf · md5 edae9a5819b091bc55152ce19142f777
+    { giris: "Samsung — E11", tip: "kod",
+      anlam: "Soğutucu gereğinden soğuk, yiyecekler donmaya başlar: hızlı soğutmayı kapat, ayarı 4 °C ya da daha sıcağa al.",
+      yazi: "samsung-buzdolabi-e11-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/buzdolabim-e08-uyarisi-veriyor-ne-yapabilirim/ · md5 7f8180ba93b2c7ea600acecbfc5bd90d
+    { giris: "Samsung — E08", tip: "kod",
+      anlam: "Düşük voltaj uyarısı (170 V altı): arıza değil, gerilim düzelince kendiliğinden kalkar; sürerse Samsung desteği.",
+      yazi: "samsung-buzdolabi-e09-hatasi" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=RB52DS33ESA&CttFileID=9806489&CDCttType=UM&VPath=UM%2F202407%2F20240716135728126%2FRB52DS_User_Manual_re_TR.pdf · md5 edae9a5819b091bc55152ce19142f777
+    { giris: "Samsung — E01, E02, E03, E06, E07", tip: "kod",
+      anlam: "Sensör hatası uyarısı: Samsung'un talimatı en kısa zamanda iletişim merkezini arayıp teknik destek istemek.",
+      yazi: "samsung-buzdolabi-e09-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/buzdolabimda-de-on-uyarisi-aliyorum-ne-yapabilirim/ · md5 4350a6055ceea025c5fdf25c5407569b
+    { giris: "Samsung — DE ON", tip: "kod",
+      anlam: "Demo (bayi) modu: Mod ve Çocuk kilidi tuşlarına 5 saniyeden uzun bas; sürerse fişi çek, 30 saniye bekle, tak.",
+      yazi: "samsung-buzdolabi-de-on-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/buzdolabim-ee-uyarisi-veriyor-ne-yapabilirim/ · md5 8f023c97a09dcf85d112af65418dba48
+    { giris: "Samsung — EE", tip: "kod",
+      anlam: "Ekonomi modu göstergesi: arıza değil; dondurucu ayarı değişince ya da hızlı mod seçilince iptal olur.",
+      yazi: "samsung-buzdolabi-de-on-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-can-i-do-when-i-get-pc-error-code-on-samsung-refrigerator/ · md5 a22613ab4735b2d149fc8a9fc52e525c
+    { giris: "Samsung — PC", tip: "kod",
+      anlam: "Bileşenler arası iletişim hatası: fişi çekip 15-30 saniye bekle; kapak raflarını hafiflet, kapıyı tam kapat.",
+      yazi: "samsung-buzdolabi-pc-hatasi" },
   ],
 
   "Klima": [
@@ -984,6 +1307,91 @@ export const HATA_KODU_KATMANI = {
     { giris: "Montaj · söküm-takma nelerden oluşur", tip: "ayar",
       anlam: "Taşınmada söküm ve takma iki ayrı iş; gaz toplanmazsa ne kaybediliyor ve kötü montaj garantiyi nasıl etkiliyor.",
       yazi: "klima-montaj-sokum-takma" },
+    // ——— 28 Eyl 2026, Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — A5", tip: "kod",
+      anlam: "Donma koruması veya yüksek basınç kontrolü (iç ünite); Daikin önce hava filtresinin kirli ya da tozlu olup olmadığını soruyor.",
+      yazi: "daikin-klima-a5-hatasi" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Ururu-Sarara-Kullanim-Kilavuzu.pdf · md5 55395d5dca925e6c5a3e29a64e180cd5
+    { giris: "Daikin — E7", tip: "kod",
+      anlam: "Dış ünite fanı: DC fan kilidi / DC fan motoru arızalı; Daikin kesici kapalıyken fana takılan yabancı cismin çıkarılmasını istiyor.",
+      yazi: "daikin-klima-e7-hatasi" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Ururu-Sarara-Kullanim-Kilavuzu.pdf · md5 55395d5dca925e6c5a3e29a64e180cd5
+    { giris: "Daikin — F3", tip: "kod",
+      anlam: "Deşarj borusu sıcaklık kontrolü (dış ünite); Daikin dış ünitenin hava çıkışının tıkalı olup olmadığını soruyor.",
+      yazi: "daikin-klima-f3-hatasi" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Ururu-Sarara-Kullanim-Kilavuzu.pdf · md5 55395d5dca925e6c5a3e29a64e180cd5
+    { giris: "Daikin — F6", tip: "kod",
+      anlam: "Soğutma modunda yüksek basınç kontrolü (dış ünite); Daikin dış ünitenin hava çıkışının tıkalı olup olmadığını soruyor.",
+      yazi: "daikin-klima-f6-hatasi" },
+    // kaynak: https://www.daikin.com.tr/bilgi-ve-ipuclari/daikin-klima-hata-kodlari-nelerdir-nasil-cozulur · md5 c2a49add61690e63ffe56243ecaf46ba
+    { giris: "Daikin — E0", tip: "kod",
+      anlam: "Daikin Türkiye'ye göre iç ya da dış ünitede genel arıza; kapatıp fişten çekip 5 dakika sonra yeniden başlatma öneriliyor.",
+      yazi: "daikin-klima-e0-hatasi" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Ururu-Sarara-Kullanim-Kilavuzu.pdf · md5 55395d5dca925e6c5a3e29a64e180cd5
+    { giris: "Daikin — L3", tip: "kod",
+      anlam: "Elektrikli parçalar ısı hatası (dış ünite); Daikin F3/F6 ile aynı kontrolü istiyor: dış ünitenin hava çıkışı tıkalı mı.",
+      yazi: "daikin-klima-f6-hatasi" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Ururu-Sarara-Kullanim-Kilavuzu.pdf · md5 55395d5dca925e6c5a3e29a64e180cd5
+    { giris: "Daikin — L4", tip: "kod",
+      anlam: "Radyasyon kanadı (inverter soğutma bloğu) sıcaklık yükselmesi; Daikin dış ünitenin hava çıkışının tıkalı olup olmadığını soruyor.",
+      yazi: "daikin-klima-f6-hatasi" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — L5", tip: "kod",
+      anlam: "İnverter anlık aşırı akımı (DC) / çıkış aşırı akım; Daikin Türkiye cihazın hemen kapatılıp servise başvurulmasını istiyor.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://www.daikin.com.tr/bilgi-ve-ipuclari/daikin-klima-hata-kodlari-nelerdir-nasil-cozulur · md5 c2a49add61690e63ffe56243ecaf46ba
+    { giris: "Daikin — U0", tip: "kod",
+      anlam: "Soğutucu eksikliği; Daikin'e göre gaz basıncı kontrolü yalnız yetkili teknik servisin işi.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — U2", tip: "kod",
+      anlam: "Aşırı voltaj tespiti / gerilim düşüşü veya ana devre aşırı gerilimi (sistem kodu).",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — U4", tip: "kod",
+      anlam: "İç ünite ile dış ünite arasında sinyal iletimi hatası (sistem kodu).",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — A1", tip: "kod",
+      anlam: "İç ünite elektronik kartı (PCB) anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — A6", tip: "kod",
+      anlam: "İç ünite fan motoru (DC motor) anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — C4", tip: "kod",
+      anlam: "İç ünite ısı eşanjörü termistörü (sıcaklık sensörü) anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — C9", tip: "kod",
+      anlam: "Oda sıcaklığı (emiş havası) termistörü anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — E1", tip: "kod",
+      anlam: "Dış ünite elektronik kartı (PCB) anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — E5", tip: "kod",
+      anlam: "Aşırı yük aktivasyonu: kompresör aşırı yüklenmesi (dış ünite).",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — E6", tip: "kod",
+      anlam: "Kompresör kilidi / kompresör çalıştırma arızası (dış ünite).",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — H9", tip: "kod",
+      anlam: "Dış sıcaklık termistörü (sensörü) anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — J3", tip: "kod",
+      anlam: "Deşarj borusu termistörü (sıcaklık sensörü) anormalliği; F3 ile karıştırılmamalı.",
+      yazi: "daikin-klima-hata-kodlari" },
+    // kaynak: https://st-daikin.mncdn.com/Content/media/img_shared/PDF/Daikin-Sensira-Kullanim-Kilavuzu.pdf · md5 ab2d928437bec2a3d5f374f3aee85cb1
+    { giris: "Daikin — J6", tip: "kod",
+      anlam: "Dış ünite ısı eşanjörü termistörü anormalliği.",
+      yazi: "daikin-klima-hata-kodlari" },
   ],
 
   "Fırın / Ocak / Aspiratör": [

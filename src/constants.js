@@ -140,14 +140,14 @@ const TELEFON = [
   "OnePlus", "Oppo", "Realme", "Reeder", "Samsung", "TCL", "Tecno", "Vivo", "Xiaomi",
 ];
 const ANKASTRE_EK = ["Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica", "Teka", "Luxell"];
-const YAZICI = ["Brother", "Canon", "Epson", "Lexmark", "Pantum", "Ricoh", "Xerox"];
+const YAZICI = ["Brother", "Canon", "Epson", "Kyocera", "Lexmark", "Pantum", "Ricoh", "Xerox"];
 
 // Garanti yönlendirmesi ve teşhis kalitesi için master liste — tüm grupların birleşimi
 // (haritada olmayan cihaz veya "Diğer" → bu liste). Süperset garantisi için üretilir.
 export const MARKALAR = [...new Set([
   ...BEYAZ_ESYA, ...KLIMA, ...KOMBI, ...KUCUK_EV, ...SUPURGE, ...TELEVIZYON, ...MONITOR,
   ...SU_ARITMA, ...BILGISAYAR, ...TELEFON, ...ANKASTRE_EK, ...YAZICI,
-  "Balay", "Comfee", "Singer",
+  "Balay", "Comfee", "Singer", "Shark", "Tineco",
 ])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
@@ -160,11 +160,13 @@ export const CIHAZ_MARKALARI = {
   "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke"].sort(trSort),
   "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK])].sort(trSort),
   "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo"])].sort(trSort),
-  "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm"].sort(trSort),
-  "Kombi / Termosifon": [...KOMBI, "Regal", "Vestel", "Daikin"].sort(trSort),
-  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier"])].sort(trSort),
-  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot", "Hoover", "Siemens", "Profilo", "AEG", "Onvo"])].sort(trSort),
-  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur"].sort(trSort),
+  // 28 Eyl 2026 (Sprint #144 kılavuz föyü): Altus/Grundig/TCL/Fakir/Airfel yalnız klima satırına.
+  "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm", "Altus", "Grundig", "TCL", "Fakir", "Airfel"].sort(trSort),
+  "Kombi / Termosifon": [...KOMBI, "Regal", "Vestel", "Daikin", "Ariston"].sort(trSort),
+  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier", "Altus"])].sort(trSort),
+  "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot", "Hoover", "Siemens", "Profilo", "AEG", "Onvo",
+    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo"])].sort(trSort),
+  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus"].sort(trSort),
   "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI])].sort(trSort),
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
