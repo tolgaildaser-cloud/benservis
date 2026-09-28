@@ -1,11 +1,8 @@
 // api/tarife/gruplar.js — (cihaz|marka|ariza) gruplarını öneri + durumla döner. Bearer ADMIN_TOKEN.
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
-import { onerTarife, sapmaSatiri, celiskiliMi } from "../_tarife-hesap.js";
+import { onerTarife, sapmaSatiri, celiskiliMi, aksiyonOnerisi } from "../_tarife-hesap.js";
 import { seedAriza, seedArizalari, seedteVar } from "../../src/tarife-esleme.js";
-
-// Raporun (scripts/tarife-rapor.mjs) fiyat aksiyonu çıkan grupları — panelde "öneri var".
-const ONERI_AKSIYON = new Set(["yukselt", "dusur"]);
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -47,9 +44,14 @@ export default async function handler(req, res) {
     const sapma = g && mevcut?.durum === "onayli"
       ? sapmaSatiri(g.points.filter((p) => p.kaynak === "web"), mevcut)
       : null;
+    // YK #143 şerhi: öneri raporun aksiyonundan türetilir; aksiyon yoksa öneri yok.
+    // Ham P25–P75 (`onerTarife`) yalnız güven rozeti için kalır — forma taşınmaz.
+    const aksiyon = aksiyonOnerisi(sapma, mevcut);
     return {
       cihaz, marka, ariza,
-      oneri: g ? onerTarife(g.points) : null,
+      oneri: aksiyon?.oneri || null,
+      aksiyon,
+      guven: g ? onerTarife(g.points).guven : null,
       mevcut,
       durum: mevcut?.durum || "yok",
       nokta: g ? g.points.length : 0,
@@ -57,7 +59,8 @@ export default async function handler(req, res) {
       seedDisi,
       seedSecenekleri: seedDisi ? seedArizalari(cihaz) : [],
       sapma,
-      oneriVar: !!sapma && ONERI_AKSIYON.has(sapma.aksiyon),
+      // Raporun fiyat aksiyonu (yükselt/düşür) çıkan grup — panelde "öneri var" (floor sayı önermez).
+      oneriVar: !!aksiyon?.oneri,
     };
   }).sort((a, b) =>
     // Öneri var → en üstte; SEED dışı → en altta; kalan alfabetik.

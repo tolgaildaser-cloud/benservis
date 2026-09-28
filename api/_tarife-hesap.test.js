@@ -66,3 +66,56 @@ describe("onerTarife", () => {
     expect(r.onayli_beklenen).toBe(3000);
   });
 });
+
+// ── YK #143 şerhi (26 Eyl): panel önerisi raporun aksiyonundan türetilir ──
+import { sapmaSatiri, aksiyonOnerisi, yonDenetimi, allIn } from "./_tarife-hesap.js";
+
+describe("aksiyonOnerisi", () => {
+  // SEED: Televizyon / Monitör · Besleme kartı [400, 1500, 500] → biz all-in 950+500+1500 = 2.950, taban 2.000.
+  const tv = { onayli_parca_min: 400, onayli_parca_max: 1500, onayli_iscilik: 500 };
+  const web = (x) => [{ toplam_tl: x, kaynak_url: "https://a.com" }, { toplam_tl: x, kaynak_url: "https://b.com" }];
+
+  it("TV besleme kartı (web 2.250): rapor 'düşür' → öneri beklenen 750, all-in DÜŞER", () => {
+    const s = sapmaSatiri(web(2250), tv);
+    expect(s.aksiyon).toBe("dusur");
+    const a = aksiyonOnerisi(s, tv);
+    expect(a.oneri).toEqual({ onayli_parca_min: 225, onayli_parca_max: 275, onayli_iscilik: 500, onayli_beklenen: 750 });
+    const y = yonDenetimi(s.aksiyon, tv, a.oneri);
+    expect(y).toMatchObject({ once: 2950, sonra: 2250, yon: "duser", tutarli: true });
+  });
+  it("eski öneri hatası tekrarlanmaz: 'düşür' grubunda öneri all-in'i yükseltemez", () => {
+    const kazan = { onayli_parca_min: 2500, onayli_parca_max: 9500, onayli_iscilik: 2200 }; // biz 9.700
+    const s = sapmaSatiri(web(7000), kazan);
+    expect(s.aksiyon).toBe("dusur");
+    const a = aksiyonOnerisi(s, kazan);
+    expect(a.oneri.onayli_parca_max).toBeLessThan(kazan.onayli_parca_max);
+    expect(allIn(a.oneri)).toBeLessThan(allIn(kazan));
+  });
+  it("web tabanın altında → floor, sayı önerilmez", () => {
+    const s = sapmaSatiri(web(1200), tv);
+    const a = aksiyonOnerisi(s, tv);
+    expect(a).toMatchObject({ aksiyon: "floor", taban: 2000, oneri: null });
+  });
+  it("yükselt → işçilik sabit, all-in YÜKSELİR", () => {
+    const s = sapmaSatiri(web(6000), tv);
+    const a = aksiyonOnerisi(s, tv);
+    expect(a.oneri.onayli_iscilik).toBe(500);
+    expect(a.oneri.onayli_beklenen).toBe(4500);
+    expect(yonDenetimi("yukselt", tv, a.oneri).tutarli).toBe(true);
+  });
+  it("parça ekseninde hedef = web parça medyanı", () => {
+    const pts = [{ parca_tl: 3000, kaynak_url: "https://a.com" }, { parca_tl: 3000, kaynak_url: "https://b.com" }];
+    const s = sapmaSatiri(pts, tv); // biz parça ortası 950 → +%216 yükselt
+    const a = aksiyonOnerisi(s, tv);
+    expect(a.oneri).toMatchObject({ onayli_parca_min: 2700, onayli_parca_max: 3300, onayli_beklenen: 3500 });
+  });
+  it("aksiyon yok (uyumlu / tek kaynak / kıyas yok) → null", () => {
+    expect(aksiyonOnerisi(sapmaSatiri(web(3000), tv), tv)).toBe(null);
+    expect(aksiyonOnerisi(sapmaSatiri([{ toplam_tl: 1000, kaynak_url: "https://a.com" }], tv), tv)).toBe(null);
+    expect(aksiyonOnerisi(null, tv)).toBe(null);
+  });
+  it("yonDenetimi ters yönü yakalar", () => {
+    expect(yonDenetimi("dusur", tv, { onayli_parca_min: 4000, onayli_parca_max: 4000, onayli_iscilik: 100 }).tutarli).toBe(false);
+    expect(yonDenetimi("dusur", tv, { onayli_parca_min: "", onayli_parca_max: 1, onayli_iscilik: 1 })).toBe(null);
+  });
+});

@@ -25,6 +25,13 @@ export default async function handler(req, res) {
   if (!ariza)
     return res.status(400).json({ error: `SEED dışı grup adı: "${cihaz} · ${hedef || b.ariza.trim()}" — panelde bir SEED satırı seç` });
 
+  // YK #143 şerhi (26 Eyl): snapshot (scripts/tarife-snapshot.mjs) üç alandan biri null olan satırı
+  // ATLAR → arıza SEED'den sessizce düşer, teşhis o arızada fiyat veremez. Bedelsiz iş için 0 yazılır.
+  const eksik = ["onayli_parca_min", "onayli_parca_max", "onayli_iscilik"]
+    .filter((k) => sayi(b[k]) == null || Number.isNaN(sayi(b[k])));
+  if (eksik.length)
+    return res.status(400).json({ error: `Zorunlu alan boş: ${eksik.join(", ")} — bedelsiz iş için 0 yaz` });
+
   const satir = {
     cihaz,
     marka: b.marka?.trim() || "Genel",

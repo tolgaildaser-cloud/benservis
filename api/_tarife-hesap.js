@@ -100,6 +100,52 @@ export function sapmaSatiri(pts, mevcut, gidis = GIDIS) {
   return { eksen, biz, web, sapma, hostSayisi, nokta: kullanilan.length, taban, aksiyon };
 }
 
+// Panel önerisi = raporun AKSİYONU (YK #143 şerhi, 26 Eyl). Eski öneri (`onerTarife`) ham
+// PARÇA noktalarının P25–P75'ini alıyordu; rapor ise all-in ekseninde karar veriyordu → "düşür"
+// denen grupta öneri bandı yükseltiyordu (TV besleme kartı: rapor 2.950→2.250, öneri 4.000–4.000).
+// Kural: hedef = web (all-in eksenindeyse gidiş düşülür), işçilik MEVCUT kalır (YK #91 tek kalem),
+// parça bandı = (hedef − işçilik) ×0,9–1,1. Taban (#15) altına inilmez → "floor", sayı önerilmez.
+// sapma: sapmaSatiri() çıktısı · mevcut: `tarife` onaylı satırı. Aksiyon yoksa null.
+export const ONERI_BANT = [0.9, 1.1];
+export function aksiyonOnerisi(sapma, mevcut, gidis = GIDIS) {
+  if (!sapma || !mevcut) return null;
+  const floor = { aksiyon: "floor", eksen: sapma.eksen, taban: sapma.taban, oneri: null };
+  if (sapma.aksiyon === "floor") return floor;
+  if (sapma.aksiyon !== "yukselt" && sapma.aksiyon !== "dusur") return null;
+  const iscilik = Number(mevcut.onayli_iscilik) || 0;
+  const parcaOrta = sapma.eksen === "all-in" ? sapma.web - gidis - iscilik : sapma.web;
+  if (!(parcaOrta > 0)) return floor; // hedef işçiliğin altına düşüyor = taban
+  const R = (x) => Math.round(x);
+  return {
+    aksiyon: sapma.aksiyon, eksen: sapma.eksen, taban: sapma.taban,
+    oneri: {
+      onayli_parca_min: R(parcaOrta * ONERI_BANT[0]),
+      onayli_parca_max: R(parcaOrta * ONERI_BANT[1]),
+      onayli_iscilik: iscilik,
+      onayli_beklenen: R(parcaOrta + iscilik),
+    },
+  };
+}
+
+// Formdaki bandın all-in karşılığı (parça ortası + işçilik + gidiş) — sapmaSatiri'nin `biz`iyle aynı ölçü.
+// Alanlardan biri boşsa null.
+export function allIn(d, gidis = GIDIS) {
+  const n = (v) => (v == null || String(v).trim() === "" ? null : Number(v));
+  const [a, b, i] = [n(d?.onayli_parca_min), n(d?.onayli_parca_max), n(d?.onayli_iscilik)];
+  if (a == null || b == null || i == null) return null;
+  return Math.round((a + b) / 2 + i + gidis);
+}
+
+// Formun yönü raporun aksiyonuyla tutarlı mı? "yukselt" → artmalı, "dusur" → azalmalı.
+// Dönüş: { once, sonra, yon: "yukselir"|"duser"|"ayni", tutarli } — kıyas yapılamazsa null.
+export function yonDenetimi(aksiyon, mevcut, d, gidis = GIDIS) {
+  const once = allIn(mevcut, gidis), sonra = allIn(d, gidis);
+  if (once == null || sonra == null) return null;
+  const yon = sonra > once ? "yukselir" : sonra < once ? "duser" : "ayni";
+  const tutarli = aksiyon === "yukselt" ? yon === "yukselir" : aksiyon === "dusur" ? yon === "duser" : true;
+  return { once, sonra, yon, tutarli };
+}
+
 // Güven: nokta sayısı + dağılım. yuksek = 3+ & düşük varyans; orta = 2 veya 3+ yüksek varyans; dusuk = ≤1.
 export function guvenSeviyesi(parcalar) {
   const n = parcalar.length;
