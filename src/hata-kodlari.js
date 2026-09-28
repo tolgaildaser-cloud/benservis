@@ -380,6 +380,23 @@ export const HATA_KODU_KATMANI = {
     { giris: "Samsung — ekranda 0 kalıyor", tip: "belirti",
       anlam: "Arıza değil: Temiz Kazan hatırlatması; makine normal çalışır, temizlik için programın çalıştırılması önerilir.",
       yazi: "samsung-camasir-makinesi-hata-kodlari" },
+    // ——— 28 Eyl 2026 (2. PR), Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://media3.bsh-group.com/Documents/9001771585_E.pdf · md5 0659013f7dc77a65864215555fabb2f5
+    { giris: "Siemens — E:10-00 / -10 / -20 (i-Dos)", tip: "kod",
+      anlam: "Siemens'e göre akıllı dozajlama pompası bloke: önce deterjan çekmecesi temizlenir; sürerse servis, bu arada manuel dozaj.",
+      yazi: "siemens-camasir-makinesi-e10-hatasi" },
+    // kaynak: https://media3.bsh-group.com/Documents/9002046535_A.pdf · md5 8053c84dd7b5f803d86e4c3d49bacec5
+    { giris: "Siemens — E:30-20", tip: "kod",
+      anlam: "Kritik fonksiyon arızası: musluğu kapat, makine suyu boşaltırken 5 dakika bekle, yeniden başlat; fazla deterjan ve ilave su da sebep.",
+      yazi: "siemens-camasir-makinesi-e30-20-hatasi" },
+    // kaynak: https://media3.bsh-group.com/Documents/9002046535_A.pdf · md5 8053c84dd7b5f803d86e4c3d49bacec5
+    { giris: "Siemens — E:36-25 / E:36-26", tip: "kod",
+      anlam: "Siemens'e göre deterjanlı su pompası tıkanmış: suyu boşaltıp pis su pompasını temizlersin.",
+      yazi: "siemens-camasir-makinesi-e36-25-hatasi" },
+    // kaynak: https://media3.bsh-group.com/Documents/9002046535_A.pdf · md5 8053c84dd7b5f803d86e4c3d49bacec5
+    { giris: "Siemens — diğer tüm hata kodları (sıfırlama)", tip: "ayar",
+      anlam: "Tabloda satırı olmayan kodda modele özel tuşlarla yeniden başlat, tekrar ederse en az 30 saniye güç kes, sürerse servis.",
+      yazi: "siemens-camasir-makinesi-hata-kodu-sifirlama" },
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -674,6 +691,39 @@ export const HATA_KODU_KATMANI = {
     { giris: "Bosch — tuz koydum, tuz ışığı sönmüyor", tip: "belirti",
       anlam: "Bosch'a göre sensör tablet tuzları algılamıyor; tablet dışında bir özel tuz kullanılır.",
       yazi: "bosch-bulasik-makinesi-sembolleri-ve-anlamlari" },
+    // ——— 28 Eyl 2026 (2. PR), Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.beko.com.tr/blog/bulasik-makinesi-hata-kodlari-rehberi · md5 b68dce2a69b3b62ff835543f98e91c80
+    { giris: "Beko — E02", tip: "kod",
+      anlam: "Su kesik: şebeke suyu kesilmiş ya da su giriş musluğu açılmamış; musluk ve hortum filtresi evde kontrol edilir, sönmezse servis.",
+      yazi: "beko-bulasik-makinesi-e02-hatasi" },
+    // kaynak: http://download.beko.com/Download.UsageManualsBeko/bm-5005-5-programli-bulasik-makinesi-kullanim-kilavuzu-tr_TR_201502251450524_User20Manual20-20Filetur-A.pdf · md5 91a260cf53261252526fea072f2d7eb4
+    { giris: "Beko — P2 (eski modellerde su kesik uyarısı)", tip: "kod",
+      anlam: "BM 4004/5005 kılavuzunda su kesik uyarısı; program durur, su gelince kaldığı yerden devam eder.",
+      yazi: "beko-bulasik-makinesi-e02-hatasi" },
+    // kaynak: http://download.beko.com/Download.UsageManualsBeko/bm-5005-5-programli-bulasik-makinesi-kullanim-kilavuzu-tr_TR_201502251450524_User20Manual20-20Filetur-A.pdf · md5 91a260cf53261252526fea072f2d7eb4
+    { giris: "Beko — P1 (eski modellerde taşma uyarısı)", tip: "kod",
+      anlam: "BM 4004/5005 kılavuzunda taşma uyarısı; makine suyu atmaya çalışır, P1 sönmüyorsa hata kalıcıdır ve servis gerekir.",
+      yazi: "beko-bulasik-makinesi-e01-hatasi" },
+    // kaynak: https://www.beko.com.tr/blog/bulasik-makinesi-hata-kodlari-rehberi · md5 b68dce2a69b3b62ff835543f98e91c80
+    { giris: "Beko — E06", tip: "kod",
+      anlam: "NTC ısı sensörü arızası; makine düzgün ve sürekli ısıtma yapmaz. Makineyi kapatıp yetkili servisle iletişime geç.",
+      yazi: "beko-bulasik-makinesi-hata-kodlari" },
+    // kaynak: https://www.beko.com.tr/blog/bulasik-makinesi-hata-kodlari-rehberi · md5 b68dce2a69b3b62ff835543f98e91c80
+    { giris: "Beko — E07", tip: "kod",
+      anlam: "Sürekli su alma: akış ölçer arızası. Makine fazla suyu atar; hata sürerse elektriği kes, valfi kapat, yetkili servis.",
+      yazi: "beko-bulasik-makinesi-hata-kodlari" },
+    // kaynak: https://www.beko.com.tr/blog/bulasik-makinesi-hata-kodlari-rehberi · md5 b68dce2a69b3b62ff835543f98e91c80
+    { giris: "Beko — E26", tip: "kod",
+      anlam: "15°C üstü kompresör arızası; kompresör ya da ısı pompasında sorun. Makineyi durdurup yetkili servise başvur.",
+      yazi: "beko-bulasik-makinesi-hata-kodlari" },
+    // kaynak: http://download.beko.com/Download.UsageManualsBeko/34758_1728766176_AA_BEKO_3938-IL.pdf · md5 86ef266bafb482f3a888acf3e8d7b975
+    { giris: "Beko — makine çalışmıyor", tip: "belirti",
+      anlam: "Beko'nun sırası: fiş, sigorta, su musluğu, kapı, açma tuşu ve filtreler; çocuk kilidi Başla tuşunu etkisiz kılar.",
+      yazi: "beko-bulasik-makinesi-calismiyor" },
+    // kaynak: http://download.beko.com/Download.UsageManualsBeko/bm-5005-5-programli-bulasik-makinesi-kullanim-kilavuzu-tr_TR_201502251450524_User20Manual20-20Filetur-A.pdf · md5 91a260cf53261252526fea072f2d7eb4
+    { giris: "Beko — makinede köpük oluşuyor", tip: "belirti",
+      anlam: "Beko'ya göre elde deterjanla yıkanıp durulanmamış bulaşık, dökülen parlatıcı ya da açık kalan parlatıcı kapağı.",
+      yazi: "beko-bulasik-makinesi-kopuk-yapiyor" },
   ],
 
   "Kombi / Termosifon": [
@@ -976,6 +1026,247 @@ export const HATA_KODU_KATMANI = {
     { giris: "DemirDöküm — F.77", tip: "kod",
       anlam: "Noktalı kod ailesinde atık gaz klapesi arızalı; kullanma kılavuzunda kullanıcı adımı yok, yetkili servis.",
       yazi: "demirdokum-kombi-ariza-kodlari" },
+    // ——— 28 Eyl 2026 (2. PR), Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — F37", tip: "kod",
+      anlam: "Duotec ve Eco'da düşük su basıncı; kombi soğukken 0,7–1,5 bar aralığına doldurma musluğu çok yavaş açılarak getirilir, sık düşüyorsa servis.",
+      yazi: "baymak-kombi-f37-hatasi" },
+    // kaynak: https://www.baymak.com.tr/media/5622/baymak-lunatec-tam-yogusmali-kombi-kullanma-kilavuzu.pdf · md5 dec11a69fd55c366d613da7ba31d6d98
+    { giris: "Baymak Lunatec — H.02.07", tip: "kod",
+      anlam: "Isıtma devresinde düşük basınç (su doldurma gerekli); açık mavi musluktan tesisat soğukken 1–1,5 bara doldurulur, kod kendiliğinden kaybolur.",
+      yazi: "baymak-kombi-f37-hatasi" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — F40", tip: "kod",
+      anlam: "Duotec ve Eco'da yüksek su basıncı; basınç 3 barı aşarsa emniyet ventili açılır, boşaltma musluğu kombinin içindeyse iş servisindir.",
+      yazi: "baymak-kombi-f37-hatasi" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — E01", tip: "kod",
+      anlam: "Duotec ve Eco'da başarısız ateşleme; gaz vanası ve su basıncına bakılıp RESET'e basılır, sorun devam ederse yetkili servis.",
+      yazi: "baymak-kombi-e01-hatasi" },
+    // kaynak: https://www.baymak.com.tr/media/5622/baymak-lunatec-tam-yogusmali-kombi-kullanma-kilavuzu.pdf · md5 dec11a69fd55c366d613da7ba31d6d98
+    { giris: "Baymak Lunatec — E.04.10", tip: "kod",
+      anlam: "Brülör ateşlemesi 4 deneme sonrası başarısız; sarı gaz musluğu açık mı bakılır, RESET'e 1 saniye basılır, tekrar ederse yetkili servis.",
+      yazi: "baymak-kombi-e01-hatasi" },
+    // kaynak: https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6604e3ec39b2d152606464cb0
+    { giris: "Baymak — F13", tip: "kod",
+      anlam: "Duotec ve Eco'da reset kilitlenmesi; Baymak'ın talimatı cihazın elektrik beslemesini kapatıp açmak, sorun devam ederse yetkili servis.",
+      yazi: "baymak-kombi-f13-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/ea/ · md5 20e5a441bf048d17adacd15e33233270
+    { giris: "Bosch — EA", tip: "kod",
+      anlam: "Bosch'a göre alev algılanmıyor; önce gaz vanası (ocak testiyle), sonra su basıncı; ikisi normalken sürüyorsa yetkili servis.",
+      yazi: "bosch-kombi-ea-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/227/ · md5 6ef3349cc49752692c4a58735cd51d8c
+    { giris: "Bosch — 227", tip: "kod",
+      anlam: "Condens 2300i W'de alev algılanmıyor; Bosch'un ilk kontrolü gaz vanasının açık olması.",
+      yazi: "bosch-kombi-ea-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/e9/ · md5 1885d07e2166a39c37f4979a9f6a11c8
+    { giris: "Bosch — E9", tip: "kod",
+      anlam: "Ateşleme yapmıyor; Bosch'a göre evde ilk bakılacak şey su basıncı, 1 bar altındaysa su basılır; kaçak ya da sensör/pompa ihtimali servis işi.",
+      yazi: "bosch-kombi-e9-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/ce/ · md5 89333e2b31f72b27a280effd2839d4be
+    { giris: "Bosch — CE", tip: "kod",
+      anlam: "Tesisat su basıncı düşük; Bosch basıncın 1,2 bar'a yükseltilmesini ve yetkili servise başvurulmasını istiyor.",
+      yazi: "bosch-kombi-ce-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/0y-a1/ · md5 56ee1552ba867b0eaadc0251cf9138cd
+    { giris: "Bosch — 0Y-A1", tip: "kod",
+      anlam: "Condens 7000i W'de \"tesisat ile ilgili hata var\"; Bosch'un çözümü CE ile aynı: basıncı 1,2 bar'a yükselt, yetkili servise başvur.",
+      yazi: "bosch-kombi-ce-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/1017/ · md5 05660f213202876692f25f0185d37681
+    { giris: "Bosch — 1017", tip: "kod",
+      anlam: "Condens 2300i W'de su basıncı çok düşük; basıncı kontrol et, gerekirse öngörülen basınca kadar su ilave et.",
+      yazi: "bosch-kombi-1017-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/2971/ · md5 0b8d03431a3e60ff74fff4851415bffd
+    { giris: "Bosch — 2971", tip: "kod",
+      anlam: "Condens 2300i W'de çalışma basıncı çok düşük; önce ısıtma tesisatının havasını al, sonra basınca bak ve gerekirse su ilave et.",
+      yazi: "bosch-kombi-1017-hatasi" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/fd/ · md5 c61077451f5cc0eeae0773c615f89831
+    { giris: "Bosch — Fd · FD", tip: "kod",
+      anlam: "Reset tuşuna uzun süre basılmış; Bosch tuşa 30 saniyeyi aşmayacak şekilde basılmasını istiyor, sürerse yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/356/ · md5 b14821795fd2757a2ffaa4e1a6bfb8ef
+    { giris: "Bosch — 356", tip: "kod",
+      anlam: "Condens 2300i W'de cihazın besleme gerilimi çok düşük; elektrik beslemesinin düzeltilmesi yetkili servis işi.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/2972/ · md5 68f4ff0fa50a05ba710670480de7379f
+    { giris: "Bosch — 2972", tip: "kod",
+      anlam: "Condens 2300i W'de şebeke gerilimi çok düşük; doğru gerilim beslemesinin sağlanması yetkili servis işi.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/c6/ · md5 9183bb82288aac85d163046d4678be8b
+    { giris: "Bosch — C6", tip: "kod",
+      anlam: "Hava akışında fan problemi; Bosch'a göre fan, prosestat ya da anakart kaynaklı olabilir ve kullanıcının yapabileceği işlem yok, yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/fa/ · md5 4c87f70f427afa6f4204aa8dce6eefef
+    { giris: "Bosch — FA", tip: "kod",
+      anlam: "Bosch'un sayfasındaki ifadeyle \"gaz kesildiği halde alev algılanmıyor\"; tek çözüm yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/e2/ · md5 147460723d88ffdbfb9d51fcf845dcfb
+    { giris: "Bosch — E2", tip: "kod",
+      anlam: "Gidiş suyu sıcaklık sensörü arızalı; sensör ve kablo kontrolü kombinin içinde, yetkili servis işi.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/a7/ · md5 fa3376d450ecd659eeea90e367efdd3a
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/ad/ · md5 7db488dd2ddc45c1f5e17472b2441feb
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/h11/ · md5 9b48c34e1e84ac40c59a2796528b3c8c
+    { giris: "Bosch — A7 · Ad · H11", tip: "kod",
+      anlam: "Boyler sıcaklık sensörü tanınmıyor; sensör ve bağlantı kablosu kontrolü yetkili servis işi.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/a8/ · md5 bc47bc67f899d0fb2ed1d4430633b237
+    { giris: "Bosch — A8", tip: "kod",
+      anlam: "BUS iletişiminde kesinti; Bosch termostat kablosunun kontrol edilmesini ve yetkili servise başvurulmasını istiyor.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/a9/ · md5 0123ae5259ca161fcb58f68488b9f702
+    { giris: "Bosch — A9", tip: "kod",
+      anlam: "Kullanım suyu sensörü kontrol edilmeli; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/ac/ · md5 30cd5f0f2ccff87b401ca737d43b5aa2
+    { giris: "Bosch — AC", tip: "kod",
+      anlam: "Modül algılama hatası; modül ve bağlantı kabloları kontrol edilmeli, yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/cc/ · md5 49386f4428bb78098c5ac8a60402e6dd
+    { giris: "Bosch — CC", tip: "kod",
+      anlam: "Dış hava sensörü algılanmıyor; dış hava termostatı ve kablosu kontrol edilmeli, yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/b1/ · md5 aad3ae64095dc0fcc04e2cc74b9050ac
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/9u/ · md5 100be0df93d9df67ea13b145be3b57e4
+    { giris: "Bosch — b1 · B1 · 9U", tip: "kod",
+      anlam: "Kod anahtarı algılanmıyor; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/b2-b3/ · md5 b00e3d824e411eb01c9a0c73266eceda
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/d3-d5/ · md5 95f5a7c821a1e32954dcbe62a392169a
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/e0-f0/ · md5 c0a73cecd96e6466f090155e8b10f3a7
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/f0/ · md5 7068a3a614c07cb2aafdd41438995a1c
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/f1/ · md5 a0dba8b02ac8ffc34f4caa183c472bbb
+    { giris: "Bosch — b2/b3 · D3-D5 · E0/F0 · F0 · F1", tip: "kod",
+      anlam: "Bosch'a göre dahili hata; tek çözüm yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/c1/ · md5 48aa6c431ced007f1aa4db9ee40b72bd
+    { giris: "Bosch — C1", tip: "kod",
+      anlam: "Fan devir sayısı düşük; voltaj düşük olabilir, baca montajı kontrol edilmeli, yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/c1-c7/ · md5 0324d5d1d3df22e0cd66b00c256f6924
+    //   ek kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/c7/ · md5 3ee16fc7dddd25c32aac70ee94dd469b
+    { giris: "Bosch — C1-C7 · C7", tip: "kod",
+      anlam: "Fan çalışmıyor; Bosch voltajın düşük olabileceğini söylüyor, yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/c4/ · md5 99ba6a43d5e103ab7f7ee04096ad2c3b
+    { giris: "Bosch — C4", tip: "kod",
+      anlam: "Diferansiyel basınç kapalı durumdayken açılmıyor; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/d5/ · md5 db7e976e856bcff0e70f475aaf5f3ee0
+    { giris: "Bosch — d5", tip: "kod",
+      anlam: "Harici sıcaklık sensörü arızalı; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/d7/ · md5 7e9fc569a745d78e09538eb30b968302
+    { giris: "Bosch — d7 · D7", tip: "kod",
+      anlam: "Gaz grubu kontrol edilmeli; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/i-i-/ · md5 fca2048f5b4253f8343543f043602263
+    { giris: "Bosch — I I", tip: "kod",
+      anlam: "Fan devir ayarı seçilmemiş; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/ariza-kodlari-ve-cozumleri/p/ · md5 367b8e1c9d7f6148e4baf4bdd1e24f1c
+    { giris: "Bosch — P", tip: "kod",
+      anlam: "Class 6000 W'de cihaz tipi tanımlanmamış; yetkili servis.",
+      yazi: "bosch-kombi-ariza-kodlari" },
+    // kaynak: https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d7565ffbc9c1faaf1e97e45553d9
+    { giris: "ECA — E01", tip: "kod",
+      anlam: "Ateşleme hatası, kombiye gaz gitmiyor; gaz vanası açık mı ve hatta gaz var mı bakılır, Reset'e bir kez basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-e01-hatasi" },
+    // kaynak: https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d7565ffbc9c1faaf1e97e45553d9
+    { giris: "ECA — E03", tip: "kod",
+      anlam: "Aşırı sıcaklık uyarısı, gidiş veya dönüş suyu 90°C'yi aşmış; tesisat su vanaları ve kış modunda en az bir radyatör vanası açık mı bakılır, Reset, sürerse servis.",
+      yazi: "eca-kombi-e03-hatasi" },
+    // kaynak: https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d7565ffbc9c1faaf1e97e45553d9
+    { giris: "ECA — F37", tip: "kod",
+      anlam: "Düşük su basıncı (0,4 bar); doldurma vanası yavaşça açılıp ekranda 1,5–2 bar okununca kapatılır, basınç sık düşüyorsa servis.",
+      yazi: "eca-kombi-f37-hatasi" },
+    // kaynak: https://eca.com.tr/uploads/documents//ccd/cba/eac/cba/303a9386-28c1-4d2f-b9e8-5eadf3729585.pdf · md5 023164f7b7cebedc931411900edd72b0
+    { giris: "ECA — F40", tip: "kod",
+      anlam: "Yüksek su basıncı (Proteus 3±0,3 · Citius 3,3±0,3 · Confeo ≥2,9 bar); basınç kontrol edilir, kombi kapatılıp yeniden çalıştırılır, sürerse servis.",
+      yazi: "eca-kombi-f40-hatasi" },
+    // kaynak: https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d7565ffbc9c1faaf1e97e45553d9
+    { giris: "ECA — F13", tip: "kod",
+      anlam: "Fazla resetleme: 1 saat içinde 5'ten fazla Reset'e basılmış; kılavuzun tek adımı E.C.A. yetkili servisine haber vermek.",
+      yazi: "eca-kombi-ariza-kodlari" },
+    // kaynak: https://eca.com.tr/uploads/documents//ccd/cba/eac/cba/303a9386-28c1-4d2f-b9e8-5eadf3729585.pdf · md5 023164f7b7cebedc931411900edd72b0
+    { giris: "ECA — F07", tip: "kod",
+      anlam: "Baca gazı sıcaklığı 95°C'yi aşmış; kılavuzun tek adımı E.C.A. yetkili servisine haber vermek.",
+      yazi: "eca-kombi-ariza-kodlari" },
+    // kaynak: https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163ac14c46f9cb1dcb9ea189681
+    { giris: "ECA — E82", tip: "kod",
+      anlam: "Alev kaybı hatası (art arda 12'den fazla alev kaybı); Reset'e bir kez basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" },
+    // kaynak: https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163ac14c46f9cb1dcb9ea189681
+    { giris: "ECA Confeo — E38", tip: "kod",
+      anlam: "Son su dolumundan 1 hafta sonra su basıncı düşük; muhtemel sebep tesisatta veya kombide su kaçağı, Reset, sürerse servis.",
+      yazi: "eca-kombi-ariza-kodlari" },
+    // kaynak: https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163ac14c46f9cb1dcb9ea189681
+    { giris: "ECA — E83 (modele göre)", tip: "kod",
+      anlam: "Proteus Premix'te ateşleme devresi hatası, Confeo Premix'te egzoz gazı yüksek sıcaklık uyarısı (ayda iki kez F07); ikisinde de Reset, sürerse servis.",
+      yazi: "eca-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-intro-24-28-kw_1452962.pdf · md5 2ad2ae698770f850da164d67e3ac3637
+    { giris: "Vaillant — kombi hiç çalışmıyor (sıcak su yok, petek soğuk)", tip: "belirti",
+      anlam: "Kılavuzun sırası: iki gaz kesme vanası, binadaki sigorta, soğuk su vanası, kombinin açık olması ve sıcaklık ayarı; hepsi yerindeyse yetkili servis.",
+      yazi: "vaillant-kombi-calismiyor" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_844161.pdf · md5 f48176844c2865cf7cd48c96cd902121
+    { giris: "Vaillant — sıcak su var, kalorifer ısıtmıyor", tip: "belirti",
+      anlam: "Kılavuza göre harici regler (oda termostatı) doğru ayarlanmamış; regler yoksa ısıtma yaz konumunda (OFF/oF) kalmış olabilir.",
+      yazi: "vaillant-kombi-kalorifer-isitmiyor" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_844161.pdf · md5 f48176844c2865cf7cd48c96cd902121
+    { giris: "Vaillant — S.31 / S.031", tip: "kod",
+      anlam: "Arıza değil, durum kodu: ısıtma kapalı (yaz konumu) ya da ısıtma talebi yok.",
+      yazi: "vaillant-kombi-kalorifer-isitmiyor" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_844161.pdf · md5 f48176844c2865cf7cd48c96cd902121
+    { giris: "Vaillant — S.08 / S.008", tip: "kod",
+      anlam: "Arıza değil, durum kodu: kombi bir ısıtmadan sonra bekleme süresinde; bilerek bekliyor.",
+      yazi: "vaillant-kombi-kalorifer-isitmiyor" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_844161.pdf · md5 f48176844c2865cf7cd48c96cd902121
+    { giris: "Vaillant — S.34 / S.034", tip: "kod",
+      anlam: "Arıza değil, durum kodu: donmaya karşı koruma çalışıyor; koruma için elektrik bağlı, düğme açık ve gaz kesme vanası açık kalmalı.",
+      yazi: "vaillant-kombi-s34-kodu" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-intro-24-28-kw_1452962.pdf · md5 2ad2ae698770f850da164d67e3ac3637
+    { giris: "Vaillant — rE yanıp sönüyor (ecoTEC intro)", tip: "kod",
+      anlam: "Reset sırasında rE görünür; beş reset denemesinden sonra hızlı yanıp söner, düğmeye basılıp ürün yeniden başlatılır; arıza giderilemiyorsa yetkili servis.",
+      yazi: "vaillant-kombi-f28-hatasi" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_844161.pdf · md5 f48176844c2865cf7cd48c96cd902121
+    { giris: "Vaillant — basınç yanıp sönüyor, 3 bar üstü (ecoTEC pure)", tip: "belirti",
+      anlam: "Sistem basıncı çok yüksek (3 barın üstünde); kılavuza göre fazla ısıtma suyunun emniyet ventilinden boşalması beklenir.",
+      yazi: "vaillant-kombi-sembolleri-ve-anlamlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.23", tip: "kod",
+      anlam: "Emniyet kapatması: sıcaklık yayılması çok fazla (gidiş/dönüş sensörleri NTC1/NTC2); nedenler arasında pompa blokajı ve üründe hava var, yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.24", tip: "kod",
+      anlam: "Emniyet kapatması: sıcaklık artışı çok hızlı (pompa, hava, düşük sistem basıncı gibi nedenler); yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.27", tip: "kod",
+      anlam: "Emniyet kapatması: alev algılama arızası; kullanıcıya adım yok, yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.32", tip: "kod",
+      anlam: "Fan devir sayısı tolerans değerlerinin dışında; yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.49", tip: "kod",
+      anlam: "eBUS (e-Veri yolu) gerilimi çok düşük; bağlantı kontrolü yetkili servis işi.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.61", tip: "kod",
+      anlam: "Gaz armatürü kumanda edilemiyor; kablo, gaz armatürü ve elektronik kart kontrolü yetkili servis işi.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.62", tip: "kod",
+      anlam: "Gaz vanası kapatma kumandası arızası; yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.73 / F.74", tip: "kod",
+      anlam: "Su basıncı sensörü hatası: F.73 kısa devre, F.74 sensör bağlı değil ya da hatta kesinti; yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
+    // kaynak: https://www.vaillant.com.tr/api/download/product/tr/_ecotec-pure_1367238.pdf · md5 d57d110b8f7b15fd282ce993442d4a77
+    { giris: "Vaillant — F.77", tip: "kod",
+      anlam: "Yoğuşma veya duman arızası (monte edilmişse yoğuşma suyu pompası ya da atık gaz klapesi); yetkili servis.",
+      yazi: "vaillant-kombi-ariza-kodlari" },
   ],
 
   "Buzdolabı": [
@@ -1392,6 +1683,51 @@ export const HATA_KODU_KATMANI = {
     { giris: "Daikin — J6", tip: "kod",
       anlam: "Dış ünite ısı eşanjörü termistörü anormalliği.",
       yazi: "daikin-klima-hata-kodlari" },
+    // ——— 28 Eyl 2026 (2. PR), Sprint #144 (PAZ tamir föyü; her giriş üreticinin kendi belgesinden, md5'li) ———
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — DF", tip: "kod",
+      anlam: "Arıza değil, buz çözme: ısıtmada dış ünitedeki buz 5-12 dakikada eritilir; bu sırada iç ünite üflemez, bitene kadar beklenir.",
+      yazi: "samsung-klima-df-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — C1", tip: "kod",
+      anlam: "Arıza değil, otomatik temizleme bilgi kodu: klima kapandıktan sonra 10-30 dakika iç üniteyi temizler, bitince kendiliğinden kapanır.",
+      yazi: "samsung-klima-c1-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-can-i-do-when-my-samsung-air-conditioner-wont-turn-off/ · md5 6371440fcca9fb2c7ad3a3fd3d3f483e
+    { giris: "Samsung — klima kapanmıyor", tip: "belirti",
+      anlam: "Otomatik temizleme açıksa klima her kapanışta 10-30 dakika çalışır; iptal ve devre dışı bırakma kumandadan yapılır.",
+      yazi: "samsung-klima-c1-hatasi" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/how-to-solve-no-cooling-problem-of-samsung-ac/ · md5 4fc82fc5c6ef2e17de5b76060163192e
+    { giris: "Samsung — klima soğutmuyor", tip: "belirti",
+      anlam: "Samsung'un sırası: Soğut modu ve oda sıcaklığından düşük ayar, kapı-pencere, ünitelerin önündeki engeller, filtre; sürerse servis.",
+      yazi: "samsung-klima-sogutmuyor" },
+    // kaynak: https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=AR12TSFYCWK%2FSK&CttFileID=7963378&CDCttType=UM&VPath=UM%2F202102%2F20210203204244405%2FRAC029-02_IB_AR9500T_GEO_WIND_TR_TR-WEB_.pdf · md5 5c6daf15aa6a54b37e7af4186f36708a
+    { giris: "Samsung — klima koku yapıyor", tip: "belirti",
+      anlam: "Samsung'un önerisi: odayı havalandır, 3-4 saat Fan modu, otomatik temizleme; yanık kokusunda güç hemen kesilir, servis.",
+      yazi: "samsung-klima-koku-yapiyor" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — E101, E102, E202", tip: "kod",
+      anlam: "İç ve dış ünite arasında 1 dakika boyunca iletişim sağlanamaması; Samsung destek alınmasını öneriyor.",
+      yazi: "samsung-klima-hata-kodlari" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — E121, E122", tip: "kod",
+      anlam: "İç ünite oda sensörü (E121) ve boru sensörü (E122) hatası; servis işi.",
+      yazi: "samsung-klima-hata-kodlari" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — E154", tip: "kod",
+      anlam: "İç fan motoru hız hatası: motor 15 saniyede 450 rpm devire ulaşamıyor; servis işi.",
+      yazi: "samsung-klima-hata-kodlari" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — E221, E237, E251", tip: "kod",
+      anlam: "Dış ünite oda sensörü (E221, E237) ve tahliye sıcaklık sensörü (E251) hatası; servis işi.",
+      yazi: "samsung-klima-hata-kodlari" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — E458, E461–E472", tip: "kod",
+      anlam: "Dış fan (E458), kompresör start/dönüş/voltaj sınırı ve aşırı akım, akım ya da voltaj sensörü hataları; kullanıcı müdahalesi yok, servis işi.",
+      yazi: "samsung-klima-hata-kodlari" },
+    // kaynak: https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426aab29d0b534308ccf3ee87a15
+    { giris: "Samsung — E554", tip: "kod",
+      anlam: "Gaz kaçak hatası; soğutucu devre servis işi.",
+      yazi: "samsung-klima-hata-kodlari" },
   ],
 
   "Fırın / Ocak / Aspiratör": [
