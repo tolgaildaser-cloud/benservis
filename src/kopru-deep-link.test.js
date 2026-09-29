@@ -216,3 +216,42 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
     expect(belirtiCoz("Çamaşır Makinesi", ariza)).toBe("Su boşaltmıyor");
   });
 });
+
+// ── 29 EYL 2026 REGRESYON KİLİDİ — HATA KODU KURALI TABLODAN KOPUYORDU ──────────────────
+// 1 Eyl hükmü ("`*-<kod>-hatasi` ve `*-hata-kodlari` sayfaları belirtiyi ön-doldurur") satır
+// satır uygulanıyordu; sprint #144 günde onlarca kod sayfası açınca 82'si belirtisiz kaldı.
+// Kural artık build-blog'da `KOD_BELIRTI` + `KOD_YAZISI` — ayna ikisini de kaynaktan okur.
+const KOD_BELIRTI = tabloOku("scripts/build-blog.mjs", "KOD_BELIRTI");
+const KOD_YAZISI = (() => {
+  const m = BUILD_BLOG_SRC.match(/const KOD_YAZISI = \/(.+)\/;/);
+  if (!m) throw new Error("build-blog.mjs içinde KOD_YAZISI bulunamadı — kod kuralı taşınmış olabilir.");
+  return new RegExp(m[1]);
+})();
+// build-blog'daki `kopruAriza(p)` ile BİREBİR aynı öncelik: önce tablo, sonra kod kuralı.
+const kopruAriza = (y) => KOPRU_ARIZA[y.slug] || (KOD_YAZISI.test(y.slug) && KOD_BELIRTI[yaziCihaz(y)]) || "";
+
+describe("hata kodu kuralı (29 Eyl 2026)", () => {
+  it("KOD_BELIRTI'nin her değeri kendi cihazında bir belirtiye çözülür", () => {
+    const olu = Object.entries(KOD_BELIRTI)
+      .filter(([c, a]) => !belirtiCoz(CIHAZ_SLUG[c], a)).map(([c, a]) => `${c} → ${a}`);
+    expect(olu, "kural App'te karşılığı olmayan slug basıyor").toEqual([]);
+  });
+
+  it("kod kuralının kapsadığı cihazdaki HER kod sayfası belirti taşır", () => {
+    const kod = yazilar.filter((y) => KOD_YAZISI.test(y.slug) && KOD_BELIRTI[yaziCihaz(y)]);
+    expect(kod.length, "kod sayfası bulunamadı — ayna kör noktaya düşmüş olabilir").toBeGreaterThan(50);
+    const bos = kod.filter((y) => !belirtiCoz(CIHAZ_SLUG[yaziCihaz(y)], kopruAriza(y))).map((y) => y.slug);
+    expect(bos, "bu kod sayfası teşhis formunu belirtisiz açıyor").toEqual([]);
+  });
+
+  it("kural cihazsız ya da listede olmayan cihazın yazısına belirti uydurmaz", () => {
+    expect(kopruAriza({ slug: "tv-e1-hatasi", category: "Televizyon" })).toBe("");
+    expect(kopruAriza({ slug: "genel-hatasi", category: "Genel" })).toBe("");
+  });
+
+  it("tablo satırı kuraldan önceliklidir", () => {
+    const tablolu = yazilar.find((y) => KOD_YAZISI.test(y.slug) && KOPRU_ARIZA[y.slug]);
+    expect(tablolu, "hem tabloda hem kural kapsamında yazı yok").toBeTruthy();
+    expect(kopruAriza(tablolu)).toBe(KOPRU_ARIZA[tablolu.slug]);
+  });
+});

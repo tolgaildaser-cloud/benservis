@@ -868,13 +868,83 @@ const KOPRU_ARIZA = {
   "yazici-silik-basiyor": "silik-basiyor",
   "laptop-sarj-olmuyor": "sarj-olmuyor",
   "laptop-klavyesi-calismiyor": "klavye-calismiyor",
+  // ── 29 Eyl 2026: SPRINT #144 MARKA × BELİRTİ REHBERLERİ (FE ölçtü, YK #106 ② dönüşüm hattı).
+  // 28-29 Eyl'de yayına giren marka × belirti sayfalarının HİÇBİRİ belirti taşımıyordu: tablo
+  // tek tek büyüdüğü için sprintin hızına yetişmedi. Kürasyon ilkesi aynı — her satır yazının
+  // KENDİ başlığındaki belirti, App'in kendi sözlüğünde karşılığı olan. BİLEREK DIŞARIDA:
+  // bulaşık "çalışmıyor" · "leke/beyaz leke" (App'te "bulanık bırakıyor" var, leke ≠ bulanık) ·
+  // "köpük" · buzdolabı "koku/terliyor" · klima "ısıtmıyor" (App'te yok) · DemirDöküm
+  // "çalışmıyor" (tek belirtiye oturmuyor — `kombi-yanmiyor` emsali).
+  "bosch-bulasik-makinesi-su-bosaltmiyor": "su-tahliye-etmiyor",
+  "bosch-bulasik-makinesi-temiz-yikamiyor": "temiz-yikamiyor",
+  "bosch-bulasik-makinesi-kurutmuyor": "kurutmuyor",
+  "samsung-bulasik-makinesi-temiz-yikamiyor": "temiz-yikamiyor",
+  "samsung-bulasik-makinesi-kurutmuyor": "kurutmuyor",
+  "samsung-bulasik-makinesi-kokuyor": "kotu-kokuyor",
+  "siemens-bulasik-makinesi-su-bosaltmiyor": "su-tahliye-etmiyor",
+  "siemens-bulasik-makinesi-su-almiyor": "su-almiyor",
+  "siemens-bulasik-makinesi-temiz-yikamiyor": "temiz-yikamiyor",
+  "siemens-bulasik-makinesi-kurutmuyor": "kurutmuyor",
+  "vestel-bulasik-makinesi-temiz-yikamiyor": "temiz-yikamiyor",
+  "vestel-bulasik-makinesi-kurutmuyor": "kurutmuyor",
+  "bosch-camasir-makinesi-kapak-acilmiyor": "kapagi-acilmiyor",
+  "bosch-camasir-makinesi-santrifuj-yapmiyor": "sikmiyor-donmuyor",
+  "bosch-camasir-makinesi-titriyor": "asiri-titresim-ses",
+  "bosch-camasir-makinesi-deterjan-almiyor": "deterjani-almiyor",
+  "samsung-camasir-makinesi-calismiyor": "calismiyor-start-almiyor",
+  "samsung-camasir-makinesi-kapagi-acilmiyor": "kapagi-acilmiyor",
+  "samsung-camasir-makinesi-santrifuj-yapmiyor": "sikmiyor-donmuyor",
+  "samsung-camasir-makinesi-ses-titresim": "asiri-titresim-ses",
+  "lg-camasir-makinesi-calismiyor": "calismiyor-start-almiyor",
+  "lg-camasir-makinesi-kokuyor": "kotu-kokuyor",
+  "lg-camasir-makinesi-su-kaciriyor": "su-kaciriyor",
+  "lg-camasir-makinesi-ses-titresim": "asiri-titresim-ses",
+  "lg-camasir-makinesi-kapagi-acilmiyor": "kapagi-acilmiyor",
+  "vestel-camasir-makinesi-titriyor": "asiri-titresim-ses",
+  "samsung-buzdolabi-sogutmuyor": "sogutmuyor",
+  "samsung-buzdolabi-buzlanma-yapiyor": "buzlanma-yapiyor",
+  "samsung-buzdolabi-su-sizdiriyor": "su-akitiyor",
+  "samsung-buzdolabi-ses-yapiyor": "cok-ses-yapiyor",
+  "samsung-buzdolabi-buz-yapmiyor": "buz-yapmiyor",
+  "lg-buzdolabi-sogutmuyor": "sogutmuyor",
+  "lg-buzdolabi-buzlanma-yapiyor": "buzlanma-yapiyor",
+  "lg-buzdolabi-ses-yapiyor": "cok-ses-yapiyor",
+  "vestel-buzdolabi-sogutmuyor": "sogutmuyor",
+  "vestel-buzdolabi-ses-yapiyor": "cok-ses-yapiyor",
+  "daikin-klima-sogutmuyor": "sogutmuyor",
+  "daikin-klima-calismiyor": "hic-calismiyor",
+  "daikin-klima-su-damlatiyor": "su-damlatiyor",
+  "daikin-klima-koku-yapiyor": "koku-yapiyor",
+  "samsung-klima-sogutmuyor": "sogutmuyor",
+  "samsung-klima-koku-yapiyor": "koku-yapiyor",
+  "demirdokum-kombi-kalorifer-isitmiyor": "petekler-isinmiyor",
+  "vaillant-kombi-kalorifer-isitmiyor": "petekler-isinmiyor",
+  "termosifon-suyu-isitmiyor": "su-isitmiyor",
 };
+// ── 29 Eyl 2026: HATA KODU KURALI ARTIK KOD (FE ölçtü). 1 Eyl hükmü "`*-<kod>-hatasi` ve
+// `*-hata-kodlari` sayfaları belirtiyi ön-doldurur" idi ama TABLO SATIRI olarak uygulanıyordu;
+// sprint #144 hata kodu sayfalarını günde onlarca açınca 82 sayfa sessizce belirtisiz kaldı
+// (üçüncü kez aynı desen: 15 Ağu · 1 Eyl · 29 Eyl). Kural artık slug'dan okunur, tabloya
+// satır yazılması gerekmez. Değerler App'in KENDİ sözlüğünden: kombi "Arıza kodu veriyor",
+// diğer beşi "Hata kodu veriyor". Listede olmayan cihaz kural dışıdır (uydurma yok).
+// `KOPRU_ARIZA` satırı her zaman önceliklidir. Kilit: src/kopru-deep-link.test.js.
+const KOD_BELIRTI = {
+  "camasir-makinesi": "hata-kodu-veriyor",
+  "kurutma-makinesi": "hata-kodu-veriyor",
+  "bulasik-makinesi": "hata-kodu-veriyor",
+  "buzdolabi": "hata-kodu-veriyor",
+  "klima": "hata-kodu-veriyor",
+  "kombi-termosifon": "ariza-kodu-veriyor",
+};
+const KOD_YAZISI = /-(hatasi|hata-kodlari|ariza-kodlari)$/;
+const kopruAriza = (p, cihaz = kopruCihazSlug(p)) =>
+  KOPRU_ARIZA[p.slug] || (KOD_YAZISI.test(p.slug || "") && KOD_BELIRTI[cihaz]) || "";
 function kopruHref(p) {
   const q = new URLSearchParams();
   const cihaz = kopruCihazSlug(p);
   if (cihaz) {
     q.set("cihaz", cihaz);
-    const ariza = KOPRU_ARIZA[p.slug];
+    const ariza = kopruAriza(p, cihaz);
     if (ariza) q.set("ariza", ariza);
   }
   q.set("k", `blog-${p.slug}`); // ölçüm HER yazıda, bağlam bulunamasa da
@@ -1468,7 +1538,7 @@ function kopruKapsamDenetimi(posts) {
     process.exit(1);
   }
   const cihazli = posts.filter((p) => kopruCihazSlug(p));
-  const arizali = cihazli.filter((p) => KOPRU_ARIZA[p.slug]);
+  const arizali = cihazli.filter((p) => kopruAriza(p));
   console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +
     `(${posts.length - cihazli.length}'i bilerek cihazsız), ${arizali.length}'inde belirti de ön-dolu ` +
     `(sembol ailesi: ${posts.filter((p) => sembolYazisi(p) && KOPRU_ARIZA[p.slug]).length}/` +
