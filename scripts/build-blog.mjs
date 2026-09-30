@@ -10,7 +10,7 @@ import * as T from "../src/theme.js";
 import { REHBERLER } from "../src/onarim-rehberleri.js";
 // TEK KAYNAK (YK #32, 2 Ağu — Tolga düzeltmesi): /tamir/ kategorileri elle yazılmaz,
 // uygulamanın resmî cihaz listesinden türetilir. Cihaz grubu eklenip çıktığında hub uyar.
-import { CIHAZLAR, cihazSlug } from "../src/constants.js";
+import { CIHAZLAR, ICERIK_CIHAZLARI, TESHISSIZ_CIHAZLAR, teshisVarMi, cihazSlug } from "../src/constants.js";
 // /kilavuzlar/ verisi de TEK KAYNAKTAN gelir (YK #34): marka→resmî kılavuz adresi
 // `src/kullanim-kilavuzlari.js`'te, cihaz→marka eşleşmesi `CIHAZ_MARKALARI`'nda. Burada liste tutulmaz.
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
@@ -552,6 +552,31 @@ const KOPRU_CIHAZ_SLUG = Object.fromEntries(
 //    kalmasın. Yeni bir cihaz kategorisi eklendiğinde doğru hamle burayı değil
 //    KOPRU_CIHAZ'ı büyütmektir.
 const KOPRU_CIHAZSIZ = new Set(["genel", "surdurulebilirlik", "kurumsal"].map(slugify));
+// ── YK #149 (30 Eyl 2026) — TEŞHİSSİZ İÇERİK KATEGORİSİ: "TEŞHİS YOK" MODU ───────────────
+// Tolga: "blog, tamir merkezi ve kullanım kılavuzları tarafında küçük ev aletlerini de ekle.
+// teşhis yapmasak da sitenin hit alması için önemli."
+// Bu kategori `KOPRU_CIHAZ`'a da `KOPRU_CIHAZSIZ`'a da GİRMEZ — üçüncü bir durumdur:
+//   · KOPRU_CIHAZ    → cihazı var, teşhis formunda karşılığı var → `/?cihaz=` köprüsü basılır.
+//   · KOPRU_CIHAZSIZ → cihazı yok (Genel…) → jenerik teşhis kapısı (`/?k=`) basılır.
+//   · TEŞHİSSİZ      → cihazı VAR ama formda YOK → teşhis kapısı HİÇ basılmaz. Yerine:
+//       ① üreticinin destek/kılavuz adresi (kılavuz kaydından, elle adres yazılmaz)
+//       ② genel "Servis Bul" (cihaz ön-seçimi taşımaz)   ③ kardeş yazılar (ilgiliYazilar).
+// Tek kaynak `src/constants.js` → TESHISSIZ_CIHAZLAR; burada ikinci liste tutulmaz.
+// ⛔ Kategori dizesi TAM eşleşir (slug'ı üzerinden). "Küçük ev aleti" gibi başka bir yazım
+//    köprü kapsam kapısında build'i durdurur — sessizce jenerik teşhis kapısına düşmez.
+const TESHISSIZ_KAT = new Set(TESHISSIZ_CIHAZLAR.map(cihazSlug));
+const teshissizYazi = (p) => TESHISSIZ_KAT.has(slugify(p.category));
+// Yazının markası SLUG ÖN EKİNDEN okunur ("arzum-cay-makinesi-…" → Arzum). Yalnız teşhissiz
+// kategorilerin KILAVUZ KAYDI olan markaları aranır; bulanık eşleştirme yok. En uzun ön ek
+// önce denenir ki "Russell Hobbs" gibi çok kelimeli ad kısa bir adın gölgesinde kalmasın.
+const TESHISSIZ_KILAVUZ = kilavuzKayitlari()
+  .filter((k) => TESHISSIZ_CIHAZLAR.includes(k.cihaz))
+  .map((k) => ({ ...k, onek: `${slugify(k.marka)}-`, katSlug: cihazSlug(k.cihaz) }))
+  .sort((a, b) => b.onek.length - a.onek.length);
+const ureticiDestek = (p) => {
+  const kat = slugify(p.category);
+  return TESHISSIZ_KILAVUZ.find((k) => k.katSlug === kat && String(p.slug || "").startsWith(k.onek)) || null;
+};
 // ── KURUTMA: SLUG ÖN EKİ (21 Ağu'da GRUPLAMAYA girdi, KÖPRÜYE girmemişti) ─────────────
 // 21 Ağu'da kurutma ayrı cihaz oldu ve `blogGrubu()` slug ön ekinden kurutma grubuna
 // yönlendirmeye başladı. Aynı kural KÖPRÜYE İŞLENMEDİ: `kopruCihazSlug` yalnız
@@ -1009,7 +1034,25 @@ const mesajOzniteligi = (p) => (kodSembolYazisi(p) ? ` data-mesaj="kod-servis-mi
 // basılmaz (jenerik satır gürültüdür; sayfa sonundaki kart zaten duruyor).
 // YK #68 ② — cümle metin, eylem BUTON (gerekçe CSS'te). Butonun kendisi cihazı söyler ki
 // bağlamdan koparılmış "Tıkla" tipi bir etiket olmasın.
+// YK #149 — teşhissiz kategoride çift kapının karşılığı: sol kapı AYNI servis düğmesi
+// (cihaz ön-seçimi taşımaz), sağ kapı teşhis yerine ÜRETİCİNİN destek sayfası. Marka
+// kılavuz kaydında yoksa o kategorinin kılavuz dizinine, o da basılmadıysa tek kapıya düşer.
+// `yer` ölçüm etiketine girer (ilk-ekran / son-kart) → hangi kapının tıklandığı ayrışır.
+const TESHISSIZ_KAPILAR = (p, yer) => {
+  const d = ureticiDestek(p);
+  const kat = slugify(p.category);
+  const dizinVar = TESHISSIZ_KILAVUZ.some((k) => k.katSlug === kat);
+  const ikinci = d
+    ? `<a class="kopru-btn kopru-teshis" href="${esc(d.url)}" target="_blank" rel="noopener noreferrer nofollow" data-kopru="uretici-${yer}">${esc(d.marka)} destek sayfası ↗</a>`
+    : dizinVar
+      ? `<a class="kopru-btn kopru-teshis" href="/kilavuzlar/${kat}/" data-kopru="kilavuz-${yer}">Kullanım kılavuzunu bul →</a>`
+      : "";
+  // Servis kapısının etiketi teşhisli yazılardakiyle AYNI seri (servis-ilk / son-kart-servis).
+  const servisEtiket = yer === "ilk" ? "servis-ilk" : `${yer}-servis`;
+  return `<a class="kopru-btn kopru-servis" href="${servisHref(p)}" data-kopru="${servisEtiket}">📍 Yakınımdaki servisi bul →</a>` + ikinci;
+};
 const KOPRU_SATIRI = (p) => {
+  if (teshissizYazi(p)) return `<div class="kopru kopru-cift">${TESHISSIZ_KAPILAR(p, "ilk")}</div>`;
   const ad = kopruCihazAdi(p);
   if (!ad) return "";
   // Tolga, 15 Ağu: "tahmini maliyeti öğren butonu etrafında dikkat dağıtıcı yazı
@@ -1039,6 +1082,10 @@ const KAPANIS_BASLIK = "Cihazın şimdi mi bozuldu?";
 // aynı seri, geçmişle kıyas bozulmaz); servis kapısı YENİ bir etiketle (`son-kart-servis`)
 // ekleniyor, mevcut seriyi kirletmiyor.
 const YAZI_CTA = (p) => {
+  // YK #149: teşhissiz kategoride teşhis kapısı basılmaz (bkz. TESHISSIZ_KAPILAR).
+  if (teshissizYazi(p))
+    return `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
+      `<div class="kopru-cift">${TESHISSIZ_KAPILAR(p, "son-kart")}</div></div>`;
   // Başlık artık cihaza göre DEĞİŞMİYOR — hub kapanışıyla birebir aynı metin.
   return `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
     `<div class="kopru-cift">` +
@@ -1052,7 +1099,8 @@ const YAZI_CTA = (p) => {
 //    LCP adayı değil. Gövdeye alttan boşluk eklenir ki bant altbilgiyi örtmesin.
 // Yalnız yazı sayfalarında ve yalnız dar ekranda görünür (masaüstünde sona kadar okuma
 // deseni farklı; orada son kart yeterli).
-const STICKY = (p) =>
+// YK #149: sabit bant yalnız teşhise gider; teşhissiz kategoride bant da boşluğu da basılmaz.
+const STICKY = (p) => teshissizYazi(p) ? "" :
   `<div class="sticky-bosluk"></div><a class="sticky-kopru" href="${kopruHref(p)}" data-kopru="sticky"${mesajOzniteligi(p)}>${stickyEtiketi(p)}</a>`;
 
 // PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
@@ -1507,7 +1555,7 @@ function kopruKapsamDenetimi(posts) {
   const bilinmeyen = new Map(); // kategori → yazı sayısı
   for (const p of posts) {
     const k = slugify(p.category);
-    if (!k || kopruCihazSlug(p) || KOPRU_CIHAZSIZ.has(k)) continue;
+    if (!k || kopruCihazSlug(p) || KOPRU_CIHAZSIZ.has(k) || TESHISSIZ_KAT.has(k)) continue;
     bilinmeyen.set(p.category, (bilinmeyen.get(p.category) || 0) + 1);
   }
   if (bilinmeyen.size) {
@@ -1593,7 +1641,7 @@ kapakDenetimi(posts); // uyarır + YK #65 ilerleme sayacını basar
 // giden bir satır basılır. ⛔ Yazının METNİNE dokunulmaz (PAZ'ın işi) — bu satır şablon
 // katmanında, mevcut CTA/PWA blokları gibi eklenir. URL'ler değişmez.
 const TAMIR_GERI = new Map();
-for (const ad of CIHAZLAR) {
+for (const ad of ICERIK_CIHAZLARI) {
   // cihazSlug: /tamir/ sayfaları bu slug'la basılıyor (KATEGORILER ile aynı kaynak). Tek cihaz kuralı
   // src/hata-kodlari-cihaz.test.js'te — bir yazı iki cihaz tablosunda olursa son yazılan kazanırdı (14 Eyl vakası).
   for (const g of hataKoduKayitlari(ad)) if (g.yazi) TAMIR_GERI.set(g.yazi, { ad, slug: cihazSlug(ad) });
@@ -1617,7 +1665,10 @@ const tamirGeriSatiri = (p) => {
 // ayrışır ("Çamaşır Makinesi / Kurutma" → çivi `camasir-makinesi`). Buradan üretilen slug
 // /tamir/, /kilavuzlar/, /blog/kategori/ adreslerini ve kategori ikon dosya adını besliyor;
 // `slugify` kalsaydı üç adres birden kayardı (KİLİTLİ_SLUGLAR kapısı da bağırırdı).
-const KATEGORILER = CIHAZLAR.map((ad) => ({ ad, slug: cihazSlug(ad), kaynak: ad }));
+// YK #149 (30 Eyl 2026): kaynak artık ICERIK_CIHAZLARI — CIHAZLAR + teşhissiz içerik
+// kategorileri (Küçük Ev Aletleri). `teshis: false` olan kategori üç merkezde de sayfa alır
+// ama hiçbir yerde `/?cihaz=` köprüsü basmaz; içeriği yokken hub ızgarasında GÖRÜNMEZ.
+const KATEGORILER = ICERIK_CIHAZLARI.map((ad) => ({ ad, slug: cihazSlug(ad), kaynak: ad, teshis: teshisVarMi(ad) }));
 
 // ── BLOG YAZISI → CİHAZ GRUBU EŞLEMESİ ────────────────────────────────────────
 // Yazıların `category` frontmatter'ı serbest metin ("Kombi", "Çamaşır makinesi",
@@ -1730,6 +1781,13 @@ function kopruGrupHizasiDenetimi(posts) {
     const beklenen = grupSlug.get(blogGrubu(p));
     if (!beklenen) continue; // konu grubu (Genel/Sürdürülebilirlik) — cihaz aranmaz
     const basilan = kopruCihazSlug(p);
+    // YK #149: teşhissiz grupta beklenen, köprünün HİÇ cihaz basmaması ve yazının teşhissiz
+    // kapıya düşmesidir. İkisinden biri tutmuyorsa (ör. kurutma ön eki yazıyı başka cihaza
+    // çekti) aynı kapı durdurur.
+    if (TESHISSIZ_KAT.has(beklenen)) {
+      if (basilan || !teshissizYazi(p)) uyumsuz.push({ slug: p.slug, beklenen: `${beklenen} (teşhissiz, köprü yok)`, basilan: basilan || "(jenerik teşhis kapısı)" });
+      continue;
+    }
     if (basilan !== beklenen) uyumsuz.push({ slug: p.slug, beklenen, basilan: basilan || "(YOK)" });
   }
   if (uyumsuz.length) {
@@ -1755,7 +1813,9 @@ function kopruGrupHizasiDenetimi(posts) {
     console.error("  Karar verilmeden geçilmez: KURUTMA_SABIT'e ekle ya da KURUTMA_ADAYI_DEGIL'e gerekçesiyle yaz.");
     process.exit(1);
   }
-  const cihazli = posts.filter((p) => grupSlug.has(blogGrubu(p)));
+  const cihazli = posts.filter((p) => grupSlug.has(blogGrubu(p)) && !teshissizYazi(p));
+  const teshissizSay = posts.filter(teshissizYazi).length;
+  if (teshissizSay) console.log(`[build-blog] ✓ YK #149: ${teshissizSay} teşhissiz kategori yazısında teşhis köprüsü YOK (üretici desteği + Servis Bul basıldı).`);
   console.log(`[build-blog] ✓ grup ↔ köprü hizası: ${cihazli.length} cihaz yazısının tamamında iki yol AYNI cihazı söylüyor ` +
     `(konusu kurutma olan ${posts.filter(kurutmaIzi).length} yazının tamamı kurutma cihazında).`);
 }
@@ -2014,6 +2074,10 @@ const katIkon = (k) => {
  */
 const katIzgarasi = (items, birim, oncelik = []) =>
   items
+    // YK #149: teşhissiz içerik kategorisi (Küçük Ev Aletleri) içeriği gelene kadar ızgaraya
+    // girmez. Teşhisli cihazın boş kartı soluk durur çünkü kullanıcı o cihaz için teşhise
+    // gidebilir; teşhissiz kategorinin boş kartının arkasında gidilecek hiçbir yer yok.
+    .filter((k) => k.sayi || k.teshis !== false)
     .map((k) =>
       k.sayi
         // ROZET KALDIRILDI (19 Ağu, Tolga: "rozeti de kaldır") — hub kartı ana
@@ -2102,6 +2166,10 @@ const kapanisHref = (cihazSlug, kaynak, servis) => {
 const SERVIS_BTN = (cihazSlug, kaynak) =>
   `<a class="kopru-btn kopru-servis" href="${kapanisHref(cihazSlug, kaynak, true)}" data-kopru="servis-kapanis" data-cagir="cta">📍 Yakınımdaki servisi bul →</a>`;
 
+// YK #149 — teşhissiz kategori sayfalarının kapanışı: TEK kapı (servis). Teşhis kapısı yok.
+const TESHISSIZ_CTA = (kaynak) =>
+  `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
+  `<div class="kopru-cift">${SERVIS_BTN("", kaynak)}</div></div>`;
 const BLOG_CTA = (cihazSlug, kaynak) =>
   `<div class="kopru kopru-kapanis"><p><strong>${KAPANIS_BASLIK}</strong></p>` +
   `<div class="kopru-cift">${SERVIS_BTN(cihazSlug, kaynak)}` +
@@ -2144,7 +2212,7 @@ for (const k of blogKatVeri) {
         : `${k.ad} ile ilgili arıza nedenleri, kendin yapabileceğin kontroller ve ne zaman servis gerekir. ${k.yazilar.length} yazı.`,
       canonical,
       head,
-      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p>${cihazAramasi(k.yazilar.length, `${k.ad} yazılarında ara…`)}<div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${cihazAramasiSon(k.yazilar.length, "Aramanı karşılayan yazı yok — farklı bir kelime dene.")}${BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
+      body: `<a class="geri" href="/blog/">← Bilgi Merkezi</a>${heroFor(k.ad, k.yesil ? "yesil" : "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)}</h1><p class="meta">${k.yazilar.length} yazı · ${k.yesil ? "onarım hakkı, cihaz ömrü ve döngüsel ekonomi" : k.fiyatVar ? "arıza nedenleri, kontroller ve tahmini maliyetler" : "arıza nedenleri, kontroller ve servis sınırı"}</p>${cihazAramasi(k.yazilar.length, `${k.ad} yazılarında ara…`)}<div class="bloglist">${k.yazilar.map(blogKarti).join("")}</div>${cihazAramasiSon(k.yazilar.length, "Aramanı karşılayan yazı yok — farklı bir kelime dene.")}${k.teshis === false ? TESHISSIZ_CTA(`blog-kat-${k.slug}`) : BLOG_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `blog-kat-${k.slug}`)}`,
     })
   );
 }
@@ -2356,7 +2424,10 @@ const girisKarti = (k, g) => {
     : g.post
       ? "Ne demek, ne yapmalı · Türkçe"
       : "Servis işi — yakınındaki servisi bul →";
-  const href = g.post ? `/blog/${g.post.slug}/` : cagirHref(`tamir-${k.slug}`);
+  // YK #149: teşhissiz kategoride yazısı olmayan giriş ana sayfadaki teşhis formuna değil,
+  // doğrudan servis listesine çıkar (formda bu cihaz yok).
+  const href = g.post ? `/blog/${g.post.slug}/`
+    : k.teshis === false ? kapanisHref("", `tamir-${k.slug}`, true) : cagirHref(`tamir-${k.slug}`);
   const ek = g.post ? "" : ` data-cagir="satir" data-giris="${esc(g.giris)}"`;
   return `<a class="card${g.post ? "" : " servis"}" href="${href}"${ek}>${ikon}<div class="card-body"><span class="cat">${esc(etiket)}</span><h2>${esc(g.giris)}</h2><p>${esc(g.anlam)}</p><span class="tamir-meta">${esc(meta)}</span></div></a>`;
 };
@@ -2403,7 +2474,7 @@ for (const k of tamirliKat) {
       desc: `${k.ad} hata kodları ve belirtileri: kodu ya da belirtiyi seç, anlamını gör, kendin yapabileceğin adımı uygula ya da servise ulaş.`,
       canonical,
       head,
-      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${cihazAramasi(k.kayitlar.length, "Hata kodu ya da belirti ara…")}${gruplar}${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan giriş yok — hata kodunu ya da belirtiyi farklı yaz.")}${TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
+      body: `<a class="geri" href="/tamir/">← Tamir Merkezi</a>${heroFor(k.ad, "", merkezFotosu(k.slug, TAMIR_KOK), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} — hata kodu ve belirti</h1><p class="meta">${k.kayitlar.length} giriş · ${rehberSayisi} kendin-çöz rehberi</p><p class="kat-not">Elindeki <strong>hata kodunu</strong> ya da <strong>belirtiyi</strong> seç: ne demek olduğunu okursun, kendin güvenle deneyebileceğin bir adım varsa oraya, yoksa doğrudan servis yoluna çıkarsın.${rehberSayisi ? ` <strong>Bakım seviyesi adımlar: temizlik, filtre, kontrol, ayar. Söküm ve parça değişimi yok.</strong>` : ""}</p>${cihazAramasi(k.kayitlar.length, "Hata kodu ya da belirti ara…")}${gruplar}${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan giriş yok — hata kodunu ya da belirtiyi farklı yaz.")}${k.teshis === false ? TESHISSIZ_CTA(kaynak) : TAMIR_CTA(kaynak, CIHAZ_SLUG.has(k.slug) ? k.slug : "")}${CAGIR_JS(kaynak)}`,
     })
   );
   basilanTamir.push(dosya);
@@ -2619,6 +2690,10 @@ const kilavuzKatVeri = KATEGORILER.map((k) => ({
 // Telif + dürüstlük notu — her hâlde ve HER KATMANDA basılır (bağlayıcı kural, YK #32/#34).
 const KILAVUZ_NOT = `<p class="kat-not"><strong>Kılavuz dosyasını burada barındırmıyoruz.</strong> Kullanım kılavuzunun telif hakkı üreticiye aittir; PDF'i kopyalayıp yeniden yayımlamak yerine seni doğrudan üreticinin resmî sayfasına göndeririz — böylece her zaman güncel ve doğru sürümü görürsün.</p><p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="/">belirtini yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren</a> ya da <a href="/tamir/">Tamir Merkezi'ndeki ücretsiz bakım adımlarına</a> bak.</p>`;
 
+// YK #149 — teşhissiz kategoride notun ikinci paragrafı teşhise değil servise gönderir.
+const KILAVUZ_NOT_TESHISSIZ = (kaynak) => KILAVUZ_NOT.slice(0, KILAVUZ_NOT.indexOf(`<p class="kat-not">Cihazın bozulduysa`)) +
+  `<p class="kat-not">Cihazın bozulduysa kılavuzu beklemene gerek yok: <a href="${kapanisHref("", kaynak, true)}">yakınındaki servisi bul</a>.</p>`;
+
 // Dış link kartı — bizde dosya YOK, kullanıcı üreticinin sayfasına gidiyor. Bunu kart üstünde
 // açıkça yazıyoruz (alan adı görünür) ki tıklamadan önce nereye gittiğini bilsin.
 const kilavuzAlanAdi = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return "resmî sayfa"; } };
@@ -2644,9 +2719,9 @@ for (const k of kilavuzluKat) {
       desc: `${k.ad} markalarının resmî kullanım kılavuzu sayfaları ve Türkçe özetleri. Kılavuz üreticinin sitesinde açılır; PDF barındırmıyoruz.`,
       canonical: `${SITE}/kilavuzlar/${k.slug}/`,
       robots: kilavuzRobots,
-      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${KILAVUZ_NOT}${cihazAramasi(k.kayitlar.length, "Marka ara…")}<div class="bloglist">${k.kayitlar
+      body: `<a class="geri" href="/kilavuzlar/">← Kullanım Kılavuzları</a>${heroFor(k.ad, "", merkezFotosu(k.slug), KAVRAM_SLUG.has(k.slug))}<h1>${esc(k.ad)} kullanım kılavuzları</h1><p class="meta">${k.kayitlar.length} marka · her link üreticinin kendi sayfasına gider</p>${k.teshis === false ? KILAVUZ_NOT_TESHISSIZ(`kilavuz-${k.slug}`) : KILAVUZ_NOT}${cihazAramasi(k.kayitlar.length, "Marka ara…")}<div class="bloglist">${k.kayitlar
         .map((m) => kilavuzKarti(k, m))
-        .join("")}</div>${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan marka yok — farklı yazmayı dene.")}${KILAVUZ_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `kilavuz-${k.slug}`)}`,
+        .join("")}</div>${cihazAramasiSon(k.kayitlar.length, "Aramanı karşılayan marka yok — farklı yazmayı dene.")}${k.teshis === false ? TESHISSIZ_CTA(`kilavuz-${k.slug}`) : KILAVUZ_CTA(CIHAZ_SLUG.has(k.slug) ? k.slug : "", `kilavuz-${k.slug}`)}`,
     })
   );
 }

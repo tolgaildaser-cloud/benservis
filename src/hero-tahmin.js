@@ -15,7 +15,7 @@
 //      bağlı; kısa anahtarda tolerans YOK, çünkü "ocak"↔"sıcak" gibi çakışmalar
 //      yanlış ön-doldurma üretir. Kürasyon ilkesi: yanlış ön-doldurma,
 //      ön-doldurmamaktan KÖTÜDÜR.
-import { MARKALAR, markalarForCihaz } from "./constants.js";
+import { MARKALAR, MARKA_ALIAS, markalarForCihaz } from "./constants.js";
 
 // TR küçük harf + ASCII katlama. Katlama iki işe yarıyor: (a) sözlükteki "çamaşır"
 // ve "camasir" varyantları tek anahtara iniyor, (b) kullanıcının şapkasız yazması
@@ -109,8 +109,12 @@ export function cihazTahmin(metin) {
 // ve noktalı yazım ("A.O. Smith") katlamada zaten sadeleşiyor.
 // Uzun markaya 1 harf tolerans var, kısa markaya YOK — "Beko"/"Elit"/"Aqua" gibi
 // 4 harfli adlarda tolerans gündelik kelimeleri markaya çevirirdi.
-const MARKA_ANAHTAR = MARKALAR
-  .map((m) => ({ ad: m, anahtar: katla(m.replace(/\(.*?\)/g, "")) }))
+// YK #150: eski/kısa ad da anahtar olur ve bugünkü ada çözülür ("mitsubishi klima" →
+// Mitsubishi Electric). Uzun ad önce denendiği için "mitsubishi heavy" Heavy'de kalır.
+const MARKA_ANAHTAR = [
+  ...MARKALAR.map((m) => ({ ad: m, anahtar: katla(m.replace(/\(.*?\)/g, "")) })),
+  ...Object.entries(MARKA_ALIAS).map(([eski, yeni]) => ({ ad: yeni, anahtar: katla(eski) })),
+]
   .filter((x) => x.anahtar.length >= 2)
   .sort((a, b) => b.anahtar.length - a.anahtar.length); // uzun ad önce ("General Mobile" > "Mobile")
 

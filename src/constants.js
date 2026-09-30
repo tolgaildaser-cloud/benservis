@@ -5,6 +5,20 @@ export const CIHAZLAR = [
   "Su Sebili / Arıtma", "Bilgisayar / Yazıcı",
 ];
 
+// ── İÇERİK CİHAZLARI (YK #149, 30 Eyl 2026) ───────────────────────────────────────────────
+// Tolga: "blog, tamir merkezi ve kullanım kılavuzları tarafında küçük ev aletlerini de ekle.
+// teşhis yapmasak da sitenin hit alması için önemli."
+// İKİ LİSTE, İKİ AYRI İŞ — karıştırılmaz:
+//   • CIHAZLAR         → TEŞHİS. Form, tarife, servis eşleşmesi, ilan, DPP. DEĞİŞMEDİ.
+//   • ICERIK_CIHAZLARI → İÇERİK yüzeyleri: /blog/kategori/, /tamir/, /kilavuzlar/.
+//     CIHAZLAR'ın üst kümesi; fazlası "teşhissiz" kategoridir.
+// Teşhissiz kategoride `/?cihaz=` köprüsü BASILMAZ (App.jsx o slug'ı çözemez, form yanlış ya da
+// boş açılırdı). Yerine üreticinin destek adresi + genel "Servis Bul" + kardeş yazılar basılır
+// (scripts/build-blog.mjs). Yeni bir teşhissiz kategori açmak = bu diziye bir satır.
+export const TESHISSIZ_CIHAZLAR = ["Küçük Ev Aletleri"];
+export const ICERIK_CIHAZLARI = [...CIHAZLAR, ...TESHISSIZ_CIHAZLAR];
+export const teshisVarMi = (cihaz) => CIHAZLAR.includes(cihaz);
+
 // ── SLUG ÇİVİSİ ────────────────────────────────────────────────────────────────────
 // Cihaz adı → slug türetimi normalde yeterli. Bu tablo, YAYINDAKİ bir adresi addan
 // bağımsız dondurmak gerektiğinde kullanılır (ad değişir, adres değişmez).
@@ -96,26 +110,26 @@ const BEYAZ_ESYA = [
 // klima kullanıcısı kombi-markası, kombi kullanıcısı klima-markası görüyordu).
 const KLIMA = [
   "Arçelik", "Aux", "Baymak", "Beko", "Bosch", "Carrier", "Daikin", "Fujitsu",
-  "Gree", "Haier", "Hisense", "Hitachi", "LG", "Midea", "Mitsubishi", "Panasonic",
+  "Gree", "Haier", "Hisense", "Hitachi", "LG", "Midea", "Mitsubishi Electric", "Mitsubishi Heavy", "Panasonic",
   "Samsung", "Toshiba", "Vestel",
 ];
 const KOMBI = [
   "Airfel", "Alarko", "Arçelik", "Baxi", "Baymak", "Beko", "Bosch", "Buderus",
-  "Demirdöküm", "ECA", "Ferroli", "Immergas", "Protherm", "Vaillant", "Viessmann",
-  "Warmhaus",
+  "Demirdöküm", "ECA", "Emas", "Ferroli", "Immergas", "Protherm", "Termoteknik", "Vaillant",
+  "Viessmann", "Warmhaus",
 ];
 const KUCUK_EV = [
-  "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "Cosori", "Fakir", "Goldmaster",
-  "Karaca", "Kenwood", "King", "Korkmaz", "Kumtel", "Luxell", "Ninja", "Philips",
-  "Rowenta", "Russell Hobbs", "Sinbo", "Tefal", "Vestel", "Xiaomi",
+  "Arçelik", "Arnica", "Arzum", "Beko", "Bosch", "Braun", "Cosori", "Fakir", "Goldmaster",
+  "Homend", "Karaca", "Kenwood", "King", "Korkmaz", "Kumtel", "Luxell", "Ninja", "Philips",
+  "Rowenta", "Russell Hobbs", "Schafer", "Sinbo", "Stilevs", "Tefal", "Vestel", "Xiaomi",
 ];
 const SUPURGE = [
-  "Arçelik", "Arzum", "Beko", "Bosch", "Dreame", "Dyson", "Ecovacs", "Electrolux",
-  "Eufy", "Fakir", "Fantom", "Karcher", "LG", "Philips", "Roborock", "Rowenta",
-  "Samsung", "Tefal", "Vestel", "Xiaomi", "iRobot",
+  "Arçelik", "Arnica", "Arzum", "Beko", "Bissell", "Bosch", "Dreame", "Dyson", "Ecovacs",
+  "Electrolux", "Eufy", "Fakir", "Fantom", "Homend", "Karcher", "LG", "Philips", "Roborock",
+  "Rowenta", "Samsung", "Stilevs", "Tefal", "Vestel", "Xiaomi", "iRobot",
 ];
 const TELEVIZYON = [
-  "Arçelik", "Awox", "Axen", "Beko", "Finlux", "Grundig", "Hisense", "LG", "Onvo",
+  "Arçelik", "Awox", "Axen", "Beko", "Dijitsu", "Finlux", "Grundig", "Hisense", "LG", "Onvo",
   "Panasonic", "Philips", "Profilo", "Regal", "Samsung", "Sharp", "Skyworth",
   "Sony", "Sunny", "TCL", "Telefunken", "Thomson", "Toshiba", "Vestel", "Xiaomi",
 ];
@@ -136,9 +150,33 @@ const BILGISAYAR = [
   "Samsung", "Sony", "Toshiba", "Xiaomi",
 ];
 const TELEFON = [
-  "Apple", "Asus", "Casper", "General Mobile", "Honor", "Huawei", "Nokia",
-  "OnePlus", "Oppo", "Realme", "Reeder", "Samsung", "TCL", "Tecno", "Vivo", "Xiaomi",
+  "Apple", "Asus", "Casper", "General Mobile", "Honor", "Huawei", "Infinix", "Nokia",
+  "Omix", "OnePlus", "Oppo", "Realme", "Reeder", "Samsung", "TCL", "Tecno", "Vivo", "Xiaomi",
 ];
+// ── YK #150 (30 Eyl 2026) — MARKA LİSTESİ GENİŞLEDİ ──────────────────────────────────────
+// Kaynak: PAZ marka boşluk taraması. Her markanın cihaz ataması 30 Eyl koşusunda markanın
+// KENDİ TR sitesindeki ürün kategorilerinden okundu (PAZ'ın kaba ölçümünden değil):
+//   Dijitsu      buzdolabı · çamaşır · bulaşık · klima · TV · mikrodalga · su sebili (kurutma/fırın YOK)
+//   Arnica · Homend · Stilevs   süpürge + küçük ev (üçünde de air fryer/fritöz var)
+//   Schafer      küçük ev (fritöz var; süpürge YOK)      Bissell  yalnız süpürge
+//   De'Longhi    kahve makinesi — air fryer sitede görülmedi → teşhis formunda hiçbir cihaza
+//                bağlanmadı, yalnız master listede (Küçük Ev Aletleri föyüyle içerik tarafına girer)
+//   Emas         kombi + klima                           Termoteknik  yalnız kombi
+//   Omix · Infinix   telefon (teşhiste telefon cihazı yok → yalnız master liste)
+//   Sunny        TV'ye ek: buzdolabı · klima · süpürge · mikrodalga (sitesinde dördü de var)
+//   Mitsubishi   → "Mitsubishi Electric" + "Mitsubishi Heavy" (ayrı şirketler, ayrı kod tabloları)
+// ⛔ EKLENMEDİ: Gorenje (site 403) · Excalibur (200 ama boş gövde, kategori okunamadı) ·
+//    Nordmende (nordmende.com.tr markanın sitesi değil, alakasız bir mağaza).
+// Tek cihazda doğrulanan marka ORTAK diziye girmez (BEYAZ_ESYA beş cihazı birden besliyor);
+// aşağıda yalnız doğrulanan cihazın satırına eklenir.
+const DIJITSU = "Dijitsu";
+
+// Eski marka adı → bugünkü ad. Ad bölününce eski kayıtlar (teşhis günlüğü, servis verisindeki
+// `serbis_markalar`, kullanıcının serbest metni) KOPMASIN diye. "Mitsubishi" tek başına
+// yazıldığında ev kliması pazarındaki yaygın ad olan Electric'e çözülür.
+export const MARKA_ALIAS = { "Mitsubishi": "Mitsubishi Electric" };
+export const markaCoz = (ad) => MARKA_ALIAS[ad] || ad;
+
 const ANKASTRE_EK = ["Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica", "Teka", "Luxell"];
 const YAZICI = ["Brother", "Canon", "Epson", "Kyocera", "Lexmark", "Pantum", "Ricoh", "Xerox"];
 
@@ -147,27 +185,33 @@ const YAZICI = ["Brother", "Canon", "Epson", "Kyocera", "Lexmark", "Pantum", "Ri
 export const MARKALAR = [...new Set([
   ...BEYAZ_ESYA, ...KLIMA, ...KOMBI, ...KUCUK_EV, ...SUPURGE, ...TELEVIZYON, ...MONITOR,
   ...SU_ARITMA, ...BILGISAYAR, ...TELEFON, ...ANKASTRE_EK, ...YAZICI,
-  "Balay", "Comfee", "Singer", "Shark", "Tineco",
+  "Balay", "Comfee", "Singer", "Shark", "Tineco", DIJITSU, "De'Longhi",
 ])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
   // 27 Eyl 2026 (Sprint #144 kılavuz föyü): ortak diziye DEĞİL, yalnız kılavuzu doğrulanan cihaza eklendi.
-  "Buzdolabı": [...BEYAZ_ESYA, "Onvo"].sort(trSort),
-  "Çamaşır Makinesi": BEYAZ_ESYA,
+  "Buzdolabı": [...BEYAZ_ESYA, "Onvo", DIJITSU, "Sunny"].sort(trSort),
+  "Çamaşır Makinesi": [...BEYAZ_ESYA, DIJITSU].sort(trSort),
   // Kurutma makinesi markaları çamaşır makinesiyle aynı üretici kümesi (TR piyasasında
   // kurutmayı satan her marka çamaşır da satıyor) — ayrı liste tutmak ikinci kaynak olurdu.
   "Kurutma Makinesi": BEYAZ_ESYA,
-  "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke"].sort(trSort),
+  "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke", DIJITSU].sort(trSort),
   "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK])].sort(trSort),
-  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo"])].sort(trSort),
+  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo", DIJITSU, "Sunny"])].sort(trSort),
   // 28 Eyl 2026 (Sprint #144 kılavuz föyü): Altus/Grundig/TCL/Fakir/Airfel yalnız klima satırına.
-  "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm", "Altus", "Grundig", "TCL", "Fakir", "Airfel"].sort(trSort),
+  "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm", "Altus", "Grundig", "TCL", "Fakir", "Airfel", DIJITSU, "Emas", "Sunny"].sort(trSort),
   "Kombi / Termosifon": [...KOMBI, "Regal", "Vestel", "Daikin", "Ariston"].sort(trSort),
   "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier", "Altus"])].sort(trSort),
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot", "Hoover", "Siemens", "Profilo", "AEG", "Onvo",
-    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo"])].sort(trSort),
-  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus"].sort(trSort),
+    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo", "Sunny"])].sort(trSort),
+  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus", DIJITSU].sort(trSort),
   "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI])].sort(trSort),
+  // YK #149 — İÇERİK kategorisi (teşhis formunda YOK). Liste bilerek BOŞ başlıyor: marka,
+  // üreticinin küçük ev aleti kılavuz/destek adresi PAZ föyünde 200 doğrulandıkça eklenir
+  // (27-28 Eyl emsali: "ortak diziye değil, yalnız kılavuzu doğrulanan cihaza"). `KUCUK_EV`
+  // dizisi toptan bağlanmadı: oradaki adresler mikrodalga/air fryer için doğrulandı, aynı
+  // adresin kettle/ütü/kahve makinesi kılavuzunu da taşıdığı ölçülmedi (#88).
+  "Küçük Ev Aletleri": [],
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
 
