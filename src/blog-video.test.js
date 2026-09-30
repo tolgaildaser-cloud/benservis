@@ -187,7 +187,7 @@ describe("gerçek içerik (content/blog)", () => {
   });
   const videolu = posts.filter((p) => p.video);
 
-  it("föylerdeki 10 eşleme birebir, başka sayfada video yok", () => {
+  it("föylerdeki 11 eşleme birebir, başka sayfada video yok", () => {
     const esleme = Object.fromEntries(videolu.map((p) => [p.slug, p.video.youtubeId]));
     expect(esleme).toEqual({
       "samsung-klima-cf-hatasi": "5lVkaoLa5DI",
@@ -200,6 +200,7 @@ describe("gerçek içerik (content/blog)", () => {
       "supurge-calismiyor": "h851xyTv5e8",
       "camasir-makinesi-kokuyor": "lqjEgj488SY",
       "tv-hdmi-sinyal-yok": "PxC_OC8Qoj0",
+      "buderus-kombi-6a-hatasi": "1m8TT6lAIKQ", // 30 Eyl 2026, PAZ yayın paketi §D (YK #134)
     });
   });
   it("tüm video kayıtları denetimden geçer", () => {

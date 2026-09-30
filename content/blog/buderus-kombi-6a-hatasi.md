@@ -64,6 +64,12 @@ faq:
     a: "Buderus'a göre resetleme sonrasında 6A sürüyorsa kombinin bazı parçalarında arıza olabilir ve Buderus yetkili servisine ulaşılması gerekir. Kılavuzlar servise arıza kodunun ve cihaz bilgilerinin bildirilmesini istiyor; bu bilgiler tip etiketinde yazılıdır. GB172i.2 kılavuzu ayrıca arızayı sıfırlamak için tekrarlanan girişimlerin cihazı güvenlik nedeniyle bloke edebileceğini yazıyor."
 images:
   coverAlt: "Mutfakta duvara asılı beyaz bir kombinin altındaki borular; sarı kollu gaz vanası boruyla aynı hizada duruyor, yanda tezgâhta yanan bir ocak gözü"
+video:
+  youtubeId: "1m8TT6lAIKQ"
+  title: "Buderus kombi 6A hatası: servisi aramadan önce 4 kontrol"
+  description: "Buderus kombide 6A ateşleme kodunda gaz kokusu, ocakla gaz testi, vana konumu ve tek reset kontrolleri."
+  uploadDate: "2026-09-30T03:39:08Z"
+  duration: "PT52S"
 ---
 
 Kombi çalışmıyor ve ekranda **6A** yanıp sönüyor. Buderus'un kendi kod sayfasındaki tanım kısa: **"kombinizde oluşan bir ateşleme sorunudur."** Aynı sayfa bir sıra da veriyor: önce gaz vanalarının açık olup olmadığına bak, vanalar açıksa kombiyi resetle, kod yine de sürüyorsa yetkili servise ulaş. Bu yazı o sırayı Buderus'un kullanma kılavuzlarıyla birlikte adım adım açıyor.
