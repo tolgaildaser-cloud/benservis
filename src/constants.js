@@ -185,7 +185,7 @@ const YAZICI = ["Brother", "Canon", "Epson", "Kyocera", "Lexmark", "Pantum", "Ri
 export const MARKALAR = [...new Set([
   ...BEYAZ_ESYA, ...KLIMA, ...KOMBI, ...KUCUK_EV, ...SUPURGE, ...TELEVIZYON, ...MONITOR,
   ...SU_ARITMA, ...BILGISAYAR, ...TELEFON, ...ANKASTRE_EK, ...YAZICI,
-  "Balay", "Comfee", "Singer", "Shark", "Tineco", DIJITSU, "De'Longhi",
+  "Balay", "Comfee", "Singer", "Shark", "Tineco", DIJITSU, "De'Longhi", "Krups", "WMF",
 ])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
@@ -206,12 +206,18 @@ export const CIHAZ_MARKALARI = {
     "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo", "Sunny"])].sort(trSort),
   "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus", DIJITSU].sort(trSort),
   "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI])].sort(trSort),
-  // YK #149 — İÇERİK kategorisi (teşhis formunda YOK). Liste bilerek BOŞ başlıyor: marka,
-  // üreticinin küçük ev aleti kılavuz/destek adresi PAZ föyünde 200 doğrulandıkça eklenir
-  // (27-28 Eyl emsali: "ortak diziye değil, yalnız kılavuzu doğrulanan cihaza"). `KUCUK_EV`
-  // dizisi toptan bağlanmadı: oradaki adresler mikrodalga/air fryer için doğrulandı, aynı
-  // adresin kettle/ütü/kahve makinesi kılavuzunu da taşıdığı ölçülmedi (#88).
-  "Küçük Ev Aletleri": [],
+  // YK #149 — İÇERİK kategorisi (teşhis formunda YOK). `KUCUK_EV` dizisi toptan BAĞLANMADI:
+  // buraya yalnız kılavuz adresinin küçük ev aletini de karşıladığı PAZ föyünde gösterilen
+  // marka girer (30 Eyl 2026: 19 mevcut kayıt + De'Longhi · Krups · WMF + cihaza özel adresle Sinbo).
+  // ⛔ Bilerek dışarıda: Dyson · Shark (küçük evleri yalnız saç bakımı; kişisel bakım kapsam
+  //    dışı) · Cosori (özeti yalnız air fryer, o cihaz Mikrodalga / Air Fryer'da) ·
+  //    Fantom · Rowenta (adres bu cihazı karşılamıyor) · Arzum · Goldmaster · Philips · Haier ·
+  //    Regal · Miele (kapsam gösterilemedi).
+  "Küçük Ev Aletleri": [
+    "Altus", "Arçelik", "Beko", "Bosch", "Braun", "De'Longhi", "Fakir", "Grundig", "Kenwood",
+    "King", "Krups", "Kumtel", "Ninja", "Onvo", "Profilo", "Russell Hobbs", "Siemens", "Sinbo",
+    "Smeg", "Tefal", "Vestel", "WMF", "Xiaomi",
+  ],
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
 

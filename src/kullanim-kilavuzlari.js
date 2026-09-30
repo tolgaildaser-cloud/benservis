@@ -49,6 +49,8 @@ import { CIHAZ_MARKALARI, ICERIK_CIHAZLARI, tabloBul, eslesenKategoriler } from 
  * marka → { url, ozet, haric? }
  *   url   : üreticinin resmî kılavuz/destek sayfası (200 doğrulandı, yönlendirme sonrası adres)
  *   ozet  : "bu sayfada ne var" — kendi Türkçe katkımız, kılavuzun kopyası DEĞİL
+ *   cihazOzel : { cihaz → { url, ozet } } — markanın genel adresi bir cihazı karşılamıyorsa o
+ *           cihaz için ayrı adres. Varsa `url`/`ozet`/`haric`'in önüne geçer.
  *   haric : markanın bu adresle KARŞILANMAYAN cihaz grupları (ör. Bosch'un ev aletleri
  *           sitesi kombi/klima kapsamıyor) — o cihazlarda kayıt üretilmez, yanlış yönlendirme olmaz
  */
@@ -562,6 +564,26 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Sinbo süpürge modelleri; alt kategoriden modelini açtığında 'Kullanım Kılavuzu' PDF'i çoğu ürün sayfasında duruyor (Sinbo'da merkezî kılavuz arama sayfası yok).",
     // Adres süpürge kategorisi; Sinbo KUCUK_EV'de olduğu için mikrodalga/air fryer satırı üretilmesin.
     haric: ["Mikrodalga / Air Fryer"],
+    // 30 Eyl 2026 (PAZ küçük ev föyü): süpürge adresi küçük ev aletini karşılamıyor → cihaza özel adres.
+    cihazOzel: {
+      "Küçük Ev Aletleri": {
+        url: "https://www.sinbo.com.tr/urunler",
+        ozet: "Sinbo'nun ürünler sayfası: kahve makinesi, blender, su ısıtıcı, tost makinesi gibi kategorilerden ürününü açıyorsun, kullanım kılavuzu ürün sayfasından PDF olarak iniyor.",
+      },
+    },
+  },
+  // ── 30 Eyl 2026, YK #149 (PAZ küçük ev kılavuz föyü): 3 yeni marka, Türkçe adresler koşuda curl 200 ──
+  "De'Longhi": {
+    url: "https://shop.delonghi.com.tr/otomatik-kahve-makineleri",
+    ozet: "De'Longhi Türkiye'nin resmî sitesi: otomatik kahve makineleri listesinden modelini açıyorsun, Türkçe kullanım kılavuzu ürün sayfasından PDF olarak iniyor.",
+  },
+  "Krups": {
+    url: "https://www.tefal.com.tr/kullanim-kilavuzlari/",
+    ozet: "Krups'un Türkiye'deki kılavuzları, aynı grubun Tefal Türkiye sitesindeki kullanım kılavuzları sayfasında: Krups kahve makinesi ve öğütücü modellerinin Türkçe kılavuzları PDF olarak iniyor.",
+  },
+  "WMF": {
+    url: "https://www.wmf.com.tr/kullanim-kilavuzlari/",
+    ozet: "WMF Türkiye kullanım kılavuzları sayfası: kahve makinesi, ekmek kızartma makinesi, blender, kettle, mutfak robotu gibi ürünlerin kılavuzları ürün adıyla listeleniyor ve PDF olarak iniyor.",
   },
   "Kyocera": {
     url: "https://www.kyoceradocumentsolutions.com.tr/tr/support/downloads.html",
@@ -585,6 +607,8 @@ export function kilavuzKayitlari() {
     for (const marka of tabloBul(CIHAZ_MARKALARI, cihaz) || []) {
       const k = MARKA_KILAVUZLARI[marka];
       if (!k) continue;
+      const ozel = k.cihazOzel?.[cihaz];
+      if (ozel) { kayitlar.push({ cihaz, marka, url: ozel.url, ozet: ozel.ozet }); continue; }
       // `haric` eski adla yazılmış olabilir → alias kümesinin herhangi biri eşleşirse hariç tut.
       if (k.haric?.some((h) => eslesenKategoriler(cihaz).includes(h))) continue;
       kayitlar.push({ cihaz, marka, url: k.url, ozet: k.ozet });

@@ -18,7 +18,7 @@ import { readFileSync, readdirSync } from "node:fs";
 // Cihaz slug'ı App.jsx'te `cihazSlug` ile üretiliyor (çivilenmiş adlarda ad≠slug).
 // Test bunu KOPYALAMAZ, tek kaynaktan ithal eder — kopyalasa çivi eklendiğinde
 // sessizce ayrışır ve köprü sözleşmesini yanlış yerden ölçerdi.
-import { cihazSlug } from "./constants.js";
+import { cihazSlug, TESHISSIZ_CIHAZLAR } from "./constants.js";
 
 // App.jsx'teki `slugla` ile BİREBİR aynı olmak zorunda — köprünün tüm sözleşmesi bu.
 const slugla = (s) =>
@@ -139,8 +139,11 @@ describe("blog → teşhis köprüsü (YK #67 · #68 ③)", () => {
   // dizesi doğdu, köprü tablosu büyümedi ve 16 yazı sessizce köprüsüz kaldı — testler
   // yeşil, build yeşil. Aşağıdaki iki test o kör noktayı kapatır.
   it("her yazının kategorisi ya cihaza eşlenmiş ya da BİLEREK cihazsız", () => {
+    const TESHISSIZ_KAT = new Set(TESHISSIZ_CIHAZLAR.map(slugify));
     const kararsiz = [...new Set(
-      yazilar.filter((y) => !yaziCihaz(y) && !KOPRU_CIHAZSIZ.has(slugify(y.category)))
+      // YK #149: teşhissiz içerik kategorisi (Küçük Ev Aletleri) üçüncü bir karardır —
+      // cihazı var, teşhiste yok; köprü yerine üretici desteği + Servis Bul basılır.
+      yazilar.filter((y) => !yaziCihaz(y) && !KOPRU_CIHAZSIZ.has(slugify(y.category)) && !TESHISSIZ_KAT.has(slugify(y.category)))
         .map((y) => y.category)
     )];
     expect(kararsiz, "bu kategoride ilk-ekran köprüsü HİÇ basılmaz — KOPRU_CIHAZ'a ya da KOPRU_CIHAZSIZ'a karar yaz").toEqual([]);
