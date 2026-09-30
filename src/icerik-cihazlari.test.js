@@ -68,4 +68,10 @@ describe("içerik cihazları — teşhissiz kategori", () => {
     expect(src).toMatch(/const YAZI_CTA = \(p\) => \{[\s\S]{0,200}if \(teshissizYazi\(p\)\)/);
     expect(src).toMatch(/const STICKY = \(p\) => teshissizYazi\(p\) \? "" :/);
   });
+  it("her kılavuz kaydının adresi var; yalnız cihaza özel adresli marka (Dijitsu) başka cihazda kayıt üretmez", () => {
+    const hepsi = kilavuzKayitlari();
+    for (const k of hepsi) expect(k.url, `${k.marka} × ${k.cihaz}`).toMatch(/^https:\/\//);
+    const dijitsu = hepsi.filter((k) => k.marka === "Dijitsu").map((k) => k.cihaz).sort();
+    expect(dijitsu).toEqual(["Buzdolabı", "Klima"]);
+  });
 });
