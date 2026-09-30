@@ -65,6 +65,24 @@ describe("② marka okuma", () => {
     expect(markaTahmin("grundik televizyon", "Televizyon / Monitör")).toBe("Grundig");
   });
 
+  it("bölünen marka adı: çıplak 'mitsubishi' Electric'e çözülür, 'heavy' ayrı kalır (YK #150)", () => {
+    expect(markalarForCihaz("Klima")).toContain("Mitsubishi Electric");
+    expect(markalarForCihaz("Klima")).toContain("Mitsubishi Heavy");
+    expect(markalarForCihaz("Klima")).not.toContain("Mitsubishi");
+    expect(markaTahmin("mitsubishi klima soğutmuyor", "Klima")).toBe("Mitsubishi Electric");
+    expect(markaTahmin("mitsubishi electric klima su damlatıyor", "Klima")).toBe("Mitsubishi Electric");
+    expect(markaTahmin("mitsubishi heavy klima çalışmıyor", "Klima")).toBe("Mitsubishi Heavy");
+  });
+
+  it("tek cihazda doğrulanan marka komşu cihaza sızmaz (YK #150)", () => {
+    expect(markalarForCihaz("Çamaşır Makinesi")).toContain("Dijitsu");
+    expect(markalarForCihaz("Kurutma Makinesi")).not.toContain("Dijitsu");
+    expect(markalarForCihaz("Fırın / Ocak / Aspiratör")).not.toContain("Dijitsu");
+    expect(markalarForCihaz("Süpürge")).toContain("Sunny");
+    expect(markalarForCihaz("Çamaşır Makinesi")).not.toContain("Sunny");
+    expect(markalarForCihaz("Mikrodalga / Air Fryer")).not.toContain("De'Longhi");
+  });
+
   it("cihazın listesinde olmayan marka 'Diğer'e DÜŞMEZ, boş kalır", () => {
     expect(markalarForCihaz("Çamaşır Makinesi")).not.toContain("Canon");
     expect(markaTahmin("canon çamaşır makinem su almıyor", "Çamaşır Makinesi")).toBeNull();

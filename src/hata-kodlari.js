@@ -2066,6 +2066,11 @@ export const HATA_KODU_KATMANI = {
       anlam: "Doğru çekme yönü ve geride yırtık parça kaldı mı kontrolü; yanlış çekiş merdaneyi bozuyor.",
       yazi: "yazici-kagit-sikisti" },
   ],
+  // ── YK #149 (30 Eyl 2026): TEŞHİSSİZ İÇERİK KATEGORİSİ ─────────────────────────────────
+  // Küçük ev aletleri teşhis formunda yok; burada yalnız hata kodu / belirti / ayar girişi
+  // olarak yaşar. Kayıt PAZ'ın tamir föyünden gelir (#88: üreticinin kendi belgesi). Boşken
+  // /tamir/kucuk-ev-aletleri/ sayfası basılmaz ve hub ızgarasında kart görünmez.
+  "Küçük Ev Aletleri": [],
 };
 
 /**

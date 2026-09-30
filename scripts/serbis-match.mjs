@@ -12,7 +12,10 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
-import { MARKALAR } from "../src/constants.js";
+import { MARKALAR as MARKA_LISTESI, MARKA_ALIAS } from "../src/constants.js";
+// YK #150: bölünen adın eski hâli ("Mitsubishi") servis adlarında tek başına geçiyor; evrende
+// kalmazsa yeniden koşuda o servislerin marka eşleşmesi sessizce düşer.
+const MARKALAR = [...MARKA_LISTESI, ...Object.keys(MARKA_ALIAS)];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");

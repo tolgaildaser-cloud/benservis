@@ -43,7 +43,7 @@
 // TEK KAYNAK KURALI: cihaz→marka eşleşmesi burada TEKRAR YAZILMAZ; `CIHAZ_MARKALARI`'ndan
 // türetilir (`kilavuzKayitlari`). Yeni marka constants.js'e eklendiğinde, kılavuz adresi
 // buraya girildiği anda /kilavuzlar/ kendiliğinden uyar; ikinci liste tutulmaz.
-import { CIHAZ_MARKALARI, CIHAZLAR, tabloBul, eslesenKategoriler } from "./constants.js";
+import { CIHAZ_MARKALARI, ICERIK_CIHAZLARI, tabloBul, eslesenKategoriler } from "./constants.js";
 
 /**
  * marka → { url, ozet, haric? }
@@ -233,7 +233,9 @@ export const MARKA_KILAVUZLARI = {
     url: "https://www.ferroli.com.tr/kombiler-F2771",
     ozet: "Kombi modelini seçtiğinde kullanım kılavuzu ürün sayfasında PDF olarak açılıyor.",
   },
-  "Mitsubishi": {
+  // YK #150 (30 Eyl 2026): "Mitsubishi" → "Mitsubishi Electric". Adres baştan beri Electric'in
+  // sitesiydi; Mitsubishi Heavy ayrı şirket (Form MHI), bu kayıt onu karşılamaz.
+  "Mitsubishi Electric": {
     url: "https://klima.mitsubishielectric.com.tr/tr/kullanim-kilavuzlari",
     ozet: "Cihaz tipini (duvar tipi, kaset, salon tipi) filtreleyip model numarana göre kılavuzu seçiyorsun; model etiketi iç ünitenin yanındadır.",
   },
@@ -440,6 +442,9 @@ export const MARKA_KILAVUZLARI = {
   "Sunny": {
     url: "https://www.sunny.com.tr/televizyon-kullanim-kilavuzlari/",
     ozet: "Sunny televizyonların kılavuzları ekran boyutu ve yazılım ailesine (WebOS, Android, Tizen) göre gruplanmış; kendi grubunun ortak kılavuzunu indiriyorsun.",
+    // YK #150: Sunny artık dört cihazda daha marka listesinde. Bu adres YALNIZ televizyon
+    // kılavuzları; diğer cihazlarda kayıt üretilirse kullanıcı yanlış sayfaya gider.
+    haric: ["Buzdolabı", "Klima", "Süpürge", "Mikrodalga / Air Fryer"],
   },
   "Onvo": {
     url: "https://onvo.com.tr/bilgi-merkezi",
@@ -566,12 +571,13 @@ export const MARKA_KILAVUZLARI = {
 
 /**
  * `CIHAZ_MARKALARI` × `MARKA_KILAVUZLARI` kesişimi → /kilavuzlar/ kayıtları.
- * Cihaz listesi ayrıca tutulmaz; CIHAZLAR sırası korunur (hub ızgarasıyla aynı sıra).
+ * Cihaz listesi ayrıca tutulmaz; ICERIK_CIHAZLARI sırası korunur (hub ızgarasıyla aynı sıra).
+ * YK #149: teşhissiz içerik kategorileri (Küçük Ev Aletleri) de kılavuz kaydı üretir.
  * @returns {{cihaz:string, marka:string, url:string, ozet:string}[]}
  */
 export function kilavuzKayitlari() {
   const kayitlar = [];
-  for (const cihaz of CIHAZLAR) {
+  for (const cihaz of ICERIK_CIHAZLARI) {
     // ⚠️ Alias-duyarlı olmak ZORUNDA: cihaz adı birleşince (21 Ağu: "Çamaşır Makinesi /
     // Kurutma") düz `CIHAZ_MARKALARI[cihaz]` boş döner, o cihazın kılavuz sayfası HİÇ
     // ÜRETİLMEZ ve YAYINDAKİ /kilavuzlar/camasir-makinesi/ 404'e düşer. Sessiz kırılır:
