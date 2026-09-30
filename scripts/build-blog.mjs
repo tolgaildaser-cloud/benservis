@@ -571,7 +571,8 @@ const teshissizYazi = (p) => TESHISSIZ_KAT.has(slugify(p.category));
 // önce denenir ki "Russell Hobbs" gibi çok kelimeli ad kısa bir adın gölgesinde kalmasın.
 const TESHISSIZ_KILAVUZ = kilavuzKayitlari()
   .filter((k) => TESHISSIZ_CIHAZLAR.includes(k.cihaz))
-  .map((k) => ({ ...k, onek: `${slugify(k.marka)}-`, katSlug: cihazSlug(k.cihaz) }))
+  // Kesme işareti slug'da iz bırakmaz: "De'Longhi" yazısı `delonghi-…` diye başlar.
+  .map((k) => ({ ...k, onek: `${slugify(k.marka.replace(/['’]/g, ""))}-`, katSlug: cihazSlug(k.cihaz) }))
   .sort((a, b) => b.onek.length - a.onek.length);
 const ureticiDestek = (p) => {
   const kat = slugify(p.category);
@@ -2419,17 +2420,26 @@ const girisKarti = (k, g) => {
     ? `<div class="card-ic kapak"><img src="${kartFoto}" width="96" height="64" loading="lazy" decoding="async" alt=""></div>`
     : `<div class="card-ic">${iconSvg(k.ad, "")}</div>`;
   const etiket = g.rehberMeta ? "Kendin çöz" : TIP_ETIKET[g.tip];
+  // YK #149: teşhissiz kategoride yazısı olmayan giriş, okunduğu ÜRETİCİ BELGESİNE çıkar
+  // (kılavuz kartlarıyla aynı dış link sözleşmesi: yeni sekme, nofollow, alan adı görünür).
+  const disBelge = !g.post && k.teshis === false && g.belge;
+  const kilavuzAlanAdiErken = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return "resmî sayfa"; } };
   const meta = g.rehberMeta
     ? `${g.rehberMeta.zorluk} · ${g.rehberMeta.sure} · ${g.rehberMeta.adim} adım · Türkçe`
     : g.post
       ? "Ne demek, ne yapmalı · Türkçe"
-      : "Servis işi — yakınındaki servisi bul →";
+      : disBelge
+        ? `Üreticinin belgesi${g.sayfa && /^[\d\s,–-]+$/.test(g.sayfa) ? ` · sayfa ${g.sayfa}` : ""} · ${kilavuzAlanAdiErken(g.belge)} ↗`
+        : "Servis işi — yakınındaki servisi bul →";
   // YK #149: teşhissiz kategoride yazısı olmayan giriş ana sayfadaki teşhis formuna değil,
   // doğrudan servis listesine çıkar (formda bu cihaz yok).
   const href = g.post ? `/blog/${g.post.slug}/`
+    : disBelge ? esc(g.belge)
     : k.teshis === false ? kapanisHref("", `tamir-${k.slug}`, true) : cagirHref(`tamir-${k.slug}`);
-  const ek = g.post ? "" : ` data-cagir="satir" data-giris="${esc(g.giris)}"`;
-  return `<a class="card${g.post ? "" : " servis"}" href="${href}"${ek}>${ikon}<div class="card-body"><span class="cat">${esc(etiket)}</span><h2>${esc(g.giris)}</h2><p>${esc(g.anlam)}</p><span class="tamir-meta">${esc(meta)}</span></div></a>`;
+  const ek = g.post ? ""
+    : disBelge ? ` target="_blank" rel="noopener noreferrer nofollow" data-kopru="uretici-belge"`
+    : ` data-cagir="satir" data-giris="${esc(g.giris)}"`;
+  return `<a class="card${g.post || disBelge ? "" : " servis"}" href="${href}"${ek}>${ikon}<div class="card-body"><span class="cat">${esc(etiket)}</span><h2>${esc(g.giris)}</h2><p>${esc(g.anlam)}</p><span class="tamir-meta">${esc(meta)}</span></div></a>`;
 };
 
 // ② KATEGORİ SAYFALARI — artık rehberi olmayan cihazda da basılır (YK #35 erken uyarı ①:
