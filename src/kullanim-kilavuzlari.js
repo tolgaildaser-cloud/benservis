@@ -589,6 +589,26 @@ export const MARKA_KILAVUZLARI = {
     url: "https://www.kyoceradocumentsolutions.com.tr/tr/support/downloads.html",
     ozet: "Kyocera Türkiye ürün destek ve indirme merkezi: yazıcı ya da çok fonksiyonlu cihazını listeden seçip sürücü, yardımcı program ve kullanım kılavuzlarına ulaşıyorsun.",
   },
+  // ── 30 Eyl 2026 14:1x, Sprint #144 (PAZ kılavuz föyü eki): 2 yeni marka, adresler koşuda curl 200 ──
+  // Dijitsu'da merkezî kılavuz sayfası yok; kılavuz ürün sayfasından iniyor ve bu yalnız
+  // buzdolabı + klima ürünlerinin çoğunda var. Genel `url` BİLEREK yok → diğer beş cihazda kayıt çıkmaz.
+  "Dijitsu": {
+    cihazOzel: {
+      "Buzdolabı": {
+        url: "https://dijitsu.com.tr/buzdolabi",
+        ozet: "Dijitsu'nun buzdolabı listesi: modelini açıyorsun, ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor.",
+      },
+      "Klima": {
+        url: "https://dijitsu.com.tr/klima",
+        ozet: "Dijitsu'nun klima listesi: modelini açıyorsun, ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor.",
+      },
+    },
+  },
+  // Alan adı MHI'nin değil, Türkiye'deki resmî şirketi Form MHI'nin (emsal: Gree / TLC Klima).
+  "Mitsubishi Heavy": {
+    url: "https://form-mhiklima.com/tr/dokuman-kullanim-kilavuzlari",
+    ozet: "Mitsubishi Heavy klimaların Türkçe kullanım kılavuzları seri adına göre listeli (Diamond, Premium, Trend, PAC, kumanda ve iç üniteler); kendi serinin kılavuzunu PDF olarak indiriyorsun (site Türkiye şirketi Form MHI Klima'nın).",
+  },
 };
 
 /**
@@ -609,6 +629,8 @@ export function kilavuzKayitlari() {
       if (!k) continue;
       const ozel = k.cihazOzel?.[cihaz];
       if (ozel) { kayitlar.push({ cihaz, marka, url: ozel.url, ozet: ozel.ozet }); continue; }
+      // Yalnız cihaza özel adresi olan marka (Dijitsu): genel adres yoksa kayıt üretilmez.
+      if (!k.url) continue;
       // `haric` eski adla yazılmış olabilir → alias kümesinin herhangi biri eşleşirse hariç tut.
       if (k.haric?.some((h) => eslesenKategoriler(cihaz).includes(h))) continue;
       kayitlar.push({ cihaz, marka, url: k.url, ozet: k.ozet });

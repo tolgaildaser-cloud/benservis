@@ -57,6 +57,8 @@ const ICON_PATHS = {
   tv: '<rect x="3" y="4" width="18" height="12" rx="2"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/>',
   // Sürdürülebilirlik KONU kategorisi (cihaz değil) — yaprak. Aynı 24x24 çizgi ailesi.
   surdurulebilirlik: '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/>',
+  // YK #149 ⑤ (GRF, 30 Eyl): Küçük Ev Aletleri — su ısıtıcı.
+  kucukev: '<path d="M6.5 7h9l1.2 11.8H5.3Z"/><line x1="9.5" y1="4.5" x2="12.5" y2="4.5"/><line x1="11" y1="4.5" x2="11" y2="7"/><path d="M6.3 8.8 3.6 7.4"/><path d="M15.8 9.8h2a1.6 1.6 0 0 1 1.6 1.6v2.6a1.6 1.6 0 0 1-1.6 1.6h-1.4"/><line x1="9.3" y1="14.8" x2="9.3" y2="16"/><line x1="4" y1="21" x2="18" y2="21"/>',
   default: '<path d="M14.5 6.5a3.5 3.5 0 0 0-4.9 4.4l-4.8 4.8a1.5 1.5 0 0 0 2.1 2.1l4.8-4.8a3.5 3.5 0 0 0 4.4-4.9l-2 2-1.7-1.7Z"/>',
 };
 function iconKey(cat) {
@@ -70,6 +72,7 @@ function iconKey(cat) {
   if (c.includes("fırın") || c.includes("firin") || c.includes("ocak")) return "firin";
   if (c.includes("televizyon") || c.includes("tv")) return "tv";
   if (c.includes("sürdürülebilir") || c.includes("surdurulebilir")) return "surdurulebilirlik";
+  if (c.includes("küçük ev") || c.includes("kucuk ev")) return "kucukev";
   return "default";
 }
 const iconSvg = (cat, cls) =>

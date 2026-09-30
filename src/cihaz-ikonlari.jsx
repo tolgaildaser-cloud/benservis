@@ -54,6 +54,10 @@ const IKONLAR = {
   "Su Sebili / Arıtma": (
     <g {...P}><path d="M9 6c0-1.5 1.5-3 3-3s3 1.5 3 3" /><rect x="7" y="6" width="10" height="15" rx="2" /><line x1="7" y1="11" x2="17" y2="11" /><line x1="11" y1="15" x2="13" y2="15" /></g>
   ),
+  // YK #149 ⑤ (GRF, 30 Eyl): su ısıtıcı — teşhissiz içerik kategorisi, formda görünmez.
+  "Küçük Ev Aletleri": (
+    <g {...P}><path d="M6.5 7h9l1.2 11.8H5.3Z" /><line x1="9.5" y1="4.5" x2="12.5" y2="4.5" /><line x1="11" y1="4.5" x2="11" y2="7" /><path d="M6.3 8.8 3.6 7.4" /><path d="M15.8 9.8h2a1.6 1.6 0 0 1 1.6 1.6v2.6a1.6 1.6 0 0 1-1.6 1.6h-1.4" /><line x1="9.3" y1="14.8" x2="9.3" y2="16" /><line x1="4" y1="21" x2="18" y2="21" /></g>
+  ),
   "Cep Telefonu": (
     <g {...P}><rect x="7" y="3" width="10" height="18" rx="2.5" /><line x1="10.5" y1="6" x2="13.5" y2="6" /><circle cx="12" cy="18" r="0.6" fill="currentColor" /></g>
   ),
