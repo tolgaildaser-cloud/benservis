@@ -214,8 +214,8 @@ export const CIHAZ_MARKALARI = {
   //    Fantom · Rowenta (adres bu cihazı karşılamıyor) · Arzum · Goldmaster · Philips · Haier ·
   //    Regal · Miele (kapsam gösterilemedi).
   "Küçük Ev Aletleri": [
-    "Altus", "Arçelik", "Beko", "Bosch", "Braun", "De'Longhi", "Fakir", "Grundig", "Kenwood",
-    "King", "Krups", "Kumtel", "Ninja", "Onvo", "Profilo", "Russell Hobbs", "Siemens", "Sinbo",
+    "Altus", "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "De'Longhi", "Fakir", "Grundig", "Kenwood",
+    "King", "Krups", "Kumtel", "Ninja", "Onvo", "Philips", "Profilo", "Russell Hobbs", "Siemens", "Sinbo",
     "Smeg", "Tefal", "Vestel", "WMF", "Xiaomi",
   ],
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)

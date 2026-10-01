@@ -142,6 +142,14 @@ export const MARKA_KILAVUZLARI = {
   "Arzum": {
     url: "https://destek.arzum.com.tr/kullanim-kilavuzlari",
     ozet: "Arzum destek portalı: ürün kullanım kılavuzları, garanti ve yetkili servis bilgisi.",
+    // 1 Eki 2026 (PAZ küçük ev eki): portalın listesi giriş istiyor, misafir göremiyor →
+    // küçük ev için ürün listesi; kılavuz PDF'i ürün sayfasından girişsiz iniyor.
+    cihazOzel: {
+      "Küçük Ev Aletleri": {
+        url: "https://www.arzum.com.tr/elektrikli-ev-aletleri",
+        ozet: "Arzum'un elektrikli ev aletleri listesi: ürününü açıyorsun, ürün sayfasındaki \"Kullanım Kılavuzu\" bölümünden Türkçe kılavuzu PDF olarak indiriyorsun; giriş gerekmiyor.",
+      },
+    },
   },
   "Fakir": {
     url: "https://destek.fakir.com.tr/kullanim-kilavuzlari",
