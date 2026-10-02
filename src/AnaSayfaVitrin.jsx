@@ -192,6 +192,21 @@ const IZGARA_IKON = {
 export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLogo, onServisler }) {
   const [dert, setDert] = useState("");
   const [sssAcik, setSssAcik] = useState(null); // SSS akordeon açık indeksi
+  // MOBİL ÜST MENÜ (2 Eki 2026, Tolga: "mobilde bilgi merkezi, tamir merkezi ve kullanım
+  // kılavuzları en üstte açılabilir bir menüye koyalım"). ≤640px'te üç bölüm bağı barda
+  // gizli; ☰ düğmesi onları açılır panelde gösterir. Yer açmak için "Kayıt" düğmesi de
+  // panele taşındı (Tolga'nın seçimi) — hero altındaki kayıt şeridi sürüyor.
+  const [menuAcik, setMenuAcik] = useState(false);
+  const menuRef = useRef(null);
+  useEffect(() => {
+    if (!menuAcik) return;
+    const kapatEsc = (e) => { if (e.key === "Escape") setMenuAcik(false); };
+    const kapatDis = (e) => { if (menuRef.current && !menuRef.current.contains(e.target)) setMenuAcik(false); };
+    document.addEventListener("keydown", kapatEsc);
+    document.addEventListener("pointerdown", kapatDis);
+    return () => { document.removeEventListener("keydown", kapatEsc); document.removeEventListener("pointerdown", kapatDis); };
+  }, [menuAcik]);
+
   // Sticky bandı hero ekrandan çıkınca göster: hero'nun kendi kutusu görünürken
   // ikinci bir CTA gürültü olur (araştırma deseni 7 "tek net çağrı" ilkesi).
   const heroRef = useRef(null);
@@ -251,7 +266,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
         {/* ═══ ÜST BAR — hero'nun ÜZERİNE biner (Tolga, 17 Ağu: "benservis logosu hero
             üzerine binsin armuttaki gibi ve menuler de binsin"). Şeffaf zemin, beyaz
             logo; koyu hero üstünde kendi kutusu yok — Armut deseni. */}
-        <div className="vitrin-ustbar" style={st.ustBar}>
+        <div className="vitrin-ustbar" style={st.ustBar} ref={menuRef}>
           <button onClick={onLogo} aria-label="Ana sayfa" className="ustbar-logo" style={st.ustLogoBtn}>
             <BenservisLogo style={st.ustLogo} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
           </button>
@@ -290,7 +305,29 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <span className="kayit-uzun">Servis Kaydı</span>
               <span className="kayit-kisa">Kayıt</span>
             </a>
+            {/* ☰ MOBİL MENÜ DÜĞMESİ — yalnız ≤640px'te görünür (App.jsx CSS'i açar).
+                ⛔ Satır içi stile `display` YAZILMAZ (PR #175 dersi). */}
+            <button
+              type="button" className="ustbar-menu-btn" style={st.ustMenuBtn}
+              aria-label={menuAcik ? "Menüyü kapat" : "Menüyü aç"}
+              aria-expanded={menuAcik} aria-controls="vitrin-mobil-menu"
+              onClick={() => setMenuAcik((a) => !a)}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+                {menuAcik
+                  ? <><path d="M6 6l12 12" /><path d="M18 6L6 18" /></>
+                  : <><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></>}
+              </svg>
+            </button>
           </nav>
+          {menuAcik && (
+            <nav id="vitrin-mobil-menu" className="vitrin-mobil-menu" style={st.mobilMenu} aria-label="Mobil menü">
+              <a href="/blog/" style={st.mobilMenuLink}>Bilgi Merkezi</a>
+              <a href="/tamir/" style={st.mobilMenuLink}>Tamir Merkezi</a>
+              <a href="/kilavuzlar/" style={st.mobilMenuLink}>Kullanım Kılavuzları</a>
+              <a href="/servis-kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Servis Kaydı <span style={st.mobilMenuAlt}>· işletmeni ekle</span></a>
+            </nav>
+          )}
         </div>
 
         <div style={st.heroIc}>
@@ -580,6 +617,28 @@ const st = {
     color: "#DBEAFE", fontSize: 13.5, fontWeight: 600, textDecoration: "none",
     padding: "8px 12px", borderRadius: 999, whiteSpace: "nowrap",
   },
+  // ☰ düğmesi: şeffaf, beyaz çerçeveli kare — "Kayıt" düğmesinin diliyle aynı.
+  ustMenuBtn: {
+    alignItems: "center", justifyContent: "center",
+    width: 44, height: 44, marginLeft: 8, padding: 0, borderRadius: 12,
+    background: "rgba(255,255,255,.08)", color: "#fff", cursor: "pointer",
+    border: "1.5px solid rgba(255,255,255,.45)",
+  },
+  // Açılır panel: barın altında tam genişlik beyaz kart; hero'nun üstüne biner.
+  mobilMenu: {
+    position: "absolute", top: "calc(100% + 8px)", left: 0, right: 0, zIndex: 5,
+    flexDirection: "column", background: "#fff", borderRadius: 16, padding: 8,
+    boxShadow: "0 20px 50px -18px rgba(0,0,0,.55)",
+  },
+  mobilMenuLink: {
+    display: "block", padding: "14px 14px", textDecoration: "none",
+    color: NAVY, fontSize: 16, fontWeight: 600, borderBottom: "1px solid #F1F5F9",
+  },
+  mobilMenuKayit: {
+    display: "block", padding: "14px 14px", borderRadius: 10, textDecoration: "none",
+    color: BLUE, fontSize: 15, fontWeight: 700,
+  },
+  mobilMenuAlt: { color: "#64748B", fontWeight: 500 },
   // Servis sahibine açılan kapı — dolgulu CTA'nın YANINDA ama onun altında bir kademe:
   // şeffaf zemin + beyaz çerçeve. Hero fotoğrafın üstünde okunur, "Yakın Servisler"in
   // dolgulu beyazıyla yarışmaz (kullanıcı akışı birinci, servis kaydı ikinci).
