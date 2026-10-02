@@ -46,6 +46,12 @@ faq:
     a: "Vestel, makine çalışırken kapağın zorlanmamasını istiyor. Kılavuzlara göre modele bağlı olarak kapak yıkama bittikten 2 dakika sonra ya da yıkama çevrimi biter bitmez açılır. Çalışan programı durdurmak için program düğmesi İPTAL konumuna getirilir."
 images:
   coverAlt: "Aydınlık bir çamaşır odasında kapağı yarı aralık duran beyaz, ön yüklemeli bir çamaşır makinesi; kapak camının çevresindeki gri lastik conta ve boş tambur görünüyor"
+video:
+  youtubeId: "s6CWab-81uA"
+  title: "Vestel çamaşır makinesi E01 hatası: kapı açık kalmış mı?"
+  description: "Vestel çamaşır makinesinde E01 kapı kodu için iç kontrol, conta kenarı, azami yük ve kapağın kilitlenmesi adımları."
+  uploadDate: "2026-10-02T04:01:47Z"
+  duration: "PT50S"
 ---
 
 Çamaşırları yerleştirdin, programı seçtin, başlat tuşuna bastın; makine çalışmadı ve ekranda **E01** yazıyor. Vestel'in çamaşır makinesi kullanım kılavuzlarındaki otomatik arıza uyarıları tablosunda bu kodun karşılığı tek cümledir: **"Makinenizin kapısı açık kalmış."** Tablonun önerdiği işlem de kısadır: kapıyı kapat; makine hâlâ hata veriyorsa makineyi kapat, fişini çek ve yetkili servise başvur. Bu yazıda o kısa talimatı, aynı kılavuzların yükleme, kapı ve bakım bölümleriyle birlikte adım adım açıyoruz.
