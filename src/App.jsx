@@ -1430,6 +1430,10 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    (Bu blok bir JS şablon dizesi: yoruma ters tırnak YAZILMAZ, dizeyi kapatır.) */
 .kayit-kisa { display: none; }
 .vitrin-kayit-serit { display: none; }
+/* MOBİL ÜST MENÜ (2 Eki 2026, Tolga): ☰ düğmesi ve açılır panel masaüstünde kapalı;
+   640px bloğunda açılır. Panel yalnız menü açıkken DOM'a girer. */
+.ustbar-menu-btn { display: none; }
+.vitrin-mobil-menu { display: none; }
 
 @media (max-width: 640px) {
   .vitrin-ustmenu a { display: none; }
@@ -1444,10 +1448,12 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
      !important gerekiyor (PR #175'te 100px taşma olarak ölçülen tuzak). */
   .ustbar-logo svg { width: 130px !important; }
   .ustcta-yakin { display: none; }
-  .vitrin-ustmenu a.ustbar-kayit {
-    display: inline-flex !important;
-    font-size: 13px !important; padding: 7px 13px !important; margin-left: 6px !important;
-  }
+  /* 2 Eki 2026 — "Kayıt" düğmesi ☰ menüsüne TAŞINDI (Tolga'nın seçimi: ☰'a yer açmak
+     için). Satır içi display:inline-flex'i ezmek için !important şart (PR #175 tuzağı).
+     Mobil karşılıkları: ☰ panelindeki "Servis Kaydı" + hero altındaki şerit. */
+  .vitrin-ustmenu a.ustbar-kayit { display: none !important; }
+  .ustbar-menu-btn { display: inline-flex; }
+  .vitrin-mobil-menu { display: flex; }
   .kayit-uzun { display: none; }
   .kayit-kisa { display: inline; }
   .vitrin-kayit-serit { display: block; }

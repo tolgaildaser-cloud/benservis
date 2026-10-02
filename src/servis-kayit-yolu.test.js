@@ -32,18 +32,27 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
   });
 
-  it("üst bar düğmesi MOBİLDE DE görünür, yer açılarak (Tolga: 'ikisi de')", () => {
+  it("mobilde kayıt ☰ menüsünde (Tolga, 2 Eki: menüye yer açmak için taşındı)", () => {
     const vitrin = oku("src/AnaSayfaVitrin.jsx");
     const app = oku("src/App.jsx");
     expect(vitrin).toContain('className="ustbar-kayit"');
-    // Mobilde yer açan üç kural: logo 130px · "Yakın " gizli · etiket "Kayıt"a düşer.
-    expect(app).toMatch(/\.ustbar-logo svg \{ width: 130px !important; \}/);
+    // Masaüstünde barda kalır; mobilde gizlenir, ☰ panelinde etiketli bağ olarak durur.
+    expect(app).toMatch(/\.vitrin-ustmenu a\.ustbar-kayit \{ display: none !important; \}/);
+    expect(vitrin).toContain('href="/servis-kayit?kaynak=anasayfa-menu"');
     expect(app).toMatch(/\.ustcta-yakin \{ display: none; \}/);
-    expect(app).toMatch(/display: inline-flex !important/); // satır içi display'i ezer
-    expect(vitrin).toContain('className="kayit-kisa"');
-    expect(vitrin).toContain('className="kayit-uzun"');
-    // Kısaltma erişilebilirliği bozmasın: tam ad aria-label'de kalır.
     expect(vitrin).toContain('aria-label="Servis kaydı"');
+  });
+
+  it("☰ mobil menü üç bölümü açar; display satır içine yazılmaz", () => {
+    const vitrin = oku("src/AnaSayfaVitrin.jsx");
+    const app = oku("src/App.jsx");
+    const panel = vitrin.slice(vitrin.indexOf('id="vitrin-mobil-menu"'));
+    for (const h of ['href="/blog/"', 'href="/tamir/"', 'href="/kilavuzlar/"']) expect(panel).toContain(h);
+    expect(vitrin).toContain('aria-controls="vitrin-mobil-menu"');
+    expect(app).toMatch(/\.ustbar-menu-btn \{ display: none; \}/);
+    expect(app).toMatch(/\.ustbar-menu-btn \{ display: inline-flex; \}/);
+    expect(vitrin).not.toMatch(/ustMenuBtn: \{[^}]*display:/);
+    expect(vitrin).not.toMatch(/mobilMenu: \{[^}]*display:/);
   });
 
   it("mobil şerit hero'nun altında ve YALNIZ mobilde açık", () => {
