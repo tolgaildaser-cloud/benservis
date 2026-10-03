@@ -407,6 +407,10 @@ export const MARKA_KILAVUZLARI = {
     ozet: "Franke Türkiye destek merkezi: 'Kılavuzlar' ve 'Kurulum Kılavuzları' bölümlerinden ürün arama sayfasına geçip modelinin dokümanlarını açıyorsun.",
     // 3 Eki 2026 (föy 3. parti): ankastre buzdolabı ve mikrodalga kategori sayfaları (ürün sayfasında kılavuz PDF).
     cihazOzel: {
+      "Su Sebili / Arıtma": {
+        url: "https://www.franke.com/tr/tr/home-solutions/urunler/filtreli-armaturler.html",
+        ozet: "Franke'nin filtreli armatürleri listeleniyor; modeline tıklayınca ürün sayfasından 'Kullanım Kılavuzu' ve 'Kurulum Kılavuzu' PDF'lerini indiriyorsun.",
+      },
       "Buzdolabı": {
         url: "https://www.franke.com/tr/tr/home-solutions/urunler/buzdolaplari.html",
         ozet: "Franke'nin ankastre buzdolabı listesi: modelini açıyorsun, ürün sayfasındaki \"İndirilenler\" bölümünden \"Kullanım Kılavuzu\"nu PDF olarak indiriyorsun; bağlantı şeması ve enerji etiketi de orada.",
@@ -649,6 +653,17 @@ export const MARKA_KILAVUZLARI = {
   "Aura (İhlas)": {
     url: "https://www.iea.com.tr/tr/urunler/su-aritmalar/aura-cebilon-unique/107",
     ozet: "İhlas Ev Aletleri'nin Aura Cebilon su arıtma sayfası; her modelin (Unique, Platinum, Silver, D-Flow) sayfasının altındaki kılavuz bağlantısından PDF açılıyor.",
+    // 3 Eki 2026 (föy 3. parti): süpürge ve şofben aynı markanın ürün listesinden (iea.com.tr).
+    cihazOzel: {
+      "Süpürge": {
+        url: "https://www.iea.com.tr/tr/urunler",
+        ozet: "İhlas Ev Aletleri'nin Aura ürün listesi: elektrikli süpürge (Wdry ıslak-kuru) ya da temizlik robotu sayfasını açıyorsun, sayfadaki bağlantıdan Türkçe kullanım kılavuzunu PDF olarak indiriyorsun.",
+      },
+      "Kombi / Termosifon": {
+        url: "https://www.iea.com.tr/tr/urunler",
+        ozet: "İhlas Ev Aletleri'nin Aura ürün listesi: banyo şofbeni sayfasını açıp Aura Şofben Premium'un Türkçe kullanım kılavuzunu PDF olarak indiriyorsun.",
+      },
+    },
   },
   // ── 28 Eyl 2026, Sprint #144 (PAZ kılavuz föyü): 4 yeni marka, adresler koşuda curl 200 ──
   "Tineco": {
@@ -790,11 +805,7 @@ export const MARKA_KILAVUZLARI = {
     ozet: "RAKS kullanım kılavuzları sayfası: kategoriden (su sebilleri, vantilatör, ısıtıcı…) ürününü seçiyorsun, ürün sayfasından Türkçe kullanım kılavuzu PDF'ini indiriyorsun.",
   },
   // ── 3 Eki 2026 · föy 3. parti (PAZ C3a/C3b) ──
-  // Aura = İhlas Ev Aletleri'nin süpürge markası (iea.com.tr).
-  "Aura": {
-    url: "https://www.iea.com.tr/tr/urunler",
-    ozet: "İhlas Ev Aletleri'nin Aura ürün listesi: elektrikli süpürge (Wdry ıslak-kuru) ya da temizlik robotu sayfasını açıyorsun, sayfadaki bağlantıdan Türkçe kullanım kılavuzunu PDF olarak indiriyorsun.",
-  },
+
   "Black+Decker": {
     url: "https://service.blackanddecker.com.tr/BD/TR/tr-TR/",
     ozet: "BLACK+DECKER Türkiye servis sitesi: ürün numarasını (ör. BHFEV182C) yazıp tipini seçiyorsun, 'Talimat Kılavuzları'ndan dil/bölge seçerek kılavuz PDF'ini açıyorsun.",
@@ -824,6 +835,31 @@ export const MARKA_KILAVUZLARI = {
   "Excalibur": {
     url: "https://www.casper.com.tr/kullanim-kilavuzlari?categoryId=5",
     ozet: "Casper kullanım kılavuzları sayfasında 'Excalibur Dizüstü' kategorisi açık geliyor: seriyi (G650…G920) seçip Türkçe kullanım kılavuzunu 'indir' ile alıyorsun; masaüstü için 'Excalibur Masaüstü' kategorisi var.",
+  },
+  // ── 3 Eki 2026 · föy 'beklet' kayıtları (Tolga: "beklet olanları da uygula") ──
+  "Grohe": {
+    url: "https://www.grohe.com/tr-TR/category/mutfak/su_filtreleme_sistemi",
+    ozet: "GROHE Blue su filtreleme sistemleri listeleniyor; ürün sayfasındaki indirmelerden 'Teknik Ürün Bilgileri' (kurulum/kullanım) ve 'Bakım Talimatı' PDF'lerini alıyorsun.",
+  },
+  "OKI": {
+    url: "https://www.oki.com/me/printing/support/user-manual/index.html",
+    ozet: "OKI kullanım kılavuzu merkezi: yazıcı türünü (renkli, siyah-beyaz, çok fonksiyonlu, etiket, nokta vuruşlu…) seçiyorsun, açılan listeden modelini bulup kılavuzuna ulaşıyorsun.",
+  },
+  "Zebra": {
+    url: "https://support.zebra.com/tr/",
+    ozet: "Zebra'nın Türkçe destek merkezi: 'Belgeleme' bölümünden kullanıcı kılavuzlarına, 'Sürücüler ve İndirmeler'den sürücülere ulaşıyorsun; ürünleri yazıcı gibi kategorilerden tarıyorsun.",
+  },
+  "Citizen": {
+    url: "https://www.citizen-systems.com/tr/destek/kilavuzlar-ve-verisayfalari",
+    ozet: "Citizen Systems'in Türkçe 'Kılavuzlar ve Veri Sayfaları' sayfası: kategoriyi (POS, etiket, mobil, foto, kiosk) ve yazıcını seçip kılavuzu açıyorsun.",
+  },
+  "Roland DG": {
+    url: "https://downloadcenter.rolanddg.com/",
+    ozet: "Roland DG indirme merkezi: ürün adıyla ya da kategoriden (mürekkep püskürtmeli yazıcılar, kesiciler…) arayıp kullanım kılavuzu, sürücü ve yazılımı indiriyorsun.",
+  },
+  "Fujifilm": {
+    url: "https://www.instax.com/support/",
+    ozet: "Fujifilm instax destek sayfası: telefon fotoğraf yazıcını (instax mini Link 3, mini Link+, SQUARE Link, Link WIDE 2) seçip modelin kılavuz sayfasını açıyorsun.",
   },
   "Dijitsu": {
     cihazOzel: {
