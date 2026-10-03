@@ -83,9 +83,13 @@ export const MARKA_KILAVUZLARI = {
   "Bosch": {
     url: "https://www.bosch-home.com.tr/musteri-hizmetleri/kullanim-kilavuzlari",
     ozet: "Bosch ev aletleri kılavuz arşivi: model numarasını yazınca kullanım kılavuzu ve montaj dokümanı birlikte çıkıyor.",
-    // Bosch ev aletleri sitesi ısıtma/iklimlendirme ürünlerini kapsamıyor (o taraf ayrı şirket).
-    // 27 Eyl 2026: klima kılavuzları bu arşivde (E-Nr yardımcısı "Ev Konforu → Klimalar"); kombi hâlâ ayrı şirkette.
-    haric: ["Kombi / Termosifon"],
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Kombi / Termosifon": {
+        url: "https://bosch-tr-tr-b.boschhc-documents.com/td/",
+        ozet: "Bosch Termoteknik'in Türkçe teknik doküman arşivi: model adını aratıyor ya da doküman tipinden 'Kullanma Kılavuzu'nu ve ürün kategorisinden kombi/elektrikli sıcak su boylerini seçip kılavuzu PDF indiriyorsun.",
+      },
+    },
   },
   "Siemens": {
     url: "https://www.siemens-home.bsh-group.com/tr/musteri-hizmetleri/destek-merkezi/kullanim-kilavuzlari",
@@ -112,10 +116,24 @@ export const MARKA_KILAVUZLARI = {
   "Viessmann": {
     url: "https://www.viessmann.com.tr/tr/hizmetler-ve-destek/kilavuzlar.html",
     ozet: "Viessmann kılavuzlar sayfası: kombi ve ısıtma cihazlarının kullanma/montaj dokümanları.",
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Klima": {
+        url: "https://www.viessmann.com.tr/tr/urunlerimiz/klimalar/vitoclima-ailesi.html",
+        ozet: "Viessmann Vitoclima klima ailesi: serini (100-S, 200-S/HE…) seçiyorsun, seri sayfasının doküman bölümünden kullanım kılavuzunu ve ürün bilgi formunu PDF indiriyorsun.",
+      },
+    },
   },
   "Vaillant": {
     url: "https://www.vaillant.com.tr/musterilerimize-ozel/urunler/urun-kategorileri/kombiler/",
     ozet: "Vaillant müşteri hizmetleri: ürün dokümanları, garanti-bakım bilgisi ve yetkili servis yönlendirmesi.",
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Klima": {
+        url: "https://www.vaillant.com.tr/urunler/klimalar/",
+        ozet: "Vaillant climaVAIR klima listesi: modeli açıp \"Dokümanlar\" bölümünden kullanım kılavuzunu ve montaj kılavuzunu PDF olarak indiriyorsun.",
+      },
+    },
   },
   "Daikin": {
     url: "https://www.daikin.com.tr/daikin-kullanim-kilavuzlari",
@@ -132,6 +150,13 @@ export const MARKA_KILAVUZLARI = {
   "ECA": {
     url: "https://eca.com.tr/isitma-sogutma/kombiler",
     ozet: "ECA'nın resmî montaj ve kullanım kılavuzu arşivi (teknik/profesyonel bölümde yayımlanıyor).",
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Klima": {
+        url: "https://eca.com.tr/isitma-sogutma/klimalar",
+        ozet: "E.C.A. klima kategorisi: duvar tipi, multi ya da hafif ticari seriyi seçip ürün sayfasındaki \"Dökümanlar\" bölümünden kullanım kılavuzunu PDF indiriyorsun.",
+      },
+    },
   },
 
   // ── Süpürge / küçük ev aletleri ───────────────────────────────────────────
@@ -274,6 +299,13 @@ export const MARKA_KILAVUZLARI = {
   "Electrolux": {
     url: "https://www.electrolux.com.tr/support/user-manuals/",
     ozet: "Electrolux Türkiye kullanma kılavuzu indirme sayfası; model ya da PNC numarasıyla kılavuzu ve ürün bilgi fişini birlikte buluyorsun.",
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Klima": {
+        url: "https://www.electrolux.com.tr/vacuums-home-comfort/air-comfort/air-conditioners/",
+        ozet: "Electrolux'un klima sayfası: portatif klima modelini açıp \"Ürüne ait dokümanlar\" altındaki kullanma kılavuzunu PDF indiriyorsun.",
+      },
+    },
   },
   "Zanussi": {
     url: "https://www.zanussi.com.tr/support/user-manuals/",
@@ -337,9 +369,29 @@ export const MARKA_KILAVUZLARI = {
   "Sharp": {
     url: "https://www.sharpconsumer.com/support/",
     ozet: "Sharp'ın ürün destek sayfası: model adı ya da anahtar kelimeyle kullanım kılavuzu, hızlı başlangıç rehberi ve garanti belgesi aranıyor. Sayfa İngilizce.",
-    // Sharp'ın tüketici sitesi buzdolabı/çamaşır/kurutma/bulaşık/fırın kapsamıyor;
-    // yalnız TV + mikrodalga/air fryer (ve hava ürünleri/süpürge) var.
-    haric: ["Buzdolabı", "Çamaşır Makinesi", "Kurutma Makinesi", "Bulaşık Makinesi", "Fırın / Ocak / Aspiratör"],
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Buzdolabı": {
+        url: "https://sharphome.eu/pages/support?view=support",
+        ozet: "Sharp beyaz eşyasının Avrupa destek sayfası: model adını ya da anahtar kelimeyi aratıyor veya kategoriden ürününü seçiyorsun, ürün sayfasından kullanım kılavuzunu PDF indiriyorsun. Sayfa İngilizce, kılavuzlar AB dillerinde.",
+      },
+      "Çamaşır Makinesi": {
+        url: "https://sharphome.eu/pages/support?view=support",
+        ozet: "Sharp beyaz eşyasının Avrupa destek sayfası: model adını ya da anahtar kelimeyi aratıyor veya kategoriden ürününü seçiyorsun, ürün sayfasından kullanım kılavuzunu PDF indiriyorsun. Sayfa İngilizce, kılavuzlar AB dillerinde.",
+      },
+      "Kurutma Makinesi": {
+        url: "https://sharphome.eu/pages/support?view=support",
+        ozet: "Sharp beyaz eşyasının Avrupa destek sayfası: model adını ya da anahtar kelimeyi aratıyor veya kategoriden ürününü seçiyorsun, ürün sayfasından kullanım kılavuzunu PDF indiriyorsun. Sayfa İngilizce, kılavuzlar AB dillerinde.",
+      },
+      "Bulaşık Makinesi": {
+        url: "https://sharphome.eu/pages/support?view=support",
+        ozet: "Sharp beyaz eşyasının Avrupa destek sayfası: model adını ya da anahtar kelimeyi aratıyor veya kategoriden ürününü seçiyorsun, ürün sayfasından kullanım kılavuzunu PDF indiriyorsun. Sayfa İngilizce, kılavuzlar AB dillerinde.",
+      },
+      "Fırın / Ocak / Aspiratör": {
+        url: "https://sharphome.eu/pages/support?view=support",
+        ozet: "Sharp beyaz eşyasının Avrupa destek sayfası: model adını ya da anahtar kelimeyi aratıyor veya kategoriden ürününü seçiyorsun, ürün sayfasından kullanım kılavuzunu PDF indiriyorsun. Sayfa İngilizce, kılavuzlar AB dillerinde.",
+      },
+    },
   },
   // ── Ankastre (fırın / ocak / davlumbaz) ───────────────────────────────────
   "Teka": {
@@ -360,6 +412,17 @@ export const MARKA_KILAVUZLARI = {
   "Kumtel": {
     url: "https://www.kumtel.com/kullanim-kilavuzlari",
     ozet: "Kumtel'in kullanım kılavuzları sayfası: ürünü model koduyla listeden seçip kılavuzunu açıyorsun (ankastre ve küçük ev aletleri aynı listede).",
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Buzdolabı": {
+        url: "https://www.kumtel.com/buzdolabi",
+        ozet: "Kumtel buzdolabı listesi (mini ve çift kapılı): ürünü açıyorsun, sayfadaki \"Kullanım Kılavuzu\" bağlantısından PDF'i indiriyorsun.",
+      },
+      "Bulaşık Makinesi": {
+        url: "https://www.kumtel.com/bulasik-makinesi",
+        ozet: "Kumtel bulaşık makinesi listesi: modeli açıp ürün sayfasındaki \"Kullanım Kılavuzu\" bağlantısından PDF'i indiriyorsun.",
+      },
+    },
   },
 
   // ── Küçük ev aleti (mikrodalga / air fryer tarafı) ────────────────────────
@@ -419,13 +482,28 @@ export const MARKA_KILAVUZLARI = {
   "Toshiba": {
     url: "https://www.toshiba-klima.com.tr/kullanim-kilavuzlari",
     ozet: "Toshiba klimanın Türkiye kılavuz arşivi: duvar tipi, konsol, multi, ticari ve ısı pompası başlıkları altında modelini bulup kılavuzu açıyorsun.",
-    // Bu adres yalnız klima tarafını karşılıyor (Toshiba TV ve bilgisayar tarafı
-    // Türkiye'de ayrı lisans sahiplerinde; onlar için resmî kılavuz sayfası doğrulanamadı).
-    haric: ["Televizyon / Monitör", "Bilgisayar / Yazıcı"],
+    // 3 Eki 2026 (Sprint #144 kılavuz föyü 1. parti, PAZ): cihaza özel adres(ler).
+    cihazOzel: {
+      "Televizyon / Monitör": {
+        url: "https://toshiba-tv.com/tr-tr/support",
+        ozet: "Toshiba TV Türkiye destek sayfası: model numaranı yazıyor ya da ürün türü ve ekran boyutundan modelini seçiyorsun; ürün sayfasındaki 'Destek - İndirmeler' bölümünden kullanım kılavuzunu PDF indiriyorsun.",
+      },
+      "Bilgisayar / Yazıcı": {
+        url: "https://tr.dynabook.com/usermanuals",
+        ozet: "Toshiba dizüstü bilgisayarlarının bugünkü üreticisi Dynabook'un kılavuz sayfası: ürün ailesini (Satellite Pro, Portégé, Tecra), seriyi ve modeli seçip dili belirliyorsun, kullanım kılavuzu indirme listesi çıkıyor.",
+      },
+    },
   },
   "Panasonic": {
     url: "https://support-tr.panasonic.eu/",
     ozet: "Panasonic Türkiye destek merkezi: model numaranı yazınca kullanım kılavuzu, yazılım güncellemesi ve servis merkezi bilgisi tek sayfada çıkıyor.",
+    // 3 Eki 2026 (föy 2. parti): TOUGHBOOK dizüstü/tablet kılavuzları ayrı veritabanında.
+    cihazOzel: {
+      "Bilgisayar / Yazıcı": {
+        url: "https://global-pc-support.connect.panasonic.com/manual",
+        ozet: "Panasonic TOUGHBOOK kılavuz veritabanı: listeden dizüstü ya da tablet modelini (CF-19, CF-31, CF-33, CF-54…) seçip kılavuzunu açıyorsun.",
+      },
+    },
   },
   "Fujitsu": {
     url: "https://www.generalww.com/global/support/downloads/index.html",
@@ -600,8 +678,124 @@ export const MARKA_KILAVUZLARI = {
   // ── 30 Eyl 2026 14:1x, Sprint #144 (PAZ kılavuz föyü eki): 2 yeni marka, adresler koşuda curl 200 ──
   // Dijitsu'da merkezî kılavuz sayfası yok; kılavuz ürün sayfasından iniyor ve bu yalnız
   // buzdolabı + klima ürünlerinin çoğunda var. Genel `url` BİLEREK yok → diğer beş cihazda kayıt çıkmaz.
+  // ── 3 Eki 2026 · Sprint #144 kılavuz föyü 1. parti (PAZ; adresler FE koşusunda 200) ──
+  "Luxell": {
+    url: "https://www.luxell.com.tr/ankastre-urunler",
+    ozet: "Luxell'in ankastre ürünler listesi: fırın, ocak ve davlumbaz modellerinin çoğunun kartında \"Kullanım Kılavuzu\" bağlantısı var, tıklayınca modelin Türkçe kılavuzu PDF olarak açılıyor.",
+    haric: ["Mikrodalga / Air Fryer"],
+  },
+  "Homend": {
+    url: "https://www.homend.com.tr/elektrikli-supurge",
+    ozet: "Homend süpürge listesi: robot, dikey ya da yatay süpürgeni açıyorsun, ürün sayfasındaki \"Kullanım Kılavuzu\" bağlantısı Türkçe kılavuzu PDF olarak açıyor.",
+    cihazOzel: {
+      "Küçük Ev Aletleri": {
+        url: "https://www.homend.com.tr/elektrikli-ev-aletleri",
+        ozet: "Homend elektrikli ev aletleri sayfası: kahve, çay makinesi, kettle, blender gibi kategorilerden ürününü açıyorsun; kullanım kılavuzu ürün sayfasından PDF olarak iniyor (merkezî arama yok).",
+      },
+      "Mikrodalga / Air Fryer": {
+        url: "https://www.homend.com.tr/fritoz",
+        ozet: "Homend fritöz ve airfryer listesi: modelini açıyorsun, ürün açıklamasının sonundaki \"Kullanım Kılavuzu için tıklayınız\" bağlantısı Türkçe kılavuzu PDF olarak açıyor.",
+      },
+    },
+  },
+  "Stilevs": {
+    url: "https://www.stilevs.com/elektrikli-supurge",
+    ozet: "Stilevs elektrikli süpürge listesi: modelini açıyorsun, ürün sayfasındaki \"Kullanma Kılavuzu\" bağlantısından Türkçe kılavuzu PDF olarak indiriyorsun.",
+    cihazOzel: {
+      "Küçük Ev Aletleri": {
+        url: "https://www.stilevs.com/elektrikli-ev-aletleri",
+        ozet: "Stilevs elektrikli ev aletleri sayfası: tost makinesi, Türk kahvesi makinesi, blender, ütü gibi ürünlerden modelini açıyorsun; kullanma kılavuzu ürün sayfasından PDF olarak iniyor.",
+      },
+      "Mikrodalga / Air Fryer": {
+        url: "https://www.stilevs.com/air-fryer",
+        ozet: "Stilevs air fryer listesi: Airtron AF-700 modelini açıyorsun, ürün sayfasındaki \"Kullanma Kılavuzu\" bağlantısı Türkçe kılavuzu PDF olarak indiriyor.",
+      },
+    },
+  },
+  // Yalnız cihaza özel adres: genel kılavuz sayfası yok, kayıt yalnız aşağıdaki cihazlarda üretilir.
+  "Simfer": {
+    cihazOzel: {
+      "Buzdolabı": {
+        url: "https://simfer.com.tr/buzdolabi",
+        ozet: "Simfer'in buzdolabı listesi: modelini açıyorsun, ürün sayfasının altındaki \"Kullanma Kılavuzu\" düğmesiyle kılavuzu PDF olarak indiriyorsun; enerji etiketi ve ürün bilgi formu da aynı yerde.",
+      },
+      "Çamaşır Makinesi": {
+        url: "https://simfer.com.tr/camasir-makinesi",
+        ozet: "Simfer çamaşır makinesi listesi: modeli seçip ürün sayfasındaki \"Kullanma Kılavuzu\" bağlantısından Türkçe-İngilizce kılavuzu PDF olarak indiriyorsun.",
+      },
+      "Klima": {
+        url: "https://simfer.com.tr/klima",
+        ozet: "Simfer split klima listesi: BTU'nu seçip ürün sayfasındaki \"Kullanma Kılavuzu\" ve \"Teknik Bilgi Formu\" PDF'lerini indiriyorsun.",
+      },
+    },
+  },
+  // Yalnız cihaza özel adres: genel kılavuz sayfası yok, kayıt yalnız aşağıdaki cihazlarda üretilir.
+  "Ferre": {
+    cihazOzel: {
+      "Fırın / Ocak / Aspiratör": {
+        url: "https://www.ferre.com.tr/tr/Urunler/Urunler?KategoriId=4",
+        ozet: "Ferre (Femas grubu) ankastre fırın listesi: modeli açıp ürün sayfasındaki \"Kullanım Kılavuzu\" bağlantısından PDF'i indiriyorsun.",
+      },
+    },
+  },
+  // Tolga 3 Eki: "Marka olarak Kiwi markasını da ekle". Tek kılavuz listesi üç cihazı karşılıyor
+  // (süpürge/halı yıkama, küçük ev, 2 mikrodalga-air fryer kılavuzu); PDF'ler static.kiwi.com.tr'de.
+  "Kiwi": {
+    url: "https://kiwi.com.tr/tr/kilavuzlar-1-17-pg",
+    ozet: "Kiwi'nin kılavuz sayfası: ürün adı ya da model koduyla listelenmiş Türkçe kullanım kılavuzlarını PDF olarak indiriyorsun; giriş gerekmiyor.",
+  },
+
+  // ── 3 Eki 2026 · föy 2. parti (PAZ C2) ──
+  "Konica Minolta": {
+    url: "https://www.konicaminolta.com.tr/tr-tr/destek/destek/belgeler",
+    ozet: "Konica Minolta Türkiye belgeler sayfası: ürün tipini (A3/A4 çok fonksiyonlu, üretim baskı vb.) ve modelini seçiyorsun ya da model adını aratıyorsun; sürücü, yazılım ve 'Manuel' başlığı altında kılavuzlar açılıyor.",
+  },
+  "MOVA": {
+    url: "https://tr.mova.tech/pages/user-manuals-and-faqs",
+    ozet: "MOVA Türkiye kılavuz ve SSS sayfası: robot, ıslak-kuru ve kablosuz süpürge gruplarından modelini bulup Türkçe kullanıcı kılavuzu ve garanti belgesi PDF'ini indiriyorsun.",
+  },
+  "Einhell": {
+    url: "https://www.einhell.com.tr/c/supurgeler/",
+    ozet: "Einhell'in akülü dikey ve el süpürgeleri listeleniyor; modelinin sayfasındaki 'Kullanım Kılavuzu (PDF)' bağlantısıyla Türkçe kılavuzu indiriyorsun.",
+  },
+  "Jura": {
+    url: "https://tr.jura.com/tr/destek-servis/urun-destek",
+    ozet: "JURA Türkiye ürün destek sayfası: seriyi (A, E, S, Z, GIGA…) ve modeli seçiyorsun; kahve makinenin Türkçe kullanım kılavuzu PDF olarak açılıyor.",
+  },
+  "Nespresso": {
+    url: "https://www.nespresso.com/tr/tr/machine-assistance",
+    ozet: "Nespresso Türkiye makine yardım sayfası: makinenin adını ya da seri numarasını yazıyor veya görselden seçiyorsun; kullanma kılavuzu PDF'i ve sorun giderme aynı sayfada.",
+  },
+  "KitchenAid": {
+    url: "https://docs.kitchenaid.eu/",
+    ozet: "KitchenAid belge portalı: ticari kodu ya da etiketteki 12 haneli numarayı yazıp kullanım ve bakım kılavuzunu buluyorsun; belge dilini Türkçe seçebiliyorsun.",
+  },
+  "Raks": {
+    url: "https://destek.raks.com.tr/",
+    ozet: "RAKS kullanım kılavuzları sayfası: kategoriden (su sebilleri, vantilatör, ısıtıcı…) ürününü seçiyorsun, ürün sayfasından Türkçe kullanım kılavuzu PDF'ini indiriyorsun.",
+  },
   "Dijitsu": {
     cihazOzel: {
+      "Çamaşır Makinesi": {
+        url: "https://dijitsu.com.tr/camasir-makinesi",
+        ozet: "Dijitsu'nun çamaşır makinesi listesi: modelini açıyorsun, kılavuzu yüklenmiş modellerde ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor; her modelde yok.",
+      },
+      "Bulaşık Makinesi": {
+        url: "https://dijitsu.com.tr/bulasik-makinesi",
+        ozet: "Dijitsu'nun bulaşık makinesi listesi: modelini açıyorsun, kılavuzu yüklenmiş modellerde ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor; her modelde yok.",
+      },
+      "Mikrodalga / Air Fryer": {
+        url: "https://dijitsu.com.tr/mikrodalga-firin",
+        ozet: "Dijitsu'nun mikrodalga fırın listesi: modelini açıyorsun, kılavuzu yüklenmiş modellerde ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor; her modelde yok.",
+      },
+      "Televizyon / Monitör": {
+        url: "https://dijitsu.com.tr/televizyon",
+        ozet: "Dijitsu'nun televizyon listesi: modelini açıyorsun, kılavuzu yüklenmiş modellerde ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor; her modelde yok.",
+      },
+      "Su Sebili / Arıtma": {
+        url: "https://dijitsu.com.tr/su-sebili",
+        ozet: "Dijitsu'nun su sebili listesi: modelini açıyorsun, kılavuzu yüklenmiş modellerde ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor; her modelde yok.",
+      },
       "Buzdolabı": {
         url: "https://dijitsu.com.tr/buzdolabi",
         ozet: "Dijitsu'nun buzdolabı listesi: modelini açıyorsun, ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor.",

@@ -10,7 +10,7 @@ import {
   CIHAZLAR, ICERIK_CIHAZLARI, TESHISSIZ_CIHAZLAR, CIHAZ_MARKALARI, teshisVarMi, cihazSlug,
 } from "./constants.js";
 import { HATA_KODU_KATMANI } from "./hata-kodlari.js";
-import { kilavuzKayitlari } from "./kullanim-kilavuzlari.js";
+import { kilavuzKayitlari, MARKA_KILAVUZLARI } from "./kullanim-kilavuzlari.js";
 
 const oku = (yol) => fs.readFileSync(new URL(yol, import.meta.url), "utf8");
 
@@ -72,6 +72,10 @@ describe("içerik cihazları — teşhissiz kategori", () => {
     const hepsi = kilavuzKayitlari();
     for (const k of hepsi) expect(k.url, `${k.marka} × ${k.cihaz}`).toMatch(/^https:\/\//);
     const dijitsu = hepsi.filter((k) => k.marka === "Dijitsu").map((k) => k.cihaz).sort();
-    expect(dijitsu).toEqual(["Buzdolabı", "Klima"]);
+    // 3 Eki 2026 (föy 1. parti): Dijitsu'ya 5 cihaz daha eklendi; kural aynı — kayıt yalnız
+    // `cihazOzel` anahtarlarında, genel adrese sızan cihaz yok.
+    expect(dijitsu).toEqual(Object.keys(MARKA_KILAVUZLARI.Dijitsu.cihazOzel).sort());
+    expect(dijitsu).toEqual(["Bulaşık Makinesi", "Buzdolabı", "Klima", "Mikrodalga / Air Fryer",
+      "Su Sebili / Arıtma", "Televizyon / Monitör", "Çamaşır Makinesi"]);
   });
 });
