@@ -31,6 +31,8 @@
 //            Hisense · Iiyama · MSI · Gigabyte
 //    · 000 — Electrolux · Zanussi · Acer (Akamai HTTP/2 INTERNAL_ERROR; HTTP/1.1 de kurtarmıyor)
 //    · 401 — Panasonic (Chrome UA'da 401, sade `Mozilla/5.0` ile 200)
+//    · 403 (3 Eki 2026, föy 3. parti) — Miele · Black+Decker · Thermomix (Vorwerk) — tarayıcıyla teyit
+//    · Silverline: curl `/market-selection`'a yönleniyor, tarayıcıda doğru sayfa açılıyor
 //    ⚠️ Iiyama: sayfanın metin dökümü (`get_page_text`) en üstte 19 ülkelik bir liste gösterir —
 //       o liste başlıktaki GİZLİ dil menüsüdür, sayfa değildir. 10 Eyl'de çerezsiz temiz oturumla
 //       açıldı: adres `/tr_tr/support#product-support`'a iner, ilk ekranda Türkçe "DESTEK" başlığı
@@ -104,8 +106,10 @@ export const MARKA_KILAVUZLARI = {
     ozet: "LG kılavuz ve yazılım merkezi: model numarasıyla kullanım kılavuzu, sürücü ve yazılım dosyaları.",
   },
   "Miele": {
-    url: "https://www.miele.com.tr/domestic/bayiservis-21.htm",
-    ozet: "Miele Türkiye bayi ve yetkili servis/destek sayfası; ürün belgeleri ve servis yönlendirmesi buradan.",
+    // 3 Eki 2026 (föy 3. parti): eski adres (domestic/bayiservis-21.htm) servis sayfasıydı; kılavuz
+    // arama sayfasına geçildi — model adı ya da fabrika numarasıyla tüm Miele cihazlarını arıyor.
+    url: "https://www.miele.com.tr/f/tr/manuals-tr.aspx",
+    ozet: "Miele Türkiye kılavuz arama sayfası: cihazının model adını ya da fabrika numarasını yazıyorsun, güncel kullanma kılavuzu ve montaj talimatı indirme bağlantısıyla listeleniyor.",
   },
   "Philips": {
     url: "https://www.philips.com.tr/c-s/support",
@@ -401,6 +405,17 @@ export const MARKA_KILAVUZLARI = {
   "Franke": {
     url: "https://www.franke.com/tr/tr/home-solutions/destek.html",
     ozet: "Franke Türkiye destek merkezi: 'Kılavuzlar' ve 'Kurulum Kılavuzları' bölümlerinden ürün arama sayfasına geçip modelinin dokümanlarını açıyorsun.",
+    // 3 Eki 2026 (föy 3. parti): ankastre buzdolabı ve mikrodalga kategori sayfaları (ürün sayfasında kılavuz PDF).
+    cihazOzel: {
+      "Buzdolabı": {
+        url: "https://www.franke.com/tr/tr/home-solutions/urunler/buzdolaplari.html",
+        ozet: "Franke'nin ankastre buzdolabı listesi: modelini açıyorsun, ürün sayfasındaki \"İndirilenler\" bölümünden \"Kullanım Kılavuzu\"nu PDF olarak indiriyorsun; bağlantı şeması ve enerji etiketi de orada.",
+      },
+      "Mikrodalga / Air Fryer": {
+        url: "https://www.franke.com/tr/tr/home-solutions/urunler/mikrodalga-firinlar.html",
+        ozet: "Franke'nin ankastre mikrodalga fırın listesi: modelini seçip ürün sayfasındaki \"İndirilenler\" bölümünden çok dilli (Türkçe dahil) kullanım kılavuzunu PDF olarak indiriyorsun.",
+      },
+    },
   },
   "Silverline": {
     url: "https://silverline.com/tr-TR/services/product-information-technical-document",
@@ -773,6 +788,42 @@ export const MARKA_KILAVUZLARI = {
   "Raks": {
     url: "https://destek.raks.com.tr/",
     ozet: "RAKS kullanım kılavuzları sayfası: kategoriden (su sebilleri, vantilatör, ısıtıcı…) ürününü seçiyorsun, ürün sayfasından Türkçe kullanım kılavuzu PDF'ini indiriyorsun.",
+  },
+  // ── 3 Eki 2026 · föy 3. parti (PAZ C3a/C3b) ──
+  // Aura = İhlas Ev Aletleri'nin süpürge markası (iea.com.tr).
+  "Aura": {
+    url: "https://www.iea.com.tr/tr/urunler",
+    ozet: "İhlas Ev Aletleri'nin Aura ürün listesi: elektrikli süpürge (Wdry ıslak-kuru) ya da temizlik robotu sayfasını açıyorsun, sayfadaki bağlantıdan Türkçe kullanım kılavuzunu PDF olarak indiriyorsun.",
+  },
+  "Black+Decker": {
+    url: "https://service.blackanddecker.com.tr/BD/TR/tr-TR/",
+    ozet: "BLACK+DECKER Türkiye servis sitesi: ürün numarasını (ör. BHFEV182C) yazıp tipini seçiyorsun, 'Talimat Kılavuzları'ndan dil/bölge seçerek kılavuz PDF'ini açıyorsun.",
+  },
+  "Wiami": {
+    url: "https://www.wiami.com.tr/kilavuz",
+    ozet: "Wiami kullanım kılavuzları sayfası: air fryer (3.5L, 4.5L, 6.5L, 9L Dual…) ya da robot süpürge (FX-7…FX-11) modelini seçip Türkçe kılavuz ve garanti belgesi PDF'ini açıyorsun.",
+  },
+  // Thermomix (Vorwerk): marka adı tüketicinin bildiği ürün adıyla yazıldı; destek Vorwerk Türkiye'de.
+  "Thermomix": {
+    url: "https://support-turkiye.vorwerk.com/hc/tr/search?query=kullan%C4%B1m+k%C4%B1lavuzu",
+    ozet: "Vorwerk Türkiye yardım merkezi: 'kullanım kılavuzu' aramasında Thermomix TM7, TM6 ve TM5 kılavuz makaleleri listeleniyor; makaleden Türkçe kılavuz PDF'ini indiriyorsun.",
+  },
+  "Skytech": {
+    url: "https://skytech.com.tr/kullanim-kilavuzu/",
+    ozet: "Skytech kullanım kılavuzu sayfası: televizyonlar işletim sistemine göre (WebOS, Android, Google TV…) gruplanmış; su sebili modelleri (ST-891, ST-991) de aynı listede. Model numaranı bulup PDF'i indiriyorsun.",
+  },
+  "Tchibo": {
+    url: "https://www.tchibo.com.tr/categories/kahve/kahve-makineleri-ve-hazirlayicilari/cafissimo-kapsullu-kahve-makineleri",
+    ozet: "Tchibo'nun Cafissimo kapsüllü kahve makineleri listesi: makineni açıyorsun, ürün açıklamasının altındaki belgelerden Türkçe kullanım kılavuzu PDF'ini indiriyorsun.",
+  },
+  "Gaggenau": {
+    url: "https://www.gaggenau.com/tr/cihaz-sahipleri-icin/indirilenler",
+    ozet: "Gaggenau Türkiye 'Kullanma kılavuzları' sayfası: cihaz numarasını ya da E-Nr'yi yazıp önerilerden modelini seçiyorsun; açılan servis sayfasında 'Kullanım Kılavuzu' Türkçe PDF olarak iniyor.",
+  },
+  // Excalibur: Casper'ın oyun bilgisayarı markası; kılavuzlar casper.com.tr'de Excalibur kategorisinde.
+  "Excalibur": {
+    url: "https://www.casper.com.tr/kullanim-kilavuzlari?categoryId=5",
+    ozet: "Casper kullanım kılavuzları sayfasında 'Excalibur Dizüstü' kategorisi açık geliyor: seriyi (G650…G920) seçip Türkçe kullanım kılavuzunu 'indir' ile alıyorsun; masaüstü için 'Excalibur Masaüstü' kategorisi var.",
   },
   "Dijitsu": {
     cihazOzel: {

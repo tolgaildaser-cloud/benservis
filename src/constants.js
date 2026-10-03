@@ -177,7 +177,7 @@ const DIJITSU = "Dijitsu";
 export const MARKA_ALIAS = { "Mitsubishi": "Mitsubishi Electric" };
 export const markaCoz = (ad) => MARKA_ALIAS[ad] || ad;
 
-const ANKASTRE_EK = ["Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica", "Teka", "Luxell", "Ferre"];
+const ANKASTRE_EK = ["Franke", "Silverline", "Simfer", "Kumtel", "ECA", "CATA", "Elica", "Teka", "Luxell", "Ferre", "Gaggenau"];
 const YAZICI = ["Brother", "Canon", "Epson", "Kyocera", "Lexmark", "Pantum", "Ricoh", "Xerox"];
 
 // Garanti yönlendirmesi ve teşhis kalitesi için master liste — tüm grupların birleşimi
@@ -187,42 +187,46 @@ export const MARKALAR = [...new Set([
   ...SU_ARITMA, ...BILGISAYAR, ...TELEFON, ...ANKASTRE_EK, ...YAZICI,
   "Balay", "Comfee", "Singer", "Shark", "Tineco", DIJITSU, "De'Longhi", "Krups", "WMF", "Kiwi",
   "Konica Minolta", "MOVA", "Einhell", "Jura", "Nespresso", "KitchenAid", "Raks",
+  "Aura", "Black+Decker", "Wiami", "Thermomix", "Skytech", "Tchibo", "Gaggenau", "Excalibur",
 ])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
   // 27 Eyl 2026 (Sprint #144 kılavuz föyü): ortak diziye DEĞİL, yalnız kılavuzu doğrulanan cihaza eklendi.
   // 3 Eki 2026 (föy 1. parti): Simfer · Kumtel · Teka · Viessmann · Vaillant · ECA · Electrolux · King · Kiwi
   //   yalnız kılavuz adresi doğrulanan cihaz satırına eklendi; Ferre ANKASTRE_EK'e.
-  "Buzdolabı": [...BEYAZ_ESYA, "Onvo", DIJITSU, "Sunny", "Simfer", "Kumtel", "Teka"].sort(trSort),
+  // 3 Eki 2026 (föy 3. parti): Franke · Gaggenau · Wiami · Raks · Kiwi · Aura · Black+Decker · Skytech · Excalibur aynı kuralla.
+  "Buzdolabı": [...BEYAZ_ESYA, "Onvo", DIJITSU, "Sunny", "Simfer", "Kumtel", "Teka", "Franke", "Gaggenau"].sort(trSort),
   "Çamaşır Makinesi": [...BEYAZ_ESYA, DIJITSU, "Simfer"].sort(trSort),
   // Kurutma makinesi markaları çamaşır makinesiyle aynı üretici kümesi (TR piyasasında
   // kurutmayı satan her marka çamaşır da satıyor) — ayrı liste tutmak ikinci kaynak olurdu.
   "Kurutma Makinesi": BEYAZ_ESYA,
-  "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke", DIJITSU, "Kumtel"].sort(trSort),
+  "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke", DIJITSU, "Kumtel", "Gaggenau"].sort(trSort),
   "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK])].sort(trSort),
-  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo", DIJITSU, "Sunny", "Kiwi"])].sort(trSort),
+  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo", DIJITSU, "Sunny", "Kiwi", "Franke", "Wiami"])].sort(trSort),
   // 28 Eyl 2026 (Sprint #144 kılavuz föyü): Altus/Grundig/TCL/Fakir/Airfel yalnız klima satırına.
   "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm", "Altus", "Grundig", "TCL", "Fakir", "Airfel", DIJITSU, "Emas", "Sunny",
-    "Simfer", "Viessmann", "Vaillant", "ECA", "Electrolux"].sort(trSort),
+    "Simfer", "Viessmann", "Vaillant", "ECA", "Electrolux", "Raks", "Kiwi"].sort(trSort),
   "Kombi / Termosifon": [...KOMBI, "Regal", "Vestel", "Daikin", "Ariston", "King"].sort(trSort),
-  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier", "Altus"])].sort(trSort),
+  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier", "Altus", "Skytech"])].sort(trSort),
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot", "Hoover", "Siemens", "Profilo", "AEG", "Onvo",
-    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo", "Sunny", "Kiwi", "MOVA", "Einhell"])].sort(trSort),
-  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus", DIJITSU, "Raks"].sort(trSort),
-  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI, "Konica Minolta", "Panasonic"])].sort(trSort),
+    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo", "Sunny", "Kiwi", "MOVA", "Einhell", "Aura", "Black+Decker", "Wiami"])].sort(trSort),
+  "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus", DIJITSU, "Raks", "Skytech"].sort(trSort),
+  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI, "Konica Minolta", "Panasonic", "Excalibur"])].sort(trSort),
   // YK #149 — İÇERİK kategorisi (teşhis formunda YOK). `KUCUK_EV` dizisi toptan BAĞLANMADI:
   // buraya yalnız kılavuz adresinin küçük ev aletini de karşıladığı PAZ föyünde gösterilen
   // marka girer (30 Eyl 2026: 19 mevcut kayıt + De'Longhi · Krups · WMF + cihaza özel adresle Sinbo).
   // ⛔ Bilerek dışarıda: Dyson · Shark (küçük evleri yalnız saç bakımı; kişisel bakım kapsam
   //    dışı) · Cosori (özeti yalnız air fryer, o cihaz Mikrodalga / Air Fryer'da) ·
-  //    Fantom · Rowenta (adres bu cihazı karşılamıyor) · Arzum · Goldmaster · Philips · Haier ·
-  //    Regal · Miele (kapsam gösterilemedi).
+  //    Fantom · Rowenta (adres bu cihazı karşılamıyor) · Arzum · Goldmaster · Philips ·
+  //    Regal (kapsam gösterilemedi). Haier ve Miele 3 Eki föyüyle eklendi.
   "Küçük Ev Aletleri": [
     "Altus", "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "De'Longhi", "Fakir", "Grundig", "Kenwood",
     "King", "Krups", "Kumtel", "Ninja", "Onvo", "Philips", "Profilo", "Russell Hobbs", "Siemens", "Sinbo",
     "Smeg", "Tefal", "Vestel", "WMF", "Xiaomi", "Kiwi",
     // 3 Eki 2026 (föy 2. parti): kılavuz adresi küçük ev aletlerini karşıladığı doğrulananlar.
     "Electrolux", "Homend", "Jura", "KitchenAid", "Nespresso", "Stilevs",
+    // 3 Eki 2026 (föy 3. parti):
+    "Haier", "Miele", "Thermomix", "Tchibo",
   ],
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
