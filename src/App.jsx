@@ -17,7 +17,7 @@ import GarantiHatirlatici from "./GarantiHatirlatici.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { gelisEtiketi } from "./gelis.js";
-import { kutuOku } from "./ariza-kutusu.js";
+import { kutuOku, kutuOtoBaslar } from "./ariza-kutusu.js";
 import { SEED } from "./tarife-seed.js";
 import { seedEslestir } from "./seed-eslesme.js";
 import { teshisImzasi, teshisKapisi } from "./teshis-onbellek.js";
@@ -35,12 +35,6 @@ const GELIS = (() => {
   try { return gelisEtiketi(window.location.search); } catch { return ""; }
 })();
 
-// YK #160 — blog ARIZA GİRİŞ KUTUSU'ndan gelen metin (adreste değil, sessionStorage'da;
-// tek kullanımlık, yalnız aynı sayfanın köprüsüyle). Sözleşme: src/ariza-kutusu.js.
-const KUTU = (() => {
-  try { return kutuOku(window.sessionStorage, GELIS); } catch { return null; }
-})();
-let kutuTeshisSayildi = false; // "kutudan başlayan teşhis" oturumda bir kez sayılır
 
 
 // YK #67 ② — BAĞLAMLI GİRİŞ. Tamir Merkezi yazısındaki kullanıcı cihazını VE belirtisini
@@ -156,6 +150,21 @@ const ONSECIM = (() => {
   } catch { return { cihaz: "", belirti: "", servis: false }; }
 })();
 
+// YK #160 — blog ARIZA GİRİŞ KUTUSU'ndan gelen metin + marka (adreste değil, sessionStorage'da;
+// tek kullanımlık, yalnız aynı sayfanın köprüsüyle). Sözleşme: src/ariza-kutusu.js.
+// ONSECIM'den SONRA durmalı: marka yalnız köprünün cihazının listesinden kabul edilir.
+const KUTU = (() => {
+  try {
+    const markalar = ONSECIM.cihaz ? markalarForCihaz(ONSECIM.cihaz) : [];
+    return kutuOku(window.sessionStorage, GELIS, Date.now(), 300, markalar);
+  } catch { return null; }
+})();
+let kutuTeshisSayildi = false; // "kutudan başlayan teşhis" oturumda bir kez sayılır
+// 2. adım: cihaz + marka + metin tamsa teşhis ikinci tıklama olmadan başlar — modül başına
+// BİR KEZ (StrictMode'un çift effect'i de, yeniden render da ikinci kez tetikleyemez).
+let kutuOtoBekliyor = kutuOtoBaslar(KUTU, ONSECIM.cihaz);
+let kutuOtoBasladi = false; // ölçüm: `ariza_kutusu_teshis` oto 1/0
+
 // Hangi ekranla acilacak? Tesihs formu artik ana sayfanin ALTINDA degil, kendi
 // adresinde (/teshis). "Yeni sayfa olarak acilmasin" talimati geregi gecis SPA
 // icinde yapilir: sunucuya gidilmez, history.pushState ile adres degisir.
@@ -245,7 +254,7 @@ function normalizeMaliyet(sonuc) {
 export default function App() {
   const [adim, setAdim] = useState("form");
   const [cihaz, setCihaz] = useState(ONSECIM.cihaz); // YK #67 ② — blogdan gelen bağlam
-  const [marka, setMarka] = useState("");
+  const [marka, setMarka] = useState(KUTU?.marka || ""); // YK #160 2. adım — kutulu sayfanın markası
   const [markaDiger, setMarkaDiger] = useState(""); // "Diğer" seçilince elle yazılan marka (veri toplama)
   const efektifMarka = (marka === "Diğer" && markaDiger.trim()) ? markaDiger.trim() : marka;
   const [yas, setYas] = useState("");
@@ -518,7 +527,7 @@ export default function App() {
       track("diagnose_start", { cihaz, marka, gelis: GELIS }); // funnel: kullanıcı teşhis istedi
       if (KUTU && !kutuTeshisSayildi) { // YK #160 ③ — yalnız sayfa slug'ı, metin YOK
         kutuTeshisSayildi = true;
-        try { track("ariza_kutusu_teshis", { sayfa: KUTU.sayfa }); } catch {}
+        try { track("ariza_kutusu_teshis", { sayfa: KUTU.sayfa, oto: kutuOtoBasladi ? 1 : 0 }); } catch {}
       }
 
       const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
@@ -683,6 +692,16 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
       }).catch(() => {});
     }
   };
+
+  // YK #160 2. adım — kutudan cihaz + marka + metin tam geldiyse teşhis kendiliğinden başlar.
+  // Tek tetik modül bayrağı: kayıt okunduğu an silindiği için yenileme/geri tuşu bayrağı
+  // yeniden kuramaz; adres parametreleri (bot/önizleme) hiç kuramaz. Hız sınırı aynen.
+  useEffect(() => {
+    if (!kutuOtoBekliyor) return;
+    kutuOtoBekliyor = false;
+    kutuOtoBasladi = true;
+    tesisEt();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const ozetMetni = () => {
     if (!sonuc) return "";
