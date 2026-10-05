@@ -16,6 +16,7 @@ import { CIHAZLAR, ICERIK_CIHAZLARI, TESHISSIZ_CIHAZLAR, teshisVarMi, cihazSlug,
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
 // ① HATA KODU / BELİRTİ KATMANI (YK #35, 3 Ağu) — kayıtlar tek kaynakta, burada liste tutulmaz.
 import { hataKoduKayitlari, TIP_BASLIK, TIP_ETIKET, HATA_KODU_SIRA } from "../src/hata-kodlari.js";
+import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, KUTU_MARKA, kutuluSlug, kutuKapisi } from "../src/ariza-kutusu-sayfalari.js";
 import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
 
 marked.setOptions({ gfm: true, breaks: false });
@@ -1134,50 +1135,18 @@ const STICKY = (p) => teshissizYazi(p) ? "" :
 // ═══ YK #160 — ARIZA GİRİŞ KUTUSU (4 Eki 2026; Tolga 5 Eki: "dpp ile ilgisi yok") ═══
 // 📏 Neden: 14 günde 14 teşhisin yalnız 1'i blogdan; en çok okunan yazı 67 ziyaretçi, 0 teşhis.
 // Sayfada düğme var, yazı alanı yok. Ana sayfadaki gibi bir kutu, ama DÜZ HTML (React yok).
-// ⛔ KAPSAM: YALNIZ #159'un 10 test sayfası (backlog "SLUG LİSTESİ (#159)"). Başka her sayfanın
+// ⛔ KAPSAM: #159'un 10 test sayfası (backlog "SLUG LİSTESİ (#159)") + YK #161'in (5 Eki) en çok
+//    ziyaret alan 10 mevcut sayfası (ARIZA_KUTUSU_YK161, ayrı liste). Başka her sayfanın
 //    çıktısı BAYT BAYT aynı kalır — CSS ve JS de bu sayfaların İÇİNE basılır, ortak stile girmez.
-//    Bosch Serie 4 yazısı listeye GİRMEZ (#145 ② + #159; aşağıdaki build kapısı durdurur).
-//    Yayılım ayrı YK kararı (50 ziyaretçi + kutudan ≥3 teşhis; okuma 12 + 26 Eki).
+//    #160'taki "Bosch Serie 4 yasak" kapısı #161 ile kalktı. Başka yayılım ayrı YK kararı.
 // 🔒 Metin adres çubuğuna GİRMEZ: metin alanlarının "name"i yok → form yalnız mevcut köprünün
 //    parametrelerini gönderir (cihaz · ariza · k=blog-<slug>; gelis kuralı aynen). Metin JS ile
 //    sessionStorage'a konur, ana sayfa okur ve siler (src/ariza-kutusu.js). JS kapalıysa form
 //    yine çalışır, yalnız metin taşınmaz.
 // 📏 Ölçüm (üç ayrı olay, yalnız sayfa slug'ı — metin YOK): ariza_kutusu_yazdi (kutuya ilk
 //    yazış) · ariza_kutusu_click (düğme) · ariza_kutusu_teshis (App.jsx, kutudan gelen teşhis).
-// Sıra: yayında olan 2 sayfa + PAZ aday listesinin kalan 8'i (yayımlandıkça kutu kendiliğinden
-// çıkar; aday değişirse bu liste de değişir).
-const ARIZA_KUTUSU_SAYFALARI = new Set([
-  "siemens-bulasik-makinesi-sembolleri-ve-anlamlari", // yayında 5 Eki
-  "protherm-kombi-ariza-kodlari", // yayında 5 Eki
-  "samsung-camasir-makinesi-sembolleri-ve-anlamlari",
-  "ariston-kombi-ariza-kodlari",
-  "beko-bulasik-makinesi-sembolleri-ve-anlamlari",
-  "lg-camasir-makinesi-sembolleri-ve-anlamlari",
-  "demirdokum-kombi-sembolleri-ve-anlamlari",
-  "beko-camasir-makinesi-sembolleri-ve-anlamlari",
-  "vestel-camasir-makinesi-sembolleri-ve-anlamlari",
-  "ferroli-kombi-ariza-kodlari",
-]);
-const kutuluYazi = (p) => ARIZA_KUTUSU_SAYFALARI.has(p.slug);
-// YK #160 2. ADIM (Tolga 5 Eki: "marka da seçili gelsin ... tekrar tıklamaya gerek yok").
-// Sayfa TEK MARKAYA aitse kutu markayı da taşır; ana sayfa onu seçili açar ve metin de
-// doluysa teşhisi ikinci tıklama olmadan başlatır (src/ariza-kutusu.js `kutuOtoBaslar`).
-// ⛔ Elle kürasyon, bulanık eşleme YOK. Değer yalnız o cihazın `markalarForCihaz` listesinden;
-//    build kapısı (kopruKapsamDenetimi) listede olmayanı ve slug'da geçmeyen markayı durdurur.
-//    Markası olmayan kutulu sayfa olabilir → form markasız açılır, teşhis başlatılmaz.
-//    Marka adres çubuğuna girmez: metinle aynı sessionStorage kaydında gider.
-const KUTU_MARKA = {
-  "siemens-bulasik-makinesi-sembolleri-ve-anlamlari": "Siemens",
-  "protherm-kombi-ariza-kodlari": "Protherm",
-  "samsung-camasir-makinesi-sembolleri-ve-anlamlari": "Samsung",
-  "ariston-kombi-ariza-kodlari": "Ariston",
-  "beko-bulasik-makinesi-sembolleri-ve-anlamlari": "Beko",
-  "lg-camasir-makinesi-sembolleri-ve-anlamlari": "LG",
-  "demirdokum-kombi-sembolleri-ve-anlamlari": "Demirdöküm",
-  "beko-camasir-makinesi-sembolleri-ve-anlamlari": "Beko",
-  "vestel-camasir-makinesi-sembolleri-ve-anlamlari": "Vestel",
-  "ferroli-kombi-ariza-kodlari": "Ferroli",
-};
+// Listeler + kapı: src/ariza-kutusu-sayfalari.js (test listesi ve YK #161 listesi AYRI).
+const kutuluYazi = (p) => kutuluSlug(p.slug);
 const kutuCihazAdi = (p) => CIHAZLAR.find((c) => cihazSlug(c) === kopruCihazSlug(p)) || "";
 const KUTU_ORNEK = "Örn. ekranda hangi kod ya da simge var, cihaz ne yapıyor?";
 const KUTU_ORNEK_KISA = "Örn. ekranda hangi kod var?"; // 375px'te tam okunur (ölçüldü)
@@ -1696,30 +1665,26 @@ function kopruKapsamDenetimi(posts) {
     console.error("  KOPRU_ARIZA'ya cihazın KENDİ listesinden bir slug yaz, ya da SEMBOL_ISTISNA'ya gerekçesiyle ekle.");
     process.exit(1);
   }
-  // ── YK #160 KUTU KAPISI (build'i durdurur) — kutu yalnız test listesinde, en çok 10 sayfa,
-  // Bosch Serie 4 yazısı ASLA; kutulu sayfa cihaz bağlamı taşımalı (yoksa form vitrine düşer).
-  const kutuHata = [];
-  if (ARIZA_KUTUSU_SAYFALARI.size > 10) kutuHata.push(`liste ${ARIZA_KUTUSU_SAYFALARI.size} sayfa (en çok 10)`);
-  if (ARIZA_KUTUSU_SAYFALARI.has("bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari")) kutuHata.push("Bosch Serie 4 yazısı listede (#145 ②)");
+  // ── YK #160/#161 KUTU KAPISI (build'i durdurur) — test listesi en çok 10 sayfa; YK #161
+  // listesi ayrı ve yalnız mevcut sayfa alır; kutulu sayfa cihaz bağlamı taşımalı (yoksa form
+  // vitrine düşer); marka yalnız cihazın kendi listesinden. Kural: src/ariza-kutusu-sayfalari.js.
   const kutulu = posts.filter(kutuluYazi);
-  for (const p of kutulu) if (!kopruCihazSlug(p)) kutuHata.push(`${p.slug} → cihaz bağlamı yok`);
-  for (const [slug, marka] of Object.entries(KUTU_MARKA)) {
-    if (!ARIZA_KUTUSU_SAYFALARI.has(slug)) kutuHata.push(`KUTU_MARKA: ${slug} test listesinde değil`);
-    else if (!slug.startsWith(`${slugify(marka)}-`)) kutuHata.push(`KUTU_MARKA: ${slug} → "${marka}" slug'da geçmiyor`);
-  }
-  for (const p of kutulu) {
-    const marka = KUTU_MARKA[p.slug];
-    if (!marka) continue;
-    const cihaz = kutuCihazAdi(p);
-    if (!cihaz) kutuHata.push(`${p.slug} → cihaz adı çözülemedi (${kopruCihazSlug(p)})`);
-    else if (!markalarForCihaz(cihaz).includes(marka)) kutuHata.push(`${p.slug} → "${marka}" ${cihaz} marka listesinde yok`);
-  }
+  const kutuHata = kutuKapisi({
+    slugify,
+    yayindakiSluglar: new Set(posts.map((p) => p.slug)),
+    yayindaki: kutulu.map((p) => {
+      const cihazAdi = kutuCihazAdi(p);
+      return { slug: p.slug, cihazSlug: kopruCihazSlug(p), cihazAdi, markalar: cihazAdi ? markalarForCihaz(cihazAdi) : [] };
+    }),
+  });
   if (kutuHata.length) {
-    console.error("[build-blog] ✗ #160 KUTU KAPISI BAŞARISIZ:");
+    console.error("[build-blog] ✗ #160/#161 KUTU KAPISI BAŞARISIZ:");
     for (const h of kutuHata) console.error(`  · ${h}`);
     process.exit(1);
   }
-  console.log(`[build-blog] ✓ #160 arıza kutusu: ${kutulu.length}/${ARIZA_KUTUSU_SAYFALARI.size} test sayfası yayında (${kutulu.map((p) => `${p.slug}${KUTU_MARKA[p.slug] ? ` [${KUTU_MARKA[p.slug]}]` : ""}`).join(", ")}).`);
+  const kutuSatir = (liste) => kutulu.filter((p) => liste.has(p.slug)).map((p) => `${p.slug}${KUTU_MARKA[p.slug] ? ` [${KUTU_MARKA[p.slug]}]` : ""}`);
+  console.log(`[build-blog] ✓ #160 arıza kutusu: ${kutuSatir(ARIZA_KUTUSU_SAYFALARI).length}/${ARIZA_KUTUSU_SAYFALARI.size} test sayfası yayında (${kutuSatir(ARIZA_KUTUSU_SAYFALARI).join(", ")}).`);
+  console.log(`[build-blog] ✓ #161 arıza kutusu: ${kutuSatir(ARIZA_KUTUSU_YK161).length}/${ARIZA_KUTUSU_YK161.size} sayfa (${kutuSatir(ARIZA_KUTUSU_YK161).join(", ")}).`);
   const cihazli = posts.filter((p) => kopruCihazSlug(p));
   const arizali = cihazli.filter((p) => kopruAriza(p));
   console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +
