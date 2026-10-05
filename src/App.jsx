@@ -17,6 +17,7 @@ import GarantiHatirlatici from "./GarantiHatirlatici.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { gelisEtiketi } from "./gelis.js";
+import { kutuOku } from "./ariza-kutusu.js";
 import { SEED } from "./tarife-seed.js";
 import { seedEslestir } from "./seed-eslesme.js";
 import { teshisImzasi, teshisKapisi } from "./teshis-onbellek.js";
@@ -33,6 +34,13 @@ import { NAVY as INK, BG as CREAM, BLUE as AMBER, BG, SURFACE, MUTED, FAINT, HAI
 const GELIS = (() => {
   try { return gelisEtiketi(window.location.search); } catch { return ""; }
 })();
+
+// YK #160 — blog ARIZA GİRİŞ KUTUSU'ndan gelen metin (adreste değil, sessionStorage'da;
+// tek kullanımlık, yalnız aynı sayfanın köprüsüyle). Sözleşme: src/ariza-kutusu.js.
+const KUTU = (() => {
+  try { return kutuOku(window.sessionStorage, GELIS); } catch { return null; }
+})();
+let kutuTeshisSayildi = false; // "kutudan başlayan teşhis" oturumda bir kez sayılır
 
 
 // YK #67 ② — BAĞLAMLI GİRİŞ. Tamir Merkezi yazısındaki kullanıcı cihazını VE belirtisini
@@ -241,7 +249,7 @@ export default function App() {
   const [markaDiger, setMarkaDiger] = useState(""); // "Diğer" seçilince elle yazılan marka (veri toplama)
   const efektifMarka = (marka === "Diğer" && markaDiger.trim()) ? markaDiger.trim() : marka;
   const [yas, setYas] = useState("");
-  const [belirti, setBelirti] = useState(ONSECIM.belirti); // YK #67 ② — blogdan gelen bağlam
+  const [belirti, setBelirti] = useState(KUTU?.metin || ONSECIM.belirti); // YK #67 ② + #160 — blogdan gelen bağlam
   const BELIRTI_MAX = 300; // belirti karakter limiti (maxLength + sayaç + ses kırpma tek kaynak)
   const [sonuc, setSonuc] = useState(null);
   const [hataMsg, setHataMsg] = useState("");
@@ -508,6 +516,10 @@ export default function App() {
       }
       setAdim("loading");
       track("diagnose_start", { cihaz, marka, gelis: GELIS }); // funnel: kullanıcı teşhis istedi
+      if (KUTU && !kutuTeshisSayildi) { // YK #160 ③ — yalnız sayfa slug'ı, metin YOK
+        kutuTeshisSayildi = true;
+        try { track("ariza_kutusu_teshis", { sayfa: KUTU.sayfa }); } catch {}
+      }
 
       const prompt = `Sen Türkiye'deki ev/elektronik cihazları için deneyimli bir arıza teşhis uzmanısın. Kullanıcı teknik bilmiyor, sadece belirti anlatıyor.
 
