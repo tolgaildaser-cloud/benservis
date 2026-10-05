@@ -1131,6 +1131,68 @@ const YAZI_CTA = (p) => {
 const STICKY = (p) => teshissizYazi(p) ? "" :
   `<div class="sticky-bosluk"></div><a class="sticky-kopru" href="${kopruHref(p)}" data-kopru="sticky"${mesajOzniteligi(p)}>${stickyEtiketi(p)}</a>`;
 
+// ═══ YK #160 — ARIZA GİRİŞ KUTUSU (4 Eki 2026; Tolga 5 Eki: "dpp ile ilgisi yok") ═══
+// 📏 Neden: 14 günde 14 teşhisin yalnız 1'i blogdan; en çok okunan yazı 67 ziyaretçi, 0 teşhis.
+// Sayfada düğme var, yazı alanı yok. Ana sayfadaki gibi bir kutu, ama DÜZ HTML (React yok).
+// ⛔ KAPSAM: YALNIZ #159'un 10 test sayfası (backlog "SLUG LİSTESİ (#159)"). Başka her sayfanın
+//    çıktısı BAYT BAYT aynı kalır — CSS ve JS de bu sayfaların İÇİNE basılır, ortak stile girmez.
+//    Bosch Serie 4 yazısı listeye GİRMEZ (#145 ② + #159; aşağıdaki build kapısı durdurur).
+//    Yayılım ayrı YK kararı (50 ziyaretçi + kutudan ≥3 teşhis; okuma 12 + 26 Eki).
+// 🔒 Metin adres çubuğuna GİRMEZ: metin alanlarının "name"i yok → form yalnız mevcut köprünün
+//    parametrelerini gönderir (cihaz · ariza · k=blog-<slug>; gelis kuralı aynen). Metin JS ile
+//    sessionStorage'a konur, ana sayfa okur ve siler (src/ariza-kutusu.js). JS kapalıysa form
+//    yine çalışır, yalnız metin taşınmaz.
+// 📏 Ölçüm (üç ayrı olay, yalnız sayfa slug'ı — metin YOK): ariza_kutusu_yazdi (kutuya ilk
+//    yazış) · ariza_kutusu_click (düğme) · ariza_kutusu_teshis (App.jsx, kutudan gelen teşhis).
+// Sıra: yayında olan 2 sayfa + PAZ aday listesinin kalan 8'i (yayımlandıkça kutu kendiliğinden
+// çıkar; aday değişirse bu liste de değişir).
+const ARIZA_KUTUSU_SAYFALARI = new Set([
+  "siemens-bulasik-makinesi-sembolleri-ve-anlamlari", // yayında 5 Eki
+  "protherm-kombi-ariza-kodlari", // yayında 5 Eki
+  "samsung-camasir-makinesi-sembolleri-ve-anlamlari",
+  "ariston-kombi-ariza-kodlari",
+  "beko-bulasik-makinesi-sembolleri-ve-anlamlari",
+  "lg-camasir-makinesi-sembolleri-ve-anlamlari",
+  "demirdokum-kombi-sembolleri-ve-anlamlari",
+  "beko-camasir-makinesi-sembolleri-ve-anlamlari",
+  "vestel-camasir-makinesi-sembolleri-ve-anlamlari",
+  "ferroli-kombi-ariza-kodlari",
+]);
+const kutuluYazi = (p) => ARIZA_KUTUSU_SAYFALARI.has(p.slug);
+const KUTU_ORNEK = "Örn. ekranda hangi kod ya da simge var, cihaz ne yapıyor?";
+const KUTU_ORNEK_KISA = "Örn. ekranda hangi kod var?"; // 375px'te tam okunur (ölçüldü)
+const kutuGizli = (p) =>
+  [...new URLSearchParams(kopruHref(p).slice(2))]
+    .map(([ad, v]) => `<input type="hidden" name="${ad}" value="${esc(v)}">`).join("");
+const ARIZA_KUTUSU = (p, yer) => {
+  if (!kutuluYazi(p)) return "";
+  const id = `akutu-${yer}`;
+  const alan = yer === "ust"
+    ? `<div class="akutu-sira"><input id="${id}" type="text" maxlength="300" autocomplete="off" placeholder="${KUTU_ORNEK_KISA}" data-akutu-metin><button type="submit">Ücretsiz teşhis</button></div>`
+    : `<textarea id="${id}" rows="3" maxlength="300" placeholder="${KUTU_ORNEK}" data-akutu-metin></textarea><button type="submit">Ücretsiz teşhis →</button><p class="akutu-not">Kayıt gerekmez · yazdığın yalnız teşhis formuna taşınır</p>`;
+  const baslik = yer === "ust" ? "Arızanı yaz, ücretsiz teşhis et" : "Cihazında tam olarak ne oluyor? Yaz, teşhis edelim";
+  return `<form class="akutu akutu-${yer}" action="/" method="get" data-yer="${yer}">` +
+    `<label for="${id}">${baslik}</label>${alan}${kutuGizli(p)}</form>`;
+};
+const ARIZA_KUTUSU_EK = (p) => !kutuluYazi(p) ? "" :
+  `<style>.akutu{margin:18px 0 22px;padding:14px 16px;background:#EFF4FF;border:1px solid ${T.HAIR};border-left:3px solid ${T.BLUE};border-radius:12px}` +
+  `.akutu-alt{margin:32px 0 8px}` +
+  `.akutu label{display:block;font-weight:700;color:${T.NAVY};margin:0 0 9px;font-size:16px;line-height:1.3}` +
+  `.akutu-sira{display:flex;gap:8px;flex-wrap:wrap}` +
+  `.akutu input,.akutu textarea{flex:1 1 220px;min-width:0;box-sizing:border-box;font:inherit;font-size:16px;padding:11px 12px;border:1.5px solid #CBD5E1;border-radius:10px;background:#fff;color:${T.NAVY}}` +
+  `.akutu textarea{display:block;width:100%;resize:vertical;margin:0 0 10px}` +
+  `.akutu input:focus,.akutu textarea:focus{outline:2px solid ${T.BLUE};outline-offset:1px;border-color:${T.BLUE}}` +
+  `.akutu button{flex:0 0 auto;padding:12px 18px;border:0;border-radius:12px;background:${T.BLUE};color:#fff;font:inherit;font-weight:700;font-size:15.5px;line-height:1.25;cursor:pointer;box-shadow:0 1px 3px rgba(37,99,235,.28)}` +
+  `.akutu button:hover{background:#1D4ED8}.akutu-alt button{width:100%}` +
+  `.akutu-not{margin:8px 0 0;font-size:13px;color:#64748B}</style>` +
+  `<script>(function(){var S=${JSON.stringify(p.slug)},A="bs_ariza_kutusu",y={};` +
+  `function ev(n,d){try{window.va&&window.va("event",{name:n,data:d});}catch(_){}}` +
+  `document.querySelectorAll("form.akutu").forEach(function(f){var m=f.querySelector("[data-akutu-metin]"),yer=f.getAttribute("data-yer");if(!m)return;` +
+  `m.addEventListener("input",function(){if(!y[yer]&&m.value.trim()){y[yer]=1;ev("ariza_kutusu_yazdi",{sayfa:S,yer:yer});}});` +
+  `f.addEventListener("submit",function(){var t=m.value.trim().slice(0,300);` +
+  `try{sessionStorage.setItem(A,JSON.stringify({m:t,s:S,t:Date.now()}));}catch(_){}` +
+  `ev("ariza_kutusu_click",{sayfa:S,yer:yer,dolu:t?"1":"0"});});});})();</script>`;
+
 // PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
 // Pasif blok: ana CTA'nın altında, yazının akışını kesmez; uygulama ana ekrandan açıldıysa
 // CSS `display-mode: standalone` sorgusuyla gizlenir (statik sayfa, JS gerekmiyor).
@@ -1614,6 +1676,19 @@ function kopruKapsamDenetimi(posts) {
     console.error("  KOPRU_ARIZA'ya cihazın KENDİ listesinden bir slug yaz, ya da SEMBOL_ISTISNA'ya gerekçesiyle ekle.");
     process.exit(1);
   }
+  // ── YK #160 KUTU KAPISI (build'i durdurur) — kutu yalnız test listesinde, en çok 10 sayfa,
+  // Bosch Serie 4 yazısı ASLA; kutulu sayfa cihaz bağlamı taşımalı (yoksa form vitrine düşer).
+  const kutuHata = [];
+  if (ARIZA_KUTUSU_SAYFALARI.size > 10) kutuHata.push(`liste ${ARIZA_KUTUSU_SAYFALARI.size} sayfa (en çok 10)`);
+  if (ARIZA_KUTUSU_SAYFALARI.has("bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari")) kutuHata.push("Bosch Serie 4 yazısı listede (#145 ②)");
+  const kutulu = posts.filter(kutuluYazi);
+  for (const p of kutulu) if (!kopruCihazSlug(p)) kutuHata.push(`${p.slug} → cihaz bağlamı yok`);
+  if (kutuHata.length) {
+    console.error("[build-blog] ✗ #160 KUTU KAPISI BAŞARISIZ:");
+    for (const h of kutuHata) console.error(`  · ${h}`);
+    process.exit(1);
+  }
+  console.log(`[build-blog] ✓ #160 arıza kutusu: ${kutulu.length}/${ARIZA_KUTUSU_SAYFALARI.size} test sayfası yayında (${kutulu.map((p) => p.slug).join(", ")}).`);
   const cihazli = posts.filter((p) => kopruCihazSlug(p));
   const arizali = cihazli.filter((p) => kopruAriza(p));
   console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +
@@ -1999,7 +2074,7 @@ for (const p of posts) {
   // — Tolga'nın güç metriği (servise ulaşma) ilk ekranda karar alabilsin.
   // SIRA: ilgili yazılar CTA'nın ALTINDA. Birincil eylem (teşhis/servis) metnin hemen
   // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
-  const body = `<article>${yaziBasi(p)}${videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p)}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}`;
+  const body = `<article>${yaziBasi(p)}${ARIZA_KUTUSU(p, "ust")}${videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
