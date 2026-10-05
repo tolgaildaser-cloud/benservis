@@ -18,6 +18,7 @@ import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
 import { track } from "@vercel/analytics";
 import { gelisEtiketi } from "./gelis.js";
 import { kutuOku, kutuOtoBaslar } from "./ariza-kutusu.js";
+import { maliyetDurumu, MALIYET_YOK_METNI } from "./maliyet-durumu.js";
 import { SEED } from "./tarife-seed.js";
 import { seedEslestir } from "./seed-eslesme.js";
 import { teshisImzasi, teshisKapisi } from "./teshis-onbellek.js";
@@ -708,9 +709,10 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
     const ar = (sonuc.olasiArizalar || []).map((a) => `• ${a.ad} (%${a.olasilik})`).join("\n");
     const m = sonuc.tahminiMaliyet || {};
     const etiket = { tamir: "Tamir ettir", yenisi: "Yenisini al", belirsiz: "Belirsiz", gerek_yok: "Tamir gerekmez" };
-    const maliyetSatiri = sonuc.kararOnerisi === "gerek_yok" || m.min == null
+    const md = maliyetDurumu(sonuc);
+    const maliyetSatiri = md === "gerek_yok"
       ? "Tahmini maliyet: Tamir gerekmez"
-      : `Tahmini maliyet: ${m.min}-${m.max} TL`;
+      : md === "yok" ? `Tahmini maliyet: ${MALIYET_YOK_METNI}` : `Tahmini maliyet: ${m.min}-${m.max} TL`;
     return `Arızam Ne? — Teşhis\nCihaz: ${cihaz}${efektifMarka ? " / " + efektifMarka : ""}\nBelirti: ${belirti}\n\nOlası arızalar:\n${ar}\n\n${maliyetSatiri}\nKarar: ${etiket[sonuc.kararOnerisi] || sonuc.kararOnerisi} — ${sonuc.kararAciklama}\nAciliyet: ${sonuc.aciliyet}${sonuc.aciliyetNot ? " — " + sonuc.aciliyetNot : ""}`;
   };
 
@@ -795,12 +797,18 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               <div style={s.cardSplit}>
                 <div style={{ flex: 1.2 }}>
                   <div style={s.secHead}>Tahmini maliyet</div>
-                  {sonuc.kararOnerisi === "gerek_yok" || sonuc.tahminiMaliyet?.min == null ? (
+                  {/* "Tamir gerekmez" yalnız kararOnerisi = gerek_yok iken; maliyet boşsa hüküm yok (5 Eki) */}
+                  {maliyetDurumu(sonuc) === "gerek_yok" ? (
                     <div style={{ ...s.fiyat, fontSize: 23, lineHeight: 1.15 }}>Tamir gerekmez</div>
+                  ) : maliyetDurumu(sonuc) === "yok" ? (
+                    <>
+                      <div style={{ ...s.fiyat, fontSize: 18, lineHeight: 1.25 }}>{MALIYET_YOK_METNI}</div>
+                      <button style={s.linkBtn} onClick={detayEkle}>← Belirtiyi düzenle</button>
+                    </>
                   ) : (
                     <div style={s.fiyat}>{sonuc.tahminiMaliyet?.min?.toLocaleString("tr-TR")}–{sonuc.tahminiMaliyet?.max?.toLocaleString("tr-TR")} <span style={s.tl}>TL</span></div>
                   )}
-                  <p style={s.fiyatNot}>En olası arızaya göre tahmini tutar (parça + işçilik dahil); kesin fiyat yerinde tespitte netleşir.</p>
+                  {maliyetDurumu(sonuc) !== "yok" && <p style={s.fiyatNot}>En olası arızaya göre tahmini tutar (parça + işçilik dahil); kesin fiyat yerinde tespitte netleşir.</p>}
                 </div>
                 <div style={s.divider} />
                 <div style={{ flex: 1 }}>
