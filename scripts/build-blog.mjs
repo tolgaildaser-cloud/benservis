@@ -10,7 +10,7 @@ import * as T from "../src/theme.js";
 import { REHBERLER } from "../src/onarim-rehberleri.js";
 // TEK KAYNAK (YK #32, 2 Ağu — Tolga düzeltmesi): /tamir/ kategorileri elle yazılmaz,
 // uygulamanın resmî cihaz listesinden türetilir. Cihaz grubu eklenip çıktığında hub uyar.
-import { CIHAZLAR, ICERIK_CIHAZLARI, TESHISSIZ_CIHAZLAR, teshisVarMi, cihazSlug } from "../src/constants.js";
+import { CIHAZLAR, ICERIK_CIHAZLARI, TESHISSIZ_CIHAZLAR, teshisVarMi, cihazSlug, markalarForCihaz } from "../src/constants.js";
 // /kilavuzlar/ verisi de TEK KAYNAKTAN gelir (YK #34): marka→resmî kılavuz adresi
 // `src/kullanim-kilavuzlari.js`'te, cihaz→marka eşleşmesi `CIHAZ_MARKALARI`'nda. Burada liste tutulmaz.
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
@@ -1159,6 +1159,26 @@ const ARIZA_KUTUSU_SAYFALARI = new Set([
   "ferroli-kombi-ariza-kodlari",
 ]);
 const kutuluYazi = (p) => ARIZA_KUTUSU_SAYFALARI.has(p.slug);
+// YK #160 2. ADIM (Tolga 5 Eki: "marka da seçili gelsin ... tekrar tıklamaya gerek yok").
+// Sayfa TEK MARKAYA aitse kutu markayı da taşır; ana sayfa onu seçili açar ve metin de
+// doluysa teşhisi ikinci tıklama olmadan başlatır (src/ariza-kutusu.js `kutuOtoBaslar`).
+// ⛔ Elle kürasyon, bulanık eşleme YOK. Değer yalnız o cihazın `markalarForCihaz` listesinden;
+//    build kapısı (kopruKapsamDenetimi) listede olmayanı ve slug'da geçmeyen markayı durdurur.
+//    Markası olmayan kutulu sayfa olabilir → form markasız açılır, teşhis başlatılmaz.
+//    Marka adres çubuğuna girmez: metinle aynı sessionStorage kaydında gider.
+const KUTU_MARKA = {
+  "siemens-bulasik-makinesi-sembolleri-ve-anlamlari": "Siemens",
+  "protherm-kombi-ariza-kodlari": "Protherm",
+  "samsung-camasir-makinesi-sembolleri-ve-anlamlari": "Samsung",
+  "ariston-kombi-ariza-kodlari": "Ariston",
+  "beko-bulasik-makinesi-sembolleri-ve-anlamlari": "Beko",
+  "lg-camasir-makinesi-sembolleri-ve-anlamlari": "LG",
+  "demirdokum-kombi-sembolleri-ve-anlamlari": "Demirdöküm",
+  "beko-camasir-makinesi-sembolleri-ve-anlamlari": "Beko",
+  "vestel-camasir-makinesi-sembolleri-ve-anlamlari": "Vestel",
+  "ferroli-kombi-ariza-kodlari": "Ferroli",
+};
+const kutuCihazAdi = (p) => CIHAZLAR.find((c) => cihazSlug(c) === kopruCihazSlug(p)) || "";
 const KUTU_ORNEK = "Örn. ekranda hangi kod ya da simge var, cihaz ne yapıyor?";
 const KUTU_ORNEK_KISA = "Örn. ekranda hangi kod var?"; // 375px'te tam okunur (ölçüldü)
 const kutuGizli = (p) =>
@@ -1185,12 +1205,12 @@ const ARIZA_KUTUSU_EK = (p) => !kutuluYazi(p) ? "" :
   `.akutu button{flex:0 0 auto;padding:12px 18px;border:0;border-radius:12px;background:${T.BLUE};color:#fff;font:inherit;font-weight:700;font-size:15.5px;line-height:1.25;cursor:pointer;box-shadow:0 1px 3px rgba(37,99,235,.28)}` +
   `.akutu button:hover{background:#1D4ED8}.akutu-alt button{width:100%}` +
   `.akutu-not{margin:8px 0 0;font-size:13px;color:#64748B}</style>` +
-  `<script>(function(){var S=${JSON.stringify(p.slug)},A="bs_ariza_kutusu",y={};` +
+  `<script>(function(){var S=${JSON.stringify(p.slug)},B=${JSON.stringify(KUTU_MARKA[p.slug] || "")},A="bs_ariza_kutusu",y={};` +
   `function ev(n,d){try{window.va&&window.va("event",{name:n,data:d});}catch(_){}}` +
   `document.querySelectorAll("form.akutu").forEach(function(f){var m=f.querySelector("[data-akutu-metin]"),yer=f.getAttribute("data-yer");if(!m)return;` +
   `m.addEventListener("input",function(){if(!y[yer]&&m.value.trim()){y[yer]=1;ev("ariza_kutusu_yazdi",{sayfa:S,yer:yer});}});` +
   `f.addEventListener("submit",function(){var t=m.value.trim().slice(0,300);` +
-  `try{sessionStorage.setItem(A,JSON.stringify({m:t,s:S,t:Date.now()}));}catch(_){}` +
+  `try{sessionStorage.setItem(A,JSON.stringify({m:t,s:S,b:B,t:Date.now()}));}catch(_){}` +
   `ev("ariza_kutusu_click",{sayfa:S,yer:yer,dolu:t?"1":"0"});});});})();</script>`;
 
 // PWA duyurusunun blog ayağı (YK #26 adım 5/5). Metin birebir duyuru paketi bölüm 1'de.
@@ -1683,12 +1703,23 @@ function kopruKapsamDenetimi(posts) {
   if (ARIZA_KUTUSU_SAYFALARI.has("bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari")) kutuHata.push("Bosch Serie 4 yazısı listede (#145 ②)");
   const kutulu = posts.filter(kutuluYazi);
   for (const p of kutulu) if (!kopruCihazSlug(p)) kutuHata.push(`${p.slug} → cihaz bağlamı yok`);
+  for (const [slug, marka] of Object.entries(KUTU_MARKA)) {
+    if (!ARIZA_KUTUSU_SAYFALARI.has(slug)) kutuHata.push(`KUTU_MARKA: ${slug} test listesinde değil`);
+    else if (!slug.startsWith(`${slugify(marka)}-`)) kutuHata.push(`KUTU_MARKA: ${slug} → "${marka}" slug'da geçmiyor`);
+  }
+  for (const p of kutulu) {
+    const marka = KUTU_MARKA[p.slug];
+    if (!marka) continue;
+    const cihaz = kutuCihazAdi(p);
+    if (!cihaz) kutuHata.push(`${p.slug} → cihaz adı çözülemedi (${kopruCihazSlug(p)})`);
+    else if (!markalarForCihaz(cihaz).includes(marka)) kutuHata.push(`${p.slug} → "${marka}" ${cihaz} marka listesinde yok`);
+  }
   if (kutuHata.length) {
     console.error("[build-blog] ✗ #160 KUTU KAPISI BAŞARISIZ:");
     for (const h of kutuHata) console.error(`  · ${h}`);
     process.exit(1);
   }
-  console.log(`[build-blog] ✓ #160 arıza kutusu: ${kutulu.length}/${ARIZA_KUTUSU_SAYFALARI.size} test sayfası yayında (${kutulu.map((p) => p.slug).join(", ")}).`);
+  console.log(`[build-blog] ✓ #160 arıza kutusu: ${kutulu.length}/${ARIZA_KUTUSU_SAYFALARI.size} test sayfası yayında (${kutulu.map((p) => `${p.slug}${KUTU_MARKA[p.slug] ? ` [${KUTU_MARKA[p.slug]}]` : ""}`).join(", ")}).`);
   const cihazli = posts.filter((p) => kopruCihazSlug(p));
   const arizali = cihazli.filter((p) => kopruAriza(p));
   console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +
