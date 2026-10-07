@@ -676,6 +676,7 @@ const KOPRU_ARIZA = {
   "bosch-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "lg-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "samsung-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "samsung-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "camasir-makinesi-isik-yanip-sonuyor": "hata-kodu-veriyor", // yazının kendi konusu: yanıp sönme = hata kodu
   // ── KURUTMA MAKİNESİ (3 Eyl 2026) ────────────────────────────────────────────────
   // Cihaz köprüsü bugün açıldığı için belirti eşleşmesi de ilk kez yazılabildi. Beşi de
@@ -706,6 +707,7 @@ const KOPRU_ARIZA = {
   "baymak-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "vaillant-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "protherm-kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "ferroli-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "demirdokum-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "firin-isinmiyor": "isinmiyor",
   "ocak-atesleme-yapmiyor": "ocak-gozu-yanmiyor",
