@@ -675,6 +675,7 @@ const KOPRU_ARIZA = {
   "arcelik-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "bosch-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "lg-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "lg-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "samsung-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "samsung-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "camasir-makinesi-isik-yanip-sonuyor": "hata-kodu-veriyor", // yazının kendi konusu: yanıp sönme = hata kodu
@@ -760,6 +761,7 @@ const KOPRU_ARIZA = {
   "siemens-bulasik-makinesi-e15-hatasi": "hata-kodu-veriyor",
   "vestel-bulasik-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "beko-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "beko-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "beko-camasir-makinesi-e10-hatasi": "hata-kodu-veriyor",
   "bosch-camasir-makinesi-e18-hatasi": "hata-kodu-veriyor",
   "grundig-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
