@@ -38,7 +38,7 @@ steps:
   - "Fişi tak ve kısa bir programla dene. Kod tekrar geliyorsa kapı kilidi, su giriş valfi, tahliye pompası ve elektronik kart tarafı servise aittir."
 faq:
   - q: "Vestel çamaşır makinesi E03 hatası ne demek?"
-    a: "E03, makinenin içindeki suyu boşaltamadığını gösteren tahliye hatasıdır. En sık sebep tüy ve yabancı cisimle tıkanmış pompa filtresi ya da bükülmüş/tıkalı tahliye hortumudur. Filtre ve hortum temizliğiyle çoğu zaman evde, ücretsiz çözülür; bunlar temizken tekrar ediyorsa pompa tarafı servis işidir."
+    a: "Vestel'in kılavuzuna göre E03 üç şeyden birini gösterir: pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı. Kılavuzun evde önerdiği adım pompa filtresinin temizlenmesi; sorun sürerse yetkili servise başvurulur. Tahliye hortumunun bükülmediğine bakmak da zararsız bir kontrol. Filtre ve hortum temizken kod tekrar ediyorsa pompa tarafı servis işidir."
   - q: "Vestel E01 hatası neden çıkar?"
     a: "Vestel'in kendi ifadesi tek cümle: makinenizin kapısı açık kalmış. Makine güvenlik gereği başlamaz. Çoğu zaman kapağa sıkışan bir çamaşır ucu ya da tam kapanmamış kapak suçludur; kapağı 'klik' sesiyle tam kapatmak genelde yeterlidir. Kapak tam kapandığı hâlde kod sürüyorsa kilit mekanizması servislik olabilir — ama bunu kod söylemiyor, biz eleme yoluyla varıyoruz."
   - q: "Vestel çamaşır makinesinde hata kodu nasıl sıfırlanır?"
@@ -123,9 +123,9 @@ Ardından **tahliye hortumunu** kontrol et: makinenin arkasında bükülmüş, e
 
 Filtre ve hortum temizken E03 tekrar ediyorsa sıra **tahliye pompasına** gelir: pervanesi kırılmış ya da motoru zayıflamış olabilir. Pompa kontrolü ve değişimi tablanın altına inmeyi gerektirir — orası servisin alanıdır.
 
-## Kodun listede yok mu? (E04 ve sonrası)
+## Kodun listede yok mu? (E05 ve sonrası)
 
-Vestel'in farklı nesillerinde `E04` ve üzeri kodlar **aynı numarayla farklı arızaları** gösterebiliyor. Bu yüzden burada anlamı yaygın biçimde sabit olan kodlar açıklandı; gerisi için tek güvenilir kaynak cihazının kendi kullanım kılavuzu ve model bazlı teşhistir. Ekrandaki kodu ve makinenin model bilgisini Benservis'e yaz; modeline göre olası arızayı ve tahmini maliyet bandını ücretsiz gör.
+Vestel'in kullanım kılavuzlarındaki otomatik arıza uyarıları tablosu E01 ile E04 arasındaki dört koddan oluşuyor; E05 ve üzeri bir kod bu tabloda yok. Ekranında başka bir kod görüyorsan tek güvenilir kaynak cihazının kendi kullanım kılavuzu ve model bazlı teşhistir. Ekrandaki kodu ve makinenin model bilgisini Benservis'e yaz; modeline göre olası arızayı ve tahmini maliyet bandını ücretsiz gör.
 
 ## Hangi noktadan sonra servis işi?
 

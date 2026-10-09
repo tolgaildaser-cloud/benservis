@@ -91,7 +91,7 @@ E4 dışındakiler sensör bildirimidir; E4 ise karlanmayı çözen ısıtıcı 
 
 ## Vestel modellerinde SR ve LV uyarıları
 
-Vestel'in no-frost buzdolabı kullanma kılavuzlarında numaralı bir arıza kodu tablosu yok. Kılavuzun "kontrol uyarıları" bölümünde iki kısaltma geçiyor; ikisi de panelde, dondurucu ve soğutucu bölme ayar göstergelerinde beliriyor.
+Vestel'in güncel no-frost buzdolabı kılavuzlarında (NF52001, NFK52002, NFK64012) E01 ile E11 arasında numaralı bir arıza kodu tablosu var; [E09](/blog/vestel-buzdolabi-e09-hatasi/), [E10](/blog/vestel-buzdolabi-e10-hatasi/) ve [E11](/blog/vestel-buzdolabi-e11-hatasi/)'in ayrıntısı kendi sayfalarında. Bazı modellerin kılavuzlarında ise numara yerine "kontrol uyarıları" bölümünde iki kısaltma geçiyor; ikisi de panelde, dondurucu ve soğutucu bölme ayar göstergelerinde beliriyor.
 
 **SR — arıza uyarısı.** Cihazın bir ya da birkaç parçası görevini yapamadığında veya soğutma sisteminde bir sorun olduğunda kırmızı yanar ve sesli alarm verir. Kılavuzun buradaki tavsiyesi tek cümledir: en kısa zamanda servise haber ver. Alarm düğmesine basmak yalnızca sesi susturur; kırmızı uyarı, sorun giderilene kadar yanmaya devam eder.
 
