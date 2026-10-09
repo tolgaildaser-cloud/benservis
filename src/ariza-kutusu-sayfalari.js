@@ -15,7 +15,7 @@ export const ARIZA_KUTUSU_SAYFALARI = new Set([
   "siemens-bulasik-makinesi-sembolleri-ve-anlamlari", // yayında 5 Eki
   "protherm-kombi-ariza-kodlari", // yayında 5 Eki
   "samsung-camasir-makinesi-sembolleri-ve-anlamlari",
-  "ariston-kombi-ariza-kodlari",
+  "baymak-kombi-sembolleri-ve-anlamlari", // PAZ 9 Eki: Ariston adayı yerine (Ariston yayınlanmadı)
   "beko-bulasik-makinesi-sembolleri-ve-anlamlari",
   "lg-camasir-makinesi-sembolleri-ve-anlamlari",
   "demirdokum-kombi-sembolleri-ve-anlamlari",
@@ -49,7 +49,7 @@ export const KUTU_MARKA = {
   "siemens-bulasik-makinesi-sembolleri-ve-anlamlari": "Siemens",
   "protherm-kombi-ariza-kodlari": "Protherm",
   "samsung-camasir-makinesi-sembolleri-ve-anlamlari": "Samsung",
-  "ariston-kombi-ariza-kodlari": "Ariston",
+  "baymak-kombi-sembolleri-ve-anlamlari": "Baymak",
   "beko-bulasik-makinesi-sembolleri-ve-anlamlari": "Beko",
   "lg-camasir-makinesi-sembolleri-ve-anlamlari": "LG",
   "demirdokum-kombi-sembolleri-ve-anlamlari": "Demirdöküm",
