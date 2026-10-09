@@ -2,7 +2,7 @@
 title: "Bosch buzdolabı sembolleri ve anlamları"
 description: "Bosch No Frost buzdolabı panelindeki super, eco, holiday, fresh, alarm ve kilit işaretleri; Serie 4 ve Serie 6 kılavuzlarındaki karşılıklarıyla."
 slug: "bosch-buzdolabi-sembolleri-ve-anlamlari"
-date: "2026-10-12"
+date: "2026-10-09"
 category: "Buzdolabı"
 faq:
   - q: "Bosch buzdolabında super yazısı ne demek?"

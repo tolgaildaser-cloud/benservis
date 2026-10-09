@@ -2,7 +2,7 @@
 title: "Vestel buzdolabı hata kodları: E01'den E11'e kontrol uyarıları"
 description: "Vestel no-frost buzdolabında E01-E03, E06-E07 sensör, E08 düşük voltaj, E09-E11 sıcaklık uyarısı. Karşılıklar ve adımlar Vestel'in kendi kılavuzlarından."
 slug: "vestel-buzdolabi-hata-kodlari"
-date: "2026-10-12"
+date: "2026-10-09"
 category: "Buzdolabı"
 guide:
   difficulty: "Kolay"
