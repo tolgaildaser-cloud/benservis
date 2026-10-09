@@ -7,7 +7,8 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
 
-  const durum    = req.query.durum || "aktif";
+  // YK #165: 'demo' kayıtlar public uçtan okunamaz — yalnız aktif | satildi.
+  const durum    = req.query.durum === "satildi" ? "satildi" : "aktif";
   const limit    = Math.min(parseInt(req.query.limit)  || 20, 50);
   const offset   = parseInt(req.query.offset) || 0;
   const kategori = req.query.kategori || null;
