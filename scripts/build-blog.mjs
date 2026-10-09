@@ -822,6 +822,8 @@ const KOPRU_ARIZA = {
   "arcelik-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
   "beko-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
   "bosch-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
+  "bosch-buzdolabi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "vestel-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
   "lg-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
   "samsung-buzdolabi-hata-kodlari": "hata-kodu-veriyor",
   "klima-ariza-kodlari": "hata-kodu-veriyor",
