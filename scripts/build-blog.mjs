@@ -706,6 +706,7 @@ const KOPRU_ARIZA = {
   "petekler-isinmiyor": "petekler-isinmiyor",
   "kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "baymak-kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "baymak-kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
   "vaillant-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "protherm-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "ferroli-kombi-ariza-kodlari": "ariza-kodu-veriyor",
@@ -768,6 +769,7 @@ const KOPRU_ARIZA = {
   "profilo-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "siemens-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
   "vestel-camasir-makinesi-hata-kodlari": "hata-kodu-veriyor",
+  "vestel-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "vestel-camasir-makinesi-e03-hatasi": "hata-kodu-veriyor",
   // ── SEMBOL YAZILARI (Tolga, 3 Eyl: "sembolleri yazısına da belirti ekle") ──────────
   // ⚖️ BU BİR HÜKÜM DEĞİŞİKLİĞİ, kayda geçiyor. FE bunları bilerek boş bırakmıştı:
