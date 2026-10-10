@@ -20,6 +20,7 @@ const ServisMagaza  = lazy(() => import("./ServisMagaza.jsx"));
 const UrunDetay     = lazy(() => import("./UrunDetay.jsx"));
 const Sepet         = lazy(() => import("./Sepet.jsx"));
 const TarifeAdmin   = lazy(() => import("./TarifeAdmin.jsx"));
+const PazarVitrin   = lazy(() => import("./PazarVitrin.jsx"));
 
 // Parça inerken görünen ara ekran. Marka zemininde sade bir satır — spinner yok:
 // parçalar küçük, çoğu bağlantıda göz kırpması bile olmadan geçer; dönen bir ikon
@@ -45,6 +46,7 @@ const isServisAdmin = path === "/servis-admin";
 const isAdmin       = path === "/admin";
 const isTarife      = path === "/tarife";
 const isServisMagaza = path.startsWith("/servis/");
+const isPazar       = path.replace(/\/+$/, "") === "/pazar"; // YK #166 PR-4 (noindex, menüsüz)
 const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : null;
 
 inject(); // Vercel Web Analytics (ziyaret/görüntüleme ölçümü)
@@ -97,6 +99,7 @@ createRoot(document.getElementById("root")).render(
      isTarife       ? <TarifeAdmin />                   :
      isAdmin        ? <RaporPaneli />                   :
      isServisMagaza ? <ServisMagaza />                  :
+     isPazar        ? <PazarVitrin />                   :
      <App />}
     </Suspense>
   </React.StrictMode>

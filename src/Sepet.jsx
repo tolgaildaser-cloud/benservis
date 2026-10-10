@@ -4,6 +4,7 @@
 // Ödeme Benservis üzerinden geçer; iyzico entegre olana dek sipariş
 // "odeme_bekleniyor" kaydedilir ve onay ekranı gösterilir.
 import React, { useState, useEffect } from "react";
+import { track } from "@vercel/analytics";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
@@ -25,6 +26,9 @@ export default function Sepet() {
   }, []);
 
   const toplam = kalemler.reduce((s, k) => s + k.fiyat, 0);
+  // YK #166 PR-4 (Tolga 10 Eki: fiyat kargo hariç, kargo sepette ayrı satır). Kargo tutarı
+  // henüz yok (PR-7) → satır "ayrıca bildirilir" der, toplama rakam eklenmez.
+  const kargoSatiri = kalemler.some(k => k.kargo_haric);
 
   const siparisVer = async (e) => {
     e.preventDefault();
@@ -45,6 +49,9 @@ export default function Sepet() {
       });
       const d = await res.json();
       if (!res.ok) throw new Error(d.error || "Sipariş oluşturulamadı");
+      if (kargoSatiri) {
+        try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length }); } catch { /* ölçüm akışı bozmaz */ }
+      }
       setSonuc(d);
       sepetiBosalt();
       setAdim(3);
@@ -111,8 +118,14 @@ export default function Sepet() {
                       style={{ border: "none", background: "none", color: "#DC2626", fontSize: 15, cursor: "pointer", padding: 4 }}>✕</button>
                   </div>
                 ))}
+                {kargoSatiri && (
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "11px 16px", fontSize: 13.5, color: "#64748B", borderBottom: "1px solid #F1F5F9" }}>
+                    <span>Kargo</span>
+                    <span>Ayrıca bildirilir</span>
+                  </div>
+                )}
                 <div style={{ display: "flex", justifyContent: "space-between", padding: "13px 16px", fontWeight: 700, fontSize: 15 }}>
-                  <span>Toplam</span>
+                  <span>{kargoSatiri ? "Toplam (kargo hariç)" : "Toplam"}</span>
                   <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
                 </div>
               </div>
@@ -139,7 +152,7 @@ export default function Sepet() {
             </div>
 
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "13px 16px", marginBottom: 14, display: "flex", justifyContent: "space-between", fontWeight: 700, fontSize: 14.5 }}>
-              <span>{kalemler.length} ürün</span>
+              <span>{kalemler.length} ürün{kargoSatiri ? " · kargo hariç" : ""}</span>
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 
