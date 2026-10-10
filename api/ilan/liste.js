@@ -35,6 +35,9 @@ export default async function handler(req, res) {
       .from("servis_urunler")
       .select("id, servis_id, baslik, aciklama, fiyat, gorsel_url, dpp_seri_no, created_at")
       .eq("durum", "aktif")
+      // YK #166 PR-2: /ikinci-el akışı aynen — yalnız servis ürünleri. Benservis'in
+      // (servis_id boş) kataloğu `/pazar`a (PR-4) aittir.
+      .not("servis_id", "is", null)
       .order("created_at", { ascending: false })
       .limit(30);
 

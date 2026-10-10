@@ -31,13 +31,13 @@ export default function UrunDetay() {
   }, [urunId]);
 
   const ekle = () => {
-    const ok = sepeteEkle({ ...data.urun, servis_ad: data.servis?.ad });
+    const ok = sepeteEkle({ ...data.urun, servis_ad: data.servis?.ad || data.satici?.ad });
     setEklendi(true);
     setTimeout(() => setEklendi(false), 1800);
   };
 
   const satinAl = () => {
-    sepeteEkle({ ...data.urun, servis_ad: data.servis?.ad });
+    sepeteEkle({ ...data.urun, servis_ad: data.servis?.ad || data.satici?.ad });
     window.location.href = "/sepet?odeme=1";
   };
 

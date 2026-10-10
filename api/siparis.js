@@ -7,6 +7,7 @@
 // checkout form initialize edilip odeme_url dönülecek.
 import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
+import { saticiHaritasi } from "./_satici.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -28,7 +29,7 @@ export default async function handler(req, res) {
   // Ürünleri DB'den çek — fiyat ve stok (durum=aktif) doğrulaması
   const { data: urunler, error } = await supabase
     .from("servis_urunler")
-    .select("id, servis_id, baslik, fiyat, durum")
+    .select("id, servis_id, satici_id, baslik, fiyat, durum, stok")
     .in("id", urun_idler);
 
   if (error) return res.status(500).json({ error: error.message });
@@ -43,20 +44,37 @@ export default async function handler(req, res) {
     });
   }
 
-  // Satıcı adlarını ekle
-  const servisIdler = [...new Set(urunler.map(u => u.servis_id))];
-  const { data: servisler } = await supabase
-    .from("servis_basvurulari").select("id, ad").in("id", servisIdler);
-  const svMap = {};
-  (servisler || []).forEach(sv => { svMap[sv.id] = sv.ad; });
+  // YK #166 PR-2: stok 0 olan ürün sipariş edilemez.
+  const tukenen = urunler.filter(u => !(u.stok > 0));
+  if (tukenen.length > 0) {
+    return res.status(409).json({
+      error: `"${tukenen[0].baslik}" stokta yok. Sepetten çıkarın.`,
+      pasif_idler: tukenen.map(u => u.id),
+    });
+  }
 
-  const kalemler = urunler.map(u => ({
-    urun_id:   u.id,
-    baslik:    u.baslik,
-    fiyat:     u.fiyat,
-    servis_id: u.servis_id,
-    servis_ad: svMap[u.servis_id] || "Servis",
-  }));
+  // Satıcı adlarını ekle — Benservis ürününde servis_id boş, ad `saticilar`dan.
+  const servisIdler = [...new Set(urunler.map(u => u.servis_id).filter(Boolean))];
+  const svMap = {};
+  if (servisIdler.length > 0) {
+    const { data: servisler } = await supabase
+      .from("servis_basvurulari").select("id, ad").in("id", servisIdler);
+    (servisler || []).forEach(sv => { svMap[sv.id] = sv.ad; });
+  }
+  const saticiMap = await saticiHaritasi(supabase, urunler.map(u => u.satici_id));
+
+  const kalemler = urunler.map(u => {
+    const satici = saticiMap[u.satici_id];
+    return {
+      urun_id:    u.id,
+      baslik:     u.baslik,
+      fiyat:      u.fiyat,
+      servis_id:  u.servis_id,
+      servis_ad:  svMap[u.servis_id] || satici?.ad || "Servis",
+      satici_id:  u.satici_id || null,
+      satici_tur: satici?.tur || null,
+    };
+  });
   const tutar = kalemler.reduce((s, k) => s + k.fiyat, 0);
 
   const telStr = String(alici_tel);
