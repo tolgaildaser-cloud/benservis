@@ -147,6 +147,23 @@ describe("/pazar sayfası", () => {
     expect(fs.readFileSync("src/App.jsx", "utf8")).not.toContain('href="/pazar');
   });
 
+  it("fiyat KDV dahil, kargo vaadi 3 iş günü (Tolga, 10 Eki)", () => {
+    const v = fs.readFileSync("src/PazarVitrin.jsx", "utf8");
+    expect(v).toContain("KDV dahil · kargo hariç");
+    expect(v).toContain("Tahmini 3 iş gününde kargoda");
+    // Arama metni analitiğe gitmez (serbest metin yasağı).
+    expect(v).toMatch(/track\("pazar_ara", \{\}\)/);
+  });
+
+  it("ilk katalog SQL'i: 37 ürün, fiyat sonu 9, filigranlı 17 üründe görsel yok", () => {
+    const sql = fs.readFileSync("supabase/migrations/20261010_pazar_ilk_katalog_37.sql", "utf8");
+    const satir = sql.split("\n").filter((l) => l.startsWith("  ('"));
+    expect(satir).toHaveLength(37);
+    for (const l of satir) expect(Number(l.match(/', (\d+), (null|')/)[1]) % 10, l).toBe(9);
+    expect(satir.filter((l) => /, \d+, null, /.test(l))).toHaveLength(17);
+    expect(sql).toContain("where not exists"); // tekrar çalıştırılabilir
+  });
+
   it("fiyat etiketinde 'kargo hariç' yazar", () => {
     expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain("kargo hariç");
   });
