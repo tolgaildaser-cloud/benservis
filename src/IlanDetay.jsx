@@ -101,8 +101,6 @@ export default function IlanDetay({ id }) {
   const benservisDogt = dpp?.tamirler?.some(t => t.servis_turu === "benservis") ?? false;
   const cihazAd       = dpp ? [dpp.cihaz.marka, dpp.cihaz.model || dpp.cihaz.kategori].filter(Boolean).join(" ") : null;
   const aktif         = ilan.durum === "aktif";
-  const waMesaj       = encodeURIComponent(`Benservis ilanınızı gördüm: ${ilan.baslik} (${pageUrl})`);
-  const waTel         = (ilan.satici_tel || "").replace(/[^0-9]/g, "").replace(/^0/, "90");
 
   const talepGonder = async () => {
     setTH("");

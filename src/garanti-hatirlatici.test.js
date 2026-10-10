@@ -96,8 +96,8 @@ describe("föy metni birebir (§E)", () => {
 
 describe("DPP public alan listesi", () => {
   it("eposta ve rıza kolonları anonim cevaba girmiyor", () => {
-    const kaynak = fs.readFileSync(path.resolve(__dirname, "..", "api", "dpp", "cihaz.js"), "utf8");
-    const liste = kaynak.match(/const CIHAZ_PUBLIC_ALANLAR = \[([\s\S]*?)\]/)[1];
+    const kaynak = fs.readFileSync(path.resolve(__dirname, "..", "api", "_public-alanlar.js"), "utf8");
+    const liste = kaynak.match(/export const CIHAZ_PUBLIC_ALANLAR = \[([\s\S]*?)\]/)[1];
     for (const k of ["eposta", "riza_ts", "riza_metin_v", "kaynak"]) expect(liste).not.toContain(`"${k}"`);
   });
 });
