@@ -179,6 +179,10 @@ export default function PazarVitrin() {
         <div className="pz-kap pz-alt-ic">
           <span><b>benservis</b> Pazaryeri · Bil, gör, çağır.</span>
           <span><a href="/">Ana sayfa</a> · <a href="/blog/">Bilgi Merkezi</a> · <a href="/servis-kayit?kaynak=pazar-alt">Servis Kaydı</a></span>
+          <span className="pz-yasal">
+            <a href="/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a> · <a href="/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a> ·{" "}
+            <a href="/iade-ve-cayma/">İade, Cayma ve Teslimat</a> · <a href="/pazaryeri-aydinlatma-metni/">Aydınlatma Metni</a> · <a href="/gizlilik/">Gizlilik</a>
+          </span>
         </div>
       </footer>
     </div>
@@ -532,6 +536,7 @@ const CSS = `
 .pz-alt{background:${INK};color:#CBD5E1;margin-top:20px;padding:24px 0;font-size:12.5px}
 .pz-alt-ic{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .pz-alt b{color:#fff}
+.pz-yasal{flex-basis:100%;font-size:12px}
 .pz-alt a{color:#CBD5E1!important;text-decoration:underline!important}
 
 @media (max-width:1000px){

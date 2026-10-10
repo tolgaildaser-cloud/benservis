@@ -1,6 +1,7 @@
 // scripts/build-blog.mjs
 // content/blog/*.md -> dist/blog/<slug>/index.html (statik, SEO'lu) + /blog listesi + sitemap + robots
 // `vite build`ten SONRA çalışır (package.json: "build": "vite build && node scripts/build-blog.mjs").
+import { PAZAR_HUKUK_SAYFALARI, eksikSaticiAlanlari } from "./pazar-hukuk.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -3039,6 +3040,25 @@ for (const h of HUKUK_SAYFALARI) {
   );
 }
 console.log(`[build-blog] ✓ KVKK paketi: /${HUKUK_SAYFALARI.map((h) => h.dizin).join("/ · /")}/ basıldı (indexlenebilir, sitemap'te).`);
+
+// /on-bilgilendirme-formu/ · /mesafeli-satis-sozlesmesi/ · /iade-ve-cayma/ · /pazaryeri-aydinlatma-metni/
+// Pazaryeri e-ticaret belgeleri (10 Eki 2026) — metin ve satıcı bilgisi scripts/pazar-hukuk.mjs'te.
+// /pazar noindex olduğu sürece bunlar da noindex + sitemap dışı.
+for (const h of PAZAR_HUKUK_SAYFALARI) {
+  fs.mkdirSync(path.join(DIST, h.dizin), { recursive: true });
+  fs.writeFileSync(
+    path.join(DIST, h.dizin, "index.html"),
+    page({
+      title: h.title,
+      desc: h.desc,
+      canonical: `${SITE}/${h.dizin}/`,
+      robots: "noindex,follow",
+      body: `<a class="geri" href="/pazar">← Pazaryeri</a>${h.govde}`,
+    })
+  );
+}
+const _eksik = eksikSaticiAlanlari();
+console.log(`[build-blog] ✓ Pazaryeri belgeleri: ${PAZAR_HUKUK_SAYFALARI.length} sayfa (noindex)${_eksik.length ? ` — ⚠️ EKSİK satıcı alanı: ${_eksik.join(", ")}` : ""}.`);
 
 // ——— 404 SAYFASI (FE, 15 Eyl 2026 · YK #106 ② dönüşüm) ———
 // SORUN (canlıda ölçüldü): olmayan her adres (`/blog/klima-isitmiyor/`, `/tamir/yok/`) Vercel'in

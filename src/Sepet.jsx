@@ -29,12 +29,16 @@ export default function Sepet() {
   // YK #166 PR-4 (Tolga 10 Eki: fiyat kargo hariç, kargo sepette ayrı satır). Kargo tutarı
   // henüz yok (PR-7) → satır "ayrıca bildirilir" der, toplama rakam eklenmez.
   const kargoSatiri = kalemler.some(k => k.kargo_haric);
+  // Pazaryeri belgeleri (10 Eki 2026): pazar ürünü olan siparişte ön bilgilendirme +
+  // mesafeli satış onayı zorunlu (Mesafeli Sözleşmeler Yönetmeliği md.5-6). Kutu işaretsiz başlar.
+  const [sozlesmeOnay, setSozlesmeOnay] = useState(false);
 
   const siparisVer = async (e) => {
     e.preventDefault();
     setHata("");
     if (!form.ad.trim())  { setHata("Ad soyad zorunludur."); return; }
     if (!form.tel.trim() || form.tel.replace(/\D/g, "").length < 10) { setHata("Geçerli bir telefon girin."); return; }
+    if (kargoSatiri && !sozlesmeOnay) { setHata("Siparişi vermek için Ön Bilgilendirme Formu'nu ve Mesafeli Satış Sözleşmesi'ni onaylayın."); return; }
     setGonderiyor(true);
     try {
       const res = await fetch("/api/siparis", {
@@ -156,6 +160,17 @@ export default function Sepet() {
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 
+            {kargoSatiri && (
+              <label style={{ display: "flex", gap: 9, alignItems: "flex-start", fontSize: 12.5, lineHeight: 1.5, color: "#475569", marginBottom: 14, cursor: "pointer" }}>
+                <input type="checkbox" checked={sozlesmeOnay} onChange={e => setSozlesmeOnay(e.target.checked)} style={{ marginTop: 3, accentColor: "#2563EB" }} />
+                <span>
+                  <a href="/on-bilgilendirme-formu/" target="_blank" rel="noopener noreferrer" style={{ color: LINK, fontWeight: 600 }}>Ön Bilgilendirme Formu</a>'nu ve{" "}
+                  <a href="/mesafeli-satis-sozlesmesi/" target="_blank" rel="noopener noreferrer" style={{ color: LINK, fontWeight: 600 }}>Mesafeli Satış Sözleşmesi</a>'ni okudum, onaylıyorum.
+                  Kişisel verilerim{" "}
+                  <a href="/pazaryeri-aydinlatma-metni/" target="_blank" rel="noopener noreferrer" style={{ color: LINK, fontWeight: 600 }}>Aydınlatma Metni</a>'nde belirtildiği şekilde işlenir.
+                </span>
+              </label>
+            )}
             {hata && <div style={{ color: "#DC2626", fontSize: 13, fontWeight: 600, marginBottom: 12 }}>{hata}</div>}
 
             <button type="submit" disabled={gonderiyor}
