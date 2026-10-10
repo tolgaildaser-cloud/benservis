@@ -31,7 +31,11 @@
     { "source": "/tarife",                        "destination": "/index.html" },
     { "source": "/servis/:id",                    "destination": "/index.html" },
     { "source": "/urun/:id",                      "destination": "/index.html" },
-    { "source": "/sepet",                         "destination": "/index.html" }
+    { "source": "/sepet",                         "destination": "/index.html" },
+    { "source": "/pazar",                         "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/pazar", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
   ],
   "functions": {
     "api/servis/yakin.js": { "includeFiles": "src/services-data.json" }

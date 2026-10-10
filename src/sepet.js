@@ -17,7 +17,10 @@ function yaz(liste) {
 export function sepeteEkle(urun) {
   const liste = sepetOku();
   if (liste.some(u => u.id === urun.id)) return false; // ikinci el — her üründen 1 adet
-  liste.push({ id: urun.id, baslik: urun.baslik, fiyat: urun.fiyat, gorsel_url: urun.gorsel_url || null, servis_ad: urun.servis_ad || null });
+  const kalem = { id: urun.id, baslik: urun.baslik, fiyat: urun.fiyat, gorsel_url: urun.gorsel_url || null, servis_ad: urun.servis_ad || null };
+  // YK #166 PR-4: Benservis (pazar) ürünü kargo hariç fiyatlı — sepette kargo satırı çıkar.
+  if (urun.kargo_haric) kalem.kargo_haric = true;
+  liste.push(kalem);
   yaz(liste);
   return true;
 }

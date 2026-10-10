@@ -3,6 +3,7 @@
 // Büyük görsel, fiyat, "Sepete Ekle" + "Hemen Satın Al", DPP özeti,
 // satıcı firma kartı (tıklayınca firmanın mağazası: /servis/:id).
 import React, { useState, useEffect } from "react";
+import { track } from "@vercel/analytics";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, BLUE as LINK } from "./theme.js";
 
@@ -30,14 +31,24 @@ export default function UrunDetay() {
       .finally(() => setYukleniyor(false));
   }, [urunId]);
 
+  // YK #166 PR-4: Benservis ürünü pazarın parçası — kargo hariç fiyat + `sepete_ekle` ölçümü.
+  // Servis (ikinci el) ürünlerinin akışı aynen kalır.
+  const pazarMi = data?.satici?.tur === "benservis";
+  const sepetKalemi = () => ({ ...data.urun, servis_ad: data.servis?.ad || data.satici?.ad, kargo_haric: pazarMi });
+  const olc = () => {
+    if (!pazarMi) return;
+    try { track("sepete_ekle", { kategori: data.urun.kategori || "", satici: "benservis" }); } catch { /* ölçüm akışı bozmaz */ }
+  };
+
   const ekle = () => {
-    const ok = sepeteEkle({ ...data.urun, servis_ad: data.servis?.ad || data.satici?.ad });
+    const ok = sepeteEkle(sepetKalemi());
+    if (ok) olc();
     setEklendi(true);
     setTimeout(() => setEklendi(false), 1800);
   };
 
   const satinAl = () => {
-    sepeteEkle({ ...data.urun, servis_ad: data.servis?.ad || data.satici?.ad });
+    if (sepeteEkle(sepetKalemi())) olc();
     window.location.href = "/sepet?odeme=1";
   };
 
@@ -69,7 +80,9 @@ export default function UrunDetay() {
       <div style={{ maxWidth: 1000, margin: "0 auto", padding: "16px 16px 50px" }}>
         {/* breadcrumb */}
         <div style={{ fontSize: 12.5, color: "#64748B", marginBottom: 12 }}>
-          <a href="/ikinci-el" style={{ color: LINK, textDecoration: "none" }}>İkinci El</a> › <strong>{urun.baslik}</strong>
+          {pazarMi
+            ? <a href="/pazar" style={{ color: LINK, textDecoration: "none" }}>Pazar</a>
+            : <a href="/ikinci-el" style={{ color: LINK, textDecoration: "none" }}>İkinci El</a>} › <strong>{urun.baslik}</strong>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 18, alignItems: "start" }}>
@@ -99,6 +112,7 @@ export default function UrunDetay() {
 
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 30, fontWeight: 700, color: AMBER, marginBottom: 16 }}>
               {urun.fiyat.toLocaleString("tr-TR")} TL
+              {pazarMi && <span style={{ fontFamily: "'Hanken Grotesk', sans-serif", fontSize: 13, fontWeight: 600, color: "#64748B", marginLeft: 8 }}>kargo hariç</span>}
             </div>
 
             {/* Satın Al + Sepete Ekle */}
