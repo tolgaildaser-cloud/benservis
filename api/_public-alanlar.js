@@ -43,3 +43,16 @@ export const ILAN_PUBLIC_ALANLAR = [
 
 // Public uçlardan okunabilen ilan durumları — `demo` (#165 PR-1) ve `silindi` 404.
 export const ILAN_PUBLIC_DURUMLAR = ["aktif", "satildi"];
+
+// ── SATICI PUBLIC ALANLARI (YK #166 PR-2, 10 Eki 2026) ──────────────────────
+// `saticilar` iletişim ve IBAN taşıyor; public uçlar yalnız ad + türü (Benservis
+// rozeti için) döndürür.
+// ⛔ DIŞARIDA: iletisim_tel · iletisim_eposta · iban · servis_id · aktif · created_at.
+export const SATICI_PUBLIC_ALANLAR = ["id", "ad", "tur"].join(", ");
+
+// Mağaza ürünü (`servis_urunler`) public kolonları — `/api/urun/:id` ve vitrin.
+export const URUN_PUBLIC_ALANLAR = [
+  "id", "servis_id", "satici_id", "tip", "tur", "kategori", "baslik", "aciklama",
+  "fiyat", "gorsel_url", "dpp_seri_no", "durum", "stok", "parca_turu", "cihaz_turu",
+  "uyumlu_modeller", "parca_durum", "created_at",
+].join(", ");

@@ -1,8 +1,10 @@
 // api/urun/[id].js
 // GET /api/urun/:id — Servis ürünü detayı (public)
-// Ürün + satıcı firma bilgisi + DPP özeti döner.
+// Ürün + satıcı (ad, tür) + servis firma bilgisi + DPP özeti döner.
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
+import { URUN_PUBLIC_ALANLAR } from "../_public-alanlar.js";
+import { saticiHaritasi } from "../_satici.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -14,21 +16,26 @@ export default async function handler(req, res) {
 
   const { data: urun, error } = await supabase
     .from("servis_urunler")
-    .select("id, servis_id, tip, baslik, aciklama, fiyat, gorsel_url, dpp_seri_no, durum, created_at")
+    .select(URUN_PUBLIC_ALANLAR)
     .eq("id", id)
     .neq("durum", "demo") // #165 PR-1: Haziran demo kayıtları public uçtan okunmaz
     .single();
 
   if (error || !urun) return res.status(404).json({ error: "Ürün bulunamadı" });
 
-  // Satıcı firma
+  // Satıcı (YK #166 PR-2): servis, Benservis ya da dış satıcı — yalnız ad + tür.
+  const satici = (await saticiHaritasi(supabase, [urun.satici_id]))[urun.satici_id] || null;
+
+  // Satıcı firma (yalnız servis ürünlerinde; Benservis ürününde servis_id boş)
   let servis = null;
-  const { data: sv } = await supabase
-    .from("servis_basvurulari")
-    .select("id, ad, il, ilce")
-    .eq("id", urun.servis_id)
-    .single();
-  if (sv) servis = sv;
+  if (urun.servis_id) {
+    const { data: sv } = await supabase
+      .from("servis_basvurulari")
+      .select("id, ad, il, ilce")
+      .eq("id", urun.servis_id)
+      .single();
+    if (sv) servis = sv;
+  }
 
   // DPP özeti
   let dpp = null;
@@ -52,5 +59,5 @@ export default async function handler(req, res) {
     }
   }
 
-  return res.status(200).json({ urun, servis, dpp });
+  return res.status(200).json({ urun, satici, servis, dpp });
 }

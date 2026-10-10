@@ -3,6 +3,7 @@
 // POST /api/servis/urunler             — JWT auth, yeni ürün ekler
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
+import { servisSaticisi, tiptenKategori } from "../_satici.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -13,7 +14,8 @@ export default async function handler(req, res) {
     const { servis_id, durum } = req.query;
     if (!servis_id) return res.status(400).json({ error: "servis_id gerekli" });
 
-    const durumFiltre = durum || "aktif";
+    // #165 PR-1: demo kayıtlar public uçtan okunmaz.
+    const durumFiltre = durum && durum !== "demo" ? durum : "aktif";
 
     const { data, error } = await supabase
       .from("servis_urunler")
@@ -50,10 +52,16 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "tip: ikinci_el | yedek_parca" });
     }
 
+    // YK #166 PR-2: ürün pazaryeri satıcısına bağlanır; kategori/tur tip'ten türetilir.
+    const satici_id = await servisSaticisi(supabase, servis_id);
+    if (!satici_id) return res.status(500).json({ error: "Satıcı kaydı açılamadı" });
+
     const { data, error } = await supabase
       .from("servis_urunler")
       .insert({
         servis_id,
+        satici_id,
+        ...tiptenKategori(tipDeger),
         tip:         tipDeger,
         baslik:      baslik.trim(),
         aciklama:    aciklama?.trim() || null,
