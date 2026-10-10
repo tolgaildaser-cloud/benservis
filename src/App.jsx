@@ -1468,6 +1468,24 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    mobil şerit kapalı. Mobil karşılıkları aşağıdaki 640px bloğunda.
    (Bu blok bir JS şablon dizesi: yoruma ters tırnak YAZILMAZ, dizeyi kapatır.) */
 .kayit-kisa { display: none; }
+/* Pazaryeri düğmesi (10 Eki): masaüstünde açık; mobilde .vitrin-ustmenu a kuralı gizler. */
+.ustbar-pazar { display: inline-flex; }
+/* Pazaryeri barı 641-860 px arasında ikinci satıra sardırıyordu (700 px'te ölçüldü:
+   menü 37 px → 77 px). Bu aralıkta mobildeki kısaltmalar erken devreye girer:
+   "Yakın " gizlenir, kayıt etiketi "Kayıt"a düşer. */
+@media (min-width: 641px) and (max-width: 860px) {
+  .ustcta-yakin { display: none; }
+  .kayit-uzun { display: none; }
+  .kayit-kisa { display: inline; }
+  /* 700 px'te kısaltmadan sonra da 4 px taşıyordu; çerçeveli iki düğmenin iç boşluğu
+     daralır (satır içi padding'i ezmek için !important). */
+  .vitrin-ustmenu a.ustbar-pazar, .vitrin-ustmenu a.ustbar-kayit { padding-left: 11px !important; padding-right: 11px !important; }
+}
+/* 641-720 px kısaltmalarla da sığmıyor (641'de ölçüldü: 77 px). Mobildeki gibi bir
+   metin bağı barda gizlenir; Kılavuzlar alttaki gezinme şeritlerinde duruyor. */
+@media (min-width: 641px) and (max-width: 720px) {
+  .vitrin-ustmenu a[href="/kilavuzlar/"] { display: none; }
+}
 .vitrin-kayit-serit { display: none; }
 /* MOBİL ÜST MENÜ (2 Eki 2026, Tolga): ☰ düğmesi ve açılır panel masaüstünde kapalı;
    640px bloğunda açılır. Panel yalnız menü açıkken DOM'a girer. */

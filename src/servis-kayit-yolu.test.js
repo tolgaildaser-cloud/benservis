@@ -32,6 +32,17 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
   });
 
+  it("Pazaryeri düğmesi Yakın Servisler ile Servis Kaydı ARASINDA (Tolga, 10 Eki)", () => {
+    const src = oku("src/AnaSayfaVitrin.jsx");
+    const app = oku("src/App.jsx");
+    const i = src.indexOf('href="/pazar?k=anasayfa-ust"');
+    expect(i).toBeGreaterThan(src.indexOf("Yakın </span>Servisler"));
+    expect(i).toBeLessThan(src.indexOf('href="/servis-kayit?kaynak=anasayfa-ust"'));
+    expect(src).toContain('href="/pazar?k=anasayfa-menu"');
+    expect(src).not.toMatch(/ustPazar: \{[^}]*display:/);
+    expect(app).toMatch(/\.ustbar-pazar \{ display: inline-flex; \}/);
+  });
+
   it("mobilde kayıt ☰ menüsünde (Tolga, 2 Eki: menüye yer açmak için taşındı)", () => {
     const vitrin = oku("src/AnaSayfaVitrin.jsx");
     const app = oku("src/App.jsx");
