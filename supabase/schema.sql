@@ -259,3 +259,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS basvurular_email_aktif_idx
 
 CREATE INDEX IF NOT EXISTS basvurular_durum_idx     ON servis_basvurulari(durum);
 CREATE INDEX IF NOT EXISTS basvurular_created_idx   ON servis_basvurulari(created_at DESC);
+
+-- YK #165 (9 Eki 2026) — Yedek parça pazaryeri Faz 1: ilanlar.tur ('cihaz'|'parca') + parça
+-- alanları, durum 'demo' (ilanlar + servis_urunler), parca_talepleri tablosu.
+-- Tam SQL: supabase/migrations/20261009_165_parca_pazari.sql
