@@ -17,7 +17,7 @@
 // test kırılır.
 //
 // KIRILDIĞINDA: cevaba kişisel veri sızmış demektir. Alanı geri eklemeyin —
-// `api/dpp/cihaz.js` içindeki CIHAZ_PUBLIC_ALANLAR / TAMIR_PUBLIC_ALANLAR listelerine
+// `api/_public-alanlar.js` içindeki CIHAZ_PUBLIC_ALANLAR / TAMIR_PUBLIC_ALANLAR listelerine
 // bakın; bir alanın public olması gerekiyorsa hüküm YK'nın.
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { readFileSync } from "node:fs";

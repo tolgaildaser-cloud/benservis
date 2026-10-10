@@ -3,6 +3,9 @@
 // Vercel rewrite: /ikinci-el/:id → bu fonksiyona yönlenir.
 // OG meta tag'leriyle tam HTML sayfa döndürür (WhatsApp/Twitter botu için).
 import supabase from "../_supabase.js";
+import {
+  ILAN_PUBLIC_ALANLAR, ILAN_PUBLIC_DURUMLAR, CIHAZ_PUBLIC_ALANLAR, TAMIR_PUBLIC_ALANLAR,
+} from "../_public-alanlar.js";
 
 const INK = "#22302A", CREAM = "#F5EFE2", AMBER = "#C8632B", GREEN = "#3A7D44";
 const FONT_URL = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Hanken+Grotesk:wght@400;600;700&display=swap";
@@ -20,19 +23,21 @@ export default async function handler(req, res) {
     bulunamadi = true;
   } else {
     const { data: ilanRow, error: ie } = await supabase
-      .from("ilanlar").select("*").eq("id", id).single();
+      .from("ilanlar").select(ILAN_PUBLIC_ALANLAR).eq("id", id)
+      .in("durum", ILAN_PUBLIC_DURUMLAR).single();
 
     if (ie || !ilanRow) {
       bulunamadi = true;
     } else {
       ilan = ilanRow;
 
-      const { data: cihaz } = await supabase
-        .from("cihazlar").select("*").eq("seri_no", ilan.seri_no).single();
+      const { data: cihaz } = ilan.seri_no ? await supabase
+        .from("cihazlar").select(CIHAZ_PUBLIC_ALANLAR).eq("seri_no", ilan.seri_no).single()
+        : { data: null };
 
       if (cihaz) {
         const { data: tamirler } = await supabase
-          .from("tamir_kayitlari").select("*").eq("cihaz_id", cihaz.id)
+          .from("tamir_kayitlari").select(TAMIR_PUBLIC_ALANLAR).eq("cihaz_id", cihaz.id)
           .order("tarih", { ascending: false });
         const toplam_maliyet = (tamirler || []).reduce((s, t) => s + (t.maliyet || 0), 0);
         dpp = { cihaz, tamirler: tamirler || [], toplam_maliyet };

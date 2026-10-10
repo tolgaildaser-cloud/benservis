@@ -1,33 +1,8 @@
 // api/dpp/cihaz.js
 import supabase from "../_supabase.js";
+import { CIHAZ_PUBLIC_ALANLAR, TAMIR_PUBLIC_ALANLAR } from "../_public-alanlar.js";
 
-// ── PUBLIC ALAN SÖZLEŞMESİ (YK Kararı #114, 30 Ağu 2026) ─────────────────────
-// Bu uç YETKİSİZ ve `Access-Control-Allow-Origin: *` ile açık: seri numarasını
-// bilen/deneyen herkes cevabı alır. Bu yüzden `select("*")` BURADA YASAK —
-// tabloya eklenen her yeni kolon, kimse fark etmeden anonim erişime açılırdı.
-// Alanlar TEK TEK yazılır; listede olmayan alan cevaba GİREMEZ.
-//
-// ⛔ `cihazlar` tablosundan BİLEREK DIŞARIDA BIRAKILANLAR (canlı şemadan 30 Ağu
-//    2026'da okunan 17 kolonun tamamı gözden geçirildi):
-//    fatura_url — fatura görselinde ad-soyad / adres / kart son hanesi olabilir
-//                 → KVKK'da kişisel veri. #114'ün açılış sebebi.
-//    notlar     — sahibin serbest metni; kişisel veri taşıyabilir.
-//    created_at — hiçbir tüketici okumuyor; yüzeyi büyütmenin karşılığı yok.
-const CIHAZ_PUBLIC_ALANLAR = [
-  "id", // DPPEkrani tamir formuna `cihaz_id` olarak geçiyor — cevapta GEREKLİ.
-  "seri_no", "kategori", "marka", "model", "renk", "uretim_yili",
-  "satin_alma_tarihi", "garanti_baslangic_tarihi", "garanti_bitis_tarihi",
-  "uzatilmis_garanti", "uzatilmis_garanti_bitis", "mevcut_durum", "fotograflar",
-].join(", ");
-
-// Aynı sözleşme `tamir_kayitlari` için de geçerli: tamir kayıtları AYNI yetkisiz
-// cevabın içinde dönüyor, dolayısıyla aynı sınıf sızıntıya açıktı.
-// ⛔ DIŞARIDA: notlar (tamir notuna müşteri adı/adresi yazılabilir) ·
-//    benservis_is_id ve servis_id (iç kimlikler) · created_at (okunmuyor).
-const TAMIR_PUBLIC_ALANLAR = [
-  "id", "cihaz_id", "tarih", "yapilan_islem", "degistirilen_parcalar",
-  "maliyet", "servis_adi", "servis_turu", "fotograflar",
-].join(", ");
+// Public alan sözleşmesi (YK #114) `api/_public-alanlar.js`'te; ilan uçları da aynı listeyi kullanır.
 
 // `fatura_url` kolonu artık KALICI PUBLIC URL DEĞİL, `DPP Faturalar` bucket'ındaki
 // OBJE YOLUNU tutar (#114 ③). Kalıcı public URL'i DB'ye yazmak, bucket kapatılsa

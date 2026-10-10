@@ -16,6 +16,7 @@ export default async function handler(req, res) {
     .from("servis_urunler")
     .select("id, servis_id, tip, baslik, aciklama, fiyat, gorsel_url, dpp_seri_no, durum, created_at")
     .eq("id", id)
+    .neq("durum", "demo") // #165 PR-1: Haziran demo kayıtları public uçtan okunmaz
     .single();
 
   if (error || !urun) return res.status(404).json({ error: "Ürün bulunamadı" });
