@@ -304,7 +304,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             {/* PAZARYERİ KAPISI (10 Eki 2026, Tolga: "yakın servisler ile servis kaydı
                 arasına da pazaryeri butonu ekle oradan pazaryerine geçelim"; #168'e
                 rağmen Tolga'nın açık seçimi: şimdiki /pazar'a bağlanır, sayfa noindex kalır).
-                Kayıt düğmesiyle aynı çerçeveli kademe. ⛔ Satır içi stile display YAZILMAZ:
+                Beyaz dolgulu (Tolga: "beyaz ve ortada olsun"). ⛔ Satır içi stile display YAZILMAZ:
                 masaüstünde CSS açar, mobilde barda gizlenir, ☰ panelinde durur. */}
             <a className="ustbar-pazar" href="/pazar?k=anasayfa-ust" style={st.ustPazar}>Pazaryeri</a>
             <a className="ustbar-kayit" href="/servis-kayit?kaynak=anasayfa-ust" aria-label="Servis kaydı" style={st.ustKayit}>
@@ -655,12 +655,13 @@ const st = {
     padding: "8px 15px", marginLeft: 8, borderRadius: 999,
     border: "1.5px solid rgba(255,255,255,.55)", whiteSpace: "nowrap",
   },
-  // Pazaryeri — kayıt düğmesinin kardeşi; display CSS'te (.ustbar-pazar).
+  // Pazaryeri — Tolga (10 Eki): "beyaz ve ortada olsun" → Yakın Servisler gibi beyaz
+  // dolgulu, iki düğmenin ortasında. display CSS'te (.ustbar-pazar).
   ustPazar: {
     alignItems: "center",
-    color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none",
-    padding: "8px 15px", marginLeft: 8, borderRadius: 999,
-    border: "1.5px solid rgba(255,255,255,.55)", whiteSpace: "nowrap",
+    background: "#fff", color: NAVY, fontSize: 13.5, fontWeight: 700, textDecoration: "none",
+    padding: "9px 16px", marginLeft: 8, borderRadius: 999, whiteSpace: "nowrap",
+    boxShadow: "0 2px 10px -4px rgba(15,23,42,.45)",
   },
   // Mobil şerit — `display` BİLEREK YOK: açılıp kapanması CSS'in işi (PR #175 dersi:
   // satır içi display, media query kuralını ezer). Hero ile cihaz kartları arasında
