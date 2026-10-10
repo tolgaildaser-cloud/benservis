@@ -301,6 +301,12 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 ekran okuyucu ve erişilebilirlik tarafı kısaltmadan etkilenmez.
                 ⛔ Satır içi stile `display` YAZILMAZ: satır içi stil CSS kuralını ezer ve
                 12 Eyl'de tam bu yüzden düğme mobilde 100px dışarı taşmıştı (PR #175). */}
+            {/* PAZARYERİ KAPISI (10 Eki 2026, Tolga: "yakın servisler ile servis kaydı
+                arasına da pazaryeri butonu ekle oradan pazaryerine geçelim"; #168'e
+                rağmen Tolga'nın açık seçimi: şimdiki /pazar'a bağlanır, sayfa noindex kalır).
+                Kayıt düğmesiyle aynı çerçeveli kademe. ⛔ Satır içi stile display YAZILMAZ:
+                masaüstünde CSS açar, mobilde barda gizlenir, ☰ panelinde durur. */}
+            <a className="ustbar-pazar" href="/pazar?k=anasayfa-ust" style={st.ustPazar}>Pazaryeri</a>
             <a className="ustbar-kayit" href="/servis-kayit?kaynak=anasayfa-ust" aria-label="Servis kaydı" style={st.ustKayit}>
               <span className="kayit-uzun">Servis Kaydı</span>
               <span className="kayit-kisa">Kayıt</span>
@@ -325,6 +331,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <a href="/blog/" style={st.mobilMenuLink}>Bilgi Merkezi</a>
               <a href="/tamir/" style={st.mobilMenuLink}>Tamir Merkezi</a>
               <a href="/kilavuzlar/" style={st.mobilMenuLink}>Kullanım Kılavuzları</a>
+              <a href="/pazar?k=anasayfa-menu" style={st.mobilMenuLink}>Pazaryeri</a>
               <a href="/servis-kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Servis Kaydı <span style={st.mobilMenuAlt}>· işletmeni ekle</span></a>
             </nav>
           )}
@@ -644,6 +651,13 @@ const st = {
   // dolgulu beyazıyla yarışmaz (kullanıcı akışı birinci, servis kaydı ikinci).
   ustKayit: {
     display: "inline-flex", alignItems: "center",
+    color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none",
+    padding: "8px 15px", marginLeft: 8, borderRadius: 999,
+    border: "1.5px solid rgba(255,255,255,.55)", whiteSpace: "nowrap",
+  },
+  // Pazaryeri — kayıt düğmesinin kardeşi; display CSS'te (.ustbar-pazar).
+  ustPazar: {
+    alignItems: "center",
     color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none",
     padding: "8px 15px", marginLeft: 8, borderRadius: 999,
     border: "1.5px solid rgba(255,255,255,.55)", whiteSpace: "nowrap",
