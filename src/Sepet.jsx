@@ -71,13 +71,14 @@ export default function Sepet() {
       
 
       {/* Header */}
-      <header style={{ background: "#fff", borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
+      {/* Koyu bant + açık renk logo/motto (Tolga, 11 Eki: "bil gör çağır beyaz zeminde gözükmüyor,
+          o bandı da koyu yap diğer sayfalardaki gibi") — ana sayfa üst barıyla aynı renkler. */}
+      <header style={{ background: INK, borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 760, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 16px" }}>
-          {/* Kurumsal logo (Tolga, 11 Eki: "sepette benservis logosu yok") — /pazar başlığıyla aynı ölçü. */}
           <a href="/" aria-label="Benservis ana sayfa" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <BenservisLogo style={{ height: 36, width: "auto" }} showMotto={false} />
+            <BenservisLogo style={{ height: 42, width: "auto" }} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
           </a>
-          <span style={{ fontSize: 13, fontWeight: 700, color: "#64748B" }}>🛒 Sepet & Ödeme</span>
+          <span style={{ fontSize: 13, fontWeight: 700, color: "#CBD5E1" }}>🛒 Sepet & Ödeme</span>
         </div>
       </header>
 
