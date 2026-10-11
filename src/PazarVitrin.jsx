@@ -40,8 +40,10 @@ const HERO_SLAYTLAR = [
 const HERO_SURE_MS = 5000;
 
 const IL_LISTESI = Object.keys(TR_IL_ILCE);
-// "İkinci El" artık ayrı sekme (/ikinci-el, YK #171); Yedek Parça sekmesinin menüsünde tekrar edilmez.
-const MENU_KATEGORILERI = PAZAR_KATEGORILERI.filter((k) => k.slug !== "ikinci-el");
+// Yedek Parça sekmesinin menüsünde yalnız yedek parça (YK #171). "İkinci El" ayrı sekme
+// (/ikinci-el); "Ürün" de menüden kalktı (Tolga, 11 Eki: "pazaryeri yedekparça kısmında üstte
+// "ürün" de var, onu kaldır artık ürünler başka sekmede"). Kategori sözlükte ve admin'de kalır.
+const MENU_KATEGORILERI = PAZAR_KATEGORILERI.filter((k) => k.slug === "yedek-parca");
 const adBul = (liste, slug) => liste.find((x) => x.slug === slug)?.ad || null;
 // Menü ve yuvarlaklarda kısa ad: "Kombi / Termosifon" → "Kombi".
 const kisaAd = (ad) => ad.split(" / ")[0];

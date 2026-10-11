@@ -124,10 +124,10 @@ describe("sayfa kuralları", () => {
     expect(i).toBeLessThan(j);
   });
 
-  it("iki sekme iki sayfada da; Yedek Parça menüsünde İkinci El kategorisi tekrar etmez", () => {
+  it("iki sekme iki sayfada da; Yedek Parça menüsünde İkinci El ve Ürün kategorisi yok", () => {
     expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain('<PazarSekmeler etkin="yedek-parca" />');
     expect(fs.readFileSync("src/IkinciElVitrin.jsx", "utf8")).toContain('<PazarSekmeler etkin="ikinci-el" />');
-    expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain('k.slug !== "ikinci-el"');
+    expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain('PAZAR_KATEGORILERI.filter((k) => k.slug === "yedek-parca")');
   });
 
   it("satıcı yalnız Benservis: vitrinde ilan ver düğmesi yok", () => {
