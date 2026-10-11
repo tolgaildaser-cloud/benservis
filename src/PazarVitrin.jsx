@@ -509,13 +509,16 @@ const CSS = `
 .pz-banner h1{font-family:'Fraunces',serif;font-size:30px;line-height:1.15;max-width:440px;margin:0}
 .pz-banner p{margin:10px 0 0;opacity:.92;max-width:420px;line-height:1.5}
 .pz-slayt-ic button{margin-top:18px;width:max-content;background:#fff;color:#1D4ED8;font-weight:800;border:0;border-radius:10px;padding:11px 18px;font-size:14px;position:relative;z-index:1}
-.pz-kayan{padding:0;background:${INK}}
-.pz-slayt{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
+/* Slaytlar aynı ızgara hücresinde üst üste (Tolga, 11 Eki: "hero da sığmayan öğeler var"):
+   kutu en uzun slayt kadar uzar, düğme/metin hiçbir genişlikte kesilmez. */
+.pz-kayan{padding:0;background:${INK};display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch}
+.pz-slayt{grid-area:1/1;position:relative;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
 .pz-slayt.on{opacity:1;visibility:visible;transition:opacity .7s ease}
 .pz-slayt-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
-.pz-slayt::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,42,.9) 0%,rgba(15,23,42,.72) 42%,rgba(15,23,42,.1) 78%)}
-.pz-slayt-ic{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding:30px 32px 40px}
-.pz-slayt-bas{font-family:'Fraunces',serif;font-size:30px;font-weight:700;line-height:1.15;max-width:440px;margin:0!important;opacity:1!important}
+.pz-slayt::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(15,23,42,.9) 0%,rgba(15,23,42,.72) 42%,rgba(15,23,42,.1) 78%)}
+.pz-slayt-ic{position:relative;z-index:1;flex:1;min-height:240px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:28px 32px 42px}
+.pz-kayan h1,.pz-kayan .pz-slayt-bas{font-family:'Fraunces',serif;font-size:28px;font-weight:700;line-height:1.15;max-width:460px;margin:0;opacity:1}
+.pz-kayan .pz-slayt-ic p:not(.pz-slayt-bas){margin:10px 0 0;max-width:460px;line-height:1.5}
 .pz-ok{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:36px;height:36px;border-radius:999px;border:0;background:rgba(255,255,255,.85);color:${INK};font-size:24px;line-height:1;cursor:pointer;padding:0 0 3px}
 .pz-ok-sol{left:10px}.pz-ok-sag{right:10px}
 .pz-kayan .pz-ok{opacity:0;transition:opacity .2s}
@@ -621,10 +624,10 @@ const CSS = `
   .pz-ara button{padding:0 14px}
   .pz-hero{grid-template-columns:1fr;margin:14px 0}
   .pz-banner{min-height:250px;padding:22px}
-  .pz-kayan{min-height:320px}
-  .pz-banner h1,.pz-slayt-bas{font-size:23px}
+  .pz-kayan{min-height:0}
+  .pz-banner h1,.pz-kayan h1,.pz-kayan .pz-slayt-bas{font-size:23px}
   .pz-kayan{padding:0}
-  .pz-slayt-ic{padding:20px 20px 36px}
+  .pz-slayt-ic{min-height:0;padding:20px 20px 36px}
   .pz-slayt::after{background:linear-gradient(90deg,rgba(15,23,42,.86) 0%,rgba(15,23,42,.6) 65%,rgba(15,23,42,.25) 100%)}
   .pz-noktalar{left:20px;bottom:12px}
   .pz-kayan .pz-ok{display:none}
