@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
+import BenservisLogo from "./BenservisLogo.jsx";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
 
@@ -68,8 +69,9 @@ export default function Sepet() {
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 760, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 16px" }}>
-          <a href="/ikinci-el" style={{ fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 20, color: INK, textDecoration: "none" }}>
-            <span style={{ color: AMBER }}>◑</span> Benservis
+          {/* Kurumsal logo (Tolga, 11 Eki: "sepette benservis logosu yok") — /pazar başlığıyla aynı ölçü. */}
+          <a href="/" aria-label="Benservis ana sayfa" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+            <BenservisLogo style={{ height: 36, width: "auto" }} showMotto={false} />
           </a>
           <span style={{ fontSize: 13, fontWeight: 700, color: "#64748B" }}>🛒 Sepet & Ödeme</span>
         </div>
