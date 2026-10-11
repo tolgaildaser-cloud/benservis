@@ -25,19 +25,23 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(oku("src/ServisMagaza.jsx")).toContain('href="/servis-kayit?kaynak=servis-magaza"');
   });
 
-  it("ANA SAYFA üst barında kayıt düğmesi var (Tolga, 12 Eyl)", () => {
+  // YK #172 ÜY-1 (11 Eki, Tolga: "servis kaydını "kayıt ol" olarak değiştirelim"): üst bar,
+  // ☰ ve footer artık /kayit seçim sayfasına gider; servis kaydına oradan geçilir ve
+  // `kaynak` aynen taşınır (KayitSecim.jsx). Hero altındaki servis şeridi doğrudan kalır.
+  it("ANA SAYFA üst barında 'Kayıt ol' düğmesi var (Tolga, 12 Eyl → 11 Eki)", () => {
     const src = oku("src/AnaSayfaVitrin.jsx");
-    expect(src).toContain('href="/servis-kayit?kaynak=anasayfa-ust"');
+    expect(src).toContain('href="/kayit?kaynak=anasayfa-ust"');
+    expect(src).toContain('<span className="kayit-uzun">Kayıt ol</span>');
     // "Yakın Servisler" dolgulu CTA'nın SAĞINDA durmalı — sırayı kilitle.
     expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
   });
 
-  it("Pazaryeri düğmesi Yakın Servisler ile Servis Kaydı ARASINDA (Tolga, 10 Eki)", () => {
+  it("Pazaryeri düğmesi Yakın Servisler ile Kayıt ol ARASINDA (Tolga, 10 Eki)", () => {
     const src = oku("src/AnaSayfaVitrin.jsx");
     const app = oku("src/App.jsx");
     const i = src.indexOf('href="/pazar?k=anasayfa-ust"');
     expect(i).toBeGreaterThan(src.indexOf("Yakın </span>Servisler"));
-    expect(i).toBeLessThan(src.indexOf('href="/servis-kayit?kaynak=anasayfa-ust"'));
+    expect(i).toBeLessThan(src.indexOf('href="/kayit?kaynak=anasayfa-ust"'));
     expect(src).toContain('href="/pazar?k=anasayfa-menu"');
     expect(src).not.toMatch(/ustPazar: \{[^}]*display:/);
     expect(app).toMatch(/\.ustbar-pazar \{ display: inline-flex; \}/);
@@ -49,9 +53,9 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(vitrin).toContain('className="ustbar-kayit"');
     // Masaüstünde barda kalır; mobilde gizlenir, ☰ panelinde etiketli bağ olarak durur.
     expect(app).toMatch(/\.vitrin-ustmenu a\.ustbar-kayit \{ display: none !important; \}/);
-    expect(vitrin).toContain('href="/servis-kayit?kaynak=anasayfa-menu"');
+    expect(vitrin).toContain('href="/kayit?kaynak=anasayfa-menu"');
     expect(app).toMatch(/\.ustcta-yakin \{ display: none; \}/);
-    expect(vitrin).toContain('aria-label="Servis kaydı"');
+    expect(vitrin).toContain('aria-label="Kayıt ol"');
   });
 
   it("☰ mobil menü üç bölümü açar; display satır içine yazılmaz", () => {
@@ -81,7 +85,7 @@ describe("kayıt sayfasına giden bağlar", () => {
   it("mobilde gizlenen üst bar düğmesinin footer karşılığı var", () => {
     // ≤640px'te `.vitrin-ustmenu a { display:none }` üst bardaki bağları gizliyor;
     // trafiğin %92'si mobil olduğu için footer bağı bu boşluğu kapatır.
-    expect(oku("src/App.jsx")).toContain('href="/servis-kayit?kaynak=anasayfa-footer"');
+    expect(oku("src/App.jsx")).toContain('href="/kayit?kaynak=anasayfa-footer"');
     expect(oku("src/App.jsx")).toContain(".vitrin-ustmenu a { display: none; }");
   });
 
@@ -94,6 +98,14 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(kod).not.toContain("◑");
     // Form ekranı ve BAŞARI ekranı aynı barı kullanır (başarı ekranında hiç yoktu).
     expect((src.match(/<UstBar \/>/g) || []).length).toBe(2);
+  });
+
+  it("/kayit seçim sayfası servis kaydına kaynakla geçer; rota + rewrite", () => {
+    const k = oku("src/KayitSecim.jsx");
+    expect(k).toContain("href={`/servis-kayit?kaynak=${kaynak}`}");
+    expect(k).toContain('href="/panel"');
+    expect(oku("src/main.jsx")).toContain('path === "/kayit"');
+    expect(oku("vercel.json")).toContain('"/kayit"');
   });
 
   it("rota ve rewrite duruyor (yol açık kalsın)", () => {
@@ -128,5 +140,22 @@ describe("kaynak etiketi uçtan uca", () => {
     expect(gecerli("Serbest Metin")).toBe(false);
     expect(gecerli("ahmet@ornek.com")).toBe(false);
     expect(gecerli("a".repeat(33))).toBe(false);
+  });
+});
+
+describe("/kayit seçim sayfası (YK #172 ÜY-1)", () => {
+  it("kaynak etiketi desenden geçer, değilse 'kayit'", async () => {
+    const { kaynakOku } = await import("./KayitSecim.jsx");
+    expect(kaynakOku("?kaynak=anasayfa-ust")).toBe("anasayfa-ust");
+    expect(kaynakOku("?kaynak=<script>")).toBe("kayit");
+    expect(kaynakOku("?kaynak=" + "a".repeat(33))).toBe("kayit");
+    expect(kaynakOku("")).toBe("kayit");
+  });
+
+  it("üyelik açılana kadar Birey kartı 'yakında' + teşhis; /giris bağlantısı bayrağa bağlı", () => {
+    const k = oku("src/KayitSecim.jsx");
+    expect(k).toContain("export const UYELIK_ACIK = false");
+    expect(k).toContain("Üyelik çok yakında açılıyor");
+    expect(k).toContain('href="/ariza"');
   });
 });
