@@ -23,6 +23,7 @@
     { "source": "/ikinci-el/admin",               "destination": "/index.html" },
     { "source": "/ikinci-el/alici/:token",        "destination": "/index.html" },
     { "source": "/ikinci-el/satis/:token",        "destination": "/index.html" },
+    { "source": "/ikinci-el/:dosya(BS-2E-[0-9]{6})", "destination": "/index.html" },
     { "source": "/ikinci-el/:id",                 "destination": "/api/ilan/og?id=:id" },
     { "source": "/takip/:is_no",                  "destination": "/index.html" },
     { "source": "/servis-kayit",                  "destination": "/index.html" },
@@ -37,7 +38,9 @@
     { "source": "/siparis/:siparis",              "destination": "/api/odeme/sonuc?siparis=:siparis" }
   ],
   "headers": [
-    { "source": "/pazar", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+    { "source": "/pazar", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
+    { "source": "/ikinci-el", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
+    { "source": "/ikinci-el/:yol*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
   ],
   "functions": {
     "api/servis/yakin.js": { "includeFiles": "src/services-data.json" }
