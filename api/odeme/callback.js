@@ -6,7 +6,8 @@
 //   · idempotent: sipariş zaten `odendi` ise dokunulmaz; tekrar gelen bildirim de "OK" alır
 //   · yanıt yalnız düz metin "OK" (başka içerik yok)
 //   · YK #171 İE-3: sipariş ilk kez `odendi` olunca içindeki ikinci el ilanları (stok 1)
-//     `satildi` + stok 0 olur; vitrinden ve sepetten düşer.
+//     `satildi` + stok 0 olur; vitrinden ve sepetten düşer. Ödeme başarısızsa sepet kilidi
+//     hemen bırakılır (ürün yeniden satışta; Tolga, 11 Eki 12:4x).
 import supabase from "../_supabase.js";
 import { paytrAyarlari, paytrBildirimGecerli, oidSiparisId, bildirimGuncellemesi } from "../_paytr.js";
 
@@ -41,8 +42,12 @@ export default async function handler(req, res) {
     const ilanIdler = satilanIlanlar(siparis);
     if (guncelle.odeme_durumu === "odendi" && yazilan?.length && ilanIdler.length) {
       const { error: ie } = await supabase.from("ilanlar")
-        .update({ durum: "satildi", stok: 0 }).in("id", ilanIdler).eq("durum", "aktif");
+        .update({ durum: "satildi", stok: 0, kilit_token: null, kilit_bitis: null }).in("id", ilanIdler).eq("durum", "aktif");
       if (ie) console.error("İkinci el ilan satıldı yapılamadı:", siparis.siparis_no, ie.message);
+    }
+    if (guncelle.odeme_durumu === "odeme_basarisiz" && yazilan?.length && ilanIdler.length) {
+      await supabase.from("ilanlar").update({ kilit_token: null, kilit_bitis: null })
+        .in("id", ilanIdler).eq("durum", "aktif");
     }
   }
 

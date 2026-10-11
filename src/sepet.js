@@ -22,7 +22,7 @@ export function sepeteEkle(urun) {
   if (urun.kargo_haric) kalem.kargo_haric = true;
   // YK #171 İE-3: ikinci el ilanı (`ilanlar`) — kargo yok, teslim seçimi kalemle taşınır;
   // sipariş ucu ilanı `ilanlar` tablosunda, fiyatı ve teslimi sunucuda doğrular.
-  if (urun.tip === "ikinci-el") Object.assign(kalem, { tip: "ikinci-el", dosya_no: urun.dosya_no, teslim: urun.teslim || "depo" });
+  if (urun.tip === "ikinci-el") Object.assign(kalem, { tip: "ikinci-el", dosya_no: urun.dosya_no, teslim: urun.teslim || "depo", kilit_bitis: urun.kilit_bitis || null });
   liste.push(kalem);
   yaz(liste);
   return true;

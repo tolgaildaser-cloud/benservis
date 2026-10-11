@@ -51,6 +51,13 @@ function sahteSorgu(tablo) {
     gt(k, v) { d.filtre.push((s) => s[k] > v); return z; },
     in(k, v) { d.filtre.push((s) => v.includes(s[k])); return z; },
     not(k, op, v) { if (op === "is") d.filtre.push((s) => (s[k] ?? null) !== v); return z; },
+    // Yalnız api/_kilit.js'in "boş | süresi dolmuş | bu sepetin" koşulu.
+    or(kosul) {
+      const m = kosul.match(/^kilit_bitis\.is\.null,kilit_bitis\.lt\."([^"]+)",kilit_token\.eq\."([^"]+)"$/);
+      if (!m) throw new Error(`beklenmeyen or: ${kosul}`);
+      d.filtre.push((s) => !s.kilit_bitis || s.kilit_bitis < m[1] || s.kilit_token === m[2]);
+      return z;
+    },
     order() { return z; }, limit() { return z; },
     maybeSingle() { return z.single(); },
     single() {
@@ -82,6 +89,8 @@ const { default: liste, seriMaskele } = await import("../api/ikinci-el/liste.js"
 const { default: siparis } = await import("../api/siparis.js");
 const { default: callback, satilanIlanlar } = await import("../api/odeme/callback.js");
 const { ilanTeslimSecenekleri } = await import("./ikinci-el-teslim.js");
+const { default: kilit } = await import("../api/ikinci-el/kilit.js");
+const { kalanMs, sureMetni } = await import("./ikinci-el-kilit.js");
 const { degisenBolgeler, SEMALAR } = await import("./IkinciElDetay.jsx");
 
 const cagir = (fn, req) => new Promise((coz) => {
@@ -92,7 +101,9 @@ const cagir = (fn, req) => new Promise((coz) => {
   };
   fn({ headers: {}, query: {}, ...req }, res);
 });
-const ALICI = { alici_ad: "Test Alıcı", alici_tel: "05551112233", alici_adres: "Kadıköy Moda Cad. No 1", alici_email: "test@ornek.com", sozlesme_onay: true };
+const BENIM = "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee", BASKASI = "11111111-2222-4333-8444-555555555555";
+const ALICI = { alici_ad: "Test Alıcı", alici_tel: "05551112233", alici_adres: "Kadıköy Moda Cad. No 1", alici_email: "test@ornek.com", sozlesme_onay: true, sepet_anahtari: BENIM };
+const gelecek = (dk) => new Date(Date.now() + dk * 60000).toISOString();
 
 beforeEach(sifirla);
 
@@ -204,5 +215,79 @@ describe("teslim ve şema", () => {
       .filter((s) => !/^\s*(\/\/|\/\*|\*)/.test(s)).join("\n");
     expect(kod).not.toMatch(/DPP|\/dpp|pasaport|qrcode|seri_no/i);
     expect(kod).toContain("Benservis kontrolü");
+  });
+});
+
+describe("sepet kilidi (Tolga, 11 Eki 12:4x: 5 dk)", () => {
+  const ilan = (id) => tablolar.ilanlar.find((i) => i.id === id);
+
+  it("sepete ekleme 5 dk kilitler; başka sepet 409 alır; kendi sepeti yeniler", async () => {
+    const r = await cagir(kilit, { method: "POST", body: { id: "11111111-0000-4000-8000-000000000001", anahtar: BENIM } });
+    expect(r.kod).toBe(409); // böyle bir ilan yok
+    tablolar.ilanlar[0].id = "11111111-0000-4000-8000-000000000001";
+    const ok = await cagir(kilit, { method: "POST", body: { id: "11111111-0000-4000-8000-000000000001", anahtar: BENIM } });
+    expect(ok.kod).toBe(200);
+    const dk = (new Date(ok.govde.kilit_bitis) - Date.now()) / 60000;
+    expect(dk).toBeGreaterThan(4.9); expect(dk).toBeLessThanOrEqual(5);
+    expect(JSON.stringify(ok.govde)).not.toContain(BENIM);
+    expect((await cagir(kilit, { method: "POST", body: { id: "11111111-0000-4000-8000-000000000001", anahtar: BASKASI } })).kod).toBe(409);
+    expect((await cagir(kilit, { method: "POST", body: { id: "11111111-0000-4000-8000-000000000001", anahtar: BENIM } })).kod).toBe(200);
+  });
+
+  it("süresi dolan kilit başkasına geçer; bırakma yalnız kendi kilidini kaldırır", async () => {
+    const id = "11111111-0000-4000-8000-000000000001";
+    Object.assign(tablolar.ilanlar[0], { id, kilit_token: BASKASI, kilit_bitis: new Date(Date.now() - 1000).toISOString() });
+    expect((await cagir(kilit, { method: "POST", body: { id, anahtar: BENIM } })).kod).toBe(200);
+    await cagir(kilit, { method: "POST", body: { id, anahtar: BASKASI, birak: true } });
+    expect(tablolar.ilanlar[0].kilit_token).toBe(BENIM);
+    await cagir(kilit, { method: "POST", body: { id, anahtar: BENIM, birak: true } });
+    expect(tablolar.ilanlar[0].kilit_token).toBeNull();
+  });
+
+  it("geçersiz anahtar ya da id 400 (süzgece serbest metin girmez)", async () => {
+    expect((await cagir(kilit, { method: "POST", body: { id: "x", anahtar: BENIM } })).kod).toBe(400);
+    expect((await cagir(kilit, { method: "POST", body: { id: "11111111-0000-4000-8000-000000000001", anahtar: 'a",kilit_token.is.null' } })).kod).toBe(400);
+  });
+
+  it("sipariş: başka sepette kilitliyse 409; boşsa 30 dk ödeme kilidi alır", async () => {
+    Object.assign(ilan("i1"), { kilit_token: BASKASI, kilit_bitis: gelecek(3) });
+    expect((await cagir(siparis, { method: "POST", body: { ...ALICI, ilanlar: [{ id: "i1" }] } })).kod).toBe(409);
+    expect(eklenen.length).toBe(0);
+    Object.assign(ilan("i1"), { kilit_token: null, kilit_bitis: null });
+    expect((await cagir(siparis, { method: "POST", body: { ...ALICI, ilanlar: [{ id: "i1" }] } })).kod).toBe(201);
+    expect(ilan("i1").kilit_token).toBe(BENIM);
+    const dk = (new Date(ilan("i1").kilit_bitis) - Date.now()) / 60000;
+    expect(dk).toBeGreaterThan(29.9);
+  });
+
+  it("sipariş: kendi süresi dolmuş kilidi de olsa ürün sepette kalır ve sipariş geçer", async () => {
+    Object.assign(ilan("i1"), { kilit_token: BENIM, kilit_bitis: new Date(Date.now() - 60000).toISOString() });
+    expect((await cagir(siparis, { method: "POST", body: { ...ALICI, ilanlar: [{ id: "i1" }] } })).kod).toBe(201);
+  });
+
+  it("sepet anahtarı olmadan ikinci el siparişi 400", async () => {
+    expect((await cagir(siparis, { method: "POST", body: { ...ALICI, sepet_anahtari: undefined, ilanlar: [{ id: "i1" }] } })).kod).toBe(400);
+  });
+
+  it("detay: başkasının kilidi 'kilitli: true', kendi kilidi false; kilit alanları cevaba girmez", async () => {
+    Object.assign(ilan("i1"), { kilit_token: BASKASI, kilit_bitis: gelecek(3) });
+    const r = await cagir(liste, { method: "GET", query: { dosya: "BS-2E-000003", anahtar: BENIM } });
+    expect(r.govde.ilanlar[0].kilitli).toBe(true);
+    expect(JSON.stringify(r.govde)).not.toMatch(/kilit_token|kilit_bitis|11111111-2222/);
+    const r2 = await cagir(liste, { method: "GET", query: { dosya: "BS-2E-000003", anahtar: BASKASI } });
+    expect(r2.govde.ilanlar[0].kilitli).toBe(false);
+  });
+
+  it("başarısız ödeme kilidi bırakır", async () => {
+    Object.assign(ilan("i1"), { kilit_token: BENIM, kilit_bitis: gelecek(30) });
+    tablolar.siparisler.push({ id: "11111111-2222-3333-4444-777777777777", siparis_no: "SP-0012", tutar: 18999, odeme_durumu: "odeme_bekleniyor", urunler: [{ ilan_id: "i1" }] });
+    await cagir(callback, { method: "POST", body: { merchant_oid: "11111111222233334444777777777777", status: "failed" } });
+    expect(ilan("i1")).toMatchObject({ durum: "aktif", kilit_token: null, kilit_bitis: null });
+  });
+
+  it("geri sayım yardımcıları", () => {
+    expect(kalanMs(null)).toBe(0);
+    expect(kalanMs(new Date(1000).toISOString(), 5000)).toBe(0);
+    expect(sureMetni(4 * 60000 + 5000)).toBe("4:05");
   });
 });
