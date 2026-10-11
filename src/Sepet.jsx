@@ -1,12 +1,13 @@
 // src/Sepet.jsx
 // Sepet + ödeme akışı — /sepet
 // Adım 1: sepet kalemleri · Adım 2: alıcı bilgileri · Adım 3: ödeme/onay
-// Ödeme Benservis üzerinden geçer; iyzico entegre olana dek sipariş
-// "odeme_bekleniyor" kaydedilir ve onay ekranı gösterilir.
+// Ödeme Benservis üzerinden geçer. YK #167 PR-6: pazar (Benservis) siparişi PayTR iFrame
+// sayfasına (/odeme/:id) yönlenir; diğer siparişler "odeme_bekleniyor" kaydedilir, onay ekranı çıkar.
 import React, { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 import BenservisLogo from "./BenservisLogo.jsx";
+import { KARGO_TL } from "./kargo.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
 
@@ -15,7 +16,7 @@ export default function Sepet() {
   const [adim, setAdim] = useState(
     new URLSearchParams(window.location.search).get("odeme") === "1" && sepetOku().length > 0 ? 2 : 1
   );
-  const [form, setForm] = useState({ ad: "", tel: "", adres: "" });
+  const [form, setForm] = useState({ ad: "", tel: "", eposta: "", adres: "" });
   const [gonderiyor, setGonderiyor] = useState(false);
   const [hata, setHata] = useState("");
   const [sonuc, setSonuc] = useState(null); // { siparis, odeme }
@@ -26,10 +27,13 @@ export default function Sepet() {
     return () => window.removeEventListener("bs-sepet-degisti", f);
   }, []);
 
-  const toplam = kalemler.reduce((s, k) => s + k.fiyat, 0);
-  // YK #166 PR-4 (Tolga 10 Eki: fiyat kargo hariç, kargo sepette ayrı satır). Kargo tutarı
-  // henüz yok (PR-7) → satır "ayrıca bildirilir" der, toplama rakam eklenmez.
+  const urunToplam = kalemler.reduce((s, k) => s + k.fiyat, 0);
+  // YK #166 PR-4 (Tolga 10 Eki: fiyat kargo hariç, kargo sepette ayrı satır) + #167 PR-6
+  // (Tolga 11 Eki: sabit kargo, KARGO_TL). Yasa gereği onaydan önce kargo dahil toplam gösterilir;
+  // sunucu (/api/siparis) aynı sabitle hesaplar, istemcideki tutar kullanılmaz.
   const kargoSatiri = kalemler.some(k => k.kargo_haric);
+  const kargo = kargoSatiri ? KARGO_TL : 0;
+  const toplam = urunToplam + kargo;
   // Pazaryeri belgeleri (10 Eki 2026): pazar ürünü olan siparişte ön bilgilendirme +
   // mesafeli satış onayı zorunlu (Mesafeli Sözleşmeler Yönetmeliği md.5-6). Kutu işaretsiz başlar.
   const [sozlesmeOnay, setSozlesmeOnay] = useState(false);
@@ -39,6 +43,8 @@ export default function Sepet() {
     setHata("");
     if (!form.ad.trim())  { setHata("Ad soyad zorunludur."); return; }
     if (!form.tel.trim() || form.tel.replace(/\D/g, "").length < 10) { setHata("Geçerli bir telefon girin."); return; }
+    if (kargoSatiri && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.eposta.trim())) { setHata("Geçerli bir e-posta adresi girin."); return; }
+    if (kargoSatiri && form.adres.trim().length < 10) { setHata("Kargo için açık teslimat adresi girin."); return; }
     if (kargoSatiri && !sozlesmeOnay) { setHata("Siparişi vermek için Ön Bilgilendirme Formu'nu ve Mesafeli Satış Sözleşmesi'ni onaylayın."); return; }
     setGonderiyor(true);
     try {
@@ -50,6 +56,7 @@ export default function Sepet() {
           alici_ad: form.ad.trim(),
           alici_tel: form.tel.trim(),
           alici_adres: form.adres.trim() || null,
+          ...(kargoSatiri ? { alici_email: form.eposta.trim(), sozlesme_onay: sozlesmeOnay } : {}),
         }),
       });
       const d = await res.json();
@@ -57,8 +64,9 @@ export default function Sepet() {
       if (kargoSatiri) {
         try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length }); } catch { /* ölçüm akışı bozmaz */ }
       }
-      setSonuc(d);
       sepetiBosalt();
+      if (d.odeme === "paytr" && d.odeme_url) { window.location.assign(d.odeme_url); return; }
+      setSonuc(d);
       setAdim(3);
     } catch (err) { setHata(err.message); }
     setGonderiyor(false);
@@ -129,11 +137,11 @@ export default function Sepet() {
                 {kargoSatiri && (
                   <div style={{ display: "flex", justifyContent: "space-between", padding: "11px 16px", fontSize: 13.5, color: "#64748B", borderBottom: "1px solid #F1F5F9" }}>
                     <span>Kargo</span>
-                    <span>Ayrıca bildirilir</span>
+                    <span>{kargo.toLocaleString("tr-TR")} TL</span>
                   </div>
                 )}
                 <div style={{ display: "flex", justifyContent: "space-between", padding: "13px 16px", fontWeight: 700, fontSize: 15 }}>
-                  <span>{kargoSatiri ? "Toplam (kargo hariç)" : "Toplam"}</span>
+                  <span>{kargoSatiri ? "Toplam (kargo dahil)" : "Toplam"}</span>
                   <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
                 </div>
               </div>
@@ -155,12 +163,16 @@ export default function Sepet() {
               <input style={inp} value={form.ad} onChange={e => setForm(f => ({ ...f, ad: e.target.value }))} placeholder="Adınız Soyadınız" />
               <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Telefon *</label>
               <input style={inp} type="tel" value={form.tel} onChange={e => setForm(f => ({ ...f, tel: e.target.value }))} placeholder="0555 123 45 67" />
-              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres <span style={{ fontWeight: 400, color: "#94A3B8" }}>(teslimat / randevu için)</span></label>
+              {kargoSatiri && (<>
+                <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>E-posta * <span style={{ fontWeight: 400, color: "#94A3B8" }}>(sipariş ve fatura için)</span></label>
+                <input style={inp} type="email" autoComplete="email" value={form.eposta} onChange={e => setForm(f => ({ ...f, eposta: e.target.value }))} placeholder="ornek@eposta.com" />
+              </>)}
+              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres{kargoSatiri ? " *" : ""} <span style={{ fontWeight: 400, color: "#94A3B8" }}>{kargoSatiri ? "(kargo teslimatı için açık adres)" : "(teslimat / randevu için)"}</span></label>
               <input style={inp} value={form.adres} onChange={e => setForm(f => ({ ...f, adres: e.target.value }))} placeholder="İlçe, mahalle, sokak…" />
             </div>
 
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "13px 16px", marginBottom: 14, display: "flex", justifyContent: "space-between", fontWeight: 700, fontSize: 14.5 }}>
-              <span>{kalemler.length} ürün{kargoSatiri ? " · kargo hariç" : ""}</span>
+              <span>{kalemler.length} ürün{kargoSatiri ? ` + ${kargo.toLocaleString("tr-TR")} TL kargo` : ""}</span>
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 
