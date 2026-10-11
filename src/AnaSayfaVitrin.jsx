@@ -17,6 +17,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { SSS } from "./sss.js";
 import TelefonaEkleBlok from "./TelefonaEkleBlok.jsx";
+import AnaSayfaPazar from "./AnaSayfaPazar.jsx";
 import { CIHAZLAR } from "./constants.js";
 import { heroTahmin } from "./hero-tahmin.js";
 import BenservisLogo from "./BenservisLogo.jsx";
@@ -526,6 +527,10 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             </div>
           </a>
         </div>
+
+        {/* ═══ PAZARYERİ ═══ (Tolga, 11 Eki: "8 adet en çok satan ürünü pazaryeri olarak koy …
+            sık sorulan soruların hemen üzeri") — 8 ürün dönmezse hiç basılmaz. */}
+        <AnaSayfaPazar />
 
         <h2 style={{ ...st.h2, marginTop: "clamp(36px, 5vw, 56px)", marginBottom: "clamp(18px, 2.2vw, 26px)" }}>Sık sorulanlar</h2>
         <div style={st.sssListe}>

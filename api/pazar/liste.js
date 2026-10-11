@@ -1,5 +1,6 @@
 // api/pazar/liste.js — YK #166 PR-4 (10 Eki 2026): `/pazar` vitrininin listesi.
 // GET /api/pazar/liste?kategori=yedek-parca&cihaz=<slug>&parca=<slug>
+// GET /api/pazar/liste?siralama=cok-satan → ana sayfa "Pazaryeri" bloğu (8 ürün, 11 Eki 2026).
 //
 // Genel pazaryeri: Benservis + servis + dış satıcı ürünleri tek listede (`servis_urunler`).
 // Yalnız `durum='aktif'` ve stoğu olan ürünler; demo/pasif/satıldı hiç dönmez.
@@ -11,6 +12,25 @@ import { saticiHaritasi } from "../_satici.js";
 import { kategoriBul, PAZAR_CIHAZLARI, PARCA_TURLERI } from "../../src/pazar-sozluk.js";
 
 const LIMIT = 60;
+const COK_SATAN_ADET = 8;
+
+// "En çok satan" (Tolga, 11 Eki: "ana sayfaya da 8 adet en çok satan ürünü pazaryeri olarak koy").
+// Sıra: ödenmiş siparişlerdeki kalem sayısı ↓ → görseli olan önce → yeni eklenen önce
+// (gelen liste zaten created_at ↓; sort kararlı olduğu için eşitlikte o sıra korunur).
+// Satış sayısı cevaba GİRMEZ — yalnız sıra döner (traction rakamı public olmaz).
+export function cokSatanSirala(urunler = [], siparisler = [], adet = COK_SATAN_ADET) {
+  const satis = {};
+  for (const s of siparisler) {
+    for (const k of Array.isArray(s?.urunler) ? s.urunler : []) {
+      if (k?.urun_id) satis[k.urun_id] = (satis[k.urun_id] || 0) + 1;
+    }
+  }
+  return urunler
+    .map((u, i) => ({ u, i, n: satis[u.id] || 0, g: u.gorsel_url ? 1 : 0 }))
+    .sort((a, b) => b.n - a.n || b.g - a.g || a.i - b.i)
+    .slice(0, adet)
+    .map((x) => x.u);
+}
 
 // Query → güvenli filtre. Sözlükte olmayan değer yok sayılır (serbest metin DB'ye gitmez).
 export function pazarFiltresi(q = {}) {
@@ -41,8 +61,16 @@ export default async function handler(req, res) {
   const { data, error } = await query;
   if (error) return res.status(500).json({ error: "Liste okunamadı" });
 
-  const saticilar = await saticiHaritasi(supabase, (data || []).map((u) => u.satici_id));
-  const urunler = (data || []).map((u) => ({ ...u, satici: saticilar[u.satici_id] || null }));
+  let liste = data || [];
+  if (req.query.siralama === "cok-satan") {
+    // Yalnız `urunler` kolonu okunur (alıcı adı/telefonu/adresi hiç seçilmez).
+    const { data: sip } = await supabase
+      .from("siparisler").select("urunler").eq("odeme_durumu", "odendi").limit(1000);
+    liste = cokSatanSirala(liste, sip || []);
+  }
+
+  const saticilar = await saticiHaritasi(supabase, liste.map((u) => u.satici_id));
+  const urunler = liste.map((u) => ({ ...u, satici: saticilar[u.satici_id] || null }));
 
   res.setHeader("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
   return res.status(200).json({ urunler, filtre: f });
