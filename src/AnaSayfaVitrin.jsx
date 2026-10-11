@@ -308,8 +308,10 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 Beyaz dolgulu (Tolga: "beyaz ve ortada olsun"). ⛔ Satır içi stile display YAZILMAZ:
                 masaüstünde CSS açar, mobilde barda gizlenir, ☰ panelinde durur. */}
             <a className="ustbar-pazar" href="/pazar?k=anasayfa-ust" style={st.ustPazar}>Pazaryeri</a>
-            <a className="ustbar-kayit" href="/servis-kayit?kaynak=anasayfa-ust" aria-label="Servis kaydı" style={st.ustKayit}>
-              <span className="kayit-uzun">Servis Kaydı</span>
+            {/* "Kayıt ol" (YK #172 ÜY-1, Tolga 11 Eki: "servis kaydını "kayıt ol" olarak değiştirelim")
+                → /kayit seçim sayfası (servis/satıcı | birey). Mobil etiket "Kayıt" (375px ölçüsü ↑). */}
+            <a className="ustbar-kayit" href="/kayit?kaynak=anasayfa-ust" aria-label="Kayıt ol" style={st.ustKayit}>
+              <span className="kayit-uzun">Kayıt ol</span>
               <span className="kayit-kisa">Kayıt</span>
             </a>
             {/* ☰ MOBİL MENÜ DÜĞMESİ — yalnız ≤640px'te görünür (App.jsx CSS'i açar).
@@ -333,7 +335,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <a href="/tamir/" style={st.mobilMenuLink}>Tamir Merkezi</a>
               <a href="/kilavuzlar/" style={st.mobilMenuLink}>Kullanım Kılavuzları</a>
               <a href="/pazar?k=anasayfa-menu" style={st.mobilMenuLink}>Pazaryeri</a>
-              <a href="/servis-kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Servis Kaydı <span style={st.mobilMenuAlt}>· işletmeni ekle</span></a>
+              <a href="/kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Kayıt ol <span style={st.mobilMenuAlt}>· servis ya da birey</span></a>
             </nav>
           )}
         </div>

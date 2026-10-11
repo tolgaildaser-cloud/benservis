@@ -27,6 +27,7 @@
     { "source": "/ikinci-el/:id",                 "destination": "/api/ilan/og?id=:id" },
     { "source": "/takip/:is_no",                  "destination": "/index.html" },
     { "source": "/servis-kayit",                  "destination": "/index.html" },
+    { "source": "/kayit",                         "destination": "/index.html" },
     { "source": "/servis-admin",                  "destination": "/index.html" },
     { "source": "/admin",                         "destination": "/index.html" },
     { "source": "/tarife",                        "destination": "/index.html" },
