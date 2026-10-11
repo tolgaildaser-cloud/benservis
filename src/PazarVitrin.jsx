@@ -23,6 +23,7 @@ import { sepetAdet, sepeteEkle } from "./sepet.js";
 import KvkkNotu from "./KvkkNotu.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import CihazIkon from "./cihaz-ikonlari.jsx";
+import PazarSekmeler from "./PazarSekmeler.jsx";
 import { NAVY as INK, BLUE, GREEN_DEEP, HAIR, SLATE, TINT, RED } from "./theme.js";
 import { KARGO_TL } from "./kargo.js";
 
@@ -39,6 +40,8 @@ const HERO_SLAYTLAR = [
 const HERO_SURE_MS = 5000;
 
 const IL_LISTESI = Object.keys(TR_IL_ILCE);
+// "İkinci El" artık ayrı sekme (/ikinci-el, YK #171); Yedek Parça sekmesinin menüsünde tekrar edilmez.
+const MENU_KATEGORILERI = PAZAR_KATEGORILERI.filter((k) => k.slug !== "ikinci-el");
 const adBul = (liste, slug) => liste.find((x) => x.slug === slug)?.ad || null;
 // Menü ve yuvarlaklarda kısa ad: "Kombi / Termosifon" → "Kombi".
 const kisaAd = (ad) => ad.split(" / ")[0];
@@ -166,10 +169,11 @@ export default function PazarVitrin() {
             {adet > 0 && <span className="pz-rozet">{adet}</span>}
           </a>
         </div>
+        <PazarSekmeler etkin="yedek-parca" />
         <nav className="pz-katnav" aria-label="Kategoriler">
           <div className="pz-kap pz-katnav-ic">
             <a href="/pazar" className={f.ana ? "on" : ""} onClick={(e) => { e.preventDefault(); git({ ana: true, kategori: "yedek-parca", cihaz: "", parca: "", ara: "" }); }}>Tüm kategoriler</a>
-            {PAZAR_KATEGORILERI.map((k) => (
+            {MENU_KATEGORILERI.map((k) => (
               <a key={k.slug} href={`/pazar?kategori=${k.slug}`} className={!f.ana && !f.cihaz && !f.ara && f.kategori === k.slug ? "on" : ""}
                 onClick={(e) => { e.preventDefault(); git({ kategori: k.slug, cihaz: "", parca: "", ara: "" }); }}>{k.ad}</a>
             ))}
@@ -370,7 +374,7 @@ function ListeGorunum({ urunler, f, git }) {
         <aside className={`pz-panel${panel ? " acik" : ""}`} aria-label="Filtreler">
           <div className="pz-fgrup">
             <h4>Kategori</h4>
-            {PAZAR_KATEGORILERI.map((k) => (
+            {MENU_KATEGORILERI.map((k) => (
               <label key={k.slug}><input type="radio" name="pz-kat" checked={f.kategori === k.slug} onChange={() => git({ kategori: k.slug, parca: "" })} /> {k.ad}</label>
             ))}
           </div>

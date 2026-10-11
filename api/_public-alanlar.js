@@ -41,6 +41,17 @@ export const ILAN_PUBLIC_ALANLAR = [
   "tur", "parca_turu", "cihaz_turu", "uyumlu_modeller", "parca_durum",
 ].join(", ");
 
+// ── İKİNCİ EL VİTRİN ALANLARI (YK #171 İE-2, 11 Eki 2026) ───────────────────
+// `/api/ikinci-el/liste` yetkisiz. Tolga (11 Eki): "DPP hiç bir zaman gösterilmeyecek önde".
+// ⛔ DIŞARIDA: seri_no · cihaz_id (DPP'ye köprü; marka/model sunucuda okunur, id dönmez) ·
+//    satici_id · satici_tel · satici_iban · satici_token · kontrol_listesi/ic_fotograflar
+//    (detayda, İE-3) · demo · goruntuleme_sayisi.
+export const IKINCI_EL_PUBLIC_ALANLAR = [
+  "id", "dosya_no", "baslik", "fiyat", "konum", "kategori", "cihaz_turu", "fotograflar",
+  "garanti_sinifi", "garanti_bitis", "garanti_ay", "uretim_yili", "kullanim_suresi_ay",
+  "teslim_secenekleri", "created_at",
+].join(", ");
+
 // Public uçlardan okunabilen ilan durumları — `demo` (#165 PR-1) ve `silindi` 404.
 export const ILAN_PUBLIC_DURUMLAR = ["aktif", "satildi"];
 

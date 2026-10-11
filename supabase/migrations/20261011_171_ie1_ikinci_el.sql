@@ -79,8 +79,10 @@ create index if not exists ilanlar_ikinci_el_idx on public.ilanlar (durum, demo,
 update public.ilanlar set durum = 'pasif' where durum = 'demo' and created_at < '2026-07-01';
 
 -- ④ 2 demo ürün (Tolga 11:3x) ──────────────────────────────────────────
--- ❓ Fiyat, üretim yılı, kullanım süresi, garanti sınıfı Tolga'dan gelmedi: fiyat yer tutucu
---    (sonu 9), garanti 'yok' (YK #171 varsayılanı). Aktif etmeden önce Tolga düzeltir.
+-- Garanti: ikisi de garantisiz, 'yok' (Tolga 11 Eki 11:3x: "ikisi de garantisiz açılsın").
+-- Teslim: nakliye/montaj tutarı yok, "ayrıca hesaplanır" (Tolga 11:4x); tutar kolonu açılmaz.
+-- ❓ Fiyat, üretim yılı, kullanım süresi Tolga'dan gelmedi: fiyat yer tutucu (sonu 9).
+--    Aktif etmeden önce Tolga düzeltir.
 -- Seri no'lar DEMO: gerçek cihaz değil; ön yüzde yalnız son 4 hane görünür.
 insert into public.cihazlar (seri_no, kategori, marka, model, renk, mevcut_durum, kaynak)
 select v.seri_no, v.kategori, v.marka, v.model, v.renk, 'çalışıyor', 'ikinci-el-demo'
