@@ -147,7 +147,7 @@ export default function PazarVitrin() {
       <header className="pz-ust">
         <div className="pz-kap pz-bas">
           <a href="/" className="pz-logo" aria-label="Benservis ana sayfası">
-            <BenservisLogo style={{ height: 36, width: "auto" }} showMotto={false} />
+            <BenservisLogo style={{ height: 40, width: "auto" }} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
           </a>
           <a href="/pazar" className="pz-etiket" onClick={(e) => { e.preventDefault(); git({ ana: true, kategori: "yedek-parca", cihaz: "", parca: "", ara: "" }); }}>Pazaryeri</a>
           <form className="pz-ara" onSubmit={ara} role="search">
@@ -484,16 +484,18 @@ const CSS = `
 .pz a{color:inherit;text-decoration:none}
 .pz button{font-family:inherit;cursor:pointer}
 .pz-kap{max-width:1240px;margin:0 auto;padding:0 16px}
-.pz-ust{background:#fff;border-bottom:1px solid ${HAIR};position:sticky;top:0;z-index:50}
+/* Koyu üst bant (Tolga, 11 Eki: "üst bantı beyaz yapmışsın logo eksik görünüyor") — sepet ve
+   statik sayfalardaki bantla aynı: lacivert zemin, beyaz/açık mavi logo + motto. */
+.pz-ust{background:${INK};position:sticky;top:0;z-index:50}
 .pz-bas{display:flex;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
 .pz-logo{display:flex;flex:none}
-.pz-etiket{font-weight:800;font-size:13px;color:${BLUE}!important;background:#EFF6FF;border-radius:8px;padding:5px 9px;white-space:nowrap}
-.pz-ara{flex:1;display:flex;border:2px solid ${BLUE};border-radius:10px;overflow:hidden;background:#fff;min-width:0}
+.pz-etiket{font-weight:800;font-size:13px;color:#fff!important;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:5px 11px;white-space:nowrap}
+.pz-ara{flex:1;display:flex;border:2px solid #fff;border-radius:10px;overflow:hidden;background:#fff;min-width:0}
 .pz-ara input{flex:1;min-width:0;border:0;outline:0;padding:11px 14px;font-size:14.5px;font-family:inherit;color:${INK}}
 .pz-ara button{border:0;background:${BLUE};color:#fff;padding:0 20px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px}
-.pz-sepet{position:relative;display:flex;align-items:center;gap:8px;background:${INK};color:#fff!important;border-radius:10px;padding:10px 14px;font-weight:700;white-space:nowrap}
-.pz-rozet{position:absolute;top:-7px;right:-7px;background:#EA580C;color:#fff;font-size:11px;font-weight:800;border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;border:2px solid #fff;padding:0 4px}
-.pz-katnav{border-top:1px solid ${HAIR}}
+.pz-sepet{position:relative;display:flex;align-items:center;gap:8px;background:#fff;color:${INK}!important;border-radius:10px;padding:10px 14px;font-weight:700;white-space:nowrap}
+.pz-rozet{position:absolute;top:-7px;right:-7px;background:#EA580C;color:#fff;font-size:11px;font-weight:800;border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;border:2px solid ${INK};padding:0 4px}
+.pz-katnav{background:#fff;border-top:3px solid ${BLUE};border-bottom:1px solid ${HAIR}}
 .pz-katnav-ic{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
 .pz-katnav-ic::-webkit-scrollbar{display:none}
 .pz-katnav-ic a{padding:11px 12px;font-weight:600;font-size:13.5px;white-space:nowrap;border-bottom:3px solid transparent}
@@ -611,7 +613,7 @@ const CSS = `
 }
 @media (max-width:640px){
   .pz-bas{flex-wrap:wrap;gap:10px;padding-top:10px;padding-bottom:10px}
-  .pz-logo svg{height:30px!important}
+  .pz-logo svg{height:34px!important}
   .pz-sepet{margin-left:auto;padding:9px 12px}
   .pz-yazi{display:none}
   .pz-ara{order:3;flex-basis:100%}
