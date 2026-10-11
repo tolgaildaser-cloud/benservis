@@ -71,6 +71,7 @@ export default function Sepet() {
       
 
       {/* Header */}
+      {/* Dönüş bağlantıları /pazar (Tolga, 11 Eki: "sepet sayfasında yedek parça ürünlerine dönemiyorum"; eskiden /ikinci-el). */}
       {/* Koyu bant + açık renk logo/motto (Tolga, 11 Eki: "bil gör çağır beyaz zeminde gözükmüyor,
           o bandı da koyu yap diğer sayfalardaki gibi") — ana sayfa üst barıyla aynı renkler. */}
       <header style={{ background: INK, borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
@@ -78,7 +79,7 @@ export default function Sepet() {
           <a href="/" aria-label="Benservis ana sayfa" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <BenservisLogo style={{ height: 42, width: "auto" }} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />
           </a>
-          <span style={{ fontSize: 13, fontWeight: 700, color: "#CBD5E1" }}>🛒 Sepet & Ödeme</span>
+          <a href="/pazar" style={{ fontSize: 13, fontWeight: 700, color: "#fff", textDecoration: "none", border: "1.5px solid rgba(255,255,255,.55)", borderRadius: 999, padding: "7px 14px", whiteSpace: "nowrap" }}>← Pazaryeri</a>
         </div>
       </header>
 
@@ -103,8 +104,8 @@ export default function Sepet() {
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, textAlign: "center", padding: "54px 16px" }}>
               <div style={{ fontSize: 44, marginBottom: 12 }}>🛒</div>
               <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>Sepetiniz boş</div>
-              <div style={{ fontSize: 13, color: "#64748B", marginBottom: 18 }}>İkinci el ürünlere göz atın, beğendiğinizi sepete ekleyin.</div>
-              <a href="/ikinci-el" style={{ display: "inline-block", padding: "11px 22px", borderRadius: 8, background: AMBER, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+              <div style={{ fontSize: 13, color: "#64748B", marginBottom: 18 }}>Pazaryerindeki yedek parçalara göz atın, beğendiğinizi sepete ekleyin.</div>
+              <a href="/pazar" style={{ display: "inline-block", padding: "11px 22px", borderRadius: 8, background: AMBER, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
                 Ürünlere Göz At →
               </a>
             </div>
@@ -140,7 +141,7 @@ export default function Sepet() {
                 style={{ width: "100%", padding: 14, borderRadius: 8, border: "none", background: AMBER, color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "inherit" }}>
                 Ödemeye Geç →
               </button>
-              <a href="/ikinci-el" style={{ display: "block", textAlign: "center", marginTop: 12, fontSize: 13, color: LINK }}>← Alışverişe devam et</a>
+              <a href="/pazar" style={{ display: "block", textAlign: "center", marginTop: 12, fontSize: 13, color: LINK }}>← Alışverişe devam et</a>
             </>
           )
         )}
@@ -213,7 +214,7 @@ export default function Sepet() {
             <div style={{ fontSize: 13, fontWeight: 700, color: AMBER, marginBottom: 22 }}>
               Toplam: {sonuc.siparis.tutar.toLocaleString("tr-TR")} TL
             </div>
-            <a href="/ikinci-el" style={{ display: "inline-block", padding: "12px 26px", borderRadius: 8, background: INK, color: "#F1F5F9", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+            <a href="/pazar" style={{ display: "inline-block", padding: "12px 26px", borderRadius: 8, background: INK, color: "#F1F5F9", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
               Alışverişe Devam Et
             </a>
           </div>
