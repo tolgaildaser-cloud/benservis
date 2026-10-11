@@ -32,7 +32,9 @@
     { "source": "/servis/:id",                    "destination": "/index.html" },
     { "source": "/urun/:id",                      "destination": "/index.html" },
     { "source": "/sepet",                         "destination": "/index.html" },
-    { "source": "/pazar",                         "destination": "/index.html" }
+    { "source": "/pazar",                         "destination": "/index.html" },
+    { "source": "/odeme/:siparis",                "destination": "/api/odeme/paytr?siparis=:siparis" },
+    { "source": "/siparis/:siparis",              "destination": "/api/odeme/sonuc?siparis=:siparis" }
   ],
   "headers": [
     { "source": "/pazar", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }

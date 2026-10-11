@@ -126,13 +126,26 @@ describe("satıcı modeli (#166 PR-2)", () => {
 
   it("sipariş: Benservis kalemi satıcı adı + türüyle yazılır, tutar sunucuda", async () => {
     const res = sahteRes();
-    await siparis({ method: "POST", body: { urun_idler: ["u-bs", "u-sv"], alici_ad: "A B", alici_tel: "05551112233" } }, res);
+    await siparis({ method: "POST", body: { urun_idler: ["u-bs", "u-sv"], alici_ad: "A B", alici_tel: "05551112233",
+      alici_adres: "Suadiye Mah. Örnek Sok. 1, Kadıköy", alici_email: "a@b.co", sozlesme_onay: true } }, res);
     expect(res.kod).toBe(201);
     const s = eklenen.find((e) => e.tablo === "siparisler").satir;
-    expect(s.tutar).toBe(9450);
+    // #167 PR-6: Benservis kalemi var → sabit kargo (150 TL) toplama eklenir; karışık sepet PayTR'ye gitmez.
+    expect(s.tutar).toBe(9450 + 150);
+    expect(s.kargo_tl).toBe(150);
+    expect(res.govde.odeme).toBe("yakinda");
     const bs = s.urunler.find((k) => k.urun_id === "u-bs");
     expect(bs).toMatchObject({ servis_id: null, servis_ad: "Benservis", satici_id: "st-bs", satici_tur: "benservis" });
     expect(s.urunler.find((k) => k.urun_id === "u-sv").servis_ad).toBe("Kadıköy Servis");
+  });
+
+  it("sipariş: Benservis kalemi varken sözleşme onayı / e-posta / adres yoksa 400, kayıt yok", async () => {
+    for (const ek of [{}, { sozlesme_onay: true, alici_adres: "Suadiye Mah. Örnek Sok. 1" }, { sozlesme_onay: true, alici_email: "a@b.co" }]) {
+      const res = sahteRes();
+      await siparis({ method: "POST", body: { urun_idler: ["u-bs"], alici_ad: "A B", alici_tel: "05551112233", ...ek } }, res);
+      expect(res.kod).toBe(400);
+    }
+    expect(eklenen).toEqual([]);
   });
 
   it("sipariş: stok 0 olan ürün 409", async () => {

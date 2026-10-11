@@ -1,20 +1,24 @@
 // api/siparis.js
 // POST /api/siparis — Sepetten sipariş oluşturur (ödeme Benservis üzerinden).
-// Body: { urun_idler: [uuid], alici_ad, alici_tel, alici_adres? }
+// Body: { urun_idler: [uuid], alici_ad, alici_tel, alici_adres?, alici_email?, sozlesme_onay? }
 // Fiyatlar SUNUCUDA DB'den hesaplanır — istemciden tutar kabul edilmez.
-// iyzico yapılandırılmamışsa sipariş 'odeme_bekleniyor' olarak kaydedilir,
-// frontend "ödeme yakında" onay ekranı gösterir. iyzico gelince burada
-// checkout form initialize edilip odeme_url dönülecek.
+// YK #167 PR-6: sepetin tamamı Benservis (pazar) ürünüyse ve PayTR env tanımlıysa sipariş
+// PayTR'ye gider → odeme_url = /odeme/:id (iFrame). Pazar ürünü varsa kargo (KARGO_TL) eklenir,
+// e-posta + sözleşme onayı zorunlu. Diğer durumlarda eski "ödeme yakında" akışı aynen sürer.
 import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
 import { saticiHaritasi } from "./_satici.js";
+import { paytrAyarlari } from "./_paytr.js";
+import { KARGO_TL } from "../src/kargo.js";
+
+const EPOSTA_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { urun_idler, alici_ad, alici_tel, alici_adres } = req.body || {};
+  const { urun_idler, alici_ad, alici_tel, alici_adres, alici_email, sozlesme_onay } = req.body || {};
 
   if (!Array.isArray(urun_idler) || urun_idler.length === 0) {
     return res.status(400).json({ error: "Sepet boş" });
@@ -75,7 +79,26 @@ export default async function handler(req, res) {
       satici_tur: satici?.tur || null,
     };
   });
-  const tutar = kalemler.reduce((s, k) => s + k.fiyat, 0);
+  const urunToplam = kalemler.reduce((s, k) => s + k.fiyat, 0);
+
+  // Pazar (Benservis) ürünü: kargo ayrı satır, mesafeli satış onayı ve e-posta zorunlu.
+  const pazarVar = kalemler.some(k => k.satici_tur === "benservis");
+  const tamamiPazar = kalemler.every(k => k.satici_tur === "benservis");
+  const email = String(alici_email || "").trim().toLowerCase();
+  if (pazarVar) {
+    if (sozlesme_onay !== true) {
+      return res.status(400).json({ error: "Ön Bilgilendirme Formu ve Mesafeli Satış Sözleşmesi onayı gerekli" });
+    }
+    if (String(alici_adres || "").trim().length < 10) {
+      return res.status(400).json({ error: "Kargo için açık teslimat adresi girin" });
+    }
+    if (!EPOSTA_RE.test(email) || email.length > 120) {
+      return res.status(400).json({ error: "Geçerli bir e-posta adresi girin" });
+    }
+  }
+  const kargo = pazarVar ? KARGO_TL : 0;
+  const tutar = urunToplam + kargo;
+  const paytr = tamamiPazar && Boolean(paytrAyarlari());
 
   const telStr = String(alici_tel);
   const tel = telStr.startsWith("+") ? telStr : `+90${telStr.replace(/^0/, "")}`;
@@ -88,19 +111,23 @@ export default async function handler(req, res) {
       alici_ad:    alici_ad.trim(),
       alici_tel:   tel,
       alici_adres: alici_adres?.trim() || null,
+      ...(pazarVar ? {
+        kargo_tl:         kargo,
+        alici_email:      email,
+        sozlesme_onay_at: new Date().toISOString(),
+        sozlesme_onay_ip: (req.headers?.["x-forwarded-for"] || "").split(",")[0].trim() || null,
+      } : {}),
+      ...(paytr ? { odeme_saglayici: "paytr" } : {}),
     })
     .select("id, siparis_no, tutar, odeme_durumu, created_at")
     .single();
 
   if (insErr) return res.status(500).json({ error: insErr.message });
 
-  // Ödeme: iyzico yapılandırıldıysa checkout başlat, değilse 'yakinda'
-  const iyzicoHazir = Boolean(process.env.IYZICO_API_KEY && process.env.IYZICO_SECRET_KEY);
-
   return res.status(201).json({
     ok: true,
-    siparis,
-    odeme: iyzicoHazir ? "iyzico" : "yakinda",
-    // iyzico entegre olduğunda: odeme_url buraya eklenecek
+    siparis: { ...siparis, kargo_tl: kargo },
+    odeme: paytr ? "paytr" : "yakinda",
+    ...(paytr ? { odeme_url: `/odeme/${siparis.id}` } : {}),
   });
 }
