@@ -17,6 +17,8 @@ const tablolar = {
     { odeme_durumu: "odendi", alici_ad: "Ad Soyad", alici_tel: "+905550000000", urunler: [{ urun_id: "d" }, { urun_id: "b" }] },
     { odeme_durumu: "odendi", alici_ad: "Ad Soyad", alici_tel: "+905550000000", urunler: [{ urun_id: "d" }] },
     { odeme_durumu: "odeme_bekleniyor", urunler: [{ urun_id: "a" }, { urun_id: "a" }, { urun_id: "a" }] },
+    // PayTR test siparişi (SP-0002 gibi): ödenmiş ama sayılmaz.
+    { odeme_durumu: "odendi", odeme_test: true, urunler: [{ urun_id: "a" }, { urun_id: "a" }, { urun_id: "a" }] },
   ],
 };
 
@@ -27,6 +29,7 @@ function sahteSorgu(tablo) {
     select(k) { d.kolon = k; return z; },
     eq(k, v) { d.filtre.push((s) => s[k] === v); return z; },
     gt(k, v) { d.filtre.push((s) => s[k] > v); return z; },
+    not(k, op, v) { if (op === "is") d.filtre.push((s) => (s[k] ?? null) !== v); return z; },
     in(k, v) { d.filtre.push((s) => v.includes(s[k])); return z; },
     order() { return z; }, limit() { return z; },
     then(ok, no) {
@@ -64,6 +67,14 @@ describe("GET /api/pazar/liste?siralama=cok-satan", () => {
     expect(r.govde.urunler.map((x) => x.id)).toEqual(["d", "b", "c", "a"]);
     const sip = sorgular.find((q) => q.tablo === "siparisler");
     expect(sip.d.kolon).toBe("urunler");
+  });
+
+  it("PayTR test siparişi sayılmaz (Tolga, 11 Eki)", async () => {
+    sorgular.length = 0;
+    const r = await cagir({ siralama: "cok-satan" });
+    // test siparişi sayılsaydı "a" 3 satışla ilk sıraya çıkardı
+    expect(r.govde.urunler[0].id).toBe("d");
+    expect(r.govde.urunler.map((x) => x.id).indexOf("a")).toBe(3);
   });
 
   it("cevapta satış sayısı ya da alıcı verisi yok", async () => {

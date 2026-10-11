@@ -64,8 +64,11 @@ export default async function handler(req, res) {
   let liste = data || [];
   if (req.query.siralama === "cok-satan") {
     // Yalnız `urunler` kolonu okunur (alıcı adı/telefonu/adresi hiç seçilmez).
+    // PayTR test modu siparişleri sayılmaz (Tolga, 11 Eki: "test siparişini sayımdan çıkar");
+    // `odeme_test` boş (eski/ödemesiz kayıt) olan sayılır.
     const { data: sip } = await supabase
-      .from("siparisler").select("urunler").eq("odeme_durumu", "odendi").limit(1000);
+      .from("siparisler").select("urunler").eq("odeme_durumu", "odendi")
+      .not("odeme_test", "is", true).limit(1000);
     liste = cokSatanSirala(liste, sip || []);
   }
 
