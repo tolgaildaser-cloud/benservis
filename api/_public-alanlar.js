@@ -52,6 +52,12 @@ export const IKINCI_EL_PUBLIC_ALANLAR = [
   "teslim_secenekleri", "created_at",
 ].join(", ");
 
+// Detay (`?dosya=`, İE-3) ek alanları. Değişen parça listesi tamir kayıtlarından yalnız
+// tarih + işlem + parça adıyla gelir (TAMIR_PUBLIC_ALANLAR'dan dar: servis adı, maliyet,
+// fotoğraf dönmez). Seri no yalnız maskeli (`****1234`) döner.
+export const IKINCI_EL_DETAY_ALANLAR = ["aciklama", "kontrol_listesi", "ic_fotograflar"].join(", ");
+export const IKINCI_EL_TAMIR_ALANLAR = ["tarih", "yapilan_islem", "degistirilen_parcalar"].join(", ");
+
 // Public uçlardan okunabilen ilan durumları — `demo` (#165 PR-1) ve `silindi` 404.
 export const ILAN_PUBLIC_DURUMLAR = ["aktif", "satildi"];
 

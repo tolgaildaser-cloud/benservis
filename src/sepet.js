@@ -20,6 +20,9 @@ export function sepeteEkle(urun) {
   const kalem = { id: urun.id, baslik: urun.baslik, fiyat: urun.fiyat, gorsel_url: urun.gorsel_url || null, servis_ad: urun.servis_ad || null };
   // YK #166 PR-4: Benservis (pazar) ürünü kargo hariç fiyatlı — sepette kargo satırı çıkar.
   if (urun.kargo_haric) kalem.kargo_haric = true;
+  // YK #171 İE-3: ikinci el ilanı (`ilanlar`) — kargo yok, teslim seçimi kalemle taşınır;
+  // sipariş ucu ilanı `ilanlar` tablosunda, fiyatı ve teslimi sunucuda doğrular.
+  if (urun.tip === "ikinci-el") Object.assign(kalem, { tip: "ikinci-el", dosya_no: urun.dosya_no, teslim: urun.teslim || "depo" });
   liste.push(kalem);
   yaz(liste);
   return true;

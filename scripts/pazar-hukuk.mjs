@@ -29,7 +29,7 @@ export const SATICI = {
 const ZORUNLU = ["unvan", "mersis", "adres", "telefon", "eposta"];
 export const eksikSaticiAlanlari = () => ZORUNLU.filter((k) => !SATICI[k]);
 
-export const PAZAR_HUKUK_GUNCELLEME = "10 Ekim 2026";
+export const PAZAR_HUKUK_GUNCELLEME = "11 Ekim 2026";
 const KARGO_SURE = "3 (üç) iş günü";
 
 const alan = (k, etiket) =>
@@ -76,6 +76,13 @@ ${SATICI_TABLO}
 <li>Ürün stokta kalmamışsa ya da teslimat imkânsızlaşırsa durum size bildirilir ve ödediğiniz tutar, bildirim tarihinden itibaren <strong>14 gün</strong> içinde iade edilir.</li>
 </ul>
 
+<h2>4A. İkinci el ürünler</h2>
+<ul>
+<li>"İkinci El" bölümündeki ürünler <strong>kullanılmış</strong> ürünlerdir ve satıcısı yukarıda bilgileri yazılı satıcıdır. Ürünün kontrol sonuçları, değişen parçaları ve garanti durumu (<strong>marka garantisi devam eden</strong>, <strong>Benservis garantili</strong> ya da <strong>garantisiz</strong>) ürün sayfasında ve sipariş özetinde gösterilir.</li>
+<li>Teslim şeklini siz seçersiniz: <strong>depodan teslim alma</strong> (ücretsiz), <strong>adrese nakliye</strong> ya da <strong>nakliye ve montaj</strong>. Nakliye ve montaj ücreti ürün bedeline dahil değildir; adresinize göre ayrıca hesaplanır, size bildirilir ve onayınız alınmadan bu hizmet verilmez. Kart ile yalnız ürün bedeli tahsil edilir.</li>
+<li>İkinci el ürünlerde de 14 günlük cayma hakkı ve ayıplı mala ilişkin yasal haklarınız geçerlidir; satıştan önce ürün sayfasında açıkça bildirilen kusurlar bu kapsamın dışındadır.</li>
+</ul>
+
 <h2>5. Cayma hakkı</h2>
 <ul>
 <li>Ürünü teslim aldığınız günden itibaren <strong>14 gün</strong> içinde, gerekçe göstermeden ve cezai şart ödemeden sözleşmeden cayabilirsiniz.</li>
@@ -117,6 +124,11 @@ ${SATICI_TABLO}
 <p>4.2. Ürün, ödemenin onaylanmasından itibaren tahmini ${KARGO_SURE} içinde kargoya verilir; teslim süresi siparişten itibaren 30 günü aşamaz.</p>
 <p>4.3. Satıcı, sipariş konusu ürünün tedarikinin imkânsızlaştığını öğrendiği tarihten itibaren 3 gün içinde Alıcı'yı bilgilendirir ve tahsil edilen tutarı en geç 14 gün içinde iade eder.</p>
 <p>4.4. Alıcı, teslim sırasında paketi kontrol etmeli; hasarlı paketi teslim almayarak ya da kargo görevlisine tutanak tutturarak teslim almalıdır.</p>
+
+<h2>Madde 4A — İkinci el ürünler</h2>
+<p>4A.1. Pazaryerinin "İkinci El" bölümünden satın alınan ürün kullanılmış üründür. Ürünün kontrol sonuçları, değişen parçaları ve garanti sınıfı (marka garantisi devam eden · Benservis garantili · garantisiz) ürün sayfasında ve sipariş özetinde belirtilir ve bu sözleşmenin parçasıdır.</p>
+<p>4A.2. İkinci el üründe kargo ücreti uygulanmaz; Alıcı teslim şeklini seçer: depodan teslim alma (ücretsiz), adrese nakliye ya da nakliye ve montaj. Nakliye ve montaj ücreti ürün bedeline dahil değildir, teslim adresine göre ayrıca hesaplanır ve Alıcı'nın onayı alınmadan hizmet verilmez. Ödeme adımında yalnız ürün bedeli tahsil edilir.</p>
+<p>4A.3. Alıcı'nın cayma hakkı ve 6502 sayılı Kanun md.11'deki hakları ikinci el üründe de saklıdır; satıştan önce ürün sayfasında açıkça bildirilen kusurlar ayıp sayılmaz.</p>
 
 <h2>Madde 5 — Cayma hakkı</h2>
 <p>5.1. Alıcı, ürünü teslim aldığı günden itibaren 14 gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.</p>
