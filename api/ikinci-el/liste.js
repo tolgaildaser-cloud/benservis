@@ -9,6 +9,7 @@
 //    kaydından okunur, yalnız metin olarak döner (api/_public-alanlar.js).
 import supabase from "../_supabase.js";
 import { IKINCI_EL_PUBLIC_ALANLAR, IKINCI_EL_DETAY_ALANLAR, IKINCI_EL_TAMIR_ALANLAR } from "../_public-alanlar.js";
+import { baskasindaKilitli } from "../_kilit.js";
 
 const LIMIT = 60;
 export const DOSYA_NO_RE = /^BS-2E-\d{6}$/;
@@ -28,7 +29,7 @@ export default async function handler(req, res) {
 
   let query = supabase
     .from("ilanlar")
-    .select(`${IKINCI_EL_PUBLIC_ALANLAR}, ${dosya ? `${IKINCI_EL_DETAY_ALANLAR}, ` : ""}cihaz_id`)
+    .select(`${IKINCI_EL_PUBLIC_ALANLAR}, ${dosya ? `${IKINCI_EL_DETAY_ALANLAR}, kilit_token, kilit_bitis, ` : ""}cihaz_id`)
     .eq("durum", "aktif")
     .gt("stok", 0)
     .not("cihaz_id", "is", null)
@@ -48,7 +49,10 @@ export default async function handler(req, res) {
     (c || []).forEach((x) => { cihazlar[x.id] = x; });
   }
 
-  const ilanlar = satirlar.map(({ cihaz_id, ...ilan }) => ({
+  // Kilit kolonları cevaba girmez; detayda yalnız "başka bir sepette mi" (Tolga, 11 Eki 12:4x).
+  const anahtar = String(req.query.anahtar || "");
+  const ilanlar = satirlar.map(({ cihaz_id, kilit_token, kilit_bitis, ...ilan }) => ({
+    ...(dosya ? { kilitli: baskasindaKilitli({ kilit_token, kilit_bitis }, anahtar) } : {}),
     ...ilan,
     marka: cihazlar[cihaz_id]?.marka || null,
     model: cihazlar[cihaz_id]?.model || null,
@@ -70,6 +74,7 @@ export default async function handler(req, res) {
     };
   }
 
-  res.setHeader("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
+  // Detay kilit durumunu taşıdığı için önbelleğe alınmaz; liste 60 sn.
+  res.setHeader("Cache-Control", dosya ? "no-store" : "public, s-maxage=60, stale-while-revalidate=300");
   return res.status(200).json({ ilanlar });
 }

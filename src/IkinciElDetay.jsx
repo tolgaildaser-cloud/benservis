@@ -10,6 +10,8 @@
 //    listesi arkada cihazın tamir kayıtlarından gelir; seri no yalnız maskeli (`****1234`).
 // ⛔ Teslim: depo ücretsiz; nakliye ve montaj "ayrıca hesaplanır" — tutar yazılmaz, ödemeye
 //    girmez (Tolga 11:4x). Sepete teslim seçimi kalemle gider; sunucu ilanın seçeneklerine bakar.
+// ⛔ Sepet kilidi (Tolga, 11 Eki 12:4x): "Sepete ekle" ilanı bu sepete 5 dk kilitler; başka
+//    sepetteyse eklenmez. Süre dolarsa kilit kalkar, ürün sepette kalır.
 // ⛔ Boş alan yazılmaz; fotoğraf yoksa ikon (genel cihaz fotoğrafı ürünün yerine konmaz).
 // ⛔ Satır içi stile `display` yazılmaz (PR #175 dersi).
 import React, { useEffect, useMemo, useState } from "react";
@@ -17,6 +19,7 @@ import { track } from "@vercel/analytics";
 import { sepetOku, sepeteEkle } from "./sepet.js";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import { ilanTeslimSecenekleri } from "./ikinci-el-teslim.js";
+import { sepetAnahtari, SEPET_KILIT_DK } from "./ikinci-el-kilit.js";
 import { SATICI } from "../scripts/pazar-hukuk.mjs";
 import {
   Kabuk, IlanKarti, useIlanlar, useNoindex, garantiEtiketi, kullanimMetni, cihazAdi, tl,
@@ -73,7 +76,7 @@ export function degisenBolgeler(sema, degisen) {
 }
 
 export default function IkinciElDetay({ dosya }) {
-  const { ilanlar, hata } = useIlanlar(dosya);
+  const { ilanlar, hata } = useIlanlar(dosya, sepetAnahtari());
   const ilan = ilanlar?.[0];
   useNoindex(ilan ? `${ilan.marka || ""} ${ilan.model || ilan.baslik} · İkinci El · Benservis`.trim() : `${dosya} · İkinci El · Benservis`);
 
@@ -237,13 +240,30 @@ function FiyatKutusu({ ilan, garanti }) {
   const secenekler = ilanTeslimSecenekleri(ilan);
   const [teslim, setTeslim] = useState("depo");
   const [sepette, setSepette] = useState(() => sepetOku().some((k) => k.id === ilan.id));
-  const ekle = () => {
-    const eklendi = sepeteEkle({
-      id: ilan.id, baslik: ilan.baslik, fiyat: ilan.fiyat, gorsel_url: ilan.fotograflar?.[0] || null,
-      servis_ad: "Benservis", tip: "ikinci-el", dosya_no: ilan.dosya_no, teslim,
-    });
-    if (eklendi) { try { track("ikinci_el_sepete_ekle", { ilan: ilan.id, teslim }); } catch { /* ölçüm akışı bozmaz */ } }
-    setSepette(true);
+  const [kilitli, setKilitli] = useState(Boolean(ilan.kilitli));
+  const [bekliyor, setBekliyor] = useState(false);
+  const [uyari, setUyari] = useState("");
+  const ekle = async () => {
+    setUyari(""); setBekliyor(true);
+    try {
+      const r = await fetch("/api/ikinci-el/kilit", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: ilan.id, anahtar: sepetAnahtari() }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (r.status === 409) { setKilitli(true); setUyari(d.error || "Bu ürün şu an başka bir müşterinin sepetinde."); return; }
+      if (!r.ok) { setUyari(d.error || "Sepete eklenemedi, tekrar deneyin."); return; }
+      const eklendi = sepeteEkle({
+        id: ilan.id, baslik: ilan.baslik, fiyat: ilan.fiyat, gorsel_url: ilan.fotograflar?.[0] || null,
+        servis_ad: "Benservis", tip: "ikinci-el", dosya_no: ilan.dosya_no, teslim, kilit_bitis: d.kilit_bitis,
+      });
+      if (eklendi) { try { track("ikinci_el_sepete_ekle", { ilan: ilan.id, teslim }); } catch { /* ölçüm akışı bozmaz */ } }
+      setSepette(true);
+    } catch {
+      setUyari("Bağlantı hatası, tekrar deneyin.");
+    } finally {
+      setBekliyor(false);
+    }
   };
   return (
     <div className="ied-fiyat">
@@ -266,7 +286,10 @@ function FiyatKutusu({ ilan, garanti }) {
 
       {sepette
         ? <a href="/sepet" className="ied-dugme ied-sepette">Sepette · Sepete git →</a>
-        : <button type="button" className="ied-dugme" onClick={ekle}>Sepete ekle</button>}
+        : <button type="button" className="ied-dugme" onClick={ekle} disabled={bekliyor}>{bekliyor ? "Ayrılıyor…" : "Sepete ekle"}</button>}
+      {!sepette && kilitli && !uyari && <p className="ied-kilit">Bu ürün şu an başka bir müşterinin sepetinde. Birkaç dakika içinde yeniden satışa açılabilir.</p>}
+      {uyari && <p className="ied-kilit">{uyari}</p>}
+      {!sepette && <p className="ied-gri">Sepete eklediğinde ürün {SEPET_KILIT_DK} dakika senin için ayrılır.</p>}
       <div className="ied-mini">Dosya no <b>{ilan.dosya_no}</b> · Stokta 1 adet · Ödeme kart ile (PayTR)</div>
     </div>
   );
@@ -316,6 +339,8 @@ const CSS = `
 .ied-teslim input{accent-color:${BLUE}}
 .ied-dugme{border:0;background:${BLUE};color:#fff!important;border-radius:10px;padding:14px;font-weight:800;font-size:15px;text-align:center}
 .ied-sepette{background:${GREEN_DEEP}}
+.ied-dugme:disabled{opacity:.7;cursor:wait}
+.ied-kilit{margin:0;background:#FFF7ED;border:1px solid #FED7AA;color:#9A3412;border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.45}
 .ied-mini{color:${SLATE};font-size:12px}
 .ied-gri{color:${SLATE};font-size:12.5px;line-height:1.45;margin:6px 0 0}
 .ied-iki{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;margin-bottom:16px}

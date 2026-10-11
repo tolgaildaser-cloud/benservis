@@ -9,12 +9,16 @@
 // Fiyat DB'den; teslim ilanın açtığı seçeneklerden biri olmalı; kargo eklenmez; nakliye/montaj
 // ücreti "ayrıca hesaplanır" (tutar yok, PayTR yalnız ürün bedeli). Ödeme sonrası ilan
 // `satildi` olur (api/odeme/callback.js).
+// Sepet kilidi (Tolga, 11 Eki 12:4x): ilan başka bir sepette süresi dolmamış kilitliyse 409.
+// Kilit boşsa ya da bu sepetinse sipariş anında ödeme süresince (30 dk) bu sepete kilitlenir.
 import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
 import { saticiHaritasi } from "./_satici.js";
 import { paytrAyarlari } from "./_paytr.js";
 import { KARGO_TL } from "../src/kargo.js";
 import { ilanTeslimSecenekleri } from "../src/ikinci-el-teslim.js";
+import { ODEME_KILIT_DK } from "../src/ikinci-el-kilit.js";
+import { anahtarGecerli, ilanKilitle } from "./_kilit.js";
 
 const EPOSTA_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -26,6 +30,10 @@ export default async function handler(req, res) {
   const { alici_ad, alici_tel, alici_adres, alici_email, sozlesme_onay } = req.body || {};
   const urun_idler = Array.isArray(req.body?.urun_idler) ? req.body.urun_idler : [];
   const ilanIstek = Array.isArray(req.body?.ilanlar) ? req.body.ilanlar : [];
+  const sepetAnahtari = req.body?.sepet_anahtari;
+  if (ilanIstek.length && !anahtarGecerli(sepetAnahtari)) {
+    return res.status(400).json({ error: "Sepet anahtarı eksik. Sayfayı yenileyip tekrar deneyin." });
+  }
 
   if (urun_idler.length + ilanIstek.length === 0) {
     return res.status(400).json({ error: "Sepet boş" });
@@ -118,6 +126,21 @@ export default async function handler(req, res) {
     };
   });
   const kalemler = [...urunKalemleri, ...ilanKalemleri];
+
+  // İkinci el: ödeme süresince bu sepete kilitle (atomik; başka sepetteyse satır dönmez).
+  if (ilanKalemleri.length) {
+    const idler = ilanKalemleri.map(k => k.ilan_id);
+    const { kilitlenen, hata } = await ilanKilitle(supabase, idler, sepetAnahtari, ODEME_KILIT_DK);
+    if (hata) return res.status(500).json({ error: "Sipariş oluşturulamadı" });
+    const kilitsiz = idler.filter(id => !kilitlenen.includes(id));
+    if (kilitsiz.length) {
+      const k = ilanKalemleri.find(x => x.ilan_id === kilitsiz[0]);
+      return res.status(409).json({
+        error: `"${k.baslik}" şu an başka bir müşterinin sepetinde ya da ödemesinde. Birkaç dakika sonra tekrar deneyin.`,
+        kilitli_idler: kilitsiz,
+      });
+    }
+  }
   const urunToplam = kalemler.reduce((s, k) => s + k.fiyat, 0);
 
   // Pazar (Benservis) ürünü: kargo ayrı satır, mesafeli satış onayı ve e-posta zorunlu.

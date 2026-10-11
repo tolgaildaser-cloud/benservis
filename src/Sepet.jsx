@@ -9,6 +9,7 @@ import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { KARGO_TL } from "./kargo.js";
 import { teslimBul } from "./ikinci-el-teslim.js";
+import { sepetAnahtari, kalanMs, sureMetni } from "./ikinci-el-kilit.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
 
@@ -21,6 +22,23 @@ export default function Sepet() {
   const [gonderiyor, setGonderiyor] = useState(false);
   const [hata, setHata] = useState("");
   const [sonuc, setSonuc] = useState(null); // { siparis, odeme }
+
+  // İkinci el sepet kilidi geri sayımı (Tolga, 11 Eki 12:4x: 5 dk; süre dolarsa ürün sepette kalır).
+  const [simdi, setSimdi] = useState(Date.now());
+  useEffect(() => {
+    if (!kalemler.some(k => k.tip === "ikinci-el")) return undefined;
+    const t = setInterval(() => setSimdi(Date.now()), 1000);
+    return () => clearInterval(t);
+  }, [kalemler]);
+  const cikar = (k) => {
+    if (k.tip === "ikinci-el") {
+      fetch("/api/ikinci-el/kilit", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: k.id, anahtar: sepetAnahtari(), birak: true }),
+      }).catch(() => { /* kilit zaten süreyle kalkar */ });
+    }
+    sepettenCikar(k.id);
+  };
 
   useEffect(() => {
     const f = () => setKalemler(sepetOku());
@@ -59,7 +77,7 @@ export default function Sepet() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           urun_idler: kalemler.filter(k => k.tip !== "ikinci-el").map(k => k.id),
-          ...(ikinciEl.length ? { ilanlar: ikinciEl.map(k => ({ id: k.id, teslim: k.teslim || "depo" })) } : {}),
+          ...(ikinciEl.length ? { ilanlar: ikinciEl.map(k => ({ id: k.id, teslim: k.teslim || "depo" })), sepet_anahtari: sepetAnahtari() } : {}),
           alici_ad: form.ad.trim(),
           alici_tel: form.tel.trim(),
           alici_adres: form.adres.trim() || null,
@@ -141,9 +159,18 @@ export default function Sepet() {
                           {k.teslim && k.teslim !== "depo" ? " (ücreti ayrıca hesaplanır)" : ""}
                         </div>
                       )}
+                      {k.tip === "ikinci-el" && (kalanMs(k.kilit_bitis, simdi) > 0 ? (
+                        <div style={{ fontSize: 11.5, color: "#15803D", fontWeight: 700 }}>
+                          Senin için ayrıldı · {sureMetni(kalanMs(k.kilit_bitis, simdi))} içinde ödemeye geç
+                        </div>
+                      ) : (
+                        <div style={{ fontSize: 11.5, color: "#9A3412", fontWeight: 700 }}>
+                          Ayırma süresi doldu · ürün sepette, ama başka bir müşteri de satın alabilir
+                        </div>
+                      ))}
                     </div>
                     <div style={{ fontWeight: 700, fontSize: 14, whiteSpace: "nowrap" }}>{k.fiyat.toLocaleString("tr-TR")} TL</div>
-                    <button onClick={() => sepettenCikar(k.id)}
+                    <button onClick={() => cikar(k)} aria-label={`${k.baslik} sepetten çıkar`}
                       style={{ border: "none", background: "none", color: "#DC2626", fontSize: 15, cursor: "pointer", padding: 4 }}>✕</button>
                   </div>
                 ))}

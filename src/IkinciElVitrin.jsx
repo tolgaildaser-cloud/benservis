@@ -114,12 +114,12 @@ export function Kabuk({ children, arama }) {
   );
 }
 
-export function useIlanlar(dosya) {
+export function useIlanlar(dosya, anahtar) {
   const [ilanlar, setIlanlar] = useState(null);
   const [hata, setHata] = useState("");
   useEffect(() => {
     let iptal = false;
-    const q = dosya ? `?dosya=${encodeURIComponent(dosya)}` : "";
+    const q = dosya ? `?dosya=${encodeURIComponent(dosya)}${anahtar ? `&anahtar=${encodeURIComponent(anahtar)}` : ""}` : "";
     fetch(`/api/ikinci-el/liste${q}`)
       .then((r) => r.json().then((d) => ({ ok: r.ok, kod: r.status, d })))
       .then(({ ok, kod, d }) => {
