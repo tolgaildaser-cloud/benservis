@@ -24,6 +24,19 @@ import KvkkNotu from "./KvkkNotu.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import { NAVY as INK, BLUE, GREEN_DEEP, HAIR, SLATE, TINT, RED } from "./theme.js";
+import { KARGO_TL } from "./kargo.js";
+
+// Hero: kayan gerçek fotoğraflar (Tolga, 11 Eki: "pazaryeri hero kısmına kayan gerçek resimler koy").
+// Fotoğraflar ana sayfadaki cihaz kareleri (/anasayfa/cihaz/<slug>.webp). Metindeki parça adları
+// katalogda aktif olan ürünlerden (11 Eki okundu); katalogda olmayan parça yazılmaz.
+const HERO_SLAYTLAR = [
+  { cihaz: "kombi-termosifon", et: "Kış hazırlığı", baslik: "Kombinin yedek parçası kapında", metin: "NTC sensör, emniyet ventili, genleşme tankı. Parçayı al, takmayı yakındaki servise bırak.", dugme: "Kombi parçaları" },
+  { cihaz: "camasir-makinesi", et: "Çamaşır makinesi", baslik: "Pompa, körük, hortum: tek tıkla", metin: "Su jetli pompa motoru, kapak körüğü, deterjan çekmecesi. Orijinal ve uyumlu parçalar.", dugme: "Çamaşır makinesi parçaları" },
+  { cihaz: "firin-ocak-aspirator", et: "Fırın · Ocak · Aspiratör", baslik: "Mutfağın eksik parçası burada", metin: "Fırın rezistansı, kapak contası, ocak buji grubu, aspiratör filtresi.", dugme: "Fırın ve ocak parçaları" },
+  { cihaz: "buzdolabi", et: "Buzdolabı", baslik: "Buzdolabın yine ilk günkü gibi", metin: "Kapı contası, fan motoru, termostat, kapı rafı. Markana uygun parçayı seç.", dugme: "Buzdolabı parçaları" },
+  { cihaz: "bulasik-makinesi", et: "Bulaşık makinesi", baslik: "Küçük parça, büyük rahatlık", metin: "Sepet tekerleği, tahliye hortumu, sızdırmazlık contası, kaşıklık.", dugme: "Bulaşık makinesi parçaları" },
+];
+const HERO_SURE_MS = 5000;
 
 const IL_LISTESI = Object.keys(TR_IL_ILCE);
 const adBul = (liste, slug) => liste.find((x) => x.slug === slug)?.ad || null;
@@ -189,6 +202,45 @@ export default function PazarVitrin() {
   );
 }
 
+// Kayan hero: 5 sn'de bir geçer; fareyle üstündeyken / sekme gizliyken / "hareketi azalt"
+// açıksa durur. Noktalar ve oklar elle geçiş içindir. Yalnız ilk fotoğraf hemen yüklenir.
+function HeroKayan({ git }) {
+  const [i, setI] = useState(0);
+  const [dur, setDur] = useState(false);
+  const n = HERO_SLAYTLAR.length;
+  useEffect(() => {
+    const azalt = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (dur || azalt) return undefined;
+    const t = setInterval(() => { if (!document.hidden) setI((x) => (x + 1) % n); }, HERO_SURE_MS);
+    return () => clearInterval(t);
+  }, [dur, n]);
+  const sec = (x) => setI(((x % n) + n) % n);
+  return (
+    <div className="pz-banner pz-kayan" role="region" aria-roledescription="slayt gösterisi" aria-label="Öne çıkan parça grupları"
+      onMouseEnter={() => setDur(true)} onMouseLeave={() => setDur(false)} onFocus={() => setDur(true)} onBlur={() => setDur(false)}>
+      {HERO_SLAYTLAR.map((sl, k) => (
+        <div key={sl.cihaz} className={`pz-slayt${k === i ? " on" : ""}`} aria-hidden={k !== i} aria-roledescription="slayt" aria-label={`${k + 1} / ${n}`}>
+          <img className="pz-slayt-foto" src={`/anasayfa/cihaz/${sl.cihaz}.webp`} alt="" loading={k === 0 ? "eager" : "lazy"} decoding="async" />
+          <div className="pz-slayt-ic">
+            <span className="pz-banner-et">{sl.et}</span>
+            {k === 0 ? <h1>{sl.baslik}</h1> : <p className="pz-slayt-bas">{sl.baslik}</p>}
+            <p>{sl.metin}</p>
+            <button type="button" tabIndex={k === i ? 0 : -1}
+              onClick={() => { try { track("pazar_hero_click", { cihaz: sl.cihaz }); } catch { /* ölçüm akışı bozmaz */ } git({ kategori: "yedek-parca", cihaz: sl.cihaz, parca: "", ara: "" }); }}>{sl.dugme} →</button>
+          </div>
+        </div>
+      ))}
+      <button type="button" className="pz-ok pz-ok-sol" aria-label="Önceki" onClick={() => sec(i - 1)}>‹</button>
+      <button type="button" className="pz-ok pz-ok-sag" aria-label="Sonraki" onClick={() => sec(i + 1)}>›</button>
+      <div className="pz-noktalar">
+        {HERO_SLAYTLAR.map((sl, k) => (
+          <button key={sl.cihaz} type="button" className={k === i ? "on" : ""} aria-label={`${k + 1}. slayt`} aria-current={k === i} onClick={() => sec(k)} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function AnaGorunum({ urunler, git, filtre }) {
   // Raflar: öne çıkanlar + en çok ürünü olan üç cihaz. Ürün yoksa raf basılmaz.
   // Görselli ürün rafta önce gelir; "öne çıkanlar" cihazlar arasında sırayla seçilir
@@ -214,13 +266,7 @@ function AnaGorunum({ urunler, git, filtre }) {
   return (
     <>
       <section className="pz-hero">
-        <div className="pz-banner">
-          <span className="pz-banner-et">Kış hazırlığı</span>
-          <h1>Kombinin yedek parçası kapında</h1>
-          <p>NTC sensör, emniyet ventili, genleşme tankı. Parçayı al, takmayı yakındaki servise bırak.</p>
-          <button type="button" onClick={() => git({ kategori: "yedek-parca", cihaz: "kombi-termosifon", parca: "", ara: "" })}>Kombi parçalarına bak →</button>
-          <span className="pz-banner-ikon" aria-hidden="true"><CihazIkon cihaz="Kombi / Termosifon" size={260} /></span>
-        </div>
+        <HeroKayan git={git} />
         <div className="pz-yan">
           <a href="/" className="pz-mini pz-mini-1">
             <b>Takmayı servise bırak</b>
@@ -237,7 +283,7 @@ function AnaGorunum({ urunler, git, filtre }) {
 
       <section className="pz-guven" aria-label="Alışveriş bilgileri">
         <div><GuvenIkon tur="kargo" /><span><b>Tahmini 3 iş günü</b>Siparişin 3 iş gününde kargoda</span></div>
-        <div><GuvenIkon tur="fiyat" /><span><b>KDV dahil fiyat</b>Kargo ücreti ayrıca bildirilir</span></div>
+        <div><GuvenIkon tur="fiyat" /><span><b>KDV dahil fiyat</b>Kargo sabit {KARGO_TL} TL, sepette gösterilir</span></div>
         <div><GuvenIkon tur="satici" /><span><b>Satıcı Benservis</b>Parça tedarikçiden doğrudan gönderilir</span></div>
         <div><GuvenIkon tur="konum" /><span><b>Taktır</b>Yakındaki servise Benservis'ten ulaş</span></div>
       </section>
@@ -460,8 +506,22 @@ const CSS = `
 .pz-banner-et{display:inline-block;width:max-content;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;margin-bottom:12px}
 .pz-banner h1{font-family:'Fraunces',serif;font-size:30px;line-height:1.15;max-width:440px;margin:0}
 .pz-banner p{margin:10px 0 0;opacity:.92;max-width:420px;line-height:1.5}
-.pz-banner button{margin-top:18px;width:max-content;background:#fff;color:#1D4ED8;font-weight:800;border:0;border-radius:10px;padding:11px 18px;font-size:14px;position:relative;z-index:1}
-.pz-banner-ikon{position:absolute;right:-20px;bottom:-40px;opacity:.16;color:#fff;pointer-events:none}
+.pz-slayt-ic button{margin-top:18px;width:max-content;background:#fff;color:#1D4ED8;font-weight:800;border:0;border-radius:10px;padding:11px 18px;font-size:14px;position:relative;z-index:1}
+.pz-kayan{padding:0;background:${INK}}
+.pz-slayt{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
+.pz-slayt.on{opacity:1;visibility:visible;transition:opacity .7s ease}
+.pz-slayt-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
+.pz-slayt::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,42,.9) 0%,rgba(15,23,42,.72) 42%,rgba(15,23,42,.1) 78%)}
+.pz-slayt-ic{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding:30px 32px 40px}
+.pz-slayt-bas{font-family:'Fraunces',serif;font-size:30px;font-weight:700;line-height:1.15;max-width:440px;margin:0!important;opacity:1!important}
+.pz-ok{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:36px;height:36px;border-radius:999px;border:0;background:rgba(255,255,255,.85);color:${INK};font-size:24px;line-height:1;cursor:pointer;padding:0 0 3px}
+.pz-ok-sol{left:10px}.pz-ok-sag{right:10px}
+.pz-kayan .pz-ok{opacity:0;transition:opacity .2s}
+.pz-kayan:hover .pz-ok,.pz-kayan .pz-ok:focus-visible{opacity:1}
+.pz-noktalar{position:absolute;left:32px;bottom:14px;z-index:2;display:flex;gap:7px}
+.pz-noktalar button{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.45);cursor:pointer;transition:width .25s,background .25s}
+.pz-noktalar button.on{width:24px;background:#fff}
+.pz-kayan .pz-banner-et,.pz-kayan h1,.pz-kayan p{text-shadow:0 1px 8px rgba(0,0,0,.25)}
 .pz-yan{display:grid;grid-template-rows:1fr 1fr;gap:14px}
 .pz-mini{border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;gap:5px}
 .pz-mini b{font-size:16.5px}
@@ -558,8 +618,14 @@ const CSS = `
   .pz-ara input{padding:10px 12px;font-size:16px}
   .pz-ara button{padding:0 14px}
   .pz-hero{grid-template-columns:1fr;margin:14px 0}
-  .pz-banner{min-height:200px;padding:22px}
-  .pz-banner h1{font-size:23px}
+  .pz-banner{min-height:250px;padding:22px}
+  .pz-kayan{min-height:320px}
+  .pz-banner h1,.pz-slayt-bas{font-size:23px}
+  .pz-kayan{padding:0}
+  .pz-slayt-ic{padding:20px 20px 36px}
+  .pz-slayt::after{background:linear-gradient(90deg,rgba(15,23,42,.86) 0%,rgba(15,23,42,.6) 65%,rgba(15,23,42,.25) 100%)}
+  .pz-noktalar{left:20px;bottom:12px}
+  .pz-kayan .pz-ok{display:none}
   .pz-yan{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .pz-mini{padding:14px}
   .pz-mini b{font-size:14px}
