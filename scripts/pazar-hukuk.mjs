@@ -20,7 +20,7 @@ export const SATICI = {
   mersis: "0647069188200001",
   sicil: "İstanbul Ticaret Sicili 326252-5",
   vkn: "6470691882",
-  adres: null, // ❓ Tolga verecek — açık adres yasal zorunluluk (Yönetmelik md.5/1-b)
+  adres: "Suadiye Mah. Bağdat Cad. Ark 399 Plaza, Kadıköy / İstanbul", // Tolga, 11 Eki 2026 (Yönetmelik md.5/1-b)
   telefon: "0530 710 55 85",
   eposta: "info@benservis.com",
   kep: null, // varsa yazılır; zorunlu değil ("varsa")
