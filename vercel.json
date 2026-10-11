@@ -7,9 +7,9 @@
     { "source": "/blog/vaillant-kombi-ariza-kodlari-f-22-f-28-f-75-ve-anlamlari", "destination": "/blog/vaillant-kombi-ariza-kodlari/", "permanent": true },
     { "source": "/blog/vaillant-kombi-ariza-kodlari-f-22-f-28-f-75-ve-anlamlari/", "destination": "/blog/vaillant-kombi-ariza-kodlari/", "permanent": true },
     { "source": "/:path((?!api/).*)", "has": [{ "type": "host", "value": "project-83ils.vercel.app" }], "destination": "https://www.benservis.com/:path", "permanent": true },
-    { "source": "/:dir(blog|tamir|kilavuzlar|gizlilik|kullanim-kosullari)/index.html", "destination": "/:dir/", "permanent": true },
+    { "source": "/:dir(blog|tamir|kilavuzlar|gizlilik|kullanim-kosullari|on-bilgilendirme-formu|mesafeli-satis-sozlesmesi|iade-ve-cayma|pazaryeri-aydinlatma-metni)/index.html", "destination": "/:dir/", "permanent": true },
     { "source": "/:dir(blog|tamir|kilavuzlar)/:rest(.+)/index.html", "destination": "/:dir/:rest/", "permanent": true },
-    { "source": "/:dir(blog|tamir|kilavuzlar|gizlilik|kullanim-kosullari)", "destination": "/:dir/", "permanent": true },
+    { "source": "/:dir(blog|tamir|kilavuzlar|gizlilik|kullanim-kosullari|on-bilgilendirme-formu|mesafeli-satis-sozlesmesi|iade-ve-cayma|pazaryeri-aydinlatma-metni)", "destination": "/:dir/", "permanent": true },
     { "source": "/:dir(blog|tamir|kilavuzlar)/:rest([^.]*[^/.])", "destination": "/:dir/:rest/", "permanent": true }
   ],
   "rewrites": [
