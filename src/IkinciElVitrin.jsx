@@ -4,7 +4,7 @@
 //
 // Sıra (DOD ana sayfası): arama (dosya no · marka · model) → hero cümlesi → 1 büyük öne çıkan
 // kart + 4'lü satırlar → tematik koleksiyonlar → güven bloğu (3 sütun).
-// `/ikinci-el/BS-2E-000123` → `IkinciElOnizleme` (detay İE-3'te gelir; şimdilik özet kart).
+// `/ikinci-el/BS-2E-000123` → `IkinciElDetay.jsx` (İE-3). Kabuk + yardımcılar buradan paylaşılır.
 //
 // ⛔ DPP ön yüzde HİÇ geçmez (Tolga 11:4x): ad, bağlantı, QR, seri no yok; bölüm adı
 //    "Benservis kontrolü". API seri no / cihaz_id döndürmez (api/ikinci-el/liste.js).
@@ -21,9 +21,9 @@ import PazarSekmeler from "./PazarSekmeler.jsx";
 import { PAZAR_CIHAZLARI } from "./pazar-sozluk.js";
 import { NAVY as INK, BLUE, GREEN_DEEP, HAIR, SLATE, TINT, RED } from "./theme.js";
 
-const tl = (n) => `${Math.round(Number(n)).toLocaleString("tr-TR")} TL`;
+export const tl = (n) => `${Math.round(Number(n)).toLocaleString("tr-TR")} TL`;
 const kucult = (t) => String(t || "").toLocaleLowerCase("tr");
-const cihazAdi = (slug) => PAZAR_CIHAZLARI.find((c) => c.slug === slug)?.ad || "Diğer";
+export const cihazAdi = (slug) => PAZAR_CIHAZLARI.find((c) => c.slug === slug)?.ad || "Diğer";
 const HAFTA_MS = 7 * 24 * 60 * 60 * 1000;
 const UCUZ_SINIR = 20000;
 
@@ -65,7 +65,7 @@ export function aramaSuz(ilanlar, metin) {
     [i.dosya_no, i.marka, i.model, i.baslik].some((alan) => kucult(alan).includes(q)));
 }
 
-function useNoindex(baslik) {
+export function useNoindex(baslik) {
   useEffect(() => {
     document.title = baslik;
     const m = document.createElement("meta");
@@ -75,7 +75,7 @@ function useNoindex(baslik) {
   }, [baslik]);
 }
 
-function Kabuk({ children, arama }) {
+export function Kabuk({ children, arama }) {
   const [adet, setAdet] = useState(sepetAdet());
   useEffect(() => {
     const s = (e) => setAdet(e.detail);
@@ -114,7 +114,7 @@ function Kabuk({ children, arama }) {
   );
 }
 
-function useIlanlar(dosya) {
+export function useIlanlar(dosya) {
   const [ilanlar, setIlanlar] = useState(null);
   const [hata, setHata] = useState("");
   useEffect(() => {
@@ -241,7 +241,7 @@ export default function IkinciElVitrin() {
   );
 }
 
-function IlanKarti({ ilan, buyuk }) {
+export function IlanKarti({ ilan, buyuk }) {
   const g = garantiEtiketi(ilan);
   const alt = altSatir(ilan);
   const foto = ilan.fotograflar?.[0];
@@ -265,39 +265,13 @@ function IlanKarti({ ilan, buyuk }) {
   );
 }
 
-function GuvenIkon({ tur }) {
+export function GuvenIkon({ tur }) {
   const yol = {
     kontrol: <><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></>,
     garanti: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
     parca: <><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-2.7-1.1l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0-1.1-2.7H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.1-2.7l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 2.7-1.1V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 2.7 1.1l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0 1.1 2.7H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1.3z" /></>,
   }[tur];
   return <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={BLUE} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{yol}</svg>;
-}
-
-// `/ikinci-el/BS-2E-000123` — ürün sayfası İE-3'te (galeri, Benservis kontrolü, teslim seçimi,
-// PayTR). O gelene kadar özet kart + "yakında"; sepete ekleme yok.
-export function IkinciElOnizleme({ dosya }) {
-  useNoindex(`${dosya} · İkinci El · Benservis`);
-  const { ilanlar, hata } = useIlanlar(dosya);
-  const ilan = ilanlar?.[0];
-  return (
-    <Kabuk>
-      <nav className="ie-kirinti"><a href="/pazar">Pazaryeri</a> › <a href="/ikinci-el">İkinci El</a> › {dosya}</nav>
-      {hata && <div className="ie-hata">{hata}</div>}
-      {!hata && ilanlar === null && <div className="ie-yukleniyor">Yükleniyor…</div>}
-      {ilanlar && !ilan && <div className="ie-bos">Bu dosya numarasıyla satışta ürün yok. <a href="/ikinci-el">Tüm ürünler →</a></div>}
-      {ilan && (
-        <section className="ie-onizleme">
-          <IlanKarti ilan={ilan} buyuk />
-          <div className="ie-yakinda">
-            <b>Ürün sayfası hazırlanıyor</b>
-            <span>Benservis kontrol sonuçları, değişen parçalar ve satın alma bu sayfaya çok yakında ekleniyor.</span>
-            <a href="/ikinci-el">← Tüm ikinci el ürünler</a>
-          </div>
-        </section>
-      )}
-    </Kabuk>
-  );
 }
 
 const CSS = `
@@ -356,10 +330,6 @@ const CSS = `
 .ie-guven span{color:${SLATE};line-height:1.45;font-size:13.5px}
 .ie-kirinti{margin:16px 0 12px;color:${SLATE};font-size:13px}
 .ie-kirinti a{color:${BLUE}!important;font-weight:600}
-.ie-onizleme{display:grid;gap:14px;margin-bottom:24px}
-.ie-yakinda{background:#fff;border:1px solid ${HAIR};border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
-.ie-yakinda span{color:${SLATE};line-height:1.45}
-.ie-yakinda a{color:${BLUE}!important;font-weight:700;margin-top:4px}
 .ie-alt{background:${INK};color:#CBD5E1;margin-top:20px;padding:24px 0;font-size:12.5px}
 .ie-alt-ic{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ie-alt b{color:#fff}

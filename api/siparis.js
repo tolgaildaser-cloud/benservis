@@ -5,11 +5,16 @@
 // YK #167 PR-6: sepetin tamamı Benservis (pazar) ürünüyse ve PayTR env tanımlıysa sipariş
 // PayTR'ye gider → odeme_url = /odeme/:id (iFrame). Pazar ürünü varsa kargo (KARGO_TL) eklenir,
 // e-posta + sözleşme onayı zorunlu. Diğer durumlarda eski "ödeme yakında" akışı aynen sürer.
+// YK #171 İE-3: `ilanlar: [{ id, teslim }]` — Benservis'in ikinci el ilanı (`ilanlar` tablosu).
+// Fiyat DB'den; teslim ilanın açtığı seçeneklerden biri olmalı; kargo eklenmez; nakliye/montaj
+// ücreti "ayrıca hesaplanır" (tutar yok, PayTR yalnız ürün bedeli). Ödeme sonrası ilan
+// `satildi` olur (api/odeme/callback.js).
 import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
 import { saticiHaritasi } from "./_satici.js";
 import { paytrAyarlari } from "./_paytr.js";
 import { KARGO_TL } from "../src/kargo.js";
+import { ilanTeslimSecenekleri } from "../src/ikinci-el-teslim.js";
 
 const EPOSTA_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -18,12 +23,14 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { urun_idler, alici_ad, alici_tel, alici_adres, alici_email, sozlesme_onay } = req.body || {};
+  const { alici_ad, alici_tel, alici_adres, alici_email, sozlesme_onay } = req.body || {};
+  const urun_idler = Array.isArray(req.body?.urun_idler) ? req.body.urun_idler : [];
+  const ilanIstek = Array.isArray(req.body?.ilanlar) ? req.body.ilanlar : [];
 
-  if (!Array.isArray(urun_idler) || urun_idler.length === 0) {
+  if (urun_idler.length + ilanIstek.length === 0) {
     return res.status(400).json({ error: "Sepet boş" });
   }
-  if (urun_idler.length > 20) return res.status(400).json({ error: "Sepette en fazla 20 ürün olabilir" });
+  if (urun_idler.length + ilanIstek.length > 20) return res.status(400).json({ error: "Sepette en fazla 20 ürün olabilir" });
   if (!alici_ad?.trim())  return res.status(400).json({ error: "Ad soyad zorunludur" });
   if (!alici_tel?.trim()) return res.status(400).json({ error: "Telefon zorunludur" });
   if (String(alici_tel).replace(/\D/g, "").length < 10) {
@@ -31,12 +38,43 @@ export default async function handler(req, res) {
   }
 
   // Ürünleri DB'den çek — fiyat ve stok (durum=aktif) doğrulaması
-  const { data: urunler, error } = await supabase
-    .from("servis_urunler")
-    .select("id, servis_id, satici_id, baslik, fiyat, durum, stok")
-    .in("id", urun_idler);
+  const { data: urunler, error } = urun_idler.length
+    ? await supabase
+      .from("servis_urunler")
+      .select("id, servis_id, satici_id, baslik, fiyat, durum, stok")
+      .in("id", urun_idler)
+    : { data: [], error: null };
 
   if (error) return res.status(500).json({ error: error.message });
+
+  // İkinci el ilanları — Benservis satar, cihaz kaydına bağlı, aktif ve stoklu olmalı.
+  const ilanKalemleri = [];
+  if (ilanIstek.length) {
+    const idler = ilanIstek.map(i => String(i?.id || ""));
+    const { data: ilanlar, error: ilanHata } = await supabase
+      .from("ilanlar")
+      .select("id, dosya_no, baslik, fiyat, durum, stok, satici_id, cihaz_id, teslim_secenekleri")
+      .in("id", idler);
+    if (ilanHata) return res.status(500).json({ error: "İlan okunamadı" });
+    const saticiIlan = await saticiHaritasi(supabase, (ilanlar || []).map(i => i.satici_id));
+    for (const istek of ilanIstek) {
+      const ilan = (ilanlar || []).find(i => i.id === String(istek?.id || ""));
+      if (!ilan || !ilan.cihaz_id || saticiIlan[ilan.satici_id]?.tur !== "benservis") {
+        return res.status(409).json({ error: "Sepetteki bir ikinci el ürün artık mevcut değil. Sepeti yenileyin.", pasif_idler: [istek?.id] });
+      }
+      if (ilan.durum !== "aktif" || !(ilan.stok > 0)) {
+        return res.status(409).json({ error: `"${ilan.baslik}" satışta değil (satılmış olabilir). Sepetten çıkarın.`, pasif_idler: [ilan.id] });
+      }
+      const teslim = String(istek?.teslim || "depo");
+      if (!ilanTeslimSecenekleri(ilan).some(t => t.slug === teslim)) {
+        return res.status(400).json({ error: "Bu ürün için seçilen teslim şekli geçerli değil" });
+      }
+      ilanKalemleri.push({
+        ilan_id: ilan.id, dosya_no: ilan.dosya_no, baslik: ilan.baslik, fiyat: ilan.fiyat, teslim,
+        servis_id: null, servis_ad: "Benservis", satici_id: ilan.satici_id, satici_tur: "benservis",
+      });
+    }
+  }
   if (!urunler || urunler.length !== urun_idler.length) {
     return res.status(409).json({ error: "Sepetteki bazı ürünler artık mevcut değil. Sepeti yenileyin." });
   }
@@ -67,7 +105,7 @@ export default async function handler(req, res) {
   }
   const saticiMap = await saticiHaritasi(supabase, urunler.map(u => u.satici_id));
 
-  const kalemler = urunler.map(u => {
+  const urunKalemleri = urunler.map(u => {
     const satici = saticiMap[u.satici_id];
     return {
       urun_id:    u.id,
@@ -79,6 +117,7 @@ export default async function handler(req, res) {
       satici_tur: satici?.tur || null,
     };
   });
+  const kalemler = [...urunKalemleri, ...ilanKalemleri];
   const urunToplam = kalemler.reduce((s, k) => s + k.fiyat, 0);
 
   // Pazar (Benservis) ürünü: kargo ayrı satır, mesafeli satış onayı ve e-posta zorunlu.
@@ -90,13 +129,14 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Ön Bilgilendirme Formu ve Mesafeli Satış Sözleşmesi onayı gerekli" });
     }
     if (String(alici_adres || "").trim().length < 10) {
-      return res.status(400).json({ error: "Kargo için açık teslimat adresi girin" });
+      return res.status(400).json({ error: "Teslimat için açık adres girin" });
     }
     if (!EPOSTA_RE.test(email) || email.length > 120) {
       return res.status(400).json({ error: "Geçerli bir e-posta adresi girin" });
     }
   }
-  const kargo = pazarVar ? KARGO_TL : 0;
+  // Kargo yalnız pazar (yedek parça) ürününde; ikinci el teslimi ayrı (ayrıca hesaplanır).
+  const kargo = urunKalemleri.some(k => k.satici_tur === "benservis") ? KARGO_TL : 0;
   const tutar = urunToplam + kargo;
   const paytr = tamamiPazar && Boolean(paytrAyarlari());
 

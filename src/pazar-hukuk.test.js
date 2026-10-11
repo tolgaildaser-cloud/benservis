@@ -39,6 +39,6 @@ describe("pazaryeri belgeleri", () => {
     const sepet = fs.readFileSync("src/Sepet.jsx", "utf8");
     expect(sepet).toContain('href="/on-bilgilendirme-formu/"');
     expect(sepet).toMatch(/useState\(false\)/); // onay kutusu işaretsiz başlar
-    expect(sepet).toMatch(/kargoSatiri && !sozlesmeOnay/);
+    expect(sepet).toMatch(/pazarSiparisi && !sozlesmeOnay/);
   });
 });

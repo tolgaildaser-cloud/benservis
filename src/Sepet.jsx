@@ -8,6 +8,7 @@ import { track } from "@vercel/analytics";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { KARGO_TL } from "./kargo.js";
+import { teslimBul } from "./ikinci-el-teslim.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
 
@@ -34,6 +35,11 @@ export default function Sepet() {
   const kargoSatiri = kalemler.some(k => k.kargo_haric);
   const kargo = kargoSatiri ? KARGO_TL : 0;
   const toplam = urunToplam + kargo;
+  // YK #171 İE-3: ikinci el kalemi kargo almaz; teslim seçimi kalemde. Nakliye/montaj tutarı
+  // yok ("ayrıca hesaplanır"), ödemeye girmez. Benservis satıcısı olduğu için yine mesafeli satış.
+  const ikinciEl = kalemler.filter(k => k.tip === "ikinci-el");
+  const ekTeslim = ikinciEl.some(k => k.teslim && k.teslim !== "depo");
+  const pazarSiparisi = kargoSatiri || ikinciEl.length > 0;
   // Pazaryeri belgeleri (10 Eki 2026): pazar ürünü olan siparişte ön bilgilendirme +
   // mesafeli satış onayı zorunlu (Mesafeli Sözleşmeler Yönetmeliği md.5-6). Kutu işaretsiz başlar.
   const [sozlesmeOnay, setSozlesmeOnay] = useState(false);
@@ -43,26 +49,27 @@ export default function Sepet() {
     setHata("");
     if (!form.ad.trim())  { setHata("Ad soyad zorunludur."); return; }
     if (!form.tel.trim() || form.tel.replace(/\D/g, "").length < 10) { setHata("Geçerli bir telefon girin."); return; }
-    if (kargoSatiri && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.eposta.trim())) { setHata("Geçerli bir e-posta adresi girin."); return; }
-    if (kargoSatiri && form.adres.trim().length < 10) { setHata("Kargo için açık teslimat adresi girin."); return; }
-    if (kargoSatiri && !sozlesmeOnay) { setHata("Siparişi vermek için Ön Bilgilendirme Formu'nu ve Mesafeli Satış Sözleşmesi'ni onaylayın."); return; }
+    if (pazarSiparisi && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.eposta.trim())) { setHata("Geçerli bir e-posta adresi girin."); return; }
+    if (pazarSiparisi && form.adres.trim().length < 10) { setHata("Teslimat için açık adres girin."); return; }
+    if (pazarSiparisi && !sozlesmeOnay) { setHata("Siparişi vermek için Ön Bilgilendirme Formu'nu ve Mesafeli Satış Sözleşmesi'ni onaylayın."); return; }
     setGonderiyor(true);
     try {
       const res = await fetch("/api/siparis", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          urun_idler: kalemler.map(k => k.id),
+          urun_idler: kalemler.filter(k => k.tip !== "ikinci-el").map(k => k.id),
+          ...(ikinciEl.length ? { ilanlar: ikinciEl.map(k => ({ id: k.id, teslim: k.teslim || "depo" })) } : {}),
           alici_ad: form.ad.trim(),
           alici_tel: form.tel.trim(),
           alici_adres: form.adres.trim() || null,
-          ...(kargoSatiri ? { alici_email: form.eposta.trim(), sozlesme_onay: sozlesmeOnay } : {}),
+          ...(pazarSiparisi ? { alici_email: form.eposta.trim(), sozlesme_onay: sozlesmeOnay } : {}),
         }),
       });
       const d = await res.json();
       if (!res.ok) throw new Error(d.error || "Sipariş oluşturulamadı");
-      if (kargoSatiri) {
-        try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length }); } catch { /* ölçüm akışı bozmaz */ }
+      if (pazarSiparisi) {
+        try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length, ikinci_el: ikinciEl.length }); } catch { /* ölçüm akışı bozmaz */ }
       }
       sepetiBosalt();
       if (d.odeme === "paytr" && d.odeme_url) { window.location.assign(d.odeme_url); return; }
@@ -128,6 +135,12 @@ export default function Sepet() {
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 13.5, color: LINK }}>{k.baslik}</div>
                       {k.servis_ad && <div style={{ fontSize: 11.5, color: "#64748B" }}>🏪 {k.servis_ad}</div>}
+                      {k.tip === "ikinci-el" && (
+                        <div style={{ fontSize: 11.5, color: "#64748B" }}>
+                          İkinci el · {k.dosya_no} · Teslim: {teslimBul(k.teslim)?.ad || "Depodan teslim al"}
+                          {k.teslim && k.teslim !== "depo" ? " (ücreti ayrıca hesaplanır)" : ""}
+                        </div>
+                      )}
                     </div>
                     <div style={{ fontWeight: 700, fontSize: 14, whiteSpace: "nowrap" }}>{k.fiyat.toLocaleString("tr-TR")} TL</div>
                     <button onClick={() => sepettenCikar(k.id)}
@@ -144,6 +157,11 @@ export default function Sepet() {
                   <span>{kargoSatiri ? "Toplam (kargo dahil)" : "Toplam"}</span>
                   <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
                 </div>
+                {ekTeslim && (
+                  <div style={{ padding: "0 16px 13px", fontSize: 12, color: "#64748B" }}>
+                    Nakliye / montaj ücreti ayrıca hesaplanır; bu toplama ve karttan çekilecek tutara dahil değildir.
+                  </div>
+                )}
               </div>
               <button onClick={() => setAdim(2)}
                 style={{ width: "100%", padding: 14, borderRadius: 8, border: "none", background: AMBER, color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "inherit" }}>
@@ -163,11 +181,11 @@ export default function Sepet() {
               <input style={inp} value={form.ad} onChange={e => setForm(f => ({ ...f, ad: e.target.value }))} placeholder="Adınız Soyadınız" />
               <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Telefon *</label>
               <input style={inp} type="tel" value={form.tel} onChange={e => setForm(f => ({ ...f, tel: e.target.value }))} placeholder="0555 123 45 67" />
-              {kargoSatiri && (<>
+              {pazarSiparisi && (<>
                 <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>E-posta * <span style={{ fontWeight: 400, color: "#94A3B8" }}>(sipariş ve fatura için)</span></label>
                 <input style={inp} type="email" autoComplete="email" value={form.eposta} onChange={e => setForm(f => ({ ...f, eposta: e.target.value }))} placeholder="ornek@eposta.com" />
               </>)}
-              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres{kargoSatiri ? " *" : ""} <span style={{ fontWeight: 400, color: "#94A3B8" }}>{kargoSatiri ? "(kargo teslimatı için açık adres)" : "(teslimat / randevu için)"}</span></label>
+              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres{pazarSiparisi ? " *" : ""} <span style={{ fontWeight: 400, color: "#94A3B8" }}>{kargoSatiri ? "(kargo teslimatı için açık adres)" : pazarSiparisi ? "(fatura ve teslimat için açık adres)" : "(teslimat / randevu için)"}</span></label>
               <input style={inp} value={form.adres} onChange={e => setForm(f => ({ ...f, adres: e.target.value }))} placeholder="İlçe, mahalle, sokak…" />
             </div>
 
@@ -176,7 +194,7 @@ export default function Sepet() {
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 
-            {kargoSatiri && (
+            {pazarSiparisi && (
               <label style={{ display: "flex", gap: 9, alignItems: "flex-start", fontSize: 12.5, lineHeight: 1.5, color: "#475569", marginBottom: 14, cursor: "pointer" }}>
                 <input type="checkbox" checked={sozlesmeOnay} onChange={e => setSozlesmeOnay(e.target.checked)} style={{ marginTop: 3, accentColor: "#2563EB" }} />
                 <span>

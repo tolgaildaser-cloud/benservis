@@ -5,6 +5,8 @@
 //   · sipariş merchant_oid'in ilk 32 karakterinden bulunur (tiresiz uuid)
 //   · idempotent: sipariş zaten `odendi` ise dokunulmaz; tekrar gelen bildirim de "OK" alır
 //   · yanıt yalnız düz metin "OK" (başka içerik yok)
+//   · YK #171 İE-3: sipariş ilk kez `odendi` olunca içindeki ikinci el ilanları (stok 1)
+//     `satildi` + stok 0 olur; vitrinden ve sepetten düşer.
 import supabase from "../_supabase.js";
 import { paytrAyarlari, paytrBildirimGecerli, oidSiparisId, bildirimGuncellemesi } from "../_paytr.js";
 
@@ -20,7 +22,7 @@ export default async function handler(req, res) {
 
   const id = oidSiparisId(b.merchant_oid);
   const { data: siparis } = id
-    ? await supabase.from("siparisler").select("id, siparis_no, tutar, odeme_durumu").eq("id", id).single()
+    ? await supabase.from("siparisler").select("id, siparis_no, tutar, odeme_durumu, urunler").eq("id", id).single()
     : { data: null };
   if (!siparis) {
     console.error("PayTR bildirimi: sipariş bulunamadı");
@@ -30,13 +32,25 @@ export default async function handler(req, res) {
 
   const guncelle = bildirimGuncellemesi(siparis, b);
   if (guncelle) {
-    const { error } = await supabase.from("siparisler").update(guncelle).eq("id", siparis.id).neq("odeme_durumu", "odendi");
+    const { data: yazilan, error } = await supabase.from("siparisler").update(guncelle)
+      .eq("id", siparis.id).neq("odeme_durumu", "odendi").select("id");
     if (error) {
       console.error("PayTR bildirimi yazılamadı:", siparis.siparis_no, error.message);
       return res.status(500).send("DB error"); // OK dönülmez → PayTR bildirimi yeniden dener
+    }
+    const ilanIdler = satilanIlanlar(siparis);
+    if (guncelle.odeme_durumu === "odendi" && yazilan?.length && ilanIdler.length) {
+      const { error: ie } = await supabase.from("ilanlar")
+        .update({ durum: "satildi", stok: 0 }).in("id", ilanIdler).eq("durum", "aktif");
+      if (ie) console.error("İkinci el ilan satıldı yapılamadı:", siparis.siparis_no, ie.message);
     }
   }
 
   res.setHeader("Content-Type", "text/plain");
   return res.status(200).send("OK");
+}
+
+// Siparişteki ikinci el ilan kalemleri (api/siparis.js `ilan_id` yazar).
+export function satilanIlanlar(siparis) {
+  return (Array.isArray(siparis?.urunler) ? siparis.urunler : []).map((k) => k?.ilan_id).filter(Boolean);
 }
