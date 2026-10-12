@@ -15,7 +15,9 @@
 import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
 import { saticiHaritasi } from "./_satici.js";
-import { paytrAyarlari } from "./_paytr.js";
+import { paytrAyarlari, odemeKapisi } from "./_paytr.js";
+import { adminYetkili } from "./_admin.js";
+import { KAPI_METNI, KAPI_KODU } from "../src/odeme-kapisi.js";
 import { kargoHesapla } from "../src/kargo.js";
 import { ilanTeslimSecenekleri } from "../src/ikinci-el-teslim.js";
 import { ODEME_KILIT_DK } from "../src/ikinci-el-kilit.js";
@@ -165,6 +167,11 @@ export default async function handler(req, res) {
   const kh = kargoHesapla(pazarKalemleri.reduce((s, k) => s + k.fiyat, 0), pazarKalemleri.length > 0);
   const kargo = kh.kargo_tl;
   const tutar = urunToplam + kh.net_kargo_tl;
+  // YK #173 şerhi: PayTR test modundayken halk için ödeme kapalı — sipariş YAZILMAZ, istemci parça
+  // talebi formuna yönlendirir. Admin anahtarıyla (Authorization: Bearer) gelen istek test ödemesine geçer.
+  if (tamamiPazar && odemeKapisi() && !adminYetkili(req)) {
+    return res.status(403).json({ error: KAPI_METNI, kapi: KAPI_KODU });
+  }
   const paytr = tamamiPazar && Boolean(paytrAyarlari());
 
   const telStr = String(alici_tel);

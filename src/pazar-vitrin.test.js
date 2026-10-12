@@ -138,12 +138,14 @@ describe("/pazar sayfası", () => {
     expect(filtreOku("?cihaz=klima&k=blog-x").kaynak).toBe("blog-x");
   });
 
-  it("noindex başlığı var, sitemap ve menüde yok", () => {
+  it("YK #173: /pazar indekse açık (X-Robots-Tag ve meta robots yok); /ikinci-el noindex kalır; App menüsünde yok", () => {
     const v = JSON.parse(fs.readFileSync("vercel.json", "utf8"));
-    const h = v.headers.find((x) => x.source === "/pazar");
-    expect(h.headers).toContainEqual({ key: "X-Robots-Tag", value: "noindex, nofollow" });
-    expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain('"noindex, nofollow"');
-    if (fs.existsSync("public/sitemap.xml")) expect(fs.readFileSync("public/sitemap.xml", "utf8")).not.toContain("/pazar");
+    const robots = v.headers.filter((h) => h.headers.some((x) => x.key === "X-Robots-Tag")).map((h) => h.source);
+    expect(robots).not.toContain("/pazar");
+    expect(robots).not.toContain("/urun/:id");
+    expect(robots).toEqual(expect.arrayContaining(["/ikinci-el", "/ikinci-el/:yol*"]));
+    expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).not.toContain('"noindex');
+    expect(fs.readFileSync("src/UrunDetay.jsx", "utf8")).not.toContain('"noindex');
     expect(fs.readFileSync("src/App.jsx", "utf8")).not.toContain('href="/pazar');
   });
 

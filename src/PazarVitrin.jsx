@@ -10,7 +10,9 @@
 // Liste, kategori bazında API'den gelir; cihaz/parça/fiyat/arama süzgeci istemcide (sayaçlar
 // için). API sınırı 60 ürün — katalog 60'ı geçince süzgeç sunucuya taşınır.
 //
-// ⛔ Sayfa `noindex`, sitemap'te YOK (Tolga "aç" diyene kadar; "aç" ayrı PR).
+// ✅ 12 Eki 2026 (YK #173): sayfa İNDEKSE AÇIK — meta robots yok, X-Robots-Tag kalktı, sitemap'te var.
+//    Başlık/açıklama/canonical ve ön-render build'de basılır (scripts/pazar-sayfalari.mjs → dist/pazar/index.html).
+//    `/ikinci-el` noindex KALIR (ayrı bileşen, bu karar ona dokunmaz).
 // ⛔ Fiyat her zaman KDV dahil; etiketin yanında "kargo hariç" zorunlu (Tolga, 10 Eki).
 // ⛔ Kargo vaadi tek cümle: "Tahmini 3 iş gününde kargoda" (Tolga: dropship, 3 iş günü).
 // ⛔ Analitiğe kişisel veri / serbest metin yazılmaz: arama metni ölçülmez, yalnız slug'lar.
@@ -60,9 +62,12 @@ export function filtreOku(search) {
   const parca = kategori === "yedek-parca" && PARCA_TURLERI.some((p) => p.slug === q.get("parca")) ? q.get("parca") : "";
   const ara = (q.get("ara") || "").trim().slice(0, 80);
   const k = q.get("k");
+  // `talep` (YK #173 ödeme kapısı): ürün adı — yalnız parça talebi formunun marka/model alanını ön-doldurur,
+  // süzgeç değildir, analitiğe yazılmaz. Varsa ana görünüm açılır (form orada, `#parca-talebi`).
+  const talep = (q.get("talep") || "").replace(/\s+/g, " ").trim().slice(0, 120);
   return {
-    kategori, cihaz, parca, ara,
-    ana: !kategoriVar && !cihaz && !parca && !ara,
+    kategori, cihaz, parca, ara, talep,
+    ana: (!kategoriVar && !cihaz && !parca && !ara) || !!talep,
     kaynak: k && /^[a-z0-9-]{1,80}$/.test(k) ? k : "",
   };
 }
@@ -92,13 +97,16 @@ export default function PazarVitrin() {
   const [adet, setAdet] = useState(sepetAdet());
   const [aramaMetni, setAramaMetni] = useState(f.ara);
 
-  // noindex — sayfa açılana kadar arama motoruna girmez (sunucuda X-Robots-Tag de var).
+  // Başlık build'deki kabukla aynı (scripts/pazar-sayfalari.mjs PAZAR_TITLE); meta robots YOK (YK #173).
+  // Sepetten ödeme kapısıyla gelen `#parca-talebi`: form React'ten sonra çizildiği için tarayıcı kendi
+  // kaydırmasını yapamaz; mount sonrası elle kaydırılır.
   useEffect(() => {
-    document.title = "Pazaryeri · Benservis";
-    const m = document.createElement("meta");
-    m.name = "robots"; m.content = "noindex, nofollow";
-    document.head.appendChild(m);
-    return () => m.remove();
+    document.title = "Yedek Parça Pazaryeri · Benservis";
+    if (window.location.hash === "#parca-talebi") {
+      const t = setTimeout(() => document.getElementById("parca-talebi")?.scrollIntoView({ block: "start" }), 0);
+      return () => clearTimeout(t);
+    }
+    return undefined;
   }, []);
 
   useEffect(() => {
@@ -652,7 +660,7 @@ const CSS = `
 `;
 
 function TalepFormu({ filtre }) {
-  const [form, setForm] = useState({ parca_turu: filtre.parca, cihaz_turu: filtre.cihaz, marka_model: "", il: "", telefon: "" });
+  const [form, setForm] = useState({ parca_turu: filtre.parca, cihaz_turu: filtre.cihaz, marka_model: filtre.talep || "", il: "", telefon: "" });
   const [durum, setDurum] = useState(""); // "" | gonderiyor | tamam
   const [hata, setHata] = useState("");
   useEffect(() => { setForm((x) => ({ ...x, parca_turu: filtre.parca || x.parca_turu, cihaz_turu: filtre.cihaz || x.cihaz_turu })); }, [filtre.parca, filtre.cihaz]);

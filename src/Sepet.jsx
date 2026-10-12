@@ -10,7 +10,17 @@ import BenservisLogo from "./BenservisLogo.jsx";
 import { kargoHesapla, UCRETSIZ_KARGO_ESIK_TL } from "./kargo.js";
 import { teslimBul } from "./ikinci-el-teslim.js";
 import { sepetAnahtari, kalanMs, sureMetni } from "./ikinci-el-kilit.js";
+import { KAPI_METNI, talepBaglantisi } from "./odeme-kapisi.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
+
+// YK #173 şerhi — PayTR test modunda ödeme yalnız admin anahtarıyla açılır. Anahtar RaporPaneli'nin
+// localStorage kaydıdır (aynı ADMIN_TOKEN, anahtar adı RaporPaneli LS_KEY ile aynı); yalnız aynı kök
+// `/api`ye başlık olarak gider, hiçbir yere yazılmaz/loglanmaz. Kayıt yoksa boş nesne (halk).
+const ADMIN_LS_KEY = "benservis_admin";
+const adminBasliklari = () => {
+  try { const s = localStorage.getItem(ADMIN_LS_KEY); return s ? { Authorization: `Bearer ${s}` } : {}; }
+  catch { return {}; }
+};
 
 
 export default function Sepet() {
@@ -65,6 +75,20 @@ export default function Sepet() {
   // mesafeli satış onayı zorunlu (Mesafeli Sözleşmeler Yönetmeliği md.5-6). Kutu işaretsiz başlar.
   const [sozlesmeOnay, setSozlesmeOnay] = useState(false);
 
+  // Ödeme kapısı (YK #173): null = okunuyor · true = halk, test modu → kart · false = form.
+  // Sunucu karar verir (/api/odeme/kapi); okuma başarısızsa form açılır, sipariş ucu 403 `kapi` ile yine durdurur.
+  const [kapi, setKapi] = useState(pazarSiparisi ? null : false);
+  useEffect(() => {
+    if (!pazarSiparisi) { setKapi(false); return undefined; }
+    let iptal = false;
+    fetch("/api/odeme/kapi", { headers: adminBasliklari() })
+      .then(r => r.json())
+      .then(d => { if (!iptal) setKapi(d?.kapi === true); })
+      .catch(() => { if (!iptal) setKapi(false); });
+    return () => { iptal = true; };
+  }, [pazarSiparisi]);
+  const kapiKalemi = kalemler.find(k => k.kargo_haric) || kalemler[0];
+
   const siparisVer = async (e) => {
     e.preventDefault();
     setHata("");
@@ -77,7 +101,7 @@ export default function Sepet() {
     try {
       const res = await fetch("/api/siparis", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...adminBasliklari() },
         body: JSON.stringify({
           urun_idler: kalemler.filter(k => k.tip !== "ikinci-el").map(k => k.id),
           ...(ikinciEl.length ? { ilanlar: ikinciEl.map(k => ({ id: k.id, teslim: k.teslim || "depo" })), sepet_anahtari: sepetAnahtari() } : {}),
@@ -88,6 +112,7 @@ export default function Sepet() {
         }),
       });
       const d = await res.json();
+      if (!res.ok && d?.kapi) { setKapi(true); setGonderiyor(false); return; } // test modu kapısı: sipariş yazılmadı
       if (!res.ok) throw new Error(d.error || "Sipariş oluşturulamadı");
       if (pazarSiparisi) {
         try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length, ikinci_el: ikinciEl.length }); } catch { /* ölçüm akışı bozmaz */ }
@@ -213,8 +238,33 @@ export default function Sepet() {
           )
         )}
 
+        {/* ── ADIM 2: ÖDEME KAPISI (YK #173 şerhi) — PayTR test modunda halk için ── */}
+        {adim === 2 && kapi === null && (
+          <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, textAlign: "center", padding: "40px 20px", color: "#64748B", fontSize: 14 }}>
+            Ödeme adımı hazırlanıyor…
+          </div>
+        )}
+        {adim === 2 && kapi === true && (
+          <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, textAlign: "center", padding: "44px 20px" }}>
+            <div style={{ fontSize: 44, marginBottom: 12 }}>📞</div>
+            <div style={{ fontFamily: "'Fraunces', serif", fontSize: 21, fontWeight: 700, marginBottom: 10 }}>Ödeme çok yakında.</div>
+            <div style={{ fontSize: 14.5, color: "#475569", lineHeight: 1.7, maxWidth: 420, margin: "0 auto 22px" }}>
+              {KAPI_METNI.replace(/^Ödeme çok yakında\.\s*/, "")}
+              {kapiKalemi?.baslik && <><br />Talebiniz <strong>{kapiKalemi.baslik}</strong> için açılır; numaranızı yazmanız yeter.</>}
+            </div>
+            <a href={talepBaglantisi(kapiKalemi)} data-kapi-talep
+              style={{ display: "inline-block", padding: "13px 26px", borderRadius: 8, background: AMBER, color: "#fff", fontWeight: 700, fontSize: 15, textDecoration: "none" }}>
+              Numaramı bırak →
+            </a>
+            <button type="button" onClick={() => setAdim(1)}
+              style={{ display: "block", margin: "14px auto 0", border: "none", background: "none", fontSize: 13, color: LINK, cursor: "pointer", fontFamily: "inherit" }}>
+              ← Sepete dön
+            </button>
+          </div>
+        )}
+
         {/* ── ADIM 2: ALICI BİLGİLERİ ── */}
-        {adim === 2 && (
+        {adim === 2 && kapi === false && (
           <form onSubmit={siparisVer}>
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "18px 18px 6px", marginBottom: 14 }}>
               <div style={{ fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, marginBottom: 14 }}>Teslimat Bilgileri</div>

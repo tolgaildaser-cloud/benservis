@@ -9,7 +9,8 @@
 // ⛔ SATICI BİLGİSİ TEK YERDE: aşağıdaki SATICI nesnesi. Boş (null) alan sayfada kırmızı
 //    "[EKSİK: …]" olarak basılır ve `src/pazar-hukuk.test.js` CI'ı kırmızıda tutar →
 //    eksik satıcı bilgisiyle yayına çıkılamaz.
-// ⛔ Sayfalar noindex ve sitemap dışı: /pazar noindex olduğu sürece belgeler de öyle kalır.
+// ⛔ Sayfalar noindex ve sitemap dışı (sözleşme metni arama sonucu değil, sepetten açılır). /pazar
+//    12 Eki 2026'da (YK #173) indekse açıldı; belgelerin açılması ayrı karardır, burada değişmedi.
 // ⛔ Mevcut /gizlilik/ (Tolga onaylı, Benservis şahıs işletmesi) DEĞİŞMEDİ; pazaryeri
 //    siparişinin veri sorumlusu farklı olduğu için aydınlatma metni ayrı sayfadır.
 
