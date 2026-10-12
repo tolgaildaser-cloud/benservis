@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
 import { sepetOku, sepettenCikar, sepetiBosalt } from "./sepet.js";
 import BenservisLogo from "./BenservisLogo.jsx";
-import { KARGO_TL } from "./kargo.js";
+import { kargoHesapla, UCRETSIZ_KARGO_ESIK_TL } from "./kargo.js";
 import { teslimBul } from "./ikinci-el-teslim.js";
 import { sepetAnahtari, kalanMs, sureMetni } from "./ikinci-el-kilit.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
@@ -50,9 +50,12 @@ export default function Sepet() {
   // YK #166 PR-4 (Tolga 10 Eki: fiyat kargo hariç, kargo sepette ayrı satır) + #167 PR-6
   // (Tolga 11 Eki: sabit kargo, KARGO_TL). Yasa gereği onaydan önce kargo dahil toplam gösterilir;
   // sunucu (/api/siparis) aynı sabitle hesaplar, istemcideki tutar kullanılmaz.
+  // 12 Eki: kargo 189 TL; kargolu ürünler 3.000 TL'yi aşarsa aynı tutar indirim satırıyla düşülür
+  // (Tolga: "kargo bedeli gösterilsin, indirim olarak silinsin"). Hesap src/kargo.js'te, sunucuyla ortak.
   const kargoSatiri = kalemler.some(k => k.kargo_haric);
-  const kargo = kargoSatiri ? KARGO_TL : 0;
-  const toplam = urunToplam + kargo;
+  const kh = kargoHesapla(kalemler.filter(k => k.kargo_haric).reduce((s, k) => s + k.fiyat, 0), kargoSatiri);
+  const kargo = kh.kargo_tl;
+  const toplam = urunToplam + kh.net_kargo_tl;
   // YK #171 İE-3: ikinci el kalemi kargo almaz; teslim seçimi kalemde. Nakliye/montaj tutarı
   // yok ("ayrıca hesaplanır"), ödemeye girmez. Benservis satıcısı olduğu için yine mesafeli satış.
   const ikinciEl = kalemler.filter(k => k.tip === "ikinci-el");
@@ -180,6 +183,17 @@ export default function Sepet() {
                     <span>{kargo.toLocaleString("tr-TR")} TL</span>
                   </div>
                 )}
+                {kh.kargo_indirim_tl > 0 && (
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "11px 16px", fontSize: 13.5, color: "#15803D", fontWeight: 600, borderBottom: "1px solid #F1F5F9" }}>
+                    <span>Kargo indirimi ({UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL üzeri)</span>
+                    <span>−{kh.kargo_indirim_tl.toLocaleString("tr-TR")} TL</span>
+                  </div>
+                )}
+                {kargoSatiri && kh.esige_kalan_tl > 0 && (
+                  <div style={{ padding: "9px 16px", fontSize: 12.5, color: "#64748B", borderBottom: "1px solid #F1F5F9" }}>
+                    {kh.esige_kalan_tl.toLocaleString("tr-TR")} TL daha ekleyin, kargo bedava.
+                  </div>
+                )}
                 <div style={{ display: "flex", justifyContent: "space-between", padding: "13px 16px", fontWeight: 700, fontSize: 15 }}>
                   <span>{kargoSatiri ? "Toplam (kargo dahil)" : "Toplam"}</span>
                   <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
@@ -217,7 +231,7 @@ export default function Sepet() {
             </div>
 
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "13px 16px", marginBottom: 14, display: "flex", justifyContent: "space-between", fontWeight: 700, fontSize: 14.5 }}>
-              <span>{kalemler.length} ürün{kargoSatiri ? ` + ${kargo.toLocaleString("tr-TR")} TL kargo` : ""}</span>
+              <span>{kalemler.length} ürün{kargoSatiri ? (kh.kargo_indirim_tl > 0 ? " · kargo bedava" : ` + ${kargo.toLocaleString("tr-TR")} TL kargo`) : ""}</span>
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 

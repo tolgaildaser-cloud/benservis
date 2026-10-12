@@ -25,7 +25,7 @@ import BenservisLogo from "./BenservisLogo.jsx";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import PazarSekmeler from "./PazarSekmeler.jsx";
 import { NAVY as INK, BLUE, GREEN_DEEP, HAIR, SLATE, TINT, RED } from "./theme.js";
-import { KARGO_TL } from "./kargo.js";
+import { KARGO_TL, UCRETSIZ_KARGO_ESIK_TL } from "./kargo.js";
 
 // Hero: kayan gerçek fotoğraflar (Tolga, 11 Eki: "pazaryeri hero kısmına kayan gerçek resimler koy").
 // Fotoğraflar ana sayfadaki cihaz kareleri (/anasayfa/cihaz/<slug>.webp). Metindeki parça adları
@@ -289,7 +289,7 @@ function AnaGorunum({ urunler, git, filtre }) {
 
       <section className="pz-guven" aria-label="Alışveriş bilgileri">
         <div><GuvenIkon tur="kargo" /><span><b>Tahmini 3 iş günü</b>Siparişin 3 iş gününde kargoda</span></div>
-        <div><GuvenIkon tur="fiyat" /><span><b>KDV dahil fiyat</b>Kargo sabit {KARGO_TL} TL, sepette gösterilir</span></div>
+        <div><GuvenIkon tur="fiyat" /><span><b>KDV dahil fiyat</b>Kargo {KARGO_TL} TL · {UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL üzeri ücretsiz</span></div>
         <div><GuvenIkon tur="satici" /><span><b>Satıcı Benservis</b>Parça tedarikçiden doğrudan gönderilir</span></div>
         <div><GuvenIkon tur="konum" /><span><b>Taktır</b>Yakındaki servise Benservis'ten ulaş</span></div>
       </section>

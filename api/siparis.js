@@ -3,7 +3,8 @@
 // Body: { urun_idler: [uuid], alici_ad, alici_tel, alici_adres?, alici_email?, sozlesme_onay? }
 // Fiyatlar SUNUCUDA DB'den hesaplanır — istemciden tutar kabul edilmez.
 // YK #167 PR-6: sepetin tamamı Benservis (pazar) ürünüyse ve PayTR env tanımlıysa sipariş
-// PayTR'ye gider → odeme_url = /odeme/:id (iFrame). Pazar ürünü varsa kargo (KARGO_TL) eklenir,
+// PayTR'ye gider → odeme_url = /odeme/:id (iFrame). Pazar ürünü varsa kargo eklenir (src/kargo.js:
+// 189 TL; pazar ürünleri 3.000 TL'yi aşarsa aynı tutar "kargo indirimi" olarak düşülür),
 // e-posta + sözleşme onayı zorunlu. Diğer durumlarda eski "ödeme yakında" akışı aynen sürer.
 // YK #171 İE-3: `ilanlar: [{ id, teslim }]` — Benservis'in ikinci el ilanı (`ilanlar` tablosu).
 // Fiyat DB'den; teslim ilanın açtığı seçeneklerden biri olmalı; kargo eklenmez; nakliye/montaj
@@ -15,7 +16,7 @@ import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
 import { saticiHaritasi } from "./_satici.js";
 import { paytrAyarlari } from "./_paytr.js";
-import { KARGO_TL } from "../src/kargo.js";
+import { kargoHesapla } from "../src/kargo.js";
 import { ilanTeslimSecenekleri } from "../src/ikinci-el-teslim.js";
 import { ODEME_KILIT_DK } from "../src/ikinci-el-kilit.js";
 import { anahtarGecerli, ilanKilitle } from "./_kilit.js";
@@ -159,8 +160,11 @@ export default async function handler(req, res) {
     }
   }
   // Kargo yalnız pazar (yedek parça) ürününde; ikinci el teslimi ayrı (ayrıca hesaplanır).
-  const kargo = urunKalemleri.some(k => k.satici_tur === "benservis") ? KARGO_TL : 0;
-  const tutar = urunToplam + kargo;
+  // Eşik, kargolu pazar ürünlerinin toplamına bakar (Tolga 11 Eki 12:1x onayı).
+  const pazarKalemleri = urunKalemleri.filter(k => k.satici_tur === "benservis");
+  const kh = kargoHesapla(pazarKalemleri.reduce((s, k) => s + k.fiyat, 0), pazarKalemleri.length > 0);
+  const kargo = kh.kargo_tl;
+  const tutar = urunToplam + kh.net_kargo_tl;
   const paytr = tamamiPazar && Boolean(paytrAyarlari());
 
   const telStr = String(alici_tel);
@@ -176,6 +180,7 @@ export default async function handler(req, res) {
       alici_adres: alici_adres?.trim() || null,
       ...(pazarVar ? {
         kargo_tl:         kargo,
+        kargo_indirim_tl: kh.kargo_indirim_tl,
         alici_email:      email,
         sozlesme_onay_at: new Date().toISOString(),
         sozlesme_onay_ip: (req.headers?.["x-forwarded-for"] || "").split(",")[0].trim() || null,
@@ -189,7 +194,7 @@ export default async function handler(req, res) {
 
   return res.status(201).json({
     ok: true,
-    siparis: { ...siparis, kargo_tl: kargo },
+    siparis: { ...siparis, kargo_tl: kargo, kargo_indirim_tl: kh.kargo_indirim_tl },
     odeme: paytr ? "paytr" : "yakinda",
     ...(paytr ? { odeme_url: `/odeme/${siparis.id}` } : {}),
   });

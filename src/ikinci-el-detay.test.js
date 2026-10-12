@@ -148,7 +148,8 @@ describe("POST /api/siparis — ikinci el", () => {
   it("yedek parça ile birlikte: kargo yalnız parça için bir kez", async () => {
     const r = await cagir(siparis, { method: "POST", body: { ...ALICI, urun_idler: ["u1"], ilanlar: [{ id: "i2" }] } });
     expect(r.kod).toBe(201);
-    expect(eklenen[0].tutar).toBe(199 + 24999 + 150);
+    // Kargo eşiği ikinci el bedelini saymaz: parça 199 TL < 3.000 → 189 TL kargo.
+    expect(eklenen[0].tutar).toBe(199 + 24999 + 189);
     expect(eklenen[0].urunler.find((k) => k.ilan_id).teslim).toBe("depo");
   });
 

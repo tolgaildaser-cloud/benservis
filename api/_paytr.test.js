@@ -24,7 +24,7 @@ describe("PayTR token (1. adım)", () => {
 
   it("sepet: [ad, 'fiyat', adet] + kargo satırı, base64 JSON", () => {
     const b = JSON.parse(Buffer.from(sepetBase64([{ baslik: "Kapak menteşesi", fiyat: 249 }], KARGO_TL), "base64").toString());
-    expect(b).toEqual([["Kapak menteşesi", "249.00", 1], ["Kargo", "150.00", 1]]);
+    expect(b).toEqual([["Kapak menteşesi", "249.00", 1], ["Kargo", "189.00", 1]]);
   });
 
   it("tutar kuruş, merchant_oid harf/rakam ve ≤64", () => {
