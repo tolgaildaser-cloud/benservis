@@ -171,20 +171,8 @@ export default function PazarVitrin() {
             {adet > 0 && <span className="pz-rozet">{adet}</span>}
           </a>
         </div>
-        <PazarSekmeler etkin="yedek-parca" />
-        <nav className="pz-katnav" aria-label="Kategoriler">
-          <div className="pz-kap pz-katnav-ic">
-            <a href="/pazar" className={f.ana ? "on" : ""} onClick={(e) => { e.preventDefault(); git({ ana: true, kategori: "yedek-parca", cihaz: "", parca: "", ara: "" }); }}>Tüm kategoriler</a>
-            {MENU_KATEGORILERI.map((k) => (
-              <a key={k.slug} href={`/pazar?kategori=${k.slug}`} className={!f.ana && !f.cihaz && !f.ara && f.kategori === k.slug ? "on" : ""}
-                onClick={(e) => { e.preventDefault(); git({ kategori: k.slug, cihaz: "", parca: "", ara: "" }); }}>{k.ad}</a>
-            ))}
-            {PAZAR_CIHAZLARI.map((c) => (
-              <a key={c.slug} href={`/pazar?kategori=yedek-parca&cihaz=${c.slug}`} className={f.cihaz === c.slug ? "on" : ""}
-                onClick={(e) => { e.preventDefault(); git({ kategori: "yedek-parca", cihaz: c.slug, parca: "", ara: "" }); }}>{kisaAd(c.ad)}</a>
-            ))}
-          </div>
-        </nav>
+        {/* Tek satır menü (Tolga, 12 Eki): cihaz kırılımı burada yok, ana görünümdeki görsellerde. */}
+        <PazarSekmeler etkin={f.ana ? "tum" : "yedek-parca"} git={git} />
       </header>
 
       <main className="pz-kap">
@@ -501,11 +489,6 @@ const CSS = `
 .pz-ara button{border:0;background:${BLUE};color:#fff;padding:0 20px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px}
 .pz-sepet{position:relative;display:flex;align-items:center;gap:8px;background:#fff;color:${INK}!important;border-radius:10px;padding:10px 14px;font-weight:700;white-space:nowrap}
 .pz-rozet{position:absolute;top:-7px;right:-7px;background:#EA580C;color:#fff;font-size:11px;font-weight:800;border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;border:2px solid ${INK};padding:0 4px}
-.pz-katnav{background:#fff;border-top:3px solid ${BLUE};border-bottom:1px solid ${HAIR}}
-.pz-katnav-ic{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
-.pz-katnav-ic::-webkit-scrollbar{display:none}
-.pz-katnav-ic a{padding:11px 12px;font-weight:600;font-size:13.5px;white-space:nowrap;border-bottom:3px solid transparent}
-.pz-katnav-ic a:hover,.pz-katnav-ic a.on{border-bottom-color:${BLUE};color:${BLUE}}
 .pz-hata{color:${RED};font-weight:600;margin:16px 0}
 .pz-yukleniyor{color:${SLATE};margin:18px 0}
 
