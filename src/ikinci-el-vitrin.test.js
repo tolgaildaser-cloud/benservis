@@ -124,8 +124,12 @@ describe("sayfa kuralları", () => {
     expect(i).toBeLessThan(j);
   });
 
-  it("iki sekme iki sayfada da; Yedek Parça menüsünde İkinci El ve Ürün kategorisi yok", () => {
-    expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain('<PazarSekmeler etkin="yedek-parca" />');
+  it("tek satır menü iki sayfada da; cihaz kırılımı menüde yok; Ürün kategorisi yok", () => {
+    const pv = fs.readFileSync("src/PazarVitrin.jsx", "utf8");
+    expect(pv).toContain('<PazarSekmeler etkin={f.ana ? "tum" : "yedek-parca"} git={git} />');
+    expect(pv).not.toContain("pz-katnav");
+    const ad = fs.readFileSync("src/PazarSekmeler.jsx", "utf8");
+    for (const s of ["Tüm kategoriler", "İkinci El Ürün", "Yedek Parça"]) expect(ad).toContain(s);
     expect(fs.readFileSync("src/IkinciElVitrin.jsx", "utf8")).toContain('<PazarSekmeler etkin="ikinci-el" />');
     expect(fs.readFileSync("src/PazarVitrin.jsx", "utf8")).toContain('PAZAR_KATEGORILERI.filter((k) => k.slug === "yedek-parca")');
   });
