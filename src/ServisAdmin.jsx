@@ -4,6 +4,7 @@
 // Onayda geçici şifre modal'da gösterilir (tek sefer!).
 import React, { useState, useEffect } from "react";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, RED, FAINT as GRAY } from "./theme.js";
+import { BenservisLogoKoyu } from "./BenservisLogo.jsx";
 
 
 
@@ -282,8 +283,7 @@ export default function ServisAdmin() {
 
       {/* Header */}
       <div style={{ background: INK, color: CREAM, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10 }}>
-        <a href="/" style={{ color: CREAM, textDecoration: "none", fontSize: 20 }}>◑</a>
-        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, fontWeight: 700 }}>Benservis</span>
+        <a href="/" aria-label="Benservis ana sayfası" style={{ display: "flex" }}><BenservisLogoKoyu height={34} /></a>
         <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>Admin — Servis Başvuruları</span>
       </div>
 

@@ -34,3 +34,20 @@ export default function BenservisLogo({
     </svg>
   );
 }
+
+// Koyu zemin varyantı — pazaryeri başlığıyla aynı renkler. Tolga (12 Eki): "daima zemine dikkat
+// et, zemin beyaz olmamalı, beyaz olursa bil gör çağır gözükmez". Lacivert zemin dışında kullanma.
+export const KOYU_ZEMIN = "#1E293B";
+export function BenservisLogoKoyu({ height = 40, style }) {
+  return <BenservisLogo style={{ height, width: "auto", display: "block", ...style }} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#CBD5E1" />;
+}
+
+// Açık zeminli sayfalarda logo: lacivert blok içinde, ana sayfaya bağlantı.
+export function LogoBlok({ href = "/", height = 36, style }) {
+  return (
+    <a href={href} aria-label="Benservis ana sayfası"
+      style={{ display: "inline-flex", background: KOYU_ZEMIN, borderRadius: 12, padding: "8px 14px", textDecoration: "none", ...style }}>
+      <BenservisLogoKoyu height={height} />
+    </a>
+  );
+}
