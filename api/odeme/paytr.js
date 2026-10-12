@@ -5,6 +5,7 @@
 import supabase from "../_supabase.js";
 import { paytrAyarlari, paytrToken, PAYTR_TOKEN_URL, siparisOid, sepetBase64, kurus } from "../_paytr.js";
 import { sayfaHTML, kacis, tl, RENK } from "./_sayfa.js";
+import { UCRETSIZ_KARGO_ESIK_TL } from "../../src/kargo.js";
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -32,7 +33,7 @@ export default async function handler(req, res) {
 
   const { data: s, error } = await supabase
     .from("siparisler")
-    .select("id, siparis_no, urunler, tutar, kargo_tl, alici_ad, alici_tel, alici_adres, alici_email, odeme_durumu, odeme_saglayici")
+    .select("id, siparis_no, urunler, tutar, kargo_tl, kargo_indirim_tl, alici_ad, alici_tel, alici_adres, alici_email, odeme_durumu, odeme_saglayici")
     .eq("id", id)
     .single();
   if (error || !s || s.odeme_saglayici !== "paytr") return hataSayfasi(res, 404, "Sipariş bulunamadı", "Bu sipariş için kart ile ödeme açık değil.");
@@ -53,7 +54,8 @@ export default async function handler(req, res) {
     merchant_oid,
     email: s.alici_email,
     payment_amount: String(kurus(s.tutar)),
-    user_basket: sepetBase64(s.urunler || [], s.kargo_tl || 0),
+    // Kargo indirimi varsa PayTR'ye kargo satırı gitmez (net 0; negatif satır gönderilmez).
+    user_basket: sepetBase64(s.urunler || [], (s.kargo_tl || 0) - (s.kargo_indirim_tl || 0)),
     no_installment: "1",
     max_installment: "0",
     currency: "TL",
@@ -95,6 +97,7 @@ export default async function handler(req, res) {
       <div style="font-size:12px;color:${RENK.SLATE};margin-bottom:6px">Sipariş No <strong style="color:${RENK.INK}">${kacis(s.siparis_no)}</strong></div>
       ${kalemler}
       ${s.kargo_tl ? `<div style="display:flex;justify-content:space-between;font-size:13.5px;padding:6px 0;border-bottom:1px solid #F1F5F9;color:${RENK.SLATE}"><span>Kargo</span><span>${tl(s.kargo_tl)}</span></div>` : ""}
+      ${s.kargo_indirim_tl ? `<div style="display:flex;justify-content:space-between;font-size:13.5px;padding:6px 0;border-bottom:1px solid #F1F5F9;color:#15803D"><span>Kargo indirimi (${tl(UCRETSIZ_KARGO_ESIK_TL)} üzeri)</span><span>−${tl(s.kargo_indirim_tl)}</span></div>` : ""}
       <div style="display:flex;justify-content:space-between;font-weight:700;font-size:15px;padding-top:10px"><span>Ödenecek toplam (KDV dahil)</span><span style="color:${RENK.BLUE}">${tl(s.tutar)}</span></div>
     </div>
     ${ayar.testMode === "1" ? `<div style="font-size:12px;color:#EA580C;font-weight:700;margin-bottom:10px">Test modu: kartınızdan para çekilmez.</div>` : ""}

@@ -29,7 +29,8 @@ export const SATICI = {
 const ZORUNLU = ["unvan", "mersis", "adres", "telefon", "eposta"];
 export const eksikSaticiAlanlari = () => ZORUNLU.filter((k) => !SATICI[k]);
 
-export const PAZAR_HUKUK_GUNCELLEME = "11 Ekim 2026";
+export const PAZAR_HUKUK_GUNCELLEME = "12 Ekim 2026";
+import { UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
 const KARGO_SURE = "3 (üç) iş günü";
 
 const alan = (k, etiket) =>
@@ -62,7 +63,7 @@ ${SATICI_TABLO}
 <ul>
 <li>Ürünün adı, temel nitelikleri, adedi ve <strong>KDV dahil satış fiyatı</strong> sipariş özetinde ve ürün sayfasında gösterilir.</li>
 <li>Fiyatlar Türk lirasıdır ve <strong>tüm vergiler dahildir</strong>.</li>
-<li><strong>Teslimat (kargo) ücreti</strong> ürün fiyatına dahil değildir; siparişi onaylamadan önce sipariş özetinde ayrıca gösterilir ve toplam tutara eklenir.</li>
+<li><strong>Teslimat (kargo) ücreti</strong> ürün fiyatına dahil değildir; siparişi onaylamadan önce sipariş özetinde ayrıca gösterilir ve toplam tutara eklenir. Kargolu ürünlerin toplamı <strong>${UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL'yi aşan</strong> siparişlerde kargo ücreti sipariş özetinde gösterilir ve aynı tutarda <strong>kargo indirimi</strong> olarak düşülür.</li>
 <li>Ürün sayfasındaki fiyat, sipariş onaylanana kadar değişebilir; onaylanan siparişte onay anındaki fiyat geçerlidir.</li>
 </ul>
 
@@ -161,7 +162,7 @@ ${UYARI}
 <ul>
 <li>Parçalar anlaşmalı tedarikçinin deposundan doğrudan adresinize gönderilir.</li>
 <li>Siparişiniz ödeme onayından itibaren <strong>tahmini ${KARGO_SURE}</strong> içinde kargoya verilir; kargo firmasına göre teslim genellikle 1-3 iş günü daha sürer. Yasal üst sınır siparişten itibaren 30 gündür.</li>
-<li>Kargo ücreti ürün fiyatına dahil değildir; siparişi onaylamadan önce gösterilir.</li>
+<li>Kargo ücreti ürün fiyatına dahil değildir; siparişi onaylamadan önce gösterilir. ${UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL'yi aşan siparişlerde kargo ücreti indirim olarak düşülür.</li>
 <li>Paketi teslim alırken kontrol edin; hasarlı paketi teslim almayın ya da kargo görevlisine tutanak tutturun.</li>
 </ul>
 

@@ -130,9 +130,11 @@ describe("satıcı modeli (#166 PR-2)", () => {
       alici_adres: "Suadiye Mah. Örnek Sok. 1, Kadıköy", alici_email: "a@b.co", sozlesme_onay: true } }, res);
     expect(res.kod).toBe(201);
     const s = eklenen.find((e) => e.tablo === "siparisler").satir;
-    // #167 PR-6: Benservis kalemi var → sabit kargo (150 TL) toplama eklenir; karışık sepet PayTR'ye gitmez.
-    expect(s.tutar).toBe(9450 + 150);
-    expect(s.kargo_tl).toBe(150);
+    // #167 PR-6 + 12 Eki: Benservis kalemi var → kargo (189 TL) eklenir; eşik yalnız kargolu (Benservis)
+    // kalemlere bakar, servis ürünü saymaz. Karışık sepet PayTR'ye gitmez.
+    expect(s.tutar).toBe(9450 + 189);
+    expect(s.kargo_tl).toBe(189);
+    expect(s.kargo_indirim_tl).toBe(0);
     expect(res.govde.odeme).toBe("yakinda");
     const bs = s.urunler.find((k) => k.urun_id === "u-bs");
     expect(bs).toMatchObject({ servis_id: null, servis_ad: "Benservis", satici_id: "st-bs", satici_tur: "benservis" });
