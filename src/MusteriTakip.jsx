@@ -3,6 +3,7 @@
 // SMS'teki link buraya gelir. Auth yok, sadece is_no ile çalışır.
 import React, { useState, useEffect } from "react";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, RED, FAINT as GRAY } from "./theme.js";
+import { BenservisLogoKoyu } from "./BenservisLogo.jsx";
 
 
 const DURUM_ADI = {
@@ -149,8 +150,7 @@ export default function MusteriTakip({ isNo }) {
 
       {/* Üst bar */}
       <div style={{ background: INK, color: CREAM, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10 }}>
-        <a href="/" style={{ color: CREAM, textDecoration: "none", fontSize: 20 }}>◑</a>
-        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 17, fontWeight: 700 }}>Benservis</span>
+        <a href="/" aria-label="Benservis ana sayfası" style={{ display: "flex" }}><BenservisLogoKoyu height={34} /></a>
         <span style={{ marginLeft: "auto", fontSize: 12, color: "#94A3B8" }}>İş Takip</span>
       </div>
 

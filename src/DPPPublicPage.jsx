@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import QRCode from "qrcode";
 import BenservisRozet from "./BenservisRozet.jsx";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
+import { LogoBlok } from "./BenservisLogo.jsx";
 
 
 function garantiDurumu(cihaz) {
@@ -112,8 +113,7 @@ export default function DPPPublicPage() {
 
       <header style={s.header}>
         <div style={s.logoRow}>
-          <span style={s.logoMark}>◑</span>
-          <h1 style={s.logo}>Benservis</h1>
+          <LogoBlok />
         </div>
         <div style={s.baslikAlt}>Dijital Ürün Pasaportu</div>
       </header>
@@ -297,7 +297,7 @@ export default function DPPPublicPage() {
           </div>
 
           <a href="/ariza" style={s.anaBtnAlt}>
-            ◑ Benservis — Arıza Teşhisi →
+            Benservis — Arıza Teşhisi →
           </a>
         </>
       )}

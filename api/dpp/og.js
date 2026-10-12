@@ -142,7 +142,7 @@ export default async function handler(req, res) {
       </div>
 
       <a href="${BASE_URL}" style="display:block;text-align:center;margin-top:14px;padding:13px;border-radius:13px;background:${INK};color:${CREAM};font-weight:700;font-size:14px;text-decoration:none">
-        ◑ Benservis — Arıza Teşhisi →
+        Benservis — Arıza Teşhisi →
       </a>`;
 
   const html = `<!doctype html>
@@ -183,8 +183,7 @@ export default async function handler(req, res) {
   <div style="position:relative;z-index:1;max-width:600px;margin:0 auto;padding:28px 18px 48px">
     <header style="text-align:center;margin-bottom:22px">
       <div style="display:flex;align-items:center;justify-content:center;gap:10px">
-        <span style="color:${AMBER};font-size:28px;transform:rotate(-20deg);display:inline-block">◑</span>
-        <h1 style="font-family:'Fraunces',serif;font-size:30px;font-weight:700;margin:0;letter-spacing:-.02em">Benservis</h1>
+        <a href="${BASE_URL}/" aria-label="Benservis ana sayfası" style="display:inline-flex;background:#1E293B;border-radius:12px;padding:8px 14px;text-decoration:none"><img src="${BASE_URL}/logo-koyu.svg" alt="Benservis — Bil, gör, çağır." width="123" height="36" style="display:block;height:36px;width:auto"></a>
       </div>
       <div style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#8A7B6A;text-transform:uppercase;margin-top:4px">Dijital Ürün Pasaportu</div>
     </header>

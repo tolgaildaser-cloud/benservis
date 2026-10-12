@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { track } from "@vercel/analytics";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, BLUE as LINK } from "./theme.js";
+import { BenservisLogoKoyu, KOYU_ZEMIN } from "./BenservisLogo.jsx";
 
 
 export default function UrunDetay() {
@@ -62,16 +63,19 @@ export default function UrunDetay() {
     <div style={{ minHeight: "100vh", background: "#F8FAFC", fontFamily: "'Hanken Grotesk', sans-serif", color: INK }}>
       
 
-      {/* Header */}
-      <header style={{ background: "#fff", borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 16px" }}>
-          <a href="/ikinci-el" style={{ fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: 20, color: INK, textDecoration: "none" }}>
-            <span style={{ color: AMBER }}>◑</span> Benservis <span style={{ fontFamily: "'Hanken Grotesk', sans-serif", fontSize: 11, fontWeight: 700, color: "#94A3B8", textTransform: "uppercase" }}>ikinci el</span>
+      {/* Header — pazaryeri başlığıyla aynı lacivert zemin + kurumsal logo (Tolga, 12 Eki: eski yarım daire logo
+          kalktı; "zemin beyaz olmamalı, beyaz olursa bil gör çağır gözükmez"). */}
+      <header style={{ background: KOYU_ZEMIN, borderBottom: `3px solid ${AMBER}`, position: "sticky", top: 0, zIndex: 100 }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", gap: 14, padding: "10px 16px" }}>
+          <a href="/" aria-label="Benservis ana sayfası" style={{ display: "flex" }}><BenservisLogoKoyu height={40} /></a>
+          <a href={pazarMi ? "/pazar" : "/ikinci-el"} style={{ color: "#fff", textDecoration: "none", fontWeight: 700, fontSize: 13, border: "1px solid rgba(255,255,255,.35)", borderRadius: 99, padding: "5px 12px", whiteSpace: "nowrap" }}>
+            {pazarMi ? "Pazaryeri" : "İkinci El"}
           </a>
-          <a href="/sepet" style={{ position: "relative", textDecoration: "none", fontSize: 22 }}>
-            🛒
+          <a href="/sepet" aria-label={`Sepetim, ${adet} ürün`} style={{ marginLeft: "auto", position: "relative", display: "flex", alignItems: "center", gap: 6, color: "#fff", textDecoration: "none", fontWeight: 700, fontSize: 13.5 }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" /><circle cx="10" cy="20.5" r="1.3" /><circle cx="17" cy="20.5" r="1.3" /></svg>
+            Sepetim
             {adet > 0 && (
-              <span style={{ position: "absolute", top: -6, right: -10, background: AMBER, color: "#fff", borderRadius: 99, fontSize: 10.5, fontWeight: 700, padding: "1px 6px" }}>{adet}</span>
+              <span style={{ position: "absolute", top: -8, right: -12, background: AMBER, color: "#fff", borderRadius: 99, fontSize: 10.5, fontWeight: 700, padding: "1px 6px" }}>{adet}</span>
             )}
           </a>
         </div>
