@@ -39,7 +39,6 @@
     { "source": "/siparis/:siparis",              "destination": "/api/odeme/sonuc?siparis=:siparis" }
   ],
   "headers": [
-    { "source": "/pazar", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
     { "source": "/ikinci-el", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
     { "source": "/ikinci-el/:yol*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
   ],

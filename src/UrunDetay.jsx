@@ -36,6 +36,34 @@ export default function UrunDetay() {
   // Servis (ikinci el) ürünlerinin akışı aynen kalır.
   const pazarMi = data?.satici?.tur === "benservis";
   const sepetKalemi = () => ({ ...data.urun, servis_ad: data.servis?.ad || data.satici?.ad, kargo_haric: pazarMi });
+
+  // YK #173 (a): sayfa başlığı + Product JSON-LD. Build'de basılan kabuk (dist/urun/<id>/index.html,
+  // scripts/pazar-sayfalari.mjs) zaten `data-bs-ld` şemasını taşır; o varsa ikinci kez eklenmez (çift
+  // Product şeması olmasın). Build'den sonra eklenen ürünlerde (kabuk yok) şema burada üretilir.
+  useEffect(() => {
+    if (!data?.urun) return undefined;
+    const u = data.urun;
+    document.title = pazarMi ? `${u.baslik} · Benservis Pazaryeri` : `${u.baslik} · Benservis`;
+    if (!pazarMi || u.kategori !== "yedek-parca" || document.head.querySelector("script[data-bs-ld]")) return undefined;
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.setAttribute("data-bs-ld", "istemci");
+    s.textContent = JSON.stringify({
+      "@context": "https://schema.org", "@type": "Product",
+      name: u.baslik, sku: u.id, url: `https://www.benservis.com/urun/${u.id}`,
+      ...(u.gorsel_url ? { image: [u.gorsel_url] } : {}),
+      ...(u.aciklama ? { description: String(u.aciklama).slice(0, 160) } : {}),
+      offers: {
+        "@type": "Offer", url: `https://www.benservis.com/urun/${u.id}`,
+        price: String(u.fiyat), priceCurrency: "TRY", // KDV dahil
+        availability: u.stok > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        itemCondition: u.parca_durum === "cikma" ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: data.satici?.ad || "Benservis" },
+      },
+    });
+    document.head.appendChild(s);
+    return () => s.remove();
+  }, [data, pazarMi]);
   const olc = () => {
     if (!pazarMi) return;
     try { track("sepete_ekle", { kategori: data.urun.kategori || "", satici: "benservis" }); } catch { /* ölçüm akışı bozmaz */ }

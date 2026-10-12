@@ -12,6 +12,11 @@ export function paytrAyarlari(env = process.env) {
   return { id: String(id), key: String(key), salt: String(salt), testMode: env.PAYTR_TEST_MODE === "0" ? "0" : "1" };
 }
 
+// Test-modu kapısı (YK #173 şerhi, 12 Eki 2026): PayTR tanımlı ama test modundayken (PAYTR_TEST_MODE
+// "0" değil) halk ödeme adımına geçemez; yalnız admin anahtarı (api/_admin.js) açar. PAYTR_TEST_MODE=0
+// olunca kapı kendiliğinden kalkar. PayTR hiç tanımlı değilse eski "ödeme yakında" sipariş akışı sürer.
+export const odemeKapisi = (env = process.env) => paytrAyarlari(env)?.testMode === "1";
+
 const hmacB64 = (metin, key) => crypto.createHmac("sha256", key).update(metin).digest("base64");
 
 // 1. adım: merchant_id + user_ip + merchant_oid + email + payment_amount + user_basket

@@ -19,6 +19,8 @@ import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzl
 import { hataKoduKayitlari, TIP_BASLIK, TIP_ETIKET, HATA_KODU_SIRA } from "../src/hata-kodlari.js";
 import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, KUTU_MARKA, kutuluSlug, kutuKapisi } from "../src/ariza-kutusu-sayfalari.js";
 import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
+import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
+import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -2088,7 +2090,9 @@ for (const p of posts) {
   // — Tolga'nın güç metriği (servise ulaşma) ilk ekranda karar alabilsin.
   // SIRA: ilgili yazılar CTA'nın ALTINDA. Birincil eylem (teşhis/servis) metnin hemen
   // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
-  const body = `<article>${yaziBasi(p)}${ARIZA_KUTUSU(p, "ust")}${videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}`;
+  // YK #173 (b): `parca:` frontmatter'lı yazıda ilk H2 altı + gövde sonu "satın al" bağlantısı
+  // (scripts/blog-satin-al.mjs); alanı olmayan yazının çıktısı bayt bayt aynı.
+  const body = `<article>${yaziBasi(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
@@ -3050,7 +3054,8 @@ console.log(`[build-blog] ✓ KVKK paketi: /${HUKUK_SAYFALARI.map((h) => h.dizin
 
 // /on-bilgilendirme-formu/ · /mesafeli-satis-sozlesmesi/ · /iade-ve-cayma/ · /pazaryeri-aydinlatma-metni/
 // Pazaryeri e-ticaret belgeleri (10 Eki 2026) — metin ve satıcı bilgisi scripts/pazar-hukuk.mjs'te.
-// /pazar noindex olduğu sürece bunlar da noindex + sitemap dışı.
+// Belgeler noindex + sitemap dışı (sözleşme metni arama sonucu değil, sepetten açılır). /pazar 12 Eki
+// 2026'da (YK #173) indekse açıldı; belgeler için ayrı karar gerekir, burada değişmedi.
 for (const h of PAZAR_HUKUK_SAYFALARI) {
   fs.mkdirSync(path.join(DIST, h.dizin), { recursive: true });
   fs.writeFileSync(
@@ -3098,6 +3103,29 @@ fs.writeFileSync(
 );
 console.log("[build-blog] ✓ 404.html basıldı (noindex, canonical yok, kapanış kapısı `kaynak=sayfa-bulunamadi`).");
 
+// ——— PAZARYERİ KABUKLARI — /pazar + /urun/:id (YK #173 (a), 12 Eki 2026) ———
+// Gerekçe ve yöntem scripts/pazar-sayfalari.mjs başında. Kaynak kabuk = vite'ın bastığı dist/index.html
+// (ana sayfa ön-render'ı ONDAN SONRA çalışır, aşağıda; buradaki okuma temiz kabuğu alır). Ürünler canlı
+// API'den: ağ yoksa build DURMAZ — /pazar kabuğu ürünsüz basılır, /urun kabukları ve sitemap ürün
+// girdileri atlanır (uyarıyla). ⛔ /ikinci-el bu bloğun dışında, noindex kalır.
+const pazarKabukKaynak = fs.existsSync(path.join(DIST, "index.html")) ? fs.readFileSync(path.join(DIST, "index.html"), "utf8") : null;
+let pazarUrunleri = [];
+if (!pazarKabukKaynak) {
+  console.warn("[build-blog] ⚠️  dist/index.html yok — /pazar ve /urun kabukları ATLANDI (yalnız `vite build` sonrası basılır).");
+} else {
+  const sonuc = await pazarUrunleriniGetir();
+  if (sonuc.urunler) pazarUrunleri = sonuc.urunler;
+  else console.warn(`[build-blog] ⚠️  pazar ürünleri okunamadı (${sonuc.hata}) — /urun kabukları ve sitemap ürün girdileri ATLANDI; /pazar kabuğu ürünsüz basıldı.`);
+  const kabukYaz = (dizin, { html, eksik }, ad) => {
+    fs.mkdirSync(dizin, { recursive: true });
+    fs.writeFileSync(path.join(dizin, "index.html"), html);
+    if (eksik.length) console.warn(`[build-blog] ⚠️  ${ad}: kabukta değiştirilemeyen etiket: ${eksik.join(", ")} — index.html değişmiş olabilir.`);
+  };
+  kabukYaz(path.join(DIST, "pazar"), pazarKabugu(pazarKabukKaynak, pazarUrunleri), "/pazar");
+  for (const u of pazarUrunleri) kabukYaz(path.join(DIST, "urun", u.id), urunKabugu(pazarKabukKaynak, u), `/urun/${u.id}`);
+  console.log(`[build-blog] ✓ pazaryeri kabukları: /pazar + ${pazarUrunleri.length} ürün sayfası (indekslenebilir, Product JSON-LD, sitemap'te).`);
+}
+
 // lastmod = frontmatter `updated` varsa onu, yoksa `date`'i kullan (Vercel checkout dosya
 // mtime'ını sıfırladığı için frontmatter sabit/güvenilir kaynaktır). Date objesi gelirse ISO'ya çevir.
 const isoDate = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d).slice(0, 10));
@@ -3110,6 +3138,9 @@ const urlEntries = [
   // KVKK paketi (YK #45): aydınlatma metninin BULUNABİLİR olması md.10'un amacı — noindex
   // yok, sitemap'te var. lastmod içerik tarihidir (blogla birlikte kaymasın diye sabit).
   ...HUKUK_SAYFALARI.map((h) => ({ loc: `${SITE}/${h.dizin}/`, lastmod: "2026-08-05" })),
+  // Pazaryeri (YK #173, 12 Eki 2026): /pazar + aktif yedek parça ürün sayfaları. Süzgeçli görünümler
+  // bilerek yok (aynı kabuk, canonical /pazar). /ikinci-el aşağıdaki 6 Ağu kararıyla dışarıda kalır.
+  ...pazarSitemapGirdileri(pazarUrunleri, newest),
   // Kategori sayfaları — yalnız giriş kaydı olanlar basıldığı için hepsi gerçek içerikli.
   ...tamirliKat.map((k) => ({ loc: `${SITE}/tamir/${k.slug}/`, lastmod: newest })),
   // Bilgi Merkezi kategori katmanı — yalnız yazısı olanlar (boş kategoriye sayfa basılmıyor).
