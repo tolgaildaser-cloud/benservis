@@ -7,6 +7,7 @@ import { track } from "@vercel/analytics";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, BLUE as LINK } from "./theme.js";
 import { BenservisLogoKoyu, KOYU_ZEMIN } from "./BenservisLogo.jsx";
+import { temsiliGorsel, mutlakGorselUrl, TEMSILI_ETIKET, TEMSILI_NOT } from "./pazar-gorsel.js";
 
 
 export default function UrunDetay() {
@@ -51,7 +52,7 @@ export default function UrunDetay() {
     s.textContent = JSON.stringify({
       "@context": "https://schema.org", "@type": "Product",
       name: u.baslik, sku: u.id, url: `https://www.benservis.com/urun/${u.id}`,
-      ...(u.gorsel_url ? { image: [u.gorsel_url] } : {}),
+      ...(u.gorsel_url ? { image: [mutlakGorselUrl(u.gorsel_url)] } : {}),
       ...(u.aciklama ? { description: String(u.aciklama).slice(0, 160) } : {}),
       offers: {
         "@type": "Offer", url: `https://www.benservis.com/urun/${u.id}`,
@@ -120,9 +121,17 @@ export default function UrunDetay() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 18, alignItems: "start" }}>
           {/* SOL: görsel */}
           <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, overflow: "hidden" }}>
-            {urun.gorsel_url
-              ? <img src={urun.gorsel_url} alt={urun.baslik} style={{ width: "100%", display: "block", aspectRatio: "4/3", objectFit: "cover" }} />
-              : <div style={{ aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 72, background: "#F1F5F9" }}>📦</div>}
+            <div style={{ position: "relative" }}>
+              {urun.gorsel_url
+                ? <img src={urun.gorsel_url} alt={urun.baslik} style={{ width: "100%", display: "block", aspectRatio: "4/3", objectFit: temsiliGorsel(urun.gorsel_url) ? "contain" : "cover", background: "#fff" }} />
+                : <div style={{ aspectRatio: "4/3", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 72, background: "#F1F5F9" }}>📦</div>}
+              {temsiliGorsel(urun.gorsel_url) && (
+                <span style={{ position: "absolute", top: 10, left: 10, fontSize: 11.5, fontWeight: 700, padding: "3px 8px", borderRadius: 6, background: "rgba(241,245,249,.95)", color: "#475569" }}>{TEMSILI_ETIKET}</span>
+              )}
+            </div>
+            {temsiliGorsel(urun.gorsel_url) && (
+              <div style={{ fontSize: 12, color: "#64748B", padding: "8px 12px", borderTop: "1px solid #F1F5F9" }}>{TEMSILI_NOT}</div>
+            )}
           </div>
 
           {/* SAĞ: bilgi + aksiyonlar */}

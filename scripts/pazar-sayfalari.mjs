@@ -20,6 +20,7 @@
 // ⛔ Fiyat KDV dahil (DB'deki fiyat), JSON-LD'de TRY; satıcı adı `saticilar`dan, yoksa "Benservis".
 import { PAZAR_CIHAZLARI, PARCA_TURLERI } from "../src/pazar-sozluk.js";
 import * as T from "../src/theme.js";
+import { temsiliGorsel, mutlakGorselUrl, TEMSILI_NOT } from "../src/pazar-gorsel.js";
 
 export const SITE = "https://www.benservis.com";
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -155,7 +156,7 @@ export function urunLd(u) {
     "@context": "https://schema.org", "@type": "Product",
     name: u.baslik,
     description: urunAciklamasi(u),
-    ...(u.gorsel_url ? { image: [u.gorsel_url] } : {}),
+    ...(u.gorsel_url ? { image: [mutlakGorselUrl(u.gorsel_url, SITE)] } : {}),
     sku: u.id,
     url: canonical,
     ...(cihazAd || parcaAd ? { category: ["Yedek Parça", kisaAd(cihazAd), parcaAd].filter(Boolean).join(" > ") } : {}),
@@ -182,6 +183,7 @@ export function urunKabugu(html, u) {
       `<p><a href="/pazar">Pazaryeri</a>${cihazAd ? ` › <a href="/pazar?kategori=yedek-parca&amp;cihaz=${esc(u.cihaz_turu)}">${esc(kisaAd(cihazAd))}</a>` : ""}</p>` +
       `<h1>${esc(u.baslik)}</h1>` +
       (u.gorsel_url ? `<img src="${esc(u.gorsel_url)}" alt="${esc(u.baslik)}" loading="lazy" referrerpolicy="no-referrer">` : "") +
+      (temsiliGorsel(u.gorsel_url) ? `<p><small>${esc(TEMSILI_NOT)}</small></p>` : "") +
       `<p><strong>${esc(tl(u.fiyat))}</strong> · KDV dahil · kargo hariç · Tahmini 3 iş gününde kargoda · Satıcı ${esc(u.satici?.ad || "Benservis")}</p>` +
       ([cihazAd && kisaAd(cihazAd), parcaAd].filter(Boolean).length ? `<p>${esc([cihazAd && kisaAd(cihazAd), parcaAd].filter(Boolean).join(" · "))}</p>` : "") +
       (u.aciklama ? `<p>${esc(u.aciklama)}</p>` : "") +
@@ -198,7 +200,7 @@ export function urunKabugu(html, u) {
       ],
     },
   ];
-  return kabukMeta(html, { title, desc, canonical, image: u.gorsel_url || "", ld, govde });
+  return kabukMeta(html, { title, desc, canonical, image: u.gorsel_url ? mutlakGorselUrl(u.gorsel_url, SITE) : "", ld, govde });
 }
 
 // ── Sitemap girdileri ────────────────────────────────────────────────────────────────────────────

@@ -25,6 +25,7 @@ import { sepetAdet, sepeteEkle } from "./sepet.js";
 import KvkkNotu from "./KvkkNotu.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import CihazIkon from "./cihaz-ikonlari.jsx";
+import { temsiliGorsel, TEMSILI_ETIKET } from "./pazar-gorsel.js";
 import PazarSekmeler from "./PazarSekmeler.jsx";
 import { NAVY as INK, BLUE, GREEN_DEEP, HAIR, SLATE, TINT, RED } from "./theme.js";
 import { KARGO_TL, UCRETSIZ_KARGO_ESIK_TL } from "./kargo.js";
@@ -466,6 +467,7 @@ function UrunKarti({ urun }) {
           ? <img src={urun.gorsel_url} alt={urun.baslik} loading="lazy" referrerPolicy="no-referrer" />
           : <span className="pz-gorsel-yer" aria-hidden="true"><CihazIkon cihaz={cihazAd || "Diğer"} size={64} /></span>}
         {durum && <span className="pz-etk">{durum}</span>}
+        {temsiliGorsel(urun.gorsel_url) && <span className="pz-temsili">{TEMSILI_ETIKET}</span>}
       </div>
       <div className="pz-kart-ic">
         <div className="pz-satici">Satıcı: <b>{benservis ? "Benservis" : urun.satici?.ad || "—"}</b></div>
@@ -557,6 +559,7 @@ const CSS = `
 .pz-gorsel{position:relative;aspect-ratio:1/1;background:#fff;display:grid;place-items:center;border-bottom:1px solid #F1F5F9}
 .pz-gorsel img{width:100%;height:100%;object-fit:contain;padding:10px;box-sizing:border-box}
 .pz-gorsel-yer{width:100%;height:100%;display:grid;place-items:center;color:#94A3B8;background:linear-gradient(160deg,#F8FAFC,#EEF2F7)}
+.pz-temsili{position:absolute;bottom:6px;right:6px;font-size:10px;font-weight:700;padding:2px 6px;border-radius:5px;background:rgba(241,245,249,.92);color:${SLATE}}
 .pz-etk{position:absolute;top:8px;left:8px;font-size:10.5px;font-weight:800;padding:3px 7px;border-radius:6px;background:${TINT};color:${SLATE}}
 .pz-kart-ic{padding:11px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
 .pz-satici{font-size:11.5px;color:${SLATE}}
