@@ -97,7 +97,7 @@ Makinenin ısı sensörü arızalıdır. Belirtisi nettir: makine **düzgün ve 
 
 ⛔ Sensör ve rezistans gövdenin içindedir; ölçümü ve değişimi servis işidir.
 
-## E07 — sürekli su alma
+## E07 — su sayacı arızası
 
 Makine su almayı durduramıyor. Üreticinin gösterdiği sebep **akış ölçerdeki arızadır**: akış ölçer makinedeki su miktarını ölçüp maksimum seviyeyi kontrol eder; görevini yapamayınca su girişi kesilmez.
 
@@ -116,8 +116,10 @@ Makine su almayı durduramıyor. Üreticinin gösterdiği sebep **akış ölçer
 | **E01** | Taşma | ⚠️ Fişi çek, musluğu kapat, zemini kurut; tekrarlarsa servis |
 | **E02** | Su kesik | ✅ Musluk açık mı, evde su var mı, hortum bükülmüş mü |
 | **E06** | NTC (ısı sensörü) arızası | ⛔ Servis |
-| **E07** | Sürekli su alma | ⛔ Fişi ve musluğu kapat, servis |
+| **E07** | Su sayacı arızası | ⛔ Fişi ve musluğu kapat, servis |
 | **E26** | 15°C üstü kompresör arızası (ısı pompalı modeller) | ⛔ Makineyi durdur, servis |
+
+Hata kodları modele göre değişiklik gösterebilir; kendi makinenin kılavuzuna bak.
 
 ## Hangi noktadan sonra servis işi
 

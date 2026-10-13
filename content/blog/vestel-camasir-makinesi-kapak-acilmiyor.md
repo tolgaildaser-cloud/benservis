@@ -79,7 +79,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **3. Zorlama.** Vestel aynı uyarıyı iki ayrı bölümde veriyor: makine çalışır durumdayken **kapağı açmak için zorlamayın.**
 
-**4. CL varsa çocuk kilidini kapat.** Kılavuza göre çocuk kilidi açıkken göstergede **"CL"** sembolü yanar. Kilit açıkken program düğmesi İPTAL'e alınıp başka bir program seçilirse **önceki program kaldığı yerden devam eder.** Kilidi kapatmak için açarken basılan aynı tuşlara (kılavuzdaki modellerde göstergenin **4. ve 5. tuşları**) aynı anda **3 saniyeden uzun** bas; CL sembolü söner.
+**4. CL varsa çocuk kilidini kapat.** Kılavuza göre çocuk kilidi açıkken göstergede **"CL"** sembolü yanar. Kilit açıkken program düğmesi İPTAL'e alınıp başka bir program seçilirse **önceki program kaldığı yerden devam eder.** Kilidi kapatmak için açarken basılan aynı tuşlara (modele göre göstergenin **4. ve 5.** ya da **6. ve 7. tuşları**; kendi kılavuzuna bak) aynı anda **3 saniyeden uzun** bas; CL sembolü söner.
 
 **5. Programı iptal et.** Program sürüyorsa Vestel'in sırası: program düğmesini **İPTAL** konumuna getir. Makine yıkamayı durdurur ve program iptal olur.
 
