@@ -5,12 +5,15 @@
 // POST  /api/admin/pazar                    — yeni Benservis ürünü (varsayılan durum: pasif)
 // POST  /api/admin/pazar?islem=gorsel       — { dosya_tipi, base64 } → "DPP Foto" bucket, public URL
 // PATCH /api/admin/pazar?id=<urun_id>       — alan güncelle; yalnız Benservis ürünü
+// PATCH /api/admin/pazar?islem=havale        — { siparis_id, sonuc: "geldi" | "iptal" } (YK #174):
+//        bekleyen havale siparişi → odendi (ikinci el satıldı) ya da iptal (ayırma kalkar)
 //
 // Güvenlik: Authorization: Bearer $ADMIN_TOKEN (ya da ADMIN_PASSWORD — /admin girişiyle aynı).
 // Silme YOK: "yayından kaldır" = durum pasif. Servis ürünlerine bu uçtan dokunulmaz
 // (onlar servis panelinin, `api/servis/urunler`).
 import { randomUUID } from "node:crypto";
 import supabase from "../_supabase.js";
+import { havaleSonuclandir } from "../_siparis-odeme.js";
 import { URUN_PUBLIC_ALANLAR } from "../_public-alanlar.js";
 import {
   kategoriBul, PAZAR_CIHAZLARI, PARCA_TURLERI, PARCA_DURUMLARI, URUN_DURUMLARI,
@@ -133,7 +136,7 @@ export default async function handler(req, res) {
     // Alıcı adı/telefonu yalnız bu yetkili cevapta; analitiğe yazılmaz.
     const { data: siparisler, error: sErr } = await supabase
       .from("siparisler")
-      .select("id, siparis_no, tutar, odeme_durumu, alici_ad, alici_tel, urunler, created_at")
+      .select("id, siparis_no, tutar, odeme_durumu, odeme_saglayici, alici_ad, alici_tel, urunler, created_at")
       .order("created_at", { ascending: false })
       .limit(100);
 
@@ -164,6 +167,14 @@ export default async function handler(req, res) {
   }
 
   // ─── PATCH ───────────────────────────────────────────────────────────────
+  if (req.method === "PATCH" && req.query?.islem === "havale") {
+    const { siparis_id, sonuc } = req.body || {};
+    if (typeof siparis_id !== "string" || !siparis_id) return res.status(400).json({ error: "siparis_id gerekli" });
+    const r = await havaleSonuclandir(supabase, siparis_id, sonuc);
+    if (r.hata) return res.status(r.kod).json({ error: r.hata });
+    return res.status(200).json({ ok: true, ...r });
+  }
+
   if (req.method === "PATCH") {
     const id = req.query?.id;
     if (!id) return res.status(400).json({ error: "id gerekli" });

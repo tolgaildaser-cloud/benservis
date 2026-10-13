@@ -2,8 +2,10 @@
 // GET /api/cron/expire  — Vercel cron tarafından her 5 dakikada çağrılır.
 // Authorization: Bearer CRON_SECRET
 // 30dk yanıt vermeyen işleri kapatır, servis puanını düşürür, müşteriye SMS gönderir.
+// YK #174 (13 Eki): 24 saatte ödemesi gelmeyen havale siparişlerini iptal eder, ikinci el ayırmasını kaldırır.
 import supabase from "../_supabase.js";
 import { sendSMS } from "../_verimor.js";
+import { suresiDolanHavaleleriIptalEt } from "../_siparis-odeme.js";
 
 export default async function handler(req, res) {
   // Cron güvenliği
@@ -11,6 +13,9 @@ export default async function handler(req, res) {
   if (token !== process.env.CRON_SECRET) {
     return res.status(401).json({ error: "Unauthorized" });
   }
+
+  // ── Süresi dolan havale siparişleri (iş akışından bağımsız, erken dönüşten önce) ──
+  const havaleIptal = await suresiDolanHavaleleriIptalEt(supabase);
 
   // ── Havuzda bekleyip süresi dolanları kapat ─────────────────────────────
   const { data: havuzDolmus } = await supabase
@@ -47,7 +52,7 @@ export default async function handler(req, res) {
 
   if (fetchErr) return res.status(500).json({ error: fetchErr.message });
   if (!dolmus || dolmus.length === 0) {
-    return res.status(200).json({ islem: 0, mesaj: "Süresi dolan iş yok" });
+    return res.status(200).json({ islem: 0, havale_iptal: havaleIptal, mesaj: "Süresi dolan iş yok" });
   }
 
   let islenenSayisi = 0;
@@ -101,5 +106,5 @@ export default async function handler(req, res) {
   }
 
   // musteri_tel dolmus dizisinde bulunur ama yanıta dahil edilmez; yalnızca SMS için kullanılır.
-  return res.status(200).json({ islem: islenenSayisi, kapatilan: dolmus.map(i => i.is_no) });
+  return res.status(200).json({ islem: islenenSayisi, havale_iptal: havaleIptal, kapatilan: dolmus.map(i => i.is_no) });
 }

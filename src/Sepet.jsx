@@ -11,6 +11,7 @@ import { kargoHesapla, UCRETSIZ_KARGO_ESIK_TL } from "./kargo.js";
 import { teslimBul } from "./ikinci-el-teslim.js";
 import { sepetAnahtari, kalanMs, sureMetni } from "./ikinci-el-kilit.js";
 import { KAPI_METNI, talepBaglantisi } from "./odeme-kapisi.js";
+import { HAVALE_SURE_SAAT, ibanBicimle } from "./havale.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
 // YK #173 şerhi — PayTR test modunda ödeme yalnız admin anahtarıyla açılır. Anahtar RaporPaneli'nin
@@ -77,16 +78,25 @@ export default function Sepet() {
 
   // Ödeme kapısı (YK #173): null = okunuyor · true = halk, test modu → kart · false = form.
   // Sunucu karar verir (/api/odeme/kapi); okuma başarısızsa form açılır, sipariş ucu 403 `kapi` ile yine durdurur.
+  // YK #174: aynı uç kart / havale seçeneklerini de döner. İkisi açıksa alıcı seçer; tekse o kullanılır.
   const [kapi, setKapi] = useState(pazarSiparisi ? null : false);
+  const [secenek, setSecenek] = useState({ kart: false, havale: false });
+  const [yontem, setYontem] = useState("kart");
   useEffect(() => {
     if (!pazarSiparisi) { setKapi(false); return undefined; }
     let iptal = false;
     fetch("/api/odeme/kapi", { headers: adminBasliklari() })
       .then(r => r.json())
-      .then(d => { if (!iptal) setKapi(d?.kapi === true); })
+      .then(d => {
+        if (iptal) return;
+        setKapi(d?.kapi === true);
+        setSecenek({ kart: d?.kart === true, havale: d?.havale === true });
+        setYontem(d?.kart === true ? "kart" : d?.havale === true ? "havale" : "kart");
+      })
       .catch(() => { if (!iptal) setKapi(false); });
     return () => { iptal = true; };
   }, [pazarSiparisi]);
+  const havaleSecili = pazarSiparisi && yontem === "havale" && secenek.havale;
   const kapiKalemi = kalemler.find(k => k.kargo_haric) || kalemler[0];
 
   const siparisVer = async (e) => {
@@ -109,13 +119,14 @@ export default function Sepet() {
           alici_tel: form.tel.trim(),
           alici_adres: form.adres.trim() || null,
           ...(pazarSiparisi ? { alici_email: form.eposta.trim(), sozlesme_onay: sozlesmeOnay } : {}),
+          ...(havaleSecili ? { odeme_yontemi: "havale" } : {}),
         }),
       });
       const d = await res.json();
       if (!res.ok && d?.kapi) { setKapi(true); setGonderiyor(false); return; } // test modu kapısı: sipariş yazılmadı
       if (!res.ok) throw new Error(d.error || "Sipariş oluşturulamadı");
       if (pazarSiparisi) {
-        try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length, ikinci_el: ikinciEl.length }); } catch { /* ölçüm akışı bozmaz */ }
+        try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length, ikinci_el: ikinciEl.length, odeme: d.odeme || "" }); } catch { /* ölçüm akışı bozmaz */ }
       }
       sepetiBosalt();
       if (d.odeme === "paytr" && d.odeme_url) { window.location.assign(d.odeme_url); return; }
@@ -225,7 +236,7 @@ export default function Sepet() {
                 </div>
                 {ekTeslim && (
                   <div style={{ padding: "0 16px 13px", fontSize: 12, color: "#64748B" }}>
-                    Nakliye / montaj ücreti ayrıca hesaplanır; bu toplama ve karttan çekilecek tutara dahil değildir.
+                    Nakliye / montaj ücreti ayrıca hesaplanır; bu toplama ve ödenecek tutara dahil değildir.
                   </div>
                 )}
               </div>
@@ -285,6 +296,29 @@ export default function Sepet() {
               <span style={{ color: AMBER }}>{toplam.toLocaleString("tr-TR")} TL</span>
             </div>
 
+            {/* YK #174: ödeme yöntemi. İki yöntem açıksa seçim; yalnız havale açıksa bilgi notu. */}
+            {pazarSiparisi && secenek.havale && (
+              <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "14px 16px", marginBottom: 14 }}>
+                <div style={{ fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, marginBottom: 10 }}>Ödeme Yöntemi</div>
+                {secenek.kart && (
+                  <label style={{ display: "flex", gap: 9, alignItems: "center", fontSize: 14, marginBottom: 8, cursor: "pointer" }}>
+                    <input type="radio" name="odeme-yontemi" checked={yontem === "kart"} onChange={() => setYontem("kart")} style={{ accentColor: "#2563EB" }} />
+                    Kredi / banka kartı
+                  </label>
+                )}
+                <label style={{ display: "flex", gap: 9, alignItems: "center", fontSize: 14, cursor: secenek.kart ? "pointer" : "default" }}>
+                  {secenek.kart && <input type="radio" name="odeme-yontemi" checked={yontem === "havale"} onChange={() => setYontem("havale")} style={{ accentColor: "#2563EB" }} />}
+                  <span><strong>Havale / EFT</strong></span>
+                </label>
+                {havaleSecili && (
+                  <div style={{ fontSize: 12.5, color: "#475569", lineHeight: 1.6, marginTop: 8 }}>
+                    Siparişi oluşturunca hesap bilgileri ve sipariş numaranız ekranda çıkar. Ödemeyi açıklamaya sipariş
+                    numaranızı yazarak <strong>{HAVALE_SURE_SAAT} saat içinde</strong> yapın; ödeme hesabımıza geçince siparişiniz hazırlanır.
+                  </div>
+                )}
+              </div>
+            )}
+
             {pazarSiparisi && (
               <label style={{ display: "flex", gap: 9, alignItems: "flex-start", fontSize: 12.5, lineHeight: 1.5, color: "#475569", marginBottom: 14, cursor: "pointer" }}>
                 <input type="checkbox" checked={sozlesmeOnay} onChange={e => setSozlesmeOnay(e.target.checked)} style={{ marginTop: 3, accentColor: "#2563EB" }} />
@@ -300,11 +334,13 @@ export default function Sepet() {
 
             <button type="submit" disabled={gonderiyor}
               style={{ width: "100%", padding: 14, borderRadius: 8, border: "none", background: GREEN, color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "inherit", opacity: gonderiyor ? 0.7 : 1 }}>
-              {gonderiyor ? "Sipariş oluşturuluyor…" : "🔒 Güvenli Ödemeye Geç"}
+              {gonderiyor ? "Sipariş oluşturuluyor…" : havaleSecili ? "Siparişi Oluştur, Hesap Bilgilerini Göster" : "🔒 Güvenli Ödemeye Geç"}
             </button>
-            <div style={{ fontSize: 11.5, color: "#64748B", textAlign: "center", marginTop: 9 }}>
-              Ödemeniz Benservis güvencesiyle platform üzerinden alınır, ürünü teslim aldığınızda satıcıya aktarılır.
-            </div>
+            {!havaleSecili && (
+              <div style={{ fontSize: 11.5, color: "#64748B", textAlign: "center", marginTop: 9 }}>
+                Ödemeniz Benservis güvencesiyle platform üzerinden alınır, ürünü teslim aldığınızda satıcıya aktarılır.
+              </div>
+            )}
             <button type="button" onClick={() => setAdim(1)}
               style={{ display: "block", margin: "12px auto 0", border: "none", background: "none", fontSize: 13, color: LINK, cursor: "pointer", fontFamily: "inherit" }}>
               ← Sepete dön
@@ -312,8 +348,13 @@ export default function Sepet() {
           </form>
         )}
 
+        {/* ── ADIM 3: HAVALE TALİMATI (YK #174) — e-posta altyapısı yok, talimat yalnız ekranda ── */}
+        {adim === 3 && sonuc?.odeme === "havale" && sonuc.havale && (
+          <HavaleTalimati siparisNo={sonuc.siparis.siparis_no} h={sonuc.havale} />
+        )}
+
         {/* ── ADIM 3: ÖDEME / ONAY ── */}
-        {adim === 3 && sonuc && (
+        {adim === 3 && sonuc && sonuc.odeme !== "havale" && (
           <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, textAlign: "center", padding: "44px 20px" }}>
             <div style={{ fontSize: 48, marginBottom: 14 }}>✅</div>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: 21, fontWeight: 700, marginBottom: 8 }}>
@@ -340,6 +381,58 @@ export default function Sepet() {
             </a>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+// Havale talimatı: hesap adı, IBAN, tutar, açıklama (sipariş no), son ödeme anı. Kopyala düğmeleri
+// panoya yazar; pano erişimi yoksa metin seçilebilir kalır. IBAN tarayıcıda saklanmaz (yalnız bu
+// cevapta), bu yüzden sayfa kapanınca talimat tekrar gösterilmez; alıcıya not alması söylenir.
+function HavaleTalimati({ siparisNo, h }) {
+  const [kopyalanan, setKopyalanan] = useState("");
+  const kopyala = (ad, deger) => {
+    try { navigator.clipboard.writeText(deger).then(() => setKopyalanan(ad), () => {}); } catch { /* pano yok */ }
+  };
+  const son = new Date(h.son_odeme);
+  const satir = (ad, deger, kopya) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 0", borderBottom: "1px solid #F1F5F9" }}>
+      <div style={{ width: 110, flexShrink: 0, fontSize: 12.5, color: "#64748B" }}>{ad}</div>
+      <div style={{ flex: 1, minWidth: 0, fontWeight: 700, fontSize: 14.5, wordBreak: "break-word" }}>{deger}</div>
+      {kopya && (
+        <button type="button" onClick={() => kopyala(ad, kopya)}
+          style={{ border: `1px solid ${BORDER}`, background: "#fff", borderRadius: 6, padding: "5px 10px", fontSize: 12, fontWeight: 700, color: LINK, cursor: "pointer", fontFamily: "inherit", whiteSpace: "nowrap" }}>
+          {kopyalanan === ad ? "Kopyalandı" : "Kopyala"}
+        </button>
+      )}
+    </div>
+  );
+  return (
+    <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "26px 20px" }}>
+      <div style={{ textAlign: "center", marginBottom: 18 }}>
+        <div style={{ fontSize: 40, marginBottom: 8 }}>🏦</div>
+        <div style={{ fontFamily: "'Fraunces', serif", fontSize: 21, fontWeight: 700, marginBottom: 6 }}>Siparişiniz alındı, ödemenizi bekliyoruz</div>
+        <div style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.6 }}>
+          Aşağıdaki hesaba havale / EFT yapın. <strong>Açıklamaya sipariş numaranızı yazın.</strong>
+        </div>
+      </div>
+      {satir("Sipariş No", siparisNo, siparisNo)}
+      {satir("Hesap adı", h.hesap_adi, h.hesap_adi)}
+      {satir("IBAN", ibanBicimle(h.iban), h.iban)}
+      {satir("Tutar", `${Number(h.tutar).toLocaleString("tr-TR")} TL`, String(h.tutar))}
+      {satir("Açıklama", h.aciklama, h.aciklama)}
+      <div style={{ fontSize: 12.5, color: "#9A3412", fontWeight: 600, lineHeight: 1.6, marginTop: 14 }}>
+        Son ödeme: {son.toLocaleString("tr-TR", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}.
+        Bu süre içinde ödeme hesabımıza geçmezse sipariş iptal olur.
+      </div>
+      <div style={{ fontSize: 12.5, color: "#475569", lineHeight: 1.6, marginTop: 8 }}>
+        Ödemeniz hesabımıza geçince siparişiniz hazırlanır ve telefonla bilgi verilir. Bu bilgileri not alın;
+        sayfayı kapatınca tekrar gösterilmez.
+      </div>
+      <div style={{ textAlign: "center", marginTop: 20 }}>
+        <a href="/pazar" style={{ display: "inline-block", padding: "12px 26px", borderRadius: 8, background: INK, color: "#F1F5F9", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+          Alışverişe Devam Et
+        </a>
       </div>
     </div>
   );

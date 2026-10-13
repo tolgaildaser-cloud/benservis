@@ -30,8 +30,9 @@ export const SATICI = {
 const ZORUNLU = ["unvan", "mersis", "adres", "telefon", "eposta"];
 export const eksikSaticiAlanlari = () => ZORUNLU.filter((k) => !SATICI[k]);
 
-export const PAZAR_HUKUK_GUNCELLEME = "12 Ekim 2026";
+export const PAZAR_HUKUK_GUNCELLEME = "13 Ekim 2026";
 import { UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
+import { HAVALE_SURE_SAAT } from "../src/havale.js";
 const KARGO_SURE = "3 (üç) iş günü";
 
 const alan = (k, etiket) =>
@@ -70,6 +71,7 @@ ${SATICI_TABLO}
 
 <h2>3. Ödeme</h2>
 <p>Ödeme, sipariş adımında sunulan yöntemlerle alınır. Kart ile ödemede kart bilgileri lisanslı ödeme kuruluşu tarafından işlenir; satıcıya ve Benservis'e iletilmez.</p>
+<p><strong>Havale / EFT ile ödeme:</strong> Bu yöntem seçildiğinde sipariş oluşturulur ve hesap bilgileri, ödenecek tutar ve sipariş numaranız ekranda gösterilir. Ödemeyi açıklamaya sipariş numaranızı yazarak <strong>${HAVALE_SURE_SAAT} saat içinde</strong> yapmanız gerekir. Süre içinde ödeme hesaba geçmezse sipariş kendiliğinden iptal olur ve ikinci el üründeki ayırma kalkar. Teslimat süresi ödemenin hesaba geçtiği andan itibaren işler.</p>
 
 <h2>4. Teslimat</h2>
 <ul>
@@ -120,6 +122,7 @@ ${SATICI_TABLO}
 <p>3.1. Ürünün temel nitelikleri, adedi, KDV dahil satış fiyatı, teslimat ücreti ve toplam tutarı sipariş özetinde yer alır ve bu sözleşmenin ayrılmaz parçasıdır.</p>
 <p>3.2. Teslimat ücreti ürün fiyatına dahil değildir; sipariş onayından önce Alıcı'ya gösterilir ve toplam tutara eklenir.</p>
 <p>3.3. Ödeme, sipariş adımında sunulan yöntemlerle yapılır. Kart bilgileri lisanslı ödeme kuruluşunca işlenir.</p>
+<p>3.4. Havale / EFT ile ödemede Alıcı, sipariş sonunda gösterilen hesaba, açıklamaya sipariş numarasını yazarak toplam tutarı sipariş anından itibaren ${HAVALE_SURE_SAAT} saat içinde öder. Ödeme bu süre içinde Satıcı hesabına geçmezse sipariş kendiliğinden iptal olur; taraflar için bir yükümlülük doğmaz. Ödeme, Satıcı hesabına geçtiği anda onaylanmış sayılır.</p>
 
 <h2>Madde 4 — Teslimat</h2>
 <p>4.1. Ürün, Satıcı'nın anlaşmalı tedarikçisi tarafından Alıcı'nın bildirdiği teslimat adresine doğrudan gönderilir.</p>
@@ -206,7 +209,7 @@ ${SATICI_TABLO}
 <tr><td>Kimlik ve iletişim</td><td>Ad-soyad, telefon, e-posta</td></tr>
 <tr><td>Teslimat ve fatura</td><td>Teslimat adresi, fatura adresi; kurumsal faturada unvan ve vergi numarası</td></tr>
 <tr><td>Sipariş</td><td>Sipariş edilen ürünler, tutar, sipariş ve teslimat tarihleri, iade/cayma kayıtları</td></tr>
-<tr><td>Ödeme işlemi</td><td>Ödeme sonucu ve işlem numarası. <strong>Kart bilgileri ödeme kuruluşunca işlenir, tarafımıza iletilmez.</strong></td></tr>
+<tr><td>Ödeme işlemi</td><td>Ödeme sonucu ve işlem numarası; havale / EFT ile ödemede gönderen adı, tutar ve açıklama (banka hesap hareketinden). <strong>Kart bilgileri ödeme kuruluşunca işlenir, tarafımıza iletilmez.</strong></td></tr>
 <tr><td>İletişim kayıtları</td><td>Sipariş, iade ve şikâyet yazışmaları</td></tr>
 </tbody></table>
 
