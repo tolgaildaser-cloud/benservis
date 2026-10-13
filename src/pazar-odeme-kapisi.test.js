@@ -91,14 +91,14 @@ describe("GET /api/odeme/kapi", () => {
   it("halka kapı + metin; admin anahtarıyla kapı yok; cevap no-store", async () => {
     const h = await cagir(kapiUcu);
     expect(h.kod).toBe(200);
-    expect(h.govde).toEqual({ kapi: true, metin: KAPI_METNI });
+    expect(h.govde).toEqual({ kapi: true, kart: false, havale: false, metin: KAPI_METNI });
     expect(h.basliklar["Cache-Control"]).toBe("no-store");
-    expect((await cagir(kapiUcu, { headers: ADMIN_BASLIK })).govde).toEqual({ kapi: false });
+    expect((await cagir(kapiUcu, { headers: ADMIN_BASLIK })).govde).toEqual({ kapi: false, kart: true, havale: false });
   });
 
   it("PAYTR_TEST_MODE=0 → herkese kapı yok; POST 405", async () => {
     vi.stubEnv("PAYTR_TEST_MODE", "0");
-    expect((await cagir(kapiUcu)).govde).toEqual({ kapi: false });
+    expect((await cagir(kapiUcu)).govde).toEqual({ kapi: false, kart: true, havale: false });
     expect((await cagir(kapiUcu, { method: "POST" })).kod).toBe(405);
   });
 });

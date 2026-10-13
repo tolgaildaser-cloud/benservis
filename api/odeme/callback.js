@@ -10,6 +10,7 @@
 //     hemen bırakılır (ürün yeniden satışta; Tolga, 11 Eki 12:4x).
 import supabase from "../_supabase.js";
 import { paytrAyarlari, paytrBildirimGecerli, oidSiparisId, bildirimGuncellemesi } from "../_paytr.js";
+import { satilanIlanlar, ilanlariSatildiYap, ilanKilitleriniBirak } from "../_siparis-odeme.js";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.redirect(302, "/pazar");
@@ -39,23 +40,14 @@ export default async function handler(req, res) {
       console.error("PayTR bildirimi yazılamadı:", siparis.siparis_no, error.message);
       return res.status(500).send("DB error"); // OK dönülmez → PayTR bildirimi yeniden dener
     }
-    const ilanIdler = satilanIlanlar(siparis);
-    if (guncelle.odeme_durumu === "odendi" && yazilan?.length && ilanIdler.length) {
-      const { error: ie } = await supabase.from("ilanlar")
-        .update({ durum: "satildi", stok: 0, kilit_token: null, kilit_bitis: null }).in("id", ilanIdler).eq("durum", "aktif");
-      if (ie) console.error("İkinci el ilan satıldı yapılamadı:", siparis.siparis_no, ie.message);
-    }
-    if (guncelle.odeme_durumu === "odeme_basarisiz" && yazilan?.length && ilanIdler.length) {
-      await supabase.from("ilanlar").update({ kilit_token: null, kilit_bitis: null })
-        .in("id", ilanIdler).eq("durum", "aktif");
-    }
+    // Satıldı / kilit bırakma mantığı havale ile ortak (api/_siparis-odeme.js, YK #174).
+    if (guncelle.odeme_durumu === "odendi" && yazilan?.length) await ilanlariSatildiYap(supabase, siparis);
+    if (guncelle.odeme_durumu === "odeme_basarisiz" && yazilan?.length) await ilanKilitleriniBirak(supabase, siparis);
   }
 
   res.setHeader("Content-Type", "text/plain");
   return res.status(200).send("OK");
 }
 
-// Siparişteki ikinci el ilan kalemleri (api/siparis.js `ilan_id` yazar).
-export function satilanIlanlar(siparis) {
-  return (Array.isArray(siparis?.urunler) ? siparis.urunler : []).map((k) => k?.ilan_id).filter(Boolean);
-}
+// Eski içe aktarımlar için (testler): tek kaynak api/_siparis-odeme.js.
+export { satilanIlanlar };

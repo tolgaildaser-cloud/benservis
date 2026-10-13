@@ -81,7 +81,8 @@ vi.mock("../api/_supabase.js", () => ({ default: { from: (t) => sahteSorgu(t) } 
 vi.mock("@vercel/analytics", () => ({ track: () => {} }));
 vi.mock("../api/_paytr.js", async (orijinal) => ({
   ...(await orijinal()),
-  paytrAyarlari: () => ({ merchant_id: "x", merchant_key: "k", merchant_salt: "s" }),
+  // testMode "0" = canlı PayTR: kart halka açık (YK #174 seçenek mantığı bu alanı okur).
+  paytrAyarlari: () => ({ merchant_id: "x", merchant_key: "k", merchant_salt: "s", testMode: "0" }),
   paytrBildirimGecerli: () => true,
 }));
 

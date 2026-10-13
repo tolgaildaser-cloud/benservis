@@ -12,16 +12,21 @@
 // `satildi` olur (api/odeme/callback.js).
 // Sepet kilidi (Tolga, 11 Eki 12:4x): ilan başka bir sepette süresi dolmamış kilitliyse 409.
 // Kilit boşsa ya da bu sepetinse sipariş anında ödeme süresince (30 dk) bu sepete kilitlenir.
+// YK #174 (13 Eki): `odeme_yontemi: "havale"` — PayTR reddi sonrası geçici yol. Sipariş
+// `odeme_saglayici = havale`, `odeme_bekleniyor` yazılır; cevapta hesap adı + IBAN + tutar + açıklama
+// (sipariş no) döner. İkinci el ayırması 24 saate uzar; yedek parça stoğu düşmez. Admin "ödeme geldi"
+// deyince `odendi` (api/admin/pazar.js), 24 saatte gelmezse cron iptal eder (api/cron/expire.js).
 import supabase from "./_supabase.js";
 import { setCorsHeaders } from "./_verimor.js";
 import { saticiHaritasi } from "./_satici.js";
-import { paytrAyarlari, odemeKapisi } from "./_paytr.js";
-import { adminYetkili } from "./_admin.js";
+import { paytrAyarlari } from "./_paytr.js";
+import { havaleAyarlari, odemeSecenekleri } from "./_havale.js";
 import { KAPI_METNI, KAPI_KODU } from "../src/odeme-kapisi.js";
 import { kargoHesapla } from "../src/kargo.js";
 import { ilanTeslimSecenekleri } from "../src/ikinci-el-teslim.js";
 import { ODEME_KILIT_DK } from "../src/ikinci-el-kilit.js";
 import { anahtarGecerli, ilanKilitle } from "./_kilit.js";
+import { HAVALE_KILIT_DK, havaleSonu } from "../src/havale.js";
 
 const EPOSTA_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -130,10 +135,32 @@ export default async function handler(req, res) {
   });
   const kalemler = [...urunKalemleri, ...ilanKalemleri];
 
+  // Ödeme yöntemi — kilitten ÖNCE karar verilir (kapı/kapalı yöntem ilanı boşuna kilitlemesin).
+  // YK #173 şerhi: PayTR test modunda halka kart kapalı; havale tanımlı değilse sipariş YAZILMAZ,
+  // istemci parça talebi formuna yönlendirir. Admin anahtarıyla gelen istek test ödemesine geçer.
+  const tamamiPazar = kalemler.every(k => k.satici_tur === "benservis");
+  const secenek = odemeSecenekleri(req);
+  const istenen = req.body?.odeme_yontemi === "havale" ? "havale" : "kart";
+  let yontem = null; // "paytr" | "havale" | null (eski "ödeme yakında" akışı)
+  if (tamamiPazar) {
+    if (istenen === "havale") {
+      if (!secenek.havale) return res.status(400).json({ error: "Havale / EFT ile ödeme şu an kapalı" });
+      yontem = "havale";
+    } else if (secenek.kart) {
+      yontem = "paytr";
+    } else if (secenek.havale) {
+      return res.status(400).json({ error: "Kart ile ödeme şu an kapalı. Havale / EFT ile ödeyin.", odeme_yontemi: "havale" });
+    } else if (secenek.kapi) {
+      return res.status(403).json({ error: KAPI_METNI, kapi: KAPI_KODU });
+    }
+  }
+
   // İkinci el: ödeme süresince bu sepete kilitle (atomik; başka sepetteyse satır dönmez).
+  // Havalede ayırma 24 saat (ödeme gelmezse cron iptal eder, kilit kalkar).
   if (ilanKalemleri.length) {
     const idler = ilanKalemleri.map(k => k.ilan_id);
-    const { kilitlenen, hata } = await ilanKilitle(supabase, idler, sepetAnahtari, ODEME_KILIT_DK);
+    const dk = yontem === "havale" ? HAVALE_KILIT_DK : ODEME_KILIT_DK;
+    const { kilitlenen, hata } = await ilanKilitle(supabase, idler, sepetAnahtari, dk);
     if (hata) return res.status(500).json({ error: "Sipariş oluşturulamadı" });
     const kilitsiz = idler.filter(id => !kilitlenen.includes(id));
     if (kilitsiz.length) {
@@ -148,7 +175,6 @@ export default async function handler(req, res) {
 
   // Pazar (Benservis) ürünü: kargo ayrı satır, mesafeli satış onayı ve e-posta zorunlu.
   const pazarVar = kalemler.some(k => k.satici_tur === "benservis");
-  const tamamiPazar = kalemler.every(k => k.satici_tur === "benservis");
   const email = String(alici_email || "").trim().toLowerCase();
   if (pazarVar) {
     if (sozlesme_onay !== true) {
@@ -167,12 +193,8 @@ export default async function handler(req, res) {
   const kh = kargoHesapla(pazarKalemleri.reduce((s, k) => s + k.fiyat, 0), pazarKalemleri.length > 0);
   const kargo = kh.kargo_tl;
   const tutar = urunToplam + kh.net_kargo_tl;
-  // YK #173 şerhi: PayTR test modundayken halk için ödeme kapalı — sipariş YAZILMAZ, istemci parça
-  // talebi formuna yönlendirir. Admin anahtarıyla (Authorization: Bearer) gelen istek test ödemesine geçer.
-  if (tamamiPazar && odemeKapisi() && !adminYetkili(req)) {
-    return res.status(403).json({ error: KAPI_METNI, kapi: KAPI_KODU });
-  }
-  const paytr = tamamiPazar && Boolean(paytrAyarlari());
+  const paytr = yontem === "paytr" && Boolean(paytrAyarlari());
+  const havale = yontem === "havale" ? havaleAyarlari() : null;
 
   const telStr = String(alici_tel);
   const tel = telStr.startsWith("+") ? telStr : `+90${telStr.replace(/^0/, "")}`;
@@ -193,6 +215,7 @@ export default async function handler(req, res) {
         sozlesme_onay_ip: (req.headers?.["x-forwarded-for"] || "").split(",")[0].trim() || null,
       } : {}),
       ...(paytr ? { odeme_saglayici: "paytr" } : {}),
+      ...(havale ? { odeme_saglayici: "havale" } : {}),
     })
     .select("id, siparis_no, tutar, odeme_durumu, created_at")
     .single();
@@ -202,7 +225,12 @@ export default async function handler(req, res) {
   return res.status(201).json({
     ok: true,
     siparis: { ...siparis, kargo_tl: kargo, kargo_indirim_tl: kh.kargo_indirim_tl },
-    odeme: paytr ? "paytr" : "yakinda",
+    odeme: paytr ? "paytr" : havale ? "havale" : "yakinda",
     ...(paytr ? { odeme_url: `/odeme/${siparis.id}` } : {}),
+    // Havale talimatı: IBAN yalnız siparişi veren kişiye bu cevapta gider (env'den), kayda yazılmaz.
+    ...(havale ? { havale: {
+      hesap_adi: havale.hesapAdi, iban: havale.iban, tutar: siparis.tutar,
+      aciklama: siparis.siparis_no, son_odeme: havaleSonu(siparis.created_at || Date.now()).toISOString(),
+    } } : {}),
   });
 }
