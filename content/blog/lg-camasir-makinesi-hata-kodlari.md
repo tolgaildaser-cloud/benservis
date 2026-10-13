@@ -20,7 +20,7 @@ faq:
   - q: "LG UE ve LE arasındaki fark ne?"
     a: "UE dengesiz yük demektir: çamaşır tambur içinde eşit dağılmamıştır. LE ise motorun kilitlendiğini gösterir. İkisi de çoğu zaman yükü düzenleyince geçer; LE tekrarlarsa servis gerekir. Not: LE'yi doğrudan ağır yüke bağlayan açıklamalar yaygın ama LG bunu kendi kılavuzunda öyle tanımlamıyor, o yüzden sebep atfı yapmıyoruz."
   - q: "LG dE hatası neden olur?"
-    a: "dE, LG'nin kendi ifadesiyle bir kapı açık hatasıdır: kapı tam kapanmamıştır. Genelde kapı arasında bir şey sıkışmıştır; kontrol edip tekrar, klik sesini duyana kadar kapat. Dikkat: bu kod kilit mekanizmasının arızalandığını söylemez — kilit arızasının ayrı bir kodu var (dE2 ya da E30). Aradaki fark pratik: dE çoğu zaman kullanıcının kapıyı düzgün kapatmasıyla geçer, dE2 ise parça işidir."
+    a: "Türkiye'de satılan güncel LG modellerinin Türkçe kılavuzu dE, dE1, dE2 ve dE4'ü kapak sensörü arızası olarak verir ve LG servisini aramayı söyler. Bazı modellerde dE, kapının tam kapanmadığını gösterir: kapı arasında sıkışan bir şey var mı bak, klik sesini duyana kadar kapat. Kod geçmiyorsa servis gerekir. Kodun anlamı modele göre değişir; kendi makinenin kılavuzuna bak."
 images:
   coverAlt: "Üst üste katlanmış temiz beyaz havlu istifi"
 ---
@@ -44,8 +44,8 @@ LG çamaşır makinen ekranında bir hata kodu gösteriyor (IE, OE, UE…) ve ne
 | **IE** | Su alamıyor (musluk, basınç, hortum) | 🛠️ Musluğu aç, giriş hortumunu/süzgeci kontrol et |
 | **OE** | Su atamıyor (tahliye) | 🛠️ Tahliye filtresini ve hortumu temizle |
 | **UE** | Dengesiz yük | 🛠️ Yükü dengele (çok az yük de olabilir, parça ekle) |
-| **dE** | Kapı tam kapanmadı | 🛠️ Kapağı tam kapat, arada bir şey var mı bak |
-| **dE2 / E30** | Kapı kilidi arızası | 🔧 Servis |
+| **dE / dE1 / dE2 / dE4** | Kapak sensörü arızası (TR kılavuzu); bazı modellerde kapı tam kapanmadı | 🛠️ Kapağı tam kapat; geçmezse 🔧 servis |
+| **E30** | Kapı kilidi arızası (bazı modeller) | 🔧 Servis |
 | **LE** | Motor kilitli | 🛠️ Yükü azalt; tekrarlarsa 🔧 servis |
 | **FE** | Aşırı su alma (taşma) | 🔧 Servis (giriş valfi) |
 | **PE** | Su seviye sensörü (basınç anahtarı) | 🔧 Servis |
@@ -83,4 +83,4 @@ Tahliye sorunu; tahliye filtresini temizle — çoğu zaman ücretsiz.
 UE dengesiz yük; LE motor kilidi (ağır yük). İkisi de genelde yükle ilgili.
 
 **dE neden olur?**
-Kapı kilitlenmiyor; arada bir şey var mı bak, tam kapat.
+TR kılavuzunda kapak sensörü arızası (servis); bazı modellerde kapı tam kapanmadı demektir. Önce kapağı tam kapat, geçmezse servis.
