@@ -16,6 +16,7 @@ import { track } from "@vercel/analytics";
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import { PAZAR_CIHAZLARI } from "./pazar-sozluk.js";
 import { BLUE, NAVY, HAIR, MUTED } from "./theme.js";
+import { temsiliGorsel, TEMSILI_ETIKET } from "./pazar-gorsel.js";
 
 const ADET = 8;
 const tl = (n) => `${Math.round(Number(n)).toLocaleString("tr-TR")} TL`;
@@ -57,6 +58,7 @@ export default function AnaSayfaPazar() {
               {u.gorsel_url
                 ? <img src={u.gorsel_url} alt={u.baslik} loading="lazy" decoding="async" referrerPolicy="no-referrer" />
                 : <CihazIkon cihaz={cihazAdi(u.cihaz_turu)} size={56} />}
+              {temsiliGorsel(u.gorsel_url) && <span className="as-pazar-temsili">{TEMSILI_ETIKET}</span>}
             </span>
             <span className="as-pazar-ad">{u.baslik}</span>
             <span className="as-pazar-fiyat"><b>{tl(u.fiyat)}</b> <small>KDV dahil · kargo hariç</small></span>
@@ -76,7 +78,8 @@ const CSS = `
 .as-pazar-izgara{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .as-pazar-kart{display:flex;flex-direction:column;background:#fff;border:1px solid ${HAIR};border-radius:14px;overflow:hidden;text-decoration:none;color:${NAVY};transition:box-shadow .15s,border-color .15s}
 .as-pazar-kart:hover{box-shadow:0 10px 30px -14px rgba(15,23,42,.35);border-color:#CBD5E1}
-.as-pazar-gorsel{display:grid;place-items:center;aspect-ratio:1/1;background:#fff;border-bottom:1px solid #F1F5F9;color:${BLUE}}
+.as-pazar-gorsel{position:relative;display:grid;place-items:center;aspect-ratio:1/1;background:#fff;border-bottom:1px solid #F1F5F9;color:${BLUE}}
+.as-pazar-temsili{position:absolute;bottom:6px;right:6px;font-size:10px;font-weight:700;padding:2px 6px;border-radius:5px;background:rgba(241,245,249,.92);color:#475569}
 .as-pazar-gorsel img{width:100%;height:100%;object-fit:contain;padding:10px;box-sizing:border-box}
 .as-pazar-ad{display:-webkit-box;padding:10px 12px 4px;font-size:14px;font-weight:600;line-height:1.35;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:2.7em}
 .as-pazar-fiyat{padding:0 12px 12px;margin-top:auto;font-size:16px}
