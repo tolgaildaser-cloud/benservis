@@ -308,11 +308,11 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 Beyaz dolgulu (Tolga: "beyaz ve ortada olsun"). ⛔ Satır içi stile display YAZILMAZ:
                 masaüstünde CSS açar, mobilde barda gizlenir, ☰ panelinde durur. */}
             <a className="ustbar-pazar" href="/pazar?k=anasayfa-ust" style={st.ustPazar}>Pazaryeri</a>
-            {/* "Kayıt ol" (YK #172 ÜY-1, Tolga 11 Eki: "servis kaydını "kayıt ol" olarak değiştirelim")
-                → /kayit seçim sayfası (servis/satıcı | birey). Mobil etiket "Kayıt" (375px ölçüsü ↑). */}
-            <a className="ustbar-kayit" href="/kayit?kaynak=anasayfa-ust" aria-label="Kayıt ol" style={st.ustKayit}>
-              <span className="kayit-uzun">Kayıt ol</span>
-              <span className="kayit-kisa">Kayıt</span>
+            {/* "Üyelik" (14 Eki, Tolga: "sağ üstte kayıt ol u üyelik olarak değiştir. üyelik girişi ikiye
+                ayrılmasın tek giriş olsun") → /kayit tek giriş sayfası. Önce "Kayıt ol" (YK #172 ÜY-1, 11 Eki). */}
+            <a className="ustbar-kayit" href="/kayit?kaynak=anasayfa-ust" aria-label="Üyelik" style={st.ustKayit}>
+              <span className="kayit-uzun">Üyelik</span>
+              <span className="kayit-kisa">Üyelik</span>
             </a>
             {/* ☰ MOBİL MENÜ DÜĞMESİ — yalnız ≤640px'te görünür (App.jsx CSS'i açar).
                 ⛔ Satır içi stile `display` YAZILMAZ (PR #175 dersi). */}
@@ -335,7 +335,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <a href="/tamir/" style={st.mobilMenuLink}>Tamir Merkezi</a>
               <a href="/kilavuzlar/" style={st.mobilMenuLink}>Kullanım Kılavuzları</a>
               <a href="/pazar?k=anasayfa-menu" style={st.mobilMenuLink}>Pazaryeri</a>
-              <a href="/kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Kayıt ol <span style={st.mobilMenuAlt}>· servis ya da birey</span></a>
+              <a href="/kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Üyelik <span style={st.mobilMenuAlt}>· giriş yap</span></a>
             </nav>
           )}
         </div>

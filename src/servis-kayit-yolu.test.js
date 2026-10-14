@@ -3,9 +3,12 @@
 // NEDEN VAR: `/servis-kayit` üç aydır çalışıyordu ama siteden erişilemiyordu — tek link
 // 17 Haz pivotunda rotadan kaldırılan `LandingPage.jsx`'teydi. "Ürün var, yol yok" hatası
 // sessizdir: build yeşil, test yeşil, sayfa ayakta, kimse bulamıyor. Bu dosya YOLU kilitler.
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { readFileSync } from "node:fs";
 import { GELIS_DESENI } from "./gelis.js";
+
+// KayitSecim artık Supabase istemcisini içe aktarıyor (tek giriş); testte ağ/env yok.
+vi.mock("./lib/supabase.js", () => ({ supabase: { auth: {} } }));
 
 const oku = (yol) => readFileSync(new URL(`../${yol}`, import.meta.url), "utf8");
 
@@ -28,10 +31,10 @@ describe("kayıt sayfasına giden bağlar", () => {
   // YK #172 ÜY-1 (11 Eki, Tolga: "servis kaydını "kayıt ol" olarak değiştirelim"): üst bar,
   // ☰ ve footer artık /kayit seçim sayfasına gider; servis kaydına oradan geçilir ve
   // `kaynak` aynen taşınır (KayitSecim.jsx). Hero altındaki servis şeridi doğrudan kalır.
-  it("ANA SAYFA üst barında 'Kayıt ol' düğmesi var (Tolga, 12 Eyl → 11 Eki)", () => {
+  it("ANA SAYFA üst barında 'Üyelik' düğmesi var (Tolga, 12 Eyl → 11 Eki → 14 Eki)", () => {
     const src = oku("src/AnaSayfaVitrin.jsx");
     expect(src).toContain('href="/kayit?kaynak=anasayfa-ust"');
-    expect(src).toContain('<span className="kayit-uzun">Kayıt ol</span>');
+    expect(src).toContain('<span className="kayit-uzun">Üyelik</span>');
     // "Yakın Servisler" dolgulu CTA'nın SAĞINDA durmalı — sırayı kilitle.
     expect(src.indexOf("Yakın Servisler")).toBeLessThan(src.indexOf("kaynak=anasayfa-ust"));
   });
@@ -55,7 +58,7 @@ describe("kayıt sayfasına giden bağlar", () => {
     expect(app).toMatch(/\.vitrin-ustmenu a\.ustbar-kayit \{ display: none !important; \}/);
     expect(vitrin).toContain('href="/kayit?kaynak=anasayfa-menu"');
     expect(app).toMatch(/\.ustcta-yakin \{ display: none; \}/);
-    expect(vitrin).toContain('aria-label="Kayıt ol"');
+    expect(vitrin).toContain('aria-label="Üyelik"');
   });
 
   it("☰ mobil menü üç bölümü açar; display satır içine yazılmaz", () => {
@@ -103,7 +106,7 @@ describe("kayıt sayfasına giden bağlar", () => {
   it("/kayit seçim sayfası servis kaydına kaynakla geçer; rota + rewrite", () => {
     const k = oku("src/KayitSecim.jsx");
     expect(k).toContain("href={`/servis-kayit?kaynak=${kaynak}`}");
-    expect(k).toContain('href="/panel"');
+    expect(k).toContain('"/panel"'); // servis hesabı girişten sonra panele (girisYonu)
     expect(oku("src/main.jsx")).toContain('path === "/kayit"');
     expect(oku("vercel.json")).toContain('"/kayit"');
   });
@@ -143,7 +146,7 @@ describe("kaynak etiketi uçtan uca", () => {
   });
 });
 
-describe("/kayit seçim sayfası (YK #172 ÜY-1)", () => {
+describe("/kayit üyelik sayfası (YK #172 ÜY-1 → tek giriş, 14 Eki)", () => {
   it("kaynak etiketi desenden geçer, değilse 'kayit'", async () => {
     const { kaynakOku } = await import("./KayitSecim.jsx");
     expect(kaynakOku("?kaynak=anasayfa-ust")).toBe("anasayfa-ust");
@@ -152,10 +155,17 @@ describe("/kayit seçim sayfası (YK #172 ÜY-1)", () => {
     expect(kaynakOku("")).toBe("kayit");
   });
 
-  it("üyelik açılana kadar Birey kartı 'yakında' + teşhis; /giris bağlantısı bayrağa bağlı", () => {
+  it("TEK GİRİŞ (Tolga 14 Eki): tek form, servis hesabı panele, bireysel ÜY-2'ye kadar bilgi mesajı", async () => {
     const k = oku("src/KayitSecim.jsx");
     expect(k).toContain("export const UYELIK_ACIK = false");
-    expect(k).toContain("Üyelik çok yakında açılıyor");
-    expect(k).toContain('href="/ariza"');
+    expect(k).toContain("signInWithPassword");
+    expect(k).toContain("<h1>Üyelik</h1>");
+    expect((k.match(/<form /g) || []).length).toBe(1);
+    expect(k).toContain("Bireysel üyelik çok yakında açılıyor");
+    const { girisYonu } = await import("./KayitSecim.jsx");
+    expect(girisYonu({ user_metadata: { servis_id: "s1" } })).toBe("/panel");
+    expect(girisYonu({ user_metadata: {} })).toBe(null);
+    expect(girisYonu({ user_metadata: {} }, true)).toBe("/hesabim");
+    expect(girisYonu(null)).toBe(null);
   });
 });
