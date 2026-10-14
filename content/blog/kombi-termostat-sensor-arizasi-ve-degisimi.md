@@ -48,10 +48,10 @@ faq:
 images:
   coverAlt: "Duvara asılı bir kombinin ekranında yanıp sönen hata kodu ve yanında duvardaki oda termostatı, sade çizim"
   steps:
-    - "Kombi ekranındaki bir kodu not defterine yazan sade siluet el, yanında açık kullanma kılavuzu"
+    - "Kombi ekranındaki kod, yanında not defteri, kalem ve açık kullanma kılavuzu"
     - "Kombinin altındaki yuvarlak basınç göstergesine yakın plan, ibre orta bölgede"
-    - "Kombi panelindeki reset tuşuna bir kez dokunan sade siluet parmak, yanında tek bir işaret simgesi"
-    - "Duvar aparatından çıkarılmış kablosuz oda termostatının arka kapağı açık, iki kalem pil yerleştiren eldivenli el"
+    - "Kombi panelinde vurgulanmış reset tuşu, yanında tek basış işareti"
+    - "Arka kapağı açık kablosuz oda termostatı, yuvasında iki kalem pil"
     - "Oda termostatının ekranında sıcaklık ayarı yukarı ok ile yükseltilirken, arkada hafif ısınan petek"
     - "Telefon, not defteri ve kombinin model etiketi yan yana, servis çağırmaya hazır bilgi listesi"
 ---

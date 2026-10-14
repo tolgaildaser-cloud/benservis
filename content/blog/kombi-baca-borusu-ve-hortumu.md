@@ -45,8 +45,8 @@ faq:
 images:
   coverAlt: "Duvara asılı kombinin üstünden çıkıp dış duvara uzanan iç içe iki borulu baca, sade çizim"
   steps:
-    - "Kombi ekranındaki bir kodu not defterine yazan sade siluet el, yanında açık kullanma kılavuzu"
-    - "Pencereden görünen dış duvardaki baca çıkış ucu, önü açık ve boş, uzaktan bakan sade siluet"
+    - "Kombi ekranındaki kod, yanında not defteri, kalem ve açık kullanma kılavuzu"
+    - "Pencereden görünen dış duvardaki baca çıkış ucu, önü açık ve boş; yanında önü açık havalandırma menfezi"
     - "Kombinin altındaki ince plastik gider hortumu ve gider hunisine yakın plan, açık ve temiz"
     - "Kombinin yanındaki raftan sprey kutusunu ve temizlik şişesini uzaklaştıran eldivenli el"
     - "Ardına kadar açılmış pencere ve kapı, perde hafifçe havalanıyor, kombi kapalı konumda"
