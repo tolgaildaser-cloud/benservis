@@ -1505,7 +1505,9 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
      Tam ad aria-label'de ve hero altındaki şeritte duruyor.
      ⚠️ Kayıt bağının satır içi stilinde display:inline-flex var → onu ezmek için
      !important gerekiyor (PR #175'te 100px taşma olarak ölçülen tuzak). */
-  .ustbar-logo svg { width: 130px !important; }
+  /* 14 Eki 2026 (Tolga: "mobilde benservis logosu küçük kaldı, %50 büyüt"): 130 → 195 px.
+     Servisler şeride indiği için barda yalnız logo + ☰ var: 195 + 10 + 44 = 249 < 320 (360 px ekran). */
+  .ustbar-logo svg { width: 195px !important; }
   .ustcta-yakin { display: none; }
   /* 2 Eki 2026 — "Kayıt" düğmesi ☰ menüsüne TAŞINDI (Tolga'nın seçimi: ☰'a yer açmak
      için). Satır içi display:inline-flex'i ezmek için !important şart (PR #175 tuzağı).
