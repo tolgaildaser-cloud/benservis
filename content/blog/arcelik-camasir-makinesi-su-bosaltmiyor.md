@@ -45,6 +45,12 @@ faq:
     a: "Arçelik 5063 FYE kılavuzuna göre bazı modellerde acil su tahliye hortumu bulunuyor. Hortumu yuvasından çekip ucunu geniş bir kaba yerleştiriyorsun, tıpayı çıkararak suyu boşaltıyorsun; kap dolunca tıpayı takıp kabı boşaltıyor ve işlemi tekrarlıyorsun. Su bitince tıpayı takıp hortumu yerine sabitliyorsun."
 images:
   coverAlt: "Çamaşır makinesinin alt önündeki açık filtre kapağı, önünde yere konmuş geniş bir plastik kap ve katlanmış bez"
+video:
+  youtubeId: "e6nVTl3o4lY"
+  title: "Çamaşır makinesi su boşaltmıyor: servisi aramadan önce 2 kontrol"
+  description: "Arçelik kılavuzundaki iki sebep: kıvrık ya da tıkalı tahliye hortumu ve pompa filtresi. Fişi çekip filtreyi güvenle boşaltma ve temizleme."
+  uploadDate: "2026-10-14T04:06:07Z"
+  duration: "PT1M5S"
 ---
 
 Program ilerlemiyor, tamburun dibinde su duruyor ya da çamaşırlar suyun içinde kaldı. Arçelik'in çamaşır makinesi kullanma kılavuzundaki sorun giderme tablosunda bu durum tek satır: **"Ürün su tahliye etmiyor."** Arçelik'in bu satırda saydığı iki sebep de kullanıcının ulaşabileceği yerde: **su gideri hortumu tıkanmış veya kıvrılmış olabilir** ve **pompa filtresi tıkanmış olabilir.** Kılavuzun bakım bölümü de aynı şeyi söylüyor: makine içindeki suyu tahliye etmiyorsa **pompa filtresi tıkanmış olabilir.** Bu yazıda Arçelik'in temizlik sırasını açıyoruz.
