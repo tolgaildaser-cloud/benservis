@@ -1491,6 +1491,8 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
    640px bloğunda açılır. Panel yalnız menü açıkken DOM'a girer. */
 .ustbar-menu-btn { display: none; }
 .vitrin-mobil-menu { display: none; }
+/* MOBİL ŞERİT (14 Eki 2026): Yakın servisler + Pazaryeri başlığın altında; masaüstünde kapalı. */
+.vitrin-mobil-serit { display: none; }
 
 @media (max-width: 640px) {
   .vitrin-ustmenu a { display: none; }
@@ -1511,6 +1513,11 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
   .vitrin-ustmenu a.ustbar-kayit { display: none !important; }
   .ustbar-menu-btn { display: inline-flex; }
   .vitrin-mobil-menu { display: flex; }
+  /* 14 Eki 2026: Servisler bardan şeride iner (Pazaryeri ile yan yana). Satır içi
+     display:inline-flex'i ezmek için !important şart (PR #175 tuzağı). */
+  .vitrin-ustmenu button.ustbar-servisler { display: none !important; }
+  .vitrin-mobil-serit { display: flex; }
+  .vitrin-mobil-serit button, .vitrin-mobil-serit a { display: inline-flex; }
   .kayit-uzun { display: none; }
   .kayit-kisa { display: inline; }
   .vitrin-kayit-serit { display: block; }

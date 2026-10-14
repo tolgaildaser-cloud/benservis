@@ -278,7 +278,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             {/* Sağ uçta ayrışan tek eylem: servis dizinini teşhissiz açar.
                 Diğer üçü metin bağlantısı; bu dolgulu, çünkü sitenin ikinci
                 ana kapısı (birincisi hero kutusundaki teşhis). */}
-            <button type="button" onClick={onServisler} style={st.ustCta}>
+            <button type="button" className="ustbar-servisler" onClick={onServisler} style={st.ustCta}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" />
               </svg>
@@ -338,6 +338,26 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <a href="/kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Kayıt ol <span style={st.mobilMenuAlt}>· servis ya da birey</span></a>
             </nav>
           )}
+        </div>
+        {/* MOBİL ŞERİT (14 Eki 2026, Tolga: "mobilde en üstte servisler butonu gözüküyor,
+            pazaryeri de bu şekilde … aynı şekilde"). 375 px'te barın iç genişliği 335 px:
+            logo 130 + Servisler 110 + ☰ 44 dolu, Pazaryeri (~100 px) sığmıyor (canlıda
+            ölçüldü). Bu yüzden ≤640 px'te Servisler bardan iner, başlığın hemen altında
+            Pazaryeri ile iki eşit beyaz düğme olur (375'te 157 px, 360'ta 155 px; taşma yok).
+            Masaüstünde gizli (App.jsx CSS). ⛔ Satır içi stile display YAZILMAZ (PR #175). */}
+        <div className="vitrin-mobil-serit" style={st.mobilSerit}>
+          <button type="button" onClick={onServisler} style={st.mobilSeritBtn}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="9" r="2.5" />
+            </svg>
+            Yakın servisler
+          </button>
+          <a href="/pazar?k=anasayfa-mobil-serit" style={st.mobilSeritBtn}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" /><circle cx="10" cy="20.5" r="1.3" /><circle cx="17" cy="20.5" r="1.3" />
+            </svg>
+            Pazaryeri
+          </a>
         </div>
 
         <div style={st.heroIc}>
@@ -624,6 +644,15 @@ const st = {
     display: "inline-flex", alignItems: "center", gap: 7,
     background: "#fff", color: NAVY, border: "none", borderRadius: 999,
     padding: "9px 16px", marginLeft: 6, cursor: "pointer",
+    fontFamily: "inherit", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap",
+    boxShadow: "0 2px 10px -4px rgba(15,23,42,.45)",
+  },
+  // Mobil şerit: ustCta ile aynı beyaz dolgu; iki eşit düğme. display CSS'te (yalnız ≤640 px).
+  mobilSerit: { position: "relative", zIndex: 2, gap: 10, marginTop: 12 },
+  mobilSeritBtn: {
+    flex: 1, minHeight: 44, alignItems: "center", justifyContent: "center", gap: 7,
+    background: "#fff", color: NAVY, border: "none", borderRadius: 999,
+    padding: "9px 12px", cursor: "pointer", textDecoration: "none",
     fontFamily: "inherit", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap",
     boxShadow: "0 2px 10px -4px rgba(15,23,42,.45)",
   },
