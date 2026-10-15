@@ -8,6 +8,14 @@ import fs from "node:fs";
 import { SATICI, eksikSaticiAlanlari, PAZAR_HUKUK_SAYFALARI } from "../scripts/pazar-hukuk.mjs";
 
 describe("pazaryeri belgeleri", () => {
+  it("YK #175: dört belgede taslak ibaresi yok; güncelleme tarihi basılı", () => {
+    for (const h of PAZAR_HUKUK_SAYFALARI) {
+      expect(`${h.title} ${h.desc} ${h.govde}`.toLocaleLowerCase("tr"), h.dizin).not.toContain("taslak");
+      expect(h.govde, h.dizin).not.toContain("hukuki kontrolden geçirilecektir");
+      expect(h.govde, h.dizin).toContain("Son güncelleme: 15 Ekim 2026");
+    }
+  });
+
   it("satıcının zorunlu alanları dolu (boşsa yayına çıkılmaz)", () => {
     expect(eksikSaticiAlanlari()).toEqual([]);
   });

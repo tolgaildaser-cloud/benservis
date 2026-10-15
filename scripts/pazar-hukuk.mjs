@@ -2,6 +2,8 @@
 // Tolga: "kvkk, mesafeli satış sözleşmesi vb, eticaret için gerekli dokümanları da eklemek gerekli"
 // → satıcı: "Orient Global Ltd. Şti." · metin: "Ben taslaklayayım" (FE taslağı; canlıdan önce
 // avukat kontrolü önerildi).
+// YK #175 (15 Eki 2026, Tolga: "taslak ibarelerini kaldır, kullan"): sayfalardaki "taslaktır" uyarı kutusu
+// kaldırıldı; belgeler yürürlükte metin olarak kullanılır.
 //
 // Dayanak: 6502 sayılı Tüketicinin Korunması Hakkında Kanun · Mesafeli Sözleşmeler Yönetmeliği
 // (RG 27.11.2014, 29188) · 6698 sayılı KVKK md.10 ve Aydınlatma Yükümlülüğü Tebliği.
@@ -49,13 +51,11 @@ ${SATICI.kep ? `<tr><th>KEP</th><td>${SATICI.kep}</td></tr>` : ""}
 <tr><th>Satış platformu</th><td>${SATICI.platform}</td></tr>
 </tbody></table>`;
 
-const UYARI = `<blockquote><p>Bu metin taslaktır; yayın öncesi hukuki kontrolden geçirilecektir.</p></blockquote>`;
 const CAPRAZ = `<p class="kat-not">İlgili belgeler: <a href="/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a> · <a href="/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a> · <a href="/iade-ve-cayma/">İade, Cayma ve Teslimat</a> · <a href="/pazaryeri-aydinlatma-metni/">Pazaryeri Aydınlatma Metni</a> · <a href="/pazar">Pazaryerine dön</a></p>`;
 
 const ON_BILGILENDIRME = `<article>
 <h1>Ön Bilgilendirme Formu</h1>
 <p class="meta">Son güncelleme: ${PAZAR_HUKUK_GUNCELLEME}</p>
-${UYARI}
 <p>Bu form, Mesafeli Sözleşmeler Yönetmeliği'nin 5. maddesi uyarınca, siparişinizi onaylamadan önce sizi bilgilendirmek için hazırlanmıştır. Siparişi onaylamanız, bu formu okuduğunuz anlamına gelir.</p>
 
 <h2>1. Satıcı</h2>
@@ -108,7 +108,6 @@ ${CAPRAZ}
 const MESAFELI = `<article>
 <h1>Mesafeli Satış Sözleşmesi</h1>
 <p class="meta">Son güncelleme: ${PAZAR_HUKUK_GUNCELLEME}</p>
-${UYARI}
 
 <h2>Madde 1 — Taraflar</h2>
 <p><strong>SATICI</strong></p>
@@ -160,7 +159,6 @@ ${CAPRAZ}
 const IADE = `<article>
 <h1>İade, Cayma ve Teslimat</h1>
 <p class="meta">Son güncelleme: ${PAZAR_HUKUK_GUNCELLEME}</p>
-${UYARI}
 
 <h2>Teslimat</h2>
 <ul>
@@ -199,7 +197,6 @@ ${CAPRAZ}
 const AYDINLATMA = `<article>
 <h1>Pazaryeri Kişisel Verilerin Korunması Aydınlatma Metni</h1>
 <p class="meta">Son güncelleme: ${PAZAR_HUKUK_GUNCELLEME}</p>
-${UYARI}
 <p>Bu metin, ${SATICI.platform} pazaryeri bölümünden verdiğiniz siparişler için, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi uyarınca hazırlanmıştır. Sitenin diğer bölümleri için <a href="/gizlilik/">Gizlilik ve Kişisel Verilerin Korunması</a> metni geçerlidir.</p>
 
 <h2>Veri sorumlusu</h2>
