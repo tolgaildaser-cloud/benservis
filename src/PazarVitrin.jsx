@@ -17,7 +17,7 @@
 // ⛔ Kargo vaadi tek cümle: "Tahmini 3 iş gününde kargoda" (Tolga: dropship, 3 iş günü).
 // ⛔ Analitiğe kişisel veri / serbest metin yazılmaz: arama metni ölçülmez, yalnız slug'lar.
 // ⛔ Satır içi stile `display` yazılmaz: duyarlı açılıp kapanma CSS'in işi (PR #175 dersi).
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { track } from "@vercel/analytics";
 import { PAZAR_KATEGORILERI, PAZAR_CIHAZLARI, PARCA_TURLERI, kategoriBul } from "./pazar-sozluk.js";
 import { TR_IL_ILCE } from "./tr-iller.js";
@@ -41,6 +41,7 @@ const HERO_SLAYTLAR = [
   { cihaz: "bulasik-makinesi", et: "Bulaşık makinesi", baslik: "Küçük parça, büyük rahatlık", metin: "Sepet tekerleği, tahliye hortumu, sızdırmazlık contası, kaşıklık.", dugme: "Bulaşık makinesi parçaları" },
 ];
 const HERO_SURE_MS = 5000;
+const HERO_KAYDIR_PX = 40; // parmakla yatay kaydırma eşiği
 
 const IL_LISTESI = Object.keys(TR_IL_ILCE);
 // Yedek Parça sekmesinin menüsünde yalnız yedek parça (YK #171). "İkinci El" ayrı sekme
@@ -205,22 +206,38 @@ export default function PazarVitrin() {
   );
 }
 
-// Kayan hero: 5 sn'de bir geçer; fareyle üstündeyken / sekme gizliyken / "hareketi azalt"
-// açıksa durur. Noktalar ve oklar elle geçiş içindir. Yalnız ilk fotoğraf hemen yüklenir.
+// Kayan hero: 5 sn'de bir geçer; fareyle üstündeyken / klavye odağındayken / sekme gizliyken /
+// "hareketi azalt" açıksa durur. Dokunuş durdurmaz (Tolga, 15 Eki: mobilde kaymıyordu); parmakla
+// yana kaydırma ve oklar elle geçiş içindir, elle geçişten sonra sayaç baştan başlar.
+// Yalnız ilk fotoğraf hemen yüklenir.
 function HeroKayan({ git }) {
   const [i, setI] = useState(0);
   const [dur, setDur] = useState(false);
+  const [tur, setTur] = useState(0);
+  const dokunus = useRef(null);
   const n = HERO_SLAYTLAR.length;
   useEffect(() => {
     const azalt = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     if (dur || azalt) return undefined;
     const t = setInterval(() => { if (!document.hidden) setI((x) => (x + 1) % n); }, HERO_SURE_MS);
     return () => clearInterval(t);
-  }, [dur, n]);
-  const sec = (x) => setI(((x % n) + n) % n);
+  }, [dur, n, tur]);
+  const sec = (x) => { setI(((x % n) + n) % n); setTur((k) => k + 1); };
+  const fare = (e) => e.pointerType === "mouse";
+  const klavye = (e) => { try { return e.target.matches(":focus-visible"); } catch { return false; } };
+  const dokunBasla = (e) => { const t = e.touches[0]; dokunus.current = { x: t.clientX, y: t.clientY }; };
+  const dokunBitir = (e) => {
+    const b = dokunus.current; dokunus.current = null;
+    if (!b) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - b.x, dy = t.clientY - b.y;
+    if (Math.abs(dx) >= HERO_KAYDIR_PX && Math.abs(dx) > Math.abs(dy)) sec(dx < 0 ? i + 1 : i - 1);
+  };
   return (
     <div className="pz-banner pz-kayan" role="region" aria-roledescription="slayt gösterisi" aria-label="Öne çıkan parça grupları"
-      onMouseEnter={() => setDur(true)} onMouseLeave={() => setDur(false)} onFocus={() => setDur(true)} onBlur={() => setDur(false)}>
+      onPointerEnter={(e) => { if (fare(e)) setDur(true); }} onPointerLeave={(e) => { if (fare(e)) setDur(false); }}
+      onFocus={(e) => { if (klavye(e)) setDur(true); }} onBlur={() => setDur(false)}
+      onTouchStart={dokunBasla} onTouchEnd={dokunBitir} onTouchCancel={() => { dokunus.current = null; }}>
       {HERO_SLAYTLAR.map((sl, k) => (
         <div key={sl.cihaz} className={`pz-slayt${k === i ? " on" : ""}`} aria-hidden={k !== i} aria-roledescription="slayt" aria-label={`${k + 1} / ${n}`}>
           <img className="pz-slayt-foto" src={`/anasayfa/cihaz/${sl.cihaz}.webp`} alt="" loading={k === 0 ? "eager" : "lazy"} decoding="async" />
@@ -510,7 +527,7 @@ const CSS = `
 .pz-slayt-ic button{margin-top:18px;width:max-content;background:#fff;color:#1D4ED8;font-weight:800;border:0;border-radius:10px;padding:11px 18px;font-size:14px;position:relative;z-index:1}
 /* Slaytlar aynı ızgara hücresinde üst üste (Tolga, 11 Eki: "hero da sığmayan öğeler var"):
    kutu en uzun slayt kadar uzar, düğme/metin hiçbir genişlikte kesilmez. */
-.pz-kayan{padding:0;background:${INK};display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch}
+.pz-kayan{padding:0;background:${INK};display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch;touch-action:pan-y}
 .pz-slayt{grid-area:1/1;position:relative;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s linear .7s}
 .pz-slayt.on{opacity:1;visibility:visible;transition:opacity .7s ease}
 .pz-slayt-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
@@ -522,6 +539,7 @@ const CSS = `
 .pz-ok-sol{left:10px}.pz-ok-sag{right:10px}
 .pz-kayan .pz-ok{opacity:0;transition:opacity .2s}
 .pz-kayan:hover .pz-ok,.pz-kayan .pz-ok:focus-visible{opacity:1}
+@media (hover:none){.pz-kayan .pz-ok{opacity:1}}
 .pz-noktalar{position:absolute;left:32px;bottom:14px;z-index:2;display:flex;gap:7px}
 .pz-noktalar button{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.45);cursor:pointer;transition:width .25s,background .25s}
 .pz-noktalar button.on{width:24px;background:#fff}
@@ -627,10 +645,11 @@ const CSS = `
   .pz-kayan{min-height:0}
   .pz-banner h1,.pz-kayan h1,.pz-kayan .pz-slayt-bas{font-size:23px}
   .pz-kayan{padding:0}
-  .pz-slayt-ic{min-height:0;padding:20px 20px 36px}
+  .pz-slayt-ic{min-height:0;padding:20px 52px 36px}
   .pz-slayt::after{background:linear-gradient(90deg,rgba(15,23,42,.86) 0%,rgba(15,23,42,.6) 65%,rgba(15,23,42,.25) 100%)}
-  .pz-noktalar{left:20px;bottom:12px}
-  .pz-kayan .pz-ok{display:none}
+  .pz-noktalar{left:52px;bottom:12px}
+  .pz-kayan .pz-ok{opacity:1;width:40px;height:40px;background:rgba(255,255,255,.8)}
+  .pz-ok-sol{left:6px}.pz-ok-sag{right:6px}
   .pz-yan{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .pz-mini{padding:14px}
   .pz-mini b{font-size:14px}
