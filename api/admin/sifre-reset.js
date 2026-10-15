@@ -40,6 +40,6 @@ export default async function handler(req, res) {
     ok: true,
     email: user.email,
     sifre, // tek sefer gösterilir — kaydet!
-    servis_ad: user.user_metadata?.servis_ad || null,
+    servis_ad: user.app_metadata?.servis_ad || user.user_metadata?.servis_ad || null, // yalnız görüntü
   });
 }

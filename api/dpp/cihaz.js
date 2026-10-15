@@ -1,6 +1,7 @@
 // api/dpp/cihaz.js
 import supabase from "../_supabase.js";
 import { CIHAZ_PUBLIC_ALANLAR, TAMIR_PUBLIC_ALANLAR } from "../_public-alanlar.js";
+import { servisIdOku } from "../../src/servis-kimlik.js";
 
 // Public alan sözleşmesi (YK #114) `api/_public-alanlar.js`'te; ilan uçları da aynı listeyi kullanır.
 
@@ -147,8 +148,10 @@ export default async function handler(req, res) {
       .from("cihazlar").select("id").eq("seri_no", seri_no).single();
     if (ce || !cihaz) return res.status(404).json({ error: "Cihaz bulunamadı" });
 
-    const servis_id = user.user_metadata?.servis_id;
-    if (servis_id) {
+    // 15 Eki 2026: servis kimliği yoksa durum değiştirilemez (eskiden kontrol tümden atlanıyordu).
+    const servis_id = servisIdOku(user);
+    if (!servis_id) return res.status(403).json({ error: "Servis kimliği bulunamadı" });
+    {
       const { count } = await supabase
         .from("tamir_kayitlari")
         .select("id", { count: "exact", head: true })

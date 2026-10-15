@@ -163,9 +163,11 @@ describe("/kayit üyelik sayfası (YK #172 ÜY-1 → tek giriş, 14 Eki)", () =>
     expect((k.match(/<form /g) || []).length).toBe(1);
     expect(k).toContain("Bireysel üyelik çok yakında açılıyor");
     const { girisYonu } = await import("./KayitSecim.jsx");
-    expect(girisYonu({ user_metadata: { servis_id: "s1" } })).toBe("/panel");
-    expect(girisYonu({ user_metadata: {} })).toBe(null);
-    expect(girisYonu({ user_metadata: {} }, true)).toBe("/hesabim");
+    expect(girisYonu({ app_metadata: { servis_id: "s1" } })).toBe("/panel");
+    // 15 Eki güvenlik: kullanıcının yazabildiği user_metadata servis yetkisi VERMEZ.
+    expect(girisYonu({ user_metadata: { servis_id: "s1" } })).toBe(null);
+    expect(girisYonu({ app_metadata: {} })).toBe(null);
+    expect(girisYonu({ app_metadata: {} }, true)).toBe("/hesabim");
     expect(girisYonu(null)).toBe(null);
   });
 });

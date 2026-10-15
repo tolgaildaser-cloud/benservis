@@ -4,6 +4,7 @@
 // Body: { action: "kabul" | "ret" | "tamamla", gelis_penceresi?: string }
 import supabase from "../_supabase.js";
 import { sendSMS, setCorsHeaders } from "../_verimor.js";
+import { servisIdOku, servisAdOku } from "../../src/servis-kimlik.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -17,7 +18,7 @@ export default async function handler(req, res) {
   const { data: { user }, error: authErr } = await supabase.auth.getUser(token);
   if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
 
-  const servis_id = user.user_metadata?.servis_id;
+  const servis_id = servisIdOku(user);
   if (!servis_id) return res.status(403).json({ error: "Servis kimliği bulunamadı" });
 
   const { id } = req.query;
@@ -31,7 +32,7 @@ export default async function handler(req, res) {
 
   // ── Havuz kabul: henüz servis_id atanmamış talep, ilk kabul eden alır ──────────
   if (action === "havuz_kabul") {
-    const servis_ad_meta = user.user_metadata?.servis_ad || "Servis";
+    const servis_ad_meta = servisAdOku(user) || "Servis";
 
     // Atomik claim: servis_id NULL ve durum=havuzda ise güncelle
     // Aynı anda iki servis talep ederse sadece biri başarılı olur

@@ -6,6 +6,7 @@
 // talepler için ilçe eşleşmesine düşülür (geri uyumluluk). musteri_tel asla dönmez.
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
+import { servisIdOku, servisIlceOku } from "../../src/servis-kimlik.js";
 
 const RADIUS_KM = 20; // servisin hizmet yarıçapı
 
@@ -31,8 +32,8 @@ export default async function handler(req, res) {
   const { data: { user }, error: authErr } = await supabase.auth.getUser(token);
   if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
 
-  const servis_id   = user.user_metadata?.servis_id;
-  const servis_ilce = user.user_metadata?.servis_ilce || null;
+  const servis_id   = servisIdOku(user);
+  const servis_ilce = servisIlceOku(user);
   if (!servis_id) return res.status(200).json({ isler: [], ilce: servis_ilce });
 
   // Servisin koordinatı (mesafe eşleştirmesi için)
