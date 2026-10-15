@@ -73,7 +73,7 @@ vi.mock("../api/_supabase.js", () => ({
   default: {
     from: (t) => sahteSorgu(t),
     auth: { getUser: async (tk) => (tk === "servis-jwt"
-      ? { data: { user: { user_metadata: { servis_id: "sv-1" } } }, error: null }
+      ? { data: { user: { app_metadata: { servis_id: "sv-1" } } }, error: null }
       : { data: { user: null }, error: { message: "x" } }) },
   },
 }));

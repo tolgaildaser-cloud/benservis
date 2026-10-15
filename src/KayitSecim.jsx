@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import { track } from "@vercel/analytics";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { supabase } from "./lib/supabase.js";
+import { servisIdOku } from "./servis-kimlik.js";
 import { NAVY as INK, BLUE, HAIR, SLATE, TINT, GREEN_DEEP } from "./theme.js";
 
 export const UYELIK_ACIK = false; // ÜY-2 (bireysel hesap + /hesabim) merge olunca true
@@ -22,9 +23,9 @@ export function kaynakOku(search) {
   return /^[a-z0-9-]{1,32}$/.test(k) ? k : "kayit";
 }
 
-// Giriş sonrası yön: servis hesabı panele, diğerleri (bireysel) ÜY-2 açılınca /hesabim'e.
+// Giriş sonrası yön (servis kimliği app_metadata'dan; 15 Eki güvenlik düzeltmesi): servis hesabı panele, diğerleri (bireysel) ÜY-2 açılınca /hesabim'e.
 export const girisYonu = (user, uyelikAcik = UYELIK_ACIK) =>
-  user?.user_metadata?.servis_id ? "/panel" : uyelikAcik ? "/hesabim" : null;
+  servisIdOku(user) ? "/panel" : uyelikAcik ? "/hesabim" : null;
 
 const olc = (sonuc) => { try { track("uyelik_giris", { sonuc }); } catch { /* ölçüm akışı bozmaz */ } };
 

@@ -3,6 +3,7 @@
 // Yetki: JWT'deki servis_id === tamir_kayitlari.servis_id
 import supabase from "../../_supabase.js";
 import { setCorsHeaders } from "../../_verimor.js";
+import { servisIdOku } from "../../../src/servis-kimlik.js";
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -16,7 +17,7 @@ export default async function handler(req, res) {
   const { data: { user }, error: authErr } = await supabase.auth.getUser(token);
   if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
 
-  const servis_id = user.user_metadata?.servis_id;
+  const servis_id = servisIdOku(user);
   if (!servis_id) return res.status(403).json({ error: "Servis kimliği bulunamadı" });
 
   const { id } = req.query;

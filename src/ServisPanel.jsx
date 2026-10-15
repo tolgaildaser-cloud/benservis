@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import QRCode from "qrcode";
 import { supabase } from "./lib/supabase.js";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN } from "./theme.js";
+import { servisIdOku } from "./servis-kimlik.js";
 
 
 const DURUM_LABEL = {
@@ -15,93 +16,38 @@ const DURUM_LABEL = {
   tamamlandi: { label: "Tamamlandı", color: GREEN },
 };
 
-function ServisKurulum({ session, onTamamlandi }) {
-  const [aramaMetni, setAramaMetni] = useState("");
-  const [secilenId, setSecilenId] = useState("");
-  const [secilenAd, setSecilenAd] = useState("");
-  const [yukleniyor, setYukleniyor] = useState(false);
-  const [hata, setHata] = useState("");
-
-  // İsim araması sunucuda (16MB direktori client'a inmez — /api/servis/yakin?q=).
-  const [filtreliServisler, setFiltreliServisler] = useState([]);
+// Hesap bir servise bağlı değilse (15 Eki 2026 güvenlik düzeltmesi): eskiden burada "kendi servisini seç"
+// ekranı vardı ve giriş yapan HERKES kendine istediği servis_id'yi yazdırabiliyordu. Eşleştirme artık
+// yalnız admin işi (api/admin/panel-kurulum.js). Yetki app_metadata'dan okunur; SQL göçünden önce
+// alınmış oturumda app_metadata eski olabilir → bir kez oturum yenilenir, sonra karar verilir.
+function HesapBagliDegil({ onYenilendi, onCikis }) {
+  const [deneniyor, setDeneniyor] = useState(true);
   useEffect(() => {
-    const q = aramaMetni.trim();
-    if (q.length < 2) { setFiltreliServisler([]); return; }
-    const t = setTimeout(() => {
-      fetch(`/api/servis/yakin?q=${encodeURIComponent(q)}`)
-        .then((r) => (r.ok ? r.json() : null))
-        .then((d) => setFiltreliServisler(d?.servisler || []))
-        .catch(() => {});
-    }, 250);
-    return () => clearTimeout(t);
-  }, [aramaMetni]);
-
-  const [secilenIlce, setSecilenIlce] = useState("");
-  const sec = (s) => { setSecilenId(s.id); setSecilenAd(s.ad); setSecilenIlce(s.ilce || ""); setAramaMetni(s.ad); };
-
-  const kaydet = async () => {
-    if (!secilenId) { setHata("Lütfen listeden bir servis seç."); return; }
-    setYukleniyor(true); setHata("");
-    try {
-      const res = await fetch("/api/admin/panel-kurulum", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
-        body: JSON.stringify({ servis_id: secilenId, servis_ad: secilenAd, ilce: secilenIlce || undefined }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
-      onTamamlandi(secilenId, secilenAd);
-    } catch (e) { setHata(e.message); }
-    setYukleniyor(false);
-  };
-
+    let iptal = false;
+    supabase.auth.refreshSession().then(({ data }) => {
+      if (iptal) return;
+      if (data?.session && servisIdOku(data.session.user)) onYenilendi(data.session);
+      else setDeneniyor(false);
+    }).catch(() => { if (!iptal) setDeneniyor(false); });
+    return () => { iptal = true; };
+  }, []);
   return (
     <div style={{ minHeight: "100vh", background: CREAM, fontFamily: "'Hanken Grotesk', sans-serif", padding: "32px 18px" }}>
-      
       <div style={{ maxWidth: 480, margin: "0 auto" }}>
-        <div style={{ fontFamily: "'Fraunces', serif", fontSize: 24, fontWeight: 700, marginBottom: 6 }}>Panel Kurulumu</div>
-        <p style={{ fontSize: 14, color: "#475569", marginBottom: 24, lineHeight: 1.5 }}>
-          Bu hesap henüz bir servisle eşleştirilmemiş. Aşağıdan kendi servisini bul ve seç.
-        </p>
-        <label style={{ fontSize: 13, fontWeight: 700, display: "block", marginBottom: 6 }}>Servis ara</label>
-        <input
-          value={aramaMetni}
-          onChange={e => { setAramaMetni(e.target.value); setSecilenId(""); setSecilenAd(""); }}
-          placeholder="Servis adı yaz..."
-          style={{ width: "100%", padding: "11px 13px", borderRadius: 10, border: `1.5px solid ${secilenId ? GREEN : "#E2E8F0"}`, background: "#F8FAFC", fontSize: 14, fontFamily: "inherit", outline: "none", marginBottom: 8 }}
-        />
-        {aramaMetni && !secilenId && (
-          <div style={{ border: "1px solid #E2E8F0", borderRadius: 10, background: "#F8FAFC", maxHeight: 260, overflowY: "auto", marginBottom: 12 }}>
-            {filtreliServisler.length === 0 && (
-              <div style={{ padding: "12px 14px", fontSize: 13, color: "#94A3B8" }}>Servis bulunamadı</div>
-            )}
-            {filtreliServisler.map(s => (
-              <div
-                key={s.id}
-                onClick={() => sec(s)}
-                style={{ padding: "11px 14px", fontSize: 13, borderBottom: "1px solid #F1F5F9", cursor: "pointer" }}
-                onMouseEnter={e => e.currentTarget.style.background = "#F1F5F9"}
-                onMouseLeave={e => e.currentTarget.style.background = "transparent"}
-              >
-                <div style={{ fontWeight: 600 }}>{s.ad}</div>
-                <div style={{ fontSize: 11, color: "#94A3B8", marginTop: 2 }}>{s.id}</div>
-              </div>
-            ))}
-          </div>
+        {deneniyor ? (
+          <p style={{ fontSize: 14, color: "#475569" }}>Hesap bilgisi yenileniyor…</p>
+        ) : (
+          <>
+            <div style={{ fontFamily: "'Fraunces', serif", fontSize: 24, fontWeight: 700, marginBottom: 6 }}>Hesap bir servise bağlı değil</div>
+            <p style={{ fontSize: 14, color: "#475569", marginBottom: 24, lineHeight: 1.5 }}>
+              Bu hesap henüz bir servisle eşleştirilmemiş. Eşleştirme için Benservis ile iletişime geç.
+            </p>
+            <button onClick={onCikis}
+              style={{ width: "100%", padding: 13, borderRadius: 11, border: "none", background: AMBER, color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer" }}>
+              Çıkış yap
+            </button>
+          </>
         )}
-        {secilenId && (
-          <div style={{ padding: "10px 13px", borderRadius: 9, background: "#F1F5F9", border: `1px solid ${GREEN}`, marginBottom: 12, fontSize: 13 }}>
-            ✓ <strong>{secilenAd}</strong><br />
-            <span style={{ fontSize: 11, color: "#475569" }}>{secilenId}</span>
-          </div>
-        )}
-        {hata && <div style={{ color: "#DC2626", fontSize: 13, marginBottom: 10 }}>{hata}</div>}
-        <button
-          onClick={kaydet}
-          disabled={yukleniyor || !secilenId}
-          style={{ width: "100%", padding: 13, borderRadius: 11, border: "none", background: secilenId ? AMBER : "#CBD5E1", color: "#fff", fontWeight: 700, fontSize: 15, cursor: secilenId ? "pointer" : "not-allowed" }}>
-          {yukleniyor ? "Kaydediliyor..." : "Bu Servisi Kullan →"}
-        </button>
       </div>
     </div>
   );
@@ -122,7 +68,7 @@ function GirisFormu({ onGiris }) {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password: sifre });
     setYukleniyor(false);
     if (error) { setHata(error.message); return; }
-    if (!data.user.user_metadata?.servis_id) {
+    if (!servisIdOku(data.user)) {
       setHata("Hesabınız yapılandırılmamış. Lütfen Benservis ile iletişime geçin.");
       await supabase.auth.signOut();
       return;
@@ -653,7 +599,7 @@ function IsKarti({ is, jwtToken, onGuncelle }) {
 }
 
 function UrunlerTab({ session }) {
-  const servisId = session.user?.user_metadata?.servis_id;
+  const servisId = servisIdOku(session.user);
   const jwtToken = session.access_token;
   const [urunler, setUrunler] = useState([]);
   const [yukleniyor, setYukleniyor] = useState(true);
@@ -971,24 +917,10 @@ export default function ServisPanel() {
 
   if (!session) return <GirisFormu onGiris={setSession} />;
 
-  // servis_id yoksa kurulum ekranı göster
-  const mevcutServisId = session.user?.user_metadata?.servis_id;
+  // servis_id yoksa (app_metadata) panel açılmaz; eşleştirme admin işi.
+  const mevcutServisId = servisIdOku(session.user);
   if (!mevcutServisId) {
-    return (
-      <ServisKurulum
-        session={session}
-        onTamamlandi={(servis_id, servis_ad) => {
-          // Local session'ı güncelle — tekrar login gerekmeden devam etsin
-          setSession(prev => ({
-            ...prev,
-            user: {
-              ...prev.user,
-              user_metadata: { ...prev.user.user_metadata, servis_id, servis_ad },
-            },
-          }));
-        }}
-      />
-    );
+    return <HesapBagliDegil onYenilendi={setSession} onCikis={cikisYap} />;
   }
 
   const bekleyenler = isler.filter(i => i.durum === "bekliyor");
@@ -1018,7 +950,7 @@ export default function ServisPanel() {
       <div style={{ padding: 16, maxWidth: 600, margin: "0 auto" }}>
         {/* Servis kimlik bilgisi */}
         <div style={{ fontSize: 11, color: "#94A3B8", background: "#F1F5F9", borderRadius: 8, padding: "6px 10px", marginBottom: 10, wordBreak: "break-all" }}>
-          🔑 Servis ID: <strong>{session.user?.user_metadata?.servis_id || "— metadata'da yok"}</strong>
+          🔑 Servis ID: <strong>{mevcutServisId}</strong>
           {session.user?.email && <span style={{ marginLeft: 8 }}>· {session.user.email}</span>}
         </div>
 

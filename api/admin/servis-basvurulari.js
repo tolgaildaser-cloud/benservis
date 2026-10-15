@@ -4,7 +4,7 @@
 // Güvenlik: Authorization: Bearer $ADMIN_TOKEN
 //
 // Onayda: Supabase Auth kullanıcısı açılır + SMS gönderilir.
-// Kullanıcı user_metadata: { servis_id: basvuru.id, servis_ad, il, ilce }
+// Kullanıcı app_metadata: { servis_id: basvuru.id, servis_ad, servis_ilce } (yetki) · user_metadata: { servis_ad, il, ilce } (görüntü)
 import supabase from "../_supabase.js";
 import { sendSMS } from "../_verimor.js";
 import { randomBytes } from "crypto";
@@ -91,12 +91,17 @@ export default async function handler(req, res) {
       email:         bav.email,
       password:      sifre,
       email_confirm: true,   // E-posta doğrulaması gerekmeden giriş yapabilsin
+      // Yetki app_metadata'da (yalnız service key yazar; api/_servis-kimlik.js). user_metadata yalnız
+      // görüntü bilgisi — kullanıcı onu kendisi değiştirebildiği için yetkiye hiç girmez (15 Eki 2026).
+      app_metadata: {
+        servis_id:   bav.id,
+        servis_ad:   bav.ad,
+        servis_ilce: bav.ilce, // api/is/havuz.js — havuz ilçe eşleştirmesi için
+      },
       user_metadata: {
-        servis_id:   bav.id,   // ServisPanel.jsx bu alan ile filtre yapar
         servis_ad:   bav.ad,
         il:          bav.il,
         ilce:        bav.ilce,
-        servis_ilce: bav.ilce, // api/is/havuz.js — havuz ilçe eşleştirmesi için
       },
     });
 
