@@ -8,7 +8,11 @@ import fs from "node:fs";
 import { temsiliGorsel, mutlakGorselUrl, TEMSILI_GORSEL_ONEK, TEMSILI_ETIKET } from "./pazar-gorsel.js";
 import { urunLd, urunKabugu } from "../scripts/pazar-sayfalari.mjs";
 
-const SQL = "supabase/migrations/20261013_173e_temsili_gorsel_23.sql";
+// 1. parti (13 Eki, PR #310) + 2. parti (15 Eki); her dosya 23 update, birlikte 46/46.
+const SQLLER = [
+  "supabase/migrations/20261013_173e_temsili_gorsel_23.sql",
+  "supabase/migrations/20261015_173e_temsili_gorsel_23b.sql",
+];
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 
 describe("temsili görsel kuralı", () => {
@@ -26,30 +30,38 @@ describe("temsili görsel kuralı", () => {
 });
 
 describe("SQL ve dosyalar", () => {
-  const sql = fs.readFileSync(SQL, "utf8");
-  const satirlar = sql.split("\n").filter((s) => s.startsWith("update "));
+  const sqller = SQLLER.map((p) => fs.readFileSync(p, "utf8"));
+  const tumIdler = new Set();
 
-  it("23 update; her biri yalnız görselsiz ürüne ve kendi id'sine yazar; dosya repoda", () => {
-    expect(satirlar).toHaveLength(23);
-    const idler = new Set();
-    for (const s of satirlar) {
-      const m = s.match(/^update public\.servis_urunler set gorsel_url = '\/pazar-gorsel\/([0-9a-f-]+)\.webp' where id = '([0-9a-f-]+)' and gorsel_url is null;/);
-      expect(m, s).not.toBeNull();
-      expect(m[1]).toBe(m[2]);
-      expect(m[1]).toMatch(UUID);
-      expect(fs.existsSync(`public${TEMSILI_GORSEL_ONEK}${m[1]}.webp`)).toBe(true);
-      idler.add(m[1]);
-    }
-    expect(idler.size).toBe(23);
-    expect(sql).toMatch(/^begin;$/m);
-    expect(sql).toMatch(/^commit;$/m);
-  });
+  for (const [k, sql] of sqller.entries()) {
+    it(`${SQLLER[k]}: 23 update; her biri yalnız görselsiz ürüne ve kendi id'sine yazar; dosya repoda`, () => {
+      const satirlar = sql.split("\n").filter((s) => s.startsWith("update "));
+      expect(satirlar).toHaveLength(23);
+      const idler = new Set();
+      for (const s of satirlar) {
+        const m = s.match(/^update public\.servis_urunler set gorsel_url = '\/pazar-gorsel\/([0-9a-f-]+)\.webp' where id = '([0-9a-f-]+)' and gorsel_url is null;/);
+        expect(m, s).not.toBeNull();
+        expect(m[1]).toBe(m[2]);
+        expect(m[1]).toMatch(UUID);
+        expect(fs.existsSync(`public${TEMSILI_GORSEL_ONEK}${m[1]}.webp`)).toBe(true);
+        idler.add(m[1]);
+      }
+      expect(idler.size).toBe(23);
+      for (const i of idler) {
+        expect(tumIdler.has(i), `iki partide aynı id: ${i}`).toBe(false);
+        tumIdler.add(i);
+      }
+      expect(sql).toMatch(/^begin;$/m);
+      expect(sql).toMatch(/^commit;$/m);
+    });
+  }
 
-  it("klasördeki her görsel SQL'de; 150 KB altı", () => {
+  it("klasördeki her görsel bir SQL'de (46/46); 150 KB altı", () => {
+    const tum = sqller.join("\n");
     const dosyalar = fs.readdirSync(`public${TEMSILI_GORSEL_ONEK}`).filter((f) => f.endsWith(".webp"));
-    expect(dosyalar).toHaveLength(23);
+    expect(dosyalar).toHaveLength(46);
     for (const f of dosyalar) {
-      expect(sql).toContain(`'/pazar-gorsel/${f}'`);
+      expect(tum).toContain(`'/pazar-gorsel/${f}'`);
       expect(fs.statSync(`public${TEMSILI_GORSEL_ONEK}${f}`).size).toBeLessThanOrEqual(150 * 1024);
     }
   });
