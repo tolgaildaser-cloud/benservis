@@ -30,7 +30,7 @@ export const SATICI = {
 const ZORUNLU = ["unvan", "mersis", "adres", "telefon", "eposta"];
 export const eksikSaticiAlanlari = () => ZORUNLU.filter((k) => !SATICI[k]);
 
-export const PAZAR_HUKUK_GUNCELLEME = "13 Ekim 2026";
+export const PAZAR_HUKUK_GUNCELLEME = "15 Ekim 2026";
 import { UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
 import { HAVALE_SURE_SAAT } from "../src/havale.js";
 const KARGO_SURE = "3 (üç) iş günü";
@@ -185,6 +185,7 @@ ${UYARI}
 <li>Teslimden sonra ambalajı, bandı, mührü açılmış olup iadesi sağlık ve hijyen açısından uygun olmayan ürünler (ör. kullanılmış su arıtma filtresi),</li>
 <li>Teslimden sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler.</li>
 </ul>
+<p><strong>Kombi baca ürünleri</strong> (baca uzatma borusu, baca dirseği, baca seti): gaz güvenliği ve conta bütünlüğü nedeniyle iade yalnız <strong>ambalajı açılmamış</strong> üründe kabul edilir; ambalajı açılmış ya da monte edilmiş baca ürünü iade alınmaz. Hermetik ve yoğuşmalı kombi bacaları birbirine uymaz; sipariş öncesi kombi tipinizi teyit edin. Ayıplı ya da yanlış gelen üründe aşağıdaki haklarınız saklıdır.</p>
 <p>Monte edilmiş ya da kullanılmış parçalarda, mutat kullanım dışında oluşan hasar ve değer kaybından alıcı sorumludur.</p>
 
 <h2>Ayıplı ya da yanlış ürün</h2>
