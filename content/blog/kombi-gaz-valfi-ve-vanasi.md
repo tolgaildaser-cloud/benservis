@@ -45,12 +45,12 @@ faq:
 images:
   coverAlt: "Duvara asılı kombinin altında, sarı kollu gaz kesme vanası olan gaz borusu, sade çizim"
   steps:
-    - "Kombi ekranındaki bir kodu not defterine yazan sade siluet el, yanında açık kullanma kılavuzu"
-    - "Ardına kadar açılmış pencere ve kapı, kombinin bulunduğu mutfak, ışık düğmesine dokunulmamış"
+    - "Kombi ekranındaki kod, yanında açık kullanma kılavuzu, not defteri ve kalem"
+    - "Gaz kokusu simgesi, açılmış pencere ve kapı, üzerinde çarpı işareti olan ışık düğmesi"
     - "Kombinin altındaki gaz borusunda sarı kollu gaz kesme vanasına yakın plan, kol boru yönünde"
-    - "Ocakta yanan mavi bir gaz alevine yakın plan, tencere yok"
+    - "Ocak üstünde vurgulanmış bir göz ve yanında onay işareti"
     - "Kombi kontrol panelinde reset tuşuna yakın plan, tuş üstünde ok işareti, el yok"
-    - "Telefon, not defteri ve kombinin model etiketi yan yana, servis çağırmaya hazır bilgi listesi"
+    - "Kapalı kombi, telefon, model etiketi ve not defteri: servisi aramaya hazır bilgiler"
 ---
 
 Kombin ateşlemiyor, ekranda bir kod var ve aklına ilk "gaz geliyor mu?" sorusu geliyor. Burada iki ayrı parça var: kombiye gelen hattın üstündeki **gaz kesme vanası** ve kombinin içindeki **gaz valfi**. Vanayı açıp kapatmak senin işin; valfin kontrolü, ayarı ve değişimi **yetkili servis işi**.
