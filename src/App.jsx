@@ -1470,21 +1470,32 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
 .kayit-kisa { display: none; }
 /* Pazaryeri düğmesi (10 Eki): masaüstünde açık; mobilde .vitrin-ustmenu a kuralı gizler. */
 .ustbar-pazar { display: inline-flex; }
-/* Pazaryeri barı 641-860 px arasında ikinci satıra sardırıyordu (700 px'te ölçüldü:
-   menü 37 px → 77 px). Bu aralıkta mobildeki kısaltmalar erken devreye girer:
-   "Yakın " gizlenir, kayıt etiketi "Kayıt"a düşer. */
-@media (min-width: 641px) and (max-width: 860px) {
-  .ustcta-yakin { display: none; }
+/* ARA GENİŞLİK (641-1000 px) — 15 Eki 2026 yeniden ölçüldü: logo 190 px'e büyüyünce
+   (12 Eki) eski 641-860 kısaltmaları yetmedi; menü kendi içinde tek satırdı ama
+   logo + menü bar iç genişliğini aşınca menünün TAMAMI logonun altına düşüyor, bar
+   58 px'ten 109 px'e çıkıyordu (canlıda 645-950 px arası her genişlikte).
+   Gereken: logo + 16 + menü <= bar iç genişliği (ekran - 44). Masaüstü dizilişi
+   (logo 190, tam etiketler, 6 öğe) 958 px'ten itibaren sığıyor ama 961'de pay 7 px;
+   yazı tipi farkına karşı ara düzen 1000 px'e kadar sürer (1001'de pay ~45 px). Bu aralıkta:
+   logo 150 px, boşluklar ve iç boşluklar daralır, sığmayan metin bağları
+   kademeli gizlenir (alttaki gezinme şeritlerinde duruyorlar). Eşikler ölçülen
+   sınırların ~20 px altında: Tamir 672, Kılavuzlar 812, "Yakın " 852 px'te sığıyor. */
+@media (min-width: 641px) and (max-width: 1000px) {
+  .vitrin-ustbar { gap: 12px !important; }
+  .ustbar-logo svg { width: 150px !important; }
+  .vitrin-ustmenu > a:not(.ustbar-pazar):not(.ustbar-kayit) { padding-left: 8px !important; padding-right: 8px !important; }
+  .vitrin-ustmenu button.ustbar-servisler, .vitrin-ustmenu a.ustbar-pazar, .vitrin-ustmenu a.ustbar-kayit { padding-left: 11px !important; padding-right: 11px !important; margin-left: 4px !important; }
   .kayit-uzun { display: none; }
   .kayit-kisa { display: inline; }
-  /* 700 px'te kısaltmadan sonra da 4 px taşıyordu; çerçeveli iki düğmenin iç boşluğu
-     daralır (satır içi padding'i ezmek için !important). */
-  .vitrin-ustmenu a.ustbar-pazar, .vitrin-ustmenu a.ustbar-kayit { padding-left: 11px !important; padding-right: 11px !important; }
 }
-/* 641-720 px kısaltmalarla da sığmıyor (641'de ölçüldü: 77 px). Mobildeki gibi bir
-   metin bağı barda gizlenir; Kılavuzlar alttaki gezinme şeritlerinde duruyor. */
-@media (min-width: 641px) and (max-width: 720px) {
+@media (min-width: 641px) and (max-width: 900px) {
+  .ustcta-yakin { display: none; }
+}
+@media (min-width: 641px) and (max-width: 850px) {
   .vitrin-ustmenu a[href="/kilavuzlar/"] { display: none; }
+}
+@media (min-width: 641px) and (max-width: 700px) {
+  .vitrin-ustmenu a[href="/tamir/"] { display: none; }
 }
 .vitrin-kayit-serit { display: none; }
 /* MOBİL ÜST MENÜ (2 Eki 2026, Tolga): ☰ düğmesi ve açılır panel masaüstünde kapalı;
