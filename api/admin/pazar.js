@@ -45,7 +45,7 @@ const SIPARIS_DURUMLARI = {
   odendi: ["odendi", "teslim_onaylandi"],
   iptal: ["iptal"],
 };
-const SIPARIS_KOLONLAR = "id, siparis_no, tutar, odeme_durumu, odeme_saglayici, odeme_test, alici_ad, alici_tel, urunler, created_at";
+const SIPARIS_KOLONLAR = "id, siparis_no, tutar, odeme_durumu, odeme_saglayici, odeme_test, alici_ad, alici_tel, alici_adres, alici_il, alici_ilce, alici_mahalle, urunler, created_at";
 
 // Sipariş listesi sorgusu → { durumlar, ara, sayfa }. Arama metni PostgREST `or` sözdizimini
 // bozamasın diye yalnız harf/rakam/boşluk/tire kalır.

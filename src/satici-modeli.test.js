@@ -126,8 +126,8 @@ describe("satıcı modeli (#166 PR-2)", () => {
 
   it("sipariş: Benservis kalemi satıcı adı + türüyle yazılır, tutar sunucuda", async () => {
     const res = sahteRes();
-    await siparis({ method: "POST", body: { urun_idler: ["u-bs", "u-sv"], alici_ad: "A B", alici_tel: "05551112233",
-      alici_adres: "Suadiye Mah. Örnek Sok. 1, Kadıköy", alici_email: "a@b.co", sozlesme_onay: true } }, res);
+    await siparis({ method: "POST", body: { urun_idler: ["u-bs", "u-sv"], alici_ad: "A B", alici_tel: "05327418296",
+      alici_adres: "Örnek Sok. No 1 D 3", alici_il: "İstanbul", alici_ilce: "Kadıköy", alici_mahalle: "Caferağa", alici_email: "a@b.co", sozlesme_onay: true } }, res);
     expect(res.kod).toBe(201);
     const s = eklenen.find((e) => e.tablo === "siparisler").satir;
     // #167 PR-6 + 12 Eki: Benservis kalemi var → kargo (189 TL) eklenir; eşik yalnız kargolu (Benservis)

@@ -10,6 +10,7 @@ import React, { useState, useEffect } from "react";
 import { NAVY as INK, BLUE, SLATE, HAIR as LINE, GREEN_DEEP, RED } from "./theme.js";
 import { havaleSonu } from "./havale.js";
 import { telBicimle, telHref } from "./telefon.js";
+import { adresSatiri } from "./teslimat-dogrula.js";
 
 export const SUZGECLER = [["bekliyor", "Ödeme bekliyor"], ["odendi", "Ödendi"], ["iptal", "İptal"], ["tumu", "Tümü"]];
 export const IPTAL_EDILEBILIR = ["odeme_bekleniyor", "odeme_basarisiz"];
@@ -151,6 +152,7 @@ export default function AdminSiparisPaneli({ sir, onYetkisiz }) {
                 </div>
                 <div style={{ flex: "1 1 160px", minWidth: 0 }}>
                   {s.alici_ad}<br /><Tel no={s.alici_tel} />
+                  {s.alici_adres && <div style={{ color: SLATE, fontSize: 12.5, marginTop: 2 }}>{adresSatiri(s)}</div>}
                 </div>
                 <div style={{ flex: "2 1 220px", minWidth: 0 }}>
                   {(s.urunler || []).map((k, i) => (

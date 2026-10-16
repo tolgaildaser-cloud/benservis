@@ -104,7 +104,7 @@ describe("GET /api/odeme/kapi", () => {
 });
 
 describe("POST /api/siparis — pazar sepeti", () => {
-  const govde = { urun_idler: ["u1"], alici_ad: "Test Alıcı", alici_tel: "05551234567", alici_adres: "Örnek Mah. Deneme Sk. No:1 Kadıköy", alici_email: "test@ornek.com", sozlesme_onay: true };
+  const govde = { urun_idler: ["u1"], alici_ad: "Test Alıcı", alici_tel: "05327418296", alici_adres: "Deneme Sk. No:1 D:2", alici_il: "İstanbul", alici_ilce: "Kadıköy", alici_mahalle: "Caferağa", alici_email: "test@ornek.com", sozlesme_onay: true };
 
   it("test modunda halk: 403 + kapı kodu, sipariş YAZILMAZ", async () => {
     const r = await cagir(siparis, { method: "POST", body: govde });

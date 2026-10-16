@@ -12,6 +12,7 @@ import { teslimBul } from "./ikinci-el-teslim.js";
 import { sepetAnahtari, kalanMs, sureMetni } from "./ikinci-el-kilit.js";
 import { KAPI_METNI, talepBaglantisi } from "./odeme-kapisi.js";
 import { HAVALE_SURE_SAAT, ibanBicimle } from "./havale.js";
+import { cepDogrula, cepMaske, adresDogrula, ILLER, ilceler } from "./teslimat-dogrula.js";
 import { NAVY as INK, BLUE as AMBER, GREEN, BLUE as LINK, HAIR as BORDER } from "./theme.js";
 
 // YK #173 şerhi — PayTR test modunda ödeme yalnız admin anahtarıyla açılır. Anahtar RaporPaneli'nin
@@ -29,7 +30,9 @@ export default function Sepet() {
   const [adim, setAdim] = useState(
     new URLSearchParams(window.location.search).get("odeme") === "1" && sepetOku().length > 0 ? 2 : 1
   );
-  const [form, setForm] = useState({ ad: "", tel: "", eposta: "", adres: "" });
+  const [form, setForm] = useState({ ad: "", tel: "", eposta: "", adres: "", il: "", ilce: "", mahalle: "" });
+  // Pazar siparişinde alan altı hatalar (16 Eki 2026, Tolga: telefon formatlı + il/ilçe/mahalle zorunlu).
+  const [alanHata, setAlanHata] = useState({});
   const [gonderiyor, setGonderiyor] = useState(false);
   const [hata, setHata] = useState("");
   const [sonuc, setSonuc] = useState(null); // { siparis, odeme }
@@ -103,9 +106,17 @@ export default function Sepet() {
     e.preventDefault();
     setHata("");
     if (!form.ad.trim())  { setHata("Ad soyad zorunludur."); return; }
-    if (!form.tel.trim() || form.tel.replace(/\D/g, "").length < 10) { setHata("Geçerli bir telefon girin."); return; }
+    if (pazarSiparisi) {
+      // Kurallar sunucuyla ortak (src/teslimat-dogrula.js): yalnız cep, saçma rakam yok, il/ilçe listeden.
+      const h = {};
+      const cep = cepDogrula(form.tel);
+      if (!cep.ok) h.tel = cep.hata;
+      const ad = adresDogrula({ il: form.il, ilce: form.ilce, mahalle: form.mahalle, acik: form.adres });
+      if (!ad.ok) Object.assign(h, ad.hatalar);
+      setAlanHata(h);
+      if (Object.keys(h).length) { setHata("Kırmızı işaretli alanları düzeltin."); return; }
+    } else if (!form.tel.trim() || form.tel.replace(/\D/g, "").length < 10) { setHata("Geçerli bir telefon girin."); return; }
     if (pazarSiparisi && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.eposta.trim())) { setHata("Geçerli bir e-posta adresi girin."); return; }
-    if (pazarSiparisi && form.adres.trim().length < 10) { setHata("Teslimat için açık adres girin."); return; }
     if (pazarSiparisi && !sozlesmeOnay) { setHata("Siparişi vermek için Ön Bilgilendirme Formu'nu ve Mesafeli Satış Sözleşmesi'ni onaylayın."); return; }
     setGonderiyor(true);
     try {
@@ -118,12 +129,14 @@ export default function Sepet() {
           alici_ad: form.ad.trim(),
           alici_tel: form.tel.trim(),
           alici_adres: form.adres.trim() || null,
+          ...(pazarSiparisi ? { alici_il: form.il, alici_ilce: form.ilce, alici_mahalle: form.mahalle.trim() } : {}),
           ...(pazarSiparisi ? { alici_email: form.eposta.trim(), sozlesme_onay: sozlesmeOnay } : {}),
           ...(havaleSecili ? { odeme_yontemi: "havale" } : {}),
         }),
       });
       const d = await res.json();
       if (!res.ok && d?.kapi) { setKapi(true); setGonderiyor(false); return; } // test modu kapısı: sipariş yazılmadı
+      if (!res.ok && d?.alan) setAlanHata(d.hatalar || { [d.alan]: d.error });
       if (!res.ok) throw new Error(d.error || "Sipariş oluşturulamadı");
       if (pazarSiparisi) {
         try { track("siparis_olustur", { satici: "benservis", adet: kalemler.length, ikinci_el: ikinciEl.length, odeme: d.odeme || "" }); } catch { /* ölçüm akışı bozmaz */ }
@@ -281,14 +294,15 @@ export default function Sepet() {
               <div style={{ fontFamily: "'Fraunces', serif", fontSize: 16, fontWeight: 700, marginBottom: 14 }}>Teslimat Bilgileri</div>
               <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Ad Soyad *</label>
               <input style={inp} value={form.ad} onChange={e => setForm(f => ({ ...f, ad: e.target.value }))} placeholder="Adınız Soyadınız" />
-              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Telefon *</label>
-              <input style={inp} type="tel" value={form.tel} onChange={e => setForm(f => ({ ...f, tel: e.target.value }))} placeholder="0555 123 45 67" />
-              {pazarSiparisi && (<>
-                <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>E-posta * <span style={{ fontWeight: 400, color: "#94A3B8" }}>(sipariş ve fatura için)</span></label>
-                <input style={inp} type="email" autoComplete="email" value={form.eposta} onChange={e => setForm(f => ({ ...f, eposta: e.target.value }))} placeholder="ornek@eposta.com" />
+              {pazarSiparisi ? (
+                <TeslimatAlanlari form={form} setForm={setForm} alanHata={alanHata} setAlanHata={setAlanHata} inp={inp}
+                  adresNotu={kargoSatiri ? "(cadde/sokak, bina no, daire)" : "(fatura ve teslimat için)"} />
+              ) : (<>
+                <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Telefon *</label>
+                <input style={inp} type="tel" value={form.tel} onChange={e => setForm(f => ({ ...f, tel: e.target.value }))} placeholder="0555 123 45 67" />
+                <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres <span style={{ fontWeight: 400, color: "#94A3B8" }}>(teslimat / randevu için)</span></label>
+                <input style={inp} value={form.adres} onChange={e => setForm(f => ({ ...f, adres: e.target.value }))} placeholder="İlçe, mahalle, sokak…" />
               </>)}
-              <label style={{ fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 }}>Adres{pazarSiparisi ? " *" : ""} <span style={{ fontWeight: 400, color: "#94A3B8" }}>{kargoSatiri ? "(kargo teslimatı için açık adres)" : pazarSiparisi ? "(fatura ve teslimat için açık adres)" : "(teslimat / randevu için)"}</span></label>
-              <input style={inp} value={form.adres} onChange={e => setForm(f => ({ ...f, adres: e.target.value }))} placeholder="İlçe, mahalle, sokak…" />
             </div>
 
             <div style={{ background: "#fff", border: `1px solid ${BORDER}`, borderRadius: 8, padding: "13px 16px", marginBottom: 14, display: "flex", justifyContent: "space-between", fontWeight: 700, fontSize: 14.5 }}>
@@ -435,5 +449,81 @@ function HavaleTalimati({ siparisNo, h }) {
         </a>
       </div>
     </div>
+  );
+}
+
+// ── Pazar siparişi teslimat alanları (16 Eki 2026) ─────────────────────────────────────────────
+// Cep (maske + yeşil onay) · e-posta · il → ilçe açılır liste · mahalle (yazı; resmî toplu liste yok) ·
+// açık adres. Hata her alanın altında; alan değişince o alanın hatası silinir.
+const SEPET_CSS = `
+.sp-izgara { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 12px; }
+@media (min-width: 641px) { .sp-izgara { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .sp-tam { grid-column: 1 / -1; } }
+`;
+
+function TeslimatAlanlari({ form, setForm, alanHata, setAlanHata, inp, adresNotu }) {
+  const etiket = { fontSize: 12.5, fontWeight: 700, display: "block", marginBottom: 5 };
+  const not = { fontWeight: 400, color: "#94A3B8" };
+  // Form anahtarı ile hata anahtarı yalnız açık adreste farklı (form.adres ↔ hata "acik", sunucuyla ortak ad).
+  const yaz = (k, v, hataK = k) => {
+    setForm(f => ({ ...f, [k]: v, ...(k === "il" ? { ilce: "" } : {}) }));
+    setAlanHata(h => { const y = { ...h }; delete y[hataK]; if (k === "il") delete y.ilce; return y; });
+  };
+  // 16 px: iOS alana dokununca sayfayı yakınlaştırmasın (mevcut inp 14 px).
+  const alan = { ...inp, fontSize: 16 };
+  const kutu = (k) => ({ ...alan, marginBottom: alanHata[k] ? 4 : 13, ...(alanHata[k] ? { borderColor: "#DC2626" } : {}) });
+  const Hata = ({ k }) => alanHata[k]
+    ? <div id={`sp-hata-${k}`} role="alert" style={{ color: "#DC2626", fontSize: 12.5, margin: "0 0 12px" }}>{alanHata[k]}</div>
+    : null;
+  const cepOk = cepDogrula(form.tel).ok;
+  const ilceListe = ilceler(form.il);
+  return (
+    <>
+      <style>{SEPET_CSS}</style>
+      <div className="sp-izgara">
+        <div>
+          <label style={etiket} htmlFor="sp-tel">Cep telefonu *</label>
+          <input id="sp-tel" type="tel" inputMode="tel" autoComplete="tel-national" value={form.tel} placeholder="05XX XXX XX XX"
+            aria-invalid={!!alanHata.tel} aria-describedby={alanHata.tel ? "sp-hata-tel" : undefined}
+            onChange={e => yaz("tel", cepMaske(e.target.value))}
+            style={{ ...kutu("tel"), ...(cepOk && !alanHata.tel ? { borderColor: "#16A34A", marginBottom: 4 } : {}) }} />
+          {cepOk && !alanHata.tel && <div style={{ color: "#16A34A", fontSize: 12, margin: "0 0 12px" }}>✓ Kargo firması bu numarayı arar.</div>}
+          <Hata k="tel" />
+        </div>
+        <div>
+          <label style={etiket} htmlFor="sp-eposta">E-posta * <span style={not}>(sipariş ve fatura için)</span></label>
+          <input id="sp-eposta" style={alan} type="email" autoComplete="email" value={form.eposta} onChange={e => setForm(f => ({ ...f, eposta: e.target.value }))} placeholder="ornek@eposta.com" />
+        </div>
+        <div>
+          <label style={etiket} htmlFor="sp-il">İl *</label>
+          <select id="sp-il" value={form.il} onChange={e => yaz("il", e.target.value)} style={kutu("il")} aria-invalid={!!alanHata.il}>
+            <option value="">İl seçin</option>
+            {ILLER.map(il => <option key={il} value={il}>{il}</option>)}
+          </select>
+          <Hata k="il" />
+        </div>
+        <div>
+          <label style={etiket} htmlFor="sp-ilce">İlçe *</label>
+          <select id="sp-ilce" value={form.ilce} onChange={e => yaz("ilce", e.target.value)} disabled={!form.il} aria-invalid={!!alanHata.ilce}
+            style={{ ...kutu("ilce"), ...(!form.il ? { background: "#F1F5F9", color: "#94A3B8" } : {}) }}>
+            <option value="">{form.il ? "İlçe seçin" : "Önce il seçin"}</option>
+            {ilceListe.map(i => <option key={i} value={i}>{i}</option>)}
+          </select>
+          <Hata k="ilce" />
+        </div>
+        <div className="sp-tam">
+          <label style={etiket} htmlFor="sp-mahalle">Mahalle *</label>
+          <input id="sp-mahalle" value={form.mahalle} onChange={e => yaz("mahalle", e.target.value)} maxLength={80}
+            autoComplete="address-level4" placeholder="ör. Caferağa" style={kutu("mahalle")} aria-invalid={!!alanHata.mahalle} />
+          <Hata k="mahalle" />
+        </div>
+        <div className="sp-tam">
+          <label style={etiket} htmlFor="sp-adres">Açık adres * <span style={not}>{adresNotu}</span></label>
+          <textarea id="sp-adres" value={form.adres} onChange={e => yaz("adres", e.target.value, "acik")}
+            rows={2} maxLength={300} autoComplete="street-address" placeholder="Cadde/sokak, bina no, daire"
+            style={{ ...kutu("acik"), resize: "vertical", minHeight: 64 }} aria-invalid={!!alanHata.acik} />
+          <Hata k="acik" />
+        </div>
+      </div>
+    </>
   );
 }
