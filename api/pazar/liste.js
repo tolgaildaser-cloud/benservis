@@ -11,7 +11,12 @@ import { URUN_PUBLIC_ALANLAR } from "../_public-alanlar.js";
 import { saticiHaritasi } from "../_satici.js";
 import { kategoriBul, PAZAR_CIHAZLARI, PARCA_TURLERI } from "../../src/pazar-sozluk.js";
 
-const LIMIT = 60;
+// Tavan, katalogun TAMAMINI kapsamalı (16 Eki 2026): `/pazar` cihaz/parça süzgeci ve arama
+// istemcide bu listenin üzerinde çalışır. 60'ta kalınca 108 aktif parçanın en eski 48'i vitrinde,
+// süzgeçte, aramada ve blog "satın al" bağlantılarında hiç görünmüyordu (ör. klima 6'nın 5'i).
+// Katalog bu tavana yaklaşırsa sunucu tarafı sayfalama gerekir; tavan sessizce kesmesin diye
+// `src/anasayfa-pazar.test.js` sınırı kilitler.
+const LIMIT = 500;
 const COK_SATAN_ADET = 8;
 
 // "En çok satan" (Tolga, 11 Eki: "ana sayfaya da 8 adet en çok satan ürünü pazaryeri olarak koy").

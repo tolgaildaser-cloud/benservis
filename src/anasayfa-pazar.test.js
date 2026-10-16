@@ -31,7 +31,7 @@ function sahteSorgu(tablo) {
     gt(k, v) { d.filtre.push((s) => s[k] > v); return z; },
     not(k, op, v) { if (op === "is") d.filtre.push((s) => (s[k] ?? null) !== v); return z; },
     in(k, v) { d.filtre.push((s) => v.includes(s[k])); return z; },
-    order() { return z; }, limit() { return z; },
+    order() { return z; }, limit(n) { d.limit = n; return z; },
     then(ok, no) {
       const kolonlar = d.kolon.split(",").map((x) => x.trim());
       const satirlar = (tablolar[tablo] || []).filter((s) => d.filtre.every((f) => f(s)));
@@ -87,6 +87,16 @@ describe("GET /api/pazar/liste?siralama=cok-satan", () => {
     sorgular.length = 0;
     await cagir({});
     expect(sorgular.some((q) => q.tablo === "siparisler")).toBe(false);
+  });
+});
+
+describe("GET /api/pazar/liste — tavan", () => {
+  // 16 Eki 2026: tavan 60 iken 108 aktif parçanın 48'i /pazar'da görünmüyordu.
+  it("liste tavanı tüm katalogu kapsar (≥ 300)", async () => {
+    sorgular.length = 0;
+    await cagir({ kategori: "yedek-parca" });
+    const q = sorgular.find((x) => x.tablo === "servis_urunler");
+    expect(q.d.limit).toBeGreaterThanOrEqual(300);
   });
 });
 
