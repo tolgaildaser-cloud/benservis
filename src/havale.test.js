@@ -35,6 +35,7 @@ function sahteSorgu(tablo) {
     or() { return z; },
     order() { return z; },
     limit() { return z; },
+    range() { return z; },
     insert(v) { d.insert = v; yazilan.push({ tablo, islem: "insert", v }); return z; },
     update(v) { d.update = v; return z; },
     maybeSingle() { return Promise.resolve({ data: satirlar()[0] || null, error: null }); },
@@ -55,7 +56,9 @@ vi.mock("../api/_kilit.js", async (orijinal) => ({
 }));
 
 const { havaleAyarlari, kartHalkaAcik, odemeSecenekleri } = await import("../api/_havale.js");
-const { havaleSonuclandir, suresiDolanHavaleleriIptalEt } = await import("../api/_siparis-odeme.js");
+const { havaleSonuclandir, suresiDolanHavaleleriIptalEt, siparisIptal, IPTAL_EDILEBILIR } = await import("../api/_siparis-odeme.js");
+const { siparisFiltresi } = await import("../api/admin/pazar.js");
+const { telBicimle, telHref } = await import("./telefon.js");
 const { HAVALE_SURE_SAAT, HAVALE_KILIT_DK, ibanBicimle, havaleSonu } = await import("./havale.js");
 const { default: kapiUcu } = await import("../api/odeme/kapi.js");
 const { default: siparis } = await import("../api/siparis.js");
@@ -245,5 +248,69 @@ describe("metinler ve istemci", () => {
     expect(k).toContain("<HavaleTalimati");
     expect(k).not.toMatch(/(localStorage|sessionStorage)\.setItem\([^)]*iban/i);
     expect(fs.readFileSync("src/havale.js", "utf8")).not.toMatch(/TR\d{24}/);
+  });
+});
+
+// 16 Eki 2026 — admin "Siparişler" sekmesi: ödenmemiş her sipariş iptal edilebilir, ödenmiş edilemez.
+describe("admin Siparişler sekmesi: iptal + süzgeç + telefon", () => {
+  const sip = (ek = {}) => ({ id: "s1", siparis_no: "BS-1", odeme_saglayici: "paytr", odeme_durumu: "odeme_bekleniyor", created_at: "2026-10-16T08:00:00.000Z", urunler: [{ ilan_id: "i1" }], ...ek });
+
+  it("kart, havale ve başarısız ödeme iptal edilir, ayırma kalkar; ödenmiş/iptal 409", async () => {
+    tablolar.siparisler = [
+      sip(), sip({ id: "s2", odeme_saglayici: "havale" }), sip({ id: "s3", odeme_durumu: "odeme_basarisiz" }),
+      sip({ id: "s4", odeme_durumu: "odendi" }), sip({ id: "s5", odeme_durumu: "teslim_onaylandi" }), sip({ id: "s6", odeme_durumu: "iptal" }),
+    ];
+    const sb = (await import("../api/_supabase.js")).default;
+    for (const id of ["s1", "s2", "s3"]) expect((await siparisIptal(sb, id)).durum, id).toBe("iptal");
+    for (const id of ["s4", "s5", "s6"]) expect((await siparisIptal(sb, id)).kod, id).toBe(409);
+    expect(tablolar.siparisler.map((s) => s.odeme_durumu)).toEqual(["iptal", "iptal", "iptal", "odendi", "teslim_onaylandi", "iptal"]);
+    expect(tablolar.ilanlar[0]).toMatchObject({ durum: "aktif", kilit_token: null });
+  });
+
+  it("uç: anahtarsız 401 ve hiçbir şey yazılmaz; siparis_id yoksa 400; anahtarla 200", async () => {
+    tablolar.siparisler = [sip()];
+    expect((await cagir(adminPazar, { method: "PATCH", query: { islem: "iptal" }, body: { siparis_id: "s1" } })).kod).toBe(401);
+    expect(tablolar.siparisler[0].odeme_durumu).toBe("odeme_bekleniyor");
+    expect((await cagir(adminPazar, { method: "PATCH", query: { islem: "iptal" }, body: {}, headers: ADMIN_BASLIK })).kod).toBe(400);
+    const r = await cagir(adminPazar, { method: "PATCH", query: { islem: "iptal" }, body: { siparis_id: "s1" }, headers: ADMIN_BASLIK });
+    expect(r.kod).toBe(200);
+    expect(r.govde.durum).toBe("iptal");
+  });
+
+  it("liste ucu: anahtarsız 401; süzgeç durumları seçer, en fazla bir sayfa döner", async () => {
+    tablolar.siparisler = [sip(), sip({ id: "s2", odeme_durumu: "odendi" }), sip({ id: "s3", odeme_durumu: "iptal" })];
+    expect((await cagir(adminPazar, { query: { islem: "siparisler" } })).kod).toBe(401);
+    const r = await cagir(adminPazar, { query: { islem: "siparisler", durum: "odendi" }, headers: ADMIN_BASLIK });
+    expect(r.kod).toBe(200);
+    expect(r.govde.siparisler.map((s) => s.id)).toEqual(["s2"]);
+    const t = await cagir(adminPazar, { query: { islem: "siparisler", durum: "tumu" }, headers: ADMIN_BASLIK });
+    expect(t.govde.siparisler).toHaveLength(3);
+  });
+
+  it("siparisFiltresi: bilinmeyen durum = tümü; arama `or` sözdizimini bozamaz; sayfa ≥ 1", () => {
+    expect(siparisFiltresi({ durum: "bekliyor" }).durumlar).toEqual(IPTAL_EDILEBILIR);
+    expect(siparisFiltresi({ durum: "xyz" }).durumlar).toBeNull();
+    expect(siparisFiltresi({ ara: "BS-12,alici_tel.ilike.%5%)" }).ara).toBe("BS-12alicitelilike5");
+    expect(siparisFiltresi({ ara: "Ayşe Yılmaz" }).ara).toBe("Ayşe Yılmaz");
+    expect(siparisFiltresi({ sayfa: "-3" }).sayfa).toBe(1);
+    expect(siparisFiltresi({ sayfa: "4" }).sayfa).toBe(4);
+  });
+
+  it("panelin İptal listesi API ile aynı; panel ödenmiş siparişte İptal basmaz", () => {
+    const panel = fs.readFileSync(new URL("./AdminSiparisPaneli.jsx", import.meta.url), "utf8");
+    const m = panel.match(/export const IPTAL_EDILEBILIR = (\[[^\]]*\]);/);
+    expect(JSON.parse(m[1])).toEqual(IPTAL_EDILEBILIR);
+    expect(panel).toMatch(/IPTAL_EDILEBILIR\.includes\(s\.odeme_durumu\) && \(/);
+  });
+
+  it("telefon gösterimi: 0532 123 45 67 + tel: bağlantısı; bozuk numara olduğu gibi", () => {
+    for (const ham of ["05321234567", "+90 532 123 45 67", "905321234567", "5321234567", "0 (532) 123-45-67"]) {
+      expect(telBicimle(ham), ham).toBe("0532 123 45 67");
+      expect(telHref(ham), ham).toBe("tel:+905321234567");
+    }
+    expect(telBicimle("0216 345 67 89")).toBe("0216 345 67 89");
+    expect(telBicimle("12345")).toBe("12345");
+    expect(telHref("12345")).toBeNull();
+    expect(telBicimle(null)).toBe("");
   });
 });

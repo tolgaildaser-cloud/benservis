@@ -1,12 +1,10 @@
 // src/AdminPazarPaneli.jsx — /admin "Pazar" sekmesi (YK #166 PR-3, 10 Eki 2026).
-// Benservis adına ürün / yedek parça ekle · düzenle · yayından kaldır + sipariş listesi.
+// Benservis adına ürün / yedek parça ekle · düzenle · yayından kaldır.
+// 16 Eki 2026: sipariş listesi + "Havale bekleyenler" ayrı "Siparişler" sekmesine taşındı (AdminSiparisPaneli.jsx).
 // Sır RaporPaneli'nden gelir (aynı ADMIN_TOKEN); uç: /api/admin/pazar.
 // Yeni ürün PASİF açılır — vitrinde (PR-4) ve /urun/:id'de görünmesi için "Yayınla" gerekir.
-// YK #174 (13 Eki): "Havale bekleyenler" — banka hesabında ödemeyi görünce "Ödeme geldi"
-// (sipariş odendi, ikinci el satıldı) ya da "İptal" (ayırma kalkar). 24 saatte gelmeyeni cron iptal eder.
 import React, { useState, useEffect } from "react";
 import { NAVY as INK, BLUE, SLATE, HAIR as LINE, GREEN_DEEP, RED } from "./theme.js";
-import { havaleSonu } from "./havale.js";
 import {
   PAZAR_KATEGORILERI, PAZAR_CIHAZLARI, PARCA_TURLERI, PARCA_DURUMLARI,
 } from "./pazar-sozluk.js";
@@ -18,7 +16,6 @@ const BOS = {
 const DURUM_AD = { aktif: "Yayında", pasif: "Yayında değil", satildi: "Satıldı" };
 const adBul = (liste, slug) => liste.find((x) => x.slug === slug)?.ad || slug || "—";
 const tl = (n) => `${Number(n || 0).toLocaleString("tr-TR")} TL`;
-const trTarih = (iso) => (iso ? new Date(iso).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" }) : "");
 
 const dosyaOku = (f) => new Promise((ok, no) => {
   const r = new FileReader();
@@ -107,18 +104,6 @@ export default function AdminPazarPaneli({ sir, onYetkisiz }) {
     } catch (err) { setHata(err.message); }
   };
 
-  const havaleSonuc = async (s, sonuc) => {
-    const soru = sonuc === "geldi"
-      ? `${s.siparis_no} · ${tl(s.tutar)} hesaba geçti mi? Sipariş ödendi olarak işaretlenecek.`
-      : `${s.siparis_no} iptal edilsin mi? İkinci el ayırması kalkar.`;
-    if (!window.confirm(soru)) return;
-    setHata("");
-    try {
-      await istek("/api/admin/pazar?islem=havale", { method: "PATCH", body: JSON.stringify({ siparis_id: s.id, sonuc }) });
-      await getir();
-    } catch (err) { setHata(err.message); }
-  };
-
   const duzenle = (u) => {
     setDuzenlenen(u.id);
     setForm({
@@ -137,8 +122,6 @@ export default function AdminPazarPaneli({ sir, onYetkisiz }) {
   const kartS = { background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, padding: 16 };
 
   const urunler = veri?.urunler || [];
-  const siparisler = veri?.siparisler || [];
-  const havaleBekleyen = siparisler.filter((s) => s.odeme_saglayici === "havale" && s.odeme_durumu === "odeme_bekleniyor");
 
   return (
     <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 16 }}>
@@ -243,58 +226,6 @@ export default function AdminPazarPaneli({ sir, onYetkisiz }) {
         )}
       </div>
 
-      {/* ── HAVALE BEKLEYENLER (YK #174) ── */}
-      {havaleBekleyen.length > 0 && (
-        <div style={{ ...kartS, borderColor: BLUE }}>
-          <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: 18, color: INK, margin: "0 0 4px" }}>Havale bekleyenler <span style={{ color: SLATE, fontSize: 14 }}>({havaleBekleyen.length})</span></h2>
-          <p style={{ color: SLATE, fontSize: 13, margin: "0 0 10px" }}>Banka hesabında açıklamadaki sipariş numarasını ve tutarı kontrol et.</p>
-          {havaleBekleyen.map((s) => (
-            <div key={s.id} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, padding: "9px 0", borderTop: `1px solid ${LINE}` }}>
-              <div style={{ flex: "1 1 220px", fontSize: 13, color: INK }}>
-                <strong>{s.siparis_no}</strong> · {tl(s.tutar)}<br />
-                <span style={{ color: SLATE }}>{s.alici_ad} · {s.alici_tel} · son ödeme {trTarih(havaleSonu(s.created_at).toISOString())}</span>
-              </div>
-              <button type="button" onClick={() => havaleSonuc(s, "geldi")} style={{ ...btnS, background: GREEN_DEEP, padding: "7px 14px", fontSize: 13 }}>Ödeme geldi</button>
-              <button type="button" onClick={() => havaleSonuc(s, "iptal")} style={{ ...kucukBtn, color: RED }}>İptal</button>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* ── SİPARİŞLER ── */}
-      <div style={kartS}>
-        <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: 18, color: INK, margin: "0 0 10px" }}>Siparişler <span style={{ color: SLATE, fontSize: 14 }}>(son {siparisler.length})</span></h2>
-        {veri?.siparis_hata && <div style={{ color: RED, fontSize: 13, marginBottom: 8 }}>Siparişler okunamadı: {veri.siparis_hata}</div>}
-        {siparisler.length === 0 ? (
-          <div style={{ color: SLATE, fontSize: 14 }}>Henüz sipariş yok.</div>
-        ) : (
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 13 }}>
-              <thead><tr style={{ background: "#F1F5F9" }}>
-                {["No", "Tarih", "Alıcı", "Kalemler", "Tutar", "Ödeme"].map((h) => (
-                  <th key={h} style={{ padding: "7px 10px", color: SLATE, textAlign: "left", whiteSpace: "nowrap", borderBottom: `1px solid ${LINE}` }}>{h}</th>
-                ))}
-              </tr></thead>
-              <tbody>
-                {siparisler.map((s) => (
-                  <tr key={s.id}>
-                    <td style={{ padding: "7px 10px", whiteSpace: "nowrap", color: INK }}>{s.siparis_no || s.id.slice(0, 8)}</td>
-                    <td style={{ padding: "7px 10px", whiteSpace: "nowrap", color: INK }}>{trTarih(s.created_at)}</td>
-                    <td style={{ padding: "7px 10px", whiteSpace: "nowrap", color: INK }}>{s.alici_ad}<br /><span style={{ color: SLATE }}>{s.alici_tel}</span></td>
-                    <td style={{ padding: "7px 10px", color: INK }}>
-                      {(s.urunler || []).map((k, i) => (
-                        <div key={i}>{k.baslik} <span style={{ color: SLATE }}>· {k.satici_tur === "benservis" ? "Benservis" : k.servis_ad || "servis"}</span></div>
-                      ))}
-                    </td>
-                    <td style={{ padding: "7px 10px", whiteSpace: "nowrap", color: INK }}>{tl(s.tutar)}</td>
-                    <td style={{ padding: "7px 10px", whiteSpace: "nowrap", color: SLATE }}>{s.odeme_durumu}{s.odeme_saglayici === "havale" ? " · havale" : ""}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
     </div>
   );
 }

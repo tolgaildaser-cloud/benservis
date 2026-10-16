@@ -7,13 +7,17 @@
 // PATCH /api/admin/pazar?id=<urun_id>       — alan güncelle; yalnız Benservis ürünü
 // PATCH /api/admin/pazar?islem=havale        — { siparis_id, sonuc: "geldi" | "iptal" } (YK #174):
 //        bekleyen havale siparişi → odendi (ikinci el satıldı) ya da iptal (ayırma kalkar)
+// GET   /api/admin/pazar?islem=siparisler&durum=&ara=&sayfa= — "Siparişler" sekmesi (16 Eki 2026):
+//        durum süzgeci (bekliyor | odendi | iptal | tumu) + sipariş no / alıcı adı araması, en yeni üstte,
+//        sayfa başı SIPARIS_SAYFA, toplam sayı döner
+// PATCH /api/admin/pazar?islem=iptal          — { siparis_id }: ödenmemiş her sipariş iptal (ayırma kalkar)
 //
 // Güvenlik: Authorization: Bearer $ADMIN_TOKEN (ya da ADMIN_PASSWORD — /admin girişiyle aynı).
 // Silme YOK: "yayından kaldır" = durum pasif. Servis ürünlerine bu uçtan dokunulmaz
 // (onlar servis panelinin, `api/servis/urunler`).
 import { randomUUID } from "node:crypto";
 import supabase from "../_supabase.js";
-import { havaleSonuclandir } from "../_siparis-odeme.js";
+import { havaleSonuclandir, siparisIptal } from "../_siparis-odeme.js";
 import { URUN_PUBLIC_ALANLAR } from "../_public-alanlar.js";
 import {
   kategoriBul, PAZAR_CIHAZLARI, PARCA_TURLERI, PARCA_DURUMLARI, URUN_DURUMLARI,
@@ -33,6 +37,35 @@ async function benservisSaticisi() {
   const { data } = await supabase
     .from("saticilar").select("id").eq("tur", "benservis").maybeSingle();
   return data?.id || null;
+}
+
+export const SIPARIS_SAYFA = 50;
+const SIPARIS_DURUMLARI = {
+  bekliyor: ["odeme_bekleniyor", "odeme_basarisiz"],
+  odendi: ["odendi", "teslim_onaylandi"],
+  iptal: ["iptal"],
+};
+const SIPARIS_KOLONLAR = "id, siparis_no, tutar, odeme_durumu, odeme_saglayici, odeme_test, alici_ad, alici_tel, urunler, created_at";
+
+// Sipariş listesi sorgusu → { durumlar, ara, sayfa }. Arama metni PostgREST `or` sözdizimini
+// bozamasın diye yalnız harf/rakam/boşluk/tire kalır.
+export function siparisFiltresi(q = {}) {
+  const durumlar = SIPARIS_DURUMLARI[q.durum] || null; // tumu / bilinmeyen → süzgeç yok
+  const ara = String(q.ara || "").replace(/[^\p{L}\p{N} -]/gu, "").trim().slice(0, 60);
+  const s = Number.parseInt(q.sayfa, 10);
+  return { durumlar, ara, sayfa: Number.isInteger(s) && s > 0 ? s : 1 };
+}
+
+async function siparisListesi(req, res) {
+  const f = siparisFiltresi(req.query);
+  const bas = (f.sayfa - 1) * SIPARIS_SAYFA;
+  let q = supabase.from("siparisler").select(SIPARIS_KOLONLAR, { count: "exact" })
+    .order("created_at", { ascending: false });
+  if (f.durumlar) q = q.in("odeme_durumu", f.durumlar);
+  if (f.ara) q = q.or(`siparis_no.ilike.%${f.ara}%,alici_ad.ilike.%${f.ara}%`);
+  const { data, error, count } = await q.range(bas, bas + SIPARIS_SAYFA - 1);
+  if (error) return res.status(500).json({ error: error.message });
+  return res.status(200).json({ ok: true, siparisler: data || [], toplam: count ?? null, sayfa: f.sayfa, sayfa_boyu: SIPARIS_SAYFA });
 }
 
 const metin = (v) => (typeof v === "string" && v.trim() ? v.trim() : null);
@@ -124,6 +157,8 @@ export default async function handler(req, res) {
   if (!satici_id) return res.status(500).json({ error: "Benservis satıcı kaydı yok" });
 
   // ─── GET ─────────────────────────────────────────────────────────────────
+  if (req.method === "GET" && req.query?.islem === "siparisler") return siparisListesi(req, res);
+
   if (req.method === "GET") {
     const { data: urunler, error } = await supabase
       .from("servis_urunler")
@@ -171,6 +206,14 @@ export default async function handler(req, res) {
     const { siparis_id, sonuc } = req.body || {};
     if (typeof siparis_id !== "string" || !siparis_id) return res.status(400).json({ error: "siparis_id gerekli" });
     const r = await havaleSonuclandir(supabase, siparis_id, sonuc);
+    if (r.hata) return res.status(r.kod).json({ error: r.hata });
+    return res.status(200).json({ ok: true, ...r });
+  }
+
+  if (req.method === "PATCH" && req.query?.islem === "iptal") {
+    const { siparis_id } = req.body || {};
+    if (typeof siparis_id !== "string" || !siparis_id) return res.status(400).json({ error: "siparis_id gerekli" });
+    const r = await siparisIptal(supabase, siparis_id);
     if (r.hata) return res.status(r.kod).json({ error: r.hata });
     return res.status(200).json({ ok: true, ...r });
   }

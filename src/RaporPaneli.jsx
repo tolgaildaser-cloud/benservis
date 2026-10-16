@@ -1,12 +1,20 @@
 // src/RaporPaneli.jsx — Teşhis raporu paneli — /admin
 // Şifre ile giriş (localStorage hatırlar) → tarih aralığı → "Raporu çek" → HAM VERİ MATRİSİ (Excel benzeri) + CSV.
 // Sır = localStorage ya da ?token=. Sunucu Bearer (ADMIN_TOKEN/ADMIN_PASSWORD) kontrol eder.
-// YK #166 PR-3 (10 Eki 2026): ikinci sekme "Pazar" — Benservis ürün/parça yönetimi + siparişler.
+// YK #166 PR-3 (10 Eki 2026): ikinci sekme "Pazar" — Benservis ürün/parça yönetimi.
+// 16 Eki 2026 (Tolga: "ayrı bir sekme olarak koy"): üçüncü sekme "Siparişler" — süzgeç, arama, iptal.
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { NAVY as INK, BG as PAPER, BLUE, SLATE, HAIR as LINE } from "./theme.js";
 
 // Pazar sekmesi kendi parçasında: rapora giren admin onu indirmez.
 const AdminPazarPaneli = lazy(() => import("./AdminPazarPaneli.jsx"));
+const AdminSiparisPaneli = lazy(() => import("./AdminSiparisPaneli.jsx"));
+const SEKMELER = [["rapor", "Teşhis Raporu"], ["pazar", "Pazar"], ["siparisler", "Siparişler"]];
+const BASLIK = {
+  rapor: ["Teşhis Raporu", "Ham veri matrisi · tarih aralığı seç, çek, Excel'e aktar."],
+  pazar: ["Pazar", "Benservis adına ürün ve yedek parça."],
+  siparisler: ["Siparişler", "Pazaryeri siparişleri · havale onayı · iptal."],
+};
 
 const LS_KEY = "benservis_admin";
 const bugun = () => new Date().toISOString().slice(0, 10);
@@ -22,7 +30,10 @@ export default function RaporPaneli() {
   const [rapor, setRapor] = useState(null);
   const [durum, setDurum] = useState("bosta"); // bosta | yukleniyor | hata
   const [hata, setHata] = useState("");
-  const [sekme, setSekme] = useState(() => (new URLSearchParams(window.location.search).get("sekme") === "pazar" ? "pazar" : "rapor"));
+  const [sekme, setSekme] = useState(() => {
+    const s = new URLSearchParams(window.location.search).get("sekme");
+    return BASLIK[s] ? s : "rapor";
+  });
 
   const cek = async (token = sir, f = from, t = to) => {
     if (!token) return false;
@@ -96,14 +107,14 @@ export default function RaporPaneli() {
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div>
-            <h1 style={{ fontFamily: "'Fraunces',serif", fontSize: 24, color: INK, margin: "0 0 4px" }}>{sekme === "pazar" ? "Pazar" : "Teşhis Raporu"}</h1>
-            <p style={{ color: SLATE, fontSize: 13, marginTop: 0 }}>{sekme === "pazar" ? "Benservis adına ürün ve yedek parça · siparişler." : "Ham veri matrisi · tarih aralığı seç, çek, Excel'e aktar."}</p>
+            <h1 style={{ fontFamily: "'Fraunces',serif", fontSize: 24, color: INK, margin: "0 0 4px" }}>{BASLIK[sekme][0]}</h1>
+            <p style={{ color: SLATE, fontSize: 13, marginTop: 0 }}>{BASLIK[sekme][1]}</p>
           </div>
           <button onClick={cikis} style={{ background: "none", border: `1px solid ${LINE}`, borderRadius: 8, padding: "6px 12px", fontSize: 12.5, fontWeight: 600, color: SLATE, cursor: "pointer", fontFamily: "inherit", flexShrink: 0 }}>Çıkış</button>
         </div>
 
         <div role="tablist" style={{ display: "flex", gap: 6, margin: "6px 0 4px", borderBottom: `1px solid ${LINE}` }}>
-          {[["rapor", "Teşhis Raporu"], ["pazar", "Pazar"]].map(([k, ad]) => (
+          {SEKMELER.map(([k, ad]) => (
             <button key={k} role="tab" aria-selected={sekme === k} onClick={() => setSekme(k)}
               style={{ background: "none", border: "none", borderBottom: `2px solid ${sekme === k ? BLUE : "transparent"}`, padding: "8px 12px", marginBottom: -1, fontSize: 14, fontWeight: 700, color: sekme === k ? INK : SLATE, cursor: "pointer", fontFamily: "inherit" }}>{ad}</button>
           ))}
@@ -113,6 +124,12 @@ export default function RaporPaneli() {
           <div style={{ marginTop: 14 }}>
             <Suspense fallback={<div style={{ color: SLATE, fontSize: 14 }}>Yükleniyor…</div>}>
               <AdminPazarPaneli sir={sir} onYetkisiz={cikis} />
+            </Suspense>
+          </div>
+        ) : sekme === "siparisler" ? (
+          <div style={{ marginTop: 14 }}>
+            <Suspense fallback={<div style={{ color: SLATE, fontSize: 14 }}>Yükleniyor…</div>}>
+              <AdminSiparisPaneli sir={sir} onYetkisiz={cikis} />
             </Suspense>
           </div>
         ) : (<>
