@@ -47,6 +47,24 @@ export async function havaleSonuclandir(supabase, siparisId, sonuc, simdi = new 
   return { durum: guncelle.odeme_durumu, siparis_no: siparis.siparis_no };
 }
 
+// Ödenmemiş siparişler (admin "Siparişler" sekmesinde İptal düğmesi yalnız bunlarda; 16 Eki 2026).
+export const IPTAL_EDILEBILIR = ["odeme_bekleniyor", "odeme_basarisiz"];
+
+// Ödenmemiş herhangi bir siparişi admin iptal eder (kart, havale ya da test). Havaledeki "iptal" ile
+// aynı yan etki: ikinci el ayırması kalkar. Koşullu güncelleme: ödenmiş/iptal olmuş sipariş değişmez.
+// Not: PayTR sonradan "ödendi" bildirirse callback yine odendi yazar (para alınmışsa doğru kayıt odur).
+export async function siparisIptal(supabase, siparisId) {
+  const { data, error } = await supabase.from("siparisler")
+    .update({ odeme_durumu: "iptal", odeme_hata: "iptal (admin)" })
+    .eq("id", siparisId).in("odeme_durumu", IPTAL_EDILEBILIR)
+    .select("id, siparis_no, urunler");
+  if (error) return { hata: error.message, kod: 500 };
+  const siparis = data?.[0];
+  if (!siparis) return { hata: "Ödenmemiş sipariş bulunamadı (ödenmiş ya da iptal olmuş olabilir)", kod: 409 };
+  await ilanKilitleriniBirak(supabase, siparis);
+  return { durum: "iptal", siparis_no: siparis.siparis_no };
+}
+
 // HAVALE_SURE_SAAT içinde ödemesi gelmeyen havale siparişlerini iptal et (cron). → iptal edilen sayı.
 export async function suresiDolanHavaleleriIptalEt(supabase, simdi = new Date()) {
   const sinir = new Date(simdi.getTime() - HAVALE_SURE_SAAT * 3600 * 1000).toISOString();
