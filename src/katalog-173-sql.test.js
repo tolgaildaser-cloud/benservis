@@ -99,3 +99,26 @@ describe("YK #173 (c) — uygunparca.com 8 kalem SQL'i", () => {
     for (const l of kodSatirlari(sql)) expect(tirnakSayisi(l) % 2, l).toBe(0);
   });
 });
+
+// YK #173 (d-ek2), 16 Eki 2026 — 17 yeni ürünün başlık SQL'i (8 uygunparca + 9 kombi baca).
+describe("YK #173 (d-ek2) — 17 ürün başlık SQL'i", () => {
+  const sql = oku("supabase/migrations/20261016_173d_baslik_esleme_17.sql");
+  const ilk89 = new Set([...oku(D).matchAll(/where id = '([0-9a-f-]{36})'/g)].map((m) => m[1]));
+
+  it("17 update, begin/commit içinde, eski başlık şartlı, id'ler tekrarsız ve #307'dekilerle çakışmaz", () => {
+    expect(sql.match(/^update public\.servis_urunler set baslik = /gm)).toHaveLength(17);
+    expect(sql).toMatch(/^begin;$/m);
+    expect(sql).toMatch(/^commit;$/m);
+    const where = [...sql.matchAll(/^  where id = '([0-9a-f-]{36})' and baslik = '(?:[^']|'')+' and baslik <> '(?:[^']|'')+';$/gm)];
+    expect(where).toHaveLength(17);
+    expect(new Set(where.map((m) => m[1])).size).toBe(17);
+    for (const m of where) expect(ilk89.has(m[1]), m[1]).toBe(false);
+  });
+
+  it("yeni başlık ' — ' içerir; eski başlık aciklama'ya taşınır; tırnaklar dengeli", () => {
+    const set = [...sql.matchAll(/^update public\.servis_urunler set baslik = '((?:[^']|'')+)', aciklama = '(?:[^']|'')+' \|\| ' · ' \|\| coalesce\(aciklama, ''\)$/gm)];
+    expect(set).toHaveLength(17);
+    for (const m of set) expect(m[1], m[1]).toContain(" — ");
+    for (const l of kodSatirlari(sql)) expect(tirnakSayisi(l) % 2, l).toBe(0);
+  });
+});
