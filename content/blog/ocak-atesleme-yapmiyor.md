@@ -20,6 +20,12 @@ faq:
     a: "Önce ucu kuru bezle temizlemeyi dene; hiç kıvılcım çıkmıyorsa buji ya da kablosu değişmelidir. Maliyet marka ve modele göre değişir — kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
   coverAlt: "Ocak çizimi, yanında kıvılcım ve tutuşmamış sönük alev"
+video:
+  youtubeId: "_rT_PAZ04Kw"
+  title: "Ocak ateşleme yapmıyor: servisi aramadan önce 4 kontrol"
+  description: "Bosch gazlı ocak kılavuzundaki 4 kontrol: brülör başlığı ve kapağın yerine oturması, bujinin metal içermeyen fırçayla temizlenmesi, düğmeyi 3–5 saniye basılı tutmak ve gaz akışı."
+  uploadDate: "2026-10-16T03:51:00Z"
+  duration: "PT1M6S"
 ---
 
 Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bir türlü yanmıyor. İyi haber: çoğu zaman sebep basit ve **evde, dakikalar içinde** çözülüyor. Bu yazıda nedenleri, **kendin yapabileceklerini** ve gerektiğinde servisten ne isteyeceğini bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
