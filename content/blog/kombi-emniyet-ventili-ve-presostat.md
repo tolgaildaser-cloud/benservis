@@ -45,7 +45,7 @@ faq:
 images:
   coverAlt: "Duvara asılı kombinin altında, ucundan hortum çıkan küçük pirinç emniyet ventili ve yanında manometre, sade çizim"
   steps:
-    - "Kombi ekranında okunur rakamı olmayan basınç göstergesi ve yanında not defteri"
+    - "Kombi, yanında rakamsız basınç göstergesi ve not defteri"
     - "Kullanma kılavuzu açık, sayfada vurgulanmış basınç aralığı çubuğu, rakamsız"
     - "Kombinin altında mavi kollu doldurma vanası yakın plan, yanında yukarı ok"
     - "Radyatör vanası ve boru birleşimi, yanında büyüteç simgesi"
