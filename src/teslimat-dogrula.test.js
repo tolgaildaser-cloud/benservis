@@ -106,17 +106,19 @@ const { cepDogrula, cepMaske, adresDogrula, adresSatiri, ILLER, ilceler } = awai
 const gonder = (ek = {}) => cagir(siparis, { method: "POST", body: { urun_idler: ["u1"], ...ALICI, odeme_yontemi: "havale", ...ek } });
 const insert = () => yazilan.find((y) => y.tablo === "siparisler" && y.islem === "insert")?.v;
 
-describe("cep telefonu (Tolga 16 Eki: yalnız cep, saçma rakam yok)", () => {
+describe("cep telefonu (Tolga 16 Eki: yalnız cep, aynı rakam yok)", () => {
   it("geçerli cep her yazımda kabul, +90 biçiminde döner", () => {
     for (const t of ["05327418296", "0532 741 82 96", "+90 532 741 82 96", "5327418296", "(0532) 741-82-96"]) {
       expect(cepDogrula(t), t).toEqual({ ok: true, ulusal: "5327418296", e164: "+905327418296" });
     }
   });
-  it("red: boş · eksik/fazla hane · sabit hat · aynı rakam · ardışık dizi", () => {
+  it("ardışık dizi geçerli (YK8, 17 Eki: gerçek bir kişiye ait olabilir)", () => {
+    for (const t of ["0532 123 45 67", "0532 765 43 21", "0545 678 90 12"]) expect(cepDogrula(t).ok, t).toBe(true);
+  });
+  it("red: boş · eksik/fazla hane · sabit hat · aynı rakam", () => {
     const red = {
       "": "zorunlu", "0532 741 82": "11 haneli", "0532 741 82 966": "11 haneli",
       "0216 345 67 89": "05 ile", "0555 555 55 55": "geçerli görünmüyor", "0532 000 00 00": "geçerli görünmüyor",
-      "0532 123 45 67": "geçerli görünmüyor", "0532 765 43 21": "geçerli görünmüyor", "0545 678 90 12": "geçerli görünmüyor",
       "1111111111": "11 haneli",
     };
     for (const [t, parca] of Object.entries(red)) {

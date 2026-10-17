@@ -7,16 +7,8 @@
 import { telUlusal, telBicimle } from "./telefon.js";
 import { TR_IL_ILCE } from "./tr-iller.js";
 
+// Ardışık dizi (0532 123 45 67) REDDEDİLMEZ: gerçek bir kişiye ait olabilir (YK8, Tolga 17 Eki 09:3x onayı).
 const hepsiAyni = (s) => /^(\d)\1+$/.test(s);
-function ardisik(s) {
-  let art = true, azal = true;
-  for (let i = 1; i < s.length; i++) {
-    const f = (Number(s[i]) - Number(s[i - 1]) + 10) % 10;
-    if (f !== 1) art = false;
-    if (f !== 9) azal = false;
-  }
-  return art || azal;
-}
 
 // Cep telefonu → { ok: true, ulusal: "5321234567", e164: "+905321234567" } ya da { ok: false, hata }.
 export function cepDogrula(ham) {
@@ -26,7 +18,7 @@ export function cepDogrula(ham) {
   if (!d) return { ok: false, hata: "Numara 11 haneli olmalı (0 ile başlayarak)." };
   if (d[0] !== "5") return { ok: false, hata: "Cep telefonu 05 ile başlamalı." };
   const abone = d.slice(3); // operatör kodundan sonraki 7 hane
-  if (hepsiAyni(d) || hepsiAyni(abone) || ardisik(abone) || ardisik(d.slice(1))) {
+  if (hepsiAyni(d) || hepsiAyni(abone)) {
     return { ok: false, hata: "Bu numara geçerli görünmüyor. Kargo için ulaşabileceğimiz bir numara yazın." };
   }
   return { ok: true, ulusal: d, e164: `+90${d}` };
