@@ -1,6 +1,8 @@
 // api/siparis.js
 // POST /api/siparis — Sepetten sipariş oluşturur (ödeme Benservis üzerinden).
-// Body: { urun_idler: [uuid], alici_ad, alici_tel, alici_adres?, alici_email?, sozlesme_onay? }
+// Body: { urun_idler: [uuid], alici_ad, alici_tel, alici_adres?, alici_il?, alici_ilce?, alici_mahalle?, alici_email?, sozlesme_onay? }
+// 16 Eki 2026 (Tolga): pazar siparişinde telefon YALNIZ CEP ve "saçma rakam" reddi; il/ilçe listeden, mahalle +
+// açık adres zorunlu, ayrı kolonlara yazılır. Kurallar src/teslimat-dogrula.js (istemciyle ortak).
 // Fiyatlar SUNUCUDA DB'den hesaplanır — istemciden tutar kabul edilmez.
 // YK #167 PR-6: sepetin tamamı Benservis (pazar) ürünüyse ve PayTR env tanımlıysa sipariş
 // PayTR'ye gider → odeme_url = /odeme/:id (iFrame). Pazar ürünü varsa kargo eklenir (src/kargo.js:
@@ -27,6 +29,7 @@ import { ilanTeslimSecenekleri } from "../src/ikinci-el-teslim.js";
 import { ODEME_KILIT_DK } from "../src/ikinci-el-kilit.js";
 import { anahtarGecerli, ilanKilitle } from "./_kilit.js";
 import { HAVALE_KILIT_DK, havaleSonu } from "../src/havale.js";
+import { cepDogrula, adresDogrula } from "../src/teslimat-dogrula.js";
 
 const EPOSTA_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -35,7 +38,7 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { alici_ad, alici_tel, alici_adres, alici_email, sozlesme_onay } = req.body || {};
+  const { alici_ad, alici_tel, alici_adres, alici_il, alici_ilce, alici_mahalle, alici_email, sozlesme_onay } = req.body || {};
   const urun_idler = Array.isArray(req.body?.urun_idler) ? req.body.urun_idler : [];
   const ilanIstek = Array.isArray(req.body?.ilanlar) ? req.body.ilanlar : [];
   const sepetAnahtari = req.body?.sepet_anahtari;
@@ -176,13 +179,19 @@ export default async function handler(req, res) {
   // Pazar (Benservis) ürünü: kargo ayrı satır, mesafeli satış onayı ve e-posta zorunlu.
   const pazarVar = kalemler.some(k => k.satici_tur === "benservis");
   const email = String(alici_email || "").trim().toLowerCase();
+  let teslimat = null; // pazar siparişinde doğrulanmış { tel, il, ilce, mahalle, acik }
   if (pazarVar) {
     if (sozlesme_onay !== true) {
       return res.status(400).json({ error: "Ön Bilgilendirme Formu ve Mesafeli Satış Sözleşmesi onayı gerekli" });
     }
-    if (String(alici_adres || "").trim().length < 10) {
-      return res.status(400).json({ error: "Teslimat için açık adres girin" });
+    const cep = cepDogrula(alici_tel);
+    if (!cep.ok) return res.status(400).json({ error: cep.hata, alan: "tel" });
+    const ad = adresDogrula({ il: alici_il, ilce: alici_ilce, mahalle: alici_mahalle, acik: alici_adres });
+    if (!ad.ok) {
+      const [alan, hata] = Object.entries(ad.hatalar)[0];
+      return res.status(400).json({ error: hata, alan, hatalar: ad.hatalar });
     }
+    teslimat = { tel: cep.e164, ...ad.adres };
     if (!EPOSTA_RE.test(email) || email.length > 120) {
       return res.status(400).json({ error: "Geçerli bir e-posta adresi girin" });
     }
@@ -205,8 +214,9 @@ export default async function handler(req, res) {
       urunler:     kalemler,
       tutar,
       alici_ad:    alici_ad.trim(),
-      alici_tel:   tel,
-      alici_adres: alici_adres?.trim() || null,
+      alici_tel:   teslimat?.tel || tel,
+      alici_adres: teslimat?.acik || alici_adres?.trim() || null,
+      ...(teslimat ? { alici_il: teslimat.il, alici_ilce: teslimat.ilce, alici_mahalle: teslimat.mahalle } : {}),
       ...(pazarVar ? {
         kargo_tl:         kargo,
         kargo_indirim_tl: kh.kargo_indirim_tl,

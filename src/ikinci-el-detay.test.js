@@ -103,7 +103,7 @@ const cagir = (fn, req) => new Promise((coz) => {
   fn({ headers: {}, query: {}, ...req }, res);
 });
 const BENIM = "aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee", BASKASI = "11111111-2222-4333-8444-555555555555";
-const ALICI = { alici_ad: "Test Alıcı", alici_tel: "05551112233", alici_adres: "Kadıköy Moda Cad. No 1", alici_email: "test@ornek.com", sozlesme_onay: true, sepet_anahtari: BENIM };
+const ALICI = { alici_ad: "Test Alıcı", alici_tel: "05327418296", alici_adres: "Moda Cad. No 1 D 2", alici_il: "İstanbul", alici_ilce: "Kadıköy", alici_mahalle: "Caferağa", alici_email: "test@ornek.com", sozlesme_onay: true, sepet_anahtari: BENIM };
 const gelecek = (dk) => new Date(Date.now() + dk * 60000).toISOString();
 
 beforeEach(sifirla);

@@ -83,7 +83,7 @@ const SAHTE_IBAN = "TR000000000000000000000000";
 const PAYTR = { PAYTR_MERCHANT_ID: "1", PAYTR_MERCHANT_KEY: "k", PAYTR_MERCHANT_SALT: "s" };
 const ADMIN = "sahte-admin";
 const ADMIN_BASLIK = { authorization: `Bearer ${ADMIN}` };
-const ALICI = { alici_ad: "Test Alıcı", alici_tel: "05551234567", alici_adres: "Örnek Mah. Deneme Sk. No:1 Kadıköy", alici_email: "test@ornek.com", sozlesme_onay: true };
+const ALICI = { alici_ad: "Test Alıcı", alici_tel: "05327418296", alici_adres: "Deneme Sk. No:1 D:2", alici_il: "İstanbul", alici_ilce: "Kadıköy", alici_mahalle: "Caferağa", alici_email: "test@ornek.com", sozlesme_onay: true };
 
 beforeEach(() => {
   yazilan.length = 0; kilitCagri.length = 0;
