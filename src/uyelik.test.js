@@ -2,7 +2,7 @@
 // Yetki ayrımı app_metadata'da kalır (#176), rıza beyanı yalnız sürüm numarası, SQL dosyası
 // "sahibi okur, üye cihaz yazamaz, anon'a yeni yol yok" ilkesini taşır.
 import { describe, it, expect, vi } from "vitest";
-vi.mock("./lib/supabase.js", () => ({ supabase: { auth: {} } }));
+vi.mock("./lib/supabase.js", () => ({ supabase: { auth: {} }, KURTARMA_BAGLANTISI: false }));
 import fs from "node:fs";
 import { kayitDogrula, kayitParametreleri, kayitSonucu, kalanGun, UYELIK_RIZA_V } from "./uyelik.js";
 import { girisYonu, UYELIK_ACIK } from "./KayitSecim.jsx";
@@ -58,6 +58,14 @@ describe("ÜY-2 SQL dosyası", () => {
     expect(sqlKod).toMatch(/grant update \(ad, hatirlatma_acik\) on public\.uyeler to authenticated/);
   });
 
+  it("rıza sürümü istemciden alınmaz: tetikleyici sabit yazar, INSERT yetkisinde sürüm yok (IT bulgu 2)", () => {
+    expect(sqlKod).toMatch(/new\.riza_metin_v := 1;/);
+    expect(sqlKod).toMatch(/check \(riza_metin_v between 1 and 1\)/);
+    expect(sqlKod).toMatch(/grant insert \(id, ad, hatirlatma_acik\) on public\.uyeler to authenticated/);
+    expect(sqlKod).not.toMatch(/v::smallint/);
+    expect(SQL).toMatch(/-- drop trigger if exists uye_profili_olustur on auth\.users;/); // geri alma bloğu
+  });
+
   it("cihazlar: yalnız sahibin OKUMA politikası; üye yazamaz, anon'a politika yok", () => {
     const cihazPol = [...sqlKod.matchAll(/create policy (\w+) on public\.cihazlar\s+for (\w+) to (\w+)/g)];
     expect(cihazPol.map((m) => [m[1], m[2], m[3]])).toEqual([["cihazlar_sahibi_okur", "select", "authenticated"]]);
@@ -84,6 +92,13 @@ describe("/hesabim ve /kayit kaynakları", () => {
     expect(hesabim).toContain("noindex");
     expect(hesabim).not.toMatch(/from\("cihazlar"\)\.(insert|update|upsert|delete)/);
     expect(hesabim).not.toMatch(/\.user_metadata/);
+  });
+  it("kurtarma bağlantısında yönlendirme/yükleme yok (IT bulgu 1)", () => {
+    expect(fs.readFileSync("src/lib/supabase.js", "utf8")).toMatch(/export const KURTARMA_BAGLANTISI[\s\S]*createClient\(/);
+    expect(hesabim).toContain('useState(KURTARMA_BAGLANTISI ? "yenisifre"');
+    expect(hesabim).toContain("if (kurtarma.current) { setUser(u || null); return; }");
+    expect(hesabim).toContain("if (kurtarma.current) return;");
+    expect(hesabim).not.toMatch(/riza_metin_v: /);
   });
   it("rota mount edildi ve vercel rewrite var", () => {
     expect(fs.readFileSync("src/main.jsx", "utf8")).toMatch(/path === "\/hesabim"/);

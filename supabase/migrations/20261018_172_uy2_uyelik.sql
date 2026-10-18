@@ -12,14 +12,16 @@
 --    `cihazlar`'da bugüne kadar politika yoktu (RLS açık, yalnız service key) → yalnız SAHİBİN OKUMASI eklenir.
 -- ③ Üye `cihazlar`'a doğrudan YAZAMAZ: ekleme/düzenleme ÜY-3'te sunucu ucundan (seri no doğrulaması,
 --    seri_no UNIQUE çakışması ve DPP bağı sunucuda denetlenir). Bu dosya yalnız okuma politikası açar.
--- ④ Rıza zamanı istemciden alınmaz: riza_at ve hatirlatma_riza_at veritabanı saatiyle (now()) yazılır.
+-- ④ Rıza zamanı ve SÜRÜMÜ istemciden alınmaz: riza_at / hatirlatma_riza_at veritabanı saatiyle (now()),
+--    riza_metin_v yürürlükteki sabit sürümle (aşağıda 1) yazılır (IT incelemesi PR #333 bulgu 2).
+--    ⚠️ Aydınlatma metni v2 olunca: uyeler_zaman_damgasi içindeki sabit + CHECK + src/uyelik.js UYELIK_RIZA_V birlikte artar.
 
 -- ─── 1) uyeler: bireysel üye profili ────────────────────────────────────────────────────────────
 create table if not exists public.uyeler (
   id                  uuid primary key references auth.users(id) on delete cascade,
   ad                  text check (ad is null or char_length(ad) <= 80),
   riza_at             timestamptz not null default now(),   -- üyelik aydınlatma + açık rıza onay anı
-  riza_metin_v        smallint    not null check (riza_metin_v between 1 and 999),
+  riza_metin_v        smallint    not null default 1 check (riza_metin_v between 1 and 1), -- yürürlükteki sürüm
   hatirlatma_acik     boolean     not null default false,   -- garanti hatırlatma e-postası (ayrı, isteğe bağlı onay)
   hatirlatma_riza_at  timestamptz,                          -- hatırlatmanın en son AÇILDIĞI an
   created_at          timestamptz not null default now(),
@@ -34,6 +36,7 @@ returns trigger language plpgsql set search_path = '' as $$
 begin
   if tg_op = 'INSERT' then
     new.riza_at := now();
+    new.riza_metin_v := 1; -- yürürlükteki aydınlatma metni sürümü (istemci ne gönderirse göndersin)
     new.created_at := now();
     new.hatirlatma_riza_at := case when new.hatirlatma_acik then now() else null end;
   else
@@ -56,7 +59,7 @@ create trigger uyeler_zaman_damgasi before insert or update on public.uyeler
 -- Sütun düzeyinde yetki: üye yalnız şu alanları yazabilir (gerisi tetikleyicide/sunucuda).
 revoke all on public.uyeler from anon, authenticated;
 grant select on public.uyeler to authenticated;
-grant insert (id, ad, riza_metin_v, hatirlatma_acik) on public.uyeler to authenticated;
+grant insert (id, ad, hatirlatma_acik) on public.uyeler to authenticated;
 grant update (ad, hatirlatma_acik) on public.uyeler to authenticated;
 
 drop policy if exists uyeler_sahibi_okur on public.uyeler;
@@ -81,8 +84,8 @@ create policy uyeler_sahibi_gunceller on public.uyeler
 -- DELETE politikası yok: hesap silinince satır auth.users ON DELETE CASCADE ile gider.
 
 -- ─── 2) Kayıt anında profil (auth.users tetikleyicisi) ─────────────────────────────────────────
--- /kayit "Üye ol" formu signUp'a `uyelik_riza_v` (onaylanan metin sürümü) ve `hatirlatma` (true/false)
--- gönderir. Bunlar yetki DEĞİL, yalnız rıza beyanı; servis hesapları (app_metadata.servis_id dolu)
+-- /kayit "Üye ol" formu signUp'a `uyelik_riza_v` (onay kutusu işaretlendi) ve `hatirlatma` (true/false)
+-- gönderir. Bunlar yetki DEĞİL, yalnız rıza beyanı; kaydedilen sürümü istemci değil uyeler_zaman_damgasi belirler; servis hesapları (app_metadata.servis_id dolu)
 -- ve bu alanı taşımayan admin hesapları atlanır. Tetikleyici hata verirse kaydı DURDURMAZ (exception
 -- yakalanır) → profil /hesabim'deki yedek yolla açılır.
 create or replace function public.uye_profili_olustur()
@@ -91,8 +94,8 @@ declare v text := new.raw_user_meta_data ->> 'uyelik_riza_v';
 begin
   if coalesce(new.raw_app_meta_data ->> 'servis_id', '') <> '' then return new; end if;
   if v is null or v !~ '^[0-9]{1,3}$' or v::int < 1 then return new; end if;
-  insert into public.uyeler (id, riza_metin_v, hatirlatma_acik)
-  values (new.id, v::smallint, coalesce(new.raw_user_meta_data ->> 'hatirlatma', '') = 'true')
+  insert into public.uyeler (id, hatirlatma_acik)
+  values (new.id, coalesce(new.raw_user_meta_data ->> 'hatirlatma', '') = 'true')
   on conflict (id) do nothing;
   return new;
 exception when others then
@@ -153,3 +156,17 @@ create policy cihaz_dosyalari_sahibi_siler on storage.objects
 --   → cihazlar_sahibi_okur SELECT · uyeler_sahibi_acar INSERT · uyeler_sahibi_gunceller UPDATE · uyeler_sahibi_okur SELECT
 -- select public, file_size_limit from storage.buckets where id = 'cihaz-dosyalari';    -- false · 10485760
 -- select count(*) from public.cihazlar where sahip_id is not null;                      -- 0
+-- select tgname from pg_trigger where tgrelid = 'auth.users'::regclass and tgname = 'uye_profili_olustur'; -- 1 satır
+
+-- ─── 6) Geri alma (gerekirse, bu sırayla; IT incelemesi PR #333) ───────────────────────────────
+-- Önce Auth → "Allow new users to sign up" KAPATILIR, sonra:
+-- drop trigger if exists uye_profili_olustur on auth.users;          -- önce kayıt akışına giren tetikleyici
+-- drop function if exists public.uye_profili_olustur();
+-- drop policy if exists cihaz_dosyalari_sahibi_okur on storage.objects;
+-- drop policy if exists cihaz_dosyalari_sahibi_yukler on storage.objects;
+-- drop policy if exists cihaz_dosyalari_sahibi_siler on storage.objects;
+-- drop policy if exists cihazlar_sahibi_okur on public.cihazlar;
+-- sahip_id ve uyeler veri taşıyorsa silmeden önce yedek alınır:
+-- alter table public.cihazlar drop column if exists sahip_id;
+-- drop table if exists public.uyeler;                                -- uyeler_zaman_damgasi tetikleyicisi tabloyla gider
+-- drop function if exists public.uyeler_zaman_damgasi();

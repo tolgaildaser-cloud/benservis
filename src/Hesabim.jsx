@@ -3,22 +3,26 @@
 // Akış: oturum yoksa /kayit'e döner · servis hesabı (app_metadata.servis_id) /panel'e geçer ·
 //   e-posta doğrulama ve şifre sıfırlama bağlantıları buraya döner (supabase-js URL'deki oturumu kendisi alır;
 //   PASSWORD_RECOVERY olayında yeni şifre formu açılır).
+// Kurtarma modu (IT PR #333 bulgu 1): bağlantıdaki type=recovery istemci oluşmadan okunur (KURTARMA_BAGLANTISI)
+//   ya da olay gelir → yönlendirme ve veri yükleme YAPILMAZ, yalnız yeni şifre formu; servis hesabı panele
+//   ancak şifre kaydedildikten sonra geçer.
 // Veri: `uyeler` (profil) ve `cihazlar` (sahip_id = üye) anon anahtar + üyenin oturumuyla, RLS üzerinden
 //   okunur (supabase/migrations/20261018_172_uy2_uyelik.sql). Üye cihaz EKLEYEMEZ: o ÜY-3 (sunucu ucu).
 // Profil yoksa (kayıt tetikleyicisi açamadıysa) rıza kutusu gösterilir; onayla üye profilini kendisi açar.
 // ⛔ Yetki user_metadata'dan okunmaz (#176). ⛔ Olaylar PII'siz. ⛔ Satır içi stile `display` yazılmaz.
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { track } from "@vercel/analytics";
 import BenservisLogo from "./BenservisLogo.jsx";
-import { supabase } from "./lib/supabase.js";
+import { supabase, KURTARMA_BAGLANTISI } from "./lib/supabase.js";
 import { servisIdOku } from "./servis-kimlik.js";
-import { UYELIK_RIZA_V, UYELIK_AYDINLATMA_URL, SIFRE_EN_AZ, kalanGun } from "./uyelik.js";
+import { UYELIK_AYDINLATMA_URL, SIFRE_EN_AZ, kalanGun } from "./uyelik.js";
 import { NAVY as INK, BLUE, HAIR, SLATE, TINT, GREEN_DEEP, RED } from "./theme.js";
 
 const olc = (ad, p) => { try { track(ad, p); } catch { /* ölçüm akışı bozmaz */ } };
 
 export default function Hesabim() {
-  const [durum, setDurum] = useState("yukleniyor"); // yukleniyor | hazir | yenisifre | hata
+  const kurtarma = useRef(KURTARMA_BAGLANTISI);
+  const [durum, setDurum] = useState(KURTARMA_BAGLANTISI ? "yenisifre" : "yukleniyor"); // yukleniyor | hazir | yenisifre | hata
   const [user, setUser] = useState(null);
   const [profil, setProfil] = useState(null); // null = yok
   const [cihazlar, setCihazlar] = useState([]);
@@ -29,14 +33,13 @@ export default function Hesabim() {
     m.name = "robots"; m.content = "noindex, nofollow";
     document.head.appendChild(m);
 
-    let kurtarma = false;
-    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "PASSWORD_RECOVERY") { kurtarma = true; setDurum("yenisifre"); }
+    const { data: sub } = supabase.auth.onAuthStateChange((event, sess) => {
+      if (event === "PASSWORD_RECOVERY") { kurtarma.current = true; setUser(sess?.user || null); setDurum("yenisifre"); }
     });
     (async () => {
       const { data } = await supabase.auth.getSession();
       const u = data.session?.user;
-      if (kurtarma) { setUser(u || null); return; }
+      if (kurtarma.current) { setUser(u || null); return; }
       if (!u) { window.location.replace("/kayit"); return; }
       if (servisIdOku(u)) { window.location.replace("/panel"); return; }
       setUser(u);
@@ -51,6 +54,7 @@ export default function Hesabim() {
       supabase.from("cihazlar").select("id, kategori, marka, model, garanti_bitis_tarihi")
         .eq("sahip_id", id).order("created_at", { ascending: false }),
     ]);
+    if (kurtarma.current) return; // yükleme sürerken kurtarma olayı geldiyse form kaybolmasın
     if (p.error || c.error) { setDurum("hata"); return; }
     setProfil(p.data || null);
     setCihazlar(c.data || []);
@@ -139,7 +143,7 @@ function ProfilAc({ uid, onAcildi }) {
     if (!riza) { setHata("Devam etmek için aydınlatma metnini onaylaman gerekiyor."); return; }
     setYuk(true); setHata("");
     const { data, error } = await supabase.from("uyeler")
-      .insert({ id: uid, riza_metin_v: UYELIK_RIZA_V, hatirlatma_acik: hatirlatma })
+      .insert({ id: uid, hatirlatma_acik: hatirlatma }) // rıza sürümünü veritabanı yazar (IT bulgu 2)
       .select("ad, hatirlatma_acik, riza_metin_v").single();
     setYuk(false);
     if (error) { setHata("Profil açılamadı, biraz sonra tekrar dene."); return; }
