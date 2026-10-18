@@ -47,6 +47,7 @@ const UCLAR = [
   ["POST /api/servis/urunler", "../api/servis/urunler.js", istek("POST", { body: { baslik: "x", fiyat: 10, tip: "yedek_parca" } })],
   ["PATCH /api/servis/urunler/[id]", "../api/servis/urunler/[id].js", istek("PATCH", { query: { id: "ur-1" }, body: { durum: "pasif" } })],
   ["DELETE /api/servis/urunler/[id]", "../api/servis/urunler/[id].js", istek("DELETE", { query: { id: "ur-1" } })],
+  ["POST /api/dpp/tamir", "../api/dpp/tamir.js", istek("POST", { body: { cihaz_id: "c1", tarih: "2026-10-18", yapilan_islem: "x" } })],
   ["PATCH /api/dpp/tamir/[id]", "../api/dpp/tamir/[id].js", istek("PATCH", { query: { id: "t-1" }, body: { yapilan_islem: "x" } })],
   ["PATCH /api/dpp/cihaz", "../api/dpp/cihaz.js", istek("PATCH", { query: { seri_no: "SN1" }, body: { mevcut_durum: "hurda" } })],
 ];
