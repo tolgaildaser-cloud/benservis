@@ -1,12 +1,25 @@
 // api/dpp/tamir.js
+// POST /api/dpp/tamir — DPP tamir kaydı ekler.
+// Yetki (18 Eki 2026, IT incelemesi PR #333 PR-dışı bulgu): eskiden kimlik kontrolü YOKTU, oturumsuz biri
+// var olan her cihaza tamir kaydı ekleyebiliyordu. Artık diğer servis uçlarıyla aynı: Bearer JWT →
+// getUser → servis_id YALNIZ app_metadata'dan (servisIdOku, #176); yoksa 401/403. Kaydın servis_id'si
+// istekten değil oturumdan yazılır (PATCH /api/dpp/tamir/:id sahipliği buna dayanır).
 import supabase from "../_supabase.js";
+import { servisIdOku } from "../../src/servis-kimlik.js";
 
 export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+
+  const token = (req.headers?.authorization || "").replace("Bearer ", "").trim();
+  if (!token) return res.status(401).json({ error: "Token gerekli" });
+  const { data: { user } = {}, error: authErr } = await supabase.auth.getUser(token);
+  if (authErr || !user) return res.status(401).json({ error: "Geçersiz token" });
+  const servis_id = servisIdOku(user);
+  if (!servis_id) return res.status(403).json({ error: "Servis kimliği bulunamadı" });
 
   const {
     cihaz_id, tarih, yapilan_islem,
@@ -44,6 +57,7 @@ export default async function handler(req, res) {
     .from("tamir_kayitlari")
     .insert({
       cihaz_id,
+      servis_id,
       tarih,
       yapilan_islem,
       degistirilen_parcalar: degistirilen_parcalar || [],

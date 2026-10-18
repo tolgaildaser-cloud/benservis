@@ -571,9 +571,10 @@ function TamirEkleForm({ cihazId, onEklendi, onIptal }) {
     setHata("");
     setYukleniyor(true);
     try {
+      const { data: oturum } = await supabase.auth.getSession(); // POST artık servis JWT'si ister (18 Eki)
       const res = await fetch("/api/dpp/tamir", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${oturum.session?.access_token || ""}` },
         body: JSON.stringify({
           cihaz_id: cihazId,
           tarih: form.tarih,
