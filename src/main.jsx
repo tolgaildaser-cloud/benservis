@@ -15,6 +15,7 @@ const IkinciElApp   = lazy(() => import("./IkinciElApp.jsx"));
 const MusteriTakip  = lazy(() => import("./MusteriTakip.jsx"));
 const ServisKayit   = lazy(() => import("./ServisKayit.jsx"));
 const KayitSecim    = lazy(() => import("./KayitSecim.jsx"));
+const Hesabim       = lazy(() => import("./Hesabim.jsx")); // YK #172 ÜY-2
 const ServisAdmin   = lazy(() => import("./ServisAdmin.jsx"));
 const RaporPaneli   = lazy(() => import("./RaporPaneli.jsx"));
 const ServisMagaza  = lazy(() => import("./ServisMagaza.jsx"));
@@ -44,6 +45,7 @@ const isIkinci      = path.startsWith("/ikinci-el");
 const isTakip       = path.startsWith("/takip/");
 const isServisKayit = path === "/servis-kayit";
 const isKayit       = path === "/kayit"; // YK #172 ÜY-1 seçim sayfası
+const isHesabim     = path === "/hesabim"; // YK #172 ÜY-2 bireysel üye sayfası (noindex)
 const isServisAdmin = path === "/servis-admin";
 const isAdmin       = path === "/admin";
 const isTarife      = path === "/tarife";
@@ -98,6 +100,7 @@ createRoot(document.getElementById("root")).render(
      isTakip        ? <MusteriTakip isNo={takipIsNo} /> :
      isServisKayit  ? <ServisKayit />                   :
      isKayit        ? <KayitSecim />                    :
+     isHesabim      ? <Hesabim />                       :
      isServisAdmin  ? <ServisAdmin />                   :
      isTarife       ? <TarifeAdmin />                   :
      isAdmin        ? <RaporPaneli />                   :
