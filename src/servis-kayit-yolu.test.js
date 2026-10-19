@@ -155,19 +155,21 @@ describe("/kayit üyelik sayfası (YK #172 ÜY-1 → tek giriş, 14 Eki)", () =>
     expect(kaynakOku("")).toBe("kayit");
   });
 
-  it("TEK GİRİŞ (Tolga 14 Eki): tek form, servis hesabı panele, bireysel ÜY-2'ye kadar bilgi mesajı", async () => {
+  it("TEK GİRİŞ (Tolga 14 Eki) + ÜY-2 (18 Eki): giriş ve üye ol aynı sayfada, servis panele, birey /hesabim'e", async () => {
     const k = oku("src/KayitSecim.jsx");
-    expect(k).toContain("export const UYELIK_ACIK = false");
+    expect(k).toContain("export const UYELIK_ACIK = true");
     expect(k).toContain("signInWithPassword");
+    expect(k).toContain("supabase.auth.signUp(");
     expect(k).toContain("<h1>Üyelik</h1>");
-    expect((k.match(/<form /g) || []).length).toBe(1);
-    expect(k).toContain("Bireysel üyelik çok yakında açılıyor");
+    expect((k.match(/<form /g) || []).length).toBe(2); // giriş | üye ol (aynı anda biri görünür)
+    expect(k).not.toMatch(/href="\/giris"/); // /giris açılmaz, /kayit tek giriş
     const { girisYonu } = await import("./KayitSecim.jsx");
     expect(girisYonu({ app_metadata: { servis_id: "s1" } })).toBe("/panel");
     // 15 Eki güvenlik: kullanıcının yazabildiği user_metadata servis yetkisi VERMEZ.
-    expect(girisYonu({ user_metadata: { servis_id: "s1" } })).toBe(null);
-    expect(girisYonu({ app_metadata: {} })).toBe(null);
-    expect(girisYonu({ app_metadata: {} }, true)).toBe("/hesabim");
-    expect(girisYonu(null)).toBe(null);
+    expect(girisYonu({ user_metadata: { servis_id: "s1" } })).toBe("/hesabim");
+    expect(girisYonu({ app_metadata: {} })).toBe("/hesabim");
+    expect(girisYonu({ app_metadata: {} }, false)).toBe(null);
+    expect(girisYonu(null, false)).toBe(null);
   });
+
 });

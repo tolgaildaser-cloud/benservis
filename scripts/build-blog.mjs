@@ -2,6 +2,7 @@
 // content/blog/*.md -> dist/blog/<slug>/index.html (statik, SEO'lu) + /blog listesi + sitemap + robots
 // `vite build`ten SONRA çalışır (package.json: "build": "vite build && node scripts/build-blog.mjs").
 import { PAZAR_HUKUK_SAYFALARI, eksikSaticiAlanlari } from "./pazar-hukuk.mjs";
+import { UYELIK_AYDINLATMA_GOVDE } from "./uyelik-aydinlatma.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -3069,6 +3070,20 @@ for (const h of PAZAR_HUKUK_SAYFALARI) {
     })
   );
 }
+// /uyelik-aydinlatma-metni/ — bireysel üyelik aydınlatma + açık rıza v1 (YK #172 ÜY-2, 18 Eki 2026).
+// /kayit "Üye ol" onay kutusu bağlanır; noindex + sitemap dışı. Metin scripts/uyelik-aydinlatma.mjs'te.
+fs.mkdirSync(path.join(DIST, "uyelik-aydinlatma-metni"), { recursive: true });
+fs.writeFileSync(
+  path.join(DIST, "uyelik-aydinlatma-metni", "index.html"),
+  page({
+    title: "Bireysel Üyelik Aydınlatma Metni — Benservis",
+    desc: "Benservis bireysel üyeliğinde işlenen kişisel veriler, amaçlar, aktarılan taraflar, saklama süresi, açık rıza ve KVKK md.11 haklarınız.",
+    canonical: `${SITE}/uyelik-aydinlatma-metni/`,
+    robots: "noindex,follow",
+    body: `<a class="geri" href="/kayit">← Üyelik</a>${UYELIK_AYDINLATMA_GOVDE}`,
+  })
+);
+console.log("[build-blog] ✓ Üyelik aydınlatma metni: /uyelik-aydinlatma-metni/ (noindex).");
 const _eksik = eksikSaticiAlanlari();
 console.log(`[build-blog] ✓ Pazaryeri belgeleri: ${PAZAR_HUKUK_SAYFALARI.length} sayfa (noindex)${_eksik.length ? ` — ⚠️ EKSİK satıcı alanı: ${_eksik.join(", ")}` : ""}.`);
 

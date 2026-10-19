@@ -4,7 +4,11 @@
 //   • E-posta + şifre (Supabase Auth, servis paneliyle aynı hesap sistemi). Hesapta servis_id varsa
 //     servis paneline (/panel) geçer; yoksa bireysel hesap sayfası henüz yok (ÜY-2) → bilgi mesajı.
 //   • "Şifremi unuttum" → Supabase sıfırlama e-postası (servis paneliyle aynı dönüş adresi).
-//   • "Hesabın yok mu?" → servis/satıcı kaydı (gelen `kaynak` aynen taşınır) · bireysel üyelik ÜY-2 ile açılır.
+//   • "Hesabın yok mu?" → servis/satıcı kaydı (gelen `kaynak` aynen taşınır) · bireysel "Üye ol" formu (ÜY-2).
+// ÜY-2 (18 Eki 2026): "Üye ol" aynı sayfada açılır (/giris yok, /kayit tek giriş): e-posta + şifre + zorunlu
+//   aydınlatma/açık rıza + isteğe bağlı garanti hatırlatma onayı → Supabase signUp, doğrulama e-postası
+//   /hesabim'e döner. Rıza beyanı user_metadata'ya yalnız sürüm numarası olarak gider; profili veritabanı
+//   tetikleyicisi açar (supabase/migrations/20261018_172_uy2_uyelik.sql). Olay `uyelik_kayit` (sonuc).
 // Olay `uyelik_giris` (sonuc: servis | birey | hata) — e-posta ya da kişisel veri analitiğe yazılmaz.
 // ⛔ Satır içi stile `display` yazılmaz (PR #175 dersi).
 import React, { useEffect, useState } from "react";
@@ -12,9 +16,10 @@ import { track } from "@vercel/analytics";
 import BenservisLogo from "./BenservisLogo.jsx";
 import { supabase } from "./lib/supabase.js";
 import { servisIdOku } from "./servis-kimlik.js";
+import { kayitDogrula, kayitParametreleri, kayitSonucu, UYELIK_AYDINLATMA_URL, SIFRE_EN_AZ } from "./uyelik.js";
 import { NAVY as INK, BLUE, HAIR, SLATE, TINT, GREEN_DEEP } from "./theme.js";
 
-export const UYELIK_ACIK = false; // ÜY-2 (bireysel hesap + /hesabim) merge olunca true
+export const UYELIK_ACIK = true; // ÜY-2 (18 Eki): bireysel hesap + /hesabim
 
 // Kaynak etiketi servis kaydına aynen taşınır; yalnız slug karakterleri ve sunucunun
 // sınırı (api/servis/basvuru.js: en fazla 32) — serbest metin URL'ye taşınmaz.
@@ -36,6 +41,9 @@ export default function KayitSecim() {
   const [hata, setHata] = useState("");
   const [bilgi, setBilgi] = useState("");
   const [yuk, setYuk] = useState(false);
+  const [mod, setMod] = useState("giris"); // giris | uye
+  const [riza, setRiza] = useState(false);
+  const [hatirlatma, setHatirlatma] = useState(false);
 
   useEffect(() => {
     document.title = "Üyelik · Benservis";
@@ -64,11 +72,27 @@ export default function KayitSecim() {
     setHata(""); setBilgi("");
     if (!email.trim()) { setHata("Önce e-posta adresini yaz."); return; }
     const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: window.location.origin + "/panel",
+      redirectTo: window.location.origin + "/hesabim", // /hesabim yeni şifreyi alır, servis hesabını panele geçirir
     });
     if (error) { setHata("Sıfırlama e-postası gönderilemedi, biraz sonra tekrar dene."); return; }
     setBilgi("Şifre sıfırlama bağlantısı e-posta adresine gönderildi.");
   };
+
+  const uyeOl = async (e) => {
+    e.preventDefault();
+    setHata(""); setBilgi("");
+    const h = kayitDogrula({ email, sifre, riza });
+    if (h) { setHata(h); return; }
+    setYuk(true);
+    const sonuc = kayitSonucu(await supabase.auth.signUp(kayitParametreleri({ email, sifre, hatirlatma }, window.location.origin)));
+    setYuk(false);
+    try { track("uyelik_kayit", { sonuc: sonuc.tur }); } catch { /* ölçüm akışı bozmaz */ }
+    if (sonuc.tur === "gonderildi") { setSifre(""); setBilgi(sonuc.mesaj); return; }
+    if (sonuc.tur === "var") setMod("giris");
+    setHata(sonuc.mesaj);
+  };
+
+  const modDegis = (m) => { setMod(m); setHata(""); setBilgi(""); };
 
   return (
     <div className="ks">
@@ -83,6 +107,7 @@ export default function KayitSecim() {
       <main className="ks-kap ks-ana">
         <h1>Üyelik</h1>
         <p className="ks-alt">Servis, satıcı ya da bireysel üye: herkes buradan giriş yapar.</p>
+        {mod === "giris" ? (
         <form className="ks-kart ks-form" onSubmit={giris} noValidate>
           <h2>Giriş yap</h2>
           <label htmlFor="ks-eposta">E-posta</label>
@@ -94,6 +119,28 @@ export default function KayitSecim() {
           <button type="submit" className="ks-dugme" disabled={yuk}>{yuk ? "Giriş yapılıyor…" : "Giriş yap"}</button>
           <button type="button" className="ks-ikincil ks-link" onClick={sifremiUnuttum}>Şifremi unuttum</button>
         </form>
+        ) : (
+        <form className="ks-kart ks-form" onSubmit={uyeOl} noValidate>
+          <h2>Bireysel üye ol</h2>
+          <p>Cihazlarını ekle, garanti bitişini takip et. Üyelik ücretsiz.</p>
+          <label htmlFor="ks-eposta">E-posta</label>
+          <input id="ks-eposta" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <label htmlFor="ks-sifre">Şifre (en az {SIFRE_EN_AZ} karakter)</label>
+          <input id="ks-sifre" type="password" autoComplete="new-password" value={sifre} onChange={(e) => setSifre(e.target.value)} />
+          <label className="ks-onay">
+            <input type="checkbox" checked={riza} onChange={(e) => setRiza(e.target.checked)} />
+            <span><a href={UYELIK_AYDINLATMA_URL} target="_blank" rel="noopener noreferrer">Üyelik Aydınlatma Metni</a>'ni okudum; hesabımın ve ekleyeceğim cihaz bilgilerinin bu metindeki amaçlarla işlenmesine açık rıza veriyorum.</span>
+          </label>
+          <label className="ks-onay">
+            <input type="checkbox" checked={hatirlatma} onChange={(e) => setHatirlatma(e.target.checked)} />
+            <span>Cihazlarımın garantisi bitmeden bana e-postayla hatırlatma gönderilsin. (İsteğe bağlı, istediğin zaman kapatabilirsin.)</span>
+          </label>
+          {hata && <p className="ks-hata" role="alert">{hata}</p>}
+          {bilgi && <p className="ks-bilgi" role="status">{bilgi}</p>}
+          <button type="submit" className="ks-dugme" disabled={yuk}>{yuk ? "Gönderiliyor…" : "Üye ol"}</button>
+          <button type="button" className="ks-ikincil ks-link" onClick={() => modDegis("giris")}>Hesabım var, giriş yap</button>
+        </form>
+        )}
         <section className="ks-yeni">
           <h2>Hesabın yok mu?</h2>
           <div className="ks-yeni-satirlar">
@@ -109,7 +156,7 @@ export default function KayitSecim() {
               <div>
                 <strong>Bireysel üye olmak istiyorsan</strong>
                 {UYELIK_ACIK
-                  ? <a className="ks-ikincil" href="/hesabim">Üye ol →</a>
+                  ? <button type="button" className="ks-ikincil ks-link" onClick={() => { modDegis("uye"); window.scrollTo(0, 0); }}>Üye ol →</button>
                   : <span className="ks-yakinda">Bireysel üyelik çok yakında açılıyor</span>}
               </div>
             </div>
@@ -145,6 +192,9 @@ const CSS = `
 .ks-dugme[disabled]{opacity:.7}
 .ks-link{background:none;border:none;cursor:pointer;font-family:inherit;padding:4px}
 .ks-form .ks-hata{color:#DC2626;font-weight:700;font-size:14px;margin:0}
+.ks-onay{display:flex;flex-direction:row;gap:10px;align-items:flex-start;font-weight:500!important;color:${INK}!important;font-size:14px!important;line-height:1.45}
+.ks-onay input{width:18px;height:18px;padding:0;border:none;margin-top:2px;flex:none;accent-color:${BLUE}}
+.ks-onay a{color:${BLUE};font-weight:700}
 .ks-form .ks-bilgi{color:${GREEN_DEEP};font-weight:700;font-size:14px;margin:0}
 .ks-yeni{max-width:440px;margin-top:22px}
 .ks-yeni h2{font-family:'Fraunces',serif;font-size:20px;margin:0 0 10px}
