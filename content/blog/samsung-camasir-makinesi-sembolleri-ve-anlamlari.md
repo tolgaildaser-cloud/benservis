@@ -1,6 +1,6 @@
 ---
 title: "Samsung çamaşır makinesi sembolleri ve anlamları"
-description: "Samsung Ecobubble panelindeki Wi-Fi, Temiz Kazan, çocuk kilidi ve kapak kilidi simgeleri, düğme sembolleri ve ekrandaki 4C, 5C, dC, Ub kodları Samsung'un kendi kılavuzundaki karşılıklarıyla."
+description: "Samsung çamaşır makinesi sembolleri ve anlamları: Ecobubble paneldeki Wi-Fi, Temiz Kazan, çocuk ve kapak kilidi simgeleri, 4C, 5C, dC, Ub kodları."
 slug: "samsung-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-10-06"
 category: "Çamaşır makinesi"

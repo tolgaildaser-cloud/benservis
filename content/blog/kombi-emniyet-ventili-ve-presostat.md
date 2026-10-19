@@ -24,7 +24,7 @@ guide:
   tools: ["Kombinin kullanma kılavuzu", "Not defteri ya da telefon"]
 steps:
   - "Kombi soğukken ekrandaki ya da manometredeki su basıncını oku; ekranda kod varsa onu da not et."
-  - "Okuduğun değeri kendi kılavuzundaki aralıkla karşılaştır; Baymak 1–2 bar, DemirDöküm 1,0–1,5 bar, ECA 1,5–2 bar diyor."
+  - "Okuduğun değeri kendi kılavuzundaki aralıkla karşılaştır; Baymak soğukken 0,7–1,5 bar, DemirDöküm 1,0–1,5 bar, ECA 1,5–2 bar diyor."
   - "Basınç düşükse kılavuzdaki gibi doldurma vanasını yavaşça açıp doğru değere kadar doldur, sonra vanayı kapat."
   - "Basınç sık sık düşüyorsa vanalara ve tesisata sızıntı var mı diye bak; kaçak varsa tesisatçı çağır."
   - "Basınç 3 bara yakınsa ya da emniyet ventilinden su geliyorsa basıncı tekrar oku ve kombiyi kapatıp yeniden başlat."
