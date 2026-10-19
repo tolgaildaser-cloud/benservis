@@ -30,6 +30,12 @@ faq:
     a: "Çoğu modelde alt püskürtme kolu elle takılıp çıkarılacak şekilde tasarlanmıştır; yerine bastırınca ya da çevirince oturur. Zorlamadan çıktıysa sorun yok — deliklerini akan suda temizleyip geri tak ve elinle çevirerek serbest döndüğünü kontrol et. Zorlamayla çıkmayan bir kolu asla alet kullanarak sökme."
 images:
   coverAlt: "Bulaşık makinesinin açık kapağı ve alt sepet bölümü"
+video:
+  youtubeId: "AHLdN9MvkV4"
+  title: "Beko bulaşık makinesi filtresi nasıl temizlenir?"
+  description: "Beko kılavuzlarına göre bulaşık makinesi filtresini çıkarma, musluk altında fırçalama ve tık sesine kadar yerine takma."
+  uploadDate: "2026-10-19T03:28:53Z"
+  duration: "PT56S"
 ---
 
 Makine programı bitiriyor, kapağı açıyorsun: bardaklarda mat bir film, tabak kenarlarında kum gibi taneler, bir de içeriden gelen ekşi bir koku. İlk akla gelen "makine bozuldu" olur; oysa bu üçlünün en yaygın sebebi çok daha basit: **dolmuş filtre**. Bulaşık makinesinin tabanındaki filtre her yıkamada yemek artıklarını tutar ve düzenli temizlenmezse suyu kirli döndürmeye başlar. İyi haber: bu filtre kullanıcı çıkarsın diye tasarlanmıştır — elle çevrilir, alet istemez, temizliği 10 dakika sürer.
