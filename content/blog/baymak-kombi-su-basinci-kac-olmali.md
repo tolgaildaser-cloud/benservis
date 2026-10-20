@@ -47,13 +47,13 @@ faq:
   - q: "Baymak kombinin basıncı sürekli düşüyor, neden?"
     a: "Kılavuzların cevabı tek cümle: kombi sürekli basınçlandırma istiyorsa su kaçağı olabilir, yetkili servisi bilgilendir. Kılavuz bakım bölümünde radyatörlerdeki pas ve kaçakların kontrol edilmesini de istiyor; peteklere ve vanalara bakıp servise haber ver."
 images:
-  coverAlt: "Beyaz bir Baymak kombinin altındaki manometrede yeşil bölgede duran ibre"
+  coverAlt: "Beyaz bir kombinin altındaki manometrede işaretli aralıkta duran ibre"
   steps:
-    - "Kapalı bir kombi ve yanında kahve molası veren ev sahibi: basınç soğukken okunur"
+    - "Kapalı bir kombi ve yanında kahve fincanı: basınç soğukken okunur"
     - "Manometre yakın plan: ibre 0,7 ile 1,5 bar arasındaki bölgede, iki sınır çizgisi işaretli"
-    - "Kombinin altındaki doldurma musluğunu iki parmakla çok az çeviren el, ibre yavaşça yükseliyor"
+    - "Kombinin altındaki doldurma musluğu çok az çevriliyor, manometrede ibre yavaşça yükseliyor"
     - "Çalışan kombinin manometresi: ibre 1 ile 2 bar arasında"
-    - "Petek vanasının altında küçük bir su lekesi ve yanında telefonla servisi arayan kişi"
+    - "Petek vanasının altında küçük bir su lekesi ve yanında servis için telefon"
 video:
   youtubeId: "Kd5ip4TZ18s"
   title: "Baymak kombi su basıncı kaç olmalı?"
