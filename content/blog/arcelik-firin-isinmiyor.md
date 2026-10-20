@@ -46,6 +46,12 @@ faq:
     a: "Evet. Arçelik kılavuzuna göre soğutma fanı fırın kapandıktan sonra yaklaşık 20-30 dakika daha çalışmaya devam eder. Fırın saatini programlayarak pişirdiysen pişirme süresi sonunda soğutma fanı da diğer fonksiyonlarla birlikte kapanır."
 images:
   coverAlt: "Ankastre fırının dokunmatik kontrol panelinde yanıp sönen sıfırlanmış saat göstergesi ve panele dokunmak üzere olan bir parmak"
+video:
+  youtubeId: "sgsiByxmphw"
+  title: "Arçelik fırın ısıtmıyor"
+  description: "Arçelik kılavuzuna göre fırın ısıtmıyorsa saat ayarı, açma tuşu, fonksiyon ve sıcaklık, tuş kilidi ve elektrik kontrolü."
+  uploadDate: "2026-10-20T05:51:34Z"
+  duration: "PT57S"
 ---
 
 Elektrik gidip geldi ya da fırını yeni taktırdın; fırın açılıyor gibi ama içi ısınmıyor. Arçelik'in elektronik kumandalı ankastre fırın kılavuzundaki sorun giderme bölümünde bu belirti **"Fırın ısınmıyor."** başlığıyla geçiyor ve iki neden sayılıyor: **fonksiyon ve/veya sıcaklık düğmesinin ayarlanmamış olması** ve **elektriğin gelmemesi.** Aynı kılavuzun ilk kullanım bölümünde gözden kaçan bir kural daha var: **saat ayarı yapılmazsa fırın çalışmaz.** Bu yazı Arçelik'in bu kılavuzundaki kuralları kullanım sırasına göre diziyor. Kaynak, Arçelik'in tek bölmeli 60 cm ankastre fırın kılavuzu; tuş adları ve yerleri modelden modele değişebilir.
