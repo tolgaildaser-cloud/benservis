@@ -7,7 +7,8 @@ import { track } from "@vercel/analytics";
 import { sepeteEkle, sepetAdet } from "./sepet.js";
 import { NAVY as INK, TINT as CREAM, BLUE as AMBER, GREEN, BLUE as LINK } from "./theme.js";
 import { BenservisLogoKoyu, KOYU_ZEMIN } from "./BenservisLogo.jsx";
-import { temsiliGorsel, mutlakGorselUrl, TEMSILI_ETIKET, TEMSILI_NOT } from "./pazar-gorsel.js";
+import { temsiliGorsel, TEMSILI_ETIKET, TEMSILI_NOT } from "./pazar-gorsel.js";
+import { urunLdNesnesi } from "./urun-ld.js"; // YK #179 ①: kabukla aynı Product şeması
 
 
 export default function UrunDetay() {
@@ -49,19 +50,10 @@ export default function UrunDetay() {
     const s = document.createElement("script");
     s.type = "application/ld+json";
     s.setAttribute("data-bs-ld", "istemci");
-    s.textContent = JSON.stringify({
-      "@context": "https://schema.org", "@type": "Product",
-      name: u.baslik, sku: u.id, url: `https://www.benservis.com/urun/${u.id}`,
-      ...(u.gorsel_url ? { image: [mutlakGorselUrl(u.gorsel_url)] } : {}),
+    s.textContent = JSON.stringify(urunLdNesnesi(u, {
+      saticiAd: data.satici?.ad || "Benservis",
       ...(u.aciklama ? { description: String(u.aciklama).slice(0, 160) } : {}),
-      offers: {
-        "@type": "Offer", url: `https://www.benservis.com/urun/${u.id}`,
-        price: String(u.fiyat), priceCurrency: "TRY", // KDV dahil
-        availability: u.stok > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        itemCondition: u.parca_durum === "cikma" ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
-        seller: { "@type": "Organization", name: data.satici?.ad || "Benservis" },
-      },
-    });
+    }));
     document.head.appendChild(s);
     return () => s.remove();
   }, [data, pazarMi]);

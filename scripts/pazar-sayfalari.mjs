@@ -21,6 +21,7 @@
 import { PAZAR_CIHAZLARI, PARCA_TURLERI } from "../src/pazar-sozluk.js";
 import * as T from "../src/theme.js";
 import { temsiliGorsel, mutlakGorselUrl, TEMSILI_NOT } from "../src/pazar-gorsel.js";
+import { urunLdNesnesi } from "../src/urun-ld.js"; // YK #179 ①: Product şeması tek kaynak
 
 export const SITE = "https://www.benservis.com";
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -149,27 +150,14 @@ export function urunAciklamasi(u) {
 }
 
 export function urunLd(u) {
-  const canonical = `${SITE}/urun/${u.id}`;
   const cihazAd = adBul(PAZAR_CIHAZLARI, u.cihaz_turu);
   const parcaAd = adBul(PARCA_TURLERI, u.parca_turu);
-  return {
-    "@context": "https://schema.org", "@type": "Product",
-    name: u.baslik,
+  return urunLdNesnesi(u, {
+    saticiAd: u.satici?.ad || "Benservis",
+    site: SITE,
     description: urunAciklamasi(u),
-    ...(u.gorsel_url ? { image: [mutlakGorselUrl(u.gorsel_url, SITE)] } : {}),
-    sku: u.id,
-    url: canonical,
-    ...(cihazAd || parcaAd ? { category: ["Yedek Parça", kisaAd(cihazAd), parcaAd].filter(Boolean).join(" > ") } : {}),
-    offers: {
-      "@type": "Offer",
-      url: canonical,
-      price: String(Math.round(Number(u.fiyat) * 100) / 100), // KDV dahil
-      priceCurrency: "TRY",
-      availability: Number(u.stok) > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      itemCondition: u.parca_durum === "cikma" ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
-      seller: { "@type": "Organization", name: u.satici?.ad || "Benservis" },
-    },
-  };
+    category: cihazAd || parcaAd ? ["Yedek Parça", kisaAd(cihazAd), parcaAd].filter(Boolean).join(" > ") : undefined,
+  });
 }
 
 export function urunKabugu(html, u) {
