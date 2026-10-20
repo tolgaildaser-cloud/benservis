@@ -1,6 +1,6 @@
 ---
 title: "Fırın kapağı menteşesi kilitlendi: nasıl açılır?"
-description: "Fırın kapağını temizlik için söktün, menteşe kilitli kaldı ya da kapak kapanmıyor mu? Bosch kılavuzundaki emniyet pimi sırası ve menteşeye dokunulmaması gereken durum."
+description: "Fırın kapağı menteşesi kilitlendi, kapak kapanmıyor mu? Bosch kılavuzuna göre emniyet pimi sırası ve menteşeye dokunulmaması gereken durum."
 slug: "firin-kapagi-mentesesi-kilitlendi-nasil-acilir"
 date: "2026-10-11"
 category: "Fırın / Ocak"

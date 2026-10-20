@@ -1,6 +1,6 @@
 ---
 title: "Arçelik infrared ısıtıcı çalışmıyor ya da az ısıtıyor: kılavuza göre kontrol"
-description: "Arçelik taşınabilir infrared ısıtıcı açılmıyorsa ya da düşük güçte çalışıyorsa: sigorta, fiş, On-Off şalteri, devrilme emniyeti ve termostat. Arçelik kılavuzundan."
+description: "Arçelik infrared ısıtıcı çalışmıyor ya da az ısıtıyor mu? Kılavuza göre sigorta, fiş, On-Off şalteri, devrilme emniyeti ve termostat kontrolü."
 slug: "arcelik-infrared-isitici-calismiyor"
 date: "2026-10-04"
 category: "Küçük Ev Aletleri"
