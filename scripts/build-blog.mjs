@@ -18,7 +18,7 @@ import { CIHAZLAR, ICERIK_CIHAZLARI, TESHISSIZ_CIHAZLAR, teshisVarMi, cihazSlug,
 import { kilavuzKayitlari, KILAVUZ_INDEKS_ESIGI } from "../src/kullanim-kilavuzlari.js";
 // ① HATA KODU / BELİRTİ KATMANI (YK #35, 3 Ağu) — kayıtlar tek kaynakta, burada liste tutulmaz.
 import { hataKoduKayitlari, TIP_BASLIK, TIP_ETIKET, HATA_KODU_SIRA } from "../src/hata-kodlari.js";
-import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, KUTU_MARKA, kutuluSlug, kutuKapisi } from "../src/ariza-kutusu-sayfalari.js";
+import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, ARIZA_KUTUSU_YK179, KUTU_MARKA, kutuluSlug, kutuKapisi } from "../src/ariza-kutusu-sayfalari.js";
 import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
 import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
 import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
@@ -1706,6 +1706,7 @@ function kopruKapsamDenetimi(posts) {
   const kutuSatir = (liste) => kutulu.filter((p) => liste.has(p.slug)).map((p) => `${p.slug}${KUTU_MARKA[p.slug] ? ` [${KUTU_MARKA[p.slug]}]` : ""}`);
   console.log(`[build-blog] ✓ #160 arıza kutusu: ${kutuSatir(ARIZA_KUTUSU_SAYFALARI).length}/${ARIZA_KUTUSU_SAYFALARI.size} test sayfası yayında (${kutuSatir(ARIZA_KUTUSU_SAYFALARI).join(", ")}).`);
   console.log(`[build-blog] ✓ #161 arıza kutusu: ${kutuSatir(ARIZA_KUTUSU_YK161).length}/${ARIZA_KUTUSU_YK161.size} sayfa (${kutuSatir(ARIZA_KUTUSU_YK161).join(", ")}).`);
+  console.log(`[build-blog] ✓ #179 arıza kutusu: ${kutuSatir(ARIZA_KUTUSU_YK179).length}/${ARIZA_KUTUSU_YK179.size} sayfa (${kutuSatir(ARIZA_KUTUSU_YK179).join(", ")}).`);
   const cihazli = posts.filter((p) => kopruCihazSlug(p));
   const arizali = cihazli.filter((p) => kopruAriza(p));
   console.log(`[build-blog] ✓ köprü kapsamı: ${cihazli.length}/${posts.length} yazı cihaz bağlamı taşıyor ` +

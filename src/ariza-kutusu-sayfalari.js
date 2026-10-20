@@ -36,7 +36,18 @@ export const ARIZA_KUTUSU_YK161 = new Set([
   "bosch-camasir-makinesi-sembolleri-ve-anlamlari",
   "bosch-camasir-makinesi-e61-hatasi",
 ]);
-export const kutuluSlug = (slug) => ARIZA_KUTUSU_SAYFALARI.has(slug) || ARIZA_KUTUSU_YK161.has(slug);
+// YK #179 ② (Tolga 20 Eki "YK önerisini uygula"): 3 sayfalık test — 6–19 Eki Google trafik sırası
+// 31–60 arasından, kombi/klima ağırlıklı (Vercel Web Analytics, yönlendiren google.com/.com.tr,
+// tekil ziyaretçi: carrier 31. sıra · 4 · airfel 33. · 3 · vaillant 43. · 3). İlk 30 trafik sayfasına
+// kutu YOK (ölçüm penceresi). Yalnız kutu bloğu; #161 kalıbı (mevcut sayfa, metin değişmez).
+export const ARIZA_KUTUSU_YK179 = new Set([
+  "carrier-klima-isitmiyor",
+  "airfel-klima-isitmiyor",
+  "vaillant-kombi-kalorifer-isitmiyor",
+]);
+// Mevcut-sayfa listeleri (#161 + #179) aynı kapıdan geçer: yayında olmalı, test listesiyle çakışmamalı.
+export const ARIZA_KUTUSU_MEVCUT = new Set([...ARIZA_KUTUSU_YK161, ...ARIZA_KUTUSU_YK179]);
+export const kutuluSlug = (slug) => ARIZA_KUTUSU_SAYFALARI.has(slug) || ARIZA_KUTUSU_MEVCUT.has(slug);
 
 // YK #160 2. ADIM (Tolga 5 Eki: "marka da seçili gelsin ... tekrar tıklamaya gerek yok").
 // Sayfa TEK MARKAYA aitse kutu markayı da taşır; ana sayfa onu seçili açar ve metin de
@@ -63,6 +74,10 @@ export const KUTU_MARKA = {
   "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari": "Arçelik",
   "bosch-camasir-makinesi-sembolleri-ve-anlamlari": "Bosch",
   "bosch-camasir-makinesi-e61-hatasi": "Bosch",
+  // YK #179
+  "carrier-klima-isitmiyor": "Carrier",
+  "airfel-klima-isitmiyor": "Airfel",
+  "vaillant-kombi-kalorifer-isitmiyor": "Vaillant",
 };
 
 // KUTU KAPISI — hata dizisi döner (boşsa geçti). Bağımlılıklar parametre: build kendi
@@ -70,7 +85,7 @@ export const KUTU_MARKA = {
 //   yayindaki: yayımlanmış kutulu yazılar [{ slug, cihazSlug, cihazAdi, markalar }]
 //   yayindakiSluglar: yayımlanmış TÜM yazı slug'ları (YK #161 listesi mevcut sayfa ister)
 export function kutuKapisi({
-  test = ARIZA_KUTUSU_SAYFALARI, yk161 = ARIZA_KUTUSU_YK161, marka = KUTU_MARKA,
+  test = ARIZA_KUTUSU_SAYFALARI, yk161 = ARIZA_KUTUSU_MEVCUT, marka = KUTU_MARKA,
   sinir = ARIZA_KUTUSU_TEST_SINIRI, yayindaki = [], yayindakiSluglar = null, slugify,
 }) {
   const hata = [];
