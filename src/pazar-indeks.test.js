@@ -165,6 +165,6 @@ describe("kaynak kuralları", () => {
   it("UrunDetay istemci şeması yalnız kabukta şema yoksa eklenir (çift Product yok)", () => {
     const u = fs.readFileSync("src/UrunDetay.jsx", "utf8");
     expect(u).toContain('document.head.querySelector("script[data-bs-ld]")');
-    expect(u).toContain('priceCurrency: "TRY"');
+    expect(u).toContain("urunLdNesnesi(u"); // YK #179: şema src/urun-ld.js'ten (priceCurrency TRY orada)
   });
 });
