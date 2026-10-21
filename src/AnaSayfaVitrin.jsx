@@ -307,10 +307,10 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
                 rağmen Tolga'nın açık seçimi: şimdiki /pazar'a bağlanır, sayfa noindex kalır).
                 Beyaz dolgulu (Tolga: "beyaz ve ortada olsun"). ⛔ Satır içi stile display YAZILMAZ:
                 masaüstünde CSS açar, mobilde barda gizlenir, ☰ panelinde durur. */}
-            <a className="ustbar-pazar" href="/pazar?k=anasayfa-ust" style={st.ustPazar}>Pazaryeri</a>
+            <a className="ustbar-pazar" rel="nofollow" href="/pazar?k=anasayfa-ust" style={st.ustPazar}>Pazaryeri</a>
             {/* "Üyelik" (14 Eki, Tolga: "sağ üstte kayıt ol u üyelik olarak değiştir. üyelik girişi ikiye
                 ayrılmasın tek giriş olsun") → /kayit tek giriş sayfası. Önce "Kayıt ol" (YK #172 ÜY-1, 11 Eki). */}
-            <a className="ustbar-kayit" href="/kayit?kaynak=anasayfa-ust" aria-label="Üyelik" style={st.ustKayit}>
+            <a className="ustbar-kayit" rel="nofollow" href="/kayit?kaynak=anasayfa-ust" aria-label="Üyelik" style={st.ustKayit}>
               <span className="kayit-uzun">Üyelik</span>
               <span className="kayit-kisa">Üyelik</span>
             </a>
@@ -334,8 +334,8 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
               <a href="/blog/" style={st.mobilMenuLink}>Bilgi Merkezi</a>
               <a href="/tamir/" style={st.mobilMenuLink}>Tamir Merkezi</a>
               <a href="/kilavuzlar/" style={st.mobilMenuLink}>Kullanım Kılavuzları</a>
-              <a href="/pazar?k=anasayfa-menu" style={st.mobilMenuLink}>Pazaryeri</a>
-              <a href="/kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Üyelik <span style={st.mobilMenuAlt}>· giriş yap</span></a>
+              <a rel="nofollow" href="/pazar?k=anasayfa-menu" style={st.mobilMenuLink}>Pazaryeri</a>
+              <a rel="nofollow" href="/kayit?kaynak=anasayfa-menu" style={st.mobilMenuKayit}>Üyelik <span style={st.mobilMenuAlt}>· giriş yap</span></a>
             </nav>
           )}
         </div>
@@ -352,7 +352,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             </svg>
             Yakın servisler
           </button>
-          <a href="/pazar?k=anasayfa-mobil-serit" style={st.mobilSeritBtn}>
+          <a rel="nofollow" href="/pazar?k=anasayfa-mobil-serit" style={st.mobilSeritBtn}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" /><circle cx="10" cy="20.5" r="1.3" /><circle cx="17" cy="20.5" r="1.3" />
             </svg>
@@ -416,7 +416,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           footer bağı 7,3 ekran aşağıdaydı; burası ~1 ekran. Masaüstünde GİZLİ (üst bardaki
           tam etiketli düğme orada zaten var, ikinci kez göstermek gürültü olur).
           ⛔ `display` satır içi stile yazılmaz — CSS ile açılıp kapanıyor (PR #175 dersi). */}
-      <a className="vitrin-kayit-serit" href="/servis-kayit?kaynak=anasayfa-serit" style={st.kayitSerit}>
+      <a className="vitrin-kayit-serit" rel="nofollow" href="/servis-kayit?kaynak=anasayfa-serit" style={st.kayitSerit}>
         Servis misiniz? <strong style={{ color: BLUE }}>Benservis'te yer alın →</strong>
       </a>
 

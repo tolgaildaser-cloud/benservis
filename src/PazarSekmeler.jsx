@@ -7,6 +7,7 @@
 import React from "react";
 import { track } from "@vercel/analytics";
 import { BLUE } from "./theme.js";
+import { icRel } from "./ic-baglanti.js"; // parametreli sekme nofollow (21 Eki)
 
 export const PAZAR_SEKMELERI = [
   { slug: "tum",         ad: "Tüm kategoriler", href: "/pazar" },
@@ -22,7 +23,7 @@ export default function PazarSekmeler({ etkin, git }) {
       <div className="pzs-ic">
         {PAZAR_SEKMELERI.map((s) => (
           <a
-            key={s.slug} href={s.href} className={s.slug === etkin ? "on" : ""}
+            key={s.slug} href={s.href} rel={icRel(s.href)} className={s.slug === etkin ? "on" : ""}
             aria-current={s.slug === etkin ? "page" : undefined}
             onClick={(e) => {
               try { track("pazar_sekme_click", { sekme: s.slug }); } catch { /* ölçüm akışı bozmaz */ }

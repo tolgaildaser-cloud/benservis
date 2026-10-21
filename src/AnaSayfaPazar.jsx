@@ -44,7 +44,7 @@ export default function AnaSayfaPazar() {
       <style>{CSS}</style>
       <div className="as-pazar-bas">
         <h2 id="as-pazar-baslik">Pazaryeri</h2>
-        <a href="/pazar?k=anasayfa-blok">Tüm ürünler <span aria-hidden="true">→</span></a>
+        <a rel="nofollow" href="/pazar?k=anasayfa-blok">Tüm ürünler <span aria-hidden="true">→</span></a>
       </div>
       <div className="as-pazar-izgara">
         {urunler.slice(0, ADET).map((u) => (
@@ -65,7 +65,7 @@ export default function AnaSayfaPazar() {
           </a>
         ))}
       </div>
-      <a className="as-pazar-tum" href="/pazar?k=anasayfa-blok">Tüm ürünler <span aria-hidden="true">→</span></a>
+      <a className="as-pazar-tum" rel="nofollow" href="/pazar?k=anasayfa-blok">Tüm ürünler <span aria-hidden="true">→</span></a>
     </section>
   );
 }

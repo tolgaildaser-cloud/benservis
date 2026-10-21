@@ -158,6 +158,7 @@ export default function AliciPaneli({ token }) {
             Ödeme Benservis güvencesiyle tutulur. Ürünü teslim aldığında onaylayana kadar satıcıya aktarılmaz.
           </p>
           <a
+            rel="nofollow"
             href={`/api/odeme/form?alici_token=${token}`}
             style={st.odemeCta}
           >

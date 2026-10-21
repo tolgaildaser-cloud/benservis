@@ -276,7 +276,7 @@ export default function Sepet() {
               {KAPI_METNI.replace(/^Ödeme çok yakında\.\s*/, "")}
               {kapiKalemi?.baslik && <><br />Talebiniz <strong>{kapiKalemi.baslik}</strong> için açılır; numaranızı yazmanız yeter.</>}
             </div>
-            <a href={talepBaglantisi(kapiKalemi)} data-kapi-talep
+            <a rel="nofollow" href={talepBaglantisi(kapiKalemi)} data-kapi-talep
               style={{ display: "inline-block", padding: "13px 26px", borderRadius: 8, background: AMBER, color: "#fff", fontWeight: 700, fontSize: 15, textDecoration: "none" }}>
               Numaramı bırak →
             </a>
