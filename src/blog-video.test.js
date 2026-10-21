@@ -187,7 +187,7 @@ describe("gerçek içerik (content/blog)", () => {
   });
   const videolu = posts.filter((p) => p.video);
 
-  it("föylerdeki 17 eşleme birebir, başka sayfada video yok", () => {
+  it("föylerdeki 18 eşleme birebir, başka sayfada video yok", () => {
     const esleme = Object.fromEntries(videolu.map((p) => [p.slug, p.video.youtubeId]));
     expect(esleme).toEqual({
       "samsung-klima-cf-hatasi": "5lVkaoLa5DI",
@@ -207,6 +207,7 @@ describe("gerçek içerik (content/blog)", () => {
       "baymak-kombi-su-basinci-kac-olmali": "Kd5ip4TZ18s", // 18 Eki 2026, Tolga talimatı, PAZ (YK #134)
       "bulasik-makinesi-filtresi-nasil-temizlenir": "AHLdN9MvkV4", // 19 Eki 2026, PAZ yayın paketi (YK #134)
       "arcelik-firin-isinmiyor": "sgsiByxmphw", // 20 Eki 2026, PAZ yayın paketi (YK #134)
+      "arcelik-bulasik-makinesi-su-bosaltmiyor": "HTbIP1N4HoI", // 21 Eki 2026, PAZ yayın paketi (YK #134)
     });
   });
   it("tüm video kayıtları denetimden geçer", () => {

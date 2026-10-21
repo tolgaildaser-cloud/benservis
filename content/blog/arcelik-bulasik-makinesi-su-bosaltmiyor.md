@@ -49,6 +49,12 @@ faq:
     a: "Arçelik'in listesi hortumun tıkanması durumunda önce hortumun kontrol edilmesini, gerekirse çıkarılıp tıkanıklığın giderilmesini ve montaj talimatında belirtildiği gibi tekrar takılmasını söylüyor. Hortumu söküp takmak montaj işi olduğu için bu yazı onu adım olarak vermiyor; montaj talimatın elinde değilse ya da emin değilsen bu kısmı yetkili servise bırak."
 images:
   coverAlt: "Program sonunda kapısı açılmış bulaşık makinesinin tabanında kalan su ve yerinden çıkarılmış filtre grubu"
+video:
+  youtubeId: "HTbIP1N4HoI"
+  title: "Bulaşık makinesi su boşaltmıyor: servisi aramadan önce 2 kontrol"
+  description: "Arçelik kılavuzuna göre program sonunda makinede su kalıyorsa: programı iptal, filtre temizliği ve tahliye hortumu kontrolü."
+  uploadDate: "2026-10-21T03:25:18Z"
+  duration: "PT1M2S"
 ---
 
 Program bitti, kapağı açtın ve makinenin dibinde su duruyor. Arçelik'in bulaşık makinesi kullanma kılavuzlarındaki sorun giderme bölümünde bu durumun ayrı bir satırı var: **"Program bittikten sonra bulaşık makinesinde su kalıyor."** Arçelik bu satırda iki neden sayıyor: **filtreler tıkanmış** ve **tahliye hortumu tıkanmış ya da bloke olmuş.** Kılavuzun bakım bölümü de içeride kalan suyun nasıl boşaltılacağını sırayla anlatıyor. Aynı satır Arçelik'in 6366, 6343, 9242 MI ve 63101 I kılavuzlarında birebir yer alıyor. Bu yazıda Arçelik'in kendi sırasını izliyoruz.
