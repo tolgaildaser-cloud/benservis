@@ -22,6 +22,7 @@ import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, ARIZA_KUTUSU_YK179, KUTU_MA
 import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
 import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
 import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
+import { nofollowEkle, nofollowSay } from "./ic-baglanti-nofollow.mjs";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -3263,5 +3264,33 @@ const anaSayfaOnRender = (cihazSayfalari = []) => {
 // Cihaz linkleri FIILEN BASILAN sayfalardan gelir (tamirliKat) — liste elle
 // yazilsaydi bir kategori bosaldiginda ana sayfa 404'e link vermeye devam ederdi.
 anaSayfaOnRender(tamirliKat);
+
+// ── İÇ BAĞLANTI NOFOLLOW (21 Eki 2026, Tolga; #179 istisnası) — EN SON ADIM ─────────────────────────
+// Query string taşıyan iç bağlantılar (`/?cihaz=…`, `/?servis=…`, `/pazar?kategori=…`) rel="nofollow" alır;
+// parametresiz iç bağlantılar dokunulmaz. Kural ve gerekçe: scripts/ic-baglanti-nofollow.mjs.
+// Kapı: işlemden sonra nofollow'suz parametreli bağlantı ya da nofollow'lu parametresiz bağlantı kalırsa build durur.
+{
+  const htmlDosyalari = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => {
+    const yol = path.join(d, e.name);
+    return e.isDirectory() ? htmlDosyalari(yol) : e.name.endsWith(".html") ? [yol] : [];
+  });
+  const once = { qsToplam: 0, qsNofollowsuz: 0, duzToplam: 0, duzNofollow: 0 };
+  const sonra = { ...once };
+  let degisen = 0;
+  for (const dosya of htmlDosyalari(DIST)) {
+    const eski = fs.readFileSync(dosya, "utf8");
+    const yeni = nofollowEkle(eski);
+    for (const [hedef, html] of [[once, eski], [sonra, yeni]]) {
+      const s = nofollowSay(html);
+      for (const k of Object.keys(hedef)) hedef[k] += s[k];
+    }
+    if (yeni !== eski) { fs.writeFileSync(dosya, yeni); degisen++; }
+  }
+  if (sonra.qsNofollowsuz || sonra.duzNofollow) {
+    console.error(`[build-blog] ✗ NOFOLLOW KAPISI: nofollow'suz parametreli iç bağlantı ${sonra.qsNofollowsuz} · nofollow'lu parametresiz iç bağlantı ${sonra.duzNofollow}`);
+    process.exit(1);
+  }
+  console.log(`[build-blog] ✓ iç bağlantı nofollow: parametreli ${sonra.qsToplam} bağlantının tamamı nofollow (önce ${once.qsNofollowsuz} nofollow'suz) · ${degisen} sayfa · parametresiz ${sonra.duzToplam} bağlantıda nofollow 0.`);
+}
 
 console.log(`[build-blog] ${posts.length} yazı + /blog + sitemap üretildi.`);

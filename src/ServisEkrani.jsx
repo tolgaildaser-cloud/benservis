@@ -342,6 +342,7 @@ function ServisProfil({ servis, onGeri }) {
             ⛔ Kullanıcı akışının ALTINDA: ara/yol tarifi/yorum hep yukarıda kalır. */}
         <div style={{ marginTop: 28, paddingTop: 16, borderTop: "1px solid #E2E8F0" }}>
           <a
+            rel="nofollow"
             href="/servis-kayit?kaynak=servis-profil"
             style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, textDecoration: "none", color: "#64748B", fontSize: 13, lineHeight: 1.45 }}
           >
@@ -693,6 +694,7 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
             bu satırı ancak listeyi sonuna kadar kaydıran görür. Servis sahibi de buradan geçer. */}
         {locationState === "success" && gosterilenServisler.length > 0 && (
           <a
+            rel="nofollow"
             href="/servis-kayit?kaynak=servis-listesi"
             style={{ display: "block", textAlign: "center", margin: "18px 0 4px", padding: "10px 12px", fontSize: 12.5, color: "#64748B", textDecoration: "none", lineHeight: 1.45 }}
           >

@@ -148,7 +148,7 @@ export default function KayitSecim() {
               <Ikon tur="servis" />
               <div>
                 <strong>Servis ya da satıcıysan</strong>
-                <a className="ks-ikincil" href={`/servis-kayit?kaynak=${kaynak}`} onClick={() => { try { track("kayit_secim", { tur: "servis" }); } catch { /* */ } }}>Servis kaydına başla →</a>
+                <a className="ks-ikincil" rel="nofollow" href={`/servis-kayit?kaynak=${kaynak}`} onClick={() => { try { track("kayit_secim", { tur: "servis" }); } catch { /* */ } }}>Servis kaydına başla →</a>
               </div>
             </div>
             <div className="ks-yeni-satir">

@@ -195,7 +195,7 @@ export default function PazarVitrin() {
       <footer className="pz-alt">
         <div className="pz-kap pz-alt-ic">
           <span><b>benservis</b> Pazaryeri · Bil, gör, çağır.</span>
-          <span><a href="/">Ana sayfa</a> · <a href="/blog/">Bilgi Merkezi</a> · <a href="/servis-kayit?kaynak=pazar-alt">Servis Kaydı</a></span>
+          <span><a href="/">Ana sayfa</a> · <a href="/blog/">Bilgi Merkezi</a> · <a rel="nofollow" href="/servis-kayit?kaynak=pazar-alt">Servis Kaydı</a></span>
           <span className="pz-yasal">
             <a href="/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a> · <a href="/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a> ·{" "}
             <a href="/iade-ve-cayma/">İade, Cayma ve Teslimat</a> · <a href="/pazaryeri-aydinlatma-metni/">Aydınlatma Metni</a> · <a href="/gizlilik/">Gizlilik</a>
@@ -312,7 +312,7 @@ function AnaGorunum({ urunler, git, filtre }) {
         <div className="pz-bolum-bas"><h2>Cihazına göre alışveriş</h2></div>
         <div className="pz-yuvarlak">
           {PAZAR_CIHAZLARI.map((c) => (
-            <a key={c.slug} href={`/pazar?kategori=yedek-parca&cihaz=${c.slug}`} className="pz-yuv"
+            <a key={c.slug} rel="nofollow" href={`/pazar?kategori=yedek-parca&cihaz=${c.slug}`} className="pz-yuv"
               onClick={(e) => { e.preventDefault(); git({ kategori: "yedek-parca", cihaz: c.slug, parca: "", ara: "" }); }}>
               <span className="pz-yuv-d"><img src={`/anasayfa/cihaz/${c.slug}.webp`} alt="" loading="lazy" /></span>
               {kisaAd(c.ad)}
