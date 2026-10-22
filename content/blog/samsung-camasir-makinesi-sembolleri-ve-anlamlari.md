@@ -21,6 +21,12 @@ faq:
     a: "Hayır. Bu yazıdaki karşılıklar Samsung'un WW**CGC***** serisi (ör. WW90CGC04DAB, Ecobubble 9 kg) Türkçe kullanıcı kılavuzundan alınmıştır. Samsung'un diğer serilerinde düğme yerleşimi, simge seti ve kısayollar farklı olabilir; kendi modelinin kılavuzundaki tablo esastır."
 images:
   coverAlt: "Samsung çamaşır makinesinin kontrol paneli yakın planda; program düğmesi, dijital ekran ve ekranın yanında Wi-Fi, kilit ve kazan temizliği simgeleri görünüyor"
+video:
+  youtubeId: "xyx9u34pfnM"
+  title: "Samsung çamaşır makinesi sembolleri ve anlamları"
+  description: "Samsung kılavuzuna göre Wi-Fi, Temiz Kazan, kapak kilidi ve çocuk kilidi simgeleri ne anlama gelir, çocuk kilidi nasıl açılır."
+  uploadDate: "2026-10-22T04:44:29Z"
+  duration: "PT1M"
 ---
 
 Samsung çamaşır makinenin ekranında bir simge yandı ya da düğmelerin üstündeki küçük işaretlerin ne demek olduğunu merak ediyorsun. Bu yazıdaki karşılıkların tamamı Samsung'un **WW\*\*CGC\*\*\*\*\* serisi Türkçe kullanıcı kılavuzundan** alındı (ör. WW90CGC04DAB, Ecobubble 9 kg).
