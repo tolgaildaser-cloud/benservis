@@ -232,7 +232,8 @@ tamamlandi/iptal) · atanan_servis · gercek_tutar · komisyon · puan · yorum 
 - **Marka:** Benservis. **Dil:** Türkçe arayüz.
 - **Tasarım token'ları (KURUMSAL marka paleti — logo, 17 Haz 2026):** mavi `#2563EB` (ana aksan/CTA),
   lacivert `#1E293B` (ink/koyu yüzey), kâğıt `#F8FAFC` (zemin), beyaz `#fff` (kart), güven yeşili
-  `#16A34A` (onay/başarı), slate `#475569`/`#64748B`/`#94A3B8` (metin kademeleri), `#E2E8F0` (hairline).
+  `#16A34A` (onay/başarı), slate `#475569`/`#64748B`/`#94A3B8` (metin kademeleri), `#E2E8F0` (hairline),
+  açık mavi `#93C5FD` (koyu zeminde vurgu; koyu zemin logosunda "servis", sunum vurguları — 22 Eki 2026).
   Semantik (marka dışı, korunur): hata `#DC2626`, aciliyet-orta `#EA580C`, tier rozetleri
   (platin mor/gold/bronz), rating yıldızı `#F5A623`. Eski sıcak palet (cream/ink/amber) BIRAKILDI.
   Fontlar **Fraunces** (başlık) + **Hanken Grotesk** (gövde). Logo varlıkları: `~/Desktop/benservis-marka/`.
