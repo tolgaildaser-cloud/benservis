@@ -60,6 +60,8 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ## LG'nin hata kodu tablosu
 
+![LG bulaşık makinesi hata kodları tablosu: IE, OE, bE kullanıcı kontrolü; HE, FE, AE, tE, LE, NE tekrar ederse servis](/tamir-gorsel/lg-bulasik-makinesi-hata-kodlari/kod-tablosu.png)
+
 | Kod | LG'nin tanımı | Kim ne yapar |
 |-----|---------------|--------------|
 | **IE** | Su girişi sorunu | 🛠️ Su beslemesini, hortumun tıkanma, bükülme ve donmasını kontrol et |
