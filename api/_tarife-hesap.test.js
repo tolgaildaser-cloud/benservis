@@ -71,17 +71,18 @@ describe("onerTarife", () => {
 import { sapmaSatiri, aksiyonOnerisi, yonDenetimi, allIn } from "./_tarife-hesap.js";
 
 describe("aksiyonOnerisi", () => {
-  // SEED: Televizyon / Monitör · Besleme kartı [400, 1500, 500] → biz all-in 950+500+1500 = 2.950, taban 2.000.
+  // SEED: Televizyon / Monitör · Besleme kartı [400, 1500, 500] → biz all-in 950+500+2000 = 3.450, taban 2.500
+  // (gidiş 23 Eki 2026'da 1500 → 2000; web değerleri aynı farkla kaydırıldı, mantık aynı).
   const tv = { onayli_parca_min: 400, onayli_parca_max: 1500, onayli_iscilik: 500 };
   const web = (x) => [{ toplam_tl: x, kaynak_url: "https://a.com" }, { toplam_tl: x, kaynak_url: "https://b.com" }];
 
-  it("TV besleme kartı (web 2.250): rapor 'düşür' → öneri beklenen 750, all-in DÜŞER", () => {
-    const s = sapmaSatiri(web(2250), tv);
+  it("TV besleme kartı (web 2.700): rapor 'düşür' → öneri beklenen 700, all-in DÜŞER", () => {
+    const s = sapmaSatiri(web(2700), tv);
     expect(s.aksiyon).toBe("dusur");
     const a = aksiyonOnerisi(s, tv);
-    expect(a.oneri).toEqual({ onayli_parca_min: 225, onayli_parca_max: 275, onayli_iscilik: 500, onayli_beklenen: 750 });
+    expect(a.oneri).toEqual({ onayli_parca_min: 180, onayli_parca_max: 220, onayli_iscilik: 500, onayli_beklenen: 700 });
     const y = yonDenetimi(s.aksiyon, tv, a.oneri);
-    expect(y).toMatchObject({ once: 2950, sonra: 2250, yon: "duser", tutarli: true });
+    expect(y).toMatchObject({ once: 3450, sonra: 2700, yon: "duser", tutarli: true });
   });
   it("eski öneri hatası tekrarlanmaz: 'düşür' grubunda öneri all-in'i yükseltemez", () => {
     const kazan = { onayli_parca_min: 2500, onayli_parca_max: 9500, onayli_iscilik: 2200 }; // biz 9.700
@@ -94,10 +95,10 @@ describe("aksiyonOnerisi", () => {
   it("web tabanın altında → floor, sayı önerilmez", () => {
     const s = sapmaSatiri(web(1200), tv);
     const a = aksiyonOnerisi(s, tv);
-    expect(a).toMatchObject({ aksiyon: "floor", taban: 2000, oneri: null });
+    expect(a).toMatchObject({ aksiyon: "floor", taban: 2500, oneri: null });
   });
   it("yükselt → işçilik sabit, all-in YÜKSELİR", () => {
-    const s = sapmaSatiri(web(6000), tv);
+    const s = sapmaSatiri(web(6500), tv);
     const a = aksiyonOnerisi(s, tv);
     expect(a.oneri.onayli_iscilik).toBe(500);
     expect(a.oneri.onayli_beklenen).toBe(4500);

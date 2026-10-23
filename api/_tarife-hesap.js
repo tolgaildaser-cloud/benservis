@@ -61,7 +61,7 @@ export const parcaGuvensiz = (v) => /dusuk-guven=sayfa-ici-makas/.test(v?.notlar
 export const hostAdi = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u || "?"; } };
 
 // App.jsx SERVIS_GIDIS_BEDELI ile aynı; final fiyata sabit eklenir.
-export const GIDIS = 1500;
+export const GIDIS = 2000; // 23 Eki 2026: 1500 → 2000 (Tolga)
 
 // Bizim onaylı bant vs web — elma-elma sapma satırı (scripts/tarife-rapor.mjs + /tarife paneli).
 // pts: YALNIZ kaynak='web' noktaları. mevcut: `tarife` onaylı satırı.

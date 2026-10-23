@@ -69,7 +69,7 @@ METİN: ${metin}`;
 //                    etiketiyle işaretlenir; rapor onu medyana ve host sayımına KATMAZ.
 const apex = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u || "?"; } };
 const KARA_LISTE = Object.keys(KAYNAKLAR?._kurallar?.kara_liste_HOST || {});
-const GIDIS = 1500; // App.jsx SERVIS_GIDIS_BEDELI ile aynı
+const GIDIS = 2000; // App.jsx SERVIS_GIDIS_BEDELI ile aynı (23 Eki 2026: 1500 → 2000)
 
 const { data: onaylar } = await supabase
   .from("tarife").select("cihaz, marka, ariza, onayli_parca_min, onayli_parca_max, onayli_iscilik")
