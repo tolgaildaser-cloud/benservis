@@ -4,6 +4,20 @@ description: "Cihaza zarar veren kesinti değil, elektrik dönerkenki voltaj dal
 slug: "elektrik-kesintisi-sonrasi-cihaz-arizalari"
 date: "2026-07-13"
 category: "Genel"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Kesinti olunca TV, modem, bilgisayar ve mümkünse beyaz eşyaların fişini çek; hangilerini çektiğini not al."
+  - "Buzdolabının ve derin dondurucunun kapısını açma."
+  - "Elektriğin geldiğini anlamak için bir lambayı açık bırak."
+  - "Elektrik gelince 5-10 dakika bekle."
+  - "Cihazları teker teker tak; kombiyi ve klimayı en sona bırak."
+  - "Program ortasında kalan çamaşır ya da bulaşık makinesi devam etmezse fişini çekip tak."
+  - "Çalışmayan cihazda prizi başka bir cihazla dene, 5 dakika fişte beklet ve yeniden başlat."
 faq:
   - q: "Elektrik kesintisi cihazlara zarar verir mi?"
     a: "Kesintinin kendisi genelde zarar vermez; asıl risk elektrik geri gelirken yaşanan ani voltaj dalgalanmasıdır. Bu dalgalanma TV, modem, kombi ve beyaz eşyaların elektronik kartlarını yakabilir. Bu yüzden kesinti olduğunda hassas cihazların fişini çekmek en etkili korumadır."
@@ -15,6 +29,14 @@ faq:
     a: "Önce sigortayı ve prizi kontrol et, cihazı birkaç dakika fişte bekletip yeniden dene. Hâlâ açılmıyorsa veya hata kodu veriyorsa büyük ihtimalle elektronik kart ya da güç ünitesi etkilenmiştir. Belirtiyi Benservis'e yaz, olası arızayı ve tahmini tamir maliyetini ücretsiz öğren."
 images:
   coverAlt: "Üç beyaz eşya silueti ve yanında kesik çizgili elektrik simgesi"
+  steps:
+    - "Prizlerden çekilmiş televizyon ve modem fişleri bir masanın üstünde"
+    - "Karanlık mutfakta kapısı kapalı buzdolabı ve derin dondurucu"
+    - "Karanlık odada açık konumda bırakılmış bir masa lambası"
+    - "Duvar saatinin altında prize takılmayı bekleyen fişler"
+    - "Sırayla prize takılan cihaz fişleri, en sonda bekleyen kombi fişi"
+    - "Program ortasında durmuş çamaşır makinesinin kontrol paneli"
+    - "Prize takılı küçük bir telefon şarj aletiyle priz denemesi"
 ---
 
 Bu yaz sıcak dalgasıyla birlikte elektrik tüketimi rekor kırdı ve İstanbul dahil birçok şehirde planlı/plansız kesintiler arttı. Kesinti anında akla önce "elektrikler ne zaman gelecek" sorusu geliyor — ama cihazların açısından kritik soru başka: **elektrik geri gelirken ne olacak?** Çünkü beyaz eşya ve elektronik arızalarının klasik tetikleyicisi kesinti değil, dönüş anındaki **voltaj dalgalanmasıdır.** Bu rehberde kesinti öncesi-sırası-sonrası yapılacakları ve kesinti sonrası tipik arızaları anlatıyoruz.
@@ -46,6 +68,22 @@ yakabilir. Kart değişimi çoğu cihazda en pahalı tamir kalemlerinden biridir
 - **Kombiyi ve klimayı en sona bırak.**
 
 Sık kesinti yaşanan bölgelerde hassas cihazlar için **akım korumalı priz** (parafudr) küçük ama etkili bir yatırımdır; sadece kesinti anını değil, yıldırım kaynaklı ani yükselmeleri de karşılar.
+
+## Adım adım: kesintide ve sonrasında yapılacaklar
+
+**1.** Kesinti olunca TV, modem, bilgisayar ve mümkünse beyaz eşyaların fişini çek; hangilerini çektiğini not al.
+
+**2.** Buzdolabının ve derin dondurucunun kapısını açma.
+
+**3.** Elektriğin geldiğini anlamak için bir lambayı açık bırak.
+
+**4.** Elektrik gelince 5-10 dakika bekle.
+
+**5.** Cihazları teker teker tak; kombiyi ve klimayı en sona bırak.
+
+**6.** Program ortasında kalan çamaşır ya da bulaşık makinesi devam etmezse fişini çekip tak.
+
+**7.** Çalışmayan cihazda prizi başka bir cihazla dene, 5 dakika fişte beklet ve yeniden başlat.
 
 ## Kesinti sonrası tipik arızalar ve işaretleri
 

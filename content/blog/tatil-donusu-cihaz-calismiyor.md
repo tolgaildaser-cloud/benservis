@@ -4,6 +4,20 @@ description: "Tatilden döndünüz, buzdolabı ya da çamaşır makinesi çalı�
 slug: "tatil-donusu-cihaz-calismiyor"
 date: "2026-07-27"
 category: "Genel"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika (+ buzdolabı için birkaç saat)"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Küçük bir test cihazı (ör. şarj aleti)", "Nemli bez"]
+steps:
+  - "Prizi telefon şarj aleti gibi küçük bir cihazla test et."
+  - "Cihazın fişini çıkarıp sonuna kadar oturacak şekilde yeniden tak; uzatma kablosunu devreden çıkar."
+  - "Çamaşır ve bulaşık makinesinin musluğunu sonuna kadar aç ve programı baştan başlat."
+  - "Kapı kapanmıyorsa contayı nemli bezle sil ve kapağı bastırarak kapat."
+  - "Koku varsa çamaşır makinesinde boş hazneyle 60-90 derece bir program çalıştır, sonra kapağı aralık bırak."
+  - "Buzdolabını fişe taktıktan sonra 4-6 saat, içinde yiyecek varsa 24 saate kadar kapağını gereksiz açmadan bekle."
+  - "24 saatin sonunda buzdolabı hâlâ soğutmuyorsa teşhise başvur."
 faq:
   - q: "Tatil dönüşü buzdolabı çalışıyor ama soğutmuyor, bozuldu mu?"
     a: "Hemen bozuldu diye düşünmeyin. Uzun süre kapalı kalmış ya da elektrik kesintisi yaşamış bir buzdolabı, yeniden çalıştırıldığında iç sıcaklığını tam olarak dengelemek için genellikle 4-6 saat, dolu bir dolapta 24 saate kadar zaman ister. Bu sürede kompresörün uzun süre çalışması normaldir. 24 saat sonunda hâlâ soğuk hissi yoksa gerçek bir arıza olabilir."
@@ -17,6 +31,14 @@ faq:
     a: "Belirtiyi olabildiğince net tarif edip Benservis'in ücretsiz teşhis aracını kullanabilirsiniz: hangi arızanın muhtemel olduğunu ve tahmini maliyet aralığını önceden görürsünüz, ardından Google puanlı yakın servisleri listeleyip doğrudan arayabilirsiniz. Amaç, servisi bilerek çağırmak."
 images:
   coverAlt: "Salonda koltuğun üstünde açık duran bavul ve yerde ikinci açık bavul"
+  steps:
+    - "Prize takılı bir telefon şarj aleti ve yanan küçük şarj ışığı"
+    - "Prize sonuna kadar oturmuş bir cihaz fişi, yanında devreden çıkarılmış uzatma kablosu"
+    - "Çamaşır makinesinin arkasında açılmış su musluğu"
+    - "Çamaşır makinesi kapak contasının üzerinde nemli bir bez"
+    - "Boş tamburlu çamaşır makinesi ve aralık bırakılmış kapağı"
+    - "Kapısı kapalı buzdolabı ve önünde duvar saati"
+    - "Buzdolabının açık kapısından görünen raflar ve içeride duran termometre"
 ---
 
 Tatilden dönmek yeterince yorucu. Bavulu daha açmadan buzdolabının soğutmadığını ya da çamaşır makinesinin hiç açılmadığını fark etmek can sıkıcı. İyi haber: tatil dönüşü yaşanan cihaz sorunlarının önemli bir kısmı **gerçek bir arıza değil**, uzun süreli kapalı kalmanın veya kesintinin normal sonucu.
@@ -24,6 +46,22 @@ Tatilden dönmek yeterince yorucu. Bavulu daha açmadan buzdolabının soğutmad
 Servis çağırmadan önce 10 dakika ayırıp aşağıdaki altı kontrolü yapın.
 
 > ⚡ **Kısa özet:** Sigorta → priz → musluk → kapı/filtre → koku → bekleme süresi. Çoğu tatil dönüşü sorunu bu altı adımın içinde çözülüyor.
+
+## Adım adım: dönüşte evde denenecekler
+
+**1.** Prizi telefon şarj aleti gibi küçük bir cihazla test et.
+
+**2.** Cihazın fişini çıkarıp sonuna kadar oturacak şekilde yeniden tak; uzatma kablosunu devreden çıkar.
+
+**3.** Çamaşır ve bulaşık makinesinin musluğunu sonuna kadar aç ve programı baştan başlat.
+
+**4.** Kapı kapanmıyorsa contayı nemli bezle sil ve kapağı bastırarak kapat.
+
+**5.** Koku varsa çamaşır makinesinde boş hazneyle 60-90 derece bir program çalıştır, sonra kapağı aralık bırak.
+
+**6.** Buzdolabını fişe taktıktan sonra 4-6 saat, içinde yiyecek varsa 24 saate kadar kapağını gereksiz açmadan bekle.
+
+**7.** 24 saatin sonunda buzdolabı hâlâ soğutmuyorsa teşhise başvur.
 
 ## 1. Sigortaya bakın
 

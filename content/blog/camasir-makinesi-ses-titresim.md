@@ -4,6 +4,19 @@ description: "Çamaşır makinen sıkarken çok ses ve titreşim mi yapıyor? Na
 slug: "camasir-makinesi-ses-titresim"
 date: "2026-06-19"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Makine yeni kurulduysa arkadaki nakliye cıvatalarının çıkarılıp çıkarılmadığına bak."
+  - "Makineyi elinle salla; oynuyorsa ayaklarını elle çevirerek ayarla."
+  - "Tek ağır parça yıkıyorsan böl ve yalnız santrifüj programıyla dene."
+  - "Kapak körüğünün kıvrımlarını elinle yokla; tel ya da bozuk para kalmış olabilir."
+  - "Sesin metalik takırtı mı, boğuk uğultu mu olduğunu dinle ve not et."
+  - "Santrifüjde artan boğuk uğultu ya da alttan su sızıntısı varsa makineyi kullanma, servise başvur."
 faq:
   - q: "Çamaşır makinesi neden çok ses ve titreşim yapar?"
     a: "En sık sebepler: takılı kalan nakliye cıvataları (yeni kurulumda), dengesiz ayak/zemin, dengesiz yük ve tamburda dönen yabancı cisim. Sürekli artan boğuk gürültü ise rulman aşınmasını gösterir."
@@ -21,6 +34,13 @@ images:
     - "Tambur kauçuğunun kıvrımında sıkışmış bozuk para ve telin aranışını gösteren çizim"
     - "Metalik takırtı ile boğuk uğultu sesinin ayrımını gösteren çizim"
   coverAlt: "Kapağı açık çamaşır makinesinin tamburunda tek tarafa yığılmış ıslak havlular"
+  steps:
+    - "Çamaşır makinesinin arka panelinde nakliye cıvatası yuvaları yakın plan"
+    - "Çamaşır makinesinin ön alt köşesindeki ayarlanabilir ayak"
+    - "Tamburda dengeli dağıtılmış birkaç orta boy havlu"
+    - "Çamaşır makinesi kapak körüğünün kıvrımları yakın plan"
+    - "Çalışan çamaşır makinesinin önünde boş bir çamaşır sepeti"
+    - "Çamaşır makinesinin önünde zeminde küçük bir su birikintisi"
 ---
 
 Çamaşır makinesi özellikle **santrifüj** sırasında zıplıyor, yürüyor ya da gümbürdüyorsa, sebep çoğu zaman basit bir dengesizlik — ama bazen pahalı bir rulman arızasının habercisi. İyi haber: hangisi olduğunu birkaç kontrolle ayırt edebilirsin. Bu yazıda gürültünün kaynağını, **kendin çözebileceklerini** ve hangi sesin servis işaret ettiğini anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -46,6 +66,20 @@ images:
 **5. Amortisör / süspansiyon yıpranması.** Titreşimi sönümleyen amortisörler zayıflarsa makine daha çok sallanır.
 
 **6. Rulman / keçe aşınması.** Santrifüjde giderek artan boğuk uğultu + bazen alttan su sızıntısı. İşçiliği ağır, en maliyetli kalemdir.
+
+## Adım adım: gürültü varsa evde denenecekler
+
+**1.** Makine yeni kurulduysa arkadaki nakliye cıvatalarının çıkarılıp çıkarılmadığına bak.
+
+**2.** Makineyi elinle salla; oynuyorsa ayaklarını elle çevirerek ayarla.
+
+**3.** Tek ağır parça yıkıyorsan böl ve yalnız santrifüj programıyla dene.
+
+**4.** Kapak körüğünün kıvrımlarını elinle yokla; tel ya da bozuk para kalmış olabilir.
+
+**5.** Sesin metalik takırtı mı, boğuk uğultu mu olduğunu dinle ve not et.
+
+**6.** Santrifüjde artan boğuk uğultu ya da alttan su sızıntısı varsa makineyi kullanma, servise başvur.
 
 ## Servisi aramadan önce kendin kontrol et
 

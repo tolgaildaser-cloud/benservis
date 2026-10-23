@@ -4,6 +4,21 @@ description: "Panelde yanan işaretlerin çoğu arıza değil: bakım uyarısı,
 slug: "bosch-kurutma-makinesi-sembolleri-ve-anlamlari"
 date: "2026-09-04"
 category: "Kurutma makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Su kabı göstergesi yanıyorsa yoğuşma suyu kabını boşalt ve start tuşuna bas; selfCleaning göstergesi ekrandayken kabı çıkarma."
+  - "Tahliye hortumu bağlıysa hortumdaki birikmeye bak, hortumu yıka ve bükmeden yerleştir."
+  - "Filtre temizliğinden önce makinenin fişini çek."
+  - "Tiftik filtresini temizle; yalnız temiz ve kuru filtreyi yerine tak."
+  - "Makine başlamıyorsa fişi, program seçimini, kapağı, çocuk emniyetini ve gecikmeli başlatmayı kontrol et."
+  - "Program bitince çamaşırı yay ve ısısının gitmesini bekle; sıcak çamaşır ıslak algılanır."
+  - "Çamaşır nemliyse maksimum dolum miktarını aşma, daha uzun süreli ya da süreli bir program seç."
+  - "Makinenin hava girişini kapatma ve odayı havalandır."
 faq:
   - q: "Bosch kurutma makinesinde su kabı işareti yandı ve program iptal oldu, arıza mı?"
     a: "Hayır, kılavuzun kendi arıza tablosunda bu satır bir bakım uyarısı olarak geçiyor. WTW87460TR kılavuzu bu gösterge için birebir şunu yazıyor: yoğuşma suyu kabını boşaltınız ve start tuşuna basınız. Aynı satırda ikinci bir ihtimal de var: opsiyonel yoğuşma suyu tahliyesi kurulmuşsa tahliye hortumu tıkanmış veya bükülmüş olabilir; hortumda birikme olup olmadığını kontrol edip hortumu yıkamak ve bükmeden yerleştirmek gerekiyor. Kabı boşaltıp start'a bastıktan sonra uyarı geri geliyorsa iş servise gider."
@@ -21,6 +36,15 @@ faq:
     a: "Aynı değil, ve fark kâğıt üstünde görülüyor. Karşılaştırdığımız üç Bosch kurutma makinesi kılavuzunun panel listeleri birbirini tutmuyor: WTW87460TR listesinde ısı eşanjörünün otomatik temizlendiğini bildiren selfCleaning göstergesi ve sinyal aktif göstergesi var; ısı pompalı WTH85200TR listesinde selfCleaning yok, buna karşılık tiftik filtresi göstergesi EasyClean filtresine de yönlendiriyor; WTW85461TR listesinde ise süreli program ve sıkma devir sayısı göstergeleri ayrı ayrı sayılıyor. Panel simgelerinin şekli de modele göre değişiyor. Kesin karşılık her zaman kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Kurutma makinesinin kumanda paneli ve gösterge alanı"
+  steps:
+    - "Kurutma makinesinden çekilmiş yoğuşma suyu kabı lavabonun yanında"
+    - "Kurutma makinesinin arkasından gidere uzanan, bükülmemiş tahliye hortumu"
+    - "Prizden çekilmiş kurutma makinesi fişi zeminde"
+    - "Kurutma makinesi kapağının iç kenarındaki temiz tiftik filtresi"
+    - "Kurutma makinesi panelinde program düğmesi ve başlat tuşu"
+    - "Sepete yayılmış, sıcaklığı çıkan çamaşırlar"
+    - "Tamburu yarıya kadar dolu kurutma makinesi"
+    - "Penceresi açık bir çamaşır odasında kurutma makinesi"
 ---
 
 Kurutma makinesinin panelinde tanımadığın bir işaret yandığında ilk düşünce genellikle aynı oluyor: "arıza mı?" Bosch'un kendi kullanma kılavuzlarına bakıldığında tablo başka türlü görünüyor. Panel listesindeki kalemlerin büyük çoğunluğu ya **bakım uyarısı**, ya **program evresi**, ya da **senin yaptığın seçim**. Gerçek arıza kılavuzda ayrı bir bölümde duruyor ve orada bile satırların çoğu "hata yok" diye başlıyor.
@@ -30,6 +54,24 @@ Bu yazıda Bosch kurutma makinelerinin gösterge alanındaki işaretleri üretic
 > ℹ️ **Simgelerin şekli için not.** Kılavuzların panel listeleri her göstergeyi **adıyla** tanımlıyor; simgelerin çizimi modelden modele değişiyor. Bu yazı da o yüzden şekil değil **anlam** üzerinden ilerliyor: panelde ne gördüğünü değil, gördüğün şeyin **ne istediğini** anlatıyor. Kendi modelinin simge çizimi için kılavuzundaki gösterge alanı sayfasına bak.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
+
+## Adım adım: gösterge yandığında yapılacaklar
+
+**1.** Su kabı göstergesi yanıyorsa yoğuşma suyu kabını boşalt ve start tuşuna bas; selfCleaning göstergesi ekrandayken kabı çıkarma.
+
+**2.** Tahliye hortumu bağlıysa hortumdaki birikmeye bak, hortumu yıka ve bükmeden yerleştir.
+
+**3.** Filtre temizliğinden önce makinenin fişini çek.
+
+**4.** Tiftik filtresini temizle; yalnız temiz ve kuru filtreyi yerine tak.
+
+**5.** Makine başlamıyorsa fişi, program seçimini, kapağı, çocuk emniyetini ve gecikmeli başlatmayı kontrol et.
+
+**6.** Program bitince çamaşırı yay ve ısısının gitmesini bekle; sıcak çamaşır ıslak algılanır.
+
+**7.** Çamaşır nemliyse maksimum dolum miktarını aşma, daha uzun süreli ya da süreli bir program seç.
+
+**8.** Makinenin hava girişini kapatma ve odayı havalandır.
 
 ## Göstergeler üç gruba ayrılıyor
 

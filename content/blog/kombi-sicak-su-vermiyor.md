@@ -5,6 +5,19 @@ slug: "kombi-sicak-su-vermiyor"
 date: "2026-06-19"
 updated: "2026-09-17"
 category: "Kombi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Kombi panelinden sıcak su sıcaklığını yükselt."
+  - "Birden çok musluğu dene; sorun tek muslukta mı hepsinde mi, not et."
+  - "Musluk ucundaki süzgeci (aeratör) çıkar, kireci temizle ve yerine tak."
+  - "Göstergedeki su basıncını kombinin kılavuzundaki aralıkla karşılaştır."
+  - "Kombiyi resetle ve sıcak suyu tekrar dene."
+  - "Ayar yüksek ve aeratör temizken su hâlâ ılık geliyorsa iç parçalara dokunma, servise başvur."
 # --- 17 Eyl 2026 · BASINÇ KÜMESİ ÜRETİCİ BELGESİYLE DOĞRULANDI (YK #88) — yayında görünmez ---
 # Belgeler 2026-09-17 curl -sL ile indirildi (hepsi HTTP 200), pdftotext ile okundu.
 # 1) Vaillant ecoTEC plus VU/VUW/VUI ..6/5-5 F A Kullanma Kılavuzu 0020228719_00
@@ -26,6 +39,13 @@ faq:
     a: "Arızaya göre değişir: plakalı eşanjör, 3 yollu vana, akış sensörü ve kimyasal temizlik çok farklı işlerdir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
   coverAlt: "Kombi çizimi, yanında akan su ve ısı dalgaları"
+  steps:
+    - "Kombi kontrol panelindeki sıcak su ayar düğmesi yakın plan"
+    - "Banyo lavabosundaki musluktan akan su"
+    - "Musluk ucundan çıkarılmış kireçli süzgeç ve temizlenmiş hâli yan yana"
+    - "Kombinin altındaki basınç göstergesi yakın plan"
+    - "Kombi panelindeki reset tuşu yakın plan"
+    - "Kapağı kapalı duvar tipi kombi ve önünde servis çantası"
 ---
 
 Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyor** (ya da ılık geliyor). Bu, sıcak su tarafında bir sorun olduğunu gösterir ve sebeplerin bir kısmı bakımla çözülür. Bu yazıda olası arızaları, kendin yapabileceklerini ve hangi arızanın servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -43,6 +63,20 @@ Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyo
 **4. Düşük su debisi / tıkalı aeratör.** Musluk ucundaki süzgeç (aeratör) kireçle tıkanırsa debi düşer; bazı kombiler düşük debide sıcak su vermez.
 
 **5. Sıcaklık ayarı / sensör.** Sıcak su sıcaklığı düşük ayarlı olabilir ya da sıcak su NTC sensörü yanlış okuyordur.
+
+## Adım adım: sıcak su gelmiyorsa evde denenecekler
+
+**1.** Kombi panelinden sıcak su sıcaklığını yükselt.
+
+**2.** Birden çok musluğu dene; sorun tek muslukta mı hepsinde mi, not et.
+
+**3.** Musluk ucundaki süzgeci (aeratör) çıkar, kireci temizle ve yerine tak.
+
+**4.** Göstergedeki su basıncını kombinin kılavuzundaki aralıkla karşılaştır.
+
+**5.** Kombiyi resetle ve sıcak suyu tekrar dene.
+
+**6.** Ayar yüksek ve aeratör temizken su hâlâ ılık geliyorsa iç parçalara dokunma, servise başvur.
 
 ## Servisi aramadan önce kendin kontrol et
 

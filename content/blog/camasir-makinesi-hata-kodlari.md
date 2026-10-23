@@ -9,6 +9,20 @@ slug: "camasir-makinesi-hata-kodlari"
 # ⛔ "Kendin çözebileceğin kodlar" listesi 5 maddede TUTULDU — images.checks'e bağlı.
 date: "2026-06-19"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu"]
+steps:
+  - "Ekrandaki kodu not et."
+  - "Su alma kodunda (F17 ya da E8) musluğu sonuna kadar aç."
+  - "Tahliye kodunda (F18 ya da E5) havlu hazırla, alt ön kapağı aç ve tahliye filtresini temizle."
+  - "Giriş ve tahliye hortumlarını düzelt; bükük ya da tıkalı kalmasın."
+  - "Köpük kodunda (E17) deterjan dozunu azalt, dengesiz yük kodunda (E18) çamaşırı dengeli dağıt."
+  - "Programı Kapalı konumuna al, fişi 1 dakika çek ve yeniden dene."
+  - "Motor, su kaçağı, ısıtma kodu ya da SC görüyorsan müdahale etme, servise başvur."
 faq:
   - q: "Çamaşır makinesi hata kodları markaya göre değişir mi?"
     a: "Evet. Bosch/Siemens aynı platformu kullandığı için F16, F17, F18, F19 gibi 'F' kodları gösterir; Arçelik/Beko ise tek haneli 'E' kodları kullanır: E5, E8, E12, E17, E18, E27, E29, E84, Err ve SC. Aynı harf-rakam farklı markada farklı anlama gelebilir — örneğin E18 Bosch'ta su atamama, Arçelik'te dengesiz yük demektir."
@@ -26,6 +40,14 @@ images:
     - "Bükülmüş hortum ile düz uzanan hortumun karşılaştırıldığı çizim"
     - "Programın kapalı konuma alınıp fişin bir dakika çekilişini gösteren çizim"
   coverAlt: "Mutfak tezgâhının altına yerleştirilmiş iki ön yüklemeli çamaşır makinesi ve aralarındaki petrol yeşili dolap"
+  steps:
+    - "Çamaşır makinesi ekranında yanan iki karakterli hata kodu"
+    - "Çamaşır makinesinin arkasında sonuna kadar açılmış su musluğu"
+    - "Açık alt ön kapağın önünde serili havlu ve çıkarılmış tahliye filtresi"
+    - "Çamaşır makinesinin arkasından düzgünce uzanan, katlanmamış hortumlar"
+    - "Deterjan çekmecesinde az miktarda deterjan ve tamburda dengeli dağılmış çamaşır"
+    - "Prizden çekilmiş çamaşır makinesi fişi ve kapalı konumdaki program düğmesi"
+    - "Kapağı kapalı çamaşır makinesi ve önünde servis çantası"
 ---
 
 Çamaşır makinen ekranında bir **hata kodu** gösteriyor (F18, E5, E8…) ve ne anlama geldiğini merak ediyorsun. İyi haber: bu kodlar arızayı işaret eder ve çoğu zaman en sık çıkan birkaç kod, basit ve **evde ücretsiz** çözülebilen sorunları gösterir. Bu rehberde marka marka en yaygın kodları, **kendin çözebileceklerini** ve hangisinin servis işi olduğunu topladık. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -61,6 +83,22 @@ Neff de BSH markasıdır ama kendi hata kodu sayfasını yayımlamadığı için
 
 > 📌 Grundig aynı gruptadır ama kendi sitesinde bir kod tablosu yayımlamaz; kılavuzlarında
 > kod değil belirti tablosu bulunur. Ayrıntı: [Grundig hata kodları](/blog/grundig-camasir-makinesi-hata-kodlari/)
+
+## Adım adım: kodu görünce evde yapılacaklar
+
+**1.** Ekrandaki kodu not et.
+
+**2.** Su alma kodunda (F17 ya da E8) musluğu sonuna kadar aç.
+
+**3.** Tahliye kodunda (F18 ya da E5) havlu hazırla, alt ön kapağı aç ve tahliye filtresini temizle.
+
+**4.** Giriş ve tahliye hortumlarını düzelt; bükük ya da tıkalı kalmasın.
+
+**5.** Köpük kodunda (E17) deterjan dozunu azalt, dengesiz yük kodunda (E18) çamaşırı dengeli dağıt.
+
+**6.** Programı Kapalı konumuna al, fişi 1 dakika çek ve yeniden dene.
+
+**7.** Motor, su kaçağı, ısıtma kodu ya da SC görüyorsan müdahale etme, servise başvur.
 
 ## Kendin çözebileceğin kodlar
 Su alma (F17/E8) ve tahliye (F18/E5) kodlarının en sık sebebi basit:

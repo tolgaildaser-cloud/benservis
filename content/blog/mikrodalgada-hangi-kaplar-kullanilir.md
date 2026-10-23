@@ -4,6 +4,21 @@ description: "Metal, cam, plastik, kağıt ve ahşap kaplar için Arçelik ve Be
 slug: "mikrodalgada-hangi-kaplar-kullanilir"
 date: "2026-09-12"
 category: "Mikrodalga / Air Fryer"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: ["Bir bardak su", "Fırın eldiveni"]
+steps:
+  - "Metal kap, melamin, kurşunlu kristal, çok ince cam ve dondurucu torbası kullanma."
+  - "Emin olmadığın kabı boş olarak cam tablanın üstüne koy, üstüne bir bardak su yerleştir."
+  - "Mikrodalgayı en yüksek güçte 60 saniye çalıştır."
+  - "Kap aşırı ısındıysa o kabı mikrodalgada kullanma."
+  - "Pişirmede köşeli kap yerine yuvarlak kap seç."
+  - "Torbaların tel bağcığını ve metal tutamağını çıkar; yumurtayı kapalı kapta ısıtma."
+  - "Plastik ya da kâğıt kapta ısıtırken cihazı ara ara kontrol et."
+  - "Yemeği eldivenle çıkar, kapağı ya da folyoyu buhara dikkat ederek aç."
 faq:
   - q: "Mikrodalgada hangi kaplar kullanılır?"
     a: "Arçelik ve Beko mikrodalga kılavuzları malzemeyi tek ölçüte bağlıyor: cihaz kağıt, plastik, cam ve seramik gibi belirli maddelerin içinden ısı üretmeksizin geçebiliyor ve bu malzemelerden yapılan pişirme kapları bazı hallerde kullanım için uygun oluyor. Kılavuzun ifadesindeki bazı hallerde vurgusu önemli: malzeme sınıfı tek başına yetmiyor, kabın kendisi test edilmeli. Kılavuzlar bunun için 60 saniyelik bir test tarif ediyor."
@@ -21,6 +36,15 @@ faq:
     a: "Kılavuzlara göre ediyor: pişirme işlemi için oval ya da dörtgen kaplar yerine yuvarlak kaplar kullanın, çünkü kenarlarda kalan yiyecekler mikrodalgadan daha fazla etkilenir ve köşelerde aşırı pişme meydana gelir. Yani köşeli kapta yemeğin kenarları fazla pişerken ortası geride kalabilir."
 images:
   coverAlt: "Mikrodalganın açık kapağı; döner cam tepsinin üzerinde yuvarlak cam kap ve içinde bir bardak su, kapının yanında metal tepsi ve folyo tezgâha ayrılmış duruyor"
+  steps:
+    - "Tezgâhta mikrodalgaya girmeyecek metal kap ve ince cam kase bir kenara ayrılmış"
+    - "Mikrodalganın cam tablasında boş bir kap ve üstünde bir bardak su"
+    - "Mikrodalga panelinde en yüksek güç ayarı seçili düğme"
+    - "Testten sonra tezgâha alınmış boş seramik kap"
+    - "Mikrodalga tablasında yuvarlak cam pişirme kabı"
+    - "Tezgâhta metal bağcığı çıkarılmış bir gıda torbası"
+    - "Mikrodalga camından görünen plastik kapta ısınan yemek"
+    - "Tezgâhta fırın eldiveni ve yanında kapağı aralık buharlı yemek kabı"
 ---
 
 Her kap mikrodalgaya girmez — ve hangisinin girdiği tahmin işi değil, üreticinin kılavuzunda yazılı.
@@ -30,6 +54,24 @@ Her kap mikrodalgaya girmez — ve hangisinin girdiği tahmin işi değil, üret
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Bu yazı kullanım kuralıdır, tamir değil.** Kap seçimi mikrodalganın içine hiç dokunmadan yapılır. Cihaz kıvılcım çıkarıyorsa başka bir yazıya bak: [mikrodalga kıvılcım çıkarıyor](/blog/mikrodalga-kivilcim-cikariyor).
+
+## Adım adım: kabı denemek ve güvenle ısıtmak
+
+**1.** Metal kap, melamin, kurşunlu kristal, çok ince cam ve dondurucu torbası kullanma.
+
+**2.** Emin olmadığın kabı boş olarak cam tablanın üstüne koy, üstüne bir bardak su yerleştir.
+
+**3.** Mikrodalgayı en yüksek güçte 60 saniye çalıştır.
+
+**4.** Kap aşırı ısındıysa o kabı mikrodalgada kullanma.
+
+**5.** Pişirmede köşeli kap yerine yuvarlak kap seç.
+
+**6.** Torbaların tel bağcığını ve metal tutamağını çıkar; yumurtayı kapalı kapta ısıtma.
+
+**7.** Plastik ya da kâğıt kapta ısıtırken cihazı ara ara kontrol et.
+
+**8.** Yemeği eldivenle çıkar, kapağı ya da folyoyu buhara dikkat ederek aç.
 
 ## Kılavuzun ölçütü: ısıyı geçiren malzeme
 

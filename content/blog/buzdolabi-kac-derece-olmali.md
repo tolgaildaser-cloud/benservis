@@ -4,6 +4,19 @@ description: "Buzdolabı ideal sıcaklığı kaç derece? Soğutucu +4°C, dondu
 slug: "buzdolabi-kac-derece-olmali"
 date: "2026-07-14"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika (+ birkaç saat ölçüm)"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: ["Mutfak termometresi", "Bir bardak su"]
+steps:
+  - "Dijital göstergeli modelde soğutucuyu +4 °C'ye, dondurucuyu -18 °C'ye ayarla."
+  - "Göstergesiz modelde termometreyi bir bardak suya daldır ve orta rafta birkaç saat beklet."
+  - "Kademeli düğmeyi orta ayara (2,5-3) getir."
+  - "Yazın düğmeyi bir kademe yukarı al; 5'te sabit bırakma."
+  - "Kapıyı kısa aç, sıcak yemeği soğumadan koyma."
+  - "Doğru ayarda içerisi hâlâ ılıksa belirtiyi not et ve teşhise başvur."
 faq:
   - q: "Buzdolabı ideal olarak kaç derece olmalı?"
     a: "Soğutucu bölme için ideal aralık +1 ile +5°C, pratik hedef +4°C'dir. Dondurucu için standart -18°C'dir. Bu değerler gıda güvenliği ile enerji tüketiminin dengelendiği noktadır."
@@ -15,11 +28,32 @@ faq:
     a: "Ayar doğruysa ve içerik hâlâ yeterince soğuk değilse conta, fan, termostat veya gaz kaynaklı bir arıza olabilir. Belirtiyi Benservis'e yaz; olası arızayı ve tahmini tamir maliyetini ücretsiz öğren."
 images:
   coverAlt: "Buzdolabı ve yanında düşük sıcaklık gösteren termometre çizimi"
+  steps:
+    - "Buzdolabı kapısındaki dijital gösterge paneli yakın plan"
+    - "Buzdolabının orta rafında içinde termometre duran bir bardak su"
+    - "Buzdolabı içindeki kademeli termostat düğmesi yakın plan"
+    - "Güneş vuran bir yaz mutfağında buzdolabının termostat düğmesi"
+    - "Tezgâhta buharı tüten bir tencere ve kapısı kapalı buzdolabı"
+    - "Buzdolabı rafında duran süt kutusu ve yanında not kâğıdı"
 ---
 
 Buzdolabı günde 24 saat çalışan tek cihazın — ve doğru sıcaklık ayarı hem gıda güvenliğini hem elektrik faturasını hem de cihazın ömrünü belirliyor. Cevap kısa ama detaylar önemli: **soğutucu +4°C, dondurucu -18°C.** Bu rehberde kademeli düğmelerin ne anlama geldiğini, yaz-kış ayar farkını ve yanlış ayarın nelere mal olduğunu anlatıyoruz.
 
 > ⚡ **Kısa özet:** Soğutucu bölme **+1 / +5°C** aralığında (hedef **+4°C**), dondurucu **-18°C**. Kademeli düğmede orta ayar (2,5-3) çoğu ev için ideal; yazın bir tık artır. Daha soğuk ≠ daha iyi: aşırı ayar fatura ve arıza üretir.
+
+## Adım adım: buzdolabını doğru ayarlamak
+
+**1.** Dijital göstergeli modelde soğutucuyu +4 °C'ye, dondurucuyu -18 °C'ye ayarla.
+
+**2.** Göstergesiz modelde termometreyi bir bardak suya daldır ve orta rafta birkaç saat beklet.
+
+**3.** Kademeli düğmeyi orta ayara (2,5-3) getir.
+
+**4.** Yazın düğmeyi bir kademe yukarı al; 5'te sabit bırakma.
+
+**5.** Kapıyı kısa aç, sıcak yemeği soğumadan koyma.
+
+**6.** Doğru ayarda içerisi hâlâ ılıksa belirtiyi not et ve teşhise başvur.
 
 ## Neden +4°C ve -18°C?
 

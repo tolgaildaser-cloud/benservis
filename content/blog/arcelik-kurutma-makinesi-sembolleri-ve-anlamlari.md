@@ -4,6 +4,20 @@ description: "Su tankı, filtre ve yoğuşturucu simgeleri arıza değil, bakım
 slug: "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Su tankı simgesi program sırasında yanıp sönüyorsa tankı boşalt ve Başla/Bekle/İptal düğmesine bas."
+  - "Program bitince su tankı simgesi yanıyorsa tankı boşalt."
+  - "Filtre temizliği simgesi sabit yanıyorsa lif filtresini temizle."
+  - "Filtre çekmecesi simgesi yanıp sönüyorsa filtre çekmecesini temizle."
+  - "Program başlamıyorsa kapağı tam kapat; arada çamaşır ucu kalmadığından emin ol."
+  - "Tuşlar tepki vermiyorsa çocuk kilidini kaldır."
+  - "Filtre simgesi temizlikten sonra da yanıp sönüyorsa ya da yanık kokusu varsa makineyi durdur, fişini çek ve servise başvur."
 faq:
   - q: "Arçelik kurutma makinesinde su tankı simgesi yanıyorsa ne yapmalı?"
     a: "Su tankını boşaltmak gerekir; arıza değildir. Arçelik 3771 KTE kılavuzuna göre program tamamlandığında su tankının boşaltılması gerektiğini gösteren uyarı sembolü yanar. Program devam ederken su tankı dolarsa sembol yanıp sönmeye başlar ve makine beklemeye geçer; bu durumda tanktaki suyu boşaltıp Başla/Bekle/İptal düğmesine basınca uyarı sembolü söner ve program kaldığı yerden devam eder."
@@ -19,6 +33,14 @@ faq:
     a: "Aynı değil ve bunu üreticinin kendisi söylüyor. Arçelik kılavuzu uyarı sembolleri bölümüne şu notu koyuyor: Uyarı sembolleri makinenizin modeline göre farklılık gösterebilir. Karşılaştırdığımız iki Arçelik kılavuzunun sembol listeleri de birebir aynı değil. Kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Çamaşır kurutma makinesinin ekranı ve kumanda düğmeleri"
+  steps:
+    - "Kurutma makinesi ekranında yanıp sönen su tankı simgesi"
+    - "Kurutma makinesinden çekilmiş su tankı lavabonun başında"
+    - "Lif filtresinden alınmış tiftik tabakası ve yanında temiz filtre"
+    - "Kurutma makinesinin alt kısmında yarıya kadar çekilmiş filtre çekmecesi"
+    - "Kurutma makinesinin kapağı ile gövdesi arasında kalmış bir çamaşır ucu"
+    - "Kurutma makinesi panelinde kilit simgesi yakın plan"
+    - "Fişi prizden çekilmiş, kapağı kapalı kurutma makinesi"
 video:
   youtubeId: "Q_BaXMLz0mE"
   title: "Arçelik kurutma makinesi sembolleri ve anlamları"
@@ -34,6 +56,22 @@ Bu yazıda Arçelik kurutma makinelerinin ekranındaki sembolleri üreticinin ke
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
 > ⚠️ **Kurutma makinesinde simgelerin çoğu bakım uyarısıdır ve bunun bir sebebi var:** bu cihaz çalışırken havadaki nemi suya, kumaştan çıkan lifi de filtreye biriktirir. İkisi de dolmak zorundadır. Simgelerin sık yanması cihazın kötü olduğunu değil, **doğru çalıştığını** gösterir.
+
+## Adım adım: simge yandığında yapılacaklar
+
+**1.** Su tankı simgesi program sırasında yanıp sönüyorsa tankı boşalt ve Başla/Bekle/İptal düğmesine bas.
+
+**2.** Program bitince su tankı simgesi yanıyorsa tankı boşalt.
+
+**3.** Filtre temizliği simgesi sabit yanıyorsa lif filtresini temizle.
+
+**4.** Filtre çekmecesi simgesi yanıp sönüyorsa filtre çekmecesini temizle.
+
+**5.** Program başlamıyorsa kapağı tam kapat; arada çamaşır ucu kalmadığından emin ol.
+
+**6.** Tuşlar tepki vermiyorsa çocuk kilidini kaldır.
+
+**7.** Filtre simgesi temizlikten sonra da yanıp sönüyorsa ya da yanık kokusu varsa makineyi durdur, fişini çek ve servise başvur.
 
 ## Ekrandaki semboller — kılavuzun kendi listesi
 

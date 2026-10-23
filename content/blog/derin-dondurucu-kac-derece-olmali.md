@@ -4,6 +4,20 @@ description: "Derin dondurucu -18 °C'de çalışır. Kademeli düğmede hangi k
 slug: "derin-dondurucu-kac-derece-olmali"
 date: "2026-07-14"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Dondurucu termometresi", "Su doldurulmuş pet şişe"]
+steps:
+  - "Dondurucuyu -18 °C'ye ayarla; kademeli düğmede orta-üstü kademeyi seç."
+  - "İçerideki gerçek sıcaklığı dondurucu termometresiyle ölç."
+  - "Cihazı ısı kaynaklarından en az 30 cm, elektrikli fırından en az 5 cm uzağa, güneş almayan bir yere koy; arkada en az 5 cm boşluk bırak."
+  - "Plakadaki iklim sınıfına bak; SN ya da N yazıyorsa cihaz 32 °C'yi aşan ortam için tasarlanmamıştır."
+  - "Şoklamayı yalnız toplu alışverişten birkaç saat önce aç, gıdalar donunca -18 °C'ye geri dön."
+  - "Boşlukları su doldurulmuş pet şişelerle doldur; hava kanallarını kapatma."
+  - "Elektrik kesintisinde kapıyı açma."
 faq:
   - q: "Derin dondurucu ideal kaç derece olmalı?"
     a: "Uzun süreli güvenli saklama için standart -18°C'dir. Daha düşük değerler (-20, -22) gıda güvenliğine kayda değer katkı sağlamaz, yalnızca elektrik tüketimini artırır."
@@ -19,11 +33,35 @@ faq:
     a: "Difriz, derin dondurucunun günlük konuşmadaki adıdır — aynı cihaz, aynı cevap: -18°C. Şoklama kuralı ve dolu dondurucunun daha verimli çalıştığı da difriz için geçerli. Sandıklı (yatay) modelde bakılacak tek ek şey defrost tarafıdır: cihazın no-frost olup olmadığı kullanma kılavuzunda yazar, no-frost değilse karlanma biriktikçe elle buz çözme ister."
 images:
   coverAlt: "Çekmeceli derin dondurucu ve yanında düşük sıcaklık gösteren termometre çizimi"
+  steps:
+    - "Derin dondurucunun termostat düğmesi yakın plan"
+    - "Dondurucu çekmecesinde donmuş gıdaların arasında duran dondurucu termometresi"
+    - "Duvardan aralıklı yerleştirilmiş derin dondurucu, gölgeli bir mutfak köşesinde"
+    - "Derin dondurucunun iç yan duvarındaki bilgi etiketi yakın plan"
+    - "Derin dondurucunun panelinde kar tanesi simgeli şoklama tuşu"
+    - "Dondurucu çekmecesindeki boşlukları dolduran su dolu pet şişeler"
+    - "Karanlık mutfakta kapısı kapalı duran derin dondurucu"
 ---
 
 Buzdolabının [soğutucu bölmesi için +4°C kuralını](/blog/buzdolabi-kac-derece-olmali/) yazmıştık; sıra kardeş soruda: **derin dondurucu kaç derece olmalı?** Cevabın standardı net — **-18°C** — ama şoklamanın ne zaman kullanılacağı, doluluk oranı ve kesinti senaryosu işin az bilinen tarafları. İşte tamamı.
 
 > ⚡ **Kısa özet:** Standart **-18°C**. Şoklama (-24) yalnızca toplu taze alışveriş öncesi birkaç saatlik hamledir, sürekli değil. **Dolu dondurucu boştan verimli** çalışır. Kesintide kapıyı açma: dolu dondurucu ~48 saat, yarı dolu ~24 saat idare eder.
+
+## Adım adım: dondurucuyu doğru ayarlamak
+
+**1.** Dondurucuyu -18 °C'ye ayarla; kademeli düğmede orta-üstü kademeyi seç.
+
+**2.** İçerideki gerçek sıcaklığı dondurucu termometresiyle ölç.
+
+**3.** Cihazı ısı kaynaklarından en az 30 cm, elektrikli fırından en az 5 cm uzağa, güneş almayan bir yere koy; arkada en az 5 cm boşluk bırak.
+
+**4.** Plakadaki iklim sınıfına bak; SN ya da N yazıyorsa cihaz 32 °C'yi aşan ortam için tasarlanmamıştır.
+
+**5.** Şoklamayı yalnız toplu alışverişten birkaç saat önce aç, gıdalar donunca -18 °C'ye geri dön.
+
+**6.** Boşlukları su doldurulmuş pet şişelerle doldur; hava kanallarını kapatma.
+
+**7.** Elektrik kesintisinde kapıyı açma.
 
 ## Neden -18°C?
 
