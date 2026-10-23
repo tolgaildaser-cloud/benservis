@@ -58,6 +58,12 @@ faq:
     a: "Kod görüyorsan önce kodun kendi satırına bak. Vestel'in kontrol uyarıları tablosunda E09 dondurucunun, E10 soğutucu bölmenin yeterince soğuk olmadığını gösterir ve her birinin kendi adımları vardır; bu kodların ayrı yazıları var."
 images:
   coverAlt: "Mutfakta duvara yakın duran iki kapılı no-frost buzdolabı; açık soğutucu bölmesinde arka duvara değmeyecek şekilde dizilmiş kaplar"
+video:
+  youtubeId: "aJb3SdPh64Y"
+  title: "Buzdolabı neden soğutmaz? Servisi aramadan önce 4 kontrol"
+  description: "Vestel kılavuzuna göre buzdolabı yeterli soğutmuyorsa: sıcaklık ayarı, kapı, iç yerleşim ve duvar/ısı kaynağı mesafesi."
+  uploadDate: "2026-10-23T06:29:06Z"
+  duration: "PT1M3S"
 ---
 
 Buzdolabı çalışıyor ama içerisi yeterince soğuk değil; süt çabuk bozuluyor, içecekler serinlemiyor. Vestel'in no-frost buzdolabı kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun ayrı bir satırı var: **"Buzdolabınız yeterli soğutma yapmıyor."** Altında sayılan yedi sebebin hepsi kullanıcının kontrol edebileceği şeyler: **sıcaklık ayarı, kapıların sık açılması, kapıların tam kapanmaması, arka duvara dayanan kaplar, aşırı doluluk, duvar mesafesi ve ortam sıcaklığı.** Göstergesi olmayan eski bir Vestel no-frost modelinin kılavuzu da "servis çağırmadan önce" listesinde aynı maddeleri soruyor. Bu yazıda Vestel'in sırasını adım adım açıyoruz.
