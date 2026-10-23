@@ -4,6 +4,20 @@ description: "Ekranın sönmesi, yanıp sönen bir rakam, sürekli yanan bir lam
 slug: "arcelik-buzdolabi-sembolleri-ve-anlamlari"
 date: "2026-09-05"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Elektrik kesintisinden sonra sıcaklık göstergesinde bir değer yanıp sönüyorsa önce dondurucu bölmedeki gıdaları kontrol et."
+  - "Gıdaları kontrol ettikten sonra alarm off düğmesine basarak uyarıyı sil."
+  - "Kapı açık alarmı çalıyorsa açık kalan kapıyı kapat ya da göstergedeki herhangi bir butona bas."
+  - "Alarm kapı kapalıyken de sürüyorsa kapı contasını kontrol et."
+  - "Buzmatik kapalı göstergesi yanıyorsa buzmatik açma kapatma düğmesini 3 saniye basılı tutarak buzmatiği yeniden çalıştır."
+  - "Düğmeler tepki vermiyorsa modelinin kılavuzundaki tuş kombinasyonuyla tuş kilidini kaldır."
+  - "Hata durumu göstergesi yandıysa ve dondurucu göstergesinde E ile birlikte bir rakam çıktıysa servisi ara."
 faq:
   - q: "Arçelik buzdolabımın ekranı kendiliğinden söndü, bozuldu mu?"
     a: "Büyük ihtimalle bozulmadı. 5500 NM kılavuzunun gösterge paneli bölümünde enerji tasarrufu diye ayrı bir kalem var ve açıklaması birebir şöyle: ürünün kapılarının açılıp kapanmadığı zamanlarda enerji tasarrufu fonksiyonu otomatik olarak devreye girer ve enerji tasarrufu simgesi yanar. Aynı kılavuz ne olduğunu da anlatıyor: enerji tasarrufu fonksiyonu etkinleştirildiğinde enerji tasarrufu simgesi dışında ekrandaki tüm simgeler söner; herhangi bir düğmeye basılır ya da kapı açılırsa fonksiyondan çıkılır ve simgeler normale döner. Kılavuzun eklediği not önemli: bu fonksiyon fabrika çıkışı aktiftir ve iptal edilemez."
@@ -21,6 +35,14 @@ faq:
     a: "Aynı değil, ve fark tek bir kılavuzun içinde bile görülüyor. 5500 NM kılavuzunda iki ayrı gösterge paneli bölümü var ve ikisinde de Tatil fonksiyonu farklı çalışıyor: mekanik ayarlı modelde sıcaklık ayar düğmesi en sıcak konuma alındıktan sonra kapılar en az 12 saat açılmazsa Tatil fonksiyonu otomatik devreye giriyor, dokunmatik panelde ise Tatil düğmesine 3 saniye basılıyor. Eko fuzzy de öyle: 5287 NHI kılavuzunda Quick Freeze butonuna 3 saniye basılarak açılıyor, 5500 NM kılavuzunda ise ayrı bir eko fuzzy düğmesine 1 saniye basılıyor. Kılavuzun kendi notu da bunu söylüyor: gösterge panelleri ürününüzün modeline göre değişiklik gösterebilir. Kesin karşılık her zaman kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Buzdolabının kapısındaki dokunmatik gösterge paneli"
+  steps:
+    - "Dondurucu bölmesi açık buzdolabında paketli dondurulmuş gıdalar"
+    - "Buzdolabı kapısındaki gösterge panelinde alarm düğmesi yakın plan"
+    - "Kapısı kapatılan iki kapılı buzdolabı"
+    - "Buzdolabı kapısının iç kenarındaki lastik conta yakın plan"
+    - "Buzdolabı panelinde buzmatik düğmesi yakın plan"
+    - "Buzdolabı panelinde kilit simgesi yakın plan"
+    - "Gösterge panelinde hata uyarısı yanan buzdolabı"
 ---
 
 Buzdolabının panelinde tanımadığın bir işaret belirdiğinde ilk düşünce genellikle aynı oluyor: "arıza mı?" Arçelik'in kendi kullanma kılavuzlarına bakıldığında tablo başka türlü görünüyor. Gösterge listelerindeki kalemlerin büyük çoğunluğu ya **senin açtığın bir fonksiyon**, ya **cihazın kendi enerji davranışı**, ya da **bir kullanım hatırlatması**. Gerçek arıza kılavuzda ayrı bir kalem olarak duruyor ve adı da açıkça konmuş: hata durumu göstergesi.
@@ -134,6 +156,22 @@ Bu yazının en net bulgusu üç kılavuzun karşılaştırmasından çıktı: *
 5500 NM kılavuzunda **iki ayrı gösterge paneli bölümü** var. Tatil fonksiyonu ikisinde farklı çalışıyor: mekanik ayarlı modelde sıcaklık ayar düğmesi en sıcak konuma alındıktan sonra kapılar **en az 12 saat** açılmazsa fonksiyon otomatik devreye giriyor; dokunmatik panelde ise Tatil düğmesine **3 saniye** basılıyor.
 
 Kılavuzun kendi notu da zaten bunu söylüyor: gösterge panelleri ürününüzün modeline göre değişiklik gösterebilir. Aynı kılavuzda bir not daha var: bu kullanıcı kılavuzunda yer alan şekiller taslaktır ve ürünle birebir aynı olmayabilir; satın aldığın üründe ilgili parçalar yoksa bunlar başka modeller için geçerlidir.
+
+## Adım adım: uyarı göstergesi yandığında yapılacaklar
+
+**1.** Elektrik kesintisinden sonra sıcaklık göstergesinde bir değer yanıp sönüyorsa önce dondurucu bölmedeki gıdaları kontrol et.
+
+**2.** Gıdaları kontrol ettikten sonra alarm off düğmesine basarak uyarıyı sil.
+
+**3.** Kapı açık alarmı çalıyorsa açık kalan kapıyı kapat ya da göstergedeki herhangi bir butona bas.
+
+**4.** Alarm kapı kapalıyken de sürüyorsa kapı contasını kontrol et.
+
+**5.** Buzmatik kapalı göstergesi yanıyorsa buzmatik açma kapatma düğmesini 3 saniye basılı tutarak buzmatiği yeniden çalıştır.
+
+**6.** Düğmeler tepki vermiyorsa modelinin kılavuzundaki tuş kombinasyonuyla tuş kilidini kaldır.
+
+**7.** Hata durumu göstergesi yandıysa ve dondurucu göstergesinde E ile birlikte bir rakam çıktıysa servisi ara.
 
 ## Ne zaman servis işi
 

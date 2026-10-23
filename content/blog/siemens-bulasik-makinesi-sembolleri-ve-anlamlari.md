@@ -4,6 +4,20 @@ description: "Siemens iQ300 panelindeki musluk, tuz, parlatıcı ve anahtar semb
 slug: "siemens-bulasik-makinesi-sembolleri-ve-anlamlari"
 date: "2026-10-05"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Kova", "Bulaşık makinesi tuzu", "Parlatıcı"]
+steps:
+  - "Musluk sembolü sabit yanıyorsa musluğu aç ve giriş hortumunu bükülme olmadan döşe."
+  - "Musluk tam açıkken bir kova ve saatle dakikada en az 10 litre su aktığını kontrol et."
+  - "Tuz göstergesi yanıyorsa programı başlatmadan hemen önce tuz kabını yalnız bulaşık makinesi tuzuyla doldur; tuz tableti ve sofra tuzu kullanma."
+  - "Parlatıcı göstergesi yanıyorsa kabı max işaretine kadar doldur ve taşan parlatıcıyı sil."
+  - "Suyunun sertliğini öğren; Setup tuşuna yaklaşık 3 saniye basıp Hxx ayarını kılavuzun tablosundaki değere getir ve yine 3 saniye basarak kaydet."
+  - "Anahtar sembolü yanıyorsa tuşuna yaklaşık 3 saniye basarak tuş kilidini kapat."
+  - "Musluk sembolü yanıp sönüyorsa cihazı kapat, fişini çek, en az 2 dakika bekleyip yeniden çalıştır; sorun dönerse musluğu kapatıp müşteri hizmetlerini ara."
 faq:
   - q: "Siemens bulaşık makinesinde musluk işareti yanıyor, ne demek?"
     a: "Siemens'in iQ300 kılavuzuna göre musluk sembolü su girişinde veya çıkışında bir arıza olduğunu gösterir. Sabit yanıyorsa kılavuz bunu E:32-00 ile aynı satırda veriyor: giriş hortumu bükülmüş, musluk kapalı, musluk sıkışmış ya da kireçlenmiş veya hortumun su bağlantısındaki süzgeç tıkanmış olabilir. Kılavuzun eşiği şu: musluk açıkken akan su en az 10 litre/dakika olmalı."
@@ -21,6 +35,14 @@ faq:
     a: "Kılavuz bu durum için iki ihtimal veriyor. Birincisi yazılım güncellemesi: yaklaşık 30 dakika beklenir, cihaz hâlâ hazır değilse ana şalter tuşuna yaklaşık 4 saniye basılarak sıfırlanır. İkincisi elektronik sistemin bir hata tespit etmesi: önce 4 saniyelik sıfırlama, sonra fişi çekip en az 2 dakika bekleme; sorun sürerse müşteri hizmetleri."
 images:
   coverAlt: "Solo bulaşık makinesinin kumanda paneli yakın planda; ekranın yanında musluk, tuz, parlatıcı ve kablosuz ağ sembolleri görünüyor"
+  steps:
+    - "Bulaşık makinesinin arkasında açık musluk ve düz uzanan giriş hortumu"
+    - "Tam açık musluğun altında su dolan kova"
+    - "Bulaşık makinesinin tabanında açık tuz kabı"
+    - "Bulaşık makinesi kapağının içinde açık parlatıcı kabı"
+    - "Bulaşık makinesi ekranında su sertliği ayarı"
+    - "Bulaşık makinesi panelinde anahtar sembolü yakın plan"
+    - "Fişi prizden çekilmiş bulaşık makinesi"
 ---
 
 Siemens bulaşık makinenin panelinde bir sembol yandı ya da ekranda **H04**, **r:05**, **h:01** gibi bir yazı belirdi. Bunların çoğu arıza değil; bir ayarın, bir sarf malzemesinin ya da bir fonksiyonun durumunu gösterir. Bu yazıdaki karşılıkların tamamı **Siemens'in kendi kullanım kılavuzundan** alındı.
@@ -151,6 +173,22 @@ Bu modelin kodları **E:32-00** gibi iki parçalı gösterilir ve ekranda deği�
 - **E:30-00, E:31-00, E:34-00:** su koruma sistemi devrede ya da cihaza sürekli su akıyor. Kılavuzun talimatı: **musluğu kapat ve müşteri hizmetlerini ara.**
 
 Kodların ayrıntısı ve evde yapılabilecek kontroller için: [Siemens bulaşık makinesi hata kodları](/blog/siemens-bulasik-makinesi-hata-kodlari).
+
+## Adım adım: sembol yandığında yapılacaklar
+
+**1.** Musluk sembolü sabit yanıyorsa musluğu aç ve giriş hortumunu bükülme olmadan döşe.
+
+**2.** Musluk tam açıkken bir kova ve saatle dakikada en az 10 litre su aktığını kontrol et.
+
+**3.** Tuz göstergesi yanıyorsa programı başlatmadan hemen önce tuz kabını yalnız bulaşık makinesi tuzuyla doldur; tuz tableti ve sofra tuzu kullanma.
+
+**4.** Parlatıcı göstergesi yanıyorsa kabı max işaretine kadar doldur ve taşan parlatıcıyı sil.
+
+**5.** Suyunun sertliğini öğren; Setup tuşuna yaklaşık 3 saniye basıp Hxx ayarını kılavuzun tablosundaki değere getir ve yine 3 saniye basarak kaydet.
+
+**6.** Anahtar sembolü yanıyorsa tuşuna yaklaşık 3 saniye basarak tuş kilidini kapat.
+
+**7.** Musluk sembolü yanıp sönüyorsa cihazı kapat, fişini çek, en az 2 dakika bekleyip yeniden çalıştır; sorun dönerse musluğu kapatıp müşteri hizmetlerini ara.
 
 ## Nerede durmalısın?
 

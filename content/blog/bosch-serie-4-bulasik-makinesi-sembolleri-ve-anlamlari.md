@@ -4,6 +4,20 @@ description: "Serie 4 panelindeki musluk, tuz ve parlatıcı göstergeleri ile E
 slug: "bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari"
 date: "2026-09-12"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Kova", "Özel tuz", "Parlatıcı"]
+steps:
+  - "Musluk sembolü yanıyorsa musluğun açık olduğunu ve besleme hortumunun bükülmediğini kontrol et."
+  - "Musluk tam açıkken bir kovayla dakikada en az 10 litre su geldiğini ölç."
+  - "Süzgeç sistemini çıkar, süzgeç elemanlarını musluk suyu altında temizle ve kaba süzgeci saat yönünde çevirerek yerine yerleştir."
+  - "Püskürtme kollarının memelerini akan su altında kontrol et ve tıkayan yabancı cisimleri uzaklaştır."
+  - "Tuz göstergesi yanıyorsa özel tuzu programı başlatmadan hemen önce tuz kabına doldur; tuz kabına deterjan koyma."
+  - "Parlatıcı göstergesi yanıyorsa kapağı kaldır, parlatıcıyı max işaretine kadar doldur ve kapağı yerine oturana kadar kapat."
+  - "Bulaşıkları, püskürtülen su yüzeylerine ulaşacak şekilde aralıklı yerleştir."
 faq:
   - q: "Bosch Serie 4'te su girişi (musluk) göstergesi ne demek?"
     a: "Bosch'un Serie 4 kısa kılavuzundaki arıza tablosu bu göstergeyi E:32-00 ile birlikte veriyor: E:32-00 değişimli olarak yanıyor veya su girişi göstergesi yanıyor. Tabloda dört sebep sıralanıyor: besleme hortumu bükülmüş, musluk kapalı, musluk sıkışmış veya kireçlenmiş, besleme hortumunun ya da AquaStop hortumunun su bağlantısındaki süzgeçler tıkanmış. Kılavuz ayrıca ölçülebilir bir eşik veriyor: musluk açıkken akan su miktarı (debi) en az 10 litre/dakika olmalıdır."
@@ -21,6 +35,14 @@ faq:
     a: "Bu yazıdaki karşılıklar Bosch'un Serie 4 kısa kılavuzlarından (SMS4IKI62T, SMS4IKW62T, SMS4IKW61T) alınmıştır. Bosch'un farklı serilerinde panel düzeni ve kod biçimi değişebiliyor; özellikle iki haneli E15 tipi kodlar ile Serie 4'ün E:32-00 biçimindeki kodları aynı gösterim değildir. Kendi modelinin kılavuzundaki tablo esastır."
 images:
   coverAlt: "Bulaşık makinesinin kontrol paneli yakın planda; su girişi, tuz ve parlatıcı göstergeleri ile iki haneli gösterge ekranı görünüyor"
+  steps:
+    - "Bulaşık makinesi panelinde musluk sembolü yakın plan"
+    - "Tam açık musluğun altında su dolan kova"
+    - "Bulaşık makinesinin tabanından çıkarılmış süzgeç sistemi"
+    - "Bulaşık makinesinin alt püskürtme kolu yakın plan"
+    - "Bulaşık makinesinin tabanında açık tuz kabı"
+    - "Bulaşık makinesi kapağının içinde açık parlatıcı kabı"
+    - "Bulaşık makinesi sepetinde aralıklı dizilmiş tabaklar"
 ---
 
 Serie 4'ün panelinde bir gösterge yanıyor ya da ekranda **E:** ile başlayan bir kod var. Bu yazıdaki karşılıkların tamamı Bosch'un **Serie 4 kısa kılavuzundan** alındı.
@@ -93,6 +115,22 @@ Serie 4 tablosu yalnız kod vermiyor; **koda dönüşmeyen şikâyetleri** de ay
 Kılavuzun ilk maddesi de ölçülebilir: *"Bulaşıkları yeterince boşluk bırakarak yerleştiriniz. Püskürtülen su, bulaşıkların yüzeyine ulaşmalıdır."*
 
 Bosch'un diğer bulaşık makinesi sembolleri için: [Bosch bulaşık makinesi sembolleri ve anlamları](/blog/bosch-bulasik-makinesi-sembolleri-ve-anlamlari).
+
+## Adım adım: gösterge yandığında yapılacaklar
+
+**1.** Musluk sembolü yanıyorsa musluğun açık olduğunu ve besleme hortumunun bükülmediğini kontrol et.
+
+**2.** Musluk tam açıkken bir kovayla dakikada en az 10 litre su geldiğini ölç.
+
+**3.** Süzgeç sistemini çıkar, süzgeç elemanlarını musluk suyu altında temizle ve kaba süzgeci saat yönünde çevirerek yerine yerleştir.
+
+**4.** Püskürtme kollarının memelerini akan su altında kontrol et ve tıkayan yabancı cisimleri uzaklaştır.
+
+**5.** Tuz göstergesi yanıyorsa özel tuzu programı başlatmadan hemen önce tuz kabına doldur; tuz kabına deterjan koyma.
+
+**6.** Parlatıcı göstergesi yanıyorsa kapağı kaldır, parlatıcıyı max işaretine kadar doldur ve kapağı yerine oturana kadar kapat.
+
+**7.** Bulaşıkları, püskürtülen su yüzeylerine ulaşacak şekilde aralıklı yerleştir.
 
 ## Nereden sonrası servis işi
 
