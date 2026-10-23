@@ -26,6 +26,14 @@ export const KAPSAM_ILLER = {
   konya: "Konya",
   mersin: "Mersin",
   kocaeli: "Kocaeli",
+  // 23 Eki 2026 — YK #184 Ekim turu (7 il · 100 ilçe). Kasım turu 7 il 1 Kasım'dan sonra.
+  balikesir: "Balıkesir",
+  aydin: "Aydın",
+  sakarya: "Sakarya",
+  kutahya: "Kütahya",
+  mugla: "Muğla",
+  tekirdag: "Tekirdağ",
+  mardin: "Mardin",
 };
 
 export const kapsamdaMi = (sehirSlug) => Object.hasOwn(KAPSAM_ILLER, String(sehirSlug ?? ""));
