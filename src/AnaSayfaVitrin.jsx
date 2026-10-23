@@ -100,16 +100,19 @@ const POPULER = [
 // kalırdı). Bu yüzden App.jsx'te ızgara ≥521px'te 4 sütuna SABİTLENDİ (≤520px'te zaten
 // 2 sütun) → 8 kutu her ekranda tam satır. Kutu sayısı değişirse o kural da gözden geçirilir.
 const trSayi = (n) => n.toLocaleString("tr-TR");
+// İçerik sayaçları 1.000'e ulaşınca tam sayı yerine "1.000+" (Tolga 23 Eki: "yazılar 1000 i geçtikten sonra artık
+// tam sayı gösterme 1000+ olarak göster"). Servis rozetindeki 10.000+ kalıbı; tam sayı site-istatistik.json'da kalır.
+export const icerikSayi = (n) => (n >= 1000 ? "1.000+" : trSayi(n));
 const SAYILAR = [
   { buyuk: trSayi(IST.servis), kucuk: "servis kaydı" },
   { buyuk: trSayi(IST.il), kucuk: "il" },
   { buyuk: trSayi(IST.ilce), kucuk: "ilçe" },
   { buyuk: trSayi(IST.marka), kucuk: "marka" },
   // ⬇️ İçerik tarafı (21 Ağu, Tolga: "50+ rehber, 200+ blog, tamir, kılavuz vb").
-  { buyuk: trSayi(IST.blog), kucuk: "blog yazısı" },
-  { buyuk: trSayi(IST.rehber), kucuk: "onarım rehberi" },
-  { buyuk: trSayi(IST.tamir), kucuk: "tamir kaydı" },
-  { buyuk: trSayi(IST.kilavuz), kucuk: "kullanım kılavuzu" },
+  { buyuk: icerikSayi(IST.blog), kucuk: "blog yazısı" },
+  { buyuk: icerikSayi(IST.rehber), kucuk: "onarım rehberi" },
+  { buyuk: icerikSayi(IST.tamir), kucuk: "tamir kaydı" },
+  { buyuk: icerikSayi(IST.kilavuz), kucuk: "kullanım kılavuzu" },
 ];
 
 // "Bil, gör, çağır" — logonun altındaki slogan burada açılıyor. Sürecin üç adımını
