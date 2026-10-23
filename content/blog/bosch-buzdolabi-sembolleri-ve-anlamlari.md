@@ -4,6 +4,20 @@ description: "Bosch No Frost buzdolabı panelindeki super, eco, holiday, fresh, 
 slug: "bosch-buzdolabi-sembolleri-ve-anlamlari"
 date: "2026-10-09"
 category: "Buzdolabı"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Dondurucu normal soğuturken soğutucu ılık kalıyorsa panelde tatil modunun açık olup olmadığına bak."
+  - "Kapı alarmı çalıyorsa açık kalan kapıyı kapat; alarm kendiliğinden kapanır."
+  - "Sıcaklık alarmında sesi modelindeki alarm tuşuyla sustur; çözülmeye başlamış yiyecekleri pişirmeden tekrar dondurma."
+  - "Tuşlara bastığın hâlde ayar değişmiyorsa modelindeki kilit tuşuyla tuş kilidini kaldır."
+  - "Göstergeler ve aydınlatma yanıyor ama cihaz soğutmuyorsa kılavuzdaki tuş sırasıyla sergileme modundan çık ve soğutmayı kontrol et."
+  - "Sıcaklık göstergesinde E ya da d görünüyorsa cihazı kapat, fişini çek, 5 dakika sonra yeniden bağla ve cihazı aç."
+  - "Mesaj hâlâ görünüyorsa ya da kendi kendine test 5 akustik sinyal veriyorsa müşteri hizmetlerini ara."
 faq:
   - q: "Bosch buzdolabında super yazısı ne demek?"
     a: "Panelde iki ayrı super vardır: soğutucu bölmesininki süper soğutma, dondurucu bölmesininki süper dondurmadır. Serie 6 KGN76CIE0N kılavuzuna göre süper soğutma yaklaşık 6 saat, süper dondurma yaklaşık 54 saat sonra kendiliğinden normal moda döner; kapatman gerekmez. Kılavuz süper dondurmayı 2 kg'dan fazla yiyecek koymadan 4 ile 6 saat önce açmanı öneriyor. İkisi açıkken cihazdan daha çok ses gelmesi de kılavuza göre normaldir."
@@ -21,6 +35,14 @@ faq:
     a: "Değil. Bu yazıdaki karşılıklar Bosch'un üç alttan donduruculu No Frost modelinin Türkçe kullanım kılavuzundan alındı: Serie 4 KGN56VWF0N, Serie 6 KGN76CIE0N ve Serie 6 KGN86AID2N. Üçünün paneli bile birbirinden farklı; örneğin tatil modu Serie 4 kılavuzunda yok, tuş kilidi ise KGN76CIE0N kılavuzunda yok. Kendi modelinin kılavuzu esastır."
 images:
   coverAlt: "Paslanmaz çelik iki kapılı buzdolabının kapısındaki dokunmatik kontrol paneli yakın planda; soldaki dondurucu sıcaklık göstergesinde −18, sağdaki soğutucu göstergesinde 4 derece okunuyor"
+  steps:
+    - "Buzdolabı kapısındaki panelde tatil modu göstergesi"
+    - "Kapısı kapatılmış alttan donduruculu buzdolabı"
+    - "Dondurucu çekmecesinde düzenli dizilmiş dondurulmuş gıda paketleri"
+    - "Buzdolabı panelinde kilit simgesi yakın plan"
+    - "İç aydınlatması yanan, kapısı açık buzdolabı"
+    - "Fişi prizden çekilmiş buzdolabının arka alt köşesi"
+    - "Buzdolabı panelinde uyarı gösteren sıcaklık ekranı"
 ---
 
 Bosch buzdolabının panelinde **super**, **eco** ya da **holiday** yanıyor, bir yerde **alarm** yazısı yanıp sönüyor ya da ekranda bir **kilit** simgesi var. Bu yazıdaki karşılıkların tamamı Bosch'un üç alttan donduruculu No Frost modeli için yayımladığı Türkçe kullanım kılavuzlarından alındı: **Serie 4 KGN56VWF0N**, **Serie 6 KGN76CIE0N** ve **Serie 6 KGN86AID2N**. Başka bir Bosch modelinde panel düzeni ve tuş adları farklı olabilir.
@@ -190,6 +212,22 @@ Testi başlatma yolu modele göre değişiyor; her birinde önce cihaz kapatıl�
 | Serie 4 KGN56VWF0N | Cihazı kapat, 5 dakika bekle, aç; ilk 10 saniye içinde **−** tuşunu sinyal duyulana kadar 3-5 saniye basılı tut |
 | Serie 6 KGN76CIE0N | Cihazı kapat, fişini çek, 5 dakika sonra bağla; açtıktan 1 dakika sonra soğutucu **super** tuşunu sinyal duyulana kadar 3-5 saniye basılı tut |
 | Serie 6 KGN86AID2N | Cihazı kapat, fişini çek, 5 dakika sonra bağla, aç; 2 dakika içinde **freezer fridge** tuşunu sinyal duyulana kadar 3 saniye basılı tut |
+
+## Adım adım: panel uyarısı yandığında yapılacaklar
+
+**1.** Dondurucu normal soğuturken soğutucu ılık kalıyorsa panelde tatil modunun açık olup olmadığına bak.
+
+**2.** Kapı alarmı çalıyorsa açık kalan kapıyı kapat; alarm kendiliğinden kapanır.
+
+**3.** Sıcaklık alarmında sesi modelindeki alarm tuşuyla sustur; çözülmeye başlamış yiyecekleri pişirmeden tekrar dondurma.
+
+**4.** Tuşlara bastığın hâlde ayar değişmiyorsa modelindeki kilit tuşuyla tuş kilidini kaldır.
+
+**5.** Göstergeler ve aydınlatma yanıyor ama cihaz soğutmuyorsa kılavuzdaki tuş sırasıyla sergileme modundan çık ve soğutmayı kontrol et.
+
+**6.** Sıcaklık göstergesinde E ya da d görünüyorsa cihazı kapat, fişini çek, 5 dakika sonra yeniden bağla ve cihazı aç.
+
+**7.** Mesaj hâlâ görünüyorsa ya da kendi kendine test 5 akustik sinyal veriyorsa müşteri hizmetlerini ara.
 
 ## Nereden sonrası servis işi
 

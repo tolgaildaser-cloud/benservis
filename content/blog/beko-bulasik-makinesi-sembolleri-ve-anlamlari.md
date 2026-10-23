@@ -4,6 +4,20 @@ description: "Beko B 710 panelindeki tuz, parlatıcı, kapı ve kilit göstergel
 slug: "beko-bulasik-makinesi-sembolleri-ve-anlamlari"
 date: "2026-10-07"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Bulaşık makinesi tuzu", "Parlatıcı", "Yumuşak fırça"]
+steps:
+  - "Parlatıcı göstergesi yanıyorsa kapağı mandalından aç, bölmeyi MAX seviyesine kadar doldur ve kapağı hafifçe bastırarak kapat."
+  - "Tuz göstergesi yanıyorsa makineyi çalıştırmadan hemen önce alt sepeti çıkar ve tuz bölmesini yalnız bulaşık makinesi yumuşatma tuzuyla doldur."
+  - "Tuz göstergesi sönmüyorsa tuzun çözünmesi için birkaç saat bekle ve su sertliği ayarının r:1 olup olmadığına bak."
+  - "Suyunun sertliğini öğren; P3 tuşuna 3 saniye basarak alt menüye gir ve r: ayarını kılavuzun tablosuna göre yap."
+  - "Bulaşıklar temiz ya da kuru çıkmıyorsa parlatıcı göstergesine bak; parlatıcı yeterliyse P: ayarını yükselt."
+  - "Filtreleri haftada en az bir kez çevirerek çıkar, musluk altında fırçayla temizle ve kaba filtreyi tık sesi gelene kadar çevirerek yerine tak."
+  - "Tuşlar tepki vermiyorsa makine açık ve kapı kapalıyken P4 tuşuna 3 saniye basarak çocuk kilidini kaldır."
 faq:
   - q: "Beko bulaşık makinesinde tuz göstergesi neden sürekli yanıyor?"
     a: "Beko'nun B 710 kılavuzu üç durum sayıyor. Birincisi tuz bitmiştir: gösterge yanmaya başladığında tuz bölmesine yeniden tuz doldurmanız gerekir. İkincisi tuz yeni konmuştur: kılavuza göre tuzun suda çözünmesi birkaç saat sürebilir, bu nedenle doldurmadan sonra gösterge belirli bir süre yanmaya devam eder. Üçüncüsü su sertliği ayarı 1. seviyededir ya da suyunuz 7 °dH'nin altındadır: bu durumda tuz kullanmanız gerekmez ama kılavuzun ifadesiyle Tuz Eksikliği Uyarı göstergesi sürekli yanacaktır."
@@ -21,6 +35,14 @@ faq:
     a: "Değil. Bu yazıdaki karşılıklar Beko'nun B 710 i, B 710 b, B 710 si, B 710 sc, B 710 bc ve B 710 gc modelleri için yayımladığı 25 Mart 2026 tarihli Türkçe kullanma kılavuzundan alınmıştır. Kılavuz da hata kodlarının modele göre değişiklik gösterebileceğini yazıyor. Farklı bir Beko modelinde panel ve tuş düzeni değişebilir; kendi modelinin kılavuzu esastır."
 images:
   coverAlt: "Bulaşık makinesinin siyah gösterge ekranı yakın planda; solda kırmızı parlatıcı ve tuz uyarı simgeleri, ortada dijital süre, sağda kapı ve kilit simgeleri görünüyor"
+  steps:
+    - "Bulaşık makinesi kapağının içinde açık parlatıcı bölmesi"
+    - "Alt sepeti çıkarılmış bulaşık makinesinin tabanındaki tuz bölmesi"
+    - "Bulaşık makinesi ekranında yanan tuz uyarı simgesi"
+    - "Bulaşık makinesi ekranında su sertliği ayarı"
+    - "Bulaşık makinesinden çıkmış lekesiz cam bardaklar"
+    - "Musluk altında fırçayla temizlenen bulaşık makinesi filtreleri"
+    - "Bulaşık makinesi ekranında kilit simgesi yakın plan"
 ---
 
 Beko bulaşık makinesinin ekranında kırmızı bir simge yanıyor, tuşlar tepki vermiyor ya da ekranda **r:3**, **P:2** gibi bir yazı var. Bu yazıdaki karşılıkların tamamı Beko'nun **B 710 serisi** (B 710 i, B 710 b, B 710 si, B 710 sc, B 710 bc, B 710 gc) için yayımladığı 25 Mart 2026 tarihli Türkçe kullanma kılavuzundan alındı.
@@ -138,6 +160,22 @@ Kılavuzun sorun giderme bölümü makine hiç çalışmadığında önce şunla
 Bulaşıklar temiz ya da kuru çıkmıyorsa kılavuz birkaç maddede aynı göstergeye geri dönüyor: *"Parlatıcı eksikliği uyarı göstergesini kontrol ederek gerekirse parlatıcı ilave edin."* Parlatıcı yeterliyse P: ayarı yükseltilir.
 
 Filtreleri kılavuz **haftada en az bir kez** temizlemeni istiyor: mikro filtre ve kaba filtre grubu saat yönünün tersine çevrilip çıkarılır, üç filtre musluk altında fırçayla temizlenir, kaba filtre tık sesi duyulana kadar saat yönünde çevrilerek yerine takılır. Kılavuzun uyarısı: *"Makine filtresiz kullanılmamalıdır."*
+
+## Adım adım: gösterge yandığında yapılacaklar
+
+**1.** Parlatıcı göstergesi yanıyorsa kapağı mandalından aç, bölmeyi MAX seviyesine kadar doldur ve kapağı hafifçe bastırarak kapat.
+
+**2.** Tuz göstergesi yanıyorsa makineyi çalıştırmadan hemen önce alt sepeti çıkar ve tuz bölmesini yalnız bulaşık makinesi yumuşatma tuzuyla doldur.
+
+**3.** Tuz göstergesi sönmüyorsa tuzun çözünmesi için birkaç saat bekle ve su sertliği ayarının r:1 olup olmadığına bak.
+
+**4.** Suyunun sertliğini öğren; P3 tuşuna 3 saniye basarak alt menüye gir ve r: ayarını kılavuzun tablosuna göre yap.
+
+**5.** Bulaşıklar temiz ya da kuru çıkmıyorsa parlatıcı göstergesine bak; parlatıcı yeterliyse P: ayarını yükselt.
+
+**6.** Filtreleri haftada en az bir kez çevirerek çıkar, musluk altında fırçayla temizle ve kaba filtreyi tık sesi gelene kadar çevirerek yerine tak.
+
+**7.** Tuşlar tepki vermiyorsa makine açık ve kapı kapalıyken P4 tuşuna 3 saniye basarak çocuk kilidini kaldır.
 
 ## Nereden sonrası servis işi
 

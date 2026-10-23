@@ -5,6 +5,8 @@ slug: "bosch-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
 updated: "2026-08-22"
 category: "Çamaşır makinesi"
+# 23 Eki 2026 (YK #182 Dalga 2, PAZ): E23 satırı Bosch WAK24210TR kılavuzuna göre düzeltildi
+# (9000941315_A, md5 e1a8d222…, s.26: "Küvet içinde su var, cihaz sızdırıyor"); eski "Aquastop etkinleştirildi" yanlıştı.
 # 🔴 22 Ağu 2026 — TABLO BAŞTAN YAZILDI (kod tablosu denetimi, TARAMA-1).
 # Beş kod satırı çıkarıldı; hiçbiri BSH'nin yayımladığı listelerde yok:
 #   F21 "motor sistemi arızası (kömür)"  → BSH'nin tahrik kodu E80
@@ -72,7 +74,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | **E18 / F18** | Atık su tahliye edilemiyor | 🛠️ Tahliye hortumunu ve pompa filtresini kontrol edin |
 | **E19 / F19** | Isıtma süresi aşıldı | 🔧 "Kendi kendine düzeltilemez" — servis |
 | **E20 / F20** | Beklenmeyen ısınma | 🛠️ Makineyi açıp kapatarak sıfırlayın; düzelmezse servis |
-| **E23 / F23** | Aquastop etkinleştirildi | 🔧 "Kendi kendine düzeltilemez" — servis |
+| **E23 / F23** | Küvette su var, cihaz sızdırıyor | 🔧 Su musluğunu kapat, yetkili servisi çağır |
 | **E25 / F25** | Bulanıklık sensörü arızası | 🔧 Servis |
 | **E26 / F26** | Analog basınç sensörü arızası | 🔧 Servis |
 | **E27 / F27** | Basınç sensörü arızası | 🔧 Servis |
@@ -101,8 +103,8 @@ Makine hâlâ suyu pompalamıyorsa pompada arıza olabilir; orası servis işidi
 ### E17 / F17 — Su besleme süresi aşıldı
 Bosch'un verdiği çözüm tek cümle: **musluğu açın.** Pratikte musluğun tam açık olduğunu, evde su olduğunu ve giriş hortumunun ezilmediğini kontrol etmek gerekir. Hortumun makine tarafındaki küçük süzgeci de kireçle tıkanabilir.
 
-### E23 / F23 — Aquastop etkinleştirildi
-Makine bir su kaçağı algılamış ve Aquastop güvenliği devreye girmiştir. Bosch bu kod için net: *"kendi kendine düzeltilemez"*. Kaynağı (conta, hortum, pompa) servis bulmalıdır.
+### E23 / F23 — Küvette su var, cihaz sızdırıyor
+Bosch'un kullanım kılavuzu (WAK24210TR) bu kod için açık: *"Küvet içinde su var, cihaz sızdırıyor. Su musluğunu kapatınız. Yetkili servisi çağırınız!"* Yani önce musluğu kapat; kaçağın kaynağını servis bulmalıdır.
 
 ### E20 / F20 — Beklenmeyen ısınma
 Listedeki en az bilinen koddur ve iyi haber taşır: Bosch burada önce **makineyi açıp kapatarak sıfırlamayı** öneriyor. Yani her E20 bir arıza değildir; geçici bir okuma hatasından da gelebilir. Reset sonrası tekrar geliyorsa servis.

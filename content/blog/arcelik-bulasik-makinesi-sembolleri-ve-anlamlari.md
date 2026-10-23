@@ -4,6 +4,20 @@ description: "Panelde yanan simgelerin çoğu arıza değil: program evresi, uya
 slug: "arcelik-bulasik-makinesi-sembolleri-ve-anlamlari"
 date: "2026-09-03"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Bulaşık makinesi tuzu", "Parlatıcı", "Bez"]
+steps:
+  - "Tuz Eksikliği Uyarı göstergesi yanıyorsa tuz bölmesine yumuşatma tuzu doldur."
+  - "Tuzu doldurduktan sonra göstergenin bir süre daha yanmasını bekle; tuzun suda çözünmesi birkaç saat sürebilir."
+  - "Parlatıcı Eksikliği Uyarı göstergesi yanıyorsa parlatıcı bölmesine parlatıcı doldur."
+  - "Doldururken taşan parlatıcıyı sil; dökülen parlatıcı köpürme yapar ve yıkamayı zayıflatır."
+  - "Su Kesik Uyarı göstergesi yanıyorsa suyun kesik olmadığını ve musluğun açık olduğunu kontrol et."
+  - "Program Evreleri Takip göstergelerinin hiçbiri yanmıyorsa erteleme ayarının devrede olup olmadığına bak."
+  - "Su akıyor ve musluk açık olduğu hâlde Su Kesik göstergesi yanıyorsa yetkili servisi çağır."
 faq:
   - q: "Arçelik bulaşık makinesinde aynı anda birden fazla gösterge yanıyor, arıza mı?"
     a: "Hayır, normal çalışma görüntüsüdür. Arçelik 6382 kılavuzu Program Evreleri Takip göstergeleri için birebir şunu yazıyor: yıkama program boyunca Yıkama / Durulama / Kurutma adımlarında göstergeler sırası ile yanar, biten adımın göstergesi sönmez, göstergeler eklenerek yanar. Yani makine ilerledikçe yanan gösterge sayısı artar. Aynı kılavuza göre program bittiğinde yıkama adımlarının göstergeleri söner ve sadece Program Bitti göstergesi yanar."
@@ -21,6 +35,14 @@ faq:
     a: "Hayır. Arçelik bulaşık makinesi panellerindeki kalemlerin çoğu ya program durumu (Yıkama, Durulama, Kurutma, Program Bitti), ya tüketim uyarısı (tuz, parlatıcı), ya da senin yaptığın seçim (Tablet Deterjan, Az Bulaşık, Hızlı Yıkama, Yarım Yük, Erteleme, Çocuk Kilidi). Arıza panelde ayrı bir dille, E ile başlayan hata kodu olarak gösterilir; o kodların anlamları için Arçelik bulaşık makinesi hata kodları yazımıza bakabilirsin."
 images:
   coverAlt: "Bulaşık makinesinin kumanda paneli ve gösterge ışıkları"
+  steps:
+    - "Bulaşık makinesinin tabanında açık tuz bölmesi"
+    - "Bulaşık makinesi panelinde yanan tuz uyarı göstergesi yakın plan"
+    - "Bulaşık makinesi kapağının içinde açık parlatıcı bölmesi"
+    - "Parlatıcı bölmesinin çevresi bezle silinmiş bulaşık makinesi kapağı"
+    - "Bulaşık makinesinin arkasında açık su musluğu ve giriş hortumu"
+    - "Bulaşık makinesi ekranında erteleme göstergesi"
+    - "Kapağı kapalı, panelinde su kesik uyarısı yanan bulaşık makinesi"
 ---
 
 Bulaşık makinesinin panelinde tanımadığın bir ışık yandığında ilk düşünce genellikle aynı oluyor: "arıza mı?" Arçelik'in kendi kullanma kılavuzlarına bakıldığında ise tablo başka türlü görünüyor. Panel listesindeki kalemlerin büyük çoğunluğu **program durumu**, **tüketim uyarısı** ya da **senin yaptığın seçim**. Arıza kılavuzda ayrı bir yerde duruyor ve simgeyle değil **hata koduyla** anlatılıyor.
@@ -146,6 +168,22 @@ Bu yazının en pratik bulgusu şu: **aynı markanın iki makinesinde panel ayn�
 | Fonksiyonlar | Tablet Deterjan · Az Bulaşık · Hızlı Yıkama | Tablet Deterjan · Yarım Yük · Ekstra Durulama |
 
 Ankastre modelde ayrıca bir **alt menü** var: makineyi açtıktan sonra Erteleme ve Program tuşuna aynı anda 3 saniye basıldığında ayar menüsüne giriliyor ve program göstergesinde **P1 – P4** arası bir kod görünüyor (uyarı sesi ve iç aydınlatmanın açık/kapalı kombinasyonları). Menüye girildiğinde **parlatıcı ikonunun yanıp sönmesi** bu akışın parçası — arıza değil.
+
+## Adım adım: panel uyarısı yandığında yapılacaklar
+
+**1.** Tuz Eksikliği Uyarı göstergesi yanıyorsa tuz bölmesine yumuşatma tuzu doldur.
+
+**2.** Tuzu doldurduktan sonra göstergenin bir süre daha yanmasını bekle; tuzun suda çözünmesi birkaç saat sürebilir.
+
+**3.** Parlatıcı Eksikliği Uyarı göstergesi yanıyorsa parlatıcı bölmesine parlatıcı doldur.
+
+**4.** Doldururken taşan parlatıcıyı sil; dökülen parlatıcı köpürme yapar ve yıkamayı zayıflatır.
+
+**5.** Su Kesik Uyarı göstergesi yanıyorsa suyun kesik olmadığını ve musluğun açık olduğunu kontrol et.
+
+**6.** Program Evreleri Takip göstergelerinin hiçbiri yanmıyorsa erteleme ayarının devrede olup olmadığına bak.
+
+**7.** Su akıyor ve musluk açık olduğu hâlde Su Kesik göstergesi yanıyorsa yetkili servisi çağır.
 
 ## Simge mi, hata kodu mu?
 

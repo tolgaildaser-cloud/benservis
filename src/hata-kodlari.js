@@ -752,7 +752,41 @@ export const HATA_KODU_KATMANI = {
       yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
     { giris: "Siemens — E:92-40", tip: "kod",
       anlam: "Süzgeçler pislenmiş ya da tıkanmış; kılavuzdaki adımlarla süzgeç sistemi çıkarılıp temizlenir ve yerine oturtulur.",
-      yazi: "siemens-bulasik-makinesi-e92-40-hatasi" }, // https://media3.bsh-group.com/Documents/9002038027_A.pdf · md5 d4a5a736
+      yazi: "siemens-bulasik-makinesi-e92-40-hatasi" }, // https://media3.bsh-group.com/Documents/9002038027_A.pdf · md5 d4a5a736,
+    // ——— 23 Eki 2026, YK #182 Dalga 2 (PAZ tamir föyü): 11 giriş; kaynak belge + md5 föyde ———
+    { giris: "LG — NE", tip: "kod",
+      anlam: "Değişken motor sorunu; aynı sorun yeniden meydana gelirse servis çağrılır.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "Bosch — E14", tip: "kod",
+      anlam: "Su alma sisteminde veya temiz su girişinde hata; köşe vanasının açık, giriş hortumunun bükülmemiş olduğu kontrol edilir, sık tekrarlarsa müşteri hizmetleri.",
+      yazi: "bosch-bulasik-makinesi-hata-kodlari" }, // https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e-14 · md5 b12de98d
+    { giris: "Bosch — E15", tip: "kod",
+      anlam: "Su koruma sistemi etkinleştirildi; Bosch evde çözmeyi denememeyi önerir: şebeke suyu kesilir, cihaz kapatılır, teknisyen randevusu alınır.",
+      yazi: "bosch-bulasik-makinesi-e15-hatasi" }, // https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e-15 · md5 882ce03b
+    { giris: "Bosch — E22", tip: "kod",
+      anlam: "Filtreler tıkanmış; filtreler temizlenir ve doğru şekilde, yerine kilitlenecek biçimde takılır.",
+      yazi: "bosch-bulasik-makinesi-e22-hatasi" }, // https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e22 · md5 d09abdfb
+    { giris: "Bosch — E24", tip: "kod",
+      anlam: "Nedenlerinden biri pompa tıkanıklığı; pompadaki tıkanıklık açılır, çözülmezse musluk ve cihaz kapatılıp teknisyen randevusu alınır.",
+      yazi: "bosch-bulasik-makinesi-e24-hatasi" }, // https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/bulasik-makinesi-hata-kodu-e24 · md5 4c0cba8d
+    { giris: "Vestel — F6", tip: "kod",
+      anlam: "Hatalı ısıtma sensörü; kılavuz servisle iletişime geçmeyi söyler.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9
+    { giris: "Vestel — F7", tip: "kod",
+      anlam: "Aşırı ısınma; kılavuz servisle iletişime geçmeyi söyler.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9
+    { giris: "Vestel — F8", tip: "kod",
+      anlam: "Isıtıcı hatası; kılavuz servisle iletişime geçmeyi söyler.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9
+    { giris: "Vestel — F9", tip: "kod",
+      anlam: "Ayırıcı konumu hatası; kılavuz servisle iletişime geçmeyi söyler.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9
+    { giris: "Vestel — HI", tip: "kod",
+      anlam: "Yüksek voltaj arızası; kılavuz servisle iletişime geçmeyi söyler.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9
+    { giris: "Vestel — LO", tip: "kod",
+      anlam: "Düşük voltaj arızası; kılavuz servisle iletişime geçmeyi söyler.",
+      yazi: "vestel-bulasik-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20264050_k.pdf · md5 dd6a67c9
   ],
 
   "Kombi / Termosifon": [
@@ -1368,7 +1402,155 @@ export const HATA_KODU_KATMANI = {
       yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
     { giris: "ECA Proteus · Citius — F64", tip: "kod",
       anlam: "Fan koruma hatası (fan ya da fan kablosu takılı değil veya temassız); kablo işi olduğu için yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756,
+    // ——— 23 Eki 2026, YK #182 Dalga 2 (PAZ tamir föyü): 49 giriş; kaynak belge + md5 föyde ———
+    { giris: "Protherm Puma · Lynx Condens — F.22", tip: "kod",
+      anlam: "Tesisat basıncı çok düşük, ısıtma sistemindeki su yetersiz; dolum basıncı kontrol edilip ısıtma sistemi doldurulur, basınç sık düşüyorsa yetkili servis.",
+      yazi: "protherm-kombi-f22-hatasi" }, // https://www.protherm.com.tr/_temp/protherm-puma-condens-kullanma-kilavuzu.pdf · md5 a132a92b
+    { giris: "Protherm Gepard Condens — F10", tip: "kod",
+      anlam: "Isıtma sisteminde yetersiz su, sistem basıncı yeterli değil; ısıtma sistemi doldurulur.",
+      yazi: "protherm-kombi-ariza-kodlari" }, // https://www.protherm.com.tr/_temp/c2f54fd4-f5ad-4a4c-a6a3-195cd32bb5f9.pdf · md5 e007ac08
+    { giris: "Protherm Puma · Lynx Condens — F.28", tip: "kod",
+      anlam: "Ateşleme başarısız: arka arkaya başarısız ateşleme denemelerinden sonra ürün arıza konumuna geçer; gaz kesme vanasının açık olduğu kontrol edilip arıza giderilir (reset), kalkmazsa yetkili servis.",
+      yazi: "protherm-kombi-ariza-kodlari" }, // https://www.protherm.com.tr/_temp/protherm-puma-condens-kullanma-kilavuzu.pdf · md5 a132a92b
+    { giris: "Protherm Gepard Condens — F04", tip: "kod",
+      anlam: "Doğalgazda üç, sıvı gazda bir başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer; reset tuşuna basılır, üç denemede kalkmazsa yetkili servis.",
+      yazi: "protherm-kombi-ariza-kodlari" }, // https://www.protherm.com.tr/_temp/c2f54fd4-f5ad-4a4c-a6a3-195cd32bb5f9.pdf · md5 e007ac08
+    { giris: "Protherm Gepard Condens — F05", tip: "kod",
+      anlam: "Atık gaz hattında bir arıza mevcut; kılavuzda kullanıcı adımı yok, arıza yetkili servis tarafından giderilir.",
+      yazi: "protherm-kombi-ariza-kodlari" }, // https://www.protherm.com.tr/_temp/c2f54fd4-f5ad-4a4c-a6a3-195cd32bb5f9.pdf · md5 e007ac08
+    { giris: "ECA Confeo — E10", tip: "kod",
+      anlam: "Yetersiz su sirkülasyonu uyarısı (F10 hatası 24 saat içinde dört kez meydana geldi); kılavuz E.C.A. yetkili servisine bildirimde bulunmayı söyler.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Confeo — F36", tip: "kod",
+      anlam: "Şebeke frekansı hatası, şebeke (elektrik) sorunu; E.C.A. yetkili servisine bildirilir.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Confeo — F201", tip: "kod",
+      anlam: "Anakart ile arayüz kartı arasında iletişim hatası (kart ya da iletişim kablosu arızalı olabilir); E.C.A. yetkili servisine bildirilir.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Proteus — E06", tip: "kod",
+      anlam: "Fan sinyal hatası: 60 saniye boyunca fandan ölçülen hız belirlenen aralıkta değil; Reset butonuna basılır, sürerse E.C.A. yetkili servisi.",
       yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Proteus — E21", tip: "kod",
+      anlam: "Analog-dijital çevirici (ADC) hatası, elektronik kart arızalı olabilir; Reset butonuna basılır, sürerse E.C.A. yetkili servisi.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Proteus — F08", tip: "kod",
+      anlam: "İyonizasyon komponenti hatası; Reset butonuna basılır, sürerse E.C.A. yetkili servisi.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "DemirDöküm — F.63", tip: "kod",
+      anlam: "EEPROM arızası; kılavuzdaki neden elektronik kart arızası olduğu için yetkili servis işidir.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf · md5 5bc84f7e
+    { giris: "DemirDöküm — F.64", tip: "kod",
+      anlam: "Elektronik / sıcaklık sensörü arızası (gidiş ya da dönüş sıcaklık sensöründe kısa devre, elektronik kart); yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf · md5 5bc84f7e
+    { giris: "DemirDöküm — F.65", tip: "kod",
+      anlam: "Elektronik sisteminde sıcaklık arızası: elektronik aşırı ısınmış ya da kart arızalı; yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf · md5 5bc84f7e
+    { giris: "DemirDöküm — F.74", tip: "kod",
+      anlam: "Su basıncı sensörü sinyali hatalı (çok yüksek); kılavuzdaki nedenler kablo demetinde kısa devre/kesinti ve sensör arızası olduğu için yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf · md5 5bc84f7e
+    { giris: "Ferroli Bluehelix — F37", tip: "kod",
+      anlam: "Sistem su basıncı doğru değil (basınç çok düşük); doldurma musluğuyla basınç başlangıç değerine (soğukta yaklaşık 1,0 bar) getirilir, musluk daima geri kapatılır.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A01", tip: "kod",
+      anlam: "Brülör ateşleme yapmıyor. Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A02", tip: "kod",
+      anlam: "Brülör kapalı iken alev var sinyali. Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A03", tip: "kod",
+      anlam: "Aşırı sıcaklık korumasının devreye girmesi. Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A04", tip: "kod",
+      anlam: "Duman tahliye emniyetinin devreye girmesi (son 24 saatte 3 kez F07 arızası). Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A05", tip: "kod",
+      anlam: "Fan korumasının devreye girmesi (1 saat boyunca art arda F15 arızası). Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A06", tip: "kod",
+      anlam: "Ateşleme aşamasından sonra alev yetersizliği (4 dakikada 6 defa). Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F07", tip: "kod",
+      anlam: "Duman sıcaklığı yüksek, duman sensörü aşırı sıcaklık tespit ediyor. Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F10", tip: "kod",
+      anlam: "Çıkış sensörü 1 arızası (sensör hasarlı, kablo kısa devre ya da kopuk). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F11", tip: "kod",
+      anlam: "Giriş sensörü arızası (sensör hasarlı, kablo kısa devre ya da kopuk). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F12", tip: "kod",
+      anlam: "Sıhhi su devresi sensöründe arıza (sensör hasarlı, kablo kısa devre ya da kopuk). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F13", tip: "kod",
+      anlam: "Duman sensörü arızası (sensör hasarlı, kablo kısa devre ya da kopuk). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F14", tip: "kod",
+      anlam: "Çıkış sensörü 2 arızası (sensör hasarlı, kablo kısa devre ya da kopuk). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F15", tip: "kod",
+      anlam: "Fan arızası (230V besleme yetersizliği, takimetre sinyali kesintisi ya da fan hasarlı). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F34", tip: "kod",
+      anlam: "Besleme gerilimi 170V'dan az, elektrik şebekesi problemi; elektrik tesisatı kontrolü ve yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F35", tip: "kod",
+      anlam: "Şebeke frekansı anormal, elektrik şebekesi problemi; elektrik tesisatı kontrolü ve yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F39", tip: "kod",
+      anlam: "Harici sensör arızası (sensör hasarlı ya da bağlantısı kesik). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A41", tip: "kod",
+      anlam: "Sensörlerin konumlandırılması: çıkış sensörünün boru ile bağlantısı kesilmiş. Kombi bloke olur; RESET tuşuna 1 saniye basılır, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — A42", tip: "kod",
+      anlam: "Isıtma sensöründe anormallik, sensör hasarlı; kılavuzun çözümü sensör değişimi, yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F43", tip: "kod",
+      anlam: "Eşanjör korumasının devreye girmesi (sistemde su sirkülasyonu yok ya da hava var). Geçici blokaj, değerler normale dönünce kendiliğinden kalkar; sürerse yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Bluehelix — F52", tip: "kod",
+      anlam: "Isıtma sensöründe anormallik, sensör hasarlı; kılavuzun çözümü sensör değişimi, yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/bluehelix-tech-kullanim-kilavuzu-28d5d.pdf · md5 3d412e0a
+    { giris: "Ferroli Leone — E01", tip: "kod",
+      anlam: "Alev algılama kilitlemeli hatası: doğalgazda 3, LPG'de 1 başarısız ateşleme denemesinden sonra; gaz kontrol edilip kombi resetlenir, kalkmazsa yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E03", tip: "kod",
+      anlam: "Merkezi ısıtma gidiş suyu sıcaklık sensörü hatası; ısıtma ve kullanım suyu çalışmaz. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E04", tip: "kod",
+      anlam: "Kullanım suyu sıcaklık sensörü hatası; merkezi ısıtma normal çalışır. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E06", tip: "kod",
+      anlam: "Merkezi ısıtma gidiş suyu aşırı ısınma hatası (95°C üzeri; 85°C altına düşünce kendiliğinden düzelir); petekler kontrol edilir, servise başvurulur.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E08", tip: "kod",
+      anlam: "Düşük su basıncı hatası: basınç 0,4 barın altında; 0,8 bar ve üstünde kendiliğinden düzelir, sistem su basıncı kontrol edilir (tabloda 1,5 bar).",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E09", tip: "kod",
+      anlam: "Aşırı ısınma emniyet termostatı kilitlemeli hatası, kullanıcının resetlemesi gerekir; petekler kontrol edilir, servise başvurulur.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E10", tip: "kod",
+      anlam: "Yüksek su basıncı hatası: basınç 4,0 barın üstünde; 3,5 bar ve altında kendiliğinden düzelir, sistem su basıncı kontrol edilir (tabloda 1,5 bar).",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E17", tip: "kod",
+      anlam: "Baca gazı sıcaklık sensörü hatası. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E24", tip: "kod",
+      anlam: "Merkezi ısıtma dönüş suyu sıcaklık sensörü hatası. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E25", tip: "kod",
+      anlam: "Donma hatası: gidiş suyu 10 saniye 1°C ve altında; 3°C ve üstünde kendiliğinden düzelir. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E30", tip: "kod",
+      anlam: "Fan enkoder sinyali gelmiyor, kilitlemeli hata; kullanıcının resetlemesi gerekir. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E43", tip: "kod",
+      anlam: "Sifon dolu hatası; kılavuzun çözümü yoğuşma sifonunun temizlenmesi, sifon kombinin içinde olduğu için yetkili servis.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
+    { giris: "Ferroli Leone — E44", tip: "kod",
+      anlam: "Gaz valfi geri beslemesi kilitlemeli hatası; kullanıcının resetlemesi gerekir. Kılavuzun çözümü: servise başvurun.",
+      yazi: "ferroli-kombi-ariza-kodlari" }, // https://www.ferroli.com.tr/docs/leone-kullanim-kilavuzu-cg9a8.pdf · md5 77bf558a
   ],
 
   "Buzdolabı": [

@@ -4,6 +4,20 @@ description: "Beko CMX 11140 ekranındaki 14 sembol: kapak kilidi, su yok, çocu
 slug: "beko-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-10-08"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Kapak açılmıyorsa ve makinede su varsa Pompa programını çalıştırıp suyu tahliye et."
+  - "Makine suyu ısıtıyorsa kapağı zorlamadan programın bitmesini bekle."
+  - "Ön kapağa baskı gelmişse kapağı tutamaktan itip çekerek takılı konumundan kurtar."
+  - "Program değiştirilemiyorsa Yardımcı Fonksiyon düğmesi 3'e 3 saniye basılı tutarak çocuk kilidini kapat."
+  - "Su Yok göstergesi yanıyorsa muslukların açık olduğunu, giriş hortumunun bükülmediğini ve yükleme kapağının kapandığını kontrol et."
+  - "Çamaşırlar dengesiz dağıldıysa çamaşırları düzelt ve işlemi yeniden başlat."
+  - "Fazla köpük oluşmaması için önerilen miktarda deterjan kullan."
 faq:
   - q: "Beko çamaşır makinesinde kapak kilidi simgesi neden sönmüyor?"
     a: "Beko'nun CMX 11140 kılavuzuna göre kapak, makinedeki su seviyesi uygun olmadığında açılmasın diye kilitlenir ve bu sırada ekranda Kapak Kilidi Devrede sembolü görünür. Başlat/Duraklat düğmesine bastığında su seviyesi uygunsa kilit çözülür ve simge kaybolur. Su seviyesi yetersizse ya da makinedeki su 50 °C'nin üzerindeyse kilit devre dışı bırakılamaz ve simge görünmeye devam eder. Kılavuzun önerisi: ürün suyu ısıtıyor ya da sıkıyorsa programın bitmesini beklemek; içeride su varsa Pompa ya da Sıkma programıyla suyu tahliye etmek."
@@ -21,6 +35,14 @@ faq:
     a: "Değil. Bu yazıdaki karşılıklar Beko'nun CMX 11140 modeli için yayımladığı 3 Eylül 2024 tarihli Türkçe kullanma kılavuzundan alınmıştır. Kılavuzun kendisi de ekran çizimlerinin şematik olduğunu ve makinenin özellikleriyle birebir aynı olmayabileceğini, yardımcı fonksiyonların modele göre farklılık gösterebileceğini yazıyor. Farklı bir Beko modelinde kendi modelinin kılavuzu esastır."
 images:
   coverAlt: "Beyaz önden yüklemeli çamaşır makinesinin kontrol paneli yakın planda; solda program seçim düğmesi, sağda süre ve sembollerin göründüğü siyah ekran ile altında sıra hâlinde dokunmatik tuşlar"
+  steps:
+    - "Program düğmesi pompa konumuna getirilmiş çamaşır makinesi"
+    - "Ekranında kapak kilidi simgesi yanan çalışan çamaşır makinesi"
+    - "Çamaşır makinesinin yuvarlak kapağı ve tutamağı yakın plan"
+    - "Çamaşır makinesi ekranında çocuk kilidi simgesi"
+    - "Çamaşır makinesinin arkasında açık musluk ve düz uzanan giriş hortumu"
+    - "Tamburun içine düzgün yayılmış çamaşırlar"
+    - "Deterjan çekmecesinde ölçülü konmuş toz deterjan"
 ---
 
 Beko çamaşır makinenin ekranında bir kilit simgesi sönmüyor, ekranda **End** yazıyor ya da süre bir türlü geri saymıyor. Bu yazıdaki karşılıkların tamamı Beko'nun **CMX 11140** modeli için yayımladığı 3 Eylül 2024 tarihli Türkçe kullanma kılavuzundan alındı. Başka bir Beko modelinde panel ve sembol düzeni farklı olabilir.
@@ -125,6 +147,22 @@ Ekranda değil ama sık sorulan bir işaret de deterjan çekmecesindeki numarala
 | 3 | Yumuşatıcı (sifon parçası bu gözde; >max< işaretini aşma) |
 
 Ön yıkamasız program kullanıyorsan 1 numaralı göze deterjan koyma. Bitiş Zamanı fonksiyonunu kullanırken kılavuz, 2 numaralı göze sıvı deterjan eklememeni söylüyor; çamaşırlarda leke kalma riski var.
+
+## Adım adım: sembol yandığında yapılacaklar
+
+**1.** Kapak açılmıyorsa ve makinede su varsa Pompa programını çalıştırıp suyu tahliye et.
+
+**2.** Makine suyu ısıtıyorsa kapağı zorlamadan programın bitmesini bekle.
+
+**3.** Ön kapağa baskı gelmişse kapağı tutamaktan itip çekerek takılı konumundan kurtar.
+
+**4.** Program değiştirilemiyorsa Yardımcı Fonksiyon düğmesi 3'e 3 saniye basılı tutarak çocuk kilidini kapat.
+
+**5.** Su Yok göstergesi yanıyorsa muslukların açık olduğunu, giriş hortumunun bükülmediğini ve yükleme kapağının kapandığını kontrol et.
+
+**6.** Çamaşırlar dengesiz dağıldıysa çamaşırları düzelt ve işlemi yeniden başlat.
+
+**7.** Fazla köpük oluşmaması için önerilen miktarda deterjan kullan.
 
 ## Hata kodu görüyorsan
 

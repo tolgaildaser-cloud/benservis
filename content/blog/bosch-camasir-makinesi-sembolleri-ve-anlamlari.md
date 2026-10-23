@@ -4,6 +4,20 @@ description: "Ekrandaki simgelerin çoğu arıza değil, program durumu. Bosch k
 slug: "bosch-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Musluk simgesi yanıyorsa su musluğunun açık olduğunu ve giriş hortumunu kontrol et."
+  - "Program başladıktan sonra kapak simgesi yanıp sönüyorsa kapağı düzgün kapat."
+  - "Tuşlar çalışmıyorsa ve çocuk kilidi simgesi yanıp sönüyorsa çocuk kilidini kapat."
+  - "Tambur temizleme göstergesi yanıp sönüyorsa Tambur Temizleme programını çalıştır."
+  - "Köpük tespiti simgesi yandıysa sonraki yıkamada deterjan dozunu düşür."
+  - "Gerilim kontrol göstergesi yanıyorsa makineye müdahale etme; gerilim düzelince program kendiliğinden devam eder."
+  - "Yanık kokusu, kumanda panelinde ısınma ya da anormal ses varsa makineyi çalıştırmayı bırak ve fişini çek."
 faq:
   - q: "Bosch çamaşır makinesinde kapak simgesi ne anlama gelir?"
     a: "Üç farklı durumu anlatır ve hangisi olduğunu simgenin davranışı söyler. WGA142Z0TR kılavuzuna göre kapak simgesi yanıyorsa kapak kilitlidir ve açılamaz, yanıp sönüyorsa kapak açıktır, sönükse kilit açılmıştır ve kapak açılabilir. Daha eski WAW28760TR kılavuzunda ise aynı simge yanıyorsa kapak açılabilir, program başlatıldıktan sonra yanıp sönüyorsa kapak doğru kapatılmamıştır. Yani okuma yönü modele göre değişir, ölçüt kendi kılavuzundur."
@@ -19,6 +33,14 @@ faq:
     a: "Aynı değil. Karşılaştırdığımız iki Bosch kılavuzu aynı işlevi farklı biçimde gösteriyor ve kılavuzun kendisi de sıkma devir sayısı için maksimum değerin seçilen programa ve modele bağlı olduğunu yazıyor. Bu yüzden buradaki tablo bir yön göstergesidir; kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Çamaşır makinesinin kumanda paneli ve ekranı"
+  steps:
+    - "Çamaşır makinesinin arkasında açık su musluğu ve giriş hortumu"
+    - "Çamaşır makinesinin kapalı yuvarlak kapağı yakın plan"
+    - "Çamaşır makinesi ekranında çocuk kilidi simgesi"
+    - "Boş tamburlu çamaşır makinesinin içi"
+    - "Deterjan çekmecesine ölçü kabıyla konan az miktarda deterjan"
+    - "Çamaşır makinesi ekranında bekleme durumu"
+    - "Fişi prizden çekilmiş çamaşır makinesi"
 ---
 
 Çamaşır makinesinin ekranında bir simge belirdiğinde ilk düşünce genelde aynı oluyor: "bozuldu mu?" Oysa Bosch'un kendi kullanma kılavuzlarına bakıldığında ekrandaki göstergelerin büyük çoğunluğu arıza değil — **program durumu, ayar bilgisi veya hatırlatma**.
@@ -160,6 +182,22 @@ Bu yüzden:
 - Buradaki tablo bir **yön göstergesi**. Kesin karşılık **kendi modelinin kullanma kılavuzunda**.
 - Kılavuzun kayıpsa üreticinin destek sayfasından **model numarasıyla** indirebilirsin. Model numarası çoğu çamaşır makinesinde kapak çevresindeki etikette ya da kapağın iç kenarında yazar.
 - Ekranda **`E` ile başlayan bir kod** görüyorsan o ayrı bir kümedir — simge değil, hata kodudur.
+
+## Adım adım: simge yandığında yapılacaklar
+
+**1.** Musluk simgesi yanıyorsa su musluğunun açık olduğunu ve giriş hortumunu kontrol et.
+
+**2.** Program başladıktan sonra kapak simgesi yanıp sönüyorsa kapağı düzgün kapat.
+
+**3.** Tuşlar çalışmıyorsa ve çocuk kilidi simgesi yanıp sönüyorsa çocuk kilidini kapat.
+
+**4.** Tambur temizleme göstergesi yanıp sönüyorsa Tambur Temizleme programını çalıştır.
+
+**5.** Köpük tespiti simgesi yandıysa sonraki yıkamada deterjan dozunu düşür.
+
+**6.** Gerilim kontrol göstergesi yanıyorsa makineye müdahale etme; gerilim düzelince program kendiliğinden devam eder.
+
+**7.** Yanık kokusu, kumanda panelinde ısınma ya da anormal ses varsa makineyi çalıştırmayı bırak ve fişini çek.
 
 ## Ne zaman servis işi
 

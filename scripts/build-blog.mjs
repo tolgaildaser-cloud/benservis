@@ -1677,7 +1677,11 @@ function kopruKapsamDenetimi(posts) {
   //    ailenin tamamı tek bir belirtiye ("kod/işaret var") oturuyor. Külliyatın geri
   //    kalanında belirtisizlik BİLEREK'tir (…-kac-para · …-nasil-temizlenir · …-kac-derece
   //    gibi 41 yazı) — oraya kapı koymak kürasyon ilkesini bozardı.
-  const SEMBOL_ISTISNA = new Set([]); // bilerek belirtisiz bırakılan sembol yazısı (bugün boş)
+  // bilerek belirtisiz bırakılan sembol yazıları (gerekçeli):
+  //  · vestel-firin-sembolleri-ve-anlamlari (YK #182 Dalga 2, 23 Eki): fırın hızlı-belirti listesinde (App.jsx
+  //    BELIRTILER + EK_BELIRTI) "hata kodu / gösterge" karşılığı yok; en yakın "Isınmıyor" sembol yazısını
+  //    yanlış ön-doldurur. Kürasyon ilkesi: yanlış ön-doldurma, ön-doldurmamaktan kötüdür → yalnız cihaz taşır.
+  const SEMBOL_ISTISNA = new Set(["vestel-firin-sembolleri-ve-anlamlari"]);
   const sembolYazisi = (p) => /sembolleri-ve-anlamlari$/.test(p.slug || "");
   const sembolKacan = posts.filter((p) => sembolYazisi(p) && !KOPRU_ARIZA[p.slug] && !SEMBOL_ISTISNA.has(p.slug));
   if (sembolKacan.length) {

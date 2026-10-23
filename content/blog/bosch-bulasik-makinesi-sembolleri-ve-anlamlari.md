@@ -4,6 +4,20 @@ description: "Musluk, tuz ve parlatıcı simgeleri arıza değil, ikmal uyarıs�
 slug: "bosch-bulasik-makinesi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Bulaşık makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Özel tuz", "Parlatıcı", "Makine temizlik maddesi"]
+steps:
+  - "Su girişi kontrolü göstergesi yanıyorsa su musluğunun açık olduğunu kontrol et."
+  - "Su giriş hortumu katlanmışsa hortumu bükülmeyecek şekilde yerleştir."
+  - "Tuz göstergesi yanıyorsa özel tuz doldur; sensör algılamadığı için özel tuz tableti kullanma."
+  - "Parlatıcı göstergesi yanıyorsa parlatıcıyı doldur ve parlatıcı ilave etme miktarını ayarla."
+  - "Makine temizliği göstergesi yanıyorsa makineye bulaşık koymadan, özel makine temizlik maddesiyle makine temizliği programını çalıştır."
+  - "Tuşlar tepki vermiyorsa ilgili tuşu yaklaşık 4 saniye basılı tutarak tuş kilidini kaldır."
+  - "Makinenin altında su birikiyorsa, yanık kokusu ya da panelde ısınma varsa makineyi durdur, fişini çek ve su musluğunu kapat."
 faq:
   - q: "Bosch bulaşık makinesinde musluk simgesi yanıyorsa ne demek?"
     a: "Makineye su giremiyor demektir; arıza kodu değildir. Bosch kılavuzu bu göstergeyi su girişi kontrolü göstergesi olarak adlandırır ve sebeplerini sırayla sayar: su giriş hortumu katlanmıştır, su musluğu kapalıdır ya da su musluğu sıkışmış veya kireçlenmiştir. Kılavuzun verdiği çözümler de aynı sırada: hortumu bükülmeyecek şekilde yerleştir, musluğu aç, musluğu kontrol et. Üçü de ücretsiz ve senin alanında."
@@ -19,6 +33,14 @@ faq:
     a: "Aynı değil. Bosch kılavuzunun kendisi kumanda paneli listesinde birçok kalemin yanına bulaşık makinenizin donanım modellerine göre notunu düşüyor ve program tuşlarının adedinin bile modele göre değiştiğini yazıyor. Ayrıca ekranın kendisi de cihazın donanımına göre değişir. Kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Bulaşık makinesinin kumanda paneli ve gösterge ışıkları"
+  steps:
+    - "Bulaşık makinesinin arkasında açık su musluğu"
+    - "Bulaşık makinesinin arkasında düz uzanan su giriş hortumu"
+    - "Bulaşık makinesinin tabanında açık özel tuz kabı"
+    - "Bulaşık makinesi kapağının içinde açık parlatıcı kabı"
+    - "Sepetleri boş bulaşık makinesinin içi"
+    - "Bulaşık makinesi panelinde tuş kilidi göstergesi"
+    - "Fişi prizden çekilmiş bulaşık makinesi ve kapalı su musluğu"
 video:
   youtubeId: "pzY0f0YwcW0"
   title: "Bosch bulaşık makinesi sembolleri ve anlamları"
@@ -121,6 +143,22 @@ Bu yüzden:
 - Buradaki tablo bir **yön göstergesi**. Kesin karşılık **kendi modelinin kullanma kılavuzunda**.
 - Kılavuzun kayıpsa üreticinin destek sayfasından **model numarasıyla** indirebilirsin. Model numarası bulaşık makinelerinde genellikle **kapağın iç kenarındaki** etikette yazar.
 - Ekranda **`E` ile başlayan bir kod** görüyorsan o ayrı bir kümedir — gösterge değil, **hata kodudur**.
+
+## Adım adım: gösterge yandığında yapılacaklar
+
+**1.** Su girişi kontrolü göstergesi yanıyorsa su musluğunun açık olduğunu kontrol et.
+
+**2.** Su giriş hortumu katlanmışsa hortumu bükülmeyecek şekilde yerleştir.
+
+**3.** Tuz göstergesi yanıyorsa özel tuz doldur; sensör algılamadığı için özel tuz tableti kullanma.
+
+**4.** Parlatıcı göstergesi yanıyorsa parlatıcıyı doldur ve parlatıcı ilave etme miktarını ayarla.
+
+**5.** Makine temizliği göstergesi yanıyorsa makineye bulaşık koymadan, özel makine temizlik maddesiyle makine temizliği programını çalıştır.
+
+**6.** Tuşlar tepki vermiyorsa ilgili tuşu yaklaşık 4 saniye basılı tutarak tuş kilidini kaldır.
+
+**7.** Makinenin altında su birikiyorsa, yanık kokusu ya da panelde ısınma varsa makineyi durdur, fişini çek ve su musluğunu kapat.
 
 ## Ne zaman servis işi
 

@@ -4,6 +4,20 @@ description: "Samsung çamaşır makinesi sembolleri ve anlamları: Ecobubble pa
 slug: "samsung-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-10-06"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika (+ Temiz Kazan programı)"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Kapak kilidi simgesi yanıyorsa kapağı zorlama; makine durduktan sonra birkaç dakika bekle."
+  - "Çocuk kilidi açıksa kilit sembolünün iki yanındaki düğmelere aynı anda 3 saniye basarak kilidi kaldır."
+  - "Temiz Kazan simgesi yanıyorsa program seçiciyi TEMİZ KAZAN'a çevir ve Başlat/Duraklat'a basılı tut."
+  - "4C görünüyorsa muslukları aç ve hortumların tıkalı ya da donmuş olmadığını kontrol et."
+  - "dC görünüyorsa kapağı düzgün kapat ve kapak ile gövde arasında çamaşır kalmadığına bak."
+  - "LC görünüyorsa boşaltma hortumunun ucunun yere konmadığından ve tıkanmadığından emin ol."
+  - "Ub görünüyorsa çamaşırı eşit dağıt ve makinenin düz, sağlam bir zeminde durduğuna bak."
 faq:
   - q: "Samsung çamaşır makinesinde kilit simgesi ne demek?"
     a: "Samsung'un WW**CGC***** kılavuzunda iki ayrı kilit simgesi var. Kapak Kilidi simgesi kapağın kilitli olduğunu ve açılamadığını gösterir; program sırasında kapak otomatik kilitlenir, simge kaybolduğunda kapağı açabilirsin. Çocuk Kilidi simgesi ise Çocuk Kilidi işlevinin açık olduğunu gösterir; bu işlev Güç hariç tüm düğmeleri kilitler."
@@ -21,6 +35,14 @@ faq:
     a: "Hayır. Bu yazıdaki karşılıklar Samsung'un WW**CGC***** serisi (ör. WW90CGC04DAB, Ecobubble 9 kg) Türkçe kullanıcı kılavuzundan alınmıştır. Samsung'un diğer serilerinde düğme yerleşimi, simge seti ve kısayollar farklı olabilir; kendi modelinin kılavuzundaki tablo esastır."
 images:
   coverAlt: "Samsung çamaşır makinesinin kontrol paneli yakın planda; program düğmesi, dijital ekran ve ekranın yanında Wi-Fi, kilit ve kazan temizliği simgeleri görünüyor"
+  steps:
+    - "Çamaşır makinesi ekranında kapak kilidi simgesi"
+    - "Çamaşır makinesi panelinde kilit sembolü ve iki yanındaki düğmeler"
+    - "Program seçicisi kazan temizleme konumunda çamaşır makinesi"
+    - "Çamaşır makinesinin arkasında açık musluk ve giriş hortumu"
+    - "Düzgün kapatılmış çamaşır makinesi kapağı"
+    - "Çamaşır makinesinin arkasından lavaboya uzanan boşaltma hortumu"
+    - "Düz zeminde duran çamaşır makinesi ve tamburda yayılmış çamaşırlar"
 video:
   youtubeId: "xyx9u34pfnM"
   title: "Samsung çamaşır makinesi sembolleri ve anlamları"
@@ -149,6 +171,22 @@ Aynı kılavuzun sonunda bir de **kumaş bakım tablosu** var. Kılavuzun temel 
 | Üstü çarpı ile çizili üçgen | Ağartıcı kullanmayın |
 
 Kılavuzun tablosunda kurutma, ütüleme ve profesyonel temizlik sembolleri de var; ütüde noktalar sıcaklık aralığını, kurutmada noktalar kurutma düzeyini, çizgiler kurutma türünü ve yerini gösteriyor.
+
+## Adım adım: simge ya da kod görünce yapılacaklar
+
+**1.** Kapak kilidi simgesi yanıyorsa kapağı zorlama; makine durduktan sonra birkaç dakika bekle.
+
+**2.** Çocuk kilidi açıksa kilit sembolünün iki yanındaki düğmelere aynı anda 3 saniye basarak kilidi kaldır.
+
+**3.** Temiz Kazan simgesi yanıyorsa program seçiciyi TEMİZ KAZAN'a çevir ve Başlat/Duraklat'a basılı tut.
+
+**4.** 4C görünüyorsa muslukları aç ve hortumların tıkalı ya da donmuş olmadığını kontrol et.
+
+**5.** dC görünüyorsa kapağı düzgün kapat ve kapak ile gövde arasında çamaşır kalmadığına bak.
+
+**6.** LC görünüyorsa boşaltma hortumunun ucunun yere konmadığından ve tıkanmadığından emin ol.
+
+**7.** Ub görünüyorsa çamaşırı eşit dağıt ve makinenin düz, sağlam bir zeminde durduğuna bak.
 
 ## Nereden sonrası servis işi
 

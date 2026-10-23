@@ -4,6 +4,20 @@ description: "LG F4V3VYW panelindeki kapak kilidi, çocuk kilidi, AI DD ve sessi
 slug: "lg-camasir-makinesi-sembolleri-ve-anlamlari"
 date: "2026-10-08"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika (+ kazan temizleme programı)"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: ["Toz kireç çözücü"]
+steps:
+  - "Kapak kilidi simgesi yanıyorsa kapağı zorlama; simge sönünce kapağı aç."
+  - "Ekranda CL varsa Zaman Erteleme ve Öğe Ekle düğmelerine birlikte 3 saniye basarak çocuk kilidini kaldır."
+  - "Ekranda tcL görünüyorsa tamburu boşalt, ana yıkama bölmesine toz kireç çözücü koy ve Kazan Temizleme programını başlat."
+  - "Kazan Temizleme bitince içi tamamen kurusun diye kapağı açık bırak."
+  - "IE görünüyorsa musluğu tamamen aç ve kıvrılan giriş hortumunu düzelt."
+  - "UE görünüyorsa çamaşırları yeniden dağıt; tek ağır parça varsa yanına bir iki küçük parça ekle."
+  - "LE görünüyorsa motor soğuyana kadar 30 dakika bekle ve programı yeniden başlat."
 faq:
   - q: "LG çamaşır makinesinde kilit simgesi yanıyor, kapak neden açılmıyor?"
     a: "LG'nin F4V3VYW serisi kılavuzuna göre kapak kilidi ışığı, program başladığında ve kapak kilitlendiğinde yanar. Kılavuzun sorun giderme tablosu bunu arıza saymıyor: cihaz çalışmaya başladıktan sonra güvenlik nedeniyle kapı açılamaz, bu normaldir ve simge söndükten sonra kapak güvenli şekilde açılabilir. Kılavuz ayrıca tamburdaki su seviyesi veya sıcaklığı yüksekse kapının kilitli kalacağını yazıyor."
@@ -21,6 +35,14 @@ faq:
     a: "Hayır. Bu yazıdaki karşılıklar LG'nin F4V3VYW* serisi Türkçe kullanıcı el kitabından (MFL71860774, Rev.01) alınmıştır. Kılavuzun kendisi de gerçek kontrol panelinin modelden modele farklılık gösterebileceğini yazıyor. Kendi modelinin kılavuzundaki tablo esastır."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin kontrol paneli yakın planda; dört haneli süre ekranı, altında kilit ve sessiz simgeleri, yanında program düğmesi görünüyor"
+  steps:
+    - "Çamaşır makinesi ekranında kapak kilidi simgesi"
+    - "Çamaşır makinesi ekranında çocuk kilidi yazısı"
+    - "Deterjan çekmecesinin ana yıkama bölmesinde toz kireç çözücü"
+    - "Program bittikten sonra kapağı açık bırakılmış çamaşır makinesi"
+    - "Çamaşır makinesinin arkasında açık musluk ve düz giriş hortumu"
+    - "Tamburun içine dengeli yayılmış havlular"
+    - "Ekranında program yeniden başlamış çamaşır makinesi"
 ---
 
 LG çamaşır makinesinin ekranında bir simge yanıyor ya da **CL**, **tcL**, **IE** gibi bir yazı çıktı. Bu yazıdaki karşılıkların tamamı LG'nin kendi **F4V3VYW serisi Türkçe kullanıcı el kitabından** alındı.
@@ -93,6 +115,22 @@ Kılavuzun "Hata Mesajları" tablosunda on iki kod satırı var. Bir kısmını 
 **OE için tahliye filtresi.** Kılavuz bu filtreyi de altı ayda bir kontrol etmeyi öneriyor ve önce **suyun soğumasını** beklemeni istiyor: fişi çek, kapak başlığını aç, tahliye borusunu çek, borunun tıpasını çıkarıp suyu boşalt, kalan su için tahliye pompası filtresini sök ve içindeki kalıntıları temizle, filtreyi iplik sarmayacak ve sızdırmayacak şekilde dikkatle yerine tak, tıpayı boruya geri tak, kapak başlığını kapat. Kılavuzun uyarısı: *"Su sıcak olabileceğinden boşaltırken dikkatli olun."*
 
 LG'nin diğer kodlarını tek tek ele aldığımız yazı: [LG çamaşır makinesi hata kodları](/blog/lg-camasir-makinesi-hata-kodlari).
+
+## Adım adım: simge ya da kod görünce yapılacaklar
+
+**1.** Kapak kilidi simgesi yanıyorsa kapağı zorlama; simge sönünce kapağı aç.
+
+**2.** Ekranda CL varsa Zaman Erteleme ve Öğe Ekle düğmelerine birlikte 3 saniye basarak çocuk kilidini kaldır.
+
+**3.** Ekranda tcL görünüyorsa tamburu boşalt, ana yıkama bölmesine toz kireç çözücü koy ve Kazan Temizleme programını başlat.
+
+**4.** Kazan Temizleme bitince içi tamamen kurusun diye kapağı açık bırak.
+
+**5.** IE görünüyorsa musluğu tamamen aç ve kıvrılan giriş hortumunu düzelt.
+
+**6.** UE görünüyorsa çamaşırları yeniden dağıt; tek ağır parça varsa yanına bir iki küçük parça ekle.
+
+**7.** LE görünüyorsa motor soğuyana kadar 30 dakika bekle ve programı yeniden başlat.
 
 ## Nereden sonrası servis işi
 
