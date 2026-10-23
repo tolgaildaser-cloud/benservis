@@ -48,7 +48,7 @@ karmaşıklığı (havuz/panel/SMS) geri çekildi**, ilk versiyonun sade modelin
 - Gömülü **referans tarife (SEED)** — 2026 TR piyasasıyla kalibre (yedek parça siteleri, Armut,
   şikayetvar, servis fiyat listeleri).
 - **±%10 bandı** + gösterilen tutar yukarı en yakın 100'e yuvarlanır.
-- **Servis eve-gidiş bedeli: 1.500 TL** sabit eklenir (7 Tem 2026'da 1.000→1.500 güncellendi).
+- **Servis eve-gidiş bedeli: 2.000 TL** sabit eklenir (7 Tem 2026'da 1.000→1.500, 23 Eki 2026'da 1.500→2.000 güncellendi).
 - **Marka kademesi** (gizli, içsel): premium/orta/ekonomik parça bandı; kullanıcıya gösterilmez.
 - **Yaş etkisi:** ~8+ yıl + tamir yeninin yarısını aşıyorsa "yenisini al" önerisi.
 

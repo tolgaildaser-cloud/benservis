@@ -34,16 +34,16 @@ describe("eşleme tablosu", () => {
 });
 
 describe("sapmaSatiri — celiskili nokta dışlanır (IT 26 Eyl)", () => {
-  const mevcut = { onayli_parca_min: 700, onayli_parca_max: 2500, onayli_iscilik: 900 }; // biz = 1600+900+1500 = 4000
+  const mevcut = { onayli_parca_min: 700, onayli_parca_max: 2500, onayli_iscilik: 900 }; // biz = 1600+900+2000 = 4500 (gidiş 23 Eki 2026'da 2000)
   const pts = [
-    { toplam_tl: 3500, kaynak_url: "https://a.com/x" },
-    { toplam_tl: 3500, kaynak_url: "https://b.com/y" },
+    { toplam_tl: 4000, kaynak_url: "https://a.com/x" },
+    { toplam_tl: 4000, kaynak_url: "https://b.com/y" },
     { parca_tl: 3500, toplam_tl: 1850, kaynak_url: "https://fiyatlarii.com/z", notlar: "web-topla; celiskili: parca>toplam" },
   ];
   it("işaretli nokta medyanı çekmez → ✓ ±%20", () => {
     const s = sapmaSatiri(pts, mevcut);
-    expect(s.web).toBe(3500);
-    expect(s.sapma).toBe(-12);
+    expect(s.web).toBe(4000);
+    expect(s.sapma).toBe(-11);
     expect(s.aksiyon).toBe("uyumlu");
     expect(s.nokta).toBe(2);
   });

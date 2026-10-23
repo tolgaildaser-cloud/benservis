@@ -222,14 +222,14 @@ function extractJSON(text) {
 
 // Türkiye'de servisin eve gidiş/keşif MİNİMUM bedeli — tüm maliyet tahminlerine
 // sabit eklenir (sonuç ne olursa olsun). Kullanıcı onayıyla 1500 TL'ye çıkarıldı
-// (5 Tem 2026). Değiştirmeden ÖNCE yine kullanıcıya sor (otomatik geçiş YOK).
-const SERVIS_GIDIS_BEDELI = 1500;
+// (5 Tem 2026), 23 Eki 2026'da 2000 TL (Tolga: "1500 TL olan servis bedelini 2000 TL olarak düzelt"). Değiştirmeden ÖNCE yine kullanıcıya sor (otomatik geçiş YOK).
+const SERVIS_GIDIS_BEDELI = 2000;
 
 // Maliyet aralığını beklenen nokta tahminin ±%10'una sabitler (kullanıcı kuralı),
 // servis gidiş bedelini (SERVIS_GIDIS_BEDELI) SABİT ekler (bedel ±%10'a tabi değil),
 // sonra gösterilen tutarı YUKARI doğru en yakın 100'e yuvarlar (kullanıcı kuralı:
 // 1990 → 2000, 2210 → 2300). AI tek "beklenen" döndürür; eski min/max gelirse orta nokta.
-// Örn (gidiş 1500): beklenen 1200 → 2600–2900 (ham 2580–2820, yukarı 100'e).
+// Örn (gidiş 2000): beklenen 1200 → 3100–3400 (ham 3080–3320, yukarı 100'e).
 function normalizeMaliyet(sonuc) {
   const m = sonuc?.tahminiMaliyet;
   if (!m) return sonuc;
