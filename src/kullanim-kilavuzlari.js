@@ -167,6 +167,7 @@ export const MARKA_KILAVUZLARI = {
   "Dyson": {
     url: "https://www.dyson.com.tr/destek",
     ozet: "Dyson destek sayfası: makineyi seçince kullanım kılavuzu, filtre bakımı ve sorun giderme videoları.",
+    haric: ["Küçük Ev Aletleri"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   "Arzum": {
     url: "https://destek.arzum.com.tr/kullanim-kilavuzlari",
@@ -195,6 +196,7 @@ export const MARKA_KILAVUZLARI = {
   "Xiaomi": {
     url: "https://www.mi.com/tr/support/user-guide/",
     ozet: "Xiaomi Türkiye destek sayfası: ürün kılavuzları, garanti bilgisi ve sorun giderme.",
+    haric: ["Su Sebili / Arıtma"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
 
   // ── Televizyon / elektronik ───────────────────────────────────────────────
@@ -250,6 +252,7 @@ export const MARKA_KILAVUZLARI = {
   "Regal": {
     url: "https://www.regal-tr.com/content/kullanim-kilavuzlari",
     ozet: "Regal, Vestel çatısındaki markadır; kılavuza cihazın seri numarasıyla Vestel Destek Merkezi üzerinden ulaşılıyor.",
+    haric: ["Küçük Ev Aletleri"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   "Baymak": {
     url: "https://www.baymak.com.tr/kombi",
@@ -285,6 +288,7 @@ export const MARKA_KILAVUZLARI = {
   "Dreame": {
     url: "https://global.dreametech.com/pages/user-manuals-and-faqs",
     ozet: "Modelini listeden seçerek kullanım kılavuzuna ve sık sorulanlara ulaşıyorsun (sayfa İngilizce); model etiketi cihazın altında.",
+    haric: ["Küçük Ev Aletleri"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   // ══════════════════════════════════════════════════════════════════════════
   // 21 AĞU 2026 DALGASI (YK #80 · 200+ kayıt hedefi) — 54 yeni marka.
@@ -401,6 +405,7 @@ export const MARKA_KILAVUZLARI = {
   "Teka": {
     url: "https://www.teka.com/tr-tr/destek/kilavuzlari-indir/",
     ozet: "Teka Türkiye'nin kılavuz indirme sayfası: model numaranı yazınca kullanım kılavuzu, montaj talimatı ve teknik çizim birlikte listeleniyor.",
+    haric: ["Çamaşır Makinesi", "Kurutma Makinesi"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   "Franke": {
     url: "https://www.franke.com/tr/tr/home-solutions/destek.html",
@@ -442,6 +447,7 @@ export const MARKA_KILAVUZLARI = {
         ozet: "Kumtel bulaşık makinesi listesi: modeli açıp ürün sayfasındaki \"Kullanım Kılavuzu\" bağlantısından PDF'i indiriyorsun.",
       },
     },
+    haric: ["Klima"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
 
   // ── Küçük ev aleti (mikrodalga / air fryer tarafı) ────────────────────────
@@ -469,7 +475,7 @@ export const MARKA_KILAVUZLARI = {
     url: "https://www.tefal.com.tr/kullanim-kilavuzlari/",
     ozet: "Rowenta Türkiye'de Groupe SEB çatısındadır ve rowenta.com.tr bu sayfaya yönlendiriyor; kılavuz listesinde Tefal, Krups ve Rowenta ürünleri birlikte duruyor.",
     // Listede Rowenta tarafı kişisel bakım ürünleriyle sınırlı — süpürge kılavuzu çıkmıyor, o yüzden Süpürge hariç.
-    haric: ["Süpürge"],
+    haric: ["Süpürge", "Küçük Ev Aletleri"],  // YK #185 (#88): adres bu gruplar için doğrulanmadı
   },
 
   // ── Süpürge ───────────────────────────────────────────────────────────────
@@ -512,6 +518,7 @@ export const MARKA_KILAVUZLARI = {
         ozet: "Toshiba dizüstü bilgisayarlarının bugünkü üreticisi Dynabook'un kılavuz sayfası: ürün ailesini (Satellite Pro, Portégé, Tecra), seriyi ve modeli seçip dili belirliyorsun, kullanım kılavuzu indirme listesi çıkıyor.",
       },
     },
+    haric: ["Fırın / Ocak / Aspiratör", "Mikrodalga / Air Fryer"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   "Panasonic": {
     url: "https://support-tr.panasonic.eu/",
@@ -674,6 +681,7 @@ export const MARKA_KILAVUZLARI = {
   "Shark": {
     url: "https://www.sharkninja.com.tr/pages/destek",
     ozet: "SharkNinja Türkiye destek sayfası; kategoriden süpürgene geçince ürün sayfasındaki 'Kullanım Kılavuzu' sekmesinden PDF açılıyor, servis noktaları ve ürün kaydı da burada.",
+    haric: ["Küçük Ev Aletleri"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   "Sinbo": {
     url: "https://www.sinbo.com.tr/urunler/supurgeler",
@@ -712,7 +720,7 @@ export const MARKA_KILAVUZLARI = {
   "Luxell": {
     url: "https://www.luxell.com.tr/ankastre-urunler",
     ozet: "Luxell'in ankastre ürünler listesi: fırın, ocak ve davlumbaz modellerinin çoğunun kartında \"Kullanım Kılavuzu\" bağlantısı var, tıklayınca modelin Türkçe kılavuzu PDF olarak açılıyor.",
-    haric: ["Mikrodalga / Air Fryer"],
+    haric: ["Mikrodalga / Air Fryer", "Klima"],  // YK #185 (#88): adres bu gruplar için doğrulanmadı
   },
   "Homend": {
     url: "https://www.homend.com.tr/elektrikli-supurge",
@@ -727,6 +735,7 @@ export const MARKA_KILAVUZLARI = {
         ozet: "Homend fritöz ve airfryer listesi: modelini açıyorsun, ürün açıklamasının sonundaki \"Kullanım Kılavuzu için tıklayınız\" bağlantısı Türkçe kılavuzu PDF olarak açıyor.",
       },
     },
+    haric: ["Su Sebili / Arıtma"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
   "Stilevs": {
     url: "https://www.stilevs.com/elektrikli-supurge",
@@ -773,6 +782,7 @@ export const MARKA_KILAVUZLARI = {
   "Kiwi": {
     url: "https://kiwi.com.tr/tr/kilavuzlar-1-17-pg",
     ozet: "Kiwi'nin kılavuz sayfası: ürün adı ya da model koduyla listelenmiş Türkçe kullanım kılavuzlarını PDF olarak indiriyorsun; giriş gerekmiyor.",
+    haric: ["Su Sebili / Arıtma"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
   },
 
   // ── 3 Eki 2026 · föy 2. parti (PAZ C2) ──
