@@ -4,6 +4,20 @@ description: "Tatilde buzdolabının fişi çekilmeli mi, tatil modu ne işe yar
 slug: "tatile-cikarken-buzdolabi-ve-cihazlar"
 date: "2026-07-13"
 category: "Genel"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Sirkeli su", "Bez"]
+steps:
+  - "Buzdolabındaki bozulacak yiyecekleri tüket ya da ver."
+  - "1-2 haftalık tatilde buzdolabının tatil modunu aç; yoksa termostatı ekonomik kademeye al."
+  - "Aylarca uzak kalacaksan buzdolabını boşalt, sirkeli suyla silip kurut, fişini çek ve kapısını aralık bırak."
+  - "Çamaşır ve bulaşık makinesinin musluklarını kapat; mümkünse ana su vanasını da kapat."
+  - "TV, modem, bilgisayar, şarj aleti ve küçük ev aletlerinin fişini çek."
+  - "Fırın ve ocağın kapalı olduğunu son kez kontrol et."
+  - "Çöpü dışarı çıkar."
 faq:
   - q: "Tatile çıkarken buzdolabının fişi çekilir mi?"
     a: "Kısa tatilde (1-2 hafta) çekme: bozulacak yiyecekleri tüket, varsa tatil modunu aç ya da termostatı ekonomik kademeye al. Uzun süre (aylar) evden uzak kalacaksan boşalt, temizle, fişini çek ve kapısını mutlaka ARALIK bırak — kapalı kalan kapının içinde nem, küf ve kalıcı koku oluşur."
@@ -15,11 +29,35 @@ faq:
     a: "Önce su vanasını ve fişleri sırayla aç. Buzdolabını çalıştırıp birkaç saat soğumasını bekle, çamaşır/bulaşık makinesini ilk seferde boş ve kısa programda çalıştır. Tuhaflık (koku, ses, hata kodu, geç soğutma) varsa belirtiyi Benservis'e yaz, olası arızayı ve tahmini maliyeti ücretsiz öğren."
 images:
   coverAlt: "Kapağı açık buzdolabı, bavul ve güneş çizimi"
+  steps:
+    - "Buzdolabı rafından alınmış taze yiyecekler tezgâhta"
+    - "Buzdolabı kontrol panelinde tatil modu tuşu yakın plan"
+    - "Boşaltılıp silinmiş, kapısı aralık bırakılmış buzdolabı"
+    - "Lavabo altında kapalı konumda su vanası"
+    - "Prizlerden çekilmiş şarj aleti ve modem fişleri"
+    - "Düğmeleri kapalı konumda ocak ve fırın paneli"
+    - "Kapı önünde ağzı bağlı çöp torbası"
 ---
 
 Temmuz-Ağustos tatil sezonunun zirvesi — ve her yıl aynı soru: **"Buzdolabının fişini çekelim mi?"** Kimine göre çekilir ("boşuna elektrik yakmasın"), kimine göre asla ("dönünce küf kokusuyla karşılaşırsın"). İkisinin de haklı olduğu senaryolar var; doğru cevap tatilin süresine bağlı. Bu rehberde buzdolabı kararını netleştirip evden çıkmadan önceki tam cihaz listesini veriyoruz — dönüşte sürprizle karşılaşmaman için.
 
 > 🧳 **Kısa özet:** Kısa tatil = buzdolabına dokunma (tatil modu yeter) + **su musluklarını kapat** + fişleri çek. Uzun süre = buzdolabını boşalt, fişini çek, **kapısını aralık bırak.** En pahalı tatil hatası su kaçağıdır, elektrik değil.
+
+## Adım adım: çıkmadan önce yapılacaklar
+
+**1.** Buzdolabındaki bozulacak yiyecekleri tüket ya da ver.
+
+**2.** 1-2 haftalık tatilde buzdolabının tatil modunu aç; yoksa termostatı ekonomik kademeye al.
+
+**3.** Aylarca uzak kalacaksan buzdolabını boşalt, sirkeli suyla silip kurut, fişini çek ve kapısını aralık bırak.
+
+**4.** Çamaşır ve bulaşık makinesinin musluklarını kapat; mümkünse ana su vanasını da kapat.
+
+**5.** TV, modem, bilgisayar, şarj aleti ve küçük ev aletlerinin fişini çek.
+
+**6.** Fırın ve ocağın kapalı olduğunu son kez kontrol et.
+
+**7.** Çöpü dışarı çıkar.
 
 ## Buzdolabı: süreye göre karar ver
 

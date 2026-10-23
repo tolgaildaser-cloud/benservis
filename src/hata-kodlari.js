@@ -725,6 +725,34 @@ export const HATA_KODU_KATMANI = {
     { giris: "Beko — makinede köpük oluşuyor", tip: "belirti",
       anlam: "Beko'ya göre elde deterjanla yıkanıp durulanmamış bulaşık, dökülen parlatıcı ya da açık kalan parlatıcı kapağı.",
       yazi: "beko-bulasik-makinesi-kopuk-yapiyor" },
+    // ——— 23 Eki 2026, YK #182 Dalga 1 (PAZ tamir föyü, md5 a2f1c99f…): 9 giriş; kaynak belge + md5 föyde ———
+    { giris: "LG — IE", tip: "kod",
+      anlam: "Su girişi sorunu; su beslemesi ve besleme hortumunun tıkanmış, bükülmüş ya da donmuş olup olmadığı kontrol edilir.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — OE", tip: "kod",
+      anlam: "Boşaltma sorunu; boşaltma hortumu (tıkanma, bükülme, donma), atık tıkacı ve filtreler kontrol edilip temizlenir.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — bE", tip: "kod",
+      anlam: "Elde yıkama deterjanı gibi uygun olmayan deterjandan aşırı köpük ya da hizasız cihaz; yalnız makine deterjanı kullanılır, kalıntı için üst rafa 100–200 ml süt konup Otomatik program çalıştırılır.",
+      yazi: "lg-bulasik-makinesi-be-hatasi" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — HE", tip: "kod",
+      anlam: "Isıtıcı devre arızası; aynı sorun yeniden görülürse servis çağrılır.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — FE", tip: "kod",
+      anlam: "Makineye aşırı su beslenmiş; aynı sorun yeniden görülürse servis çağrılır.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — AE", tip: "kod",
+      anlam: "Su kaçağı sorunu; aynı sorun yeniden görülürse servis çağrılır.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — tE", tip: "kod",
+      anlam: "Termistör (sıcaklık sensörü) arızası; aynı sorun yeniden görülürse servis çağrılır.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "LG — LE", tip: "kod",
+      anlam: "Motor sorunu; aynı sorun yeniden görülürse servis çağrılır.",
+      yazi: "lg-bulasik-makinesi-hata-kodlari" }, // https://gscs-b2c.lge.com/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    { giris: "Siemens — E:92-40", tip: "kod",
+      anlam: "Süzgeçler pislenmiş ya da tıkanmış; kılavuzdaki adımlarla süzgeç sistemi çıkarılıp temizlenir ve yerine oturtulur.",
+      yazi: "siemens-bulasik-makinesi-e92-40-hatasi" }, // https://media3.bsh-group.com/Documents/9002038027_A.pdf · md5 d4a5a736
   ],
 
   "Kombi / Termosifon": [
@@ -1268,6 +1296,79 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vaillant — F.77", tip: "kod",
       anlam: "Yoğuşma veya duman arızası (monte edilmişse yoğuşma suyu pompası ya da atık gaz klapesi); yetkili servis.",
       yazi: "vaillant-kombi-ariza-kodlari" },
+    // ——— 23 Eki 2026, YK #182 Dalga 1 (PAZ tamir föyü, md5 a2f1c99f…): 24 giriş; kaynak belge + md5 föyde ———
+    { giris: "Alarko Seradens Super — E04", tip: "kod",
+      anlam: "Düşük tesisat suyu basıncı; bilgi menüsünden basınç okunur, kombi soğuk ve kapalıyken doldurma musluğundan 1,2 bara kadar doldurulur, kombi kendiliğinden yeniden çalışır, sürerse yetkili servis.",
+      yazi: "alarko-kombi-e04-hatasi" }, // https://www.alarko-carrier.com.tr/Data/Files/Dokumanlar/kullanim-kilavuzu/kombi-alarko-srs-kk.pdf · md5 1d7022ad
+    { giris: "Alarko Seradens Super — E47", tip: "kod",
+      anlam: "Yüksek tesisat suyu basıncı (çoğunlukla soğukken fazla doldurulmuş sistemin ısınınca basıncı artar); basınç 1,2 bara düşene kadar su tahliye edilir, kombi kendiliğinden çalışır, sürerse yetkili servis.",
+      yazi: "alarko-kombi-e47-hatasi" }, // https://www.alarko-carrier.com.tr/Data/Files/Dokumanlar/kullanim-kilavuzu/kombi-alarko-srs-kk.pdf · md5 1d7022ad
+    { giris: "Baymak — E05", tip: "kod",
+      anlam: "Duotec Compact'ta fan geri besleme hatası; RESET (K1) tuşuna basılır, sorun sürerse yetkili servis.",
+      yazi: "baymak-kombi-ariza-kodlari" }, // https://www.baymak.com.tr/media/2889/300032317-kullanma-kilavuzu-baymak-duotec-compact-24_r1_28122018.pdf · md5 df4c42a6
+    { giris: "DemirDöküm — F.20", tip: "kod",
+      anlam: "Sıcaklık sınırlayıcı emniyet kapatması; kılavuzdaki nedenler gidiş/dönüş sıcaklık sensörü, şasi bağlantısı ve ateşleme hattındaki kaçak olduğu için yetkili servis işidir.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.23", tip: "kod",
+      anlam: "Emniyet kapatması: gidiş-dönüş sıcaklık farkı çok büyük; kılavuz nedenleri bloke ya da düşük güçte pompa, üründe hava ve karışmış sensör bağlantıları olarak sayar, yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.26", tip: "kod",
+      anlam: "Gaz armatürü işlevsiz (adım motoru bağlı değil ya da arızalı, soket/kablo kesintisi veya elektronik kart); gaz tarafı olduğu için yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.27", tip: "kod",
+      anlam: "Sahte alev emniyet kapatması (elektronik kartta nemlenme, kart arızası ya da sızdıran selenoid gaz valfi); yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.32", tip: "kod",
+      anlam: "Fan arızası (fan fişi ya da soket gevşek, kablo kesintisi, fan bloke, Hall sensörü veya elektronik arızası); yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.61", tip: "kod",
+      anlam: "Gaz emniyet ventili tahrik arızası (gaz armatürü kablo demetinde kısa devre, gaz armatürü ya da elektronik kart arızalı); yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.62", tip: "kod",
+      anlam: "Gaz emniyet ventili bağlantı arızası (gaz armatürü, elektronik kart ya da ateşleme elektrodu arızalı); yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.73", tip: "kod",
+      anlam: "Su basıncı sensörü sinyali hatalı (çok düşük): kablo demetinde kısa devre ya da kesinti veya sensör arızası; yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/downloads/products-1/nitromix-mk-0020309469-02-2557204.pdf · md5 bdff1627
+    { giris: "DemirDöküm — F.75", tip: "kod",
+      anlam: "Pompa arızası / su eksikliği; kılavuz nedenleri pompa ya da su basıncı sensörü arızası, düşük tesisat basıncı, üründe az su ve hava olarak sayar, basınç doğruysa yetkili servis.",
+      yazi: "demirdokum-kombi-ariza-kodlari" }, // https://www.demirdokum.com.tr/products-2/a5-1/ademix-mk-0020313926-02-2323451.pdf · md5 5bc84f7e
+    { giris: "ECA — E02", tip: "kod",
+      anlam: "Yanlış alev sinyali; kılavuzun tek adımı Reset'e basmak, hata sürer ya da tekrarlarsa E.C.A. yetkili servisi.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Proteus · Citius — E05", tip: "kod",
+      anlam: "Fandan 1 dakikadan uzun süre geri bildirim alınamıyor (fan ya da fan kablosu sorunu); Reset'e basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Proteus · Citius — E09", tip: "kod",
+      anlam: "Gaz valfi geri bildirim vermiyor (valf arızalı olabilir); Reset'e basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Proteus · Citius — E12", tip: "kod",
+      anlam: "EEPROM kontrol hatası (elektronik kart arızalı olabilir); Reset'e basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Confeo — E44", tip: "kod",
+      anlam: "Gaz valfinde arıza; Reset düğmesine basılır, sürerse E.C.A. yetkili servisi.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA — E80", tip: "kod",
+      anlam: "Swap test hatası: dönüş suyu sensörünün sıcaklığı besleme suyu sensöründen yüksek; Reset'e basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Confeo — F05", tip: "kod",
+      anlam: "Fan geri bildirim hatası (fan ya da fan kablosu sorunu); Reset düğmesine basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Confeo — F10", tip: "kod",
+      anlam: "Yetersiz su sirkülasyonu hatası (tesisat tıkanıklığı); kullanıcı adımı yok, E.C.A. yetkili servisine bildirilir.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA — F34", tip: "kod",
+      anlam: "Düşük besleme gerilimi: şebeke voltajı 170 V'un altına düşmüş; kullanıcı adımı yok, yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Confeo — F49", tip: "kod",
+      anlam: "Oda termostatı haberleşme hatası (termostat arızalı ya da bağlantı sorunu); kombi kapatılıp açılır, Reset'e basılır, sürerse yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aaa/edb/dfd/add/59663772-1e7b-4a8e-95d4-9874b5138500.pdf · md5 4ef56163
+    { giris: "ECA Proteus · Citius — F58", tip: "kod",
+      anlam: "Baca gazı yüksek sıcaklıkta kilitlenme: bir ay içinde iki kez F07 verilmiş; doğrudan yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    { giris: "ECA Proteus · Citius — F64", tip: "kod",
+      anlam: "Fan koruma hatası (fan ya da fan kablosu takılı değil veya temassız); kablo işi olduğu için yetkili servis.",
+      yazi: "eca-kombi-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
   ],
 
   "Buzdolabı": [
@@ -1729,6 +1830,25 @@ export const HATA_KODU_KATMANI = {
     { giris: "Samsung — E554", tip: "kod",
       anlam: "Gaz kaçak hatası; soğutucu devre servis işi.",
       yazi: "samsung-klima-hata-kodlari" },
+    // ——— 23 Eki 2026, YK #182 Dalga 1 (PAZ tamir föyü, md5 a2f1c99f…): 6 giriş; kaynak belge + md5 föyde ———
+    { giris: "Vestel — DF", tip: "kod",
+      anlam: "Koruma mesajı, arıza değil: dış ünitede oluşan buzlanma çözülüyor, işlem bitince klima ısıtmaya kendiliğinden devam eder.",
+      yazi: "vestel-klima-hata-kodlari" }, // https://static.vestel.com.tr/kullanimkilavuzlari/52162881.pdf · md5 b08e2688
+    { giris: "Vestel — AE", tip: "kod",
+      anlam: "Koruma mesajı: elektrik tesisatında ark kontrolü yaptırılmalı (elektrikçi işi), sorun sürerse yetkili servis.",
+      yazi: "vestel-klima-hata-kodlari" }, // https://static.vestel.com.tr/kullanimkilavuzlari/52162881.pdf · md5 b08e2688
+    { giris: "Vestel — HL", tip: "kod",
+      anlam: "Koruma mesajı: elektrik geriliminde dalgalanma var, klima gerilim düzelene kadar bekletilir.",
+      yazi: "vestel-klima-hata-kodlari" }, // https://static.vestel.com.tr/kullanimkilavuzlari/52162881.pdf · md5 b08e2688
+    { giris: "Vestel — Er11 / Er13", tip: "kod",
+      anlam: "Hata değil, kompresörü aşırı akımdan koruma mesajı; klima kumandadan kapatılır, sigortadan enerji kesilip 30 saniye beklenir ve yeniden açılır, tekrarlarsa yetkili servis.",
+      yazi: "vestel-klima-hata-kodlari" }, // https://static.vestel.com.tr/kullanimkilavuzlari/52162881.pdf · md5 b08e2688
+    { giris: "Samsung — CF", tip: "kod",
+      anlam: "Arıza değil, 14 günlük periyotlarla çıkan filtre temizleme hatırlatıcısı; filtre temizlenir, ardından hatırlatıcı sıfırlanır.",
+      yazi: "samsung-klima-cf-hatasi" }, // https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426a
+    { giris: "Samsung — E162", tip: "kod",
+      anlam: "EEPROM hatası; Samsung bu kod için kullanıcı adımı vermiyor, destek kanalına ya da yetkili servise yönlendiriyor.",
+      yazi: "samsung-klima-hata-kodlari" }, // https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426a
   ],
 
   "Fırın / Ocak / Aspiratör": [
@@ -1822,6 +1942,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "Fırın içi temizliği (piroliz · katalitik · buharlı)", tip: "ayar",
       anlam: "Hangi fırında hangi yöntem; katalitik yüzeye deterjan sürülmez, sprey nereye gitmemeli.",
       yazi: "firin-nasil-temizlenir" },
+    // ——— 23 Eki 2026, YK #182 Dalga 1 (PAZ tamir föyü, md5 a2f1c99f…): 1 giriş; kaynak belge + md5 föyde ———
+    { giris: "Vestel indüksiyonlu ocak — U sembolü", tip: "kod",
+      anlam: "Pişirme bölgesinin üzerinde tencere yok ya da tencere indüksiyona uygun değil; uygun tencere konur, tencere konmazsa bölge 2 dakika sonra kendiliğinden kapanır.",
+      yazi: "vestel-ocak-u-hatasi" }, // https://statik.vestel.com.tr/webfiles/20210044_k.pdf · md5 6e4db4a2
   ],
 
   "Televizyon / Monitör": [

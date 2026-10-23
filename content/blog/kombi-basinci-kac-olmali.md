@@ -4,6 +4,20 @@ description: "Normal aralık 1-2 bar. Asıl mesele şu: 1,1 barın altında komb
 slug: "kombi-basinci-kac-olmali"
 date: "2026-09-07"
 category: "Kombi/Termosifon"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Manometreyi oku; iğne 1-2 bar arasındaysa basınç tarafında yapılacak bir şey yok."
+  - "Petekler ılık kalıyor ve ekranda kod yoksa önce manometreye bak."
+  - "Kombinin altında su görürsen iğnenin 3 bara dayanıp dayanmadığına bak."
+  - "Basınç düşükse su eklemeyi ilk kez yetkili servisin göstermesini iste."
+  - "Ekranda H ve bir kod varsa kombiyi kapatıp yeniden çalıştır ya da kılavuzdaki tuşlarla sıfırla."
+  - "Kod geçmiyorsa kodu cihaz bilgileriyle birlikte not et ve servise bildir."
+  - "Basınç tekrar tekrar düşüyorsa servise başvur."
 faq:
   - q: "Kombi basıncı normalde kaç bar olmalı?"
     a: "Bosch'un üç ayrı kombi kılavuzu da aynı aralığı veriyor. Condens 1200 W kullanma kılavuzunun ifadesi birebir şöyle: normal şartlarda çalışma basıncı 1 ile 2 bar arasıdır. Condens 2200i W kılavuzu aynı şeyi şöyle yazıyor: işletme basıncı normal durumlarda 1 ila 2 bar arasında olmalıdır. Condens 2500 W montaj kılavuzu ise doldurma talimatında ısıtma tesisatını tekrar 1 ile 2 bar seviyesine kadar doldurun diyor. Yani 1-2 bar tek bir modelin tercihi değil, üreticinin bu üç belgede tekrarladığı aralık. Manometrede iğne bu bandın içindeyse basınç tarafında yapılacak bir şey yok."
@@ -23,6 +37,14 @@ faq:
     a: "Hayır. Yukarıdaki her şey basıncın bir kez düşmesiyle ilgili. Doldurulduktan sonra tekrar tekrar düşüyorsa konu artık basınç okuması değil, suyun nereye gittiğidir ve bu panelden anlaşılmaz. Kılavuzlar da bu noktadan sonra kullanıcıya bir işlem tarif etmiyor. Tesisatta ya da cihazın içinde kaçak araması, eşanjör ve genleşme tankı kontrolü servis işidir."
 images:
   coverAlt: "Kombi tesisatına bağlı basınç göstergesi; kadranın üst kısmında mavi işaretli normal aralık, ibre bu aralığın alt sınırına yakın duruyor"
+  steps:
+    - "Kombi tesisatındaki basınç göstergesinin kadranı ve ibresi yakın plan"
+    - "Salondaki ılık petek ve üzerindeki termostatik vana"
+    - "Kombinin alt bağlantılarında birkaç su damlası ve yanında basınç göstergesi"
+    - "Duvar tipi kombinin alt kısmındaki bağlantı vanaları ve yanında kullanım kılavuzu"
+    - "Kombi ekranında yanan harf simgesi yakın plan"
+    - "Kombinin yan yüzündeki cihaz etiketi ve yanında not defteri"
+    - "Kapağı kapalı duvar tipi kombi ve önünde servis çantası"
 ---
 
 Manometrede iğne nerede olmalı sorusunun kısa cevabı var: **1 ile 2 bar arası.** Bosch'un üç ayrı kombi kılavuzu da bu aralığı veriyor.
@@ -30,6 +52,22 @@ Manometrede iğne nerede olmalı sorusunun kısa cevabı var: **1 ile 2 bar aras
 Ama asıl işe yarayan bilgi bu değil. Asıl işe yarayan şu: **basınç normalin altına indiğinde kombi çoğu zaman arıza vermez.** Çalışmaya devam eder, ekranda kod çıkmaz, ve bu yüzden pek çok kişi basıncı hiç kontrol etmez. Cihaz sessizce başka bir şey yapar — ısıtma suyunun sıcaklığını kısar. Petekler ılık kalır, ekran temizdir, ve arada bir bağlantı olduğu akla gelmez.
 
 Bu yazı o bağlantıyı üreticinin kendi tablosuyla anlatıyor.
+
+## Adım adım: basıncı okumak
+
+**1.** Manometreyi oku; iğne 1-2 bar arasındaysa basınç tarafında yapılacak bir şey yok.
+
+**2.** Petekler ılık kalıyor ve ekranda kod yoksa önce manometreye bak.
+
+**3.** Kombinin altında su görürsen iğnenin 3 bara dayanıp dayanmadığına bak.
+
+**4.** Basınç düşükse su eklemeyi ilk kez yetkili servisin göstermesini iste.
+
+**5.** Ekranda H ve bir kod varsa kombiyi kapatıp yeniden çalıştır ya da kılavuzdaki tuşlarla sıfırla.
+
+**6.** Kod geçmiyorsa kodu cihaz bilgileriyle birlikte not et ve servise bildir.
+
+**7.** Basınç tekrar tekrar düşüyorsa servise başvur.
 
 ## Normal aralık: 1-2 bar
 

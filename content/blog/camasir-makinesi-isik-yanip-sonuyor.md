@@ -4,6 +4,21 @@ description: "Çamaşır makinende ışıklar yanıp sönüyor ya da hata kodu m
 slug: "camasir-makinesi-isik-yanip-sonuyor"
 date: "2026-06-19"
 category: "Çamaşır makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~20 dakika"
+  totalTime: "PT20M"
+  cost: "Ücretsiz"
+  tools: ["Havlu"]
+steps:
+  - "Hangi ışığın kaç kez yanıp söndüğünü not et."
+  - "Kapağı klik sesi gelene kadar tam kapat."
+  - "Su musluğunun açık olduğunu kontrol et."
+  - "Havlu hazırla, alt ön kapağı aç, tahliye filtresini çıkar ve tüyleri temizle."
+  - "Tek ağır parça varsa böl ve yükü dengele."
+  - "Çocuk kilidinin açık olup olmadığına bak."
+  - "Fişi 1 dakika çek, tak ve programı yeniden dene."
+  - "Desen sürüyor, ısıtma kodu çıkıyor ya da kod hemen geri geliyorsa servise başvur."
 faq:
   - q: "Çamaşır makinesinde ışıklar neden yanıp söner?"
     a: "Yanıp sönen ışık genelde bir hata kodudur: makine bir sorunu (kapı kilidi, su almama/atmama, ısıtma veya denge) ışık deseniyle anlatır. Hangi ışığın kaç kez yandığı arızayı işaret eder."
@@ -22,6 +37,15 @@ images:
     - "Fişin bir dakika çekilişini ve çocuk kilidinin kontrolünü gösteren çizim"
     - "Panelde yanıp sönen ışık deseninin not alınmasını gösteren çizim"
   coverAlt: "Ankastre nişe yerleştirilmiş çamaşır makinesinin kapağı ve tamburu yakın plan"
+  steps:
+    - "Çamaşır makinesinin kontrol panelinde yanıp sönen gösterge ışıkları"
+    - "Çamaşır makinesinin tam kapanmış cam kapağı yakın plan"
+    - "Duvardaki su musluğu açık konumda, ona bağlı giriş hortumu"
+    - "Açık alt ön kapağın önünde serili havlu ve çıkarılmış tahliye filtresi"
+    - "Tamburda dengeli yayılmış birkaç havlu"
+    - "Kontrol panelinde kilit simgeli tuş yakın plan"
+    - "Prizden çekilmiş çamaşır makinesi fişi zeminde"
+    - "Kapağı kapalı çamaşır makinesi ve önünde servis çantası"
 ---
 
 Çamaşır makinesi çalışmıyor ve ekranındaki ya da düğmelerindeki ışıklar **yanıp sönüyor** — bu aslında makinenin sana "bir sorun var" demesidir. Yanıp sönme rastgele değil; çoğu modelde bir **hata kodudur** ve hangi ışığın kaç kez yandığı arızayı işaret eder. Bu yazıda en sık sebepleri, **kendin çözebileceklerini** ve hangi kodun servis işi olduğunu anlatıyoruz. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -41,6 +65,24 @@ images:
 **5. Dengesiz yük.** Tek ağır parça topaklanınca su atma adımına geçemez, uyarı verir.
 
 **6. Elektronik kart arızası.** Yukarıdakiler yokken sürekli/anlamsız yanıp sönme karta işaret edebilir.
+
+## Adım adım: ışık yanıp sönüyorsa evde denenecekler
+
+**1.** Hangi ışığın kaç kez yanıp söndüğünü not et.
+
+**2.** Kapağı klik sesi gelene kadar tam kapat.
+
+**3.** Su musluğunun açık olduğunu kontrol et.
+
+**4.** Havlu hazırla, alt ön kapağı aç, tahliye filtresini çıkar ve tüyleri temizle.
+
+**5.** Tek ağır parça varsa böl ve yükü dengele.
+
+**6.** Çocuk kilidinin açık olup olmadığına bak.
+
+**7.** Fişi 1 dakika çek, tak ve programı yeniden dene.
+
+**8.** Desen sürüyor, ısıtma kodu çıkıyor ya da kod hemen geri geliyorsa servise başvur.
 
 ## Servisi aramadan önce kendin kontrol et
 

@@ -19,8 +19,26 @@ faq:
     a: "Dört kılavuz da aynı uyarıyı yapıyor: ısıtma sistemine zarar vermemek için sıcak su musluğundan su gelmeden ısıtma fonksiyonu çalıştırılmaz. İlk kurulumda Arçelik 1135 SP ve 1038 SP kılavuzları bir adım daha ileri gidiyor: sıcak su musluğundan su gelene kadar cihazın elektrik bağlantısı yapılmaz. Yeni damacana taktıktan sonra önce sıcak su musluğundan su geldiğini görmek bu yüzden önemli."
   - q: "Sebilde kireç olursa ne yapmalıyım?"
     a: "Beko BSS 4600 kılavuzu, suyun yeterince ısınmamasının bir sebebinin sıcak su deposundaki ısıtıcının yüzeyinin kireçlenmesi olabileceğini yazıyor, ama kullanıcıya bir kireç çözme yöntemi tarif etmiyor. Aynı kılavuz su depoları temizlenirken sağlığa zararlı kimyasal madde veya deterjan kullanılmamasını istiyor. Arçelik 1038 SP ve Beko BSS 2203 kılavuzları sebilin hijyen açısından 3 ayda bir temizlenmesi gerektiğini ve bu işin yetkili servisten alınan bir hizmet olduğunu belirtiyor."
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Alet gerekmiyor"]
+steps:
+  - "Cihazın arkasındaki ısıtma anahtarının açık olduğundan emin ol."
+  - "Kırmızı ışık yanıyorsa ısıtma sürüyordur; ışığın sönmesini bekle."
+  - "Damacanada su olduğunu ve boş damacana uyarısının yanmadığını kontrol et; yeni damacana taktıysan önce sıcak su musluğundan su geldiğini gör."
+  - "Doğru musluğa bastığından emin ol; ılık su musluğu ya da çocuk kilidi olabilir."
+  - "Kireçten şüpheleniyorsan depoya bir şey dökme; sıradaki adım servis."
 images:
   coverAlt: "Su sebilinin arka paneli; ısıtma ve soğutma anahtarları yan yana, önde sıcak ve soğuk su muslukları ile ısıtma gösterge lambası görünüyor"
+  steps:
+    - "Su sebilinin arka panelindeki iki ayrı açma kapama anahtarı"
+    - "Su sebilinin önünde yanan ısıtma gösterge lambası"
+    - "Su sebilinin üstüne takılı dolu damacana"
+    - "Su sebilinin önündeki sıcak su musluğu ve yanındaki kilit düğmesi"
+    - "Kapağı kapalı su sebili ve yanında servis çantası"
 ---
 
 Sebilden soğuk su geliyor ama sıcak musluğa bastığında ılık su akıyor. Ya da hiç sıcak gelmiyor.
@@ -56,25 +74,19 @@ Tablonun söylediği şey basit: sebilin hazır tuttuğu sıcak su **bir litre c
 
 ## Adım adım: sıcak su kontrolü
 
-### 1) Arkadaki ısıtma anahtarı kapalı
-
-Gözden kaçması kolay, çünkü Beko BSS 4600'de anahtar önde değil **arkada.** Parça listesinde bu açıkça yazıyor: *"Isıtma butonu (cihazın arkasında - kırmızı)"*. Arçelik 1038 SP ve Beko BSS 2203'te de soğutma ve ısıtma için **iki ayrı anahtar** var.
+**1. Arkadaki ısıtma anahtarına bak.** Gözden kaçması kolay, çünkü Beko BSS 4600'de anahtar önde değil **arkada.** Parça listesinde bu açıkça yazıyor: *"Isıtma butonu (cihazın arkasında - kırmızı)"*. Arçelik 1038 SP ve Beko BSS 2203'te de soğutma ve ısıtma için **iki ayrı anahtar** var.
 
 Aynı kılavuzun sorun giderme rehberinde "su sebili suyu yeteri kadar ısıtmıyor" satırının ilk maddesi de bu: *"Arkadaki sıcak su butonunun açık olduğuna emin olun."*
 
 Temizlik ya da taşıma sırasında anahtara dokunulmuş olabilir. Soğuk suyun gelmesi, sıcak tarafın anahtarının açık olduğunu göstermez.
 
-### 2) Işık yanıyor: su henüz ısınmadı
-
-Kırmızı ışık yanıyorsa cihaz o anda ısıtıyor demektir. Su ılık geliyorsa önce ışığa bak:
+**2. Işık yanıyorsa bekle: su henüz ısınmadı.** Kırmızı ışık yanıyorsa cihaz o anda ısıtıyor demektir. Su ılık geliyorsa önce ışığa bak:
 
 - **Işık yanıyor** → ısıtma sürüyor. Sönmesini bekle. Ardı ardına birkaç bardak ya da bir demlik doldurulduysa, bir litrelik depo boşalmış ve yerine gelen su ısınıyor olabilir.
 - **Işık yanmıyor ve su ılık** → anahtar kapalı olabilir (1. adım) ya da damacana tarafında bir durum var (3. adım).
 - **Işık uzun süre sönmüyor ve su hâlâ ılık** → bekleme meselesi değil; aşağıdaki servis bölümüne geç.
 
-### 3) Damacana boş ya da yeni takıldı
-
-Gizli damacanalı Beko BSS 4600 kılavuzu bunu tek cümleyle yazıyor: *"Boş damacana uyarı göstergesi yanınca, ısıtma ve soğutma fonksiyonları otomatik olarak durur."* Yani damacana bittiyse sıcak suyun kesilmesi arıza değil, cihazın kendi koruması.
+**3. Damacanayı kontrol et: boş ya da yeni takılmış olabilir.** Gizli damacanalı Beko BSS 4600 kılavuzu bunu tek cümleyle yazıyor: *"Boş damacana uyarı göstergesi yanınca, ısıtma ve soğutma fonksiyonları otomatik olarak durur."* Yani damacana bittiyse sıcak suyun kesilmesi arıza değil, cihazın kendi koruması.
 
 Kılavuzların güvenlik bölümleri aynı kuralı başka yönden koyuyor:
 
@@ -86,16 +98,12 @@ Yeni damacana taktıysan sıra şu: önce **sıcak su musluğundan su geldiğini
 
 Bir de damacana değişimiyle ilgili kural var. Arçelik kılavuzları, damacanadaki su **tam bitmeden** yeni damacana konmamasını istiyor ve sebebini yazıyor: *"Bu ürün içindeki su seviyesinin bozulmaması açısından gereklidir."*
 
-### 4) Doğru musluk, açık kilit
-
-İki küçük ama gerçek sebep:
+**4. Doğru musluğa bas, kilide bak.** İki küçük ama gerçek sebep:
 
 - **Üç musluklu modeller.** Beko BSS 4600'de sıcak ve soğuğun yanında ayrı bir **ılık su musluğu** ve ılık su düğmesi var. Ilık musluktan gelen suyun ılık olması arıza değil.
 - **Çocuk kilidi.** Arçelik 1038 SP, Beko BSS 2203 ve BSS 4600'ün parça listelerinde sıcak su düğmesi *"çocuk kilidi özellikli"* olarak geçiyor. Düğmeye bastığında hiç su gelmiyorsa bunu hatırla. Kilidin nasıl açıldığı bu dört kılavuzda ayrıca anlatılmıyor; cihazının kendi kılavuzuna bak.
 
-### 5) Kireç — burada durman gereken yer
-
-Beko BSS 4600'ün sorun giderme rehberi, ısınmama satırının ikinci maddesine şunu yazıyor: *"Sıcak su deposundaki ısıtıcının yüzeyi tortulamış (kireçlemiş) olabilir."*
+**5. Kireçten şüpheleniyorsan burada dur.** Beko BSS 4600'ün sorun giderme rehberi, ısınmama satırının ikinci maddesine şunu yazıyor: *"Sıcak su deposundaki ısıtıcının yüzeyi tortulamış (kireçlemiş) olabilir."*
 
 Ama aynı kılavuz kullanıcıya bir **kireç çözme yöntemi tarif etmiyor.** Tersine, depolar için net bir yasak koyuyor: *"Su depolarını temizlerken asla sağlığa zararlı kimyasal madde veya deterjan kullanmayın."*
 

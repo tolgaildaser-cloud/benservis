@@ -4,6 +4,19 @@ description: "Pamuklu 60 kılavuzlarda 1 saat 50 dakika ile 3 saat 35 dakika ara
 slug: "camasir-makinesi-program-sureleri"
 date: "2026-08-10"
 category: "Çamaşır Makinesi"
+guide:
+  difficulty: "Kolay"
+  time: "~15 dakika"
+  totalTime: "PT15M"
+  cost: "Ücretsiz"
+  tools: []
+steps:
+  - "Deterjanı önerilen dozun üstüne çıkmayacak şekilde azalt."
+  - "Su musluğunu sonuna kadar aç."
+  - "Tek büyük parça yıkıyorsan yanına birkaç küçük parça ekle."
+  - "Ekstra durulama ve ön yıkama gibi ek işlevleri kapat."
+  - "Aynı programı yarım yükle dene; süre belirgin kısalıyorsa makine normal çalışıyordur."
+  - "Yalnız sıcak programlar uzuyorsa rezistansa dokunma, servise başvur."
 faq:
   - q: "Pamuklu 60 derece kaç saat sürer?"
     a: "Marka ve modele göre değişir: kullanım kılavuzlarında aynı program için 1 saat 50 dakika ile 3 saat 35 dakika arasında değerler görüyoruz. Kesin süre kendi kılavuzundaki program tablosunda yazar. Makinen yarım doluysa süre kendiliğinden kısalabilir."
@@ -15,6 +28,13 @@ faq:
     a: "Her zaman değil. Ama süre alıştığından belirgin biçimde uzadıysa ve bu her yıkamada tekrarlıyorsa belirti sayılır: su alma yavaşlığı, ısıtma sorunu ya da tahliye tıkanıklığı programı uzatır. Aynı programın bir anda iki katına çıkması normal değildir."
 images:
   coverAlt: "Önde keskin odaklı bir kum saati, arkada bulanık kapağı açık çamaşır makinesi"
+  steps:
+    - "Deterjan çekmecesinde ölçü kabıyla konmuş az miktarda toz deterjan"
+    - "Çamaşır makinesinin arkasında açık konumda su musluğu"
+    - "Tamburda büyük bir battaniyenin yanında birkaç küçük havlu"
+    - "Çamaşır makinesi kontrol panelinde ek işlev tuşları yakın plan"
+    - "Yarısı dolu çamaşır makinesi tamburu"
+    - "Kapağı kapalı çamaşır makinesi ve önünde servis çantası"
 ---
 
 Makineye çamaşırı attın, ekranda bir süre yazıyor — ama program o sürede bitmiyor. Ya da "pamuklu 60'a atsam kaç saat sürer?" diye merak ediyorsun. Bu yazıda **programların gerçek süre bantlarını**, süreyi uzatan sebepleri ve **süre uzamasının ne zaman arıza belirtisi** olduğunu anlatıyoruz.
@@ -56,6 +76,20 @@ Süre değişkenliği normal — **ama şu üç desen normal değil:**
 **3. Tahliye tıkanıklığı.** Su atma aşaması uzuyorsa ya da çamaşır fazla ıslak çıkıyorsa tahliye tarafında sorun var demektir. Ayrıntı: [çamaşır makinesi su atmıyor](/blog/camasir-makinesi-su-atmiyor/).
 
 > 🔧 **Pratik ölçüt:** Aynı program, aynı yük miktarıyla **her seferinde** eskisinden belirgin uzun sürüyorsa bu bir belirtidir. Tek seferlik uzama genelde köpük ya da dengesiz yüktür.
+
+## Adım adım: program uzuyorsa evde denenecekler
+
+**1.** Deterjanı önerilen dozun üstüne çıkmayacak şekilde azalt.
+
+**2.** Su musluğunu sonuna kadar aç.
+
+**3.** Tek büyük parça yıkıyorsan yanına birkaç küçük parça ekle.
+
+**4.** Ekstra durulama ve ön yıkama gibi ek işlevleri kapat.
+
+**5.** Aynı programı yarım yükle dene; süre belirgin kısalıyorsa makine normal çalışıyordur.
+
+**6.** Yalnız sıcak programlar uzuyorsa rezistansa dokunma, servise başvur.
 
 ## Servisi aramadan önce yapabileceklerin
 

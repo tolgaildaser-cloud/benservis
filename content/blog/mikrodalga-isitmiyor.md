@@ -4,6 +4,19 @@ description: "Mikrodalga çalışıyor, tabla dönüyor ama ısıtmıyor mu? Mag
 slug: "mikrodalga-isitmiyor"
 date: "2026-07-06"
 category: "Mikrodalga"
+guide:
+  difficulty: "Kolay"
+  time: "~5 dakika"
+  totalTime: "PT5M"
+  cost: "Ücretsiz"
+  tools: ["Bir bardak su"]
+steps:
+  - "Kapağı klik sesi gelene kadar tam kapat; arada kir ya da yiyecek artığı olmadığından emin ol."
+  - "Buz çözme ya da düşük güç seçili kalmadığına bak, tam güce al."
+  - "Bir bardak suyu tam güçte 1 dakika ısıtarak test et."
+  - "Uzatma kablosu kullanıyorsan çıkar, cihazı doğrudan prize tak."
+  - "Fişi 1 dakika çek, sonra tekrar tak ve su testini yinele."
+  - "Su hâlâ ısınmıyorsa ya da ses, kıvılcım veya yanık kokusu varsa cihazı kapat, gövdeyi açma ve servise başvur."
 faq:
   - q: "Mikrodalga çalışıyor ama ısıtmıyor, en sık sebep ne?"
     a: "En sık sebep magnetron arızasıdır. Magnetron, elektriği ısıtan mikrodalgalara çeviren ana parçadır; bozulunca ışık, fan ve tabla çalışmaya devam eder ama ısıtma olmaz. Yüksek voltaj kapasitörü/diyot arızası da benzer sonucu verir."
@@ -15,6 +28,13 @@ faq:
     a: "Magnetron ya da kapasitör değişimi çoğu zaman uygun maliyetlidir ve tamir mantıklıdır. Ancak cihaz çok eski ve ekonomik bir modelse, tamir bedeli yeni cihaza yaklaşabilir. Tahmini maliyeti görüp karar ver."
 images:
   coverAlt: "Mikrodalga fırın çizimi ve yanında ısı dalgaları"
+  steps:
+    - "Mikrodalga fırının tamamen kapanmış kapağı ve temiz kapı kenarı yakın plan"
+    - "Mikrodalga kontrol panelinde güç ayarı düğmesi yakın plan"
+    - "Mikrodalganın döner tablasının ortasında duran dolu bir su bardağı"
+    - "Duvardaki prize doğrudan takılı mikrodalga fişi, yanında kullanılmayan uzatma kablosu"
+    - "Prizden çekilmiş mikrodalga fişi tezgâhın üzerinde duruyor"
+    - "Kapağı kapalı mikrodalga fırın ve yanında servis çantası"
 ---
 
 Mikrodalganı çalıştırıyorsun; ışık yanıyor, tabla dönüyor, fan sesi geliyor — ama yemek **soğuk kalıyor.** Standart fırından farklı olarak mikrodalga, rezistansla değil **mikrodalga ışımasıyla** ısıtır; ısıtma yoksa bu ışıma üretimi durmuş demektir. Bu yazıda nedenleri, güvenlik uyarısını ve tahmini maliyeti anlatıyoruz.
@@ -32,6 +52,20 @@ Mikrodalganı çalıştırıyorsun; ışık yanıyor, tabla dönüyor, fan sesi 
 **3. Kapı arızası / güvenlik anahtarı.** Kapı tam kapanmıyor ya da mandal/switch arızalıysa cihaz güvenlik için ısıtmayı durdurur (kendini korur).
 
 **4. Düşük şebeke voltajı.** Voltaj düşükse mikrodalga zayıf üretilir; yemek yalnız yüzeyden ya da çok yavaş ısınır.
+
+## Adım adım: ısıtmıyorsa evde denenecekler
+
+**1.** Kapağı klik sesi gelene kadar tam kapat; arada kir ya da yiyecek artığı olmadığından emin ol.
+
+**2.** Buz çözme ya da düşük güç seçili kalmadığına bak, tam güce al.
+
+**3.** Bir bardak suyu tam güçte 1 dakika ısıtarak test et.
+
+**4.** Uzatma kablosu kullanıyorsan çıkar, cihazı doğrudan prize tak.
+
+**5.** Fişi 1 dakika çek, sonra tekrar tak ve su testini yinele.
+
+**6.** Su hâlâ ısınmıyorsa ya da ses, kıvılcım veya yanık kokusu varsa cihazı kapat, gövdeyi açma ve servise başvur.
 
 ## Servisi aramadan önce (yalnız güvenli dış kontroller)
 

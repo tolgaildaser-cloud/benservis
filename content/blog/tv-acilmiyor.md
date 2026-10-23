@@ -5,6 +5,20 @@ slug: "tv-acilmiyor"
 date: "2026-06-23"
 updated: "2026-07-06"
 category: "Televizyon"
+guide:
+  difficulty: "Kolay"
+  time: "~10 dakika"
+  totalTime: "PT10M"
+  cost: "Ücretsiz"
+  tools: ["Yedek kumanda pili"]
+steps:
+  - "Güç kablosunun televizyona ve prize tam takılı olduğunu kontrol et."
+  - "Televizyonu farklı bir prize tak."
+  - "Fişi çek, 1-2 dakika bekle ve yeniden tak."
+  - "Kumandanın pilini değiştir."
+  - "Televizyonu üstündeki ya da altındaki fiziksel güç düğmesiyle açmayı dene."
+  - "Standby ışığına bak: yanıyorsa güç geliyordur, hiç yanmıyorsa sorun güç ya da priz tarafındadır."
+  - "Hâlâ açılmıyorsa arka kapağı açma, servise başvur."
 faq:
   - q: "TV neden açılmıyor?"
     a: "En sık sebep güç kaynağı kartıdır (power board) — genelde üzerindeki kondansatörlerin şişmesinden olur. Standby ışığı yanıp açılmıyorsa anakart, hiç ışık yoksa güç kaynağı/priz-kablo öne çıkar."
@@ -16,6 +30,14 @@ faq:
     a: "Arızaya göre değişir: güç kaynağı kartı, kondansatör ve anakart farklı işlerdir. Panel arızası genelde ekonomik değildir. Kesin tahmini cihazına göre Benservis'ten ücretsiz al."
 images:
   coverAlt: "Açılmayan televizyon çizimi, ekranın ortasında sönük gösterge"
+  steps:
+    - "Televizyonun arkasına tam oturmuş güç kablosu yakın plan"
+    - "Duvarda yan yana iki priz ve birine takılı televizyon fişi"
+    - "Prizden çekilmiş televizyon fişi zeminde, arkada kapalı ekran"
+    - "Pil kapağı açık bir televizyon kumandası ve yanında yeni piller"
+    - "Televizyon çerçevesinin alt kenarındaki fiziksel güç düğmesi yakın plan"
+    - "Kapalı televizyon ekranının alt köşesinde yanan küçük beyaz bekleme ışığı"
+    - "Arka kapağı kapalı duran televizyon ve yanında servis çantası"
 ---
 
 Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönüyor ya da ses gelip görüntü gelmiyor. Sebep çoğu zaman birkaç parçadan biridir ve belirtiye bakarak daraltmak mümkün. Bu yazıda TV'nin neden açılmadığını, **servis çağırmadan önce kontrol edebileceklerini** ve hangi belirtinin panel, hangisinin besleme arızası olduğunu bulacaksın. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
@@ -33,6 +55,22 @@ Televizyonun açılmıyor: hiç tepki vermiyor, standby ışığı yanıp sönü
 **4. Priz / kablo / kumanda.** Basit ama atlanır: gevşek fiş, arızalı priz, biten kumanda pili ya da TV'nin fiziksel güç düğmesi.
 
 **5. Panel / T-con (ışık var, görüntü yok).** Açılır, ses gelir ama ekran karanlıksa panel/arka aydınlatma sorunu olabilir — ayrı ve genelde pahalı bir konudur.
+
+## Adım adım: açılmıyorsa evde denenecekler
+
+**1.** Güç kablosunun televizyona ve prize tam takılı olduğunu kontrol et.
+
+**2.** Televizyonu farklı bir prize tak.
+
+**3.** Fişi çek, 1-2 dakika bekle ve yeniden tak.
+
+**4.** Kumandanın pilini değiştir.
+
+**5.** Televizyonu üstündeki ya da altındaki fiziksel güç düğmesiyle açmayı dene.
+
+**6.** Standby ışığına bak: yanıyorsa güç geliyordur, hiç yanmıyorsa sorun güç ya da priz tarafındadır.
+
+**7.** Hâlâ açılmıyorsa arka kapağı açma, servise başvur.
 
 ## Servisi aramadan önce kendin kontrol et
 
