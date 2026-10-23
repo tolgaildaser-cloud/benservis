@@ -782,7 +782,8 @@ export const MARKA_KILAVUZLARI = {
   "Kiwi": {
     url: "https://kiwi.com.tr/tr/kilavuzlar-1-17-pg",
     ozet: "Kiwi'nin kılavuz sayfası: ürün adı ya da model koduyla listelenmiş Türkçe kullanım kılavuzlarını PDF olarak indiriyorsun; giriş gerekmiyor.",
-    haric: ["Su Sebili / Arıtma"],  // YK #185 (#88): kategori eşlemesi eklendi ama adres bu grup için doğrulanmadı
+    // YK #185 takip (23 Eki 2026): Su Sebili / Arıtma açıldı — PAZ K2 sebil + su pompası kılavuzlarını doğruladı
+    //   (8'in 7'si temiz; KWP-8556M'nin kılavuz kapağı "KWP-8556" yazıyor). Diğer 13 #185 satırı kapalı kalır.
   },
 
   // ── 3 Eki 2026 · föy 2. parti (PAZ C2) ──
