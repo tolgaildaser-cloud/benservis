@@ -495,6 +495,34 @@ export const HATA_KODU_KATMANI = {
     { giris: "Profilo — E:36-10", tip: "kod",
       anlam: "Deterjanlı su pompalanıp boşaltılamıyor: tahliye hortumu çok yükseğe bağlanmış, bükülmüş, sıkışmış ya da izin verilmeyen şekilde uzatılmış; hortum montajı kontrol edilir.",
       yazi: "profilo-camasir-makinesi-e18-hatasi" }, // https://media3.bsh-group.com/Documents/9002013778_F.pdf · md5 e8d78fec
+    // ——— 23 Eki 2026, YK #182 Dalga 4 (PAZ tamir föyü): 9 giriş; kaynak belge + md5 föyde ———
+    { giris: "Samsung — 3E1", tip: "kod",
+      anlam: "Motor sorunu; cihazın elektriği kesilip 1 dakika beklenir, yeniden açılıp yeni program başlatılır.",
+      yazi: "samsung-camasir-makinesi-3e-hatasi" }, // https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/ · md5 037d77c5
+    { giris: "Samsung — 3E2", tip: "kod",
+      anlam: "Motor sorunu; cihazın elektriği kesilip 1 dakika beklenir, yeniden açılıp yeni program başlatılır.",
+      yazi: "samsung-camasir-makinesi-3e-hatasi" }, // https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/ · md5 037d77c5
+    { giris: "Samsung — 3E3", tip: "kod",
+      anlam: "Motor sorunu; cihazın elektriği kesilip 1 dakika beklenir, yeniden açılıp yeni program başlatılır.",
+      yazi: "samsung-camasir-makinesi-3e-hatasi" }, // https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/ · md5 037d77c5
+    { giris: "Samsung — 3E4", tip: "kod",
+      anlam: "Motor sorunu; cihazın elektriği kesilip 1 dakika beklenir, yeniden açılıp yeni program başlatılır.",
+      yazi: "samsung-camasir-makinesi-3e-hatasi" }, // https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/ · md5 037d77c5
+    { giris: "Samsung — 3CP", tip: "kod",
+      anlam: "Elektronik kontrol sorunu; program yeniden başlatılır.",
+      yazi: "samsung-camasir-makinesi-3e-hatasi" }, // https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/ · md5 037d77c5
+    { giris: "Samsung — HE2", tip: "kod",
+      anlam: "Kurutma bölümü ısıtıcısı çalışmıyor: makine sıcaklığın fazla yükseldiğini algıladı ve kurutma bölümü güvenlik amacıyla kapandı.",
+      yazi: "samsung-camasir-makinesi-he-hatasi" }, // https://www.samsung.com/uk/support/home-appliances/what-do-the-codes-on-my-washing-machine-mean/ · md5 037d77c5
+    { giris: "LG F4V5RGP2T — CL", tip: "kod",
+      anlam: "Kontrol paneli kilitli (bilgi mesajı, arıza değil); kilit makine açıkken Zaman Erteleme ve Öğe Ekle düğmelerine 3 saniye basılı tutularak açılır.",
+      yazi: "lg-camasir-makinesi-te-hatasi" }, // https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9
+    { giris: "LG F4V5RGP2T — tcL", tip: "kod",
+      anlam: "Kazan Temizleme programını çalıştırma önerisi (bilgi mesajı, arıza değil); tambur boşaltılıp program ayda bir çalıştırılır.",
+      yazi: "lg-camasir-makinesi-te-hatasi" }, // https://gscs-b2c.lge.com/open/downloadFile?fileId=4I58FRKMi1azDU3hn7biVA · md5 2281c4e9
+    { giris: "Hotpoint RSG 845 J TK — H2O", tip: "kod",
+      anlam: "Ekranda yanıp sönüyorsa makine su almıyor: hortum musluğa bağlı mı, bükülmüş mü, musluk açık mı, evde su ve yeterli basınç var mı, BAŞLAT/DURDUR'a basıldı mı kontrol edilir.",
+      yazi: "hotpoint-camasir-makinesi-su-almiyor" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-4b6e625f-22ff-4881-b4d6-eef252b1162b/pdf/19514205300_TR.pdf · md5 2b0a9a73
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -564,6 +592,28 @@ export const HATA_KODU_KATMANI = {
     { giris: "Samsung DV5000T — FIL tEr", tip: "kod",
       anlam: "Zil ile birlikte görünür: ısı eşanjörünün temizlenmesi gerekiyor; kılavuzdaki adımlarla ısı eşanjörü temizlenir.",
       yazi: "samsung-kurutma-makinesi-hata-kodlari" }, // https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_TR&OriginYN=N&ModelType=N&ModelName=DV90TA040AE&CttFileID=8770640&CDCttType=UM&VPath=UM%2F202209%2F20220917120230960%2FDV5000T_DC68-04209V-02_TR.pdf · md5 af744046
+    // ——— 23 Eki 2026, YK #182 Dalga 4 (PAZ tamir föyü): 7 giriş; kaynak belge + md5 föyde ———
+    { giris: "Vestel KM 10WS1101 — E00", tip: "kod",
+      anlam: "Kullanıcı arayüzü hatası; teknik servis aranır.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    { giris: "Vestel KM 10WS1101 — E03", tip: "kod",
+      anlam: "Pompa hatası; su tankının boş olduğundan emin olunur, düzelmezse teknik servis.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    { giris: "Vestel KM 10WS1101 — E04", tip: "kod",
+      anlam: "Kompresör arızası; teknik servis aranır.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    { giris: "Vestel KM 10WS1101 — E05", tip: "kod",
+      anlam: "Kompresör NTC hatası; teknik servis aranır.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    { giris: "Vestel KM 10WS1101 — E06", tip: "kod",
+      anlam: "Kapı NTC hatası; teknik servis aranır.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    { giris: "Vestel KM 10WS1101 — E07", tip: "kod",
+      anlam: "Motor hatası; teknik servis aranır.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    { giris: "Vestel KM 10WS1101 — E08", tip: "kod",
+      anlam: "Voltaj dalgalanma hatası: şehir şebekesinde voltaj dalgalanması olabilir; en yakın yetkili servise başvurulur.",
+      yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
   ],
   "Bulaşık Makinesi": [
     { giris: "E15 (musluk işareti)", tip: "kod",
@@ -958,6 +1008,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "Profilo BM6380MA — E:18", tip: "kod",
       anlam: "Su girişi sorunu: besleme hortumu bükülmüş, musluk kapalı ya da kireçlenmiş, ya da hortum bağlantısındaki süzgeç tıkalı; musluk ve hortum kontrol edilir, süzgeç temizlenir.",
       yazi: "profilo-bulasik-makinesi-e22-hatasi" }, // https://media3.bsh-group.com/Documents/9001951966_E.pdf · md5 2e7b3ee8
+    // ——— 23 Eki 2026, YK #182 Dalga 4 (PAZ tamir föyü): 1 giriş; kaynak belge + md5 föyde ———
+    { giris: "LG DFC325HD — CL", tip: "kod",
+      anlam: "Ekran (kontrol) kilidi etkin, tuşlar çalışmaz; Yarım Yük ve Enerji Tasarrufu düğmelerine aynı anda 3 saniye basılı tutularak kapatılır.",
+      yazi: "lg-bulasik-makinesi-he-hatasi" }, // https://gscs-b2c.lge.com/open/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
   ],
 
   "Kombi / Termosifon": [
@@ -1735,6 +1789,136 @@ export const HATA_KODU_KATMANI = {
     { giris: "ECA — F52", tip: "kod",
       anlam: "Kullanım suyu sıcaklık sensörü hatası, sensör arızalı olabilir; E.C.A. yetkili servisine haber verilir.",
       yazi: "eca-kombi-sicak-su-vermiyor" }, // https://eca.com.tr/uploads/documents//aff/a1a45d25-44e3-4ca3-8001-786e45e7a0d3.pdf · md5 28a5d756
+    // ——— 23 Eki 2026, YK #182 Dalga 4 (PAZ tamir föyü): 43 giriş; kaynak belge + md5 föyde ———
+    { giris: "DemirDöküm L 275 F · L 350 F şofben — F01", tip: "kod",
+      anlam: "Aşırı ısınma: sensör su sıcaklığının 85 °C'nin üzerinde olduğunu tespit etti, gaz girişi kesildi; açma/kapama şalteri kapatılıp açılır, sonra müşteri hizmetleri.",
+      yazi: "demirdokum-sofben-f4-arizasi" }, // https://www.demirdokum.com.tr/downloads/0020265474-10-3044973.pdf · md5 0dda9738
+    { giris: "DemirDöküm L 275 F · L 350 F şofben — F07", tip: "kod",
+      anlam: "Gaz armatürü arızası; açma/kapama şalteri kapatılıp açılır, sonra müşteri hizmetleri (yetkili servis).",
+      yazi: "demirdokum-sofben-f4-arizasi" }, // https://www.demirdokum.com.tr/downloads/0020265474-10-3044973.pdf · md5 0dda9738
+    { giris: "Immergas — 01", tip: "kod",
+      anlam: "\"Gaz yok\" uyarısı, gaz eksik olabilir; vanalar kontrol edilip resetlenir, tekrarlarsa Immergas servisi.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 02", tip: "kod",
+      anlam: "Aşırı ısı termostatı arızası (emniyet), nedeni tesisat ve petek vanaları; kontrol edilip resetlenir, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 03", tip: "kod",
+      anlam: "Baca (atık gaz) termostat arızası; reset, tekrarlarsa servis (baca kontrolü servise bırakılır).",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 04", tip: "kod",
+      anlam: "Elektromekanik kontaklar uyarısı, nedeni devre kartı; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 05", tip: "kod",
+      anlam: "Gidiş (kalorifer) sensörü arızası; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 06", tip: "kod",
+      anlam: "Sıcak kullanım suyu sensörü arızası; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 08", tip: "kod",
+      anlam: "Maksimum reset sayısı aşıldı (3'ten fazla resetleme); tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 10", tip: "kod",
+      anlam: "Tesisat basıncı yetersiz; petek vanaları kontrol edilip resetlenir, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 23", tip: "kod",
+      anlam: "Geri dönüş sondasında (NTC) arıza; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 24", tip: "kod",
+      anlam: "Tuş takımı anormalliği, tuşlar basılı kalmış; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 27", tip: "kod",
+      anlam: "Yetersiz su sirkülasyonu, ana devrede aşırı ısınma; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 28", tip: "kod",
+      anlam: "Sızıntı durumu: ısıtma sırasında kullanım suyu sıcaklığı arttı, kireçlenmeyi kısmak için ısıtma sıcaklığı düşürüldü; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 31", tip: "kod",
+      anlam: "Uzaktan kumanda ile iletişim kaybı; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 37", tip: "kod",
+      anlam: "Düşük güç kaynağı gerilimi, voltaj sınırın altında; elektrik voltajı kontrol edilip resetlenir, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 38", tip: "kod",
+      anlam: "Alev sinyali kaybı, alev oluşmuyor; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 43", tip: "kod",
+      anlam: "Sürekli alev sinyali kaybı (38) nedeniyle kilit; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 45", tip: "kod",
+      anlam: "Yüksek ΔT: gidiş ve dönüş probu arasında beklenmeyen ani artış; petek vanaları kontrol edilip resetlenir, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Immergas — 47", tip: "kod",
+      anlam: "Düşük brülör gücü: yüksek baca gazı sıcaklığından korunmak için çıkış gücü azaltıldı; reset, tekrarlarsa servis.",
+      yazi: "immergas-kombi-hata-kodlari" }, // https://www.immergas.com.tr/urun-ariza-kodlari/ · md5 c7814f5f
+    { giris: "Airfel Maestro Comfort — 10-64", tip: "kod",
+      anlam: "Gaz valfi devresi hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 11-64", tip: "kod",
+      anlam: "Alev oluşmaması; gaz vanasının açık olduğundan emin olunur, 3. başarısız ateşlemeden sonra resetlenir, tekrarlarsa servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 11-67", tip: "kod",
+      anlam: "Alev kaybı, geçici hata; kazanın tekrar devreye girmesi beklenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 13-64", tip: "kod",
+      anlam: "Fan hızı hatası; gerekiyorsa reset, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 16-64", tip: "kod",
+      anlam: "Yüksek baca gazı sıcaklığı; reset gerekiyorsa resetlenir, sürer ya da tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 1J-64", tip: "kod",
+      anlam: "Limit termostat hatası; radyatör vanalarının açık olduğundan emin olunur, resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 80-01", tip: "kod",
+      anlam: "Dönüş sıcaklık sensörü hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 81-01", tip: "kod",
+      anlam: "Gidiş sıcaklık sensörü hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 81-65", tip: "kod",
+      anlam: "Solar sensör hatası, solar sensör devre dışı; yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — 8A-46", tip: "kod",
+      anlam: "Donmaya karşı koruma: gidiş sensörü 1 °C altı okudu, cihaz bloke; su 1 °C'nin üstüne çıkınca kazan kendiliğinden devreye girer.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — E1-64", tip: "kod",
+      anlam: "Yanlış alev sinyali; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — E1-69", tip: "kod",
+      anlam: "CRC parametre hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — E1-71", tip: "kod",
+      anlam: "EK kilitlenme hatası, kalıcı hata; yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — E1-73", tip: "kod",
+      anlam: "Dahili kart hatası; gerekiyorsa reset, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — H9-01", tip: "kod",
+      anlam: "Dış hava sensörü hatası; kazan çalışmaya devam eder ama sensör devre dışı, yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — HC-01", tip: "kod",
+      anlam: "Kullanım sıcak suyu hatası; kazan çalışmaya devam eder, konforlu sıcak su için yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — HJ-08", tip: "kod",
+      anlam: "Yüksek sistem basıncı; basıncın 0,8 bara indirilmesi gerekir, tesisattan su boşaltma yetkili servise bırakılır.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — HJ-09", tip: "kod",
+      anlam: "Düşük sistem basıncı; basıncın 0,8 bara çıkarılması gerekir, doldurma yetkili servise bırakılır.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — HJ-10", tip: "kod",
+      anlam: "Su basıncı sensörü hatası; yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — J6-01", tip: "kod",
+      anlam: "Yüksek gidiş suyu sıcaklığı; radyatör vanalarının açık olduğundan emin olunur, gerekiyorsa reset, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — J6-21", tip: "kod",
+      anlam: "Dönüş sıcaklığı gidiş sıcaklığından yüksek; reset gerekmez, kazan bir süre sonra devreye girer, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — JJ-64", tip: "kod",
+      anlam: "Baca gazı sıcaklık sensörü hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    { giris: "Airfel Maestro Comfort — U4-67", tip: "kod",
+      anlam: "Reset denetimi; kazanın elektriği kesilip tekrar açılır, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
   ],
 
   "Buzdolabı": [
