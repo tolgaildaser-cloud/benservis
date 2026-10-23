@@ -6,7 +6,8 @@ işler → tekrar koşulunca KALDIĞI YERDEN devam eder (biten ilçeyi tekrar so
 Mevcut veriye ekler, cross-city mislabel düzeltir, çıktı buffer'lanmaz.
 
 Kullanım (proje kökünde):
-  GOOGLE_PLACES_API_KEY=xxx DRYRUN=1 python3 -u scripts/collect-cities.py   # plan + maliyet, çağrı YOK
+  DRYRUN=1 CITIES=balikesir,aydin python3 -u scripts/collect-cities.py      # plan + maliyet, çağrı YOK, anahtar gerekmez
+  (MAX_CALLS=1000 varsayılan sert tavan: plan aşarsa koşu hiç başlamaz, aşacak ilçede durur)
   GOOGLE_PLACES_API_KEY=xxx python3 -u scripts/collect-cities.py            # 3 şehir (resume destekli)
   GOOGLE_PLACES_API_KEY=xxx CITIES=istanbul python3 -u scripts/collect-cities.py
   GOOGLE_PLACES_API_KEY=xxx RESET=1 python3 -u scripts/collect-cities.py    # progress sıfırla, baştan
@@ -15,11 +16,14 @@ Kullanım (proje kökünde):
 import os, re, json, time, shutil, requests
 
 API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
-if not API_KEY:
-    raise SystemExit("GOOGLE_PLACES_API_KEY ortam değişkeni eksik")
 PAGES = int(os.environ.get("PAGES", "1"))
 DRYRUN = os.environ.get("DRYRUN") == "1"
+# DRYRUN çağrı yapmaz → anahtar gerekmez (YK #184: plan anahtarsız çıkarılır)
+if not API_KEY and not DRYRUN:
+    raise SystemExit("GOOGLE_PLACES_API_KEY ortam değişkeni eksik")
 RESET = os.environ.get("RESET") == "1"
+# Sert tavan (YK #184): bu sayıya varınca koşu kaydedip durur; hatalı istek de çağrı sayılır.
+MAX_CALLS = int(os.environ.get("MAX_CALLS", "1000"))
 ONLY = [x.strip() for x in os.environ.get("ONLY", "").split(",") if x.strip()]
 CITIES_SEL = [x.strip().lower() for x in os.environ.get("CITIES", "").split(",") if x.strip()]
 
@@ -33,7 +37,9 @@ FIELD_MASK = (
 CITY_DISPLAY = {"istanbul": "İstanbul", "izmir": "İzmir", "ankara": "Ankara",
                 "bursa": "Bursa", "adana": "Adana", "eskisehir": "Eskişehir", "trabzon": "Trabzon",
                 "gaziantep": "Gaziantep",
-                "antalya": "Antalya", "konya": "Konya", "mersin": "Mersin", "kocaeli": "Kocaeli"}
+                "antalya": "Antalya", "konya": "Konya", "mersin": "Mersin", "kocaeli": "Kocaeli",
+                "balikesir": "Balıkesir", "aydin": "Aydın", "sakarya": "Sakarya", "kutahya": "Kütahya",
+                "mugla": "Muğla", "tekirdag": "Tekirdağ", "mardin": "Mardin"}
 CITY_DISTRICTS = {
     "istanbul": ["Adalar","Arnavutköy","Ataşehir","Avcılar","Bağcılar","Bahçelievler","Bakırköy",
         "Başakşehir","Bayrampaşa","Beşiktaş","Beykoz","Beylikdüzü","Beyoğlu","Büyükçekmece","Çatalca",
@@ -74,6 +80,25 @@ CITY_DISTRICTS = {
         "Silifke","Tarsus","Toroslar","Yenişehir"],
     "kocaeli": ["Başiskele","Çayırova","Darıca","Derince","Dilovası","Gebze","Gölcük","İzmit","Kandıra",
         "Karamürsel","Kartepe","Körfez"],
+    # 23 Eki 2026 — YK #184 Ekim turu (7 il · 100 ilçe · PAGES=1 → 1.000 çağrı = aylık ücretsiz kota).
+    #   Kasım turu (Kastamonu, Denizli, Manisa, Samsun, Van, Zonguldak, Uşak) 1 Kasım'dan önce EKLENMEZ.
+    #   İlçe adları UYDURULMADI: src/tr-iller.js ile programatik karşılaştırıldı — sapma 0
+    #   (20 · 17 · 16 · 13 · 13 · 11 · 10).
+    "balikesir": ["Altıeylül","Ayvalık","Balya","Bandırma","Bigadiç","Burhaniye","Dursunbey","Edremit",
+        "Erdek","Gömeç","Gönen","Havran","İvrindi","Karesi","Kepsut","Manyas","Marmara","Savaştepe",
+        "Sındırgı","Susurluk"],
+    "aydin": ["Bozdoğan","Buharkent","Çine","Didim","Efeler","Germencik","İncirliova","Karacasu",
+        "Karpuzlu","Koçarlı","Köşk","Kuşadası","Kuyucak","Nazilli","Söke","Sultanhisar","Yenipazar"],
+    "sakarya": ["Adapazarı","Akyazı","Arifiye","Erenler","Ferizli","Geyve","Hendek","Karapürçek",
+        "Karasu","Kaynarca","Kocaali","Pamukova","Sapanca","Serdivan","Söğütlü","Taraklı"],
+    "kutahya": ["Altıntaş","Aslanapa","Çavdarhisar","Domaniç","Dumlupınar","Emet","Gediz","Hisarcık",
+        "Merkez","Pazarlar","Şaphane","Simav","Tavşanlı"],
+    "mugla": ["Bodrum","Dalaman","Datça","Fethiye","Kavaklıdere","Köyceğiz","Marmaris","Menteşe",
+        "Milas","Ortaca","Seydikemer","Ula","Yatağan"],
+    "tekirdag": ["Çerkezköy","Çorlu","Ergene","Hayrabolu","Kapaklı","Malkara","Marmaraereğlisi",
+        "Muratlı","Saray","Süleymanpaşa","Şarköy"],
+    "mardin": ["Artuklu","Dargeçit","Derik","Kızıltepe","Mazıdağı","Midyat","Nusaybin","Ömerli","Savur",
+        "Yeşilli"],
 }
 ALL_CITIES = list(CITY_DISTRICTS.keys())
 CITIES = [c for c in ALL_CITIES if not CITIES_SEL or c in CITIES_SEL]
@@ -214,7 +239,11 @@ def search(query):
 plan = [(c, d) for c in CITIES for d in CITY_DISTRICTS[c] if not ONLY or d in ONLY]
 qpd = len(SEARCHES)
 log(f"Şehirler: {', '.join(CITIES)} · ilçe: {len(plan)} · sorgu/ilçe: {qpd} · PAGES={PAGES}")
-log(f"Planlanan API çağrısı: ~{len(plan)*qpd*PAGES} · kaba maliyet ~${len(plan)*qpd*PAGES*0.04:.2f}")
+log(f"Planlanan API çağrısı: ~{len(plan)*qpd*PAGES} · kaba maliyet ~${len(plan)*qpd*PAGES*0.04:.2f} · tavan MAX_CALLS={MAX_CALLS}")
+if len(plan)*qpd*PAGES > MAX_CALLS:
+    log(f"⚠️ Plan tavanı aşıyor ({len(plan)*qpd*PAGES} > {MAX_CALLS}): CITIES= ile turu daralt.")
+    if not DRYRUN:
+        raise SystemExit("Plan tavanı aşıyor — API çağrısı yapılmadı.")
 if DRYRUN:
     raise SystemExit("DRYRUN — API çağrısı yapılmadı.")
 
@@ -257,13 +286,17 @@ def save():
 # ---- ilçe-bazlı toplama (her ilçeden sonra kaydet) ----
 total_calls = 0; added = 0
 todo = [(c, d) for (c, d) in plan if (c, d) not in done]
+tavan = False
 for i, (city, district) in enumerate(todo, 1):
+    if total_calls + qpd * PAGES > MAX_CALLS:
+        log(f"⛔ TAVAN: {total_calls} çağrı yapıldı, sıradaki ilçe {MAX_CALLS} sınırını aşar — durduruldu."); tavan = True; break
     log(f"[{i}/{len(todo)}] {CITY_DISPLAY[city]} / {district}")
     da = 0
     for phrase, cats in SEARCHES:
         try:
             places, c = search(f"{phrase} {district} {CITY_DISPLAY[city]}"); total_calls += c
         except requests.RequestException as e:
+            total_calls += 1  # faturalanmış olabilir; tavan hesabına girer, tekrar denenmez
             log(f"   HATA: {e}"); continue
         for p in places:
             pid = p.get("id", "")
