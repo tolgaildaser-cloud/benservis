@@ -16,6 +16,7 @@ const MusteriTakip  = lazy(() => import("./MusteriTakip.jsx"));
 const ServisKayit   = lazy(() => import("./ServisKayit.jsx"));
 const KayitSecim    = lazy(() => import("./KayitSecim.jsx"));
 const Hesabim       = lazy(() => import("./Hesabim.jsx")); // YK #172 ÜY-2
+const YerindePanel  = lazy(() => import("./YerindePanel.jsx")); // YK #183 PR-2 (noindex, menüsüz)
 const ServisAdmin   = lazy(() => import("./ServisAdmin.jsx"));
 const RaporPaneli   = lazy(() => import("./RaporPaneli.jsx"));
 const ServisMagaza  = lazy(() => import("./ServisMagaza.jsx"));
@@ -49,6 +50,7 @@ const isHesabim     = path === "/hesabim"; // YK #172 ÜY-2 bireysel üye sayfas
 const isServisAdmin = path === "/servis-admin";
 const isAdmin       = path === "/admin";
 const isTarife      = path === "/tarife";
+const isYerinde     = path === "/yerinde"; // YK #183 PR-2 yerinde servis koordinatör paneli (noindex)
 const isServisMagaza = path.startsWith("/servis/");
 const isPazar       = path.replace(/\/+$/, "") === "/pazar"; // YK #166 PR-4 (noindex, menüsüz)
 const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : null;
@@ -103,6 +105,7 @@ createRoot(document.getElementById("root")).render(
      isHesabim      ? <Hesabim />                       :
      isServisAdmin  ? <ServisAdmin />                   :
      isTarife       ? <TarifeAdmin />                   :
+     isYerinde      ? <YerindePanel />                  :
      isAdmin        ? <RaporPaneli />                   :
      isServisMagaza ? <ServisMagaza />                  :
      isPazar        ? <PazarVitrin />                   :

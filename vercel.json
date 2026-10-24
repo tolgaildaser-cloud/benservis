@@ -34,6 +34,7 @@
     { "source": "/servis-admin",                  "destination": "/index.html" },
     { "source": "/admin",                         "destination": "/index.html" },
     { "source": "/tarife",                        "destination": "/index.html" },
+    { "source": "/yerinde",                       "destination": "/index.html" },
     { "source": "/servis/:id",                    "destination": "/index.html" },
     { "source": "/urun/:id",                      "destination": "/index.html" },
     { "source": "/sepet",                         "destination": "/index.html" },
@@ -43,7 +44,8 @@
   ],
   "headers": [
     { "source": "/ikinci-el", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
-    { "source": "/ikinci-el/:yol*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+    { "source": "/ikinci-el/:yol*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
+    { "source": "/yerinde", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
   ],
   "functions": {
     "api/servis/yakin.js": { "includeFiles": "src/services-data.json" }
