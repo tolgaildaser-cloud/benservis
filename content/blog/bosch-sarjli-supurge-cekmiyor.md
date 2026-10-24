@@ -48,6 +48,12 @@ faq:
     a: "Unlimited 6 kılavuzundaki akü süreleri tablosuna göre elektrikli zemin başlığıyla turbo modda çalışma süresi 18 V 2,5 Ah aküyle en fazla 8, 3,0 Ah aküyle en fazla 10 dakika. Kılavuz ayrıca akü kapasitesinin ve çalışma süresinin zamanla azalmasının doğal bir yıpranma olduğunu yazıyor."
 images:
   coverAlt: "Emme borusu ayrılmış şarjlı bir dikey süpürge, yanında çıkarılmış toz haznesi ve filtre ünitesi"
+video:
+  youtubeId: "bkcm7z96mek"
+  title: "Bosch şarjlı süpürge çekmiyor: servisi aramadan önce 4 kontrol"
+  description: "Bosch Unlimited kılavuzuna göre emme gücü azaldıysa: tıkalı filtre ya da bloke başlık. Filtre ünitesi, hazne, hava kanalı ve rulo fırça kontrolü."
+  uploadDate: "2026-10-24T04:39:06Z"
+  duration: "PT56S"
 ---
 
 Süpürge eskisi gibi çekmiyor; halıdan geçtikten sonra kırıntılar yerinde kalıyor. Bosch'un Unlimited 6 ve Unlimited 7 şarjlı süpürge kılavuzlarının arıza giderme bölümünde bu belirti **"Emme gücünde azalma var."** diye geçiyor. Bosch iki neden sayıyor, **"Filtre tıkanmıştır."** ve **"Başlık bloke olmuştur."**, ve her biri için numaralı bir sıra veriyor. Aşağıdaki adımlar bu iki sıranın birleşimi.

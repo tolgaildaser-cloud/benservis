@@ -187,7 +187,7 @@ describe("gerçek içerik (content/blog)", () => {
   });
   const videolu = posts.filter((p) => p.video);
 
-  it("föylerdeki 20 eşleme birebir, başka sayfada video yok", () => {
+  it("föylerdeki 21 eşleme birebir, başka sayfada video yok", () => {
     const esleme = Object.fromEntries(videolu.map((p) => [p.slug, p.video.youtubeId]));
     expect(esleme).toEqual({
       "samsung-klima-cf-hatasi": "5lVkaoLa5DI",
@@ -210,6 +210,7 @@ describe("gerçek içerik (content/blog)", () => {
       "arcelik-bulasik-makinesi-su-bosaltmiyor": "HTbIP1N4HoI", // 21 Eki 2026, PAZ yayın paketi (YK #134)
       "samsung-camasir-makinesi-sembolleri-ve-anlamlari": "xyx9u34pfnM", // 22 Eki 2026, PAZ yayın paketi (YK #134)
       "vestel-buzdolabi-sogutmuyor": "aJb3SdPh64Y", // 23 Eki 2026, PAZ yayın paketi (YK #134)
+      "bosch-sarjli-supurge-cekmiyor": "bkcm7z96mek", // 24 Eki 2026, PAZ yayın paketi (YK #134)
     });
   });
   it("tüm video kayıtları denetimden geçer", () => {
