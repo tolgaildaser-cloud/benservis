@@ -71,6 +71,8 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ## Ekran ne söylüyor
 
+![ECA kombi ekranı: OFF bekleme, yalnız musluk yaz modu, musluk ve petek kış modu, AP hava tahliyesi, ASE bakım hatırlatma](/tamir-gorsel/eca-kombi-kalorifer-isitmiyor/kod-tablosu.png)
+
 
 | Ekranda gördüğün | Kılavuza göre anlamı | Kim ne yapar |
 |---|---|---|
