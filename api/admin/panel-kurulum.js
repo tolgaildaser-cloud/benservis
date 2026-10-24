@@ -10,6 +10,7 @@
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
 import { adminYetkili } from "../_admin.js";
+import { yerindeRolOku } from "../../src/yerinde-kimlik.js";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -26,6 +27,10 @@ export default async function handler(req, res) {
 
   const { data: mevcut, error: getErr } = await supabase.auth.admin.getUserById(user_id);
   if (getErr || !mevcut?.user) return res.status(404).json({ error: "Kullanıcı bulunamadı" });
+
+  // IT bulgusu (YK #183 PR-2): ters guard — yerinde rolü (koordinatör/teknisyen) taşıyan hesaba servis_id verilmez.
+  // yerinde-rol.js servis hesabına rol vermiyordu; bu uç da tersini engeller → tek hesap tek yetki.
+  if (yerindeRolOku(mevcut.user)) return res.status(409).json({ error: "Yerinde servis rolü olan hesaba servis bağlanmaz" });
 
   const yeniApp = { ...(mevcut.user.app_metadata || {}), servis_id, servis_ad };
   if (ilce) yeniApp.servis_ilce = ilce;

@@ -4,15 +4,16 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import fs from "node:fs";
 import { yerindeRolOku, koordinatorMu, teknisyenMi } from "./yerinde-kimlik.js";
 
-const { kayit } = vi.hoisted(() => ({ kayit: { yazma: [], kullanici: null, tekBagli: null } }));
+const { kayit } = vi.hoisted(() => ({ kayit: { yazma: [], kullanici: null, tekBagli: null, eskiBag: null, authHata: null } }));
 
 vi.mock("../api/_supabase.js", () => {
   const zincir = (tablo) => {
-    let islem = null;
+    let islem = "select";
     const z = {
-      update: (v) => { islem = ["update", v]; kayit.yazma.push([tablo, "update", v]); return z; },
+      update: (v) => { islem = "update"; kayit.yazma.push([tablo, "update", v]); return z; },
       eq: () => z, is: () => z, select: () => z,
-      maybeSingle: async () => ({ data: kayit.tekBagli, error: null }),
+      // update…select → yeni kod bağlandı mı (tekBagli) · düz select → bu kullanıcının eski bağı (eskiBag)
+      maybeSingle: async () => ({ data: islem === "update" ? kayit.tekBagli : kayit.eskiBag, error: null }),
       then: (ok, no) => Promise.resolve({ data: null, error: null }).then(ok, no),
     };
     return z;
@@ -22,7 +23,7 @@ vi.mock("../api/_supabase.js", () => {
       from: zincir,
       auth: { admin: {
         getUserById: async () => ({ data: { user: kayit.kullanici }, error: kayit.kullanici ? null : { message: "yok" } }),
-        updateUserById: async (id, v) => { kayit.yazma.push(["auth", id, v]); return { error: null }; },
+        updateUserById: async (id, v) => { kayit.yazma.push(["auth", id, v]); return { error: kayit.authHata }; },
       } },
     },
   };
@@ -42,6 +43,8 @@ beforeEach(() => {
   kayit.yazma.length = 0;
   kayit.kullanici = { id: UID, app_metadata: { provider: "email" } };
   kayit.tekBagli = { kod: "T1" };
+  kayit.eskiBag = null;
+  kayit.authHata = null;
   process.env.ADMIN_TOKEN = "admin-sir";
 });
 
@@ -123,5 +126,72 @@ describe("YK #183 SQL dosyası", () => {
     expect(kod).toMatch(/isodow from randevu_gun\) between 1 and 5/);
     expect(kod).toMatch(/tutar\s+numeric\(10,2\) check \(tutar is null or tutar >= 0\)/);
     expect(kod).toMatch(/'yerinde-seri', 'yerinde-seri', false/);
+  });
+});
+
+describe("PR-2 IT bulguları: rol değişimi atomik, rol alanı zorunlu", () => {
+  it("rol alanı yoksa 400 ve hiçbir yazma yok (boş gövde rolü sessizce silmez)", async () => {
+    kayit.kullanici = { id: UID, app_metadata: { rol: "yerinde_koordinator" } };
+    const r = await cagir({ user_id: UID });
+    expect(r.kod).toBe(400);
+    expect(kayit.yazma).toEqual([]);
+  });
+  it("yeni kod doluysa (409) eski bağ ÇÖZÜLMEZ", async () => {
+    kayit.eskiBag = { kod: "T1" };
+    kayit.tekBagli = null;
+    const r = await cagir({ user_id: UID, rol: "yerinde_teknisyen", teknisyen_kod: "T2" });
+    expect(r.kod).toBe(409);
+    expect(kayit.yazma.some((y) => y[0] === "yerinde_teknisyenler" && y[2].user_id === null)).toBe(false);
+    expect(kayit.yazma.some((y) => y[0] === "auth")).toBe(false);
+  });
+  it("T1 → T2: önce yeni bağ, sonra eski çözülür, sonra rol", async () => {
+    kayit.eskiBag = { kod: "T1" };
+    kayit.tekBagli = { kod: "T2" };
+    const r = await cagir({ user_id: UID, rol: "yerinde_teknisyen", teknisyen_kod: "T2" });
+    expect(r.kod).toBe(200);
+    const sira = kayit.yazma.map((y) => (y[0] === "auth" ? "rol" : y[2].user_id ? "bagla" : "coz"));
+    expect(sira).toEqual(["bagla", "coz", "rol"]);
+  });
+  it("rol yazımı düşerse bağ geri alınır (eski bağ yerine konur)", async () => {
+    kayit.eskiBag = { kod: "T1" };
+    kayit.tekBagli = { kod: "T2" };
+    kayit.authHata = { message: "düştü" };
+    const r = await cagir({ user_id: UID, rol: "yerinde_teknisyen", teknisyen_kod: "T2" });
+    expect(r.kod).toBe(500);
+    const sira = kayit.yazma.map((y) => (y[0] === "auth" ? "rol" : y[2].user_id ? "bagla" : "coz"));
+    expect(sira).toEqual(["bagla", "coz", "rol", "coz", "bagla"]);
+  });
+  it("aynı koda yeniden teknisyen rolü: bağ değişmez, yalnız rol yazılır", async () => {
+    kayit.eskiBag = { kod: "T1" };
+    const r = await cagir({ user_id: UID, rol: "yerinde_teknisyen", teknisyen_kod: "T1" });
+    expect(r.kod).toBe(200);
+    expect(kayit.yazma.map((y) => y[0])).toEqual(["auth"]);
+  });
+});
+
+describe("PR-2 IT bulgusu: panel-kurulum ters guard", () => {
+  it("yerinde rolü olan hesaba servis_id verilmez (409)", async () => {
+    kayit.kullanici = { id: UID, app_metadata: { rol: "yerinde_teknisyen" } };
+    const { default: h } = await import("../api/admin/panel-kurulum.js");
+    const r = res();
+    await h({ method: "PATCH", headers: { authorization: "Bearer admin-sir" }, body: { user_id: UID, servis_id: "sv-1", servis_ad: "X" } }, r);
+    expect(r.kod).toBe(409);
+    expect(kayit.yazma.some((y) => y[0] === "auth")).toBe(false);
+  });
+});
+
+describe("YK #183 PR-2 SQL dosyası", () => {
+  const SQL = fs.readFileSync("supabase/migrations/20261024_183_pr2_yerinde.sql", "utf8");
+  const kod = SQL.split("\n").filter((l) => !l.trim().startsWith("--")).join("\n");
+  it("teknisyen tablosunda user_id authenticated'a kapalı; yerinde_rol anon'a kapalı", () => {
+    expect(kod).toMatch(/revoke select on public\.yerinde_teknisyenler from authenticated/);
+    const grant = kod.match(/grant select \(([^)]*)\) on public\.yerinde_teknisyenler to authenticated/);
+    expect(grant).toBeTruthy();
+    expect(grant[1]).not.toMatch(/user_id/);
+    expect(kod).toMatch(/revoke execute on function public\.yerinde_rol\(\) from public, anon/);
+  });
+  it("açıklama sütunu sınırlı; yazma politikası eklenmiyor", () => {
+    expect(kod).toMatch(/add column if not exists aciklama text check \(aciklama is null or char_length\(aciklama\) <= 500\)/);
+    expect(kod).not.toMatch(/create policy/);
   });
 });

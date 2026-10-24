@@ -154,12 +154,12 @@ describe("kaynak kuralları", () => {
     expect(b.indexOf("const pazarKabukKaynak")).toBeLessThan(b.indexOf("anaSayfaOnRender(tamirliKat)"));
   });
 
-  it("vercel.json: /pazar ve /urun/:id rewrite'ı yedek olarak durur; X-Robots-Tag yalnız /ikinci-el", () => {
+  it("vercel.json: /pazar ve /urun/:id rewrite'ı yedek olarak durur; X-Robots-Tag yalnız /ikinci-el (+ /yerinde paneli, YK #183 PR-2)", () => {
     const v = JSON.parse(fs.readFileSync("vercel.json", "utf8"));
     expect(v.rewrites.find((r) => r.source === "/pazar")?.destination).toBe("/index.html");
     expect(v.rewrites.find((r) => r.source === "/urun/:id")?.destination).toBe("/index.html");
     const robots = v.headers.filter((h) => h.headers.some((x) => x.key === "X-Robots-Tag")).map((h) => h.source);
-    expect(robots.sort()).toEqual(["/ikinci-el", "/ikinci-el/:yol*"]);
+    expect(robots.sort()).toEqual(["/ikinci-el", "/ikinci-el/:yol*", "/yerinde"]);
   });
 
   it("UrunDetay istemci şeması yalnız kabukta şema yoksa eklenir (çift Product yok)", () => {
