@@ -1931,7 +1931,9 @@ function kopruGrupHizasiDenetimi(posts) {
   // kurutma olan ama kurutmaya YÖNLENDİRİLMEMİŞ yazı gördüğünde build durur.
   // ⛔ Kapı yazıyı otomatik taşımaz — KARAR ister: ya `KURUTMA_SABIT`'e ekle, ya bilerek
   //    dışarıda tutuyorsan `KURUTMA_ADAYI_DEGIL`'e yaz. Sessiz üçüncü yol yok.
-  const KURUTMA_ADAYI_DEGIL = new Set([]); // bilerek kurutma sayılmayan yazılar (bugün boş)
+  // Bilerek kurutma (çamaşır kurutma makinesi) sayılmayan yazılar — her biri gerekçeli:
+  //   kiwi-gida-kurutucu-kullanimi: meyve/sebze kurutan küçük ev aleti; çamaşır kurutma makinesi değil (YK #182 Dalga 5, 24 Eki 2026).
+  const KURUTMA_ADAYI_DEGIL = new Set(["kiwi-gida-kurutucu-kullanimi"]);
   const kurutmaIzi = (p) => /kurutma[- ]makinesi|kurutucu/i.test(`${p.slug} ${p.title || ""}`);
   const kacan = posts.filter((p) => kurutmaIzi(p) && blogGrubu(p) !== "Kurutma Makinesi" && !KURUTMA_ADAYI_DEGIL.has(p.slug));
   if (kacan.length) {
