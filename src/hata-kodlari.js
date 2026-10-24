@@ -581,6 +581,79 @@ export const HATA_KODU_KATMANI = {
     { giris: "Candy — E7", tip: "kod",
       anlam: "Kapak sorunu (ekransız modelde 7 yanıp sönme); kapağın tam kapandığı ve çamaşırın kapağa engel olmadığı kontrol edilir; kapak kilitli kaldıysa makine kapatılıp fişi çekilir, 2-3 dakika sonra kapak açılır.",
       yazi: "candy-camasir-makinesi-ariza-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2019/8/15647292/43029015%20wm%20rapid%20itdeenesfr · md5 fd30c919
+    // ——— 24 Eki 2026, YK #182 Dalga 6 (PAZ tamir föyü): 24 giriş; kaynak belge + md5 föyde ———
+    { giris: "Hoover — E2", tip: "kod",
+      anlam: "Makine su alamıyor (ekransız modelde LED'ler 2 kez yanıp söner); musluğun açık olduğu, su hortumunun bükülmediği ya da sıkışmadığı ve tahliye borusunun uygun yükseklikte olduğu kontrol edilir; musluk kapatılıp doldurma hortumu makinenin arkasından sökülür, kum giderme filtresi ve filtre bölmesi kontrol edilir.",
+      yazi: "hoover-camasir-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2025/8/17548968/MAN-000192635_000 · md5 4d86c3b9
+    { giris: "Hoover — E3", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor (ekransız modelde 3 yanıp sönme); filtrenin ve filtre bölmesinin tıkalı olmadığı, tahliye borusunun bükülmediği ve evin giderinin tıkalı olmadığı kontrol edilir; suyu lavaboya boşaltmak denenir.",
+      yazi: "hoover-camasir-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2025/8/17548968/MAN-000192635_000 · md5 4d86c3b9
+    { giris: "Hoover — E4", tip: "kod",
+      anlam: "Çok fazla köpük ve/veya su (ekransız modelde 4 yanıp sönme); aşırı deterjan ya da çamaşır makinesi için üretilmemiş bir ürün kullanılmadığından emin olunur.",
+      yazi: "hoover-camasir-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2025/8/17548968/MAN-000192635_000 · md5 4d86c3b9
+    { giris: "Hoover — E7", tip: "kod",
+      anlam: "Kapak sorunu (ekransız modelde 7 yanıp sönme); kapağın doğru kapandığı ve arada giysi kalmadığı kontrol edilir; kapak sıkışmışsa makine kapatılıp fişi çekilir, 2-3 dakika beklenip kapak yeniden açılır.",
+      yazi: "hoover-camasir-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2025/8/17548968/MAN-000192635_000 · md5 4d86c3b9
+    { giris: "Whirlpool — F02", tip: "kod",
+      anlam: "Su stop arızası: alt tablada su sızıntısı algılandı; Açma/Kapama tuşuna en az 3 saniye basılır, arıza sürerse satış sonrası servis aranır.",
+      yazi: "whirlpool-camasir-makinesi-ariza-kodlari" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-74e562c4-58a7-4720-bacd-70071098cea4/pdf/400010792541EN.pdf · md5 6dcf560e
+    { giris: "Whirlpool — F24", tip: "kod",
+      anlam: "Küçük yük kapasiteli programa fazla çamaşır ya da fazla su girişi; fazla çamaşırda \"Durulama ve Sıkma\" programı başlatılır ve program yük sınırı aşılmaz; fazla suda musluk kapatılır, Açma/Kapama 3 saniye basılı tutularak su boşaltılır; program başlatılmadan su giriyorsa musluk kapatılır, makinenin fişi çekilir ve servis aranır.",
+      yazi: "whirlpool-camasir-makinesi-ariza-kodlari" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-74e562c4-58a7-4720-bacd-70071098cea4/pdf/400010792541EN.pdf · md5 6dcf560e
+    { giris: "Whirlpool — F20", tip: "kod",
+      anlam: "Elektronik bileşen arızası; makine kapatılıp fişi çekilir, su musluğu kapatılır, satış sonrası servis aranır.",
+      yazi: "whirlpool-camasir-makinesi-ariza-kodlari" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-74e562c4-58a7-4720-bacd-70071098cea4/pdf/400010792541EN.pdf · md5 6dcf560e
+    { giris: "Whirlpool — F60", tip: "kod",
+      anlam: "Elektronik bileşen arızası; makine kapatılıp fişi çekilir, su musluğu kapatılır, satış sonrası servis aranır.",
+      yazi: "whirlpool-camasir-makinesi-ariza-kodlari" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-74e562c4-58a7-4720-bacd-70071098cea4/pdf/400010792541EN.pdf · md5 6dcf560e
+    { giris: "AEG — E10", tip: "kod",
+      anlam: "Makine düzgün su almıyor; musluğun açık ve tıkalı olmadığı, su basıncının çok düşük olmadığı, giriş hortumunun bükülmediği ya da hasarlı olmadığı ve bağlantısının doğru olduğu kontrol edilir; giriş hortumu filtresi ve valf filtresi temizlenir.",
+      yazi: "aeg-camasir-makinesi-hata-kodlari" }, // https://electrolux.bynder.com/asset/f59f0dd4-2098-4a05-a66e-b2a21165bb5c/9a54852a-a1da-412d-9554-4c128f1baa33-pdf.pdf · md5 b376496c
+    { giris: "AEG — E20", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor; lavabo bağlantısının tıkalı olmadığı, tahliye hortumunun bükülmediği ve bağlantısının doğru olduğu kontrol edilir, tahliye filtresi temizlenir; tahliye aşaması olmayan bir program ya da suyu kazanda bırakan bir seçenek seçildiyse boşaltma programı çalıştırılır.",
+      yazi: "aeg-camasir-makinesi-hata-kodlari" }, // https://electrolux.bynder.com/asset/f59f0dd4-2098-4a05-a66e-b2a21165bb5c/9a54852a-a1da-412d-9554-4c128f1baa33-pdf.pdf · md5 b376496c
+    { giris: "AEG — E40", tip: "kod",
+      anlam: "Kapak açık ya da doğru kapanmamış; kapak düzgün kapatılır.",
+      yazi: "aeg-camasir-makinesi-hata-kodlari" }, // https://electrolux.bynder.com/asset/f59f0dd4-2098-4a05-a66e-b2a21165bb5c/9a54852a-a1da-412d-9554-4c128f1baa33-pdf.pdf · md5 b376496c
+    { giris: "AEG — E91", tip: "kod",
+      anlam: "Elektronik parçalar arasında iletişim yok; program düzgün bitmemiş ya da makine erken durmuş olabilir, makine kapatılıp yeniden açılır; kod tekrar görünürse yetkili servis aranır.",
+      yazi: "aeg-camasir-makinesi-hata-kodlari" }, // https://electrolux.bynder.com/asset/f59f0dd4-2098-4a05-a66e-b2a21165bb5c/9a54852a-a1da-412d-9554-4c128f1baa33-pdf.pdf · md5 b376496c
+    { giris: "AEG — EH0", tip: "kod",
+      anlam: "Şebeke elektriği dengesiz; şebekenin dengelenmesi beklenir.",
+      yazi: "aeg-camasir-makinesi-hata-kodlari" }, // https://electrolux.bynder.com/asset/f59f0dd4-2098-4a05-a66e-b2a21165bb5c/9a54852a-a1da-412d-9554-4c128f1baa33-pdf.pdf · md5 b376496c
+    { giris: "AEG — EF0", tip: "kod",
+      anlam: "Taşma önleme düzeneği devrede; makinenin bağlantısı kesilir, su musluğu kapatılır, yetkili servis aranır.",
+      yazi: "aeg-camasir-makinesi-hata-kodlari" }, // https://electrolux.bynder.com/asset/f59f0dd4-2098-4a05-a66e-b2a21165bb5c/9a54852a-a1da-412d-9554-4c128f1baa33-pdf.pdf · md5 b376496c
+    { giris: "Zanussi — E10", tip: "kod",
+      anlam: "Makine suyu düzgün almıyor; musluğun açık ve tıkalı olmadığı, su basıncının çok düşük olmadığı, giriş hortumunun bükülmediği ve bağlantısının doğru olduğu kontrol edilir, giriş hortumu ve valf filtresi temizlenir. Sorun tıkalı tahliye devresinden de kaynaklanabilir; bu durumda yetkili servis aranır.",
+      yazi: "zanussi-camasir-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/9bcd45c5-8570-4cea-b636-edb5fea7a52e/902afbfa-85d4-4b86-918c-b2ed171bceb4-pdf.pdf · md5 cb7f2637
+    { giris: "Zanussi — E20", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor; lavabo bağlantısının tıkalı olmadığı, tahliye hortumunun bükülmediği ve bağlantısının doğru olduğu kontrol edilir; tahliye aşaması olmayan program ya da suyu kazanda bırakan seçenek seçildiyse boşaltma programı çalıştırılır. Sorun tıkalı tahliye devresinden de kaynaklanabilir; bu durumda yetkili servis aranır.",
+      yazi: "zanussi-camasir-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/9bcd45c5-8570-4cea-b636-edb5fea7a52e/902afbfa-85d4-4b86-918c-b2ed171bceb4-pdf.pdf · md5 cb7f2637
+    { giris: "Zanussi — E40", tip: "kod",
+      anlam: "Kapak açık ya da doğru kapanmamış; kapak düzgün kapatılır.",
+      yazi: "zanussi-camasir-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/9bcd45c5-8570-4cea-b636-edb5fea7a52e/902afbfa-85d4-4b86-918c-b2ed171bceb4-pdf.pdf · md5 cb7f2637
+    { giris: "Zanussi — E91", tip: "kod",
+      anlam: "İç arıza: elektronik parçalar arasında iletişim yok; program düzgün bitmemiş ya da makine erken durmuş olabilir, makine kapatılıp yeniden açılır; kod tekrar görünürse yetkili servis aranır.",
+      yazi: "zanussi-camasir-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/9bcd45c5-8570-4cea-b636-edb5fea7a52e/902afbfa-85d4-4b86-918c-b2ed171bceb4-pdf.pdf · md5 cb7f2637
+    { giris: "Zanussi — EH0", tip: "kod",
+      anlam: "Şebeke elektriği dengesiz; şebekenin dengelenmesi beklenir.",
+      yazi: "zanussi-camasir-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/9bcd45c5-8570-4cea-b636-edb5fea7a52e/902afbfa-85d4-4b86-918c-b2ed171bceb4-pdf.pdf · md5 cb7f2637
+    { giris: "Miele — F 34", tip: "kod",
+      anlam: "Kapak düzgün kapanmamış, kapak kilidi kenetlenememiş; kapak tekrar kapatılır ve program yeniden başlatılır; hata tekrar görünürse yetkili servis çağrılır.",
+      yazi: "miele-camasir-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/86/90/01_C7F1282812F01FE090BCEF45E10E8690.pdf · md5 4c6bcd02
+    { giris: "Miele — F 10", tip: "kod",
+      anlam: "Su girişi engellenmiş veya kısıtlanmış; musluğun yeterince açık olduğu, su giriş hortumunun bükülmediği ve su basıncının çok düşük olmadığı kontrol edilir; su girişindeki süzgeç tıkanmışsa temizlenir.",
+      yazi: "miele-camasir-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/86/90/01_C7F1282812F01FE090BCEF45E10E8690.pdf · md5 4c6bcd02
+    { giris: "Miele — F 11", tip: "kod",
+      anlam: "Su çıkışı engellenmiş veya kısıtlanmış ya da tahliye hortumu çok yüksekte olabilir; yıkama suyu filtresi ve pompası temizlenir; azami pompalama yüksekliği 1 metredir.",
+      yazi: "miele-camasir-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/86/90/01_C7F1282812F01FE090BCEF45E10E8690.pdf · md5 4c6bcd02
+    { giris: "Miele — F 138", tip: "kod",
+      anlam: "Su koruma sistemi tepki vermiş; su musluğu kapatılır, yetkili servis çağrılır.",
+      yazi: "miele-camasir-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/86/90/01_C7F1282812F01FE090BCEF45E10E8690.pdf · md5 4c6bcd02
+    { giris: "Miele — F 35", tip: "kod",
+      anlam: "Kapak kilidi bloke olmuş; yetkili servis çağrılır.",
+      yazi: "miele-camasir-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/86/90/01_C7F1282812F01FE090BCEF45E10E8690.pdf · md5 4c6bcd02
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -672,6 +745,10 @@ export const HATA_KODU_KATMANI = {
     { giris: "Vestel KM 10WS1101 — E08", tip: "kod",
       anlam: "Voltaj dalgalanma hatası: şehir şebekesinde voltaj dalgalanması olabilir; en yakın yetkili servise başvurulur.",
       yazi: "vestel-kurutma-makinesi-hata-kodlari" }, // https://statik.vestel.com.tr/webfiles/20269607_k.pdf · md5 8dcc7f3c
+    // ——— 24 Eki 2026, YK #182 Dalga 6 (PAZ tamir föyü): 1 giriş; kaynak belge + md5 föyde ———
+    { giris: "Miele — F 066", tip: "kod",
+      anlam: "Havlar ve deterjan kalıntıları sonucu tıkanma; bildirim program seçim düğmesi güç simgeli konuma getirilerek kapatılır, hav filtreleri ve baza filtresi temizlenir, hasarlı ya da deforme filtreler değiştirilir.",
+      yazi: "miele-kurutma-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/9f/e7/01_C7F1282861C81FE098F3B3C0DA369FE7.pdf · md5 bc75ea66
   ],
   "Bulaşık Makinesi": [
     { giris: "E15 (musluk işareti)", tip: "kod",
@@ -1089,6 +1166,67 @@ export const HATA_KODU_KATMANI = {
     { giris: "Hoover — E21", tip: "kod",
       anlam: "Su seviyesi sorunu; tıkalı filtre plakası kontrol edilip temizlenir.",
       yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
+    // ——— 24 Eki 2026, YK #182 Dalga 6 (PAZ tamir föyü): 20 giriş; kaynak belge + md5 föyde ———
+    { giris: "Miele — F11", tip: "kod",
+      anlam: "Su tahliyesinde hata, yıkama kabininde su olabilir; güç kapatılır, süzgeç kombinasyonu ve su boşaltma pompası temizlenir, gerekirse su boşaltma hortumundaki bükülme ya da düğüm giderilir.",
+      yazi: "miele-bulasik-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/5c/2f/01_C7F138384D4C1FD0B2F0C4E19E3F5C2F.pdf · md5 e21d6f90
+    { giris: "Miele — F12", tip: "kod",
+      anlam: "Su girişinde hata; güç kapatılır, su musluğu sonuna kadar açılıp program yeniden başlatılır, su girişindeki süzgeç temizlenir; su basıncı 50 kPa'nın altındaysa tesisatçıya başvurulur; hata sürerse Miele yetkili servisi çağrılır.",
+      yazi: "miele-bulasik-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/5c/2f/01_C7F138384D4C1FD0B2F0C4E19E3F5C2F.pdf · md5 e21d6f90
+    { giris: "Miele — F13", tip: "kod",
+      anlam: "Su girişinde hata (F ile 13 dönüşümlü görünüyorsa su musluğu kapalıdır, musluk sonuna kadar açılır); güç kapatılır, su musluğu sonuna kadar açılıp program yeniden başlatılır, su girişindeki süzgeç temizlenir; su basıncı 50 kPa'nın altındaysa tesisatçıya başvurulur; hata sürerse Miele yetkili servisi çağrılır.",
+      yazi: "miele-bulasik-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/5c/2f/01_C7F138384D4C1FD0B2F0C4E19E3F5C2F.pdf · md5 e21d6f90
+    { giris: "Miele — F18", tip: "kod",
+      anlam: "Teknik bir hata; güç kapatılır, su musluğu kapatılır, Miele yetkili servisi çağrılır.",
+      yazi: "miele-bulasik-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/5c/2f/01_C7F138384D4C1FD0B2F0C4E19E3F5C2F.pdf · md5 e21d6f90
+    { giris: "Miele — F70", tip: "kod",
+      anlam: "Su koruma sistemi (Waterproof) devreye girmiş, su boşaltma pompası kapak açıkken de çalışıyor olabilir; güç kapatılır, su musluğu kapatılır, Miele yetkili servisi çağrılır.",
+      yazi: "miele-bulasik-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/5c/2f/01_C7F138384D4C1FD0B2F0C4E19E3F5C2F.pdf · md5 e21d6f90
+    { giris: "Miele — F78", tip: "kod",
+      anlam: "Sirkülasyon pompasında hata; güç kapatılıp yeniden açılır ve program yeniden başlatılır; hata yeniden görünürse güç ve su musluğu kapatılır, Miele yetkili servisi çağrılır.",
+      yazi: "miele-bulasik-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/5c/2f/01_C7F138384D4C1FD0B2F0C4E19E3F5C2F.pdf · md5 e21d6f90
+    { giris: "Whirlpool — F6", tip: "kod",
+      anlam: "Makine su almıyor (Açık/Kapalı ve BAŞLAT/Duraklat LED'leri hızla yanıp söner); şebekede su olduğu ve musluğun açık olduğu, giriş hortumunun bükülmediği kontrol edilir, giriş hortumundaki süzgeç temizlenir; ardından makine kapatılıp açılır ve yeni program başlatılır.",
+      yazi: "whirlpool-bulasik-makinesi-su-almiyor" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-e046d875-d0e4-478d-8bbc-0a7d93659802/pdf/400011476017_EN.pdf · md5 28b16988
+    { giris: "Whirlpool — F3", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor (Açık/Kapalı ve BAŞLAT/Duraklat LED'leri hızla yanıp söner); çevrimin bitmesi beklenir, tahliye hortumunun bükülmediği kontrol edilir, lavabo boşaltma borusu ve yiyecek artığıyla tıkanan filtre temizlenir.",
+      yazi: "whirlpool-bulasik-makinesi-su-bosaltmiyor" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-e046d875-d0e4-478d-8bbc-0a7d93659802/pdf/400011476017_EN.pdf · md5 28b16988
+    { giris: "AEG — i10", tip: "kod",
+      anlam: "Makine su almıyor; musluğun açık ve tıkalı olmadığı, su basıncının çok düşük olmadığı, giriş hortumu filtresinin tıkalı olmadığı ve hortumun bükülmediği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — i11", tip: "kod",
+      anlam: "Makine su almıyor; musluğun açık ve tıkalı olmadığı, su basıncının çok düşük olmadığı, giriş hortumu filtresinin tıkalı olmadığı ve hortumun bükülmediği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — i20", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor; lavabo bağlantısının ve iç filtre sisteminin tıkalı olmadığı, tahliye hortumunun bükülmediği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — i30", tip: "kod",
+      anlam: "Taşma önleme düzeneği devrede; su musluğu kapatılır, makinenin doğru kurulduğu ve sepetlerin kılavuza göre yüklendiği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — i61", tip: "kod",
+      anlam: "Makinedeki su çok sıcak ya da sıcaklık sensöründe arıza; giriş suyunun 60 °C'yi aşmadığından emin olunur, makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — i69", tip: "kod",
+      anlam: "Makinedeki su çok sıcak ya da sıcaklık sensöründe arıza; giriş suyunun 60 °C'yi aşmadığından emin olunur, makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — iC0", tip: "kod",
+      anlam: "Makinede teknik arıza; makine kapatılıp açılır, sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — iC3", tip: "kod",
+      anlam: "Makinede teknik arıza; makine kapatılıp açılır, sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — iF1", tip: "kod",
+      anlam: "Makinedeki su seviyesi çok yüksek; makine kapatılıp açılır, filtrelerin temiz olduğu ve tahliye hortumunun yerden doğru yükseklikte takıldığı kontrol edilir; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "Sharp — FF", tip: "kod",
+      anlam: "Su giriş sistemi arızası; musluğun açık olduğu ve suyun aktığı kontrol edilir, giriş hortumu musluktan ayrılıp hortum filtresi temizlenir; hata sürerse servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F5", tip: "kod",
+      anlam: "Basınç sistemi arızası; servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F2", tip: "kod",
+      anlam: "Su boşaltılamıyor, boşaltma hortumu ve filtreler tıkalı olabilir; program iptal edilir, hata sürerse servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
   ],
 
   "Kombi / Termosifon": [
@@ -2582,6 +2720,52 @@ export const HATA_KODU_KATMANI = {
     { giris: "Samsung — E162", tip: "kod",
       anlam: "EEPROM hatası; Samsung bu kod için kullanıcı adımı vermiyor, destek kanalına ya da yetkili servise yönlendiriyor.",
       yazi: "samsung-klima-hata-kodlari" }, // https://www.samsung.com/tr/support/home-appliances/what-are-samsung-air-conditioner-error-codes-and-solutions/ · md5 da8a426a
+    // ——— 24 Eki 2026, YK #182 Dalga 6 (PAZ tamir föyü): 15 giriş; kaynak belge + md5 föyde ———
+    { giris: "Panasonic — H 11", tip: "kod",
+      anlam: "İç ünite ile dış ünite arasında normal dışı haberleşme. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 12", tip: "kod",
+      anlam: "İç ünite kapasitesi eşleşmiyor. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 14", tip: "kod",
+      anlam: "İç ünite giriş havası sıcaklık sensöründe anormallik. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 19", tip: "kod",
+      anlam: "İç ünite fan motoru mekanizması kilitli. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 23", tip: "kod",
+      anlam: "İç ünite ısı eşanjörü 1 numaralı sıcaklık sensöründe anormallik. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 27", tip: "kod",
+      anlam: "Dış ünite hava sıcaklığı sensöründe anormallik. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 85", tip: "kod",
+      anlam: "İç ünite ile kablosuz LAN modülü arasında anormal iletişim. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 97", tip: "kod",
+      anlam: "Dış ünite fan motoru mekanizması kilitli. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 98", tip: "kod",
+      anlam: "İç ünite yüksek basınç koruması devrede. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — H 99", tip: "kod",
+      anlam: "İç ünite donma koruması devrede. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — F 11", tip: "kod",
+      anlam: "4 yollu valf anahtarlamasında anormallik. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — F 91", tip: "kod",
+      anlam: "Soğutma döngüsünde anormallik. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — F 95", tip: "kod",
+      anlam: "Dış ünite soğutmasında yüksek basınç koruması devrede. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — F 97", tip: "kod",
+      anlam: "Kompresörde aşırı ısınma koruması devrede. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
+    { giris: "Panasonic — F 99", tip: "kod",
+      anlam: "Dış ünitede doğru akım (DC) tepe akımı algılandı. Kılavuza göre ürün kapatılır ve hata kodu yetkili satıcıya bildirilir.",
+      yazi: "panasonic-klima-hata-kodlari" }, // https://tda.panasonic-europe-service.com/docs/1524929632-6001-E9699AB39A3E97DB00FD229EFE2950EC03A3AD60/tsn3/data/ALL/CSTZ20ZKEW/OI/995378/WEB-ACXF55-35140-TR.pdf · md5 644a0a77
   ],
 
   "Fırın / Ocak / Aspiratör": [
