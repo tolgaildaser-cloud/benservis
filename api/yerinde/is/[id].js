@@ -1,5 +1,5 @@
 // api/yerinde/is/[id].js — YK #183 PR-2 · tek iş emrinde alan güncelleme + durum geçişi
-// PATCH /api/yerinde/is/:id   (YALNIZ koordinatör; teknisyen durum değişimi PR-3)
+// PATCH /api/yerinde/is/:id   koordinatör: tüm alanlar + geçişler · teknisyen (PR-3): yalnız KENDİ işinde seri no + saha geçişleri
 // Header: Authorization: Bearer <supabase-jwt>
 // Body: { guncel (updated_at, eşzamanlı düzenleme kilidi), alanlar?: { garanti, seri, tek, istenenGun, istenenSlot,
 //         randevuGun, randevuSlot, tnot }, gecis?: "randevu" | "yolda" | … | "iptal" | "ulasilamadi",
@@ -9,7 +9,7 @@ import supabase from "../../_supabase.js";
 import { setCorsHeaders } from "../../_verimor.js";
 import { yerindeKimlik, slotCakisti } from "../../_yerinde.js";
 import {
-  SLOTLAR, PILOT_IL, gecisGecerli, haftaIciMi, kisiselVeriVar, garantiEtiket, isUiya, OLAY_DESEN,
+  SLOTLAR, PILOT_IL, gecisGecerli, teknisyenGecisGecerli, haftaIciMi, kisiselVeriVar, garantiEtiket, isUiya, OLAY_DESEN,
 } from "../../../src/yerinde-cekirdek.js";
 
 const ALAN_ISLER = "id, no, kanal, kiwi_ref, talep_at, durum, urun, model, seri_no, garanti, belirti, aciklama, il, ilce, istenen_gun, istenen_slot, randevu_gun, randevu_slot, teknisyen_kod, temsilci, temsilci_notu, aramalar, ilk_ziyarette, csat, degisen_parcalar, tutar, updated_at";
@@ -17,15 +17,17 @@ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const slotSayi = (v) => (v === "" || v == null ? null : Number(v));
 
 // Saf karar fonksiyonu (testlenir): mevcut satır + istek → { guncelle, olaylar } ya da { hata, kod }.
-export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"]) {
-  const a = body.alanlar || {};
+export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"], rol = "yerinde_koordinator") {
+  const teknisyen = rol === "yerinde_teknisyen";
+  // Teknisyen yalnız seri no girer; diğer alanlar (randevu, teknisyen, garanti, not) koordinatörün.
+  const a = teknisyen ? ("seri" in (body.alanlar || {}) ? { seri: body.alanlar.seri } : {}) : body.alanlar || {};
   const g = {};
   const olaylar = [];
   if ("garanti" in a) {
     if (!["E", "H", "?"].includes(a.garanti)) return { kod: 400, hata: "Garanti değeri geçersiz" };
     if (a.garanti !== is.garanti) { g.garanti = a.garanti; olaylar.push("garanti:" + garantiEtiket(a.garanti)); }
   }
-  if ("seri" in a) { const s = String(a.seri ?? "").trim().slice(0, 60) || null; if (s !== is.seri_no) g.seri_no = s; }
+  if ("seri" in a) { const s = String(a.seri ?? "").trim().slice(0, 60) || null; if (s !== is.seri_no) { g.seri_no = s; if (s) olaylar.push("seri"); } }
   if ("tnot" in a) {
     const n = String(a.tnot ?? "").trim().slice(0, 1000) || null;
     if (kisiselVeriVar(n)) return { kod: 400, hata: "Telefon ya da e-posta yalnız müşteri alanlarına yazılır (temsilci notundan çıkarın)." };
@@ -52,6 +54,7 @@ export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"]) {
   }
 
   const to = body.gecis;
+  if (teknisyen && to && !teknisyenGecisGecerli(is.durum, to)) return { kod: 403, hata: "Bu adımı koordinatör yapar" };
   if (to === "ulasilamadi") {
     if (is.durum !== "yeni") return { kod: 409, hata: "Ulaşılamadı yalnız aranacak kayıtta işaretlenir" };
     g.aramalar = Math.min(50, (is.aramalar || 0) + 1);
@@ -88,7 +91,6 @@ export default async function handler(req, res) {
   if (req.method !== "PATCH") return res.status(405).json({ error: "Method not allowed" });
   const kim = await yerindeKimlik(req, res);
   if (!kim) return;
-  if (kim.rol !== "yerinde_koordinator") return res.status(403).json({ error: "Bu işlemi koordinatör yapar" });
 
   const id = String(req.query?.id || "");
   if (!UUID.test(id)) return res.status(400).json({ error: "İş kimliği geçersiz" });
@@ -96,14 +98,15 @@ export default async function handler(req, res) {
 
   const { data: is, error: okErr } = await supabase.from("yerinde_isler").select(ALAN_ISLER).eq("id", id).maybeSingle();
   if (okErr) return res.status(500).json({ error: "İş okunamadı" });
-  if (!is) return res.status(404).json({ error: "İş bulunamadı" });
+  // Teknisyen yalnız kendi koduna atanmış işi görür/değiştirir; başkasının işi için varlık bile sızdırılmaz.
+  if (!is || (kim.rol === "yerinde_teknisyen" && (!kim.teknisyenKod || is.teknisyen_kod !== kim.teknisyenKod))) return res.status(404).json({ error: "İş bulunamadı" });
   if (body.guncel && body.guncel !== is.updated_at) return res.status(409).json({ error: "Kayıt başka biri tarafından değiştirildi; liste yenilendi, tekrar deneyin", yenile: true });
 
   const [{ data: tek }, { data: parcaLog }] = await Promise.all([
     supabase.from("yerinde_teknisyenler").select("kod").eq("aktif", true),
     supabase.from("yerinde_is_log").select("id").eq("is_id", id).eq("olay", "durum:parca").limit(1),
   ]);
-  const h = guncellemeHesapla(is, { ...body, _parcaGecmisi: !!parcaLog?.length }, (tek || []).map((t) => t.kod));
+  const h = guncellemeHesapla(is, { ...body, _parcaGecmisi: !!parcaLog?.length }, (tek || []).map((t) => t.kod), kim.rol);
   if (h.hata) return res.status(h.kod).json({ error: h.hata });
   if (!Object.keys(h.guncelle).length && !h.olaylar.length) return res.status(200).json({ is: null, degisiklik: false });
 

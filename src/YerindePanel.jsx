@@ -2,7 +2,8 @@
 // Hedef görünüm: ~/Desktop/Yerinde Servis/2-servis-paneli.html — dört sekme (Genel bakış · Kiwi kaydı gir · İş emirleri ·
 // Takvim) birebir. Prototipte veri localStorage'daydı; burada GET/POST /api/yerinde/isler ve PATCH /api/yerinde/is/:id.
 // Kurallar ve öneri modeli src/yerinde-cekirdek.js'te (API ile ortak). Rol yalnız app_metadata.rol (src/yerinde-kimlik.js).
-// Teknisyen mobil görünümü PR-3, Verimor tıkla-ara PR-4: bu PR'da "Ara" düğmesi yok, telefon tel: bağlantısıdır.
+// Teknisyen mobil görünümü (PR-3, 24 Eki): kendi işleri, saha geçişleri, seri no + fotoğraf (private bucket, imzalı URL).
+// Verimor tıkla-ara PR-4: "Ara" düğmesi yok, telefon tel: bağlantısıdır.
 // ⛔ Kişisel veri analitiğe/loga gitmez; bu bileşen track() çağırmaz.
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import BenservisLogo from "./BenservisLogo.jsx";
@@ -11,7 +12,7 @@ import { yerindeRolOku } from "./yerinde-kimlik.js";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import {
   PILOT_IL, ILCE_KONUM, TEKNISYENLER, SLOTLAR, CALISMA_GUNLERI, URUNLER, URUN_MODEL, DURUMLAR, durumAd, KAPALI,
-  GECISLER, GARANTI_SECENEK, arizalarFor, tekFor, pad, slotAd, slotKisa, isoDay, isWorkDay, addWorkDays, monday,
+  GECISLER, TEKNISYEN_GECISLER, FOTO_TIPLERI, FOTO_EN_FAZLA, GARANTI_SECENEK, arizalarFor, tekFor, pad, slotAd, slotKisa, isoDay, isWorkDay, addWorkDays, monday,
   fmtDT, fmtD, fmtDS, gunAdi, slaAsimi, yolDk, randevuOner, cakisma, planlanabilir, olayMetni, ozet,
   kisiselVeriVar, cepNormal, SIKISIK_DK,
 } from "./yerinde-cekirdek.js";
@@ -48,6 +49,7 @@ const basHarf = (ad) => String(ad || "").replace(/\(örnek\)/, "").trim().split(
 
 // ─── Veri katmanı: canlıda API, `npm run dev` + ?onizleme=1'de bellek içi örnek (yalnız ekran görüntüsü için) ─
 const ONIZLEME = import.meta.env.DEV && typeof window !== "undefined" && new URLSearchParams(window.location.search).has("onizleme");
+const ONIZLEME_TEKNISYEN = ONIZLEME && new URLSearchParams(window.location.search).get("onizleme") === "teknisyen";
 
 async function apiCagir(yol, secenek = {}) {
   const { data } = await supabase.auth.getSession();
@@ -61,7 +63,7 @@ async function apiCagir(yol, secenek = {}) {
 }
 
 export default function YerindePanel() {
-  const [durum, setDurum] = useState(ONIZLEME ? "hazir" : "yukleniyor"); // yukleniyor | giris | yetkisiz | teknisyen | hazir
+  const [durum, setDurum] = useState(ONIZLEME_TEKNISYEN ? "teknisyen" : ONIZLEME ? "hazir" : "yukleniyor"); // yukleniyor | giris | yetkisiz | teknisyen | hazir
   const [email, setEmail] = useState("");
 
   useEffect(() => {
@@ -88,14 +90,13 @@ export default function YerindePanel() {
       <style>{CSS}</style>
       {durum === "yukleniyor" && <div className="yp-orta"><p className="hint">Yükleniyor…</p></div>}
       {durum === "giris" && <Giris />}
-      {(durum === "yetkisiz" || durum === "teknisyen") && (
+      {durum === "teknisyen" && <TeknisyenGorunum email={email} onCikis={cikis} />}
+      {durum === "yetkisiz" && (
         <div className="yp-orta">
           <div className="yp-kutu">
             <BenservisLogo style={{ height: 34, width: "auto" }} benColor="#1E293B" servisColor="#2563EB" mottoColor="#64748B" />
-            <h1>{durum === "teknisyen" ? "Teknisyen görünümü yakında" : "Bu panel için yetkin yok"}</h1>
-            <p className="hint">{durum === "teknisyen"
-              ? "Teknisyen hesabın tanımlı. İş listesi ve durum güncelleme ekranı bir sonraki sürümde açılacak."
-              : "Yerinde servis paneli yalnız tanımlı koordinatör ve teknisyen hesaplarıyla açılır. Hesap tanımı için info@benservis.com."}</p>
+            <h1>Bu panel için yetkin yok</h1>
+            <p className="hint">Yerinde servis paneli yalnız tanımlı koordinatör ve teknisyen hesaplarıyla açılır. Hesap tanımı için info@benservis.com.</p>
             <p className="hint mono">{email}</p>
             <button className="btn" type="button" onClick={cikis}>Çıkış yap</button>
           </div>
@@ -465,6 +466,7 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
           {!KAPALI.includes(j.durum) && <button className="btn" type="button" disabled={mesgul} onClick={() => gonder("iptal")}>İptal et</button>}
         </div>
         {j.aramalar > 0 && <span className="hint">Ulaşılamadı: {j.aramalar} kez</span>}
+        <Fotolar j={j} />
         <div><div className="hint" style={{ marginBottom: 6 }}>Geçmiş</div>
           <div className="log">{j.log.slice().reverse().map((l, i) => <div key={i}><span>{fmtDT(l.t)}</span>{olayMetni(l.olay)}</div>)}</div></div>
       </div>
@@ -637,6 +639,185 @@ function YeniKayit({ isler, teknisyenler, isOlustur, toast, sonra }) {
         </div>
       </form>
     </section>
+  );
+}
+
+// ─── Seri no fotoğrafları (koordinatör ayrıntısı ve teknisyen kartı ortak) ───────────────────────
+function Fotolar({ j, yukleyebilir = false, onYuklendi }) {
+  const [fotolar, setFotolar] = useState(null); // null = henüz bakılmadı
+  const [mesaj, setMesaj] = useState("");
+  const [mesgul, setMesgul] = useState(false);
+  const goster = async () => {
+    if (ONIZLEME) { setFotolar([]); return; }
+    const r = await apiCagir(`/api/yerinde/foto?isId=${encodeURIComponent(j.id)}`);
+    if (!r.ok) { setMesaj(r.error || "Fotoğraflar okunamadı"); return; }
+    setFotolar(r.fotolar || []);
+  };
+  const yukle = async (e) => {
+    const dosya = e.target.files?.[0];
+    e.target.value = "";
+    if (!dosya) return;
+    if (!FOTO_TIPLERI[dosya.type]) { setMesaj("Yalnız JPEG, PNG, WEBP ya da HEIC fotoğraf yüklenir."); return; }
+    if (dosya.size > FOTO_EN_FAZLA) { setMesaj("Fotoğraf 10 MB'tan büyük olamaz."); return; }
+    setMesgul(true); setMesaj("");
+    if (ONIZLEME) { setMesgul(false); setMesaj("Önizleme: fotoğraf yüklenmiş sayıldı."); onYuklendi?.(); return; }
+    const r = await apiCagir("/api/yerinde/foto", { method: "POST", body: JSON.stringify({ isId: j.id, tip: dosya.type }) });
+    if (!r.ok) { setMesgul(false); setMesaj(r.error || "Yükleme adresi alınamadı"); return; }
+    const { error } = await supabase.storage.from(r.bucket).uploadToSignedUrl(r.yol, r.token, dosya, { contentType: dosya.type });
+    setMesgul(false);
+    if (error) { setMesaj("Fotoğraf yüklenemedi, tekrar dene."); return; }
+    setMesaj("Fotoğraf yüklendi.");
+    onYuklendi?.();
+    if (fotolar) goster();
+  };
+  return (
+    <div className="foto">
+      <div className="hint">Seri no fotoğrafları</div>
+      <div className="actions">
+        {yukleyebilir && (
+          <label className={"btn" + (mesgul ? " mesgul" : "")}>
+            {mesgul ? "Yükleniyor…" : "Fotoğraf çek / yükle"}
+            <input type="file" accept="image/jpeg,image/png,image/webp,image/heic" capture="environment" onChange={yukle} disabled={mesgul} hidden />
+          </label>
+        )}
+        {fotolar === null && <button className="btn" type="button" onClick={goster}>Fotoğrafları göster</button>}
+      </div>
+      {fotolar && (fotolar.length
+        ? <div className="foto-izgara">{fotolar.map((f) => <a key={f.yol} href={f.url} target="_blank" rel="noreferrer"><img src={f.url} alt="Seri no etiketi fotoğrafı" loading="lazy" /></a>)}</div>
+        : <span className="hint">Henüz fotoğraf yok.</span>)}
+      {mesaj && <span className="hint" role="status">{mesaj}</span>}
+    </div>
+  );
+}
+
+// ─── Teknisyen mobil görünümü (PR-3) ─────────────────────────────────────────────────────────────
+// API teknisyene yalnız kendi koduna atanmış işleri döner; geçişler TEKNISYEN_GECISLER ile sınırlı (sunucu da denetler).
+function TeknisyenGorunum({ email, onCikis }) {
+  const [isler, setIsler] = useState(ONIZLEME ? ornekVeri.filter((j) => j.tek === "T1") : []);
+  const [yuklendi, setYuklendi] = useState(ONIZLEME);
+  const [hata, setHata] = useState("");
+  const [gun, setGun] = useState(null);
+  const [acik, setAcik] = useState(null);
+  const [tost, setTost] = useState("");
+  const tostZ = useRef(null);
+  const toast = (m) => { setTost(m); clearTimeout(tostZ.current); tostZ.current = setTimeout(() => setTost(""), 2600); };
+
+  const yukle = useCallback(async () => {
+    if (ONIZLEME) return;
+    const r = await apiCagir("/api/yerinde/isler");
+    if (!r.ok) { setHata(r.error || "İşler yüklenemedi"); return; }
+    setIsler(r.isler || []); setHata(""); setYuklendi(true);
+  }, []);
+  useEffect(() => { yukle(); }, [yukle]);
+  useEffect(() => {
+    if (ONIZLEME) return undefined;
+    const t = setInterval(() => { if (document.visibilityState === "visible") yukle(); }, 60000);
+    return () => clearInterval(t);
+  }, [yukle]);
+
+  const bugun = isoDay(new Date());
+  const gunler = useMemo(() => [...new Set(isler.filter((j) => j.randevuGun && j.randevuGun >= bugun && !KAPALI.includes(j.durum)).map((j) => j.randevuGun))].sort(), [isler, bugun]);
+  const seciliGun = gun || gunler[0] || bugun;
+  const gunIsleri = isler.filter((j) => j.randevuGun === seciliGun && j.durum !== "iptal").sort((a, b) => a.randevuSlot - b.randevuSlot);
+  const bekleyen = isler.filter((j) => ["parca", "atolye"].includes(j.durum));
+  const kod = isler.find((j) => j.tek)?.tek || "";
+
+  const kaydet = async (j, istek) => {
+    if (ONIZLEME) { const y = onizlemeUygula(j, istek); setIsler((l) => l.map((x) => (x.id === j.id ? y : x))); return { ok: true }; }
+    const r = await apiCagir(`/api/yerinde/is/${j.id}`, { method: "PATCH", body: JSON.stringify({ guncel: j.guncel, ...istek }) });
+    if (r.ok && r.is) setIsler((l) => l.map((x) => (x.id === j.id ? r.is : x)));
+    if (r.yenile) yukle();
+    return r;
+  };
+
+  return (
+    <div className="tk">
+      <header className="tk-ust">
+        <BenservisLogo style={{ height: 26, width: "auto" }} benColor="#FFFFFF" servisColor="#93C5FD" mottoColor="#94A3B8" />
+        <div className="tk-kim"><b>{kod ? kod + " · teknisyen" : "Teknisyen"}</b><small>{email}</small></div>
+        <button className="tk-cik" type="button" onClick={onCikis} aria-label="Çıkış yap"><Ic p="cikis" sw={1.8} /></button>
+      </header>
+      <main className="tk-ana">
+        {hata && <div className="callout" role="alert"><Ic p="zil" /><div><b>Bağlantı sorunu</b>{hata}</div></div>}
+        {!yuklendi && !hata && <p className="hint">Yükleniyor…</p>}
+        {yuklendi && <>
+          <div className="tk-gunler" role="tablist" aria-label="Günler">
+            {(gunler.length ? gunler : [bugun]).map((d) => (
+              <button key={d} role="tab" type="button" aria-selected={d === seciliGun} onClick={() => { setGun(d); setAcik(null); }}>
+                {d === bugun ? "Bugün" : gunAdi(d) + " " + fmtD(d).slice(0, 5)}
+                <small>{isler.filter((j) => j.randevuGun === d && j.durum !== "iptal").length} iş</small>
+              </button>
+            ))}
+          </div>
+          {gunIsleri.map((j) => <TeknisyenKart key={j.id + j.guncel} j={j} acik={acik === j.id} ac={() => setAcik(acik === j.id ? null : j.id)} kaydet={kaydet} toast={toast} />)}
+          {!gunIsleri.length && <p className="tk-bos">Bu gün için atanmış iş yok.</p>}
+          {bekleyen.length > 0 && <>
+            <h2 className="tk-baslik">Parça / atölye bekleyen</h2>
+            {bekleyen.map((j) => <TeknisyenKart key={j.id + j.guncel} j={j} acik={acik === j.id} ac={() => setAcik(acik === j.id ? null : j.id)} kaydet={kaydet} toast={toast} />)}
+          </>}
+          <button className="btn tk-yenile" type="button" onClick={() => { yukle(); toast("Liste yenilendi"); }}><Ic p="yenile" sw={1.8} />Listeyi yenile</button>
+        </>}
+      </main>
+      {tost && <div className="toast" role="status">{tost}</div>}
+    </div>
+  );
+}
+
+function TeknisyenKart({ j, acik, ac, kaydet, toast }) {
+  const [seri, setSeri] = useState(j.seri || "");
+  const [parcalar, setParcalar] = useState("");
+  const [tutar, setTutar] = useState("");
+  const [mesgul, setMesgul] = useState(false);
+  const adimlar = TEKNISYEN_GECISLER[j.durum] || [];
+  const harita = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(`${j.adres}, ${j.ilce}, ${j.il}`);
+  const uyari = kisiselVeriVar(parcalar);
+
+  const gonder = async (gecis) => {
+    if (uyari) { toast("Telefon ya da e-posta değişen parçalar alanına yazılmaz"); return; }
+    setMesgul(true);
+    const istek = { alanlar: { seri } };
+    if (gecis) istek.gecis = gecis;
+    if (gecis === "tamam") istek.kapanis = { parcalar, tutar };
+    const r = await kaydet(j, istek);
+    setMesgul(false);
+    toast(!r.ok ? r.error || "Kaydedilemedi" : gecis ? durumAd[gecis] : "Seri no kaydedildi");
+  };
+
+  return (
+    <article className={"tk-kart" + (acik ? " acik" : "")}>
+      <button className="tk-kart-ust" type="button" onClick={ac} aria-expanded={acik}>
+        <span className="tk-saat mono">{j.randevuSlot != null ? slotKisa(j.randevuSlot) : "—"}</span>
+        <span className="tk-ozet"><b>{j.ilce} · {j.urun}</b><small>{j.belirti}</small></span>
+        <span className={"chip s-" + j.durum}>{durumAd[j.durum]}</span>
+      </button>
+      {acik && (
+        <div className="tk-detay">
+          <dl>
+            <dt>Müşteri</dt><dd>{j.ad}</dd>
+            <dt>Telefon</dt><dd><a className="mono" href={"tel:" + j.tel}>{j.tel}</a></dd>
+            <dt>Adres</dt><dd>{j.adres}, {j.ilce} · <a href={harita} target="_blank" rel="noreferrer">Haritada aç</a></dd>
+            {j.tarif && <><dt>Tarif</dt><dd>{j.tarif}</dd></>}
+            <dt>Ürün</dt><dd>{j.urun}{j.model && <> · <span className="mono">{j.model}</span></>}</dd>
+            <dt>Arıza</dt><dd>{j.belirti}{j.aciklama && <><br /><span className="hint">{j.aciklama}</span></>}</dd>
+            <dt>Garanti</dt><dd>{(GARANTI_SECENEK.find(([v]) => v === j.garanti) || [])[1]}</dd>
+            {j.tnot && <><dt>Not</dt><dd>{j.tnot}</dd></>}
+          </dl>
+          <div className="field"><label htmlFor={"tk-seri-" + j.id}>Seri no</label>
+            <div className="pair"><input id={"tk-seri-" + j.id} value={seri} onChange={(e) => setSeri(e.target.value)} maxLength={60} autoComplete="off" />
+              <button className="btn" type="button" disabled={mesgul || seri === (j.seri || "")} onClick={() => gonder(null)}>Kaydet</button></div></div>
+          <Fotolar j={j} yukleyebilir onYuklendi={() => toast("Fotoğraf eklendi")} />
+          {j.durum === "serviste" && <div className="grid2">
+            <div className="field"><label htmlFor={"tk-parca-" + j.id}>Değişen parçalar</label><input id={"tk-parca-" + j.id} placeholder="ör. rezistans" value={parcalar} onChange={(e) => setParcalar(e.target.value)} maxLength={300} /></div>
+            <div className="field"><label htmlFor={"tk-tutar-" + j.id}>Tahsilat (TL)</label><input id={"tk-tutar-" + j.id} type="number" min="0" inputMode="numeric" placeholder="Garanti içi ise 0" value={tutar} onChange={(e) => setTutar(e.target.value)} /></div>
+          </div>}
+          {uyari && <p className="warnline" role="alert">Telefon ya da e-posta değişen parçalar alanına yazılmaz.</p>}
+          {adimlar.length > 0 && <div className="tk-adimlar">
+            {adimlar.map(([s, l], i) => <button key={s} className={"btn" + (i === 0 ? " primary" : "")} type="button" disabled={mesgul} onClick={() => gonder(s)}>{l}</button>)}
+          </div>}
+          {["parca", "atolye"].includes(j.durum) && <p className="hint">Yeni randevuyu koordinatör verir.</p>}
+        </div>
+      )}
+    </article>
   );
 }
 
@@ -840,6 +1021,29 @@ background:var(--bg);color:var(--fg);font:14px/1.5 var(--f-body);min-height:100v
 .yp .steps li{counter-increment:s;background:var(--bg);border-radius:6px;padding:10px 12px;font-size:12.5px;color:var(--muted)}
 .yp .steps li b{display:block;color:var(--fg);font-size:13px;margin-bottom:2px}
 .yp .steps li b::before{content:counter(s) " · ";font-family:var(--f-mono);color:var(--accent)}
+.yp .foto{display:grid;gap:6px}.yp label.btn{display:inline-flex;align-items:center}.yp label.btn.mesgul{opacity:.6;cursor:wait}
+.yp .foto-izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.yp .foto-izgara img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+.yp .tk{min-height:100vh;background:var(--bg)}
+.yp .tk-ust{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--side);color:#fff}
+.yp .tk-kim{flex:1;min-width:0}.yp .tk-kim b{display:block;font-size:14px}.yp .tk-kim small{display:block;font-size:11.5px;color:var(--side-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.yp .tk-cik{width:38px;height:38px;border-radius:8px;border:1px solid var(--side-line);background:none;color:#fff;display:grid;place-items:center;cursor:pointer}.yp .tk-cik svg{width:18px;height:18px}
+.yp .tk-ana{max-width:640px;margin:0 auto;padding:14px 16px 40px;display:grid;gap:10px}
+.yp .tk-gunler{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.yp .tk-gunler button{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer;text-align:left}
+.yp .tk-gunler button small{display:block;font-weight:500;font-size:11px;color:var(--muted)}
+.yp .tk-gunler button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}.yp .tk-gunler button[aria-selected="true"] small{color:#DBEAFE}
+.yp .tk-kart{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.yp .tk-kart.acik{border-color:var(--accent)}
+.yp .tk-kart-ust{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;width:100%;padding:14px;background:none;border:0;text-align:left;cursor:pointer}
+.yp .tk-saat{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:8px;padding:6px 8px}
+.yp .tk-ozet b{display:block;font-size:14px}.yp .tk-ozet small{display:block;font-size:12px;color:var(--muted)}
+.yp .tk-detay{border-top:1px solid var(--line);padding:14px;display:grid;gap:12px;background:var(--bg)}
+.yp .tk-detay dl{grid-template-columns:76px minmax(0,1fr)}
+.yp .tk-adimlar{display:grid;gap:8px}.yp .tk-adimlar .btn{min-height:46px;font-size:15px;font-weight:600}
+.yp .tk-bos{color:var(--muted);text-align:center;padding:28px 0;margin:0}
+.yp .tk-baslik{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:10px 0 0}
+.yp .tk-yenile{display:inline-flex;align-items:center;gap:8px;justify-self:center;margin-top:8px}
 @media (max-width:1100px){.yp .kcards{grid-template-columns:repeat(2,minmax(0,1fr))}.yp .dash-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:980px){.yp .main{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:860px){.yp .app{grid-template-columns:minmax(0,1fr);background:var(--bg)}.yp .side{position:static;height:auto}
