@@ -6,6 +6,7 @@ import {
 } from "./yerinde-cekirdek.js";
 
 vi.mock("../api/_supabase.js", () => ({ default: {} }));
+vi.mock("../api/_yerinde.js", () => ({ yerindeKimlik: async () => null, slotCakisti: () => false }));
 vi.mock("../api/_verimor.js", () => ({ setCorsHeaders() {} }));
 
 describe("geçiş tablosu (prototipteki düğmeler)", () => {
@@ -127,5 +128,38 @@ describe("API kararları", () => {
     expect(guncellemeHesapla({ ...is, durum: "serviste" }, { gecis: "tamam", kapanis: { parcalar: "a@b.co" } }).kod).toBe(400);
     expect(guncellemeHesapla(is, { alanlar: { tnot: "05321234567" } }).kod).toBe(400);
     expect(guncellemeHesapla({ ...is, il: "Ankara", teknisyen_kod: null }, { alanlar: { tek: "T1" } }).kod).toBe(400);
+  });
+});
+
+describe("PR-3 teknisyen yetkisi", () => {
+  it("teknisyen yalnız saha geçişleri yapar; randevu, iptal, ulaşılamadı koordinatörde", async () => {
+    const { guncellemeHesapla } = await import("../api/yerinde/is/[id].js");
+    const T = "yerinde_teknisyen";
+    const is = { durum: "randevu", garanti: "?", il: "İstanbul", teknisyen_kod: "T1", randevu_gun: "2026-10-26", randevu_slot: 10, aramalar: 0, seri_no: null };
+    expect(guncellemeHesapla(is, { gecis: "yolda" }, ["T1"], T).guncelle.durum).toBe("yolda");
+    expect(guncellemeHesapla(is, { gecis: "iptal" }, ["T1"], T).kod).toBe(403);
+    expect(guncellemeHesapla({ ...is, durum: "yeni" }, { gecis: "ulasilamadi" }, ["T1"], T).kod).toBe(403);
+    expect(guncellemeHesapla({ ...is, durum: "parca" }, { gecis: "randevu" }, ["T1"], T).kod).toBe(403);
+    expect(guncellemeHesapla({ ...is, durum: "serviste" }, { gecis: "tamam", kapanis: { parcalar: "rezistans", tutar: "0" } }, ["T1"], T).guncelle).toMatchObject({ durum: "tamam", tutar: 0 });
+  });
+  it("teknisyen yalnız seri no yazar; randevu/teknisyen/garanti/not alanları yok sayılır", async () => {
+    const { guncellemeHesapla } = await import("../api/yerinde/is/[id].js");
+    const is = { durum: "serviste", garanti: "?", il: "İstanbul", teknisyen_kod: "T1", randevu_gun: "2026-10-26", randevu_slot: 10, seri_no: null, temsilci_notu: null };
+    const r = guncellemeHesapla(is, { alanlar: { seri: "SN123", tek: "T2", garanti: "E", randevuGun: "2026-10-27", randevuSlot: "12", tnot: "x" } }, ["T1", "T2"], "yerinde_teknisyen");
+    expect(r.guncelle).toEqual({ seri_no: "SN123" });
+    expect(r.olaylar).toEqual(["seri"]);
+  });
+  it("foto yolu sunucuda üretilir; yalnız izinli tip ve geçerli iş kimliği", async () => {
+    const { fotoYolu } = await import("../api/yerinde/foto.js");
+    const id = "11111111-2222-4333-8444-555555555555";
+    expect(fotoYolu(id, "image/jpeg", 1000, "abc")).toBe(`${id}/1000-abc.jpg`);
+    expect(fotoYolu(id, "application/pdf")).toBe(null);
+    expect(fotoYolu("../baska", "image/png")).toBe(null);
+  });
+  it("PR-3 SQL: varsayılan fazla yetkiler kalkar, istemci storage politikası eklenmez", async () => {
+    const fs = await import("node:fs");
+    const kod = fs.readFileSync("supabase/migrations/20261024_183_pr3_yerinde.sql", "utf8").split("\n").filter((l) => !l.trim().startsWith("--")).join("\n");
+    expect(kod).toMatch(/revoke references, trigger, truncate\s+on public\.yerinde_teknisyenler, public\.yerinde_isler, public\.yerinde_musteri, public\.yerinde_is_log\s+from authenticated, anon/);
+    expect(kod).not.toMatch(/create policy|grant /i);
   });
 });

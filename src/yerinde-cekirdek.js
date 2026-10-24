@@ -84,6 +84,16 @@ export function gecisGecerli(from, to) {
   return (GECISLER[from] || []).some(([s]) => s === to);
 }
 export const planlanabilir = (durum) => ["yeni", "randevu", "parca"].includes(durum);
+// PR-3: teknisyen yalnız sahadaki adımları ilerletir (randevu verme, iptal, ulaşılamadı koordinatörde).
+export const TEKNISYEN_GECISLER = {
+  randevu: [["yolda", "Yola çıktım"]],
+  yolda: [["serviste", "Adrese vardım"]],
+  serviste: [["tamam", "İş tamamlandı"], ["parca", "Parça gerekiyor"], ["atolye", "Atölyeye alıyorum"]],
+};
+export const teknisyenGecisGecerli = (from, to) => (TEKNISYEN_GECISLER[from] || []).some(([s]) => s === to);
+// Seri no fotoğrafı: private bucket `yerinde-seri`, yol `<is_id>/<zaman>-<rastgele>.<uzantı>` (PR-1 SQL, 10 MB).
+export const FOTO_TIPLERI = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/heic": "heic" };
+export const FOTO_EN_FAZLA = 10 * 1024 * 1024;
 
 // ─── Kişisel veri deseni (IT bulgusu): serbest metin alanlarına telefon / e-posta yazılmaz ──────
 // Telefon yalnız yerinde_musteri.telefon'da, e-posta yalnız yerinde_musteri.eposta'da durur. İş/log tablosuna
@@ -206,6 +216,8 @@ export function olayMetni(olay) {
     case "tercih": return "Müşteri tercihi güncellendi";
     case "kapanis": return "Kapanış bilgisi girildi";
     case "not": return "Temsilci notu güncellendi";
+    case "seri": return "Seri no girildi";
+    case "foto": return "Seri no fotoğrafı yüklendi";
     default: return olay;
   }
 }
