@@ -59,6 +59,29 @@ describe("cokSatanSirala", () => {
   });
 });
 
+describe("vitrin çeşitliliği (24 Eki, Tolga: \"sadece boru koymuşsun\")", () => {
+  it("satış yokken 8'li blok tek türle dolmaz: her cihaz/parça türünden birer, boru sona", async () => {
+    const { vitrinCesitle } = await import("./pazar-vitrin.js");
+    const boru = Array.from({ length: 9 }, (_, i) => ({ id: "b" + i, gorsel_url: "x", cihaz_turu: "kombi-termosifon", parca_turu: "hortum-boru-baca" }));
+    const diger = [
+      { id: "raf", gorsel_url: "x", cihaz_turu: "buzdolabi", parca_turu: "raf-sepet-cekmece" },
+      { id: "izgara", gorsel_url: "x", cihaz_turu: "firin-ocak-aspirator", parca_turu: "tabla-tepsi-izgara" },
+      { id: "fan", gorsel_url: "x", cihaz_turu: "firin-ocak-aspirator", parca_turu: "fan-pervane" },
+      { id: "filtre", gorsel_url: "x", cihaz_turu: "klima", parca_turu: "filtre" },
+      { id: "gorselsiz", cihaz_turu: "supurge", parca_turu: "motor" },
+    ];
+    const s = cokSatanSirala([...boru, ...diger], []).map((x) => x.id);
+    expect(s.slice(0, 3)).toEqual(["raf", "izgara", "filtre"]);
+    for (const id of ["raf", "izgara", "fan", "filtre", "gorselsiz"]) expect(s).toContain(id); // borudan farklı her ürün girer
+    expect(s.filter((id) => id.startsWith("b")).length).toBe(3); // boru yalnız kalan kutuları doldurur
+    expect(s.length).toBe(8);
+  });
+  it("gerçek satış varsa satılan önde kalır", () => {
+    const u = [{ id: "boru", gorsel_url: "x", parca_turu: "hortum-boru-baca" }, { id: "raf", gorsel_url: "x", parca_turu: "raf-sepet-cekmece" }];
+    expect(cokSatanSirala(u, [{ urunler: [{ urun_id: "boru" }] }])[0].id).toBe("boru");
+  });
+});
+
 describe("GET /api/pazar/liste?siralama=cok-satan", () => {
   it("yalnız ödenmiş siparişler sayılır; siparişten yalnız urunler kolonu okunur", async () => {
     sorgular.length = 0;

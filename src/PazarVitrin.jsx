@@ -20,6 +20,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { track } from "@vercel/analytics";
 import { PAZAR_KATEGORILERI, PAZAR_CIHAZLARI, PARCA_TURLERI, kategoriBul } from "./pazar-sozluk.js";
+import { vitrinCesitle } from "./pazar-vitrin.js";
 import { TR_IL_ILCE } from "./tr-iller.js";
 import { sepetAdet, sepeteEkle } from "./sepet.js";
 import KvkkNotu from "./KvkkNotu.jsx";
@@ -271,8 +272,8 @@ function AnaGorunum({ urunler, git, filtre }) {
     const grup = {};
     for (const u of sirali) if (u.cihaz_turu) (grup[u.cihaz_turu] ||= []).push(u);
     const enCok = Object.keys(grup).sort((a, b) => grup[b].length - grup[a].length);
-    const one = [];
-    for (let i = 0; one.length < 10 && i < 10; i++) for (const s of enCok) if (grup[s][i] && one.length < 10) one.push(grup[s][i]);
+    // 24 Eki 2026: öne çıkanlar görsel çeşitlilikle seçilir (her cihazdan + her parça türünden birer; boru/conta sona).
+    const one = vitrinCesitle(urunler, 10);
     return [
       { baslik: "Öne çıkanlar", liste: one, git: { kategori: "yedek-parca", cihaz: "", parca: "" } },
       ...enCok.slice(0, 3).map((s) => ({
