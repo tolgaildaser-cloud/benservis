@@ -10,6 +10,7 @@ import supabase from "../_supabase.js";
 import { URUN_PUBLIC_ALANLAR } from "../_public-alanlar.js";
 import { saticiHaritasi } from "../_satici.js";
 import { kategoriBul, PAZAR_CIHAZLARI, PARCA_TURLERI } from "../../src/pazar-sozluk.js";
+import { vitrinCesitle } from "../../src/pazar-vitrin.js";
 
 // Tavan, katalogun TAMAMINI kapsamalı (16 Eki 2026): `/pazar` cihaz/parça süzgeci ve arama
 // istemcide bu listenin üzerinde çalışır. 60'ta kalınca 108 aktif parçanın en eski 48'i vitrinde,
@@ -20,8 +21,8 @@ const LIMIT = 500;
 const COK_SATAN_ADET = 8;
 
 // "En çok satan" (Tolga, 11 Eki: "ana sayfaya da 8 adet en çok satan ürünü pazaryeri olarak koy").
-// Sıra: ödenmiş siparişlerdeki kalem sayısı ↓ → görseli olan önce → yeni eklenen önce
-// (gelen liste zaten created_at ↓; sort kararlı olduğu için eşitlikte o sıra korunur).
+// Sıra: ödenmiş siparişlerdeki kalem sayısı ↓; satışı olmayan kutular görsel çeşitlilikle dolar
+// (24 Eki, Tolga: "sadece boru koymuşsun, biraz görsel güzel ürünler koy" → src/pazar-vitrin.js).
 // Satış sayısı cevaba GİRMEZ — yalnız sıra döner (traction rakamı public olmaz).
 export function cokSatanSirala(urunler = [], siparisler = [], adet = COK_SATAN_ADET) {
   const satis = {};
@@ -30,11 +31,14 @@ export function cokSatanSirala(urunler = [], siparisler = [], adet = COK_SATAN_A
       if (k?.urun_id) satis[k.urun_id] = (satis[k.urun_id] || 0) + 1;
     }
   }
-  return urunler
-    .map((u, i) => ({ u, i, n: satis[u.id] || 0, g: u.gorsel_url ? 1 : 0 }))
-    .sort((a, b) => b.n - a.n || b.g - a.g || a.i - b.i)
-    .slice(0, adet)
-    .map((x) => x.u);
+  const satilan = urunler
+    .map((u, i) => ({ u, i, n: satis[u.id] || 0 }))
+    .filter((x) => x.n > 0)
+    .sort((a, b) => b.n - a.n || a.i - b.i)
+    .map((x) => x.u)
+    .slice(0, adet);
+  const kalan = urunler.filter((u) => !satilan.includes(u));
+  return [...satilan, ...vitrinCesitle(kalan, adet - satilan.length)];
 }
 
 // Query → güvenli filtre. Sözlükte olmayan değer yok sayılır (serbest metin DB'ye gitmez).
