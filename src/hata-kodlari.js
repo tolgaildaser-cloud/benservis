@@ -523,6 +523,64 @@ export const HATA_KODU_KATMANI = {
     { giris: "Hotpoint RSG 845 J TK — H2O", tip: "kod",
       anlam: "Ekranda yanıp sönüyorsa makine su almıyor: hortum musluğa bağlı mı, bükülmüş mü, musluk açık mı, evde su ve yeterli basınç var mı, BAŞLAT/DURDUR'a basıldı mı kontrol edilir.",
       yazi: "hotpoint-camasir-makinesi-su-almiyor" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-4b6e625f-22ff-4881-b4d6-eef252b1162b/pdf/19514205300_TR.pdf · md5 2b0a9a73
+    // ——— 24 Eki 2026, YK #182 Dalga 5 (PAZ tamir föyü): 19 giriş; kaynak belge + md5 föyde ———
+    { giris: "Hisense — F01", tip: "kod",
+      anlam: "Su girişi arızası; musluğun açık ve basıncın yeterli olduğu, giriş hortumunun ezilmediği, hortumdaki süzgecin tıkalı olmadığı ve hortumun donmadığı kontrol edilir.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F03", tip: "kod",
+      anlam: "Tahliye arızası; tahliye hortumunun ezilmediği ve suyun aktığı, hortumdaki süzgecin tıkalı olmadığı ve hortumun donmadığı kontrol edilir.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F04", tip: "kod",
+      anlam: "Elektronik modül arızası; cihaz kapatılır, güç tuşuna 3 saniye basılır, Başlat/Duraklat tuşuna yeniden basılır; tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F05", tip: "kod",
+      anlam: "Elektronik modül arızası; cihaz kapatılır, güç tuşuna 3 saniye basılır, Başlat/Duraklat tuşuna yeniden basılır; tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F06", tip: "kod",
+      anlam: "Elektronik modül arızası; cihaz kapatılır, güç tuşuna 3 saniye basılır, Başlat/Duraklat tuşuna yeniden basılır; tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F07", tip: "kod",
+      anlam: "Elektronik modül arızası; cihaz kapatılır, güç tuşuna 3 saniye basılır, Başlat/Duraklat tuşuna yeniden basılır; tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F23", tip: "kod",
+      anlam: "Elektronik modül arızası; cihaz kapatılır, güç tuşuna 3 saniye basılır, Başlat/Duraklat tuşuna yeniden basılır; tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F24", tip: "kod",
+      anlam: "Su seviyesi taşma seviyesine ulaştı; program Başlat/Duraklat ile durdurulup yeniden başlatılır, makine kazana su basmaya devam ederse musluk kapatılır ve servis aranır.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F13", tip: "kod",
+      anlam: "Kapak kapalı ama kilitlenemiyor; makine kapatılıp açılır ve program yeniden başlatılır, tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — F14", tip: "kod",
+      anlam: "Kapak kapalı ama kilidi açılamıyor; makine kapatılıp açılır, tekrarlarsa servis.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Hisense — Unb", tip: "kod",
+      anlam: "Dengesizlik uyarısı; çamaşır dolandıysa makine kapatılır, kapak açılıp çamaşır silkelenerek yeniden yerleştirilir ve tek sıkma programı seçilir; yük çok hafifse bir iki havlu eklenip tek sıkma programı çalıştırılır.",
+      yazi: "hisense-camasir-makinesi-hata-kodlari" }, // https://partners.gorenje.com/fts/GetDigitDoc.aspx?sifra=20012770&jezik=en&tipVsebine=1&docName=20011180_en.pdf · md5 b2e71f98
+    { giris: "Sharp — E01", tip: "kod",
+      anlam: "Kapak düzgün kapanmamış; kapak klik sesi gelene kadar kapatılır, kod sürerse makine kapatılıp fişi çekilir ve yetkili servis aranır.",
+      yazi: "sharp-camasir-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10793913_k.pdf · md5 cc3aa2d3
+    { giris: "Sharp — E02", tip: "kod",
+      anlam: "Su basıncı ya da makinedeki su seviyesi düşük; musluğun tam açık olduğu, şebeke suyunun kesik olmadığı kontrol edilir; sürerse makine bir süre sonra kendiliğinden durur, fiş çekilip musluk kapatılır ve yetkili servis aranır.",
+      yazi: "sharp-camasir-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10793913_k.pdf · md5 cc3aa2d3
+    { giris: "Sharp — E03", tip: "kod",
+      anlam: "Pompa arızalı, pompa filtresi tıkalı ya da pompanın elektrik bağlantısı arızalı; pompa filtresi temizlenir, sürerse yetkili servis.",
+      yazi: "sharp-camasir-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10793913_k.pdf · md5 cc3aa2d3
+    { giris: "Sharp — E04", tip: "kod",
+      anlam: "Makinede fazla su var; makine suyu kendisi boşaltır, ardından makine kapatılıp fişi çekilir, musluk kapatılır ve yetkili servis aranır.",
+      yazi: "sharp-camasir-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10793913_k.pdf · md5 cc3aa2d3
+    { giris: "Candy — E2", tip: "kod",
+      anlam: "Makine su alamıyor (ekransız modelde LED'ler 2 kez yanıp söner); musluğun açık, giriş hortumunun bükülmemiş olduğu, tahliye borusunun uygun yükseklikte olduğu, kum filtresinin ve pompa filtresinin tıkalı olmadığı kontrol edilir.",
+      yazi: "candy-camasir-makinesi-ariza-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2019/8/15647292/43029015%20wm%20rapid%20itdeenesfr · md5 fd30c919
+    { giris: "Candy — E3", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor (ekransız modelde 3 yanıp sönme); filtrenin tıkalı olmadığı, tahliye hortumunun bükülmediği ve evin giderinin tıkalı olmadığı kontrol edilir, su lavaboya boşaltılarak denenir.",
+      yazi: "candy-camasir-makinesi-ariza-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2019/8/15647292/43029015%20wm%20rapid%20itdeenesfr · md5 fd30c919
+    { giris: "Candy — E4", tip: "kod",
+      anlam: "Çok fazla köpük ve/veya su (ekransız modelde 4 yanıp sönme); doğru miktarda ve çamaşır makinesine uygun deterjan kullanılır.",
+      yazi: "candy-camasir-makinesi-ariza-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2019/8/15647292/43029015%20wm%20rapid%20itdeenesfr · md5 fd30c919
+    { giris: "Candy — E7", tip: "kod",
+      anlam: "Kapak sorunu (ekransız modelde 7 yanıp sönme); kapağın tam kapandığı ve çamaşırın kapağa engel olmadığı kontrol edilir; kapak kilitli kaldıysa makine kapatılıp fişi çekilir, 2-3 dakika sonra kapak açılır.",
+      yazi: "candy-camasir-makinesi-ariza-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2019/8/15647292/43029015%20wm%20rapid%20itdeenesfr · md5 fd30c919
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -1012,6 +1070,25 @@ export const HATA_KODU_KATMANI = {
     { giris: "LG DFC325HD — CL", tip: "kod",
       anlam: "Ekran (kontrol) kilidi etkin, tuşlar çalışmaz; Yarım Yük ve Enerji Tasarrufu düğmelerine aynı anda 3 saniye basılı tutularak kapatılır.",
       yazi: "lg-bulasik-makinesi-he-hatasi" }, // https://gscs-b2c.lge.com/open/downloadFile?fileId=yDLoRUEJzXe5wldA1WMfA · md5 fbec0dd8
+    // ——— 24 Eki 2026, YK #182 Dalga 5 (PAZ tamir föyü): 6 giriş; kaynak belge + md5 föyde ———
+    { giris: "Hoover — E2", tip: "kod",
+      anlam: "Bulaşık makinesine su dolmuyor (bazı modellerde \"SU YOK\" yazar); su beslemesinin açık, giriş hortumunun bükülmemiş olduğu, boşaltma borusunun uygun yükseklikte olduğu ve kum filtresinin tıkalı olmadığı kontrol edilir.",
+      yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
+    { giris: "Hoover — E3", tip: "kod",
+      anlam: "Makine suyu boşaltmıyor; boşaltma hortumunun bükülmediği ya da sıkışmadığı, filtrenin ve sifonun tıkalı olmadığı kontrol edilir.",
+      yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
+    { giris: "Hoover — E4", tip: "kod",
+      anlam: "Su sızıntısı; boşaltma hortumunun bükülmediği ya da sıkışmadığı, filtrenin ve sifonun tıkalı olmadığı kontrol edilir.",
+      yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
+    { giris: "Hoover — E8", tip: "kod",
+      anlam: "Su ısıtma elemanı düzgün çalışmıyor ya da filtre plakası tıkalı; filtre plakası temizlenir.",
+      yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
+    { giris: "Hoover — E18", tip: "kod",
+      anlam: "Su ısıtma elemanı düzgün çalışmıyor ya da filtre plakası tıkalı; filtre plakası temizlenir.",
+      yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
+    { giris: "Hoover — E21", tip: "kod",
+      anlam: "Su seviyesi sorunu; tıkalı filtre plakası kontrol edilip temizlenir.",
+      yazi: "hoover-bulasik-makinesi-hata-kodlari" }, // https://d15v10x8t3bz3x.cloudfront.net/Libretti/2023/4/16806824/70025801.A%20HF%203E53E0W-17%20TR · md5 5f6058c1
   ],
 
   "Kombi / Termosifon": [
@@ -1919,6 +1996,112 @@ export const HATA_KODU_KATMANI = {
     { giris: "Airfel Maestro Comfort — U4-67", tip: "kod",
       anlam: "Reset denetimi; kazanın elektriği kesilip tekrar açılır, tekrarlarsa yetkili servis.",
       yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-comfort-kullanim_-_TR2.pdf · md5 4d7af068
+    // ——— 24 Eki 2026, YK #182 Dalga 5 (PAZ tamir föyü): 35 giriş; kaynak belge + md5 föyde ———
+    { giris: "ECA Phoenix şofben — AL01", tip: "kod",
+      anlam: "Alev kaybı hatası; muhtemel sebep gaz bağlantıları. Kendiliğinden geçmezse ya da sürekli görünürse yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL02", tip: "kod",
+      anlam: "Aşırı ısınma hatası, aşırı ısınma termostatı devre dışı. Kendiliğinden geçmezse ya da sürekli görünürse yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL06", tip: "kod",
+      anlam: "NTC hatası, kablo bağlantı hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL07", tip: "kod",
+      anlam: "Kullanım suyu (DHW) solar sensör hatası, kablo bağlantı hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL11", tip: "kod",
+      anlam: "Gaz vanası parazit hatası, elektronik kart hasarlı; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL12", tip: "kod",
+      anlam: "Gaz vanası kablo hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL28", tip: "kod",
+      anlam: "Sürekli reset hatası: art arda 6 kez reset yapıldı; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL37", tip: "kod",
+      anlam: "Düşük voltaj hatası, gerilim kaynağı limitlerin dışında; enerji beslemesi yetersizse elektrik tesisatı yeterli hale getirilir, yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL40", tip: "kod",
+      anlam: "Frekans ölçüm hatası, kablo bağlantı hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL41", tip: "kod",
+      anlam: "Ardışık 6 seferden fazla arıza için alev kaybı; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL44", tip: "kod",
+      anlam: "Gaz vanası için alev tetikleme zaman aşımı hatası, gaz vanası hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL62", tip: "kod",
+      anlam: "Kalibrasyon isteği hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL70", tip: "kod",
+      anlam: "Kullanım suyu (DHW) solar sensör aşırı ısınma hatası, NTC düzgün yerleştirilmemiş; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL71", tip: "kod",
+      anlam: "Yüksek sıcaklık uyarısı, limit termostat düzgün monte edilmemiş; kılavuz limit termostatın kontrol edilmesini istiyor, bu kontrol yetkili servise bırakılır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL72", tip: "kod",
+      anlam: "NTC ölçüm hatası, NTC düzgün yerleştirilmemiş; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL80", tip: "kod",
+      anlam: "Gaz valfi sürücü hatası, kablo bağlantı hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL81", tip: "kod",
+      anlam: "İlk kalkışta yanma sorunu, ilk çalıştırmada hatalı yanma; kılavuz baca giriş ve çıkışının kontrolünü istiyor, baca kontrolü yetkili servise bırakılır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL82", tip: "kod",
+      anlam: "Sürekli kötü yanma sorunu; kılavuz baca giriş ve çıkışının kontrolünü istiyor, baca kontrolü yetkili servise bırakılır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL83", tip: "kod",
+      anlam: "Geçici hatalı yanma uyarısı, baca gazı devir daimi; hata otomatik olarak kaybolur.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL84", tip: "kod",
+      anlam: "Geçici yanma hatası, verimsiz yanma sorunu; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL86", tip: "kod",
+      anlam: "Fan sensörü hatası: sensör ya da konnektör yerinden çıkmış veya kabloları sorunlu olabilir; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL98", tip: "kod",
+      anlam: "Yazılım hatası; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — AL99", tip: "kod",
+      anlam: "Tanımlanamayan hata; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — FE", tip: "kod",
+      anlam: "Donma koruma hatası: 4 °C altındaki hava koşullarında görülür, cihazı donmaya karşı korur; Yetkili servis aranır.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "ECA Phoenix şofben — FX", tip: "kod",
+      anlam: "Uzun süreli çalışma hatası: şofben 6 saat boyunca sürekli çalıştığında görülür; reset yapılarak düzeltilebilir, sorun sürerse yetkili servis.",
+      yazi: "eca-sofben-ariza-kodlari" }, // https://eca.com.tr/uploads/documents//bca/a1c4190f-91a0-4373-b6e2-98f0fa1674be.pdf · md5 7d865330
+    { giris: "Airfel Maestro Optimum — 10-65", tip: "kod",
+      anlam: "Gaz valfi akımı hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — 8H-67", tip: "kod",
+      anlam: "Gidiş suyu sıcaklık sensörü takılma hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — 8H-68", tip: "kod",
+      anlam: "Dönüş suyu sıcaklık sensörü takılma hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — E1-65", tip: "kod",
+      anlam: "İyonizasyon bileşenleri hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — E1-74", tip: "kod",
+      anlam: "ADC hatası; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — J6-20", tip: "kod",
+      anlam: "Yüksek dönüş suyu sıcaklığı; durum giderilince kazan kendiliğinden çalışmaya devam eder, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — J6-64", tip: "kod",
+      anlam: "Drift testi beklemesi; testin tamamlanması beklenir, kazan kendiliğinden devam eder, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — J6-65", tip: "kod",
+      anlam: "Başarısız drift testi; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Optimum — J6-66", tip: "kod",
+      anlam: "Başarısız sensör çatlak testi; kazan resetlenir, tekrarlarsa yetkili servis.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/maestro-optimum-kullanim1.pdf · md5 ecf05d11
+    { giris: "Airfel Maestro Power — U5-01", tip: "kod",
+      anlam: "Termostat bağlantı hatası: termostat bağlantısı 3 dakika sağlanmazsa oluşur; bağlantı gelmezse resetten 3 dakika sonra yeniden belirir, normal çalışma için elektrik kapatılıp açılır.",
+      yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/Maestro-power-kullanim_k%C4%B1lavuzu.pdf · md5 a2baa359
   ],
 
   "Buzdolabı": [
