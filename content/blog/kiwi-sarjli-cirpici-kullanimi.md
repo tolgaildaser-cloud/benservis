@@ -49,7 +49,7 @@ images:
     - "Çırpıcının ucundan çıkarılmış şeffaf koruyucu kapak"
     - "Süt dolu bir bardağa daldırılmış çalışan çırpıcı ucu"
     - "Tezgâhta dinlenmeye bırakılmış kapalı çırpıcı ve köpüklü süt bardağı"
-    - "Sabunlu su dolu bir kaba daldırılmış çırpıcı ucu"
+    - "Çizim: köpüklü sıcak sabunlu su dolu kâse"
     - "Temiz ve kuru bir mutfak çekmecesinde duran çırpıcı ve şarj kablosu"
 ---
 
