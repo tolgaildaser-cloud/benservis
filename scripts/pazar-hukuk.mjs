@@ -19,6 +19,9 @@
 // Kaynak: Türkiye Ticaret Sicili Gazetesi 10 Ağu 2026, sayı 11640, ilan 170462 (sicil + MERSİS);
 // VKN finans kayıtları. ❓ Ünvanın yazımı vergi levhasından teyit edilmeli.
 export const SATICI = {
+  // YK #188 (25 Eki 2026, Tolga: "tutarlılık için heryerde benservis"): alıcının gördüğü işletme adı. Yasal unvan
+  // ve MERSİS aşağıda AYNEN kalır (Mesafeli Sözleşmeler Yönetmeliği md.5/1-b); bu satır unvanın yerine geçmez.
+  isletmeAdi: "Benservis",
   unvan: "Orient Global Tarımsal Üretim ve Sanayi Ticaret Ltd. Şti.",
   mersis: "0647069188200001",
   sicil: "İstanbul Ticaret Sicili 326252-5",
@@ -32,7 +35,7 @@ export const SATICI = {
 const ZORUNLU = ["unvan", "mersis", "adres", "telefon", "eposta"];
 export const eksikSaticiAlanlari = () => ZORUNLU.filter((k) => !SATICI[k]);
 
-export const PAZAR_HUKUK_GUNCELLEME = "15 Ekim 2026";
+export const PAZAR_HUKUK_GUNCELLEME = "25 Ekim 2026"; // YK #188: işletme adı satırı eklendi
 import { UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
 import { HAVALE_SURE_SAAT } from "../src/havale.js";
 const KARGO_SURE = "3 (üç) iş günü";
@@ -40,6 +43,7 @@ const KARGO_SURE = "3 (üç) iş günü";
 const alan = (k, etiket) =>
   SATICI[k] ? SATICI[k] : `<strong style="color:#DC2626">[EKSİK: ${etiket}]</strong>`;
 const SATICI_TABLO = `<table><tbody>
+<tr><th>İşletme adı</th><td>${SATICI.isletmeAdi}</td></tr>
 <tr><th>Unvan</th><td>${alan("unvan", "unvan")}</td></tr>
 <tr><th>MERSİS No</th><td>${alan("mersis", "MERSİS")}</td></tr>
 <tr><th>Ticaret sicil</th><td>${alan("sicil", "sicil")}</td></tr>
