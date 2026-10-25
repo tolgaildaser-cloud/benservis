@@ -132,8 +132,8 @@ function Detay({ ilan }) {
         <div className="ied-kutu ied-satici">
           <h2>Satıcı</h2>
           <b>Benservis</b>
-          <span>Fatura: {SATICI.unvan}</span>
-          <span>{SATICI.adres}</span>
+          {/* YK #188 (25 Eki 2026, Tolga): "İkinci el detayındaki Fatura: Orient Global satırını kaldırın, yalnız Benservis kalsın".
+              Yasal unvan ve adres mesafeli satış belgelerinde (scripts/pazar-hukuk.mjs) duruyor. */}
           <span>Telefon: <a href={`tel:${SATICI.telefon.replace(/\s/g, "")}`}>{SATICI.telefon}</a></span>
           <span className="ied-not">Görüşmede dosya numarasını söyleyin: <b>{ilan.dosya_no}</b></span>
         </div>

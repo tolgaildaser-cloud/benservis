@@ -27,6 +27,12 @@ describe("pazaryeri belgeleri", () => {
     }
   });
 
+  it("YK #188 ek: ikinci el detayının satıcı kutusunda yalnız Benservis; unvan ve adres yok", () => {
+    const d = fs.readFileSync("src/IkinciElDetay.jsx", "utf8");
+    expect(d).toContain("<b>Benservis</b>");
+    expect(d).not.toMatch(/SATICI\.unvan|SATICI\.adres/);
+  });
+
   it("satıcının zorunlu alanları dolu (boşsa yayına çıkılmaz)", () => {
     expect(eksikSaticiAlanlari()).toEqual([]);
   });
