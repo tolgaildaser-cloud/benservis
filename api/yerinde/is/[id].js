@@ -2,8 +2,9 @@
 // PATCH /api/yerinde/is/:id   koordinatör: tüm alanlar + geçişler · teknisyen (PR-3): yalnız KENDİ işinde seri no + saha geçişleri
 // Header: Authorization: Bearer <supabase-jwt>
 // Body: { guncel (updated_at, eşzamanlı düzenleme kilidi), alanlar?: { garanti, seri, tek, istenenGun, istenenSlot,
-//         randevuGun, randevuSlot, tnot }, gecis?: "randevu" | "yolda" | … | "iptal" | "ulasilamadi",
+//         randevuGun, randevuSlot, tnot, parcalar, tutar }, gecis?: "randevu" | "yolda" | … | "iptal" | "ulasilamadi",
 //         kapanis?: { parcalar, tutar } }
+// alanlar.parcalar / alanlar.tutar: koordinatörün tamamlanmış işte kapanış bilgisini sonradan düzeltmesi (log: kapanis:duzeltme).
 // Geçişler src/yerinde-cekirdek.js GECISLER tablosuyla denetlenir; log'a yalnız sabit olay etiketi yazılır.
 import supabase from "../../_supabase.js";
 import { setCorsHeaders } from "../../_verimor.js";
@@ -15,6 +16,14 @@ import {
 const ALAN_ISLER = "id, no, kanal, kiwi_ref, talep_at, durum, urun, model, seri_no, garanti, belirti, aciklama, il, ilce, istenen_gun, istenen_slot, randevu_gun, randevu_slot, teknisyen_kod, temsilci, temsilci_notu, aramalar, ilk_ziyarette, csat, degisen_parcalar, tutar, updated_at";
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const slotSayi = (v) => (v === "" || v == null ? null : Number(v));
+const PARCA_HATA = "Telefon ya da e-posta yalnız müşteri alanlarına yazılır (değişen parçalar alanından çıkarın).";
+const parcaOku = (v) => String(v ?? "").trim().slice(0, 300) || null;
+// Tahsilat: boş → null; geçersizse undefined (çağıran 400 döner).
+const tutarOku = (v) => {
+  if (v === "" || v == null) return null;
+  const t = Number(v);
+  return Number.isFinite(t) && t >= 0 && t < 1e8 ? t : undefined;
+};
 
 // Saf karar fonksiyonu (testlenir): mevcut satır + istek → { guncelle, olaylar } ya da { hata, kod }.
 export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"], rol = "yerinde_koordinator") {
@@ -52,6 +61,22 @@ export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"], rol
     if (gun && !haftaIciMi(gun)) return { kod: 400, hata: "Randevu yalnız hafta içine verilir" };
     if (gun !== is.randevu_gun || slot !== is.randevu_slot) { g.randevu_gun = gun; g.randevu_slot = slot; if (gun) olaylar.push("randevu"); }
   }
+  // Koordinatör, teknisyenin girdiği kapanış bilgisini iş tamamlandıktan sonra düzeltebilir (teknisyende `a` zaten yalnız seri).
+  if ("parcalar" in a || "tutar" in a) {
+    if (is.durum !== "tamam") return { kod: 409, hata: "Kapanış bilgisi yalnız tamamlanmış işte düzeltilir" };
+    let degisti = false;
+    if ("parcalar" in a) {
+      const parca = parcaOku(a.parcalar);
+      if (kisiselVeriVar(parca)) return { kod: 400, hata: PARCA_HATA };
+      if (parca !== (is.degisen_parcalar ?? null)) { g.degisen_parcalar = parca; degisti = true; }
+    }
+    if ("tutar" in a) {
+      const tutar = tutarOku(a.tutar);
+      if (tutar === undefined) return { kod: 400, hata: "Tahsilat tutarı geçersiz" };
+      if (tutar !== (is.tutar == null ? null : Number(is.tutar))) { g.tutar = tutar; degisti = true; }
+    }
+    if (degisti) olaylar.push("kapanis:duzeltme");
+  }
 
   const to = body.gecis;
   if (teknisyen && to && !teknisyenGecisGecerli(is.durum, to)) return { kod: 403, hata: "Bu adımı koordinatör yapar" };
@@ -69,13 +94,14 @@ export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"], rol
     }
     if (to === "tamam" && is.durum === "serviste") {
       const k = body.kapanis || {};
-      const parca = String(k.parcalar ?? "").trim().slice(0, 300) || null;
-      if (kisiselVeriVar(parca)) return { kod: 400, hata: "Telefon ya da e-posta yalnız müşteri alanlarına yazılır (değişen parçalar alanından çıkarın)." };
-      const tutar = k.tutar === "" || k.tutar == null ? null : Number(k.tutar);
-      if (tutar != null && !(Number.isFinite(tutar) && tutar >= 0 && tutar < 1e8)) return { kod: 400, hata: "Tahsilat tutarı geçersiz" };
+      const parca = parcaOku(k.parcalar);
+      if (kisiselVeriVar(parca)) return { kod: 400, hata: PARCA_HATA };
+      const tutar = tutarOku(k.tutar);
+      if (tutar === undefined) return { kod: 400, hata: "Tahsilat tutarı geçersiz" };
       g.degisen_parcalar = parca; g.tutar = tutar;
       g.ilk_ziyarette = !(body._parcaGecmisi ?? false);
-      olaylar.push("kapanis");
+      // Kapanışı kimin girdiği logda ayrılır: teknisyen sahadan kapattıysa koordinatör sonradan düzeltebilir.
+      olaylar.push(teknisyen ? "kapanis:teknisyen" : "kapanis");
     }
     if (to === "atolye" || to === "parca") g.ilk_ziyarette = false;
     g.durum = to;

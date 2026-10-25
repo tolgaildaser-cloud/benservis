@@ -400,7 +400,9 @@ const SlotSecenek = ({ bos }) => <>{bos && <option value="">{bos}</option>}{SLOT
 function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
   const [f, setF] = useState({
     garanti: j.garanti, seri: j.seri, tek: j.tek || "", istenenGun: j.istenenGun || "", istenenSlot: j.istenenSlot ?? "",
-    randevuGun: j.randevuGun || "", randevuSlot: j.randevuSlot ?? "", tnot: j.tnot, parcalar: "", tutar: "",
+    randevuGun: j.randevuGun || "", randevuSlot: j.randevuSlot ?? "", tnot: j.tnot,
+    // Tamamlanmış işte kapanış bilgisi düzeltilebilir: alanlar mevcut değerle açılır.
+    parcalar: j.durum === "tamam" ? j.parcalar : "", tutar: j.durum === "tamam" ? (j.tutar ?? "") : "",
   });
   const [mesgul, setMesgul] = useState(false);
   const d = (k) => (e) => setF((x) => ({ ...x, [k]: e.target.value }));
@@ -421,6 +423,7 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
     const istek = { alanlar: { garanti: f.garanti, seri: f.seri, tek: f.tek, istenenGun: f.istenenGun, istenenSlot: f.istenenSlot, randevuGun: f.randevuGun, randevuSlot: f.randevuSlot, tnot: f.tnot } };
     if (gecis) istek.gecis = gecis;
     if (gecis === "tamam" && j.durum === "serviste") istek.kapanis = { parcalar: f.parcalar, tutar: f.tutar };
+    if (j.durum === "tamam") Object.assign(istek.alanlar, { parcalar: f.parcalar, tutar: f.tutar });
     const r = await isKaydet(j, istek);
     setMesgul(false);
     if (!r.ok) { toast(r.error || "Kaydedilemedi"); return; }
@@ -459,6 +462,10 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
         {j.durum === "serviste" && <div className="grid2">
           <div className="field"><label htmlFor="d-parca">Değişen parçalar</label><input id="d-parca" placeholder="ör. rezistans, şarj soketi" value={f.parcalar} onChange={d("parcalar")} maxLength={300} /></div>
           <div className="field"><label htmlFor="d-tutar">Tahsilat (TL)</label><input id="d-tutar" type="number" min="0" placeholder="Garanti içi ise 0" value={f.tutar} onChange={d("tutar")} /></div></div>}
+        {j.durum === "tamam" && <div className="field"><span className="hint">Kapanış bilgisi (teknisyenin girdiğini düzeltebilirsiniz; “Kaydet” ile yazılır)</span>
+          <div className="grid2">
+            <div className="field"><label htmlFor="d-parca">Değişen parçalar</label><input id="d-parca" placeholder="ör. rezistans, şarj soketi" value={f.parcalar} onChange={d("parcalar")} maxLength={300} /></div>
+            <div className="field"><label htmlFor="d-tutar">Tahsilat (TL)</label><input id="d-tutar" type="number" min="0" placeholder="Garanti içi ise 0" value={f.tutar} onChange={d("tutar")} /></div></div></div>}
         {tnotUyari && <p className="warnline" role="alert">Telefon ya da e-posta yalnız müşteri alanlarına yazılır; nottan çıkarın.</p>}
         <div className="actions">
           {sonraki.map(([s, l], i) => <button key={s} className={"btn" + (i === 0 ? " primary" : "")} type="button" disabled={mesgul} onClick={() => gonder(s)}>{l}</button>)}
@@ -829,6 +836,10 @@ function onizlemeUygula(j, { alanlar = {}, gecis, kapanis }) {
   if (alanlar.randevuGun !== undefined) { y.randevuGun = alanlar.randevuGun || null; y.randevuSlot = alanlar.randevuSlot === "" ? null : Number(alanlar.randevuSlot); }
   if (alanlar.istenenGun !== undefined) { y.istenenGun = alanlar.istenenGun || null; y.istenenSlot = alanlar.istenenSlot === "" ? null : Number(alanlar.istenenSlot); }
   for (const k of ["garanti", "seri", "tnot"]) if (alanlar[k] !== undefined) y[k] = alanlar[k];
+  if (j.durum === "tamam" && (alanlar.parcalar !== undefined || alanlar.tutar !== undefined)) {
+    const tutar = alanlar.tutar === "" || alanlar.tutar == null ? null : Number(alanlar.tutar);
+    if ((alanlar.parcalar || "") !== (j.parcalar || "") || tutar !== (j.tutar ?? null)) { y.parcalar = alanlar.parcalar || ""; y.tutar = tutar; y.log.push({ t, olay: "kapanis:duzeltme" }); }
+  }
   if (gecis === "ulasilamadi") { y.aramalar = (y.aramalar || 0) + 1; y.log.push({ t, olay: "arama_ulasilamadi" }); }
   else if (gecis) { if (kapanis) y.log.push({ t, olay: "kapanis" }); y.durum = gecis; y.log.push({ t, olay: "durum:" + gecis }); }
   y.guncel = t;

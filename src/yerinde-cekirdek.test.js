@@ -82,7 +82,7 @@ describe("randevu öneri modeli", () => {
 
 describe("log etiketleri ve dönüşüm", () => {
   it("panelin yazdığı her etiket SQL CHECK desenine uyar ve okunur metne döner", () => {
-    for (const o of ["eposta_geldi", "kayit", "durum:randevu", "arama_ulasilamadi", "randevu", "teknisyen:t1", "teknisyen:yok", "garanti:e", "garanti:bilinmiyor", "tercih", "kapanis", "not"]) {
+    for (const o of ["eposta_geldi", "kayit", "durum:randevu", "arama_ulasilamadi", "randevu", "teknisyen:t1", "teknisyen:yok", "garanti:e", "garanti:bilinmiyor", "tercih", "kapanis", "kapanis:teknisyen", "kapanis:duzeltme", "not"]) {
       expect(o).toMatch(OLAY_DESEN);
       expect(olayMetni(o)).not.toBe(o);
     }
@@ -148,6 +148,32 @@ describe("PR-3 teknisyen yetkisi", () => {
     const r = guncellemeHesapla(is, { alanlar: { seri: "SN123", tek: "T2", garanti: "E", randevuGun: "2026-10-27", randevuSlot: "12", tnot: "x" } }, ["T1", "T2"], "yerinde_teknisyen");
     expect(r.guncelle).toEqual({ seri_no: "SN123" });
     expect(r.olaylar).toEqual(["seri"]);
+  });
+  it("kapanışı kimin girdiği logda ayrılır: teknisyen → kapanis:teknisyen, koordinatör → kapanis", async () => {
+    const { guncellemeHesapla } = await import("../api/yerinde/is/[id].js");
+    const is = { durum: "serviste", garanti: "?", il: "İstanbul", teknisyen_kod: "T1", randevu_gun: "2026-10-26", randevu_slot: 10 };
+    const kapanis = { parcalar: "rezistans", tutar: "450" };
+    expect(guncellemeHesapla(is, { gecis: "tamam", kapanis }, ["T1"], "yerinde_teknisyen").olaylar).toEqual(["kapanis:teknisyen", "durum:tamam"]);
+    expect(guncellemeHesapla(is, { gecis: "tamam", kapanis }, ["T1"]).olaylar).toEqual(["kapanis", "durum:tamam"]);
+    expect(olayMetni("kapanis:teknisyen")).toBe("Kapanış bilgisi girildi (teknisyen)");
+    expect(olayMetni("kapanis:duzeltme")).toBe("Kapanış bilgisi düzeltildi");
+  });
+  it("koordinatör tamamlanmış işte parça ve tutarı düzeltir; açık işte ve teknisyende düzeltme yok", async () => {
+    const { guncellemeHesapla } = await import("../api/yerinde/is/[id].js");
+    // tutar DB'den numeric (metin) gelebilir: "450" ile 450 aynı sayılır.
+    const is = { durum: "tamam", garanti: "?", il: "İstanbul", teknisyen_kod: "T1", degisen_parcalar: "rezistans", tutar: "450" };
+    const r = guncellemeHesapla(is, { alanlar: { parcalar: "rezistans, termostat", tutar: "600" } });
+    expect(r.guncelle).toEqual({ degisen_parcalar: "rezistans, termostat", tutar: 600 });
+    expect(r.olaylar).toEqual(["kapanis:duzeltme"]);
+    // Değişmeyen değerler yazılmaz, log düşmez.
+    expect(guncellemeHesapla(is, { alanlar: { parcalar: "rezistans", tutar: "450" } })).toEqual({ guncelle: {}, olaylar: [] });
+    // Tutar silinebilir (boş → null).
+    expect(guncellemeHesapla(is, { alanlar: { tutar: "" } }).guncelle).toEqual({ tutar: null });
+    expect(guncellemeHesapla(is, { alanlar: { tutar: "-5" } }).kod).toBe(400);
+    expect(guncellemeHesapla(is, { alanlar: { parcalar: "ara 0532 111 22 33" } }).kod).toBe(400);
+    expect(guncellemeHesapla({ ...is, durum: "serviste" }, { alanlar: { parcalar: "x" } }).kod).toBe(409);
+    // Teknisyen düzeltme alanı gönderse de yok sayılır (yalnız seri no yazar).
+    expect(guncellemeHesapla(is, { alanlar: { parcalar: "x", tutar: "1" } }, ["T1"], "yerinde_teknisyen")).toEqual({ guncelle: {}, olaylar: [] });
   });
   it("foto yolu sunucuda üretilir; yalnız izinli tip ve geçerli iş kimliği", async () => {
     const { fotoYolu } = await import("../api/yerinde/foto.js");
