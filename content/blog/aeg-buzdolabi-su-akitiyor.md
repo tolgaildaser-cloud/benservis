@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir kombi buzdolabının taze gıda bölmesi, cam raflar ve alt sebzelik"
   steps:
-    - "Buzdolabının arka iç duvarında süzülen ince su damlacıkları"
-    - "Buzdolabı arka iç duvarında hafif buğu ve aşağı inen erime suyu"
-    - "Arka duvardan öne çekilmiş kaplar ve aralarında boşluk bırakılmış raf"
-    - "Buzdolabı iç kanalının ortasındaki küçük tahliye deliğine sokulan ince bir temizleme çubuğu"
-    - "Nemli bezle silinen buzdolabı kapı contası"
-    - "Kapakları kapalı saklama kaplarıyla düzenlenmiş buzdolabı rafları"
-    - "Buzdolabının arka alt kısmında, kompresörün üstünde duran plastik buharlaştırma kabı"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 AEG buzdolabının rafları ıslak, sebzeliğin altında su göleti var ya da sabah mutfakta buzdolabının önünde bir ıslaklık buldun. AEG'nin kılavuzları bu belirtiyi üçe ayırıyor: arka duvarda süzülen ve normal olan erime suyu, buzdolabının **içinde** biriken su ve **yerde** biriken su. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz iki kılavuzun İngilizce baskısını kullandık: ankastre kombi **SCE818E6TC** ve solo kombi **RCB736E5MB**. Alıntılar bizim çevirimiz; senin modelinde parça adları farklı olabilir.

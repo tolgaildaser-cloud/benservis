@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Parke zeminde şarj istasyonunun önünde duran yuvarlak beyaz bir robot süpürge"
   steps:
-    - "Şarj istasyonuna yerleşmiş, göstergesi yanan bir robot süpürge"
-    - "Göstergeleri sönük, zeminde bekleyen bir robot süpürge"
-    - "Robot süpürgenin üst yüzündeki güç düğmesinin yakın planı"
-    - "İstasyondan uzakta duran, düğmeleri görünen bir robot süpürge"
-    - "Robot süpürgenin üst yüzünde yan yana duran iki düğme"
-    - "Üst kapağı kaldırılmış robot süpürgenin toz haznesi bölümü"
-    - "Robot süpürgenin yanında uygulaması açık bir akıllı telefon"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda panel ekranındaki uyarı"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda çalışma sesi"
+    - "Çizim: solda robot süpürge, sağda kapak"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Dreame robot süpürgen ortada kalakaldı, düğmelere tepki vermiyor ya da Dreamehome uygulaması robotu çevrimdışı gösteriyor; "resetleme" arıyorsun. Dreame kılavuzlarında üç ayrı yol var ve her biri farklı bir sorunu çözüyor: **kapat-aç ya da zorla kapatma** (robot donduğunda), **Wi-Fi sıfırlama** (bağlantı koptuğunda) ve **reset düğmesiyle fabrika ayarı** (son çare). Bu yazı Dreame'in global sitesindeki kullanım kılavuzları sayfasından bağlanan **Dreame D10 Plus Gen 2** ve **Dreame L10s Ultra** kılavuzlarına dayanıyor. Türkçe kılavuz bulunmadığı için **kılavuzların İngilizce baskısını** kullandık, alıntıları Türkçeye çevirdik. Başka bir Dreame modelin varsa düğme adları ve süreler farklı olabilir; kendi kılavuzunla karşılaştır.

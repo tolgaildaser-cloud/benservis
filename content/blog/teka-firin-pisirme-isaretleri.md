@@ -38,12 +38,12 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kumanda panelinde döner kadranları olan ankastre bir fırın"
   steps:
-    - "Ankastre fırının kumanda panelindeki işlev kadranı ve çevresindeki simgeler"
-    - "Fırının orta rafında pişen bir kek kalıbı"
-    - "Fırın içinde yan yana pişen tepsiler ve arka duvardaki fan kapağı"
-    - "Fırının üst kısmındaki ızgara rezistansının altında kızaran et"
-    - "Fırın tepsisinde pişmeye hazır bir pizza"
-    - "Kapağı kapalı, iç ışığı sönük bir ankastre fırın"
+    - "Çizim: solda ankastre fırın, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda buzlanma ve buz çözme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Teka fırınının işlev kadranında küçük kareler, dalgalı çizgiler ve fan pervaneleri var; hangisinin alt üst, hangisinin fanlı olduğunu çıkarmak zor. Bu yazı Teka'nın Türkiye sitesinden indirdiğimiz iki belgeye dayanıyor: HLB ve HLB P serisinin (HLB 830, HLB 840, HLB 830 P, HLB 840 P) Türkçe kullanım kılavuzu ve aynı seri için yayımlanan Türkçe **pişirme kılavuzu**. Kullanım kılavuzu simgeleri gösteriyor, ne işe yaradıklarını ise açıkça pişirme kılavuzuna bırakıyor. Teka'nın uyarısıyla: işlevler modele göre değişiyor, kendi kılavuzundaki tabloya bak.

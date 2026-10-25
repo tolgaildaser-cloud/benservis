@@ -47,13 +47,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir şofben ve altında açık duran bir musluk"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Şofbenin küçük ekranında yanıp sönen kısa bir uyarı kodunun yakın planı"
-    - "Şofbenin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Şofbenin önündeki yuvarlak açma kapama düğmesinin yakın planı"
-    - "Duvara asılı bir şofbenin yan tarafından görünen beyaz kasası"
-    - "Buzlu bir pencerenin önünde duran duvar tipi bir su ısıtıcısı"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve kapalı bir alet çantası"
+    - "Çizim: solda duvar tipi şofben, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi şofben, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi şofben, sağda not defteri ve kalem"
 ---
 
 Vaillant şofbenin ekranında F harfiyle başlayan bir kod yanıp sönüyor ve musluktan sıcak su gelmiyor. Bu kodların anlamı, Vaillant'ın turboMAG MAG 125/1 3R ve MAG 145/1 3R (H-TR) şofbenleri için yayımladığı kullanma kılavuzunda ve montaj-bakım kılavuzunda yazıyor; ikisini de bu koşuda vaillant.com.tr'den indirdik. Bu sayfada kodların tamamını tek tabloda topladık: hangisinde açma/kapama şalteriyle sıfırlama denenebilir, hangisi kendiliğinden geçer, hangisi doğrudan servis işi. Senin şofbenin farklı bir modelse kendi kılavuzunla karşılaştır.

@@ -37,12 +37,12 @@ faq:
 images:
   coverAlt: "Duvara yaslanmış, gövdesinde küçük ekran bulunan kablosuz dikey bir süpürge"
   steps:
-    - "Dikey süpürgenin gövdesindeki küçük renkli ekranın yakın planı"
-    - "Zemine bırakılmış, kapalı bir dikey süpürge"
-    - "Başlıktan çıkarılmış, kılları kesilen bir fırça rulosu"
-    - "Gövdeden ayrılmış toz haznesi ve uzatma çubuğu"
-    - "Süpürge gövdesinden çıkarılmış silindir biçimli filtre"
-    - "Servis için kutusuna konmuş bir dikey süpürge"
+    - "Çizim: solda dikey süpürge, sağda panel ekranındaki uyarı"
+    - "Çizim: solda dikey süpürge, sağda bekleme süresi için saat"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda telefon ve kullanım kılavuzu"
 ---
 
 Dreame süpürgenin ekranında bir simge yanıp sönüyor, bir E kodu çıktı ya da robotun ışığı turuncuya döndü. Dreame dikey süpürgelerde uyarılar ekranda **simge ve renkle** veriliyor; robotlarda ise durum ışığı yanıyor, ayrıntı uygulamada görünüyor. Bu yazı Dreame'in global sitesindeki kullanım kılavuzları sayfasından bağlanan **Dreame R20** dikey süpürge kılavuzuna ve robot ışıkları için **Dreame D10 Plus Gen 2** kılavuzuna dayanıyor. Türkçe kılavuz bulunmadığı için **kılavuzların İngilizce baskısını** kullandık, alıntıları Türkçeye çevirdik. Başka bir Dreame modelin varsa simgeler ve renkler farklı olabilir; kendi kılavuzunla karşılaştır.

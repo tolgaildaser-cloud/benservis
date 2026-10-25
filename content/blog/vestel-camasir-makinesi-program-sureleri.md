@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Banyoda duran beyaz bir önden yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin arkasındaki ürün etiketinin yakın planı"
-    - "Masada açık duran bir çamaşır makinesi kullanım kılavuzunun tablo sayfası"
-    - "Tamburun yarısına kadar doldurulmuş çamaşırlar"
-    - "Çamaşır makinesi panelindeki ek fonksiyon tuşları"
-    - "Çamaşır makinesinin önünde sepette duran ağır havlular"
-    - "Program bitmiş bir çamaşır makinesinin dijital ekranı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 Vestel çamaşır makinende pamuklu 60'ı başlattın, ekran iki buçuk saate yakın bir süre gösteriyor ve bunun normal olup olmadığını merak ediyorsun. Vestel'in **CMI 128222 WIFI** kullanım kılavuzunda her programın süresi **"Program Süresi (dk.)"** sütununda dakika olarak, tüketim tablosunda da saat:dakika olarak veriliyor. Bu yazıda o tabloları, aynı süreyi ikinci bir model olan **CMI 86201** kılavuzuyla karşılaştırarak ve süreyi neyin uzattığını kılavuzun notlarından çıkardık. Süreler modele göre değişiyor; kendi makinenin kılavuzuyla karşılaştır.

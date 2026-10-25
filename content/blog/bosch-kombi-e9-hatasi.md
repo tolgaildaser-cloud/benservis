@@ -54,6 +54,13 @@ faq:
     a: "Basınç normalken E9 sürüyorsa Bosch'a göre sorun su eksikliği değil; sıcaklık sensörü, pompa ya da bağlantı kabloları olabilir ve yetkili servis gerekir. Basınç kısa sürede yine düşüyorsa Bosch kılavuzlarının uyarısı geçerli: sisteme sık su ekleniyorsa tesisatta kaçak vardır ve kaçağın giderilmesi gerekir."
 images:
   coverAlt: "Beyaz bir kombinin kumanda panelinde yuvarlak basınç göstergesi, ibre 1 bar'ın altında; kombinin alt tarafında borular ve küçük bir musluk"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bosch kombi ekranda **E9** gösteriyor ve ateşleme yapmıyor. Bosch'un E9 sayfası bu kodu kendi sayfasında şöyle anlatıyor: kombi E9 veriyor ve **ateşleme yapmıyorsa** nedeni tek değil; tesisatta bir kaçak, **emniyet ventilinin açık kalması**, eşanjör ya da hidrolik grupta kaçak olabilir. Ama servisi çağırmadan önce evde bakılacak **en önemli nokta** belli: kombinin su seviyesi. Bosch'a göre **kombinin içinde su kalmadığında kombi ateşleme yapmaz.**

@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Tezgâhta duran, önden yüklemeli dar gövdeli siyah bir tam otomatik kahve makinesi"
   steps:
-    - "Makineden çıkarılmış ve musluk altında yıkanan kahve demleme ünitesi"
-    - "Maksimum çizgisine kadar suyla doldurulmuş şeffaf su haznesi"
-    - "Kahve makinesinin üstündeki küçük tuşların yakın planı"
-    - "Boşaltılmış damlama haznesi ve posa kabı"
-    - "Demleme ünitesinin üstüne konmuş beyaz bir temizleme tableti"
-    - "Aşağı indirilmiş kahve çıkışı ve altında duran kap"
-    - "Temizlikten sonra yerine takılmış damlama haznesi"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 Melitta tam otomatik kahve makinende temizlik simgesi yanıyor, kahvenin tadı değişti ya da makineyi nasıl temiz tutacağını öğrenmek istiyorsun. Melitta'nın Türkçe kılavuzunda temizlik üç katmanlı: **her gün** dış yüzey, damlama haznesi ve posa kabı; **her hafta** pişirme (demleme) ünitesinin elle yıkanması; **iki ayda bir** ise temizleme tabletiyle entegre temizlik programı. Bu yazı Melitta'nın uluslararası sitesindeki kullanım kılavuzları sayfasından bağlanan **Melitta Solo** kılavuzunun Türkçe bölümüne dayanıyor. Başka bir Melitta modelin (Avanza, Purista, Caffeo serisi) varsa tuşlar ve aşamalar farklı olabilir; kendi kılavuzunla karşılaştır. Kireç çözme ayrı bir program; adımlar [Melitta kahve makinesi kireç temizliği](/blog/melitta-kahve-makinesi-kirec-temizligi/) yazısında.

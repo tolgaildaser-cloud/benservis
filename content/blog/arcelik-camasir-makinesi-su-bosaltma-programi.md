@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı beyaz önden yüklemeli çamaşır makinesi, camın ardında suda bekleyen çamaşırlar"
   steps:
-    - "Çamaşır makinesi kontrol panelinde yuvarlak bir başlat tuşu yakın plan"
-    - "Çamaşır makinesinin büyük, yuvarlak program seçim düğmesi"
-    - "Çamaşır makinesi panelinde sıkma ayar tuşu ve yanındaki gösterge ışıkları"
-    - "Tamburun içinde ıslak, toplu duran havlular"
-    - "Cam kapağın ardında suyla dolu tambur"
-    - "Kapağı yeni açılmış çamaşır makinesi ve önünde boş çamaşır sepeti"
-    - "Çamaşır makinesinin arkasından duvardaki gidere uzanan gri tahliye hortumu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Program yarıda kaldı, elektrik gidip geldi ya da çamaşırı yanlış programa attın; tambur su dolu ve kapak açılmıyor. Arçelik çamaşır makinesinde bu iş için ayrı bir **su boşaltma programı** var: kılavuzdaki adı **Sıkma+Pompa**. Bu yazıda Arçelik'in 7103 D ve 9103 HE kullanma kılavuzlarından programın nasıl çalıştırılacağını, **çamaşırı sıkmadan yalnız suyu atmanın** yolunu ve kapak kilidiyle ilişkisini çıkardık. Tuş adları iki modelde biraz farklı; kendi panelinle karşılaştır.

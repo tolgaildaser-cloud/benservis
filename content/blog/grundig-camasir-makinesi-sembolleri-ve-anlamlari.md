@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Banyoda duran beyaz bir önden yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kapalı duran yuvarlak cam kapağı"
-    - "Çamaşır makinesi kontrol panelindeki küçük fonksiyon düğmeleri"
-    - "Çamaşır makinesinin arkasındaki su giriş musluğu ve hortumu"
-    - "Çamaşır makinesi panelinde sıkma devri ayar düğmesi"
-    - "Çamaşır makinesinin yanında masada duran bir akıllı telefon"
-    - "Çamaşır makinesinin dijital ekranının yakın planı"
-    - "Çamaşır makinesinin üstünde duran açık bir kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Grundig çamaşır makinenin ekranında bir kilit, bir musluk ya da tanımadığın küçük bir ikon yanıyor ve ne anlama geldiğini bilmiyorsun. Grundig'in **GWM 9701 Y** ve **GWM 91014** kullanma kılavuzlarında ekrandaki işaretler "Ekran sembolleri" başlığı altında harflerle tek tek sayılıyor. Bu yazıda bu listeyi, en çok sorulan sembollerin ne zaman yandığını ve ekranda gördüğünde ne yapman gerektiğini kılavuzdan çıkardık. Kılavuzun kendi notu da var: bu bölümdeki görseller şematiktir, **makinenle birebir aynı olmayabilir;** kendi modelinin çizimine bak.

@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin kumanda paneli ve yanında küçük bir ekran"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Kombi ekranında yanıp sönen kısa bir uyarı kodunun yakın planı"
-    - "Kombinin önünde duran yuvarlak kadranlı bir basınç göstergesi"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombi kumanda panelindeki yuvarlak bir tuşun yakın planı"
-    - "Tezgâhta açık duran bir kullanma kılavuzunun sorun giderme sayfası"
-    - "Kombinin alt kısmındaki tip etiketinin yakın planı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Vaillant kombi durdu, ekranda F ile başlayan bir kod var ve ilk akla gelen reset. Ama Vaillant'ta reset her modelde aynı tuşla, aynı sürede yapılmıyor. ecoTEC pro, ecoTEC plus, ecoTEC pure ve ecoTEC intro kullanma kılavuzlarını bu koşuda yeniden indirdik; tuşun yerini, ne kadar basılı tutulacağını, kaç kez deneneceğini ve resetin işe yaramadığı durumları bu dört kılavuzdan topladık. Kendi kombinin adı kumanda panelinde ve tip etiketinde yazar; kılavuzunla karşılaştır.

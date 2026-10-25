@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran siyah gövdeli tam otomatik bir kahve makinesi"
   steps:
-    - "Tam otomatik kahve makinesinin renkli ekranında bakım uyarısının yakın planı"
-    - "Kahve makinesinin yan tarafından çıkarılmış, taze suyla doldurulan şeffaf su haznesi"
-    - "Kahve makinesinin dokunmatik ekranında bakım menüsünün göründüğü ön panel"
-    - "Kahve makinesinden çekilmiş damlama tepsisi ve telve haznesi"
-    - "Kahve makinesinin kahve çıkışının altına yerleştirilmiş geniş bir kap"
-    - "Kahve makinesinin üstünde açılmış küçük doldurma hunisi kapağı ve yanında beyaz bir tablet"
-    - "Temizlik sonrası yeniden yerine takılmış damlama tepsisi ve parlak kahve makinesi ön yüzü"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su giriş musluğu"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 Jura'nın tam otomatik kahve makineleri temizliği kendisi hatırlatıyor: ekranda **"Clean"** uyarısı çıktığında tabletli temizleme programını çalıştırman gerekiyor. Program yaklaşık 20 dakika sürüyor ve tablet makine durduğunda atılıyor. Bu yazı, Jura Türkiye sitesindeki E8 ve E6 ürün sayfalarından bağlanan resmî kılavuzlara dayanıyor. Sayfalarda Türkçe baskı yok; alıntılar **kılavuzun İngilizce baskısından** çevrildi ve ekran yazıları kılavuzdaki İngilizce adlarıyla verildi. Makinen Türkçe menüdeyse yazılar farklı görünebilir (çıkarım). Başka bir Jura modelinde sıra benzer olsa da kendi kılavuzunu kontrol et.

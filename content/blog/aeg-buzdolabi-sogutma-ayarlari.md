@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Buzdolabı kapağının dışındaki dijital sıcaklık ayar paneli"
   steps:
-    - "Buzdolabı kontrol panelinde yan yana iki sıcaklık göstergesi"
-    - "Buzdolabı panelinde parlayan bir sıcaklık değeri"
-    - "Kapağı açık dondurucu bölmesindeki düzenli çekmeceler"
-    - "Sıcak bir yaz gününde mutfaktaki buzdolabı"
-    - "Buzdolabı rafına yerleştirilen yeni alınmış market ürünleri"
-    - "Buzdolabı panelindeki mod tuşu"
-    - "Buzdolabı rafında duran küçük bir termometre"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 AEG buzdolabının sıcaklığını ayarlamak istiyorsun ama hangi değerin doğru olduğunu ya da tuşların ne yaptığını bilmiyorsun. AEG'nin kılavuzları önerilen değerleri, sıcak havada yapılacak değişikliği ve hızlı soğutma modlarını açıkça yazıyor. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz iki kılavuzun İngilizce baskısını kullandık: serbest duran RCB736E5MB kombi buzdolabı ve ankastre SCE818E6TC. Alıntılar bizim çevirimiz. Panel ve tuş adları modele göre değişir; kendi kılavuzunla karşılaştır.

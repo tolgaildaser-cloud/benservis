@@ -50,13 +50,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir kombi ve altında açık duran bir lavabo musluğu"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Beyaz bir kombinin kumanda panelinde musluk biçimli bir simgenin yakın planı"
-    - "Lavabo üzerinde açık duran bir sıcak su musluğu"
-    - "Kombinin kumanda panelinde artırma ve azaltma tuşlarının yakın planı"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombi ekranında beliren küçük bir basınç simgesinin yakın planı"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve yanında bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kalorifer belki ısınıyor, ama musluğu açınca su soğuk akıyor. Alarko'nun Seradens Super, Seradens Super Plus, Super Fit ve Smart Fit kılavuzlarında "sıcak su gelmiyor" diye ayrı bir tablo yok; ama dört kılavuz da sıcak suyu belirleyen konum düğmesini, kullanım suyu sıcaklık ayarını, ekran sembollerini ve hata kodlarını açıkça anlatıyor. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi bu kılavuzlardan sırayla topladık. Düğmelerin numarası modele göre değişir; kendi kılavuzunla karşılaştır.

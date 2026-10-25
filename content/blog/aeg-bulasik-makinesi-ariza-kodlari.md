@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, ankastre bir bulaşık makinesinin önündeki zemin"
   steps:
-    - "Bulaşık makinesinin altında zemine düşen küçük bir ışık noktası"
-    - "Tezgâh altında bulaşık makinesine bağlı bir su musluğu"
-    - "Bulaşık makinesinin tabanındaki silindir biçimli filtre"
-    - "Bulaşık makinesinin içinde düzgün yerleştirilmiş alt ve üst sepet"
-    - "Musluk altında yıkanan düz bir metal filtre"
-    - "Bulaşık makinesinin kapak üstündeki kontrol paneli"
-    - "Prizden çekilmiş bir fiş"
+    - "Çizim: solda bulaşık makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 AEG bulaşık makinesi programın ortasında durdu ve ekranda **i** harfiyle başlayan bir kod çıktı. AEG bu kodları kılavuzun sorun giderme bölümünde, belirtilerle birlikte tek tabloda veriyor; kılavuza göre sorunların çoğu servis çağırmadan çözülebiliyor. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 7000 GlassCare (FSE73727P) bulaşık makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Kodlar modele göre değişebilir; kendi kılavuzunla karşılaştır.

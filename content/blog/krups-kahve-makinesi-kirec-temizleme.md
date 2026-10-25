@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Tezgâhta duran tam otomatik kahve makinesi ve önünde boş geniş bir kap"
   steps:
-    - "Su haznesinin dibinden çıkarılmış silindir biçimli bir su filtresi"
-    - "Tam otomatik kahve makinesinin kontrol panelindeki küçük ışıklar"
-    - "Kahve çıkışlarının ve buhar ucunun altına yerleştirilmiş geniş bir kap"
-    - "Su haznesine dökülen beyaz toz kireç çözücü"
-    - "Makineye geri takılmış dolu su haznesi"
-    - "Musluk altında durulanan şeffaf bir su haznesi"
-    - "Kahve çıkışlarından kaba akan berrak su"
-    - "Kireç programından sonra dolu su haznesiyle hazır duran kahve makinesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 Krups tam otomatik kahve makinende **CALC** ışığı yandı ya da kahve eskisi gibi akmıyor; makine kireç çözme istiyor. Krups'un kılavuzunda kireç çözme, makinenin kendisi uyardığında açılan üç aşamalı bir program: kireç çözücüyü suya katıyorsun, makine çözeltiyi geçiriyor, sonra iki kez temiz suyla duruluyor. Bu yazı Krups'un İngiltere sitesindeki kullanım kılavuzları sayfasından bağlanan **Krups Arabica (EA81, kılavuzda "Espresseria Automatic")** kılavuzuna dayanıyor. Türkçe kılavuz bulunmadığı için **kılavuzun İngilizce baskısını** kullandık, alıntıları Türkçeye çevirdik. Başka bir Krups modelin varsa tuşlar ve süreler farklı olabilir; kendi kılavuzunla karşılaştır.

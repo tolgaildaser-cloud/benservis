@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında bakır renkli, küçük cezveli otomatik bir Türk kahvesi makinesi"
   steps:
-    - "Prizden çekilmiş ve tezgâhta soğumaya bırakılmış küçük bir kahve makinesi"
-    - "Prize takılmış kahve makinesinin ön yüzündeki yuvarlak başlatma düğmesi"
-    - "Ölçü kaşığıyla kahve konmuş, içine su eklenen küçük bir cezve hazne"
-    - "Kahve makinesinin tabanına oturtulmuş saplı pişirme haznesi"
-    - "Pişirme sürerken ön yüzündeki düğmenin çevresi aydınlanan kahve makinesi"
-    - "Başlatma düğmesinin yakın görünümü ve yanında bekleyen boş bir fincan"
-    - "Nemli bir bezle silinen kahve makinesinin pişirme algılama sensörü"
+    - "Çizim: solda Türk kahvesi makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda Türk kahvesi makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda çalışma sesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
 ---
 
 Arzum Okka'n başlamıyor, kırmızı ışıkta bekliyor ya da bir anda kapandı; aklına "resetleme" geliyor. Bu yazı Arzum'un sitesinde ürün sayfasından bağlanan **Okka Minio (OK004)** ve **Okka Minio Duo (OK006)** Türkçe kullanma kılavuzlarına dayanıyor. Önce bilmen gereken: iki kılavuzda da ayrı bir reset tuşu, tuş kombinasyonu ya da fabrika ayarı yok. Kılavuzun anlattığı, durum ışığının ne söylediği, pişirmenin nasıl iptal edildiği ve susuz pişirme emniyetinin makineyi neden durdurduğu. "Resetleme" diye aranan şeylerin çoğu bu üç bilgiyle çözülüyor.

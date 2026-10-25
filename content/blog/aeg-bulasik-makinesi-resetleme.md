@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağın üst kenarındaki dokunmatik tuşlarıyla bir bulaşık makinesi kontrol paneli"
   steps:
-    - "Bulaşık makinesi kontrol panelinin en solundaki güç düğmesi"
-    - "Bulaşık makinesi ekranında görünen geri sayım süresi"
-    - "Kapağı aralık duran ve paneli sönük bir bulaşık makinesi"
-    - "Bulaşık makinesi panelinde yan yana duran program seçim tuşları"
-    - "Bulaşık makinesi ekranında görünen üç kısa çizgi"
-    - "Bulaşık makinesinin açık kapağının iç yüzündeki parlatıcı haznesi"
-    - "Bulaşık makinesinin açık deterjan gözü ve yanında bir tablet"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda uzaktan kumanda"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
 ---
 
 "Resetleme" bulaşık makinesinde üç ayrı işi anlatabiliyor: takılan bir programı iptal etmek, bir hata kodundan sonra makineyi yeniden başlatmak ya da ayarları fabrika değerlerine döndürmek. AEG'nin kılavuzu üçünü de ayrı ayrı anlatıyor ve bu modelde kontrol panelindeki ilk düğmenin adı zaten "Açma/Kapama / Reset". Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 7000 GlassCare (FSE73727P) bulaşık makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları ve kombinasyonlar modele göre değişebilir; kendi kılavuzunla karşılaştır.

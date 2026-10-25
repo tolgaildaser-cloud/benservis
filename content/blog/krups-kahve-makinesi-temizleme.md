@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Tezgâhta duran, çekirdek hazneli siyah bir tam otomatik kahve makinesi"
   steps:
-    - "Tam otomatik kahve makinesinin kontrol panelindeki küçük ışıklar"
-    - "Makineden çıkarılmış, boşaltılmış kahve posası haznesi"
-    - "Lavabonun yanında duran boş damlama tepsisi ve ızgarası"
-    - "Kahve çıkışlarının altına yerleştirilmiş geniş bir kap"
-    - "Açık bakım kapağının yanında beyaz bir temizleme tableti"
-    - "Kahve çıkışlarından kaba akan berrak su"
-    - "Temizlikten sonra yerine takılmış damlama tepsisi"
-    - "Musluk altında yıkanan, makineden çıkarılmış buhar ucu"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
 ---
 
 Krups tam otomatik kahve makinende CLEAN ışığı yanıp sönüyor, kahve eskisi kadar lezzetli değil ya da sadece makineyi nasıl temiz tutacağını öğrenmek istiyorsun. Krups'un kılavuzunda temizlik iki katmanlı: **her gün** posa haznesi, damlama tepsisi ve buhar ucu; **makine istediğinde** ise temizleme tabletiyle otomatik temizlik programı. Bu yazı Krups'un İngiltere sitesindeki kullanım kılavuzları sayfasından bağlanan **Krups Arabica (EA81, kılavuzda "Espresseria Automatic")** kılavuzuna dayanıyor. Türkçe kılavuz bulunmadığı için **kılavuzun İngilizce baskısını** kullandık, alıntıları Türkçeye çevirdik. Başka bir Krups modelin varsa tuş adları ve süreler farklı olabilir; kendi kılavuzunla karşılaştır. Kireç çözme ayrı bir program; adımlar [Krups kahve makinesi kireç temizleme](/blog/krups-kahve-makinesi-kirec-temizleme/) yazısında.

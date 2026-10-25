@@ -60,6 +60,14 @@ faq:
     a: "DemirDöküm'ün Atron Condense ve Nitron Plus gibi noktasız kod kullanan modellerinde ateşleme arızası F04 koduyla gösteriliyor. O modeller için DemirDöküm kombi F04 hatası yazısına bak."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; borular arasında sarı kollu bir gaz kesme vanası ve kombinin ön panelinde soyut, rakamsız bir ekran"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 DemirDöküm kombinin ekranında **F.28** görüyorsan DemirDöküm'ün kendi arıza tablosu bunu iki kelimeyle adlandırıyor: **"Ateşleme başarısız."** Nedeni de tabloda yazılı: kombi yanmayı art arda birkaç kez denedi, alevi tutturamadı ve **arıza konumuna geçti.** Kullanma kılavuzu sana bu noktada üç iş bırakıyor: gaz kesme vanasına bakmak, resetlemek ve sonuç alamazsan yetkili servise başvurmak. Bu yazıda bu adımları DemirDöküm'ün Nitromix, ademiX ve vintomiX kullanma kılavuzlarından, modelden modele değişen yerleriyle birlikte anlatıyoruz.

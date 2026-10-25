@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran tam otomatik bir espresso makinesi ve önünde geniş boş bir kap"
   steps:
-    - "Tam otomatik kahve makinesinin kontrol panelinde yanan küçük bir ikaz ışığı"
-    - "Kahve makinesinin kontrol panelindeki bir tuşa uzun basılırken yanıp sönen ışık"
-    - "Kahve makinesinden çıkarılmış damla toplama haznesi ve atık kahve kabı"
-    - "Su haznesine dökülen şeffaf kireç çözücü sıvı"
-    - "Kahve ve sıcak su dağıtıcılarının altına yerleştirilmiş geniş bir kap"
-    - "Musluk altında durulanan şeffaf bir su haznesi"
-    - "Taze suyla doldurulup makineye takılan su haznesi"
-    - "Kireç çözmeden sonra temiz hazneleriyle hazır duran kahve makinesi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 De'Longhi Magnifica Evo'nun kontrol panelinde kireç çözme ikazı yandı; makine kirecinin çözülmesini istiyor. De'Longhi'nin Türkçe kılavuzunda kireç çözme dört aşamalı bir program: kireç çözücüyü suyla hazneye koyuyorsun, makine çözeltiyi geçiriyor, sonra iki kez temiz suyla duruluyor. Program bir kez başladı mı durdurulamıyor; o yüzden önce malzemeyi hazırla. Bu yazı De'Longhi Türkiye sitesindeki Magnifica Evo ürün sayfalarından bağlanan **Magnifica Evo (ECAM29x serisi) Türkçe kullanım kılavuzuna** dayanıyor. Başka bir De'Longhi modelin varsa tuşlar ve seviyeler farklı olabilir; kendi kılavuzunla karşılaştır.

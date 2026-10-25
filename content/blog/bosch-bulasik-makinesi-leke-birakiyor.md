@@ -48,6 +48,15 @@ faq:
     a: "Bosch'un bilgilendirme kılavuzu deterjan tipini değiştirdiğinde ya da binana arıtma sistemi kurulması gibi su sertliğini değiştirecek durumlarda makinenin tuz ve parlatıcı ayarlarının gözden geçirilmesini öneriyor. Su sertliği ayarı için kılavuzdaki sertlik tablosunu kullan."
 images:
   coverAlt: "Bulaşık makinesinden yeni çıkmış, üzerinde beyaz iz ve lekeler görünen cam bardaklar; arka planda açık makinenin üst sepeti"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Bardaklar makineden temiz ama lekeli çıkıyor: beyaz izler, su damlası lekeleri ya da sütümsü bir buğu. Bosch'un bulaşık makinesi kullanma kılavuzundaki arıza tablosunda bu şikâyetler için birden fazla satır var ve Bosch bunları iki gruba ayırıyor: **giderilebilen izler** ve **eski haline döndürülemez cam bulanıklığı.** İlk grubun nedenleri çoğunlukla **parlatıcı, su sertliği ayarı, tuz ve deterjan;** ikinci grup ise bardağın kendisiyle ilgili. Bu yazıda Bosch'un listesini adım adım açıyoruz.

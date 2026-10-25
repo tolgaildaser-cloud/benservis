@@ -59,6 +59,15 @@ faq:
     a: "LG'nin tablosuna göre cihaz, elektrik geldiğinde programı kaldığı yerden devam ettirir. Ekranda PF (güç arızası) görüyorsan LG, programı yeniden başlatmak için Başlat/Durdur düğmesine basılmasını söylüyor."
 images:
   coverAlt: "Çamaşır odasında ekranı kapalı, kapağı kapalı beyaz ön yüklemeli çamaşır makinesi; üstünde açık duran kullanım kılavuzu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
 ---
 
 Çamaşırları yerleştirdin, düğmeye bastın ve makine çalışmıyor: ekran hiç yanmıyor, ya da yanıyor ama program başlamıyor. LG'nin Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun kendi satırı var: **"Cihaz çalışmıyor."** Altında sayılan sebeplerin çoğu makinenin dışında ya da ön panelde: **priz, sigorta, su musluğu, kapak, Güç ve Başlat/Durdur düğmeleri.** Bu yazıda LG'nin sırasını, aynı kılavuzların çocuk kilidi bölümü ve LG Türkiye destek sayfalarıyla birlikte adım adım açıyoruz.

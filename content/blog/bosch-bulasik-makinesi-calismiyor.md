@@ -49,6 +49,15 @@ faq:
     a: "Bosch'un kılavuzu tabloda olmayan bir hata kodu için şunu söylüyor: makineyi AÇIK/KAPALI şalterinden kapat, kısa süre sonra yeniden çalıştır. Sorun yeniden oluşursa su musluğunu kapat, fişi prizden çek ve müşteri hizmetlerini arayıp hata kodunu bildir. Bosch'un yayımladığı kodların anlamları için hata kodları sayfamıza bakabilirsin."
 images:
   coverAlt: "Mutfakta kapağı kapalı ankastre bulaşık makinesinin üst kenarındaki kontrol paneli, ekranı kapalı; yanında açık duran kullanma kılavuzu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Bulaşıkları yerleştirdin, START'a bastın ve hiçbir şey olmadı; ya da program başladı, yarıda durdu. Bosch'un bulaşık makinesi kullanma kılavuzundaki arıza tablosunda bu durumlar için birkaç satır var: **"Cihaz çalışmıyor."**, **"Cihaz devreye sokulamıyor veya kullanılamıyor."** ve **"Cihaz program esnasında duruyor veya program devre dışı kalıyor."** Bosch'un bu satırlarda saydığı nedenlerin çoğu makinenin dışında ya da ön panelde: **sigorta, fiş, kapak, duraklatma, elektrik ve su beslemesi.** Bu yazıda Bosch'un sırasını adım adım açıyoruz.

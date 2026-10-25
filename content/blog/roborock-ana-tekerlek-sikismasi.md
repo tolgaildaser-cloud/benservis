@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Parke zeminde duran yuvarlak bir robot süpürge, yanında küçük bir halı kenarı"
   steps:
-    - "Şarj istasyonundan uzakta, zeminde duran kapalı bir robot süpürge"
-    - "Odanın ortasında engelsiz, düz bir zeminde duran robot süpürge"
-    - "Ters çevrilmiş robot süpürgenin alt yüzü ve iki yandaki büyük tekerlekler"
-    - "Robot süpürgenin lastik ana tekerleğinin yanında katlanmış kuru bir bez"
-    - "Robot süpürgenin önündeki küçük döner tekerlek ve yanında küçük düz tornavida"
-    - "Robot süpürgenin alt yüzünde ana fırça ve köşedeki yan fırça"
-    - "Robot süpürgenin üst kapağı açık hâlde, toz haznesi bölmesinin yakın planı"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda tekerlek"
+    - "Çizim: solda dikey süpürge, sağda tekerlek"
+    - "Çizim: solda dikey süpürge, sağda tekerlek"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Roborock robot süpürge temizliğin ortasında durup kırmızı ışık yakıyor ve sesli uyarı veriyorsa çoğu zaman sorun tekerleklerde. Türkiye'de bu en çok "Roborock ana tekerlek sıkışma hatası" diye aranıyor. Roborock'un Q7 Max kılavuzundaki hata tablosunda bunun karşılığı **Error 7: tekerlekler sıkıştı**. Bu yazı, Roborock'un resmî destek sitesinden indirilen Q7 Max ve S8 kılavuzlarına ve aynı sitedeki S8 sorun giderme sayfasına dayanıyor. Türkçe kılavuz bulunamadı; alıntılar **kılavuzun İngilizce baskısından** çevrildi. Senin modelinde düğme adları ya da parça yerleri farklı olabilir.

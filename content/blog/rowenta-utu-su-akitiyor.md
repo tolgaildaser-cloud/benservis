@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Ütü masasının üzerinde topuğu üzerinde dik duran bir buharlı ütü ve katlanmış bir gömlek"
   steps:
-    - "Topuğu üzerinde ısınmayı bekleyen bir buharlı ütü"
-    - "Buharlı ütünün üst kısmındaki yuvarlak sıcaklık ayar düğmesi"
-    - "Ütü sapının altındaki şok buhar düğmesi"
-    - "Lavabo musluğundan su haznesi doldurulan buharlı ütü"
-    - "Ütü masasının yanında dik duran, kablosu gevşekçe toplanmış ütü"
-    - "Su haznesinin yanında duran şeffaf bir su sürahisi"
-    - "Lavabonun üzerinde yatay tutulan ve tabanından buhar çıkan ütü"
+    - "Çizim: solda buharlı ütü, sağda ilgili filtre"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
+    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda deterjan bölmesi"
+    - "Çizim: solda buharlı ütü, sağda temizleme bezi"
 ---
 
 Rowenta ütün kıyafetin üzerine damla damla su bırakıyorsa ilk akla gelen arıza oluyor. Oysa Rowenta'nın kendi kılavuzlarındaki sorun tablolarına göre tabandan su akmasının en sık nedenleri kullanımla ilgili: ütü yeterince ısınmadan buhar kullanmak, şok buhar düğmesine art arda basmak, düşük sıcaklık ve ütüyü suyla yatay bırakmak. Bu yazı Rowenta'nın **Autosteam (DW4000 serisi)** çok dilli kullanım kılavuzunun Türkçe bölümüne, **Focus 3 (DW5000 serisi)** kılavuzunun İngilizce baskısına ve Rowenta'nın aynı ürünler için yayımladığı sık sorulan sorular sayfasına (İngilizce) dayanıyor. Alıntılar Türkçeye çevrildi. Başka bir Rowenta modelin varsa düğme adları farklı olabilir; kendi kılavuzunla karşılaştır.

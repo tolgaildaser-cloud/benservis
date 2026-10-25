@@ -52,13 +52,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin kumanda paneli ve küçük ekranı"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Kombi ekranında beliren küçük bir uyarı simgesinin yakın planı"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombinin altında yuvarlak kadranlı bir basınç göstergesi"
-    - "Beyaz bir kombinin kumanda panelindeki düğme sırasının yakın planı"
-    - "Kombi ekranında beliren küçük bir alev simgesinin yakın planı"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve yanında bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda bir kod belirdi, kombi durdu ve aklına ilk gelen reset tuşu. Alarko'nun dört güncel kılavuzunda (Seradens Super, Seradens Super Plus, Super Fit, Smart Fit) resetin iki farklı yolu var: bazı modellerde ayrı bir Reset düğmesi, bazılarında ise çalışma konumu düğmesinin kendisi. Daha önemlisi, kılavuzlar her kodun karşısına ne yapılacağını yazıyor ve kodların çoğunda reset evde çözüm değil. Bu yazıda hangi modelde hangi düğmeye basılacağını ve hangi kodda resetin işe yaradığını kılavuzlardan topladık.

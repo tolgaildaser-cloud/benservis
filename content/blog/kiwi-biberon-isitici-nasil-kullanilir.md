@@ -43,12 +43,12 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında yumuşak kumaştan sarma tip bir biberon ısıtıcı ve yanında USB kablosu"
   steps:
-    - "Kutudan çıkarılmış sarma tip biberon ısıtıcı ve katlanmış USB kablosu"
-    - "Cam bir biberonun çevresine sarılmış ısıtıcı ve bağlanmış cırt bantlar"
-    - "Isıtıcının jakına takılan USB kablosu ve duvardaki USB adaptörü"
-    - "Isıtıcının üzerindeki ışıklı güç düğmesi, yakın plan"
-    - "Kapatılmış ısıtıcı ve prizden çıkarılmış USB adaptörü"
-    - "Isıtıcı gövdesinin hafif nemli bir bezle silinmesi"
+    - "Çizim: solda biberon ısıtıcı, sağda ambalaj kutusu"
+    - "Çizim: solda biberon ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda biberon ısıtıcı, sağda anten girişi ve kablo"
+    - "Çizim: solda biberon ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda biberon ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda biberon ısıtıcı, sağda deterjan bölmesi"
 ---
 
 Kiwi Baby KBABY-50, su haznesi olan klasik ısıtıcılardan farklı. Biberonun çevresine sarılan, USB kablosuyla beslenen yumuşak bir kılıf. Gücü düşük, kullanımı kısa; ama kılavuzun birkaç kuralı atlanınca cihaz da biberon da zarar görebilir. Bu yazıdaki adımlar KBABY-50'nin Türkçe Kiwi kullanım kılavuzundan, ışık-sıcaklık bilgisi ise Kiwi'nin kendi ürün sayfasından alındı. İşin özü kılavuzun şu cümlesinde: **"Cihazı açmak için güç düğmesini 3 saniye basılı tutun."**

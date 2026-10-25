@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin kumanda panelinde yan yana dizili küçük düğmeler ve bir ekran"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Tezgâhta açık duran bir kombi kullanma kılavuzunda kumanda paneli çizimi"
-    - "Kombi ekranında yanıp sönen kısa bir harf ve sayı dizisi"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombinin kumanda panelinde bir düğmenin yakın planı"
-    - "Kombi ekranında beliren kısa bir harf yazısı"
-    - "Kombinin yanında duvara asılı not kâğıdı ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombinin ekranında bir kod yanıp sönüyor ve reset düğmesini arıyorsun. ECA'nın yoğuşmalı kombilerinde reset düğmesi tek bir iş yapmıyor: arızadan çıkarıyor, ama kod yokken basarsan kombiyi Eco moduna da geçiriyor. Bir de hangi kodu silip hangisini silmediği önemli. Bu yazıda ECA'nın **Proteus Premix**, **Confeo Premix** ve **Citius Premix** kullanma kılavuzlarından resetlemeyi topladık. Kodların tek tek anlamı [ECA kombi arıza kodları](/blog/eca-kombi-ariza-kodlari/) sayfasında.

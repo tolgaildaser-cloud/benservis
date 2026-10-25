@@ -59,6 +59,14 @@ faq:
     a: "Bosch'un E12 için kullanıcıya verdiği iş kireç temizliği ve su sertliği ayarının kontrolüyle sınırlı. Bunlara rağmen kod sürüyorsa Bosch'un kılavuzu onarım çalışmalarının daima uzman kişilere yaptırılmasını söylüyor. Bosch yetkili servisinden randevu al."
 images:
   coverAlt: "Boş bir bulaşık makinesinin açık kapağı; alt sepetin yanında bir şişe bulaşık makinesi kireç çözücüsü ve bir paket özel tuz"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda ambalaj kutusu"
+    - "Çizim: solda bulaşık makinesi, sağda ambalaj kutusu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
 ---
 
 Bosch bulaşık makinenin ekranında **E12** yazıyor. Bosch'un Türkiye destek sayfasında bu kodun karşılığı: **"Isıtma sisteminde kireç birikimi."** Bosch aynı sayfada gerekçesini de veriyor: ısıtma sistemine zarar vermemek için cihazın kireçlerinin temizlenmesi gerekiyor. Bosch'un bu kod için verdiği çözüm bir parça değişimi değil, **bir bakım işi**: kireç temizliği. Bu yazıda Bosch'un önerdiği kireç temizliğini ve kodun tekrar etmemesi için kılavuzun işaret ettiği tuz ve su sertliği ayarını adım adım anlatıyoruz.

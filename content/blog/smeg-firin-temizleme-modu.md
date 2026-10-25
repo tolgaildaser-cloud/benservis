@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Kapağı açık, içi boş ve temiz ankastre fırın"
   steps:
-    - "Kapağı açık, soğumuş fırının emaye iç yüzeyi"
-    - "Fırının tabanına dökülmüş az miktarda su ve yanında sprey şişesi"
-    - "Fırın kumanda panelinde işlev kadranı ve dijital ekran"
-    - "Nemli mikrofiber bezle silinen fırın iç duvarı"
-    - "Raf destek çerçeveleri çıkarılmış boş fırın içi"
-    - "Fırın ekranında temizlik çevrimi göstergesi ve kalan süre"
-    - "Kapağı kapalı, çalışan fırının ekranında kilit göstergesi"
-    - "Temizlik sonrası fırın tabanında kalan ince kül tabakası"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda deterjan bölmesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
 ---
 
 Smeg fırınının içi yağ ve yemek sıçramasıyla kaplandı ve "kendini temizleme" düğmesi var mı diye arıyorsun. Cevap modele göre değişiyor. Bu yazı Smeg'in Türkiye indirme sayfasından ürün koduyla ulaştığımız **SF6390XE** kılavuzuna dayanıyor; kılavuz çok işlevli ve pirolitik elektrikli fırınları birlikte anlatıyor. Sayfada Türkçe baskı yok; kılavuzun İngilizce baskısını kullandık, alıntılar bizim çevirimiz. Kendi modelin farklıysa kendi kılavuzun esastır. Saat, işlev ve sıcaklık seçimi [Smeg fırın nasıl çalışır](/blog/smeg-firin-nasil-calisir/) yazısında.

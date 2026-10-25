@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Ankastre fırının kontrol panelinde çevirmeli düğmeler ve küçük dijital ekran"
   steps:
-    - "Fırın kontrol panelinin tamamı, düğmeler ve ekran yan yana"
-    - "Fırının seçim düğmesinin üst kısmı ve çevresindeki küçük simgeler"
-    - "Seçim düğmesi çevresinde çizgi ve zikzak biçimli ısıtıcı simgeleri"
-    - "Seçim düğmesi çevresinde pervane biçimli fan simgeleri"
-    - "Seçim düğmesi çevresinde damla ve kar tanesi simgeleri"
-    - "Termostat düğmesinin yanında yanan küçük gösterge ışığı"
-    - "Fırının dijital ekranında yan yana duran harfler ve küçük simgeler"
-    - "Analog zamanlayıcı düğmesinin kadranındaki saat ve zil simgeleri"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Franke fırının düğmesinin çevresinde pervane, zikzak, damla gibi küçük resimler var; ekranda da AUTO, DUR, END gibi yazılar beliriyor. Hangisinin ne demek olduğunu kılavuz çoğu zaman yalnız resimle gösteriyor. Bu yazı Franke'nin Türkiye sitesindeki ürün sayfalarından indirdiğimiz iki elektrikli fırın kılavuzunun Türkçe bölümüne dayanıyor: dijital ekranlı **FMA 86 H / FSM 86 H** ve düğmeli **FCO 86 H / FCO 82 H / FCL 86 H**. Simgelerin biçimini kılavuz sayfalarındaki resimlerden okuduk. Fırını adım adım çalıştırmak için [Franke fırın kullanımı](/blog/franke-firin-kullanimi/), saati kurmak için [Franke fırın saat ayarı](/blog/franke-firin-saat-ayari/) yazısına bak.

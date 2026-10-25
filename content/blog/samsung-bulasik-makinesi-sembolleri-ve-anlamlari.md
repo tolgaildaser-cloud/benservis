@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfakta ankastre yerleştirilmiş paslanmaz çelik görünümlü bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin tabanındaki açık tuz haznesi kapağı"
-    - "Bulaşık makinesi kapağının iç yüzündeki parlatıcı haznesi"
-    - "Bulaşık makinesinin üst kenarındaki dokunmatik kontrol paneli"
-    - "Bulaşık makinesi ekranında yanan küçük bir saat göstergesi"
-    - "Bulaşık makinesi panelinde başlat tuşunun yakın planı"
-    - "Bulaşık makinesinin arkasındaki elektrik prizi ve fişi"
-    - "Bulaşık makinesinin dijital ekranının yakın planı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda anten girişi ve kablo"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
 ---
 
 Samsung bulaşık makinenin panelinde bir ışık yanıyor, tuşlar tepki vermiyor ya da ekranda bir kilit simgesi görüyorsun ve ne anlama geldiğini bilmiyorsun. Samsung'un **DW8500AM** (DW60A8050FS) ve **DW5500MM** bulaşık makinesi kılavuzlarında kontrol panelindeki göstergeler tek tek anlatılıyor; panelde yanan ışıkların çoğu arıza değil, tuz ve parlatıcı hatırlatması ya da bir seçeneğin açık olduğunu gösteren işaret. Bu yazıda bu göstergeleri ve gördüğünde ne yapman gerektiğini iki kılavuzdan çıkardık. Panel düzeni ve tuş adları modele göre değişir; kendi kılavuzunla karşılaştır.

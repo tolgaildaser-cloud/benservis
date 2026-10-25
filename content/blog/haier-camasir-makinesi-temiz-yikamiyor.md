@@ -42,6 +42,14 @@ faq:
     a: "Haier, konsantre sıvı deterjanın eklemeden önce seyreltilmesini, Gecikme işlevi seçiliyse sıvı deterjan kullanılmamasını ve deterjanın yıkama döngüsü başlamadan hemen önce eklenmesini istiyor. Aşırı miktarda deterjan veya yumuşatıcı kullanılmamasını da öneriyor."
 images:
   coverAlt: "Yıkanmış koyu renk bir tişört üzerinde kalan beyaz deterjan izlerine yakından bakılan bir el"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Yıkamadan çıkan çamaşır hâlâ kirli, üzerinde beyaz noktalar ya da gri lekeler var. Haier'in HW80/90/100-B14939S8 kılavuzunun arıza giderme tablosunda bu durum üç ayrı satıra bölünüyor. Ana satır **"Yıkama sonucu memnun edici değil."** ve Haier'in burada saydığı dört sebebin hepsi kullanım ayarı: **kirlilik derecesi seçilen programa uygun olmayabilir**, **deterjan miktarı yetersiz olabilir**, **maksimum yük sınırı aşılmış olabilir** ve **çamaşırlar kazanda dengesiz şekilde dağılmış olabilir.** Diğer iki satır lekelerle ilgili: **deterjan kalıntıları** ve **gri lekeler.**

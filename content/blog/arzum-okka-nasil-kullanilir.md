@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında bakır renkli otomatik Türk kahvesi makinesi ve yanında iki küçük fincan"
   steps:
-    - "Lavabo başında musluk altında yıkanan küçük, saplı bir kahve haznesi"
-    - "Prize takılı bir kahve makinesinin aydınlanmış başlatma düğmesi"
-    - "Ölçü kaşığıyla Türk kahvesi konan küçük kahve haznesi ve yanında şeker"
-    - "Fincanla su eklenen ve kaşıkla karıştırılan kahve karışımı"
-    - "Kahve makinesinin tabanına oturtulmuş saplı pişirme haznesi"
-    - "Pişirme sürerken ön yüzündeki düğmenin çevresi aydınlanan kahve makinesi"
-    - "Köpüklü Türk kahvesinin hazneden fincana döküldüğü an"
-    - "Nemli bir bezle silinen kahve makinesinin pişirme algılama sensörü"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda çalışma sesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda prizden çekilen fiş"
 ---
 
 Yeni bir Arzum Okka aldın ya da evdekini ilk kez sen kullanacaksın; "nasıl çalışır, ne kadar kahve koyulur" diye soruyorsun. Bu yazı Arzum'un sitesinde ürün sayfasından bağlanan **Okka Minio (OK004)** ve **Okka Minio Duo (OK006)** Türkçe kullanma kılavuzlarına dayanıyor. Kılavuz Okka Minio'yu ağır ateşte ideal kıvamda Türk kahvesi pişirmek için tasarlanmış pratik bir makine diye tanıtıyor: hazneyi doldur, tabana oturt, tuşa bas, ışık beyaza dönünce servis et.

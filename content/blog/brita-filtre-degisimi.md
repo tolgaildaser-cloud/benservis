@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran şeffaf gövdeli, kapaklı bir su filtreli sürahi"
   steps:
-    - "Tezgâhta kapağı açık bir sürahi ve yanında huniden çıkarılmış eski bir su filtresi"
-    - "Ters çevrilmiş sürahi hunisinin akan musluk suyu altında durulanması"
-    - "İçinde soğuk su bulunan sürahiye daldırılmış yeni bir su filtresi"
-    - "Sürahinin hunisine oturtulmuş yeni su filtresinin yukarıdan görünümü"
-    - "Hunisi suyla dolu sürahi ve aşağı hazneye süzülen su"
-    - "Saksıdaki bir bitkinin yanında duran su dolu sürahi"
-    - "Sürahi kapağındaki küçük yuvarlak elektronik göstergenin yakın planı"
+    - "Çizim: solda filtreli su sürahisi, sağda ilgili filtre"
+    - "Çizim: solda filtreli su sürahisi, sağda su giriş musluğu"
+    - "Çizim: solda filtreli su sürahisi, sağda ilgili filtre"
+    - "Çizim: solda filtreli su sürahisi, sağda ilgili filtre"
+    - "Çizim: solda filtreli su sürahisi, sağda ilgili filtre"
+    - "Çizim: solda filtreli su sürahisi, sağda ilgili filtre"
+    - "Çizim: solda filtreli su sürahisi, sağda kapak"
 ---
 
 Brita sürahinde filtre değişimi beş dakikalık bir iş ama sıra önemli: yeni filtre ıslatılmadan takılırsa su huniden geçmeyebiliyor, gösterge sıfırlanmazsa bir sonraki değişim zamanı yanlış görünüyor. Bu yazı, Brita'nın Türkiye sitesindeki sürahi sayfalarından bağlanan resmî kullanım kılavuzunun **Türkçe bölümüne** dayanıyor. Kılavuz MAXTRA PRO filtre ve Brita'nın cam, plastik ve Flow sürahileri için ortak; kapağındaki gösterge modeline göre değişiyor.

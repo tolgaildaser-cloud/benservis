@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Duvar askısında duran, şeffaf toz hazneli kablosuz dikey bir süpürge"
   steps:
-    - "Şarj adaptörü çıkarılmış, duvara yaslanmamış kablosuz dikey süpürge"
-    - "Çöp kutusunun üzerinde tabanı açılmış şeffaf süpürge haznesi"
-    - "Lavaboda akan suyun altında hafifçe yıkanan şeffaf toz haznesi"
-    - "Tezgâhta yan yana duran sünger, metal elek ve beyaz kıvrımlı süpürge filtresi"
-    - "Zemin başlığından çıkarılmış, kıllarına saç dolanmış rulo fırça"
-    - "Nemli bir bezle silinen süpürge zemin başlığının alt yüzü"
-    - "Yumuşak nemli bezle silinen süpürge gövdesinin dış yüzeyi"
-    - "Temizlenmiş parçaları takılmış, duvar askısında duran dikey süpürge"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda temizleme bezi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
 ---
 
 Fakir şarjlı dikey süpürgen eskisi kadar iyi çekmiyorsa ya da hazne hep tozlu görünüyorsa sıra temizlikte. Fakir'in dikey süpürgelerinde temizlik dört yerde toplanıyor: toz haznesi, filtreler, rulo fırça ve zemin başlığı. Kılavuzun önemli kuralı şu: hazne suda hafifçe yıkanabiliyor, ama zemin başlığı akan suya tutulmuyor ve EPA filtre en fazla bir kez yıkanabiliyor. Bu yazı Fakir'in sitesindeki **Fakir Inovator 6158** Türkçe kullanma kılavuzuna dayanıyor; farklı olan yerlerde **Purevac Ultra** kılavuzunu da anıyoruz. Başka bir Fakir modelin varsa filtre sayısı ve düğme yerleri farklı olabilir; kendi kılavuzunla karşılaştır.

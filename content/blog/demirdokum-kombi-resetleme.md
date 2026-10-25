@@ -50,13 +50,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin ön panelinde yuvarlak bir düğme ve küçük bir ekran"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Tezgâhta açık duran bir kombi kullanma kılavuzunun kapak sayfası"
-    - "Kombi ekranında beliren kısa bir uyarı yazısının yakın planı"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombinin kumanda panelinde yuvarlak bir düğmenin yakın planı"
-    - "Kombi ekranında yanıp sönen kısa bir harf dizisi"
-    - "Kombinin yanında duvara asılı not kâğıdı ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda kapak"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi kilitlendi, ekranda bir kod duruyor ve aklına ilk gelen şey reset. DemirDöküm'de bu iş tek bir tuşla anlatılamıyor: Nitromix'te panelde ayrı bir reset tuşu var, ademiX ve vintomiX'te ise resetleme açma/kapatma düğmesine uzun basarak yapılıyor. Süre ve deneme sınırı da modele göre değişiyor. Bu yazıda Nitromix, ademiX, vintomiX, Atron Condense ve Nitron Plus kullanma kılavuzlarından resetlemeyi model model topladık. Kodların anlamı için [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) sayfasına bak.

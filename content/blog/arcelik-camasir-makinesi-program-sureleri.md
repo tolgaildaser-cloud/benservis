@@ -43,12 +43,12 @@ faq:
 images:
   coverAlt: "Önden yüklemeli çamaşır makinesinin ekranında kalan süre göstergesi"
   steps:
-    - "Çamaşır makinesinin üstünde açık duran bir kullanma kılavuzu"
-    - "Çamaşır makinesi panelinde dijital süre ekranı yakın plan"
-    - "Yarısına kadar doldurulmuş çamaşır makinesi tamburu"
-    - "Çamaşır makinesi panelinde yardımcı fonksiyon tuşları"
-    - "Deterjan çekmecesinin açık bölmeleri"
-    - "Tamburda düzgünce dağıtılmış birkaç havlu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 "Pamukluya attım, kaç saat sürer?" sorusunun Arçelik'teki cevabı **modele göre değişiyor** ve kılavuzlarda yazıyor. Bu yazıda Arçelik'in iki kullanma kılavuzundaki program tablolarını **model adıyla** verdik: tüm programlarda süre sütunu olan **5063 FYE** ve enerji etiketi süreleriyle sentetik değerlerini veren **7103 D**. Kendi makinen başka bir modelse rakamlar farklı olabilir; tabloyu kendi kılavuzunda bul.

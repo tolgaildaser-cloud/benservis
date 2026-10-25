@@ -38,14 +38,14 @@ faq:
 images:
   coverAlt: "Ütü masasının üzerinde topuğu üzerinde dik duran mavi beyaz bir buharlı ütü"
   steps:
-    - "Prizden çekilmiş bir ütü fişi ve soğumaya bırakılmış buharlı ütü"
-    - "Lavabonun üzerinde ters çevrilip su haznesi boşaltılan ütü"
-    - "Bir bardak limon suyunun içinde duran ince uzun plastik bir çubuk ve yanında yarım limon"
-    - "Ütünün üst kısmındaki yuvaya geri takılan çubuk"
-    - "Topuğu üzerinde ısınan ve su haznesi dolu buharlı ütü"
-    - "Lavabonun üzerinde yatay tutulan bir buharlı ütü"
-    - "Ütü tabanındaki deliklerden lavaboya çıkan buhar ve su"
-    - "Nemli bir süngerle silinen soğumuş ütü tabanı"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda kireç çözücü şişesi"
+    - "Çizim: solda buharlı ütü, sağda su giriş musluğu"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda kireç çözücü şişesi"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
 ---
 
 Tefal buharlı ütün eskisi gibi buhar vermiyorsa, tabandan beyaz tanecikler dökülüyorsa ya da kıyafetlerde lekeler kalıyorsa sebep büyük ihtimalle kireç. Arama önerilerinde "kireç temizleme" kadar "kireç çubuğu nasıl çıkarılır" da öne çıkıyor; çünkü Tefal ütülerin bir kısmında kireç önleyici çubuk, bir kısmında kendi kendini temizleme düğmesi, bir kısmında da kireç toplayıcı var. Bu yazı Tefal Türkiye sitesindeki **Easygliss Plus / Ultragliss Plus / Ultragliss Anti-Calc Plus** resimli kılavuzuna, Tefal'in aynı ürün için yayımladığı bakım ve sık sorulan sorular sayfasına (İngilizce) ve Tefal'in Türkçe güvenlik ve kullanım kitapçığına dayanıyor. Hangi sistemin olduğu "modele göre" değişiyor; kendi ütünün kılavuzuna bak.

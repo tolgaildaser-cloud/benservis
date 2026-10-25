@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Çamaşır makinesinin üstüne yerleştirilmiş beyaz bir kurutma makinesi"
   steps:
-    - "Kurutma makinesinden çekilip çıkarılmış plastik su tankı"
-    - "Kurutma makinesi kapağının iç kenarındaki lif filtresi"
-    - "Kurutma makinesinin alt ön kısmında açılmış tekmelik kapağı"
-    - "Kurutma makinesi ekranının yakın planı"
-    - "Kurutma makinesi kontrol panelindeki düğmeler"
-    - "Kurutma makinesinin açık kapağının önünde katlanmış havlular"
-    - "Kurutma makinesinin yanında masada duran bir modem"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Beko kurutma makinenin panelinde bir damla, bir filtre ya da tanımadığın bir simge yanıp sönüyor; ekranda belki **F L t** yazıyor. Bunun arıza mı bakım hatırlatması mı olduğunu öğrenmek istiyorsun. Beko'nun **KMX 82**, **KMB 901 I** ve **KMX 90** kurutma makinesi kılavuzlarında numaralı bir hata kodu tablosu yok; uyarılar **sembollerle** veriliyor ve her sembolün ne demek olduğu sorun giderme tablosunda tek tek yazıyor. Bu yazıda o sembolleri ve gördüğünde yapacağın kontrolleri kılavuzlardan çıkardık. Kılavuzun notu: uyarı göstergeleri **modele göre farklılık gösterebilir;** kendi kılavuzunla karşılaştır.

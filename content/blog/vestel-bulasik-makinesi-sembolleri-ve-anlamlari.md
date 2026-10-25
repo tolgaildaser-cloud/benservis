@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfakta ankastre yerleştirilmiş beyaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin alt kısmında açık duran tuz bölmesi kapağı"
-    - "Bulaşık makinesi kontrol panelindeki küçük dijital ekran"
-    - "Kapağı açık bulaşık makinesinin aydınlatılmış iç kısmı"
-    - "Bulaşık makinesinin üst sepetinde yan yana dizilmiş bardaklar"
-    - "Bulaşık makinesinin yanındaki tezgahta duran bir akıllı telefon"
-    - "Mutfak tezgahında duran bir kablosuz ağ modemi"
-    - "Bulaşık makinesinin önünde duran açık bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda bulaşık makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
 ---
 
 Vestel bulaşık makinenin panelinde bir ışık yanıyor, ekranda **CL**, **CF**, **IL1** ya da **U1** gibi iki üç harflik bir yazı beliriyor ve bunun arıza mı uyarı mı olduğunu bilmiyorsun. Vestel'in **BM 8402 GI Pro WIFI** bulaşık makinesi kullanım kılavuzunda panel göstergeleri numaralarla tek tek sayılıyor; ekrandaki kısa yazıların çoğu da arıza değil, bir ayarın ya da işlevin durumunu gösteriyor. Bu yazıda o listeyi ve ekranda gördüğünde ne yapman gerektiğini kılavuzdan çıkardık. Tuş adları ve yerleri modele göre değişir; kendi kılavuzunla karşılaştır.

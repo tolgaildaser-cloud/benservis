@@ -49,6 +49,15 @@ faq:
     a: "Siemens kılavuzlarına göre renk ve kir tutan örtüler gider pompasını tıkayabilir; bu kâğıtlar yalnızca çamaşır filesi içinde kullanılmalı. Makineyi çalıştırmadan önce ceplerdeki tüm cisimler boşaltılmalı. Kılavuz pis su pompasının tıkanma ya da tıkırtı gibi durumlarda ve düzenli olarak en az yılda bir kez temizlenmesini istiyor."
 images:
   coverAlt: "Çamaşır makinesinin ön alt köşesinde açılmış bakım kapağı, altında su toplamak için konmuş geniş bir kap"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
 ---
 
 Yıkama durdu, tamburda su kaldı ve ekranda **E:36-25** ya da **E:36-26** yazıyor. Siemens'in yeni nesil çamaşır makinesi kılavuzlarında bu satırın karşılığı tek cümle: **"Deterjanlı su pompası tıkanmış."** Talimat da tek: **pis su pompasını temizle.** Bu yazıda o temizliği, Siemens kılavuzundaki sırayla ve güvenlik uyarılarıyla adım adım anlatıyoruz.

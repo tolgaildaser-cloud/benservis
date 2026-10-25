@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında cezveli otomatik bir Türk kahvesi makinesi ve yanında boş bir fincan"
   steps:
-    - "Nemli bir bezle silinen kahve makinesinin cezve yuvası üstündeki iç tavan"
-    - "Prizden çekilmiş bir mutfak aleti fişi ve yuvasından çıkarılmış cezve"
-    - "Lavabonun yanında kurulanan temiz, boş bir makine cezvesi"
-    - "Cezvesi takılı olmayan kahve makinesinin ön paneli ve prize uzanan kablo"
-    - "Işıkları yanan, cezvesiz bekleyen bir Türk kahvesi makinesi"
-    - "Yuvasına yerleştirilmiş cezve ve makinenin önündeki fonksiyon düğmeleri"
-    - "Pişirmeye hazır kahve makinesi ve yanında ölçek kaşığıyla kahve kavanozu"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda çalışma sesi"
 ---
 
 Karaca kahve makinen kırmızı ışık verip çalışmıyor, aklına "resetleme" geliyor. Karaca'nın sitesinde kılavuzu açıkça yayımlanan Hatır modellerinden **Hatır Köz Türk Kahvesi Makinesi**'nin kılavuzu bu sorunu kendi "Sıkça Sorulan Sorular" bölümünde ele alıyor ve çözüm olarak bir **kalibrasyon** adımı veriyor. Kılavuzda "reset" diye bir tuş ya da menü yok; internette resetleme diye anlatılan işlem kılavuzdaki bu kalibrasyon (çıkarım). Bu yazı o sırayı, ışıkların ne söylediğini ve Hatır Perfetto'daki farklı yolu anlatıyor.

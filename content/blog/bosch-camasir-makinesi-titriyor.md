@@ -46,6 +46,15 @@ faq:
     a: "Eder. Bosch'un eski WAK kılavuzuna göre yerleştirme yüzeyi sabit ve düz olmalı, yumuşak zemin ve zemin kaplamaları uygun değil. Taban ya da ahşap ızgara üzerinde makine sıkma sırasında hareket edip devrilebileceği için ayakların sabitleme düzeneğine bağlanması gerekiyor. Ahşap kirişli zeminde Bosch, makinenin zemine sıkıca vidalanmış, suya dayanıklı ve en az 30 mm kalınlığında bir ahşap plaka üzerine kurulmasını istiyor."
 images:
   coverAlt: "Banyo zemininde duran beyaz çamaşır makinesinin önünde su terazisi ve ayak somununu ayarlamak için cıvata anahtarı"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda arka paneldeki taşıma emniyeti cıvataları"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Sıkma başladığında makine sallanıyor, gürültü artıyor ve bir süre sonra yerinden kaymış oluyor. Bosch'un çamaşır makinesi kullanma kılavuzlarındaki arıza tablosunda bunun ayrı bir satırı var: **"Sıkma sırasında cihazda titreşim ve hareket."** Bosch'un bu satırda saydığı üç sebebin üçü de kurulumla ilgili: **"Cihaz doğru şekilde hizalanmamış"**, **"Cihaz ayakları sabitlenmemiş"** ve **"Taşıma güvenliği donanımları çıkarılmamış."** Bu yazıda Bosch'un kurulum bölümündeki tarifle üçünü sırayla kontrol ediyoruz.

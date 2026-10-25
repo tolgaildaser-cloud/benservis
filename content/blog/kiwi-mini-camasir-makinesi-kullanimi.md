@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Banyo tezgâhında kapaklı küçük beyaz bir mini çamaşır makinesi, yanında katlanmış çoraplar"
   steps:
-    - "Kutudan çıkarılmış mini çamaşır makinesinin hazne gövdesi, kapağı ve tabanı yan yana"
-    - "Tabanın yan tarafındaki şarj girişine takılı ince bir şarj kablosu"
-    - "Düz bir tezgâhta tabanına oturtulmuş hazne gövdesi"
-    - "Haznenin içinde suyun altında kalmış bir çift çorap ve az miktarda köpük"
-    - "Kapağı kapalı mini çamaşır makinesinin dijital göstergesi ve başlat düğmesi"
-    - "Lavaboda temiz suyla durulanan küçük çoraplar"
-    - "Tabandan ayrılmış haznenin dibindeki pulsör, temiz ve kuru"
+    - "Çizim: solda mini çamaşır makinesi, sağda ambalaj kutusu"
+    - "Çizim: solda mini çamaşır makinesi, sağda şarj edilen batarya"
+    - "Çizim: solda mini çamaşır makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda mini çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda mini çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda mini çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda mini çamaşır makinesi, sağda su ya da toz haznesi"
 ---
 
 Kiwi KWM-2510, çorap, atlet ve iç çamaşırı gibi küçük tekstiller için yapılmış şarjlı bir mini çamaşır makinesidir. Kiwi'nin ürün sayfası 2 litre kapasite, 1800 mAh Li-ion pil ve tek şarjla yaklaşık 12–15 yıkama yazıyor. Bu yazıdaki adımlar cihazın çok dilli kılavuzunun Türkçe sütunundan alındı. En önemli kural en başta: **"Lityum batarya içeren tabanı suya daldırmayın veya doğrudan su altında yıkamayın."**

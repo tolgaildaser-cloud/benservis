@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Oturma odasında gölgelikli ve oyuncaklı otomatik sallanır ana kucağı"
   steps:
-    - "Taban braketine takılan ayak boruları ve yanında küçük vidalar"
-    - "Taban braketine yerleştirilen boş koltuk çerçevesi"
-    - "Koltuk çerçevesine geçirilmiş kumaş kılıf ve yastık"
-    - "Ana kucağının üstündeki gölgelik ve asılı peluş oyuncaklar"
-    - "Ana kucağının ortasındaki kasık desteği ve iki yandaki kemer tokaları"
-    - "Ana kucağı motor ünitesindeki tuşlar ve yanındaki uzaktan kumanda"
-    - "Gölgede askıya asılarak kurumaya bırakılmış gölgelik kumaşı"
+    - "Çizim: solda ana kucağı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ana kucağı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ana kucağı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ana kucağı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ana kucağı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ana kucağı, sağda bekleme süresi için saat"
+    - "Çizim: solda ana kucağı, sağda deterjan bölmesi"
 ---
 
 Kiwi Baby KBABY-71, motorlu tabanı ve beş salınım vitesi olan bir otomatik sallanır ana kucağı. Kutudan sekiz parça çıkıyor ve kılavuz montaj için hiçbir alet gerekmediğini yazıyor. Bu yazıdaki adımlar KBABY-71'in Türkçe Kiwi kullanım kılavuzundan alındı. Kullanıma geçmeden önce bilinmesi gereken en önemli kural güvenlik listesinde: **"Çocuğun bu üründe uyumasına asla izin vermeyin."**

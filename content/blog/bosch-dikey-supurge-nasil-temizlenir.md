@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Duvardaki ana istasyonda asılı duran kablosuz dikey bir süpürge"
   steps:
-    - "Emme borusu ayrılmış kablosuz dikey süpürge gövdesi"
-    - "Çöp kutusunun üzerinde boşaltılan şeffaf süpürge haznesi"
-    - "Silindir biçimli tiftik filtresinden ayrılan kıvrımlı tabakalı filtre"
-    - "Çöp kutusunun üzerinde silkelenen kıvrımlı süpürge filtresi"
-    - "İçi kuru bir bezle silinen şeffaf tiftik filtresi"
-    - "Kıllarına saç dolanmış rulo fırça ve yanında bir makas"
-    - "Temizlenmiş haznesi yerine takılmış dikey süpürge"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
 ---
 
 Bosch dikey süpürgen eskisi kadar çekmiyorsa ya da hazne çabuk doluyorsa sıra temizlikte. Bosch'un Unlimited serisinde temizlik üç yerde toplanıyor: toz haznesi, filtre ünitesi ve zemin başlığındaki rulo fırça. Kılavuzun en önemli kuralı tek cümle: **filtre kesinlikle sıvıyla temas etmemeli.** Yani Bosch'ta filtre yıkanmıyor, silkelenip siliniyor. Bu yazı Bosch'un Türkiye sitesindeki **Unlimited 7 (BBS71 / BCS71 / BSS71)** Türkçe kullanım kılavuzuna dayanıyor; farklı olan yerlerde **Unlimited 10 (BBS10 / BCS10 / BKS10)** kılavuzunu da anıyoruz. Bosch kılavuzları adımları çoğunlukla şekillerle anlatıyor; aşağıdaki adımlar o şekillerin sırasını izliyor.

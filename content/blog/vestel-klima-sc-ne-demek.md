@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Duvara monte edilmiş beyaz bir split klima iç ünitesi"
   steps:
-    - "Split klima iç ünitesinin ön panelindeki küçük gösterge ekranı"
-    - "Beyaz klima uzaktan kumandasının düğmeleri"
-    - "Klima kumandasının mod düğmesine yakın plan"
-    - "Klima iç ünitesinden yavaşça çıkan hava akışı"
-    - "Kapağı yukarı kaldırılmış klima iç ünitesi ve görünen toz filtresi"
-    - "Masada duran açık bir klima kullanım kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Vestel klimanın iç ünite ekranında birkaç saniyeliğine **SC** yazısı belirip kayboluyor, bir süre sonra yine geliyor; arıza mı, ne yapmalısın? Vestel'in **NOVA INVERTER 12 A++ GI WIFI** klima kullanım kılavuzuna göre SC bir arıza kodu değil, **Gün Işığı işlevinin açık olduğunu** gösteren bir mesaj. Bu yazıda kılavuzun "Gün Işığı İşlevi" bölümünden SC'nin ne zaman göründüğünü, işlevi nasıl açıp kapatacağını ve UV-C ile ilgili güvenlik uyarılarını çıkardık. SC mesajı Vestel'in bütün klima kılavuzlarında geçmiyor; baktığımız Plazma kılavuzunda yok. Kendi modelinin kılavuzunda "Gün Işığı" bölümü olup olmadığını kontrol et.

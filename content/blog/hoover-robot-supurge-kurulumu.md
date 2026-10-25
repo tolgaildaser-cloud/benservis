@@ -45,14 +45,14 @@ faq:
 images:
   coverAlt: "Duvar dibindeki şarj altlığının önünde, boş parke zeminde duran yuvarlak robot süpürge"
   steps:
-    - "Açılmış kutunun yanında dizilmiş robot süpürge, şarj altlığı, adaptör ve yedek fırçalar"
-    - "Yerden toplanmış kablolar ve kenarı düzeltilmiş kilim olan sade oturma odası"
-    - "Duvara dayalı, önü ve yanları boş bırakılmış robot süpürge şarj altlığı"
-    - "Ters çevrilmiş robotun altına takılmış köşe temizlik fırçaları"
-    - "Şarj altlığına oturmuş, üst düğmelerinin ışığı yanan robot süpürge"
-    - "Masada duran akıllı telefonda açık ev cihazı uygulaması ve yanında robot süpürge"
-    - "Su doldurulmuş tank ve altına yerleştirilen paspas bezi tutucusu"
-    - "Telefon ekranında beliren ev haritası ve arka planda temizliğe başlamış robot süpürge"
+    - "Çizim: solda robot süpürge, sağda ambalaj kutusu"
+    - "Çizim: solda robot süpürge, sağda anten girişi ve kablo"
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Hoover'ın Türkiye sitesinde listelenen robot süpürgesi **HG530H (HG5 Hydro)**. Kutuyu açtın; şarj altlığını nereye koyacağını, ilk şarjın ne kadar süreceğini ve robotu telefona nasıl bağlayacağını merak ediyorsun. Hoover'ın kılavuzunun Türkçe bölümü bunları "Robot süpürgenizin hazırlanması" ve "Uygulamanın indirilmesi ve Wi-Fi ile bağlantı" başlıklarında veriyor. Bu yazı o sırayı izliyor. Kurulumdan sonra robot hareket etmez ya da ışıklar yanıp sönerse [Hoover robot süpürge çalışmıyor](/blog/hoover-robot-supurge-calismiyor/) yazısına geç.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak zemininde önünde su birikintisi olan, kapağı kapalı solo bulaşık makinesi"
   steps:
-    - "Lavabo altındaki kapalı konumda su vanası ve prizden çekilmiş fiş"
-    - "Aralık duran bulaşık makinesi kapağının içinde görünen köpüklü tekne"
-    - "Bulaşık makinesi teknesinin dibine dökülen soğuk su"
-    - "Bulaşık makinesi deterjan haznesi ve yanında parlatıcı şişesi"
-    - "Akan suyun altında yumuşak fırçayla temizlenen silindir biçimli filtre"
-    - "Lavabo altındaki gidere düzgün bağlanmış tahliye hortumu"
-    - "Kapağı kapalı bulaşık makinesinin önünde kuru zemin ve katlanmış havlu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Midea bulaşık makinen yıkamanın ortasında durdu ve ekranda E4 çıktı; belki tezgâhın önünde ya da makinenin altında su da gördün. Midea'nın hata kodu tablosunda E4'ün nedeni tek kelime: taşma. Çözüm sütunundaki açıklama da kısa: makinenin bir parçası sızdırıyor. Bu yazı Midea'nın İngiltere sitesindeki MDWEF1034D(W)-WG-UK ve MDWEF1034D(SS)-WG-UK kullanım kılavuzuna dayanıyor (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi). Türkiye'deki modelinde ayrıntılar farklı olabilir; kendi kılavuzunla karşılaştır.

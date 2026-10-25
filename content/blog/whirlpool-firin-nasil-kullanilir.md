@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kapağı kapalı paslanmaz ankastre fırın"
   steps:
-    - "Fırın kumanda panelinin ortasında yanıp sönen saat ekranı"
-    - "Fırın panelinde sıcaklık tuşu ve yanındaki küçük ekran"
-    - "Koruyucu filmi çıkarılmış, içi boş fırın"
-    - "Fırının sol ekranında işlev simgeleri ve ortadaki döner düğme"
-    - "Fırın ekranında yanıp sönen sıcaklık değeri"
-    - "Fırın ekranında pişirme süresi göstergesi"
-    - "Kapağı açılmış fırına konan fırın tepsisi"
-    - "Pişirme bitince fırın ekranında beliren bitiş yazısı"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda ambalaj kutusu"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
 ---
 
 Yeni bir Whirlpool ankastre fırın aldın, ama panelde düğme yerine iki ekran, bir döner düğme ve bir sıra tuş var; fırın açılınca ne yapacağını bilemiyorsun. Bu yazı Whirlpool'un resmî belge portalından indirdiğimiz **AKZ9 6230 IX** Günlük Referans Kılavuzu'nun Türkçe baskısına dayanıyor; **AKZ9 6270 IX** kılavuzu aynı paneli ve aynı günlük kullanım adımlarını anlatıyor. Senin modelinde tuş adları ya da işlevler farklıysa kendi kılavuzun esastır.

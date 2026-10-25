@@ -51,6 +51,15 @@ faq:
     a: "Siemens'in son adımı müşteri hizmetlerini aramak. Kılavuz aradığında hata mesajını eksiksiz belirtmeni, mümkünse arızayı fotoğraf ve videoyla belgelemeni istiyor. Cihazın ürün numarası (E-Nr.), imalat numarası (FD) ve sayma numarası (Z-Nr.) de hazır olmalı."
 images:
   coverAlt: "Ekranı karanlık, kapağı kapalı ön yüklemeli bir çamaşır makinesinin kumanda paneline uzanan bir el"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
 ---
 
 Makineye bastın, bir şey olmadı; ya ekran kapalı ya da program bir türlü başlamıyor. Siemens'in çamaşır makinesi kılavuzlarındaki arıza tablosunda bu tablo birkaç satıra dağılıyor: **"Ekran karanlık ve yanıp sönüyor"**, **"Program çalışmaya başlamıyor"** ve **"Ekran ve düğmeler yanıt vermiyor."** Siemens'in bu satırlarda saydığı sebeplerin çoğu ayar ve kullanım: enerji tasarrufu modu, tam kapanmamış kapak, açık kalmış çocuk kilidi, ayarlı kalmış Bitiş Erteleme. Bu yazıda Siemens'in sırasını açıyoruz.

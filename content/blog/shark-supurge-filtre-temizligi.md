@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Duvar dibinde şarj istasyonunda duran kablosuz dikey süpürge"
   steps:
-    - "Kapatılmış kablosuz dikey süpürge ve yanında fişi çekilmiş şarj istasyonu"
-    - "Çöp kutusunun üzerinde boşaltılan şeffaf toz haznesi"
-    - "Süpürge gövdesinden kaydırılarak ayrılan toz haznesi"
-    - "Süpürgenin gövdesinden çıkarılan dikdörtgen bir filtre"
-    - "Musluk altında yalnız suyla durulanan bir süpürge filtresi"
-    - "Havalı bir yerde kurumaya bırakılmış süpürge filtresi"
-    - "Kapağı açılmış şarj istasyonu ve çıkarılmış köpük filtre"
-    - "Filtreleri yerine takılmış, istasyonda duran süpürge"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
 ---
 
 Shark dikey süpürgen eskisi gibi çekmiyor ya da filtreyi doğru temizlemek istiyorsun. Shark'ın kılavuzunda filtre bakımı iki yerde anlatılıyor: el süpürgesinin içindeki **HEPA filtresi** ve otomatik boşaltma özellikli modellerde **şarj istasyonunun filtreleri**. İkisinde de kural aynı: sabun yok, yalnız su, filtre tamamen kurumadan yerine takılmıyor. Bu yazı SharkNinja Türkiye sitesinde **Shark PowerDetect Clean & Empty** ürün sayfasından bağlanan Türkçe kullanım kılavuzuna (IP1000 ve IP3000 serisi) dayanıyor. Başka bir Shark modelin varsa tuşların yeri farklı olabilir; kendi kılavuzunla karşılaştır.

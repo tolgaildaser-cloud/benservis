@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin önünde, küçük simgelerle dolu dijital bir ekranın yakın planı"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Kombinin alt kapağında duran küçük bir ürün etiketi ve yanında açık bir kılavuz"
-    - "Kapalı duran, ışığı sönük bir kombi kumanda paneli"
-    - "Kombi ekranında yan yana duran radyatör, musluk ve alev simgeleri"
-    - "Kombi ekranında üzeri çizgiyle kapatılmış bir radyatör simgesi"
-    - "Kombi ekranında beliren üçgen içinde bir uyarı simgesi"
-    - "Kombi ekranının köşesinde duran küçük bir anahtar simgesi"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bosch kombinin ekranında rakamların etrafında küçük simgeler var: bir radyatör, bir musluk, bir alev, bir üçgen, bazen bir anahtar ya da şapkalı bir figür. Bunların çoğu arıza değil, kombinin o anda ne yaptığını gösteren işaretler. Bu yazıda Bosch'un Condens 2500 W, Condens 1200W ve Condens 2200i W kullanma kılavuzlarındaki ekran şemalarını tek tek açtık. Simgelerin yeri ve tuşların düzeni modele göre değişir; kendi kılavuzunla karşılaştır.

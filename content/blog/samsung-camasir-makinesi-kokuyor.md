@@ -55,6 +55,15 @@ faq:
     a: "Koku satırının ilk maddesi aşırı köpük. Samsung'un 'Aşırı köpük var.' satırı yüksek etkililiğe (HE) sahip deterjan kullanılmasını, yumuşak su, az yük ya da az kirli çamaşırda deterjan miktarının azaltılmasını istiyor; HE olmayan deterjan önerilmiyor. Kılavuz ayrıca çamaşır makinesinde doğal elde yıkama deterjanı kullanılmamasını, sertleşip makinenin içinde birikirse kötü kokuya neden olabileceğini yazıyor."
 images:
   coverAlt: "Kapağı aralık bırakılmış ön yüklemeli çamaşır makinesi; deterjan çekmecesi dışarı çekilmiş, yanında küçük bir fırça ve katlanmış kuru bir bez"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Kapağı açınca tamburdan ağır bir koku geliyor, ya da yeni yıkanan çamaşır hafif rutubet kokuyor. Samsung'un Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bunun karşılığı kısa: **"Koku var."** Samsung bu satırda dört madde sayıyor ve bunlardan biri doğrudan sebebi söylüyor: **"Aşırı köpük girintilerde toplanır ve kötü kokuya neden olabilir."** Diğer üçü kullanıcının yapacağı işler: temizleme programını düzenli çalıştırmak, **kapı sızdırmazlığını (diyafram)** kontrol etmek ve program bittikten sonra makinenin içini kurulamak. Aşağıdaki sıra bu satırı ve kılavuzun bakım bölümünü izliyor. Kaynak WW4000T ve WW5000C serilerinin kılavuzları; düğme ve program adları modele göre değişebilir.

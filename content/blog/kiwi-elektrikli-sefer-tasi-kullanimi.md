@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Ofis masasında kapağı kapalı, taşıma kolu yukarıda duran katlı elektrikli sefer tası"
   steps:
-    - "Lavabo kenarında yıkanıp kurumaya bırakılmış paslanmaz çelik yemek kaseleri"
-    - "Boş tezgâhın ortasına, duvardan uzak konmuş elektrikli sefer tası"
-    - "Pişmiş pilav ve sebze yemeğiyle doldurulmuş çelik kaseler"
-    - "Kase kapağındaki küçük çıkış kapağı açık, yakın plan"
-    - "Gövdedeki açma kapama anahtarı ve yanındaki yanan gösterge ışığı"
-    - "Prizden çekilmiş fiş ve kapağı açılmış sefer tasından yükselen hafif buhar"
-    - "Nemli bezle silinen sefer tası gövdesi ve yanında kuruyan kaseler"
+    - "Çizim: solda elektrikli sefer tası, sağda ambalaj kutusu"
+    - "Çizim: solda elektrikli sefer tası, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda elektrikli sefer tası, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda elektrikli sefer tası, sağda kapak"
+    - "Çizim: solda elektrikli sefer tası, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli sefer tası, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli sefer tası, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin **KLB-1612** elektrikli sefer tası, evden götürdüğün pişmiş yemeği ofiste ya da başka bir yerde prize takıp sıcak tutmak için yapılmış küçük bir cihaz. İki çelik kase, bir ana gövde, üst kapak ve yan kilitlerden oluşuyor. Kiwi'nin kılavuzu kısa bir föy; ama içinde atlanırsa cihaza zarar verebilecek bir kural var: **çalışma sırasında kaselerin çıkış kapağı açık olmalı.** Bu yazıdaki sıra o föyün Türkçe bölümünden, özellikler Kiwi'nin kendi ürün sayfasından.

@@ -48,6 +48,14 @@ faq:
     a: "Hayır. Beko, parlatıcı bölmesinde yalnız bulaşık makinelerinde kullanılmak üzere üretilmiş parlatıcıların kullanılmasını istiyor. Kılavuzun koku bölümünde de parlatıcı haznesine sirke, elde yıkama deterjanı, kireç çözücü gibi kimyasalların konmaması gerektiği yazıyor."
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin tabanında toplanmış beyaz köpük; alt sepette tabaklar, yanda katlanmış kâğıt havlu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
 ---
 
 Makinenin kapağını açtın ve tabanda beyaz bir köpük tabakası gördün, ya da köpük kapak kenarından dışarı taşmaya başladı. Beko'nun BM 4004 ve BM 5005 kullanma kılavuzlarındaki sorun giderme tablosunda bu durumun kendi başlığı var: **"Makinede köpük oluşuyor."** Tabloda sayılan üç sebebin üçü de kullanım kaynaklı: **elde deterjanla yıkanıp durulanmadan makineye konan bulaşıklar**, **makinenin içine dökülen parlatıcı** ve **açık unutulan parlatıcı bölmesi kapağı.** Bu yazıda Beko'nun çözümlerini adım adım açıyoruz.

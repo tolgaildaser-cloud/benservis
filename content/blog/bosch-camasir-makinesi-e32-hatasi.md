@@ -43,6 +43,13 @@ faq:
     a: "Bosch bunu arıza saymıyor. Kılavuzdaki karşılığı: denge kontrol sistemi dengesizliği düzeltiyor. Program süresinin uzaması da aynı nedenle olabilir; sistem çamaşırları birkaç kez dağıtarak dengesizliği düzeltir."
 images:
   coverAlt: "Açık kapaklı bir çamaşır makinesinin tamburunda tek bir tarafa toplanmış ıslak havlu ve nevresim"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
 ---
 
 Program bitti ama çamaşırlar beklediğinden ıslak; ekranda **E32** yanıp sönüyor, belki bitiş göstergesiyle sırayla. Bosch'un kullanım kılavuzunda bu kodun karşısında yazan ilk ifade şu: **"Hata yok."** Açıklaması da hemen arkasından gelir: **denge kontrol sistemi, çamaşırlar eşit dağılmadığı için sıkma işlemini durdurdu.** Yani makine bozulmadı; dengesiz bir yükle yüksek devirde dönmemeyi seçti. Yeni nesil Bosch'larda aynı durum **H:32** ya da **E:60-2B** olarak görünür.
