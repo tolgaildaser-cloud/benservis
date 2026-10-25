@@ -8,9 +8,9 @@
 // Geçişler src/yerinde-cekirdek.js GECISLER tablosuyla denetlenir; log'a yalnız sabit olay etiketi yazılır.
 import supabase from "../../_supabase.js";
 import { setCorsHeaders } from "../../_verimor.js";
-import { yerindeKimlik, slotCakisti } from "../../_yerinde.js";
+import { yerindeKimlik, slotCakisti, aralikKontrol } from "../../_yerinde.js";
 import {
-  SLOTLAR, PILOT_IL, gecisGecerli, teknisyenGecisGecerli, haftaIciMi, kisiselVeriVar, garantiEtiket, isUiya, OLAY_DESEN,
+  SLOTLAR, PILOT_IL, gecisGecerli, teknisyenGecisGecerli, calismaGunuMu, kisiselVeriVar, garantiEtiket, isUiya, OLAY_DESEN, slotEngelMetni,
 } from "../../../src/yerinde-cekirdek.js";
 
 const ALAN_ISLER = "id, no, kanal, kiwi_ref, talep_at, durum, urun, model, seri_no, garanti, belirti, aciklama, il, ilce, istenen_gun, istenen_slot, randevu_gun, randevu_slot, teknisyen_kod, temsilci, temsilci_notu, aramalar, ilk_ziyarette, csat, degisen_parcalar, tutar, updated_at";
@@ -58,7 +58,7 @@ export function guncellemeHesapla(is, body, teknisyenKodlari = ["T1", "T2"], rol
     const gun = a.randevuGun || null, slot = slotSayi(a.randevuSlot);
     if (!!gun !== (slot != null)) return { kod: 400, hata: "Randevu için hem günü hem saat aralığını seçin" };
     if (slot != null && !SLOTLAR.includes(slot)) return { kod: 400, hata: "Saat aralığı geçersiz" };
-    if (gun && !haftaIciMi(gun)) return { kod: 400, hata: "Randevu yalnız hafta içine verilir" };
+    if (gun && !calismaGunuMu(gun)) return { kod: 400, hata: "Randevu Pazartesi–Cumartesi verilir (Pazar kapalı)" };
     if (gun !== is.randevu_gun || slot !== is.randevu_slot) { g.randevu_gun = gun; g.randevu_slot = slot; if (gun) olaylar.push("randevu"); }
   }
   // Koordinatör, teknisyenin girdiği kapanış bilgisini iş tamamlandıktan sonra düzeltebilir (teknisyende `a` zaten yalnız seri).
@@ -135,6 +135,14 @@ export default async function handler(req, res) {
   const h = guncellemeHesapla(is, { ...body, _parcaGecmisi: !!parcaLog?.length }, (tek || []).map((t) => t.kod), kim.rol);
   if (h.hata) return res.status(h.kod).json({ error: h.hata });
   if (!Object.keys(h.guncelle).length && !h.olaylar.length) return res.status(200).json({ is: null, degisiklik: false });
+
+  // Randevu (teknisyen, gün ya da aralık) değiştiyse aralık kuralı: kapasite ve yakınlık.
+  const son = (k) => (k in h.guncelle ? h.guncelle[k] : is[k]);
+  if (["teknisyen_kod", "randevu_gun", "randevu_slot"].some((k) => k in h.guncelle) && son("durum") !== "iptal") {
+    const engel = await aralikKontrol({ tek: son("teknisyen_kod"), gun: son("randevu_gun"), slot: son("randevu_slot"), ilce: is.ilce, haricId: id });
+    if (engel?.sebep === "okunamadi") return res.status(500).json({ error: "Takvim okunamadı" });
+    if (engel) return res.status(409).json({ error: slotEngelMetni(son("teknisyen_kod"), is.ilce, engel) });
+  }
 
   // Eşzamanlı düzenleme kilidi: okunduğu andaki updated_at hâlâ aynıysa yaz.
   const { data: yeni, error } = await supabase.from("yerinde_isler").update(h.guncelle)

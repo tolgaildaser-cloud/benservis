@@ -21,9 +21,13 @@ export function tekFor(il, ilce) {
   return y === "Anadolu" ? "T1" : y === "Avrupa" ? "T2" : "";
 }
 
-// ─── Çalışma takvimi: hafta içi, 08–18 arası beş adet 2 saatlik aralık ────────────────────────────
-export const SLOTLAR = [8, 10, 12, 14, 16];
-export const CALISMA_GUNLERI = [1, 2, 3, 4, 5]; // Pzt..Cum (SQL CHECK de hafta içi)
+// ─── Çalışma takvimi: Pazartesi–Cumartesi 09–18; dört adet 2 saatlik aralık, 15–16 öğle ve yol payı ──
+export const SLOTLAR = [9, 11, 13, 16];
+export const CALISMA_GUNLERI = [1, 2, 3, 4, 5, 6]; // Pzt..Cmt (SQL CHECK de Pzt–Cmt)
+// Bir aralığa birden fazla iş girebilir: aynı teknisyen, aynı gün ve aralıkta en fazla SLOT_EN_FAZLA iş,
+// hepsi birbirine YAKIN_DK dakikalık yol mesafesinde (yakın ilçe/mahalle). Uzak adres aynı aralığa konmaz.
+export const SLOT_EN_FAZLA = 3;
+export const YAKIN_DK = 25;
 export const pad = (n) => String(n).padStart(2, "0");
 export const slotAd = (h) => (h == null ? "—" : pad(h) + ":00–" + pad(h + 2) + ":00");
 export const slotKisa = (h) => (h == null ? "" : pad(h) + "–" + pad(h + 2));
@@ -128,7 +132,7 @@ export function fmtDT(s) { if (!s) return "—"; const d = new Date(s); return p
 export function fmtD(s) { if (!s) return "—"; const [y, m, d] = s.split("-"); return d + "." + m + "." + y.slice(2); }
 export function fmtDS(day, h) { if (!day) return "—"; const [, m, d] = day.split("-"); return d + "." + m + (h != null ? " " + slotKisa(h) : ""); }
 export const gunAdi = (day) => ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"][parseDay(day).getDay()];
-export const haftaIciMi = (day) => !!day && /^\d{4}-\d{2}-\d{2}$/.test(day) && isWorkDay(parseDay(day));
+export const calismaGunuMu = (day) => !!day && /^\d{4}-\d{2}-\d{2}$/.test(day) && isWorkDay(parseDay(day));
 export function slaAsimi(j, simdi = Date.now()) { return j.durum === "yeni" && simdi - new Date(j.talep) > 2 * 24 * 3600e3; }
 
 // ─── Yol süresi: ilçe merkezleri arası kuş uçuşu × 1,4, şehir içi 25 km/sa, +10 dk park/ulaşma ──
@@ -144,22 +148,40 @@ export function yolDk(ilceA, ilceB) {
 }
 
 // ─── Randevu öneri modeli ────────────────────────────────────────────────────────────────────────
-// Her yakada tek teknisyen; her 2 saatlik aralıkta en fazla bir iş. Aday her (iş günü, aralık) için
-// maliyet = gecikme + saat sapması + komşu işlere yol süresi; en düşük üç aday önerilir.
+// Her yakada tek teknisyen. Bir aralık boşsa ya da içindeki işler yeni adrese yakınsa (YAKIN_DK) ve
+// SLOT_EN_FAZLA dolmadıysa aday olur. Maliyet = gecikme + saat sapması + ek yol; en düşük üç aday önerilir.
 const AGIRLIK = { gun: 40, slot: 15, yol: 0.6, sikisik: 40 };
 export const SIKISIK_DK = 60; // 2 saatlik aralıkta ~60 dk iş + en fazla ~60 dk yol sığar
 const ARAMA_GUN = 10;
-export function cakisma(isler, tek, gun, saat, haricNo) {
-  return isler.find((x) => x.no !== haricNo && x.tek === tek && x.randevuGun === gun && x.randevuSlot === saat && x.durum !== "iptal");
+export function slotIsleri(isler, tek, gun, saat, haricNo) {
+  return isler.filter((x) => x.no !== haricNo && x.tek === tek && x.randevuGun === gun && x.randevuSlot === saat && x.durum !== "iptal");
 }
-function doluSlotlar(isler, tek, haricNo) {
+// Aynı aralıktaki işler (yalnız ilçe ve no gerekir; API DB satırıyla da çağırır) → engel yoksa null.
+export function aralikEngeli(ayni, ilce) {
+  if (ayni.length >= SLOT_EN_FAZLA) return { sebep: "dolu", is: ayni[0] };
+  const uzak = ayni.find((j) => yolDk(j.ilce, ilce) > YAKIN_DK);
+  return uzak ? { sebep: "uzak", is: uzak } : null;
+}
+export const slotEngeli = (isler, tek, gun, saat, ilce, haricNo) => (tek && gun && saat != null ? aralikEngeli(slotIsleri(isler, tek, gun, saat, haricNo), ilce) : null);
+export function slotEngelMetni(tek, ilce, e) {
+  return e.sebep === "dolu"
+    ? `${tek} bu aralıkta ${SLOT_EN_FAZLA} işle dolu. Önerilerden birini seçin.`
+    : `${tek} bu aralıkta ${e.is.ilce}'de (${e.is.no}); ${ilce} aynı aralığa sığmayacak kadar uzak. Önerilerden birini seçin.`;
+}
+function slotHaritasi(isler, tek, haricNo) {
   const m = new Map();
-  for (const j of isler) if (j.tek === tek && j.no !== haricNo && j.randevuGun && j.durum !== "iptal") m.set(j.randevuGun + "|" + j.randevuSlot, j);
+  for (const j of isler) {
+    if (j.tek !== tek || j.no === haricNo || !j.randevuGun || j.durum === "iptal") continue;
+    const k = j.randevuGun + "|" + j.randevuSlot;
+    m.set(k, [...(m.get(k) || []), j]);
+  }
   return m;
 }
+// Bir aralıktaki işlerden yeni adrese en yakını (komşu aralıktan gelen/giden yol için).
+const enYakin = (liste, ilce) => liste?.reduce((a, j) => (!a || yolDk(j.ilce, ilce) < yolDk(a.ilce, ilce) ? j : a), null) || null;
 export function randevuOner(isler, { tek, ilce, istenenGun, istenenSlot, haricNo }, simdi = new Date()) {
   if (!tek || !konum(ilce)) return [];
-  const dolu = doluSlotlar(isler, tek, haricNo);
+  const harita = slotHaritasi(isler, tek, haricNo);
   const bugun = new Date(simdi); bugun.setHours(0, 0, 0, 0);
   const istenen = istenenGun ? parseDay(istenenGun) : bugun;
   let gun = isoDay(istenen) < isoDay(bugun) ? new Date(bugun) : new Date(istenen);
@@ -170,25 +192,34 @@ export function randevuOner(isler, { tek, ilce, istenenGun, istenenSlot, haricNo
     const day = isoDay(gun);
     const gecikme = isoDay(gun) >= isoDay(istenen) ? workDayDiff(istenen, gun) : 0;
     SLOTLAR.forEach((h, i) => {
-      if (dolu.has(day + "|" + h)) return;
+      const ayni = harita.get(day + "|" + h) || [];
+      if (aralikEngeli(ayni, ilce)) return;
       if (day === isoDay(bugun) && h <= simdiSaat) return; // geçmiş saatler
       let maliyet = gecikme * AGIRLIK.gun;
       if (istenenSlot != null) maliyet += Math.abs(i - SLOTLAR.indexOf(istenenSlot)) * AGIRLIK.slot;
       const nedenler = [];
-      const once = SLOTLAR.slice(0, i).reverse().map((x) => dolu.get(day + "|" + x)).find(Boolean);
-      const sonra = SLOTLAR.slice(i + 1).map((x) => dolu.get(day + "|" + x)).find(Boolean);
-      for (const [komsu, yon] of [[once, "önce"], [sonra, "sonra"]]) {
-        if (!komsu) continue;
-        const dk = yolDk(komsu.ilce, ilce);
-        const bitisik = Math.abs(SLOTLAR.indexOf(komsu.randevuSlot) - i) === 1;
-        if (bitisik && dk > SIKISIK_DK) { maliyet += AGIRLIK.sikisik; nedenler.push(`${yon} ${komsu.ilce}, ${dk} dk yol (sıkışık)`); }
-        else nedenler.push(`${yon} ${komsu.ilce}, ${dk} dk`);
+      let ekYol;
+      if (ayni.length) {
+        // Aynı aralıkta yakın bir iş var: teknisyen zaten o bölgede, ek yol yalnız ona olan mesafe.
+        const yakin = enYakin(ayni, ilce);
+        ekYol = yolDk(yakin.ilce, ilce);
+        nedenler.push(`aynı aralıkta ${yakin.ilce} (${ayni.length} iş), ${ekYol} dk`);
+      } else {
+        const once = enYakin(SLOTLAR.slice(0, i).reverse().map((x) => harita.get(day + "|" + x)).find(Boolean), ilce);
+        const sonra = enYakin(SLOTLAR.slice(i + 1).map((x) => harita.get(day + "|" + x)).find(Boolean), ilce);
+        for (const [komsu, yon] of [[once, "önce"], [sonra, "sonra"]]) {
+          if (!komsu) continue;
+          const dk = yolDk(komsu.ilce, ilce);
+          const bitisik = Math.abs(komsu.randevuSlot - h) === 2; // arada boşluk yok (15–16 payı bitişik saymaz)
+          if (bitisik && dk > SIKISIK_DK) { maliyet += AGIRLIK.sikisik; nedenler.push(`${yon} ${komsu.ilce}, ${dk} dk yol (sıkışık)`); }
+          else nedenler.push(`${yon} ${komsu.ilce}, ${dk} dk`);
+        }
+        // Ek yol: iki iş arasına girerse önceki→sonraki doğrudan yol düşülür
+        ekYol = once && sonra ? Math.max(0, yolDk(once.ilce, ilce) + yolDk(ilce, sonra.ilce) - yolDk(once.ilce, sonra.ilce))
+          : once ? yolDk(once.ilce, ilce) : sonra ? yolDk(ilce, sonra.ilce) : 0;
+        if (!once && !sonra) nedenler.push("gün boş");
+        else nedenler.push(`ek yol ~${ekYol} dk`);
       }
-      // Ek yol: iki iş arasına girerse önceki→sonraki doğrudan yol düşülür
-      const ekYol = once && sonra ? Math.max(0, yolDk(once.ilce, ilce) + yolDk(ilce, sonra.ilce) - yolDk(once.ilce, sonra.ilce))
-        : once ? yolDk(once.ilce, ilce) : sonra ? yolDk(ilce, sonra.ilce) : 0;
-      if (!once && !sonra) nedenler.push("gün boş");
-      else nedenler.push(`ek yol ~${ekYol} dk`);
       maliyet += ekYol * AGIRLIK.yol;
       if (gecikme === 0 && istenenSlot === h) nedenler.unshift("istenen gün, tercih edilen saat");
       else if (gecikme === 0) nedenler.unshift("istenen gün");
@@ -248,6 +279,8 @@ export function ozet(isler, teknisyenSayisi = TEKNISYENLER.length, simdi = new D
     bugun, acik, kapanan,
     aranacak: isler.filter((j) => j.durum === "yeni").sort((a, b) => new Date(a.talep) - new Date(b.talep)),
     bugunRandevu: isler.filter((j) => j.randevuGun === bugun && j.durum !== "iptal"),
+    // Bir aralıkta birden fazla iş olabildiği için doluluk iş sayısıyla değil dolu aralıkla ölçülür.
+    doluAralik: new Set(isler.filter((j) => j.randevuGun === bugun && j.durum !== "iptal" && j.tek).map((j) => j.tek + "|" + j.randevuSlot)).size,
     ftf: kapanan.length ? Math.round((100 * kapanan.filter((j) => j.ilkZiyarette).length) / kapanan.length) : null,
     kapasite: teknisyenSayisi * SLOTLAR.length,
   };

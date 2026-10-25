@@ -6,9 +6,9 @@
 // Teknisyen ataması istemciden ALINMAZ: il + ilçeden yaka → teknisyen (src/yerinde-cekirdek.js tekFor).
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
-import { yerindeKimlik, slotCakisti } from "../_yerinde.js";
+import { yerindeKimlik, slotCakisti, aralikKontrol } from "../_yerinde.js";
 import {
-  PILOT_IL, SLOTLAR, URUN_MODEL, arizalarFor, tekFor, cepNormal, haftaIciMi, kisiselVeriVar,
+  PILOT_IL, SLOTLAR, URUN_MODEL, arizalarFor, tekFor, cepNormal, calismaGunuMu, kisiselVeriVar, slotEngelMetni,
   isUiya, KAPALI,
 } from "../../src/yerinde-cekirdek.js";
 import { TR_IL_ILCE } from "../../src/tr-iller.js";
@@ -75,7 +75,7 @@ export function yeniIsDogrula(b) {
   const istenenGun = b.istenenGun || null, randevuGun = b.randevuGun || null;
   if (istenenGun && !/^\d{4}-\d{2}-\d{2}$/.test(istenenGun)) return { hata: "Tercih günü geçersiz." };
   if (!!randevuGun !== (randevuSlot != null)) return { hata: "Randevu için hem günü hem saat aralığını seçin ya da ikisini de boş bırakın." };
-  if (randevuGun && !haftaIciMi(randevuGun)) return { hata: "Randevu yalnız hafta içine verilir." };
+  if (randevuGun && !calismaGunuMu(randevuGun)) return { hata: "Randevu Pazartesi–Cumartesi verilir (Pazar kapalı)." };
   const tek = tekFor(il, ilce);
   if (randevuGun && !tek) return { hata: "Pilot bölge dışındaki kayda randevu verilemez." };
   const garanti = ["E", "H", "?"].includes(b.garanti) ? b.garanti : "?";
@@ -111,6 +111,10 @@ async function olustur(kim, req, res) {
       if (data?.length) return res.status(409).json({ error: `Bu telefon ile açık kayıt var: ${data[0].no}.`, mukerrer: data[0].no });
     }
   }
+
+  const engel = await aralikKontrol({ tek: v.is.teknisyen_kod, gun: v.is.randevu_gun, slot: v.is.randevu_slot, ilce: v.is.ilce });
+  if (engel?.sebep === "okunamadi") return res.status(500).json({ error: "Takvim okunamadı" });
+  if (engel) return res.status(409).json({ error: slotEngelMetni(v.is.teknisyen_kod, v.is.ilce, engel) });
 
   const { data: is, error } = await supabase.from("yerinde_isler").insert(v.is).select(ALAN_ISLER).single();
   if (slotCakisti(error)) return res.status(409).json({ error: `${v.is.teknisyen_kod} bu aralıkta dolu. Önerilerden birini seçin.` });

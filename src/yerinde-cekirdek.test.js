@@ -1,12 +1,12 @@
 // src/yerinde-cekirdek.test.js — YK #183 PR-2: panel ve API'nin ortak kuralları + API karar fonksiyonları.
 import { describe, it, expect, vi } from "vitest";
 import {
-  gecisGecerli, GECISLER, tekFor, cepNormal, kisiselVeriVar, randevuOner, cakisma, olayMetni, OLAY_DESEN,
-  isUiya, ozet, haftaIciMi,
+  gecisGecerli, GECISLER, tekFor, cepNormal, kisiselVeriVar, randevuOner, slotEngeli, aralikEngeli, slotEngelMetni,
+  olayMetni, OLAY_DESEN, isUiya, ozet, calismaGunuMu, SLOTLAR, CALISMA_GUNLERI, SLOT_EN_FAZLA,
 } from "./yerinde-cekirdek.js";
 
 vi.mock("../api/_supabase.js", () => ({ default: {} }));
-vi.mock("../api/_yerinde.js", () => ({ yerindeKimlik: async () => null, slotCakisti: () => false }));
+vi.mock("../api/_yerinde.js", () => ({ yerindeKimlik: async () => null, slotCakisti: () => false, aralikKontrol: async () => null }));
 vi.mock("../api/_verimor.js", () => ({ setCorsHeaders() {} }));
 
 describe("geçiş tablosu (prototipteki düğmeler)", () => {
@@ -56,27 +56,63 @@ describe("kişisel veri deseni (IT bulgusu)", () => {
   });
 });
 
+describe("çalışma düzeni (25 Eki): 09–18, Pazartesi–Cumartesi", () => {
+  it("dört aralık 09–11 · 11–13 · 13–15 · 16–18; Cumartesi açık, Pazar kapalı", () => {
+    expect(SLOTLAR).toEqual([9, 11, 13, 16]);
+    expect(CALISMA_GUNLERI).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(calismaGunuMu("2026-10-31")).toBe(true); // Cumartesi
+    expect(calismaGunuMu("2026-11-01")).toBe(false); // Pazar
+  });
+});
+
 describe("randevu öneri modeli", () => {
   const simdi = new Date(2026, 9, 26, 7, 0); // Pzt 26 Eki 2026 07:00
   const isler = [
-    { no: "A", tek: "T1", ilce: "Kadıköy", randevuGun: "2026-10-26", randevuSlot: 8, durum: "randevu" },
-    { no: "B", tek: "T1", ilce: "Tuzla", randevuGun: "2026-10-26", randevuSlot: 12, durum: "randevu" },
+    { no: "A", tek: "T1", ilce: "Kadıköy", randevuGun: "2026-10-26", randevuSlot: 9, durum: "randevu" },
+    { no: "B", tek: "T1", ilce: "Tuzla", randevuGun: "2026-10-26", randevuSlot: 13, durum: "randevu" },
   ];
-  it("dolu aralığı önermez, en fazla üç aday döner; boş günde istenen gün ve saat önde", () => {
-    const o = randevuOner(isler, { tek: "T1", ilce: "Üsküdar", istenenGun: "2026-10-26", istenenSlot: 10 }, simdi);
+  it("uzak işin olduğu aralığı önermez, en fazla üç aday döner; boş günde istenen gün ve saat önde", () => {
+    const o = randevuOner(isler, { tek: "T1", ilce: "Üsküdar", istenenGun: "2026-10-26", istenenSlot: 11 }, simdi);
     expect(o.length).toBe(3);
-    expect(o.some((x) => x.gun === "2026-10-26" && [8, 12].includes(x.saat))).toBe(false);
-    const bos = randevuOner(isler, { tek: "T2", ilce: "Şişli", istenenGun: "2026-10-26", istenenSlot: 14 }, simdi);
-    expect([bos[0].gun, bos[0].saat]).toEqual(["2026-10-26", 14]);
+    expect(o.some((x) => x.gun === "2026-10-26" && x.saat === 13)).toBe(false); // Tuzla Üsküdar'a uzak
+    const bos = randevuOner(isler, { tek: "T2", ilce: "Şişli", istenenGun: "2026-10-26", istenenSlot: 16 }, simdi);
+    expect([bos[0].gun, bos[0].saat]).toEqual(["2026-10-26", 16]);
   });
-  it("hafta sonu istenirse ilk iş gününe kayar; teknisyensiz öneri yok", () => {
-    const o = randevuOner([], { tek: "T2", ilce: "Şişli", istenenGun: "2026-10-31" }, simdi);
-    expect(o.every((x) => haftaIciMi(x.gun))).toBe(true);
+  it("yakın adres dolu aralığa eklenebilir (Kadıköy'ün aralığına Üsküdar)", () => {
+    const o = randevuOner(isler, { tek: "T1", ilce: "Üsküdar", istenenGun: "2026-10-26", istenenSlot: 9 }, simdi);
+    expect([o[0].gun, o[0].saat]).toEqual(["2026-10-26", 9]);
+    expect(o[0].neden).toMatch(/aynı aralıkta Kadıköy \(1 iş\)/);
+  });
+  it("aralık SLOT_EN_FAZLA işle dolunca yakın adres de giremez", () => {
+    const uc = Array.from({ length: SLOT_EN_FAZLA }, (_, i) => ({ no: "K" + i, tek: "T1", ilce: "Kadıköy", randevuGun: "2026-10-26", randevuSlot: 9, durum: "randevu" }));
+    const o = randevuOner(uc, { tek: "T1", ilce: "Kadıköy", istenenGun: "2026-10-26", istenenSlot: 9 }, simdi);
+    expect(o.some((x) => x.gun === "2026-10-26" && x.saat === 9)).toBe(false);
+    expect(slotEngeli(uc, "T1", "2026-10-26", 9, "Kadıköy", null)?.sebep).toBe("dolu");
+  });
+  it("Cumartesi önerilir; Pazar istenirse Pazartesiye kayar; teknisyensiz öneri yok", () => {
+    const cmt = randevuOner([], { tek: "T2", ilce: "Şişli", istenenGun: "2026-10-31", istenenSlot: 11 }, simdi);
+    expect([cmt[0].gun, cmt[0].saat]).toEqual(["2026-10-31", 11]);
+    const paz = randevuOner([], { tek: "T2", ilce: "Şişli", istenenGun: "2026-11-01" }, simdi);
+    expect(paz.every((x) => calismaGunuMu(x.gun))).toBe(true);
+    expect(paz[0].gun).toBe("2026-11-02");
     expect(randevuOner([], { tek: "", ilce: "Şişli" }, simdi)).toEqual([]);
   });
-  it("çakışma iptal edilmiş işi saymaz", () => {
-    expect(cakisma(isler, "T1", "2026-10-26", 8, null)?.no).toBe("A");
-    expect(cakisma([{ ...isler[0], durum: "iptal" }], "T1", "2026-10-26", 8, null)).toBeUndefined();
+  it("aralık kuralı: uzak adres engellenir, iptal edilmiş iş sayılmaz, mesaj sebebi söyler", () => {
+    const e = slotEngeli(isler, "T1", "2026-10-26", 9, "Pendik", null);
+    expect(e).toMatchObject({ sebep: "uzak", is: { no: "A" } });
+    expect(slotEngelMetni("T1", "Pendik", e)).toMatch(/Kadıköy'de \(A\); Pendik/);
+    expect(slotEngeli(isler, "T1", "2026-10-26", 9, "Üsküdar", null)).toBe(null);
+    expect(slotEngeli([{ ...isler[0], durum: "iptal" }], "T1", "2026-10-26", 9, "Pendik", null)).toBe(null);
+    expect(aralikEngeli([], "Pendik")).toBe(null);
+  });
+  it("özet: aynı aralıktaki iki iş tek dolu aralık sayılır", () => {
+    const bugun = [
+      { durum: "randevu", tek: "T1", randevuGun: "2026-10-26", randevuSlot: 9 },
+      { durum: "randevu", tek: "T1", randevuGun: "2026-10-26", randevuSlot: 9 },
+      { durum: "randevu", tek: "T2", randevuGun: "2026-10-26", randevuSlot: 9 },
+    ];
+    const o = ozet(bugun, 2, new Date(2026, 9, 26));
+    expect([o.bugunRandevu.length, o.doluAralik, o.kapasite]).toEqual([3, 2, 8]);
   });
 });
 
@@ -93,7 +129,7 @@ describe("log etiketleri ve dönüşüm", () => {
   });
   it("özet: açık, aranacak, ilk ziyarette çözüm oranı", () => {
     const o = ozet([{ durum: "yeni", talep: "2026-10-20" }, { durum: "tamam", ilkZiyarette: true }, { durum: "tamam", ilkZiyarette: false }, { durum: "iptal" }], 2, new Date(2026, 9, 26));
-    expect([o.acik.length, o.aranacak.length, o.ftf, o.kapasite]).toEqual([1, 1, 50, 10]);
+    expect([o.acik.length, o.aranacak.length, o.ftf, o.kapasite]).toEqual([1, 1, 50, 8]);
   });
 });
 
@@ -108,9 +144,11 @@ describe("API kararları", () => {
     expect(v.musteri.telefon).toBe("05321234567");
     expect(JSON.stringify(v.is)).not.toMatch(/Ayşe|0532|Örnek Mah/);
     expect(yeniIsDogrula({ ...temel, aciklama: "beni 0532 111 22 33'ten arayın" }).hata).toMatch(/müşteri alanlarına/);
-    expect(yeniIsDogrula({ ...temel, randevuGun: "2026-10-31", randevuSlot: 10 }).hata).toMatch(/hafta içine/);
+    expect(yeniIsDogrula({ ...temel, randevuGun: "2026-11-01", randevuSlot: 11 }).hata).toMatch(/Pazar kapalı/);
+    expect(yeniIsDogrula({ ...temel, randevuGun: "2026-10-31", randevuSlot: 11 }).hata).toBeUndefined(); // Cumartesi
+    expect(yeniIsDogrula({ ...temel, randevuGun: "2026-10-26", randevuSlot: 10 }).hata).toMatch(/Saat aralığı geçersiz/);
     expect(yeniIsDogrula({ ...temel, randevuGun: "2026-10-26" }).hata).toMatch(/hem günü hem saat/);
-    expect(yeniIsDogrula({ ...temel, il: "Ankara", ilce: "Çankaya", randevuGun: "2026-10-26", randevuSlot: 10 }).hata).toMatch(/Pilot bölge/);
+    expect(yeniIsDogrula({ ...temel, il: "Ankara", ilce: "Çankaya", randevuGun: "2026-10-26", randevuSlot: 11 }).hata).toMatch(/Pilot bölge/);
     expect(yeniIsDogrula({ ...temel, belirti: "uydurma arıza" }).hata).toMatch(/listeden/);
   });
   it("güncelleme: geçiş tablosu, randevu şartı, ulaşılamadı sayacı, kapanış", async () => {
@@ -118,8 +156,8 @@ describe("API kararları", () => {
     const is = { durum: "yeni", garanti: "?", il: "İstanbul", teknisyen_kod: "T1", randevu_gun: null, randevu_slot: null, aramalar: 0 };
     expect(guncellemeHesapla(is, { gecis: "tamam" }).kod).toBe(409);
     expect(guncellemeHesapla(is, { gecis: "randevu" }).kod).toBe(400);
-    const r = guncellemeHesapla(is, { gecis: "randevu", alanlar: { randevuGun: "2026-10-26", randevuSlot: "10" } });
-    expect(r.guncelle).toMatchObject({ durum: "randevu", randevu_gun: "2026-10-26", randevu_slot: 10 });
+    const r = guncellemeHesapla(is, { gecis: "randevu", alanlar: { randevuGun: "2026-10-26", randevuSlot: "11" } });
+    expect(r.guncelle).toMatchObject({ durum: "randevu", randevu_gun: "2026-10-26", randevu_slot: 11 });
     expect(r.olaylar).toEqual(["randevu", "durum:randevu"]);
     expect(guncellemeHesapla(is, { gecis: "ulasilamadi" }).guncelle.aramalar).toBe(1);
     expect(guncellemeHesapla({ ...is, durum: "randevu" }, { gecis: "ulasilamadi" }).kod).toBe(409);
