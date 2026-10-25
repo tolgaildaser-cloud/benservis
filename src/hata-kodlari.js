@@ -1343,6 +1343,49 @@ export const HATA_KODU_KATMANI = {
     { giris: "Smeg — E11", tip: "kod",
       anlam: "Yıkama pompası arızası; kılavuza göre teknik servis aranır.",
       yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    // ——— 25 Eki 2026, YK #182 Dalga 8 (PAZ tamir föyü): 14 giriş; kaynak belge + md5 föyde ———
+    { giris: "Smeg — ışık 1 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 1 kez aralıklı yanıp söner, sesli uyarı da 1 kez çalar: makine su almıyor; musluğun açık ve tıkalı olmadığı, su basıncının çok düşük olmadığı, giriş hortumundaki filtrenin tıkalı olmadığı ve hortumun bükülmediği kontrol edilir. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 2 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 2 kez aralıklı yanıp söner, sesli uyarı da 2 kez çalar: makine suyu boşaltmıyor; lavabo bağlantısının ve iç filtre sisteminin tıkalı olmadığı, tahliye hortumunun bükülmediği kontrol edilir. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 3 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 3 kez aralıklı yanıp söner, sesli uyarı da 3 kez çalar: taşma önleyici düzenek devrede; musluk kapatılır, makinenin doğru kurulduğu ve sepetlerin kılavuza göre yüklendiği kontrol edilir. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 4 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 4 kez aralıklı yanıp söner, sesli uyarı da 4 kez çalar: su seviyesi algılama sensöründe arıza; filtrelerin temiz olduğu kontrol edilir. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 5 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 5 kez aralıklı yanıp söner, sesli uyarı da 5 kez çalar: yıkama ya da tahliye pompasında arıza. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 6 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 6 kez aralıklı yanıp söner, sesli uyarı da 6 kez çalar: makinedeki su çok sıcak ya da sıcaklık sensöründe arıza; giriş suyunun 60 °C'yi aşmadığından emin olunur. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 12 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 12 kez aralıklı yanıp söner, sesli uyarı da 12 kez çalar: makinede teknik arıza. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Smeg — ışık 15 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Göstergenin ışığı 15 kez aralıklı yanıp söner, sesli uyarı da 15 kez çalar: makinedeki su seviyesi çok yüksek; filtrelerin temiz olduğu ve tahliye hortumunun yerden doğru yükseklikte takıldığı kontrol edilir. Kılavuza göre makine kapatılıp açılır; sorun sürerse Smeg yetkili servisi aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/914779936/EN · md5 0334e6a4
+    { giris: "Kumtel — ECO ışığı hızla yanıp sönüyor", tip: "belirti",
+      anlam: "Kılavuza göre taşma: makinenin bazı parçaları sızdırıyor. Taşmada servisi aramadan önce ana su musluğu kapatılır; hata sürerse Kumtel yetkili servisi aranır.",
+      yazi: "kumtel-bulasik-makinesi-eco-isigi-yanip-soniyor" }, // https://static.ticimax.cloud/61061//uploads/dosyalar/usermanuel/teknik%20dosya/hdw-01kk.pdf · md5 1b876ccf
+    { giris: "Kumtel — Hızlı ışığı hızla yanıp sönüyor", tip: "belirti",
+      anlam: "Kılavuza göre su girişi çok uzun sürüyor: musluk açılmıyor, su girişi kısıtlı ya da su basıncı çok düşük. Musluğun tam açık olduğu ve giriş hortumunun bükülmediği kontrol edilir.",
+      yazi: "kumtel-bulasik-makinesi-eco-isigi-yanip-soniyor" }, // https://static.ticimax.cloud/61061//uploads/dosyalar/usermanuel/teknik%20dosya/hdw-01kk.pdf · md5 1b876ccf
+    { giris: "Kumtel — Hızlı + 90 dakika ışıkları hızla yanıp sönüyor", tip: "belirti",
+      anlam: "Kılavuza göre makine gereken sıcaklığa ulaşamıyor; olası neden ısıtma elemanının arızası. Kullanıcının yapacağı bir ayar yok; Kumtel yetkili servisi aranır.",
+      yazi: "kumtel-bulasik-makinesi-eco-isigi-yanip-soniyor" }, // https://static.ticimax.cloud/61061//uploads/dosyalar/usermanuel/teknik%20dosya/hdw-01kk.pdf · md5 1b876ccf
+    { giris: "Kumtel — Yoğun + ECO + Hızlı ışıkları hızla yanıp sönüyor", tip: "belirti",
+      anlam: "Kılavuza göre ana kart ile ekran kartı haberleşemiyor (devre ya da kablo bağlantısı). Kullanıcının yapacağı bir ayar yok; Kumtel yetkili servisi aranır.",
+      yazi: "kumtel-bulasik-makinesi-eco-isigi-yanip-soniyor" }, // https://static.ticimax.cloud/61061//uploads/dosyalar/usermanuel/teknik%20dosya/hdw-01kk.pdf · md5 1b876ccf
+    { giris: "Teka — E:02", tip: "kod",
+      anlam: "Su kesintisi uyarısı: şebeke suyu kesildi ya da giriş musluğu kapalı. Program duraklar, makine su girişini aralıklarla dener; su gelince E:02 bir süre sonra kaybolur ve program kaldığı yerden devam eder. Musluğun açık olduğu kontrol edilir.",
+      yazi: "teka-bulasik-makinesi-kullanimi" }, // http://d7rh5s3nxmpy4.cloudfront.net/CMP1219/files/2/DFI-76950-46700-46900-46950-46950XL-EN-UserManual.pdf · md5 0b55dab2
+    { giris: "Teka — E:01", tip: "kod",
+      anlam: "Taşma uyarısı: makine fazla su aldı ya da bir parçada sızıntı var. Taşma sürdükçe güvenlik algoritması suyu boşaltmaya çalışır; taşma durunca E:01 kaybolur. E:01 kaybolmuyorsa kalıcı arıza vardır, Teka yetkili servisi aranır.",
+      yazi: "teka-bulasik-makinesi-kullanimi" }, // http://d7rh5s3nxmpy4.cloudfront.net/CMP1219/files/2/DFI-76950-46700-46900-46950-46950XL-EN-UserManual.pdf · md5 0b55dab2
   ],
 
   "Kombi / Termosifon": [
@@ -2423,6 +2466,145 @@ export const HATA_KODU_KATMANI = {
     { giris: "Baxi — E10", tip: "kod",
       anlam: "Su basınç anahtarı izin vermiyor; tesisat basıncının kılavuzdaki değerde (soğukken 1–1,5 bar) olduğu kontrol edilir; doldurma kılavuzun tesisatı doldurma bölümüne göre, önce kombinin elektriği çift kutuplu şalterden kesilerek yapılır.",
       yazi: "baxi-kombi-e25-hatasi" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    // ——— 25 Eki 2026, YK #182 Dalga 8 (PAZ tamir föyü): 46 giriş; kaynak belge + md5 föyde ———
+    { giris: "Ariston — 101", tip: "kod",
+      anlam: "Aşırı ısınma (CLAS One tablosu, \"Sovratemperatura\"). Kılavuza göre kombi elektronik kartıyla kendini korur ve durmanın türünü gösteren bir kod verir: geçici güvenlik durmasında kod sebep ortadan kalkınca kendiliğinden silinir; kalıcı kilitlenmede kombi ancak RESET tuşuyla açılır (15 dakikada en fazla 5 sıfırlama). Durma sürerse kombi kapatılır, dış şalter OFF konumuna alınır, gaz vanası kapatılır ve yetkili teknisyen çağrılır.",
+      yazi: "ariston-kombi-resetleme" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/condensation/clas-one/manuale-uso-clas-one.pdf · md5 e53e196b
+    { giris: "Ariston — 501", tip: "kod",
+      anlam: "Alev yok (CLAS One tablosu, \"Mancanza fiamma\"). Kılavuzun örneğine göre Err/501 kalıcı kilitlenmedir: kod kendiliğinden silinmez, RESET tuşuna bir kez basılır; 15 dakikada en fazla 5 sıfırlama yapılır. Birkaç denemeden sonra tekrar ederse yetkili teknisyen çağrılır.",
+      yazi: "ariston-kombi-resetleme" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/condensation/clas-one/manuale-uso-clas-one.pdf · md5 e53e196b
+    { giris: "Ariston — 108", tip: "kod",
+      anlam: "Su eksik, doldurma gerekiyor (CLAS One tablosu, \"Mancanza acqua\"). Kılavuzdaki kullanıcı adımı: kombinin altındaki doldurma musluğu açılır ve MODE tuşuna 5 saniye basılır (ekranda PURGE); manometre soğuk tesisatta 0,6–1,5 bar gösterince musluk kapatılıp MODE'a yeniden basılır. Basınç sık düşüyorsa tesisatta kaçak olabilir; tesisatçı çağrılır.",
+      yazi: "ariston-kombi-resetleme" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/condensation/clas-one/manuale-uso-clas-one.pdf · md5 e53e196b
+    { giris: "Ariston — 305", tip: "kod",
+      anlam: "Kart hatası (CLAS One tablosu, \"Errore scheda\"). Kullanıcının yapacağı bir işlem yok; kombi kapatılır, dış şalter OFF, gaz vanası kapatılır ve yetkili teknisyen çağrılır.",
+      yazi: "ariston-kombi-resetleme" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/condensation/clas-one/manuale-uso-clas-one.pdf · md5 e53e196b
+    { giris: "Ariston — 306", tip: "kod",
+      anlam: "Kart hatası (CLAS One tablosu, \"Errore scheda\"). Kullanıcının yapacağı bir işlem yok; kombi kapatılır, dış şalter OFF, gaz vanası kapatılır ve yetkili teknisyen çağrılır.",
+      yazi: "ariston-kombi-resetleme" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/condensation/clas-one/manuale-uso-clas-one.pdf · md5 e53e196b
+    { giris: "Ariston — 307", tip: "kod",
+      anlam: "Kart hatası (CLAS One tablosu, \"Errore scheda\"). Kullanıcının yapacağı bir işlem yok; kombi kapatılır, dış şalter OFF, gaz vanası kapatılır ve yetkili teknisyen çağrılır.",
+      yazi: "ariston-kombi-resetleme" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/condensation/clas-one/manuale-uso-clas-one.pdf · md5 e53e196b
+    { giris: "Ariston — 601", tip: "kod",
+      anlam: "Duman sondası devrede (CLAS X CF, bacalı kombi; \"Intervento sonda fumi\"). Kılavuza göre duman tahliyesinde anormallik olunca kombi geçici olarak durur; 12 dakika sonra yeniden yakmayı dener, koşullar düzelmediyse yine durur ve döngü tekrarlanır. Tekrar ederse kombi kapatılır ve yetkili teknisyen çağrılır.",
+      yazi: "ariston-kombi-baca-isareti-yaniyor" }, // https://www.ariston.com/content/dam/ariston/it/products/boilers/traditional/clas-x-cf/manuale-uso-clas-x.pdf · md5 4fa29bc0
+    { giris: "Ariston — A1", tip: "kod",
+      anlam: "Şofbende brülör yanmadı (NEXT EVO X SFT, \"Mancata accensione bruciatore\"). Kılavuza göre gaz vanasının açık olduğu kontrol edilir ve ON/OFF tuşuna basılarak sıfırlanır. A1 geri gelirse şofben kapatılır, gaz vanası ve dış şalter kapatılır, yetkili teknisyen çağrılır.",
+      yazi: "ariston-sofben-a1-hatasi" }, // https://www.ariston.com/content/dam/ariston/it/products/water-heater/gas/next-evo-x/manuale-uso-e-installazione-next-evo-x.pdf · md5 bf16f851
+    { giris: "Baxi — E01", tip: "kod",
+      anlam: "Ateşleme olmadığı için blokaj. Kılavuza göre R (reset) tuşuna en az 2 saniye basılır; tekrar ederse Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E02", tip: "kod",
+      anlam: "Emniyet termostatı devreye girdiği için blokaj. Kılavuza göre R (reset) tuşuna en az 2 saniye basılır; tekrar ederse Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E03", tip: "kod",
+      anlam: "Duman termostatı devrede. Kılavuza göre Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E04", tip: "kod",
+      anlam: "Ateşleme olmaması ya da sık alev kaybı nedeniyle emniyet hatası. Kılavuza göre R (reset) tuşuna en az 2 saniye basılır; tekrar ederse Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E05", tip: "kod",
+      anlam: "Gidiş (ısıtma) sondası arızası. Kılavuza göre Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E06", tip: "kod",
+      anlam: "Sıcak su sondası arızası. Kılavuza göre Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E08", tip: "kod",
+      anlam: "Alev yükseltme devresinde hata. Kılavuza göre Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E09", tip: "kod",
+      anlam: "Gaz valfi emniyet devresinde hata. Kılavuza göre Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E22", tip: "kod",
+      anlam: "Besleme gerilimi düştüğü için kapanma. Gerilim 170 V'un üstüne çıkınca kendiliğinden düzelir; arıza sürerse Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E35", tip: "kod",
+      anlam: "Parazit alev (alev hatası). Kılavuza göre tekrar ederse Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E98", tip: "kod",
+      anlam: "Elektronik kart parametreleri yanlış yapılandırılmış. Kılavuza göre Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — St", tip: "kod",
+      anlam: "Yanıp sönen \"St\": donma önleme (çözülme) işlevi çalışıyor. Birkaç dakika beklenir; St ekranda kalırsa Baxi yetkili teknik servisi aranır.",
+      yazi: "baxi-kombi-hata-kodlari" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Viessmann Vitodens 200-W/300-W — 1A", tip: "kod",
+      anlam: "Akış sensörü 1 (sol, fiş 163) arızalı; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — 1b", tip: "kod",
+      anlam: "Akış sensörü 2 (sağ, soket 163A) arızalı; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — 1F", tip: "kod",
+      anlam: "Diferansiyel akış hızı çok büyük; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — A3", tip: "kod",
+      anlam: "Baca gazı sıcaklık sensörü yanlış yerleştirilmiş; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — b7", tip: "kod",
+      anlam: "Kazan kodlama kartında arıza; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — E4", tip: "kod",
+      anlam: "24 V besleme geriliminde arıza; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — Eb", tip: "kod",
+      anlam: "Kalibrasyon sırasında tekrarlanan alev kaybı; brülör arıza konumuna geçer. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — EC", tip: "kod",
+      anlam: "Kalibrasyon sırasında parametre hatası; brülör arıza konumuna geçer. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — Ed", tip: "kod",
+      anlam: "Dahili arıza; brülör arıza konumuna geçer. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — F0", tip: "kod",
+      anlam: "Dahili arıza; brülör kilitlenir. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — F6", tip: "kod",
+      anlam: "Kazan suyu sıcaklık sensörlerinin değerleri birbirinden çok farklı; brülör arıza konumuna geçer. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — F8", tip: "kod",
+      anlam: "Yakıt (gaz) valfi geç kapanıyor; brülör arıza konumuna geçer. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — FF", tip: "kod",
+      anlam: "Dahili arıza ya da R sıfırlama düğmesi bloke; brülör kilitli ya da arıza konumunda. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — A4", tip: "kod",
+      anlam: "En yüksek sistem basıncı (6 bar) aşıldı; kombi normal çalışmayı sürdürür. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — A7", tip: "kod",
+      anlam: "Programlama ünitesi arızalı; kombi teslimat ayarlarıyla normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — b1", tip: "kod",
+      anlam: "Programlama ünitesiyle iletişim hatası; kombi teslimat ayarlarıyla normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — b5", tip: "kod",
+      anlam: "Dahili arıza; kombi teslimat ayarlarıyla normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — bA", tip: "kod",
+      anlam: "Isıtma devresi 2 (karıştırıcılı) uzatma kitiyle iletişim hatası; karıştırıcı 20 °C akış sıcaklığına ayarlanır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — bb", tip: "kod",
+      anlam: "Isıtma devresi 3 (karıştırıcılı) uzatma kitiyle iletişim hatası; karıştırıcı 20 °C akış sıcaklığına ayarlanır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — bC", tip: "kod",
+      anlam: "Vitotrol uzaktan kumandayla iletişim hatası, ısıtma devresi 1 (karıştırıcısız); kombi uzaktan kumanda olmadan normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — bd", tip: "kod",
+      anlam: "Vitotrol uzaktan kumandayla iletişim hatası, ısıtma devresi 2 (karıştırıcılı); kombi uzaktan kumanda olmadan normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — bE", tip: "kod",
+      anlam: "Vitotrol uzaktan kumandayla iletişim hatası, ısıtma devresi 3 (karıştırıcılı); kombi uzaktan kumanda olmadan normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — bF", tip: "kod",
+      anlam: "Yanlış LON iletişim modülü; kombi normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — 4C", tip: "kod",
+      anlam: "Isıtma devresi 3 (karıştırıcılı) akış sıcaklık sensöründe kablo kopması; karıştırıcı kapatılır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — 9A", tip: "kod",
+      anlam: "Kolektör sıcaklık sensöründe kablo kopması; güneş enerjili kullanım sıcak suyu ısıtması yapılmaz. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
+    { giris: "Viessmann Vitodens 200-W/300-W — 9b", tip: "kod",
+      anlam: "Kolektör dönüş sıcaklık sensöründe kablo kopması; kombi normal çalışır. Viessmann önlemlerin yalnız yetkili yüklenici tarafından alınmasını istiyor; kod ve kısa açıklaması servise iletilir.",
+      yazi: "viessmann-kombi-ariza-kodlari" }, // https://www.viessmann.com.tr/tr/bilgi/bakim-ve-onarim/vitodens-200-w-300-w-hata-kodlari.html · md5 bcd1fd75
   ],
 
   "Buzdolabı": [
