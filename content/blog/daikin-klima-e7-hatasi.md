@@ -43,6 +43,13 @@ faq:
     a: "Tek başına değil. Daikin'in Sensira kılavuzuna göre işletim durduktan sonra dış fan sistem koruması için 30 saniye daha döner; dış sıcaklık çok yüksekken klima çalışmıyorken de koruma için dönmeye başlayabilir. Bu belirtiler kılavuzda sistem arızası olmayan durumlar arasında sayılıyor."
 images:
   coverAlt: "Balkon zemininde duran klima dış ünitesi; fan ızgarasına rüzgârla savrulmuş bir naylon poşet ve birkaç kuru yaprak takılmış"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima durdu, iç ünitenin işletim lambası yanıp sönüyor ve kumandadan okuduğun kod **E7**. Daikin'in kullanım kılavuzlarındaki tabloda bu kod **dış ünite** bölümündedir: Sensira kılavuzunda **"DC fan kilidi"**, FTXM kılavuzunda **"DC fan motoru arızalı"** olarak geçer. Daikin'in Ururu Sarara kılavuzu bu kod için kullanıcıya bir kontrol veriyor: **"Yabancı bir cisim dış ünite fanına yapışmış durumda mı?"** Bu yazıda o kontrolü, güvenli sınırıyla birlikte adım adım açıyoruz.

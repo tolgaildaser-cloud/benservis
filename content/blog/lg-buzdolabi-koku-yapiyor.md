@@ -57,6 +57,14 @@ faq:
     a: "Hayır. LG açıkça uyarıyor: arka kapağı (mekanik bölmenin kapağı) ayırma; bu bir kazaya ve iç gaz borusunun zarar görmesine yol açabilir. Kullanıcının yapabileceği, fişi çekip kapağın üzerindeki tozu elektrikli süpürgeyle almaktır. Kapağın sökülüp içinin temizlenmesi servis teknisyeninin işidir."
 images:
   coverAlt: "Kapağı açık, temiz bir LG buzdolabı; raflarda kapaklı cam saklama kapları, bir el yumuşak bezle rafı siliyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda ilgili filtre"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda ilgili filtre"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Kapağı açınca yoğun bir yemek kokusu geliyor, ya da koku buzdolabının arkasından yayılıyor. LG Türkiye'nin yardım sayfalarına göre bunun sebepleri çoğunlukla evde çözülebilecek türden: **yiyecekler hava geçirmez kaba konmadan saklanıyor, iç temizlik uzun süredir yapılmamış, temiz hava filtresinin değişim zamanı gelmiş ya da buzdolabı bölmesinin sıcaklığı çok yüksek.** LG'nin açıklaması basit: buzdolapları soğuk havayı tutmak için sızdırmaz tasarlanır, bu yüzden yiyecek kokusu da kolayca dışarı çıkmaz. Bu yazıda LG'nin kendi sırasını adım adım veriyoruz.

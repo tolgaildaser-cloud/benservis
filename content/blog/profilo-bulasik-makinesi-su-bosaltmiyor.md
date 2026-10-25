@@ -49,6 +49,15 @@ faq:
     a: "Profilo'nun kılavuzu süzgeçlerdeki artıkların her yıkama işleminden sonra kontrol edilmesini öneriyor; yıkama suyundaki kirlilikler süzgeçlerin tıkanmasına neden olabilir. Arıza tablosunda da süzgeçlerin pislenmesi ya da tıkanması ayrı bir kodla geçiyor: BM6380MA'da E:22, BMS623V5'te E:92-40. İki kodda da Profilo'nun çözümü süzgeçleri temizlemek."
 images:
   coverAlt: "Alt sepeti çıkarılmış bulaşık makinesinin tabanında birikmiş su ve süzgeç yuvası, yanında sünger ve küçük bir kap"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
 ---
 
 Program bitti, kapağı açtın ve makinenin dibinde su duruyor. Profilo'nun bulaşık makinesi kullanım kılavuzundaki arıza tablosunda bu durum için ayrı bir satır var: **"Program sona erdikten sonra cihazın içinde su kalıyor."** Ekranda su boşaltmayla ilgili kod görüyorsan Profilo'nun aynı tablosu onun için de **"Cihaz hatası yok"** diyerek kullanıcıya dönük nedenler sayıyor: **süzgeçler, tahliye hortumu, sifon bağlantısı ve atık su pompası.** Bu yazıda Profilo'nun sırasını açıyoruz. Kaynak, Profilo'nun BM6380MA ve BMS623V5 modelleri için yayımladığı kullanım kılavuzları.

@@ -57,6 +57,14 @@ faq:
     a: "Bosch'un CE sayfası basıncın 1,2 bar'a yükseltilmesini istiyor. Condens 2500 W ve 7000i W kılavuzlarına göre çalışma basıncı normal durumlarda 1 ile 2 bar arasıdır; tesisatın için en uygun değeri yetkili servis verir. Isıtma suyunun en yüksek sıcaklığında 3 bar aşılmamalı; aşılırsa emniyet ventili açılır."
 images:
   coverAlt: "Beyaz bir kombinin alt tarafında borular arasında küçük bir doldurma vanası; üstte kumanda panelindeki basınç göstergesi 1 bar civarında"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bosch kombinin ekranında **CE** yanıp sönüyor. Bosch'un CE sayfasındaki tanım kısa: **"Tesisat su basıncı düşük."** Çözüm de iki cümle: **tesisat su basıncı 1,2 bar'a yükseltilmeli** ve **yetkili servise başvurulmalı.** Condens 7000i W'de aynı çözüm **0Y-A1** koduyla geliyor; Bosch bu kodu "tesisat ile ilgili hata var" diye tanımlıyor ve çözüm metni CE ile birebir aynı.

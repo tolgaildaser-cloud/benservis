@@ -48,6 +48,14 @@ faq:
     a: "Samsung'un talimatı: fişi çekip taktıktan, kapak raflarını ve kapıyı kontrol ettikten sonra hata devam ediyorsa servis merkeziyle iletişime geç. Belge bu noktadan sonra kullanıcıya başka adım vermiyor."
 images:
   coverAlt: "Kapağı aralık bir buzdolabının dolu kapak rafları ve kapı kenarındaki lastik conta"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **PC** yazıyor. Samsung Türkiye'nin destek sayfasındaki karşılığı: **"Yaşamış olduğunuz durum buzdolabındaki bileşenlerin birbiriyle olan iletişim hatasıdır."** Samsung iki olası sebep daha sayıyor: yakın zamanda bir **elektrik ya da güç dalgalanması** olmuş olabilir, ya da kapı kapatılırken **tam kapatılmamış** ve sensörler denk gelmemiş olabilir. Bu yazıda Samsung'un kullanıcıya verdiği adımları sırayla açıyoruz.

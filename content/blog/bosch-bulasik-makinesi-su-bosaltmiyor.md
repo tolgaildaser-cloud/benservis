@@ -47,6 +47,15 @@ faq:
     a: "Bosch'un kılavuzunda E24 atık su hortumu, sifon bağlantısı ve pompa kapağıyla; E25 ise atık su pompasının bloke olması ya da kapağının yerine oturmamasıyla ilgili. Kod görüyorsan önce o koda ait sayfamıza bak: Bosch E24 ve Bosch E25 rehberleri bu yazının altında bağlı."
 images:
   coverAlt: "Kapağı açık ankastre bulaşık makinesinin tabanında süzgecin çevresinde biriken su; alt sepet dışarı çekilmiş"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
 ---
 
 Program bitti, kapağı açtın ve makinenin tabanında su duruyor. Bosch'un bulaşık makinesi kullanma kılavuzundaki arıza tablosunda bu durumun kendi satırı var: **"Program sona erdikten sonra cihazın içinde su kalıyor."** Bosch'un bu satırda verdiği iki neden de evde kontrol edilebilir: **tıkanmış süzgeçler** ve **henüz bitmemiş bir program.** Aynı tablo, su boşaltma koduyla birlikte **tahliye hortumu** ve **sifon bağlantısını** da sayıyor. Bu yazıda Bosch'un sırasını adım adım açıyoruz.

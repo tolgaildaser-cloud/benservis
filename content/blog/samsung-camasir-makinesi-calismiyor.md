@@ -54,6 +54,15 @@ faq:
     a: "Gecikmeli Bitir seçili olabilir. Samsung kılavuzuna göre bu seçenek programın bitiş zamanını ayarlar ve programın başlangıç zamanı ayarına göre makinenin kendisi tarafından belirlenir. Paneldeki Gecikmeli Bitir göstergesini kontrol et."
 images:
   coverAlt: "Banyoda önden yüklemeli beyaz Samsung çamaşır makinesi; kapağı kapalı, kontrol panelinin ekranı sönük"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Çamaşırı koydun, programı seçtin ve makine başlamadı; ya da başladı ama bir yerde durdu. Samsung'un Türkçe kullanım kılavuzundaki sorun giderme tablosunda bu iki durumun ayrı satırları var: **"Başlamıyor."** ve **"Duruyor."** Altında sayılanların çoğu makinenin dışından ya da ön panelden kontrol edilebilecek şeyler: **fiş, sigorta, kapak, su muslukları, Başlat/Duraklat düğmesi ve çocuk kilidi.** Bu yazıda Samsung'un sırasını adım adım veriyoruz.

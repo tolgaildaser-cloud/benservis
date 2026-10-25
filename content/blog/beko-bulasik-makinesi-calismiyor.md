@@ -52,6 +52,15 @@ faq:
     a: "Beko'nun BM 4004 ve BM 5005 kılavuzlarına göre makine enerji tasarrufu için program bitiminde ya da program başlatılmadığında belirli bir süre sonra otomatik olarak kapanır. Program seçip başlatmadan beklediysen ekranın kapanması bu davranıştır."
 images:
   coverAlt: "Mutfakta kapağı kapalı ankastre bulaşık makinesinin kontrol paneli, ekranı kapalı; yanında açık duran kullanma kılavuzu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
 ---
 
 Bulaşıkları yerleştirdin, düğmeye bastın ve hiçbir şey olmadı: ekran yanmıyor, ya da yanıyor ama program başlamıyor. Beko'nun bulaşık makinesi kullanma kılavuzlarında bu durumun ayrı bir başlığı var: **"Makine çalışmıyor."** Altında sayılan sebeplerin hepsi makinenin dışında ya da ön panelde kontrol edilebilecek şeyler: **fiş, sigorta, su musluğu, kapı ve Açma/Kapatma tuşu**, bazı modellerde de **tıkalı filtreler.** Bu yazıda Beko'nun sırasını, aynı kılavuzların çocuk kilidi ve erteleme bölümleriyle birlikte adım adım açıyoruz.

@@ -43,6 +43,12 @@ faq:
     a: "Bosch'un kılavuzuna göre elektrik geldiğinde program çalışmaya devam eder. Acelen yoksa elektriğin gelmesini beklemek yeterli. Bosch'un kılavuzunda bir acil kilit açma mekanizması da var, ancak pompa boşaltma ve bir aletle mekanizmayı çekmeyi gerektiriyor; bu rehberde onu kullanıcı adımı olarak vermiyoruz, çamaşırları hemen çıkarman gerekiyorsa kilidi yetkili servise açtır."
 images:
   coverAlt: "Banyoda duran beyaz ön yüklemeli çamaşır makinesinin kapalı kapağı, cam kapağın ardında çamaşırlar ve ekranda yanan kilit simgesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program bitti ya da yarıda kaldı, kapak kolunu çekiyorsun ama kapak açılmıyor. Bosch'un çamaşır makinesi kullanma kılavuzlarındaki arıza tablosunda bu durumun ayrı bir satırı var: **"Kapak açılmıyor."** Bosch bu satırda üç sebep sayıyor: **"Sıcaklık çok yüksek"**, **"Su seviyesi çok yüksek"** ve **"Elektrik kesintisi"**. Üçünün de çözümü kapağı zorlamadan, makinenin kendi programlarıyla. Bu yazıda Bosch'un sırasını adım adım açıyoruz.

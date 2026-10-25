@@ -47,6 +47,14 @@ faq:
     a: "Evet, kılavuzda ikisi ayrı satırlarda. HC ısıtma kontrolü; tC ise 'Termistör kontrolü', yani sıcaklık sensörüyle ilgili (kılavuzun ifadesiyle kısa ya da açık devre). tC için kılavuzda evde yapılacak bir adım yok, doğrudan yetkili servis öneriliyor."
 images:
   coverAlt: "Kapağı açık, rafları boş bir bulaşık makinesi ve deterjan haznesinin yanında duran bir deterjan kutusu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Ekranda **HC** yazıyor. Bazı Samsung modellerinde aynı durum **HE** olarak görünür. Samsung bu kodu **"Yüksek sıcaklıkta ısıtma kontrolü"** olarak tanımlıyor; yani kod, makinenin ısıtma kontrolüyle ilgili.

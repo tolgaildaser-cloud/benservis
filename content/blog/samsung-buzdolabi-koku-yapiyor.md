@@ -57,6 +57,13 @@ faq:
     a: "Samsung'un güvenlik uyarısı: buzdolabı yanık kokusu ya da duman yayarsa fişini hemen çek ve Samsung servis merkezine başvur. Bu durum temizlikle çözülecek bir koku değildir."
 images:
   coverAlt: "Kapağı açık bir buzdolabının rafını nemli bir bezle silen bir el, tezgâhta bir kâse su ve kapaklı saklama kapları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Buzdolabının kapağını açınca hoş olmayan bir koku geliyor. Samsung'un Türkçe kullanım kılavuzlarındaki arıza tablosu bu belirtiyi "**Buzdolabında kokular var.**" satırıyla ele alıyor ve iki neden sayıyor: **bozulmuş yiyecek** ve **güçlü kokuya sahip yiyecek.** Samsung'un RB52DS kılavuzuna göre ürünün üretiminde kokuya neden olacak bir madde kullanılmıyor; koku çoğunlukla yiyeceklerin uygun saklanmamasından ve içinin gerektiği gibi temizlenmemesinden doğuyor. Bu yazıda Samsung'un kılavuzlarındaki sırayı adım adım veriyoruz.

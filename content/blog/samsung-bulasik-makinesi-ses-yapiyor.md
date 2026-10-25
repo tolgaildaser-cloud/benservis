@@ -48,6 +48,12 @@ faq:
     a: "Samsung'a göre dengesiz duran makine gürültü yapar ve dengeli olduğundan emin olunması gerekir. Dengeleme, ayaklardaki ayar vidalarıyla yapılır ve kılavuzun kurulum bölümünde anlatılır; bu iş alet gerektirdiği için yetkili servise ya da kurulumu yapan montöre bırak."
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinde alt sepete tabakları aralıklı yerleştiren bir el, püskürtme kolu görünüyor"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Samsung bulaşık makinen çalışırken beklediğinden fazla ses çıkarıyor. Samsung'un Türkçe kullanım kılavuzları bu belirtiyi arıza tablosunda "**Gürültü**" ve "**Bulaşık makinesi çok gürültülü.**" satırlarıyla ele alıyor. Samsung'a göre seslerin bir kısmı normal; kalanların çoğu da bulaşıkların yerleştirilmesiyle ilgili ve evde düzeltilebilir. Bu yazıda önce Samsung'un normal saydığı sesleri, sonra kontrol sırasını adım adım veriyoruz.

@@ -55,6 +55,15 @@ faq:
     a: "Samsung kılavuzuna göre makineye yeterince güç sağlanmazsa makine geçici olarak boşaltma ya da sıkma yapmaz ve yeterli güç gelince normal çalışmaya döner. Az yük de etkili olabilir: bir ya da iki parçalık yükler dengesiz olabilir ve tamamen sıkılmayabilir."
 images:
   coverAlt: "Önden yüklemeli beyaz Samsung çamaşır makinesinin kapağı açık; kazanın içinde ıslak, dolaşmış bir bornoz ve birkaç havlu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ama çamaşırlar sırılsıklam; ya da makine sıkma aşamasına gelip dönmeden duruyor. Samsung'un Türkçe kullanım kılavuzunda bunun iki satırı var: **"Boşaltma ve/veya sıkma yapmıyor."** ve **"Çamaşır program sonunda ıslak."** Samsung Türkiye'nin destek sayfası da sebepleri üç başlıkta topluyor: **sıkma devri, yük dengesi ve tahliye.** Bu yazıda Samsung'un sırasını adım adım veriyoruz.

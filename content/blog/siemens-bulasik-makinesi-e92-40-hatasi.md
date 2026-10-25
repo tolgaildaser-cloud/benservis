@@ -49,6 +49,14 @@ faq:
     a: "Siemens'in bazı kılavuzlarında (ör. SN23HW62MT, SN45EB01NT, SN63HX62MT) temizleme memesi özelliği anlatılıyor. Bu kılavuzlara göre kaba yemek artıkları yıkamadan önce elle alınır ve temizleme memesi temel ayarlardan etkinleştirilirse gerekli süzgeç temizliği yılda üç kereye inebilir. Özellik her modelde yok; kendi kılavuzuna bak."
 images:
   coverAlt: "Açık bir bulaşık makinesinin tabanında, alt sepet çıkarılmış hâlde süzgeç parçalarını musluk suyunun altında yıkayan bir el"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
 ---
 
 Siemens bulaşık makinenin ekranında **E:92-40** değişimli olarak yanıyor. Siemens'in Türkçe kullanım kılavuzlarındaki arıza tablosunda bu kodun karşılığı tek cümle: "**Süzgeçler pislenmiş veya tıkanmış.**" Çözüm de kılavuzda yazıyor: "**Süzgeçleri temizleyiniz.**" Bu, kullanıcının kendi yapabileceği bir bakım işi; alet gerektirmiyor. Aşağıda Siemens'in süzgeç temizleme sırasını adım adım veriyoruz.

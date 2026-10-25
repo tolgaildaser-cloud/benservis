@@ -47,6 +47,13 @@ faq:
     a: "Samsung kılavuzu iki sebep sayıyor. Kapak açıkken GÜÇ dışındaki düğmeler çalışmaz; kapağı kapatıp tekrar dene. Kontrol kilidi açıksa düğmeler yanıt vermez; kilidi açmak için Kontrol kilidi düğmesini üç saniye basılı tut. Kılavuza göre elektrik kablosu yeniden bağlandığında da kontrol kilidi bırakılır."
 images:
   coverAlt: "Bulaşık makinesinin üst kenarındaki dokunmatik kontrol panelini yumuşak bir bezle silen bir el"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda **bC2** yazıyor. Bazı Samsung modellerinde aynı durum **bE2** olarak görünür. Samsung bu kodu **"Düğme kontrolü"** olarak tanımlıyor. Kılavuzdaki açıklama kısa: **"Düğmeye 30 saniye kadar basılmıştır."**

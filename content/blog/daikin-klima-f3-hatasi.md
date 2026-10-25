@@ -43,6 +43,13 @@ faq:
     a: "Daikin kılavuzlarının talimatı bu noktada servis: işletim lambası tekrar yanıp sönüyorsa model adını kontrol et ve yetkili servisle temasa geç. Klimayı tekrar tekrar açıp kapatarak zorlama; servise kodu, ünitenin tam model adını ve mümkünse kurulum tarihini ilet."
 images:
   coverAlt: "Balkon köşesindeki klima dış ünitesinin önü; hava çıkış ızgarasına yaslanmış katlanmış bir masa ve sandalyeler"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Klima çalışırken durdu, işletim lambası yanıp sönüyor ve kumandadan okuduğun kod **F3**. Daikin'in Sensira kullanım kılavuzundaki tabloda bu kodun karşılığı **"Deşarj borusu sıcaklık kontrolü"**dür; kod dış ünite bölümündedir. Daikin'in Ururu Sarara kılavuzu F3 için kullanıcıya tek bir kontrol veriyor: **"Dış ünitenin hava çıkışı bir araç ya da benzeri ile tıkalı durumda mı?"** Bu yazıda o kontrolü ve nerede durman gerektiğini adım adım açıyoruz.

@@ -54,6 +54,13 @@ faq:
     a: "Samsung kılavuzu su hortumunun tel filtresinin yılda bir ya da iki kez temizlenmesini öneriyor ve tel filtre tıkanırsa ekranda 4C bilgi kodunun görüneceğini yazıyor."
 images:
   coverAlt: "Beyaz ön yüklemeli çamaşır makinesinin arkasında duvardaki su musluğuna bağlı giriş hortumu; musluğun kolu açık konumda"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Programı seçtin, başlattın; ama makineye su girmedi ve ekranda **4C** belirdi. Modeline göre aynı durum **4E** ya da **E1** olarak da görünebilir. Samsung Türkiye'nin destek sayfası bu kodları tek başlık altında topluyor: **"Çamaşır makinenizin su almadığı durumlarda"** ekranda görünen bilgi kodları. Kullanım kılavuzundaki tabloda 4C'nin karşılığı daha da kısa: **"Su sağlanmıyor."**

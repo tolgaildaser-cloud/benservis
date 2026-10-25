@@ -53,6 +53,15 @@ faq:
     a: "Samsung'a göre iç yüzeydeki beyaz tabakanın nedeni sert su mineralleri. İç kısmı özel bulaşık makinesi temizleyicisiyle ya da bulaşık makinesi deterjanıyla nemlendirilmiş bir süngerle, lastik eldiven takarak temizle. Samsung köpük ya da baloncuk riski nedeniyle bulaşık makinesi deterjanı dışında başka bir temizleyici kullanılmamasını istiyor. Temizlikten önce, ısınan parçaların soğuması için bir programdan sonra 20 dakika bekle."
 images:
   coverAlt: "Bulaşık makinesinden yeni çıkmış, üzerinde beyaz su lekeleri ve ince beyaz tabaka görünen cam bardaklar ışığa tutulmuş hâlde"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
 ---
 
 Bardaklar makineden çıkıyor ama üzerlerinde beyaz noktalar, ince bir beyaz tabaka var. Samsung Türkiye'nin sıkça sorulan sorular sayfasına göre bulaşıklardaki beyaz kalıntılar **genellikle sert sudan veya çok fazla deterjandan kaynaklanır.** Samsung'un Türkçe kullanım kılavuzlarında bu belirtinin birkaç satırı var: **"Camlarda ve çatal bıçak takımında lekeler ve tabakalar"**, **"Bulaşıklar üzerinde beyaz bir kaplama kalıyor"**, **"Camda bulanıklık"** ve **"İç yüzeyde beyaz tabaka."** Bu yazıda Samsung'un bu satırlarda verdiği çözümleri sırasıyla anlatıyoruz.

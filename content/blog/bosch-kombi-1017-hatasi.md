@@ -59,6 +59,13 @@ faq:
     a: "Kılavuza göre bazı arızalarda kombi sıfırlanmadan tekrar çalışmaz. İki yol var: cihazı kapatıp tekrar çalıştırmak ya da kılavuzda gösterilen iki tuşu, ekranda H ve ! sembolleri artık görünmeyene kadar aynı anda basılı tutmak. Kombi yeniden çalışınca gidiş suyu sıcaklığı görünür. Arıza giderilemezse servisi ya da müşteri hizmetlerini arayıp kodu ve cihaz bilgilerini bildir."
 images:
   coverAlt: "Beyaz bir kombinin kumanda panelinde rakamlı arıza kodu gösteren ekran ve yanında küçük yuvarlak manometre; arka planda bir kalorifer peteği"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 Bosch kombinin ekranında **H** sembolüyle birlikte **1017** ya da **2971** duruyorsa konu basınç. Bosch'un kod sayfalarında 1017'nin karşılığı **"Su Basıncı Çok Düşük"**, 2971'in karşılığı **"Çalışma Basıncı Çok Düşük."** İkisinin de çözümü basıncı kontrol edip gerektiğinde **öngörülen basınca ulaşılana kadar su ilave etmek.** 2971'de Bosch buna bir ön adım ekliyor: **"Isıtma tesisatının havasını alın."**

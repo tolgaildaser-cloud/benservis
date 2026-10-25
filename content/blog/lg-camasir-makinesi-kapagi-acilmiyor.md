@@ -56,6 +56,14 @@ faq:
     a: "LG'nin F4V5RGP2T ve F4V3VYW3WE kılavuzlarında bunun için Öğe Ekle seçeneği var: program başladıktan sonra Öğe Ekle düğmesine bas, kapının kilidi kendiliğinden açıldıktan sonra kapağı aç. LG'ye göre tambur içindeki su seviyesi ya da sıcaklık yüksekse kapı kilitli kalır ve o sırada kıyafet eklenemez. Senin modelinde bu seçenek olmayabilir; kendi kılavuzuna bak."
 images:
   coverAlt: "Kapağı kapalı ön yüklemeli çamaşır makinesinin kontrol panelinde yanan kapı kilidi simgesi; camın ardında ıslak çamaşırlar"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti ya da yarıda kaldı, çamaşırlar içeride ve kapak açılmıyor. LG'nin Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun kendi satırı var: **"Kapak açılmıyor."** LG'nin açıklaması: **"Cihaz çalışmaya başladıktan sonra güvenlik nedeniyle kapı açılamaz."** Yani kilit çoğu zaman bir arıza değil, bir güvenlik önlemi: tamburda su varken, tambur sıcakken ya da elektrik kesildiğinde kapı kilitli kalıyor. Bu yazıda kilidin ne zaman ve nasıl kendiliğinden açıldığını LG'nin kılavuzu ve Türkiye destek sayfalarıyla adım adım anlatıyoruz.

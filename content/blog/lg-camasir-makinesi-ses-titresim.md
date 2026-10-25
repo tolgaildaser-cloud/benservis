@@ -58,6 +58,15 @@ faq:
     a: "LG'nin hata tablosunda UE dengesizlik hatası, vS titreşim sensörü hatasıdır. UE için LG çamaşırları yeniden düzenlemeyi ya da yükü dengelemek için birkaç küçük parça eklemeyi öneriyor; vS için çözüm olarak servisi aramayı veriyor."
 images:
   coverAlt: "Düz bir zeminde duran ön yüklemeli çamaşır makinesinin üst plakasında bir su terazisi; makinenin ayakları görünüyor"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda arka paneldeki taşıma emniyeti cıvataları"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
 ---
 
 Sıkma başlayınca makine sallanıyor, yerinden oynuyor ya da tamburdan tıkırtı, vurma sesleri geliyor. LG'nin Türkçe kullanım kılavuzlarında bunun için ayrı bir tablo var: **"Duyabileceğiniz Sesler."** Tablo sesleri üçe ayırıyor: **tıkırtı ve şıkırtı**, **vurma** ve **titreme.** Sebeplerin çoğu makinenin içinde değil: tamburda unutulmuş bir cisim, dengesiz dağılmış çamaşır, ayarsız bir ayak ya da zemin. Bu yazıda LG'nin tablosunu ve kurulum bölümündeki seviyelendirme talimatını adım adım açıyoruz.

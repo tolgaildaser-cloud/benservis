@@ -51,6 +51,13 @@ faq:
     a: "Siemens'in tablosuna göre elektrik kesintisinde kapak kilitli kalır ve acil kilit açma düğmesiyle açılır. Ancak kılavuza göre bu iş bir aletle yapılıyor, önce pis su pompasının boşaltılmasını gerektiriyor ve camdan su görünüyorsa kapak açılmamalı. Elektrik geldiğinde yukarıdaki adımları dene; çamaşırları hemen çıkarman gerekiyorsa acil açmayı yetkili servise bırak."
 images:
   coverAlt: "Kapalı cam kapaklı ön yüklemeli bir çamaşır makinesinin kapı koluna uzanan bir el; camın ardında ıslak çamaşırlar"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program durdu ya da bitti ama kapak açılmıyor. Siemens'in çamaşır makinesi kılavuzlarındaki arıza tablosunda bu durumun satırı açık: **"Program duraklatıldı veya iptal edildi, ancak kapak açılamıyor."** Siemens'in saydığı iki sebep de bir güvenlik önlemi: **sıcaklık çok yüksek** ya da **su seviyesi çok yüksek.** Kılavuzun başka bir yerinde de aynı cümle var: sıcaklık veya su seviyesi yüksek olduğunda **kapak güvenlik nedenlerinden dolayı kilitli kalır.** Bu yazıda kilidin nasıl okunacağını ve Siemens'in sırasını açıyoruz.

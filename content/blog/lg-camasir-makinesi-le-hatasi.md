@@ -47,6 +47,14 @@ faq:
     a: "LG'nin talimatı açık: hatayı görmeye devam ediyorsan elektrik fişini çek ve LG servis merkeziyle iletişime geç."
 images:
   coverAlt: "Ön yüklemeli bir çamaşır makinesinin tamamen doldurulmuş tamburu; kapak camına kadar dayanmış kalın bir yorgan"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Makine yıkamanın ortasında durdu, tambur dönmüyor ve ekranda **LE** yazıyor. LG'nin Türkçe kullanım kılavuzlarındaki hata tablosunda LE'nin başlığı **motor kilitli hatası**, karşılığı da tek cümle: **"Motorda aşırı yüklenme var."** LG'nin önerdiği ilk iş basit: motor soğuyuncaya kadar makineyi **30 dakika** beklet, ardından programı yeniden başlat. LG Türkiye destek sayfası bu kodun sebeplerini de sayıyor; çoğu, yükle ve tamburda kalmış eşyalarla ilgili.

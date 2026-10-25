@@ -47,6 +47,13 @@ faq:
     a: "LG Türkiye destek sayfası bunu açıkça istemiyor: conta makinenin sızdırmazlığının önemli bir parçası olduğu için kendin tamir etme. Conta yırtık, eksik ya da yerinden çıkmışsa bir servis teknisyenine kontrol ettir."
 images:
   coverAlt: "Ön yüklemeli beyaz bir çamaşır makinesinin aralık duran kapağı; gri kauçuk contanın kenarından dışarı taşmış bir havlu ucu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Çamaşırları yerleştirdin, kapağı kapattın, başlat tuşuna bastın; makine çalışmadı ve ekranda **dE** yazıyor (bazı modellerde **dE1**, **dE2** ya da **dE4**). LG'nin kendi belgelerinde bu kod bir **kapı hatası**dır. LG Türkiye destek sayfasının açıklaması şu: ön yüklemeli çamaşır makinesinin kapısı, yıkama ve sıkma sırasında su ya da buhar sızmasın diye **tamamen sızdırmaz** olacak şekilde tasarlanmıştır; kapak kapatıldığında sızdırmaz hâle gelemezse **"[dE] işareti görünecek ve çamaşır makinesi çalışmayacaktır."** Bu yazıda LG'nin kendi sayfalarındaki kontrolleri sırayla ve kodun servis gerektirdiği yeri açıkça anlatıyoruz.

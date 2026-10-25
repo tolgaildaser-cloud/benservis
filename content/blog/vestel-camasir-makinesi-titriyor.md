@@ -53,6 +53,14 @@ faq:
     a: "Vestel kılavuzlarına göre gürültü seviyesi sıkma hızından etkilenir: sıkma adımında hız ne kadar yüksekse gürültü o kadar yüksek, kalan nem o kadar düşük olur."
 images:
   coverAlt: "Düz, sert bir zeminde duran beyaz ön yüklemeli çamaşır makinesinin alt kısmı; ayarlanabilir ön ayaklar ve duvarla arasında bırakılmış boşluk görünüyor"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Makine sıkmaya geçince yerinde duramıyor, sarsılıyor ya da yürüyor. Vestel'in çamaşır makinesi kullanım kılavuzlarındaki küçük arızalar tablosunda bu durumun ayrı bir satırı var: **"Makineniz titreşim yapıyor."** Altında sayılan beş sebebin hepsi kurulum ve yüklemeyle ilgili: **ayaklar, nakliye emniyet vidaları, az çamaşır, aşırı ya da dengesiz yük ve makinenin sert bir yere dayanması.** Bu yazıda Vestel'in sırasını, aynı kılavuzların kurulum ve yükleme bölümleriyle birlikte adım adım açıyoruz.

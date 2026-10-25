@@ -47,6 +47,13 @@ faq:
     a: "Siemens E:30-10 satırında tıkalı giriş süzgeçlerini temizlemeyi sayıyor ama yordamı kılavuzun metninde değil, satırdaki QR koddan açılan animasyonda veriyor. Animasyonu izleyip adımlardan emin olamıyorsan bu işi yetkili servise bırak."
 images:
   coverAlt: "Çamaşır makinesinin arkasındaki su musluğunu açan bir el ve musluğa bağlı gri su giriş hortumu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 Programı başlattın ama makine su almıyor; ya ekranda bir musluk simgesi beliriyor ya da **E:30-10** kodu çıkıyor. Siemens'in çamaşır makinesi kılavuzlarındaki arıza tablosunda bu durumun satırı E:30-10 ve ilk sebebi en basiti: **"Musluk kapalı."** Aynı satır giriş hortumunu, su basıncını ve giriş süzgeçlerini de sayıyor. Siemens'in tablosu ayrıca iki durumu açıkça "hata yoktur" diye ayırıyor: suyun ilk 2 dakika gelmemesi ve camdan su görünmemesi. Bu yazıda Siemens'in sırasını açıyoruz.

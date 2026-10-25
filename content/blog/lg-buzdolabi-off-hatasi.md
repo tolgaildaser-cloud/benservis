@@ -51,6 +51,14 @@ faq:
     a: "LG'nin sayfasındaki son cümle: sorun devam ederse daha fazla destek için LG Electronics Çağrı Merkezi 444 6 543 ile iletişime geç."
 images:
   coverAlt: "Buzdolabı kapağındaki dijital ekranın yakın çekimi; sıcaklık yerine OFF yazısı görünüyor, yanında kuru bir havlu duruyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Buzdolabının ekranı yanıyor ama içerisi soğumuyor ve sıcaklık yerine **OFF** yazıyor. İlk akla gelen büyük bir arıza olur; LG Türkiye'nin yardım sayfası ise başka bir şey söylüyor. LG'ye göre bu gösterge, **"ürünü satıştan önce mağazada görüntülemek için özel bir işlev"**. Bu işlevde yalnız güç kaynağı ve ekran gibi sınırlı özellikler çalışır, ürünün içindeki diğer parçalar çalışmaz. Çözümü de LG'nin kendi sayfasında: 10 saniyelik bir enerji kesintisi.

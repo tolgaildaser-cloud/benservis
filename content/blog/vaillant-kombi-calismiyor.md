@@ -65,6 +65,15 @@ faq:
     a: "Ekranda bir arıza kodu varsa kodun kendi tedbiri önce gelir. ecoTEC pro kılavuzunun aynı satırı yetersiz sistem basıncını F.22'ye, arka arkaya üç başarısız ateşleme denemesini F.28'e bağlıyor. F.22 için Vaillant kombi F22 hatası, F.28 için Vaillant kombi F28 hatası yazısına bak."
 images:
   coverAlt: "Duvara asılı beyaz bir kombi, ekranı kapalı; altındaki borularda sarı kollu gaz vanası ve mavi kollu su vanası görünüyor"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda kapak"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Vaillant kombin hiç çalışmıyor: musluktan sıcak su gelmiyor, petekler soğuk, belki ekranda hiçbir şey yok. Vaillant'ın ecoTEC kullanma kılavuzlarının dördünde de bu durumun kendi satırı var: **"Ürün çalışmıyor (sıcak su yok, ısıtma soğuk kalıyor)."** Tablo olası nedenleri tek tek sayıyor ve çoğu kullanıcının kendi bakabileceği şeyler: kapalı kalmış bir vana, kesilmiş elektrik, kapalı kalmış kombi ya da çok düşük bırakılmış bir ayar. Bu yazıda o satırı sırayla açıyoruz.

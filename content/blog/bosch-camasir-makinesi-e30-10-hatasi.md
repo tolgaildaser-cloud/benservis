@@ -44,6 +44,15 @@ faq:
     a: "Konu yakın ama kod farklı. Eski Bosch modelleri su besleme süresinin aşıldığını E17 ya da F17 koduyla gösterir. O kod için ayrı rehberimiz var: Bosch çamaşır makinesi E17 hatası."
 images:
   coverAlt: "Yeni nesil bir çamaşır makinesinin dijital ekranında iki parçalı hata kodu ve yanında yanan musluk sembolü"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Yeni bir Bosch çamaşır makinen var; program başladı, tambur döndü ama bir süre sonra ekranda **E:30-10** belirdi, belki yanında bir **musluk sembolü** de yanıyor. Bosch'un yeni nesil kullanım kılavuzlarında bu satır su girişine ayrılmıştır. Kılavuzun saydığı sebeplerin çoğu evde kontrol edilebilecek şeylerdir: **musluk kapalı**, **giriş hortumu katlanmış ya da sıkışmış**, **su girişindeki süzgeçler tıkanmış** ya da **su basıncı düşük.** Listenin sonunda bir de "su seviyesi ölçüm sistemi arızalı" satırı var; o kısım servisin alanıdır.

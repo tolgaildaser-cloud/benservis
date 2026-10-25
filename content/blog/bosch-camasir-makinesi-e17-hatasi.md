@@ -43,6 +43,15 @@ faq:
     a: "Bosch'un sayfasındaki yönlendirme bu noktada net: hata düzeltilemiyorsa müşteri hizmetleriyle iletişime geçip servis randevusu ayarlayın. Kılavuz da kendi başına giderilemeyen arızada cihazın kapatılmasını, fişin çekilmesini, musluğun kapatılmasını ve yetkili servisin çağrılmasını istiyor."
 images:
   coverAlt: "Çamaşır makinesinin arkasındaki su musluğu ve musluğa bağlı beyaz su giriş hortumu, hortum düz ve gergin değil"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Çamaşırları koydun, programı başlattın; makine bir süre bekledi ve ekranda **E17** belirdi. Bosch'un Türkiye destek sayfasında bu kodun karşılığı kısadır: **"Su besleme süresi aşıldı."** Makine su almayı denedi ama beklediği süre içinde yeterli suyu alamadı. Bosch'un ilk önerisi de aynı kısalıkta: **"Musluğu açın."** Bu yazıda o cümleyi, Bosch kullanım kılavuzlarındaki E:17 satırı ve süzgeç temizliği bölümüyle birlikte adım adım açıyoruz.

@@ -82,6 +82,15 @@ faq:
     a: "Baymak'ın kılavuzları burada sınırı net çiziyor: basınç düşmesi sık tekrarlanıyorsa yetkili servise başvurulmalı. Duotec kılavuzu ayrıca kombi sürekli basınçlandırma ihtiyacı gösteriyorsa su kaçağı olabileceğini yazıyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; yuvarlak bir basınç göstergesi ve borular arasında açık mavi kollu küçük bir doldurma musluğu"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 Baymak kombinin ekranında **F37** görüyorsan Baymak'ın kullanma kılavuzundaki karşılığı iki kelime: **"Düşük su basıncı."** Lunatec serisinde aynı durum **H.02.07** koduyla ve şu tanımla gelir: **"Isıtma devresinde düşük basınç (su doldurma gerekli)."** Basıncı okumak ve su eklemek, Baymak'ın kılavuzlarının kullanıcıya bıraktığı bir iş. Bu yazı o işi seriye göre adım adım anlatıyor ve nerede durman gerektiğini gösteriyor.

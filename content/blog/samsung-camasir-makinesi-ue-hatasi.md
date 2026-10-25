@@ -54,6 +54,14 @@ faq:
     a: "Samsung Türkiye'nin destek sayfası üçünü aynı başlık altında, dengesiz yük kodu olarak veriyor. Ekranda hangisinin görüneceği modele göre değişir."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin açık kapağından görünen kazanda tek tarafa toplanmış bir bornoz ve yanında katlanmış küçük havlular"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
 ---
 
 Yıkama bitti gibi görünüyor ama makine sıkmaya geçmedi, çamaşırlar ıslak ve ekranda **UE** yazıyor. Modeline göre aynı durum **Ub** ya da **E4** olarak da görünebilir. Samsung Türkiye'nin destek sayfasına göre bu kodlar **"çamaşır makinesi içine atılan çamaşır yükünün dengesiz olduğu durumlarda"** meydana gelir. Samsung'un UK destek sayfası bir adım daha ileri gidiyor: bu bir arıza değil; makine dengesiz yükü algılamış ve **güvenlik için sıkmayı durdurmuştur.**

@@ -54,6 +54,15 @@ faq:
     a: "Vestel'in sorun giderme tablosu su boşaltma pompasının tıkanmış olabileceği durum için tek bir çözüm veriyor: servis çağırın. Program bittikten sonra makinede su kalıyorsa önce su boşaltma hortumunun tıkalı ya da katlanmış olmadığına ve filtrelere bak."
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinin alt sepeti ve tabandaki filtre grubu; yanda çıkarılmış filtre parçaları"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti, kapağı açtın ve tabakların üzerinde yemek artıkları duruyor. Vestel'in bulaşık makinesi kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun ayrı bir satırı var: **"Bulaşıklarda kısmen yemek artıkları kalıyor."** Altında sayılan sebeplerin çoğu kullanıcının kontrol edebileceği şeyler: **yerleştirme, sepetin doluluğu, filtreler, püskürtme kolları, deterjan ve program seçimi.** Tabloda tek bir sebep doğrudan servise gidiyor: **su boşaltma pompasının tıkanmış olabilmesi.** Bu yazıda Vestel'in sırasını, aynı kılavuzların bakım ve yerleştirme bölümleriyle birlikte adım adım açıyoruz.

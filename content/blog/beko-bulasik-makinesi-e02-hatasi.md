@@ -58,6 +58,15 @@ faq:
     a: "Beko'nun BM 4004 ve BM 5005 kılavuzlarında su kesik uyarısı P2 ikonuyla anlatılıyor: şebeke suyu kesikse ya da su giriş musluğu açılmamışsa makine su almaz ve P2 yanıp söner. Kontroller aynıdır. Hangi göstergenin senin makinende kullanıldığını kendi kullanma kılavuzundan teyit et."
 images:
   coverAlt: "Tezgâh altındaki su musluğuna bağlı bulaşık makinesi giriş hortumu; hortum ucundan çıkarılmış küçük süzgeç ve yanında kuru bir bez"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Bulaşıkları yerleştirdin, programı başlattın; makine bir süre sessiz kaldı ve ekranda **E02** yanıp sönmeye başladı. Beko'nun kendi hata kodları rehberinde bu kodun adı kısa: **"Su Kesik."** Beko'ya göre E02 yanıp sönüyorsa **"şebeke suyu kesilmiş veya bulaşık makinesinin su giriş musluğu açılmadığı için makine su almıyor olabilir."** Beko'nun saydığı iki sebep de makineye gelen suyla ilgili. Bu yazıda Beko'nun verdiği kontrol sırasını adım adım açıyoruz.

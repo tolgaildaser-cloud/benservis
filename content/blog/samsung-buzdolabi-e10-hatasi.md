@@ -49,6 +49,15 @@ faq:
     a: "Samsung'un talimatı: hata hâlâ devam ediyorsa en kısa zamanda Samsung müşteri hizmetlerini arayarak teknik destek iste. Belge bu noktadan sonra kullanıcıya başka adım vermiyor."
 images:
   coverAlt: "Kapağı açık bir buzdolabının soğutucu bölmesinde aralıklı dizilmiş gıdalar ve kapaktaki dijital sıcaklık göstergesi"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **E10** yazıyor. Samsung Türkiye'nin destek sayfasındaki karşılığı: **"Buzdolabınızın soğutucu bölümü yeteri kadar soğuk olmadığında bu hata kodu görüntülenir."** Samsung sebepleri de sayıyor: uyarı **genellikle uzun süreli elektrik kesintisinde, buzdolabı ilk çalıştırıldığında ya da sıcak yiyecekler yüklendiğinde** görünür. Bu yazıda Samsung'un destek sayfası ve kullanım kılavuzundaki adımları sırayla açıyoruz.

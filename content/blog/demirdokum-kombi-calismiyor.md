@@ -66,6 +66,14 @@ faq:
     a: "Modele göre değişiyor. Nitromix kılavuzu soğuk sistemde 1,0–1,5 bar veriyor ve basınç 0,4 barın altına düşerse ürünün kapanıp F.22 gösterdiğini yazıyor. ademiX ve vintomiX'te basınç 0,5 barın altındaysa doldurulur, gerekli basınç 1,0–1,4 bar. Atron Condense ve Nitron Plus'ta aralık 1,0–2,0 bar, 0,80 barın altında doldurulur ve aralık dışında ekranda F10 görünür. Isıtma sistemi birçok kata uzanıyorsa daha yüksek değer gerekebilir; bunun için kılavuzlar yetkili servise yönlendiriyor."
 images:
   coverAlt: "Duvara monte beyaz bir kombi; ekranı kapalı, altında borular ve vanalar görünüyor"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombinin ekranı kapalı, musluktan sıcak su gelmiyor, petekler de soğuk. DemirDöküm'ün kullanma kılavuzlarında bu durumun kendi satırı var: **"Ürün çalışmıyor (sıcak su yok, ısıtma soğuk kalıyor)."** Nitromix, ademiX ve vintomiX kılavuzları satırı bu sözlerle; Atron Condense ve Nitron Plus kılavuzları "Ürün çalışmıyor: Sıcak su yok, Isıtma soğuk" diye veriyor. Tablonun saydığı nedenlerin çoğu bir arıza değil, kapalı kalmış ya da yanlış ayarlanmış bir şey. Bu yazıda o satırı beş DemirDöküm kılavuzundan, kullanıcıya bırakılan kontroller sırasıyla anlatıyoruz.

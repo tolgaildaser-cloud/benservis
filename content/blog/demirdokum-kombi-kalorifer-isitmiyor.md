@@ -64,6 +64,14 @@ faq:
     a: "İkisi de arıza değil, durum kodu. Nitromix kılavuzunda S.30 'Oda termostatı ısıtma konumunu bloke ediyor', S.31 'Yaz işletimi etkinleştirildi veya e-Veri yolu regleri ısıtma modunu bloke ediyor' demek. S.08 ise ısıtma modu için bekleme süresinin etkin olduğunu gösteriyor; bu kodu görüyorsan kombi bilerek bekliyor."
 images:
   coverAlt: "Duvara monte beyaz bir kombi ve yanında duvara asılı dijital bir oda termostatı; önde soğuk görünen beyaz bir panel radyatör"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor ama petekler soğuk. Kombi çalışıyor gibi görünüyor, sadece ısıtma yapmıyor. DemirDöküm'ün Nitromix, ademiX ve vintomiX kullanma kılavuzlarında bu durumun kendi satırı var: **"Isıtma işletime geçmiyor (Sıcak su hazırlama çalışıyor)."** Nitromix aynı satırı *"Sıcak su hazırlama arızasız; Isıtma çalışmıyor"* diye yazıyor. Üç kılavuzun bu satır için verdiği neden bir parça değil, bir ayar: **harici regler doğru ayarlanmamış.** Regler, kombiye bağlı oda termostatı demek. Bu yazıda o satırı ve kombinin kendi ısıtma ayarlarını, DemirDöküm kılavuzlarından sırayla anlatıyoruz.

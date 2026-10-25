@@ -54,6 +54,14 @@ faq:
     a: "Samsung kılavuzuna göre makineye yeterince güç sağlanmazsa makine geçici olarak boşaltmaz ya da sıkmaz; yeniden yeterince güç aldığında normal çalışır."
 images:
   coverAlt: "Çamaşır makinesinin elektrik fişi doğrudan duvardaki topraklı prize takılı; yerde kullanılmayan bir çoklu priz duruyor"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Makine çalışırken durdu ya da hiç başlamadı ve ekranda **UC** yazıyor. Samsung Türkiye'nin destek sayfasına göre bu kod, **"çamaşır makinesine gelen elektrik voltajının çamaşır makineniz için uygun olmadığı durumlarda"** görüntülenir. Kullanım kılavuzundaki bilgi kodları tablosunda UC için iki karşılık yazıyor: **"Elektronik kontrolün kontrol edilmesi gerekiyor"** ve **"Düşük voltaj algılandı."**

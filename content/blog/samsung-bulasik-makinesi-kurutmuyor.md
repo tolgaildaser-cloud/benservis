@@ -50,6 +50,14 @@ faq:
     a: "Hayır. Samsung'un uyarısına göre hazne maksimum seviyeyi geçecek kadar doldurulmamalı; fazla parlatıcı program sırasında taşabilir. Parlatıcı haznesinde herhangi bir tür deterjan da kullanılmaz. Dökülen parlatıcıyı nemli bir bezle sil."
 images:
   coverAlt: "Program bitiminde kapağı açılmış bir bulaşık makinesinin üst sepetinde üzerinde su damlaları kalmış bardaklar ve fincanlar"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Program bitti, kapağı açtın ve bardaklar hâlâ ıslak. Samsung'un Türkçe kullanım kılavuzunda bu durum için ayrı bir satır var: **"Bulaşıklar iyi kurumamış."** Samsung'un bu satırda saydığı nedenlerin hepsi ayar ve kullanım konusu: **parlatıcı, aşırı yükleme, boşaltma sırası ve tablet deterjan seçeneği.** Samsung Türkiye'nin sıkça sorulan sorular sayfası da aynı noktaları öne çıkarıyor. Bu yazıda Samsung'un listesini sırasıyla anlatıyoruz.

@@ -47,6 +47,14 @@ faq:
     a: "Bu, bu rehberdeki adımların kapsamı dışında. Samsung kılavuzunun güvenlik talimatı: cihazdan garip sesler, yanık kokusu veya duman gelirse hemen güç kaynağının bağlantısını kes ve en yakın servis merkezine başvur."
 images:
   coverAlt: "Pencereleri açık, havalandırılan bir oturma odasında çalışan duvar tipi beyaz split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klimayı açtığında odaya hoş olmayan bir koku yayılıyor. Samsung'un Türkçe kullanım kılavuzu bu durumu sorun giderme tablosunda "Normal çalışma sırasında üniteden koku geliyor" başlığıyla ele alıyor ve iki madde veriyor: ünite dumanlı bir alanda çalışıyorsa **"odayı havalandırın veya üniteyi 3-4 saat boyunca Fan modunda çalıştırın"**; ayrıca **"Tahliye hatlarının temiz olup olmadığını kontrol edin."** Kılavuza göre ünitenin içinde güçlü koku üretecek bileşen yoktur. Aynı kılavuz, iç üniteden koku geliyorsa otomatik temizleme işlevinin kullanılmasını öneriyor.

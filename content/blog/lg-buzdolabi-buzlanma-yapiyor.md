@@ -54,6 +54,15 @@ faq:
     a: "LG'nin açıklamasına göre tek kapılı mini buzdolabı, içinde bir soğutma plakası bulunan doğrudan soğutmalı bir üründür; plaka iç kısma açık olduğu için buzlanma olur. Plakadaki buz 1 cm'yi geçerse soğutma performansı düşebilir. O zaman sıcaklık anahtarını KAPALI konuma alıp buzu çözmek gerekir."
 images:
   coverAlt: "Kapağı açık bir LG buzdolabının dondurucu bölmesi; üst kısımda ince buz sarkıtları, raflarda hava geçirmez kaplar"
+  steps:
+    - "Çizim: solda buzdolabı, sağda pencere"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Dondurucunun tepesinde buz sarkıtları, raflarda ya da yiyeceklerin üstünde ince bir don tabakası var. LG Türkiye'nin yardım sayfasına göre bu çoğu zaman bir arıza değil: havadaki nem buzdolabının soğuk havasıyla karşılaşınca donar ve LG bunu **"buzdolabı düzgün çalıştığında ve makinenin arızası olmadığında ortaya çıkan normal bir olgu"** olarak tanımlıyor. Yine de fazla buz, nemin bir yerden içeri girdiğini gösterir. Bu yazıda LG'nin kendi kontrol sırasını adım adım veriyoruz.

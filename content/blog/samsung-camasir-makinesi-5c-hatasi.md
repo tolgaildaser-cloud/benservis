@@ -54,6 +54,15 @@ faq:
     a: "Samsung kılavuzu, filtre temizlendikten sonra filtre düğmesinin düzgün kapatılmaması ya da filtrenin düzgün yerleştirilmemesi hâlinde sızıntı olabileceği uyarısını yapıyor. Filtreyi çıkarıp yeniden yerleştir ve sağa çevirerek düzgünce kapat."
 images:
   coverAlt: "Ön yüklemeli bir çamaşır makinesinin alt ön köşesinde açılmış küçük filtre kapağı ve önünde yere konmuş geniş, boş bir plastik kap"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, kazanda su duruyor ve ekranda **5C** yazıyor. Modeline göre aynı durum **5E** ya da **E2** olarak da görünebilir. Samsung Türkiye'nin destek sayfasına göre bu kodlar, **"çamaşır makinenizin suyu tahliye edemediği durumlarda"** uyarı amacıyla ekrana gelir. Kullanım kılavuzundaki tabloda 5C'nin karşılığı: **"Su boşaltılmıyor."**

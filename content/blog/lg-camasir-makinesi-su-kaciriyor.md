@@ -55,6 +55,15 @@ faq:
     a: "LG, dolum hortumlarının durumunun kontrol edilmesini ve 5 yıl sonra değiştirilmesini yazıyor; cihazla gelen yeni hortum setinin kullanılmasını, eski hortumların tekrar kullanılmasının su sızıntısına yol açabileceğini belirtiyor. Hortum kırılır ya da koparsa basıncı düşürmek için su musluklarını kapat."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin önünde fayans zeminde küçük bir su birikintisi; makinenin sağ alt köşesindeki servis kapağı kapalı"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Çamaşır makinesinin önünde ya da altında su birikmiş. LG'nin Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun kendi satırı var: **"Su sızıntısı var."** LG bu satırda üç sebep sayıyor: **evin gider boruları tıkanmış**, **tahliye hortumu yanlış kurulmuş ya da tıkanmış**, veya **tahliye pompası filtre başlığı doğru oturmuyor.** LG Türkiye'nin destek sayfası kapağın altından gelen su için bir sebep daha ekliyor. Bu yazıda LG'nin sırasını ve güvenlik kuralını adım adım açıyoruz.

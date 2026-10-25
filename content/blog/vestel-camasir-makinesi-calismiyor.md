@@ -48,6 +48,13 @@ faq:
     a: "Vestel'in tablosu bu sebep için tek cümle yazıyor: 'Sigortanızı değiştirtin.' Kılavuz ayrıca herhangi bir arıza durumunda önce fişin çekilmesini, musluğun kapatılmasını ve kullanıcının kendi tamir etmeye çalışmamasını istiyor."
 images:
   coverAlt: "Kapağı kapalı bir çamaşır makinesinin kontrol panelinde program düğmesine uzanan bir el; ekran boş, tamburun içinde çamaşırlar görünüyor"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Çamaşırları koydun, programı seçtin ama makine hiçbir şey yapmıyor. Vestel'in çamaşır makinesi kullanım kılavuzlarındaki küçük arızalar tablosunda bu durumun ayrı bir satırı var: **"Makineniz çalışmaya başlamıyor."** Altında sayılan altı sebebin beşi kullanıcının birkaç dakikada kontrol edebileceği şeyler: **fiş, elektrik, açma/kapama butonu, Başlat/Beklet tuşu ve kapı.** Altıncısı, **sigorta**, tabloda "değiştirtin" diye geçiyor. Bu yazıda Vestel'in listesini, aynı kılavuzların çalıştırma ve çocuk kilidi bölümleriyle birlikte adım adım açıyoruz.

@@ -54,6 +54,13 @@ faq:
     a: "DemirDöküm'ün Nitromix, ademiX ve vintomiX gibi noktalı kod kullanan modellerinde ateşleme arızası F.28 koduyla gösteriliyor ve reset yöntemi farklı. O modeller için DemirDöküm kombi F28 hatası yazısına bak."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin kontrol paneli; döner düğme, birkaç tuş ve rakamsız, soyut bir dijital ekran; kombinin altında borular arasında sarı kollu bir gaz kesme vanası"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 DemirDöküm Atron Condense ya da Nitron Plus kombinin ekranında **F04** yanıp sönüyorsa DemirDöküm'ün kullanma kılavuzu bunun karşılığını açıkça veriyor: bir **ateşleme arızası.** Kılavuzdaki satır şöyle: **"Doğalgazda gerçekleşen üç başarısız ateşleme denemesinden/sıvı gazda gerçekleşen bir başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer (Arıza mesajı: F04)."** Tedbiri de kısa: reset tuşuna bas; ürün yeniden çalışmaya başlar. Bu yazıda bu adımı, öncesindeki vana kontrolünü ve servis sınırını iki DemirDöküm kılavuzundan anlatıyoruz.

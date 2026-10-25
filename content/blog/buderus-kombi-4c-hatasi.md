@@ -66,6 +66,13 @@ faq:
     a: "Buderus'un sırasına göre basınç normalse kalorifer vanaları kontrol edilir, kapalıysa açılır; ardından kombi resetlenir. Tüm bu adımlara rağmen 4C sürüyorsa sayfa Buderus yetkili servisine başvurulmasını istiyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; borular arasındaki küçük doldurma vanasına uzanan bir el, yanda duvarda bir kalorifer peteğinin yan vanası"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi birden durdu ve ekranda **4C** var. Buderus'un 4C sayfasına göre bu kod, **kombi tesisatındaki su sıcaklığının maksimum değeri aşarak aşırı ısınmaya yol açtığı** anlamına geliyor. Bu olunca kombi **kendini güvenlik moduna geçirir**, bloke eder ve çalışmayı durdurur. Yani kombi kendini korumak için durdu. Sayfanın verdiği sıra şu: su basıncı, kalorifer vanaları, reset; hepsine rağmen kod sürüyorsa yetkili servis.

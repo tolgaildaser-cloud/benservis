@@ -53,6 +53,13 @@ faq:
     a: "Daikin kılavuzu ünite uzun süre kullanılmayacaksa önce iç kısmını kurutmak için birkaç saat yalnız FAN modunda çalıştırmayı, sonra kesiciyi kapatmayı, hava filtrelerini temizleyip yerine takmayı ve kumandanın pillerini çıkarmayı öneriyor."
 images:
   coverAlt: "Pencereleri açılmış, havalandırılan bir oturma odasının duvarında beyaz split klima ve masada çıkarılmış hava filtresi"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klimayı açtığında odaya hoş olmayan bir koku yayılıyor. Daikin'in Türkçe kullanım kılavuzu bu durumu sorun giderme bölümünde **"İç üniteden koku geliyor."** başlığıyla ele alıyor ve açıklamasını veriyor: koku, ünitenin **"odadaki mobilyaların veya sigara kokusunu çekmesi ve üflenen havayla birlikte odaya geri vermesi"** durumunda ortaya çıkar. Kılavuz bu durumda iç ünitenin yetkili bir teknisyen tarafından yıkanmasını öneriyor. Aynı kılavuz, kirli filtrelerle çalışan klimanın **"koku yapabilir"** olduğunu da yazıyor. Bu yazıda evde yapılabilecek kısmı ve servis sınırını Daikin'in belgelerinden anlatıyoruz.

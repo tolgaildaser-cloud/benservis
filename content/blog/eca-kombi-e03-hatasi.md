@@ -54,6 +54,13 @@ faq:
     a: "E03 kalorifer suyunun (gidiş veya dönüş) 90°C'yi aşmasıdır ve kılavuz önce vana kontrolü ile Reset'i öneriyor. F07 ise baca gazı sıcaklığının 95°C'yi aşmasıdır; F07'de kılavuzun tek adımı E.C.A. yetkili servisine haber vermektir."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin altındaki bakır borular ve vanalar; yandaki odada beyaz bir panel radyatörün köşesindeki termostatik vana başlığı"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 ECA kombinin ekranında **E03** var ve kombi durdu. ECA'nın kullanma kılavuzlarındaki hata kodu tablosunda bu kod **"Aşırı Sıcaklık Uyarısı"** (Confeo Premix'te **"Yüksek Sıcaklık Uyarısı"**) olarak geçiyor ve şöyle tanımlanıyor: **"Gidiş veya dönüş sıcaklığının 90°C'yi aşması durumunda meydana gelir."** Kılavuzun çözümü dört adım; ilk üçü senin yapabileceğin kontroller. Bu yazı o adımları Proteus Premix, Confeo Premix ve Citius Premix kılavuzlarına dayanarak anlatıyor.

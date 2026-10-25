@@ -56,6 +56,14 @@ faq:
     a: "Hayır. E82 ayrı bir koddur: kılavuzlarda alev kaybı hatası olarak geçer ve art arda 12'den fazla alev kaybında çıkar. E82'de kılavuzun adımı Reset'e basmak, hata sürerse yetkili servise haber vermektir."
 images:
   coverAlt: "Beyaz bir kombinin altındaki borular arasında sarı kollu bir gaz vanası; kombinin ekranında yanıp sönen bir uyarı simgesi ve yanında duran bir kullanma kılavuzu"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 ECA kombinin ekranında **E01** yanıp sönüyor ve kombi yanmıyor. ECA'nın kullanma kılavuzlarındaki hata kodu tablosunda bu kodun adı **"Ateşleme Hatası"**, muhtemel nedeni de tek cümle: **"Kombiye gaz gitmiyor."** Kılavuzun çözümü dört adım; ilk üçü senin yapabileceğin kontroller. Bu yazı o adımları ECA'nın Proteus Premix, Confeo Premix ve Citius Premix kılavuzlarına dayanarak sırayla anlatıyor.

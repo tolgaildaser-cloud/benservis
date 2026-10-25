@@ -44,6 +44,15 @@ faq:
     a: "Siemens kılavuzuna göre parlatıcının fonksiyonu kombine deterjanlarda sınırlıdır ve parlatıcı kullandığında genelde daha iyi sonuç alırsın. Kılavuz ayrıca özel kurutma performansına sahip tabletlerin kullanılmasını öneriyor ve 14 °dH su sertliğinden itibaren en iyi yıkama ve kurutma sonucu için özel tuz ve parlatıcı kullanılmasını tavsiye ediyor."
 images:
   coverAlt: "Programı bitmiş bulaşık makinesinin açık kapağı, üst sepette üzerinde su damlaları kalmış bardaklar ve plastik kaplar"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, bulaşıklar temiz ama ıslak: bardakların dibinde su, plastik kaplarda damlalar. Siemens bunun için ayrı bir destek sayfası yayımlıyor ve sayfanın ilk cümlesi rahatlatıcı: yıkama döngüsü bittiği hâlde kurutma performansının düşük olmasının **birkaç nedeni** olabilir ve bunlar **tavsiyeler uygulanarak** iyileştirilebilir. Siemens'in dört kontrolü şunlar: **yerleştirme, parlatıcı, program sonrası su damlaları ve program seçimi.** Kullanım kılavuzları da parlatıcı ve kurutma ayarı tarafını tamamlıyor. Bu yazıda ikisini birleştirip adım adım anlatıyoruz.
