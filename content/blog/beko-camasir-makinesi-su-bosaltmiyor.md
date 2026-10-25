@@ -48,6 +48,14 @@ faq:
     a: "Beko'nun D4 9122 E kılavuzuna göre filtre yerine takılırken zorlanmamalı ve tam olarak oturtulmalı; aksi hâlde filtre kapağından su sızıntısı olabilir. Filtreyi çıkarıp yeniden, zorlamadan ve tam oturtarak tak. Makinenin altından su geliyorsa Beko'nun tablosu pompa filtresinin tamamen kapalı olup olmadığının kontrol edilmesini istiyor."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin alt köşesinde açılmış filtre kapağı, önünde su toplanan geniş sığ bir kap ve katlanmış bir havlu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program bitti ama tamburun dibinde su duruyor, ya da makine boşaltma adımında takılı kaldı. Beko'nun çamaşır makinesi kullanma kılavuzlarındaki sorun giderme bölümünde bunun karşılığı tek satır: **"Makine su tahliye etmiyor."** Beko bu satırda iki sebep sayıyor: **su gideri hortumu tıkanmış veya kıvrılmış olabilir** ya da **pompa filtresi tıkanmış olabilir.** İkisi de evde, alet kullanmadan kontrol edilebiliyor. Bu yazıda Beko'nun kendi bakım talimatıyla sırayı açıyoruz.

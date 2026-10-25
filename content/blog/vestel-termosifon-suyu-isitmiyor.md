@@ -62,6 +62,14 @@ faq:
     a: "Kılavuzun tablosuna göre bu normal bir durum: termosifon çalıştıkça basınç artar ve ventil su damlatır. Kılavuz ürünle birlikte verilen hortumun gidere bağlanmasını istiyor."
 images:
   coverAlt: "Banyo duvarına monte beyaz bir elektrikli termosifonun ön panelinde dijital sıcaklık göstergesi ve yanında akmayan bir duş başlığı"
+  steps:
+    - "Çizim: solda duvar tipi şofben, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi şofben, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi şofben, sağda bekleme süresi için saat"
 ---
 
 Duşu açıyorsun, su ısınmıyor. Vestel'in TRV-50 E / TRV-65 E / TRV-80 E termosifon kılavuzu bu tabloyu iki satıra ayırıyor: termosifon **hiç çalışmıyorsa** sebepler şalter ve elektrikle ilgili; çalışıyor ama **"Termosifon suyu ısıtmıyor."** ise kılavuzun tek çözümü servis. Arada bir de dijital panel var: göstergeler ve **E1, E2, E3** kodları hangi durumda olduğunu sana söylüyor.

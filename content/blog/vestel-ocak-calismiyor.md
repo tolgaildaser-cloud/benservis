@@ -44,6 +44,14 @@ faq:
     a: "AO-6470 kılavuzuna göre ocağı açtıktan sonra 20 saniye içinde bir pişirme bölgesi seçilmezse ocak otomatik olarak kapanır. Kullanım sırasında kapanıyorsa tablodaki neden bir bölgenin çok uzun süredir açık olması; bölgeyi yeniden açarak kullanmaya devam edebilirsin."
 images:
   coverAlt: "Mutfak tezgâhına gömülü dört gözlü siyah cam ocağın kumanda şeridinde yanan küçük bir kilit ışığı"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Vestel ocağın tuşlarına basıyorsun ama ekran karanlık, ya da göstergelerde bir harf yanıp sönüyor ve göz ısınmıyor. Vestel'in ocak kılavuzlarında bu tabloların çoğu birer harfle işaretlenmiş: **F**, **L**, **t**. AO-6470 indüksiyonlu ocak kılavuzunun sorun giderme tablosu ilk satırda en temel durumu yazıyor: **"Ocağın kumanda kartının göstergesi karardı. Ocak ve yakma başlıkları açılamıyor."** Bu yazı, AO-6470 (indüksiyon) ve AO-6330 (vitroseramik) kılavuzlarındaki satırlara dayanıyor.

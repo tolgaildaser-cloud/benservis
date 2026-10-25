@@ -50,6 +50,15 @@ faq:
     a: "Kılavuz, bu maddeler kontrol edildiği hâlde sorun sürerse klimayı kullanmayı bırakmanı ve satıcına danışmanı istiyor. Güvenlik bölümü ayrıca klimanın soğutmaması ya da ısıtmaması durumunda soğutucu madde sızıntısı olasılığı bulunduğunu yazıyor; sızıntı tespit edilirse çalıştırmayı durdurup odayı iyice havalandırman ve derhal bayine başvurman gerekir."
 images:
   coverAlt: "Aydınlık bir yatak odasında duvardaki beyaz split klima, kapalı pencere ve klimaya doğrultulmuş uzaktan kumanda"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor ama oda bir türlü serinlemiyor. Mitsubishi Electric'in Türkçe çalıştırma talimatları bu durumu **"Oda etkin bir şekilde soğutulup ısıtılamıyor"** başlığıyla ele alıyor ve yedi soru soruyor; ilki **"Sıcaklık ayarı doğru mu?"** Ardından fan ayarı, filtreler, hava yolu, açık pencere ya da kapı ve gece modu geliyor. Bu yazıda kılavuzun sırasını evde güvenle yapılabilecek adımlara çeviriyoruz.

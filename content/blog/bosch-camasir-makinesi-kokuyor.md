@@ -46,6 +46,13 @@ faq:
     a: "Bosch'un kılavuzu bu alışkanlığı tambur bakımıyla birlikte anıyor: sürekli düşük sıcaklıklarda ve az havalandırılan cihazla yıkama yapmak tambura zarar verebilir. Bosch'un önerisi düzenli olarak tambur temizlik programını çalıştırmak ya da en az 60 °C'de yıkamak. Program tablosu da Tambur Temizleme'yi 40 °C ve daha düşük sıcaklıkta sık yıkama yapılan durumlar için öneriyor."
 images:
   coverAlt: "Kapağı ve deterjan çekmecesi açık bırakılmış boş bir ön yüklemeli çamaşır makinesi, lastik contanın yanında katlanmış kuru bir bez"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
 ---
 
 Kapağı açtığında içeriden ağır bir koku geliyor, ya da çamaşırlar makineden hoş kokmadan çıkıyor. Bosch'un çamaşır makinesi kılavuzlarındaki arıza tablosunda bu durumun satırı açık: **"Cihaz içinde koku oluşmuş."** Bosch'un açıklaması da tek cümle: **"Nem ve deterjan kalıntıları bakteri oluşumuna neden olabilir."** Yani çözüm parça değil temizlik ve kurutma alışkanlığı: lastik conta, deterjan çekmecesi, çamaşırsız bir tambur temizliği ve program sonrası açık bırakılan kapak. Bu yazıda Bosch'un sırasını açıyoruz.

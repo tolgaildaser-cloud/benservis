@@ -42,6 +42,13 @@ faq:
     a: "Philips bu bilgiyi yalnız HR3760 ve HR3770 modelleri için veriyor: blender haznesi doğru konumda değilse kontrol panelinde hazne simgesi yanıp söner ve blender çalışmaz. Hazneyi klik sesi gelene kadar saat yönünde sonuna kadar çevirince simge kaybolur."
 images:
   coverAlt: "Mutfak tezgâhında cam sürahili bir blender, sürahi gövdeye yerleştirilirken yandan görünüm"
+  steps:
+    - "Çizim: solda sürahili blender, sağda prizden çekilen fiş"
+    - "Çizim: solda sürahili blender, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda sürahili blender, sağda su ya da toz haznesi"
+    - "Çizim: solda sürahili blender, sağda kapak"
+    - "Çizim: solda sürahili blender, sağda prizden çekilen fiş"
+    - "Çizim: solda sürahili blender, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Philips blenderin düğmesini çeviriyorsun ama motor dönmüyor. Philips'in Türkiye destek sayfası bu belirtiyi **"Philips blenderim çalışmıyor"** başlığıyla ele alıyor ve saydığı nedenlerin hepsi senin kontrol edebileceğin şeyler. Bunlardan biri şu: **"Güvenlik kilidi kilitliyken blenderiniz çalışmaya başlamaz."** Hazne yerine tam oturmadıysa, kapak klipsleri kilitlenmediyse ya da aşırı ısınma koruması devreye girdiyse blender çalışmaz. Bu yazı Philips'in saydığı nedenleri ve her birinin çözümünü anlatıyor.

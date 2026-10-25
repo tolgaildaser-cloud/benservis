@@ -48,6 +48,13 @@ faq:
     a: "Shorai Edge kılavuzu, kumanda iç üniteyle iletişim kurabilecek şekilde tutulmazsa zamanlayıcıda 15 dakikaya kadar zaman farkı oluşabileceğini yazıyor."
 images:
   coverAlt: "Sabah ışığında bir çalışma odasında kapalı duran beyaz split klimaya doğrultulmuş kumanda, masada yanında iki kalem pil"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun, klima hiç tepki vermiyor. Toshiba'nın Türkçe kullanıcı kılavuzları bu durumu "Pratik Çözümler (Kontrol Noktası)" tablosunda **"Ünite çalışmıyor."** satırıyla veriyor ve altına dört kısa madde yazıyor: **"Ana güç şalteri kapalı."**, sigortanın elektriği kesmiş olması, **"Elektrik akımı kesik."** ve **"ON timer ayarlanmış."** Bunlara kılavuzun üç dakikalık koruma notu ve kumanda pili eklenince evde kontrol edilecek liste tamamlanıyor. Bu yazıda Toshiba'nın sırasını ve kumanda olmadan klimayı çalıştırmanın yolunu anlatıyoruz.

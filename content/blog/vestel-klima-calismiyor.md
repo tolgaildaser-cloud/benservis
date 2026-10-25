@@ -45,6 +45,14 @@ faq:
     a: "Vestel'in çözüm sütunu 'Sigortanın değiştirilmesini sağlayın' diyor ve klimayı kendin tamir etmeye çalışmamanı istiyor. Sigorta değişimi bir elektrik müdahalesidir; bunu kendin yapma, Vestel İletişim Merkezi'nden ya da yetkili servisten destek iste."
 images:
   coverAlt: "Akşam saatinde salonda kapalı duran beyaz split klimaya kumanda tutan bir el, yanında yanan bir ayaklı lamba"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun, klima tepki vermiyor. Vestel'in Türkçe kullanım kılavuzu bu durumu sorun giderme tablosunda **"Klima Çalışmıyor."** satırıyla açıyor ve çözüm sütununun büyük kısmı evde kontrol edilebilecek şeyler: **"Elektriklerin gelmesini bekleyin."**, **"Klimayı açın."**, **"Pili değiştirin."**, **"Bekleyin veya ayarlamayı iptal edin."** Nova Inverter kılavuzu buna az bilinen bir madde ekliyor: klimaya çok yakın bir ışık kaynağı. Bu yazıda Vestel'in sırasını, servis sınırıyla birlikte anlatıyoruz.

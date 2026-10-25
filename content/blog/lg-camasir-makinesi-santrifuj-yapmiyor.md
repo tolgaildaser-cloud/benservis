@@ -46,6 +46,14 @@ faq:
     a: "O zaman sorun bir koda bağlanmış demektir. LG'nin tablosunda UE dengesizlik hatası, OE ise su çıkış hatası. İkisinin LG kılavuzuna göre adımlarını ayrı rehberlerde anlattık: LG çamaşır makinesi UE hatası ve LG çamaşır makinesi OE hatası."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin kontrol panelinde sıkma ayarı düğmesine uzanan bir el, tamburda ıslak çamaşırlar"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, kapağı açtın ve çamaşırlar sırılsıklam; ya makine hiç sıkmadı ya da sıktıysa bile yeterince değil. Ekranda bir hata kodu yoksa ilk bakılacak yer ayarlar. LG'nin F4Y5EYW0W kullanım kılavuzunda sıkma seviyesi **Sıkma düğmesine art arda basılarak** seçiliyor ve kılavuzun notu şu: **"Sıkma seviyesi olarak 0 seçilmişse, çamaşır makinesinin tamburu tahliyeden önce dönecektir."** Bazı modellerde bu seviye **No** diye görünüyor. Bu yazıda önce ayarları, sonra LG'nin yük dengesi için verdiği kuralları, en son da ıslak kalan çamaşırı **Sadece Sıkma** ile kurtarmayı anlatıyoruz. Ekranda **UE** ya da **OE** varsa aşağıdaki bağlantılardan o kodun kendi rehberine geç. Kaynak LG'nin iki modelinin kılavuzu; tuş adları modele göre değişebilir.

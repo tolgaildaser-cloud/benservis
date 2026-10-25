@@ -50,6 +50,15 @@ faq:
     a: "Arçelik'in sorun giderme tablosu bunu açıkça yazıyor: havanın sıcak ve nemli olması buzlanmayı ve yoğunlaşmayı artırır; bu normaldir ve bir arıza değildir. Aynı satırdaki diğer iki neden kapının aralık kalması ve kapının çok sık açılması ya da uzun süre açık kalması."
 images:
   coverAlt: "Kapısı açık bir buzdolabının dondurucu bölmesinde, katlanmış bir havlunun üzerine konmuş buharı tüten sıcak su dolu bir tencere ve rafları kaplayan ince buz tabakası"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Dondurucunun duvarları beyazlaşmış, çekmeceler buz yüzünden zor açılıyor ya da soğutucunun arka duvarında kar görüyorsun. Arçelik'in buzdolabı kılavuzlarındaki sorun giderme tablosunda bu durum **"Buzdolabı içinde su/yoğunlaşma/buz"** ara başlığı altında geçiyor. İlk satır şu: **"Havanın sıcak ve nemli olması buzlanmayı ve yoğunlaşmayı arttırır."** Arçelik'in bu satıra cevabı da kısa: **"Bu normaldir ve bir arıza değildir."** Bu yazıda önce hangi buzun normal sayıldığını ayırıyoruz. Sonra kapı ve conta kontrolüne geçiyoruz, en son da otomatik eritme yapmayan dondurucuda karın elle nasıl eritildiğini anlatıyoruz. Kaynaklar Arçelik'in 3061 N ve 5845 NFEY kılavuzları; bölme ve düğme adları modele göre değişebilir.

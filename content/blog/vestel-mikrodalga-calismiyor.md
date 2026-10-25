@@ -48,6 +48,12 @@ faq:
     a: "Vestel tablosunda 'Fırın ısınmıyor' satırının nedeni kapağın düzgün kapatılmamış olması; çözüm kapağı iyice kapatmak. Bakım bölümü kapağın çerçevesinin, contasının ve yakınındaki parçaların düzenli olarak nemli bir bezle temizlenmesini istiyor."
 images:
   coverAlt: "Tezgâhtaki solo bir mikrodalga fırının önünde prizden çekilmiş fiş ve kapağı kapalı fırının dijital ekranı"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Mikrodalgayı ayarladın ama başlamıyor; ya da ekran birkaç saniye sonra saate dönüyor. Vestel'in MD 20 DB / MD 20 DG ve ızgara/kombi modlu mikrodalga kılavuzlarındaki sorun giderme tablosunda bu belirti **"Fırın çalışmıyor."** olarak geçiyor ve üç neden sayılıyor: fiş, sigorta ve priz. Tablonun dışında kalan iki ayrıntı ise kılavuzun kullanım bölümünde: **Başlat'a basma süresi** ve **çocuk kilidi.**

@@ -48,6 +48,14 @@ faq:
     a: "Beko'nun önerisi: bulaşıkları makineye koyduktan sonra makineyi hemen çalıştırmayacaksan bulaşıkların üzerindeki kirleri al ve iki günde bir deterjansız Ön Yıkama programını çalıştır. Bu dönemde makinenin kapağını tam kapatma. Beko ayrıca piyasadaki koku giderici ve makine temizleyici ürünlerin de kullanılabileceğini yazıyor."
 images:
   coverAlt: "Kapısı hafifçe aralık bırakılmış bulaşık makinesi; tezgâhta musluk altında yıkanmış taban filtresi ve küçük bir fırça"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Makinenin kapağını açtığında içeriden hoş olmayan bir koku geliyor. Beko'nun BM 4004 ve BM 5005 kullanma kılavuzlarındaki sorun giderme tablosunda bu durumun kendi başlığı var: **"Makinenin içinde farklı bir koku var."** Beko bu başlık altında dört durum sayıyor: **yeni makine kokusu, tıkanmış filtreler, parlatıcı haznesine konmuş kimyasallar ve makinede günlerce bekletilen kirli bulaşıklar.** Bu yazıda Beko'nun çözümlerini adım adım açıyoruz.

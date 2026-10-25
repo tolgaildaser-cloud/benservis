@@ -61,6 +61,14 @@ faq:
     a: "Beko'nun tablosundaki son madde: makine yumuşatıcıyı erken alıyor olabilir. Beko'ya göre bu durumda vanalarda ya da deterjan çekmecesinde sorun olabilir ve Yetkili Servisin aranması gerekir."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin camından görünen yoğun beyaz köpük; yanında açık deterjan çekmecesi ve dozaj kabı"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program başladıktan kısa süre sonra makinenin camı köpükle doluyor, bazen köpük deterjan çekmecesinden dışarı taşıyor. Beko'nun D4 9101 E, D4 9122 E, D4 8102 E ve D3 5061 B kullanma kılavuzlarındaki sorun giderme tablosunda bunun iki ayrı satırı var: **"Makinede çok miktarda köpük oluşuyor"** ve **"Deterjan çekmecesinden dışarı köpük taşıyor."** Beko'nun saydığı sebeplerin neredeyse hepsi deterjanın türü, miktarı, konduğu göz ve saklanma biçimiyle ilgili; yani çözüm büyük ölçüde senin elinde. Bu yazıda Beko'nun listesini adım adım açıyoruz.

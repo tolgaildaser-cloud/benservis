@@ -61,6 +61,15 @@ faq:
     a: "Samsung'un tablosuna göre yük çok az olabilir: havlu gibi birkaç parça daha ekleyip yeniden kurut. DV5000T kılavuzu yük çok fazlaysa öğe çıkarıp programı yeniden başlatmayı da söylüyor. Bir ya da iki parça kurutuyorsan Samsung kurutma verimini artırmak için çamaşıra kuru bir havlu eklemeni öneriyor."
 images:
   coverAlt: "Kapağı açık ön yüklemeli kurutma makinesi; kapak ağzının yanında çıkarılmış tiftik filtresi ve küçük bir temizleme fırçası, alt köşede açılmış bakım kapağı"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama çamaşırlar hâlâ nemli, ya da kurutma her seferinde daha uzun sürüyor. Samsung'un ısı pompalı kurutucular için Türkçe kılavuzunda bu durumun satırı **"Öğeler kurutulmuyor."** Satırın ilk cümlesi dikkat çekici: **"Yukarıdakilerin tümünü kontrol edin."** Yani Samsung önce bir üstteki **"Kurutucu ısınmıyor."** satırını, sonra yükle ilgili maddeleri kontrol ettiriyor. İki satırda da aynı iki parça öne çıkıyor: **tiftik filtresi** ve **ısı eşanjörü.** Aşağıdaki sıra bu tabloyu ve kılavuzun bakım bölümünü izliyor. Kaynak DV90T5240AW / DV90T8240SE ve DV5000T (DV90TA040AE) kılavuzları; mesaj ve tuş adları modele göre değişebilir.

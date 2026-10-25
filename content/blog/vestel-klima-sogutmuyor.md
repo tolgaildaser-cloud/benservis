@@ -46,6 +46,15 @@ faq:
     a: "Vestel'e göre tablodaki açıklamaları denedikten sonra klima hâlâ normal çalışmıyorsa İletişim Merkezi'ne ya da en yakın yetkili servise başvurmalısın. Kılavuz ayrıca iç ve dış ünitelere yılda en az bir kez yetkili servis tarafından kapsamlı bakım yapılmasını istiyor."
 images:
   coverAlt: "Güneşli bir oturma odasında yarıya kadar çekilmiş perdenin yanında duvarda çalışan beyaz split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda deterjan bölmesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima açık, hava da geliyor, ama oda serinlemiyor. Vestel'in Türkçe kullanım kılavuzu bu belirtiyi iki ayrı satırla ele alıyor: **"Klima hava üflüyor ama soğutma ve ısıtma performansı kötü."** ve **"Klima hava üflüyor ama soğutma yapmıyor."** İkisinin çözüm sütununda da servis yerine önce senin yapabileceğin işler var: **"Uygun bir sıcaklık ayarlayın."**, **"Toz filtrelerini temizleyin."**, **"Pencere ve kapıları kapatın."** Bu yazıda Vestel'in iki satırını tek bir kontrol sırasına çeviriyoruz.

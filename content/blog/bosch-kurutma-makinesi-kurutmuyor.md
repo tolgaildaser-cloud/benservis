@@ -46,6 +46,15 @@ faq:
     a: "WTWH8760TR kılavuzuna göre cihaz belirli bir kullanım süresinden sonra basit cihaz bakımı yapmanı öneriyor ve uyarı bakım yapılana kadar tekrar görünüyor. Basit bakım yaklaşık 1 saat sürüyor; önce tiftik filtresi temizleniyor ve yoğuşma suyu kabı boşaltılıyor. Programın nasıl çağrıldığı modele göre değiştiği için kendi kılavuzundaki Cihaz bakımı bölümüne bak."
 images:
   coverAlt: "Kapağı açık bir kurutma makinesinin önünde masaya yayılmış hafif nemli havlular ve çıkarılmış tiftik filtresi"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda su tankı"
+    - "Çizim: solda kurutma makinesi, sağda hava giriş ve çıkış ızgarası"
 ---
 
 Program bitti, ekranda "End" yazıyor ama havlular hâlâ nemli. Bosch'un kurutma makinesi kılavuzlarındaki arıza tablosunda bu durumun satırı kısaca **"Çamaşırlar çok nemli."** Bosch'un bu satırda saydığı sebeplerin çoğu kullanımla ilgili: fazla ya da çok az doldurulmuş tambur, kumaşa uymayan program, düşük kalmış kurutma hedefi, kirlenmiş nem sensörü ve dolan yoğuşma kabı. Satırın ilk sebebi ise şaşırtıcı biçimde basit: **sıcak çamaşırlar program sonunda olduklarından daha ıslak algılanır.** Bu yazıda Bosch'un WTWH8760TR, WQG244C1TR ve WTW87460TR kılavuzlarındaki sırayı açıyoruz.

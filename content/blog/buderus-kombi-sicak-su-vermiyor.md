@@ -65,6 +65,14 @@ faq:
     a: "Buderus'un resetleme rehberi resetin en fazla 2 defa tekrarlanmasını, ardından uyarı sürüyorsa teknik servise başvurulmasını öneriyor. GB172i.2 kılavuzu da bir arızayı sıfırlamak için tekrarlanan girişimlerin cihazın güvenlik nedeniyle bloke olmasına (arıza kodu 2980) yol açabileceğini yazıyor. Bu yüzden adımlarda tek bir deneme verdik."
 images:
   coverAlt: "Banyo lavabosunda açık bir musluktan buharsız akan su ve arka planda duvara monte beyaz bir kombi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Petekler ısınıyor ya da en azından kombi çalışıyor, ama musluktan sıcak su gelmiyor. Buderus kendi sitesinde bu soruya ayrı bir rehber ayırıyor: **"Kombi Neden Sıcak Su Vermiyor?"** Sayfanın ilk cümlelerinden biri işin özünü veriyor: kombinin sıcak su vermemesi tek bir nedenden kaynaklanmaz. Listenin bir kısmı parça arızası ve servis işi; ama en başta duran iki madde, **su basıncı** ve **açık kalan doldurma musluğu**, senin kontrol edebileceğin şeyler. Bu yazıda Buderus'un rehber sayfalarını ve kullanma kılavuzlarını yan yana koyup sırayla ilerliyoruz.

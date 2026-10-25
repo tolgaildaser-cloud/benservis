@@ -49,6 +49,14 @@ faq:
     a: "Baymak kılavuzu klima uzun süre kullanılmayacaksa kumandanın pillerinin çıkarılmasını ve elektrik bağlantısının kesilmesini istiyor. Yeniden kullanmaya başlarken pilleri takmanı ve elektriğin açık olup olmadığını kontrol etmeni öneriyor; aynı listede ünitenin ve filtrenin temizlenmesi, hava giriş-çıkışlarının ve drenaj borusunun kontrolü de var."
 images:
   coverAlt: "Gün ışığı alan bir salonda koltuk kolçağında duran klima kumandası ve yeni pil paketi, arkada duvarda ekranı karanlık beyaz split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandayla klimayı açmaya çalışıyorsun ama iç üniteden ne ses geliyor ne hava. Baymak'ın Elegant Air montaj ve kullanma kılavuzu bu belirtiyi sorun giderme tablosunda **"Cihaz çalışmıyor"** satırıyla veriyor ve dokuz olası neden sayıyor. Bunlardan üçü evde kontrol edilebilir: **"Güç arızası/fiş çekilmiş olabilir"**, **"Bazen cihaz, korunma amaçlı olarak çalışmayı durdurur."** ve **"TIMER-ON (Zamanlayıcı Açık) fonksiyonu aktif kalmış olabilir."** Aynı tablodaki "Cihaz komutlara yanıt vermiyor" ve "Ekran kapalı" satırları da bu belirtiye karışıyor. Bu yazıda üçünü birlikte, Baymak'ın sırasıyla anlatıyoruz.

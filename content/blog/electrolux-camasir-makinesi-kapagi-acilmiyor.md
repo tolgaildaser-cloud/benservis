@@ -45,6 +45,13 @@ faq:
     a: "Electrolux'a göre program ya da gecikmeli başlatma çalışırken kapak kilitlenir. Giysi eklemek ya da çıkarmak için Başlat/Beklet tuşuna dokun; ekrandaki kapak kilidi göstergesi söner, kapağı açıp giysiyi ekle, kapağı kapat ve Başlat/Beklet'e yeniden dokun. Kılavuzun uyarısı: tamburdaki su sıcaklığı ve seviyesi çok yüksekse ya da tambur dönmeye devam ediyorsa kapağı açma."
 images:
   coverAlt: "Kapağı kapalı ön yüklemeli çamaşır makinesinin cam kapağının ardında, tamburun alt kısmında görünen su ve ıslak çamaşırlar"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti sanıyorsun, kulpu çekiyorsun ama kapak yerinden kıpırdamıyor. EW8F7417QT'nin kapağı, program çalışırken bilerek kilitli tutuluyor; Electrolux'un kılavuzuna göre **"Program başlar, kapak kilitlenir."** Kılavuza göre program bitince kapak kilidi açılıyor. Açılmadığında Electrolux'un sorun giderme tablosu **"Cihazın kapağı açılmıyor."** satırında altı madde sayıyor: programın gerçekten bitmesi, kazanda su bırakan bir seçenek, tamburdaki su, elektrik, Uzaktan Başlatma Modu ve son olarak olası bir cihaz arızası. İlk beşi kullanıcıya dönük kontroller. Kaynak tek bir modelin kılavuzu; tuş ve seçenek adları modele göre değişebilir.

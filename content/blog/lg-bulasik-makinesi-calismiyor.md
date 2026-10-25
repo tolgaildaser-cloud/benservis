@@ -44,6 +44,13 @@ faq:
     a: "Kodu not al ve LG'nin hata tablosuna bak. DFC325HD'nin tablosunda IE, OE ve bE için kullanıcıya dönük kontroller var; HE, FE, AE, tE, LE ve NE kodlarında ise LG'nin yönlendirmesi aynı sorun yeniden meydana gelirse servisi çağırmak."
 images:
   coverAlt: "Kapağı yarı açık bir bulaşık makinesinin üst kenarındaki kontrol paneli ve ekranında yanan iki harfli bir kod"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
 ---
 
 Tuşa basıyorsun ama makine açılmıyor, ya da açılıyor ama program başlamıyor. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabındaki kullanım tablosunda bunun karşılığı **"Cihaz çalışmıyor."** satırı. LG bu satırda dört neden sayıyor: **kapak tam kapanmamış, güç kablosu bağlı değil, ekranda CL ile Ekran Kilidi açık, sigorta atmış.** Kılavuzun kontrol paneli bölümü buna iki durum daha ekliyor: **BAŞLAT'a 4 dakika içinde basılmazsa makinenin kendini kapatması** ve **Gecikmeli Başlatma.** Bu yazıda en basitinden başlayarak sırayla gidiyoruz. Kaynak tek bir modelin kılavuzu; tuş adları ve tuş kombinasyonları modele göre değişebilir.

@@ -64,6 +64,14 @@ faq:
     a: "Uğur'un sandık tipi kılavuzuna göre elektrik kesintisinde kapak kesinlikle açılmaz. Kesinti yüzünden gıdalar çözülmeye başlarsa 24 saat içinde tüketilmeli ya da pişirme, kızartma gibi işlemlerden geçirilip tekrar dondurulmalı; cihazın gıdaları koruma süresi ürün etiketinde yazıyor. UED 100 kılavuzu ani kesintide fişin çekilmesini ve elektrik geldikten 20 dakika sonra yeniden takılmasını istiyor."
 images:
   coverAlt: "Kapağı açık bir sandık tipi derin dondurucunun içinde düzenli poşetlenmiş donuk gıdalar ve sepetin üst hizasında duran yük"
+  steps:
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Dondurucuya koyduğun et ertesi gün hâlâ yumuşak, ya da içeride biriken poşetler eskisi kadar sert değil. Uğur'un derin dondurucu kılavuzlarının arıza tablosunda bu belirti iki adla geçiyor: sandık modellerde **"Yiyecekler donmuyor."**, dikey modellerde **"Cihaz soğutmuyor."** İki tablonun sıraladığı nedenlerin çoğu kullanıcının elinde: ayar, kapak, yük, havalandırma ve ısı kaynağı.

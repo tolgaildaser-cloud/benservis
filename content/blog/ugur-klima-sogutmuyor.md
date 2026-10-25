@@ -58,6 +58,14 @@ faq:
     a: "Kılavuzun 'Normal Performans denetimi' satırına göre soğutma ya da kurutma sırasında ani soğutma nedeniyle iç ünite odadaki havanın buharını üfleyebilir; bu normal performans sayılıyor."
 images:
   coverAlt: "Duvar tipi bir klimanın ön ızgarası kaldırılmış, içinden tozlu hava filtresi çıkarılırken"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Klima çalışıyor, fan dönüyor ama oda bir türlü serinlemiyor. Uğur'un UIS serisi duvar tipi klima kılavuzunda bu belirtinin adı **"Zayıf soğutma"** ve sorun giderme tablosunda karşısında altı soru var. Uğur bu listeyi **servise danışmadan önce** kontrol etmeni istiyor; altısı da kullanıcının yapabileceği kontroller.

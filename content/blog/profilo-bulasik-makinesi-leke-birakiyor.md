@@ -61,6 +61,15 @@ faq:
     a: "Profilo'ya göre iç kısımdaki plastik parçalar makinenin ömrü boyunca renk alabilir ya da renkleri değişebilir; bu durum cihazın fonksiyonunu olumsuz etkilemez. Plastik bulaşıklarda renk alma için ise tablo yıkama sıcaklığının çok düşük olabileceğini yazıyor ve daha yüksek sıcaklıklı bir program seçmeyi öneriyor."
 images:
   coverAlt: "Bulaşık makinesinin açık kapağı önünde, ağız kısmında pas noktaları olan bıçaklar ve iç yüzeyinde renkli bir tabaka bulunan paslanmaz çelik bir tencere"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
 ---
 
 Bulaşıklar makineden temiz çıkıyor ama üzerlerinde bir şey kalıyor: beyaz bir tortu, tencerenin içinde sarımsı ya da mavimsi bir tabaka, bıçağın ağzında pas noktaları, plastik kaplarda damla izleri. Profilo'nun bulaşık makinesi kullanım kılavuzundaki arıza tablosu bunları tek satırda toplamıyor; **lekenin rengine ve yerine göre ayrı satırlarda** ele alıyor ve her birine ayrı bir neden veriyor. Bu yüzden ilk iş lekeyi tanımak. Bu yazıda Profilo'nun tablosunu leke türüne göre açıyoruz. Kaynak, Profilo'nun BM6380MA modeli için yayımladığı kullanım kılavuzu; tuş ve ayar adları modele göre değişebilir.

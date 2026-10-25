@@ -58,6 +58,14 @@ faq:
     a: "Vitopend 100-W kılavuzunda F02, F03, F04, F05, F07 ve F08 için MODE ve OK tuşlarına aynı anda basılarak reset tarif ediliyor. 0C, A0, CC, F10, F18, F30, F38, F51, F59, F70, F78, F80, F88, F90 ve F98 için ise tedbir yetkili teknik servise haber vermek; kılavuz bu kilidin kullanıcı tarafından açılamayacağını yazıyor."
 images:
   coverAlt: "Banyo lavabosunda açık bir musluk ve arka planda duvara monte beyaz bir kombi; musluktan buhar çıkmayan soğuk su akıyor"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluğu açıyorsun, su akıyor ama ısınmıyor. Viessmann'ın kullanma kılavuzlarında tam bu durum için ayrı bir tablo var: **"Sıcak su yok."** Vitopend 100-W, Vitodens 050-W, Vitodens 100-W/111-W/111-F, Vitodens Connect, Vitodens Trend ve Vitodens 200-W/222-W/222-F/242-F kılavuzlarının "Ne yapmalı?" bölümünde yer alan tablo, her nedenin karşısına bir "giderilmesi" yazıyor. Tablonun ilk iki satırı bir parça değil: cihazın kapalı olması ve kontrol panelindeki ayar. Bu yazıda tabloyu senin bakabileceğin satırlardan başlayarak anlatıyoruz.

@@ -46,6 +46,15 @@ faq:
     a: "Electrolux, bulaşık makinesinin her kullanımından sonra filtreleri ve tekneyi kontrol etmeni istiyor; yabancı maddeler (cam, plastik, kemik, kürdan gibi) temizleme performansını düşürür. Püskürtme kolları için öneri, delikler tıkanmasın diye düzenli temizlik. Kılavuza göre sürekli kısa programlar makinenin içinde yağ ve kireç birikmesine yol açabilir; bunu önlemek için uzun süreli programları ayda en az iki kez çalıştır."
 images:
   coverAlt: "Bulaşık makinesinin tabanından çıkarılmış silindir ve yassı filtre parçaları ile alt püskürtme kolu, mutfak lavabosunda akan suyun altında"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama tabaklarda yemek izi, bardaklarda tortu kaldı. Electrolux'un ESM89400SX kullanma kılavuzunda bu durum **"Yetersiz yıkama sonuçları."** başlığıyla geçiyor ve Electrolux'un listesi kısa: yerleştirme, daha yoğun program, **ExtraPower** seçeneği ve **püskürtme kollarındaki deliklerle filtrenin temizliği.** Kılavuzun bakım bölümü bunun nedenini tek cümleyle söylüyor: **kirli filtreler ve tıkalı püskürtme kolları yıkamadan alınacak sonucu kötüleştirir.** Bu yüzden bu rehber temizlikle başlıyor, ayarla bitiyor. Kaynak tek bir modelin kılavuzu; filtre ve kol yapısı modele göre değişebilir.

@@ -50,6 +50,15 @@ faq:
     a: "Kılavuzun uzun süre kullanmama talimatı: önce en yüksek sıcaklık ayarıyla SOĞUTMA ya da FAN modunda 3-4 saat çalıştırarak ünitenin içini kurut, sonra durdur, şalteri kapat ya da fişi çek ve kumandadaki pilleri çıkar. Kılavuza göre klimadaki nem küf gibi mantarların oluşmasına uygun koşul yaratıyor. Tekrar kullanmaya başlarken önce hava filtresini temizle."
 images:
   coverAlt: "Duvardaki beyaz split klimanın ön paneli kaldırılmış; çıkarılmış hava filtresi gölgede bir havlunun üzerinde kuruyor"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışınca odaya hoş olmayan bir koku yayılıyor. Mitsubishi Electric'in Türkçe çalıştırma talimatları bu belirtiyi arıza tablosunda **"İç üniteden gelen hava garip kokuyor"** diye anıyor ve ilk soruyu filtreye ayırıyor: **"Filtreler temiz mi?"** Aynı satır kokunun her zaman klimanın içinden çıkmadığını da hatırlatıyor. Bu yazıda kılavuzun koku satırını, güvenlik bölümünü ve uzun süre kullanmama talimatını bir araya getiriyoruz.

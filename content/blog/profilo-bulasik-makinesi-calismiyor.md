@@ -53,6 +53,15 @@ faq:
     a: "Profilo'nun tablosuna göre E:27 şebeke geriliminin çok düşük olduğunu gösterir ve bir cihaz hatası değildir. Profilo'nun önerisi bir elektrik teknisyeni çağırıp şebeke gerilimini ve elektrik tesisatını kontrol ettirmek."
 images:
   coverAlt: "Mutfakta kapağı kapalı bulaşık makinesinin ön panelinde ekran sönük duruyor; bir el panelin üst kenarındaki tuşa uzanıyor"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 START'a basıyorsun, hiçbir şey olmuyor. Profilo bulaşık makinesinde neye bakacağını en hızlı **ekran** söylüyor: tamamen karanlık mı, yanıp sönüyor mu, üzerinde **CL** ya da **h:** gibi bir yazı mı var? Profilo'nun BM6380MA kullanım kılavuzundaki arıza tablosu bu durumların her biri için ayrı bir satır veriyor; örneğin **"Cihaz harekete geçmiyor."**, **"Ekran yanıp sönüyor"** ve **"Cihaz devreye sokulamıyor veya kullanılamıyor."** Bu yazıda ekranın hâline göre Profilo'nun sırasını izliyoruz. Tuş ve gösterge adları modele göre değişebilir; kendi kılavuzun esastır.

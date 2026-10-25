@@ -51,6 +51,15 @@ faq:
     a: "Vestel her kullanımın ardından toz haznesinin temizlenmesini tavsiye ediyor; toz çok fazlaysa ve filtreler tıkanmışsa temizlenmeleri ya da değiştirilmeleri gerekiyor. V-Bot kılavuzu her üç ayda bir fırça rulosunu, döndürme fırçasını ve HEPA filtresini durulayıp en az 24 saat kurumaya bırakmanı öneriyor. Filtreyi takmadan önce kuruduğundan emin ol."
 images:
   coverAlt: "Ters çevrilmiş bir robot süpürgenin altındaki ana fırça ve yanında çıkarılmış toz haznesi ile filtre"
+  steps:
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda robot süpürge, sağda ilgili filtre"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
 ---
 
 Robot her gün çalışıyor ama geçtiği yerde toz kalıyor, halının kenarında kırıntılar duruyor, ya da fırçası dönmüyor gibi. Vestel'in V-Bot Pro kılavuzunun sorun giderme tablosunda bu belirti şöyle geçiyor: **"Robot süpürge artık etkili bir şekilde temizlemiyor veya toz bırakıyor"**. Tablonun saydığı nedenlerin hepsi bakımla giderilecek türden: hazne, filtre ve fırça.

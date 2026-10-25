@@ -45,6 +45,14 @@ faq:
     a: "LG'nin deterjan bölümündeki uyarıya göre hatalı deterjan makinenin çalışırken köpükle dolmasına neden olabilir; aşırı köpük yıkama sonuçlarını düşürebilir ve cihazdan kaçağa yol açabilir. Kaçak için ayrı kontrolleri LG bulaşık makinesi su kaçırıyor rehberinde topladık."
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin tabanında ve alt sepetin çevresinde biriken beyaz köpük"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kapağı açtın, tabanda köpük var ve ekranda **bE** yazıyor. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabındaki hata tablosu bu kodu tek cümleyle açıklıyor: **"Sıvı bulaşık sabunu gibi uygun olmayan deterjan nedeniyle aşırı köpük oluşumu."** LG'nin tablosuna göre bE'nin ilk nedeni makinenin içindeki bir parça değil, hazneye giren deterjan. LG aynı satıra ikinci bir neden de ekliyor: **cihaz hizalanmamış.** Bu yazıda köpüğün kaynağını, tamburdaki deterjan atığının LG'nin önerdiği yolla nasıl temizleneceğini ve parlatıcının payını sırayla anlatıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

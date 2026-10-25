@@ -51,6 +51,15 @@ faq:
     a: "Arçelik'in 6366 kılavuzu bu durumu ayrıca yazıyor: tablet deterjan kullanırken program sonunda bulaşıkların ıslak kalması ya da özellikle bardaklarda kireç lekesi görülmesi hâlinde deterjan üreticisiyle bağlantıya geçilmesini istiyor. Kılavuza göre en iyi yıkama performansı deterjan, parlatıcı ve su yumuşatma tuzunun ayrı ayrı kullanılmasıyla elde ediliyor."
 images:
   coverAlt: "Bulaşık makinesinin üst sepetinden çıkarılmış, ışığa tutulmuş cam bardakta beyaz puslu iz; yanında bir fincanın içinde kalmış çay lekesi"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
 ---
 
 Program bitti, bulaşıklar temiz görünüyor ama fincanın dibinde çay halkası, bardaklarda beyaz bir iz ya da elle silince gitmeyen süt rengi bir pus var. Arçelik'in bulaşık makinesi kullanma kılavuzlarındaki sorun giderme bölümü "leke"yi tek satırda toplamıyor; **lekenin türüne göre dört ayrı satır** açıyor: **"Bulaşıklarda çay, kahve veya ruj lekesi kalıyor."**, **"Bulaşıklarda kireç izi kalıyor ve cam eşyalar puslu bir görünüm alıyor"**, **"Bulaşıklarda pas lekesi, kararma, yüzey bozulması"** ve bardaklarda **elle silindiğinde çıkmayan, süt bulaşığı görünümünde** leke. Aynı dört satır Arçelik'in 6366 ve 9242 MI kılavuzlarında birebir yer alıyor. Önce lekenin hangisi olduğunu bul, sonra o satırın çözümünü uygula.

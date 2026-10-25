@@ -54,6 +54,14 @@ faq:
     a: "Uğur kılavuzunun uygun ambalaj listesi: plastik folyo, polietilen tüp film, dondurucu poşetleri ve dondurucu kapları. Ambalaj kâğıdı, gazete kâğıdı, çöp torbaları ve alışveriş torbaları uygun olmayanlar arasında. Kılavuz poşetin içindeki havanın boşaltılmasını, ağzının sıkıca kapatılmasını ve sızdırmazlığının kontrol edilmesini istiyor."
 images:
   coverAlt: "Boşaltılmış bir sandık tipi derin dondurucunun içini pamuklu bezle silen eldivenli bir el ve yanında ağzı kapatılmış dondurucu poşetleri"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda deterjan bölmesi"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Kapağı açınca yüzüne gelen koku buzdolabındakinden farklı: daha ağır ve kaynağı belirsiz. Uğur'un derin dondurucu kılavuzlarında **"Cihaz koku yapıyor."** satırı arıza tablosunda ayrıca yer alıyor. Sandık modellerin tablosu üç neden sayıyor: **poşetlerde sızıntı**, **tahliye kanalında biriken sıvı** ve **hasarlı conta.** Kılavuz ayrıca bir uyarı yapıyor: cihazın **mikroorganizmalar üzerinde sterilizasyon etkisi yoktur**; bu yüzden içeri konan gıdanın hijyeni önemli.

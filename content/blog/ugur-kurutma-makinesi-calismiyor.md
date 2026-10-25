@@ -54,6 +54,13 @@ faq:
     a: "Uğur kılavuzu taşımadan sonra makineyi 2 saat bekletmeni istiyor. İlk kullanımdan önce tamburun içini yumuşak bir kumaşla temizlemeni de öneriyor."
 images:
   coverAlt: "Ekranı kapalı bir kurutma makinesinin önünde, prizdeki fişe uzanan bir el"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
 ---
 
 Kurutma makinesinin düğmesine basıyorsun ve ya ekran hiç yanmıyor ya da ekran açık ama program başlamıyor. Uğur'un UKM serisi kurutma makinesi kılavuzunun sorun giderme tablosu bu iki durumu ayrı satırlara koyuyor: **"Ekran açık değil."** ve **"Kurutucu çalışmıyor."** İki satırın çözümleri de kullanıcı seviyesinde: elektrik, düğme, kapak ve program. Ekranda bir simge yanıyorsa tablo ona da ayrı bir çözüm veriyor.

@@ -43,6 +43,14 @@ faq:
     a: "Kılavuz bölge boyuna göre en küçük kap çapını veriyor: 160 mm'lik bölge için 120 mm, 210 mm'lik bölge için 140 mm, 290 mm'lik bölge için 160 mm. Bunun altındaki tabanlar bölgeye uygun sayılmaz."
 images:
   coverAlt: "İndüksiyonlu cam ocağın bir gözünde ortaya yerleştirilmiş düz tabanlı çelik tencere, yanında küçük bir mıknatıs"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
 ---
 
 Vestel indüksiyonlu ocakta bir gözü açtın, güç seviyesini seçtin ama göz ısıtmak yerine göstergesinde **U** yanıp sönüyor. Bu bir arıza kodu değil, ocağın tencereyle ilgili uyarısı. Vestel'in AO-6470 kılavuzundaki tablo anlamını tek satırda veriyor: **"Pişirme bölgesinin üzerinde tencere yoktur veya tencere uygun değildir."** Çözüm de aynı satırda: **"Uygun bir tencere kullanınız."**

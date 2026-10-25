@@ -45,6 +45,15 @@ faq:
     a: "Kılavuz bu durum için cihazı mikrodalga fırınlardan, cep telefonlarından, Bluetooth ve diğer kablosuz cihazlardan en az üç metre uzak tutmayı ve modemin aktif kanalını değiştirmeyi öneriyor. Video için IEEE 802.11n protokolü öneriliyor; modemin N modunu destekliyorsa N modu için ayar yapman isteniyor."
 images:
   coverAlt: "Oturma odasında televizyon ekranında açık bir kablosuz ağ listesi, sehpanın üzerinde ışıkları yanan beyaz bir modem ve elde tutulan bir kumanda"
+  steps:
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda bekleme süresi için saat"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Smart TV'de uygulamalar açılmıyor, ağ menüsü "bağlı değil" diyor. Vestel'in 43U9540 kılavuzu bu durumu **"Bağlantı Sorunlarını Giderme"** bölümünde **"Kablosuz Ağ Kullanılamıyor"** başlığıyla ele alıyor ve iki şeyle başlıyor: **"Ağınızdaki güvenlik duvarlarının TV'nin kablosuz bağlantısına izin verdiğinden emin olun."** ve **"Ağ menü ekranını kullanarak kablosuz ağları tekrar aramayı deneyin."** Kılavuz bunun ardından kablolu bağlantıyı denemeyi, aynı adlı modemleri, kablosuz parazit yapan cihazlardan üç metre uzaklığı ve ağ sorunu için televizyonu fişten çekip yeniden takmayı anlatıyor. Bu yazıda bu adımları bağlanma tarifinin sırasına koyuyoruz.

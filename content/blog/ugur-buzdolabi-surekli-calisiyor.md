@@ -52,6 +52,14 @@ faq:
     a: "Uğur'un kılavuzları ilk çalıştırmada gıda koymadan önce bir soğuma süresi veriyor: UES 90 / 91 DTK ve UES 304 D2K için 6 saat, UES 470 / 540 NF DGT için 2-3 saat; bu sürede kapı gerekmedikçe açılmıyor."
 images:
   coverAlt: "Mutfakta ocaktan ve pencereden uzakta duran çift kapılı beyaz bir buzdolabı ve kapağı kapalı, tezgâhta soğumayı bekleyen bir tencere"
+  steps:
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Buzdolabının motoru saatlerdir susmuyor; uğultu hiç kesilmiyor. Uğur'un buzdolabı kılavuzlarında bu durum için ayrı bir satır var: **"Kompresör sürekli çalışıyor."** Tablonun karşısına yazdığı nedenlerin hepsi kullanıcının kontrol edebileceği şeyler: termostat ayarı, kapı, sıcak yemek, yük ve ortam sıcaklığı. İlk satır da önemli bir rahatlatma içeriyor: **yaz aylarında cihazın daha uzun çalışması normaldir.**

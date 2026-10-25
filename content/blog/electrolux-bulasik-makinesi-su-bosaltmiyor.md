@@ -43,6 +43,14 @@ faq:
     a: "Electrolux'un önerisi beklemek: sorun tamamen çözülene kadar makineyi kullanmaman, fişini çekmen ve düzgün çalıştığından emin olana kadar tekrar takmaman öneriliyor. Yukarıdaki kontrollerden sonra makineyi kapatıp açtığında sorun tekrarlanırsa Yetkili Servis Merkezi'ni ara; tabloda tanımlanmamış alarm kodları için de kılavuzun yönlendirmesi Yetkili Servis."
 images:
   coverAlt: "Bulaşık makinesinin açık kapağının ardında, alt sepet çıkarılmış tabanda biriken kirli su ve ortadaki filtre yuvası"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Program bitti, kapağı açtın ve makinenin tabanında kirli su duruyor. Electrolux'un ESM89400SX kullanma kılavuzu bu durumu bir alarm koduyla eşleştiriyor: **"Cihaz suyu tahliye etmiyor. Ekranda i20 görünüyor."** Electrolux bu satırda üç yere bakmanı istiyor: **lavabo borusu, iç filtre sistemi ve tahliye hortumu.** Yakın bir satır daha var: ekranda **iF1** görünüyorsa kılavuza göre **cihazın içindeki su seviyesi çok yüksek** demektir ve çözümleri de filtreyle hortuma çıkıyor. Bu yüzden bu rehber dışarıdan içeriye ilerliyor: önce kod, sonra hortum ve lavabo, sonra filtre, en son yeniden başlatma. Kaynak tek bir modelin kılavuzu; kodlar ve filtre yapısı modele göre değişebilir.

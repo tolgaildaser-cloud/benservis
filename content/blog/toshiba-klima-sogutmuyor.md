@@ -47,6 +47,15 @@ faq:
     a: "Toshiba kılavuzuna göre Comfort Sleep soğutmada ayarlanan sıcaklığı 2 saat boyunca saatte 1 derece artırır (en fazla 2 derece). Bu işlevin bilinçli davranışıdır."
 images:
   coverAlt: "Yaz öğleden sonrası bir yatak odasında duvardaki beyaz split klimaya doğru tutulan uzaktan kumanda, arkada kapalı pencere"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor ama oda bir türlü serinlemiyor. Toshiba'nın Türkçe kullanıcı kılavuzu bu durumu "Pratik Çözümler (Kontrol Noktası)" tablosunda **"Soğutma veya Isıtma anormal derecede düşük seviyede."** satırıyla veriyor. Altındaki yedi maddenin çoğu kumandadan ya da odadan düzeltilebilecek ayarlar: mod, fan hızı, POWER SELECTION, açık kapı-pencere, tıkalı hava yolu ve tozlu filtre. Bu yazıda Toshiba'nın listesini, kılavuzun Sessiz çalışma ve bakım notlarıyla birlikte sırayla anlatıyoruz.

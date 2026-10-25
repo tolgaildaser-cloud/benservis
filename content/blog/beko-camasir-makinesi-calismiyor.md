@@ -49,6 +49,14 @@ faq:
     a: "Beko'nun tablosuna göre voltaj düşüklüğü nedeniyle makine bir süre durmuş olabilir; voltaj normal seviyeye geldiğinde makine kaldığı yerden devam eder."
 images:
   coverAlt: "Kapağı kapalı ön yüklemeli çamaşır makinesinin önünde prizdeki fişi kontrol eden bir el; kontrol panelinin ışıkları sönük"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Programı seçtin, tuşa bastın ve hiçbir şey olmuyor; belki ekran bile yanmıyor. Beko'nun çamaşır makinesi kullanma kılavuzlarındaki sorun giderme bölümünde bunun iki ayrı satırı var: **"Makine çalışmıyor. Ekranda hiçbir şey görünmüyor."** ve **"Programı seçtikten ve Başla / Bekle / İptal tuşuna basıldığında makine çalışmıyor."** Beko'nun bu satırlarda saydığı sebeplerin hepsi evde kontrol edilebiliyor: fiş, sigorta, elektrik, açma tuşu ve kapak. Bu yazıda Beko'nun sırasını açıyoruz.

@@ -43,6 +43,14 @@ faq:
     a: "Arçelik'in tablosuna göre sıkma adımında zamanlayıcı durabilir; sebep çamaşırların dengesiz dağılmış olması nedeniyle otomatik dengesiz yük algılama sisteminin devreye girmiş olabilmesi."
 images:
   coverAlt: "Açık kapaklı ön yüklemeli çamaşır makinesinin tamburunda bir yana toplanmış ıslak nevresim ve havlular"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti, kapağı açtın ve çamaşırlar sırılsıklam; ya da süre göstergesi sıkma adımında takılıp kaldı. Arçelik'in çamaşır makinesi kullanma kılavuzundaki sorun giderme tablosunda bu durum iki satırda geçiyor: **"Ürün sıkma adımına geçmiyor"** ve **"Program sonunda çamaşırlar ıslak kalıyor."** Arçelik'in bu satırlarda saydığı sebepler dengesiz dağılmış çamaşır, tahliye edilemeyen su ve fazla deterjanın yaptığı köpük. Kılavuzun başka bir notu buna bir ayarı ekliyor: **Suda Bırakma fonksiyonu etkin olabilir.** Bu yazıda Arçelik'in sırasını açıyoruz.

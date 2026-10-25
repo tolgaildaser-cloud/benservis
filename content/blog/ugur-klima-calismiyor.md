@@ -57,6 +57,14 @@ faq:
     a: "Kılavuzda iç ve dış ünitenin kart üzerindeki sigortalarının tipi yazıyor ama bu bir elektrik müdahalesi; kılavuz bakım, onarım, arıza ve yedek parça işlemleri için Uğur Yetkili Servisi'ne ya da Uğur Müşteri Hizmetleri'ne danışmanı istiyor. Evdeki sigorta panosunu kontrol etmenin ötesinde elektrik aksamına müdahale etme."
 images:
   coverAlt: "Kapalı duran duvar tipi bir klimaya doğru tutulan uzaktan kumanda ve yanında yeni piller"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Kumandada güç tuşuna basıyorsun, klima ne ses veriyor ne kanatlarını açıyor. Uğur'un UIS serisi duvar tipi klima kılavuzundaki sorun giderme tablosu, ünitenin çalışmadığı durum için **"Çoklu kontrol"** başlığında üç soru soruyor: **güç kablosu takıldı mı, bir güç arızası var mı, sigorta yanmış mı?** Kılavuzun kumanda ve acil durum bölümleri de bu üç soruya kumanda tarafını ekliyor.

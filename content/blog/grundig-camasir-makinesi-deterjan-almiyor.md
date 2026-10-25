@@ -42,6 +42,14 @@ faq:
     a: "Grundig'in kılavuzu yıkama programı çalışırken deterjan çekmecesinin açık bırakılmamasını istiyor. Deterjanı ve yumuşatıcıyı programı başlatmadan önce eklemen gerekiyor."
 images:
   coverAlt: "Lavaboda ılık su altında tutulan, gözlerinde toz deterjan topakları kalmış çamaşır makinesi deterjan çekmecesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, çamaşırları çıkardın, çekmeceyi açınca deterjan hâlâ orada: ıslak bir topak ya da gözün dibinde kalıntı. Grundig'in çamaşır makinesi kullanma kılavuzlarındaki sorun giderme tablosunda bu durum tek satır: **"Çekmecede deterjan kalıntısı var."** Grundig bu satırda yedi sebep sayıyor ve yalnız biri, **deterjan gözü vanaları**, servis işi. Geri kalanı nasıl koyduğun, nerede sakladığın ve çekmecenin temizliğiyle ilgili. Bu yazı Grundig'in GWM 91014 ve GWM 9701 Y kılavuzlarına dayanıyor; çekmece temizliği GWM 9801 kılavuzunda da aynı sırayla anlatılıyor.

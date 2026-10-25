@@ -47,6 +47,14 @@ faq:
     a: "LG'ye göre olabilir. Kılavuza göre hatalı deterjan makinenin çalışırken köpükle dolmasına yol açabilir ve aşırı köpük cihazdan kaçağa neden olabilir; çok fazla deterjan da köpüklerin dışarı sızmasına yol açabilir."
 images:
   coverAlt: "Mutfak tezgâhının altındaki bulaşık makinesinin kapağının önünde, zemindeki küçük su birikintisi"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
 ---
 
 Bulaşık makinesinin önünde, mutfak zemininde küçük bir su birikintisi buldun. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabında bu belirtinin kendi satırı var: **"Cihazdan su kaçağı oluyor."** LG bu satırda üç neden sayıyor: makinenin **eğik durması** yüzünden kapağın tam kapanmaması, **boşaltma hortumunun** hatalı montajı ve makine kapalıyken bile su sızdırabilen **kötü musluk bağlantısı.** Kılavuzun başka bölümleri buna iki neden daha ekliyor: **aşırı köpük** ve **serbest dönemeyen püskürtücü kollar.** Bu yazıda önce makinenin kendisine, sonra içine koyduklarına, en son da hortumlara bakıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

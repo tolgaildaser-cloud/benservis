@@ -51,6 +51,14 @@ faq:
     a: "Hayır, o bir hata göstergesi. Arçelik'in 5845 NFEY kılavuzuna göre buzdolabı yeterli soğutma yapmıyorsa ya da bir sensör arızası meydana gelirse hata durumu göstergesi devreye girer; dondurucu göstergesinde 'E', soğutucu göstergesinde 1, 2, 3 gibi rakamlar görünür. Kılavuz bu rakamların servis personeline hata hakkında bilgi verdiğini yazıyor."
 images:
   coverAlt: "Mutfakta kapısı açık duran no-frost buzdolabının önünde, soğutucu bölmenin sıcaklık panelini kontrol eden bir el"
+  steps:
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının içi eskisi kadar soğuk değil ya da dondurucu yumuşamaya başladı. Arçelik'in buzdolabı kullanma kılavuzlarındaki sorun giderme listesinde "soğutmuyor" diye bir başlık yok; bu durumun karşılığı şu satır: **"Soğutucu ya da dondurucudaki sıcaklık çok yüksek."** Arçelik'in bu satırda saydığı nedenlerin hepsi kullanıcı tarafında: **sıcaklık ayarı, kapı, yeni konan yiyecek ve sıcak yemek.** Buzdolabı hiç çalışmıyorsa aynı listenin "Buzdolabı çalışmıyor" ve "Kompresör çalışmıyor" satırlarına bakmak gerekiyor. Bu yazıda üç satırı Arçelik'in kendi sırasıyla açıyoruz.

@@ -42,6 +42,13 @@ faq:
     a: "Kılavuza göre dört bölmenin güç kademesi 9 ise aynı anda yalnız ikisi pişirme yapar, belirli bir süre sonra diğer ikisi devreye girer. Uğur bunu normal bir durum olarak, arıza değil diye yazıyor."
 images:
   coverAlt: "Dört gözlü siyah vitroseramik ocağın dokunmatik panelinde parlayan küçük kilit ışığı, gözler kapalı"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Uğur vitroseramik ocağı açıyorsun, birkaç saniye sonra kendiliğinden kapanıyor; ya da pişirme ortasında göz sönüyor, tuşlar tepki vermiyor. Uğur'un UAO V604 / V302 vitroseramik ocak kılavuzunda ayrı bir sorun giderme tablosu yok, ama ocağın kendini **neden ve ne zaman** kapattığı işlev bölümlerinde tek tek yazıyor. En sık karşılaşılan kural da ilk sayfalarda: **"Ocak açıldıktan 10 saniye sonra ısıtıcılara seviye bilgisi girilmemişse, ocak otomatik olarak kapanır."**

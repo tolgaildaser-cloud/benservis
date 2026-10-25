@@ -48,6 +48,14 @@ faq:
     a: "LG önermiyor. Kılavuza göre Hızlı programda tablet deterjan kullanılırsa görece düşük durulama sıcaklıkları nedeniyle bulaşıklarda deterjan kalıntısı kalabilir. Hızlı program LG'nin tarifiyle hafif kirli bulaşıklar için."
 images:
   coverAlt: "Açık bulaşık makinesinin alt sepetinde kenarında kurumuş yemek artığı kalmış bir tabak, altında görünen püskürtücü kol"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
 ---
 
 Program bitti ama tabağın kenarında hâlâ yemek artığı var. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabındaki performans tablosunda bunun karşılığı **"Bulaşıklarda gıda kiri kalmış."** satırı. LG bu satırda tam sekiz neden sayıyor ve çoğu kullanıcının elinde: **program seçimi, deterjan, yemek artıkları, yerleştirme, püskürtücü kollar ve filtreler.** Su sıcaklığı ve su basıncı gibi iki neden ise evin tesisatıyla ilgili. Bu yazıda LG'nin listesini makineye yükleme sırasına göre diziyoruz. Kaynak tek bir modelin kılavuzu; program ve seçenek adları modele göre değişebilir.

@@ -50,6 +50,14 @@ faq:
     a: "BM 4004 ve BM 5005 kılavuzlarına göre parlatıcı ayarlayıcısı elle çevrilerek 1 ile 6 arasında ayarlanıyor ve fabrika çıkışında 4 konumunda. Beko'nun kuralı: yıkamadan sonra yemek takımlarında su izi oluşuyorsa ayarı artır, elle silindiğinde çıkan mavi bir iz kalıyorsa azalt."
 images:
   coverAlt: "Program sonunda kapısı aralık bırakılmış bulaşık makinesi; üst sepette üzerinde su damlaları kalmış bardaklar ve ters çevrilmiş kaseler"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Program bitti, kapağı açtın ve bulaşıklar hâlâ ıslak. Beko'nun BM 4004 ve BM 5005 kullanma kılavuzlarındaki sorun giderme tablosunda bu durum için ayrı bir satır var: **"Bulaşıklar kurutulmuyor."** Beko'nun bu satırda saydığı sebeplerin hepsi kullanıcı tarafında: **parlatıcı, tablet fonksiyonu, yerleştirme, program seçimi ve bulaşıkları boşaltma zamanı.** Bu yazıda Beko'nun listesini sırayla açıyoruz; teflon tavalar için Beko'nun ne dediğine de bakıyoruz.

@@ -47,6 +47,14 @@ faq:
     a: "LG'nin dönemsel bakım notuna göre sıcak aylarda uzun süre evden uzak kalacaksan su vanasını kapat, güç kablosunu çıkar ya da devre kesiciyi kapat; kokuyu önlemek için de filtreyi, tamburu ve hazneyi temizle."
 images:
   coverAlt: "Kapağı açık, boş bir bulaşık makinesinin tabanındaki filtre yuvası ve üst rafta duran içi beyaz sirkeyle dolu bir bardak"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
 ---
 
 Kapağı açınca yüzüne ekşi, bayat bir koku çarpıyorsa LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabında bunun için ayrı bir satır var: **"Koku."** LG bu satırda üç ayrı neden sayıyor ve her birine ayrı bir çözüm veriyor: yarıda kalmış bir programdan içeride **atık su** kalmış olabilir, **filtrede ya da tabanda gıda artığı** birikmiş olabilir ya da **yıkanmamış bulaşıklar** makinede uzun süre beklemiş olabilir. Bu yazıda bu üç nedeni LG'nin kendi sırasıyla ele alıyoruz, sonra kokunun geri gelmemesi için kılavuzdaki programları anlatıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

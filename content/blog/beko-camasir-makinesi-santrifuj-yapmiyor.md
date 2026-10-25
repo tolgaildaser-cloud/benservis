@@ -49,6 +49,14 @@ faq:
     a: "Beko'nun kılavuzuna göre makine suda bekletme modundayken Sıkma sembolü yanıp söner ve Bekleme sembolü yanar. Sıkma yapmak istiyorsan sıkma devrini ayarlayıp Başla / Bekle / İptal tuşuna bas; program devam ederek suyu tahliye eder ve sıkma yapar. Sıkmadan yalnız suyu boşaltmak istiyorsan yalnızca Başla / Bekle / İptal tuşuna basman yeterli."
 images:
   coverAlt: "Açık kapaklı ön yüklemeli çamaşır makinesinin tamburunda bir tarafa toplanmış ıslak çamaşırlar, önünde boş bir çamaşır sepeti"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti, kapağı açtın ve çamaşırlar sırılsıklam; ya da makine sıkma adımına bir türlü geçmiyor. Beko'nun çamaşır makinesi kullanma kılavuzlarındaki sorun giderme bölümünde bunun karşılığı: **"Makine sıkma adımına geçmiyor."** Beko bu satırda üç sebep sayıyor: **çamaşırın makinede dengesizlik yaratması**, **suyun tahliye edilememesi** ve **fazla deterjanın yaptığı aşırı köpük.** Kılavuzun kullanım bölümü bir dördüncüsünü ekliyor: **Suda Bırakma fonksiyonu etkin olabilir.** Bu yazıda Beko'nun sırasını açıyoruz.

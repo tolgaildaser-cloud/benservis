@@ -50,6 +50,15 @@ faq:
     a: "Arçelik'in sorun giderme listesi toz deterjan kullanılıyorsa miktarın bulaşıkların kirlilik seviyesine ve program tanımlarına uygun olmasını, paketin nemli yerde saklanmamasını ve mümkünse ağzı kapaklı bir kapta tutulmasını istiyor. Aynı liste en iyi sonuç ve saklama kolaylığı için tablet deterjanı öneriyor."
 images:
   coverAlt: "Alt sepeti dışarı çekilmiş bulaşık makinesinde, taban filtresini musluk altında bir fırçayla temizleyen eller"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama tabaklarda yemek kalıntısı, bardaklarda iz var. Arçelik'in bulaşık makinesi kullanma kılavuzlarındaki sorun giderme bölümünde bu durumun ayrı bir satırı var: **"Bulaşıklar temiz yıkanmıyor."** Arçelik bu satırda on iki neden sayıyor ve hepsinin çözümü kullanıcı tarafında: **yerleştirme, pervaneler, filtreler, deterjan, parlatıcı ve program seçimi.** Aynı tablo Arçelik'in 6366, 6343, 9242 MI ve 63101 I kılavuzlarında birebir aynı başlıklarla yer alıyor. Bu yazıda listeyi uygulama sırasına göre açıyoruz.

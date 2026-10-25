@@ -51,6 +51,15 @@ faq:
     a: "Vestel kılavuzu hem iç hem dış ortam sıcaklığı yüksekken ısıtma modu seçildiyse dış ünitenin bazen durabileceğini ve bunun tamamen normal olduğunu yazıyor. Hiçbir şey yapmadan klima yeniden çalışana kadar bekle."
 images:
   coverAlt: "Soğuk bir akşamda kanepede battaniyeyle oturan biri duvardaki beyaz split klimaya kumanda tutuyor, pencerede buğu var"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hava soğudu, klimayı ısıtmaya aldın ama oda ısınmıyor. Vestel'in Türkçe kullanım kılavuzu bu belirti için iki ayrı yere bakmanı söylüyor: sorun giderme tablosundaki **"Klima hava üflüyor ama soğutma ve ısıtma performansı kötü."** satırı ve kılavuzun ısıtmaya ayrılmış "Pratik ve Faydalı Bilgiler" notları. İkincisi önemli, çünkü kışın ısıtmanın kesilmesi her zaman arıza değil: kılavuzun deyişiyle dış ünitede buz oluşunca klima ısıtmayı durdurur ve buz çözmeye geçer, **"Bu bir arıza değildir."** Bu yazıda Vestel'in sırasını, ekranda DF gördüğünde ne yapacağınla birlikte anlatıyoruz.

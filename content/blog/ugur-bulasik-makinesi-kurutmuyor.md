@@ -54,6 +54,14 @@ faq:
     a: "Uğur'un yükleme tavsiyelerinde hasarı önlemek için program bittiği an bardak ve çatal bıçakların makineden çıkarılmaması yazıyor."
 images:
   coverAlt: "Program sonunda kapağı hafifçe aralık bırakılmış bulaşık makinesinin üst sepetinde ters duran, üzerinde su damlaları olan bardaklar"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
 ---
 
 Program bitti ama bardakların dibinde su, tabaklarda damlalar var. Uğur'un UBL serisi bulaşık makinesi kılavuzlarında bu belirti iki satırda geçiyor: **"Bulaşıklar ıslak."** ve **"Bulaşıklar ıslak ve mat."** İki satırın çözümlerinin ortak noktası parlatıcı ve program; ikisi de kullanıcının elinde.

@@ -42,6 +42,13 @@ faq:
     a: "Grundig'in tablosunda bunun ayrı bir satırı var ve beş sebep sayıyor: kapının çok sık açılıp kapanması, ortamın çok nemli olması, sıvı içeren yiyeceklerin açık kaplarda saklanması, kapının açık kalması ve termostatın çok soğuk bir değere ayarlanması. Çözümler sırasıyla kapıyı sık açmamak, ürünü çok nemli ortama kurmamak, sıvılı yiyecekleri kapalı kapta saklamak, kapıyı uzun süre açık tutmamak ve termostatı uygun değere ayarlamak."
 images:
   coverAlt: "Buzdolabının açık kapısından görünen iç yan duvarda ince su damlacıkları, ön planda rafta kapağı açık duran bir çorba kasesi"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Buzdolabının içinde duvarlar ıslak, sebzelik bölmesinin yanında damlacıklar var ya da yaz günü iki kapının arası buğulanıyor. Grundig'in buzdolabı kullanma kılavuzlarındaki sorun giderme tablosu terlemeyi tek bir satırda değil, yerine göre üç ayrı satırda ele alıyor: **"Soğutucu bölmenin (MULTI ZONE, COOL CONTROL ve FLEXI ZONE) yan duvarında terleme."**, **"Ürünün iç duvarlarında terleme oluyor."** ve **"Ürünün dışında ya da kapıların arasında terleme oluşuyor."** Satırların bir kısmını Grundig arıza saymıyor; geri kalanının çözümü kapıda, kaplarda, termostatta ve buzdolabının durduğu yerde. Bu yazı Grundig'in GRND 6101 I ve GSND6384S kılavuzlarına dayanıyor; iki belgede de satırlar aynı. Kılavuzun kendi notu: bahsedilen bazı özellikler senin ürününde olmayabilir.

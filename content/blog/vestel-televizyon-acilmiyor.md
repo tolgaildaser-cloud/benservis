@@ -45,6 +45,14 @@ faq:
     a: "Her zaman değil. 43U9540 kılavuzu iki otomatik bekleme anlatıyor: uzun süre sinyal gelmezse Sinyal Yok Zamanlayıcısı, ayarlanan süre boyunca hiçbir işlem yapılmazsa 1 ile 8 saat arasında ayarlanabilen Otomatik Güç Kesme devreye giriyor. Televizyonu yeniden açtığında hangisinin çalıştığını söyleyen bir mesaj görürsün."
 images:
   coverAlt: "Akşam saatinde oturma odasında kapalı duran siyah ekranlı bir televizyon, önündeki sehpada arka kapağı açık bir kumanda ve yanında iki yeni ince kalem pil"
+  steps:
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda kumandanın pilleri"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda bekleme süresi için saat"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandanın açma tuşuna basıyorsun, ekran karanlık kalıyor. Vestel'in televizyon kılavuzları bu durumu sorun giderme tablosunda **"Cihaz açılmıyor."** satırıyla veriyor ve iki neden sayıyor: güç kablosunun fişi prize takılmamış olabilir, uzaktan kumandanın pilleri bitmiş olabilir. Çözüm de kısa: **"Fişin prize takıldığından emin olunuz."** ve **"Uzaktan kumandanın pillerini yenileriyle değiştiriniz. TV'deki Açma/kapama tuşuna basınız."** Kılavuz bunlara ek olarak yazılım güncellemesinden sonra açılmayan televizyon için iki dakikalık fişten çekme notu ve tepki vermeyen televizyonu yeniden başlatan bir tuş yöntemi de veriyor. Bu yazıda Vestel'in sırasını 43U9540 ve TiVo modellerinin kılavuzlarına dayanarak anlatıyoruz.

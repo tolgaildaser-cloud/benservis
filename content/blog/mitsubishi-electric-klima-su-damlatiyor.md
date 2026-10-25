@@ -49,6 +49,14 @@ faq:
     a: "Kılavuz bu sesleri normal durumlar arasında sayıyor. Mırıltı, aralık başlığı ya da havalandırma vantilatörü açıldığında dışarıdaki havanın boşaltma hortumundan emilip hortumdaki suyu dışarı püskürtmesiyle oluşur; su akma sesi ise soğutucunun ya da ünitede akan yoğun suyun sesidir. Bunlar tek başına damlama anlamına gelmez."
 images:
   coverAlt: "Duvardaki beyaz split klimanın altına konmuş geniş bir kap, yanında katlanmış kuru bir bez ve kenara çekilmiş bir sehpa"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klimanın altında ıslak bir leke ya da damlayan su görüyorsun. Mitsubishi Electric'in Türkçe çalıştırma talimatları bu konuda net bir ayrım yapıyor: dış üniteden su gelmesi çoğu çalışma koşulunda normal; **"İç üniteden su sızıntısı veya damlaması olduğunda"** ise kılavuzun talimatı **klimayı kullanmayı bırakmak ve bayiye başvurmak.** Bu yazıda bu ayrımı nasıl yapacağını ve servise kadar evde güvenle yapabileceklerini anlatıyoruz.

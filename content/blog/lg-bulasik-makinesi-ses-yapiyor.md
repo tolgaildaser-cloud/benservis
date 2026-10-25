@@ -44,6 +44,13 @@ faq:
     a: "LG'nin gürültü satırında su basıncının çok yüksek olması da bir neden olarak geçiyor. Kılavuza göre makinenin izin verilen giriş su basıncı 0,05-1,0 MPa. Evdeki basıncı ölçmek ve ayarlamak bu rehberin kapsamında değil; yetkili servise danış."
 images:
   coverAlt: "Açık bulaşık makinesinin alt sepetinde püskürtücü kolun hemen üstüne denk gelen uzun saplı bir tava"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Bulaşık makinesi çalışırken tıkırtı, takırtı ya da alışılmadık bir uğultu duyuyorsun. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabında bunun için **"Gürültü"** diye ayrı bir satır var ve ilk cümlesi rahatlatıcı: **"Çalışma sırasında bir miktar gürültü seviyesi normaldir."** LG örnek olarak **programın başındaki boşaltma pompasını** sayıyor. Aynı satırda sesin normal olmadığı üç durum da yazıyor: **cihaz hizalanmamış,** **püskürtücü kol bulaşıklara çarpıyor** ya da **su basıncı çok yüksek.** Bu yazıda önce hangi sesin beklenen olduğunu, sonra çarpan bulaşığı ve makinenin dengesini LG'nin kendi kontrolleriyle anlatıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

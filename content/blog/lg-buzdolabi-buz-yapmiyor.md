@@ -53,6 +53,13 @@ faq:
     a: "LG'nin önerisi: haznedeki buzu boşalt, kontrol panelinin kilidini aç ve Buz Açma/Kapama düğmesine üç saniye basılı tutarak buz yapıcıyı kapat. Yeniden buz kullanacaksan buz yapıcıyı kullanmadan bir-iki gün önce aç."
 images:
   coverAlt: "Dondurucu kapısı açık bir buzdolabında boş buz haznesini iki elle tutan biri, rafta birkaç buz küpü duruyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda su ya da toz haznesi"
+    - "Çizim: solda buzdolabı, sağda su ya da toz haznesi"
+    - "Çizim: solda buzdolabı, sağda kapak"
 ---
 
 Buz yapıcılı LG buzdolabın buz yapmıyor. LG Türkiye'nin "**Su/buz ile ilgili sorunları giderme**" sayfası bu belirti için kısa bir kontrol listesi veriyor ve ilk sorusu şu: "**Buz yapıcı kapalı mı?**" LG'ye göre buz yapıcı kapatılırsa buz yapılmaz. Listenin geri kalanı da çoğunlukla evde kontrol edilebilecek şeyler: yeni kurulumda bekleme süresi, su vanası, haznede topaklanan buz ve kapılar. Bu yazı yalnız **buz yapıcılı** LG modeller için; LG'nin sırasını adım adım veriyoruz.

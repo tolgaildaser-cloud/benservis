@@ -57,6 +57,15 @@ faq:
     a: "Siemens'in önerisi: buzdolabını +4 ve −18 derecede kullanıyorsan yılın en sıcak yaz günlerinde +2 ve −20 dereceye alabilirsin. Soğutucu bölmesinin ayarı mekanik bir düğmeyle yapılıyorsa düğmeyi saat yönünde birkaç kademe çevirmek daha soğuk, ters yönde çevirmek daha sıcak bir ayar verir."
 images:
   coverAlt: "Kapısı açık iki kapılı buzdolabının üst rafında üstü kapalı saklama kapları; bir el kapıdaki kumanda panelinin tuşuna basıyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
 ---
 
 Buzdolabının içi ılık ama ortada bir hata kodu yok. Siemens'in kendi destek sayfası bu durumu **"en çok karşılaşılan durumlardan biri"** olarak anlatıyor ve sebeplerin önemli bir kısmını panelde arıyor: buzdolabı **kapalı (stand-by)** kalmış olabilir, **tatil modu** açık olabilir, ayar mevsime uymuyor olabilir. Bu yazıda Siemens'in destek sayfasındaki sırayı, KG56N.. ve KG55N.. serisi kullanım kılavuzlarındaki mod ve arıza bilgileriyle birlikte izliyoruz. Tuş ve simge adları modele göre değişebilir; kendi kılavuzun esastır.

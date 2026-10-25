@@ -51,6 +51,14 @@ faq:
     a: "İki ayrı durum var. Lambalar birkaç saniye yanıp sönüyor ve içecek gelmiyorsa kılavuz yine hazneyi, filtreyi, kahve dağıtıcısını ve kireci gösteriyor. Makine hiç çalışmıyor ve tüm ikaz lambaları yanıp sönüyorsa kılavuzun talimatı cihazın bağlantısını derhal kesip yetkili servis merkezine başvurmak."
 images:
   coverAlt: "Mutfak tezgâhında dar gövdeli çelik bir espresso makinesi, yanında çıkarılmış su haznesi ve filtre tutucu"
+  steps:
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
 ---
 
 De'Longhi Dedica'da tuşa bastın ama fincana kahve gelmiyor. De'Longhi'nin kullanım kılavuzunda bu belirtinin kendi satırı var: **"Espresso kahve çıkmıyor."** Kılavuz bu satırın karşısına beş neden yazıyor ve beşinin de çözümünü kullanıcıya veriyor: haznede su yok, hazne tam oturmamış, filtre tutucunun delikleri tıkanmış, filtre tıkalı, hidrolik devre kireçlenmiş. Bu yazı o beş satırı kılavuzdaki sırayla anlatıyor. Kaynak EC685, EC695 ve EC785 modellerinin ortak Türkçe kılavuzu.

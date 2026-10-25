@@ -53,6 +53,14 @@ faq:
     a: "Vestel kılavuzu ER06 ve ER09 dışındaki hata kodlarında fırına herhangi bir şey yapmamanı ve Yetkili Servis ile iletişime geçmeni söylüyor. Örneğin AF-9786 kılavuzunda Er0 ve Er1 sıcaklık sensörü arızası olarak geçiyor. Kodu ve model adını not et."
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı ve içi karanlık bir ankastre fırının önünde sıcaklık düğmesine uzanan bir el"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Fırını açtın, süre geçti ama içerisi hâlâ soğuk. Vestel'in ankastre fırın kılavuzlarındaki sorun giderme tablosunda bu belirtinin karşılığı var: **"Pişirim yapmıyor veya fırın ısınmıyor."** Tablonun saydığı iki neden de kullanıcı tarafında: sıcaklık kumandasının yanlış ayarı ve açık bırakılan kapak. Bu yazıda Vestel'in AF-107892 X WIFI, AF-9786 ve VAF serisi kılavuzlarındaki sırayı tek tek açıyoruz; düğme ve ekran adları modele göre değişebilir.

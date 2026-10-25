@@ -57,6 +57,14 @@ faq:
     a: "Beko'nun tablosunda bunun ayrı bir satırı var. Sebepler: ön yıkama seçilmediği hâlde ön yıkama gözüne deterjan konmuş olması ya da deterjanla yumuşatıcının karışması. Beko'nun çözümü çekmeceyi sıcak suyla yıkayıp temizlemek, deterjanı doğru göze koymak ve yumuşatıcıyı deterjanla karıştırmamak."
 images:
   coverAlt: "Yükleme kapağı ve deterjan çekmecesi aralık bırakılmış ön yüklemeli çamaşır makinesi; lavabonun yanında yıkanmış çekmece ve sifon parçası"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Yıkamadan yeni çıkan çamaşırlar temiz kokmuyor ya da makinenin kapağını açınca içeriden ağır bir koku geliyor. Beko'nun D4 9101 E, D4 9122 E, D4 8102 E ve D3 5061 B kullanma kılavuzlarındaki sorun giderme tablosunda bu durumun kendi satırı var: **"Yıkama performansı kötü: Çamaşırlar kötü kokuyor."** Beko'nun açıklamasına göre **devamlı düşük sıcaklıkta ve/veya kısa programlarda yıkama nedeniyle kazanda koku ve bakteri tabakaları oluşabilir.** Beko bunun için üç şey öneriyor: **deterjan çekmecesinin temizliği, düzenli kazan temizliği ve her yıkamadan sonra aralık bırakılan kapak ile çekmece.** Bu yazıda üçünü sırayla açıyoruz.
