@@ -14,6 +14,10 @@ category: "Küçük Ev Aletleri"
 #  (B) KTM-2919 Çay Makinesi kılavuzu 28 s.  md5 7e52ae2c22ba35c01e2555d7da24df8d  TR s.8-10 (dijital panel, kireç belirtisi)
 #  (C) KTM-2921 Çay Makinesi kılavuzu 8 s.  md5 a816f9d90ad5dfb027dcf0de248455d5  TR s.4-5 (susuz çalışma koruması, tekrar kaynatma)
 # BİLEREK YAZILMAYANLAR: termostat, rezistans, güç tabanı kontağı teşhisi · tabanı açma · sıcak tutma lambası arızası (belgede yok) · fiyat, yedek parça bağlantısı (#46).
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KTM-2914 Çay Makinesi kılavuzu 12 s. TR s.6-7  md5 7643f9e289bd7d44afe024ae56a7bc22
+#  Cam su ısıtıcılı; kullanım metni KTM-2907 ailesinden farklı (iki düğme aynı anda, neon/mavi ışık). Kireç tarifi yok; kireç yazısına eklenmedi.
+# Ek alıntı tablosu: kiwi-cay-makinesi-calismiyor.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-cay-makinesi-calismiyor.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -56,6 +60,8 @@ images:
 
 Sabah çayı için Kiwi çay makinesini çalıştırdın ama su ısınmıyor, ısınıp kaynamadan kapanıyor ya da bir kez kaynatıp tekrar çalışmıyor. Kiwi'nin çay makinesi kılavuzları bu belirtilerin çoğunu kullanım bölümünde tek tek açıklıyor: az su, açık kapak, sıkışmış tuş, susuz çalışma koruması ve kireç. Bu yazı **KTM-2907 ailesi (KTM-2908, KTM-2910, KTM-2911, KTM-2930 semaver dahil), KTM-2919 ve KTM-2921** Türkçe kılavuzlarına dayanıyor.
 
+Cam su ısıtıcılı **KTM-2914**'ün kılavuzu da bu kontrolleri destekliyor; farkları adımların altında.
+
 > ⚡ **Kısa özet:** Fişi ve prizi kontrol et. Suyu minimum ve maksimum işaretleri arasına getir. Susuz çalıştıysa soğut, soğuk su doldur. Su ısıtıcıyı kendi tabanına düz oturt. Kapağı kapat, tuşun önünü aç. Tuşu aşağı indir ya da dijital programı seç. Kaynamadan kapanma sürüyorsa kireç temizliği yap.
 
 ## Belirtiye göre kılavuzun söylediği
@@ -88,6 +94,10 @@ Sıcak tutma da modele göre değişiyor. KTM-2919'da su kaynadıktan sonra sıc
 
 **8. Müşteri hizmetlerini ara.** Bu adımlardan sonra da makine çalışmıyorsa fişi çek ve Kiwi müşteri hizmetlerini ya da yetkili servisi ara. Kiwi aramadan önce cihazın altındaki etiketteki model numarasını hazır tutmanı istiyor.
 
+## KTM-2914'te farkı
+
+KTM-2914'te su ısıtıcıyı doldurmadan önce üstteki kapağı çıkar, suyu en az MIN seviyesine koy, MAX'ı geçme ve taban ünitesi üzerindeyken doldurma. Kapak açıkken ya da çıkarılmışken çalıştırma. Su ısıtıcıyı tabanına koyup fişi taktıktan sonra **ana güç düğmesini ve sıcak tutma düğmesini aynı anda** aç. KIRMIZI neon ışık cihazın güce bağlı olduğunu gösterir ve su kaynayınca söner; düğmenin sıcak tutma tarafını açtığında mavi ışık yanar. Bu modelde de otomatik ısıtma var; suyla doldurmadan fişe takma. Kılavuz bir kireç tarifi vermiyor.
+
 ## Ne zaman servis?
 
 | Durum | Kimin işi |
@@ -102,3 +112,5 @@ Sıcak tutma da modele göre değişiyor. KTM-2919'da su kaynadıktan sonra sıc
 ---
 
 **Kaynak künyesi.** Su seviyesi, otomatik ısıtma, kuru kaynama koruması, kapak ve tuş uyarıları, tekrar kaynatma ve kireç belirtisi Kiwi'nin Türkçe kullanım kılavuzlarından (KTM-2907, KTM-2919, KTM-2921; aynı metni taşıyan KTM-2908, KTM-2910, KTM-2911 ve KTM-2930) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KTM-2914 bilgileri bu modelin Kiwi Türkçe kullanım kılavuzundan alınmıştır.

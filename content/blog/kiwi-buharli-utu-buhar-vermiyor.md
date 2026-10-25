@@ -15,6 +15,10 @@ category: "Küçük Ev Aletleri"
 #  (D) KSI-6323 Akıllı Buharlı Ütü föyü 2 s.  md5 ed6ded79918e52bcdbfcb5c13a155f3c  TR sütunu s.2 (otomatik kapanma)
 #  (E) KSI-6317 Seyahat Tipi Buharlı Ütü kılavuzu 12 s.  md5 a7e6828665fd27c455136e66e5723d6c  TR s.6-7 (PUSH, buhar deliği temizliği)
 # BİLEREK YAZILMAYANLAR: kendini temizleme düğmesinin kullanımı (parça listesinde var, kılavuzlarda tarifi yok) · sirke/kireç çözücüyü hazneye koyma · pompa/rezistans/termostat teşhisi · gövde açma · su tipi önerisi (buharlı ütü kılavuzlarında yok) · fiyat (#46).
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KSI-6316 kılavuz 16 s., Türkçe bölüm yok, EN s.2-3  md5 2db05bc05db7537be3d8d2228e32978f · KSI-6344 kılavuz 16 s., Türkçe bölüm yok, EN s.2-3  md5 d89b19dc98cb064c3c30f41a4eda54a9
+#  İki modelin Kiwi kılavuzunda Türkçe bölüm yok; Kiwi'nin İngilizce baskısı kullanıldı, alıntılar çevrildi, orijinali KAYNAK-EK'te. KSI-6306 ürün sayfasındaki PDF KSI 6305 kılavuzu çıktı; eklenmedi.
+# Ek alıntı tablosu: kiwi-buharli-utu-buhar-vermiyor.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-buharli-utu-buhar-vermiyor.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -57,6 +61,8 @@ images:
 
 Kiwi buharlı ütün ısınıyor, gömlek de düzleşiyor, ama tabandan buhar gelmiyor. Kiwi'nin Türkçe kullanım kılavuzları bu durumu ayrı bir arıza başlığıyla ele almıyor. Buna karşın buharın hangi koşulda çıktığını ve hangi koşulda bilerek kesildiğini açıkça yazıyor. Bu yazı o koşulları **KSI-6322, KSI-6347, KSI-6357, KSI-6323 ve KSI-6317** kılavuzlarından sırayla topluyor. Kılavuzların en önemli cümlesi şu: buharlı ütüleme **yalnızca en yüksek sıcaklık seçildiğinde** mümkün.
 
+**KSI-6316** ve **KSI-6344** için Kiwi'nin kılavuzunda Türkçe bölüm yok; kılavuzun İngilizce baskısı aynı kuralları veriyor: buharlı ütüleme yalnız en yüksek sıcaklıkta mümkün, kırmızı pilot ışık sönünce ütü hazır, art arda üçten fazla şok buhar yok, buhar deliklerine hafif kireç çözme solüsyonuyla nemlendirilmiş pamuk uç. Farkları aşağıda.
+
 > ⚡ **Kısa özet:** Fişi çekip hazneyi MAX'a kadar doldur. Kadranı en yüksek sıcaklığa al ve gösterge ışığının sönmesini bekle. Buhar düğmesini aç. Şok buhara art arda üçten fazla basma. Akıllı modelde ışık yanıp sönüyorsa ütü kendini kapatmıştır; hareket ettir. Buhar delikleri tortuluysa ütü soğukken nemli pamukla temizle.
 
 ## Kiwi kılavuzunda buharın kesildiği durumlar
@@ -93,6 +99,10 @@ Kiwi'nin üç noktalı kadranında "•" naylon ve asetat, "••" yün, ipek v
 
 KSI-6322, KSI-6347, KSI-6357 ve KSI-6323 kılavuzlarına göre şeffaf su haznesinin içindeki özel filtre suyu yumuşatır ve tabanda kireç oluşumunu engeller. Filtre kalıcıdır, değiştirilmesi gerekmez. Bu ütülerde parça listesinde bir **kendini temizleme düğmesi** de görünüyor, ama Türkçe kılavuz metni bu düğmenin nasıl kullanılacağını anlatmıyor. Düğmeyi denemeden önce kendi kılavuzunun resimli sayfasına bak. Saklamadan önce haznede kalan suyu boşalt; Kiwi bunu da istiyor.
 
+## KSI-6316 ve KSI-6344'te farkı
+
+İki kılavuzun İngilizce baskısı hazneyi doldurmadan önce buhar ayarını kuru ütülemeye almanı, suyun sertse yalnız damıtık ya da demineralize su kullanmanı istiyor; kimyasal kireci alınmış ya da parfümlü su kullanma, ütüyü haznede suyla saklama. KSI-6344'ün parça listesinde buharı azaltmak için bir **buhar miktarı kontrol düğmesi** var; buhar zayıfsa önce bu düğmenin konumuna bak (çıkarım: kılavuz düğmeyi yalnız parça adıyla veriyor).
+
 ## Ne zaman servis?
 
 | Durum | Kimin işi |
@@ -107,3 +117,5 @@ KSI-6322, KSI-6347, KSI-6357 ve KSI-6323 kılavuzlarına göre şeffaf su haznes
 ---
 
 **Kaynak künyesi.** Buharın çıktığı ve kesildiği koşullar, şok buhar kuralı, otomatik kapanma, kireç önleme filtresi ve temizlik bilgileri Kiwi'nin Türkçe kullanım kılavuzlarından (KSI-6322, KSI-6347, KSI-6357, KSI-6323, KSI-6317) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KSI-6316 ve KSI-6344 bilgileri bu modellerin Kiwi kılavuzlarının İngilizce baskısından çevrilmiştir; iki kılavuzda Türkçe bölüm yok.
