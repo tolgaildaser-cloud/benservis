@@ -214,7 +214,7 @@ export function olayMetni(olay) {
     case "teknisyen": return "Teknisyen: " + (deger === "yok" ? "yok" : deger.toUpperCase());
     case "garanti": return "Garanti: " + (GARANTI_AD[{ e: "E", h: "H", bilinmiyor: "?" }[deger]] || deger);
     case "tercih": return "Müşteri tercihi güncellendi";
-    case "kapanis": return "Kapanış bilgisi girildi";
+    case "kapanis": return deger === "duzeltme" ? "Kapanış bilgisi düzeltildi" : deger === "teknisyen" ? "Kapanış bilgisi girildi (teknisyen)" : "Kapanış bilgisi girildi";
     case "not": return "Temsilci notu güncellendi";
     case "seri": return "Seri no girildi";
     case "foto": return "Seri no fotoğrafı yüklendi";
