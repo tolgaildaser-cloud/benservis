@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kapağı kapalı paslanmaz bir ankastre fırın"
   steps:
-    - "Kapağı açık, boş ve temiz bir fırın içi ve raf"
-    - "Fırın kumanda panelinin ortasındaki dijital ekran"
-    - "Fırın kumanda panelinin solundaki işlev kadranı"
-    - "Fırın kumanda panelinin sağındaki sıcaklık kadranı"
-    - "Işığı yanan, kapağı kapalı ve çalışan bir fırın"
-    - "Fırın ekranında yanan zamanlayıcı göstergesi"
-    - "Kapalı konumdaki fırın kadranları"
+    - "Çizim: solda ankastre fırın, sağda ambalaj kutusu"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Yeni bir Smeg fırın aldın ya da evdeki fırını ilk kez kullanacaksın. Panelde iki kadran ve bir ekran var, ama fırın bir türlü ısınmaya başlamıyor ya da hangi simgenin ne olduğu belli değil. Bu yazı Smeg'in SF6390XE elektrikli fırını için yayımladığı kullanım kılavuzuna dayanıyor; aynı kılavuz çok işlevli ve pirolitik modelleri birlikte anlatıyor. Smeg'in Türkiye sitesindeki indirme sayfasında Türkçe dil seçeneği yok; kılavuzun İngilizce baskısını kullandık ve alıntıları Türkçeye çevirdik. Senin modelin farklıysa kendi kılavuzunla karşılaştır.

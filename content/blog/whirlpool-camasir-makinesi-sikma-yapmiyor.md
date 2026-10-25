@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Tamburunda ıslak çamaşır duran, kapağı kapalı önden yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi panelinde sıkma hızı düğmesi ve ekran"
-    - "Tamburda son durulama suyunda bekleyen çamaşırlar"
-    - "Tamburun bir yanına toplanmış büyük bir yorgan"
-    - "Kapak camının arkasında köpüklü su"
-    - "Lavabo altında gider bağlantısına uzanan gri bir tahliye hortumu"
-    - "Banyo zemininde duran çamaşır makinesinin ayakları ve üstünde su terazisi"
-    - "Tanıtım etiketi görünen bir çamaşır makinesinin kapak kenarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda arka paneldeki taşıma emniyeti cıvataları"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ama Whirlpool çamaşır makinenden çamaşırlar sırılsıklam çıkıyor, ya da makine sıkma aşamasına gelince dönmeye başlayıp vazgeçiyor. Kılavuzlara göre bunun çoğu zaman bir ayar, bir yük ya da köpükle ilgisi var; motor arızası listenin en sonunda. Bu yazıda Whirlpool'un FSCR 90426 kullanım kılavuzunu ve FFB 8458 BV EE hızlı başvuru kılavuzunu (ikisi de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) sıraya koyduk. Senin modelinde düğme adları farklı olabilir; kendi kılavuzunla karşılaştır.

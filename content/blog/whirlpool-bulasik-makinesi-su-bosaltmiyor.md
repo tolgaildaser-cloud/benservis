@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinin tabanında biriken bulanık su"
   steps:
-    - "Kapağı kapalı ve paneli yanan bir bulaşık makinesi"
-    - "Prizden çekilmiş bir fiş ve yanında duran bulaşık makinesi"
-    - "Lavabo altı dolabında gevşek ve düz uzanan gri bir tahliye hortumu"
-    - "Lavabo altındaki sifon ve boşaltma borusu bağlantısı"
-    - "Bulaşık makinesinin tabanında silindir biçimli filtre ve altındaki tas filtre"
-    - "Musluk altında fırçayla yıkanan bulaşık makinesi filtresi"
-    - "Filtresi yerine takılmış, alt rafı boş bir bulaşık makinesi tabanı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ama Whirlpool bulaşık makinenin tabanında bulanık su duruyor, makine kötü kokmaya başladı ya da ekranda **F3** yanıp sönüyor. Whirlpool'un WFE 2B19 bulaşık makinesi için yayımladığı Türkçe Günlük Referans Kılavuzu ve WFC 3C42 modelinin kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) boşaltmama için aynı dört sebebi sayıyor. Bu yazıda o sırayı ve filtre temizliğini kılavuzun anlattığı şekilde verdik. Senin modelinde filtre biçimi farklı olabilir; kendi kılavuzunla karşılaştır.

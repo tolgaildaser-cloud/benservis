@@ -47,12 +47,12 @@ faq:
 images:
   coverAlt: "Koridor duvarına asılı beyaz bir kombi ve ekranında sabit duran bir uyarı yazısı"
   steps:
-    - "Ardına kadar açık bir pencere ve boş, sakin bir mutfak"
-    - "Duvardaki gaz sayacı ve yanındaki kapalı bir vana"
-    - "Kombinin kumanda panelindeki yuvarlak çalışma konumu düğmesi"
-    - "Duvara asılı kombinin karanlık ekranının yakın planı"
-    - "Kombi ekranında küçük bir alev simgesi"
-    - "Kombinin yanında tezgâhta duran kapalı bir alet çantası ve katlanmış bir kılavuz"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi çalışmıyor, ekranda E01 sabit duruyor. Alarko Seradens Super kombilerin kullanım kılavuzunda bu kodun adı açık: **alev yok ya da sahte alev**. Kılavuz bu kod için kullanıcıya üç adım bırakıyor ve hepsi gazla, yani kombinin dışındaki bir şeyle başlıyor. Bu yazıda o adımları, sırasını ve nerede durman gerektiğini Alarko'nun kendi kılavuzundan topladık. Kaynak Seradens Super SRS 20/24/28/36 kılavuzu; başka bir Alarko modelinde düğme yerleri farklı olabilir, kendi kılavuzunla karşılaştır.

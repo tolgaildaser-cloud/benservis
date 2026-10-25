@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve ekranında yanıp sönen küçük bir uyarı"
   steps:
-    - "Pencereleri açık, boş ve sakin bir mutfak"
-    - "Kombi ekranının yakın planı ve yanında duran küçük bir not kâğıdı"
-    - "Sakin bir koridorda duvardaki kapalı kombi ve yanında bekleyen bir sandalye"
-    - "Kombinin altında borular arasındaki sarı kollu gaz vanası"
-    - "Kombi ön panelinde diğerlerinden ayrı duran tek bir tuş"
-    - "Duvardaki sigorta kutusunun kapalı kapağı"
-    - "Kombinin yanında tezgâhta duran katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi durdu, ekranda bir kod var ve ilk akla gelen reset. Airfel'in Maestro Optimum, Maestro Comfort ve Maestro Power kullanım kılavuzlarında reset var, ama her kod için değil ve her şeyi çözmüyor. Bu yazıda reset tuşunun hangisi olduğunu, nasıl basılacağını, resetin işe yaramadığı kodları ve nerede durman gerektiğini bu üç kılavuzdan topladık. Senin kombinde tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

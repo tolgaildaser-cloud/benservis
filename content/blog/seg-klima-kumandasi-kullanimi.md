@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Beyaz bir klima kumandası ve arkada duvara monte edilmiş beyaz split klima iç ünitesi"
   steps:
-    - "Arka pil kapağı açılmış beyaz bir klima kumandası ve yanında iki kalem pil"
-    - "Ekranında saat göstergesi yanıp sönen bir klima kumandası"
-    - "Odanın ortasından duvardaki klimaya doğru yöneltilmiş bir kumanda"
-    - "Klima kumandasının ekranındaki mod simgelerinin yakın planı"
-    - "Klima kumandasının sıcaklık artırma ve azaltma düğmeleri"
-    - "Yatay kanadı aşağı doğru açılmış beyaz bir klima iç ünitesi"
-    - "Akşam ışığında yatak odası duvarında sessizce çalışan bir klima"
-    - "Ön kapağı yukarı kaldırılmış bir klima iç ünitesinin önden görünümü"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 SEG klima kumandasında otuzdan fazla tuş ve gösterge var, ama günlük kullanımda işin çoğunu birkaç tuş görüyor: açma/kapama, soğut, ısıt ve sıcaklık okları. Kumandadaki işaretlerin ne anlama geldiğini bilmek, "tuşa basıyorum ama olmuyor" durumunu da büyük ölçüde açıklıyor. Bu yazı SEG INV 9/12/18/24 duvar tipi split klima kullanım kılavuzuna dayanıyor. Kılavuz Vestel'in kılavuz sunucusunda duruyor; SEG klimaları Vestel Beyaz Eşya üretiyor. Senin kumandan farklı bir modele aitse tuş yerleri değişebilir.

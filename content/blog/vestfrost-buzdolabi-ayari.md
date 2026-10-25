@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Beyaz, iki kapılı uzun bir no frost buzdolabının önden görünüşü"
   steps:
-    - "Buzdolabı kapağı üzerinde yan yana küçük ışıklar ve tek bir dokunmatik tuş"
-    - "Buzdolabı panelindeki dokunmatik tuşa basılmış hâli ve yanan tek ışık"
-    - "Soğutucu rafında duran küçük bir buzdolabı termometresi"
-    - "Market alışverişiyle doldurulmuş buzdolabı rafları"
-    - "Kapağı aralık bırakılmış boş ve temiz bir buzdolabı"
-    - "Yeni yerleştirilmiş, kapısı kapalı bir buzdolabı ve yanındaki ambalaj kartonu"
-    - "Mutfakta güneş almayan bir köşeye yerleştirilmiş buzdolabı"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
 ---
 
 Vestfrost buzdolabın ya fazla soğutuyor ya da sebzeler çabuk bozuluyor ve ayarın kaç olması gerektiğini merak ediyorsun. "Vestfrost buzdolabı ayarı" sorusunun cevabı için Vestfrost'un Danimarka'daki resmî sitesinden bağlanan VCF 20180 NoFrost kılavuzunu kullandık. Vestfrost'un Türkiye sitesi artık açılmıyor ve Türkçe kılavuz bulunmuyor; bu yüzden **kılavuzun İngilizce baskısını** kullandık ve alıntıları Türkçeye çevirdik. Dikkat: Türkiye'de satılmış Vestfrost modellerinde panel farklı olabilir. Sıcaklık hedefleri ve genel kurallar çoğu buzdolabına uyar; tuş adımları ise bu panele özel.

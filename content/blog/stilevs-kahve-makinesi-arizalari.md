@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında çelik cezveli otomatik bir Türk kahvesi makinesi ve yanında bir fincan"
   steps:
-    - "Duvardaki topraklı prize doğrudan takılmış bir mutfak aleti fişi"
-    - "Kahve makinesinin yuvasına oturtulmuş çelik pişirme haznesi"
-    - "Pişirme haznesine dökülen su ve yanında bir ölçü kaşığı kahve"
-    - "Nemli bir bezle silinen çelik pişirme haznesinin iç yüzeyi"
-    - "Kahve makinesinin ön yüzündeki yuvarlak başlatma düğmesi"
-    - "Işıkları sönük, tezgâhta bekleyen bir Türk kahvesi makinesi"
-    - "Tezgâhta kahve makinesinin yanında duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 Stilevs Türk kahvesi makinen çalışmıyor, sürekli kırmızı ışık yanıyor ya da kahveyi köpüksüz pişiriyor; aklına "arıza" ve "resetleme" geliyor. Stilevs'in sitesinde satışta olan otomatik kahve makinesi **Sadem X Inox Otomatik Türk Kahvesi Makinesi** ve bu yazı onun Türkçe kullanma kılavuzuna dayanıyor. Önce bilmen gereken bir şey: kılavuzda ayrı bir reset tuşu ya da fabrika ayarı yok. Kılavuzun anlattığı, makinenin ışık ve seslerle ne söylediği ve pişirmeyi nasıl iptal edip yeniden başlatacağın. Arıza sandığın şeylerin çoğu bu sinyallerle çözülüyor.

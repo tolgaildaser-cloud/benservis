@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Oturma odasında ekranında boş kanal listesi görünen televizyon"
   steps:
-    - "Kanepenin kolunda duran televizyon kumandası"
-    - "Duvardaki anten prizine takılı koaksiyel kablo"
-    - "Televizyon ekranında yayın türü seçim listesi"
-    - "Televizyon ekranında ilerleyen otomatik kanal araması"
-    - "Televizyon ekranında frekans giriş alanları"
-    - "Televizyon ekranında kanal ayarları menüsü"
-    - "Televizyon ekranında açık duran düzenlenebilir kanal listesi"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda temizleme bezi"
 ---
 
 Sunny televizyonunu açtın ve kanalların hepsi ya da bir kısmı gitmiş. Bu çoğu zaman bir ayar ya da yayın değişikliğinden kaynaklanıyor: fabrika ayarına dönüş, yayıncının liste güncellemesi, yanlış kaynak ya da yanlış yayın türü. Bu yazıda Sunny'nin kendi sitesindeki televizyon destek sayfasının "Kurulum ve Kanal İşlemleri" bölümünü ve Sunny kullanım kılavuzunu temel aldık. Sunny'nin sayfası menü adlarının ve adımların modele ve işletim sistemine göre değiştiğini özellikle belirtiyor; aşağıdaki adımlarda menü adlarını Sunny'nin saydığı seçeneklerle birlikte verdik.

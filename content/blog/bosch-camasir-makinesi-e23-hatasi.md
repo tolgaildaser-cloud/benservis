@@ -52,14 +52,14 @@ faq:
 images:
   coverAlt: "Banyoda beyaz önden yüklemeli bir çamaşır makinesi ve önündeki zeminde küçük bir su birikintisi"
   steps:
-    - "Çamaşır makinesinin arkasında duvara monte, kolu kapalı konuma çevrilmiş bir su musluğu"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve yanında boş duran priz"
-    - "Kapalı çamaşır makinesi kapağının camından görünen ıslak çamaşırlar"
-    - "Çamaşır makinesinin yan tarafından arkaya doğru uzanan gri ve beyaz iki hortum"
-    - "Lavabo kenarına sabitlenmiş gri bir tahliye hortumunun ucu"
-    - "Musluğa vidalanmış beyaz bir su giriş hortumunun bağlantı somunu"
-    - "Yarı açık bir deterjan çekmecesi ve kenarında kurumuş köpük izi"
-    - "Çamaşır makinesi kapağının iç kenarındaki ürün etiketi ve yanında katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Ekranda E:23 yanıyor, belki makinenin önünde de su var. Bosch bu kodu açık yazıyor: **küvet içinde su var, cihaz sızdırıyor.** WAK24210TR, WAK20200TR, WAT ve WIW serisinin Türkçe kılavuzlarında satır aynı, talimat da aynı: su musluğunu kapat, servisi çağır. Bu yazıda kodun anlamını, servisi beklerken evde güvenle yapabileceklerini ve kılavuzun sızıntıyla ilgili diğer satırlarını bu dört kılavuzdan topladık. Senin modelinde tuş ve kapak yerleri farklı olabilir; kendi kılavuzunla karşılaştır.

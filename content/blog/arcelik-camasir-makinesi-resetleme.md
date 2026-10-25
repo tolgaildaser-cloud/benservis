@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında beyaz, ön yüklemeli bir çamaşır makinesi ve sönük kumanda paneli"
   steps:
-    - "Çamaşır makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Çamaşır makinesi kumanda panelinde yuvarlak bir başlat tuşunun yakın planı"
-    - "Çamaşır makinesinin büyük, yuvarlak program seçim düğmesi"
-    - "Kapalı cam kapağın ardında boş ve sakin bir çamaşır tamburu"
-    - "Çamaşır makinesinin alt köşesinde kapalı duran pompa filtresi kapağı"
-    - "Açık duran deterjan çekmecesi ve yanında bir kap toz deterjan"
-    - "Çamaşır makinesinin üstünde katlanmış duran bir kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program takıldı, ekran tepki vermiyor ya da yanlış programı başlattın; ilk akla gelen "makineyi resetlemek". Arçelik'in çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok**. Kılavuzdaki karşılığı **"Programın iptal edilmesi"** bölümü; 9103 HE kılavuzunun sorun giderme tablosu bu işi açıkça **"makineyi fabrika ayarlarına getirmek"** diye tarif ediyor. Bu yazıda Arçelik'in iki kılavuzundan, tuşlu 9103 HE ile Program Seçim düğmesiyle çalışan 7103 D'den, sıfırlamanın doğru yolunu sırayla çıkardık. Tuş yerleri modelden modele değişir; kendi kılavuzunla karşılaştır.

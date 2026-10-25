@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin program düğmesi ve dijital ekranı"
   steps:
-    - "Çamaşır makinesi ekranında yanan küçük simgeler"
-    - "Program sırasında kapalı ve kilitli duran çamaşır makinesi kapağı"
-    - "Çamaşır makinesi panelinde kilit simgeli bir düğme"
-    - "Çamaşır makinesi ekranında saat simgesi ve geri sayım"
-    - "Çamaşır makinesinin arkasındaki musluk ve giriş hortumu"
-    - "Seçenek düğmelerinin üzerinde yanan küçük ışıklar"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Whirlpool çamaşır makinenin ekranında bir anahtar, bir kilit ya da musluk simgesi yandı ve ne anlama geldiğini bilmiyorsun. Bazıları sadece bilgi veriyor, bazıları senden bir şey bekliyor, bazıları ise arıza haberi. Bu yazıda Whirlpool'un FFB 8458 BV EE hızlı başvuru kılavuzunun ve FSCR 90426 kullanım kılavuzunun (ikisi de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) gösterge listelerini Türkçeye aktardık. Senin modelinde simgeler ve yerleri farklı olabilir; kendi kılavuzunla karşılaştır.

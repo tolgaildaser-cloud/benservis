@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran gümüş renkli, alt kısmı dondurucu olan kombi tipi bir buzdolabı"
   steps:
-    - "Buzdolabı kapağı üzerindeki küçük dokunmatik kumanda panelinin yakın planı"
-    - "Kapağı kapalı bir buzdolabının yanında duvardaki priz"
-    - "Işığı yanan ama içi boş bir buzdolabının açık soğutucu bölmesi"
-    - "Buzdolabı kumanda panelinde yan yana dizili küçük sembollü tuşlar"
-    - "Buzdolabı rafında duran küçük bir termometre"
-    - "Buzdolabının arkasından prize uzanan elektrik kablosu"
-    - "Kumanda paneli ışıkları yanan bir buzdolabının kapağı"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabı garip davranıyor: ekranda bir şey yanıp sönüyor, ikaz sesi susmuyor ya da ışık yandığı hâlde içerisi soğumuyor. İlk akla gelen "resetlemek" oluyor. İncelediğimiz üç Bosch kılavuzunda, KGN76, KGN ve KGE serilerinde, **"reset" adında bir tuş yok.** Ama kılavuzlar sıfırlamanın karşılığı olan adımları tek tek yazıyor: cihazı kapatıp açmak, **sergileme modunu** kapatmak, alarmı susturmak ve cihazın **kendi kendine testini** çalıştırmak. Bu yazıda bu adımları belirtiye göre sıraladık. Tuş adları ve sembolleri modele göre değişir; kendi kılavuzunla karşılaştır.

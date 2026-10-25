@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Oturma odasında ekranında sistem menüsü açık duran televizyon"
   steps:
-    - "Duvar prizinden çekilmiş televizyon güç kablosu"
-    - "Televizyon ekranında açık duran görüntü ayarları menüsü"
-    - "Masada açık duran bir not defteri ve kalem"
-    - "Televizyon ekranında sistem menüsünde fabrika ayarları satırı"
-    - "Televizyon ekranında cihaz tercihleri listesi"
-    - "Televizyon ekranında şifre giriş kutusu"
-    - "Televizyon ekranında dil seçimiyle açılan ilk kurulum ekranı"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sunny televizyonun donuyor, menüler karıştı ya da televizyonu başkasına vereceksin ve "resetleme" arıyorsun. Sunny'de bunun iki ayrı yolu var: yeniden başlatma ayarları silmeden sistemi tazeler, fabrika ayarı ise her şeyi ilk günkü hâline getirir. Bu yazıda Sunny'nin kendi sitesinde yayımladığı uydulu ve Smart televizyon kullanım kılavuzlarını ve Sunny'nin televizyon destek sayfasının "Yazılım ve Sistem" bölümünü temel aldık. Kılavuzlar görüntü tabanlı olduğu için menü yollarını sayfa görüntülerinden okuduk.

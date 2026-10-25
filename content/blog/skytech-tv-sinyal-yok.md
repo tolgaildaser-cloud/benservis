@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Duvara monte edilmiş düz ekran televizyonda düz renkli boş ekran"
   steps:
-    - "Kapağı açık duran bir televizyon kullanım kılavuzu"
-    - "Televizyon ekranında açılmış giriş kaynağı listesi"
-    - "Televizyon ayarlar menüsünde gelişmiş seçenekler ekranı"
-    - "Televizyonun arka panelindeki anten ve uydu girişleri"
-    - "Ekranında sinyal gücü çubukları görünen bir televizyon menüsü"
-    - "Televizyonun yan tarafındaki giriş yuvasına takılı bir HDMI kablosu"
-    - "Çatıdaki bir çanak antenin ucundaki LNB başlığı"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
 ---
 
 Skytech televizyonun ekranında "Sinyal Yok" yazıyor. Önce şunu bil: Skytech'in tek bir kılavuzu yok. Üreticinin sitesinde Android, uydu alıcılı, Google TV, webOS ve Whale işletim sistemli modeller için ayrı kılavuzlar duruyor ve kaynak tuşunun adı bile aralarında değişiyor. Ortak olan ise sorun giderme tablosu: Sinyal Yok uyarısı için aynı iki satır beş kılavuzun dördünde birebir var. Bu yazı o tabloya ve kılavuzların kaynak, giriş ve uydu menülerine dayanıyor.

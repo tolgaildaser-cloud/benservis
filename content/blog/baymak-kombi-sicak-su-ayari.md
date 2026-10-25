@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir kombi ve yanında buhar yükselen bir lavabo musluğu"
   steps:
-    - "Pencereleri açık, sakin ve aydınlık bir mutfak"
-    - "Duvara asılı iki beyaz kombinin yan yana kumanda panelleri"
-    - "Kombi ekranında tek başına duran bir musluk simgesi"
-    - "Kombinin kumanda panelinde artı ve eksi işaretli küçük tuşlar"
-    - "Sade bir kombi panelinde yan yana dizilmiş yuvarlak köşeli tuşlar"
-    - "Kombi panelinin sağ tarafındaki yuvarlak çevirmeli düğme"
-    - "Akan suyun üstünde hafif buhar görünen bir banyo lavabosu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
 ---
 
 Duş ılık akıyor ya da musluktan gelen su elini yakıyor; ikisinde de ilk bakılacak yer kombinin kullanım suyu ayarı. Baymak'ın Duotec, Duotec Compact, Eco CT 20 Premix ve Lunatec kullanma kılavuzlarında bu ayar her modelde ayrı tuş ya da düğmeyle yapılıyor. Bu yazıda hangi modelde hangi tuşa basacağını, ayar aralığını ve en sık karışan iki noktayı bu dört kılavuzdan topladık. Senin kombinde tuş numaraları farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Solo bir bulaşık makinesinin kontrol paneli ve küçük dijital ekranı"
   steps:
-    - "Bulaşık makinesi panelinde harf ve rakamdan oluşan bir kod gösteren küçük ekran"
-    - "Duvardaki su musluğu ve ona bağlı beyaz giriş hortumu"
-    - "Musluktan ayrılmış bir hortum ucunda küçük süzgeç"
-    - "Bulaşık makinesi panelinde başlat ve duraklat tuşu"
-    - "Bulaşık makinesinin tabanından çıkarılmış silindir biçimli filtre grubu"
-    - "Bulaşık makinesinin tabanında sünger ve yanında küçük bir kova"
-    - "Tezgâh altında kapatılmış bir köşe musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Sharp bulaşık makinesinin ekranında FF, F2 ya da F5 yanıyor ve makine durdu. Bu kodların ne demek olduğunu Sharp'ın kendi kullanım kılavuzu "otomatik arıza uyarıları ve yapılacaklar" tablosunda tek tek yazıyor. Sharp'ın Türkçe bir kılavuzuna ulaşamadık; bu yazıda Sharp'ın Avrupa sitesindeki QW-NA1FF45DW solo bulaşık makinesi sayfasından indirdiğimiz kılavuzun **İngilizce baskısını** kullandık, alıntılar bizim çevirimiz. Kod listesi modele göre değişebilir; kendi kılavuzunla karşılaştır.

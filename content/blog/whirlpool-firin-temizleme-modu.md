@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş paslanmaz görünümlü ankastre bir fırın"
   steps:
-    - "Ankastre fırının dijital ekranı ve ayar düğmesi"
-    - "Tezgâha çıkarılmış fırın tepsileri ve raf kılavuzları"
-    - "Fırının iç tabanını nemli süngerle silen bir temizlik bezi"
-    - "Kapağı kapalı ve ekranında temizlik çevrimi gösteren bir fırın"
-    - "Soğuk bir fırının tabanına dökülen bir kap su"
-    - "Temizlik çevriminden sonra iç yüzeyi silinmiş bir fırın"
-    - "Kapağı kapalı, ekranı yanan bir ankastre fırın"
+    - "Çizim: solda ankastre fırın, sağda temizleme bezi"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda ilgili filtre"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda ilgili filtre"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool fırınının menüsünde bir temizleme işlevi var ama ne zaman, nasıl kullanılacağını bilmiyorsun; ya da çevrim başladı ve kapak kilitlendi. Whirlpool fırınlarında iki tür otomatik temizlik görülüyor: çok yüksek ısıyla çalışan **piroliz** ve buharla çalışan **Smart Clean**. Bazı modellerde ise kendi kendini temizleyen **katalitik paneller** var. Bu yazıda Whirlpool'un AKZ9 6270 IX ve AKZ9 6230 IX fırınları için yayımladığı Türkçe Günlük Referans Kılavuzlarını okuyup kullanımı sıraya koyduk. Senin modelinde menü ve simgeler farklı olabilir; kendi kılavuzunla karşılaştır.

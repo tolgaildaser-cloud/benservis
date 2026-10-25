@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Mutfakta kapıları kapalı duran paslanmaz görünümlü kombi tip bir buzdolabı"
   steps:
-    - "Duvar prizine takılı bir buzdolabı fişi"
-    - "Buzdolabının iç kapağındaki sıcaklık kontrol paneli"
-    - "Buzdolabı kapısının kenarındaki temiz kapı contası"
-    - "Rafları seyrek düzenlenmiş, kapları arasında boşluk bırakılmış bir buzdolabı içi"
-    - "Buzdolabının arka yüzündeki tozlu kondenser ızgarası ve süpürge başlığı"
-    - "Yeni alışverişten gelen paketlerle dolu buzdolabı rafları"
-    - "Ekranı yeniden yanan bir buzdolabı kontrol paneli"
-    - "Tezgâhta duran bir buzdolabı kullanım kılavuzu ve telefon"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool buzdolabın çalışıyor gibi ama süt ılık, sebzeler çabuk bozuluyor ya da dondurucudaki buzlar yumuşamış. Arızayı düşünmeden önce kılavuzun sorun giderme tablosundaki satırlara bakmak gerekiyor; çoğu evde çözülen şeyler. Bu yazıda Whirlpool'un W7X 82I OX ve W7 931T OX kılavuzlarını (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ve WHC20 T352'nin Türkçe kullanım kılavuzunu sıraya koyduk. Senin modelinde panel farklı olabilir; kendi kılavuzunla karşılaştır.

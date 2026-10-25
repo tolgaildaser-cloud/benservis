@@ -39,12 +39,12 @@ faq:
 images:
   coverAlt: "Kapağı aralık, üst kenarında dokunmatik tuşları görünen ankastre bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kontrol panelindeki açma kapama tuşunun yakın planı"
-    - "Bulaşık makinesi panelinde gecikmeli başlatma göstergesi"
-    - "Kapağı açık deterjan gözü ve içindeki tablet"
-    - "Sepetleri dolu ve kapağı kapanmak üzere olan bulaşık makinesi"
-    - "Program tuşu ışıkları yanıp sönen bulaşık makinesi paneli"
-    - "Ayar modunda göstergeleri yanan bulaşık makinesi paneli"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Zanussi bulaşık makinen yanlış programda kaldıysa, gecikmeli başlatmayı yanlışlıkla kurduysan ya da makine garip davranıyorsa aradığın şey onu temiz bir başlangıca döndürmek. Zanussi'nin ZDLN2621 kullanım kılavuzunda (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) kontrol panelindeki ilk tuşun adı **On/Off button/Reset button**, yani açma kapama ve sıfırlama tuşu. Kılavuz bu tuşla program ve gecikme iptalini, ayrıca ayar modunu anlatıyor. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

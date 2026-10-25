@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Bir apartman balkonuna monte edilmiş uydu çanağı ve LNB başlığı"
   steps:
-    - "Televizyonun arka panelinde uydu girişine takılı koaksiyel kablo"
-    - "Televizyon ekranında açık duran uydu seçim listesi"
-    - "Televizyon ekranında LNB ayar satırları"
-    - "Çatıda yan yana duran birden fazla uydu çanağı"
-    - "Televizyon ekranında ilerleyen uydu kanal araması"
-    - "Televizyon ekranında açık duran transponder listesi"
-    - "Televizyon ekranında sinyal gücü ve kalite göstergesi"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
 ---
 
 Skytech televizyonunda uydu kanalları gelmiyor, yeni bir uydu eklemen gerekiyor ya da bina sistemini değiştirdin. Uydu ayarı Skytech'te kanal menüsünden yapılıyor ama satır adları modele göre değişiyor: bazı Android modellerinde "LNB Ekle", bazılarında "Çanak Kurulumu", kendinden uydu alıcılı modellerde "Çanak Anten Ayarı". Bu yazıda Skytech'in kendi sitesinde yayımladığı Android TV, uydu alıcılı TV ve webOS TV kılavuzlarındaki uydu adımlarını bir araya getirdik.

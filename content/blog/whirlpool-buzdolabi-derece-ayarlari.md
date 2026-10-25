@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran paslanmaz görünümlü kombi tip bir buzdolabı"
   steps:
-    - "Fişi yeni takılmış, kapıları kapalı yeni kurulmuş bir buzdolabı"
-    - "Buzdolabı kapısının içindeki dokunmatik kontrol paneli"
-    - "Yalnız soğutucu göstergesi olan sade bir buzdolabı kontrol paneli"
-    - "Soğutucu ve dondurucu için ayrı ekranları olan bir kontrol paneli"
-    - "Dondurucu çekmecesine yerleştirilmiş paketli taze yiyecekler"
-    - "Gece yarı karanlık mutfakta ekranı sönük bir buzdolabı"
-    - "Buzdolabı rafına konmuş küçük bir termometre"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Whirlpool buzdolabını yeni aldın ya da süt beklenenden çabuk bozuluyor ve panelde hangi değeri seçeceğini bilmiyorsun. Whirlpool'un buzdolabı kılavuzları bu konuda kısa ama net: önerilen değer var, panel türüne göre ayar yolu var, bir de ayarı etkileyen birkaç mod. Bu yazıda W7X 82I OX ve W7 931T OX kılavuzlarını (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ve WHC20 T352'nin Türkçe kullanım kılavuzunu birlikte okuduk. Senin modelinde panel farklı olabilir; kendi kılavuzunla karşılaştır.

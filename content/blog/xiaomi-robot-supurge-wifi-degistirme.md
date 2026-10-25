@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Salonda zeminde duran yuvarlak bir robot süpürge ve arka planda bir kablosuz modem"
   steps:
-    - "Kablosuz ağ listesi açık bir akıllı telefon ekranı"
-    - "Şarj istasyonuna yerleşmiş, kapağı kapalı bir robot süpürge"
-    - "Kapağı kaldırılmış bir robot süpürgenin içindeki gösterge ışığı"
-    - "Robot süpürgenin üst yüzünde yan yana duran güç ve ev düğmeleri"
-    - "Yanıp sönen bir gösterge ışığının yakın planı"
-    - "Cihaz ekleme ekranı açık bir akıllı telefon ve önünde robot süpürge"
-    - "Masada duran bir kablosuz modem ve önünde akıllı telefon"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda bekleme süresi için saat"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Modemini değiştirdin, Wi-Fi parolasını yeniledin ya da internet sağlayıcın yeni bir cihaz kurdu; Xiaomi robot süpürgen artık uygulamada çevrimdışı görünüyor. Robotun hafızasındaki ağ eski ağ olduğu için kendiliğinden yeni ağa geçmiyor. Xiaomi'nin Türkçe kılavuzlarında bunun için ayrı bir işlem var: **Wi-Fi'ı Sıfırlama**. Robotu Wi-Fi'den koparıp ağ yapılandırma moduna alıyorsun, sonra Xiaomi Home uygulamasından yeni ağla yeniden ekliyorsun. Bu yazı Xiaomi'nin Türkiye destek sayfasındaki **Xiaomi Robot Vacuum X10** ve **Xiaomi Robot Vacuum S20** Türkçe kılavuzlarına dayanıyor.

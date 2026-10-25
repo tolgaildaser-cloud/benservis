@@ -47,14 +47,14 @@ faq:
 images:
   coverAlt: "Modern bir mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı beyaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kontrol panelinde yan yana duran iki küçük tuş"
-    - "Bulaşık makinesi panelinde başlat, beklet ve iptal için kullanılan yuvarlak tuş"
-    - "Bulaşık makinesi panelinde yanıp sönen küçük bir gösterge ışığı"
-    - "Kapağı kapalı, sessizce su tahliye eden bir bulaşık makinesi"
-    - "Bulaşık makinesi panelinde sıralı program seçim simgeleri"
-    - "Bulaşık makinesinin tabanından çıkarılmış silindir biçimli filtre grubu"
-    - "Lavabo altında kapalı konuma çevrilmiş bir su musluğu"
-    - "Bulaşık makinesinin yanında tezgâhta katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, yanlış programı seçtin ya da makine bir türlü bitmiyor; Beko bulaşık makinesini "resetlemek" istiyorsun. Beko'nun kılavuzlarında **Reset adında bir tuş yok.** Karşılığı **programın iptal edilmesi** ve yolu üç kılavuzda da aynı: **Başla / Bekle / İptal tuşunu 3 saniye basılı tutmak.** Bu yazıda Beko'nun BM 5005, 3938 IL ve D3 3001 SY kullanım kılavuzlarından iptalin sırasını, ne kadar sürdüğünü, onu engelleyen çocuk kilidini ve iptalden sonra makinede su kalırsa ne yapılacağını çıkardık. Gösterge adları modele göre değişir; kendi kılavuzunla karşılaştır.

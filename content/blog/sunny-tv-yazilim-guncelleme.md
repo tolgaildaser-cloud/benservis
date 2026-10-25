@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Oturma odasında ekranında yazılım güncelleme ilerleme çubuğu görünen televizyon"
   steps:
-    - "Televizyon ekranında açık duran sistem bilgileri sayfası"
-    - "Televizyonun arkasına takılı ağ kablosu"
-    - "Televizyon ekranında cihaz tercihleri listesi"
-    - "Televizyon ekranında ilerleyen güncelleme çubuğu"
-    - "Duvar prizine takılı televizyon fişi"
-    - "Televizyonun yan tarafındaki USB girişi"
-    - "Televizyon ekranında açık duran ana menü"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda USB bellek ve güncelleme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sunny televizyonunda uygulamalar yavaşladı, bir özellik çalışmıyor ya da ekranda güncelleme uyarısı çıktı; yazılımı güncellemek istiyorsun. Sunny'de yazılım güncellemesi internete bağlı Smart modellerde menüden yapılıyor, bazı modellerde USB seçeneği de var. Bu yazıda Sunny'nin kendi sitesinde yayımladığı Smart ve uydulu televizyon kullanım kılavuzlarını ve Sunny'nin televizyon destek sayfasının "Yazılım ve Sistem" bölümünü temel aldık. Sunny'nin sayfası menü adlarının ve güncelleme yönteminin modele ve işletim sistemine göre değiştiğini belirtiyor.

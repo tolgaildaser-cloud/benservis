@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Kış akşamı loş bir salonda duvara asılı beyaz bir split klima ve sehpada duran kumandası"
   steps:
-    - "Koridordaki sigorta kutusunun kapalı kapağı"
-    - "Klima kumandasının ekranında küçük bir mod sembolü"
-    - "Klima kumandasında yan yana duran iki sıcaklık ayar tuşu"
-    - "Kanatları hafifçe açık, sessiz çalışan bir duvar kliması"
-    - "Kanadı aşağı doğru eğilmiş bir duvar kliması ve altında halı"
-    - "Sehpanın üzerinde ekranı aydınlanmış beyaz bir klima kumandası"
-    - "Duvarda saat ve altında kapalı duran bir split klima"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hava soğudu, Beko klimayı ısıtmaya almak istiyorsun ama kumandadaki tuşlar yaz ayarında kalmış. Beko'nun 509411 A, 512411 A, 518411 A ve 525411 A modelleri için yayımladığı Türkçe kullanma kılavuzu ısıtma ayarını "Odanın ısıtılması" başlığı altında adım adım veriyor. Isıtmanın hiç başlamamasına yol açan tek bir ayar hatasına da ayrıca dikkat çekiyor. Bu yazıda ısıtma modunu açmayı, sıcaklığı doğru aralığa almayı ve ilk dakikalarda normal olan davranışları bu kılavuzdan topladık. Yazı tek bir serinin kılavuzuna dayanıyor; senin modelinde tuş adları ya da özellikler farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Kapısı açık bir buzdolabının içinde raflara dizilmiş yiyecekler"
   steps:
-    - "Mutfak duvarındaki prize takılı bir buzdolabı fişi"
-    - "Buzdolabı içinde yuvarlak termostat düğmesinin yakın planı"
-    - "Mutfağa yeni yerleştirilmiş, dik duran ambalajsız bir buzdolabı"
-    - "Kapısı kapalı bekleyen bir buzdolabı ve arkada mutfak penceresi"
-    - "Buzdolabı kapısının kenarındaki lastik contanın yakın planı"
-    - "Buzdolabı rafında arka duvardan uzak dizilmiş saklama kapları"
-    - "Duvardan biraz uzakta duran bir buzdolabının yan görünümü"
-    - "Buzdolabının arkasındaki siyah kanatlı kondenser ve yumuşak bir fırça"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 SEG buzdolabı soğutmayı bıraktığında ilk akla gelen gaz ya da motor olur. Oysa SEG'in kılavuzlarındaki "servis çağırmadan önce" listesi bambaşka sırayla başlıyor: fiş, termostat, kapı, dolabın içi ve yerleşim. Bu yazı üç SEG kılavuzuna dayanıyor: tezgâh altı **STW 902**, No Frost **RF4540 A** ve çift kapılı **455A**. SEG'in kendi sitesi yok; kılavuzlar üretici Vestel'in kılavuz sunucusunda duruyor. Senin modelin farklıysa kendi kılavuzundaki sorun tablosu esastır.

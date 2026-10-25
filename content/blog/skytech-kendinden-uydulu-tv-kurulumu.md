@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Küçük bir mutfak tezgâhının üzerinde duran kompakt televizyon"
   steps:
-    - "Televizyonun arka panelinde uydu girişine takılı koaksiyel kablo"
-    - "Televizyon kasasının alt kenarında duran açma tuşu ve gösterge ışığı"
-    - "Televizyon ekranında açık duran giriş kaynağı listesi"
-    - "Televizyon ekranında menü dili ve ülke seçim ekranı"
-    - "Televizyon ekranında ilerleyen uydu kanal araması"
-    - "Çatıda yan yana duran birden fazla uydu çanağı"
-    - "Televizyon ekranında açık duran kanal düzenleme tablosu"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kendinden uydu alıcılı bir Skytech televizyon aldın ve ayrı bir uydu kutusu kullanmadan kanalları açmak istiyorsun. Bu modellerde çanak kablosu doğrudan televizyona takılıyor ve kanallar televizyonun kendi KANAL menüsünden aranıyor. Bu yazıda Skytech'in kendi sitesinde yayımladığı "Uydu Alıcılı TV" kullanma kılavuzundaki kurulum ve arama adımlarını sıraladık. Kılavuz 24 ve 32 inçlik uydu alıcılı modelleri (24ST1000, 24ST2000, 24ST3000, 32ST1000, 32ST1001, 32ST2000, 32ST3001, 32ST4000) kapsıyor; model grupları arasında küçük menü farkları var.

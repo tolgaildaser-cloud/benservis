@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Mutfak dolapları arasında kapağı kapalı ankastre bir bulaşık makinesi"
   steps:
-    - "Alt sepet çıkarılmış bulaşık makinesinin tabanındaki tuz haznesi kapağı"
-    - "Kapak iç yüzündeki parlatıcı haznesinin kapağı"
-    - "Tabaklar ve tencereler yerleştirilmiş alt sepet ile püskürtme kolu"
-    - "Kapak iç yüzündeki açık deterjan bölmesi"
-    - "Bulaşık makinesinin üst kenarındaki dokunmatik tuş sırası"
-    - "Kapağı kapanmış, çalışan bir ankastre bulaşık makinesi"
-    - "Alt sepetten çıkarılan temiz tabaklar ve aralık duran kapak"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Teka bulaşık makinen yeni kuruldu ya da paneldeki tuşları ilk kez kullanacaksın. Programı seçtin ama makine başlamıyor, ya da yanlış programı seçtin ve iptal etmek istiyorsun. Bu yazı Teka'nın DFI 76950, DFI 46700, DFI 46900, DFI 46950 ve DFI 46950 XL ankastre bulaşık makineleri için yayımladığı kullanım kılavuzuna dayanıyor. Teka'nın Türkiye sitesinde bu model için yalnız kılavuzun İngilizce baskısı var; alıntıları Türkçeye çevirdik. Senin modelinde tuş adları farklı olabilir.

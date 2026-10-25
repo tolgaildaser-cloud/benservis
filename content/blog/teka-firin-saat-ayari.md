@@ -36,12 +36,12 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kapağı kapalı siyah camlı bir ankastre fırın"
   steps:
-    - "Ankastre fırının kumanda panelindeki döner kadranlar"
-    - "Fırın panelinde yanıp sönen dijital saat göstergesi"
-    - "Fırın kumanda panelinin ortasındaki dokunmatik tuşlar"
-    - "Dijital saat ekranının yanındaki dokunmatik tuş sırası"
-    - "Duvardaki prizden çekilmiş bir fırın fişi"
-    - "Kumanda paneli aydınlanmış, ışığı yanan bir ankastre fırın"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda çalışma sesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Teka fırınının ekranında saat yanıp sönüyor, fırın da bir türlü ısınmaya başlamıyor. Ya da yaz saati değişti, ekrandaki saati düzeltmek istiyorsun. Teka'nın HLB ve HLB P serisi (HLB 830, HLB 840, HLB 830 P, HLB 840 P) için yayımladığı Türkçe kullanım kılavuzu saati tek bir bölümde anlatıyor. Bu yazı o kılavuza dayanıyor; senin modelin farklıysa tuş adlarını kendi kılavuzunla karşılaştır.

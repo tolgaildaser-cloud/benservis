@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Tezgâh üstünde duran camlı kapaklı küçük bir elektrikli fırın"
   steps:
-    - "Duvardaki topraklı prize takılmış bir fiş"
-    - "Midi fırının ön panelinde simgeli döner program düğmesi"
-    - "Midi fırının panelinde termostat düğmesi ve yanındaki küçük lamba"
-    - "Midi fırının panelinde döner zamanlayıcı düğmesi"
-    - "Midi fırının orta rafına yerleştirilmiş bir kek kalıbı"
-    - "Tel ızgaranın üzerinde donmuş yiyecek ve altında kare tepsi"
-    - "Kapalı konuma getirilmiş üç döner düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Tezgâh üstü Simfer midi fırını aldın; üç düğmenin ne işe yaradığını ve keki kaç derecede pişireceğini bilmek istiyorsun. "Simfer midi fırın kullanımı" sorusunun cevabı Simfer'in midi fırın kullanım kılavuzunda. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu ve "Midi fırın kullanım kılavuzu" yazan Türkçe belgeyi kullandık. Kılavuz M 4500'den M 4590 Turbo'ya kadar birçok modeli kapsıyor ve teknik tabloyu 45 litrelik midi fırın için veriyor. Simfer'in notu: fonksiyonlar modele göre değişiyor, her model bütün fonksiyonları içermeyebilir.

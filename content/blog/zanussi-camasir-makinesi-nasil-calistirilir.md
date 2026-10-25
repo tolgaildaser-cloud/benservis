@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Kapağı açık, tamburu boş ön yüklemeli beyaz çamaşır makinesi"
   steps:
-    - "Boş tamburu görünen ve kapağı kapalı çamaşır makinesi"
-    - "Açık konumdaki su musluğu ve bağlı giriş hortumu"
-    - "Tambura tek tek yerleştirilmiş katlanmamış çamaşırlar"
-    - "Çekmecesi açık deterjan gözü ve içindeki ayar kapağı"
-    - "Çevirmeli program düğmesinin pamuklu programı üzerindeki hâli"
-    - "Sıcaklık ve sıkma tuşları görünen kontrol paneli"
-    - "Ekranında süre ve kilit simgesi yanan çalışan çamaşır makinesi"
-    - "Kapağı aralık bırakılmış, içi boş çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Yeni bir Zanussi çamaşır makinen var ya da kılavuzunu kaybettin ve makinenin nasıl çalıştığını baştan öğrenmek istiyorsun. Zanussi'nin ZWF845B4PW (8 kg) ve ZWF143A2DG (10 kg) kullanım kılavuzları (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ilk kullanımdan program sonuna kadar akışı anlatıyor. İki modelin farkı küçük: ZWF845B4PW program düğmesiyle açılıp kapanıyor, ZWF143A2DG'de ayrı bir ON/OFF tuşu var. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Aydınlık bir banyoda beyaz, ön yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Çamaşır makinesinin büyük, yuvarlak program seçim düğmesi"
-    - "Çamaşır makinesi kumanda panelinde yuvarlak açma kapama tuşu"
-    - "Çamaşır makinesinin alt köşesinde kapalı duran pompa filtresi kapağı"
-    - "Kapalı cam yükleme kapağının yakın planı"
-    - "Açık deterjan çekmecesi ve yanında bir kap toz deterjan"
-    - "Çamaşır makinesinin üstünde katlanmış duran bir kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program takıldı, makine tepki vermiyor ya da yanlış programı başlattın; "resetleme" burada akla gelen ilk çözüm. Altus'un AL CM 81050 kullanma kılavuzunda **Reset adında ayrı bir tuş yok.** Kılavuzdaki karşılığı **"Programı İptal Etme"** bölümü ve sorun giderme tablosundaki "program başlatılamıyor" satırı. Bu yazıda o kılavuzdan, programı doğru biçimde sıfırlamanın yolunu sırayla çıkardık. Kaynak tek bir modelin kılavuzu; senin makinende düğme yerleri farklı olabilir, kendi kılavuzunla karşılaştır.

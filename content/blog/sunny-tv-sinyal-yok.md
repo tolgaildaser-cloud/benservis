@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Karanlık bir oturma odasında ekranında uyarı yazısı duran düz ekran televizyon"
   steps:
-    - "Sehpa üzerinde duran televizyon kumandası"
-    - "Duvardaki anten prizine takılı koaksiyel kablo"
-    - "Televizyonun arkasındaki giriş yuvalarına takılı kablolar"
-    - "Ekranında kanal listesi açık bir televizyon"
-    - "Ek yerinde bantlanmış eski bir anten kablosu"
-    - "Bir apartman çatısında yan yana duran çanak antenler"
-    - "Çatıda çanak anteni kontrol eden bir teknisyen"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
 ---
 
 Sunny televizyonu açtın, ekranda "Sinyal Yok" yazıyor, ne kanal geliyor ne ses. Bu uyarı çoğu zaman televizyonun arızası değil: yanlış kaynak, gevşek bir kablo, kapalı bir uydu alıcısı ya da çatıdaki sistemden gelen zayıf yayın. Sunny'nin kendi sitesindeki Televizyonlar soru-cevap sayfasında bu uyarı için ayrı bir madde var; 32-39 inç Uydulu ve Smart kullanım kılavuzlarının sorun giderme tablosu da sinyal kaynağına işaret ediyor. Bu yazı ikisine dayanıyor. Sunny'nin uyarısıyla başlayalım: menü adları modele ve işletim sistemine göre değişebiliyor.

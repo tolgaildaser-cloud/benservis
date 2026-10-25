@@ -53,14 +53,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarında beyaz bir kombi ve önünde soğuk görünen beyaz bir panel radyatör"
   steps:
-    - "Ardına kadar açılmış bir pencere ve önünde boş bir mutfak"
-    - "Duvardaki beyaz kombinin kumanda panelinde basılan yuvarlak bir düğme"
-    - "Kombi ekranında yan yana duran bir musluk simgesi ve bir radyatör simgesi"
-    - "Kombi panelinde artı ve eksi işaretli iki sıcaklık düğmesi"
-    - "Radyatör yanında duran rakamlı beyaz bir termostatik vana başlığı"
-    - "Kombinin altında borular arasında duran küçük bir doldurma musluğu"
-    - "Duvardaki gaz sayacı ve önündeki sarı kollu bir gaz vanası"
-    - "Önü boş bırakılmış beyaz bir panel radyatör ve yan tarafındaki radyatör vanası"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor ama petekler soğuk. Kombi çalışıyor gibi görünüyor, yalnız ısıtma yapmıyor. Alarko'nun Seradens Super kullanım ve montaj kılavuzunda bu belirtinin tek bir satırı yok; ama kılavuz kombinin çalışma konumlarını, ekran sembollerini, basınç ayarını ve ısıtmayı ilgilendiren hata kodlarını adım adım anlatıyor. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi o kılavuzdan sırayla topladık. Kaynak tek bir model ailesinin kılavuzu; senin kombinde düğme düzeni farklı olabilir, kendi kılavuzunla karşılaştır.

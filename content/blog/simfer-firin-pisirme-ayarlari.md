@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Açık kapaklı bir ankastre fırında orta rafta kek kalıbı"
   steps:
-    - "Fırın kapağının iç kenarındaki küçük model etiketi"
-    - "Fırın panelinde program düğmesinin yakın planı"
-    - "Fırın panelinde termostat düğmesi"
-    - "Fırın içinde yan duvarlardaki tel raf yuvaları"
-    - "Kapağı kapalı fırının camından görünen boş ve aydınlık iç bölme"
-    - "Fırının alt rafında içinde su olan derin tepsi ve üstte ızgara teli"
-    - "Kapağı kapalı fırının önünde bekleyen fırın eldiveni"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda kapak"
 ---
 
 Simfer fırında ilk kekini pişireceksin ya da börek bir türlü kızarmıyor. "Simfer fırın pişirme ayarları" sorusunun cevabı, Simfer'in ankastre fırın kılavuzundaki iki pişirme tablosunda. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu olan Türkçe kılavuzu kullandık. Kılavuz iki tablo veriyor (MFA1-6 ve MFA1-8 diye adlandırılmış iki model grubu); hangisinin senin fırınına uyduğunu kılavuzun model listesinden ve fırının etiketinden kontrol et. Simgelerin anlamı için ayrıca [Simfer fırın alt üst pişirme işareti](/blog/simfer-firin-alt-ust-pisirme-isareti/) yazısına bak.

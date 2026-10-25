@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Oturma odasında görüntüsü açık, karşısında kimsenin olmadığı bir televizyon"
   steps:
-    - "Sehpa üzerinde ses tuşları görünen bir televizyon kumandası"
-    - "Ekranında kanal bilgisi çubuğu açık bir televizyon"
-    - "Televizyon menüsünde açılmış ses çıkışı seçenekleri"
-    - "Televizyonun yanındaki kulaklık girişine takılı bir kablo"
-    - "Televizyonun altında duran ince uzun bir soundbar"
-    - "Televizyon ekranında açılmış ses ayarları menüsü"
-    - "Duvar prizinden çekilmiş bir televizyon fişi"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Sunny televizyonunda görüntü normal geliyor ama hiç ses yok. Haber spikerinin dudakları oynuyor, hoparlör sessiz. Çoğu zaman sebep hoparlörün bozulması değil; ses kısık kalmış, sessiz mod açık kalmış ya da ses başka bir cihaza gidiyor. Sunny'nin 32-39 inç Uydulu ve Smart kullanım kılavuzlarının sorun giderme tablosunda tam bu belirti için ayrı bir satır var: "Görüntü Normal, Ses Yok". Sunny'nin sitesindeki Televizyonlar soru-cevap sayfası da aynı durumu ses çıkışı, kulaklık ve soundbar maddeleriyle açıyor. Bu yazı ikisine dayanıyor; menü adları modele göre değişebilir.

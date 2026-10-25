@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin tabanında biriken bulanık su"
   steps:
-    - "Program tuşu ışıkları yanıp sönen bulaşık makinesi paneli"
-    - "Prizden çekilmiş bulaşık makinesi fişi"
-    - "Bulaşık makinesi tabanından çıkarılmış silindir filtre ve düz filtre"
-    - "Akan su altında yıkanan bulaşık makinesi filtre parçaları"
-    - "Tabandaki yuvasına yerleştirilmiş temiz silindir filtre"
-    - "Lavabo sifonuna bağlı bulaşık makinesi tahliye hortumu"
-    - "Kapağı kapalı ve çalışmaya hazır bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Zanussi bulaşık makinen programı bitirdi ama tabanda kirli su duruyorsa ya da program tuşlarının ışıkları aralıklarla iki kez yanıp sönüp kesik bir uyarı sesi çıkıyorsa makine suyu boşaltamıyor. Zanussi'nin ZDLN2621 kullanım kılavuzuna (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) göre en sık sebepler tıkalı filtre, tıkalı lavabo bağlantısı ve bükülmüş tahliye hortumu. Üçünü de evde kontrol edebilirsin. Senin modelinde filtre yapısı farklı olabilir; kendi kılavuzunla karşılaştır.

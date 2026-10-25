@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Banyo köşesinde beyaz, ön yüklemeli bir çamaşır makinesi ve kapalı cam kapak"
   steps:
-    - "Çamaşır makinesi kumanda panelinde yan yana dizilmiş küçük yardımcı fonksiyon tuşları"
-    - "Çamaşır makinesi ekranının ve yanındaki başlat tuşunun yakın planı"
-    - "Çamaşır makinesinin büyük, yuvarlak program seçim düğmesi"
-    - "Cam kapağın ardında tamburun dibinde duran bir miktar su"
-    - "Çamaşır makinesinin alt köşesindeki kapalı pompa filtresi kapağı"
-    - "Açık deterjan çekmecesi ve yanında sıvı deterjan şişesi"
-    - "Çamaşır makinesinin üstünde katlanmış duran bir kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda takıldı, tuşlar tepki vermiyor ya da yanlış programı başlattın. Akla ilk gelen "makineyi resetlemek". Beko'nun çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok**; karşılığı **"Programın iptal edilmesi"** bölümü. D4 9101 E kılavuzunun sorun giderme tablosu bu işi açıkça **"makineyi fabrika ayarlarına getirmek"** diye anlatıyor. Bu yazıda ekranlı D4 9101 E ile Program Seçim düğmesiyle çalışan D3 5061 B kılavuzlarından doğru sıfırlama yolunu sıraladık. İki modelde yol farklı; tuş yerleri için kendi kılavuzuna bak.

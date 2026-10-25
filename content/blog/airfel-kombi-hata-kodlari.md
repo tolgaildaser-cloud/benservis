@@ -46,12 +46,12 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin küçük ekranında beliren kısa bir hata yazısı"
   steps:
-    - "Pencereleri açık, boş ve sakin bir mutfak"
-    - "Kombi ekranının yakın planı ve yanında duran küçük bir not kâğıdı"
-    - "Kombinin alt kapağındaki ürün etiketi alanının bulanık yakın planı"
-    - "Açık bir kullanma kılavuzunda tablo sayfası"
-    - "Bir odadaki petek ve petek vanasının yakın planı"
-    - "Kombinin yanında tezgâhta duran katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi durdu ve ekranda "11-64" ya da "HJ-09" gibi tireli bir kod var. Airfel'in Maestro Optimum, Maestro Comfort ve Maestro Power kullanım kılavuzlarının sonunda kod tablosu var; tabloda her kodun adı ve Airfel'in önerdiği ilk adım yazıyor. Bu yazıda o tabloları birleştirip hangi kodda senin ne yapabileceğini, hangisinde servisi araman gerektiğini topladık. Optimum'un tablosu diğer ikisinden biraz farklı, modelini bilmen işe yarar.

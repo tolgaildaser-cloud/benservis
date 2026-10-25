@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Dört gözlü cam gazlı ankastre ocak ve döküm ızgaraları"
   steps:
-    - "Ocak gözünün üzerine düzgün oturtulmuş yuvarlak bek kapağı"
-    - "Ocak panelinde göz yerini gösteren küçük işaretli düğmeler"
-    - "Ocak tezgâhının altındaki prize takılı bir fiş"
-    - "İçeri doğru bastırılmış döner ocak düğmesi"
-    - "Yanmaya başlamış mavi alevli bir ocak gözü"
-    - "Kısık konumda yanan küçük mavi alev"
-    - "Sönmüş bir ocak gözü ve açık pencere"
-    - "Soğumuş bek kapağını silen kuru bir bez"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
 ---
 
 Simfer gazlı ankastre ocağın düğmesini çeviriyorsun ama alev yanmıyor ya da düğmeyi bırakınca sönüyor. "Simfer ocak nasıl çalışır" sorusunun cevabı Simfer'in ankastre ocak kılavuzundaki "Cihaz kullanımı" bölümünde. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu ve "Ankastre ocak kullanım kılavuzu" yazan Türkçe belgeyi kullandık. Kılavuz 3113'ten 3922'ye kadar birçok gazlı ve karma modeli kapsıyor; düğme ve bek sayısı modele göre değişiyor.

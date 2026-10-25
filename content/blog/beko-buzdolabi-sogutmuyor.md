@@ -56,14 +56,14 @@ faq:
 images:
   coverAlt: "Mutfakta kapısı kapalı, beyaz, iki kapılı bir buzdolabı"
   steps:
-    - "Duvar prizine takılı beyaz bir buzdolabı fişinin yakın planı"
-    - "Mutfak tezgâhında duran, kadranı sade bir mutfak saati"
-    - "Buzdolabı kapısındaki dijital sıcaklık göstergesinin yakın planı"
-    - "Buzdolabı göstergesinde iki kısa yatay çizgi ve yanında küçük bir düğme"
-    - "Tam kapanmış bir buzdolabı kapısının kenarı"
-    - "Buzdolabı kapı contasını nemli bir bezle silen bir el"
-    - "Rafları seyrek ve düzenli dizilmiş, kapakları kapalı kaplarla dolu bir buzdolabı içi"
-    - "Mutfakta pencereden uzak, iki yanında boşluk bırakılmış bir buzdolabı"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda not defteri ve kalem"
+    - "Çizim: solda buzdolabı, sağda su giriş musluğu"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabı çalışıyor gibi görünüyor ama içi serin değil; süt ılık, sebzeler çabuk solmuş. Beko'nun kullanma kılavuzlarında "soğutmuyor" diye tek bir satır yok, ama sorun giderme tablosu soğutmayı bozan nedenleri tek tek sayıyor: enerji, sıcaklık ayarı, tatil fonksiyonu, kapılar, conta, yükleme ve yerleşim. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi Beko'nun üç kılavuzundan sırayla topladık. Kaynaklar no-frost modellerin kılavuzları; senin buzdolabında düğme ve göstergeler farklı olabilir, kendi kılavuzunla karşılaştır.

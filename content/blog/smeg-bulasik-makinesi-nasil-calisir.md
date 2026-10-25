@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Mutfakta kapağı açık, sepetleri temiz tabaklarla dolu ankastre bir bulaşık makinesi"
   steps:
-    - "Kapağı açık, sepetleri boş bir bulaşık makinesinin içi"
-    - "Bulaşık makinesinin tabanındaki kapağı açılmış tuz haznesi ve yanında bir huni"
-    - "Bulaşık makinesi kapağının iç yüzündeki açık parlatıcı bölmesi"
-    - "Alt sepete aralıklı dizilmiş tabaklar ve ağzı aşağı bakan kâseler"
-    - "Kapağın iç yüzündeki deterjan bölmesine konmuş bir bulaşık tableti"
-    - "Bulaşık makinesinin üst kenarındaki program tuşları ve gösterge ışıkları"
-    - "Kapağı kapatılmış, tezgâh altına yerleştirilmiş bir bulaşık makinesi"
-    - "Program sonunda kapağı hafif aralık duran bir bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Yeni bir Smeg bulaşık makinesi aldın ya da evdekinin tuşları sana yabancı: tuz nereye konuyor, parlatıcı ne kadar, program nasıl başlıyor? Bu yazı Smeg'in Türkiye indirme sayfasından ürün koduyla ulaştığımız iki kılavuza dayanıyor: **ST4512IN** ve **STL323BL**. Sayfada Türkçe baskı yok, ikisi de kılavuzun İngilizce baskısı; alıntılar bizim çevirimiz. Tuş adları modele göre değişebilir, kendi modelin farklıysa kendi kılavuzun esastır.
