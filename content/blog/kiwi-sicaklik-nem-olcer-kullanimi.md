@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Bebek odasındaki bir rafta duran küçük beyaz dijital sıcaklık ve nem ölçer"
   steps:
-    - "Kutusundan yeni çıkmış küçük bir dijital ölçer ve yanında koruyucu folyo"
-    - "Ölçerin arkasındaki açık pil bölmesi ve yanında ince bir kalem pil"
-    - "Kitaplık rafında, pencereden ve radyatörden uzakta duran ölçer"
-    - "Ölçerin önündeki birim değiştirme düğmesi, yakın plan"
-    - "Ölçer ekranında en düşük ve en yüksek değer bölümleri"
-    - "Ölçer ekranının köşesinde yanan konfor simgesi"
-    - "Kuru bir bezle silinen ölçerin ön yüzü"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda ambalaj kutusu"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda kumandanın pilleri"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda kumandanın pilleri"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda panel ekranındaki uyarı"
+    - "Çizim: solda sıcaklık ve nem ölçer, sağda kumandanın pilleri"
 ---
 
 Kiwi Baby'nin iki sıcaklık ve nem ölçeri var. KBABY-90 yalnız sıcaklık ve nem gösteren, mıknatıslı küçük bir ekrandır. KBABY-92 bunlara saat, günlük alarm ve takvim ekler. İkisi de AAA pille çalışır. Bu yazıdaki adımlar iki modelin Kiwi kılavuzlarının Türkçe sütunundan alındı. Önce en sık sorulan şey, birim ve bellek düğmesi: KBABY-90 kılavuzu düğme için **"°C ve °F arasında geçiş yapmak için kısa basın Kaydedilen Min&Maks sıcaklık ve nemi silmek için uzun basın."** diyor.

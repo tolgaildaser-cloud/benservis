@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Tezgâhta duran tam otomatik kahve makinesi ve çıkışın altında boş bir kap"
   steps:
-    - "Su haznesinin dibinden sökülen silindir biçimli su filtresi"
-    - "Kahve makinesinin üstündeki küçük tuşların yakın planı"
-    - "Boşaltılmış ve yerine takılmaya hazır damlama haznesi"
-    - "Su haznesine dökülen şeffaf kireç çözücü sıvı"
-    - "Kahve çıkışından kaba akan berrak sıvı"
-    - "Musluk altında yıkanan şeffaf bir su haznesi"
-    - "Kireç programından sonra yerine takılan su filtresi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 Melitta tam otomatik kahve makinende kireç simgesi yandı ya da kahve eskisinden yavaş akıyor; makine kireç çözme istiyor. Melitta'nın Türkçe kılavuzunda kireç çözme, makinenin kendi yönlendirdiği yaklaşık **30 dakikalık** bir program: kireç çözücü haznede geçiyor, ardından temiz suyla duruluyor. Bu yazı Melitta'nın uluslararası sitesindeki kullanım kılavuzları sayfasından bağlanan **Melitta Solo** kılavuzunun Türkçe bölümüne dayanıyor. Başka bir Melitta modelin (Avanza, Purista, Caffeo serisi) varsa tuşlar ve aşamalar farklı olabilir; kendi kılavuzunla karşılaştır.

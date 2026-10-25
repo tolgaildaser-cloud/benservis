@@ -44,12 +44,12 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz çamaşır makinesi, ekranında kalan süre görünüyor"
   steps:
-    - "Çamaşır makinesinin büyük, yuvarlak program seçim düğmesi ve yanındaki ekran"
-    - "Ağzına kadar dolu çamaşır makinesi tamburu"
-    - "Çamaşır makinesi panelinde yardımcı fonksiyon tuşları yakın plan"
-    - "Çamur lekeli bir pamuklu tişört"
-    - "Tamburun dibinde birkaç parça az kirli tişört"
-    - "Tamburda düzgünce dağıtılmış birkaç havlu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 Altus çamaşır makinesinde pamukluyu 60 dereceye ayarladın, ekranda bir süre gördün, yıkama başladıktan sonra süre uzadı. Bu Altus'un kılavuzunda anlatılan bir durum. Bu yazıda **Altus AL CM 81050** kullanma kılavuzundaki **Tüketim Değerleri** tablosunu, ekranda gösterilen sürenin nasıl hesaplandığını ve süreyi kısaltan ayarları çıkardık. 8 kg'lık bu modelin değerleri başka bir Altus modelinde farklı olabilir; kendi kılavuzunla karşılaştır.

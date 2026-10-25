@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhının altına yerleştirilmiş, kapağı kapalı ankastre bir bulaşık makinesi"
   steps:
-    - "Kapağı tam kapatılmış bir bulaşık makinesinin üst kenarındaki kontrol paneli"
-    - "Lavabo altında açık konumda duran bir su musluğu"
-    - "Mutfak lavabosunda akan ince bir su"
-    - "Bulaşık makinesinin arkasından lavabo altına uzanan esnek giriş hortumu"
-    - "Musluk bağlantısında duran bir giriş hortumu ucu ve altında küçük bir kova"
-    - "Lavabo altında kapatılmış bir su musluğu ve yanında kuru bir bez"
-    - "Kapağı açık, sepetleri düzenli yerleştirilmiş bir bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 AEG bulaşık makinesini doldurdun, programı seçtin, kapağı kapattın; ama makinenin içinden su sesi gelmiyor ya da bir süre sonra ekranda **i10** veya **i11** beliriyor. AEG'nin kılavuzu bu belirtinin nedenlerini neredeyse tamamen musluk, şebeke basıncı ve giriş hortumu tarafında arıyor. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz **7000 GlassCare (FSE73727P)** kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları ve göstergeler modele göre değişebilir.

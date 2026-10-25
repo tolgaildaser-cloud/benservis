@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Soğuk duran beyaz bir radyatör ve arka planda duvara asılı bir kombi"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Kombi ekranında yan yana duran musluk ve radyatör simgeleri"
-    - "Kombi panelinde radyatör simgeli bir sıcaklık ayar düğmesi"
-    - "Duvarda asılı küçük, beyaz bir oda termostatı"
-    - "Bir radyatörün yanında duran beyaz başlıklı bir vana"
-    - "Kombinin altında yuvarlak kadranlı bir basınç göstergesi"
-    - "Kombi ekranında yanıp sönen kısa bir uyarı yazısı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, kombi çalışıyor, musluktan sıcak su da geliyor ama petekler soğuk ya da ılık. Warmhaus'un Glowa ve Ewa montaj ve kullanım kılavuzları bu durumda bakılacak yerleri tek tek veriyor: kombinin konumu, radyatör sıcaklığı, oda termostatı, vanalar ve basınç. Bu yazıda servisi çağırmadan önce evde yapabileceklerini bu kılavuzlardan sırayla topladık. Düğmelerin yeri modele göre değişir; kendi kılavuzunla karşılaştır.

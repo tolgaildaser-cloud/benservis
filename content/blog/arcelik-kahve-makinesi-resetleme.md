@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında çelik cezveli otomatik bir Türk kahvesi makinesi ve yanında iki fincan"
   steps:
-    - "Türk kahvesi makinesinin ön yüzünde ışığı yanan yuvarlak başlatma butonu"
-    - "Kahve makinesinin ön yüzündeki yuvarlak başlatma butonunun yakın çekimi"
-    - "Arka yüzünde açma kapama düğmesi görünen Türk kahvesi makinesi"
-    - "Yuvasından alınmış pişirme haznesi ve nemli bir bezle silinen ısıtıcı yüzeyi"
-    - "Işığı sabit beyaz yanan, cezvesi yuvasında duran kahve makinesi"
-    - "Kahve makinesinin yan tarafındaki şeffaf su deposu ve su seviyesi çizgisi"
-    - "Tezgâhta kahve makinesinin yanında duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kahve makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Arçelik Türk kahvesi makinen pembe ya da kırmızı yanıp sönüyor, kahveyi pişirmiyor ya da hiç tepki vermiyor; aklına ilk gelen "resetleme". Önce bilmen gereken şu: Arçelik'in **Telve (TKM 9961)**, **Mini Telve (K 3300)** ve **Telve X (TKM 3341)** Türkçe kılavuzlarında ayrı bir reset tuşu ya da fabrika ayarı yok. Kılavuzların anlattığı, makinenin ışıklarla ne söylediği, pişirmenin nasıl iptal edildiği ve hata ışığında makinenin nasıl kapatılıp temizlenip yeniden açıldığı. Resetleme dediğimiz iş pratikte bu. Bu yazı Arçelik'in ürün sayfalarındaki bu üç kılavuza dayanıyor; başka bir modelin varsa ışık renkleri farklı olabilir, kendi kılavuzunla karşılaştır.

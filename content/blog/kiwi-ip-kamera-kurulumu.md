@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Rafta duran beyaz bir IP kamera ve yanında akıllı telefon, sade bir oturma odası"
   steps:
-    - "Masada bir kâğıt ve kalem, yanında modem"
-    - "Telefon ekranında açılmış bir kamera uygulamasının kayıt formu"
-    - "Önünde mavi ışığı yanan beyaz bir IP kamera"
-    - "Telefon ekranında Wi-Fi ağ adı ve şifre alanı"
-    - "Telefon ekranındaki QR kodun kameranın objektifine dönük tutulması"
-    - "Uygulamanın ana menüsünde canlı görüntü ve altında sıralı simgeler"
-    - "Kameranın yan yüzündeki hafıza kartı yuvası, yanında küçük bir TF kart"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda bekleme süresi için saat"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda ilgili filtre"
+    - "Çizim: solda kamera, sağda temizleme bezi"
 ---
 
 Kiwi Baby'nin KBABY-93 ve KBABY-96 IP kameraları aynı uygulamayla, Yi IoT ile kurulur. İki modelin Türkçe kurulum metni neredeyse birebir aynı; fark donanımda. Kurulumda en sık takılınan nokta Wi-Fi bandıdır. Kılavuz bunu baştan söylüyor: **"IP Kameranız internet için 2.4 GHZ WIFI ağını kullanabilir. 5 GHZ ağları görmez ve desteklemez."** Bu yazıdaki adımlar iki modelin Türkçe kılavuzlarından alındı.

@@ -47,13 +47,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir şofben ve altında lavabo"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Şofbenin küçük ekranında yanan kısa bir uyarı yazısının yakın planı"
-    - "Şofbenin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Şofbenin önündeki döner açma kapama düğmesinin yakın planı"
-    - "Şofbenin önündeki ikinci döner ayar düğmesi"
-    - "Lavabo üzerinde buharı yükselen açık bir musluk"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve kapalı bir alet çantası"
+    - "Çizim: solda duvar tipi şofben, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi şofben, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi şofben, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluğu açıyorsun, şofben bir an çalışıyor gibi oluyor, sonra ekranda A01 beliriyor ve su soğuk akıyor. Baymak'ın hermetik şofben (BH12) montaj ve kullanma kılavuzunda bu kodun karşılığı tek kelime: ateşleme hatası. Kılavuzu bu koşuda baymak.com.tr'deki ürün sayfasından indirdik. Bu yazıda kodun ne söylediğini, kılavuzun verdiği RESET adımını, aynı tablodaki öteki kodlarla farkını ve ne zaman servise bırakman gerektiğini bu kılavuzdan topladık. Senin şofbenin başka bir modelse kendi kılavuzunla karşılaştır.

@@ -36,12 +36,12 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, paneli üstte duran beyaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi panelinde seçim tuşunun yakın planı"
-    - "Bulaşık makinesi panelinde başlat duraklat tuşu"
-    - "Bulaşık makinesi panelinde yanıp sönen bitiş ışığı"
-    - "Bulaşık makinesi panelinde açma kapama tuşu"
-    - "Program göstergeleri yanan bir bulaşık makinesi paneli"
-    - "Bulaşık makinesinin arkasındaki kapalı su musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Vestfrost bulaşık makinen yanlış programda kaldı, ışıklar yanıp sönüyor ya da tuşlar tepki vermiyor; "resetleme" arıyorsun. Vestfrost'un kılavuzunda ayrı bir reset tuşu yok; kılavuzun anlattığı yol **programı iptal etmek**: Başlat/Duraklat'a üç saniye basılıyor, makine suyu boşaltıyor, sonra yeni program seçiliyor. Bu yazı Vestfrost'un Danimarka'daki resmî sitesinden bağlanan **VDW 2160 BMAD** kullanım kılavuzuna dayanıyor. Türkçe ya da İngilizce kılavuz bulunmadığı için **kılavuzun Danca baskısını** kullandık, alıntıları Türkçeye çevirdik. **Türkiye'de satılmış Vestfrost modellerinde panel, tuş adları ve süreler farklı olabilir**; kendi kılavuzunla karşılaştır.

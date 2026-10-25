@@ -46,6 +46,15 @@ faq:
     a: "Siemens dozajlama haznesine yalnız uygun sıvı deterjan ve yumuşatıcı doldurulmasını, eklemenin aynı üründen yapılmasını ve ürün değiştirilecekse önce deterjan bölmesinin temizlenmesini istiyor. Kılavuza göre kendiliğinden akan sıvı deterjanlar kullanılmalı, farklı sıvı deterjanlar karıştırılmamalı ve dozaj haznesine sirke doldurulmamalı."
 images:
   coverAlt: "Kurutmalı bir çamaşır makinesinin tamamen dışarı çekilmiş deterjan çekmecesi; yanında nemli bir bez ve sıvı deterjan şişesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Yıkama başladı ya da başlamak üzereydi, ekranda **E:10-00**, **E:10-10** veya **E:10-20** belirdi. Siemens'in akıllı dozaj sistemli (i-Dos) WN54C2A0TR kurutmalı çamaşır makinesi kılavuzunda bu kodun karşılığı tek cümle: **"Akıllı dozajlama sistemi pompası bloke."** Kılavuzun ilk talimatı servis çağırmak değil, **deterjan çekmecesini temizlemek**. Bu yazıda o temizliği Siemens'in kendi sırasıyla adım adım anlatıyoruz.

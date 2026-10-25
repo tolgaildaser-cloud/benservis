@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir kombi buzdolabının ışıklı soğutucu bölmesi"
   steps:
-    - "Duvardaki prize takılı bir buzdolabı fişi"
-    - "Buzdolabı kapağındaki dijital sıcaklık göstergesi"
-    - "Buzdolabı kapağının kenarındaki esnek conta"
-    - "Buzdolabı rafında arka duvardan aralıklı dizilmiş kapalı saklama kapları"
-    - "Mutfakta fırından uzak duran bir buzdolabı ve arkasındaki boşluk"
-    - "Buzdolabı kontrol panelindeki mod düğmesi"
-    - "Buzdolabının arkasındaki kondenser ızgarası ve yumuşak bir fırça"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda su giriş musluğu"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 AEG buzdolabının ışığı yanıyor, motor sesi geliyor ama içerisi yeterince soğuk değil. Ya da göstergede **E10** gibi bir uyarı çıktı. AEG'nin kılavuzları bu durumda servisi aramadan önce yapılacak kontrolleri ayrı bir tabloda topluyor; çoğu ayar, kapak, yük ve hava dolaşımıyla ilgili. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz iki kılavuzun İngilizce baskısını kullandık: serbest duran RCB736E5MB kombi buzdolabı ve ankastre SCE818E6TC. Alıntılar bizim çevirimiz; tuş adları ve kodlar modele göre değişebilir.

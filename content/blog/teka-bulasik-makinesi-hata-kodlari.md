@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak dolapları arasında kapağı kapalı ankastre bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin üst kenarındaki dijital gösterge ve tuşlar"
-    - "Açık duran bir bulaşık makinesi kılavuzunun arıza tablosu sayfası"
-    - "Tezgâh altındaki su musluğu ve bağlı giriş hortumu"
-    - "Bulaşık makinesinin önünde yere serilmiş emici bir bez"
-    - "Bulaşık makinesinin tabanından çıkarılmış filtre grubu"
-    - "Kapağı aralık duran bir ankastre bulaşık makinesi"
-    - "Kapağı kapatılmış, göstergesi sönük bir bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Teka bulaşık makinenin ekranında bir harf ve rakam yanıp sönüyor, program yarıda kaldı. İnternette "Teka E4" diye aratınca birbirini tutmayan cevaplar çıkıyor; bunun nedeni basit: Teka'nın farklı serilerinde **aynı kod farklı anlama geliyor**. Bu yazı Teka'nın Türkiye sitesinde yayımlanan altı bulaşık makinesi kılavuzundaki arıza tablolarını model model topluyor. DFS 76850, DFI 46700 TTM ve DW 605 S kılavuzları Türkçe; DW8 80 FI, LP8 410 ve DW8 55 FI için yalnız kılavuzun İngilizce baskısı var, alıntıları Türkçeye çevirdik.

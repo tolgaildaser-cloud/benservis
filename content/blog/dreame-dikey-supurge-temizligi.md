@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Duvar askısında şarj olan kablosuz dikey bir süpürge"
   steps:
-    - "Alt kapağı açılmış, çöp kovası üzerinde boşaltılan şeffaf toz haznesi"
-    - "Süpürge gövdesinden ayrılmış şeffaf toz haznesi"
-    - "Toz haznesinden çıkarılmış siklon grubu ve ön filtre"
-    - "Musluk altında durulanan siklon grubu"
-    - "Temiz suyla yıkanan silindir biçimli süpürge filtresi"
-    - "Başlıktan çıkarılmış, kılları kesilen yumuşak bir fırça rulosu"
-    - "Havlu üzerinde kurumaya bırakılmış süpürge filtresi ve fırça rulosu"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Dreame dikey süpürgen eskisi kadar çekmiyor, ekranda filtre uyarısı yanıyor ya da sadece hazneyi ve filtreyi doğru temizlemek istiyorsun. Dreame'in kılavuzunda temizlik parça parça anlatılıyor: **toz haznesi** silinir ama suyla yıkanmaz; **ön filtre, siklon grubu, filtre ve fırça ruloları** temiz suyla yıkanır ve en az bir gün kurutulur. Bu yazı Dreame'in global sitesindeki kullanım kılavuzları sayfasından bağlanan **Dreame R20** dikey süpürge kılavuzuna dayanıyor. Türkçe kılavuz bulunmadığı için **kılavuzun İngilizce baskısını** kullandık, alıntıları Türkçeye çevirdik. Başka bir Dreame modelin varsa parça adları ve kilitler farklı olabilir; kendi kılavuzunla karşılaştır.

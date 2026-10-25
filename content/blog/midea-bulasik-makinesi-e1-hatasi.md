@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhı yanında duran, kapağı kapalı beyaz solo bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin kapak üstündeki ekranda yanan musluk simgesi"
-    - "Lavabo altında açık konumda duran su vanası"
-    - "Mutfak lavabosunda güçlü akan musluk suyu"
-    - "Bulaşık makinesinin arkasından duvardaki vanaya uzanan düz besleme hortumu"
-    - "Mutfak duvarındaki yeni döşenmiş su borusu ve vana"
-    - "Kışın ısıtılmayan kiler köşesinde duran bulaşık makinesi"
-    - "Bulaşık makinesinin kapak üstündeki düğme sırası"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Midea bulaşık makinen programa başladı, bir süre bekledi, sonra durdu ve ekranda E1 belirdi. Midea'nın hata kodu tablosunda E1'in karşılığı kısa: su alma süresi uzadı. Yani makine, programın istediği suyu beklenen sürede alamadı. Tablodaki çözüm de nedenleri sayıyor: musluk açılmamış, su girişi kısıtlanmış ya da su basıncı çok düşük. Bu yazı Midea'nın İngiltere sitesinde yayımlanan MDWEF1034D(W)-WG-UK ve MDWEF1034D(SS)-WG-UK kullanım kılavuzuna dayanıyor (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi). Türkiye'de satılan modelde panel ve ayrıntılar farklı olabilir; kendi kılavuzunla karşılaştır.

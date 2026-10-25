@@ -59,6 +59,15 @@ faq:
     a: "Bosch'un kullanıcıya verdiği iş pompa temizliği ve kapağın doğru oturtulmasıyla sınırlı. Kılavuzun genel uyarısı, onarım çalışmalarının daima uzman kişilere yaptırılması yönünde. Bu noktada makineyi kapat ve Bosch yetkili servisinden randevu al."
 images:
   coverAlt: "Alt sepeti çıkarılmış bir bulaşık makinesinin tabanında kaldırılmış beyaz pompa kapağı ve bir çay kaşığı"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
 ---
 
 Ekranda **E25** yazıyor ve makinenin tabanında su kalmış olabilir. Bosch'un Türkiye destek sayfasında bu kodun karşılığı tek cümle: **"Pompa yabancı bir madde nedeniyle tıkanmış veya pompa kapağı düzgün şekilde takılmamış."** Bosch bu kod için kullanıcıya bir iş tarif ediyor: pompa temizliği. Bu yazıda o adımları, Bosch'un kullanma kılavuzundaki pompa bölümüyle birlikte sırayla anlatıyoruz.

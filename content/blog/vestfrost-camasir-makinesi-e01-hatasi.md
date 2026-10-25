@@ -36,12 +36,12 @@ faq:
 images:
   coverAlt: "Kapağı aralık duran beyaz bir önden yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin program seçicisi ve küçük ekranı"
-    - "Çamaşır makinesinin kapak contası ve cam kapak kenarı"
-    - "Kapağı kapatılmış önden yüklemeli çamaşır makinesi"
-    - "Çamaşır makinesinin başlat duraklat tuşunun yakın planı"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi"
-    - "Çamaşır makinesinin arkasındaki kapalı su musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Vestfrost çamaşır makinen programın başında durdu, ekranda **E01** var ya da ışıklar tuhaf bir düzende yanıp sönüyor. Vestfrost kılavuzunda bu kodun tek bir anlamı var: **makinenin kapağı tam kapanmamış**. Bu yazıda Vestfrost'un Danimarka'daki resmî sitesinden bağlanan **VWM 22148 BM** kullanım kılavuzunu kullandık. Vestfrost'un Türkiye sitesi açılmıyor ve Türkçe ya da İngilizce kılavuz bulunmuyor; bu yüzden **kılavuzun Danca baskısını** kullandık, alıntıları Türkçeye çevirdik. **Türkiye'de satılmış Vestfrost modellerinde panel, tuş yerleşimi ve kod tablosu farklı olabilir**; kendi kılavuzunla karşılaştır.

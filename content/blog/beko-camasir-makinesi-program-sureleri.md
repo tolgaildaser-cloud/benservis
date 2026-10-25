@@ -42,12 +42,12 @@ faq:
 images:
   coverAlt: "Kapağı kapalı önden yüklemeli çamaşır makinesi, camın ardında dönen renkli sentetik giysiler"
   steps:
-    - "Çamaşır makinesinin üstünde açık duran bir kullanma kılavuzu"
-    - "Çamaşır makinesi panelinde dijital kalan süre ekranı yakın plan"
-    - "Yarısına kadar doldurulmuş çamaşır makinesi tamburu"
-    - "Tamburun önünde katlanmış ince beyaz tül perde"
-    - "Deterjan çekmecesinde ölçü kabıyla konmuş az miktarda deterjan"
-    - "Tamburda düzgünce dağıtılmış birkaç havlu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 Sentetik giysileri 40 dereceye attın ve ne zaman biteceğini merak ediyorsun. Beko'da bu sorunun cevabı kılavuza göre değişiyor: bazı Beko kılavuzlarında program tablosunda **süre sütunu var**, bazılarında **yok.** Bu yazıda süre sütunu olan **D3 5061 B** kılavuzunun tablosunu, süre sütunu olmayan **D4 9101 E** kılavuzunun ekran ve standart program bilgisini çıkardık. Kendi modelin farklıysa süreler de farklı olabilir.

@@ -53,6 +53,13 @@ faq:
     a: "Kılavuz bazı arızaların tesisat sıfırlanmadan çalışmadığını söylüyor ve iki yol veriyor: cihazı kapatıp tekrar çalıştırmak ya da iki ok tuşunu H ve ! sembolleri kaybolana kadar aynı anda basılı tutmak. Arıza giderilemezse servisi ya da müşteri hizmetlerini arayıp arıza kodunu ve cihaz bilgilerini bildirmen isteniyor."
 images:
   coverAlt: "Beyaz bir kombinin altındaki borular; sarı kollu gaz vanasının kolu borunun akış yönüne paralel duruyor, vanaya uzanan bir el"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Buderus kombinin ekranında **H** sembolü ve **227** var, kombi yanmıyor. Buderus'un 227 sayfasındaki tanım tek cümle: **"Alev algılanmamaktadır."** Çözüm de tek cümle: **gaz vanasının açık olup olmadığını kontrol et.** Bu yazı o kontrolü Buderus'un GB022i ve GB122i.2 kullanma kılavuzlarıyla adım adım anlatıyor ve reset ile servis sınırını gösteriyor.

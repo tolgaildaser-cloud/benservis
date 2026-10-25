@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Düz bir masa üzerinde geniş tartma yüzeyli beyaz dijital bebek tartısı"
   steps:
-    - "Ambalajından yeni çıkarılmış dijital bebek tartısı ve koruyucu folyo"
-    - "Tartının altındaki açık pil bölmesi kapağı"
-    - "Sağlam ve düz bir masaya yerleştirilmiş bebek tartısı"
-    - "Tartma yüzeyine serilmiş yumuşak bir havlu"
-    - "Tartının LCD ekranı ve yanındaki tuş, yakın plan"
-    - "Havlulu tartma yüzeyi ve sabitlenmiş ekran değeri"
-    - "Nemli bir bezle silinen tartma yüzeyi"
+    - "Çizim: solda bebek tartısı, sağda ambalaj kutusu"
+    - "Çizim: solda bebek tartısı, sağda kumandanın pilleri"
+    - "Çizim: solda bebek tartısı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bebek tartısı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bebek tartısı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bebek tartısı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bebek tartısı, sağda kumandanın pilleri"
 ---
 
 Kiwi Baby'nin iki dijital bebek tartısı, KBABY-25 ve KBABY-25K, aynı kılavuz metniyle geliyor. Tek bir tuşla açılıyor, aynı tuşla dara alıyor ve en fazla 20 kg tartıyor. Bu yazıdaki adımlar iki modelin Türkçe Kiwi kullanım kılavuzlarından alındı. İşin en çok karıştırılan kısmı havlulu tartım; kılavuz bunu açıkça sıraya bağlıyor: **"teraziyi açmadan ÖNCE havluyu terazinin üzerine yerleştirmeniz gerekir."**

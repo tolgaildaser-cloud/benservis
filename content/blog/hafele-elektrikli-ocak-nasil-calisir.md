@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhına gömülü, siyah cam yüzeyli dört gözlü bir elektrikli ocak"
   steps:
-    - "Cam ocak gözünün ortasına yerleştirilmiş düz tabanlı bir tencere"
-    - "Ocağın dokunmatik kontrol panelinde açma kapama tuşu"
-    - "Dokunmatik paneldeki göz seçim tuşlarının yakın planı"
-    - "Dokunmatik paneldeki artı ve eksi tuşları"
-    - "Dokunmatik paneldeki zamanlayıcı tuşu ve gösterge"
-    - "Ocak gözünden kaldırılan bir tencere"
-    - "Kapatılmış cam ocağın göstergesinde uyarı harfi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
 ---
 
 Häfele vitroseramik ocağını yeni taktırdın, cam yüzeyde düğme yok, yalnız dokunmatik tuşlar var ve nereden başlayacağını bilmiyorsun. Häfele'nin Türkçe kılavuzunda kullanım dört hareketle özetleniyor: **ocağı aç, gözü seç, kademeyi ayarla, işin bitince kapat**. Bu yazı Häfele Türkiye sitesindeki **HÄFELE VETRO 60 cm 4 gözlü vitroseramik ocak** ürün sayfasından indirilen kullanım kılavuzunun Türkçe bölümüne dayanıyor. Kılavuz 30, 60, 70 ve 90 cm modelleri birlikte anlatıyor ve grafiklerin yalnız örnek olduğunu, gerçek görüntünün ya da işlevlerin modeline göre farklı olabileceğini söylüyor.

@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Kapağı açık, tabanında bir miktar su birikmiş bir bulaşık makinesinin içi"
   steps:
-    - "Kapağı açık bir bulaşık makinesinin alt sepeti ve altındaki taban"
-    - "Bulaşık makinesinin üst kenarındaki kontrol paneli ve açma kapama tuşu"
-    - "Bulaşık makinesinin tabanındaki silindir biçimli filtre"
-    - "Lavaboda akan su altında yıkanan bulaşık makinesi filtreleri"
-    - "Filtresi çıkarılmış bir bulaşık makinesinin boş tahliye haznesi"
-    - "Yerine oturtulmuş düz metal filtre ve üzerindeki silindir filtre"
-    - "Bulaşık makinesinin arkasından lavabo altına uzanan esnek tahliye hortumu"
-    - "Lavabo altındaki gidere bağlanmış bir tahliye hortumu ucu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 AEG bulaşık makinen programı bitirdi ama kapağı açtığında tabanda kirli su duruyor, ya da program yarıda kesilip ekranda **i20** beliriyor. AEG'nin kılavuzu bu belirtinin nedenlerini üç yerde arıyor: makinenin kendi filtre sistemi, tahliye hortumu ve lavabo altındaki gider bağlantısı. Bu yazı AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz **7000 GlassCare (FSE73727P)** kılavuzunun İngilizce baskısına dayanıyor; alıntılar bizim çevirimiz. Tuş adları modele göre değişebilir.

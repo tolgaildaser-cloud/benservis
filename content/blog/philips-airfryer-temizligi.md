@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında çekmecesi açık siyah bir sıcak hava fritözü ve yanında duran sepeti"
   steps:
-    - "Prizden çekilmiş bir mutfak aleti fişi ve soğumaya bırakılmış fritöz"
-    - "Lavabo üzerinde boşaltılan fritöz tavasının tabanı"
-    - "Bulaşık makinesinin alt rafında duran fritöz sepeti ve tavası"
-    - "Köpüklü sıcak suyla dolu lavaboda bekletilen fritöz sepeti"
-    - "Nemli bir bezle silinen fritöz gövdesinin dış yüzeyi"
-    - "Fritözün iç tavanındaki ısıtma elemanına uzatılmış yumuşak kıllı bir fırça"
-    - "Kurumaya bırakılmış fritöz parçaları ve yanında katlanmış bir bez"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda temizleme bezi"
+    - "Çizim: solda airfryer, sağda temizlik fırçası"
+    - "Çizim: solda airfryer, sağda ilgili filtre"
 ---
 
 Philips airfryer'ı her gün kullanıyorsan tavanın dibinde yağ, sepetin ızgarasında yapışmış kırıntı, ısıtma elemanında da zamanla yanık artıklar birikiyor. İnternette su kaynatmaktan karbonatlı karışımlara kadar pek çok tarif dolaşıyor; Philips'in kendi kılavuzlarının tarifi ise sade: kapat, soğut, yağı dök, parçaları yıka, ısıtma elemanını fırçala. Bu yazı Philips Türkiye destek sayfalarındaki **3000 Serisi Airfryer L (HD9252)** ve **Premium Airfryer XXL (HD9650)** Türkçe kullanım kılavuzlarına dayanıyor. Başka bir Philips modelin varsa parça adları farklı olabilir; kendi kılavuzunla karşılaştır.

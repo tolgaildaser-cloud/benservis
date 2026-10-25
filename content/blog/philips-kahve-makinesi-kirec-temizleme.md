@@ -38,14 +38,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kontrol paneli yanan tam otomatik bir espresso makinesi"
   steps:
-    - "Espresso makinesinin ön yüzündeki ışıklı kontrol paneli"
-    - "Makineden çıkarılmış damlama tepsisi ve atık kahve haznesi lavabo yanında"
-    - "Makinenin arkasından çıkarılmış şeffaf su haznesi"
-    - "Su haznesine dökülen şeffaf sıvı ve yanında duran şişe"
-    - "Kahve ve su musluğunun altına yerleştirilmiş geniş bir cam kap"
-    - "Musluklardan kaba akan su ve bekleyen makine"
-    - "Lavabo musluğunun altında çalkalanan şeffaf su haznesi"
-    - "Su haznesine dikey olarak takılan silindir biçimli su filtresi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda su giriş musluğu"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
 ---
 
 Philips tam otomatik espresso makinende Calc/Clean ışığı yandıysa makine kireç temizliği istiyor demektir. Arama önerilerinde "kireç temizleme" ile birlikte "kireç çözücü" de sık çıkıyor; çünkü çoğu kişi sirke ya da limon tuzu kullanmayı düşünüyor. Philips'in kılavuzu bu konuda açık: sirke tabanlı çözücü yok, işlem makinenin kendi programıyla yaklaşık 30 dakika sürüyor. Bu yazı Philips Türkiye destek sayfasındaki **2300 Serisi ve 3300 Serisi tam otomatik espresso makinesi** (ör. EP3341/50) kullanım kılavuzunun Türkçe bölümüne dayanıyor. 2200, 5400 ya da başka bir seride tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

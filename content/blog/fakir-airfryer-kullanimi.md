@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında dokunmatik ekranlı, siyah bir sıcak hava fritözü"
   steps:
-    - "Lavaboda köpüklü suyla yıkanan fritöz haznesi ve yumuşak bir sünger"
-    - "Duvardan uzakta, düz tezgâhta duran sıcak hava fritözü"
-    - "Sıcak hava fritözünün dokunmatik kontrol panelindeki yiyecek simgeleri"
-    - "Fritöz ekranında sıcaklık ve süre ayarı gösterilen bölüm"
-    - "Fritöz haznesinde ısıya dayanıklı tahta kaşıkla karıştırılan patatesler"
-    - "Kulpundan dışarı çekilmiş, içinde kızarmış patates olan fritöz haznesi"
-    - "Fişi çekilmiş, soğumaya bırakılmış sıcak hava fritözü"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
+    - "Çizim: solda airfryer, sağda iç bölme ve raflar"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
 ---
 
 Fakir airfryer'ı ilk kez kullanacaksan iki soru akla geliyor: hangi tuş ne işe yarıyor ve hazır programlar hangi sıcaklıkta kaç dakika pişiriyor. Fakir'in destek sitesindeki kullanım kılavuzları arasında sıcak hava fritözü olarak Uno Chefry ve Flavy Chefry çıkıyor; tam kılavuzu yayımlanmış olan **Fakir Flavy Chefry** (1550 W, 4 litre hazne). Bu yazı onun Türkçe kullanım kılavuzuna dayanıyor. Başka bir Fakir modelin varsa tuşlar ve hazır programlar farklı olabilir; kendi kılavuzunla karşılaştır.

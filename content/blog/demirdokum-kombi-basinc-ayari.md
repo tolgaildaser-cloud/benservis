@@ -50,14 +50,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin ekranında basınç birimiyle gösterilen kısa bir değer"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Tezgâhta açık duran bir kombi kullanma kılavuzunun kapak sayfası"
-    - "Kombi ekranında yanıp sönen bir basınç simgesinin yakın planı"
-    - "Kombi ekranındaki değerin yanında açık duran bir kullanma kılavuzu sayfası"
-    - "Kombinin altında soğuk su borusu üzerinde küçük bir doldurma vanası"
-    - "Bir peteğin üst köşesindeki küçük hava alma tapası"
-    - "Duvardaki kombinin altında borular arasında duran bir emniyet ventili"
-    - "Kombinin yanında duvara asılı not kâğıdı ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda kapak"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombinin ekranındaki basınç değeri gözüne takıldı: düşük mü, yüksek mi, ne yapmalı? DemirDöküm kombilerde "bar ayarı" diye ayrı bir düğme yok; basınç, ısıtma sistemindeki su miktarıyla değişiyor (çıkarım). Kullanma kılavuzları ise üç şey söylüyor: basıncı nerede okuyacağını, modelin hangi aralıkta çalıştığını ve basınç düşükse sistemin nasıl doldurulduğunu. Bu yazıda Nitromix, ademiX, vintomiX, Atron Condense ve Nitron Plus kılavuzlarından bunları topladık. Senin modelin farklıysa kendi kılavuzunla karşılaştır. Ekranda bir kod varsa önce [DemirDöküm kombi arıza kodları](/blog/demirdokum-kombi-ariza-kodlari/) sayfasına bak.

@@ -60,6 +60,15 @@ faq:
     a: "Vestel'in sorun tablosuna göre kapı contaları bozuk veya yırtıksa yetkili teknik servisten yardım talep edilir. Conta değişimi kullanıcı adımı olarak verilmiyor."
 images:
   coverAlt: "Açık duran bir dondurucu çekmecesinin kenarında ve önündeki yiyecek paketlerinin üzerinde biriken ince beyaz kar tabakası"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
 ---
 
 Dondurucu çekmecesini açtığında paketlerin üzerinde ince bir kar tabakası, kapının kenarında beyaz bir şerit görüyorsun. Oysa buzdolabın No-Frost; Vestel'in kılavuzuna göre bu sistemde kuru ve soğuk hava fanla dondurucuya üflenir ve **nem ve buz oluşumuna olanak verilmez.** Vestel'in NF52001 kılavuzu karlanmanın sebebini tek cümleyle yazıyor: **dondurucu bölme kapısının açık kalması durumunda dondurucu bölümde karlanma olabilir.** Aynı cümlenin devamı da iyi haber: karlanan bölüm temizlenir ve kapının tam kapandığından emin olunursa **aynı sorun tekrarlamaz.**

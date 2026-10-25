@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında cam sürahili bir filtre kahve makinesi ve yanında bir kupa"
   steps:
-    - "Kapağı açık su deposuna dökülen soğuk su"
-    - "Filtre tutucusundaki kâğıt filtrenin içine konan öğütülmüş kahve"
-    - "Isı plakasının üzerine yerleştirilmiş boş cam sürahi"
-    - "Kahve makinesinin yanan ışıklı açma/kapama düğmesi"
-    - "Filtreden cam sürahiye damlayan taze demlenmiş kahve"
-    - "Prizden çekilmiş fişi tezgâhta duran kahve makinesi"
-    - "Lavabo kenarında kurumaya bırakılmış cam sürahi ve filtre"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
 ---
 
 Sinbo kahve makinesi denince akla iki farklı cihaz geliyor. Sinbo'nun sitesindeki kahve makineleri iki alt kategoride: **filtre kahve makinesi (SCM 2938)** ve Türk kahvesi için **elektrikli cezveler** (SCM 2916, SCM 2928, SCM 2949, SCM 2950 ve benzerleri). Sitedeki Türk kahvesi ürünleri otomatik makine değil, düğmeyle açıp kapattığın elektrikli cezve. Bu yazı Sinbo'nun kendi sitesinden indirilen Türkçe kullanma kılavuzlarına dayanıyor: adım adım bölümü filtre kahve makinesini, ayrı bölüm elektrikli cezveyi anlatıyor. Modelin farklıysa kendi kılavuzunla karşılaştır.

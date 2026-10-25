@@ -49,6 +49,15 @@ faq:
     a: "Vestel, bazı modellerde güvenlikli hortum kullanıldığını ve bu hortumda tehlikeli gerilim bulunduğunu belirtiyor: güvenlikli hortum kesilmemeli, kıvrılmasına ve bükülmesine izin verilmemeli. Fişi çekmeden hortuma dokunma; musluk tarafındaki bağlantıyı zorlamadan ayıramıyorsan servise bırak."
 images:
   coverAlt: "Tezgâh altında bulaşık makinesine bağlı beyaz su giriş hortumu ve açık duran ara musluk"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşıkları yerleştirdin, programı başlattın ve ekranda **FF** yazıyor. Vestel'in bulaşık makinesi kullanım kılavuzlarındaki arıza kodu tablosunda bu kodun karşılığı kısa: **"Su giriş sistemi arızası."** Tablonun çözüm sütunu da kullanıcıya iş veren iki kod satırından biri: musluğun açık ve suyun akıyor olmasını sağla, giriş hortumunun filtresini temizle; arıza devam ederse servisle iletişime geç. Bu yazıda o talimatı, aynı kılavuzların kurulum ve bakım bölümleriyle birlikte adım adım açıyoruz.

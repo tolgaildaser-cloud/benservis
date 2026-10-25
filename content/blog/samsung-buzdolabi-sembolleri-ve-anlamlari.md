@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran gümüş renkli iki kapılı bir buzdolabı"
   steps:
-    - "Buzdolabı kapağındaki dijital kontrol panelinin yakın planı"
-    - "Buzdolabı panelinde sıcaklık göstergesi ve küçük simgeler"
-    - "Buzdolabı kontrol panelindeki dokunmatik düğmeler"
-    - "Buzdolabı rafına yeni yerleştirilmiş içecek şişeleri"
-    - "Kapağı hafif aralık kalmış bir buzdolabı"
-    - "Mutfakta kapağı açık duran buzdolabının aydınlatılmış içi"
-    - "Buzdolabının yanında tezgahta duran bir akıllı telefon"
+    - "Çizim: solda buzdolabı, sağda not defteri ve kalem"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Samsung buzdolabının kapağındaki panelde bir simge yanıyor, sıcaklık yerine **E** ya da **--** yazıyor ya da göstergeler yanıp sönüyor; bunun bir arıza işareti olup olmadığını öğrenmek istiyorsun. Samsung'un **RB52DS** buzdolabı kılavuzunda kontrol panelindeki simgeler numarayla tek tek sayılıyor, **RT6300C** el kitabında da yeni nesil panelin simgeleri anlatılıyor. Bu yazıda bu iki kılavuzdan hangi işaretin arıza, hangisinin yalnız bir modun göstergesi olduğunu ve ne yapman gerektiğini çıkardık. Kılavuzun kendi notu: kontrol panosunun görüntüsü **modele göre değişkenlik gösterebilir;** kendi kılavuzunla karşılaştır.

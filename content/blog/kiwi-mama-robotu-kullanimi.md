@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kaseli ve kilitleme kollu küçük bir buharlı pişirici blender"
   steps:
-    - "Tezgâhın ortasına çevresi boş bırakılarak yerleştirilmiş mama robotu"
-    - "Lavaboda ılık sabunlu suyla yıkanan kase ve pişirme sepeti"
-    - "Isıtma haznesinin açık kapağı ve yanında su ölçmek için tutulan kase"
-    - "Kapağın üzerine indirilmiş kilitleme kolu, yakın plan"
-    - "Tabandaki kontrol düğmesi ve yanındaki gösterge ışığı"
-    - "Spatulayla kaseden kaldırılan pişirme sepeti"
-    - "Kurumaya bırakılmış kase, bıçak, spatula ve sepet"
+    - "Çizim: solda mama robotu, sağda ambalaj kutusu"
+    - "Çizim: solda mama robotu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mama robotu, sağda su ya da toz haznesi"
+    - "Çizim: solda mama robotu, sağda kapak"
+    - "Çizim: solda mama robotu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mama robotu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mama robotu, sağda prizden çekilen fiş"
 ---
 
 Kiwi Baby KBABY-85, aynı kasede önce buharla pişiren, sonra karıştıran bir mama robotu. Tabandaki tek düğme iki yöne döner: sola buharlı pişirme, sağa blender. Bu yazıdaki adımlar KBABY-85'in Türkçe Kiwi kullanım kılavuzundan alındı. Cihazın en sık atlanan kuralı ilk kullanımdan önce geliyor: **"Hijyen nedeniyle, ilk kez kullanmadan önce, 3 pişirme döngüsünü tamamlayın (yalnızca su - seviye 3)."**

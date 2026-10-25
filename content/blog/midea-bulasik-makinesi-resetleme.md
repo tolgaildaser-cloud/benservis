@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh yanında duran, kapak üstünde düğme sırası görünen solo bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin kapak üstündeki program seçme düğmeleri ve kilit simgesi"
-    - "Prize takılı fiş ve kapağı tam kapanmış bulaşık makinesi"
-    - "Bulaşık makinesi kapak üstündeki başlatma düğmesi"
-    - "Bulaşık makinesi ekranında yanıp sönen program göstergeleri"
-    - "Bulaşık makinesi kapağının iç yüzündeki açık deterjan bölmesi"
-    - "Kapağı açık bulaşık makinesinin alt sepetine yerleştirilen tabak"
-    - "Tezgâh üzerinde duran telefon ve yanında bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Midea bulaşık makinende yanlış programı başlattın, düğmeler tepki vermiyor ya da makine bir hata kodundan sonra takılı kaldı. Midea'nın kılavuzunda bunun için ayrı bir reset düğmesi yok; kontrol paneli tablosundaki düğmeler Güç, Bağlan, Program, Çocuk kilidi, Gecikme, Alt, Otomatik açma, Power Wash, Ion Dishfresh ve Başlat/Duraklat. Sıfırlama, program değiştirme bölümünde anlatılan Başlat/Duraklat yöntemiyle yapılıyor. Bu yazı Midea'nın İngiltere sitesinde yayımlanan MDWEF1034D(W)-WG-UK ve MDWEF1034D(SS)-WG-UK kullanım kılavuzuna dayanıyor (kılavuzun İngilizce baskısı, alıntılar ve düğme adları Türkçeye çevrildi). Türkiye'deki modelinde panel farklı olabilir.

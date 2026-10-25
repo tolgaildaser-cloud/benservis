@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Bebek odasında rafa konmuş küçük beyaz bir bebek kamerası, arkada yumuşak ışıklı duvar"
   steps:
-    - "Ekranında akıllı ev uygulamasının mağaza sayfası açık bir telefon"
-    - "Arka tarafındaki şarj soketine kablo takılı küçük bir bebek kamerası"
-    - "Telefon ekranında açık Wi-Fi ve Bluetooth simgeleri"
-    - "Telefon ekranındaki QR kodun kameranın merceğine doğru tutulması"
-    - "Uygulamada eklenmiş yeni bir kamera kartı ve ad alanı"
-    - "Kameranın yanındaki hafıza kartı yuvası ve yanında küçük bir SD kart"
-    - "Nemli bir bezle silinen kapalı bebek kamerasının gövdesi"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda bekleme süresi için saat"
+    - "Çizim: solda kamera, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda kamera, sağda anten girişi ve kablo"
 ---
 
 Kiwi Baby KBABY-99, TuyaSmart uygulamasıyla çalışan, Wi-Fi'ye bağlanan bir IP bebek kamerasıdır. Kurulumda en çok takılınan iki yer Wi-Fi şifresi ve kameranın daha önce başka bir hesaba eklenmiş olmasıdır. Bu yazıdaki adımlar KBABY-99'un Türkçe kullanım kılavuzundan alındı. Kılavuzun ilk uyarısı da şu: **"Bu bebek izleme cihazı yalnızca yardımcı bir üründür ve hiçbir koşulda 'YETİŞKİN GÖZETİMİ'nin yerini alamaz."**

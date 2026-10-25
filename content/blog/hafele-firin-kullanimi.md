@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, düğmeli ve camlı kapaklı ankastre bir fırın"
   steps:
-    - "Fırının içinden çıkarılan tepsi ve tel ızgara"
-    - "Boş fırının içini silen nemli bir bez"
-    - "En yüksek konuma çevrilmiş fırın termostat düğmesi"
-    - "Soğumuş fırının iç yüzeyi ve yanında kuru bir bez"
-    - "Fırın panelindeki fonksiyon ve termostat düğmeleri"
-    - "Kapağı kapalı, içi aydınlık ve boş bir fırın"
-    - "Fırın panelindeki mekanik zamanlayıcı düğmesi"
+    - "Çizim: solda ankastre fırın, sağda ambalaj kutusu"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda deterjan bölmesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
 ---
 
 Yeni bir Häfele ankastre fırın aldın ya da düğmelerin ne işe yaradığını tam bilmiyorsun. Häfele'nin Türkçe kılavuzunda fırın kullanımı üç düğmeye dayanıyor: **fonksiyon (program) düğmesi**, **zamanlayıcı** ve **termostat**. Bu yazı Häfele Türkiye sitesindeki **HÄFELE VINTAGE 60 cm ankastre fırın** ürün sayfasından indirilen kullanım kılavuzunun Türkçe bölümüne dayanıyor. Kılavuz 60 litre ve 80 litre fırınları birlikte anlatıyor; senin fırınının panelinde bazı programlar olmayabilir, kılavuz da kontrol paneli görselinin örnek olduğunu ve yalnız kendi cihazındaki panelin dikkate alınmasını söylüyor.

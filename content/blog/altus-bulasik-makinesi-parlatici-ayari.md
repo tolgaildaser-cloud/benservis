@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfakta kapağı açık duran beyaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kapağının iç yüzündeki açık parlatıcı bölmesi"
-    - "Bulaşık makinesi panelindeki yuvarlak program seçim düğmesi"
-    - "Bulaşık makinesi kontrol panelindeki küçük fonksiyon tuşları"
-    - "Kontrol panelinde yan yana dizilmiş program takip ışıkları"
-    - "Bulaşık makinesi panelinde başlat tuşunun yakın planı"
-    - "Kapalı konumda duran program seçim düğmesi"
-    - "Bulaşık makinesinin üst sepetinde parlak, temiz bardaklar"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Bardaklarda su lekesi kalıyor, bulaşıklar ıslak çıkıyor ya da tam tersine tabakta mavimsi bir iz görüyorsun; Altus bulaşık makinesinin parlatıcı ayarını değiştirmek istiyorsun. Altus'un AL 434 P kılavuzunda bu ayar ayrı bir tuşla değil, **program düğmesi ile Yarım yük / Tablet tuşunun birlikte kullanıldığı bir ayar moduyla** yapılıyor. Bu yazıda kılavuzun "Parlatıcı Miktarının Ayarlanması" bölümündeki sırayı, beş kademenin anlamını ve doğru kademeyi nasıl seçeceğini çıkardık. Tuş adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

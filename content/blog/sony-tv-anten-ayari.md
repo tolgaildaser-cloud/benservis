@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Oturma odasında sehpa üzerinde duran, ekranında ayarlar menüsü açık bir televizyon"
   steps:
-    - "Televizyonun arka panelindeki anten girişine takılan bir koaksiyel kablo"
-    - "Televizyonun arkasında diğer kablolardan ayrı duran bir anten kablosu"
-    - "Televizyon ekranında açılmış bir ayarlar menüsü"
-    - "Televizyon ekranında ilerleyen bir kanal tarama çubuğu"
-    - "Televizyon ekranında gelişmiş ayarlar listesi"
-    - "Televizyon ekranında açık ya da kapalı seçeneği olan bir ayar satırı"
-    - "Televizyon ekranında düzenlenen bir kanal listesi"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sony televizyonunu yeni kurdun, anteni değiştirdin ya da taşındın ve kanallar gelmiyor. Sony'de anten ayarı iki parçalı bir iş: kabloyu doğru girişe doğru biçimde takmak, sonra **Kanal Ayarı** menüsünden otomatik taramayı çalıştırmak. Bu yazı Sony Türkiye sitesindeki KD-55X85L kılavuzlar sayfasından bağlanan **Sony Türkçe Yardım Kılavuzu'na** (Google TV'li BRAVIA modelleri için çevrimiçi kılavuz) dayanıyor. Kılavuz, seçeneklerin bölgeye ve ülkeye göre değişebildiğini yazıyor; televizyonunda bir seçenek yoksa kendi modelinin Yardım Kılavuzu'na bak.

@@ -52,14 +52,14 @@ faq:
 images:
   coverAlt: "Duvara monte beyaz bir split klima iç ünitesine doğru tutulan bir uzaktan kumanda"
   steps:
-    - "Arka kapağı açık bir klima kumandası ve yanında kalem piller"
-    - "Duvardaki klima iç ünitesine doğru tutulan bir uzaktan kumanda"
-    - "Kumanda ekranında mod simgelerinin yakın planı"
-    - "Kumanda ekranında sıcaklık göstergesinin yakın planı"
-    - "Kumanda ekranında fan devri çubuklarının yakın planı"
-    - "Kumanda ekranında küçük bir saat simgesinin yakın planı"
-    - "Klima iç ünitesinin aşağı doğru açılmış hava yönlendirme kanadı"
-    - "Kumanda ekranının köşesinde küçük bir kilit simgesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
 ---
 
 Carrier split klimanın kumandası ilk bakışta kalabalık: Mod, Fan, iki sıcaklık tuşu, zamanlayıcı, Salınım, Sabit, EKO Uyku, Turbo, X-ECO, Benim Modum. Kışın en çok sorulan şey de sıcak ayarı. Bu yazıda Carrier'ın uzaktan kumanda kullanım kılavuzundaki her tuşu, kumandanın hangi durumda hiç yanıt vermediğini ve sıcak ayarının nasıl yapıldığını sırayla topladık. Kılavuzun kendi notu da var: tuş tasarımı senin kumandandan biraz farklı olabilir ve her model bütün işlevleri taşımaz.

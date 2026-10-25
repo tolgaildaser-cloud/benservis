@@ -49,14 +49,14 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir kombi ve altında soğuk akan bir lavabo musluğu"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Kombinin altında borular arasında duran açık konumda vanalar"
-    - "Mutfakta yanan mavi alevli bir ocak gözü"
-    - "Kombinin ışığı sönük, kapalı duran dijital ekranı"
-    - "Kombi panelinde musluk simgeli bir sıcaklık ayar düğmesi"
-    - "Kombi ekranında yanıp sönen kısa bir uyarı yazısı"
-    - "Lavaboda ince ve zayıf akan bir musluk suyu"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve kapalı bir alet çantası"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi çalışıyor gibi görünüyor ama musluktan sıcak su gelmiyor. Warmhaus'un Glowa, Ewa ve Enerwa montaj ve kullanım kılavuzlarında bu belirti için tek bir satır yok; ama üç kılavuz da sıcak suyu etkileyen kontrolleri, ekran göstergelerini ve kullanıcıya bırakılan adımları açıkça sıralıyor. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi bu kılavuzlardan topladık. Düğmelerin yeri modele göre değişir; kendi kılavuzunla karşılaştır.

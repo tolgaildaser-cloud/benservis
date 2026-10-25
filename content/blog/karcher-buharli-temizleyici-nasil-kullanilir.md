@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Fayans zeminde duran, hortumlu ve uzatma borulu tekerlekli bir buharlı temizleyici"
   steps:
-    - "Buharlı temizleyicinin üstündeki açıklığa yerleştirilmiş silindir biçimli kireç giderme kartuşu"
-    - "Buharlı temizleyicinin üst panelindeki küçük gösterge ışıkları ve tek bir tuş"
-    - "Buharlı temizleyicinin su doldurma ağzına dökülen musluk suyu"
-    - "Buhar tabancasına takılmış nokta huzme memesi ve küçük yuvarlak fırça"
-    - "Prize takılı buharlı temizleyici ve tabancanın ucundan beze yönelen hafif buhar"
-    - "Buharla silinen fayans zemin ve üzerinde mikrofiber bezli yer başlığı"
-    - "Kireç kartuşu yerindeyken su eklenmiş buharlı temizleyicinin üstten görünümü"
-    - "Kullanımdan sonra park tutucusuna asılmış yer başlığı ve gövdeye sarılmış hortum"
+    - "Çizim: solda buharlı temizleyici, sağda kireç çözücü şişesi"
+    - "Çizim: solda buharlı temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı temizleyici, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı temizleyici, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buharlı temizleyici, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buharlı temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı temizleyici, sağda sigorta kutusundaki şalterler"
 ---
 
 Kärcher'in SC serisi buharlı temizleyicileri hortumlu, tekerlekli kazanlı cihazlar. SC 3 EasyFix'te kazan yerine sürekli doldurulabilen bir su deposu ve suyun kirecini tutan bir **kireç giderme kartuşu** var. Bu kartuş, kullanımın en çok atlanan kısmı: cihaz su sertliğine ayarlanmazsa kireçleniyor, kartuş bitince de kendini kapatıyor. Bu yazı, Kärcher Türkiye sitesindeki SC 3 EasyFix ürün sayfasından bağlanan orijinal işletim kılavuzunun **Türkçe bölümüne** dayanıyor. SC 2, SC 4 ya da SC 5 kullanıyorsan mantık benzer olabilir ama düğme ve ışık düzeni modele göre değişir; kendi kılavuzuna bak.

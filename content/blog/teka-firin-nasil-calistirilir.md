@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kapağı kapalı siyah camlı bir ankastre fırın"
   steps:
-    - "Fırın kumanda panelinde yanıp sönen dijital saat"
-    - "Fırının orta seviyesine sürülmüş bir fırın tepsisi"
-    - "Ankastre fırının sol tarafındaki döner işlev kadranı"
-    - "Fırının sağ tarafındaki döner sıcaklık kadranı"
-    - "Fırın camının arkasında pişmeyi bekleyen bir tepsi börek"
-    - "Fırın ekranında geri sayan kalan süre göstergesi"
-    - "Kapalı konuma çevrilmiş döner fırın kadranları"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Yeni bir Teka ankastre fırın aldın ya da evdekini ilk kez kullanacaksın: kadranı çeviriyorsun ama fırın ısınmıyor, ya da işin bitince nasıl kapatacağını bilmiyorsun. Bu yazı Teka'nın HLB ve HLB P serisi (HLB 830, HLB 840, HLB 830 P, HLB 840 P) için yayımladığı Türkçe kullanım kılavuzuna ve aynı serinin Türkçe pişirme kılavuzuna dayanıyor. Senin modelinde düğmeler farklıysa kendi kılavuzun esastır. İlk kullanımdan önce Teka, fırınla gelen kurulum ve bakım talimatlarını okumanı istiyor.

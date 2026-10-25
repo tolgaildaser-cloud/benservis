@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Program seçici düğmesi ve ekranı görünen beyaz bir çamaşır makinesi paneli"
   steps:
-    - "Çamaşır makinesi panelinde yan yana duran iki tuş"
-    - "Durdurma konumuna çevrilmiş program seçici düğmesi"
-    - "Su boşaltan çamaşır makinesinin cam kapağı"
-    - "Yeni program seçilmiş çamaşır makinesi paneli"
-    - "Çamaşır makinesi panelindeki gecikmeli başlatma tuşu"
-    - "Prizden çekilmiş çamaşır makinesi fişi"
-    - "Prize yeniden takılmış fiş ve kapağı kapalı çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Vestfrost çamaşır makinen yanlış programda takıldı, tuşlara tepki vermiyor ya da ekranda bir hata kodu kaldı; "resetleme" arıyorsun. Vestfrost kılavuzlarında ayrı bir reset tuşu yok. Kılavuzun anlattığı yol **programı iptal etmek**: seçiciyi durdurma konumuna çevir, makine suyu boşaltsın, sonra yeni program seç. Bu yazı Vestfrost'un Danimarka'daki resmî sitesinden bağlanan **VWM 22148 BM** kullanım kılavuzuna dayanıyor; **VWM 33149** kılavuzuyla karşılaştırdık. Türkçe ya da İngilizce kılavuz bulunmadığı için **kılavuzun Danca baskısını** kullandık, alıntıları Türkçeye çevirdik. **Türkiye'de satılmış Vestfrost modellerinde panel, iptal konumunun adı ve tuş numaraları farklı olabilir**; kendi kılavuzunla karşılaştır.
