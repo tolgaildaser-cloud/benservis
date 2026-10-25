@@ -1,7 +1,7 @@
 // src/urun-ld.test.js — YK #179 ①: Product JSON-LD tek kaynak, uydurma stok yok, fiyat ekranla aynı.
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
-import { urunLdNesnesi, urunTeklifi, urunSatista, ekranFiyati } from "./urun-ld.js";
+import { urunLdNesnesi, urunTeklifi, urunSatista, ekranFiyati, IADE_GUNU } from "./urun-ld.js";
 import { urunLd } from "../scripts/pazar-sayfalari.mjs";
 
 const u = { id: "a1", baslik: "Kombi pompası", fiyat: 1029, stok: 10, durum: "aktif", parca_durum: "yeni", gorsel_url: "/pazar-gorsel/a1.webp" };
@@ -30,6 +30,29 @@ describe("Product teklifi", () => {
       expect(o.availability).toBe("https://schema.org/OutOfStock");
       expect(o.shippingDetails).toBeUndefined();
     }
+  });
+});
+
+describe("iade politikası (GSC Satıcı girişleri: hasMerchantReturnPolicy)", () => {
+  const u = { id: "u1", baslik: "Parça", fiyat: 509, stok: 10, durum: "aktif" };
+  it("teklifte belgeyle birebir iade politikası: TR, 14 gün, kargoyla, ücretsiz, belge bağlantısı", () => {
+    expect(urunTeklifi(u).hasMerchantReturnPolicy).toEqual({
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "TR",
+      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 14,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+      merchantReturnLink: "https://www.benservis.com/iade-ve-cayma/",
+    });
+  });
+  it("satıştan kalkmış üründe de var; build kabuğu da aynı alanı basar", () => {
+    expect(urunTeklifi({ ...u, durum: "pasif" }).hasMerchantReturnPolicy.merchantReturnDays).toBe(IADE_GUNU);
+    expect(JSON.stringify(urunLd(u))).toContain("hasMerchantReturnPolicy");
+  });
+  it("iade süresi canlı belge metniyle tutarlı (pazar-hukuk.mjs)", () => {
+    const belge = fs.readFileSync("scripts/pazar-hukuk.mjs", "utf8");
+    expect(belge).toMatch(new RegExp(`${IADE_GUNU} gün`));
   });
 });
 
