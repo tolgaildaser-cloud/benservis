@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Kapısı açık, iç ışığı yanan ve rafları dolu beyaz bir buzdolabı"
   steps:
-    - "Mutfak duvarındaki prize takılı bir buzdolabı fişi"
-    - "Prizden yeni takılmış fişi ve kapısı kapalı buzdolabı"
-    - "Buzdolabı kapağındaki gösterge ışıkları ve tek tuş"
-    - "Buzdolabı kapısının kenarındaki temiz kapı contası"
-    - "Fazla doldurulmuş, arka duvara dayanmış yiyeceklerle dolu raf"
-    - "Buzdolabının arkasındaki siyah ızgara biçimli kondenserin tozunu alan süpürge ucu"
-    - "Duvarla buzdolabının arkası arasındaki boşluk"
-    - "Tezgâhta duran buzdolabı kılavuzu ve garanti belgesi"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Vestfrost buzdolabın çalışıyor gibi ama içerisi serin değil; ya da elektrik kesintisinden sonra hiç ses gelmiyor. "Vestfrost buzdolabı soğutmuyor" diye arıyorsan önce servis çağırmadan yapabileceğin kontrollere bak. Bu yazıda Vestfrost'un Danimarka'daki resmî sitesinden bağlanan VCF 20180 NoFrost kılavuzunu kullandık. Vestfrost'un Türkiye sitesi artık açılmıyor ve Türkçe kılavuz bulunmuyor; bu yüzden **kılavuzun İngilizce baskısını** kullandık, alıntıları Türkçeye çevirdik. Türkiye'de satılmış Vestfrost modellerinde panel ve iç düzen farklı olabilir; buradaki kontroller ise kılavuzun genel "servisi aramadan önce" listesinden geliyor.

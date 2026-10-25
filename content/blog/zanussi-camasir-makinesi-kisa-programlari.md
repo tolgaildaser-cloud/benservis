@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Çevirmeli program düğmesinin yanında kısa program yazıları görünen çamaşır makinesi paneli"
   steps:
-    - "Çamaşır makinesi program düğmesinin kısa programlar bölümü"
-    - "Tamburun yarısına kadar doldurulmuş hafif sentetik çamaşırlar"
-    - "Kontrol panelinde sönük duran seçenek tuşları"
-    - "Ekranda süre ve altında kısa çizgiler gösteren çamaşır makinesi paneli"
-    - "Çalışmakta olan ve ekranında süre görünen çamaşır makinesi"
-    - "Tamburda düzgün yayılmış, dengeli duran çamaşırlar"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 "Zanussi çamaşır makinesinin kısa programı hangisi?" diye arıyorsan büyük ihtimalle elinde az çamaşır var ve uzun bir programa girmek istemiyorsun. Ya da kısa program seçtin ama ekrandaki süre beklediğinden uzun çıktı. Zanussi'nin ZWF845B4PW ve ZWF143A2DG kullanım kılavuzlarında (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) üç kısa program ve bir süre kısaltma tuşu var. Aşağıda hangisini ne zaman seçeceğin ve sürenin neden uzayabileceği adım adım duruyor. Senin modelinde program adları farklı olabilir; kendi kılavuzunla karşılaştır.

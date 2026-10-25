@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Çevirmeli program düğmesi ve dokunmatik tuşları görünen çamaşır makinesi kontrol paneli"
   steps:
-    - "Çamaşır makinesinin başlat ve duraklat tuşu"
-    - "Çamaşır makinesi kontrol panelindeki açma kapama tuşu"
-    - "Program düğmesinin işaretli sıfırlama konumuna çevrilmiş hâli"
-    - "Çamaşır makinesi ekranında yanan küçük kilit simgesi"
-    - "Ekranında saat göstergesi duran çamaşır makinesi paneli"
-    - "Tamburunda az miktarda su görünen çamaşır makinesi kapağı"
-    - "Açık deterjan çekmecesi ve içindeki toz deterjan"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Zanussi çamaşır makinen yanlış programda kaldıysa, tuşlar tepki vermiyorsa ya da programı baştan kurmak istiyorsan aradığın şey makineyi temiz bir başlangıca döndürmek. Zanussi'nin ZWF845B4PW ve ZWF143A2DG kullanım kılavuzlarında (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ayrı bir reset tuşu yok. ZWF143A2DG'nin program düğmesinde bir **Reset** konumu var; iki modelde de ON/OFF ya da program düğmesiyle iptal yolu anlatılıyor. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

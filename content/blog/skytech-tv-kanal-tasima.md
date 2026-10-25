@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Televizyon ekranında açık duran düzenlenebilir kanal listesi"
   steps:
-    - "Televizyonun arka kasasında duran model etiketi"
-    - "Televizyon ekranında karasal tarama ayarları penceresi"
-    - "Televizyon ekranında açık duran dijital kanal listesi"
-    - "Televizyon ekranında yeni konumuna taşınan seçili kanal satırı"
-    - "Televizyon ekranında kanal düzenleme tablosu"
-    - "Televizyon ekranında kanal yöneticisi menüsü"
-    - "Kanepenin kolunda duran televizyon kumandası"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Tarama bitti, kanallar geldi ama sıra karışık: sık izlediğin kanal listenin dibinde, istemediğin yayınlar başta. Skytech televizyonlarda kanal taşıma kanal listesinden yapılıyor; menünün adı ise modelin işletim sistemine göre değişiyor. Bu yazıda Skytech'in kendi sitesinde yayımladığı Android TV, uydu alıcılı TV ve webOS TV kullanma kılavuzlarındaki kanal düzenleme adımlarını topladık.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı ankastre bulaşık makinesi ve tezgah altındaki su musluğu"
   steps:
-    - "Program tuşu ışıkları yanıp sönen bulaşık makinesi paneli"
-    - "Tam kapatılmış bulaşık makinesi kapağı"
-    - "Tezgah altında açık konumdaki su musluğu"
-    - "Lavabo bataryasından akan su"
-    - "Bükülmeden dolaşan bulaşık makinesi giriş hortumu"
-    - "Musluk bağlantısından sökülmüş hortum ucundaki süzgeç"
-    - "Kontrol paneli sönük, kapağı kapalı bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Zanussi bulaşık makinen programı başlatıyor ama içeriden su sesi gelmiyorsa ya da program tuşlarının ışıkları aralıklarla bir kez yanıp sönüp kesik bir uyarı sesi çıkıyorsa makine su alamıyor. Zanussi'nin ZDLN2621 kullanım kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) bu durumun sebeplerini evde kontrol edilebilecek bir liste hâlinde veriyor. Çoğu musluk, basınç ya da hortumla ilgili. Senin modelinde gösterim farklı olabilir; kendi kılavuzunla karşılaştır.

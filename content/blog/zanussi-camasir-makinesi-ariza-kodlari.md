@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Ön yüklemeli beyaz çamaşır makinesinin ekranında yanan harfli hata kodu"
   steps:
-    - "Kontrol paneli sönük, kapağı kapalı çamaşır makinesi"
-    - "Duvardaki su musluğu ve ona bağlı giriş hortumu"
-    - "Giriş hortumunun ucundaki süzgeç filtrenin yakın planı"
-    - "Lavabo altına giden bükülmemiş gri tahliye hortumu"
-    - "Çamaşır makinesinin program düğmesinde boşaltma konumu"
-    - "Contası temiz, sıkıca kapatılmış çamaşır makinesi kapağı"
-    - "Prizden çekilmiş fiş ve yanında duran çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Zanussi çamaşır makinenin ekranında E ile başlayan bir kod duruyor ve başlat/duraklat tuşu sürekli yanıp sönüyorsa makine bir sorunu kendisi yakalamış demektir. Zanussi'nin ZWF845B4PW (8 kg) ve ZWF143A2DG (10 kg) kullanım kılavuzlarındaki "Alarm kodları ve olası arızalar" tablosunda beş kod var: E10, E20, E40, E91 ve EH0. Bu yazı kılavuzun İngilizce baskısına dayanıyor, alıntılar Türkçeye çevrildi. Senin modelinde farklı kodlar olabilir; kendi kılavuzunla karşılaştır.

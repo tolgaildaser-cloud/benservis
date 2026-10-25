@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Banyoda lavabonun üzerindeki açık musluk ve yanında asılı duran katlanmış bir havlu"
   steps:
-    - "Pencereleri ardına kadar açık, boş ve sakin bir mutfak"
-    - "Duvardaki beyaz kombinin ekranının yakın planı ve yanında küçük bir not kâğıdı"
-    - "Kombi ön panelindeki sade tuş sırası ve küçük ekran"
-    - "Kombi ekranında beliren kısa bir harf yazısı"
-    - "Kombi panelinde sıcak su ayar tuşlarının yakın planı"
-    - "Mutfak lavabosunda sonuna kadar açılmış bir musluktan akan su"
-    - "Kombinin yanında tezgâhta duran katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kalorifer çalışıyor ama musluktan soğuk su akıyor, ya da kombi hiç yanmıyor. Airfel'in Maestro Optimum, Maestro Comfort ve Maestro Power kullanım kılavuzları sıcak su için iki koşul koyuyor: kombi doğru modda olacak ve musluktan yeterli akış olacak. Bu yazıda bu koşulları, sıcak su ayarını ve ekranda görebileceğin kodları bu üç kılavuzdan sırayla topladık. Senin kombinde tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

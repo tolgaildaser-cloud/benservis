@@ -38,12 +38,12 @@ faq:
 images:
   coverAlt: "Mutfak dolapları arasına yerleştirilmiş, kapağı kapalı ankastre bir bulaşık makinesi"
   steps:
-    - "Kapağı tam kapanmış bir bulaşık makinesinin üst kenarı"
-    - "Bulaşık makinesinin üst kenarındaki açma kapama düğmesi"
-    - "Bulaşık makinesi panelindeki gecikme düğmesi ve göstergesi"
-    - "Aralık duran kapağından buhar çıkan bir bulaşık makinesi"
-    - "Gösterge ışıkları yanıp sönen bir bulaşık makinesi paneli"
-    - "Bulaşık makinesi kapağının yan kenarındaki ürün etiketi"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Smeg bulaşık makinen yanlış programla başladı, tuşlara tepki vermiyor ya da bir alarmdan sonra öylece bekliyor. Bu durumda "resetlemenin" bir yolunu arıyorsun. Smeg'in ST4512IN ve STL323BL bulaşık makineleri için yayımladığı kullanım kılavuzları bunu birkaç adımda anlatıyor. Smeg'in Türkiye sitesindeki indirme sayfasında bu modeller için Türkçe dil seçeneği yok; kılavuzun İngilizce baskısını kullandık ve alıntıları Türkçeye çevirdik. Senin modelinde düğme adları farklı olabilir.

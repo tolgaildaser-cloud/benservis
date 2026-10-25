@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ön kapağı açılmış beyaz bir split klima iç ünitesi ve içinde görünen ince toz filtreleri"
   steps:
-    - "Duvardaki bir elektrik sigorta panosunun kapağı açık hâli"
-    - "Ön kapağı yukarı doğru kaldırılmış bir klima iç ünitesi"
-    - "Klimadan çıkarılmış, üzerinde ince toz tabakası olan plastik bir hava filtresi"
-    - "Lavaboda ılık su altında yıkanan ince bir klima filtresi"
-    - "Gölgede bir havlunun üzerinde kurumaya bırakılmış iki klima filtresi"
-    - "Yuvasına yeniden yerleştirilmiş temiz filtreleriyle bir klima iç ünitesi"
-    - "Nemli bir bezle silinmiş, kapağı kapalı parlak bir klima ön paneli"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kapak"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda deterjan bölmesi"
 ---
 
 SEG klimada kullanıcıya bırakılan bakım işinin çoğu filtrelerle ilgili. SEG'in kılavuzu toz filtrelerinin yaklaşık haftada bir temizlenmesini istiyor ve kirli filtreyi hem zayıf soğutma hem zayıf ısıtma için ilk sebep olarak gösteriyor. İş kısa: sigortayı kapat, ön kapağı aç, filtreyi çıkar, temizle, kurut, yerine tak. Bu yazı SEG INV 9/12/18/24 duvar tipi split klima kullanım kılavuzundaki sırayı izliyor. Kılavuz Vestel'in kılavuz sunucusunda; SEG klimaları Vestel Beyaz Eşya üretiyor. Senin modelinde filtre sayısı ve biçimi farklı olabilir.

@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Kapısı açık bir dondurucu bölmesinin iç duvarlarında biriken beyaz buz tabakası"
   steps:
-    - "Buzdolabının iç yan duvarındaki model ve özellik etiketi"
-    - "Tam kapanmış bir buzdolabı kapısının kenarındaki conta hattı"
-    - "Statik buzdolabının soğutucu bölmesinin arka duvarında ince kar tabakası"
-    - "Gazete kâğıdına sarılmış donmuş yiyecek paketleri"
-    - "Kapısı açık dondurucunun içinde sıcak su dolu orta boy bir kap"
-    - "Buzu çözülmüş dondurucunun içi ve yanında kuru bir sünger"
-    - "Kapısı kapalı, yeniden çalıştırılmış bir buzdolabı"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda ilgili filtre"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 SEG buzdolabında buzlanmanın sebebi önce dolabın tipine bağlı. Statik bir dolapta dondurucuda buz birikmesi normaldir ve belli aralıklarla eritilir. No Frost bir dolapta ise kılavuza göre buz oluşmamalıdır; görüyorsan sebep çoğu zaman kapı ya da nemdir. Bu yazı üç SEG kılavuzuna dayanıyor: tezgâh altı **STW 902** ve çift kapılı **455A** (statik), No Frost **RF4540 A**. SEG'in kendi sitesi yok; kılavuzlar üretici Vestel'in kılavuz sunucusunda duruyor. Senin modelin farklıysa kendi kılavuzunun eritme bölümü esastır.

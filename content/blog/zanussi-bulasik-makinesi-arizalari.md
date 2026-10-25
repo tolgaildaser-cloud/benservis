@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Programı bitmiş bulaşık makinesinin üst sepetinde lekeli cam bardaklar"
   steps:
-    - "Program tuşu ışıkları yanıp sönen bulaşık makinesi paneli"
-    - "Akan su altında temizlenen alt püskürtme kolu"
-    - "Kurutma aşamasında kendiliğinden aralanmış bulaşık makinesi kapağı"
-    - "Işığa tutulmuş, üzerinde damla izleri olan cam bardak"
-    - "Bulaşık makinesi tabanındaki kapağı sıkıca kapatılmış tuz haznesi"
-    - "Kapağı açılmamış, içinde tablet kalmış deterjan gözü"
-    - "Yumuşak bezle silinen bulaşık makinesinin iç yüzeyi"
-    - "Bulaşık makinesinin alt kısmındaki ayarlanabilir ayaklar"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Zanussi bulaşık makinen çalışıyor, arıza ışığı da yok, ama sonuç kötü: bulaşıklar kirli ya da ıslak çıkıyor, bardaklarda iz kalıyor, içerisi kokuyor. Bunlar kod vermeyen arızalar. Zanussi'nin ZDLN2621 kullanım kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) "Yıkama ve kurutma sonuçları tatmin edici değil" başlıklı ayrı bir tabloda bunların sebeplerini sayıyor. Çoğu yükleme, parlatıcı, tuz ve filtreyle çözülüyor. Senin modelinde ayarlar farklı olabilir; kendi kılavuzunla karşılaştır.

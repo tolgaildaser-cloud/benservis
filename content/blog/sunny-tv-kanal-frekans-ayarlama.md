@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Televizyon ekranında açık duran manuel kanal arama penceresi"
   steps:
-    - "Televizyonun arka kasasında duran ürün etiketi"
-    - "Masada açık duran bir dizüstü bilgisayar ekranında yayın listesi"
-    - "Duvardaki anten prizine takılı koaksiyel kablo"
-    - "Televizyon ekranında yayın türü seçim listesi"
-    - "Televizyon ekranında frekans ve sembol oranı giriş alanları"
-    - "Duvar kenarında duran kablo TV bağlantı kutusu"
-    - "Televizyon ekranında açık duran kanal listesi"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sunny televizyonunda bir kanal kayboldu ya da yayıncı frekansını değiştirdi; bütün listeyi silmeden yalnız o kanalı eklemek istiyorsun. Bunun yolu manuel kanal arama: kanalın frekansını ve yayın değerlerini elle girip yalnız o yayını aratıyorsun. Bu yazıda Sunny'nin kendi sitesindeki televizyon destek sayfasının "Kurulum ve Kanal İşlemleri" bölümünü temel aldık. Sunny'nin sayfası menü adlarının ve adımların televizyonun modeline ve işletim sistemine göre değiştiğini belirtiyor; frekans değerlerini ise vermiyor, güncel değerin yayıncıdan alınmasını öneriyor.

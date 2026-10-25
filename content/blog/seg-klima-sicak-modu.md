@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Kış akşamı oturma odasında duvara monte edilmiş beyaz bir split klima"
   steps:
-    - "Klima kumandasının ekranındaki mod simgelerinin yakın planı"
-    - "Klima kumandasının sıcaklık artırma düğmesinin yakın planı"
-    - "Yatay kanadı açılmaya başlamış beyaz bir klima iç ünitesi"
-    - "Soğuk bir sabahta balkonda duran klima dış ünitesi"
-    - "Ön kapağı açılmış bir klima iç ünitesinde görünen toz filtreleri"
-    - "Önü boş bırakılmış, perdesi kenara çekilmiş bir klima iç ünitesi"
-    - "Masada açık duran bir klima kullanım kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
 ---
 
 "SEG klima sıcak modu çalışmıyor" diye aranan durumların bir kısmı aslında arıza değil. SEG'in kılavuzu, ısıtmaya alınan klimanın birkaç durumda bilerek bekletildiğini yazıyor: iç ünite sıcak hava hazır olmadan üflemiyor, soğuk ve nemli havada dış ünite buz çözmek için ısıtmaya ara veriyor. Bu yazı sıcak modun nasıl açıldığını ve ısıtma zayıfsa hangi kontrollerin sende olduğunu SEG INV 9/12/18/24 duvar tipi split klima kullanım kılavuzuna göre anlatıyor. Kılavuz Vestel'in kılavuz sunucusunda; SEG klimaları Vestel Beyaz Eşya üretiyor.

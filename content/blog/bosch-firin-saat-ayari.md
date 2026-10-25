@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, paslanmaz çelik panelli ve küçük ekranlı bir ankastre fırın"
   steps:
-    - "Ankastre fırının kumanda panelinde yan yana tuşlar ve küçük dijital ekran"
-    - "Fırın panelinde sıfır konumunda duran döner fonksiyon düğmesi"
-    - "Fırın panelindeki küçük dijital saat ekranının yakın planı"
-    - "Fırın panelinde yan yana duran iki küçük dokunmatik tuş"
-    - "Fırın panelinde iki döner düğme ve aralarında küçük bir ekran"
-    - "Ankastre fırının ekranında bir zamanlayıcı göstergesi"
-    - "Karanlık bir mutfakta sönük ekranlı bir ankastre fırın"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Fırını yeni taktırdın ya da elektrik gidip geldi; ekranda sıfırlar ya da 12:00 yanıp sönüyor. Bosch'un kılavuzlarına göre bu bir arıza değil: elektrik bağlantısından ya da **elektrik kesintisinden sonra** saat yeniden ayarlanmayı bekler. Bosch'ta saatin nasıl ayarlandığı panel tipine göre değişiyor. Bu yazıda Bosch'un üç ankastre fırın kılavuzundan, tuşlu **HBB23C,** artı-eksi tuşlu **HBF512B.1T** ve iki döner düğmeli **HBJN10Y..R** serilerinden, saatin ilk ayarını, sonradan değiştirilmesini ve kesintiden sonra yapılacakları çıkardık. Senin modelin farklıysa tuş ve sembol yerlerini kendi kılavuzunla karşılaştır.

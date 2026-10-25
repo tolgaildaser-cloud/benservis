@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ankastre fırının ön panelinde döner program düğmesi ve çevresindeki küçük simgeler"
   steps:
-    - "Fırın panelinde çevresi simgelerle çevrili döner bir düğme"
-    - "Kare çerçevenin altında ve üstünde birer yatay çizgi olan fırın simgesi"
-    - "Yalnız altta tek çizgi olan sade bir fırın simgesi"
-    - "Yatay çizgilerin ortasında küçük bir pervane bulunan fırın simgesi"
-    - "Üst kenarda zikzak çizgi olan ızgara simgesi"
-    - "Fırının içinde ortadaki rafa yerleştirilmiş boş bir tepsi"
-    - "Daire içinde pervane bulunan turbo fan simgesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
 ---
 
 Yeni bir Simfer ankastre fırın aldın ya da düğmenin üzerindeki yazılar silindi; şimdi kek için hangi işarete çevireceğini bilmiyorsun. "Simfer fırın alt üst pişirme işareti" sorusunun cevabı Simfer'in kendi ankastre fırın kullanım kılavuzundaki program türleri tablosunda. Bu yazıda Simfer'in kendi alan adında duran ve kapağında Simfer logosu olan Türkçe kılavuzu kullandık. Simgelerin şeklini kılavuzun sayfa görüntüsünden okuduk. Kılavuz 7301'den 7340'a kadar birçok modeli kapsıyor, bu yüzden bütün simgeler her fırında olmayabilir.

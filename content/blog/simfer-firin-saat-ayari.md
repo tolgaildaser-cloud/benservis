@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Ankastre fırının üst panelinde yanıp sönen dijital saat ekranı"
   steps:
-    - "Fırın ekranında yanıp sönen saat haneleri ve yanında küçük bir harf simgesi"
-    - "Fırın panelinde saat kadranı simgeli dokunmatik tuş"
-    - "Fırın panelinde yan yana artı ve eksi dokunmatik tuşları"
-    - "Fırın ekranında saat ile dakika arasında yanıp sönen nokta"
-    - "Fırın ekranında kum saati biçiminde küçük bir alarm simgesi"
-    - "Fırın ekranında sabit yanan harf simgesi ve günün saati"
-    - "Elektriği yeni gelmiş bir mutfakta yanıp sönen fırın ekranı"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Elektrik kesildi ya da fırın yeni takıldı; ekranda saat ve bir **A** harfi yanıp sönüyor, fırın ısıtmıyor. "Simfer fırın saat ayarı" sorusunun cevabı Simfer'in ankastre fırın kılavuzunda, "3 dokunmatik programlı zamanlayıcı" bölümünde. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu olan Türkçe kılavuzu kullandık; tuşların şeklini kılavuzun sayfa görüntülerinden okuduk. Simfer'in uyarısı önemli: zamanlayıcılar fırının donanımına göre değişiyor. Kılavuzda başka dijital ve analog zamanlayıcılar da var; senin panelinde **eksi, saat ayar ve artı** olmak üzere üç dokunmatik tuş varsa bu sıra senin için.

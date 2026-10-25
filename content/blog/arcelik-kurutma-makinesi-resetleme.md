@@ -43,12 +43,12 @@ faq:
 images:
   coverAlt: "Çamaşır makinesinin üstüne yerleştirilmiş beyaz bir kurutma makinesi"
   steps:
-    - "Kurutma makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Kurutma makinesinden yarıya kadar çekilmiş plastik su tankı"
-    - "Kurutma makinesinin büyük, yuvarlak program seçim düğmesi"
-    - "Kurutma makinesinin açık kapağının önünde katlanmış duran sıcak havlular"
-    - "Kurutma makinesi panelinde yuvarlak bir başlat tuşu"
-    - "Kurutma makinesinin üstünde katlanmış duran bir kullanma kılavuzu"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kurutma programı yarıda kaldı, yanlış programı seçtin ya da makine tuşlara tepki vermiyor; Arçelik kurutma makinesini "resetlemek" istiyorsun. Arçelik'in kurutma makinesi kılavuzlarında **Reset adında bir tuş yok.** Karşılığı **"Programın iptal edilmesi"** bölümü. Bu yazıda Arçelik'in 3886 KT ve 2772 KT kullanma kılavuzlarından sıfırlamanın iki yolunu, onu engelleyen çocuk kilidini ve iptalden sonra unutulmaması gereken sıcak çamaşır uyarısını çıkardık. Düğme adları iki modelde farklı; kendi kılavuzunla karşılaştır.

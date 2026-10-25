@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Kapağı açık, tamburunda kurumuş havlular duran ön yüklemeli kurutma makinesi"
   steps:
-    - "Nemli bezle silinen kurutma makinesi tamburu"
-    - "Fermuarı kapatılmış ve cepleri boşaltılmış giysiler"
-    - "Contasına çamaşır sıkışmadan kapatılmış kurutma makinesi kapağı"
-    - "Kurutma makinesinin dokunmatik program seçim paneli"
-    - "Kontrol panelinde kırışık önleme ve gecikme göstergeleri"
-    - "Ekranında kalan süre görünen çalışan kurutma makinesi"
-    - "Kapak ağzından çıkarılmış, üzerinde hav birikmiş filtre"
-    - "Alt kapağı açılmış kurutma makinesinin kondenser bölmesi"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda hava giriş ve çıkış ızgarası"
 ---
 
 Zanussi kurutma makinen var ama kılavuz kayıp, ya da makine ortasında duruyor, çamaşır nemli çıkıyor ve neyi yanlış yaptığını bilmiyorsun. Zanussi'nin ZDH8903PZ (8 kg, ısı pompalı) kullanım kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) programları, ayarları ve her kullanımdan sonra yapılması gereken iki küçük bakımı anlatıyor: filtre ve su haznesi. Bu iki iş atlanınca makine durur ya da kurutmaz. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

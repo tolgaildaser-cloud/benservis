@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Banyoda beyaz, önden yüklemeli bir çamaşır makinesi ve kapalı cam kapak"
   steps:
-    - "Çamaşır makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Çamaşır makinesi kumanda panelinde başlat ve beklet tuşunun yakın planı"
-    - "Cam kapağın ardında suyla dolu, sakin duran bir tambur"
-    - "Kumanda paneli sönmüş, kapalı duran bir çamaşır makinesi"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Dokunmatik ekranlı bir çamaşır makinesi kumanda panelinin geniş planı"
-    - "Çamaşır makinesi kapağının iç kenarında ürün etiketi ve yanında katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program takıldı, ekran tepki vermiyor ya da yanlış programı başlattın; ilk akla gelen "makineyi resetlemek". Bosch'un çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok.** Kılavuzlar bunun yerine dört ayrı işlem anlatıyor: **programı iptal etmek, cihazı kapatıp açmak, en az 30 saniye güç kaynağından ayırmak** ve dokunmatik ekranlı modellerde **temel ayarlar menüsünden fabrika ayarlarına dönmek.** Bu yazıda sırayı iki Bosch kılavuzundan çıkardık: dokunmatik ekranlı WGB244A0TR ve program düğmeli WAK24210TR. Tuş adları ve yerleri seriye göre değişir; kendi kılavuzunla karşılaştır.

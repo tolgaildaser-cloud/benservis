@@ -51,13 +51,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin kumanda paneli ve küçük ekranı"
   steps:
-    - "Açık duran bir pencere ve önünde boş, sakin bir mutfak"
-    - "Kombi ekranında beliren küçük bir uyarı simgesinin yakın planı"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombinin kumanda panelinde yan yana duran ok biçimli iki tuş"
-    - "Kombinin sade kumanda panelinde tek bir yuvarlak tuşun yakın planı"
-    - "Duvarda sessizce bekleyen beyaz bir kombi ve kapalı mutfak dolapları"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bosch kombinin ekranında bir sembol ve bir kod belirdi, kombi durdu. Bazı arızalarda kombi sıfırlanmadan yeniden çalışmıyor; ama Bosch'un sıfırlama yolu tek değil, modele göre değişiyor. Bu yazıda Bosch'un Condens 2500 W, 1200W, 2200i W, 2300i W, 7000iW ve 5700i W kullanma kılavuzlarındaki sıfırlama adımlarını ve tekrar denemenin sınırını topladık. Kendi kombinin modelini kumanda paneli kapağındaki tip etiketinden öğrenebilirsin.

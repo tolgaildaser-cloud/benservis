@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Tezgâh altında kapağı kapalı paslanmaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kontrol panelinde yanıp sönen gösterge ışığı"
-    - "Lavabo altında açık konumdaki bir su musluğu"
-    - "Dolap içinde kıvrılmadan uzanan bir giriş hortumu"
-    - "Musluk bağlantısından sökülmüş giriş hortumunun ucu ve küçük süzgeç"
-    - "Musluğa yeniden takılmış giriş hortumu ve altında kuru bir bez"
-    - "Kapağı kapanmış, çalışan bir ankastre bulaşık makinesi"
-    - "Tezgâh üzerinde duran bir telefon ve yanında kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Smeg bulaşık makinen programa başlıyor ama içeriden su sesi gelmiyor, bir süre sonra da bir ışık art arda yanıp sönüp sesli uyarı veriyor. Çoğu zaman sebep makinenin dışında: musluk, hortum ya da hortumun ucundaki küçük filtre. Bu yazı Smeg'in ST4512IN ve STL323BL bulaşık makineleri için yayımladığı kullanım kılavuzlarına dayanıyor. Smeg'in Türkiye sitesindeki indirme sayfasında Türkçe dil seçeneği yok; kılavuzun İngilizce baskısını kullandık ve alıntıları Türkçeye çevirdik.

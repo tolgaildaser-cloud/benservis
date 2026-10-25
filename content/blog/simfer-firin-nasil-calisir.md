@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Yeni takılmış boş bir ankastre fırın ve açık kapağının içi"
   steps:
-    - "Fırının ön camında soyulmak üzere olan şeffaf koruyucu folyo"
-    - "Boş fırın iç bölmesini silen ıslak bir bez"
-    - "Kapağı kapalı, içi aydınlık boş fırın"
-    - "Soğumuş fırının içinde deterjanlı suyla silinmiş parlak yüzey"
-    - "Panelden dışarı çıkmış döner bir fırın düğmesi"
-    - "Fırın panelinde yan yana fonksiyon düğmesi ve termostat düğmesi"
-    - "Kapağı kapalı fırının üst havalandırma aralığı"
+    - "Çizim: solda ankastre fırın, sağda ambalaj kutusu"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda deterjan bölmesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
 ---
 
 Simfer ankastre fırını yeni taktırdın ve ilk yemeği koymadan önce ne yapman gerektiğini, düğmelerin nasıl kullanıldığını merak ediyorsun. "Simfer fırın nasıl çalışır" sorusunun cevabı Simfer'in ankastre fırın kılavuzundaki "Fırın kullanımı" bölümünde. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu olan Türkçe kılavuzu kullandık. Kılavuz birçok modeli ve birkaç kontrol paneli tipini kapsıyor; Simfer yalnız kendi cihazındaki kontrol panelini dikkate almanı istiyor.

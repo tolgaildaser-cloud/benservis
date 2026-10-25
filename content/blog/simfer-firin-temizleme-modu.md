@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Açık kapaklı bir ankastre fırının temiz ve boş iç bölmesi"
   steps:
-    - "Fırın program düğmesinin çevresinde küçük temizleme simgesi"
-    - "Tezgâhta üst üste duran çıkarılmış fırın tepsileri ve tel ızgara"
-    - "Fırının en alt rafına sürülmüş, içinde su olan derin tepsi"
-    - "Fırın panelinde düşük dereceye çevrilmiş termostat düğmesi"
-    - "Kapağı kapalı çalışan fırının camında hafif buğu"
-    - "Fırının iç yan duvarını silen ıslak bez"
-    - "Fırın iç yüzeyini kurulayan kuru ve yumuşak bez"
+    - "Çizim: solda ankastre fırın, sağda temizleme bezi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda deterjan bölmesi"
 ---
 
 Fırının içi yağ ve yemek lekesiyle kaplandı; Simfer'in bir temizleme programı olduğunu duydun ama nasıl kullanıldığını bilmiyorsun. "Simfer fırın temizleme modu" sorusunun cevabı Simfer'in ankastre fırın kılavuzundaki "Buharlı temizleme kullanımı" bölümünde. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu olan Türkçe kılavuzu kullandık. Kılavuz bu özelliği yıldızla, yani bazı modellerde bulunan bir özellik olarak işaretliyor. Programın simgesi kılavuzun program tablosunda "alt ısıtma elemanı veya buharlı temizleme" diye geçiyor.

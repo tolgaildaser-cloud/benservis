@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin açık kapağı ve içinde boş, kuru duran sepetler"
   steps:
-    - "Bulaşık makinesinin yanındaki dolap içinde duvara bağlı küçük bir köşe musluğu"
-    - "Tezgâh altından hafifçe öne çekilmiş bulaşık makinesinin arkasında uzanan düz bir hortum"
-    - "Mutfak tezgâhı altında bir musluğun altında duran boş, plastik bir kova"
-    - "Akan suyun altında tutulan küçük, yuvarlak bir hortum süzgeci ve yanında küçük bir fırça"
-    - "Musluğa yeniden vidalanmış bir su giriş hortumu ve altına serilmiş kuru bir havlu"
-    - "Duvardaki prizden çekilmiş bir bulaşık makinesi fişi"
-    - "Kapalı bir bulaşık makinesinin önünde tezgâhta duran katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşık makinesi programa başladı, sonra durdu ve ekranda **E16** ya da **E17** belirdi. Belki gösterge panelindeki su musluğu sembolü de yanıyor. Bosch'un Türkiye destek sayfası bu iki kodu tek cümleyle açıklıyor: su alma sisteminde ya da temiz su girişinde bir hata tespit edildi. Yani makine istediği suyu alamamış. Bu yazıda Bosch'un destek sayfalarındaki ve Serie 4 kullanım kılavuzundaki su girişi kontrollerini sırayla topladık. Tuş adları ve göstergeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

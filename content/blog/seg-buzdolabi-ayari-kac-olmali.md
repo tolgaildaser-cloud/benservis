@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfakta kapısı açık bir buzdolabının üst bölümündeki termostat düğmesi"
   steps:
-    - "Buzdolabının iç yan duvarındaki bilgi etiketine bakan bir kişi"
-    - "Buzdolabı içinde orta konuma çevrilmiş yuvarlak termostat düğmesi"
-    - "Kış günü mutfakta kapısı kapalı duran beyaz bir buzdolabı"
-    - "Buzdolabının buz yapma bölmesinde duran dolu bir buz kabı"
-    - "Dondurucu bölmesine yerleştirilmiş poşetlenmiş et porsiyonları"
-    - "Buzdolabı içinde damlalığın arkasındaki ayarlanabilir profil"
-    - "Kapısı kapalı, yeni çalıştırılmış bir buzdolabının yan görünümü"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda su giriş musluğu"
 ---
 
 SEG buzdolabının termostat düğmesinde derece yazmaz; 1'den 5'e kadar rakamlar vardır ve "kaç olmalı" sorusunun cevabı bu rakamlardan biridir. SEG'in kendi sitesi yok, kılavuzları üretici Vestel'in kılavuz sunucusunda duruyor. Bu yazı üç SEG kılavuzuna dayanıyor: tezgâh altı **STW 902**, No Frost **RF4540 A** ve çift kapılı **455A**. Senin modelin farklıysa düğmenin yanındaki işaretleri ve kendi kılavuzunu esas al.

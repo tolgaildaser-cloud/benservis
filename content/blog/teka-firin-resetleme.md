@@ -36,12 +36,12 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kapağı kapalı siyah camlı bir ankastre fırın"
   steps:
-    - "Kapalı konuma çevrilmiş döner fırın kadranları"
-    - "Duvardaki prizden çekilmiş bir fırın fişi"
-    - "Fırın panelinde yanıp sönen dijital saat göstergesi"
-    - "Fırın ekranında yanan küçük kilit simgesi"
-    - "Kapağı kapalı, içi aydınlatmasız bir ankastre fırın"
-    - "Fırın kapağının iç kenarındaki ürün etiketi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda çalışma sesi"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Teka fırınının dokunmatik tuşları basmana tepki vermiyor, elektrik gidip geldikten sonra fırın ısınmıyor ya da ekranda bir kilit simgesi duruyor. Bu durumda çoğu kişi "fırını resetlemenin" bir yolunu arıyor. Teka'nın HLB ve HLB P serisi (HLB 830, HLB 840, HLB 830 P, HLB 840 P) için yayımladığı Türkçe kullanım kılavuzunda ayrı bir reset tuşu yok, ama sıfırlama gerektiren dört durum ve her birinin çözümü yazıyor. Senin modelin farklıysa kendi kılavuzunla karşılaştır.

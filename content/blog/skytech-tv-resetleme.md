@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Oturma odasında ekranında sistem ayarları açık duran televizyon"
   steps:
-    - "Bekleme modunda duran bir televizyon ve sönük ekran"
-    - "Televizyonun arka kasasında duran model etiketi"
-    - "Televizyon ekranında genel ayarlar listesi"
-    - "Televizyon ekranında sistem menüsünde sıfırlama seçeneği"
-    - "Televizyon ekranında onay penceresi ve parola alanı"
-    - "Küçük bir televizyonun ekranında açık kurulum menüsü"
-    - "Televizyon ekranında dil seçimiyle açılan ilk kurulum ekranı"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Skytech televizyonun menüleri karıştı, görüntü ya da ses ayarı bozuldu, uygulamalar takılıyor ya da televizyonu başkasına vereceksin. "Resetleme" Skytech'te tek bir düğme değil: modelin işletim sistemine göre bir menü sıfırlama, bir de fabrika ayarına dönüş var ve ikisi aynı şeyi silmiyor. Bu yazıda Skytech'in kendi sitesinde yayımladığı Android TV, Google TV, webOS TV, Whale TV ve uydu alıcılı TV kılavuzlarındaki sıfırlama yollarını topladık.

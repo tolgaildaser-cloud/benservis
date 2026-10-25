@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kumanda panelinde küçük bir kilit simgeli tuşun yakın planı"
-    - "Bulaşık makinesi panelinde yuvarlak bir başlat tuşu ve yanında küçük gösterge ışıkları"
-    - "Kapağı kapalı, sessizce bekleyen bir bulaşık makinesi"
-    - "Hafifçe aralanmış bulaşık makinesi kapağından yükselen ince bir buhar"
-    - "Bulaşık makinesinin tabanında yerinden çıkarılmış silindir biçimli filtre"
-    - "Bulaşık makinesi kapağının iç yüzünde açık duran deterjan haznesi"
-    - "Bulaşık makinesinin yanında tezgâhta katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, yanlış programı seçtin ya da makine tepki vermiyor; Arçelik bulaşık makinesini "resetlemek" istiyorsun. Arçelik'in bulaşık makinesi kılavuzlarında **Reset adında bir tuş yok.** Karşılığı **"Programın iptal edilmesi"** bölümü ve üç kılavuzda da yol aynı: **Başla / Bekle / İptal tuşuna yaklaşık 3 saniye basmak.** Bu yazıda Arçelik'in 6366, 9242 MI ve 6222 kullanma kılavuzlarından sıfırlamanın sırasını, ne kadar sürdüğünü ve onu engelleyen tuş kilidini çıkardık. Tuş adları ve ışıklar modele göre değişir; kendi kılavuzunla karşılaştır.

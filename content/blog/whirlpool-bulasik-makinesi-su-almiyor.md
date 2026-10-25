@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı bir bulaşık makinesi"
   steps:
-    - "Gösterge ışıkları yanıp sönen bir bulaşık makinesi paneli"
-    - "Lavabo altındaki dolapta duran bir su musluğu ve bağlı hortum"
-    - "Dolap içinde gevşek ve düz uzanan gri bir su giriş hortumu"
-    - "Bulaşık makinesinin üst kenarındaki düğme sırası"
-    - "Kapatılmış musluk ve altına konmuş küçük bir kova"
-    - "Kapağı kapalı, yeniden çalıştırılmaya hazır bulaşık makinesi"
-    - "Mutfak duvarındaki su tesisatı bağlantıları ve vana"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool bulaşık makinen programı başlattıktan sonra su sesi gelmiyor, makine bekliyor ve ekranda **F6** beliriyor. Ekransız modelde ise bütün ışıklar hızla yanıp sönmeye başlıyor. Whirlpool'un WFE 2B19 bulaşık makinesi için yayımladığı Türkçe Günlük Referans Kılavuzu ve WFC 3C42 modelinin kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) bu durumu aynı satırda topluyor. Bu yazıda kontrol sırasını ve sınırını verdik. Senin modelinde panel farklı olabilir; kendi kılavuzunla karşılaştır.

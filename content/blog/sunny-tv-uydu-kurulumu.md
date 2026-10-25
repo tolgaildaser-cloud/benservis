@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Bir apartman balkonuna monte edilmiş uydu çanağı"
   steps:
-    - "Televizyonun arka panelinde uydu girişine takılı koaksiyel kablo"
-    - "Televizyon ekranında açık duran yayın türü seçim listesi"
-    - "Televizyon ekranında uydu listesi ve seçili satır"
-    - "Çatıda yan yana duran birden fazla uydu çanağı"
-    - "Televizyon ekranında ilerleyen otomatik kanal araması"
-    - "Televizyon ekranında sinyal seviyesi göstergesi"
-    - "Televizyonun yan tarafındaki modül yuvası"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sunny televizyonunu çanağa bağlayıp uydu kanallarını kurmak istiyorsun ya da kanallar gelmiyor ve uydu ayarını baştan yapman gerekiyor. Uydu kurulumu Sunny'de kanal kurulum menüsünden yapılıyor: girişi doğru seçmek, uyduyu ve portu doğru işaretlemek ve aramayı tamamlamak. Bu yazıda Sunny'nin kendi sitesindeki televizyon destek sayfasının "Kurulum ve Kanal İşlemleri" bölümünü ve Sunny'nin uydulu televizyon kullanım kılavuzunu temel aldık. Sunny'nin sayfası menü adlarının modele ve işletim sistemine göre değiştiğini belirtiyor.

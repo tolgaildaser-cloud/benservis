@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Beyaz bir duvar klimasının altında zemine serilmiş katlanmış havlu ve yanında boş bir plastik kova"
   steps:
-    - "Duvar klimasının altına serilmiş kuru bir havlu ve kenara çekilmiş bir sehpa"
-    - "Duvar klimasının yatay kanadı üzerinde ince su damlacıkları"
-    - "Balkon duvarı boyunca inen ince beyaz bir klima tahliye hortumu"
-    - "Bir tahliye hortumunun açık ucu ve yanında duran küçük bir fırça"
-    - "Ekranında küçük bir simge yanan beyaz bir klima kumandası"
-    - "Duvar kliması önünde hafif buğulu bir hava akımı"
-    - "Kapalı bir alet çantası ve yanında katlanmış bir klima kullanma kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda çalışma sesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Arçelik klimanın altında su birikintisi, duvardan inen ince bir iz ya da halıda ıslak bir leke. İç ünite su akıtıyorsa ilk iş suyu durdurmak, sonra nereden geldiğini bulmak. Arçelik'in 182410 serisi klima kullanım kılavuzunda "su akıtıyor" diye ayrı bir sorun satırı yok; ama kurulum, bakım ve sorun giderme bölümleri suyun nasıl tahliye edildiğini, nelerin normal olduğunu ve hangi parçanın ne sıklıkla temizlenmesi gerektiğini anlatıyor. Bu yazıda servisi aramadan önce evde güvenle bakabileceklerini bu kılavuzdan topladık. Senin modelinin kılavuzu farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, kontrol panelinde kilit simgesi yanan ön yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi ekranında yanan küçük kilit simgesinin yakın planı"
-    - "Programı bitmiş, ekranı sakin duran çamaşır makinesi"
-    - "Tamburun alt kısmında biriken su görünen kapalı çamaşır makinesi kapağı"
-    - "Ekranında saat göstergesi duran çamaşır makinesinin kontrol paneli"
-    - "Kapalı konuma çevrilmiş çevirmeli program düğmesi"
-    - "Duvar prizine takılı çamaşır makinesi fişi"
-    - "Kapağı kapalı, yanında servis çantası duran çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Zanussi çamaşır makinenin kapağı açılmıyorsa çoğu zaman makine bir arıza vermiyor, güvenlik kilidi işini yapıyor. Kilit, tamburda su varken, su sıcakken ya da program sürerken kapağı kapalı tutuyor. Zanussi'nin ZWF845B4PW ve ZWF143A2DG kullanım kılavuzları (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) kapağın hangi durumda neden kilitli kaldığını ve nasıl açılacağını anlatıyor. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -46,14 +46,14 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı paslanmaz yüzlü bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kumanda panelinde küçük bir kilit simgesinin yandığı gösterge penceresi"
-    - "Bulaşık makinesi panelinde yuvarlak bir başlat tuşu ve yanında küçük gösterge ışıkları"
-    - "Kapağı kapalı, sessizce bekleyen bir bulaşık makinesi"
-    - "Bulaşık makinesi panelinde açma kapama şalteri ve sönmüş gösterge ışıkları"
-    - "Hafifçe aralanmış bulaşık makinesi kapağından yükselen ince bir buhar"
-    - "Bulaşık makinesinin tabanında yerinden çıkarılmış silindir biçimli süzgeç"
-    - "Bulaşık makinesinin açık kapağında deterjan bölmesine tablet yerleştirilmiş görünüm"
-    - "Bulaşık makinesinin yanında tezgâhta katlanmış bir kullanma kılavuzu ve kapalı bir su musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, yanlış programı seçtin ya da makine bir yerde takıldı; Bosch bulaşık makinesini "resetlemek" istiyorsun. Bosch bunu kılavuzda açıkça adlandırıyor: **Programın iptal edilmesi (Reset).** Yöntem panel tipine göre değişiyor. SM ve SB serisinin dijital panelli modellerinde **START tuşuna yaklaşık 3 saniye** basılıyor; program seçme düğmeli eski modellerde ise düğme **Reset konumuna** çevriliyor. Bu yazıda iki Bosch kullanma kılavuzundan resetin sırasını, süresini ve onu engelleyen tuş kilidini çıkardık. Tuş adları ve göstergeler modele göre değişir; kendi kılavuzunla karşılaştır.

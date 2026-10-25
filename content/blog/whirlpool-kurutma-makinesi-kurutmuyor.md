@@ -38,14 +38,14 @@ faq:
 images:
   coverAlt: "Çamaşır makinesinin üstüne yerleştirilmiş önden yüklemeli beyaz bir kurutma makinesi"
   steps:
-    - "Kurutma makinesinden çekilmiş, içinde su bulunan plastik su tankı"
-    - "Kurutma makinesi kapağının iç kenarından çıkarılmış tüylü kapak filtresi"
-    - "Kurutma makinesinin alt kapağı açılmış hâlde ve içindeki alt filtre"
-    - "Alt filtre bölmesindeki metal kanatçıklar ve yanında fırça başlıklı süpürge"
-    - "Kurutma makinesinin ön alt kısmındaki hava giriş ızgarası"
-    - "Tambura gevşek biçimde yerleştirilmiş sıkılmış çamaşırlar"
-    - "Serin ve havadar bir çamaşır odasında duran kurutma makinesi"
-    - "Kapağı açık bırakılmış, tamburu boş bir kurutma makinesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool kurutma makinen programı bitirdi ama çamaşırlar hâlâ nemli, ya da kurutma her seferinde daha uzun sürüyor. Isı pompalı kurutucularda bunun en sık sebebi bakım: tank, kapak filtresi ve alt filtre. Bu yazıda Whirlpool'un FFT M22 9X3B EE ısı pompalı kurutma makinesi kılavuzunun (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) sorun giderme tablosunu ve bakım bölümünü sıraya koyduk. Senin modelinde filtre sayısı ve panel farklı olabilir; kendi kılavuzunla karşılaştır.

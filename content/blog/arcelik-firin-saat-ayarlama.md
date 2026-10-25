@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, dokunmatik ekranlı paslanmaz çelik ankastre bir fırın"
   steps:
-    - "Duvardaki bir prize takılı fırın fişi ve yanındaki kapalı sigorta kutusu"
-    - "Ankastre fırının dokunmatik panelinde yukarı ve aşağı ok biçimli tuşlar"
-    - "Ankastre fırının karanlık ekranında sakin duran saat göstergesi"
-    - "Kapalı bir ankastre fırının dokunmatik kontrol panelinin yakın planı"
-    - "Fırın ekranında yanıp sönen saat alanının bulanık görüntüsü"
-    - "Dokunmatik fırın panelinde küçük bir kilit simgesi"
-    - "Mutfakta tezgâh üstünde katlanmış bir fırın kullanma kılavuzu"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Fırını yeni taktın, elektrik gitti geldi ya da saat ileri geri alındı; ekranda sıfırlar yanıp sönüyor ve fırın çalışmıyor. Arçelik fırınlarda saat sadece bir gösterge değil: Arçelik'in 9658 ankastre fırın kılavuzu açıkça **"Fırını kullanmadan önce saat ayarı yapılmalıdır. Saat ayarı yapılmazsa fırın çalışmayacaktır"** diyor. Bu yazıda o kılavuzdan, dokunmatik panelli Arçelik ankastre fırında saati ilk kez ayarlamayı, sonradan değiştirmeyi ve saatin neden ayarlanamadığını sırayla çıkardık. Kaynak tek bir modelin kılavuzu; düğmeli ya da mekanik saatli modellerde yol farklıdır, kendi kılavuzuna bak.

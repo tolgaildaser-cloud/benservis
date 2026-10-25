@@ -37,12 +37,12 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında ön yüzünde ekran ve döner düğme bulunan bir sıcak hava fritözü"
   steps:
-    - "Sıcak hava fritözünün altındaki model etiketi"
-    - "Prize takılmış fritözün yanan ekranı"
-    - "Fritöz ekranında dil listesi ve döner kontrol düğmesi"
-    - "Fritöz ekranında ayarlar menüsü"
-    - "Döner kontrol düğmesinin yakın planı"
-    - "Fritöz ekranında bir önceki menüye dönüş"
+    - "Çizim: solda airfryer, sağda panel ekranındaki uyarı"
+    - "Çizim: solda airfryer, sağda anten girişi ve kablo"
+    - "Çizim: solda airfryer, sağda panel ekranındaki uyarı"
+    - "Çizim: solda airfryer, sağda panel ekranındaki uyarı"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda panel ekranındaki uyarı"
 ---
 
 Xiaomi airfryer'ı kutusundan çıkardın ve ekran İngilizce ya da hiç bilmediğin bir dilde açıldı; ya da biri daha önce yanlış dili seçmiş. Ekranlı Xiaomi Smart Air Fryer modellerinde dil, fritözün kendi menüsünden değişiyor ve tek bir döner düğmeyle yapılıyor. Bu yazı Xiaomi'nin Türkiye destek sayfasındaki **Xiaomi Smart Air Fryer 5.5L** Türkçe kılavuzuna dayanıyor; karşılaştırma için **Xiaomi Air Fryer 6.5L (MAF-W6501)** kılavuzuna da baktık. Başka bir Xiaomi modelin varsa menü adları farklı olabilir; kendi kılavuzunla karşılaştır.

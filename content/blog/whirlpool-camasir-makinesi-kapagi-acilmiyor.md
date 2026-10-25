@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, tamburunda çamaşır görünen önden yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi ekranında program sonu yazısı"
-    - "Çamaşır makinesinin kontrol panelindeki başlat duraklat düğmesi"
-    - "Kapak camının arkasında buğulanmış sıcak çamaşırlar"
-    - "Çamaşır makinesi kapağının kilit tarafındaki kenarı"
-    - "Kontrol panelindeki açma kapama düğmesi ve ekran"
-    - "Çamaşır makinesinin alt kapağının önüne konmuş geniş ve sığ bir kap"
-    - "Çamaşır makinesinin alt ön bölmesi ve yanında bir tornavida"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ama Whirlpool çamaşır makinenin kapağı açılmıyor, ya da yıkamanın ortasında bir çorabı çıkarmak istiyorsun ve kapak kilitli. Kapak kilidi bir güvenlik önlemi; kılavuz ne zaman açılacağını ve kilit takılırsa sırayla ne yapılacağını anlatıyor. Bu yazıda Whirlpool'un FFB 8458 BV EE hızlı başvuru kılavuzunu ve FSCR 90426 kullanım kılavuzunu (ikisi de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) sıraya koyduk. Senin modelinde düğme adları farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin program düğmesi ve ekranı"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki düğme sırası"
-    - "Panelde başlat duraklat düğmesi ve yanında ekran"
-    - "Ekranda kısa bir yazı gösteren çamaşır makinesi paneli"
-    - "Panelde açma kapama düğmesi ve yanan küçük ışık"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi"
-    - "Panelde anahtar simgeli bir düğme"
-    - "Kapatılmış bir su musluğu ve fişi çekilmiş çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool çamaşır makinen bir kod gösterip durdu, yanlış programı başlattın ya da düğmeler hiçbir şeye tepki vermiyor. "Reset" Whirlpool'da tek bir tuş değil; kılavuz durumu göre üç farklı yol tarif ediyor. Bu yazıda Whirlpool'un FSCR 90426 ve AWOE 9759 kullanım kılavuzlarını ve FFB 8458 BV EE hızlı başvuru kılavuzunu (üçü de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) sıraya koyduk. Senin modelinde düğme adları farklı olabilir; kendi kılavuzunla karşılaştır.

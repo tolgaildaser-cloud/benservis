@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Ankastre fırının dijital ekranında küçük bir kilit simgesi"
   steps:
-    - "Fırın ekranının köşesinde yanan küçük asma kilit simgesi"
-    - "Fırının dokunmatik zamanlayıcı paneli ve yan yana dizili tuşlar"
-    - "Fırın panelinde saat kadranı simgeli dokunmatik tuş"
-    - "Fırın panelinde asma kilit simgeli ayrı bir dokunmatik tuş"
-    - "Kilit simgesi sönmüş, yalnız saati gösteren fırın ekranı"
-    - "Fırın ekranında yanıp sönen harf simgesi ve günün saati"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Fırının ekranında küçük bir **kilit** simgesi var ve dokunmatik tuşlara basınca hiçbir şey olmuyor. Saat değişmiyor, süre girilemiyor. "Simfer fırın çocuk kilidi nasıl açılır" sorusunun cevabı fırının zamanlayıcı tipine göre değişiyor. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu olan Türkçe ankastre fırın kılavuzunu kullandık. Kılavuzda birden çok dijital zamanlayıcı anlatılıyor; burada en sık iki tipi, **3 dokunmatik** ve **6 dokunmatik (piyano)** zamanlayıcıyı ele aldık. Tuşların şeklini kılavuzun sayfa görüntülerinden okuduk.

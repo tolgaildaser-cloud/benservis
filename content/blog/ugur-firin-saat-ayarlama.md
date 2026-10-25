@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Ankastre fırının üst kısmında dijital saat ekranı ve düğmeler"
   steps:
-    - "Ankastre fırının ön panelinde döner düğmeler ve ortada küçük bir ekran"
-    - "Fırın ekranında yanıp sönen saat haneleri"
-    - "Fırın ekranında saat haneleri ve yanında küçük bir saat simgesi"
-    - "Fırın panelinde geri ok simgeli bir tuş"
-    - "Fırın panelinde yan yana dizilmiş dokunmatik tuşlar"
-    - "Fırın ekranında kısa bir menü kısaltması"
-    - "Fırın ekranında dikey çizgilerden oluşan duraklatma sembolü"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Uğur ankastre fırını yeni taktırdın ya da elektrik kesildi ve ekranda saat yanıp sönüyor. "Uğur fırın saat ayarlama nasıl yapılır" sorusunun cevabı Uğur'un kendi kullanım kılavuzunda dört tuşla anlatılıyor: **Geri**, **−**, **+** ve **OK**. Bu yazıda Uğur'un sitesindeki UAF serisi ankastre fırın kılavuzunu kullandık; aynı seri için yayımlanan ikinci bir kılavuzda saat ayarı metni birebir aynı. Panel düzenin farklıysa kendi kılavuzunla karşılaştır.

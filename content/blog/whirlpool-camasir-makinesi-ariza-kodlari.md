@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Banyoda duran önden yüklemeli beyaz bir çamaşır makinesinin dijital ekranı"
   steps:
-    - "Çamaşır makinesi ekranında yanan kısa bir harf ve sayı kodu"
-    - "Duvardaki açık su musluğuna bağlı çamaşır makinesi giriş hortumu"
-    - "Çamaşır makinesinin alt kapağının arkasındaki su filtresi ve önünde sığ bir kap"
-    - "Tamburun içinde köpüklü su ve çamaşır"
-    - "Kapağın arkasında su dolu tambur ve kapalı musluk"
-    - "Çamaşır makinesinin kontrol panelindeki açma kapama düğmesi"
-    - "Fişi çekilmiş ve musluğu kapatılmış bir çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool çamaşır makinen program ortasında durdu, ekranda bir **F** kodu ya da "musluk kapalı" gibi bir uyarı yanıyor. İnternette en çok sorulan kod F06, ama Whirlpool'un kılavuzlarında F06 için ayrı bir satır yok; kod bir gruba giriyor. Bu yazıda Whirlpool'un FSCR 90426 ve AWOE 9759 çamaşır makinesi kılavuzlarını ve FFB 8458 BV EE hızlı başvuru kılavuzunu (üçü de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) okuyup tabloyu topladık. Senin modelinde mesajlar farklı olabilir; kendi kılavuzunla karşılaştır.

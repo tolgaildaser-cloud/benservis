@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Oturma odasında televizyon ekranında açık duran kanal ayarları menüsü"
   steps:
-    - "Televizyonun arka kasasında duran model etiketi"
-    - "Televizyonun arka panelinde anten girişine takılı koaksiyel kablo"
-    - "Televizyon ekranında açılmış bir ayarlar menüsü"
-    - "Televizyon ekranında anten tipi seçim listesi"
-    - "Televizyon ekranında ilerleyen kanal tarama çubuğu"
-    - "Bir binanın çatısına monte edilmiş uydu çanakları"
-    - "Televizyon ekranında açık duran kanal listesi"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda temizleme bezi"
 ---
 
 Skytech televizyonu yeni kurdun, taşındın ya da kanallar bir sabah kayboldu. Kanal ayarlama Skytech'te kanal menüsünden yapılıyor; menünün görünümü ise model grubuna göre değişiyor. Bu yazıda Skytech'in kendi sitesinde yayımladığı Android TV kullanma kılavuzundaki kanal menüsü adımlarını topladık; Google TV'li modeller için farklı olan yolu da ayrıca not ettik.

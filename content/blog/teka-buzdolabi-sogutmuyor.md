@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabının içine yerleştirilmiş, kapağı kapalı ankastre bir buzdolabı"
   steps:
-    - "Duvardaki prize takılı bir buzdolabı fişi"
-    - "Buzdolabının aydınlatılmış kontrol paneli"
-    - "Kontrol panelinde yanan sıcaklık göstergesi"
-    - "Buzdolabı kapağının iç kenarındaki lastik conta"
-    - "Raflarında kaplar arka duvardan uzak duran bir buzdolabı içi"
-    - "Tezgâhta soğumayı bekleyen kapaklı bir yemek kabı"
-    - "Kontrol panelinde yanan sıcaklık göstergesi ve yanındaki tuşlar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Teka buzdolabın soğutmuyor; içecekler ılık, sebzeler çabuk bozuluyor ya da dondurucu eskisi kadar dondurmuyor. Her zaman büyük bir arıza yok: sebep çoğu zaman ayar, seçili mod, kapı ya da yerleşim. Teka'nın RBF 73380 FI EU ankastre kombi buzdolabı için yayımladığı çok dilli kullanım kılavuzunun Türkçe bölümünde bunun kontrol sırası var. Bu yazı o kılavuza dayanıyor; senin modelin farklıysa tuş yerleşimini kendi kılavuzunla karşılaştır.

@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, ekranı sönük bir ankastre fırın"
   steps:
-    - "Evin elektrik panosunda sıra hâlinde duran sigortalar"
-    - "Fırın ekranında yanıp sönen saat ve harf simgesi"
-    - "Tam kapanmış bir fırın kapağının alt kenarı"
-    - "Fırın panelinde yan yana program ve termostat düğmeleri"
-    - "Elektrik panosunda aşağı inmiş bir otomatik sigorta anahtarı"
-    - "Ankastre fırının mutfak dolabı içindeki yerleşimi ve çevresindeki boşluk"
-    - "Prizden çekilmiş bir fırın fişi"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Fırının düğmesini çevirdin ama hiçbir şey olmuyor; ya da fırın ısınıyor, sonra yemeğin ortasında duruyor. "Simfer fırın çalışmıyor" diye arayanlar için Simfer'in ankastre fırın kılavuzunda ayrı bir "Sorunlar ve çözüm önerileri" tablosu var. Bu yazıda Simfer'in kendi alan adında duran, kapağında Simfer logosu olan Türkçe kılavuzu kullandık ve tablodaki her satırı senin evde yapabileceğin kontrollere çevirdik. Simfer'in kendi cümlesiyle: önce tabloyu kontrol et, önerileri dene, sorun devam ederse Simfer Servis Merkezi ile iletişime geç.

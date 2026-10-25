@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Tezgâh altına yerleştirilmiş, kapağı kapalı paslanmaz görünümlü bir bulaşık makinesi"
   steps:
-    - "Kapağı tam kapanmış bir bulaşık makinesinin üst kenarı"
-    - "Bulaşık makinesinin üst kenarındaki düğme sırası ve gösterge ışıkları"
-    - "Tahliye edilen suyun aktığı lavabo altındaki gider bağlantısı"
-    - "Hafifçe aralanmış kapağından buhar çıkan bir bulaşık makinesi"
-    - "Gösterge ışıkları yanıp sönen bir bulaşık makinesi paneli"
-    - "Prizden çekilmiş bir fiş ve yanında duran bulaşık makinesi"
-    - "Bulaşık makinesi kapağının iç kenarındaki ürün tanıtım etiketi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Whirlpool bulaşık makinen tuşlara tepki vermiyor, yanlış programı başlattın ya da bir elektrik kesintisinden sonra öylece duruyor. Bu durumda akla ilk gelen "makineyi resetlemek" oluyor. Whirlpool'un WFE 2B19 bulaşık makinesi için yayımladığı Türkçe Günlük Referans Kılavuzu ve WFC 3C42 modelinin kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) bunun birkaç farklı yolunu anlatıyor. Bu yazıda hangisini ne zaman kullanacağını sıraladık. Senin modelinde düğme adları farklı olabilir; kendi kılavuzunla karşılaştır.

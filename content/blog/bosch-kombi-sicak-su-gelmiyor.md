@@ -50,14 +50,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve altında açık duran bir lavabo musluğu"
   steps:
-    - "Açık bir pencere ve önünde boş, sakin bir koridor"
-    - "Duvara asılı beyaz bir kombinin kapalı duran kumanda paneli"
-    - "Kombi ekranında beliren küçük bir uyarı simgesinin yakın planı"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz vanası"
-    - "Kombinin kumanda panelinde musluk biçimli bir sıcak su simgesi"
-    - "Lavabo üzerinde buharı yükselen açık bir musluk"
-    - "Kombinin önünde duran yuvarlak kadranlı bir basınç göstergesi"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve kapalı bir alet çantası"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi açık görünüyor, petekler belki ısınıyor, ama musluktan sıcak su gelmiyor. Bosch'un Condens 2500 W, Condens 1200W, Condens 2200i W ve Condens 7000iW kullanma kılavuzlarında bu belirtinin tek bir satırı yok; ama dört kılavuz da sıcak suyu etkileyen ayarları, arıza göstergesini ve kullanıcıya bırakılan kontrolleri açıkça anlatıyor. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi bu kılavuzlardan sırayla topladık. Tuşların yeri modele göre değişir; kendi kılavuzunla karşılaştır.

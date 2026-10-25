@@ -49,12 +49,12 @@ faq:
 images:
   coverAlt: "Mutfak dolabına gömülü, kapağı kapalı ankastre bir fırın ve üstündeki boş tezgâh"
   steps:
-    - "Ankastre fırın kapağının üst kenarı ile kumanda paneli arasındaki ince havalandırma aralığı"
-    - "Pişirme bitmiş, ışığı yanan, kapağı kapalı bir ankastre fırın"
-    - "Ankastre fırının kumanda panelinde sıfır konumuna çevrilmiş yuvarlak bir düğme"
-    - "Kapak kolu boş bırakılmış bir fırın ve yanındaki askıda duran katlanmış mutfak havlusu"
-    - "Fırın camının ardından görünen pişirme bölümü ve arka duvarında yuvarlak fan kapağı"
-    - "Fırın kumanda panelinin yanında tezgâhta açık duran bir kullanım kılavuzu"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
 ---
 
 Fırını açtın ya da yemeği çıkarıp kapattın, kapağın üstünden yüzüne doğru hava geliyor ve bir motor sesi sürüyor. Çoğu zaman bu bir arıza değil, Bosch'un **soğutma fanı**. FRMA226, HBF512B, FRGA103I ve HBB23C kullanım kılavuzları bu fanın ne zaman çalıştığını, neden kapattıktan sonra da döndüğünü ve hangi durumda kapanmadığını aynı dille anlatıyor. Bu yazıda o kuralları ve servis sınırını sırayla topladık. Tuşlar ve göstergeler modele göre değişiyor; kendi kılavuzunla karşılaştır.

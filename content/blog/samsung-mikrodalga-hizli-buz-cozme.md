@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Tezgâh üstünde kapağı kapalı bir mikrodalga fırın ve yanında donmuş paketler"
   steps:
-    - "Mikrodalga tablasının ortasında düz seramik tabakta donmuş et"
-    - "Mikrodalga kontrol panelinde buz kristali simgeli bir düğme"
-    - "Mikrodalga panelinde döner ayar düğmesi ve küçük ekran"
-    - "Mikrodalga panelinde başlat yazılı düğme"
-    - "Açık mikrodalga kapağı ve tabakta ters çevrilmiş tavuk parçaları"
-    - "Tezgâhta tabak içinde dinlenmeye bırakılmış çözülmüş et"
-    - "Mikrodalga ekranında güç seviyesi gösteren yazı"
+    - "Çizim: solda mikrodalga fırın, sağda ambalaj kutusu"
+    - "Çizim: solda mikrodalga fırın, sağda buzlanma ve buz çözme"
+    - "Çizim: solda mikrodalga fırın, sağda iç bölme ve raflar"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda iç bölme ve raflar"
+    - "Çizim: solda mikrodalga fırın, sağda buzlanma ve buz çözme"
+    - "Çizim: solda mikrodalga fırın, sağda buzlanma ve buz çözme"
 ---
 
 Akşam yemeği için eti dondurucudan çıkarmayı unuttun ve Samsung mikrodalganın "hızlı buz çözme" tuşunu nasıl kullanacağını arıyorsun. Samsung'un kullanım kılavuzunda bu programın adı **Quick Defrost (Hızlı Buz Çözme)**. Süreyi ve gücü fırın kendisi ayarlıyor; sen yalnız gıdanın türünü ve ağırlığını seçiyorsun. Bu yazıda Samsung'un Türkiye destek sayfasından bağlanan MG22M8074AT ankastre mikrodalga kılavuzunu, çapraz kontrol için de aynı indirme merkezindeki MS23K3555ES solo mikrodalga kılavuzunu kullandık. İki kılavuzda tablo aynı, yalnız seçim tuşları farklı. Senin modelin başkaysa tuş adlarını kendi kılavuzunla karşılaştır.

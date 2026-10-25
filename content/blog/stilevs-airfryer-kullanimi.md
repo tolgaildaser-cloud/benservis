@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında çekmeceli, dijital panelli siyah bir sıcak hava fritözü"
   steps:
-    - "Ambalajından yeni çıkarılmış bir sıcak hava fritözü ve yanında çıkarılmış hazne"
-    - "Duvardan uzakta, düz tezgâhta duran bir sıcak hava fritözü"
-    - "Sıcak hava fritözünün sepetine yerleştirilmiş patates dilimleri"
-    - "Sıcak hava fritözünün üst kısmındaki dijital kontrol paneli"
-    - "Dijital panelde menü simgeleri ve sıcaklık göstergesi"
-    - "Hazneyi sapından çekilmiş, içindeki malzemesi sallanan bir sıcak hava fritözü"
-    - "Silikon matın üzerine konmuş sıcak fritöz haznesi ve maşa"
-    - "Lavaboda deterjanlı suyla yumuşak süngerle yıkanan fritöz sepeti"
+    - "Çizim: solda airfryer, sağda ambalaj kutusu"
+    - "Çizim: solda airfryer, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
 ---
 
 Stilevs AirTron AF-700'ü kutudan çıkardın; dijital panelde simgeler, ısı ve süre göstergeleri, bir de "Kaydet" düğmesi var. İlk kullanımda en çok sorulanlar: önceden ısıtmak gerekiyor mu, hazneye yağ konur mu, hangi yiyeceğe kaç derece? Bu yazı Stilevs'in sitesindeki AF-700 ürün sayfasının bağladığı **Stilevs AirTron AF-700 Sıcak Hava Fritözü** Türkçe kullanma kılavuzuna dayanıyor. Fritöz 5,9 litre kapasiteli, 40–200 °C arası ısı ve 0–60 dakika zamanlayıcıyla çalışıyor.

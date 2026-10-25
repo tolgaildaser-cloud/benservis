@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında sepeti çekmece gibi dışarı çekilmiş dijital ekranlı bir sıcak hava fritözü"
   steps:
-    - "Prizden çekilmiş bir sıcak hava fritözü fişi"
-    - "Fritözden çıkarılmış sepet ve yanında duran kızartma tepsisi"
-    - "Lavaboda köpüklü suyla yumuşak süngerle yıkanan fritöz sepeti"
-    - "Bulaşık makinesinin rafında duran delikli kızartma tepsisi"
-    - "Sepeti çıkarılmış fritözün iç boşluğu ve nemli bir sünger"
-    - "Yumuşak bir bezle silinen fritöz gövdesinin dış yüzeyi"
-    - "Kurumaya bırakılmış fritöz parçaları ve yanında katlanmış bir bez"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
+    - "Çizim: solda airfryer, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
 ---
 
 Xiaomi airfryer'ı her gün kullanıyorsan sepetin dibinde yağ, kızartma tepsisinin aralarında kırıntı, iç boşlukta da zamanla sararmış lekeler birikiyor. İnternette su kaynatmadan fırçayla rezistans temizlemeye kadar pek çok yöntem dolaşıyor; Xiaomi'nin kendi kılavuzlarının tarifi ise sade: soğut, parçaları ayır, nötr deterjanla yumuşak süngerle temizle, gövdeyi asla suya sokma. Bu yazı Xiaomi'nin Türkiye destek sayfasındaki **Xiaomi Smart Air Fryer 5.5L** ve **Xiaomi Air Fryer 6.5L (MAF-W6501)** Türkçe kılavuzlarına dayanıyor. Başka bir Xiaomi modelin varsa parça adları farklı olabilir; kendi kılavuzunla karşılaştır.

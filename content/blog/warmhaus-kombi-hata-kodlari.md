@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmında dijital ekranlı kontrol paneli"
   steps:
-    - "Mutfakta açık bir pencere ve kapatılmış sarı kollu bir gaz vanası"
-    - "Kombi ekranında yanıp sönen kısa bir hata kodu"
-    - "Kombinin altında yuvarlak kadranlı bir manometre"
-    - "Kombinin altında yan yana dizilmiş vanalar"
-    - "Kombi panelinde iki basmalı düğme ve iki döner düğme"
-    - "Kombi ekranında sıcaklık değeri ve radyatör simgesi"
-    - "Kombinin yanındaki tezgâhta açık duran bir not defteri"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Warmhaus kombinin ekranında **Er** yazısı yanıp sönüyor, yanında bir sayı var ve kombi ısıtmıyor ya da sıcak su vermiyor. Warmhaus'un kurulum ve kullanma kılavuzunda bu kodların hepsi "Arıza Kodları Tablosu"nda tek tek yazıyor; her kodun tipi de belli: kimi kendiliğinden siliniyor, kimi **SIFIRLAMA** düğmesi istiyor. Bu yazıda Warmhaus'un sitesindeki Glowa yoğuşmalı kombi sayfasından bağlanan Türkçe kılavuzu kullandık. Senin modelin farklıysa kod adını kendi kılavuzunla karşılaştır.

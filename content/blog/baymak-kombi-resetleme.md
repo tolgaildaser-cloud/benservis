@@ -51,13 +51,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve ekranında yanıp sönen bir uyarı"
   steps:
-    - "Pencereleri açık, boş ve sakin bir mutfak"
-    - "Kombi ekranının yakın planı ve yanında duran küçük bir not kâğıdı"
-    - "Sade bir kombi ekranında tek bir harfle başlayan uyarı yazısı"
-    - "Kombinin altında borular arasındaki küçük doldurma musluğu"
-    - "Kombi panelinde diğerlerinden ayrı duran yuvarlak bir tuş"
-    - "Duvardaki sigorta kutusunun kapalı kapağı"
-    - "Kombinin yanında tezgâhta duran katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi durdu, ekranda bir kod yanıp sönüyor ve ilk akla gelen reset. Baymak'ın Duotec, Duotec Compact, Eco CT 20 Premix ve Lunatec kılavuzlarında reset tuşu var, ama her kodu silmiyor ve her kod için doğru adım değil. Bu yazıda reset tuşunun yerini, resetin işe yaradığı ve yaramadığı durumları ve nerede durman gerektiğini bu dört kılavuzdan topladık. Senin kombinde tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Beyaz önden yüklemeli bir çamaşır makinesinin üstte duran, yarı açık deterjan çekmecesi"
   steps:
-    - "Kapalı ekranlı bir çamaşır makinesinin kumanda paneli"
-    - "Çamaşır makinesinden tamamen dışarı çekilmiş bir deterjan bölmesi"
-    - "Tezgâhın üstünde kuru bir bezin üzerine konmuş küçük plastik bir pompa ünitesi"
-    - "Kapağı açılmış, iki hazneli boş bir deterjan çekmecesi"
-    - "Nemli bir bezle silinen deterjan çekmecesinin iç yüzeyi"
-    - "Yerine geri itilmiş ve kapanmış bir deterjan çekmecesi"
-    - "Çamaşır makinesinin açık deterjan çekmecesinin önünde duran boş bir ölçü kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda E:10 -00, E:10 -10 ya da E:10 -20 yanıyor ve makine yıkamaya başlamıyor. Bosch'un i-DOS akıllı dozajlama sistemli WGB244A0TR ve WGA244A0TR kılavuzlarında bu üç kod tek satırda: **akıllı dozajlama sistemi pompası bloke.** İyi haber şu ki kılavuzun ilk çözümü senin yapabileceğin bir temizlik. Bu yazıda kodun anlamını, çekmece ve pompa ünitesi temizliğini ve servisi beklerken nasıl yıkamaya devam edeceğini bu iki kılavuzdan sırayla topladık. Modelinde tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

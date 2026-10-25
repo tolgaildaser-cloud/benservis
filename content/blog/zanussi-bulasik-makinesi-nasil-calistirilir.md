@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Sepetleri dolu, kapağı açık ankastre bulaşık makinesi"
   steps:
-    - "Açık tuz haznesine huniyle dökülen iri taneli tuz"
-    - "Tezgah altındaki açık su musluğu"
-    - "Bulaşık makinesi kapağının iç yüzündeki parlatıcı haznesi"
-    - "Alt sepette düzenli dizilmiş tabaklar ve ters konmuş bardaklar"
-    - "Deterjan gözüne yerleştirilmiş tablet"
-    - "Bulaşık makinesinin üst kenarındaki program tuşları"
-    - "Kapanmakta olan bulaşık makinesi kapağı"
-    - "Programı bitmiş makinenin alt sepetindeki temiz tabaklar"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Zanussi bulaşık makineni yeni aldıysan ya da kılavuzu kaybettiysen ilk soru belli: tuz nereye, deterjan nereye, program nasıl başlıyor? Zanussi'nin ZDLN2621 kullanım kılavuzu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ilk kullanımı ve her gün yapılacakları sırayla anlatıyor. Bu modelin kontrol paneli kapağın üst kenarında; program, seçtiğin tuşa basıp **kapağı kapattığında** başlıyor. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

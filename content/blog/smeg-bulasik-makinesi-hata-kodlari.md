@@ -39,12 +39,12 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı paslanmaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kontrol panelinde yanıp sönen gösterge ışıkları"
-    - "Lavabo altında kapatılmış bir su musluğu"
-    - "Bulaşık makinesinin giriş hortumu ve musluk bağlantısı"
-    - "Bulaşık makinesinin tabanından çıkarılmış filtre parçaları"
-    - "Bulaşık makinesinin üst kenarındaki açma kapama düğmesi"
-    - "Tezgâh üzerinde duran bir telefon ve yanında kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Smeg bulaşık makinen yıkamanın ortasında durdu, panelde birkaç ışık birlikte yanıp sönüyor ya da tek bir ışık art arda yanıp sönüp susuyor. Smeg bunu "alarm" olarak adlandırıyor ve her alarmın anlamı kullanım kılavuzunun sorun giderme bölümünde yazıyor. Bu yazı Smeg'in STL323BL ve ST4512IN bulaşık makineleri için yayımladığı kılavuzlara dayanıyor. Smeg'in Türkiye sitesindeki indirme sayfasında Türkçe dil seçeneği yok; kılavuzun İngilizce baskısını kullandık ve alıntıları Türkçeye çevirdik.

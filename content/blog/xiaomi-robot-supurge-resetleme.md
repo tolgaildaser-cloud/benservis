@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Ahşap zeminde şarj istasyonunun önünde duran yuvarlak, beyaz bir robot süpürge"
   steps:
-    - "Duvara dayalı şarj istasyonuna yerleşmiş bir robot süpürge"
-    - "Göstergesi sönük, zeminde bekleyen bir robot süpürge"
-    - "Robot süpürgenin üst yüzündeki güç düğmesinin yakın planı"
-    - "Robot süpürgenin üst yüzünde yan yana duran güç ve ev düğmeleri"
-    - "Kapağı açık bir robot süpürgenin üst bölmesi ve yanında ince bir iğne"
-    - "Kapağı açık robot süpürgenin içindeki Wi-Fi göstergesi"
-    - "Şarj istasyonundaki robot süpürgenin yanında uygulaması açık bir akıllı telefon"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda panel ekranındaki uyarı"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda çalışma sesi"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Xiaomi robot süpürgen ortada donup kaldı, düğmelere tepki vermiyor ya da uygulama robotu çevrimdışı gösteriyor; aklına gelen ilk şey "resetleme". Xiaomi'nin Türkçe kılavuzlarında üç ayrı sıfırlama var ve her biri farklı bir sorunu çözüyor: **yeniden başlatma** (robot donduğunda), **fabrika ayarlarını geri yükleme** (yeniden başlatma yetmediğinde) ve **Wi-Fi sıfırlama** (telefonla bağlantı koptuğunda). Bu yazı Xiaomi'nin Türkiye destek sayfasındaki **Xiaomi Robot Vacuum X10** ve **Xiaomi Robot Vacuum S20** Türkçe kılavuzlarına dayanıyor. Başka bir Xiaomi modelin varsa sıra benzer olabilir, düğme süreleri farklı olabilir; kendi kılavuzunla karşılaştır.

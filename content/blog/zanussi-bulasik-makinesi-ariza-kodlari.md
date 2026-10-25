@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağının üst kenarında program tuşlarının ışıkları yanan ankastre bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kapağının üst kenarındaki program tuşu ışıkları"
-    - "Tezgah altındaki açık su musluğu ve giriş hortumu"
-    - "Bulaşık makinesinin tabanındaki silindir filtre"
-    - "Kapalı konumda duran su musluğu"
-    - "Temizlenmiş filtre parçaları ve bulaşık makinesinin boş tabanı"
-    - "Kontrol paneli sönük, kapağı kapalı bulaşık makinesi"
-    - "Prizden çekilmiş bulaşık makinesi fişi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Zanussi bulaşık makinende program tuşlarının ışıkları aralıklarla yanıp sönüyor ve kesik kesik bir uyarı sesi geliyorsa makine sana bir arıza kodu veriyor. Zanussi'nin ZDLN2621 kullanım kılavuzunda (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) bu kodlar ekranda harfle değil, **ışıkların kaç kez yanıp söndüğüyle** gösteriliyor. Kılavuza göre sorunların çoğu servis çağırmadan çözülebiliyor. Senin modelinde farklı bir gösterim olabilir; kendi kılavuzunla karşılaştır.
