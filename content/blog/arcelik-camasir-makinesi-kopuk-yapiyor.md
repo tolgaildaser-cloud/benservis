@@ -50,6 +50,15 @@ faq:
     a: "Arçelik deterjan paketinin üzerindeki tavsiye edilen dozajın aşılmamasını, az ya da az kirli çamaşır için daha az deterjan kullanılmasını istiyor. Çekmecede 1 numaralı göz ön yıkama, 2 numaralı göz ana yıkama, 3 numaralı göz yumuşatıcı için. Ön yıkamasız bir program seçtiysen 1 numaralı göze deterjan koyma."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin camında yükselmiş beyaz köpük, açık deterjan çekmecesinin kenarında taşmış köpük izleri"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Tamburun camı beyaz köpükle doldu ya da deterjan çekmecesinin ağzından köpük taşıyor. Arçelik'in çamaşır makinesi kullanma kılavuzlarındaki sorun giderme tablosunda bu iki görüntünün ayrı ayrı satırı var: **"Ürünün içinde çok miktarda köpük oluşuyor."** ve **"Deterjan çekmecesinden dışarı köpük taşıyor."** Arçelik'in saydığı nedenlerin neredeyse tamamı deterjanla ilgili: **türü, miktarı, konduğu göz ve saklandığı yer.** Önce taşan köpüğü yatıştırıyoruz, sonra bir dahakine köpüğü baştan önleyen sırayı veriyoruz.

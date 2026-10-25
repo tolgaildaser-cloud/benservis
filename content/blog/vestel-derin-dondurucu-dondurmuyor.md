@@ -54,6 +54,14 @@ faq:
     a: "Vestel'in dikey kılavuzunda E09, dondurucunun sıcaklık değerinin yeteri kadar soğuk olmadığını gösteriyor ve özellikle uzun süreli elektrik kesintilerinden sonra görünüyor. Ayrıntı için Vestel buzdolabı E09 yazısına bakabilirsin."
 images:
   coverAlt: "Kapağı açık beyaz sandık tipi derin dondurucunun içinde sepetlere dizilmiş donmuş gıda paketleri"
+  steps:
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
 ---
 
 Dondurucunun motoru çalışıyor, içi serin; ama et paketleri taş gibi donmuyor. Vestel'in sandık tipi kılavuzunda bu durumun satırı **"Derin dondurucu yeterince soğutmuyor."**, dikey kılavuzunda **"Derin dondurucunuz yeterli soğutma yapmıyor."** İki tabloda da ilk bakılacak yer aynı: ayar. Ama sandık tipinde ayrıca cihazın **hangi modda** çalıştığına bakmak gerekiyor.

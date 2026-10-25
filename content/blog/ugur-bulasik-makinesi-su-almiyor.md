@@ -51,6 +51,14 @@ faq:
     a: "Uğur kılavuzunda izin verilen en düşük basınç 0,3 bar, en yüksek 10 bar. Kılavuz basınç 1 bar'ın altındaysa yetkili bir tesisatçıyla, 10 bar'ın üzerindeyse basınç düşürme valfi için yine tesisatçıyla iletişime geçilmesini istiyor. Sorun giderme tablosu da basınç çok düşükse yerel su idaresiyle görüşmeni söylüyor."
 images:
   coverAlt: "Tezgâh altında bulaşık makinesine giden su giriş hortumu ve hortumun bağlı olduğu açık ara musluk"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Programı başlattın, makineden su sesi gelmiyor; birkaç dakika sonra sesli alarm çalıyor ve ekranda **E10** yazıyor. Uğur'un UBL serisi bulaşık makinesi kılavuzlarındaki hata tablosunda bu kodun satırı **"Cihaz su almıyor."** Karşısındaki altı nedenden dördü musluk ve hortumla ilgili, yani önce tezgâhın altına bakmak gerekiyor.

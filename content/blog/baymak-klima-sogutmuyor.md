@@ -46,6 +46,14 @@ faq:
     a: "Baymak kılavuzu bunu, odadaki havanın çok soğuk olduğu durumlarda, örneğin SOĞUTMA ya da NEM ALMA modlarında görülen bir durum olarak açıklıyor."
 images:
   coverAlt: "Banyo lavabosunun kenarında kurumaya bırakılmış, ince plastik ızgaralı bir split klima hava filtresi"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor ama üflediği hava odayı serinletmeye yetmiyor. Baymak'ın Türkçe montaj ve kullanma kılavuzu bu belirtiyi sorun giderme tablosunda **"Sıcak veya soğuk, yetersiz hava akışı"** satırıyla veriyor ve altı olası neden sayıyor. Bunların dördü kumandadan ya da filtreden kontrol edilebilir; biri, **"Soğutucu akışkan tükenmiş/yok olabilir."** maddesi ise yalnız servisin işidir. Bu yazıda Baymak'ın listesini, kılavuzun fan hızı, MUTE ve bakım bölümleriyle birlikte sırayla anlatıyoruz.

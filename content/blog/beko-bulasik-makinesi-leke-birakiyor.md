@@ -63,6 +63,15 @@ faq:
     a: "Beko'nun tablosu 'pas lekesi, kararma, yüzey bozulması' satırında şunları sayıyor: tuz kaçağı, bulaşıklarda uzun süre kalan tuzlu yiyecek artıkları, topraklama hattının olmaması, çamaşır suyu gibi yoğun temizleyiciler, bıçakların amacı dışında kullanılması, düşük kaliteli paslanmaz çelik ve daha önce paslanmış eşyaların makinede yıkanması."
 images:
   coverAlt: "Bulaşık makinesinin açık üst sepetinde yan yana duran, üzerinde beyaz puslu iz kalmış cam bardaklar; kapağın iç yüzünde açık parlatıcı bölmesi"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitiyor, bulaşıklar temiz ama bardaklar puslu, üzerlerinde beyaz izler var ya da çatal bıçaklarda pas lekesi çıkıyor. Beko'nun BM 4004 ve BM 5005 kullanma kılavuzlarındaki sorun giderme tablosu bu lekeleri türüne göre ayırıyor. Beyaz izlerin kendi satırı var: **"Bulaşıklarda kireç izi kalıyor ve cam eşyalar puslu bir görünüm alıyor."** Beko silince çıkmayan, ışıkta gökkuşağı gibi görünen pusu ve pas lekesini ise ayrı satırlarda anlatıyor. Üçünde de kullanıcıya düşen işler aynı yerde toplanıyor: **parlatıcı, tuz, su sertlik ayarı ve program seçimi.** Bu yazıda Beko'nun çözümlerini adım adım açıyoruz.

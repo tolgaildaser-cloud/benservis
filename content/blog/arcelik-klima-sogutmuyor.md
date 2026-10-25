@@ -46,6 +46,15 @@ faq:
     a: "Arçelik'in bakım tablosu hava filtresi için 2 haftalık aralık veriyor; filtre bölümünde de ortamın kirliliğine göre en az 15 günde bir filtrelerin çekilip tıkanıp tıkanmadığının kontrol edilmesini istiyor. Klimayı kesinlikle hava filtresiz çalıştırma."
 images:
   coverAlt: "Öğle güneşinin girdiği bir salonda tabure üzerinde duran bir kişinin duvardaki beyaz split klimanın ön panelini açması"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima açık, ama beklediğin serinlik yok. Arçelik'in Türkçe kullanma kılavuzu bu durumu "Problemler için çözüm önerileri" bölümünde **"Klima etkili olarak soğutmuyor veya ısıtmıyor."** başlığıyla veriyor ve dört olası neden sayıyor. Bunlardan biri çoğu zaman gözden kaçıyor: **"Klimayı ilk çalıştırdığınızda oda çok sıcak olabilir."** Kılavuzun yanıtı da sade: soğutma için biraz bekle. Bu yazıda Arçelik'in dört maddesini, kılavuzun enerji tasarruflu soğutma ve filtre bölümleriyle birlikte sırayla anlatıyoruz.

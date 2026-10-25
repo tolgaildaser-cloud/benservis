@@ -47,6 +47,15 @@ faq:
     a: "Electrolux'un tablosuna göre cihaz demo modundadır. Demo modundan çıkmak için OK tuşunu yaklaşık 10 saniye, uzun bir ses duyana kadar basılı tut; gösterge ekranı kısa bir süre içinde kapanır."
 images:
   coverAlt: "Kapağı açık bir buzdolabının içinde rafa yerleştirilmiş kapaklı saklama kapları, kapı iç kenarındaki lastik contayı yumuşak bir bezle silen el"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Buzdolabı çalışıyor, ışığı yanıyor ama içerisi yeterince soğuk değil. Electrolux'un LRS4DF18S soğutucu kılavuzundaki sorun giderme tablosunda bu belirtinin karşılığı **"Cihazın içindeki sıcaklık çok az/çok fazla."** satırı. Electrolux bu satırda yedi neden sayıyor ve hepsinin çözümü kullanıcının elinde: sıcaklık ayarı, kapı, sıcak ya da çok miktarda yiyecek, kapıyı sık açmak, FastCool ve hava dolaşımı. Bu rehberde Electrolux'un listesini bir de "cihaz hiç çalışmıyor" satırıyla birlikte sırayla açıyoruz. Kaynak, dondurucu bölmesi olmayan tek bir soğutucu modelinin kılavuzu; tuş ve fonksiyon adları modele göre değişebilir.

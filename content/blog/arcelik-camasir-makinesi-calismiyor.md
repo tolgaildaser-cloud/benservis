@@ -49,6 +49,14 @@ faq:
     a: "Hayır. Arçelik'e göre program seçimi sırasında 1 dakika içinde program başlatılmazsa ya da bir tuşa basılmazsa makine bekleme durumuna geçer ve gösterge ışıklarının parlaklığı azalır; program bittikten sonra yaklaşık 2 dakika işlem yapılmazsa enerji tasarrufu moduna geçer. Program düğmesini çevirmek ya da bir tuşa dokunmak ışıkları geri getirir. Kılavuzun ifadesiyle bu bir hata değildir."
 images:
   coverAlt: "Ekranı ve gösterge ışıkları sönük duran bir çamaşır makinesinin kontrol paneli, yanında duvardaki prize takılı fiş"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Makine hiç açılmıyor, ekran karanlık; ya da program seçiliyor ama başlamıyor. Arçelik'in çamaşır makinesi kullanma kılavuzlarındaki sorun giderme tablosu bu durumu birkaç satıra bölüyor: **"Makine çalışmıyor. Ekranda hiçbir şey görünmüyor."**, **"Makinenin kapağını kapattıktan sonra program başlamıyor."** ve **"Program başlatılamıyor veya program seçimi yapılamıyor."** Arçelik'in bu satırlarda saydığı sebeplerin çoğu makinenin dışında ya da bir tuşta: fiş, sigorta, elektrik, Açma/Kapama, kapak, Başla/Bekle ve su. Bu yazıda Arçelik'in sırasını açıyoruz.

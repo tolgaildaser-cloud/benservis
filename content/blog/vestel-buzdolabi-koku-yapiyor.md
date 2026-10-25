@@ -62,6 +62,15 @@ faq:
     a: "Eski nesil R 5402 NF kılavuzunda buzdolabı ilk çalıştırıldığında koku duyulabileceği ve kokunun buzdolabı soğutmaya geçince kaybolacağı yazıyor. Ancak koku garip bir ses ya da dumanla birlikte geliyorsa Vestel'in talimatı farklı: cihazı hemen kapat, güç bağlantısını kes ve yetkili servisle irtibata geç."
 images:
   coverAlt: "Rafları boşaltılmış açık bir buzdolabının içini nemli bir bezle silen bir el ve tezgâhta kapaklı saklama kapları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kapağı açtığında yüzüne gelen koku birkaç gündür geçmiyor ve hangi kaptan geldiğini bulamıyorsun. Vestel'in buzdolabı kullanım kılavuzlarında bunun için ayrı bir bölüm var: **"Kötü kokuların önlenmesi."** Bölümün ilk cümlesi kaygıyı baştan gideriyor: Vestel'e göre üründe **kokuya neden olacak hiçbir madde kullanılmıyor.** Koku, kılavuzun ifadesiyle **uygun olmayan yiyecek saklama** ve **iç yüzeyin gerektiği gibi temizlenmemesi** yüzünden ortaya çıkıyor. İkisi de kullanıcının elinde.

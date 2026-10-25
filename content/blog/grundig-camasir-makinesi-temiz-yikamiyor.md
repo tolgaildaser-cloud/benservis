@@ -42,6 +42,14 @@ faq:
     a: "Grundig'in tablosu renk solmasını üç kullanıcı tarafı sebebe bağlıyor: aşırı çamaşır yükleme, deterjanın nemlenmesi ve yüksek sıcaklık seçimi. Çözümler: makineyi aşırı yüklememek, deterjanı nemsiz ve kapalı saklamak, çamaşırın türüne ve kirine uygun program ve sıcaklık seçmek."
 images:
   coverAlt: "Çamaşır makinesinden yeni çıkarılmış, yakası hafif grileşmiş beyaz bir gömleğin katlanmış beyaz havlular yanında tutulması"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
 ---
 
 Makine çalışıyor, program bitiyor ama beyazlar grileşmiş, leke yerinde duruyor ya da çamaşırda yağlı izler var. Grundig'in çamaşır makinesi kullanma kılavuzlarında bu durum tek bir başlık altında değil, üç ayrı satırda geçiyor: **"Yıkama performansı kötü: Grileşme var."**, **"Lekeler çıkmadı veya çamaşırlar beyazlaşmadı."** ve **"Çamaşırlarda yağlı lekeler oluştu."** Grundig'in bu satırlarda saydığı sebeplerin hiçbiri parça arızası değil: deterjan miktarı, yük, program ve sıcaklık, deterjan türü ve kazan temizliği. Bu yazı Grundig'in GWM 91014 ve GWM 9701 Y kılavuzlarındaki tabloya dayanıyor; kazan temizleme programı olmayan modeller için GWM 9801 kılavuzuna da bakıyoruz.

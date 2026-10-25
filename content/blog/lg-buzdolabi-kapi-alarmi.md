@@ -46,6 +46,12 @@ faq:
     a: "LG'nin yazdığı sınır açık: kapı tamamen kapalıyken bile kapı açık alarmı çalmaya devam ederse buzdolabını bir servis teknisyenine kontrol ettir."
 images:
   coverAlt: "Kapısı aralık bir buzdolabının kapı contasını bir el nemli havluyla siliyor, kapı rafında birkaç şişe duruyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda ilgili filtre"
+    - "Çizim: solda buzdolabı, sağda deterjan bölmesi"
+    - "Çizim: solda buzdolabı, sağda kapak"
 ---
 
 Kapı kapalı, ama buzdolabı uyarı sesi vermeye devam ediyor. LG Türkiye'nin yardım sayfası bu durumu "**Kapı kapalıyken bile uyarı sesi geliyor**" başlığıyla anlatıyor. LG'ye göre alarm, kapı belirli bir süre açık kalınca çalar; kapı kapalı göründüğü hâlde çalıyorsa kapı çoğu zaman tam kapanmıyordur. Sebeplerin çoğu evde kontrol edilebilecek türden: fazla yiyecek, yanlış takılmış raf, kapıya takılan poşet ya da kirli, yerinden çıkmış conta. Bu yazıda LG'nin kendi sırasını adım adım veriyoruz.

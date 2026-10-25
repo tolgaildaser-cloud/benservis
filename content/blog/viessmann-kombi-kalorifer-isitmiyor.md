@@ -71,6 +71,15 @@ faq:
     a: "Vitodens 100-W, Connect ve Trend kılavuzlarının tablosunda 'Isıtma sisteminde hava var' satırı var ve tedbir olarak radyatörlerin havasının atılmasını yazıyor. Kılavuz bunun nasıl yapılacağını ayrıca anlatmıyor. Nasıl yapılacağını bilmiyorsan bu işi yetkili servise bırak."
 images:
   coverAlt: "Duvara monte beyaz bir kombi, yanında dijital bir oda termostatı ve önde soğuk görünen beyaz bir panel radyatörün olduğu sade bir oda köşesi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi duvarda sessizce duruyor ya da çalışıyor gibi görünüyor ama oda bir türlü ısınmıyor. Viessmann'ın kullanma kılavuzlarında bunun için ayrı bir tablo var, adı da tam olarak bu: **"Ortam çok soğuk."** Tablo Vitopend 100-W, Vitodens 050-W, Vitodens 100-W/111-W/111-F, Vitodens Connect, Vitodens Trend ve Vitodens 200-W/222-W/222-F/242-F kılavuzlarının "Ne yapmalı?" bölümünde, her satırda bir neden ve karşısında giderilmesi yazıyor. Bu yazıda o tablonun evde bakabileceğin satırlarını sırayla anlatıyoruz.

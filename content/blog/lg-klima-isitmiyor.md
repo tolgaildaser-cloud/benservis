@@ -49,6 +49,14 @@ faq:
     a: "LG'nin sorun giderme tablosuna göre ısıtma işlemlerinde ısı dönüştürücüden yoğunlaşmış su damlar. LG bu durumda taban tepsisinin altına bir tahliye hortumu kurulmasını ve bunun için tesisatçıyla iletişime geçilmesini öneriyor."
 images:
   coverAlt: "Kış günü bir odada duvara monte iç ünitenin önünde, elinde kumanda tutan ve üzerinde kalın hırka olan bir kişi"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Hava soğudu, klimayı ısıtmaya aldın ama odaya sıcak hava gelmiyor. LG'nin duvar tipi klima kullanıcı el kitabındaki sorun giderme tablosunda bunun karşılığı **"Klima ılık hava üflemiyor."** satırı. Dikkat çekici olan şu: LG'nin bu satırda saydığı üç nedenin ikisi arıza değil. Isıtma başlarken **havanın bir süre hiç gelmemesi** ve dış ünitenin **buz çözme** yapması, LG'ye göre beklenen durumlar. Bu yazıda önce bunları ayırıyor, sonra kumanda, oda ve filtre tarafında yapabileceklerini LG'nin kendi sırasıyla anlatıyoruz. Kaynak iki LG kullanıcı el kitabı; tuş adları ve özellikler modele göre değişebilir.

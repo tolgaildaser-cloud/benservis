@@ -53,6 +53,14 @@ faq:
     a: "Bu büyük olasılıkla Otomatik Temizleme işlevi. LG kılavuzuna göre bu işlev açıkken klimayı kapattığında fan 30 dakika çalışır ve iç ünitenin içindeki nemi giderir. İstemiyorsan iç üniteyi kapatabilirsin."
 images:
   coverAlt: "Oturma odasında duvardaki kapalı beyaz split klimaya doğrultulmuş uzaktan kumanda, yanında yeni piller"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun, klima tepki vermiyor; ya da çalışırken bir anda duruyor. LG'nin Türkçe kullanım kılavuzu bu durumu **"Klima çalışmıyor"** başlığıyla ele alıyor ve ilk olarak şunu soruyor: **"Klima prize takılı değil."** Ardından sigorta ve devre kesici, elektrik kesintisi, zamanlayıcı ve kumanda pilleri geliyor. Bu yazıda LG'nin sırasını evde güvenle yapılabilecek adımlara çeviriyoruz.

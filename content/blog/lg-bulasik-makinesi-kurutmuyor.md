@@ -47,6 +47,14 @@ faq:
     a: "DFC325HD'nin seçenek tablosuna göre Enerji Tasarrufu seçeneği Yüksek Sıcaklık ya da Ekstra Kurutma ile birlikte mevcut değil. Kurutma sorunu yaşıyorsan Ekstra Kurutma'yı tercih et. LG'ye göre bu seçenek programa ekstra kurutma süresi ekler ve durulama sıcaklığını yükseltir; parlatıcı olmadığında da kendiliğinden seçilir."
 images:
   coverAlt: "Program sonunda hafifçe aralanmış bulaşık makinesi kapağı, üst sepette üzerinde su damlaları kalmış plastik kaplar ve bardaklar"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Program bitti, kapağı açtın ve bulaşıklar hâlâ ıslak. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabında bunun için ayrı bir kurutma tablosu var ve tek satırı şu: **"Bulaşıklar kurumuyor."** LG bu satırda üç neden sayıyor: **parlatıcı haznesi boş, tablette parlatıcı yok, Ekstra Kurutma seçeneği olmadan bir program seçilmiş.** Kılavuzun başka bölümleri buna parlatıcı seviyesini, Otomatik Açık Kurutma özelliğini ve program sonrası kapağı aralamayı ekliyor. Bu yazıda hepsini LG'nin kendi sözleriyle sıraladık. Kaynak tek bir modelin kılavuzu; tuş adları ve tuş kombinasyonları modele göre değişebilir.

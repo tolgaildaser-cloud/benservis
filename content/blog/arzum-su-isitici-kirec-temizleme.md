@@ -46,6 +46,14 @@ faq:
     a: "Arzum Estilo kılavuzuna göre suyun sertlik derecesine göre kaynamış suda pudramsı tortu oluşması normaldir; bu durum sudan kaynaklanır ve insan sağlığına zararı yoktur."
 images:
   coverAlt: "Mutfak tezgâhında kapağı açık çelik bir su ısıtıcı, yanında bir şişe beyaz sirke ve küçük bir fırça"
+  steps:
+    - "Çizim: solda su ısıtıcı (kettle), sağda prizden çekilen fiş"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kapak"
+    - "Çizim: solda su ısıtıcı (kettle), sağda temizlik fırçası"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kireç çözücü şişesi"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda su ısıtıcı (kettle), sağda temizlik fırçası"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kireç çözücü şişesi"
 ---
 
 Arzum su ısıtıcının tabanında beyaz ya da kahverengi bir katman oluştuysa bu kireçtir. Arzum'un kullanma kılavuzu nedenini şöyle anlatıyor: suyun içindeki kireç zamanla **"ısıtıcı tabanı üzerinde birikip yanarak kahverengi bir katman oluşturarak ısıtıcınızın verimini düşürecektir."** Kılavuz bu yüzden kirecin periyodik olarak giderilmesini hijyen ve enerji tasarrufu açısından önemli sayıyor ve temizliği kullanıcıya bırakıyor. Bu yazıdaki adımlar Arzum Minia (AR 395) ve Arzum Estilo (AR 3048) kılavuzlarından.

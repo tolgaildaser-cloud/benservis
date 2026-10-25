@@ -53,6 +53,15 @@ faq:
     a: "Altus kılavuzuna göre normal. Yıkama süresinin uzamasıyla ilgili satırda makinenin daha iyi durulama yapması gerektiğinde durulama suyu miktarını artırdığı ve gerekirse bir durulama adımı daha eklediği yazıyor."
 images:
   coverAlt: "Ön yüklemeli bir çamaşır makinesinin açık deterjan çekmecesinde numaralı gözler ve yanında ağzı kapalı bir deterjan kutusu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Çamaşır makineden çıktı ama üzerinde deterjan izi ya da kayganlık kalmış. Altus'un çamaşır makinesi kılavuzu bu durumu sorun giderme tablosunda **"İyi durulamıyor."** satırıyla veriyor ve dört sebep sayıyor: **kullanılan deterjanın miktarı, markası veya saklama koşulları uygun değildir**, **deterjan yanlış göze konmuş olabilir**, **pompa filtresi tıkalı olabilir** ve **tahliye hortumu kıvrılmış olabilir.** İlk ikisi deterjanla, son ikisi suyun makineden çıkışıyla ilgili. Bu yazıda önce deterjanı, sonra suyun yolunu kontrol ediyoruz.

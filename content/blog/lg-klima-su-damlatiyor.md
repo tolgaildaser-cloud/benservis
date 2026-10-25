@@ -44,6 +44,12 @@ faq:
     a: "LG'nin bakım tablosu kondensat drenaj borusunun ve drenaj tavasının temizliği için uzman yardımı alınmasını istiyor. Hortumu açmaya, içine tel sokmaya ya da üflemeye çalışma."
 images:
   coverAlt: "Duvardaki beyaz split klimanın iç ünitesi kapalı, altında kuru bir zemin ve elinde uzaktan kumanda tutan bir kişi"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Klimanın altında damlalar ya da duvarda ıslaklık fark ettin. LG'nin Türkçe kullanım kılavuzu bu belirtiyi, kontrol listesiyle çözülen konulardan değil, doğrudan servis isteyen satırlardan sayıyor: **"Nem seviyesi düşük olduğunda bile iç mekan ünitesinden su sızıyor."** Talimat da açık: **"Klimayı kapatın, güç kablosunu prizden çekin veya güç kaynağı bağlantısını kesin ve servis merkezi ile iletişime geçin."** Bu yazı, sızıntının gerçekten iç üniteden olup olmadığını ayırt etmeni ve servisi çağırmadan önce güvenle yapabileceklerini LG'nin belgelerinden anlatıyor.

@@ -55,6 +55,15 @@ faq:
     a: "Vestel kılavuzu düşük sıcaklıkta yıkama yapan programlarda sıvı deterjan kullanılmasını öneriyor. Miktar çamaşırın miktarına ve kirlilik düzeyine göre değişir; Vestel deterjan miktarı için üreticinin önerilerine uyulmasını istiyor."
 images:
   coverAlt: "Kapağı açık bir çamaşır makinesinin önünde renklerine göre ayrılmış iki çamaşır yığını ve deterjan çekmecesine ölçü kabıyla deterjan koyan bir el"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Makine programı bitiriyor ama çamaşırlar beklediğin kadar temiz çıkmıyor. Vestel'in Türkçe kullanım kılavuzlarındaki küçük arızalar tablosu bu durumu **"Yıkama sonucu iyi değil."** satırıyla ele alıyor ve beş sebep sayıyor; ilki **"Çamaşırlarınızın kirlilik derecesi seçmiş olduğunuz programa uygun değil."** Sebeplerin hiçbiri parça ya da söküm gerektirmiyor: hepsi program seçimi, deterjan ve yükleme düzeniyle ilgili. Bu yazıda Vestel'in tablosunu, kılavuzun deterjan bölümüyle birlikte adım adım anlatıyoruz.

@@ -49,6 +49,14 @@ faq:
     a: "LG'nin kurulum bölümünde bunun için ayrı bir not var: lavabo altındaki atık tıkacında doğru şekilde delik açılmadığında OE hatası meydana gelebilir. Kılavuz bu deliğin tornavida ve çekiçle açılmaya çalışılmamasını istiyor. Bu bir montaj işi; kurulumu yapan kişiye ya da yetkili servise bırak."
 images:
   coverAlt: "Alt sepeti dışarı alınmış bulaşık makinesinin tabanında silindir biçimli filtre yuvası ve dibinde biraz kalmış su"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
 ---
 
 Program bitti, kapağı açtın ve makinenin dibinde su duruyor; belki ekranda **OE** de yazıyor. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabında bu belirti iki yerde geçiyor. Hata tablosunda OE'nin karşılığı **"Boşaltma Sorunu"**; kullanım tablosunda ise ayrı bir satır var: **"Program tamamlandıktan sonra tamburun dibinde su kalıyor."** LG'nin saydığı nedenlerin ilki bir arıza bile değil: program elektrik kesintisi ya da elle kapatma yüzünden yarıda kalmış olabilir. Bu yazıda önce bunu, sonra hortumu, en son da filtreleri LG'nin kendi talimatıyla anlatıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

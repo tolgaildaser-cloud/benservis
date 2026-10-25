@@ -46,6 +46,14 @@ faq:
     a: "Bosch'un KGN76.. kılavuzuna göre soğutucu ya da dondurucu uzun süre boş kalacaksa küflenmeyi önlemek için cihaz kapatılmalı, buzu çözülmeli, temizlenmeli ve kapağı açık bırakılmalı."
 images:
   coverAlt: "Rafları çıkarılmış, kapısı açık boş bir buzdolabının içini bezle silen bir el; tezgâhta kapakları kapalı saklama kapları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda deterjan bölmesi"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda ambalaj kutusu"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Buzdolabının kapağını açınca rahatsız edici bir koku geliyor ve bir kez silmek işe yaramadı. Bosch'un kombi buzdolabı kılavuzlarında bu durum için ayrı bir bölüm var, adı da kısa: **"Kokular."** Bosch burada sekiz maddelik bir sıra veriyor ve sıranın sonunda bir kontrol koyuyor: **"24 saat sonra, yeniden koku oluşup oluşmadığını kontrol ediniz."** Bu yazıda Bosch'un KGE.. ve KDV.. serisi kılavuzlarındaki sırayı, aynı kılavuzların temizlik kurallarıyla birlikte açıyoruz.

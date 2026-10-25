@@ -50,6 +50,12 @@ faq:
     a: "Uğur'un kılavuzuna göre cihazı birkaç gün kullanmayacaksan kapatıp fişini çek, iç temizliğini yap ve içini iyice kurula. Kılavuz cihazdaki suyun 15 günden fazla bekletilmemesini istiyor: uzun süre bekleyen su kokuya, soğuk ortamda kalırsa da donarak su tanklarının deformasyonuna sebep olabilir."
 images:
   coverAlt: "Mutfakta duvardan bir karış uzakta duran beyaz bir su sebili ve musluğun altında boş bir bardak"
+  steps:
+    - "Çizim: solda su sebili, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda su sebili, sağda bekleme süresi için saat"
+    - "Çizim: solda su sebili, sağda bekleme süresi için saat"
+    - "Çizim: solda su sebili, sağda bekleme süresi için saat"
+    - "Çizim: solda su sebili, sağda duvarla arasındaki boşluk"
 ---
 
 Bardağı musluğa tuttun ama su gelmiyor; ne sıcak ne soğuk. Uğur'un USP 3608 su sebili kılavuzundaki **"Küçük arızalar ve çözümleri"** listesinde bu belirti için ayrı bir madde var: **"Su haznelerinden sıcak veya soğuk olarak su gelmiyorsa."** Maddenin altındaki üç nedenin üçü de kullanıcının bakabileceği şeyler: arkadaki anahtarlar, kısa sürede çekilen su miktarı ve sebilin duvara uzaklığı.

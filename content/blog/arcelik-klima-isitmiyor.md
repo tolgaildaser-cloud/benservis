@@ -55,6 +55,15 @@ faq:
     a: "Arçelik'in 2018 tarihli klima kılavuzuna göre uyku modunda ısıtma ayarı 60 dakika sonra 1°C, 2 saat sonra 2°C düşer. Uyku modu odanın siz uyurken çok ısınmasını önlemek için böyle çalışır."
 images:
   coverAlt: "Kış akşamı loş bir yatak odasında duvardaki beyaz split klimanın aşağı yönelmiş kanadı, yatağın üzerinde kalın bir yorgan"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Soğuk bir akşam klimayı ısıtmaya aldın, ama odaya ya hiç sıcak hava gelmiyor ya da gelen hava ılık kalıyor. Arçelik'in Türkçe kullanma kılavuzlarında bu belirtinin anahtarı ısıtma modunun kendi notlarında: **"Ayarlanan sıcaklık değeri oda sıcaklık değerinden düşük ise cihaz ısıtma modunda çalışmaz."** Kılavuz ayrıca ısıtmada havanın neden geç geldiğini, neden ılık hissedilebileceğini ve kanadın nereye bakması gerektiğini ayrı ayrı açıklıyor. Bu yazıda Arçelik'in ısıtma notlarını, sorun giderme bölümüyle birlikte sırayla anlatıyoruz.

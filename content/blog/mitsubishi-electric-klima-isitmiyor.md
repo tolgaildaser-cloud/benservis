@@ -54,6 +54,15 @@ faq:
     a: "Kılavuza göre çoklu sistemde ısıtma ile soğutma, kurutma ya da fan aynı anda yapılamaz. Bir ünitede ISITMA, diğerinde SOĞUTMA, KURUTMA ya da FAN seçilirse son seçilen ünite bekleme moduna geçer. İki ünitede de aynı modu seç."
 images:
   coverAlt: "Kış sabahı oturma odasında duvardaki beyaz split klimaya yöneltilmiş uzaktan kumanda, pencerenin dışında buğulu soğuk bir hava"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, klimayı ısıtmaya aldın ama odaya sıcak hava gelmiyor. Mitsubishi Electric'in Türkçe çalıştırma talimatları bu belirtiyi tek bir satırda değil, birkaç ayrı satırda ele alıyor; bunların bir kısmı arıza değil, ısıtmanın kendi işleyişi. Örneğin kılavuz, ısıtmada hava hemen gelmiyorsa **"Ünite sıcak hava üflemek için hazırlanırken lütfen bekleyin."** diyor; çalışma 10 dakika kadar durduysa bunun dış ünitenin buz çözmesi olduğunu yazıyor. Bu yazıda önce bekleme gerektiren durumları, sonra kumandadan ve odadan düzeltilebilecek maddeleri sırayla anlatıyoruz.

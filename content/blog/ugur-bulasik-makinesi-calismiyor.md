@@ -45,6 +45,13 @@ faq:
     a: "Uğur'un tablosu ev devresindeki sigorta arızasını da bir neden olarak sayıyor. Elektrik tesisatıyla ilgili işlemleri nitelikli bir elektrik uzmanına bırak; kılavuz elektrikli ekipmanların yalnızca nitelikli elektrik uzmanlarınca servis işlemine alınmasını istiyor."
 images:
   coverAlt: "Kapağı kapalı ankastre bulaşık makinesinin üst kenarındaki kontrol paneline uzanan bir el"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Bulaşıkları dizdin, programı seçtin ama makine sessiz: ne su sesi var ne geri sayım. Uğur'un UBL serisi bulaşık makinesi kılavuzunda bu durumun satırı **"Program başlamıyor."** ve tablonun başlığı **"Cihaz başlamıyor veya çalışırken duruyor"**. Nedenlerin çoğu kapak, ayar ve elektrik bağlantısıyla ilgili; birkaç dakikada elenebilir.

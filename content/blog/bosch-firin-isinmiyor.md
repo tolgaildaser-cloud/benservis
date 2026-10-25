@@ -54,6 +54,14 @@ faq:
     a: "Hayır. Bosch'un tablosuna göre süre dolduktan sonra cihaz bir süre sonra ısınmayı durdurur, fırın lambası ve soğutma fanı ise açık kalır. Fonksiyon seçme düğmesini sıfır konumuna çevirdiğinde cihaz kapanır; soğutma fanı cihaz soğuduktan sonra kendiliğinden kapanır."
 images:
   coverAlt: "Ankastre fırının ön panelinde sıfır konumunda duran döner sıcaklık düğmesi ve yanında yanıp sönen saat göstergesi"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Fırını açtın, fonksiyonu seçtin ama içerisi ısınmıyor; ya da fırın hiç tepki vermiyor. Bosch'un Türkçe ankastre fırın kılavuzlarındaki arıza tablosunda bu iki durum ayrı satırlarda: **"Cihaz çalışmıyor."** ve eski HBB23C serisinde **"Fırın ısınmıyor."** Bosch'un gösterdiği nedenlerin çoğu evde kontrol edilebiliyor: fiş, sigorta, elektrik kesintisi, sıfırda kalan sıcaklık düğmesi, yeniden ayarlanmamış saat ve çocuk kilidi. Bu yazıda Bosch'un FRMA226, FRGA103I ve HBB23C kılavuzlarındaki tabloları tek sırada topluyoruz; düğme ve simge düzeni modele göre değişebilir.

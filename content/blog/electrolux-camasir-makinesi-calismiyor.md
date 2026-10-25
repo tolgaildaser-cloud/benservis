@@ -47,6 +47,15 @@ faq:
     a: "Electrolux'un kılavuzuna göre gösterge ekranında başka alarm kodları görünürse cihazı kapatıp yeniden çalıştır. Sorun devam ederse Yetkili Servis Merkezi ile temasa geç. Servis için gereken bilgiler cihazın bilgi etiketinde yazıyor."
 images:
   coverAlt: "Kapağı kapalı ön yüklemeli çamaşır makinesinin kontrol panelinde parmakla dokunulan başlat tuşu ve yanında program düğmesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Program seçtin, tuşa bastın ama makine su almıyor, tambur dönmüyor. Electrolux'un EW8F7417QT kullanma kılavuzunda bu durum için tek satırlık bir başlık var: **"Program başlamıyor."** Altında yedi kontrol sıralanıyor ve hepsi kullanıcı tarafında yapılabiliyor: fiş, kapak, sigorta, Başlat/Beklet tuşu, gecikmeli başlatma, Çocuk Kilidi ve program düğmesi. Electrolux'un alarm tablosu da işe yarıyor; bazı durumlarda makine çalışmaya başlamadan ekrana bir uyarı yazıyor. Kaynak tek bir modelin kılavuzu; ekran ve tuş adları modele göre değişebilir.

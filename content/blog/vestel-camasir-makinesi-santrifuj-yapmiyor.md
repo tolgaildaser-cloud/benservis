@@ -58,6 +58,14 @@ faq:
     a: "Vestel'in program tablosu notunda makinenin dengesiz yük algıladığında program süresinin arttığı yazıyor. Dengesiz yük kontrol sistemi çamaşırı dağıtmaya çalışırken sıkma geç başlar; tablo bunu bir arıza olarak değil, 'Hata yok' diye tanımlıyor."
 images:
   coverAlt: "Kapağı kapalı bir çamaşır makinesinin camının ardında tamburun bir yanında toplanmış ıslak bir yorgan"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Yıkama bitti, kapağı açtın ve çamaşırlar sırılsıklam; ya da makine durulamadan sonra uzun süre bekliyor, bir türlü hızlanmıyor. Vestel'in çamaşır makinesi kullanım kılavuzlarındaki küçük arızalar tablosunda bunun ayrı bir satırı var: **"Sıkma işlemi yapılmıyor ya da geç başlıyor."** Tablonun cevabı şaşırtıcı biçimde sakin: **"Hata yok. Dengesiz yük kontrol sistemi devreye girdi."** Aynı kılavuzların ek fonksiyonlar bölümü de ikinci bir ihtimali açıkça gösteriyor: sıkma devri panelden kapatılmış olabilir. İkisi de birkaç dakikada kontrol edilir.

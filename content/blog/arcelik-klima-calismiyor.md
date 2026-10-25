@@ -52,6 +52,15 @@ faq:
     a: "Arçelik kılavuzu üründen garip bir ses, duman ya da koku gelirse ürünü sigortadan kapatmanı ve yetkili servisi aramanı istiyor. Bu durumda klimayı yeniden çalıştırmayı deneme."
 images:
   coverAlt: "Akşamüstü bir yatak odasında komodinin üzerinde açık pil kapağıyla duran klima kumandası, yanında iki kalem pil ve arkada kapalı duvar kliması"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun, klimadan ne ses geliyor ne de ön paneldeki gösterge yanıyor. Arçelik'in Türkçe kullanma kılavuzu bu durumu "Problemler için çözüm önerileri" bölümünde **"Klima çalışmıyor."** başlığıyla açıyor ve iki kontrol veriyor: **"Sigortanın atıp atmadığını ve devre kesiciyi kontrol edin."** ve **"Zamanlayıcıyı ayarlama sırasında bir hata yapıp yapmadığınızı kontrol edin."** Aynı bölümdeki iki satır daha bu belirtiye bağlanıyor: 3 dakikalık koruma ve silik kumanda göstergesi. Bu yazıda bunları, kılavuzun kumanda ve otomatik başlatma notlarıyla birlikte sırayla anlatıyoruz.

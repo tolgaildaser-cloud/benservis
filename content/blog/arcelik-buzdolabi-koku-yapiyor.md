@@ -47,6 +47,14 @@ faq:
     a: "Arçelik'in kılavuzunda bu öneri yer alıyor: çay bilinen en iyi koku alıcılarından biridir. Demlenmiş çay posasını ağzı açık bir kapta ürünün içine yerleştir ve en geç 12 saat sonra al. Kılavuzun uyarısı önemli: çay posası 12 saatten fazla tutulursa kokuya sebep olan organizmaları bünyesinde toplayacağı için kokunun kaynağı hâline gelebilir."
 images:
   coverAlt: "Rafları boşaltılmış buzdolabının içini karbonatlı suyla ıslatılmış bir bezle silen el; yanında kapaklı saklama kapları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Buzdolabını açtığında gelen kötü koku çoğu zaman ilk olarak "arıza mı?" sorusunu akla getiriyor. Arçelik'in buzdolabı kullanma kılavuzlarındaki sorun giderme listesinde bu durumun ayrı bir satırı var: **"Ürünün içi kötü kokuyor."** Arçelik'in bu satırda saydığı dört nedenin dördü de kullanıcı tarafında: **temizlik, kap seçimi, ağzı açık yiyecek ve bozulan yiyecek.** Kılavuzun bakım bölümü de aynı şeyi söylüyor: ürünün üretiminde kokuya neden olacak hiçbir madde kullanılmıyor; koku **uygun olmayan yiyecek saklamaya** ve **iç yüzeyin gerektiği şekilde temizlenmemesine** bağlı olarak ortaya çıkabiliyor.

@@ -55,6 +55,14 @@ faq:
     a: "Uğur'un tablosunda 'Fırın düzgünce pişirmiyor' satırının nedeni kapağın pişirme sırasında çok fazla açılması; çözüm iç sıcaklığın düşmemesi için kapağı çok fazla açmamak. Kılavuzun ipuçlarında da fırın kapağının her açılışta ısı kaybına neden olduğu yazıyor."
 images:
   coverAlt: "Ankastre bir fırının kontrol panelinde fonksiyon ve sıcaklık düğmelerini çeviren bir el, fırının içi karanlık"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Fırını açtın, düğmeleri çevirdin ama içerisi ısınmıyor, ya da fırın hiç tepki vermiyor. Uğur'un UAF serisi ankastre fırın kılavuzundaki sorun giderme tablosu bu iki durumu ayrı satırlarda yazıyor: **"Cihaz çalışmıyor."** ve **"Fırın ısıtmıyor."** Kılavuzun kendi ifadesiyle bunlar, **ürüne müdahale etmeden** kolayca çözebileceğin durumlar.

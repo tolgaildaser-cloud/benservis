@@ -57,6 +57,14 @@ faq:
     a: "VAD 955 CX kılavuzuna göre karbon filtre kullanılması cihazın hava çekiş gücünü azaltıyor ve hava akışındaki zorluk yüzünden davlumbazın sesi yükseliyor. Kılavuz davlumbazların bacalı kullanım öngörülerek üretildiğini ve bacasız kullanımın bacayı dışarı verme imkânı olmadığında önerildiğini yazıyor."
 images:
   coverAlt: "Buharı tüten bir tencerenin üstünde çalışan duvar tipi davlumbaz ve arka planda aralık bırakılmış bir mutfak penceresi"
+  steps:
+    - "Çizim: solda davlumbaz, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda deterjan bölmesi"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda davlumbaz, sağda bekleme süresi için saat"
 ---
 
 Davlumbaz çalışıyor, fanın sesi geliyor ama tencerenin buharı yukarı gitmek yerine mutfağa dağılıyor. Vestel'in davlumbaz kılavuzlarında bu belirti **"Cihazın performansı yeterli değil veya çalışırken yüksek ses yapıyor."** satırında geçiyor. Tablonun sıraladığı sebepler filtreyle sınırlı değil: Vestel **mutfağın havalandırılmasını** ve davlumbazın **ocakla birlikte çalıştırılmasını** da çekişin parçası sayıyor.

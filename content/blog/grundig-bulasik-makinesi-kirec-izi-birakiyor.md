@@ -41,6 +41,14 @@ faq:
     a: "Her pus kireç değil. Grundig'in kılavuzu bazı hassas cam türlerinin ve kristallerin zamanla saydamlığını yitirebileceğini yazıyor ve yeni alınan sofra gereçlerinin bulaşık makinesinde yıkanmaya uygun olmasına dikkat edilmesini öneriyor."
 images:
   coverAlt: "Bulaşık makinesinin üst sepetinden çıkarılmış, yüzeyinde beyaz kireç lekeleri ve hafif pus görünen iki cam bardak"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
 ---
 
 Bardaklar temiz ama mat, üzerlerinde beyaz noktalar ya da ince bir pus var. Grundig'in bulaşık makinesi kullanma kılavuzundaki sorun giderme bölümünde bu durum için ayrı bir satır var: **"Bulaşıklarda kireç izi kalıyor ve cam eşyalar puslu bir görünüm alıyor."** Grundig bu satırda üç sebep sayıyor: **parlatıcı yetersiz**, **su sertlik ayarı düşük veya tuz seviyesi yetersiz**, ve **tuz kaçağı.** Üçü de makinenin ayarı ve dolumuyla ilgili. Bu yazı Grundig'in GPDF 11853 I modeli için yayımladığı kullanma kılavuzuna dayanıyor; tuş adları ve ayar menüsü modeline göre değişebilir.

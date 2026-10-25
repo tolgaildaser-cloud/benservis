@@ -51,6 +51,14 @@ faq:
     a: "Bosch'a göre conta aşırı kirliyse cihaz kapağı tam kapanmaz ve yandaki mobilyaların panelleri hasar görebilir. Contayı sıcak deterjanlı suyla temiz tut; Bosch'un temizlik tablosuna göre conta çıkarılmamalı ve aşındırılmamalı. Bosch, cihazın hasarlı bir contayla ya da contasız çalıştırılmamasını da istiyor; conta hasarlıysa müşteri hizmetlerine başvur."
 images:
   coverAlt: "Ankastre fırının cam kapağının iç yüzünde ve üstündeki tezgâh dolabının alt kenarında biriken küçük su damlaları"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda iç bölme ve raflar"
+    - "Çizim: solda ankastre fırın, sağda deterjan bölmesi"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
 ---
 
 Fırında börek ya da kızartma pişiyor; kapağın camı buğulanıyor, kumanda panelinin önünde ve yandaki dolabın kenarında su damlaları birikiyor. Bosch'un Türkçe ankastre fırın kılavuzlarında bunun bir başlığı var: **"Yoğuşma oluşumu."** Bosch'un açıklaması kısa: fırının içi ile dışı arasındaki yüksek sıcaklık farkı nedeniyle kapakta, kumanda alanında ya da bitişik mobilyada **yoğuşma suyu oluşabilir** ve bu **normal, fiziksel bir olaydır.** Yine de Bosch iki şey istiyor: suyun silinmesi ve kapak, conta, havalandırma kurallarına uyulması. Bu yazıda Bosch'un FRGA103I, FRMA226 ve HBB23C kılavuzlarındaki kuralları tek listede topluyoruz.

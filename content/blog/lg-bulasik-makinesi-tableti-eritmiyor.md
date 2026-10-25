@@ -44,6 +44,14 @@ faq:
     a: "LG'nin tablosuna göre yeni deterjan eklemeden önce hazneyi kurutmak, deterjanın kümelenmesini önlüyor. Kılavuz bunu her yeni deterjandan önce yapmayı öneriyor."
 images:
   coverAlt: "Açık bulaşık makinesi kapağının içindeki deterjan haznesinde erimeden kalmış beyaz bir tablet"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, kapağı açtın ve deterjan haznesinin içinde tablet ya da toz deterjan olduğu gibi duruyor. LG'nin DFC325HD bulaşık makinesi kullanıcı el kitabında bunun için ayrı bir satır var: **"Deterjan haznesinde deterjan kalmış."** LG bu satırda iki neden sayıyor ve ikisi de makinenin içindeki bir parçayla değil, rafla ve yerleştirmeyle ilgili: **üst raf dengesiz** olabilir ya da bulaşıklar hazne kapağının **otomatik olarak açılmasını** engellemiş olabilir. Bu yazıda bu iki nedeni ve LG'nin kılavuzunda tabletle ilgili geçen diğer notları sırayla anlatıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

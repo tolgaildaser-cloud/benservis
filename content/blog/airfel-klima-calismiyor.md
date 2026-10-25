@@ -54,6 +54,15 @@ faq:
     a: "Bazı Airfel ünitelerinde otomatik yeniden başlatma var: güç geri geldiğinde ünite önceki ayarlarla kendiliğinden yeniden başlar."
 images:
   coverAlt: "Sabah ışığında bir çalışma odasında masanın üzerinde arka kapağı açık klima kumandası ve iki yeni kalem pil, arkada duvarda kapalı beyaz split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun ama klimadan ne bip sesi geliyor ne hava. Airfel'in Türkçe kullanım kılavuzu bu durumu sorun giderme tablosunda **"Ünite çalışmıyor"** satırıyla veriyor ve her nedenin karşısına kısa bir çözüm yazıyor: **"Elektriğin gelmesini bekleyin"**, **"Gücü açın"**, **"Pilleri değiştirin"**, **"Üniteyi yeniden başlattıktan sonra üç dakika bekleyin"**, **"Zamanlayıcıyı kapatın"**. Kılavuz ayrıca tepki vermeyen ünite için fişten çekip yeniden takmayı, yanıp sönen gösterge lambaları için de 10 dakika beklemeyi öneriyor. Bu yazıda Airfel'in sırasını kumanda kılavuzunun pil ve menzil notlarıyla birlikte anlatıyoruz.

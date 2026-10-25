@@ -47,6 +47,13 @@ faq:
     a: "Arçelik bu satırda iki neden sayıyor. Zemin düz ya da dayanıklı değilse dolabı yavaşça hareket ettir; sallanıyorsa ayaklarını ayarlayarak dengele ve zeminin dolabı taşıyabilecek kadar dayanıklı olmasına dikkat et. Ses dolabın üzerine konmuş eşyalardan geliyorsa o eşyaları kaldır."
 images:
   coverAlt: "Mutfakta düz zeminde duran iki kapılı bir buzdolabının ön alt köşesinde ayarlanabilir ayağı çeviren bir el, dolabın üstü boş"
+  steps:
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
 ---
 
 Gece mutfaktan bir tıkırtı, bir fokurtu ya da hafif bir uğultu geliyor ve buzdolabının bozulup bozulmadığını merak ediyorsun. Arçelik'in buzdolabı kullanma kılavuzlarındaki sorun giderme bölümü ses konusunu tek satırda değil, **sesin türüne göre ayrı ayrı** ele alıyor. Çoğunun karşısında aynı cümle yazıyor: **"Bu normaldir ve bir arıza değildir."** Kullanıcıdan iş isteyen satır ise bir tane: **"Sarsılma ya da gürültü."** Bu yazıda önce normal sesleri ayırıyoruz, sonra Arçelik'in sarsılma için verdiği kontrolleri sırayla açıyoruz.

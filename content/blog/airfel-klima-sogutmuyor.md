@@ -44,6 +44,14 @@ faq:
     a: "Airfel iki haftada bir temizlemeyi öneriyor. Bazı ünitelerde 240 saat kullanımdan sonra iç ünite ekranında CL ibaresi yanıp söner; bu filtre temizliği zamanının geldiğini gösterir."
 images:
   coverAlt: "Yaz öğleden sonrası güneşin vurduğu bir salonda yarıya kadar çekilmiş perdeler, duvarda çalışan beyaz split klima ve masada bir dizüstü bilgisayar"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda çalışma sesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor, hava da geliyor, ama oda istediğin kadar serinlemiyor. Airfel'in Türkçe kullanım ve kurulum kılavuzu bu belirtiyi sorun giderme tablosunda **"Düşük Soğutma Performansı"** başlığıyla veriyor ve her olası nedenin yanına bir çözüm yazıyor; tablonun girişi de açık: **"Sorunlar ortaya çıktığında onarım şirketiyle irtibata geçmeden önce lütfen aşağıdaki hususları kontrol edin."** Satırların çoğu kumandadan, odadan ya da filtreden çözülüyor; ısı eşanjörü ve soğutucu akışkan ise servisin işi. Bu yazıda Airfel'in tablosunu, kılavuzun "arıza değil" listesiyle birlikte sırayla anlatıyoruz.

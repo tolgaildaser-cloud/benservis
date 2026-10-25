@@ -46,6 +46,14 @@ faq:
     a: "Vestel kılavuzu bunu 'Görüntü kalitesi kötü' satırında ayrıca veriyor: düşük sinyal seviyesi görüntüde bozulmaya neden olabilir, anten bağlantısını kontrol etmen gerekir. Anten aynı anda iki harici cihaza bağlıysa birini ayırman, manuel arama yaptıysan frekans ayarını doğru girdiğinden emin olman isteniyor."
 images:
   coverAlt: "Oturma odasında duvara monte bir televizyonun arkasına uzanan beyaz anten kablosu ve önde sehpada duran kumanda, ekran mavi bir boş görüntü gösteriyor"
+  steps:
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
 ---
 
 Televizyon açılıyor ama kanal yerine boş bir ekran ya da sinyal uyarısı geliyor. Vestel kılavuzlarının sorun giderme tablosu bu durumu **"Görüntü yok."** satırında topluyor ve ilk nedeni açıkça yazıyor: **"TV'nizin herhangi bir yayın almadığı anlamına gelir."** Yani sorun çoğu zaman ekranda değil, yayının televizyona ulaştığı yoldadır. Tablo ardından anten bağlantısını, anten kablosunun hasarını, yanlış konektörü ve yanlış seçilmiş giriş kaynağını sayıyor. Bu yazıda bu satırları kılavuzun Kurulum menüsündeki Sinyal Bilgileri ve Otomatik Kanal Arama seçenekleriyle birlikte sıraya koyuyoruz.

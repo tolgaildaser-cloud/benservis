@@ -45,6 +45,13 @@ faq:
     a: "Bosch'un kılavuzlarına göre gövdenin alın yüzleri bazen hafif ısıtılıyor; böylece kapı contası kısmında yoğuşma suyu ya da terleme suyu oluşması önleniyor. Bu bir arıza değil."
 images:
   coverAlt: "Açık bir buzdolabının soğutucu bölmesinde arka duvardaki erimiş su oluğu ve tabanda küçük su birikintisi, yanında katlanmış kuru bez"
+  steps:
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
 ---
 
 Buzdolabını açtığında rafların üstünde su damlacıkları, sebze çekmecesinin dibinde su ya da soğutucu bölmenin tabanında küçük bir gölet görüyorsun. Bosch'un buzdolabı kılavuzlarında bu üç durumun her biri ayrı yerde anlatılıyor ve sebepleri farklı: raflardaki damlalar için **yoğuşma**, sebze kabındaki su için **nem ayarı**, tabandaki su için **tıkanmış erimiş su oluğu.** Bosch'un KDV.. kılavuzundaki arıza satırı tabandaki suyu tek cümleyle açıklıyor: **"Erimiş su akma olukları veya akıp boşalma deliği tıkanmıştır."** Bu yazıda Bosch'un dört kılavuzundaki sırayı açıyoruz.

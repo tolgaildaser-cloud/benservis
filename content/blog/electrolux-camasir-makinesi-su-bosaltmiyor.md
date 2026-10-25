@@ -51,6 +51,15 @@ faq:
     a: "Electrolux'un pompa temizliği talimatında bir kontrol daha var: pompa çarkının döndüğünden emin olunması; dönmüyorsa kılavuz Yetkili Servis Merkezi ile iletişime geçmeni söylüyor. Kontrollerden sonra sorun tekrarlanırsa da kılavuzun yönlendirmesi aynı: Yetkili Servis Merkezi. Servis için gereken bilgiler cihazın bilgi etiketinde."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin alt köşesinde açılmış küçük pompa kapağı, önünde zemine konmuş geniş bir plastik kap ve katlanmış bir bez"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, tamburda hâlâ su var ya da makine tahliye aşamasında takılı kalıyor. Electrolux'un EW8F7417QT kullanma kılavuzundaki sorun giderme tablosunda bu durum **"Cihaz suyu tahliye etmiyor."** diye geçiyor; ekranda da **"Tahliye filtresinin tıkalı olmadığını kontrol edin"** uyarısı çıkabiliyor. Electrolux bu satırda altı kontrol sayıyor ve bunların ikisi doğrudan seçtiğin programla ilgili. Bu yüzden bu yazıda sırayı tersten kuruyoruz: önce ayar, sonra hortum ve lavabo, en son pompa filtresi. Kaynak tek bir modelin kılavuzu; tuş ve seçenek adları modele göre değişebilir.

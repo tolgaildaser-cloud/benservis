@@ -64,6 +64,14 @@ faq:
     a: "Siemens'in tablosu bu durum için 'Hata yoktur' diyor: dolum algılama 2 dakikaya kadar aktif ve herhangi bir işlem gerekmiyor. Makine hiç su almıyorsa ya da ekranda E:30-10 görünüyorsa musluk, su giriş hortumu ve süzgeç kontrollerini Siemens çamaşır makinesi su almıyor yazımızda Siemens'in sırasıyla anlattık."
 images:
   coverAlt: "Çamaşır makinesinden dışarı çekilmiş deterjan çekmecesi; yumuşatıcı gözünde kalmış mavi sıvı, yanında yumuşak bir fırça"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ambalaj kutusu"
 ---
 
 Program bitti, çekmeceyi açtın ve yumuşatıcı gözünde duruyor; ya da i-Dos'lu makinende akıllı dozaj simgesi yanıp sönüyor, deterjanı sanki hiç kullanmıyor. Siemens'in çamaşır makinesi kılavuzlarındaki arıza tablosunda "deterjan alınmıyor" diye tek bir satır yok. Bu şikâyet Siemens'in tablosunda modele göre farklı satırlara dağılıyor: deterjan çekmeceli modellerde **"Deterjan çekmecesinde yumuşatıcı kalıyor"** ve **yumuşatıcı bölmesinde kalan su**, akıllı dozajlı (i-Dos) modellerde ise **dozaj haznesi, Intelligent Dosing tuşu ve temel dozaj miktarı.** Bu yazıda iki grubu Siemens'in kendi satırlarıyla ayrı ayrı açıyoruz.

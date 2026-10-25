@@ -51,6 +51,14 @@ faq:
     a: "Regal kılavuzuna göre musluktan 0,1-1 MPa basınçlı su akması makinenin daha verimli çalışmasını sağlar. Kılavuzun kendi ölçüsüyle 0,1 MPa basınç, tam açılmış bir musluktan 1 dakikada 8 litreden fazla su akması demek."
 images:
   coverAlt: "Çamaşır makinesinin arkasında duvardaki musluğa bağlı beyaz başlıklı su giriş hortumu, hortumun yanında katlanmış bir bez"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Program seçildi, makine çalışıyor gibi ama tambura su gelmiyor. Regal'in çamaşır makinesi kılavuzlarındaki küçük arızalar tablosunda bu belirti **"Makineniz su almıyor."** satırında geçiyor ve sebeplerin beşi de kullanıcının görebileceği yerde: **musluğunuz kapalı**, **su giriş hortumu bükülmüş olabilir**, **su giriş hortumu tıkalı**, **valf giriş filtresi tıkalı** ve **makinenizin kapısı tam olarak kapalı değil.** Bu yazıda Regal'in tablosunu makineye dokunmadan yapılan kontrollerden filtre temizliğine doğru sıralıyoruz.

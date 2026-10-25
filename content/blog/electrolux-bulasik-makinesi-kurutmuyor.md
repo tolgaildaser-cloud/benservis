@@ -46,6 +46,14 @@ faq:
     a: "Electrolux'a göre parlatıcı dozajının yetersiz olması kurutmayı olumsuz etkiler, çok fazla parlatıcı ise bulaşık üzerinde mavimsi tabakalara neden olur. Tabloda da bardak ve tabaklarda beyaz çizgi ya da mavimsi tabaka varsa parlatıcı miktarını daha düşük konuma getirmen öneriliyor. ESM89400SX'te seviye 1 ile 6 arasında ayarlanıyor, fabrika ayarı 4."
 images:
   coverAlt: "Program sonunda kapağı kendiliğinden hafif aralanmış bulaşık makinesi, alt sepette dik duran tabaklar ve ağzı aşağı yerleştirilmiş kaseler"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Program bitti ama bardaklar damlalı, plastik kaplar sırılsıklam. Electrolux'un ESM89400SX kullanma kılavuzundaki sorun giderme tablosunda bu durum **"Yetersiz kurutma sonuçları."** başlığıyla geçiyor ve Electrolux'un ilk sıraya koyduğu neden dikkat çekici: bulaşıklar yıkandıktan sonra **kapağı kapalı makinenin içinde çok uzun süre kalmış** olabilir. Bu yüzden bu rehberin merkezinde Electrolux'un **AirDry** işlevi ve **parlatıcı** var; ardından program seçimi, yerleştirme ve boşaltma sırası geliyor. Kaynak tek bir modelin kılavuzu; tuş ve program adları modele göre değişebilir.

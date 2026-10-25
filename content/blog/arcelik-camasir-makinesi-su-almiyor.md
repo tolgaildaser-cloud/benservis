@@ -44,6 +44,14 @@ faq:
     a: "Arçelik'in sorun giderme tablosuna göre su basıncı düşükse makine, yıkama kalitesi düşmesin diye yeterli suyu alıncaya kadar bekler ve bu yüzden yıkama süresi uzar. Ekranlı modellerde makine yeterince su alıncaya kadar süre göstergesi de geri saymaz."
 images:
   coverAlt: "Çamaşır makinesinin arkasında duvardaki su musluğuna bağlı beyaz su giriş hortumu, musluğun kolu yarı açık"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Programı başlattın ama tamburda su yok, ya da makine birkaç saniye sonra bekleme moduna geçti. Arçelik'in çamaşır makinesi kullanma kılavuzundaki sorun giderme tablosu bu iki durumu tek satırda topluyor: **"Program başladıktan sonra makine bekleme moduna geçiyor veya makine su almıyor."** Arçelik'in bu satırda saydığı beş sebebin hepsi makinenin dışında, musluk ile kapak arasında: kapalı musluk, bükülmüş hortum, tıkalı giriş filtresi, kapanmamış kapak ve kesik su. Bu yazıda Arçelik'in sırasını açıyoruz.

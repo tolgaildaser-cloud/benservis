@@ -60,6 +60,15 @@ faq:
     a: "Lunatec kılavuzunun geçici arızalar tablosunda H.01.18 'Su sirkülasyonu yok (geçici)' olarak geçiyor; kalıcı karşılığı E.01.17 'Su sirkülasyonu eksikliği (kalıcı)'. H ile başlayan kodlarda kombi çalışmaz, sebep giderilince kod kaybolur. Tablonun bu kodlar için saydığı kontroller pompa, sirkülasyon ve sensörlerle ilgili; bunlar yetkili teknik servisin işi."
 images:
   coverAlt: "Oturma odasında pencerenin altında beyaz bir panel radyatör ve önünde dokunarak sıcaklığını yoklayan bir el"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor ama petekler soğuk. Baymak kombilerde bu tablo çoğu zaman bir arızadan önce bir **ayarla** ilgili, çünkü Baymak'ın Duotec ve Eco CT 20 kullanma kılavuzları kombiye iki ayrı çalışma konumu veriyor: ısıtma ve sıcak suyun birlikte çalıştığı **kış konumu** ve kılavuzun deyişiyle **"sadece kullanım suyu"** veren **yaz konumu.** Lunatec'te ise ısıtma düğmeden ayrıca kapatılabiliyor. Bu yazıda önce ekranın ne söylediğine, sonra ısıtma sıcaklığına ve su basıncına bakıyoruz; hepsi Baymak'ın kendi kılavuzlarından.

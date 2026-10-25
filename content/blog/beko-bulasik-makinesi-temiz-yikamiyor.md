@@ -49,6 +49,15 @@ faq:
     a: "Beko'nun tablosu bu durum için daha yüksek sıcaklıkta ve daha uzun süre yıkayan bir program seçmeyi ve toz deterjanı nemli yerde saklamamayı öneriyor. Beko'ya göre yüzeyi bozulmuş mutfak eşyalarına işlemiş çay, kahve ve boyalı lekeler bulaşık makinesinde çıkmıyor; bu tür eşyaların bulaşık makinesinde yıkanması tavsiye edilmiyor."
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin alt sepetinde üzerinde yemek kalıntısı kalmış tabaklar; tezgâhta çıkarılmış filtre ve küçük bir fırça"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, kapağı açtın ve tabaklarda hâlâ yemek kalıntısı var. Beko'nun BM 4004 ve BM 5005 kullanma kılavuzlarındaki sorun giderme tablosunda bu durumun kendi başlığı var: **"Bulaşıklar temiz yıkanmıyor."** Beko bu başlık altında on bir olası sebep sayıyor ve hepsinin çözümü kullanıcı tarafında: **filtreler, pervaneler, yerleştirme, deterjan, parlatıcı ve program seçimi.** Bu yazıda Beko'nun listesini sırayla açıyoruz.

@@ -41,6 +41,14 @@ faq:
     a: "Olmaz. Arzum Tostina kılavuzu ısıtıcı plakalar takılı değilken cihazın kesinlikle çalıştırılmamasını istiyor. Plakaları taktığında klipsten gelen klik sesi yüzeylerin yerine oturduğunu gösterir."
 images:
   coverAlt: "Mutfak tezgâhında kapağı açık bir tost makinesi, yanında çıkarılmış bir ızgara plakası ve yumuşak bir bez"
+  steps:
+    - "Çizim: solda tost ve waffle makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda tost ve waffle makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda tost ve waffle makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda tost ve waffle makinesi, sağda temizlik fırçası"
+    - "Çizim: solda tost ve waffle makinesi, sağda temizleme bezi"
+    - "Çizim: solda tost ve waffle makinesi, sağda temizleme bezi"
+    - "Çizim: solda tost ve waffle makinesi, sağda çalışma sesi"
 ---
 
 Arzum tost makinesinin plakalarında yağ ve peynir kalıntısı birikiyorsa temizliği kılavuzun tarif ettiği biçimde yapmak kaplamayı korur. Arzum'un kullanma kılavuzu bunu açıkça istiyor: **"Yapışmayan malzeme ile kaplı pişirme yüzeylerini korumak için her kullanımdan sonra ısıtıcı plakaları temizleyiniz."** Temizliğin nasıl yapılacağı ise modele göre değişiyor: bazı Arzum modellerinde plakalar yerinden çıkar, bazılarında çıkmaz. Bu yazı iki tarifi de Arzum'un kendi kılavuzlarından veriyor.

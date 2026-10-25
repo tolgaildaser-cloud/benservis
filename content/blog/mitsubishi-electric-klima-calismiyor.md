@@ -51,6 +51,15 @@ faq:
     a: "Kılavuza göre piller yaklaşık 1 yıl kullanılabilir. Pil zayıfladığında kumanda ekranında pil değişim göstergesi belirir ve gösterge çıktıktan sonra yaklaşık 7 gün içinde kumanda çalışmayı keser. Tüm pilleri aynı tipte yenileriyle değiştir; manganezli, sızıntı yapan ya da şarj edilebilir pil kullanma."
 images:
   coverAlt: "Oturma odasında kapalı duran beyaz duvar tipi klima ve önündeki sehpada arka kapağı açık bir uzaktan kumanda ile iki yeni pil"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun, klima tepki vermiyor. Mitsubishi Electric'in Türkçe çalıştırma talimatlarındaki arıza tablosu bu durumu **"Ünite çalıştırılamıyor"** diye adlandırıyor ve ilk olarak şunu soruyor: **"Şalter açık mı?"** Ardından fiş ve ON zamanlayıcı geliyor; kumanda ekranı boşsa bakılacak yer de piller. Bu yazıda kılavuzun kontrol noktalarını, evde güvenle yapılabilecek sırayla anlatıyoruz.

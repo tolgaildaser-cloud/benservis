@@ -60,6 +60,14 @@ faq:
     a: "Kılavuz tıkalı püskürtme kollarındaki kalıntıların ince, sivri bir nesneyle temizlenmesini yazıyor; kol çok kirli ya da tıkalıysa bulaşık makinesi temizleyicisi veya kireç çözücü öneriyor ve üreticinin talimatlarına uymanı istiyor. Alt kolu elle çıkarıp akan suyun altında durulamak ilk adım; kolu çıkaramıyorsan ya da tıkanıklık geçmiyorsa Uğur Yetkili Servisi'ne başvur."
 images:
   coverAlt: "Açık bulaşık makinesinin alt sepetinde üzerinde yemek izi kalmış tabaklar ve sepetin altında görünen püskürtme kolu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Program bitti, kapağı açtın ve tabaklarda yemek izi, bardaklarda tortu var. Uğur'un UBL serisi bulaşık makinesi kılavuzlarında bu durum "Yıkama Sonuçları tatmin edici değil" başlığı altında, tek satırla geçiyor: **"Bulaşıklar temiz değil."** Satırın karşısında yedi olası neden var ve neredeyse hepsini evde kontrol edebilirsin: filtre, kollar, sepet düzeni, program ve deterjan.

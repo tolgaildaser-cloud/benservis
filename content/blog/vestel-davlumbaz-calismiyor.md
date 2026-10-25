@@ -53,6 +53,13 @@ faq:
     a: "Vestel kılavuzlarında bu satır 'Bacadan kirli hava girişi oluyor' olarak geçiyor. Sebep baca çıkış ağzındaki plastik klape: cihaz çalışmadığında klape hava çıkış ağzını kapatmalı. Kılavuz bu kapanmayı engelleyen nedenlerin ortadan kaldırılmasını istiyor; klape baca bağlantısında olduğu için bu kontrolü servise ya da montajı yapan tarafa bırak."
 images:
   coverAlt: "Mutfakta ocağın üstündeki kapalı bir duvar tipi davlumbazın ön kumanda tuşlarına uzanan bir el"
+  steps:
+    - "Çizim: solda davlumbaz, sağda prizden çekilen fiş"
+    - "Çizim: solda davlumbaz, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda davlumbaz, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda davlumbaz, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda davlumbaz, sağda prizden çekilen fiş"
+    - "Çizim: solda davlumbaz, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ocak yanıyor, davlumbazın tuşuna basıyorsun ve hiçbir şey olmuyor: ne fan dönüyor ne ışık yanıyor. Vestel'in davlumbaz kılavuzlarında bu belirtinin adı **"Cihaz çalışmıyor."** Tabloda yazan üç sebebin üçü de evde kontrol edilebiliyor: **fiş, elektrik ve açma/kapama tuşu.** VAD 955 CX kılavuzu bunlara bir **yeniden başlatma** ve **tuş temizliği** adımı ekliyor.

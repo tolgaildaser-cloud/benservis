@@ -46,6 +46,14 @@ faq:
     a: "LG'ye göre yumuşatıcı çok kalınsa bölmede kalabilir; kolay akması için seyreltilmeli. Kılavuz yumuşatıcının maksimum dolum çizgisini geçmemesini ve bölmede 1 günden fazla bırakılmamasını da istiyor; bırakılırsa sertleşebiliyor."
 images:
   coverAlt: "Dışarı çekilmiş çamaşır makinesi deterjan çekmecesinin ana bölmesinde topaklanmış toz deterjan"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Yıkama bitti, deterjan çekmecesini açtın ve koyduğun deterjan ya da yumuşatıcı hâlâ orada. LG'nin F4Y5EYW0W kullanım kılavuzunda bunun kendi satırı var: **"Deterjan tamamıyla dağıtılmıyor ya da hiç dağıtılmıyor."** LG bu satırda iki neden sayıyor: **çok fazla deterjan** kullanılması ve **tahliye pompası filtresinin** tıkalı olması. Kılavuzun deterjan ve bakım bölümleri buna birkaç kullanım alışkanlığı daha ekliyor: çekmecenin nasıl kapatıldığı, sıvı deterjanın ne zaman kullanılmaması gerektiği ve bölmenin altında biriken deterjan. Bu yazıda önce dozajı ve kullanımı, sonra çekmece temizliğini LG'nin kendi talimatıyla anlatıyoruz. Kaynak tek bir modelin kılavuzu; tuş adları modele göre değişebilir.

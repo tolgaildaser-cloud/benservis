@@ -56,6 +56,14 @@ faq:
     a: "Uğur'un ipuçları: çamaşırları kurutmadan önce çamaşır makinesinde yüksek devirde santrifüj et, çünkü yüksek devir kuruma süresini kısaltır; çamaşırları kumaş türüne göre ayırıp uygun programı seç; ceketleri açık bırak ve uzun fermuarları aç. Makineye yüklediğin kuru çamaşırın nominal kapasiteyi aşmadığından emin ol; her kullanımdan sonra tüy filtresini temizle ve su kabını boşalt."
 images:
   coverAlt: "Kapağı açık bir kurutma makinesinin tambur girişinde, elde tutulan ve üzerinde tüy birikmiş kapak filtresi"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda kurutma makinesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama havlular hâlâ nemli, ya da kurutma her seferinde beklediğinden çok daha uzun sürüyor. Uğur'un UKM serisi kurutma makinesi kılavuzundaki sorun giderme tablosu bu durumu tek satırla tarif ediyor: **"Kuruluk derecesine ulaşılamadı veya kuruma süresi çok uzun."** Satırın altı çözümü var ve beşi evde, birkaç dakikada yapılacak işler.

@@ -48,6 +48,14 @@ faq:
     a: "AF-107892 kılavuzuna göre tuş kilidi, çalışmakta olan fırının pişirme ayarlarının yanlışlıkla değiştirilmesini önlemek için kullanılıyor. AF-9786 kılavuzu da aynı amacı fırın ayarlarında istem dışı değişiklikleri önlemek diye yazıyor."
 images:
   coverAlt: "Ankastre bir fırının kumanda panelinde dijital zamanlayıcı ekranı ve tuş kilidi sembolüne dokunan bir parmak"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda temizleme bezi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Saati ayarlamak ya da pişirme süresini girmek istiyorsun ama zamanlayıcının tuşları tepki vermiyor. Vestel'in ankastre fırın kılavuzlarındaki sorun giderme tablosunda bu belirti ayrı bir satır: **"Zamanlayıcı butonlarına düzgün basılamıyor."** Tablonun saydığı üç nedenin üçü de evde bakılabilecek şeyler. Bu yazı Vestel'in AF-107892 X WIFI, AF-9786 ve AF-8685 kılavuzlarına dayanıyor; kilidi açma yolu her modelde farklı.

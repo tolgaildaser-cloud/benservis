@@ -43,6 +43,13 @@ faq:
     a: "Bosch'a göre her durulama işleminden sonra süzgeçlerdeki artıklar kontrol edilmeli. Süzgeç sistemi kaba kirleri tutuyor; yıkama suyundaki kirlilikler süzgeçlerin tıkanmasına neden olabiliyor. Süzgeci çıkarırken pompa kabına yabancı cisim düşmemesine dikkat et."
 images:
   coverAlt: "Kapısı yarı aralık bırakılmış boş bir bulaşık makinesi, alt sepeti dışarı çekilmiş ve tabanındaki süzgeç görünüyor"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda temizleme bezi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Bulaşık makinesinin kapağını açtığında içeriden kötü bir koku geliyor, ya da temiz bulaşıklar bile hafif kokuyor. Bosch'un SMS6EKI63T kullanım kılavuzu bu kokunun kaynağını tortularda gösteriyor: **yemek artıkları ve kireç gibi tortular** arızalara neden olabiliyor, Bosch da **"Arızaları önlemek ve koku oluşumunu azaltmak için, cihazı düzenli aralıklarla temizleyiniz"** diyor. Bosch'un kılavuzunda kokuya karşı dört iş öne çıkıyor: süzgeç, kapı contası, Makine temizlik programı ve aralık bırakılan kapı. Bu yazıda Bosch'un sırasını açıyoruz.

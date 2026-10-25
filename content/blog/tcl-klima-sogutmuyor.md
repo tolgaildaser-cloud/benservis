@@ -50,6 +50,14 @@ faq:
     a: "Kılavuz hem tuhaf koku hem de yetersiz hava akışı satırında kirli hava filtresini olası neden olarak sayıyor. Filtreyi yıkayıp kuruttuktan sonra iki belirtiyi yeniden kontrol et."
 images:
   coverAlt: "Yaz öğleden sonrası bir çalışma odasında lavabonun yanında süzülmeye bırakılmış ince plastik klima filtresi, arkada duvarda ön paneli kaldırılmış beyaz split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klimadan hava geliyor ama ne yeterince güçlü ne yeterince serin. TCL'nin Türkçe kullanma kılavuzu bu belirtiyi sorun giderme tablosunda **"Yetersiz hava akışı, sıcak ya da soğuk"** satırıyla veriyor ve altı olası neden sayıyor. Bunların beşi evde kontrol edilebilir: **"Sıcaklık ayarı uygun değildir."**, **"Klima girişleri ve çıkışları tıkanmıştır."**, **"Hava filtresi kirlidir."**, **"Fan hızı minimuma ayarlanmıştır."**, **"Odada başka ısı kaynakları vardır."** Tablo çözüm sütunu vermiyor; aşağıdaki adımları kılavuzun soğutma, fan, hava yönü ve bakım bölümlerinden kurduk.

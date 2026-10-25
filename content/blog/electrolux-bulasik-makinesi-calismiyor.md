@@ -46,6 +46,15 @@ faq:
     a: "Hayır. Electrolux'a göre program çalışırken kapağı açarsan makine durur; kapağı kapattığında kaldığı yerden çalışmaya devam eder. Bu, enerji tüketimini ve program süresini etkileyebilir. Kılavuzun bir notu var: kurutma aşamasında kapak 30 saniyeden uzun açık kalırsa çalışan program sonlanır; kapak AirDry fonksiyonu tarafından açıldıysa bu olmaz."
 images:
   coverAlt: "Kapağı kapalı bulaşık makinesinin üst kenarındaki kumanda paneline dokunan bir parmak ve panelde sönük duran program göstergeleri"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda uzaktan kumanda"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
 ---
 
 Bulaşıkları yerleştirdin, deterjanı koydun ama makine ya hiç tepki vermiyor ya da tuşa basmana rağmen yıkamaya geçmiyor. Electrolux'un ESM89400SX kullanma kılavuzu bu iki durumu ayrı satırlarda ele alıyor: **"Cihazı çalıştıramıyorsanız."** satırında elektrik kontrolleri, **"Program başlamıyor."** satırında ise kapak, Başlat tuşu, gecikmeli başlatma ve bir bekleme süresi var. Electrolux'un listesinde gözden kaçması kolay bir madde de bulunuyor: makine **su yumuşatıcısının içindeki reçineyi yeniliyor** olabilir ve bu iş **yaklaşık 5 dakika** sürüyor. Bu rehber önce elektriği, sonra panel ayarlarını, en son suyu kontrol ediyor. Kaynak tek bir modelin kılavuzu; tuş ve gösterge adları modele göre değişebilir.

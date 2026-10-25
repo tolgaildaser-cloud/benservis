@@ -51,6 +51,14 @@ faq:
     a: "V-Bot Pro kılavuzuna göre robot doğru hizalandığında bir bip sesi duyulur ve güç düğmesi yanar. Şarj sırasında güç düğmesinin üzerindeki ve etrafındaki beyaz ışık yanıp söner, robot tamamen şarj olunca beyaz yanar. Batarya göstergesi beyazsa seviye %15'in üstünde, turuncuysa altındadır."
 images:
   coverAlt: "Arkası duvara dayalı şarj istasyonuna yanaşan bir robot süpürge ve istasyonun önünde boş bırakılmış zemin"
+  steps:
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda çalışma sesi"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Robot istasyonda duruyor ama ışığı yanmıyor, ya da temizlik bitince istasyonu bulamayıp odanın ortasında kalıyor. Vestel'in V-Bot Pro kılavuzunun sorun giderme tablosunda bu iki belirti yan yana: **"Robot süpürge şarj olmuyor"** ve **"Robot süpürge şarj istasyonuna geri dönmüyor"**. İkisinin çözümü de kablo, kontak ve istasyonun yeri.

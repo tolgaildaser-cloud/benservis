@@ -43,6 +43,13 @@ faq:
     a: "Grundig'in tablosuna göre hasarlı ya da kopuk kapı contası ürünün sıcaklığı korumak için daha uzun çalışmasına neden olur; kılavuz contanın temizlenmesini ya da değiştirilmesini söylüyor. Temizlik senin işin; conta eskimiş, kırılmış ya da yerine oturmuyorsa değişim için yetkili servise başvur."
 images:
   coverAlt: "Mutfakta kapıları kapalı duran iki kapılı bir buzdolabı, alt kapının kenarında içerideki bir paketin kapıyı hafifçe araladığı görülüyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Buzdolabının sesi neredeyse hiç kesilmiyor ya da çok sık devreye giriyor. Grundig'in buzdolabı kullanma kılavuzlarındaki sorun giderme tablosunda bu durumun kendi satırı var: **"Buzdolabı çok sık ya da çok uzun süre çalışıyor."** Grundig bu satırda sekiz madde sayıyor; üçünü **normal** kabul ediyor, geri kalan beşi kapı, conta, sıcak yemek ve sıcaklık ayarıyla ilgili. Yani ilk iş, uzun çalışmanın gerçekten bir sorun olup olmadığını anlamak. Bu yazı Grundig'in GRND 6101 I ve GSND6384S kılavuzlarına dayanıyor; iki belgede de satır aynı içerikte. Tuş ve ayar adları modeline göre değişebilir.

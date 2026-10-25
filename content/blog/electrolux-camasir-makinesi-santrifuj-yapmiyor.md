@@ -47,6 +47,14 @@ faq:
     a: "Her zaman değil. Electrolux'un tablosunda uzayan yıkama süresi santrifüj satırıyla aynı başlıkta geçiyor ve çözümleri aynı: sıkma programı, tahliye filtresi, çamaşırı elle dağıtmak. Ayrı bir satıra göre de SensiCare System seçeneği çamaşır tipine ve yük miktarına göre program süresini ayarlayabilir; program çalışırken sürenin artması ya da azalması bu yüzden olabilir."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin açık kapağından görünen, tamburun bir yanında toplanmış ıslak havlular ve onları tamburun içine yayan bir el"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda çalışma sesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Yıkama bitiyor, durulama da geçiyor ama makine santrifüje geçmiyor; çamaşır sırılsıklam çıkıyor ya da program bir türlü bitmiyor. Electrolux'un EW8F7417QT kullanma kılavuzunda bu durum için tek satır var: **"Sıkma aşaması çalışmıyor ya da yıkama işlemi normalden uzun sürüyor."** Electrolux bu satırda üç şey söylüyor: sıkma programını ayarla, tahliye filtresine bak ve tamburdaki çamaşırı elle düzelt, çünkü **"Bu soruna denge sorunları neden olabilir."** Kılavuzun seçenekler bölümü bir ipucu daha veriyor: bazı ayarlar santrifüjü bilerek kapatıyor. Bu rehber önce bu ayarlara, sonra yük dengesine, en son filtreye bakıyor. Kaynak tek bir modelin kılavuzu; tuş ve seçenek adları modele göre değişebilir.

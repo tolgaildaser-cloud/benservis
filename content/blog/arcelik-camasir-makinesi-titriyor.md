@@ -48,6 +48,14 @@ faq:
     a: "Arçelik'in kurulum bölümüne göre çamaşır makinesi ve kurutucu üst üste yerleştirildiğinde dolu hâlde toplam ağırlıkları yaklaşık 180 kilogramı bulur. Kılavuz bu yüzden ürünün yeterli yük taşıma kapasitesine sahip, sağlam ve düz bir yüzeye yerleştirilmesini istiyor."
 images:
   coverAlt: "Banyoda sert ve düz bir zeminde, yanındaki dolapla arasında boşluk bırakılmış ön yüklemeli çamaşır makinesi; önünde ters çevrilmiş bir pantolon cebi ve çıkarılmış birkaç bozuk para"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Sıkma başladığında makine sarsılıyor, yanındaki dolaba vuruyor ya da birkaç santim yer değiştirmiş buluyorsun. Arçelik'in çamaşır makinesi kullanma kılavuzu bu tabloyu kurulum bölümünde önceden yazıyor: makine ayakları üzerinde **düzgün ve dengede** durmazsa **yerinden hareket edebilir, çarpma, ses ve titreşim problemlerine** yol açabilir. Sorun giderme tablosundaki satırın adı **"Ürün titreşim veya ses yapıyor."** Arçelik'in bu satırda ve kurulum bölümünde saydıkları üç yere toplanıyor: **makinenin durduğu yer, tamburdaki yük ve makinenin içine kaçan cisimler.** Kontrolleri bu sırayla yapıyoruz.

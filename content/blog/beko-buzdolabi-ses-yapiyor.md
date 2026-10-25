@@ -54,6 +54,13 @@ faq:
     a: "Beko'nun tablosuna göre dondurucu kapısı açıldığında fan çalışmaya devam edebilir. Tablo bunu ayrı bir satırda, kullanıcıdan bir işlem istemeden anlatıyor."
 images:
   coverAlt: "Mutfakta duran gri no-frost buzdolabının alt kısmı; zemindeki ön ayarlı ayaklar ve buzdolabının üstü boş"
+  steps:
+    - "Çizim: solda buzdolabı, sağda çalışma sesi"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabından uğultu, şırıltı, rüzgar sesi ya da sarsıntılı bir gürültü geliyor ve bunun normal mi yoksa arıza mı olduğunu merak ediyorsun. Beko'nun no-frost buzdolabı kullanma kılavuzlarındaki sorun giderme tablosu bu soruyu iki gruba ayırıyor. Bir grup sesi **normal** sayıyor: çalışma sesinin ortam sıcaklığıyla artması, **sıvı akması ve püskürmesi gibi sesler** ve **rüzgar sesi.** Kullanıcıdan işlem isteyen tek satır ise **"Sarsılma ya da gürültü."** Beko bu satırda iki sebep sayıyor: **düz ya da dayanıklı olmayan zemin** ve **buzdolabının üzerine konmuş eşyalar.** Bu yazıda ikisini birlikte adım adım açıyoruz.
