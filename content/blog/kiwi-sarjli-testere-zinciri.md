@@ -54,7 +54,7 @@ images:
     - "Yan kapağı yerine takılmış, zinciri dişliye oturmuş küçük testere"
     - "Kılavuz plakanın ortasından hafifçe kaldırılmış zincir ve altında görünen kılavuz dişleri"
     - "Testere sapındaki açma kapama düğmesi ve yanındaki kilit düğmesi, yakın plan"
-    - "Boya fırçasıyla temizlenen testere zinciri ve yanında küçük zincir yağı şişesi"
+    - "Çizim: temizlik için boya fırçası ve zincir yağı şişesi"
 ---
 
 Kiwi Garden'ın **KGCS-880** ve **KGCS-882** modelleri, ahşap kesme, dal budama ve bambu kesme için yapılmış hafif, şarjlı mini testereler. İki modelin ürün sayfasındaki değerler ve Türkçe kılavuz metni aynı; yalnız model adı farklı. En çok sorulan iki konu zincir ve batarya. Kiwi'nin kılavuzu zinciri takmayı, gerginliği ayarlamayı, şarjı ve temizliği anlatıyor. Bu yazıdaki sıra o metinden. Kılavuzun temel kuralı: **koruma kapağı olmadan asla çalıştırma.**
