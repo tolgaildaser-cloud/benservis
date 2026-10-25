@@ -14,6 +14,10 @@ category: "Küçük Ev Aletleri"
 #  (E) KCC-4321 föy  md5 f58398d1e61b9fbad1d419610e215b2e · (F) KCC-4328 föy  md5 44ecc57f767b805c2965a86a541696e0 · (G) KSC-4213 kılavuzu, yedek parça cümlesi  md5 8d3c7f51b96ee1e02b9bdbf4ebaa61dd
 # Kılavuzlarda hortum onarımı, yama ya da değişim tarifi YOK; "tamiri/yırtıldı/değiştirilir" niyetine yalnız "kullanma, Kiwi'ye sor" denebildi.
 # BİLEREK YAZILMAYANLAR: hortum yaması, bant, ısıtarak birleştirme · hortum çapı/uzunluğu · uyumlu muadil hortum · fiyat (#46) · pazar bağlantısı.
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KCC-4322 föy TR s.2  md5 98b06a2309b55aa1fc8586683641bafb · KCC-4323 föy TR s.2  md5 865d18769aea5634fd70e21cb157bebb · KCC-4324 föy TR s.2  md5 9fd85b26454ba4a869d417769ae6c1a3 · KCC-4326 föy TR s.2  md5 e8d0fc96de4a89594681e58d3d35d400 · KCC-4327 föy TR s.2  md5 4ae32ef129620c488dfb23c0881eb853 · KCC-4361 föy TR s.2  md5 f7d6b6a286af90b41974d90a80a507a9
+#  Altısının montaj metni KCC-4320 ile aynı (çıtçıt). KCC-4351 hortumsuz; bu yazıya eklenmedi. Kendi kendini temizleyen başlığın kullanımı bu föylerde yok; yazılmadı.
+# Ek alıntı tablosu: kiwi-koltuk-yikama-makinesi-hortumu.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-koltuk-yikama-makinesi-hortumu.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -52,6 +56,8 @@ images:
 
 Kiwi koltuk ve halı yıkama makinelerinde hortum iki işi birden yapar: kolun ya da fırçanın ucundan çekilen kirli su hortumdan geçip kirli su tankına gider. Hortum gövdeye tam oturmazsa makine düzgün çekmez; kullanımdan sonra durulanmazsa içinde kir kalır. Bu yazı hortumun takılması, çıkarılması, durulanması ve saklanmasını Kiwi'nin **KCC-4316**, **KCC-4320**, **KCC-4328**, **KCC-4330**, **KCC-4321** ve **KCC-4332** kılavuzlarından derliyor.
 
+Aynı çıtçıtlı bağlantıyı anlatan **KCC-4322**, **KCC-4323**, **KCC-4324**, **KCC-4326**, **KCC-4327** ve **KCC-4361** kılavuzları da tabloda. KCC-4322, KCC-4323 ve KCC-4327'nin parça listesinde kendi kendini temizleyen başlık var, ama bu föyler başlığın kullanımını anlatmıyor.
+
 > ⚡ **Kısa özet:** Fişi çek. Hortumu gövdedeki yuvasına yerine oturana kadar tak, diğer ucunu kola ya da fırçaya bağla. Çıkarırken modelindeki düğmeyi kullan. Kullanımdan sonra kendi kendini temizleme parçasıyla hortumu durula, kirli tankı boşalt, hortumu tutucusuna sarıp kuru yerde sakla. Yırtık hortumu yamama; Kiwi'den parça iste.
 
 ## Modelinde hortum nasıl bağlanıyor?
@@ -63,6 +69,7 @@ Kiwi koltuk ve halı yıkama makinelerinde hortum iki işi birden yapar: kolun y
 | KCC-4330 | Yerine oturana kadar it | Sap | Hortum çıkarma düğmesi, hortum tutucu, kendi kendini temizleme parçası |
 | KCC-4328 | Ana ünite arayüzüne, çıtçıtla | Kol | Hortum serbest bırakma düğmesi, hortum braketi |
 | KCC-4332 | Kılavuzda ayrı tarif yok | Fırça başlığı ya da aksesuar, yerine oturana kadar | Kendi kendini temizleme modu; hortum tutucuya sarılır |
+| KCC-4322, KCC-4323, KCC-4324, KCC-4326, KCC-4327, KCC-4361 | Ana ünite arayüzüne, çıtçıtla sabitlenir | Kol, çıtçıtla | Çıkarma tarifi yok; KCC-4326'da hortum kilidi, KCC-4323'te hortum tutucusu, KCC-4324'te hortum kancası |
 
 ## Adım adım: takma, durulama, saklama
 
@@ -104,3 +111,5 @@ Genel kullanım sırası için [Kiwi koltuk yıkama makinesi nasıl kullanılır
 ---
 
 **Kaynak künyesi.** Hortum bağlantısı, kendi kendini temizleme ve saklama bilgileri Kiwi'nin KCC-4316, KCC-4320, KCC-4321, KCC-4328, KCC-4330 ve KCC-4332 Türkçe kullanım kılavuzlarından; yedek parça cümlesi KSC-4213 kılavuzundan alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KCC-4322, KCC-4323, KCC-4324, KCC-4326, KCC-4327 ve KCC-4361 hortum bağlantısı bu modellerin Kiwi Türkçe kullanım kılavuzlarından alınmıştır.

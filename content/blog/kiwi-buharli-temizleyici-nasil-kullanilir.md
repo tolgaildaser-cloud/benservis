@@ -14,6 +14,10 @@ category: "Küçük Ev Aletleri"
 #  (C) KSC-4217 kullanım kılavuzu 24 s. (TR s.14-15)  md5 2553e2a4b9dfbe2d974579dd675502dc
 #  (D) KSC-4255 kullanım kılavuzu 24 s. (TR s.14-15)  md5 06c10cc3fab9ba8f1fdb0309736517f2
 # BİLEREK YAZILMAYANLAR: kireç çözücü adı ve dozu (belge vermiyor) · emniyet valfi/kazan arızası teşhisi · buhar sıcaklığı rakamı · "bakterilerin %99'u" gibi oran (belgede yok) · fiyat (#46) · pazar bağlantısı.
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KSC-4218 kılavuz 24 s. TR s.14-15  md5 714f7f0dae8c64233162b0262f65c5c6 · KSC-4214 föy 2 s. TR s.2  md5 03666227c1852a1cd51ab788ecaf6279 · KSC-4216 föy 2 s. TR s.2  md5 b1cf09e8f4de0aadb46e1437124b2ae0 · KSC-4219 föy 2 s. TR s.2  md5 a22a207da2953a7c92ef171201ce68e5 · KSC-4223 föy 2 s. TR s.2  md5 feed57600340f4166445b9d7b87dced5
+#  Ürün sayfalarındaki KSC-4219 ve KSC-4223 garanti belgeleri (md5 f1c8e39c… · 97890857…) kullanılmadı. KSC-4219 Türkçe kullanım metni bozuk çeviri; yalnız açık cümleler alındı, ısınma süresi yazılmadı.
+# Ek alıntı tablosu: kiwi-buharli-temizleyici-nasil-kullanilir.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-buharli-temizleyici-nasil-kullanilir.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -54,6 +58,8 @@ images:
 
 Kiwi'nin buharlı temizleyicileri iki tipte geliyor: elde tutulan küçük gövdeli modeller (**KSC-4210**, **KSC-4213**) ve hortumlu, tekerlekli kazan modelleri (**KSC-4217**, **KSC-4255**). Hepsinde mantık aynı: hazneye su konur, emniyet kapağı kapanır, cihaz ısınır ve buhar düğmesiyle kullanılır. Farklar su miktarında, ısınma süresinde ve kapağın açılış biçiminde. Bu yazı dört modelin Türkçe kılavuzuna dayanıyor.
 
+Aynı temel adımlarla çalışan beş Kiwi modeli daha var: **KSC-4218**, **KSC-4214**, **KSC-4216**, **KSC-4219** ve **KSC-4223**. Farkları adımların altındaki tabloda.
+
 > ⚡ **Kısa özet:** Fiş çekili, cihaz soğukken emniyet kapağını aç, huniyle suyu koy, kapağı sıkıca kapat. Fişi tak, hazır ışığını bekle. Aksesuarı tak, yüzeye göre çalış. Bitince fişi çek, buhar düğmesine basarak basıncı boşalt, kapağı yavaşça gevşet, soğuyunca suyu dök. Basınç varken kapağı zorlama.
 
 ## Senin modelin hangisi?
@@ -90,6 +96,17 @@ KSC-4213'ü kullanırken dik tut ve 45 dereceden fazla eğme.
 
 **8. Bitir ve boşalt.** Fişi çek. Buhar çıkmayana kadar buhar düğmesine basarak basıncı boşalt. Emniyet kapağını yavaşça gevşet ama tamamen çıkarma; artık buhar kalmayınca soğumasını bekle. KSC-4210'da bu yaklaşık beş, KSC-4213'te yaklaşık on dakika. Sonra kapağı çıkar, kalan suyu boşalt ve dış yüzeyi kuru bezle sil. KSC-4213 kılavuzu aksesuarları düzenli olarak ılık sabunlu suyla yıkamanı istiyor.
 
+## Bu modellerde farkı
+
+| Model | Su | Hazır olma | Kılavuzdaki fark |
+|---|---|---|---|
+| KSC-4218 | En fazla 2000 ml, önerilen 1500 ml | Turuncu lamba söner; tekrar dolumdan sonra yaklaşık 8 dakika | Kazanlı; kullanım ve tekrar doldurma KSC-4255 ile aynı |
+| KSC-4216, KSC-4223 | Ölçüm kabıyla; miktar yazılmamış | Yaklaşık 3 dakikada tankta basınç oluşur | Bitince buhar kalmayana kadar buhar tuşuna bas |
+| KSC-4214 | 380 ml | Her buhar kademesinde 20 saniye ön ısıtma | Çocuk kilidi tuşuna 3 saniye basılı tutarak kilidi aç, sonra güç düğmesi; buhar tuşu üç kademe arasında geçer |
+| KSC-4219 | 230 ml | Fişe takınca güç göstergesi yanıp söner | Güç düğmesine tekrar basınca kazan ısıtmayı durdurur; Türkçe metin ısınma süresini vermiyor |
+
+KSC-4214, KSC-4216, KSC-4219 ve KSC-4223 föylerinde iki ortak not var. Çalışırken su eklemen gerekirse rezervuarda basınçlı buhar olabilir: buhar düğmesine basarak buharı serbest bırak, fişi çek, kapağı ısıdan korunmak için **mutfak eldiveniyle** yavaşça aç. Temizlikten önce de basıncı aynı yolla boşalt ve 5 dakika soğumasını bekle. Depoya kireç çözücü, aromatik yağ ya da temizlik maddesi ekleme.
+
 ## Su biterse: tekrar doldurma
 
 KSC-4217 ve KSC-4255 kılavuzlarına göre çalışırken buhar azalıp hiç gelmez olursa kazana su eklemek gerekir. Sıra şu: fişi çek, hiç buhar çıkmayana kadar buhar koluna basıp depodaki basıncı tamamen boşalt, emniyet kilidini sök, temiz arıtılmış su doldur, kilidi yeniden vidala, fişi tak. KSC-4217'de kırmızı ısıtıcı lambası yaklaşık 7 dakika içinde yeşile döner, KSC-4255'te turuncu lamba yaklaşık 8 dakika sonra söner. El tipi modellerde aynı basınç tahliyesini yaptıktan sonra doldurursun. Her zaman damıtık su kullanıyorsan kazanlı modellerde kireç çözmeye gerek yok.
@@ -110,3 +127,5 @@ Zemin için tasarlanmış modeller [Kiwi buharlı mop buhar vermiyor](/blog/kiwi
 ---
 
 **Kaynak künyesi.** Su miktarları, ısınma, aksesuar, yüzey kuralları ve basınç tahliyesi Kiwi'nin KSC-4210, KSC-4213, KSC-4217 ve KSC-4255 Türkçe kullanım kılavuzlarından alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KSC-4218, KSC-4214, KSC-4216, KSC-4219 ve KSC-4223 bilgileri bu modellerin Kiwi Türkçe kullanım kılavuzlarından alınmıştır.

@@ -14,6 +14,10 @@ category: "Küçük Ev Aletleri"
 #  (E) KCC-4332  md5 f3490ea54e5998c7beeb21c71e120f2b · (F) KCC-4321  md5 f58398d1e61b9fbad1d419610e215b2e · (G) KCC-4330  md5 e3208573e02512fc5e0aa906e31851ae · (H) KCC-4371  md5 a3f5598f1c47d829cbf6b73a30a24414
 # Belge içi çelişki: KCC-4317 (ve KCC-4318) uyarı bölümü "Temiz su haznesine deterjan koymayın", bakım satırı "su haznesine sadece normal deterjan koyunuz" diyor. Yazı ikisini birebir verdi, güvenli yolu "çıkarım" diye işaretledi.
 # BİLEREK YAZILMAYANLAR: deterjan markası · ev yapımı karışım (sirke, karbonat) · 20 kattan başka oran · KCC-4330 deterjan tankının doldurulması (kılavuz anlatmıyor) · fiyat (#46) · pazar bağlantısı.
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KCC-4322 föy TR s.2  md5 98b06a2309b55aa1fc8586683641bafb · KCC-4323 föy TR s.2  md5 865d18769aea5634fd70e21cb157bebb · KCC-4324 föy TR s.2  md5 9fd85b26454ba4a869d417769ae6c1a3 · KCC-4326 föy TR s.2  md5 e8d0fc96de4a89594681e58d3d35d400 · KCC-4327 föy TR s.2  md5 4ae32ef129620c488dfb23c0881eb853 · KCC-4351 föy TR s.2  md5 2422d833d5cf76ac634b7756f4063d9c · KCC-4361 föy TR s.2  md5 f7d6b6a286af90b41974d90a80a507a9
+#  KCC-4322 KCC-4317/4318 ile aynı belge içi çelişkiyi taşıyor (uyarı: hazneye deterjan yok · bakım: "sadece normal deterjan"). KCC-4351'de "cihaz dışında uygulanır" cümlesi yok.
+# Ek alıntı tablosu: kiwi-hali-yikama-makinesi-deterjan.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-hali-yikama-makinesi-deterjan.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -52,6 +56,8 @@ images:
 
 "Deterjanı nereye koyacağım?" sorusunun cevabı Kiwi'de modele göre değişiyor. El aparatlı koltuk ve halı yıkama makinelerinde Kiwi'nin kuralı açık: **temiz su haznesine deterjan konmaz**, deterjan cihazın dışında lekeye uygulanır ve sonra makineyle vakumlanır. Dik tip halı yıkama makinelerinde ise depoya köpürmeyen, makinelere özel deterjan konabiliyor. Bu yazı yedi Kiwi kılavuzundaki deterjan cümlelerini yan yana koyuyor: **KCC-4316**, **KCC-4317**, **KCC-4320**, **KCC-4321**, **KCC-4330**, **KCC-4332** ve **KCC-4370**.
 
+Tabloda ayrıca **KCC-4322**, **KCC-4323**, **KCC-4324**, **KCC-4326**, **KCC-4327**, **KCC-4361** ve şarjlı **KCC-4351** kılavuzlarının deterjan cümleleri var.
+
 > ⚡ **Kısa özet:** El aparatlı modelde hazneye yalnız su koy. Halı ya da koltuk için üretilmiş, az köpüren sıvı deterjanı önce görünmeyen bir yerde dene, gerekirse seyrelt, lekeye dışarıdan uygula, sonra makineyle çek. Dik tip KCC-4370/4371'de köpürmeyen makine deterjanı depoya konabilir. Tiner, klorlu ağartıcı, yanıcı çözücü asla.
 
 ## Modelin ne diyor?
@@ -65,6 +71,9 @@ images:
 | KCC-4332 (buharlı) | Kılavuz hazne için yasak satırı vermiyor | Az köpüren deterjan 20 kat seyreltilebilir |
 | KCC-4330 | Ayrı deterjan tankı var | Bakım: yalnız temiz su, köpüklü deterjan yok |
 | KCC-4370, KCC-4371 (dik tip) | Evet, köpürmeyen ve makinelere özel | İlk solüsyonu halının küçük bir yerinde test et |
+| KCC-4323, KCC-4324, KCC-4326, KCC-4327, KCC-4361 | Hayır | Deterjan cihaz dışında uygulanır; bakımda hazneye sadece su |
+| KCC-4322 | Uyarı: hayır · bakım satırı: "sadece normal deterjan" | KCC-4317 ve KCC-4318'deki çelişkinin aynısı; az köpüren deterjan 20 kat seyreltilebilir |
+| KCC-4351 (şarjlı) | Hayır | Hazneye köpüklü deterjan gibi temizlik ürünü konmaz; uygulama yeri yazılmamış |
 
 ## Adım adım: el aparatlı modelde deterjanlı leke temizliği
 
@@ -86,6 +95,8 @@ images:
 
 KCC-4317 ve KCC-4318 kılavuzlarının başındaki uyarı **"Temiz su haznesine deterjan koymayın"** diyor; aynı kılavuzların bakım satırında ise **"su haznesine sadece normal deterjan koyunuz"** cümlesi geçiyor. Kiwi bu farkı açıklamıyor. Güvenli yol uyarı bölümündeki kural: deterjanı dışarıda uygula, hazneye su koy (çıkarım). Emin olmak istersen Kiwi müşteri hizmetlerine model kodunla sor.
 
+KCC-4322 kılavuzunda da aynı iki cümle var: uyarı bölümü **"Temiz su haznesine deterjan koymayın"**, bakım satırı **"su haznesine sadece normal deterjan koyunuz"** diyor. Aynı güvenli yol geçerli (çıkarım). Şarjlı KCC-4351'in kılavuzu ise halı ya da koltuk yıkama için üretilmiş sıvı deterjan istiyor ve hazneye köpüklü deterjan gibi temizlik ürünü konmamasını yazıyor; ötekilerdeki "deterjan cihaz dışında uygulanır" cümlesi bu kılavuzda yok.
+
 ## Dik tip halı yıkamada fark
 
 KCC-4370 ve KCC-4371 dik tip halı yıkama makinelerinde kural farklı: su haznesine **köpüren deterjan konmaz**, ama **köpürmeyen ve makinelere özel** deterjan ya da solüsyon konabilir. Kiwi ilk kez kullandığın solüsyonu halının küçük bir yerinde test etmeni, halının birden fazla rengi varsa tüm renkleri kontrol etmeni istiyor. Bu makineler yalnız halı yüzeyleri için.
@@ -106,3 +117,5 @@ Buhar modlu model için [Kiwi buharlı koltuk yıkama makinesi](/blog/kiwi-buhar
 ---
 
 **Kaynak künyesi.** Deterjan, seyreltme ve test kuralları Kiwi'nin KCC-4316, KCC-4317, KCC-4320, KCC-4321, KCC-4330, KCC-4332, KCC-4370 ve KCC-4371 Türkçe kullanım kılavuzlarından alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KCC-4322, KCC-4323, KCC-4324, KCC-4326, KCC-4327, KCC-4351 ve KCC-4361 deterjan cümleleri bu modellerin Kiwi Türkçe kullanım kılavuzlarından alınmıştır.

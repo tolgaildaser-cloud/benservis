@@ -15,6 +15,10 @@ category: "Küçük Ev Aletleri"
 #  (C) KK-3350 Su Isıtıcı kılavuzu 8 s.  md5 1e360819a37b6370d1d2e74b5e3b7c06  TR s.4-5 (kuru çalışma sıfırlama, kireç belirtisi)
 #  (D) KK-3361 Barista Su Isıtıcı föyü 2 s.  md5 a1aa0e530c95274b8e8ddd7a76506a60  TR sütunu s.2 (dijital düğme, bekleme)
 # BİLEREK YAZILMAYANLAR: düğme mekanizmasını ya da termostatı söküp onarma (#31; "tamiri" sorgusu servis satırına bağlandı) · yedek parça (#46) · kapak açıkken kapanmama (kettle kılavuzlarında yok, yalnız çay makinesi kılavuzunda) · kireç çözücü dozu.
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KK-3325P Su Isıtıcı kılavuzu 12 s. TR s.6-7  md5 913042671eddb8bb93adc4f81b673fe9
+#  Kullanım metni KK-3330 ailesiyle aynı.
+# Ek alıntı tablosu: kiwi-kettle-acma-kapama-dugmesi.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-kettle-acma-kapama-dugmesi.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -56,6 +60,8 @@ images:
 ---
 
 Kiwi kettle'ın düğmesine basıyorsun ama hiç açılmıyor, bastığın an geri atıyor ya da su kaynamadan kapanıyor. Arama önerilerinde de "kiwi kettle açma kapama düğmesi" ve "tamiri" birlikte geçiyor. Kiwi'nin su ısıtıcı kılavuzları düğmenin ne zaman kendiliğinden kapandığını açıkça yazıyor; bu kapanmaların çoğu arıza değil, güvenlik özelliği. Bu yazı **KK-3330 ailesi (KK-3328, KK-3331, KK-3334, KK-3340, KKT-33), KK-3304, KK-3350 ve KK-3361** Türkçe kılavuzlarına dayanıyor.
+
+**KK-3325P** kılavuzu da KK-3330 ailesiyle aynı kullanım metnini taşıyor: düğmeye basınca gösterge ışığı yanar, su kaynayınca düğme kendiliğinden kapalı konuma döner, az suda güvenlik nedeniyle kapanır, susuz kalınca kuru kaynama koruması devreye girer ve soğuk su eklemek korumayı soğutur. Kireç için ev aletlerine uygun bir kireç çözücü istiyor.
 
 > ⚡ **Kısa özet:** Su ısıtıcıyı kendi tabanına oturt, fişi kontrol et. Suyu minimum ve maksimum arasına koy. Kaynayınca düğmenin atması normal. Boşken attıysa fişi çek, soğuk su ekle; koruma kendiliğinden sıfırlanır. Dijital modelde başlatmak için iki kez basılır. Su yeterliyken kaynamadan kapanıyorsa kireç çöz. Düğme tepki vermiyorsa servis.
 
@@ -103,3 +109,5 @@ Yeni bir su ısıtıcıda Kiwi ilk kullanımdan önce temizlik ve koku için mak
 ---
 
 **Kaynak künyesi.** Düğmenin çalışma biçimi, su seviyesi, kuru kaynama koruması, dijital model düğmeleri ve kireç tarifleri Kiwi'nin Türkçe kullanım kılavuzlarından (KK-3330 ailesi, KK-3304, KK-3350, KK-3361) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KK-3325P bilgileri bu modelin Kiwi Türkçe kullanım kılavuzundan alınmıştır.

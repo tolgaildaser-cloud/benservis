@@ -16,6 +16,10 @@ category: "Küçük Ev Aletleri"
 #  (D) KSI-671 Portatif Buharlı Kırışık Giderici föyü 2 s.  md5 56778783562a1996f375bd588a8b8d30  TR sütunu s.2
 #  (E) KSI-682 2'si 1 Arada Buharlı Ütü kılavuzu 12 s.  md5 a9a4dadc7917ef898d5005d91765ea07  TR s.6-7
 # BİLEREK YAZILMAYANLAR: conta, pompa, buhar odası, termostat teşhisi · gövde açma · sızıntı için "en sık neden" sıralaması (belgede yok) · fiyat (#46).
+# 2026-10-25 PAZ alt ajanı (YK #182 Kiwi model eki, origin/main b70bb65): yeni modeller eklendi, yeni yazı açılmadı. Belgeler bu koşuda kiwi.com.tr ürün sayfası (HTTP 200) → static.kiwi.com.tr PDF zinciriyle indirildi, HTTP 200 application/pdf (#88):
+#  KSI-6316 kılavuz 16 s., Türkçe bölüm yok, EN s.2-3  md5 2db05bc05db7537be3d8d2228e32978f · KSI-6344 kılavuz 16 s., Türkçe bölüm yok, EN s.2-3  md5 d89b19dc98cb064c3c30f41a4eda54a9
+#  Türkçe bölüm yok; Kiwi'nin İngilizce baskısı kullanıldı, alıntılar çevrildi, orijinali KAYNAK-EK'te.
+# Ek alıntı tablosu: kiwi-utu-su-akitiyor.KAYNAK-EK.md
 # Alıntı denetim tablosu: kiwi-utu-su-akitiyor.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -58,6 +62,8 @@ images:
 
 Kiwi ütü ısınıyor ama tabandan buhar yerine su damlıyor, beyaz gömlekte ıslak lekeler kalıyor. Kiwi'nin Türkçe kılavuzları bunun için ayrı bir sorun giderme tablosu vermiyor. Ama kullanım bölümünde **"aksi takdirde ütünüz su akıtabilir"** ve **"aksi takdirde tabandan su kaçabilir"** diye iki ayrı uyarı yazıyor. Bu yazı o uyarıları **KSI-6322, KSI-6347 ve KSI-6317** ütü kılavuzlarından, dikey kullanılan modeller için de **KSI-671 ve KSI-682** kılavuzlarından topluyor.
 
+**KSI-6316** ve **KSI-6344**'ün kılavuzunda Türkçe bölüm yok. Kılavuzun İngilizce baskısı aynı uyarıyı veriyor: buharlı ütüleme yalnız en yüksek sıcaklıkta mümkün, aksi halde tabandan su kaçabilir.
+
 > ⚡ **Kısa özet:** Buharı yalnız en yüksek sıcaklıkta ve gösterge ışığı söndükten sonra kullan. Düşük sıcaklıkta buhar düğmesini kapat. Hazneyi MAX'ın üzerine doldurma. Molalarda ütüyü dik koy, işin bitince kalan suyu dök. Dikey modelde kazan sıcakken su ekleme. Ütü gövdeden sızdırıyorsa kullanma, servise götür.
 
 ## Kılavuzdaki iki uyarı
@@ -72,6 +78,10 @@ Kılavuz bir de **damlama önleme sistemi** anlatıyor: sıcaklık çok düşük
 ## Seyahat ütüsü ve ilk kullanım
 
 KSI-6317 seyahat ütüsünde de ilk dolum kuralı aynı: hazneyi temiz suyla doldur, dereceyi MIN seviyeye ve buhar ayarını kapalı konuma getir. Kılavuz aksi takdirde ütünün su akıtabileceğini yazıyor. Bu modelde kullanmadan önce PUSH düğmesine basarak tutma sapını açman gerekiyor. İlk kullanımda kısa süre koku ya da duman olması ve tabandan zararsız parçacıklar çıkması Kiwi'ye göre normaldir; bunlar sızıntı belirtisi değildir.
+
+## KSI-6316 ve KSI-6344'te farkı
+
+Bu iki modelin İngilizce baskısı hazneyi doldurmadan önce fişi çekmeni ve buhar ayarını kuru ütülemeye almanı istiyor. Molalarda ütüyü dik koy; bitince fişi çek, kalan suyu dök. Kiwi haznede suyu gece boyu bırakmamanı, ütü düştüyse, görünür hasar varsa ya da sızdırıyorsa kullanmamanı yazıyor. KSI-6344'te su spreyi de var; sprey düğmesine bastıkça su püskürtür.
 
 ## Adım adım: evde denenecekler
 
@@ -105,3 +115,5 @@ KSI-6317 seyahat ütüsünde de ilk dolum kuralı aynı: hazneyi temiz suyla dol
 ---
 
 **Kaynak künyesi.** İlk dolum uyarısı, buharlı ütüleme şartı, damlama önleme sistemi, sprey, saklama ve dikey modellerdeki dolum uyarısı Kiwi'nin Türkçe kullanım kılavuzlarından (KSI-6322, KSI-6347, KSI-6317, KSI-671, KSI-682) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+**Ek kaynak.** KSI-6316 ve KSI-6344 bilgileri bu modellerin Kiwi kılavuzlarının İngilizce baskısından çevrilmiştir; iki kılavuzda Türkçe bölüm yok.
