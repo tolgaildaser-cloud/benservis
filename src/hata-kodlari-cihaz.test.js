@@ -4,6 +4,7 @@
 // kaydı "Kurutma Makinesi" dizisine girmişti. build-blog'daki TAMIR_GERI haritası yazıyı son
 // yazılan cihaza bağladığı için çamaşır yazılarının alt bağı /tamir/kurutma-makinesi/'ne gidiyor,
 // kurutma sayfası 22 çamaşır girişi listeliyor, 4 çamaşır yazısı çamaşır sayfasında hiç görünmüyordu.
+import fs from "node:fs";
 import { describe, it, expect } from "vitest";
 import { HATA_KODU_KATMANI } from "./hata-kodlari.js";
 import { cihazSlug } from "./constants.js";
@@ -33,5 +34,30 @@ describe("hata kodu katmanı — yazı ↔ cihaz tekilliği", () => {
       }
     }
     expect(yanlis).toEqual([]);
+  });
+});
+
+// YAZISIZ KAYIT KİLİDİ (25 Eki 2026, YK #182 · Tolga: "Yazısız 39 tamir kaydı için PAZ yazı ve
+// GRF görsel açılsın"). /tamir/ kartı `yazi:` yoksa okuru hiçbir sayfaya götürmüyordu; 39 kayıt
+// böyleydi. 38'i bağlandı. İstisna yalnız kaynak belgesi olmayan kayıt: belge bulunmadan yazı
+// açılmaz (#88). Yeni kayıt yazısız eklenirse ya da istisnaya yazı bağlanırsa bu test kırılır.
+const YAZISIZ_ISTISNA = new Set([
+  "Mikrodalga / Air Fryer › Hiç çalışmıyor / düğme-ekran tepki vermiyor",
+]);
+
+describe("hata kodu katmanı — her kayıt bir yazıya bağlı", () => {
+  const kayitlar = Object.entries(HATA_KODU_KATMANI).flatMap(([cihaz, liste]) =>
+    liste.map((g) => ({ ad: `${cihaz} › ${g.giris}`, yazi: g.yazi })));
+
+  it("yazısız kayıt yalnız istisna listesinde", () => {
+    const yazisiz = kayitlar.filter((k) => !k.yazi).map((k) => k.ad);
+    expect(yazisiz.filter((ad) => !YAZISIZ_ISTISNA.has(ad))).toEqual([]);
+    expect([...YAZISIZ_ISTISNA].filter((ad) => !yazisiz.includes(ad))).toEqual([]);
+  });
+
+  it("bağlı her yazı content/blog'da var", () => {
+    const eksik = [...new Set(kayitlar.map((k) => k.yazi).filter(Boolean))]
+      .filter((y) => !fs.existsSync(`content/blog/${y}.md`));
+    expect(eksik).toEqual([]);
   });
 });

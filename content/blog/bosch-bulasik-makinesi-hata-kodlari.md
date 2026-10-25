@@ -31,6 +31,9 @@ category: "Bulaşık makinesi"
 #    pompasında hata) — ikisi de Bosch TR'de kendi sayfasıyla duruyor.
 # 📌 Neff/Gaggenau iddiası yumuşatıldı: neff-home.com'da hata kodu sayfası bulunamadı.
 #    Siemens ve Profilo teyitli, onlar kaldı.
+# 📌 25 Eki 2026 (YK #182, tamir-yazisiz-39, yalnız ekleme): E19 tablo satırı, frontmatter SSS'si ve gövde SSS'si eklendi. Tamir merkezindeki yazısız "Bosch — E19" kaydı bu yazıya bağlanır.
+#    Kaynak: https://www.bosch-home.com.tr/musteri-hizmetleri/yardim-destek/hata-kodu-19 — 200 text/html, dinamik HTML (iki indirme iki ayrı md5: 5f2008413c11caf3ae375c2825278707, 583c65ee8006f7850ff6c229ee2c0bbd; föy md5'i 14525d86e14a9c796dda907d93c50bec yeniden üretilemez, kayıttaki cümle sayfa metninde birebir var).
+#    OT (25 Eki): "bosch bulaşık makinesi e19" → 1. "…e19 hatası" · 2. "…e19 hatası nedir" · 3. "…e19 hatası neden olur". Hub kuralı: tekil sayfa açılmadı, E09 gibi tablo satırı oldu. Alıntılar: tamir-yazisiz-39/mevcut-ek/bosch-bulasik-makinesi-hata-kodlari.EK-KAYNAK.md
 faq:
   - q: "Bosch bulaşık makinesi E15 ne demek ve nasıl çözülür?"
     a: "E15, su koruma sisteminin etkinleştirildiğini gösterir: makinenin tabanına su inmiştir. Bosch'un kendi talimatı net ve evde denenecek bir adım içermiyor: şebeke suyunu kesin, cihazı kapatın ve teknisyenden randevu alın. İnternette çok yayılan 'makineyi yana yatırıp suyu boşalt' tavsiyesi Bosch'un talimatına aykırıdır; Bosch sağlık ve güvenlik gerekçesiyle evde çözmeyi denememenizi söylüyor."
@@ -38,6 +41,8 @@ faq:
     a: "E22 filtrelerin tıkandığını gösterir; Bosch filtreleri temizlemeyi ve doğru şekilde yerleştirmeyi söylüyor — filtrelerin çoğu yerine kilitlenen türdendir. E24 ise pompa tıkanıklığını işaret eder; pompadaki tıkanıklığı açmak gerekir. İkisi de çoğu zaman evde çözülür. E24 bu adımdan sonra da sürüyorsa Bosch musluğu ve cihazı kapatıp randevu almanızı öneriyor."
   - q: "Bosch bulaşık E09 ne anlama gelir?"
     a: "Bosch, E09 veya F09 için ayrı bir sayfa yayımlıyor ve şunu söylüyor: sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denememenizi öneririz, şebeke suyunu kesin ve cihazı kapatın. Yani bu kod ısıtma tarafına bakan ve doğrudan teknisyen isteyen bir koddur; evde denenecek bir adım tarif edilmemiştir."
+  - q: "Bosch bulaşık makinesi E19 hatası nedir?"
+    a: "Bosch, E19 veya F19 için ayrı bir destek sayfası yayımlıyor: sorun stok kabında veya iç vanada olabilir. Bosch'un talimatı E09 ve E15'teki gibi: sağlığınız ve güvenliğiniz için sorunu evde tek başınıza çözmeyi denemeyin, şebeke suyunu kesin, cihazı kapatın ve teknisyen randevusu alın. Evde denenecek bir adım tarif edilmemiştir."
   - q: "Siemens, Profilo, Neff'te de aynı kodlar mı?"
     a: "Siemens ve Profilo'da evet: ikisi de BSH grubundadır ve kendi destek sayfalarındaki tablolar Bosch'unkiyle örtüşür. Neff ve Gaggenau için aynı şeyi söyleyemiyoruz; ikisi de BSH markası olmasına rağmen kendi sitelerinde bir hata kodu sayfası yayımlamıyor. Platform ortaklığı belgeli, kod tablosu ortaklığı değil."
   - q: "E15 ile birlikte musluk (çeşme) işareti yanıyor, ne demek?"
@@ -74,6 +79,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 | **E24** | Pompa tıkanıklığı | 🛠️ Pompadaki tıkanıklığı açın; çözülmezse musluğu ve cihazı kapatın |
 | **E25** | Pompa yabancı madde nedeniyle tıkalı ya da pompa kapağı düzgün takılmamış | 🛠️ Fişi çekin, pompa kapağını çıkarın, yabancı maddeleri temizleyin |
 | **E09** | — | 🔧 **Şebeke suyunu kesin, cihazı kapatın** — evde çözmeyi denemeyin |
+| **E19** | Sorun stok kabında veya iç vanada olabilir | 🔧 **Şebeke suyunu kesin, cihazı kapatın** — evde çözmeyi denemeyin |
 | **Diğer kodlar** | Elektronik arızalar | 🔧 Yalnızca deneyimli teknisyen giderebilir |
 
 "Bosch ne diyor" sütunu bizim yorumumuz değil — Bosch'un kendi sayfalarındaki çözüm cümlesinin özeti.
@@ -142,6 +148,9 @@ E22 filtreler tıkalı; E24 pompa tıkanıklığı. İkisi de çoğu zaman evde 
 
 **E09 ne anlama gelir?**
 Bosch evde çözmeyi denememeyi söylüyor: şebeke suyunu kes, cihazı kapat, randevu al.
+
+**E19 ne anlama gelir?**
+Bosch'a göre sorun stok kabında veya iç vanada olabilir. Talimat E09'daki gibi: evde çözmeyi deneme, şebeke suyunu kes, cihazı kapat, teknisyen randevusu al.
 
 **Siemens'te aynı mı?**
 Siemens ve Profilo'da evet. Neff ve Gaggenau kendi kod sayfalarını yayımlamadığı için onlar için aynı şeyi söyleyemiyoruz.

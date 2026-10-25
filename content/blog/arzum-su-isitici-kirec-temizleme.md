@@ -21,6 +21,9 @@ category: "Küçük Ev Aletleri"
 #     s.7 "Cihazınızın hiçbir aksesuvarını sert ve kimyasal temizleyiciler (çamaşır suyu, tuz ruhu vb.) kullanarak temizlemeyiniz."
 # BİLEREK YAZILMAYANLAR: karbonat, limon, limon tuzu oranı (belgede yalnız Estilo'da "25 gram sitrik asit" var, o yazıldı); kireç çözücü dozu (belge vermiyor, ürün etiketi); kireç temizleme sıklığı için gün/hafta rakamı (belge "periyodik" diyor); taban ya da gövde sökümü; "kapanmıyorsa termostat arızası" gibi belgede olmayan teşhis.
 # Alıntı denetim tablosu: arzum-su-isitici-kirec-temizleme.KAYNAK.md
+# 📌 25 Eki 2026 (YK #182, tamir-yazisiz-39, yalnız ekleme): "Erken kapanıyor ya da düğme açık durmuyorsa" bölümü, iki SSS, bir servis satırı ve künye satırı eklendi. Tamir merkezindeki yazısız üç Fuente kaydı bu yazıya bağlanır (erken kapanma, düğme, filtre kireci; filtre kireci gövdenin 7. adımında zaten var).
+#  F) Arzum Fuente AR 3041 / 3047 Su Isıtıcı kullanma kılavuzu  https://destek.arzum.com.tr/manuals/arzum-fuente-su-isiticisi-ar3047.pdf — 200 application/pdf, 36 s., md5 7a17e378e1f7d629a5f3d023d1bcfb7b (föy md5'i ile aynı). Kapak "FUENTE AR 3041 / 3047 SU ISITICISI · KULLANMA KILAVUZU". s.6–9. Alıntılar: tamir-yazisiz-39/mevcut-ek/arzum-su-isitici-kirec-temizleme.EK-KAYNAK.md
+#  OT (25 Eki): "arzum fuente" → 1. "arzum fuente kettle"; "kettle düğmesi" → 3. "kettle düğmesi bozuldu", 5. "kettle düğmesi atıyor"; "arzum kettle kapanmıyor" ve "su ısıtıcı erken kapanıyor" önerisiz. Kanıt zayıf; ayrı sayfa açılmadı, Arzum kettle sayfasına ek.
 guide:
   difficulty: "Kolay"
   time: "~15 dakika (1 saat bekleme hariç)"
@@ -44,6 +47,10 @@ faq:
     a: "Arzum Minia kılavuzu bunun için tek bir neden yazıyor: kapak yerine iyice oturmamışsa su kaynadığı halde cihaz otomatik olarak kapanmayabilir. Çalıştırmadan önce kapağın tam kapandığından emin ol. Kapak kapalıyken de kapanmıyorsa kılavuz kendin tamir etmemeni, Arzum yetkili servisine başvurmanı istiyor."
   - q: "Kaynamış suda beyaz tortu görüyorum, zararlı mı?"
     a: "Arzum Estilo kılavuzuna göre suyun sertlik derecesine göre kaynamış suda pudramsı tortu oluşması normaldir; bu durum sudan kaynaklanır ve insan sağlığına zararı yoktur."
+  - q: "Arzum kettle su kaynamadan erken kapanıyor, neden?"
+    a: "Arzum Fuente kılavuzuna göre minimum seviyenin (0,5 litre) altındaki suyu kaynatmaya çalışmak cihazın erken kapanmasına neden olabilir. Kettle boşken ya da yeterli su yokken çalıştırıldıysa emniyet kapatma tertibatı enerjiyi kendiliğinden keser; tekrar su doldurmadan önce tamamen soğumasını bekle."
+  - q: "Arzum kettle'ın düğmesi açık konumda durmuyor, ne yapmalıyım?"
+    a: "Fuente kılavuzu düğmeyi zorlamamanı istiyor: cihaz yeterince soğumadan düğme kendiliğinden kapalı konuma geliyorsa açık konuma getirmek için zorlarsan cihaza zarar verebilirsin. Suyu yeniden kaynatmadan önce kettle'ın yeterince soğumasını bekle; kılavuz yeniden çalıştırmadan önce 15-20 saniye beklemeni de yazıyor."
 images:
   coverAlt: "Mutfak tezgâhında kapağı açık çelik bir su ısıtıcı, yanında bir şişe beyaz sirke ve küçük bir fırça"
   steps:
@@ -90,6 +97,18 @@ Aşağıdaki adımlar sirke yolunu anlatıyor; diğer ikisinde yalnız dördünc
 
 **7. Kireçli filtreyi sirkede beklet.** Filtrede kireç çoksa filtreyi beyaz sirke dolu bir kapta yarım saat beklet, sonra sıcak suya tut. Kireç ve sirke izleri tamamen gidene kadar sıcak suda tut. Filtrede bulaşık deterjanı ya da özel kireç temizleyici kullanma.
 
+## Erken kapanıyor ya da düğme açık durmuyorsa
+
+Arzum'un Fuente (AR 3041 / 3047) su ısıtıcı kılavuzu kireçten ayrı iki duruma daha değiniyor. İkisi de kettle'ın kendini koruması:
+
+| Ne oluyor | Kılavuza göre neden | Ne yapılır |
+|---|---|---|
+| Su kaynamadan kapanıyor | Su minimum seviyenin (0,5 litre) altında | Suyu MIN ile MAX (1,7 litre) arasında doldur |
+| Boşken ya da az suyla çalıştı, kapandı | Emniyet kapatma tertibatı enerjiyi kesti | Su doldurmadan önce tamamen soğumasını bekle |
+| Düğme açık konumda durmuyor, hemen atıyor | Cihaz yeterince soğumadı | Düğmeyi zorlama, soğumasını bekle |
+
+Kılavuz suyu yeniden kaynatmak istediğinde cihazı çalıştırmadan önce 15-20 saniye beklemeni ve cihazın yeterince soğuduğundan emin olmanı istiyor. Düğme kendiliğinden kapalı konuma geliyorsa onu açık konuma zorlamak cihaza zarar verebilir. Su ısıtıcıda su yokken ya da su minimum sınırın altındayken düğme açılmamalı; içindeki su bittiğinde düğme mutlaka kapatılmalı. Fuente'de su filtresi de diğer Arzum kettle'lardaki gibi temizleniyor: kireç çoksa beyaz sirke ya da sitrik asit dolu bir kapta yarım saat beklet, sonra izler gidene kadar sıcak suya tut.
+
 ## Ne zaman servis?
 
 Kireç temizliği Arzum'un kullanıcıya bıraktığı bir bakım. Kılavuzun çizdiği sınır şu: **"Cihazınıza temizliği ve bakımı dışında herhangi bir müdahalede bulunmayınız."**
@@ -99,6 +118,7 @@ Kireç temizliği Arzum'un kullanıcıya bıraktığı bir bakım. Kılavuzun ç
 | Tabanda kireç, filtrede kireç | Senin, bu rehberdeki adımlar |
 | Kaynamış suda pudramsı tortu | Kimsenin; Estilo kılavuzuna göre normal, sudan kaynaklanır |
 | Su kaynadığı halde kapanmıyor | Önce kapağın tam oturduğuna bak; kapak kapalıyken de sürüyorsa Arzum yetkili servisi |
+| Erken kapanıyor, boşken çalıştı ya da düğme açık durmuyor | Senin; suyu MIN ile MAX arasında doldur, soğumasını bekle, düğmeyi zorlama |
 | Kablo ya da fiş hasarlı, cihaz düşmüş ya da zarar görmüş | Kullanma; Arzum yetkili servisi |
 
 ⛔ Su ısıtıcının tabanını ya da gövdesini açmaya çalışma. Arzum kılavuzu cihazın kendin tamir edilmemesini ve yetkili servise başvurulmasını istiyor.
@@ -108,3 +128,5 @@ Arzum'un bir başka mutfak cihazının bakımı için [Arzum tost makinesi temiz
 ---
 
 **Kaynak künyesi.** Kireç giderme yöntemleri, filtre temizliği, temizlik öncesi uyarılar ve kapak notu Arzum'un Türkçe kullanma kılavuzlarından (Minia AR 395 ve Estilo AR 3048) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+Erken kapanma ve düğme bölümü Arzum'un Fuente AR 3041 / 3047 Türkçe kullanma kılavuzundan alınmıştır.
