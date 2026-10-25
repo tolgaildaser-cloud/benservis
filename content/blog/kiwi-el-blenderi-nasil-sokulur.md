@@ -50,7 +50,7 @@ images:
     - "Ucunda koruyucu çanı olan paslanmaz çelik blender çubuğu, yakın plan"
     - "Lavabo musluğundan akan suyun altında tutulan blender çubuğunun ucu"
     - "Blender çubuğunun yanında duran küçük bir bulaşık fırçası"
-    - "Tiftiksiz bir bezle silinen el blenderinin motor gövdesi"
+    - "Çizim: hafif nemli, tiftiksiz temizlik bezi"
     - "Yeniden birleştirilmiş el blenderi ve yanında katlanmış kurulama bezi"
 ---
 
