@@ -12,7 +12,18 @@ describe("pazaryeri belgeleri", () => {
     for (const h of PAZAR_HUKUK_SAYFALARI) {
       expect(`${h.title} ${h.desc} ${h.govde}`.toLocaleLowerCase("tr"), h.dizin).not.toContain("taslak");
       expect(h.govde, h.dizin).not.toContain("hukuki kontrolden geçirilecektir");
-      expect(h.govde, h.dizin).toContain("Son güncelleme: 15 Ekim 2026");
+      expect(h.govde, h.dizin).toContain("Son güncelleme: 25 Ekim 2026");
+    }
+  });
+
+  it("YK #188: dört belgede satıcı tablosunun ilk satırı İşletme adı: Benservis; yasal unvan altında aynen", () => {
+    expect(SATICI.isletmeAdi).toBe("Benservis");
+    for (const h of PAZAR_HUKUK_SAYFALARI) {
+      const i = h.govde.indexOf("<tr><th>İşletme adı</th><td>Benservis</td></tr>");
+      const u = h.govde.indexOf(`<tr><th>Unvan</th><td>${SATICI.unvan}</td></tr>`);
+      expect(i, h.dizin).toBeGreaterThan(-1);
+      expect(u, h.dizin).toBeGreaterThan(i);
+      expect(SATICI.unvan).toMatch(/^Orient Global/);
     }
   });
 
