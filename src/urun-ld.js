@@ -18,6 +18,23 @@ import { mutlakGorselUrl } from "./pazar-gorsel.js";
 export const SITE = "https://www.benservis.com";
 export const HAZIRLIK_IS_GUNU = { min: 1, max: 3 }; // "tahmini 3 iş gününde kargoda"
 
+// İade politikası (25 Eki 2026, YK8: GSC "Satıcı girişleri" raporu — `hasMerchantReturnPolicy` eksik alanı).
+// Değerler canlı /iade-ve-cayma/ belgesiyle birebir (#88, uydurma yok): "Ürünü teslim aldığınız günden itibaren
+// 14 gün içinde … cayma" · "Bu kargo [anlaşmalı kargo] ile gönderimde iade kargo ücreti ödemezsiniz" · ürün kargoyla
+// geri gönderilir. Ürün bazlı istisna (ör. baca ürününde "yalnız ambalajı açılmamış") şemaya taşınmaz;
+// genel politika + belge bağlantısı verilir.
+export const IADE_GUNU = 14;
+export const IADE_BELGESI = "/iade-ve-cayma/";
+export const iadePolitikasi = (site = SITE) => ({
+  "@type": "MerchantReturnPolicy",
+  applicableCountry: "TR",
+  returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+  merchantReturnDays: IADE_GUNU,
+  returnMethod: "https://schema.org/ReturnByMail",
+  returnFees: "https://schema.org/FreeReturn",
+  merchantReturnLink: `${site}${IADE_BELGESI}`,
+});
+
 // Ekranda yazan fiyatın sayısal hâli (UrunDetay: `urun.fiyat.toLocaleString("tr-TR")`).
 export const ekranFiyati = (u) => Number(u?.fiyat);
 
@@ -37,6 +54,7 @@ export function urunTeklifi(u, { saticiAd = "Benservis", site = SITE } = {}) {
     availability: satista ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
     itemCondition: u.parca_durum === "cikma" ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
     seller: { "@type": "Organization", name: saticiAd },
+    hasMerchantReturnPolicy: iadePolitikasi(site),
     ...(satista ? {
       shippingDetails: {
         "@type": "OfferShippingDetails",
