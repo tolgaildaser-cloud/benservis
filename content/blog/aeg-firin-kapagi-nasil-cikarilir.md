@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Ankastre bir fırının sonuna kadar açılmış cam kapağı"
   steps:
-    - "Soğumuş ve kapalı duran ankastre bir fırının ön yüzü"
-    - "Açık fırın kapağının alt kenarındaki metal menteşe ve kaldırılmış küçük kol"
-    - "Yarı açık konumda duran bir fırın kapağı"
-    - "Sağlam bir tezgâh üzerine serilmiş kalın bir bezin üstünde duran fırın kapağı"
-    - "Fırın kapağının üst kenarındaki plastik çıta"
-    - "Sabunlu suyla yıkanan dikdörtgen bir fırın camı"
-    - "Fırın kapağına yeniden yerleştirilen iç cam"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda temizleme bezi"
+    - "Çizim: solda ankastre fırın, sağda kapak"
 ---
 
 AEG fırının kapak camının arasına yağ ve buhar lekesi girdi, dışarıdan silmekle çıkmıyor. AEG bu iş için kapağın ve iç camların sökülmesini kılavuzda ayrı bir bölüm olarak anlatıyor; alet gerektirmiyor ama kapak ağır ve cam kırılabilir, bu yüzden sıra önemli. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz iki ankastre fırın kılavuzunun İngilizce baskısını kullandık: 6000 SteamBake Pyrolytic (BPE556060M) ve 6000 SurroundCook (BEB331010M). İki kılavuzda adımlar aynı; alıntılar bizim çevirimiz. Cam sayısı modele göre değişiyor.

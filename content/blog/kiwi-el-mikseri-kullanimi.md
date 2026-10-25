@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında bir kâse krema ve içine daldırılmış iki çırpıcısı olan beyaz bir mikser"
   steps:
-    - "Nemli bezle silinen mikser çırpıcıları ve hamur kancaları"
-    - "Mikser gövdesinin altındaki iki yuvaya oturtulmuş çırpıcılar"
-    - "Tezgâhta un ve yumurta dolu derin bir kâse, yanında fişi takılı mikser"
-    - "Kâsedeki karışıma daldırılmış çırpıcılar, yakın plan"
-    - "Mikser gövdesindeki hız ayar düğmesi ve turbo düğmesi, yakın plan"
-    - "Tezgâhta dinlenmeye bırakılmış, fişi çekili mikser"
-    - "Lavaboda ılık sabunlu suda yıkanan çırpıcılar ve hamur kancaları"
+    - "Çizim: solda el mikseri, sağda temizleme bezi"
+    - "Çizim: solda el mikseri, sağda prizden çekilen fiş"
+    - "Çizim: solda el mikseri, sağda prizden çekilen fiş"
+    - "Çizim: solda el mikseri, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda el mikseri, sağda uzaktan kumanda"
+    - "Çizim: solda el mikseri, sağda bekleme süresi için saat"
+    - "Çizim: solda el mikseri, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin el mikserlerinde en çok sorulan şey uçların nasıl takıldığı ve hangi hızın ne işe yaradığı. Kiwi'nin KMX-3608 ve KMX-3620 kablolu modelleriyle şarjlı KMX-3612 kılavuzları bunu kısa ama net anlatıyor. KMX-3608'deki ilk kural şu: **"Çırpıcıları veya hamur kancalarını kilitleninceye kadar yerine yerleştirin."** Bu yazıdaki adımlar bu üç kılavuzdan. Modeller arasında süre ve hız düzeninde fark var; farklar tabloda ve adımlarda ayrıca yazıldı.

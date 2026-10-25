@@ -39,12 +39,12 @@ faq:
 images:
   coverAlt: "Masa üstünde, telefonun yanında duran bir taşınabilir mini fan ve şarj kablosu"
   steps:
-    - "Kutusundan yeni çıkarılmış taşınabilir mini fan ve yanında sarılı kablo"
-    - "Mini fanın alt kısmındaki sokete takılı ince şarj kablosu ve bir dizüstü bilgisayar"
-    - "Şarj kablosu çıkarılmış, masada dik duran küçük fan"
-    - "Mini fanın gövdesindeki tek düğmeye yakın çekim"
-    - "Masa kenarında, yüzden uzak tutulan çalışan taşınabilir bir mini fan"
-    - "Çekmecede, şarj kablosuyla birlikte saklanan taşınabilir mini fan"
+    - "Çizim: solda vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda vantilatör, sağda anten girişi ve kablo"
+    - "Çizim: solda vantilatör, sağda şarj edilen batarya"
+    - "Çizim: solda vantilatör, sağda uzaktan kumanda"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda şarj edilen batarya"
 ---
 
 Kiwi'nin cebe ya da çantaya sığan şarjlı fanları küçük ama kuralları belli cihazlar: içlerinde bir lityum pil var ve pilin ömrü büyük ölçüde nasıl şarj ettiğine bağlı. Bu yazı Kiwi'nin KFAN-7400 ve KFAN-7603 şarjlı mini fan, KFAN-7610 şarjlı pervanesiz fan kılavuzlarına dayanıyor. Sonda, adı sık karıştırılan KFAN-7611 klipsli fanı da anlatıyoruz; o model şarjlı değil, prize takılıyor. Masaya konan daha büyük şarjlı modeller için ayrı bir yazı var.

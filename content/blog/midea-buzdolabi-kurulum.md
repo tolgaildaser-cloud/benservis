@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfakta duvar kenarına yerleştirilmiş beyaz kombi buzdolabı ve yanında boşluk"
   steps:
-    - "Ocaktan uzakta mutfak köşesinde duran buzdolabı"
-    - "Buzdolabının yanı ile duvar arasında ölçülen boşluk"
-    - "Rafları bantla sabitlenmiş, dik taşınan buzdolabı"
-    - "Buzdolabının altındaki ayarlanabilir ayak ve yerde su terazisi"
-    - "Prize takılmamış fişiyle yerinde bekleyen tezgâh altı buzdolabı"
-    - "Duvardaki prize takılı buzdolabı fişi"
-    - "İçi boş, ışığı yanan buzdolabı rafları"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
 ---
 
 Yeni Midea buzdolabın geldi ya da yerini değiştirdin. Kurulumda en çok karıştırılan iki şey var: duvarla arasında ne kadar boşluk kalacağı ve fişe takmadan ya da yiyecek koymadan önce ne kadar bekleneceği. Bu yazıda Midea'nın İngiltere sitesindeki üç kılavuzu sıraya koyduk: MDRB424FGD02O ve MDRB379FGD01 kombi buzdolapları ile MDRD194FGE01 tezgâh altı buzdolabı (üçü de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi). Türkiye'de satılan modelde ayrıntılar farklı olabilir; kendi kılavuzunla karşılaştır.

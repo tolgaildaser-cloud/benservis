@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombi ve üstünden duvara giren metal baca borusu"
   steps:
-    - "Ardına kadar açılmış bir pencere ve boş, aydınlık bir oda"
-    - "Kombinin yan yüzündeki bilgi etiketi"
-    - "Kombi ekranında yanan küçük bir uyarı simgesi"
-    - "Duvarda sakin duran kombi ve yanında asılı bir saat"
-    - "Bir mutfak duvarındaki açık havalandırma menfezi"
-    - "Kombinin altında kapalı konumda bir gaz vanası ve duvarda bir şalter"
-    - "Tavana doğru uzanan metal bir baca borusunun genel görünümü"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda su ya da toz haznesi"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ariston kombinin panelinde baca işareti yandı ya da ekranda 601 göründü, kombi durdu. Bu, duman tahliyesinde bir sorun olduğu anlamına geliyor. Kılavuz bunu geçici bir durma olarak anlatıyor, ama tekrar ederse kombiyi kapatmanı istiyor. Bu yazıda Ariston'un CLAS X CF kullanım ve kurulum kılavuzlarının kullanıcıya bıraktığı adımları topladık. Kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi. Türkiye'de satılan modelde panel ve simgeler farklı olabilir; kendi kılavuzunla karşılaştır.

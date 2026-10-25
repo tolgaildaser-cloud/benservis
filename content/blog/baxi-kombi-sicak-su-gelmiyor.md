@@ -47,13 +47,13 @@ faq:
 images:
   coverAlt: "Banyo lavabosunda açık bir musluk ve arkada duvara asılı beyaz bir kombi"
   steps:
-    - "Kombi ekranında beliren kısa bir uyarı yazısı"
-    - "Kombinin kumanda panelinde yan yana duran birkaç tuş"
-    - "Ekranlı bir kombi panelinde açılmış bir menü listesi"
-    - "Kombi ekranında küçük bir mod simgesi"
-    - "Kombi panelinde artı ve eksi işaretli tuşlar"
-    - "Akan sıcak sudan buhar yükselen bir mutfak musluğu"
-    - "Tezgâhta duran katlanmış bir kullanım kılavuzu ve bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Baxi kombin peteği ısıtıyor ya da hiç ses çıkarmıyor, ama musluğu açınca sıcak su gelmiyor. Bu belirtinin bir kısmı arıza değil, ayardır: kombi kapalı modda kalmış, sıcak su işlevi menüden kapatılmış ya da sıcaklık düşük ayarlanmış olabilir. Bu yazıda Baxi'nin tuşlu ECO5 BLUE ve ekranlı LUNA CENTURY kombilerinin kullanım kılavuzlarını sıraya koyduk; ikisi de kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi. Senin modelinde menü adları farklı olabilir, kendi kılavuzunla karşılaştır.

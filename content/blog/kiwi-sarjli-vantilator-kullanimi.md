@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Çalışma masasında, dizüstü bilgisayarın yanında duran küçük beyaz bir şarjlı masa vantilatörü"
   steps:
-    - "Masada açılmış kutu, yanında küçük bir vantilatör ve sarılı şarj kablosu"
-    - "Masa vantilatörünün arkasındaki sokete takılmış ince şarj kablosu ve prizdeki adaptör"
-    - "Vantilatör gövdesinde yan yana dizilmiş küçük gösterge ışıkları"
-    - "Vantilatör gövdesinin üstündeki tek güç düğmesine yakın çekim"
-    - "Başlığı hafifçe yukarı eğilmiş masa vantilatörü, yandan görünüm"
-    - "Izgarası çıkarılmış küçük vantilatör ve yanında katlanmış nemli bir bez"
-    - "Kuru bir rafta, üstü şeffaf torbayla örtülmüş küçük bir vantilatör"
+    - "Çizim: solda vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda vantilatör, sağda şarj edilen batarya"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda uzaktan kumanda"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda vantilatör, sağda şarj edilen batarya"
 ---
 
 Kiwi'nin şarjlı vantilatörleri iki ayrı ailede geliyor: masaya konan küçük **şarjlı masaüstü vantilatörler** (KFAN-7607, KFAN-7608, KFAN-7618) ve aküsüyle kablosuz da çalışan **şarjlı standlı vantilatör** (KFAN-7629). Kullanım mantığı benzer ama şarj yolu, tuşlar ve bakım farklı. Bu yazı dört modelin Kiwi kullanım kılavuzlarına dayanıyor. Masaüstü modellerin kılavuzu üç modelde neredeyse birebir aynı; standlı modelin föyü çok dilli ve Türkçe bölümü kısa.

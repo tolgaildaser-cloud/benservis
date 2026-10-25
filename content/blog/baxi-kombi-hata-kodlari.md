@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Banyo duvarına monte edilmiş beyaz bir kombi ve alt kısmındaki vanalar"
   steps:
-    - "Kombi ekranında yanıp sönen arıza kodu"
-    - "Kombinin altındaki basınç göstergesi ve doldurma musluğu"
-    - "Kombinin altındaki sarı kollu gaz vanası"
-    - "Kombi kontrol panelindeki reset tuşu"
-    - "Kapatılmış bir kombinin karanlık ekranı"
-    - "Masada kombi kılavuzu ve kod yazılı bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Baxi kombinin ekranında bir harf ve rakam yanıp sönüyor, kombi de durmuş. Önce kodun ne dediğini bilmek gerek: bazısını kendin kaldırırsın, bazısında kombiyi kapatıp servisi beklemek gerekir. Bu sayfa Baxi'nin İtalya sitesinde yayımlanan ECO5 BLUE kılavuzunun hata tablosunu ve yeni LUNA CENTURY kılavuzunun kod biçimini bir araya getiriyor (kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi). Türkiye'de satılan modelde kodlar ve tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

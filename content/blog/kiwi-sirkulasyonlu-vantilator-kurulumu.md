@@ -37,12 +37,12 @@ faq:
 images:
   coverAlt: "Çalışma masasının yanında duran yuvarlak başlıklı küçük bir sirkülasyon vantilatörü"
   steps:
-    - "Ahşap zeminde açılmış karton kutu, yanında yuvarlak taban ve ızgaralı vantilatör başlığı"
-    - "Yuvarlak tabanın orta deliğine oturtulmuş uzun kolon borusu"
-    - "Kolon borusunun üstüne vidalanmış yuvarlak vantilatör başlığı"
-    - "Kısa bağlantı borusuyla tabana oturtulmuş, masa üstünde duran vantilatör"
-    - "Ön kapağı çıkarılmış vantilatör ve görünen küçük yuvarlak sünger tutucu"
-    - "Düz bir zeminde çalışan, başlığı hafifçe yana dönmüş sirkülasyon vantilatörü"
+    - "Çizim: solda vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda vantilatör, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda ilgili filtre"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin sirkülasyonlu vantilatörleri, klasik ayaklı modellerden daha küçük ve kapalı bir başlıkla geliyor; havayı odada döndürmek için tasarlanmış. Kutudan taban, boru, başlık ve küçük parçalar çıkıyor. Bu yazı Kiwi'nin KFAN-7419 ve KFAN-7460 sirkülasyonlu vantilatör kılavuzlarına dayanıyor. İki föy de çok dilli; Türkçe bölüm kısa, ama montaj sırası ve kullanım kuralları açık. KFAN-7419'da hem ayaklı hem masaüstü kurulum tarif ediliyor; KFAN-7460'ta montaj tek cümle, bu yüzden aynı ailenin sırasını referans alıyoruz.

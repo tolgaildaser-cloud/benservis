@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Tezgâhta kapsüllü bir kahve makinesi, kahve çıkışının altında büyük boş bir sürahi"
   steps:
-    - "Makineden çıkarılmış damlama tepsisi ve boş kapsül haznesi"
-    - "Su haznesine dökülen şeffaf kireç çözücü sıvı"
-    - "Kapsüllü kahve makinesinin kahve çıkışının altına konmuş geniş bir kap"
-    - "Kapsüllü kahve makinesinin üstündeki iki tuşun yakın planı"
-    - "Kahve çıkışından kaba akan berrak su"
-    - "Kapta biriken sıvının su haznesine geri dökülmesi"
-    - "Musluk altında durulanan şeffaf bir su haznesi"
-    - "Kireç bakımından sonra kuruyan, kapağı açık bir kapsüllü kahve makinesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
 ---
 
 Nespresso makinende kahve eskisinden yavaş akıyor, fincan yeterince sıcak gelmiyor ya da Vertuo'nun ışığı tuhaf bir düzende yanıp sönüyor. Nespresso'nun kendi sorun giderme satırlarında bu belirtilerin ortak cevabı **kireç bakımı**. İşlem her modelde aynı mantıkla ilerliyor: kireç çözücüyü suya kat, makineyi kireç çözme moduna al, çözeltiyi iki kez geçir, sonra temiz suyla durula. Değişen, moda girmek için hangi tuşa ne kadar bastığın. Bu yazı Nespresso Türkiye'nin makine yardım sayfasındaki Türkçe talimatlara dayanıyor.

@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş ankastre fırının düğmeli ön paneli"
   steps:
-    - "Ambalajından çıkarılmış ankastre fırının iç hacmi"
-    - "Kapağı kapalı, içi aydınlık boş bir fırın"
-    - "Fırın panelinde yan yana üç döner düğme"
-    - "Fırın panelinde ortadaki saat düğmesi"
-    - "Derece işaretli döner sıcaklık düğmesi"
-    - "Simgeli fonksiyon düğmesi ve yanında küçük bir lamba"
-    - "Orta rafa yerleştirilmiş yuvarlak bir kek kalıbı"
-    - "Kapalı konuma çevrilmiş fırın düğmeleri"
+    - "Çizim: solda ankastre fırın, sağda ambalaj kutusu"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Ferre ankastre fırını yeni taktırdın ve "Ferre fırın kullanımı" diye arıyorsun: hangi düğme ne yapıyor, ilk seferde ne yapılmalı, fırın neden ısınmıyor. Ferre'nin kılavuzu bunu iki aşamada anlatıyor: bir kerelik **ilk temizlik ve ilk ısıtma**, sonra her pişirmede **saat, sıcaklık ve fonksiyon** düğmeleri. Bu yazıda Ferre'nin kendi sitesindeki ankastre fırın ürün sayfalarından bağlanan Türkçe kullanım kılavuzunu kullandık. Kılavuz BE3, BE4, BE5, BE6, BE7, BE10, BE11 ve BEF serilerini kapsıyor ve aksesuarların, modların modele göre değiştiğini not ediyor.

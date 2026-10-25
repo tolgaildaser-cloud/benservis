@@ -43,12 +43,12 @@ faq:
 images:
   coverAlt: "Ankastre bir fırının kontrol panelindeki dijital saat göstergesi"
   steps:
-    - "Fırın ekranında yanıp sönen saat rakamları"
-    - "Fırın kontrol panelinde saat simgeli dokunmatik tuş"
-    - "Fırın kontrol panelinde yan yana artı ve eksi tuşları"
-    - "Fırın ekranında sabit duran saat göstergesi"
-    - "Menülü bir fırın ekranında ayarlar listesi"
-    - "Fırın panelinde çevrilen bir ayar düğmesi"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Elektrik gidip geldi ve AEG fırının ekranında saat yanıp sönüyor, ya da ekran **12.00** veya **00:00** gösteriyor. Bu bir arıza değil; AEG'nin kılavuzları bunu elektrik kesintisinin işareti olarak yazıyor ve tek yapman gereken saati yeniden kurmak. AEG fırınlarında saat iki farklı yolla ayarlanıyor: tuşlu panellerde saat tuşu ile, menülü panellerde Ayarlar menüsünden. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz iki ankastre fırın kılavuzunun İngilizce baskısını kullandık: tuşlu 6000 SurroundCook (BEB331010M) ve menülü 6000 SteamBake Pyrolytic (BPE556060M). Alıntılar bizim çevirimiz.

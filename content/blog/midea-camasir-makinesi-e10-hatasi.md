@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Duvardaki musluğa bağlı giriş hortumuyla önden yüklemeli beyaz bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin arkasındaki duvarda açık konumda duran soğuk su musluğu"
-    - "Lavaboda güçlü akan musluk suyu"
-    - "Çamaşır makinesinin arkasından duvara uzanan düz bir giriş hortumu"
-    - "Musluktan sökülmüş giriş hortumunun ucu"
-    - "Küçük bir fırçayla temizlenen ağ biçimli giriş filtresi"
-    - "Makinenin arkasındaki su girişine yeniden bağlanmış hortum"
-    - "Ilık bir odada duran çamaşır makinesi ve yerde katlanmış havlu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
 ---
 
 Midea çamaşır makinen programı başlattı, bir süre bekledi ve ekranda E10 çıktı; tambura ya hiç su gelmedi ya da çok az geldi. Bu kod, Midea'nın hata tablosunda yıkama sırasında su alma sorunu anlamına geliyor. Sebep çoğu zaman makinenin dışında: musluk, şebeke basıncı, hortum ya da giriş filtresi. Bu yazı Midea'nın İngiltere sitesinde yayımlanan MF20EW80 ve MF205W100WBA30 kullanım kılavuzlarına dayanıyor (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi). Türkiye'de satılan modelde ayrıntılar farklı olabilir; kendi kılavuzunla karşılaştır.

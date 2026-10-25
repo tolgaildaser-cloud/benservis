@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Duvar askısında şarja takılı kablosuz dikey bir süpürge ve gövdesinde yanan pil göstergesi"
   steps:
-    - "Kutudan yeni çıkmış, duvar askısında şarja takılmış bir kablosuz dikey süpürge"
-    - "Süpürgenin pil şarj prizine takılan kendi şarj aletinin ucu"
-    - "Pencereden ve ısı kaynaklarından uzak, kuru bir odada şarjda duran süpürge"
-    - "Süpürgeden çıkarılmış, tek başına şarja takılı bir pil takımı"
-    - "Süpürge gövdesindeki pil seviyesi göstergesinin yakın görüntüsü"
-    - "Kullanımdan sonra soğumaya bırakılmış, prizden çekilmiş bir süpürge"
-    - "Süpürge gövdesinden kaydırılarak ayrılmış lityum iyon pil takımı"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda kumandanın pilleri"
 ---
 
 Hoover'ın kablosuz dikey süpürgelerinde süpürme süresini çıkarılabilir lityum iyon pil takımı belirliyor. Pille ilgili kurallar Hoover'ın belgelerinde birkaç yere dağılmış: kullanım kılavuzunun "pil" bölümü, sorun giderme listesi ve pil takımıyla gelen ayrı güvenlik ve teknik veri belgesi. Bu yazı **HF1 Plus, HFX ve HF410H** kılavuzlarının Türkçe bölümlerini ve HF1 Plus pil belgesini bir araya topluyor.

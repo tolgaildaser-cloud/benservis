@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Oturma odası tavanında, ortasında yuvarlak lambası olan kanatlı bir fan"
   steps:
-    - "Duvardaki kapalı konumda bir ışık anahtarı"
-    - "Tavan duyunun yakından görüntüsü ve ürün kutusunun yan yüzündeki etiket"
-    - "Lamba gövdesinin çevresine dizilmiş, yuvalarına oturtulmuş beyaz fan kanatları"
-    - "Tavandaki duya takılmış uzatma aparatı ve altında fanlı lamba gövdesi"
-    - "Masada açık pil yuvasıyla duran küçük beyaz bir uzaktan kumanda"
-    - "Işığı yanan, kanatları duran tavan tipi fan"
-    - "Kanatları dönen ve sıcak tonda ışık veren tavan tipi fan"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda uzaktan kumanda"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda kumandanın pilleri"
+    - "Çizim: solda vantilatör, sağda uzaktan kumanda"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kiwi'nin tavan tipi fanı KFAN-7681, klasik tavan vantilatörlerinden farklı çalışıyor: tavana vidalanıp kabloyla bağlanmıyor, **bir lamba duyuna takılıyor**. Kılavuzun kullanım cümlesi bu yüzden kısa: cihazı tavanda duya tak, oda anahtarını açık konuma getir, cihazı uzaktan kumandayla kontrol et. Fan, ışık, ışık rengi ve zamanlayıcı ise kumandadan yönetiliyor. Bu yazı Kiwi'nin KFAN-7681 için yayımladığı iki kılavuz baskısına dayanıyor; kurulumu, kumanda tuşlarını ve temizliği sırayla anlatıyor.

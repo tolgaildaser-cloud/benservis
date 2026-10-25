@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Ankastre bir fırının içi, raf destekleri çıkarılmış ve boş, kapağı kapalı"
   steps:
-    - "Kapalı ve soğumaya bırakılmış ankastre bir fırının ön yüzü"
-    - "Fırından çıkarılmış raf destekleri ve tepsiler, bir tezgâhın üzerinde"
-    - "Fırının iç kapak camının yumuşak bir bezle silinmesi"
-    - "Penceresi açık, ferah bir mutfak ve uzakta duran ankastre fırın"
-    - "Fırının ekranında temizlik menüsü ve programı seçme düğmesi"
-    - "Kapağı kilitli, ekranında kilit simgesi görünen bir ankastre fırın"
-    - "Temizlik sonrası fırın tabanında biriken ince külün yumuşak bir bezle alınması"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ankastre fırın, sağda deterjan bölmesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
 ---
 
 AEG fırınının menüsünde "kendini temizleme" işlevi var ama ne zaman, nasıl başlatılacağını bilmiyorsun; ya da temizlik başladı, kapak kilitlendi ve açılmıyor. AEG'nin kendini temizleyen fırınları **pirolitik** temizlik kullanıyor. Kılavuz bunu yüksek sıcaklıkta çalışan bir işlem diye tanımlıyor; temizlik bitince fırın tabanında silinecek bir kalıntı kalıyor. Bu yazı AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz **BPE556060M** pirolitik fırın ile **BEB331010M** fırın kılavuzlarına dayanıyor. Kılavuzların İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Senin modelinde menü ve simgeler farklı olabilir, kendi kılavuzunla karşılaştır.

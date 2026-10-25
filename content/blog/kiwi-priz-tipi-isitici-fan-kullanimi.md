@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Oturma odasında duvar prizine takılı küçük, kompakt bir ısıtıcı fan"
   steps:
-    - "Kutusundan çıkarılmış kompakt priz tipi ısıtıcı ve yanında küçük kumandası"
-    - "Duvardaki prize doğrudan takılmış, dik duran priz tipi ısıtıcı"
-    - "Priz tipi ısıtıcının üst yüzündeki dijital ekran ve düğmeler"
-    - "Sehpa üzerinde duran ince bir ısıtıcı kumandası"
-    - "Ekranında zamanlayıcı göstergesi yanan kompakt bir ısıtıcı"
-    - "Bekleme moduna alınmış, ekranı sönük bir priz tipi ısıtıcı"
-    - "İnce bir fırçayla temizlenen ısıtıcının hava emiş ızgarası"
+    - "Çizim: solda vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda vantilatör, sağda panel ekranındaki uyarı"
+    - "Çizim: solda vantilatör, sağda uzaktan kumanda"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin KHT-8430 priz tipi ısıtıcı fanı ayağı ya da kablosu olmayan küçük bir cihaz: doğrudan duvar prizine takılıyor, üstünde ekranı ve düğmeleri, yanında bir de kumandası var. Kumanda, zamanlayıcı ve HH/LL göstergesi kutuda kısa bir föyle anlatılıyor. Bu yazı KHT-8430'un kendi kullanım kılavuzundan cihazın nereye ve nasıl takılacağını, sıcaklığın, seviyenin ve zamanlayıcının nasıl ayarlanacağını, güvenli kapatmayı ve temizliği sıralıyor. Cihaz çalışıyor ama ılık değil serin hava veriyorsa ayrı yazıya bak: [Kiwi ısıtıcı fan soğuk üflüyor](/blog/kiwi-isitici-fan-soguk-ufluyor/).

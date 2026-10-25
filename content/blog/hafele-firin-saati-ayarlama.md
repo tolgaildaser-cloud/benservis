@@ -41,12 +41,12 @@ faq:
 images:
   coverAlt: "Antrasit renkli klasik görünümlü bir ankastre fırının ortasında yuvarlak analog saat"
   steps:
-    - "Fırın panelinde yan yana bir analog saat kadranı ve döner düğmeler"
-    - "Dijital fırın ekranında yanıp sönen saat ve küçük harf simgesi"
-    - "Fırın panelinde artı, saat ve eksi dokunmatik tuşları"
-    - "Analog fırın saatinin yanında bastırılan küçük düğme"
-    - "Analog fırın saatinin altındaki dönen süre diski"
-    - "Elektriği yeni gelmiş bir mutfakta yanıp sönen fırın ekranı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Häfele ankastre fırının saati yanlış gösteriyor ya da elektrik kesintisinden sonra fırın ısıtmıyor. "Häfele fırın saati ayarlama" sorusunun cevabı fırındaki saatin tipine bağlı. Bu yazıda Häfele Türkiye'nin kendi sitesinde, Vintage serisi 60 cm ankastre fırının ürün sayfasındaki İndirilenler bölümünden bağlanan kullanım kılavuzunu kullandık. Kılavuzun kapağında Häfele logosu var; belge Almanca, İngilizce ve Türkçe bölümlerden oluşuyor, biz Türkçe bölümü kullandık. Kılavuz birden çok modeli kapsıyor; Häfele cihazının kılavuzdaki her özelliğe sahip olmayabileceğini yazıyor. Burada iki tipi anlattık: **üç dokunmatik tuşlu dijital saat** ve Vintage gibi klasik modellerdeki **analog saat**.

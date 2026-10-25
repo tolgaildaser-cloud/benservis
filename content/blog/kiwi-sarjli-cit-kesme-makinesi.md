@@ -52,7 +52,7 @@ images:
     - "Çim kenarından toplanmış taş ve dal parçaları"
     - "Gövdedeki kilit sürgüsü ve açma düğmesi, yakın plan"
     - "Eğik tutulan aletle aşağıdan yukarıya budanan çit yan yüzü"
-    - "Nemli bezle silinen bıçak ağzı ve yanında küçük yağ şişesi"
+    - "Çizim: nemli temizlik bezi ve bıçağa damlatılan yağ şişesi"
 ---
 
 Kiwi Garden'ın KGGT-623 ve KGGT-625 modelleri tek gövdeye iki başlık takılan küçük şarjlı aletler: biri çim kenarı kesmek, öteki küçük çit ve çalıları düzeltmek için. Şarj USB kabloyla yapılıyor, şarj durumu üç ışıkla okunuyor. Kiwi'nin Türkçe kılavuzu şarjı, bıçak değişimini ve kullanımı kısa ama net anlatıyor; en önemli uyarısı da bıçaklarla ilgili: **"Açma/Kapama anahtarını bıraktıktan sonra bıçaklar hareket etmeye devam edecektir."** Bu yazıdaki adımlar iki modelin kılavuzundan; Türkçe metinleri sayfa başlığı dışında aynı. Sonda kablolu KGGT-621 ve KGGT-622 için kısa notlar var.

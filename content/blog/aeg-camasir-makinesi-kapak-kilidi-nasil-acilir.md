@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, önden yüklemeli bir çamaşır makinesinin yuvarlak cam kapağı"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde program bitişini gösteren ekran"
-    - "Çamaşır makinesi panelinde program seçim düğmesi"
-    - "Duvardaki prize takılı bir çamaşır makinesi fişi"
-    - "Kapağın camından görülen, içinde su olmayan durmuş bir tambur"
-    - "Prizden çekilmiş bir fiş"
-    - "Çamaşır makinesinin alt önündeki açık filtre kapağı ve arkasındaki küçük çekme kolu"
-    - "Açık duran bir çamaşır makinesi kapağı ve önündeki boş çamaşır sepeti"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Program bitti ya da yarıda kaldı, çamaşırlar içeride ve AEG çamaşır makinesinin kapağı açılmıyor. Kapağı zorlamadan önce kılavuzun sırasını izlemek gerekiyor; çoğu durumda kapak bir arıza yüzünden değil, makine güvenlik için kilitli tuttuğu için açılmıyor. AEG bu durum için bir de acil açma kolu koymuş. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 7000 ProSteam (L7FEE945R) kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Kolun yeri ve tuş adları modele göre değişebilir.

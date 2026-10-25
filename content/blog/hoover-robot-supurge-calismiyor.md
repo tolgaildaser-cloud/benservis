@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Parke zeminde ters çevrilmiş bir robot süpürgenin alt yüzü, fırçaları ve tekerlekleri görünüyor"
   steps:
-    - "Üst yüzündeki düğmelerin ışığı yanan yuvarlak bir robot süpürge"
-    - "Duvar dibindeki şarj altlığına yerleştirilmiş robot süpürge"
-    - "Robot süpürgenin üst yüzündeki düğmeler ve çevrelerindeki ışıklı halka"
-    - "Ters çevrilmiş robotun altındaki kenar fırçası ve döner fırça yuvası"
-    - "Çöp kovası üzerinde açılmış bir robot süpürge toz haznesi ve filtresi"
-    - "Kuru bir bezle silinen robot süpürge alt sensörleri ve tekerleği"
-    - "Robot süpürge gövdesindeki küçük sıfırlama deliği ve yanında ince bir iğne"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda robot süpürge, sağda tekerlek"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Hoover robot süpürgen düğmeye bastığında kalkmıyor, birkaç saniye sonra ışıklar yanıp sönmeye başlıyor ya da şarj altlığına geri dönmüyor. Hoover'ın Türkiye sitesinde listelediği **HG530H (HG5 Hydro)** robotun kılavuzunun Türkçe bölümü, bu durumlar için kısa bir kontrol listesi veriyor. Listenin en kullanışlı kısmı, düğme ışıklarının hangi renk kombinasyonunun hangi parçayı gösterdiği.

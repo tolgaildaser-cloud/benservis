@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgahı altında bulaşık makinesine bağlı su musluğu"
   steps:
-    - "Bulaşık makinesi panelinde musluk simgeli küçük bir gösterge"
-    - "Duvardaki köşe musluğunun açık konumdaki kolu"
-    - "Lavabo musluğundan akan su"
-    - "Bulaşık makinesinin arkasından çıkan su giriş hortumu"
-    - "Bir kovaya akıtılan berrak musluk suyu"
-    - "Tam kapanmış bir bulaşık makinesi kapağı"
-    - "Kış mevsiminde soğuk bir mutfakta bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kumtel bulaşık makineni çalıştırdın, uğultu var ama içeri su gelmiyor; ya da makine bir süre bekleyip duruyor. "Kumtel bulaşık makinesi su almıyor" diye arayanların çoğunda sorun makinenin dışında: musluk, basınç ya da hortum. Kumtel'in HDW-01 kılavuzu bu belirtiyi iki yerde anlatıyor: panelde bir **su temini arızası** göstergesi ve hata tablosunda **Hızlı** ışığının hızla yanıp sönmesi. Bu yazıda Kumtel'in sitesindeki HDW-01 ürün sayfasından bağlanan Türkçe kullanıcı kılavuzunu kullandık. Modelin farklıysa kendi kılavuzunla karşılaştır.

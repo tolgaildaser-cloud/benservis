@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir kurutma makinesinin kumanda panelinde süre göstergesi"
   steps:
-    - "Kurutma makinesi panelinde yanan küçük bir dijital gösterge"
-    - "Kurutma makinesinin kapak ağzından çıkarılmış hav filtresi"
-    - "Kurutma makinesinin alt önündeki açılmış ısı eşanjörü kapağı"
-    - "Kurutma makinesinden çekilmiş yoğuşma suyu haznesi"
-    - "Kurutma makinesi kazanında birbirinden ayrılmış çamaşırlar"
-    - "Kumanda panelinde kapalı konumdaki program seçim düğmesi"
-    - "Kurutma makinesinin yanında not alınmış bir kâğıt"
+    - "Çizim: solda kurutma makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Miele kurutma makinen programı kesti, sinyal sesi duyuldu ve süre göstergesinde **F** harfiyle bir sayı ya da bir simge yanıyor. Miele bu bildirimleri kılavuzun "Sorunların giderilmesi" bölümünde açıklıyor. Bu yazıda Miele'nin Türkiye sitesindeki TWD640WP ısı pompalı kurutma makinesi ürün sayfasından indirdiğimiz kullanım kılavuzunu kullandık. Kod ve simge anlamları o kılavuzdan. Modelin farklıysa kendi kılavuzunla karşılaştır.

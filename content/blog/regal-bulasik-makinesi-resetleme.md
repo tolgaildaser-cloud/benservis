@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Solo bir bulaşık makinesinin üst kenarındaki kontrol paneli ve küçük ekran"
   steps:
-    - "Bulaşık makinesi panelinde başlat ve beklet düğmesi"
-    - "Bulaşık makinesi panelinde yanan kurutma adımı göstergesi"
-    - "Bulaşık makinesi panelinde açma kapama düğmesi"
-    - "Bulaşık makinesi panelinde program seçim düğmesi ve yanan program ışıkları"
-    - "Bulaşık makinesi ekranında harflerden oluşan kısa bir kilit kodu"
-    - "Bulaşık makinesi panelinde saat simgeli erteleme düğmesi"
-    - "Bulaşık makinesinin yanında köşe musluğu ve giriş hortumu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Regal bulaşık makinen programın ortasında takıldı, yanlış programı seçtin ya da ekranda bir kod yanıyor ve "Regal bulaşık makinesi nasıl resetlenir" diye arıyorsun. Regal'in kullanım kılavuzunda ayrı bir reset tuşu yok; bu işin adı kılavuzda **"Programın iptal edilmesi"** ve tek bir düğmeyle yapılıyor: **Başlat/Beklet**. Bu yazıda Regal'in sitesindeki BM 424 bulaşık makinesi sayfasından bağlanan Türkçe kullanım kılavuzunu kullandık. Regal, Vestel çatısındaki bir marka; kılavuz da Vestel'in belge sunucusunda duruyor. Düğme adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

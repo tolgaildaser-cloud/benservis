@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Duvara monte şarj ünitesinde asılı duran kablosuz dikey bir süpürge"
   steps:
-    - "Şarj ünitesinden çıkarılmış kablosuz dikey süpürge"
-    - "Çöp kutusunun üzerinde tabanı açılmış şeffaf süpürge haznesi"
-    - "Makineden ayrılmış şeffaf toz haznesi ve tüy bırakmayan bir bez"
-    - "Musluk suyu altında yıkanan silindir biçimli süpürge ön filtresi"
-    - "Musluk altında yıkanan kısa, yuvarlak arka filtre"
-    - "Havadar bir rafta kurumaya bırakılmış iki süpürge filtresi"
-    - "Ters çevrilmiş temizleme başlığından çıkarılan silindir fırça"
-    - "Temizlenmiş parçaları takılmış, şarj ünitesinde duran dikey süpürge"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
 ---
 
 Dyson süpürgenin çekişi zayıfladıysa ya da hazne hep dolu görünüyorsa sıra temizlikte. Dyson'ın kablosuz süpürgelerinde temizlik dört parçada toplanıyor: toz haznesi, ön filtre, arka filtre ve temizleme başlığındaki silindir fırça. Kılavuzun akılda tutulacak iki kuralı var: filtreler yalnız soğuk suyla yıkanıyor, temizleme başlıkları ise hiç yıkanmıyor. Bu yazı Dyson'ın Türkiye için yayımladığı **Dyson V8 Cyclone** Türkçe kullanım kılavuzuna dayanıyor. Başka bir Dyson modelin varsa (V11, V12, V15) filtre ve hazne yerleri farklı olabilir; kendi kılavuzunla karşılaştır.

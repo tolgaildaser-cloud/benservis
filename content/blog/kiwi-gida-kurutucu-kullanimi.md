@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında üst üste dizilmiş tepsileriyle yuvarlak bir gıda kurutucu"
   steps:
-    - "Lavabonun yanında kurumaya bırakılmış delikli kurutucu tepsileri"
-    - "Kapağı kapalı, boş çalışan bir gıda kurutucu"
-    - "Kesme tahtasında ince dilimlenmiş elma halkaları"
-    - "Kağıt havlu üzerinde nemi alınan meyve dilimleri"
-    - "Tepsiye tek kat ve aralıklı dizilmiş meyve dilimleri"
-    - "Tepsileri yer değiştirmek için kapağı açılmış bir gıda kurutucu"
-    - "Tezgâhta soğumaya bırakılmış bir avuç kurutulmuş meyve"
-    - "Kapağı kapalı cam kavanozda saklanan kurutulmuş meyve dilimleri"
+    - "Çizim: solda gıda kurutucu, sağda deterjan bölmesi"
+    - "Çizim: solda gıda kurutucu, sağda bekleme süresi için saat"
+    - "Çizim: solda gıda kurutucu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda gıda kurutucu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda gıda kurutucu, sağda kapak"
+    - "Çizim: solda gıda kurutucu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda gıda kurutucu, sağda bekleme süresi için saat"
+    - "Çizim: solda gıda kurutucu, sağda prizden çekilen fiş"
 ---
 
 Gıda kurutucuda en sık sorulan şey süre, ama Kiwi'nin KFD-5151 kılavuzu işe sürenin sabit olmadığını söyleyerek başlıyor: kurutma süresi gıdanın türüne, dilim kalınlığına, oda sıcaklığına, neme ve tepsilerin ne kadar dolu olduğuna göre değişiyor. Kılavuz bu yüzden bir yöntem ve bir referans tablosu veriyor. Bu yazı o yöntemi sırayla anlatıyor; süreler yaklaşık değerler.

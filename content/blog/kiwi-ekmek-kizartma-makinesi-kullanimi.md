@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında iki yuvalı bir ekmek kızartma makinesi, yuvalardan yükselmiş kızarmış ekmek dilimleri"
   steps:
-    - "Duvardan ve dolaplardan uzakta, düz bir tezgâha yerleştirilmiş ekmek kızartma makinesi"
-    - "Ekmek kızartma makinesinin altından yarı çekilmiş kırıntı tepsisi"
-    - "Ekmek kızartma makinesinin yuvalarına yerleştirilmiş iki ekmek dilimi"
-    - "Ekmek kızartma makinesinin yan yüzündeki döner kızartma ayar düğmesi, yakın plan"
-    - "Aşağı indirilmiş çalıştırma kolu ve yuvaların içinden görünen sıcak ışık"
-    - "Kızarmış ekmek dilimlerinin yuvalardan yukarı çıktığı an"
-    - "Çekilmiş kırıntı tepsisi ve tepsinin içindeki ekmek kırıntıları"
+    - "Çizim: solda ekmek kızartma makinesi, sağda ambalaj kutusu"
+    - "Çizim: solda ekmek kızartma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ekmek kızartma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ekmek kızartma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ekmek kızartma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ekmek kızartma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ekmek kızartma makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin KT-6518 ekmek kızartma makinesi iki yuvalı, 700W'lık klasik bir kızartıcı: bir kol, bir kızartma ayar düğmesi ve altta çekmeceli bir kırıntı tepsisi. Kullanımı basit, ama en sık yapılan iki hata kılavuzda açıkça yasak: makineyi perde ya da dolap altına koymak ve sıkışan ekmeği çatalla çıkarmak. Kılavuzun ilk uyarısı şu: **"Ekmek yanabilir, bu nedenle ekmek kızartma makinesini perde gibi yanıcı malzemelerin yakınında veya altında kullanmayın."** Bu yazıdaki adımlar Kiwi'nin Türkçe KT-6518 kılavuzundan.

@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin önden görünüşü ve altındaki borular"
   steps:
-    - "Kombi ekranında beliren kısa bir harf ve kod"
-    - "Kombinin altında yuvarlak kadranlı bir basınç göstergesi"
-    - "Duvarda kombinin yanında duran beyaz bir elektrik şalteri"
-    - "Bir petek ve yanında küçük bir hava alma vidası"
-    - "Kombinin kumanda panelinde yuvarlak bir tuşun yakın planı"
-    - "Duvarda sessizce bekleyen beyaz bir kombi ve kapalı mutfak dolapları"
-    - "Tezgâhta duran katlanmış bir kullanım kılavuzu ve bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 Baxi kombinin ekranında E25 yazıyor, kombi durdu ve petekler soğumaya başladı. Bu kod, kombinin içinde suyun dolaşmadığını algıladığını ve kendini güvenlik için kapattığını söylüyor. Bu yazıda Baxi'nin ECO5 BLUE duvar tipi kombisinin kullanım kılavuzunu temel aldık; kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi. Senin modelinin kod listesi farklı olabilir, kendi kılavuzunla karşılaştır.

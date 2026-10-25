@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin program düğmesi ve dijital ekranı"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki düğme sırası"
-    - "Panelde başlat duraklat düğmesi ve yanında ekran"
-    - "Panelde açma kapama düğmesi ve program düğmesi"
-    - "Kapağı kapatılmış önden yüklemeli çamaşır makinesi"
-    - "Ekranında kısa harfler görünen çamaşır makinesi paneli"
-    - "Panelde ekstra durulama düğmesi"
-    - "Çamaşır makinesinin yanında masada duran telefon ve panelde kablosuz simgesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda çalışma sesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Midea çamaşır makinen bir kod gösterip durdu, yanlış programı başlattın ya da düğmeler hiçbir şeye tepki vermiyor. Panelde "reset" yazan bir tuş arıyorsan bulamayacaksın: Midea'nın kılavuzları ayrı bir reset tuşu tarif etmiyor. Duruma göre değişen birkaç yol var. Bu yazıda Midea'nın İngiltere sitesindeki MF20EW80 ve MF205W100WBA30 kullanım kılavuzlarını (ikisi de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) sıraya koyduk. Türkiye'de satılan modelde düğme adları ve ayrıntılar farklı olabilir; kendi kılavuzunla karşılaştır.

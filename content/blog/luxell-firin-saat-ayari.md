@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Ankastre fırının ortasındaki dijital saat ekranı ve yanındaki tuşlar"
   steps:
-    - "Fırın ekranında yanıp sönen saat ve küçük harfli bir yazı"
-    - "Fırın panelinde harfli bir tuş"
-    - "Fırın panelinde yukarı ve aşağı ok tuşları"
-    - "Fırın ekranında zil biçimli küçük bir simge"
-    - "Fırın ekranında pişirme süresi gösteren haneler"
-    - "Fırın panelinde ok ve çizgi simgeli bir tuş"
-    - "Kapalı konuma çevrilmiş döner fırın düğmesi"
-    - "Fırın ekranında küçük bir anahtar simgesi"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
 ---
 
 Luxell ankastre fırını taktırdın ya da elektrik kesildi; ekranda saat ve **AUTO** yazısı yanıp sönüyor ve fırın ısıtmıyor. "Luxell fırın saat ayarı nasıl yapılır" sorusunun cevabı Luxell'in B66 kılavuzunda dört tuşla anlatılıyor: **M**, **pişirmeyi bitir (>|)**, **▲** ve **▼**. Bu yazıda Luxell'in kendi sitesindeki B66 ankastre fırın ürün sayfasından bağlanan Türkçe kullanım kılavuzunu kullandık. Tuşların hangisine basıldığını kılavuzdaki ekran görsellerinden okuduk. Mekanik zamanlayıcılı bir Luxell fırının varsa bu sıra senin için geçerli değil.

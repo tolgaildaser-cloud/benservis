@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Duvar dibine yerleştirilmiş bir şarj istasyonu ve önünde, boş bir zeminde duran yuvarlak robot süpürge"
   steps:
-    - "Kablolardan ve küçük eşyalardan temizlenmiş, püskülleri altına katlanmış bir kilimin olduğu oda"
-    - "Duvara dayalı, önü ve yanları boş bırakılmış robot süpürge şarj istasyonu"
-    - "Şarj istasyonuna oturmuş, gösterge ışığı yanan bir robot süpürge"
-    - "Üst yüzünde düğme ışığı yanan, açılmış bir robot süpürge"
-    - "Masada duran bir akıllı telefon ekranında açık bir ev cihazları uygulaması"
-    - "Telefon ekranında Wi-Fi şifre alanı ve yanında bekleyen robot süpürge"
-    - "Su doldurulmuş tankına paspas bezi takılmış robot süpürgenin alt kısmı"
-    - "Parke zeminde temizliğe başlamış bir robot süpürge"
+    - "Çizim: solda robot süpürge, sağda anten girişi ve kablo"
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda çalışma sesi"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 King'in **KRS360 Sebastian** robot süpürgesini kutudan çıkardın; şimdi istasyonu nereye koyacağını, ilk şarjın ne kadar süreceğini ve telefona nasıl bağlanacağını bilmek istiyorsun. King'in Türkçe kullanma kılavuzu bunları "Çalıştırma ve Programlama" bölümünde adım adım veriyor. Bu yazı o sırayı izliyor; kılavuzun metin katmanı olmadığı için alıntılar sayfa görüntüsünden okundu.

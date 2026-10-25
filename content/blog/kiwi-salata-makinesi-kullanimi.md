@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında besleme oluklu küçük bir salata makinesi, önünde dilimlenmiş salatalık dolu bir kase"
   steps:
-    - "Kutudan çıkarılmış salata makinesi gövdesi ve yanında dizili koniler"
-    - "Salata makinesinin motor tabanına takılan bir rendeleme konisi"
-    - "Salata makinesinin çıkış ağzının altına konmuş boş bir cam kase"
-    - "Salata makinesinin gövdesindeki açma kapama düğmesi, yakın plan"
-    - "Besleme oluğuna yerleştirilmiş plastik itici ve oluktaki havuç"
-    - "Şarj kablosuna bağlı küçük şarjlı salata makinesi ve yanında dilimleme diski"
-    - "Lavaboda sabunlu suyla yıkanan koniler ve kase"
+    - "Çizim: solda rondo, sağda ambalaj kutusu"
+    - "Çizim: solda rondo, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda rondo, sağda prizden çekilen fiş"
+    - "Çizim: solda rondo, sağda iç bölme ve raflar"
+    - "Çizim: solda rondo, sağda bekleme süresi için saat"
+    - "Çizim: solda rondo, sağda şarj edilen batarya"
+    - "Çizim: solda rondo, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin iki salata makinesi aynı işi farklı yoldan yapar. KIM-4710 prize takılan, besleme oluklu bir dilimleyici ve rendeleyicidir; üstüne bir de narenciye konisi var. KC-8230 ise şarjlı, dört aparatlı küçük bir doğrayıcı-dilimleyicidir. Bu yazıdaki adımlar iki modelin Kiwi kılavuzlarından alındı. Her şeyden önce KIM-4710'daki tek kritik kural: **"Besleme borusuna herhangi bir yiyecek koymadan önce Açma/Kapama düğmesine bir veya iki kez kısaca basın, böylece kesici tahrik miline kilitlenir."**

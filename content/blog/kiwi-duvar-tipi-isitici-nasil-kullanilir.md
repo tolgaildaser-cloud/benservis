@@ -38,14 +38,14 @@ faq:
 images:
   coverAlt: "Yatak odasında duvarın üst kısmına asılmış beyaz bir duvar tipi ısıtıcı"
   steps:
-    - "Banyodan uzak, boş bir oda duvarı ve köşede bir priz"
-    - "Duvara kurşun kalemle işaretlenmiş iki delik noktası ve bir şerit metre"
-    - "Duvardaki iki deliğe takılmış vidalar"
-    - "Duvar prizine doğrudan takılmış bir fiş"
-    - "Duvar tipi ısıtıcının ön yüzündeki kontrol paneli ve ekran"
-    - "Kontrol paneline doğrultulmuş küçük bir uzaktan kumanda"
-    - "Ekranı sönmüş, kapanmak üzere olan bir duvar tipi ısıtıcı"
-    - "Isıtıcının dış gövdesinin kuru bir bezle silinmesi"
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli ısıtıcı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda elektrikli ısıtıcı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli ısıtıcı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda elektrikli ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda elektrikli ısıtıcı, sağda bekleme süresi için saat"
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin duvar tipi ısıtıcısı **KHT-8490** yerde değil duvarda duruyor: önce duvara asılıyor, sonra panelden ya da uzaktan kumandayla kullanılıyor. Kutudan çıktıktan sonra en çok sorulan iki şey, cihazın duvara hangi ölçüyle asılacağı ve kumandadaki tuşların ne işe yaradığı. Bu yazı KHT-8490 kullanım kılavuzunun Türkçe bölümüne dayanıyor. Cihaz ılık değil serin üflüyorsa bu ayrı bir konu; [Kiwi ısıtıcı fan soğuk üflüyor](/blog/kiwi-isitici-fan-soguk-ufluyor/) yazısına bak.

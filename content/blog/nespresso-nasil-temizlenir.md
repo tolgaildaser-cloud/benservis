@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Tezgâhta temizlenmiş, parçaları yanında kurumaya bırakılmış kapsüllü bir kahve makinesi"
   steps:
-    - "Duvar prizinden çekilmiş bir kahve makinesi fişi"
-    - "Boşaltılmış damlama tepsisi ve kullanılmış kapsül haznesi"
-    - "Lavaboda köpüklü suyla yıkanan şeffaf bir su haznesi"
-    - "Temiz bir havlunun üzerinde kuruyan makine parçaları"
-    - "Nemli bir bezle silinen kahve çıkışı"
-    - "Kahve çıkışının altına konmuş geniş bir kaba akan berrak su"
-    - "Su haznesi çıkarılmış, kapağı kapalı bir kapsüllü kahve makinesi"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Nespresso makinenin bakımı sanıldığından kısa: her gün boşaltılacak iki hazne, düzenli silinecek bir kahve çıkışı ve ara sıra yıkanacak bir su haznesi. Vertuo makinelerde buna bir de tek tuşla çalışan otomatik temizleme programı ekleniyor. Kireç çözme bunlardan ayrı bir işlem; onu [Nespresso kireç temizleme](/blog/nespresso-kirec-temizleme/) yazısında anlattık. Bu yazı Nespresso Türkiye'nin makine yardım sayfasındaki Essenza Mini, Inissia, Citiz, Pixie ve Vertuo Pop Türkçe talimatlarına dayanıyor.

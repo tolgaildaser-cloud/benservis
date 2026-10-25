@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin dijital ekranlı kontrol paneli"
   steps:
-    - "Çamaşır makinesi kontrol panelinde yanıp sönen başlatma düğmesi"
-    - "Çamaşır makinesinin arkasındaki duvarda bir su musluğu ve bağlı giriş hortumu"
-    - "Musluktan sökülmüş giriş hortumunun ucundaki küçük süzgeç"
-    - "Çamaşır makinesinin alt ön köşesindeki açık pompa kapağı ve önüne konmuş alçak bir kap"
-    - "Çamaşır makinesinin program düğmesi ve panel üzerindeki seçenek tuşları"
-    - "Kapalı bir çamaşır makinesi kapağının kenarı"
-    - "Prizden çekilmiş bir fiş ve kapatılmış bir su musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 AEG çamaşır makinesi çalışırken durdu, ekranda **E** ile başlayan bir kod var ve Başlat/Duraklat düğmesi yanıp sönüyor. AEG bu kodları kullanım kılavuzunun sorun giderme bölümünde tek tabloda topluyor. AEG'nin Türkiye adresi Electrolux sitesine yönlendiği için bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 7000 ProSteam (L7FEE945R) kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Kodlar modele göre değişebilir; kendi kılavuzunla karşılaştır.

@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhının altına yerleştirilmiş kapağı kapalı bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kapağının üst kenarındaki düğme sırası"
-    - "Bulaşık makinesi panelinde açma kapama düğmesi ve küçük ekran"
-    - "Kapağı kapalı bir bulaşık makinesinin önden görünüşü"
-    - "Ekranı sönük bir bulaşık makinesi kontrol paneli"
-    - "Yarı açık kapağından buhar çıkan bir bulaşık makinesi"
-    - "Tezgâh altındaki açık bir su musluğu"
-    - "Bulaşık makinesi kapağının yan kenarındaki bilgi etiketi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Bauknecht bulaşık makinen yanlış programla başladı, yarıda kaldı ya da tuşlara bastığında ekran tepki vermiyor. Bauknecht'in bu model ailesinde ayrı bir reset tuşu aramana gerek yok: panelin ilk düğmesi zaten **On-Off/Reset** adını taşıyor ve programı iptal etmek, suyu boşaltmak ya da makineyi toparlamak birkaç basış türüyle yapılıyor. Bu yazıda BFC 3C26'nın 2016 ve 2018 tarihli günlük kullanım kılavuzlarını ve BUC 3C26 kılavuzunu karşılaştırdık; hepsi kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi. Üç BFC baskısında panel aynı, BUC 3C26'da ise birkaç fark var; aşağıda ayrıca belirttik.

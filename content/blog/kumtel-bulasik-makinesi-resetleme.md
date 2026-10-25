@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Solo bulaşık makinesinin kapak üstündeki tuşlu kontrol paneli"
   steps:
-    - "Bulaşık makinesi panelinde başlat ve duraklat tuşu"
-    - "Bulaşık makinesi panelinde program seçme tuşu"
-    - "Bulaşık makinesi panelinde yan yana dizilmiş program göstergeleri"
-    - "Açık bulaşık makinesinin kapağında deterjan çekmecesi"
-    - "Kapağı kapalı çalışan bir bulaşık makinesi"
-    - "Bulaşık makinesi panelinde güç düğmesi"
-    - "Bulaşık makinesi panelinde yanıp sönen gösterge ışıkları"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Kumtel bulaşık makinen programın ortasında takıldı, yanlış programı seçtin ya da panelde ışıklar hızla yanıp sönüyor ve "Kumtel bulaşık makinesi resetleme nasıl yapılır" diye arıyorsun. Kumtel'in HDW-01 kılavuzunda ayrı bir reset tuşu yok. Kılavuz bu işi **"Döngü Ortasında Programın Değiştirilmesi"** başlığı altında anlatıyor ve açıkça "bulaşık makinesini sıfırlamak için" diyor: iki tuş yetiyor, **Başlat/Duraklat** ve **Program**. Bu yazıda Kumtel'in kendi sitesindeki HDW-01 ürün sayfasından bağlanan Türkçe kullanıcı kılavuzunu kullandık. Senin modelin farklıysa panel düzenini kendi kılavuzunla karşılaştır.

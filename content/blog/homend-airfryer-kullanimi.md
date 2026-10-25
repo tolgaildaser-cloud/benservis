@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran siyah bir yağsız fritöz ve öne çekilmiş haznesi"
   steps:
-    - "Lavaboda sabunlu suyla yıkanan bir fritöz sepeti ve aşındırıcı olmayan bir sünger"
-    - "Duvardan uzakta, çevresinde boşluk bırakılmış düz bir tezgâhta duran yağsız fritöz"
-    - "Fritöz haznesinin dibine yerleştirilmiş delikli yağ toplayıcı"
-    - "Yağsız fritözün önündeki sıcaklık ve zaman ayar düğmeleri"
-    - "Haznesi takılı, çalışır durumda boş bir yağsız fritöz"
-    - "Hazne içine tek kat dizilmiş patates dilimleri"
-    - "Fritözden dışarı çekilmiş hazne içinde karıştırılmış patates dilimleri"
-    - "Ahşap bir nihalenin üzerinde duran fritöz haznesi ve yanında silikon uçlu maşa"
+    - "Çizim: solda airfryer, sağda ambalaj kutusu"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda bekleme süresi için saat"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
 ---
 
 Homend'in Airfryday yağsız fritözünü yeni kurduysan ya da yemek bir yerinde çiğ, bir yerinde kuru çıkıyorsa, kılavuzun kısa kullanım bölümünü bir kez sırasıyla uygulamak çoğu soruyu çözer. Bu yazı Homend'in kendi ürün sayfalarından bağlanan iki Türkçe kılavuza dayanıyor: **Airfryday 2504H–2505H** ve **Airfryday 2508H–2511H** (2509H bu gruptadır). İki kılavuzun en çok tekrarladığı kurallar şunlar: **hazneyi yağla doldurma** ve **hazneyi yerine tam oturtmadan çalıştırma.**

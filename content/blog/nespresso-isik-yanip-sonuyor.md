@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Karanlık bir mutfakta ön düğmesinin ışığı yanan kapsüllü bir kahve makinesi"
   steps:
-    - "Açılıştan sonra tuş ışıkları yanan kapsüllü bir kahve makinesi"
-    - "Kahve makinesine takılmış, içme suyu dolu şeffaf bir su haznesi"
-    - "Kapsüllü kahve makinesinin kilit konumundaki kolu"
-    - "Başlığı açık bir kapsüllü kahve makinesinin boş kapsül yuvası"
-    - "Kireç bakımı için kahve çıkışının altına konmuş geniş bir kap"
-    - "Duvar prizinden çekilmiş bir kahve makinesi fişi"
-    - "Tezgâhta kapsüllü kahve makinesinin yanında duran bir telefon"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Nespresso makinende ışık yanıp sönüyor ve ne demek istediğini anlamıyorsun. Çoğu zaman sebep zararsız: makine ısınıyor ya da hazne boş. Bazen kireç uyarısı, bazen de kapsülün ya da kolun yerine oturmadığını söylüyor. Işığın düzeni belirtiyi ayırt etmenin anahtarı. Bu yazı Nespresso Türkiye'nin makine yardım sayfasındaki Türkçe sorun giderme satırlarına dayanıyor; tek düğmeli **Vertuo Pop** ile iki tuşlu **Original** makineleri (Essenza Mini, Inissia, Citiz, Pixie) ayrı ayrı ele alıyoruz.

@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Bahçede biçilmiş çimin üzerinde duran elektrikli çim biçme makinesi ve arkasında uzanan uzatma kablosu"
   steps:
-    - "Çim biçme makinesinin önüne takılmış taş saptırıcı kapak, yakın plan"
-    - "Birleştirilmiş taşıma kolu ve kola kelepçeyle tutturulmuş kablo"
-    - "Makinenin arkasına takılmış sert çim tutucu ve yan tekerlek"
-    - "Biçilecek çimden toplanmış birkaç taş ve dal parçası"
-    - "Kabloyu arkasında bırakarak çimi biçen kişi, kablo biçilmiş alanda"
-    - "Prizden çıkarılmış uzatma kablosu fişi ve yanında duran makine"
-    - "Yumuşak fırçayla gövdesinden çim artıkları temizlenen çim biçme makinesi"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda anten girişi ve kablo"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda tekerlek"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda anten girişi ve kablo"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda anten girişi ve kablo"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli çim biçme makinesi, sağda tekerlek"
 ---
 
 Kiwi Garden'ın elektrikli çim biçme makinesini ilk açtığında taş saptırıcı, iki parçalı kol, çim tutucu ve tekerlekler ayrı gelir. Kiwi'nin KGGT 650 kılavuzu montajı, kesme yüksekliğini ve çalıştırmayı adım adım anlatıyor. Kılavuzun en sık tekrar ettiği kural kabloyla ilgili: **"Keserken, elektrik kablosunun daima arkanızda ve önceden kesilmiş çim alanda olduğundan emin olun."** Bu yazıdaki adımlar KGGT 650'nin Türkçe kılavuzundan. Aramada sık geçen KGGT-620 ise bıçaklı değil misinalı bir kenar kesme aleti; onun kılavuzunda Türkçe bölüm yok, bilgiler kılavuzun İngilizce baskısından çevrildi.

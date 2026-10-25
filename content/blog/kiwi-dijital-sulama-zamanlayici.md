@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Bahçe musluğuna takılmış, hortumu aşağıya inen dijital ekranlı sulama zamanlayıcısı"
   steps:
-    - "Musluk bağlantısının içine yerleştirilmiş küçük metal filtre ve lastik conta"
-    - "Zamanlayıcının arkasında açılmış pil bölmesi ve yanında kalem piller"
-    - "Zamanlayıcının LCD ekranında saat göstergesi, yakın plan"
-    - "Zamanlayıcının ön yüzündeki ayar kadranı"
-    - "Ekrandaki süre göstergesi ve yanındaki ayar tuşları"
-    - "Zamanlayıcıya bağlı hortumdan çimlere düşen su"
-    - "Kışa doğru musluktan çıkarılmış ve kuru rafa konmuş zamanlayıcı"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda ilgili filtre"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda kumandanın pilleri"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda bekleme süresi için saat"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dijital sulama zamanlayıcısı, sağda su giriş musluğu"
 ---
 
 Kiwi Garden'ın dijital sulama zamanlayıcısı musluk ile hortum arasına takılıyor ve bahçeni senin yerine belirli saatte, belirli süre, belirli aralıkla suluyor. İki model var: KGWT-550 tuşlarla, KGWT-551 ise ön yüzdeki kadranla ayarlanıyor. Kiwi'nin iki Türkçe kılavuzu kurulumu, programlamayı ve sorun gidermeyi anlatıyor. En sık atlanan noktayı da şöyle hatırlatıyor: **"Ürünün kendisi basınç oluşturmaz, ancak musluk suyunun basıncı kullanılır."** Yani musluk kapalıysa program ne kadar doğru kurulsa da su çıkmaz. Bu yazıdaki adımlar KGWT-550 ve KGWT-551 kılavuzlarından.

@@ -36,13 +36,13 @@ faq:
 images:
   coverAlt: "Oturma odasında koltuğun yanında duran dikdörtgen bir quartz ısıtıcı"
   steps:
-    - "Isıtıcının arka tabanına yerleştirilmiş küçük tekerlekler"
-    - "Duvar ve perdelerden uzak, boş bir zemine konmuş quartz ısıtıcı"
-    - "Duvardaki tekli bir prize takılmış ısıtıcı fişi"
-    - "Isıtıcının üst kısmındaki açma kapama düğmeleri"
-    - "Penceresi aralık bırakılmış bir oda"
-    - "Kapatılmış ısıtıcının üst kısmındaki taşıma kolu"
-    - "Isıtıcının metal ızgarasının nemli bir bezle silinmesi"
+    - "Çizim: solda quartz ısıtıcı, sağda ambalaj kutusu"
+    - "Çizim: solda quartz ısıtıcı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda quartz ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda quartz ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda quartz ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda quartz ısıtıcı, sağda bekleme süresi için saat"
+    - "Çizim: solda quartz ısıtıcı, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin quartz ısıtıcısı **KHT-8407** fanlı ısıtıcılardan farklı çalışıyor: önündeki metal ızgaranın arkasında kuvars tüpler var, ayar düğmesi yerine açma/kapama düğmeleriyle kullanılıyor. Kurulumu tekerlekleri takmaktan ibaret, ama yerleşim ve güvenlik kuralları sıkı. Bu yazı KHT-8407 kullanım kılavuzunun Türkçe bölümüne dayanıyor. Kılavuzun kendi notu da baştan söylemeye değer: bu ürün **yalnızca iyi yalıtılmış yerlerde ya da belirli sürelerde kullanıma uygun.**

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran küçük, kapsüllü bir espresso makinesi ve önünde boş bir fincan"
   steps:
-    - "Kapsüllü kahve makinesinin yan yüzündeki model etiketi"
-    - "Kapsüllü kahve makinesinin üstünde yan yana duran iki kahve tuşu"
-    - "Kapalı duran kapsüllü kahve makinesinin tuş paneli"
-    - "Tuş ışıkları yanan kapsüllü kahve makinesinin yakın planı"
-    - "Başlığı açık, kapsül yuvası boş bir kapsüllü kahve makinesi"
-    - "Ön yüzünde tek düğmesi olan yuvarlak hatlı bir kapsüllü kahve makinesi"
-    - "Tezgâhta kapsüllü kahve makinesinin yanında duran bir telefon"
+    - "Çizim: solda kahve makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Nespresso makinende kahve boyları kaymış, enerji tasarrufu ayarı karışmış ya da makine bir şeylerin ters gittiğini düşündürüyor; aklına gelen ilk şey "resetleme". Nespresso'da ayrı bir reset tuşu yok. Fabrika ayarına dönüş tuş kombinasyonuyla yapılıyor ve bu kombinasyon iki ailede farklı: kollu, iki tuşlu **Original** makineler (Essenza Mini, Inissia, Citiz, Pixie) ve tek düğmeli **Vertuo** makineler (Vertuo Pop). Bu yazı Nespresso Türkiye'nin makine yardım sayfasındaki Türkçe talimatlara dayanıyor.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında şeffaf kapaklı küçük bir dondurma makinesi ve yanında bir kâse dondurma"
   steps:
-    - "Lavabonun yanında kurumaya bırakılmış dondurma makinesi haznesi ve karıştırma küreği"
-    - "Derin dondurucunun arka tarafına dik yerleştirilmiş çift cidarlı bir hazne"
-    - "Cam bir kapta karıştırılmış, buzdolabında soğutulan süt ve krema karışımı"
-    - "Motor ünitesine takılmış karıştırma küreği ve şeffaf kapak"
-    - "Motor ünitesi üstüne oturtulmuş ve kilitlenmiş dondurma haznesi"
-    - "Şeffaf kapağın besleme deliğinden hazneye dökülen karışım"
-    - "Kapaklı bir saklama kabına alınmış yumuşak kıvamlı dondurma"
+    - "Çizim: solda dondurma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda dondurma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda dondurma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda dondurma makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda dondurma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda dondurma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda dondurma makinesi, sağda bekleme süresi için saat"
 ---
 
 Kiwi KIM-4700, içi çift cidarlı bir hazneyle çalışan küçük bir dondurma makinesi. Soğutmayı makine yapmıyor; hazne önceden derin dondurucuda donduruluyor, makine yalnız karışımı karıştırıyor. Bu yüzden "Kiwi dondurma makinesi ile dondurma nasıl yapılır" sorusunun en önemli cevabı makineden önce başlıyor. Kılavuz da bunu "en önemli adım" diye yazıyor. Aşağıdaki adımlar ve tarifler KIM-4700 kılavuzunun Türkçe bölümünden; kılavuzdaki bazı bozuk çeviri cümleleri anlamı korunarak sadeleştirildi.

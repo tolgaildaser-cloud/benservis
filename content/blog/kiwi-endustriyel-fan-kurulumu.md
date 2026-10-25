@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Geniş bir atölye köşesinde duran, metal ızgaralı büyük ayaklı bir fan"
   steps:
-    - "Zeminde açılmış bir karton kutu ve yanına dizilmiş fan parçaları"
-    - "Fan tabanına sabitlenmiş dikey stand borusu"
-    - "Stand borusundaki yükseklik ayar somunu"
-    - "Stand borusunun üst kısmına takılmış hız seçici bölümü"
-    - "Motor gövdesine takılmış arka tel ızgara ve öne geçirilmiş metal kanat"
-    - "Ön ve arka ızgarası birleşmiş, klipsleri kapalı fan başlığı"
-    - "Kurulumu bitmiş, açısı hafifçe yukarı eğilmiş çalışan bir ayaklı fan"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda vantilatör, sağda uzaktan kumanda"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin **KFAN-7473** endüstriyel fanı kutudan parça parça çıkar: motor, taban ve boru, iki ızgara, kanat ve küçük bağlantı parçaları. Kurulum kılavuzda tek paragraf; ama sıra karışırsa ızgara yerine oturmuyor ya da kanat sallanıyor. Bu yazı Kiwi'nin KFAN-7473 için yayımladığı çok dilli kullanım kılavuzunun Türkçe bölümüne dayanıyor. Türkçe metinde kanat bir yerde "bıçak" diye geçiyor; ikisi aynı parça.

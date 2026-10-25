@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında geniş kaseli, başlığı kalkık bir standlı mikser"
   steps:
-    - "Geniş ve boş bir tezgâhın üzerine yerleştirilmiş standlı mikser"
-    - "Standlı mikserin yanında prizden çekili fiş ve kapalı konumdaki hız seçici"
-    - "Başlığı yukarı kalkmış, dik konumda kilitli standlı mikser"
-    - "Standlı mikserin aksına takılan hamur kancası, yakın plan"
-    - "Mikser tabanına oturtulmuş geniş karıştırma kasesi"
-    - "Kasenin içinde un ve yumurta, başlığı indirilmiş mikser ve sıçrama koruması"
-    - "Çalışan standlı mikserde kasede dönen çırpma teli"
-    - "Başlığı kalkık mikserden çıkarılan çırpma teli ve yanında kase"
+    - "Çizim: solda standlı mikser, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda standlı mikser, sağda prizden çekilen fiş"
+    - "Çizim: solda standlı mikser, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda standlı mikser, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda standlı mikser, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda standlı mikser, sağda çalışma sesi"
+    - "Çizim: solda standlı mikser, sağda bekleme süresi için saat"
+    - "Çizim: solda standlı mikser, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin KMX-3638 standlı mikseri hamuru ve kek karışımını elle tutmadan karıştırır, ama başlığın kalkıp inmesi ve aksesuarın doğru takılması alışkanlık ister. Kılavuz bu düzeni kısa ve sıralı anlatıyor. En önemli sınır şu: **"Maksimum çalışma süresi 4 dakikayı geçmemeli ve 20 dakikalık bir dinlenme süresi sağlanmalıdır."** Bu yazıdaki kurulum, kullanım ve temizlik adımları Kiwi'nin Türkçe KMX-3638 kılavuzundan.

@@ -41,12 +41,12 @@ faq:
 images:
   coverAlt: "Ankastre bir fırının kontrol paneli, ısıtma işlevi düğmesi ve küçük dijital ekran"
   steps:
-    - "Yan yana iki ankastre fırının kontrol panelleri, biri dokunmatik ekranlı biri düğmeli"
-    - "Fırının ısıtma işlevi düğmesinin çevresindeki simgeler, yakın plan"
-    - "Fırın ekranının alt sırasında yan yana duran küçük gösterge simgeleri"
-    - "Fırın ekranında zil ve saat simgeleri, yakın plan"
-    - "Fırın ekranında yanıp sönen bir kilit simgesi"
-    - "Fırın ekranında beliren bir uyarı göstergesi ve yanında açık duran kullanım kılavuzu"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
 ---
 
 AEG fırınının düğmesindeki ya da ekranındaki küçük simgelerin ne anlama geldiğini çıkaramıyorsan yalnız değilsin; kılavuz bunları çoğu zaman yalnız resimle gösteriyor. Bu yazı AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz iki kılavuza dayanıyor: menülü, dokunmatik ekranlı **BPE556060M** pirolitik fırın ve iki düğmeli, küçük ekranlı **BEB331010M** fırın. Kılavuzların İngilizce baskısını kullandık; işlev adları bizim çevirimiz, simgelerin biçimi kılavuz sayfalarındaki resimlerden. Senin modelinde simge sayısı ve yeri farklı olabilir.

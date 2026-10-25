@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Pencere kenarında, geniş egzoz hortumu pencereye uzanan beyaz bir portatif klima"
   steps:
-    - "Açılmış bir kartonun yanında dizilmiş portatif klima aksesuarları ve hortum"
-    - "Dik konumda duvar dibinde bekletilen portatif klima"
-    - "Pencereye yakın, çevresinde boşluk bırakılmış düz zemindeki portatif klima"
-    - "Portatif klimanın arkasındaki egzoz çıkışına oturtulmuş hortum bağlantısı"
-    - "Sürgülü pencerenin aralığına yerleştirilmiş plastik pencere bölmesi ve hortum ağzı"
-    - "Portatif klimanın arkasına takılı ince tahliye hortumu ve zemindeki bir kova"
-    - "Kurulumu bitmiş, kontrol paneli ışıkları yanan portatif klima"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ambalaj kutusu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi portatif klima kutudan çıktığında tek parça bir cihaz gibi görünür, ama soğutmanın işe yaraması için sıcak havayı dışarı atan egzoz hortumunun pencereye doğru biçimde bağlanması gerekir. Kiwi'nin KAC-7910, KAC-7911, KAC-7912 ve KAC-7914 kılavuzları kurulumu kısa bir cümleyle anlatıyor: **cihaz, yan taraftaki şekle göre monte edilmelidir.** Bu yazı o şekli metne döküyor; parça adlarını, yer seçimini ve ilk çalıştırmayı Kiwi'nin kendi kılavuzlarından sıralıyor. Su dolu uyarısı ve depo boşaltma ayrı bir konu; onun için [Kiwi portatif klima su boşaltma](/blog/kiwi-portatif-klima-su-bosaltma/) yazısına bak.

@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Çalışma masasının köşesinde duran beyaz bir masaüstü vantilatör"
   steps:
-    - "Masaya açılmış bir karton kutu ve yanında vantilatör parçaları"
-    - "Motor gövdesinden ayrılmış pervane çeviricisi ve ızgara somunu"
-    - "Motor gövdesinin önüne oturtulmuş tel arka ızgara"
-    - "Motor miline geçirilmiş şeffaf pervane kanatları"
-    - "Kenar klipsleri kapatılmış ön ve arka ızgara"
-    - "Düz bir masada başlığı hafif yukarı eğilmiş vantilatör"
-    - "Motor gövdesinin üstündeki salınım düğmesi"
+    - "Çizim: solda vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kiwi'nin fişli masaüstü vantilatörleri kutudan başlık, ızgaralar ve pervane ayrı çıkıyor. Kurulum kısa, ama pervane çeviricisinin ve ızgara klipslerinin sırası karışabiliyor. Bu yazı Kiwi'nin **KFAN-7621**, **KFAN-7625** ve **KFAN-7626** masaüstü vantilatör kılavuzlarına dayanıyor. KFAN-7621 ile KFAN-7625 aynı montaj sırasını kullanıyor; KFAN-7626'nın sırası biraz farklı, onu ayrıca yazdık. Şarjlı masa vantilatörleri bu yazının kapsamında değil.

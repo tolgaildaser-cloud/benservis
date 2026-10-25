@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran, kapakları kapalı solo kombi bir buzdolabı"
   steps:
-    - "Duvardaki prize takılı bir buzdolabı fişi"
-    - "Buzdolabı kapağındaki aydınlatılmış dokunmatik kontrol paneli"
-    - "Kontrol panelinde yanan buzdolabı ve dondurucu derece göstergeleri"
-    - "Tezgâhta soğumayı bekleyen kapaklı bir yemek kabı"
-    - "Buzdolabı kapağının iç kenarındaki lastik conta"
-    - "Duvarla arasında boşluk bırakılmış bir buzdolabının yan görünümü"
-    - "Rafları boş, ışığı yanan temiz bir buzdolabı içi"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
 ---
 
 Franke buzdolabın soğutmuyor: içecekler ılık, sebzelikteki ürünler çabuk solmuş ya da dondurucu eskisi kadar dondurmuyor. Sebep her zaman pahalı bir parça değil; çoğu zaman bir ayar, bir mod, kapı ya da cihazın durduğu yer. Franke'nin FMD 420 TNF BK NE E (ürün kodu 118.0713.770) No Frost kombi buzdolabı için yayımladığı kullanıcı kılavuzunun Türkçe bölümünde bunun sorun giderme tablosu var. Bu yazı o tabloya ve kılavuzun yerleştirme bölümüne dayanıyor; başka bir Franke modelin varsa adımları kendi kılavuzunla karşılaştır.

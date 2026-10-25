@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir kurutma makinesi ve tamburun içindeki nemli çamaşırlar"
   steps:
-    - "Kurutma makinesinin program seçme düğmesi"
-    - "Kurutma makinesinin kontrol panelindeki seçenek tuşları"
-    - "Katlanmış, sıkılmış çamaşırlarla dolu bir sepet"
-    - "Kurutma makinesinin kapak açıklığından yukarı çekilmiş hav filtresi"
-    - "Kurutma makinesinin alt ön kısmındaki hava delikleri ve bir süpürge başlığı"
-    - "Kurutma makinesi kapağının iç tarafındaki parlak metal şeritler"
-    - "Kurutma makinesinin alt önündeki açılmış kondenser bölmesi"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
 ---
 
 AEG kurutma makinesi programı bitirdi ama çamaşırlar hâlâ nemli. Ya da program normalden çok uzun sürüyor. AEG'nin kılavuzu "yetersiz kurutma sonucu" için tek bir tabloda sekiz neden sayıyor; bunların hepsi evde kontrol edilebilecek şeyler. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 8000 AbsoluteCare (T8DEE845R) kurutma makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları ve parça yerleri modele göre değişebilir.

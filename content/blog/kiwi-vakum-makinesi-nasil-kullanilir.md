@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kapağı kapalı duran ince uzun bir vakum makinesi"
   steps:
-    - "Boş bir mutfak tezgâhının ortasında duran vakum makinesi"
-    - "Rulo vakum filminden makasla kesilen şeffaf bir poşet parçası"
-    - "Yarısına kadar doldurulmuş ve ağız kısmı boş bırakılmış bir vakum poşeti"
-    - "Vakum makinesinin üst panelindeki işlev düğmeleri"
-    - "Kapağı açık vakum makinesinin conta bölümüne yerleştirilmiş poşet ağzı"
-    - "Vakumlanıp sıkıca gövdeye yapışmış bir poşet"
-    - "Poşetin ağzında düz bir şerit hâlinde görünen kaynak dikişi"
+    - "Çizim: solda vakum makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda vakum makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda vakum makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda vakum makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda vakum makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda vakum makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda vakum makinesi, sağda bekleme süresi için saat"
 ---
 
 Kiwi KVS-9957 hem vakumlayıp kapatan hem de yalnız kapatan bir gıda mühürleme makinesi. Kullanımı kısa ama kılavuzun üzerinde durduğu birkaç küçük kural var: hangi film kullanılacağı, poşetin ne kadar doldurulacağı ve kapatılacak kenarın temiz kalması. Poşet kapanmıyorsa ya da dikiş kırışık çıkıyorsa sebebi genelde bu üç kuraldan biri. Aşağıdaki adımlar KVS-9957 kılavuzunun Türkçe bölümünden; vakum kabı tarifi yalnız Fransızca bölümde olduğu için o kısım çevrilerek ayrıca verildi.

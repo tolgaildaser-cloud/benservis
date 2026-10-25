@@ -45,14 +45,14 @@ faq:
 images:
   coverAlt: "Torbasız bir elektrikli süpürgenin yanında çıkarılmış toz haznesi ve pliseli ince toz filtresi"
   steps:
-    - "Prizden çekilmiş bir elektrikli süpürge fişi"
-    - "Bir çöp kutusunun üstünde boşaltılan şeffaf toz haznesi"
-    - "Toz haznesinin arkasından çıkarılmış pliseli bir filtre ve yanında sünger"
-    - "Pliseli filtrenin kıvrımları arasından geçen küçük bir temizlik fırçası"
-    - "Akan suyun altında durulanan pliseli bir süpürge filtresi"
-    - "Toz haznesinin arkasına yerleştirilmiş kuru bir filtre"
-    - "Yan kapağı çıkarılmış bir toz haznesinin iç bölmesi"
-    - "Elektrikli süpürgenin arkasındaki açılmış atık hava filtresi bölmesi"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda deterjan bölmesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
 ---
 
 Miele süpürgen eskisi gibi çekmiyor ya da filtreyi ne zaman ve nasıl temizleyeceğini merak ediyorsun. Cevap süpürgenin türüne bağlı. Torbasız Miele süpürgelerde filtrelerin çoğu temizleniyor, bir kısmı yıkanabiliyor. Torbalı modellerde ise filtreler temizlenmiyor, belli aralıklarla değiştiriliyor. Bu yazıda Miele'nin Türkiye sitesindeki iki kılavuzu kullandık: torbasız **Boost CX1** ve torbalı **Guard M1**. İki kılavuz da Miele'nin ürün sayfalarından indirildi ve çok dilli; adımlar Türkçe bölümlerinden. Senin modelin farklıysa kendi kılavuzunla karşılaştır.

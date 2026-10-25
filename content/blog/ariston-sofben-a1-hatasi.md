@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir şofben ve önündeki küçük ekran"
   steps:
-    - "Açık bir banyo penceresi ve boş, aydınlık bir banyo"
-    - "Şofben ekranında yanan kısa bir uyarı yazısı"
-    - "Şofbenin altındaki borularda duran kollu vanalar"
-    - "Şofbenin ön yüzünde yuvarlak bir açma kapama tuşu"
-    - "Lavabo bataryasından akan buharlı sıcak su"
-    - "Kapalı konumda bir gaz vanası ve duvarda bir şalter"
-    - "Ekransız bir şofbenin ön yüzünde döner düğme ve küçük bir ışık"
+    - "Çizim: solda duvar tipi şofben, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi şofben, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi şofben, sağda kumandanın pilleri"
 ---
 
 Ariston şofbenden sıcak su gelmiyor, ekranda A1 yazıyor ve alev simgesi kayboldu. A1, Ariston'un ekranlı şofbenlerinde brülörün yanmadığını gösteren kod. Bu yazıda Ariston'un NEXT EVO X SFT ve NEXT EVO SFT kullanım kılavuzlarındaki sırayı ve ekransız FAST EVO X'teki karşılığını topladık. Kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi. Türkiye'de satılan modelde panel ve tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

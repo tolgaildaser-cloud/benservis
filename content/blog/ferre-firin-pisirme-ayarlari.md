@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Ankastre fırın panelinde simgeli fonksiyon düğmesi ve sıcaklık düğmesi"
   steps:
-    - "Kapağı kapalı ısınan boş bir fırın"
-    - "Fonksiyon düğmesinin çevresindeki küçük çizgisel simgeler"
-    - "Derece işaretli döner sıcaklık düğmesi"
-    - "Fırının alt kısmındaki raf rayları"
-    - "Fırın panelinde döner zaman düğmesi"
-    - "Fırının üst kısmında kızaran ızgara rezistansı"
-    - "Kapalı konuma çevrilmiş iki fırın düğmesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Ferre ankastre fırında kek, börek ya da et pişireceksin ve "Ferre fırın pişirme ayarları" diye arıyorsun. Ferre'nin kılavuzu bu ayarı üç parçaya ayırıyor: **çalışma modu** (fonksiyon düğmesi), **sıcaklık** ve **raf konumu ile süre** (pişirme süreleri tablosu). Bu yazıda Ferre'nin kendi sitesindeki ankastre fırın ürün sayfalarından bağlanan Türkçe kullanım kılavuzunu kullandık. Bu bir tarif yazısı değil; kılavuzun verdiği ayarları ve sırasını anlatıyor. Kılavuz modların sıralamasının ve bazı modların modele göre değiştiğini not ediyor.

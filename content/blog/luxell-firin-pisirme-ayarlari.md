@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ankastre fırın panelinde simgeli fonksiyon ve derece düğmeleri"
   steps:
-    - "Fırın içinde yanan lamba ve boş raflar"
-    - "Fonksiyon düğmesinin çevresinde küçük pişirme simgeleri"
-    - "Termostat düğmesinin derece işaretleri"
-    - "Fırının ortadaki rafına sürülmüş tepsi"
-    - "Fırın ekranında pişirme süresi gösteren haneler"
-    - "Fırın rafında cam kavanozlarda yoğurt"
-    - "Fırın camının arkasında pişen bir tepsi"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Luxell ankastre fırında kek, börek ya da et pişireceksin ve "Luxell fırın pişirme ayarları" diye arıyorsun. Luxell'in B66 kılavuzu bu ayarı üç parçaya bölüyor: **fonksiyon** (hangi ısıtıcı çalışacak), **sıcaklık** (termostat) ve **raf konumu ile süre** (pişirme tablosu). Bu yazıda Luxell'in kendi sitesindeki B66 ankastre fırın ürün sayfasından bağlanan Türkçe kullanım kılavuzunu kullandık. Bu bir tarif yazısı değil; kılavuzun verdiği ayarları ve sırasını anlatıyor. Fırının farklı bir seriyse kendi kılavuzunla karşılaştır.

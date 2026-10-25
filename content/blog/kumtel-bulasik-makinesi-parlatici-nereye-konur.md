@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Bulaşık makinesi kapağının iç yüzünde deterjan ve parlatıcı dağıtıcısı"
   steps:
-    - "Dağıtıcı kapağındaki küçük yuvarlak seviye penceresi"
-    - "Açık bulaşık makinesi kapağında yan yana iki hazne"
-    - "Dağıtıcıdaki yuvarlak hazne kapağının çevrilerek açılması"
-    - "Hazneye ince bir akışla dökülen mavi sıvı"
-    - "Dağıtıcının çevresini silen emici bir bez"
-    - "Hazne içindeki ok işaretli ayar kadranı"
-    - "Tezgah üzerinde bulaşık makinesi parlatıcısı şişesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
 ---
 
 Kumtel bulaşık makinenin panelinde parlatıcı göstergesi yandı ya da bardaklar lekeli çıkıyor ve "Kumtel bulaşık makinesi parlatıcı nereye konur" diye arıyorsun. Kumtel'in HDW-01 kılavuzuna göre parlatıcı haznesi kapağın iç yüzündeki **dağıtıcıda**, deterjan bölmesinin hemen yanında. Kapağı çevirerek açılıyor ve içinde miktarı belirleyen bir **ayar kadranı** var. Bu yazıda Kumtel'in sitesindeki HDW-01 ürün sayfasından bağlanan Türkçe kullanıcı kılavuzunu kullandık. Haznenin yeri ve kapağın dönüş yönü kılavuzdaki şekillerden. Modelin farklıysa kendi kılavuzunla karşılaştır.
