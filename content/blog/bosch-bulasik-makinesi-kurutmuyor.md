@@ -47,6 +47,14 @@ faq:
     a: "Bosch'un ayar tablosu çok aşamalı tablet kullanıldığında parlatıcı kademesinin 0 seçilmesini söylüyor. Kurutma yine de yetersiz kalırsa arıza tablosu iki yol veriyor: daha iyi kurutan başka bir kombine madde kullanmak ya da ek parlatıcı kullanmak; Bosch'a göre ek parlatıcı kurutma performansını yükseltir. Bosch ayrıca kombine deterjanların genelde 21°dH su sertliğine kadar çalıştığını, bu sınır aşıldığında tuz ve parlatıcı ilave edilmesi gerektiğini yazıyor."
 images:
   coverAlt: "Program sonunda açılmış bulaşık makinesinin üst sepetinde üzerinde su damlaları kalmış plastik kaplar ve bardaklar"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Program bitti, kapağı açtın ve bulaşıklar hâlâ ıslak. Bosch'un bulaşık makinesi kullanma kılavuzundaki arıza tablosunda bu durum için ayrı bir satır var: **"Bulaşıklar kuru değil."** Bosch'un bu satırda saydığı nedenlerin hepsi kullanıcı tarafında: **parlatıcı, seçilen program, ekstra kurutma, yerleştirme ve bulaşıkları çıkarma zamanı.** Bu yazıda Bosch'un listesini sırayla açıyoruz; plastik kaplar ve makinenin iç duvarındaki damlalar için de Bosch'un ne dediğine bakıyoruz.

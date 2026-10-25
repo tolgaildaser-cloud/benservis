@@ -57,6 +57,14 @@ faq:
     a: "Bosch'un musluk sembolü için ayrı bir destek sayfası var ve orada sayılan üç sebep E18'dekilerle aynı: bükülmüş veya tıkanmış hortum, düşük su basıncı ve filtre tıkanıklığı. Kontrol adımları da aynı. Bosch, bu adımlara rağmen sorun sürerse cihazın yetkili servis uzmanına kontrol ettirilmesini söylüyor."
 images:
   coverAlt: "Musluğun altındaki kovaya su akıyor; yanında bulaşık makinesinin su giriş hortumu ucu, içindeki küçük süzgeç ve küçük bir fırça"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Bosch bulaşık makinenin ekranında **E18** yazıyor. Bosch'un Türkiye destek sayfası bu kod için üç sebep sayıyor: **"Su giriş hortumu bükülmüş"**, **"Su şebeke bağlantısındaki filtreler veya AquaStop hortumu tıkanmış"** ve **"Su basıncının düşük olması nedeniyle musluk sıkışmış veya kireçlenmiş."** Üçünün de kontrolü makinenin dışında, hortumda ve muslukta yapılıyor. Bu yazıda Bosch'un verdiği sırayı adım adım açıyoruz.

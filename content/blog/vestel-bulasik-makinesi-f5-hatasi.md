@@ -44,6 +44,13 @@ faq:
     a: "Vestel'in eski nesil kılavuzuna göre önce musluğu kapat ve hortumu sök. Filtreyi hortumdan çıkarıp musluk altına tutarak temizle, yeniden hortumun içindeki yerine yerleştir ve hortumu geri tak. Kılavuz, bu filtrenin şebekeden gelebilecek kum, kil gibi kirleri tuttuğunu yazıyor."
 images:
   coverAlt: "Açık bir kullanım kılavuzunda bulaşık makinesi arıza kodu tablosu ve yanında makinenin kontrol paneli"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda **F5** yazıyor. Bu kodun cevabı makinenin nesline bağlı: Vestel bulaşık makinesi kod tablosunu nesiller arasında değiştirmiş ve bu kodda fark büyük. Eski nesil kılavuzda F5'in karşılığı **"Su girişi yetersiz."**; yeni nesil kılavuzlarda ise **"Basınç sistemi arızası."** Birincisinde Vestel sana musluk ve hortum filtresi kontrolü yaptırıyor, ikincisinde doğrudan servise yönlendiriyor. Bu yazı önce hangisinin sende geçerli olduğunu, sonra ne yapacağını adım adım anlatıyor.

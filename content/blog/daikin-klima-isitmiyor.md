@@ -57,6 +57,15 @@ faq:
     a: "Daikin Türkiye'ye göre soğutucu akışkan seviyesi düşükse ısıtma verimi düşer ve bu durumda yetkili servis müdahalesi gerekir; fan ya da kompresör kaynaklı sorunları da yetkili servis kontrol etmeli. Uğultu, sürtme sesi ya da titreşim varsa cihazı kapatıp yetkili servise başvur."
 images:
   coverAlt: "Kış akşamı oturma odasının duvarındaki beyaz split klima, kumanda ekranında güneş simgeli ısıtma modu görünüyor"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, klimayı ısıtmaya aldın ama odaya sıcak hava gelmiyor. Daikin Türkiye'nin bu konudaki sayfası ilk sebebi net koyuyor: **"Kumandada “Heat” modu seçili olmalıdır."** Ardından sıcaklık ayarı ve filtre geliyor; gaz, fan ve kompresör sorunlarını ise yetkili servise bırakıyor. Daikin'in kullanım kılavuzları buna, arıza sanılan iki bekleme süresini ekliyor: ısınma ve buz çözme. Bu yazıda sırayı bu belgelerden kuruyoruz.

@@ -46,6 +46,13 @@ faq:
     a: "Samsung'un WindFree kılavuzuna göre kumandadaki Seçenekler düğmesine en az 3 saniye basılınca otomatik temizleme etkinleşir; klima kapalıysa hemen, çalışıyorsa kapanır kapanmaz başlar. Düğme adı modele göre değişebilir; kendi kılavuzuna bak."
 images:
   coverAlt: "Duvardaki beyaz split klima iç ünitesinin ekranında iki karakterli bir kod yanıyor; önünde elde tutulan uzaktan kumanda"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Klimayı kumandadan kapattın ama iç ünite çalışmayı sürdürüyor ve ekranda **C1** ya da bir yüzde değeri görünüyor. Bu bir arıza değil. Samsung Türkiye'nin destek sayfasındaki bilgi kodları tablosunda C1'in karşılığı: **"Klimanız otomatik temizleme işlemi yaptığında klima ekranında C1 bilgi kodu görüntülenir."** Samsung'un bir başka destek sayfası da aynı durumu belirtiden anlatıyor: **"Otomatik temizleme fonksiyonunun açık olması durumunda klimanız kapanmayabilir."**

@@ -50,6 +50,13 @@ faq:
     a: "Vestel, buzdolabının arka kısmına nemli yiyecek konmamasını istiyor; soğuk havayla temas edince donabilirler. Bunu önlemek için yiyecekleri kapalı bir kapta sakla."
 images:
   coverAlt: "No-frost buzdolabının kapağındaki dijital panelde soğutucu sıcaklık göstergesi ve ayar tuşları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **E11** var; sebzeler ya da içecekler donmaya başlamış olabilir. Vestel'in no-frost buzdolabı kullanım kılavuzlarındaki kontrol uyarıları tablosunda bu kodun karşılığı: soğutucu bölme **gereğinden fazla soğuk.** Vestel'e göre buzdolabı normal çalışma aralığından daha düşük bir değerde soğutma yaptığında bu uyarı görünür ve **soğutucudaki yiyecekler donmaya başlar.** Tablonun verdiği iki adım da ayarla ilgili; bu yazıda onları sırayla açıyoruz.

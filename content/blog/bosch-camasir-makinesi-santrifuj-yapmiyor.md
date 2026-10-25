@@ -45,6 +45,14 @@ faq:
     a: "Bosch'un WGA244A0TR kılavuzuna göre E:60 / -2B, denge kontrol sisteminin çamaşırlar eşit dağılmadığı için sıkma işlemini durdurduğunu gösteriyor. Çözüm tamburdaki çamaşırları yeniden dağıtmak. Aynı konunun ayrıntısı Bosch E32 yazımızda."
 images:
   coverAlt: "Açık kapaklı ön yüklemeli çamaşır makinesinin tamburunda tek tarafa toplanmış ıslak çamaşırlar, yanında boş çamaşır sepeti"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti, kapağı açtın ve çamaşırlar sırılsıklam. Bosch'un çamaşır makinesi kullanma kılavuzlarındaki arıza tablosunda bu durum üç ayrı satırda geçiyor: **"Yüksek sıkma devir sayısına ulaşılamadı"**, **"Sıkma programı çalışmaya başlamıyor"** ve **"Sıkma sonucu tatmin edici değil. Çamaşırlar çok ıslak / çok nemli."** Bosch'un bu satırlarda saydığı sebeplerin çoğu ayar ve yerleştirme: düşük seçilmiş devir, açık kalmış Kolay ütüleme, tamburda eşit dağılmamış çamaşır ve tahliye hattı. Bu yazıda Bosch'un sırasını açıyoruz.

@@ -45,6 +45,13 @@ faq:
     a: "Hayır, o farklı bir durum. Bosch kılavuzlarına göre sıcaklık ya da su seviyesi çok yüksekse kapak güvenlik için açılmaz; sıcaklığın düşmesi beklenir ya da uygun bir boşaltma programı seçilir. Elektrik kesintisinde kapak, kılavuzda anlatılan acil kilit açma mekanizmasıyla açılır."
 images:
   coverAlt: "Çamaşır makinesinin yarı aralık kapağı ile gri lastik manşon arasından taşan bir havlu ucu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Programı seçtin, başlat tuşuna bastın; makine çalışmadı ve ekranda **E16** yazıyor. Bosch'un Türkiye destek sayfasında bu kodun karşılığı iki kelimedir: **"Kapak açık."** Talimat da iki adımlı: **kapağı kapatın**; hata düzeltilemiyorsa müşteri hizmetleriyle iletişime geçip servis randevusu ayarlayın. Bu yazıda o kısa talimatı, Bosch kullanım kılavuzlarının kapak kapatma ve yükleme bölümleriyle birlikte adım adım açıyoruz.

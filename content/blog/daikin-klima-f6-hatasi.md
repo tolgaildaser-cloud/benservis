@@ -47,6 +47,13 @@ faq:
     a: "Daikin kılavuzlarının talimatı bu noktada servis: işletim lambası tekrar yanıp sönüyorsa model adını kontrol et ve yetkili servisle temasa geç. Klimayı tekrar tekrar zorlama; servise kodu, ünitenin tam model adını ve mümkünse kurulum tarihini ilet."
 images:
   coverAlt: "Bina avlusunda duvar dibindeki klima dış ünitesi; hava çıkış ızgarasının hemen önüne üst üste konmuş karton kutular"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Klima soğuturken durdu, işletim lambası yanıp sönüyor ve kumandadan okuduğun kod **F6**. Daikin'in Sensira ve FTXM kullanım kılavuzlarındaki tabloda bu kodun karşılığı birebir aynıdır: **"Yüksek basınç kontrolü (soğutma modunda)."** Kod dış ünite bölümündedir. Daikin'in Ururu Sarara kılavuzu F6 için kullanıcıya bir kontrol veriyor: **"Dış ünitenin hava çıkışı bir araç ya da benzeri ile tıkalı durumda mı?"** Bu yazıda o kontrolü adım adım açıyoruz.

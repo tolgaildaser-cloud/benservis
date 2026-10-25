@@ -48,6 +48,13 @@ faq:
     a: "Profilo'nun tuş açıklamasına göre Kırışık Azaltma açıldığında sıkma işlemi ve sıkma devri buna göre uyarlanır; çamaşırlar yıkamadan sonra daha yüksek artık nem içerir. Profilo bu durumda çamaşırların yıkamadan hemen sonra asılmasını öneriyor. Daha kuru çıkmasını istiyorsan bu seçeneği kapatıp kumaş türüne uygun bir program seç."
 images:
   coverAlt: "Kapağı açık çamaşır makinesinin tamburunda bir yana toplanmış ıslak çamaşırlar, bir el onları tambura yayıyor"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama çamaşırlar sırılsıklam, ya da makine sıkmaya hiç geçmedi. Profilo'nun çamaşır makinesi kullanım kılavuzundaki arıza tablosunda bu durum için ayrı bir satır var: **"Sıkma işleminden sonra çamaşırlar çok ıslak."** Profilo'nun bu satırda saydığı nedenlerin hepsi kullanıcı tarafında: **ayarlanan sıkma devri, çamaşırların tamburdaki dağılımı ve Kırışık Azaltma seçeneği.** Bu yazıda Profilo'nun listesini sırayla açıyoruz; arıza sanılan ama arıza olmayan durumlara da bakıyoruz.

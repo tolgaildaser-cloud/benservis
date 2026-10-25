@@ -56,6 +56,15 @@ faq:
     a: "Samsung, kauçuk kapı contalarının düzenli olarak, en az altı ayda bir temizlenmesini istiyor. Contanın işlevini yitirdiğini fark edersen Samsung'a göre parçanın onarılması ya da değiştirilmesi gerekir; bu iş yetkili servisindir."
 images:
   coverAlt: "Kapağı açık bir dondurucu çekmecesinin üst kenarında ve arka duvarında ince kar tabakası; önde düzenli dizilmiş kapalı saklama kapları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
 ---
 
 Dondurucunun duvarları karla kaplanıyor, havalandırma deliklerinin çevresinde buz birikiyor ya da buzdolabının içinde yoğuşma var. Samsung Türkiye'nin destek sayfası bu durumda müşteri merkezini aramadan önce evde denenecek adımları sıralıyor ve ilk maddeyi net koyuyor: **"Kapı düzgün kapanmazsa, buzdolabı ısınır ve su oluşmaya başlar."** Bu yazıda Samsung'un destek sayfalarındaki sırayı, Türkçe kullanım kılavuzlarının "Karlanma" tablosuyla birlikte açıyoruz.

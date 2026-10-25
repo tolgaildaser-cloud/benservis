@@ -53,6 +53,14 @@ faq:
     a: "Vestel'e göre bulaşık makinesi iyi çalışmak için yumuşak, yani az kireçli suya ihtiyaç duyar; su yumuşatma sistemi için bulaşık makinesi tuzu kullanılır. Kılavuz, yumuşak su sağlanmadığında makinede ve bulaşıklarda beyaz kireç artıkları kaldığını ve bunun yıkama, kurutma ve parlatma performansını olumsuz etkilediğini yazıyor."
 images:
   coverAlt: "Programı bitmiş, kapağı hafifçe aralanmış bir bulaşık makinesi; üst sepette ağzı aşağı bakan bardaklar ve kapak iç yüzündeki parlatıcı bölmesi"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda iç bölme ve raflar"
 ---
 
 Program bitti, bulaşıklar temiz ama üzerleri ıslak, bardakların dibinde su duruyor. Vestel'in bulaşık makinesi kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun ayrı bir satırı var: **"Bulaşıklar kurumuyor."** Tablo iki sebep sayıyor: **kurutma işlemi olmayan bir program seçilmiş** ya da **parlatıcı dozu çok düşük ayarlanmış.** Aynı kılavuzların program, parlatıcı, tuz ve yerleştirme bölümleri bu iki maddeye birkaç kontrol daha ekliyor. Bu yazıda hepsini Vestel'in cümleleriyle adım adım açıyoruz.

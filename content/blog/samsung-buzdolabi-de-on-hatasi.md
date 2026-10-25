@@ -47,6 +47,14 @@ faq:
     a: "Samsung'un EE sayfası ekonomi modunu anlatıyor; RB52DS kılavuzuna göre ekonomi modu seçiliyken soğutucu ve dondurucu göstergelerinde E harfi görünür. Kılavuza göre dondurucu sıcaklığı değiştirildiğinde ya da hızlı dondurma veya hızlı soğutma seçildiğinde ekonomi modu iptal olur."
 images:
   coverAlt: "Buzdolabı kapağındaki dijital kontrol paneli; sıcaklık göstergeleri ve dokunmatik tuşlar"
+  steps:
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **DE ON** yazıyor. Samsung Türkiye'nin destek sayfasındaki karşılığı kısa: **"DE ON hata kodu ekranda belirdiyse buzdolabınız DEMO (bayi modu) modunda çalışmaktadır."** Yani bu ekran bir parça arızasını değil, cihazın hangi modda çalıştığını söylüyor. Samsung aynı sayfada moddan çıkış adımlarını da veriyor; bu yazıda o adımları sırayla açıyoruz.

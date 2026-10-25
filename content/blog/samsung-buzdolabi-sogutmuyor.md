@@ -56,6 +56,15 @@ faq:
     a: "Samsung'un kılavuzu bu noktada yetkili teknik servisle irtibata geçilmesini istiyor. Contada yırtık ya da yıpranma varsa, ya da yiyecekleri düzelttiğin hâlde kapı kapanmıyorsa da Samsung yetkili servis desteği öneriyor."
 images:
   coverAlt: "Mutfakta kapağı açık duran gri, iki kapılı bir buzdolabı; raflarda aralıklı dizilmiş kaplar ve kapının iç kenarındaki lastik conta görünüyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabı çalışıyor gibi ama içerisi yeterince soğumuyor. Samsung Türkiye'nin destek sayfası bu durumda önce evde kontrol edilecek maddeleri sayıyor ve bir uyarıyla başlıyor: **"Uzun süreli elektrik kesintisi, kapıların çok sık açılıp kapatılması, yoğun gıda yüklemeleri gibi durumlar buzdolabınızın soğutmasını etkileyecektir."** Bu yazıda Samsung'un iki destek sayfasındaki sırayı, Türkçe kullanım kılavuzlarının sorun giderme tablosuyla birlikte açıyoruz.

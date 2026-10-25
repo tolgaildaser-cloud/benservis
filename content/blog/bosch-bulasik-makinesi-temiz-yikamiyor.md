@@ -46,6 +46,15 @@ faq:
     a: "Bosch'a göre tabletin çözünme süresi hızlı ya da kısa programlar için çok uzun olabilir; bu durumda toz deterjan ya da daha güçlü bir program önerilir. Tablet tutma kabına bulaşık parçası konmamalı; tablet deterjan bölmesine dik değil yatay yerleştirilmeli. Uzun süre bekletilen deterjanın etkisi azalabilir; Bosch bu durumda deterjanı değiştirmeyi öneriyor."
 images:
   coverAlt: "Açık bulaşık makinesinin alt sepetinde yıkama sonrası üzerinde yemek artığı kalmış tabaklar; püskürtme kolu görünüyor"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama tabaklarda yemek artığı, fincanlarda çay izi var. Bosch'un bulaşık makinesi kullanma kılavuzundaki arıza tablosunda bu şikâyetin kendi satırı var: **"Bulaşıklarda yemek artıkları var."** Bosch'un bu satırda saydığı nedenlerin neredeyse hepsi evde kontrol edilebilir: **yerleştirme, püskürtme kolları, süzgeçler, seçilen program ve sensör ayarı.** Bu yazıda Bosch'un listesini sırayla açıyoruz.

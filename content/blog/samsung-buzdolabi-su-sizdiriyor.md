@@ -53,6 +53,15 @@ faq:
     a: "Samsung'un destek sayfası su sürahisi bölümünden sürekli su damlıyorsa doğrudan Samsung Müşteri Hizmetleri ile iletişime geçilmesini istiyor."
 images:
   coverAlt: "Mutfak zemininde gri bir buzdolabının ön ayakları dibinde küçük bir su birikintisi ve yanında katlanmış kuru bir bez"
+  steps:
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
 ---
 
 Buzdolabının önünde ya da altında su birikintisi var, ya da sebzeliğin altında su toplanıyor. Samsung Türkiye'nin destek sayfası konuya net bir cümleyle giriyor: **"Samsung buzdolabınızın soğutucu veya dondurucu bölümlerinde su sızıntısı olmamalıdır."** Samsung'a göre bu sızıntıların birkaç yaygın nedeni var ve birçoğu evde çözülebilir. Bu yazıda Samsung'un iki destek sayfasındaki sırayı birlikte açıyoruz.

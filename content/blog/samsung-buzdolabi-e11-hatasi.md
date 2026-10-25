@@ -44,6 +44,13 @@ faq:
     a: "Samsung'un ikinci adımı soğutucu bölmenin sıcaklık değerini arttırmak. Kılavuzun sorun giderme tablosu ayrıca dondurucuya çok miktarda yeni yiyecek konduysa kompresörün daha uzun çalışacağını ve soğutucudaki yiyecekleri de gereğinden fazla soğutabileceğini, bunun bir süre sonra kendiliğinden düzelebileceğini yazıyor. Hata sürüyorsa Samsung iletişim merkezini ara."
 images:
   coverAlt: "Kapağı açık bir buzdolabının soğutucu bölmesinde sebzelik ve raflar, kapakta dijital sıcaklık göstergesi"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Göstergede **E11** var ve buzdolabındaki bazı yiyecekler donmaya başladı. Samsung Türkiye'nin destek sayfasındaki karşılığı: **"Buzdolabınız normal çalışma aralığından daha düşük bir değerde soğutma yapmış ise bu hata görünür."** Samsung devamında şunu da yazıyor: **bu hata görüldüğünde buzdolabındaki yiyecekler donmaya başlar.** Kısacası E11, E10'un tersidir: soğutucu bölme yetersiz değil, gereğinden fazla soğuk. Bu yazıda Samsung'un destek sayfası ve kullanım kılavuzundaki adımları sırayla açıyoruz.

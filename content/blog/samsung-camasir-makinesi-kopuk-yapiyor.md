@@ -55,6 +55,14 @@ faq:
     a: "Samsung kılavuzu her iki durumda da aşırı köpürmeyi kontrol listesine koyuyor: 'Çamaşır program sonunda ıslak' ve 'Su sızıyor' satırlarında yüksek etkililiğe (HE) sahip deterjan kullanılması öneriliyor. Aynı kılavuza göre aşırı köpük girintilerde toplanıp kötü kokuya da neden olabilir."
 images:
   coverAlt: "Önden yüklemeli beyaz Samsung çamaşır makinesinin cam kapağının arkasında kazanı dolduran yoğun beyaz köpük"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Cam kapağın ardı bembeyaz köpükle dolmuş. Samsung'un Türkçe kullanım kılavuzunda bunun ayrı bir satırı var: **"Aşırı köpük var."** Samsung'un bu satırda saydığı maddelerin hepsi deterjanla ilgili: **deterjanın türü, miktarı ve suyun sertliği.** Kılavuz ayrıca aşırı köpüğü ıslak kalan çamaşır, su sızıntısı ve kötü koku satırlarında da anıyor. Bu yazıda Samsung'un sırasını adım adım veriyoruz.

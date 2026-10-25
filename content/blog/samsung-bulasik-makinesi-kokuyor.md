@@ -51,6 +51,14 @@ faq:
     a: "Samsung'un bakım önerileri: her yıkamadan sonra makineye giden suyu kapat ve içerideki nemin ve kokunun gitmesi için kapağı hafif aralık bırak; contaları nemli bir süngerle düzenli temizle; tatile giderken boş makinede bir yıkama çalıştırıp fişi çek, suyu kapat ve kapağı hafif açık bırak."
 images:
   coverAlt: "Kapağı hafif aralık bırakılmış bir bulaşık makinesi; içte boş sepetler ve kapak kenarındaki lastik conta görünüyor"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Kapağı açtığında makineden kötü bir koku geliyor. Samsung'un Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bunun ayrı bir satırı var: **"Bulaşık makinesinde kötü kokular var."** Samsung'un bu satırda verdiği neden tek: **önceki programdan makinede su kalması.** Kılavuzların bakım bölümü de kokuyu önlemek için somut alışkanlıklar sayıyor: **contaların temizliği** ve **kapağın aralık bırakılması.** Bu yazıda Samsung'un önerilerini sırasıyla anlatıyoruz.

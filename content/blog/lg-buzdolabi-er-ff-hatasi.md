@@ -50,6 +50,13 @@ faq:
     a: "LG'nin talimatı net: aynı belirti ve aynı kod tekrarlanırsa doğru teşhis için buzdolabının bir LG servis teknisyeni tarafından kontrol edilmesi gerekir. Sayfa bu noktadan sonra kullanıcıya başka adım vermiyor."
 images:
   coverAlt: "Mutfakta kapakları ardına kadar açık bırakılmış, fişi çekili no-frost bir buzdolabı; dondurucu bölmenin arka duvarında ince bir buz tabakası görünüyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının ekranında sıcaklık yerine **Er FF** yazıyor. LG Türkiye'nin yardım sayfasında bu kodun karşılığı kısa: **"Bu hata, dondurucu fan motoru normal çalışmadığında ortaya çıkar."** Aynı sayfa ikinci bir ihtimali de yazıyor: kod, **fan motorunun etrafındaki buzlanma nedeniyle fan kilitlendiğinde** de görünebilir. İyi haber şu ki LG, bu ikinci ihtimal için kullanıcıya evde yapabileceği bir yol veriyor. Bu yazıda o yolu, LG'nin kendi sırasıyla adım adım anlatıyoruz.

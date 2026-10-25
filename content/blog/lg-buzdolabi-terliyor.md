@@ -62,6 +62,15 @@ faq:
     a: "LG'ye göre evet. Bu modellerde buzdolabı bölmesindeki kapı contası buz yapıcıya giden soğuk havanın geçididir; buz yapılırken contanın yüzeyi soğuk kalır ve yoğuşma oluşur. LG bunu kışın soğuk bir pencerenin iç yüzündeki buğuya benzetiyor ve kuru bir havluyla silinmesini öneriyor."
 images:
   coverAlt: "Nemli bir yaz gününde LG buzdolabının kapı contası üzerinde küçük su damlacıkları; bir el kuru bir havluyla contayı siliyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda pencere"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda deterjan bölmesi"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının kapı contasında, dış yüzeyinde ya da içindeki raflarda su damlacıkları var. LG Türkiye'nin yardım sayfaları bunu **yoğuşma** olarak anlatıyor ve çoğu durumda arıza saymıyor: nemli havada kapı açılıp kapanınca nem soğuk havayla buluşur, tıpkı buzdolabından yeni çıkmış soğuk bir su şişesinin terlemesi gibi. LG'nin tanımıyla bu, **"özellikle nem yüksek olduğunda ortaya çıkan ve nem azaldığında kaybolan normal bir olgu."** Yine de kapının tam kapanmaması ya da kirli bir conta terlemeyi artırır. Bu yazıda LG'nin kendi kontrol sırasını adım adım veriyoruz.

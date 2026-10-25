@@ -52,6 +52,13 @@ faq:
     a: "Siemens hata mesajının eksiksiz söylenmesini, mümkünse arızanın fotoğraf ve videoyla belgelenmesini istiyor. Ayrıca cihazın ürün numarasını (E-Nr.), imalat numarasını (FD) ve sayma numarasını (Z-Nr.) hazır bulundurman gerekiyor."
 images:
   coverAlt: "Dokunmatik ekranlı bir çamaşır makinesi kumanda panelinde aynı anda iki tuşa basan iki parmak"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Ekranda bir hata kodu var ve kılavuzun tablosunda o koda ait ayrı bir satır bulamıyorsun; ya da ekran ve tuşlar hiç tepki vermiyor. Siemens'in yeni nesil çamaşır makinesi kılavuzlarında bu durumun karşılığı tablonun son satırlarından biri: **"Diğer tüm hata kodları. Fonksiyonel arıza."** Siemens'in talimatı üç basamaklı: **cihazı yeniden başlat**, arıza tekrar oluşursa **en az 30 saniye güç kaynağından ayır**, sürerse **müşteri hizmetlerini ara.** Yeniden başlatmanın yolu ise modele göre değişiyor; aşağıda sekiz Siemens Türkiye kılavuzundan derledik.

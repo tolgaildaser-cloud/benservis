@@ -49,6 +49,14 @@ faq:
     a: "Kılavuzdaki tablonun son maddesi: hata hâlâ devam ediyorsa en kısa zamanda Samsung iletişim merkezini arayıp teknik destek talep et. Samsung bu noktadan sonra kullanıcıya başka adım vermiyor."
 images:
   coverAlt: "Alttan donduruculu bir buzdolabının açık dondurucu çekmeceleri ve kapağındaki dijital sıcaklık göstergesi"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **E09** belirdi. Samsung Türkiye'nin destek sayfasındaki karşılığı: **"Dondurucu bölmesinin sıcaklık değeri yeteri kadar soğuk değilse E09 hata kodu görüntülenir."** Samsung sebebini de yazıyor: bu uyarı **özellikle uzun süreli elektrik kesintilerinden sonra** görünür. Destek sayfası ve kullanım kılavuzundaki tablo kullanıcıya kısa bir adım listesi veriyor; bu yazıda o adımları, kılavuzun ayar bölümüyle birlikte sırayla açıyoruz.

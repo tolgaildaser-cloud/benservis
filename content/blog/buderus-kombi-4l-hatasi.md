@@ -61,6 +61,13 @@ faq:
     a: "Buderus'un 4L ve 2E sayfaları basıncı yükselttikten sonra da yetkili servise başvurulmasını söylüyor. Kılavuzlar ayrıca sisteme sık su ekleniyorsa bunun sistemde su kaçağı olduğunu gösterdiğini ve kaçakların giderilmesi gerektiğini yazıyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin ön panelinde yuvarlak bir basınç göstergesi, altındaki borular arasında küçük bir doldurma vanası"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Ekranda **4L** ya da **2E** görüyorsan Buderus'un tanımı ikisi için de aynı: **"Tesisat su basıncı düşük."** Çözüm de aynı iki cümle: **tesisat su basıncı 1,2 bar'a yükseltilmeli** ve **yetkili servise başvurulmalı.** İlk yarısı, yani basıncı okumak ve su eklemek, Buderus'un kullanma kılavuzlarının kullanıcıya verdiği bir iş. Bu yazı o işi adım adım anlatıyor ve servisin neden hâlâ listede olduğunu açıklıyor.

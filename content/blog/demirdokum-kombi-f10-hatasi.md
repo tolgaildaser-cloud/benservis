@@ -55,6 +55,14 @@ faq:
     a: "DemirDöküm'ün Nitromix, ademiX ve vintomiX gibi noktalı kod kullanan modellerinde düşük basınç F.22 olarak görünür ve basınç aralıkları farklıdır. O modeller için DemirDöküm kombi F22 hatası yazısına bak."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmında soğuk su borusu üzerinde küçük bir vana ve kombinin ön panelinde rakamsız, soyut bir dijital ekran"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 DemirDöküm Atron Condense ya da Nitron Plus kombinin ekranında **F10** yanıp sönüyorsa DemirDöküm'ün kullanma kılavuzu bunun anlamını tek cümleyle veriyor: **"Tesisat basıncı müsaade edilen aralığın dışındaysa ekranda F10 görüntülenir."** Arıza tablosunda nedeni de yazılı: **"Sistem basıncı yeterli değil. Isıtma sisteminde yetersiz su."** Tedbir kullanıcıya bırakılmış bir iş: ısıtma sistemini doldurmak. Bu yazıda o işi iki DemirDöküm kılavuzunun tarifiyle adım adım anlatıyoruz.

@@ -55,6 +55,14 @@ faq:
     a: "LG'nin soğutma zayıflığı sayfasına göre buzdolabının kapısı tamamen kapanmazsa dışarıdan gelen sıcak hava içeri girebilir ve soğutma işlevini etkisiz hâle getirebilir. Aynı sayfa kapının tam kapanmasını engelleyen üç durumu sayıyor: yanlış takılmış raf ya da çekmece, fazla dolu kapı rafı ve yapışmış kapı contası."
 images:
   coverAlt: "Aralık kalmış bir buzdolabı kapısının yakın çekimi; kapı rafındaki şişeler ve kapı contasının kenarı görünüyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının ekranında **Er CH** ya da **Er CL** yazıyor. LG Türkiye'nin yardım sayfasında bu çiftin tanımı şu: soğutma gücünde azalma tespit edildiğinde **"ekranda bir buzdolabı sıcaklık arızası belirtisini bildiren bir inceleme kodu."** LG bu kod için iki ayrı durum tarif ediyor ve hangisinin geçerli olduğu, yapman gerekenleri tamamen değiştiriyor: kod **yeni kurulumdan ya da taşınmadan sonra** mı çıktı, yoksa buzdolabını **kullanırken** mi? Bu yazıda iki yolu LG'nin kendi sırasıyla ayırıyoruz.

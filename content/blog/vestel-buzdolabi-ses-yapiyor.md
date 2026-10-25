@@ -56,6 +56,14 @@ faq:
     a: "Vestel'e göre ürün çalışırken yan panellerde yüksek sıcaklık görülebilir ve bu normaldir. Ön kenarların ve orta bölümün sıcak olması yoğuşmayı engellemek için yapılan bir tasarımdır. Özellikle yaz aylarında kompresör çalışırken contanın temas ettiği yüzeylerde ısınma oluşması da normal bir durumdur."
 images:
   coverAlt: "Mutfakta duran beyaz no-frost buzdolabının alt kısmı; ayarlanabilir ön ayaklar ve arkasında duvarla arasında bırakılmış boşluk"
+  steps:
+    - "Çizim: solda buzdolabı, sağda çalışma sesi"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Gece sessiz bir mutfakta buzdolabından çıtırtı, fokurtu ya da uğultu geliyor ve bunun normal mi yoksa arıza mı olduğunu merak ediyorsun. Vestel'in no-frost buzdolabı kullanım kılavuzları bu soruyu iki parçada cevaplıyor. Önce bir **"Normal Sesler"** listesi veriyor: çıtırtı, kısa çıtlama, kompresör sesi, fokurtu ve şırıltı, su akış sesi ve hava üfleme sesi. Sonra sorun giderme tablosunda **"Buzdolabınız sesli çalışmaya devam ediyor olabilir"** satırında dört kontrol sayıyor: **ayak dengesi, arkadaki eşyalar, raflar ve tabaklar, üstteki eşyalar.** Bu yazıda ikisini birlikte adım adım açıyoruz.

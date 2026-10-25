@@ -53,6 +53,14 @@ faq:
     a: "Hayır, bunlar farklı kodlar. Samsung kılavuzuna göre DC1 ana kapağın, DC3 AddWash kapağının kilitleme ya da kilit açma işleminin düzgün çalışmadığını gösterir. Makineyi kapatıp programı yeniden başlat; kod kalırsa yerel Samsung servis merkezine başvur."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin yarı açık kapağında, cam ile gri lastik conta arasından dışarı sarkan bir çorap ucu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Çamaşırları koydun, kapağı kapattın ve başlat'a bastın; makine çalışmadı ve ekranda **dC** yazıyor. Samsung'un kullanım kılavuzundaki bilgi kodları tablosunda bu kodun karşılığı: **"Çamaşır makinesi kapak açık olarak çalıştırılıyor."** Samsung'un UK destek sayfası aynı durumu modele göre **dE** olarak da gösterebilen kapı kodlarını birlikte veriyor.

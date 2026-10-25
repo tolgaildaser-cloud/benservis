@@ -49,6 +49,15 @@ faq:
     a: "Profilo'nun tablosuna göre bunun iki nedeni var: yıkama sıcaklığının çok düşük olması ve deterjan dozajının yetersiz ya da deterjanın uygun olmaması. Çözüm, daha yüksek sıcaklıklı bir program seçmek ve uygun bir deterjanı üreticinin bilgilerine göre dozajlamak."
 images:
   coverAlt: "Bulaşık makinesinin açık kapağında çıkarılmış süzgeç parçaları ve püskürtme kolu, arkada kısmen dolu alt sepet"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda iç bölme ve raflar"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
 ---
 
 Program bitti ama tabaklarda yemek artığı var. Profilo'nun bulaşık makinesi kullanım kılavuzlarındaki arıza tablosunda bu durum için ayrı bir satır var: **"Bulaşıklarda yemek artıkları var."** Profilo'nun bu satırda saydığı nedenlerin hepsi kullanıcı tarafında: **yerleştirme, püskürtme kolları, süzgeçler ve program seçimi.** Bu yazıda Profilo'nun listesini sırayla açıyoruz. Kaynak, Profilo'nun BM6380MA ve BMS623V5 modelleri için yayımladığı kullanım kılavuzları; ikisinde bu satır aynı, farklı olan yeri ayrıca belirttik.

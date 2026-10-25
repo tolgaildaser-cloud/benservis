@@ -45,6 +45,13 @@ faq:
     a: "Philips'e göre buharlı ütü musluk suyuyla kullanılmak üzere tasarlanmıştır. Bölgenin suyu kireçliyse kullanım ömrünü uzatmak için damıtılmış ya da demineralize su öneriliyor; yüzde 50 demineralize su ile musluk suyu karışımı da kullanılabilir."
 images:
   coverAlt: "Ütü masasının üzerinde dik duran buharlı bir ütü, yanında su doldurma kabı ve katlanmış bir gömlek"
+  steps:
+    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda ilgili filtre"
+    - "Çizim: solda buharlı ütü, sağda temizleme bezi"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Philips buharlı ütü ısınıyor ama tabandan buhar gelmiyor. Philips'in Türkiye destek sayfası bu belirtiyi kendi başlığıyla ele alıyor: **"Philips Buharlı Ütüm buhar üretmiyor."** Sayfa üç neden sayıyor ve üçü de senin kontrol edebileceğin şeyler: haznede su yok, ütü henüz hazır değil ya da buhar ayarı kapalı. Bu yazı o üç nedeni ve Philips'in kireç temizleme tarifini Philips'in kendi sayfalarından anlatıyor.

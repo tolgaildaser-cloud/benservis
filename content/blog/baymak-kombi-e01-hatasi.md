@@ -74,6 +74,14 @@ faq:
     a: "Baymak'ın kılavuzları reset için bir deneme sayısı vermiyor; verdikleri sınır şu: sorun devam ederse ya da arıza tekrar ederse yetkili servis aranır. Ateşlemenin neden olmadığını anlamak için Lunatec tablosunda sayılan kontroller (gaz besleme basıncı, gaz vanası ayarları, elektrot, fan, baca gazı çıkışı) servisin işidir."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin kontrol paneli; ekranda soyut bir uyarı göstergesi, kombinin altında borular arasında sarı kollu bir gaz vanası"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Baymak kombinin ekranında **E01** görüyorsan Baymak'ın kullanma kılavuzundaki karşılığı iki kelime: **"Başarısız ateşleme."** Kılavuzun talimatı da kısa: **RESET tuşuna bas; sorun devam ederse mutlaka yetkili servisi ara.** Bu yazıda reset'ten önce güvenle bakabileceğin şeyleri, Lunatec serisindeki karşılığını ve nerede durman gerektiğini Baymak'ın kendi kılavuzlarıyla adım adım anlatıyoruz.

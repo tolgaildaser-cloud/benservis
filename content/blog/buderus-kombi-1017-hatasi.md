@@ -60,6 +60,13 @@ faq:
     a: "Kılavuza göre iki yol var: cihazı kapatıp tekrar çalıştırmak ya da kılavuzda gösterilen iki ok tuşunu, ekranda H ve ! sembolleri artık görünmeyene kadar aynı anda basılı tutmak. Cihaz tekrar çalışır ve gidiş suyu sıcaklığı görünür. Arıza giderilemezse servisi ya da müşteri hizmetlerini arayıp arıza kodunu ve cihaz bilgilerini bildirmen isteniyor."
 images:
   coverAlt: "Beyaz bir kombinin kumanda panelinde küçük yuvarlak bir basınç göstergesi; yanda bir kalorifer peteğinin üst köşesinde hava alma vidası"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 Buderus kombinin ekranında **H** sembolü ve **1017** ya da **2971** yazıyorsa ikisinin de konusu basınç. Buderus'un kod sayfalarındaki tanımlar şu: **1017 = "Su basıncının çok düşük olması"**, **2971 = "Çalışma basıncının çok düşük olması."** Çözümleri de birbirine çok yakın: basıncı kontrol et, gerekirse öngörülen basınca ulaşılana kadar su ilave et. 2971'de Buderus bunun önüne bir adım daha koyuyor: **ısıtma tesisatının havasını al.**

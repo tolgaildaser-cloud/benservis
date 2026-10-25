@@ -56,6 +56,14 @@ faq:
     a: "LG'nin talimatına göre aynı belirti ve aynı kod tekrarlanırsa doğru teşhis için buzdolabının bir LG servis teknisyeni tarafından kontrol edilmesi gerekir. Sorun devam ederse LG Electronics Çağrı Merkezi 444 6 543'ten destek alabilirsin."
 images:
   coverAlt: "Fişi çekilmiş, dondurucu ve soğutucu kapıları ardına kadar açık bir buzdolabı; dondurucunun arka duvarındaki buz tabakası erimeye başlamış"
+  steps:
+    - "Çizim: solda buzdolabı, sağda not defteri ve kalem"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının ekranında **Er dH** yazıyor; bazı modellerde bu **E dH**, **H**, **F dH** ya da **r dH** olarak görünür. LG Türkiye'nin yardım sayfasındaki tanım şu: **"ürün incelemesi gerektiren bir buz çözme (buzlanma, buz giderme) arızası hata kodu."** LG bu kodun beş olası sebebini sayıyor ve bunlardan birine, **buzla tıkanmış drenaj deliğine**, kullanıcının evde uygulayabileceği bir yol veriyor. Bu yazıda o yolu LG'nin kendi sırasıyla anlatıyoruz.

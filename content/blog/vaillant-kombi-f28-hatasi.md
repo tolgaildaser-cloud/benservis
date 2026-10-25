@@ -71,6 +71,15 @@ faq:
     a: "F.29 kullanma kılavuzlarındaki arıza tablolarında yer almıyor; kullanıcıya adım verilmemiş. Vaillant'ın yetkili servise yönelik montaj kılavuzları F.29'u ecoTEC intro'da 'İşletim sırasında ateşleme ve kontrol arızası - Alev sönüyor', ecoTEC pure'da 'Alev kaybından sonra yeniden ateşleme başarısız' diye tanımlıyor. Yani F.28 ateşlemenin başlangıçta tutmadığını, F.29 ise çalışma sırasında sönen alevin yeniden yakılamadığını anlatıyor. F.29 için yetkili servise başvurulur."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; altındaki borular arasında sarı kollu bir gaz vanası ve ekranında rakam okunmayan soyut bir arıza göstergesi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Vaillant kombinin ekranında **F.28** görüyorsan Vaillant'ın kendi arıza tablosu bunu iki kelimeyle adlandırıyor: **"Ateşleme başarısız."** Nedeni de tabloda yazılı: *"Arka arkaya üç başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer."* Yani kombi yanmayı birkaç kez denedi, alevi tutturamadı ve kendini durdurdu. Kullanma kılavuzu sana bu noktada üç iş bırakıyor: gaz kesme vanasına bakmak, resetlemek ve sonuç alamazsan yetkili servisi çağırmak. Bu yazıda bu üç adımı dört Vaillant kullanma kılavuzundan, modelden modele değişen yerleriyle birlikte anlatıyoruz.

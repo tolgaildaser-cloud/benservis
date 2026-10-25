@@ -48,6 +48,15 @@ faq:
     a: "Bosch'un eski WAK kılavuzu tıkanmaları önlemek için yoğun yumuşatıcıların ve şekil vericilerin su ile inceltilmesini ve bölmedeki max seviyesinin aşılmamasını istiyor. Bosch ayrıca her kullanımdan sonra kapağın ve deterjan çekmecesinin açık bırakılarak kurutulmasını öneriyor."
 images:
   coverAlt: "Çamaşır makinesinden tamamen çıkarılmış deterjan çekmecesi, gözlerinde yumuşatıcı kalıntısı, yanında küçük fırça ve bez"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, çekmeceyi açtın ve deterjan hâlâ gözde duruyor ya da yumuşatıcı gözünde su birikmiş. Bosch'un çamaşır makinesi kullanma kılavuzlarındaki arıza tablosu bu belirtiyi su girişiyle aynı satırda veriyor: **"Su girişi gerçekleşmiyor. Deterjan cihazın içine alınmıyor."** Bosch bu satırda deterjan için ayrı bir sebep saymıyor; kontroller su girişiyle aynı: musluk, hortum, süzgeç ve Başlat tuşu. Yumuşatıcı gözünde kalan su için ise tablonun ayrı bir satırı var ve çözümü **deterjan çekmecesinin temizlenmesi.** Bu yazıda ikisini Bosch'un sırasıyla açıyoruz.

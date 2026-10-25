@@ -48,6 +48,15 @@ faq:
     a: "Siemens'e göre su seviyesi yüksekken kapak güvenlik nedeniyle kilitli kalır. Önce Sıkma programını ya da uygun bir boşaltma programını başlatmayı dene. Program da suyu atamıyorsa suyu yukarıdaki 5. adımdaki gibi boşaltma hortumundan kaba alabilirsin; kapakla ilgili ayrıntılar kapak yazımızda."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin alt ön köşesinde açık bakım kapağı ve önüne konmuş düz bir su kabı"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program durdu, tamburun dibinde su duruyor ya da ekranda **E:36-10** veya **E:30-80** var. Siemens'in çamaşır makinesi kılavuzlarındaki arıza tablosunda bu tablonun adı açık: **"Deterjanlı su cihazdan pompalanıp boşaltılmıyor."** Siemens'in bu satırda saydığı sebepler: tahliye hortumunun duruşu, tıkanmış tahliye hattı, tıkalı pis su pompası ya da yanlış takılmış pompa kapağı ve fazla deterjan. Bu yazıda Siemens'in sırasını açıyoruz.

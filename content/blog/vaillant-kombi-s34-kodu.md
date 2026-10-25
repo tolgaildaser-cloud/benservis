@@ -58,6 +58,14 @@ faq:
     a: "ecoTEC pure ve ecoTEC pro kılavuzlarına göre cihazın uzun süre kullanılmadığı durumlarda donmaya karşı koruma, ısıtma sistemi ve ürün tamamen boşaltılarak sağlanabilir; bunun için yetkili bayiye başvurulur. ecoTEC intro kılavuzu da sistemin ısıtılmasını sağlayamıyorsan yetkili servisin ısıtma sistemini boşaltmasını istiyor. Boşaltmayı kendin yapma."
 images:
   coverAlt: "Kış günü buğulu bir pencerenin yanında duvara asılı beyaz bir kombi; ekranında soyut bir durum göstergesi, dışarıda karla kaplı bir balkon korkuluğu"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, kombinin ekranında ya da durum kodu menüsünde **S.34** gördün. İlk akla gelen "arıza mı?" sorusunun cevabı Vaillant'ın kendi kılavuzunda: S ile başlayan kodlar **durum kodu**, ve S.34'ün ecoTEC pure kılavuzundaki karşılığı tek cümle: **"Donmaya karşı koruma aktif."** Yani kombi soğuğu algılamış ve tesisattaki su donmasın diye kendiliğinden çalışıyor. Bu yazıda S.34'ün ne yaptığını ve korumanın gerçekten işe yaraması için kılavuzların senden istediği birkaç şeyi anlatıyoruz.

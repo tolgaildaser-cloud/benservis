@@ -49,6 +49,13 @@ faq:
     a: "Profilo'nun tablosunda kapak simgesinin yanıp sönmesi için verilen neden kapağın tamamen kapatılmamış olması. Çözüm, çamaşırların kapağa sıkışmadığından emin olup kapağı yeniden kapatmak. Aynı satırda tambur temizliğinin gerekebileceği de yazıyor; kılavuzundaki 'Tambur temizleme' bölümüne bakabilirsin."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin kapalı kapağı ve camın ardında tamburda duran çamaşırlar, kontrol panelinde yanan kilit simgesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti ya da durdu, ama kapak açılmıyor. Profilo'nun çamaşır makinesi kullanım kılavuzundaki arıza tablosunda bu durum için ayrı bir satır var: **"Program duraklatıldı veya iptal edildi, ancak kapak açılamıyor."** Profilo'nun bu satırda saydığı iki neden de güvenlik kilidiyle ilgili: **sıcaklık çok yüksek** ya da **su seviyesi çok yüksek.** Bu yazıda Profilo'nun sırasını açıyoruz; program sonundaki kırışık azaltma, çocuk kilidi ve elektrik kesintisi için de Profilo'nun ne dediğine bakıyoruz.

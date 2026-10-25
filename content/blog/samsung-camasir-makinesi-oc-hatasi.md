@@ -51,6 +51,14 @@ faq:
     a: "Samsung kılavuzuna göre bilgi kodu ekranda kalırsa yerel bir Samsung servis merkezine başvurulur. Bu noktadan sonra kullanıcıya verilen başka bir adım yok."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin kapak camının ardında normalden yüksek duran köpüklü su"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Makine yıkamanın ortasında durdu ve ekranda **OC** yazıyor. Modeline göre aynı durum **OE** olarak da görünebilir. Samsung Türkiye'nin destek sayfasına göre bu mesaj **"makinenizdeki su seviyesi fazla algılandığında"** çıkar. Kullanım kılavuzundaki bilgi kodları tablosunda OC'nin karşılığı iki kelimedir: **"Su taşıyor."**

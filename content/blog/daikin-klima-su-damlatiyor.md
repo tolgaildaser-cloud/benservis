@@ -47,6 +47,13 @@ faq:
     a: "Daikin kılavuzu soğutma ya da nem alma sırasında tahliye hortumunun sorunsuz tahliye yaptığından emin olmanı istiyor. Tahliye edilen su görünmüyorsa iç ünitede su kaçağı meydana gelmiş olabilir; bu durumda çalışmayı durdurup yetkili servise danışman gerekir."
 images:
   coverAlt: "Duvardaki beyaz split klimanın iç ünitesinin altına konmuş bir kap ve yerden kaldırılmış eşyalar"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Klimanın altında damlalar ya da duvarda ıslaklık fark ettin. Daikin'in kullanım kılavuzu bu belirtiyi **"derhal yetkili servisi arayın"** listesine koyuyor: **"İç ünitede su kaçağı varsa."** Talimat da açık: **"Kesiciyi kapalı konuma getirin ve yetkili servisi arayın."** Bu yazı servisi çağırmadan önce ve beklerken güvenle yapabileceklerini, damlamanın normal sayıldığı durumları Daikin'in belgelerinden anlatıyor.

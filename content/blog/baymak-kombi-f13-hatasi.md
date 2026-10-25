@@ -63,6 +63,13 @@ faq:
     a: "Lunatec kılavuzunun arıza tablolarında F13 yok; Lunatec H ve E ile başlayan noktalı kodlar kullanıyor. F13, Duotec ve Eco serisinin kod tablosunda geçiyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin ön paneli; dijital ekranda soyut bir kod göstergesi ve yanında birkaç yuvarlak tuş"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi kombi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Baymak kombinin ekranında **F13** görüyorsan Baymak'ın kullanma kılavuzundaki karşılığı şu: **"Reset kilitlenmesi."** Aynı satırda parantez içinde talimat da var: **"cihaz elektrik beslemesini açıp kapatınız."** Yani bu kodda Baymak'ın tarif ettiği işlem, kombinin elektriğini kapatıp yeniden açmak. Bu yazıda o işlemi ve kombiyi yeniden çalıştırmayı Baymak'ın kılavuzlarıyla adım adım anlatıyoruz.

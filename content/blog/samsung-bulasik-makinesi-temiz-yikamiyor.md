@@ -49,6 +49,15 @@ faq:
     a: "Samsung Türkiye'nin destek sayfasına göre orta kirli bulaşıklar için EKO, daha kirli ya da yağlı bulaşıklar için Yoğun programı önerilir. Bulaşıklar temiz çıkmıyorsa kılavuzdaki öneri daha yoğun bir yıkama programı seçmek. Modelinde hangi programların bulunduğu için kendi kılavuzuna bak."
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinin alt sepetinde yıkama sonrası üzerinde yemek kalıntısı kalmış tabaklar; tabanda filtre düzeneği görünüyor"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti, kapağı açtın ve tabaklarda hâlâ yemek kalıntısı var. Samsung'un Türkçe kullanım kılavuzunda bu durumun ayrı bir satırı var: **"Kaplarda yiyecek kalıyor."** Samsung bu satırda yedi olası neden sayıyor ve çoğu evde düzeltilebilecek şeyler: **yerleşim, program, deterjan, filtre, püskürtücüler ve tuz.** Samsung Türkiye'nin "temiz yıkamadığında ne yapabilirim?" destek sayfası da aynı çizgide. Bu yazıda Samsung'un listesini sırasıyla anlatıyoruz.

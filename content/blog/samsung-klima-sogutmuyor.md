@@ -52,6 +52,15 @@ faq:
     a: "Bunu evde anlamanın yolu yok. Samsung, soğutma performansının aşırı yüksek dış sıcaklık, elektrik kaynağı sorunları ya da soğutucu gaz sızıntısı gibi etkenlerden de etkilenebileceğini ve bu durumlarda servis müdahalesi gerektiğini belirtiyor. Evdeki kontrollerden sonra sorun sürüyorsa Samsung yetkili servisine başvur."
 images:
   coverAlt: "Sıcak bir yaz gününde oturma odasında duvardaki beyaz split klima; kumanda ekranında düşük bir sıcaklık ayarı görünüyor"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda deterjan bölmesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor, üflüyor ama oda serinlemiyor. Samsung Türkiye'nin destek sayfasına göre bunun temel nedeni çoğu zaman **"hatalı ayarlar, hava akışını engelleyen unsurlar veya bakım eksikliği"** olabilir. Samsung'un listesi evde kontrol edilebilecek maddelerle başlıyor: yanlış mod ya da sıcaklık ayarı, iç veya dış ünitenin önündeki engeller, kirli filtre, açık kapı-pencere. Bu yazıda Samsung'un kendi sırasını, Türkçe kullanım kılavuzunun sorun giderme tablosuyla birlikte adım adım anlatıyoruz.

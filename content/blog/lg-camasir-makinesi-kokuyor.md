@@ -55,6 +55,15 @@ faq:
     a: "LG, deterjan bölmesinde bir günden fazla kumaş yumuşatıcısı bırakılmamasını, çünkü yumuşatıcının sertleşebileceğini yazıyor. Aynı kılavuza göre sertleşen deterjan da tıkanmaya, kötü durulama performansına ya da kokuya neden olabilir."
 images:
   coverAlt: "Kapağı aralık bırakılmış ön yüklemeli çamaşır makinesi; deterjan çekmecesi çıkarılmış, yanında yumuşak bir bez ve küçük bir fırça"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
 ---
 
 Makinenin kapağını açtığında küf kokusu geliyor, ya da temiz çıkan çamaşırlar bile hafif kokuyor. LG'nin Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bunun ayrı bir başlığı var: **"Cihazda küflü veya küflü bir koku."** LG bu satırda üç sebep sayıyor: **tamburun içi düzgün temizlenmemiş**, **boşaltma hortumu düzgün takılmamış** ya da **deterjan bölmesi düzenli temizlenmemiş.** Üçü de evde halledilebilir; bu yazıda LG'nin kendi bakım talimatıyla adım adım anlatıyoruz.

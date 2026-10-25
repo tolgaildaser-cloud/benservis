@@ -46,6 +46,15 @@ faq:
     a: "LG, filtrenin altı ayda bir kontrol edilip temiz olduğundan emin olunmasını öneriyor. Filtre, iplikleri ve kıyafetlerde yanlışlıkla kalmış küçük parçaları toplar."
 images:
   coverAlt: "Ön yüklemeli beyaz çamaşır makinesinin sağ alt köşesinde açılmış küçük servis kapağı; önünde yere serilmiş havlu ve sığ bir kap"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Yıkama bitmek üzereyken makine durdu, tamburda su kaldı ve ekranda **OE** yazıyor. LG'nin Türkçe kullanım kılavuzlarındaki hata tablosunda OE'nin başlığı **su çıkış hatası**, karşılığı da şu: **"Tahliye hortumu bükülmüş veya tıkanmış. Cihazın içindeki su boşalmaz veya yavaş boşalır."** Tablo ikinci bir sebep daha sayıyor: **tahliye filtresi tıkanmış**. İki sebep de evde kontrol edilebilir; bu yazıda LG'nin kendi bakım talimatıyla adım adım anlatıyoruz.

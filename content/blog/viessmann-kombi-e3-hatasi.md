@@ -55,6 +55,14 @@ faq:
     a: "Hayır. Viessmann Türkiye'nin Vitotronic kontrol üniteli Vitodens 200-W ve 300-W için yayımladığı hata kodu listesinde E3, kalibrasyon sırasında ısı transferinin çok düşük olduğunu ve sıcaklık sınırlayıcının kapandığını gösterir; brülör arıza durumuna geçer. Viessmann bu listedeki önlemleri yetkili yüklenici işi olarak tanımlıyor, yani o seride E3 servis konusudur."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin önünde, elinde akıllı telefon tutan bir kişi; telefon ekranında rakam okunmayan soyut bir takvim ve termometre simgesi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Viessmann kombinin ekranında **E3** görünce ilk akla gelen bir arıza olur. Oysa Vitodens 100-W, 111-W, 111-F ile Vitodens Connect ve Trend kullanma kılavuzlarında bu kodun karşılığı bir arıza değil, bir ayardır: **„Evde tatil" ya da „Tatil programı" fonksiyonu açık olduğu müddetçe standart göstergede „E 3" gösterilir.** Bu iki fonksiyon ViCare uygulaması üzerinden açılıp kapatılıyor; E3'ü kaldırmanın yolu da oradan geçiyor.

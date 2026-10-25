@@ -49,6 +49,15 @@ faq:
     a: "Samsung'un DW60M serisi kılavuzuna göre elektrik kablosu yeniden bağlandığında Kontrol kilidi işlevi bırakılır. Kilit göstergesi hâlâ yanıyorsa kilidi kılavuzundaki düğmeyle kaldır."
 images:
   coverAlt: "Mutfakta kapağı kapalı ankastre bir bulaşık makinesinin üst kenarındaki kontrol paneli; ekran kapalı, yanında açık duran kullanma kılavuzu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
 ---
 
 Bulaşıkları yerleştirdin, düğmeye bastın ve makine hiç tepki vermiyor ya da ekran yanıyor ama program başlamıyor. Samsung'un Türkçe kullanım kılavuzundaki sorun giderme tablosunda bunun ayrı bir satırı var: **"Bulaşık makinesi çalışmıyor."** Altında sayılan nedenlerin hepsi evde kontrol edilebilecek şeyler: **sigorta/şalter, güç ve kapak, su basıncı.** Samsung Türkiye'nin destek sayfası da aynı sırayı veriyor ve buna **su giriş hortumu** ile **çocuk (kontrol) kilidini** ekliyor. Bu yazıda Samsung'un kendi listesini sırasıyla açıyoruz.

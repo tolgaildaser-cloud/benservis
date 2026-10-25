@@ -56,6 +56,15 @@ faq:
     a: "Hayır. Samsung kılavuzuna göre çamaşır filesi diğer çamaşırlar olmadan yalnız yıkanmamalıdır; anormal titreşime neden olarak makineyi hareket ettirebilir ve yaralanmaya sebep olabilir."
 images:
   coverAlt: "Banyoda fayans zemin üzerinde duran beyaz Samsung çamaşır makinesinin alt kısmı ve ayarlanabilir dengeleme ayakları yakından"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda arka paneldeki taşıma emniyeti cıvataları"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
 ---
 
 Makine sıkarken yerinde zıplıyor, dolaba vuruyor ya da alışılmadık bir ses çıkarıyor. Samsung'un Türkçe kullanım kılavuzunda bunun ayrı bir satırı var: **"Aşırı titreşim veya gürültü var."** Samsung'un listesindeki maddelerin çoğu kurulumla ve yüklemeyle ilgili: **zemin, dengeleme ayakları, nakliye cıvataları, makinenin bir yere temas etmesi, dengesiz çamaşır ve metal nesneler.** Aynı tablo bazı seslerin normal olduğunu da söylüyor. Bu yazıda Samsung'un sırasını adım adım veriyoruz.

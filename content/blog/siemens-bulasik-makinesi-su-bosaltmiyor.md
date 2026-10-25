@@ -47,6 +47,15 @@ faq:
     a: "Siemens'in son önerisi sıfırlama: modeline göre Reset yazan tuşa 3 ya da 4 saniye basılı tut; ekranlı modellerde 0:00 görünene kadar, ekransızlarda ECO ışığı yanana kadar bekle. Sorun sürerse cihazı kapat, fişini çekip en az 2 dakika bekle, sonra fişi takıp aç. Buna rağmen devam ediyorsa Siemens 444 66 88 numaralı çağrı merkezini aramayı öneriyor."
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin tabanında birikmiş su, yanında çıkarılmış filtre ünitesi ve bir sünger"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
 ---
 
 Program bitti, kapağı açtın ve tabanda kirli su duruyor. Belki ekranda **E:61-02** ya da **E:61-03** değişimli olarak yanıyor. Siemens'in kullanım kılavuzu bu iki kod için aynı cümleyle başlıyor: **"Cihaz hatası yok."** Yani makine bozuldu demiyor; suyun gideceği yolda bir tıkanıklık var diyor. Siemens'in kendi destek sayfasındaki sıra da net: **önce filtre ve pompa, sonra tahliye hortumu, en sonda sıfırlama.** Bu yazıda o sırayı Siemens'in kılavuzundaki adımlarla birlikte anlatıyoruz.

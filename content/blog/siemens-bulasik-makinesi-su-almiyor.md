@@ -48,6 +48,15 @@ faq:
     a: "Siemens kılavuzu bu durumu ayrı bir satırda veriyor: 'Su beslemesinin kontrolü' göstergesi yanıp sönüyorsa teknik bir arıza mevcuttur. Kılavuzun yolu şöyle: açma/kapama tuşuna bas, fişini çek ya da sigortayı kapat, en az 2 dakika bekle, fişi takıp cihazı çalıştır. Sorun yeniden ortaya çıkarsa açma/kapama tuşuna bas, musluğu kapat, fişi çek ve müşteri hizmetlerine hata kodunu bildir."
 images:
   coverAlt: "Bulaşık makinesinin arkasındaki musluğa bağlı su giriş hortumu ve hortum ucundan çıkarılmış küçük süzgeç"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Programı başlattın ama makineden tanıdık su sesi gelmiyor; ya da ekranda **E:32-00** değişimli olarak yanıyor, su girişi göstergesi açık. Siemens'in kullanım kılavuzu bu kodun sebeplerini tek tek sayıyor ve hepsi makinenin dışında: **bükülmüş besleme hortumu, kapalı ya da kireçlenmiş musluk ve hortum bağlantısındaki tıkalı süzgeç.** Siemens'in destek sayfası buna iki madde daha ekliyor: **gecikmeli başlatma** açık kalmış olabilir ya da **musluk ışığı** yanıyor olabilir. Bu yazıda Siemens'in sırasını, kılavuzdaki süzgeç temizliği adımlarıyla birlikte anlatıyoruz.

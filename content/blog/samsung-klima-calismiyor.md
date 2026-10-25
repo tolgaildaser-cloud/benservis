@@ -50,6 +50,14 @@ faq:
     a: "Samsung kılavuzu kesiciyi açıp üniteyi yeniden başlattıktan sonra sorun devam ederse servis sağlayıcınla iletişime geçmeni istiyor; devre kesici zarar gördüyse de en yakın servis merkezine başvurmanı söylüyor. Kesici yeniden düşüyorsa Samsung yetkili servisine başvur."
 images:
   coverAlt: "Oturma odasında duvardaki beyaz split klimanın kapalı iç ünitesi ve ona doğru tutulan bir uzaktan kumanda"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda not defteri ve kalem"
 ---
 
 Kumandaya basıyorsun ama klima açılmıyor. Samsung'un Türkçe kullanım kılavuzunun sorun giderme tablosunda bu belirtinin karşılığı açık: **"Klima çalışmıyor."** Çözüm sütunu da evde kontrol edilebilecek maddelerle başlıyor: güç, devre kesici ve zamanlamalı kapatma. Bu yazıda Samsung'un kendi sırasını, Samsung Türkiye'nin destek ve SSS sayfalarıyla birlikte adım adım anlatıyoruz.

@@ -50,6 +50,14 @@ faq:
     a: "Daikin'in Sensira kılavuzundaki yol şu: kablosuz kumandayı iç üniteye doğrult ve CANCEL (iptal) düğmesine yaklaşık 5 saniye bas; sıcaklık alanında 00 yanıp söner. Sonra sürekli bir bip sesi duyana kadar CANCEL düğmesine art arda bas; o anda ekrandaki kod cihazın kodudur."
 images:
   coverAlt: "Elinde klima kumandası tutan bir kişi; kumandanın küçük ekranında iki karakterli kod görünüyor, arka planda duvar tipi iç ünite"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışmıyor ve ekranda ya da kumandada **E0** var. Daikin Türkiye'nin hata kodları sayfasında bu kodun karşılığı genel bir tanımdır: **"İç ya da dış ünitede genel bir arıza tespit edilmiştir."** Aynı sayfanın önerdiği ilk adım da nettir: **cihazı kapatıp fişten çek, 5 dakika bekledikten sonra yeniden başlat.** Bu yazıda o adımı ve Daikin'in önerdiği temel kontrolleri adım adım açıyoruz.

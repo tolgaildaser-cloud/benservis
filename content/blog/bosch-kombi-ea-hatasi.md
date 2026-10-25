@@ -61,6 +61,14 @@ faq:
     a: "Yalnız basınç düşükse. Bosch'un EA sayfası ideal aralığı 1,2–1,5 bar olarak veriyor ve basınç 1 bar'ın altındaysa su basılabileceğini söylüyor. Condens 2500 W, 2300i W ve 7000i W kılavuzlarına göre işletme basıncı normalde 1 ila 2 bar arasındadır. 2300i W ve 7000i W kılavuzları suyun nasıl ilave edildiğini yetkili servisin göstermesini istiyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin altındaki sarı kollu gaz vanası, kolu borusuyla aynı hizada; kombinin ekranında harfli bir arıza kodu"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Bosch kombinin ekranında **EA** yanıp sönüyor, ya da rakamlı ekranlı bir Condens 2300i W'de **227** görüyorsun. İki kodun da Bosch'taki karşılığı aynı: EA sayfası kodu **"alev algılanmaması sorunu"** olarak, 227 sayfası **"Alev Algılanmıyor"** diye tanımlıyor. Bosch'un sırası da net: önce gaz vanası, sonra su basıncı, ikisi de yerindeyse yetkili servis.

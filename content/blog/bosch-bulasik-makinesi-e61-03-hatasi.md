@@ -55,6 +55,15 @@ faq:
     a: "Hortum düz, sifon bağlantısı açık, pompa kapağı temiz ve klik sesiyle oturmuşsa Bosch'un kılavuzunun kullanıcıya verdiği adımlar tükenmiş demektir. Bosch'un kılavuzu onarım çalışmalarının daima uzman kişilere yaptırılmasını söylüyor; makineyi kapatıp Bosch yetkili servisinden randevu al."
 images:
   coverAlt: "Hafifçe öne çekilmiş bir bulaşık makinesinin arkasında düz uzanan gri tahliye hortumu ve evye altındaki sifon bağlantısı"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Bosch bulaşık makinenin ekranında **E:61-03** yazıyor; makinenin içinde su kalmış olabilir. Bu, yeni nesil Bosch Serie 4 modellerin kod biçimi: iki parçalı, arada tire. Bosch'un Serie 4 kısa kılavuzundaki arıza tablosunda bu kodun satırı şöyle: **"E:61-03 değişimli olarak yanıyor. Su boşaltılmıyor."** Kılavuz üç sebep ve her biri için bir çözüm veriyor. Bu yazıda o sırayı adım adım anlatıyoruz.

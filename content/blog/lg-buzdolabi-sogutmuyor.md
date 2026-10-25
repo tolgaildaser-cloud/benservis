@@ -58,6 +58,15 @@ faq:
     a: "LG'ye göre bu kod soğutma gücünde azalma tespit edildiğinde çıkan bir inceleme kodudur. Kullanım sırasında çıktıysa gücü kapatıp yaklaşık 5 dakika sonra yeniden açmak deneniyor; aynı belirti tekrarlanırsa LG servis teknisyenine kontrol ettirilmesi gerekiyor. Ayrıntısı Er CH / CL rehberimizde."
 images:
   coverAlt: "Mutfakta duvardan biraz uzakta duran gri bir LG buzdolabı; kapısı açık, raflar yarı dolu ve yiyecekler arasında boşluk var"
+  steps:
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabı çalışıyor ama içi eskisi kadar soğuk değil. LG Türkiye'nin yardım sayfası bu belirtiyi **"Soğutma zayıf"** başlığıyla anlatıyor ve beş neden sayıyor: **ayarlanan sıcaklık uygun değil, buzdolabı gıdayla dolu, kapı düzgün kapanmamış, kurulum yeri uygun değil ya da buzdolabı yakın zamanda kurulmuş.** Beşi de evde kontrol edilebilir. Bu yazıda LG'nin kendi sırasını adım adım veriyoruz.

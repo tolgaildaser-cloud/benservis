@@ -63,6 +63,14 @@ faq:
     a: "LG, uğultu sesi düzensiz ya da sürekli geliyorsa LG servisine başvurulmasını öneriyor. Fan buzlanmasından şüphelenip buz çözdürmek yerine yiyeceklerin için endişeleniyorsan da LG servis teknisyeninin incelemesini öneriyor."
 images:
   coverAlt: "Gece loş bir mutfakta duran LG buzdolabı; öndeki alt köşede ayar anahtarıyla tesviye ayağı ayarlanıyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda not defteri ve kalem"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabından gece çıtırtı, uğultu, akan su sesi ya da kapıyı kapatınca bir tıslama geliyor. LG Türkiye'nin yardım sayfalarına göre bu seslerin çoğu **düzgün çalışan bir buzdolabının doğal sesleri**: içeride bir soğutma motoru (kompresör) ve bir hava sirkülasyon fanı çalışır; iç sıcaklık yüksekken kompresör daha aktif çalışır ve ses artar, sıcaklık düştükçe ses de azalır. LG'nin sayfalarında evde düzeltilebilecek iki gerçek sebep var: **denge** ve **zemin**. Bu yazıda önce sesleri ayırıyor, sonra LG'nin kontrol sırasını adım adım veriyoruz.

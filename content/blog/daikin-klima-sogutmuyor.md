@@ -56,6 +56,15 @@ faq:
     a: "Bunu evde anlamanın yolu yok. Daikin Türkiye, doğru moda ayarlandığı hâlde klima soğuk hava üflemiyorsa sorunun gaz eksikliği, kompresör arızası ya da sensör kaynaklı olabileceğini ve servis müdahalesi gerektiğini yazıyor. Soğutucu kaçak kontrolü de kılavuza göre yetkili servisin işidir."
 images:
   coverAlt: "Sıcak bir yaz gününde oturma odasının duvarında çalışan beyaz Daikin tipi split klima, önünde perdeleri çekilmiş pencere"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor, üflüyor ama oda serinlemiyor. Daikin'in Türkçe kullanım kılavuzu bu durumu sorun giderme bölümünde **"Soğutma (Isıtma) etkisi zayıf."** başlığıyla ele alıyor ve servis çağırmadan önce kontrol edilecek beş soru veriyor: **"Hava filtreleri temiz mi?"**, iç ve dış ünitenin hava giriş-çıkışında engel var mı, **"Sıcaklık ayarı doğru mu?"**, **"Pencereler ve kapılar kapalı mı?"**, hava üfleme hızı ve yönü doğru mu. Bu yazıda bu listeyi, FTXF kılavuzunun ek maddeleriyle birlikte sırasıyla anlatıyoruz.

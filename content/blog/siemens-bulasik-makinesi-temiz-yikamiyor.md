@@ -45,6 +45,15 @@ faq:
     a: "Siemens kılavuzu iki sebep veriyor: püskürtme kolları bulaşıklar tarafından bloke ediliyor ve deterjan tam durulanmıyor ya da deterjan doldurulurken bölme ıslaktı. Çözüm, kolların serbestçe dönebildiğinden emin olmak ve deterjanı yalnız kuru bölmeye doldurmak."
 images:
   coverAlt: "Bulaşık makinesinden çıkarılmış sprey kolu, memelerinde kireç ve yemek artığı; yanında ince bir çubuk"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti, kapağı açtın ve tabaklarda hâlâ yemek artığı var; belki tablet de haznede yarım duruyor. Siemens'in destek sayfası bu durumu tek cümleyle çerçeveliyor: **bulaşık makinen çalışıyor ama bulaşıklar temizlenmiyorsa birkaç kontrol adımı sorunu çözmeye yetebilir.** Siemens bu kontrolleri beş başlıkta topluyor: **tablet, sprey kolları, filtre, yerleştirme ve program ile deterjan.** Kullanım kılavuzundaki "Bulaşıklarda yemek artıkları var" satırı da aynı yerlere bakıyor. Bu yazıda ikisini birleştirip adım adım anlatıyoruz.

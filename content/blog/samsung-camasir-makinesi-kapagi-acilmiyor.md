@@ -55,6 +55,15 @@ faq:
     a: "Olmayabilir. Samsung kılavuzuna göre AddWash kapağı yalnızca gösterge göründüğünde açılabilir ve kaynatma ya da kurutma sırasında iç sıcaklık yükseldiğinde, Çocuk Kilidi ayarlıyken ya da ek çamaşır içermeyen kazan yıkama veya kazan kurutma programı çalışırken açılmaz."
 images:
   coverAlt: "Önden yüklemeli beyaz Samsung çamaşır makinesinin kapalı kapağı; cam kapaktan ıslak çamaşırlar görünüyor, panelde kilit simgesi yanıyor"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ya da yarıda durdurdun, ama kapak açılmıyor. Samsung'un Türkçe kullanım kılavuzunda bunun ayrı bir satırı var: **"Kapak açılmıyor."** Samsung'un verdiği sebeplerin çoğu bir arıza değil, güvenlik davranışı: kapak, makine durduktan sonraki **3 dakika** içinde açılmaz ve **kazanda su kalırsa** açılamayabilir. Bu yazıda Samsung'un sırasını, kılavuzun acil durum boşaltma bölümüyle birlikte adım adım veriyoruz.

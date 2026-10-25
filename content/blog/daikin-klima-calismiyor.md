@@ -58,6 +58,15 @@ faq:
     a: "Kesiciyi tekrar tekrar açmaya çalışma. Daikin kılavuzu güvenlik kesicisi, sigorta ya da toprak kaçağı kesicisi üniteyi sık sık devre dışı bırakıyorsa kesiciyi kapalı konuma getirip yetkili servisi aramanı istiyor. Daikin Türkiye de bu durumda elektriksel bağlantılarda sorun olabileceğini ve yetkili servise başvurulması gerektiğini yazıyor."
 images:
   coverAlt: "Oturma odasında duvardaki kapalı beyaz split klimaya doğrultulmuş uzaktan kumanda, yanında yeni piller"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun, klima hiç tepki vermiyor. Daikin'in Türkçe kullanım kılavuzu bu durumu **"Klima çalışmıyor. (ÇALIŞMA lambası yanmıyor.)"** başlığıyla ele alıyor ve dört soru soruyor: **"Kesici kapalı konuma mı getirildi veya sigorta mı patladı?"**, **"Bir güç kesintisi mi var?"**, **"Piller uzaktan kumandaya doğru şekilde takıldı mı?"**, **"Saat ayarı doğru mu?"** Daikin Türkiye'ye göre açılmamanın en yaygın nedeni kumanda pillerinin bitmesi. Bu yazıda kılavuzun ve Daikin Türkiye'nin sırasını anlatıyoruz.

@@ -65,6 +65,14 @@ faq:
     a: "ECA'nın garanti bölümü, Reset işlemini, kalorifer sistemine kombi doldurma musluğuyla su doldurmayı ve ısıtma sistemi hava almayı kullanıcı seviyesindeki işlemler arasında sayıyor. Bu işler için servis hizmeti talep edilmesi garanti kapsamı dışındaki durumlar arasında yazılı."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin dijital ekranında düşük basınç değeri; kombinin altındaki borular arasında küçük bir doldurma vanasına uzanan bir el"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 ECA kombinin ekranında **F37** görüyorsan ECA'nın kullanma kılavuzlarındaki karşılığı **"Düşük Su basıncı Hatası"**: su basınç sensörü, cihaz için sakıncalı **düşük su basıncı (0,4 bar)** algılamış. Basıncı okumak ve doldurma vanasıyla su eklemek, ECA'nın kılavuzlarının kullanıcıya bıraktığı bir iş. Bu yazı o işi Proteus Premix, Confeo Premix ve Citius Premix kılavuzlarına dayanarak adım adım anlatıyor ve nerede durman gerektiğini gösteriyor.

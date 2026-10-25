@@ -58,6 +58,13 @@ faq:
     a: "ECA'nın F40 çözümünde basıncı düşürme ya da su boşaltma adımı yok; kılavuz bunu kullanıcıya tarif etmiyor. Basınç kontrolü ve kombiyi kapatıp açmaktan sonra hata sürüyorsa kılavuzun yönlendirmesi E.C.A. yetkili servisidir."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin dijital ekranında yüksek bir basınç değeri; kombinin altındaki borular ve kapalı konumda küçük bir doldurma vanası"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 ECA kombinin ekranında **F40** görüyorsan ECA'nın kullanma kılavuzlarındaki karşılığı **"Yüksek Su Basıncı Hatası"**: su basınç sensörü, cihaz için sakıncalı **yüksek su basıncı** algılamış. Kılavuzun çözümü üç adım; ilk ikisi senin yapabileceğin kontroller. Bu yazı o adımları Proteus Premix, Confeo Premix ve Citius Premix kılavuzlarına dayanarak anlatıyor.

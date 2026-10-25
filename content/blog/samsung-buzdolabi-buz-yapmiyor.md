@@ -56,6 +56,15 @@ faq:
     a: "Samsung'un destek sayfası, görünür bir tıkanıklık yoksa buz yapıcının sıfırlanmasını öneriyor ama tarifi vermiyor; kendi modelinin kullanım kılavuzuna bakılmasını istiyor. Sıfırlamadan sonra sistemin yeniden buz üretmesi 24 saate kadar sürebilir."
 images:
   coverAlt: "Açık bir dondurucunun üst bölmesinde buz yapıcının altında duran boş, şeffaf buz sepeti ve önündeki buz kepçesi"
+  steps:
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda su giriş musluğu"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda duvar giderine giden hortum"
 ---
 
 Buzdolabının buz yapıcısı buz üretmiyor, buz sepeti boş kalıyor. Samsung Türkiye'nin destek sayfası bunun birkaç nedeni olabileceğini yazıyor ve iki örnek veriyor: **"tıkalı bir su hattı veya etkinleştirilmiş Çocuk Kilidi gibi birkaç faktör buna neden olabilir."** Bu yazıda Samsung'un destek sayfasındaki sırayı, Türkçe kullanım kılavuzlarının "Su/buz" sorun giderme tablosuyla birlikte açıyoruz. Bu rehber **otomatik buz yapıcısı olan** Samsung modelleri içindir; ekran ve düğmeler modele göre değişir.

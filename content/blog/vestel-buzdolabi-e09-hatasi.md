@@ -52,6 +52,14 @@ faq:
     a: "Vestel'in tablosundaki son cümle bu: hata hâlâ devam ediyorsa en kısa zamanda Vestel iletişim merkezini arayıp teknik destek talep et. Kılavuz bu noktadan sonra kullanıcıya başka adım vermiyor."
 images:
   coverAlt: "Kapağı açık bir no-frost buzdolabının dondurucu çekmeceleri ve kapak üzerindeki dijital sıcaklık göstergesi"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **E09** belirdi. Vestel'in no-frost buzdolabı kullanım kılavuzlarındaki kontrol uyarıları tablosunda bu kodun karşılığı: **"Dondurucunuzun sıcaklık değeri yeteri kadar soğuk değil."** Vestel sebebini de yazıyor: bu uyarı **özellikle uzun süreli elektrik kesintilerinden sonra** görünür. Tablo kullanıcıya dört adım veriyor ve bu yazıda o adımları, aynı kılavuzların ayar bölümüyle birlikte sırayla açıyoruz.

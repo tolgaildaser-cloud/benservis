@@ -46,6 +46,14 @@ faq:
     a: "Samsung'a göre ayarlanan sıcaklığın sabit kalabilmesi için kompresör zaman zaman devreye girer ve bu sırada gelen sesler normaldir. Kılavuza göre buzdolabı gereken sıcaklık seviyesine ulaştığında sesler otomatik olarak azalır; RT6300C kılavuzu da ayarlanan sıcaklığa erişildiğinde fan sesi çıkmadığını yazıyor."
 images:
   coverAlt: "Sessiz bir mutfakta duvardan bir miktar açıkta duran gri buzdolabı; üstü boş, içindeki raflarda düzenli dizilmiş kaplar"
+  steps:
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Gece mutfaktan fokurtu, çıtırtı ya da uğultu geliyor ve buzdolabının bozulduğunu düşünüyorsun. Samsung'un Türkçe kullanım kılavuzu bu konuda önce rahatlatıyor: ayarlanan sıcaklığın sabit kalabilmesi için kompresör zaman zaman devreye girer ve **"Bu sırada buzdolabınızdan gelecek sesler fonksiyon gereği normaldir."** Samsung'un kılavuzları normal seslerin listesini de veriyor. Bu yazıda önce o listeyi, sonra sesi gerçekten azaltabilecek kontrolleri açıyoruz.

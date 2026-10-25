@@ -53,6 +53,14 @@ faq:
     a: "Kılavuzlara göre uygulama üzerinden internet erişimi için gerekli erişim bilgileri kontrol ünitesindeki bir etikette bulunuyor. Kurulum ViCare uygulaması üzerinden yapılıyor ve uygulamadaki talimatlar izleniyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin yanında rafta duran ev tipi bir kablosuz modem ve kombiye doğru tutulmuş bir akıllı telefon; ekranlarda okunabilir yazı yok"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda duvar tipi kombi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda duvar tipi kombi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
 ---
 
 Viessmann kombini ViCare uygulamasına bağlamaya çalışırken ekranda **E10** gördüysen kombide bir ısıtma arızası değil, bir bağlantı sorunu var. Viessmann'ın kullanma kılavuzları bu kodu WLAN bağlantısı kurulurken çıkan hatalar arasında veriyor ve karşılığını tek cümleyle yazıyor: **„E10" Ana ağ bağlantısı kurulamadı.** Önerilen işlem de kılavuzda: **yönlendirici bağlantısını ve ağ şifresinin doğruluğunu kontrol edin.**

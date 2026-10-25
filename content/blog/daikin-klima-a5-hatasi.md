@@ -51,6 +51,14 @@ faq:
     a: "Daikin kılavuzlarının talimatı bu noktada servise yönlendiriyor: işletim lambası tekrar yanıp sönüyorsa model adını kontrol et ve yetkili servisle temasa geç. Montajcıya ya da servise kodu, ünitenin tam model adını ve mümkünse kurulum tarihini bildir."
 images:
   coverAlt: "Duvar tipi beyaz split klimanın ön paneli kaldırılmış; iki ince hava filtresinden biri çıkarılmış, elde tutuluyor"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda deterjan bölmesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışırken durdu, işletim lambası yanıp sönüyor ve kumandadan okuduğun kod **A5**. Daikin'in kullanım kılavuzlarındaki hata kodu tablosunda bu kod iç ünite grubundadır ve karşılığı şudur: **"Donma koruması veya yüksek basınç kontrolü."** İyi haber, Daikin bu kod için kullanıcıya somut bir kontrol veriyor: Ururu Sarara kılavuzundaki soru **"Hava filtresi kirli ya da tozlu mu?"**, Daikin Türkiye'nin hata kodları sayfasındaki öneri de filtre temizliği ve yeniden başlatma. Bu yazıda o kontrolü adım adım açıyoruz.

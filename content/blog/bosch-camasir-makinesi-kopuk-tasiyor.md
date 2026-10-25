@@ -44,6 +44,13 @@ faq:
     a: "Bosch'un yeni kılavuzlarında E:30 / -80 tahliye kodunun sebepleri arasında 'Deterjan dozajı çok fazla' da sayılıyor ve aynı hızlı önlem veriliyor. Kodun diğer sebepleri hortum ve pompa tarafında; ayrıntısı Bosch E:30-80 yazımızda."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin cam kapağının ardında tamburu dolduran beyaz köpük, yanında yarısı dolu bir ölçü kabı"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Cam kapağın ardı bembeyaz köpükle dolu ya da deterjan çekmecesinden köpük taşıyor. Bosch'un çamaşır makinesi kullanma kılavuzlarındaki arıza tablosunda bu durumun ayrı bir satırı var: **"Yoğun köpük oluşumu."** Bosch'un bu satırdaki tek sebebi **"Deterjan dozajı çok fazla."** Çözümü de iki parçalı: o anki yıkama için bir **hızlı önlem**, sonraki yıkamalar için **daha az deterjan.** Bu yazıda Bosch'un tarifini sırasıyla açıyoruz.

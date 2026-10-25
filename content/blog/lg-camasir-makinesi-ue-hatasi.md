@@ -44,6 +44,14 @@ faq:
     a: "Hayır. LG'nin tablosunda UE dengesizlik hatası, LE ise motor kilitli hatasıdır ve karşılığı motorda aşırı yüklenmedir. İkisinin çözüm adımları farklıdır."
 images:
   coverAlt: "Ön yüklemeli beyaz çamaşır makinesinin açık kapağından görünen tamburda tek başına duran kalın bir banyo paspası"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
 ---
 
 Yıkama bitti, sıkma başlamadı ya da yarıda kesildi; çamaşırlar ıslak ve ekranda **UE** yazıyor. LG'nin Türkçe kullanım kılavuzlarındaki hata tablosunda UE'nin başlığı **dengesizlik hatası**. LG'nin açıklaması şu: **"Cihazın, dengesizliği tespit eden ve düzelten bir sistemi vardır."** Tambur içindeki yük dengesiz olduğunda bu sistem sıkmayı durdurabilir ya da sıkma döngüsünü tamamen kesebilir. Kod bir arızadan çok bir korumayı gösterir ve çözümü çoğu zaman elindedir.

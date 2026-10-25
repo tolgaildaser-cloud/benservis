@@ -43,6 +43,11 @@ faq:
     a: "LG, su giriş filtresinin altı ayda bir, su çok sertse ya da kireç izi taşıyorsa daha sık temizlenmesini öneriyor. Filtre, makineye giden sudaki kireci ve tortuları tutar."
 images:
   coverAlt: "Çamaşır makinesinin arkasında duvardaki su musluğuna bağlı beyaz giriş hortumu; musluk kolu açık konumda"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Programı başlattın, makine birkaç dakika bekledi ve ekranda **IE** (bazı panellerde **1E**) belirdi. LG'nin Türkçe kullanım kılavuzlarındaki hata tablosunda bu kodun başlığı **giriş hatası**, karşılığı da şu: **"Bu konumda su yeterli şekilde sağlanmıyor. Su cihaza girmiyor veya yavaşça giriyor."** Yani makine, programın istediği suyu alamıyor. LG'nin tablosu dört olası sebep sayıyor ve dördü de evde kontrol edilebilir: evdeki su, musluk, giriş hortumu ve giriş filtresi.

@@ -51,6 +51,15 @@ faq:
     a: "DF bir arıza değil, cihazın kendi yürüttüğü bir işlemdir; Samsung'un talimatı bitene kadar beklemektir. Buz çözme sürerken kumandadan başka işlev seçilemez. Samsung ayrıca klimanın çalışırken devre kesiciden kapatılmamasını istiyor."
 images:
   coverAlt: "Kışın balkonda duran klima dış ünitesi; ızgaranın çevresinden ince bir buhar yükseliyor"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış günü klimayı ısıtmaya aldın; bir süre sonra iç ünite üflemeyi kesti ve ekranda **DF** yazıyor. Bu bir arıza kodu değil. Samsung Türkiye'nin destek sayfasındaki karşılığı: **"Klimanız buz çözme işlemi yaptığında görüntülenir."** Aynı sayfaya göre klima dış ısı eşanjöründeki buzu gidermek için Buz Çözme işlevini 5-12 dakika çalıştırır; Samsung'un önerdiği çözüm de tek cümle: **"Klimanız buzu çözene kadar bekleyin."**
