@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Oturma odasında ekranı boş kalmış televizyon ve önündeki sehpa"
   steps:
-    - "Televizyonun alt kenarında yanan gösterge ışığı"
-    - "Kanepenin kolunda duran televizyon kumandası"
-    - "Televizyon ekranında açık duran giriş kaynağı listesi"
-    - "Televizyonun arka panelinde anten girişine takılı koaksiyel kablo"
-    - "Televizyon ekranında açık duran bir haber kanalı"
-    - "Televizyonun yan tarafındaki modül yuvası"
-    - "Masada duran bir telefon ve yanında not kâğıdı"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Dijitsu televizyonunu açtın, ekranda yayın yok ve sinyal uyarısı görüyorsun. Bu uyarı çoğu zaman televizyon arızası değil: yanlış giriş, yanlış yayın modu ya da gevşek bir anten kablosu yeterli. Bu yazıda Dijitsu'nun kendi sitesinde ürün sayfalarına bağladığı "Ürün Kullanım Formu" kılavuzlarını temel aldık: uydu alıcılı 32D15000/32D18000 ile Google TV'li 43DG27000/50DG27000 ve 55/65DQ33000 kılavuzları. Kılavuzlar görüntü tabanlı olduğu için tuş ve giriş adlarını sayfa görüntülerinden okuduk. Bir uyarı: bu kılavuzlarda "Sinyal Yok" mesajı ayrı bir satır olarak geçmiyor; aşağıdaki adımlar kılavuzun "görüntü yok, ses yok" ve "kötü görüntü" satırlarına dayanıyor.

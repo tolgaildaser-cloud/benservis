@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin kapak üstündeki tuşlu kontrol paneli"
   steps:
-    - "Kapısı kapalı bir bulaşık makinesinin ön yüzü"
-    - "Bulaşık makinesi panelinde başlat ve iptal tuşu"
-    - "Bulaşık makinesi ekranında geri sayım gösteren haneler"
-    - "Açık bulaşık makinesinde sepetteki tabaklar ve deterjan haznesi"
-    - "Bulaşık makinesi panelinde kilit simgesi yanan bir gösterge"
-    - "Bulaşık makinesi panelinde saat simgeli erteleme tuşu"
-    - "Bulaşık makinesinin arkasında su giriş hortumu ve köşe musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Grundig bulaşık makinen programın ortasında takıldı, yanlış programı başlattın ya da ekranda bir E kodu yanıyor ve "Grundig bulaşık makinesi nasıl resetlenir" diye arıyorsun. Grundig'in kullanma kılavuzunda ayrı bir reset tuşu yok. Bu işin adı kılavuzda **"Programın Sıfırlanması / İptal Edilmesi"** ve tek bir tuşla yapılıyor: **Başla / Bekle / İptal**. Bu yazıda Grundig Türkiye'nin GPDF 11853 I ürün sayfasındaki Türkçe kullanma kılavuzunu kullandık; aynı modelin eski baskısında da metin aynı. Tuş adları ve numaraları modele göre değişebilir; kendi kılavuzunla karşılaştır.

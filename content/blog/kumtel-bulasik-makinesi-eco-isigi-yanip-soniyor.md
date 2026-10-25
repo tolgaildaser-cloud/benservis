@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Bulaşık makinesi panelinde yan yana dizilmiş küçük gösterge ışıkları"
   steps:
-    - "Bulaşık makinesi panelinde program adlarının yanındaki göstergeler"
-    - "Tezgah altında bulaşık makinesine giden su vanası"
-    - "Duvardaki prizden çekilmiş bir fiş"
-    - "Bulaşık makinesinin iç tabanında filtre bölgesi ve sünger"
-    - "Kapağı kapalı çalışan bir bulaşık makinesi"
-    - "Bulaşık makinesinin arkasına bağlı su giriş hortumu"
-    - "Bulaşık makinesi panelinde birlikte yanıp sönen göstergeler"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda uzaktan kumanda"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumtel bulaşık makinen yıkamanın ortasında durdu ve paneldeki **ECO** ışığı hızla yanıp sönüyor. "Kumtel bulaşık makinesi ECO ışığı yanıp sönüyor" sorusunun cevabı Kumtel'in kendi kılavuzunda tek kelime: **taşma**. HDW-01'in ekranı yok; arızayı program ışıklarının yanıp sönmesiyle bildiriyor ve hangi ışığın yandığı anlamı değiştiriyor. Bu yazıda Kumtel'in sitesindeki HDW-01 ürün sayfasından bağlanan Türkçe kullanıcı kılavuzunu kullandık; dört ışık kodunun hepsi aşağıdaki tabloda. Modelin farklıysa kendi kılavuzunla karşılaştır.

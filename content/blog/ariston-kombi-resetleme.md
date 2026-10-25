@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin ekranlı kumanda paneli"
   steps:
-    - "Açık bir mutfak penceresi ve önünde boş bir tezgâh"
-    - "Kombi ekranında yanıp sönen kısa bir uyarı yazısı"
-    - "Duvarda sessizce bekleyen beyaz bir kombi"
-    - "Kombinin altında borular arasında duran küçük bir doldurma musluğu"
-    - "Kombinin kumanda panelinde yuvarlak bir tuşun yakın planı"
-    - "Duvarda asılı bir saat ve altında kapalı duran bir kombi"
-    - "Kombinin altında kapatılmış bir gaz vanası ve duvardaki şalter"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ariston kombinin ekranında bir kod belirdi, kombi durdu ve RESET tuşuna basmak işe yaramadı ya da kod hemen geri geldi. Ariston'da her durma reset istemiyor: kılavuz iki tür durmayı ayırıyor ve RESET tuşu yalnız birinde işe yarıyor. Bu yazıda Ariston'un CLAS One, Genus One Net ve CLAS X CF kullanım kılavuzlarındaki sırayı topladık. Kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi. Türkiye'de satılan modelde panel ve tuş numaraları farklı olabilir; kendi kılavuzunla karşılaştır.

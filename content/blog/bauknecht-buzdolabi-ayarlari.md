@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran beyaz, alt bölmesi dondurucu olan bir buzdolabı"
   steps:
-    - "Yeni yerine konmuş, fişi henüz takılmamış bir buzdolabı"
-    - "Buzdolabındaki sıcaklık ekranlı kontrol paneli"
-    - "Soğutucu ve dondurucu değerlerini gösteren dijital buzdolabı ekranı"
-    - "Buzdolabı içinde LED ışıklı küçük bir ayar tuşu"
-    - "Buzdolabı rafına dizilmiş poşetli taze alışveriş ürünleri"
-    - "Buzdolabı iç tavanındaki fan kapağı ve sebzelik çekmecesi"
-    - "Kapıları kapalı, boşaltılmış bir buzdolabının önden görünüşü"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Bauknecht buzdolabını yeni kurdun ya da yiyecekler beklediğinden çabuk bozuluyor ve panelde neyi ayarlaman gerektiğini bilmiyorsun. Bauknecht'te iki farklı panel karşına çıkabiliyor: sıcaklık ekranı ve birkaç tuşu olan **ekranlı panel**, bir de LED ışıklarla kademe gösteren **tek tuşlu panel**. Bu yazıda ilki için B70 400'ün hızlı kılavuzunu ve Türkçe kullanıcı kılavuzunu, ikincisi için KGSF 182G IN'in hızlı kılavuzunu ve kullanım kılavuzunu okuduk. B70 400 hızlı kılavuzu ile KGSF belgeleri kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi; Türkçe alıntılar B70 400'ün Türkçe kılavuzundan birebir.

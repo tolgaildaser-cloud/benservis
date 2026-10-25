@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında küçük, beyaz gövdeli elektrikli bıçak bileyici ve yanında bir şef bıçağı"
   steps:
-    - "Kutusundan yeni çıkarılmış küçük elektrikli bıçak bileyici, düz bir tezgâhın üstünde"
-    - "Bileyicinin alt önüne takılmış ince plastik toplama tablası"
-    - "Bileyicinin üstündeki döner kılavuz kapağı ve üzerindeki simgeler, yakın plan"
-    - "Lavabo kenarında yıkanıp kurulanmış bir mutfak bıçağı"
-    - "Kılavuz yuvasına kesici kenarı aşağıda girmiş bir bıçak ağzı"
-    - "Tezgâhta kapalı duran bileyici ve yanında katlanmış bez"
-    - "Temiz kuru bezle silinen yeni bilenmiş bıçak ağzı"
+    - "Çizim: solda bıçak bileyici, sağda ambalaj kutusu"
+    - "Çizim: solda bıçak bileyici, sağda kapak"
+    - "Çizim: solda bıçak bileyici, sağda kapak"
+    - "Çizim: solda bıçak bileyici, sağda temizleme bezi"
+    - "Çizim: solda bıçak bileyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bıçak bileyici, sağda bekleme süresi için saat"
+    - "Çizim: solda bıçak bileyici, sağda iç bölme ve raflar"
 ---
 
 Kiwi'nin elektrikli bıçak bileyicisi KMS 8301, mutfak bıçaklarını ve paslanmaz çelik makasları döner bir bileme sistemiyle biler. Kullanımı kısa, ama kılavuz iki şeyi özellikle vurguluyor: doğru yuva ve doğru hareket. Bıçak ileri geri sürtülmez, kendine doğru tek yönde çekilir. Kılavuzun açık uyarısı da şu: **"Dikkat, yaralanma tehlikesi! Yeni bilenmiş bıçaklar ve makaslar çok keskindir."** Bu yazıdaki adımlar Kiwi'nin KMS 8301 kılavuzundan. Türkçe metindeki bazı bozuk çeviri cümlelerinin anlamı, aynı kılavuzun İngilizce bölümüyle karşılaştırılarak verildi.

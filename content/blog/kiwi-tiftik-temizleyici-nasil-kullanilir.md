@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Ütü masasına serilmiş bir kazak ve yanında şarjlı tiftik temizleyici"
   steps:
-    - "Masa üzerinde USB kablosuyla şarja takılmış küçük bir tiftik temizleyici"
-    - "Kazağın iç dikiş tarafında denenen tiftik temizleyici"
-    - "Düz bir yüzeye serilmiş, kırışıkları açılmış bir yün kazak"
-    - "Gövdesindeki açma/kapama düğmesi görünen tiftik temizleyici"
-    - "Kumaş üzerinde dairesel hareketlerle gezdirilen tiftik temizleyici"
-    - "Gövdeden çıkarılmış, içinde tüy topakları olan şeffaf tüy haznesi"
-    - "Başlığı çıkarılmış tiftik temizleyicinin bıçak kısmı ve yanında nemli bez"
+    - "Çizim: solda tiftik temizleyici, sağda şarj edilen batarya"
+    - "Çizim: solda tiftik temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda tiftik temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda tiftik temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda tiftik temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda tiftik temizleyici, sağda temizlik fırçası"
+    - "Çizim: solda tiftik temizleyici, sağda su ya da toz haznesi"
 ---
 
 Yün kazakta, battaniyede ya da koltuk örtüsünde biriken tüy topakları için Kiwi'nin şarjlı tiftik temizleyicisi KLR-1526 kutudan kısa bir föyle çıkıyor. Föy kısa, ama iki şeyi özellikle vurguluyor: cihaz giyilen kıyafette kullanılmaz ve bıçaklar çok keskindir. Bu yazı Kiwi'nin KLR-1526 kullanım kılavuzundan ilk şarjı, doğru kullanımı, tüy haznesinin boşaltılmasını ve bıçak temizliğini sıralıyor.

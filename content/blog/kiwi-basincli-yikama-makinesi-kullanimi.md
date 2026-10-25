@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Garaj önünde bir otomobilin kapısını basınçlı su jetiyle yıkayan koruyucu gözlüklü kişi"
   steps:
-    - "Püskürtme çubuğu ile tetikli tabancanın birleşme yeri, yakın plan"
-    - "Basınçlı yıkama makinesinin su çıkışına bağlanmış kalın hortum"
-    - "Makinenin su girişine takılmış bahçe hortumu adaptörü"
-    - "Tabancanın ucundan düzgün akan su ve düz zeminde duran makine"
-    - "Tetikli tabancayla araç yüzeyine mesafeli püskürten kişi"
-    - "Kapatılmış makine ve sarılmış yüksek basınç hortumu"
-    - "Akan su altında temizlenen küçük ağ süzgeç"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda basınçlı yıkama makinesi, sağda ilgili filtre"
 ---
 
 Kiwi Garden KGCC-590 aslında üç işi bir arada yapan bir makine: basınçlı yıkama, elektrikli süpürge ve üfleyici. Kutudan tetikli tabanca, püskürtme çubuğu, turbo ve fan nozulu, yüksek basınç hortumu ve vakum hortumu çıkıyor. Kiwi'nin Türkçe kılavuzu kurulumu ve kullanımı ayrıntılı anlatıyor, ama pompayı korumak için bir kuralı öne koyuyor: **"2 dakikadan fazla kuru çalıştırma, yüksek basınç pompasının hasar görmesine neden olur."** Bu yazıdaki adımlar KGCC-590 kılavuzundan.

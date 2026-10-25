@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ankastre fırın panelinin ortasında yuvarlak saat kadranı"
   steps:
-    - "Fırın panelinde iki döner düğme arasında yuvarlak saat"
-    - "Analog fırın saatinin kadranı ve yanındaki küçük buton"
-    - "Fırın saatinde dakika çizgileriyle işaretli kadran"
-    - "Fırın saati kadranında manuel konumu gösteren küçük bir simge"
-    - "Fırın panelinde dakika işaretli döner zaman düğmesi"
-    - "Fırın içinde ızgara teli üzerinde pişen yiyecek"
-    - "Kapağı kapalı, içi aydınlık bir fırın"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Ferre ankastre fırının saatini ayarlamak istiyorsun ya da fırın ısınmıyor ve sebebin saat olabileceğini duydun. "Ferre fırın saat ayarlama" araması iki farklı saati kapsıyor, çünkü Ferre'nin kılavuzu iki tip anlatıyor: **mekanik saat (model 1)** ve **analog saat (model 2)**. Panel şemasında üçüncü bir tip olarak **dokunmatik saat** de var, ama bu kılavuzda onun ayar adımları yok. Bu yazıda Ferre'nin kendi sitesindeki ankastre fırın ürün sayfalarından bağlanan Türkçe kullanım kılavuzunu kullandık; saat simgeleri kılavuzun şekillerinden.

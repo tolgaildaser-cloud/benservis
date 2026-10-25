@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak dolapları arasına yerleştirilmiş, kapağı kapalı ankastre bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kapağının iç kenarındaki veri plakası"
-    - "Kapağı tam kapanmış bir bulaşık makinesinin üst kenarı"
-    - "Bulaşık makinesi kapağının üst kenarındaki düğme sırası"
-    - "Lavabo altındaki gider bağlantısına uzanan tahliye hortumu"
-    - "Hafifçe aralık duran kapağından buhar çıkan bir bulaşık makinesi"
-    - "Prizden çekilmiş bir fiş ve yanında duran bulaşık makinesi"
-    - "Tezgâh üzerinde duran bir telefon ve yanında kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Panelde ışıklar hızlı hızlı yanıp sönüyor, düğmeler tepki vermiyor ya da yanlış programla başlayan Franke bulaşık makinesini durdurmak istiyorsun. Franke'nin Türkçe kullanım kılavuzlarında ayrı bir "reset" bölümü yok; sıfırlama yolları günlük kullanım, seçenekler ve sorun giderme bölümlerine dağılmış. Biz bunları iki modelin kılavuzundan topladık: FDWS 614 D8P DOS E ve FDW 614 D6P DOS E. İki model aynı işi farklı düğmelerle yapıyor; o yüzden önce hangisine benzediğini bul.

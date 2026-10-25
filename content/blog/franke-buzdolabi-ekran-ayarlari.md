@@ -36,12 +36,12 @@ faq:
 images:
   coverAlt: "Mutfakta duran, kapakları kapalı koyu renkli çok kapılı bir buzdolabı"
   steps:
-    - "Buzdolabı kapağı üzerinde aydınlanmış dokunmatik kontrol paneli"
-    - "Dokunmatik panelde kilit simgesinin bulunduğu tuş"
-    - "Buzdolabı bölmesinin sıcaklık göstergesi yanıp sönen panel"
-    - "Dondurucu bölmesinin sıcaklık göstergesinin bulunduğu panel kenarı"
-    - "Kontrol panelinde mod simgelerinin sıralandığı satır"
-    - "Işığı sönmüş, kilitli durumdaki buzdolabı kontrol paneli"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda çalışma sesi"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
 ---
 
 Franke buzdolabının ekranına dokunuyorsun ama dereceler değişmiyor, ya da bir simge yanıyor ve ne anlama geldiğini bilmiyorsun. Çoğu zaman sebep arıza değil, ekranın kendi kilidi ya da seçili mod. Bu yazı Franke'nin FMD 420 TNF BK NE E kombi buzdolabı için yayımladığı kullanım kılavuzunun Türkçe bölümüne dayanıyor. Senin modelinde tuş yerleşimi farklı olabilir; kendi kılavuzunla karşılaştır.

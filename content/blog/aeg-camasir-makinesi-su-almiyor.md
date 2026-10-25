@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Arka duvara yakın duran önden yüklemeli bir çamaşır makinesi ve yanındaki su musluğu"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki program düğmesi ve başlatma tuşu"
-    - "Duvarda açık konumda duran bir su musluğu"
-    - "Lavabo musluğundan akan ince bir su"
-    - "Çamaşır makinesinin arkasından duvara uzanan esnek giriş hortumu"
-    - "Musluktan sökülmüş giriş hortumunun ucundaki süzgeç"
-    - "Çamaşır makinesinin arka yüzündeki su girişi bağlantı noktası ve yanında bir diş fırçası"
-    - "Çamaşır makinesinin arkasına yeniden bağlanmış giriş hortumu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
 ---
 
 AEG çamaşır makinesine programı verdin ama tamburda su yok; bir süre sonra ekranda **E10** çıktı ve Başlat/Duraklat düğmesi yanıp sönmeye başladı. AEG'nin kılavuzu bu kodu "makine düzgün su almıyor" diye tanımlıyor ve çözümü tamamen musluk ile hortum tarafında arıyor. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 7000 ProSteam (L7FEE945R) kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları modele göre değişebilir.

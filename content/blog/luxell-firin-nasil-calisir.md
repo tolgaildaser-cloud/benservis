@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş ankastre fırının ön paneli"
   steps:
-    - "Boş ve temiz bir fırının iç hacmi"
-    - "Fırın ekranında yanıp sönen saat haneleri"
-    - "Fırın panelinde yukarı ve aşağı ok tuşları"
-    - "Fırın panelinde simgeli döner fonksiyon düğmesi"
-    - "Derece işaretli döner termostat düğmesi"
-    - "Fırın panelinde küçük bir çalışma lambası"
-    - "Fırının orta rafına sürülmüş bir pişirme tepsisi"
-    - "Kapalı konumdaki iki döner fırın düğmesi"
+    - "Çizim: solda ankastre fırın, sağda temizleme bezi"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Luxell ankastre fırını yeni taktırdın, düğmeleri çevirdin ama fırın ısınmıyor; ekranda saat ve **AUTO** yazısı yanıp sönüyor. "Luxell fırın nasıl çalışır" sorusunun ilk cevabı burada: Luxell'in B66 kılavuzuna göre elektrik ilk geldiğinde fırın **devre dışı**. Önce **manuel moda** geçmen, sonra **fonksiyon** ve **termostat** düğmelerini birlikte ayarlaman gerekiyor. Bu yazıda Luxell'in kendi sitesindeki B66 ankastre fırın ürün sayfasından bağlanan Türkçe kullanım kılavuzunu kullandık. Mekanik zamanlayıcılı ya da mini fırının varsa kılavuzun farklı olabilir.

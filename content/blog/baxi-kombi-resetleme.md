@@ -48,14 +48,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin kumanda paneli ve küçük ekranı"
   steps:
-    - "Açık duran bir pencere ve önünde boş, sakin bir mutfak"
-    - "Yan yana duran farklı kombi kumanda panelleri"
-    - "Duvardaki oda termostatının ekranında kısa bir yazı"
-    - "Kombinin altında borular arasında duran sarı kollu bir gaz musluğu"
-    - "Kombinin kumanda panelinde yuvarlak bir tuşun yakın planı"
-    - "Duvarda sessizce çalışan beyaz bir kombi"
-    - "Kombinin ekranında beliren kısa bir uyarı yazısı"
-    - "Tezgâhta duran katlanmış bir kullanım kılavuzu ve bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Baxi kombin bir kod gösterip durdu ve "resetlesem geçer mi" diye düşünüyorsun. Baxi'de reset tek bir tuş değil; panelin kuşağına ve kodun türüne göre değişiyor. Bu yazıda Baxi'nin iki kılavuzunu yan yana koyduk: tuşlu ECO5 BLUE ve döner düğmeli ekranlı LUNA CENTURY. İkisi de kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi. Senin modelinde tuş adları farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kapsüllü bir kahve makinesi ve kahve çıkışının altında dolan bir fincan"
   steps:
-    - "Musluk altında durulanan şeffaf bir kahve makinesi su haznesi"
-    - "Kahve çıkışının altına konmuş geniş bir kap"
-    - "Tuş ışıkları yanan kapsüllü bir kahve makinesi"
-    - "Kolu kaldırılmış kapsüllü kahve makinesine yerleştirilen kapsül"
-    - "Kahve çıkışının altında duran küçük bir espresso fincanı"
-    - "Kullanılmış kapsüllerle dolmaya başlamış kapsül haznesi"
-    - "Kahve çıkışının altında duran uzun bir kahve bardağı"
-    - "Makineden çıkarılmış damlama tepsisi ve boş kapsül haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
 ---
 
 Yeni bir Nespresso aldın ya da evde duran makineyi ilk kez kullanacaksın. Makine basit görünse de ilk kahveden önce yapılacak bir durulama, kapsülün yerine oturması ve fincan boyunun ayarı gibi küçük adımlar var. Nespresso'nun iki ailesi farklı çalışıyor: kollu, iki tuşlu **Original** makineler (Essenza Mini, Inissia ve benzerleri) ile kapsülü kendisi tanıyan tek düğmeli **Vertuo** makineler (Vertuo Pop). Bu yazı Nespresso Türkiye'nin makine yardım sayfasındaki Türkçe talimatlara dayanıyor; önce Original, sonra Vertuo farklarını anlatıyor.

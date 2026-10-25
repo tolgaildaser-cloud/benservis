@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, kapağı kapalı ankastre bir elektrikli fırın"
   steps:
-    - "Ambalajından yeni çıkarılmış boş bir fırının içi"
-    - "Kapağı kapalı, içi aydınlanmış boş bir fırın"
-    - "Fırın içindeki raf kılavuzlarına sürülen bir tel raf"
-    - "Fırın kontrol panelindeki işlev seçim düğmesi"
-    - "Fırın kontrol panelindeki sıcaklık ayar düğmesi"
-    - "Kontrol panelinde yanan küçük gösterge ışığı"
-    - "Kapatma konumuna çevrilmiş fırın düğmeleri"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Yeni bir Franke ankastre fırın aldın ya da evdeki fırının düğmeleri sana yabancı: hangi simge ne işe yarıyor, ön ısıtma bitti mi, fırın nasıl kapanıyor? Franke'nin elektrikli fırınlar için yayımladığı iki kullanıcı kılavuzunun Türkçe bölümleri bunu aynı sırayla anlatıyor: ilk ısıtma, işlev seçimi, sıcaklık, ön ısıtma ve kapatma. Bu yazı o iki kılavuza dayanıyor; modelin aşağıdaki tabloda yoksa adımları kendi kılavuzunla karşılaştır. Yazı gazlı fırınları kapsamıyor.

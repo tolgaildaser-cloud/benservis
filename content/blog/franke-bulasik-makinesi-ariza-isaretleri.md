@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin üst kenarında yanan gösterge ışıkları"
   steps:
-    - "Bulaşık makinesi kapağının iç kenarındaki veri plakası"
-    - "Lavabo altında açık konumdaki su musluğu ve giriş hortumu"
-    - "Lavabo altındaki gider borusuna bağlı tahliye hortumu"
-    - "Bulaşık makinesinin tabanından çıkarılmış silindirik filtre"
-    - "Tezgâh altından duvardaki gidere yükselen tahliye hortumu"
-    - "Gösterge ışıkları yanıp sönen bir bulaşık makinesi paneli"
-    - "Tezgâh üzerinde duran bir telefon ve yanında kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Franke bulaşık makinenin ekranında bir harf ve sayı yanıp sönüyor, yanında da bir ya da iki LED hızla yanıp sönüyor. Bu işaretlerin anlamı Franke'nin Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda yazıyor. Bu yazı FDWS 614 D8P DOS E ve FDW 614 D6P DOS E kılavuzlarına dayanıyor. İki modelde aynı arıza ekranda farklı yazılıyor; senin modelin farklıysa kendi kılavuzunla karşılaştır.

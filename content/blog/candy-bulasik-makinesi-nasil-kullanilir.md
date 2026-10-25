@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinde dolu alt ve üst sepet"
   steps:
-    - "Bulaşık makinesinin tabanında açık tuz haznesi"
-    - "Bulaşık makinesi panelinde seçilmiş kısa bir program"
-    - "Kapak iç yüzünde açık parlatıcı haznesi"
-    - "Alt sepette eğik dizilmiş tabaklar ve üst sepette ters bardaklar"
-    - "Kapak iç yüzünde açık deterjan haznesine konmuş bir tablet"
-    - "Bulaşık makinesi kontrol panelinde program seçim tuşu"
-    - "Kapağı kapalı çalışan bir bulaşık makinesinin ön yüzü"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Yeni bir Candy bulaşık makinesi aldın ya da evde var ama tuşlarının ne işe yaradığından emin değilsin. Candy'nin kullanım kılavuzu makineyi ilk kez çalıştırırken izlenecek sırayı veriyor: önce tuz ve parlatıcı, sonra yerleştirme ve deterjan, en son program. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz CF serisi bulaşık makinesi kılavuzunun **İngilizce baskısını** kullandık; alıntılar ve tuş açıklamaları bizim çevirimiz. Tuş adları panelde İngilizce yazıyor; modele göre değişebilir, kendi kılavuzunla karşılaştır.

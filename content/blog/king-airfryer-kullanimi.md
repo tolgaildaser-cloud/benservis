@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran siyah dijital bir sıcak hava fritözü ve yanında bir tabak patates kızartması"
   steps:
-    - "Lavaboda yıkanan bir fritöz sepeti ve aşındırıcı olmayan bir sünger"
-    - "Duvardan uzakta, düz bir tezgâhta duran sıcak hava fritözü"
-    - "Haznenin içine yerleştirilmiş delikli pişirme sepeti"
-    - "İçinde patates dilimleri olan çekmecenin fritöze itilmesi"
-    - "Dijital fritözün dokunmatik sıcaklık ve süre paneli"
-    - "Dışarı çekilmiş haznede sallanmış patates dilimleri"
-    - "Isıya dayanıklı bir mat üzerinde duran sıcak fritöz haznesi ve fırın eldiveni"
-    - "Kurumaya bırakılmış temiz fritöz sepeti ve haznesi"
+    - "Çizim: solda airfryer, sağda ambalaj kutusu"
+    - "Çizim: solda airfryer, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda su ya da toz haznesi"
+    - "Çizim: solda airfryer, sağda prizden çekilen fiş"
 ---
 
 King'in sıcak hava fritözleri dokunmatik panelli ve çekmeceli; menü, sıcaklık ve süre aynı ekranda dönüşümlü görünüyor. İlk kullanımda en çok takılan şey, çekmece tam oturmadığı için cihazın çalışmaması ya da ekrandaki simgelerin karışması. Bu yazı King'in **KYF27 MagicFry Plus Dijital Sıcak Hava Fritözü** ve **KYF28 Dual Airfryer** Türkçe kullanım kılavuzlarına dayanıyor. Başka bir King modelin varsa sıra aynı, ama tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

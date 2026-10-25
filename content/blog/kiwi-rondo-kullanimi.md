@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında şeffaf kaseli küçük bir rondo, kasede doğranmış soğan ve maydanoz"
   steps:
-    - "Kutudan çıkarılmış rondo parçaları tezgâhta yan yana: motor ünitesi, kapak, bıçak ve kase"
-    - "Şeffaf kasenin ortasındaki eksene oturtulmuş doğrama bıçağı"
-    - "Kesme tahtasında küçük küpler halinde doğranmış soğan ve havuç"
-    - "Kasenin kenarına oturmuş kapak, yakından"
-    - "Kapağın üstüne yerleştirilmiş motor ünitesi ve üstündeki iki hız düğmesi"
-    - "Kasede ince doğranmış sebzeler ve yanında duran rondo"
-    - "Lavaboda sabunlu suyla yıkanan şeffaf kase ve kapak"
+    - "Çizim: solda rondo, sağda prizden çekilen fiş"
+    - "Çizim: solda rondo, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda rondo, sağda iç bölme ve raflar"
+    - "Çizim: solda rondo, sağda kapak"
+    - "Çizim: solda rondo, sağda prizden çekilen fiş"
+    - "Çizim: solda rondo, sağda bekleme süresi için saat"
+    - "Çizim: solda rondo, sağda prizden çekilen fiş"
 ---
 
 "Rondo" mutfakta küçük, kaseli elektrikli doğrayıcının yerleşik adı. Kiwi'de bu iş için iki kablolu model var: adı da "Rondo" olan KC-8215 ve "Doğrayıcı" diye satılan KC-8209. İkisinin Türkçe kılavuz metni güç değeri dışında aynı, kullanım sırası da tek: bıçak, yiyecek, kapak, motor. Kılavuzun en çok gözden kaçan cümlesi şu: **"Kapak doğru konuma takılmadıkça cihaz çalışmayacaktır."** Şarjlı mikser ve doğrayıcı KC-8232 için ayrı bir bölüm aşağıda.

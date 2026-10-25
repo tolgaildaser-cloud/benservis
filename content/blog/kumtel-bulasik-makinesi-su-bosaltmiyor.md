@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Açık bulaşık makinesinin tabanında silindir biçimli filtre"
   steps:
-    - "Bulaşık makinesinin iç tabanında süngerle alınan su"
-    - "Bulaşık makinesi tabanından çıkarılan filtre parçaları"
-    - "Akan musluk suyu altında durulanan ince elekli filtre"
-    - "Bulaşık makinesinin arkasından çıkan gri tahliye hortumu"
-    - "Lavabo altındaki sifona bağlanmış tahliye hortumu"
-    - "Su biriktirmiş bir mutfak lavabosu gideri"
-    - "Bulaşık makinesi küvetinde beyaz köpük"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama Kumtel bulaşık makinenin tabanında kirli su duruyor, ya da makine boşaltma aşamasında takılıp kalıyor. "Kumtel bulaşık makinesi su boşaltmıyor" belirtisinde Kumtel'in kılavuzu önce üç yere bakmanı istiyor: **filtre**, **tahliye hortumu** ve **mutfak lavabosu**. Bu yazıda Kumtel'in sitesindeki HDW-01 ürün sayfasından bağlanan Türkçe kullanıcı kılavuzunu kullandık. Türkçe tablodaki satırın başlığı çeviri yüzünden karışık okunuyor; İngilizce baskı bunun suyun makineden **dışarı** pompalanamaması olduğunu gösteriyor. Modelin farklıysa kendi kılavuzunla karşılaştır.

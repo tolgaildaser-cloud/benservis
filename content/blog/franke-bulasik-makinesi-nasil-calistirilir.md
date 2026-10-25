@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Kapağı açık, rafları boş ankastre bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin boş üst rafı ve yan kanatları"
-    - "Alt raf çıkarılmış bulaşık makinesinin tabanındaki tuz haznesi kapağı"
-    - "Kapak iç yüzündeki parlatıcı bölmesinin kapağı"
-    - "Tabakları ve tencereleri yerleştirilmiş alt raf"
-    - "Kapak iç yüzündeki açık deterjan bölmesi"
-    - "Bulaşık makinesi kapağının üst kenarındaki program düğmesi"
-    - "Kapağı kapanmış, çalışan bir ankastre bulaşık makinesi"
-    - "Alt raftan çıkarılan temiz tabaklar ve yanında açık kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Yeni bir Franke bulaşık makinesi aldın ya da evdeki makineyi ilk kez sen kullanacaksın. Panelde birkaç düğme ve simge var, ama hangisinden başlayacağın belli değil. Bu yazı Franke'nin FDWS 614 D8P DOS E ve FDW 614 D6P DOS E modelleri için yayımladığı Türkçe kullanım kılavuzlarına ve Franke Türkiye'nin "Bulaşık Makinesi Kullanım Detayları" broşürüne dayanıyor. Senin modelinde düğme adları farklı olabilir; kendi kılavuzunla karşılaştır.

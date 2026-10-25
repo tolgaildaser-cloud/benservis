@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Masada duran beyaz küçük bir dikiş makinesi ve yanında iplik makaraları"
   steps:
-    - "Dikiş makinesinin arkasına takılı güç kablosu ve yerde duran ayak pedalı"
-    - "Dikiş makinesinin üstündeki makara pimine takılı bir iplik makarası"
-    - "İğne gözüne geçirilmek üzere tutulan ince tel bir iplik geçirici"
-    - "Kapak plakası açılmış dikiş makinesinin masura bölmesi"
-    - "Baskı ayağının arkasına doğru uzanan iki iplik ucu"
-    - "Dikiş makinesinin ön yüzündeki desen seçim kadranı"
-    - "Baskı ayağının altında dikilmekte olan pamuklu bir kumaş"
-    - "Dikiş makinesinin üst tarafındaki iplik gerginliği kadranı"
+    - "Çizim: solda dikiş makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda dikiş makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda dikiş makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikiş makinesi, sağda kapak"
+    - "Çizim: solda dikiş makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda dikiş makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikiş makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda dikiş makinesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Kiwi KSW-3072 küçük, adaptörle çalışan bir ev tipi dikiş makinesi. "Kiwi dikiş makinesi dikmiyor" ya da "ip topluyor" diye aratılan sorunların çoğu, kılavuzun en başta uyardığı iki şeyden çıkıyor: iplik yanlış takılmış ya da masura yanlış oturmuş. Kiwi bunun makineye zarar verebileceğini yazıyor. Bu yazı KSW-3072 kılavuzunun Türkçe bölümüne dayanıyor. Kılavuzun bazı cümleleri bozuk çeviri; burada anlamı korunarak sade yazıldı.

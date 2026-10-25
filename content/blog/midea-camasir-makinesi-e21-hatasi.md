@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin alt köşesindeki küçük servis kapağı"
   steps:
-    - "Prizden çekilmiş bir çamaşır makinesi fişi"
-    - "Çamaşır makinesinin arkasından çıkan gri tahliye hortumu"
-    - "Çamaşır makinesinin önünde yere konmuş sığ bir kap ve katlanmış bez"
-    - "İnce acil boşaltma hortumundan kaba akan su"
-    - "Lavabo musluğunun altında yıkanan pompa filtresi"
-    - "Kapatılmış servis kapağıyla çamaşır makinesinin alt ön yüzü"
-    - "Durulama programında çalışan çamaşır makinesinin kontrol paneli"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Midea çamaşır makinen program ortasında durdu, ekranda E21 yazıyor ve tamburda su kaldı. Bu kod, Midea'nın hata tablosunda "su boşaltma süresi aşıldı" anlamına geliyor: makine suyu beklenen sürede dışarı atamadı. Bu yazıda Midea'nın İngiltere sitesindeki MF20EW80 ve MF205W100WBA30 kullanım kılavuzlarını ve önden yüklemeli makineler için hazırlanan kullanıcı servis kılavuzunu (üçü de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) sıraya koyduk. Türkiye'de satılan modelde ayrıntılar farklı olabilir; kendi kılavuzunla karşılaştır.

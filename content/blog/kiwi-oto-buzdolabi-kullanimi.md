@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Bir aracın bagajında duran, kapağı kapalı taşınabilir bir soğutucu kutu"
   steps:
-    - "Kutudan yeni çıkarılmış, koruyucu folyosu duran taşınabilir buzdolabı"
-    - "Düz bir zeminde duran, yan havalandırma ızgaraları açık bir soğutucu kutu"
-    - "Araç konsolundaki çakmak soketine takılmış güç kablosu"
-    - "Yanında küçük gösterge ışığı yanan oto buzdolabının yan paneli"
-    - "İçine içecek şişeleri ve kaplar dizilmiş açık bir soğutucu kutu"
-    - "Dijital ekranlı kompresörlü araç buzdolabının kontrol paneli"
-    - "Nemli bezle silinen, fişi çekilmiş bir oto buzdolabının iç haznesi"
+    - "Çizim: solda oto buzdolabı, sağda ambalaj kutusu"
+    - "Çizim: solda oto buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda oto buzdolabı, sağda anten girişi ve kablo"
+    - "Çizim: solda oto buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda oto buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda oto buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda oto buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin oto buzdolabı ailesinde iki farklı cihaz var. KIM-4750, 4751, 4752, 4753 ve 4754 föylerinde soğutma tipi **termoelektrik**; bunlar aracın çakmak soketinden çalışan, soğuk tutmaya yönelik kutular. KIM-4755 ise **kompresörlü** bir araç içi taşınabilir buzdolabı; dijital paneli, ECO ve MAX modları, akü koruması ve telefon bağlantısı var. Bu yazı altı modelin Kiwi kılavuzlarına dayanıyor.

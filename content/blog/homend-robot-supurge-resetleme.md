@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Ahşap zeminde şarj istasyonunun önünde duran yuvarlak bir robot süpürge"
   steps:
-    - "Açık duran bir robot süpürge kullanım kılavuzunun teknik özellik sayfası"
-    - "Duvara dayalı şarj istasyonuna yerleştirilmiş bir robot süpürge"
-    - "Robot süpürgenin üst yüzündeki güç tuşu ve gösterge ışığı"
-    - "Göstergesi sönük, zeminde bekleyen bir robot süpürge"
-    - "Robot süpürgenin üst yüzündeki ev simgeli tuş"
-    - "Robot süpürgenin üst yüzünde yan yana duran güç ve ev simgeli tuşlar"
-    - "Şarj istasyonundaki robot süpürgenin yanında robot uygulaması açık bir akıllı telefon"
+    - "Çizim: solda robot süpürge, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda panel ekranındaki uyarı"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Homend robot süpürgen ortada durup tepki vermiyor, tuşlara bastıkça bir şey olmuyor ya da uygulama robotu çevrimdışı gösteriyor; aklına ilk gelen "resetleme". Homend'in kılavuzlarına baktığımızda iki ayrı aile çıkıyor. **Alex 10**, **Alex Laser 1291H** ve **Alex Laser Power 1289H** kılavuzlarında ayrı bir reset tuşu ya da fabrika ayarı yok; yazılı olan güç tuşuyla kapat-aç ve Wi-Fi sıfırlaması. **Alex UltiClean 1293H** kılavuzunda ise tuş tablosu var: zorla kapatma, ağ yapılandırma ve fabrika ayarlarını geri yükleme. Bu yazı Homend'in sitesindeki ürün sayfalarının bağladığı bu dört Türkçe kılavuza dayanıyor.

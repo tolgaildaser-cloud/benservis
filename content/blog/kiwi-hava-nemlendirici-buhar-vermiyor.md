@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Yatak odasında komodin üstünde ince sis çıkaran beyaz bir ultrasonik nemlendirici"
   steps:
-    - "Düz bir masa üstünde fişi çekilmiş küçük bir nemlendirici"
-    - "Kapağı açılmış nemlendirici su deposuna sürahiden dökülen su"
-    - "Nemlendiricinin önündeki sis ayar düğmesinin yakın planı"
-    - "Pencere kenarında, odanın ortasında duran bir nemlendirici"
-    - "Lavaboda yumuşak bir fırçayla temizlenen boş su deposu"
-    - "Bardak suyun yanında duran ıslak pamuk çubuklar"
-    - "Fişi çekilmiş ve yanında kullanım kılavuzu duran bir nemlendirici"
+    - "Çizim: solda hava nemlendirici, sağda prizden çekilen fiş"
+    - "Çizim: solda hava nemlendirici, sağda su ya da toz haznesi"
+    - "Çizim: solda hava nemlendirici, sağda prizden çekilen fiş"
+    - "Çizim: solda hava nemlendirici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda hava nemlendirici, sağda temizlik fırçası"
+    - "Çizim: solda hava nemlendirici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda hava nemlendirici, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ultrasonik nemlendirici buhar vermediğinde akla ilk gelen bozulma olur, ama Kiwi'nin kılavuzları önce suya, düğmeye ve kirece bakmanı istiyor. Kiwi'nin iki nemlendiricisi farklı çalışıyor: KAH-6643 iki litrelik depolu, düğmeyle sis miktarı ayarlanan bir masaüstü cihaz; KAH-6611 ise Type-C kabloyla beslenen, parça listesinde püskürtme uçları ve pamuk çubuk bulunan küçük bir model. Aşağıdaki kontroller bu iki kılavuzdan. Kendi cihazının modeli tabanındaki etikette yazıyor.

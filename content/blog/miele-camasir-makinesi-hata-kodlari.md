@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin kumanda panelinde dijital süre göstergesi"
   steps:
-    - "Çamaşır makinesi panelinde yanan küçük bir süre göstergesi"
-    - "Kapağı kapatılmış önden yüklemeli bir çamaşır makinesi"
-    - "Duvardaki musluğa bağlı esnek bir su giriş hortumu"
-    - "Çamaşır makinesinin alt önündeki açılmış pompa kapağı ve filtre"
-    - "Çamaşır makinesinin arkasında kapatılmış bir su musluğu"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi"
-    - "Açık kapağın üst kenarında görünen cihaz tip etiketi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Miele çamaşır makinen programı yarıda kesti, süre göstergesinde **F** harfiyle bir sayı dönüşümlü yanıyor ve sinyal sesi duyuluyor. Miele bu kodları kullanım kılavuzunun "Ne yapmalı, eğer ...?" bölümünde tek tek açıklıyor. Bu yazıda Miele'nin Türkiye sitesindeki WWA 120 ürün sayfasından indirdiğimiz kullanım kılavuzunu kullandık. Kod adları ve "ne yap" cümleleri o kılavuzdan. Senin modelin farklıysa kodu kendi kılavuzunla karşılaştır.

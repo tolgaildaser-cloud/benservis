@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Ankastre bir fırının kumanda panelinde dijital ekran ve iki döner düğme"
   steps:
-    - "Fırın panelinde kapalı konuma getirilmiş bir program seçim düğmesi"
-    - "Fırın ekranının altında yan yana duran dokunmatik tuşlar"
-    - "Fırın ekranında açılmış bir ayarlar listesi"
-    - "Fırın ekranında yanıp sönen saat haneleri ve yanındaki döner düğme"
-    - "Fırın ekranında ayarlanan dakika haneleri"
-    - "Fırın ekranında saat biçimi seçenekleri"
-    - "Fırın ekranında görünen güncel saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Miele fırının ekranında saat yok, yanlış gösteriyor ya da elektrik kesintisinden sonra 12:00 görünüyor ve "saati nasıl ayarlarım" diye arıyorsun. Bu yazıda Miele'nin Türkiye sitesindeki H 2465 B fırın ürün sayfasından indirdiğimiz kullanım kılavuzunu kullandık; aynı kılavuz H 2861 B ve H 2861-1 B modellerini de kapsıyor. Bu fırınlarda saat, ekranın altındaki sensörlü tuşlar ve sağdaki seçim düğmesiyle ayarlanıyor. Daha eski tuşlu ya da dokunmatik ekranlı Miele fırınlarında menü farklı olabilir; kendi kılavuzunla karşılaştır.

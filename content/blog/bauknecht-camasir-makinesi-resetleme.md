@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Banyoda duran önden yüklemeli beyaz çamaşır makinesi ve program düğmesi"
   steps:
-    - "Çamaşır makinesinin üst kısmındaki tuşlu kontrol paneli"
-    - "Kontrol panelinde başlat ve duraklat düğmesi"
-    - "Çamaşır makinesi panelinde açma kapama düğmesi"
-    - "Duvar prizinin önünde duran çıkarılmış bir fiş"
-    - "Eski tip panelde program düğmesi ve yanındaki sıfırlama tuşu"
-    - "Panelde anahtar simgesi yanan küçük bir ekran"
-    - "Kapatılmış bir su musluğu ve yanında çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizleme bezi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bauknecht çamaşır makinen yıkamanın ortasında durdu, ekranda bir F kodu belirdi ya da düğmelere bastığında hiçbir şey olmuyor. Bauknecht'te "reset" makinenin hangi kuşaktan geldiğine göre değişiyor. Yeni panelli modellerde bu işi ON/OFF düğmesi ve kısa bir elektrik molası görüyor; eski panelli modellerde ise ayrı bir Reset tuşu bulunuyor. Bu yazıda BPW 914 A hızlı başvuru kılavuzunu ve Super Eco 7415 kullanım kılavuzunu yan yana okuduk; ikisi de kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi. Panelde tuş adları İngilizce yazdığı için burada da öyle bıraktık.

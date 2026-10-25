@@ -45,14 +45,14 @@ faq:
 images:
   coverAlt: "Ters çevrilmiş bir robot süpürgenin alt yüzünde ana fırça ve yan fırçalar"
   steps:
-    - "Robot süpürgenin yan yüzünde kapalı konumdaki güç anahtarı"
-    - "Robot süpürgenin üst kapağı açık, çıkarılmış toz haznesi"
-    - "Toz haznesinden çıkarılmış ince filtre ağı ve katlanmış filtre"
-    - "Robot süpürgenin altından çıkarılmış silindir biçimli ana fırça ve dolanmış saçlar"
-    - "Robot süpürgenin altından çıkarılmış yıldız biçimli yan fırça"
-    - "Robot süpürgenin altına geri takılmış yan fırçalar"
-    - "Kuru bezle silinen robot süpürge tamponu"
-    - "Parke zeminde temizliğe başlayan robot süpürge"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ecovacs Deebot robot süpürgen eskisi kadar iyi toplamıyor, yan fırçaları ağır dönüyor ya da temizlik sırasında ses yapıp duruyor. Çoğu zaman sebep, fırçaya dolanan saç ve dolmuş bir filtre. Ecovacs'ın Türkçe kullanım kılavuzu bunun için bir **düzenli bakım tablosu** veriyor. Bu yazıda Ecovacs Türkiye destek sitesindeki DEEBOT N8 kılavuzunu, aynı yerdeki N10 ve T9 kılavuzlarını ve N8 destek sayfasının sık sorulan sorularını kullandık. Kılavuzun bakım adımları büyük ölçüde şekille anlatılıyor; şekilden okuduğumuz yerleri ayrıca belirttik. Parça adları modele göre değişebilir: N8'de "sünger filtre" ve "yüksek verimli filtre", N10'da "antibakteriyel filtre" deniyor.

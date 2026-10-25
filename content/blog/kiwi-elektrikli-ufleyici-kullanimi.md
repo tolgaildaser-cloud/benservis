@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Sonbaharda bahçe yolundaki kuru yaprakları elektrikli üfleyiciyle kenara toplayan kişi"
   steps:
-    - "Masa üstünde yan yana duran elektrikli üfleyici gövdesi, meme ve toz torbası"
-    - "Üfleyicinin püskürtme portuna çevrilerek takılan meme, yakın plan"
-    - "Motor gövdesine takılı uzun üfleme ve emme boruları, yanında omuz askısı"
-    - "Uzatma kablosunun halka yapılarak gövdedeki kancadan geçirilmesi"
-    - "Üfleyici gövdesindeki hız ayar düğmesi, yakın plan"
-    - "Yere yakın tutulan üfleme borusunun yaprakları kenara itmesi"
-    - "Yumuşak fırçayla temizlenen havalandırma delikleri"
+    - "Çizim: solda elektrikli üfleyici, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli üfleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda elektrikli üfleyici, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda elektrikli üfleyici, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli üfleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda elektrikli üfleyici, sağda bekleme süresi için saat"
+    - "Çizim: solda elektrikli üfleyici, sağda prizden çekilen fiş"
 ---
 
 Kiwi Garden'ın elektrikli üfleyicileri iki ailede geliyor. KGBL-906, 908 ve 909 elle tutulan kısa gövdeli modeller; meme ve toz torbasıyla hem üfler hem toz toplar. KGBL-920 ise uzun boruları, ek kulpu, omuz askısı ve hız ayarı olan büyük model. Kılavuzların ikisi de aynı sınırı koyuyor: **"Emme girişini ve çıkışını asla engellemeyin."** Bu yazıdaki montaj, kullanım ve temizlik adımları dört modelin Türkçe kılavuzlarından; KGBL-906, 908 ve 909'un Türkçe metni sayfa başlığı dışında aynı.

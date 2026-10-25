@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir kurutma makinesinin kapak açıklığındaki hav filtresi"
   steps:
-    - "Kurutma makinesinin kontrol panelindeki ekran"
-    - "Kurutma makinesinin kapak açıklığından yukarı çekilmiş plastik hav filtresi"
-    - "Açılmış bir hav filtresinin iç yüzünde biriken gri hav tabakası"
-    - "Hav filtresinin üzerinde gezdirilen bir süpürge başlığı"
-    - "Kurutma makinesi kapak açıklığındaki boş filtre yuvası ve çevresindeki conta"
-    - "Kurutma makinesinden çekilmiş su haznesinden leğene boşalan su"
-    - "Açık kondenser bölmesinin yanında duran nemli bir bez ve koruyucu eldiven"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
 ---
 
 AEG kurutma makinesi her programın sonunda ekranda filtre simgesini gösteriyor. Bu bir arıza uyarısı değil; AEG her kurutmadan sonra hav filtresinin temizlenmesini istiyor. Kılavuza göre tıkalı filtre programı uzatıyor ve enerji tüketimini artırıyor. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 8000 AbsoluteCare (T8DEE845R) kurutma makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Filtrenin ve kondenserin yeri modele göre değişebilir; kendi kılavuzunla karşılaştır.

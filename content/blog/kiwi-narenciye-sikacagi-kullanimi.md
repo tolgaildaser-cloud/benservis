@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında beyaz gövdeli küçük bir narenciye sıkacağı ve yanında ikiye kesilmiş portakallar"
   steps:
-    - "Kutusundan yeni çıkarılmış bir narenciye sıkacağı ve nemli bir bezle silinen konisi"
-    - "Düz bir mutfak tezgâhında duran, fişi takılmamış narenciye sıkacağı"
-    - "Motor gövdesine yerleştirilmiş filtre ve üzerinde duran sivri koni"
-    - "Koniye bastırılmış yarım bir portakal"
-    - "Konideki meyvenin kabuk kısmı ve gövdede biriken taze meyve suyu"
-    - "Tezgâhta dinlenen narenciye sıkacağı ve yanında dolu bir bardak meyve suyu"
-    - "Lavaboda sabunlu suyla yıkanan koni ve filtre"
+    - "Çizim: solda narenciye presi, sağda ambalaj kutusu"
+    - "Çizim: solda narenciye presi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda narenciye presi, sağda ilgili filtre"
+    - "Çizim: solda narenciye presi, sağda prizden çekilen fiş"
+    - "Çizim: solda narenciye presi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda narenciye presi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda narenciye presi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin **KCJ-1803** otomatik narenciye sıkacağı küçük bir cihaz: motor gövdesi, mil, filtre ve meyve sıkacağı konisinden oluşuyor. Tuşu yok, meyveyi koniye bastırınca çalışıyor; bu yüzden ilk kullanımda "çalışmıyor" sanılabiliyor. Bu yazı Kiwi'nin KCJ-1803 için yayımladığı Türkçe kullanım kılavuzuna dayanıyor. Kılavuz kısa; burada onu kullanım sırasına koyduk ve güvenlik maddelerinden işine yarayanları ekledik.

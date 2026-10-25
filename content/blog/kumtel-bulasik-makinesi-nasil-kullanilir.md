@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinde dolu alt ve üst sepet"
   steps:
-    - "Bulaşık makinesi panelinde program seçme tuşu"
-    - "Bulaşık makinesi tabanındaki tuz haznesinin kapağı"
-    - "Alt sepette düzenli dizilmiş tabaklar ve tencere"
-    - "Bulaşık makinesi kapağındaki parlatıcı haznesi"
-    - "Deterjan bölmesine konan toz deterjan"
-    - "Bulaşık makinesi panelinde program göstergeleri"
-    - "Kapağı kapalı bulaşık makinesinin kontrol paneli"
-    - "Program bitince hafif aralık bırakılmış bulaşık makinesi kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Kumtel bulaşık makineni yeni aldın, kurulum bitti ve "Kumtel bulaşık makinesi nasıl kullanılır" diye bakıyorsun. Kumtel'in HDW-01 kılavuzu ilk kullanımdan önce dört iş istiyor: **su yumuşatıcıyı ayarla, tuzu yükle, sepetleri yükle, deterjan çekmecesini doldur**. Sonrası beş tuşlu bir panel: **Güç, Gecikme, Program, Yarım yük, Başlat/Duraklat**. Bu yazıda Kumtel'in sitesindeki HDW-01 ürün sayfasından bağlanan Türkçe kullanıcı kılavuzunu kullandık. Modelin farklıysa kendi kılavuzunla karşılaştır.

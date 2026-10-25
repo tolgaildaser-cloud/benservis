@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve altındaki boru bağlantıları"
   steps:
-    - "Kombi ön panelinde kapalı durumu gösteren ekran"
-    - "Kombi panelinde çalışma modunu değiştiren tuş"
-    - "Kombi ekranında yanıp sönen sıcak su sıcaklığı"
-    - "Kombinin altındaki doldurma musluğu ve basınç göstergesi"
-    - "Kombi ekranında görünen arıza kodu"
-    - "Kombi ekranında yanan konfor yazısı"
-    - "Lavabo bataryasından akan buharlı sıcak su"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda su ya da toz haznesi"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ariston kombin çalışıyor gibi görünüyor ama musluktan sıcak su gelmiyor ya da su bir türlü ısınmıyor. Kombi bozulmuş olmayabilir. Çoğu zaman sebep çalışma modu, sıcak su ayarı, tesisat basıncı ya da ekranda bekleyen bir kod. Bu yazı Ariston'un İtalya sitesinde yayımlanan CLAS One ve GENUS One Net kullanım kılavuzlarına dayanıyor (kılavuzun İtalyanca baskısı, alıntılar Türkçeye çevrildi). Türkiye'de satılan modelde tuş yerleri ve ekran yazıları farklı olabilir; kendi kılavuzunla karşılaştır.

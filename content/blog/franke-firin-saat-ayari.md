@@ -37,12 +37,12 @@ faq:
 images:
   coverAlt: "Ankastre bir fırının kontrol panelindeki dijital saat ekranı"
   steps:
-    - "Fırın ekranında yanıp sönen saat göstergesi"
-    - "Fırın panelinde dijital ekranın altındaki küçük yuvarlak tuşlar"
-    - "Fırın panelindeki saat simgeli orta tuş"
-    - "Fırın ekranında beliren kısa bir yazı"
-    - "Işığı sönük bir mutfakta yeniden yanan fırın ekranı"
-    - "Fırın panelindeki ibreli analog saat düğmesi"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Franke fırınının ekranında AUTO ve 0.00 yanıp sönüyor, ya da elektrik kesintisinden sonra saat yanlış kalmış. Bazen de sorun saat değil, bir türlü susmayan alarm. Franke'nin iki elektrikli fırın kılavuzunun Türkçe bölümleri saat ayarını iki ayrı panel için anlatıyor: eksi, saat ve artı tuşlu dijital ekran ile ibreli analog zamanlayıcı. Bu yazı o iki kılavuza dayanıyor. Fırını genel olarak çalıştırma adımları [Franke fırın kullanımı](/blog/franke-firin-kullanimi/) yazısında.

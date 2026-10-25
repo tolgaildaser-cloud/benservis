@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Oturma odasında, pencere kenarında duran beyaz ayaklı bir vantilatör"
   steps:
-    - "Ahşap zeminde açılmış bir karton kutu ve yanında vantilatör parçaları"
-    - "Vantilatör sütununun yuvarlak tabana oturtulmuş hâli"
-    - "Uzatılmış vantilatör sütunu ve üstündeki ayar düğmesi"
-    - "Sütunun üstüne yerleştirilmiş motor gövdesi ve arkasına takılmış tel ızgara"
-    - "Motor miline geçirilmiş şeffaf pervane kanatları"
-    - "Ön ve arka ızgarası birleştirilmiş vantilatör başlığı"
-    - "Kurulumu bitmiş, düz zeminde çalışan ayaklı bir vantilatör"
+    - "Çizim: solda vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda vantilatör, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda vantilatör, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin ayaklı vantilatörleri kutudan parça parça çıkıyor: taban, sütun, motor gövdesi, iki ızgara ve pervane. Kurulumun sırası kılavuzda kısa bir paragraf; pervanenin somunu ve ızgaraların birleşimi ise genelde en çok takılınan yer. Bu yazı Kiwi'nin KFAN-7417L, KFAN-7421 ve KFAN-7426 standlı vantilatör kılavuzlarıyla KFAN-7691 ve KFAN-7692 soğuk buharlı vantilatör kılavuzlarına dayanıyor. Parça adları modele göre biraz farklı; kutudaki şekle bakarak ilerle.

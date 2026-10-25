@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Oturma odasında koltuk yanında duran ince uzun kule tipi bir vantilatör"
   steps:
-    - "Ahşap zeminde açılmış bir karton kutu ve yanında yatırılmış kule vantilatör"
-    - "Yan yana getirilmiş, yuvarlak delikleri hizalanmış iki yarım taban parçası"
-    - "Kule vantilatörün altına oturtulmuş taban ve vidalanmış plastik somun"
-    - "Düz zeminde, priz yakınında dik duran kule vantilatör"
-    - "Kule vantilatörün üstündeki döner kadran ve çevresindeki kademe işaretleri"
-    - "Gövdesi sağa sola dönen kule vantilatörün önden görünüşü"
-    - "Fişi çekilmiş, kablosu sarılmış ve yanında katlanmış bir bez duran kule vantilatör"
+    - "Çizim: solda kule tipi vantilatör, sağda ambalaj kutusu"
+    - "Çizim: solda kule tipi vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kule tipi vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kule tipi vantilatör, sağda prizden çekilen fiş"
+    - "Çizim: solda kule tipi vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kule tipi vantilatör, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kule tipi vantilatör, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin kule tipi vantilatörleri ayaklı modellere göre daha az yer kaplıyor ve kutudan neredeyse hazır çıkıyor; kurulacak tek parça taban. Hız ve salınım ise modele göre üç farklı yolla seçiliyor: tek kadran, iki düğme ya da hız ve salınım tuşları. Bu yazı Kiwi'nin KFAN-7429, KFAN-7670, KFAN-7690 ve KFAN-7693 kule vantilatör kılavuzlarına dayanıyor. Dört föyün Türkçe bölümü kısa; burada aynı sırayla, modeller arasındaki farkı gösterecek biçimde toplandı.

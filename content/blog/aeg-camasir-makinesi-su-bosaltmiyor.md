@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Kapağı kapalı, içinde su görünen önden yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin program düğmesi ve seçenek tuşlarının bulunduğu panel"
-    - "Lavabo altında gider borusuna bağlanmış gri bir tahliye hortumu"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi"
-    - "Çamaşır makinesinin alt ön köşesinde açılmış pompa kapağı ve önünde alçak bir kap"
-    - "Pompa filtresinden alçak bir kaba akan su"
-    - "Musluk altında yıkanan silindir biçimli bir pompa filtresi"
-    - "Çamaşır makinesinin açık deterjan çekmecesi ve yanında bir ölçü kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 AEG çamaşır makinesi programın sonunda durdu, kazanda su var ve ekranda **E20** görünüyor. Ya da kod yok ama makine sıkmaya geçmiyor. AEG'nin kılavuzu E20'yi "makine suyu boşaltmıyor" diye tanımlıyor; çözümün büyük kısmı lavabo altındaki gider, tahliye hortumu ve makinenin önündeki pompa filtresinde. Bu yazıda AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz 7000 ProSteam (L7FEE945R) kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz.

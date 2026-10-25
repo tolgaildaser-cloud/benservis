@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Banyoda duran beyaz önden yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki dijital ekran"
-    - "Çamaşır makinesinin kontrol panelindeki fonksiyon düğmeleri"
-    - "Çamaşır makinesinin kontrol panelindeki başlat düğmesi"
-    - "Çamaşır makinesinin kontrol panelindeki program seçim düğmesi"
-    - "Kapağı kapalı ve çalışmaya hazır bir çamaşır makinesi"
-    - "Duvar prizinden çekilmiş bir çamaşır makinesi fişi"
-    - "Çamaşır makinesinin kapalı kapağı ve tambur camı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Dijitsu çamaşır makinen programın ortasında takıldı, ekranda bir kod çıktı ya da düğmeler tepki vermiyor ve "resetleme" arıyorsun. Bu yazıda Dijitsu'nun kendi sitesinde DCM 8000 ürün sayfasına bağladığı kullanım kılavuzunu temel aldık. Kılavuz görüntü tabanlı olduğu için kodları ve düğme adlarını sayfa görüntülerinden okuduk. Diğer DCM modellerinin ürün sayfalarında kullanım formu bulunmadığından anlatım DCM 8000'e göre; başka modelde düğme adları farklı olabilir.

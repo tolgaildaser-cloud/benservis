@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında kapağı açık, tamburunda katlanmamış havlular duran beyaz bir kurutma makinesi"
   steps:
-    - "Bir kurutma makinesinin boş tamburunun nemli bir bezle silinmesi"
-    - "Fermuarı kapatılmış bir ceket ve düğmeleri iliklenmiş bir nevresim yığını"
-    - "Kurutma makinesinin açık kapağından içeri yerleştirilmiş tek tek silkelenmiş çamaşırlar"
-    - "Kurutma makinesinin üst panelindeki program düğmesi ve ekran"
-    - "Kurutma makinesi panelindeki seçenek tuşları dizisi"
-    - "Çalışmaya başlamış, kapağı kapalı bir kurutma makinesi"
-    - "Kapağı açık kurutma makinesinden çıkarılmış kuru çamaşırlarla dolu bir sepet"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda çalışma sesi"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
 ---
 
 AEG kurutma makinesini yeni aldıysan ya da her seferinde aynı programa basıp çamaşırın bazen nemli bazen fazla kuru çıktığını görüyorsan, kılavuzun kullanım bölümünü bir kez sıraya koymak işe yarar. Bu yazı AEG'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz **T8DEE845R** kurutma makinesinin kullanım kılavuzuna dayanıyor. Kılavuzun İngilizce baskısını kullandık; alıntılar bizim çevirimiz, program adları kılavuzdaki gibi. Senin modelinde tuşlar ve programlar farklı olabilir, kendi kılavuzunla karşılaştır.
