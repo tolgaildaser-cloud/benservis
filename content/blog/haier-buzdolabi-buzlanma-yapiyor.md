@@ -42,6 +42,13 @@ faq:
     a: "Haier yiyecekleri dondurucuya koymadan önce paketlemeni, torbaların birbirine yapışmaması için ambalajın dışının kuru olmasını ve ambalajın hava geçirmez olmasını öneriyor. Sıcak yiyecekleri önce oda sıcaklığına soğutmanı ve dondurucuya aşırı miktarda taze yiyecek yüklememeni de istiyor."
 images:
   coverAlt: "Çekmeceli bir dondurucu bölmesinin iç duvarında ve çekmece kenarında biriken beyaz buz tabakası"
+  steps:
+    - "Çizim: solda buzdolabı, sağda ambalaj kutusu"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Dondurucu çekmecesi zor kapanıyor, iç duvarlar ve paketler kalın bir karla kaplanmış. Haier'in HCR5919 ailesini de kapsayan çok kapılı buzdolabı kılavuzunda bu durumun satırı **"Dondurucu bölmesinde kuvvetli buz ve buzlanma."** Haier bu satırda beş sebep gösteriyor ve hepsi içeriye nemli havanın girmesiyle ilgili: **ürünler yeterince paketlenmemiş**, **cihazın bir kapısı/çekmecesi sıkıca kapatılmamış**, **kapı/çekmece çok sık veya çok uzun süre açıldı**, **kapı/çekmece contası kirli, aşınmış, çatlamış veya uyumsuz** ve **içerideki bir şey kapının/çekmecenin düzgün kapanmasını engelliyor.**

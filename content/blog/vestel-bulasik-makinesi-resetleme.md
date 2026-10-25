@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Modern bir mutfakta ankastre, kapağı kapalı bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin dijital ekranının ve yanındaki küçük tuşların yakın planı"
-    - "Bulaşık makinesi panelinde yuvarlak başlat ve beklet tuşu"
-    - "Kapağı kapalı, sessizce su tahliye eden bir bulaşık makinesi"
-    - "Bulaşık makinesi panelinde sıralı program seçim tuşları"
-    - "Bulaşık makinesinin tabanında çıkarılmış silindir biçimli filtre"
-    - "Lavabo altında kapalı konumda bir su musluğu"
-    - "Bulaşık makinesinin yanında tezgâhta katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, ekranda bir F kodu var ya da yanlış programı başlattın; Vestel bulaşık makinesini "resetlemek" istiyorsun. Vestel'in kılavuzlarında **Reset adında bir tuş yok.** Karşılığı **programın iptali** ve yolu iki kılavuzda da aynı: **Başlat / Beklet tuşunu 3 saniye basılı tutmak.** Bu yazıda Vestel'in BM 10502 X GI WIFI ve BM-401 kullanma kılavuzlarından sıfırlamanın sırasını, ne kadar sürdüğünü, onu engelleyen çocuk kilidini ve F kodlarıyla ilişkisini çıkardık. Tuş adları modele göre değişir; kendi kılavuzunla karşılaştır.

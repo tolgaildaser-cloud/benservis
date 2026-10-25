@@ -50,6 +50,14 @@ faq:
     a: "TCL kılavuzu hata kodlarının karşılığında sensör, fan motoru, soğutucu akışkan sistemi ve elektronik kart gibi arızaları sıralıyor. Bunlar kullanıcının giderebileceği arızalar değil; kılavuz onarımın yalnızca üreticinin yetkili servis merkezince yapılmasını istiyor."
 images:
   coverAlt: "Sabah ışığında bir yatak odasında komodinin üzerinde arka pil kapağı açılmış beyaz klima kumandası, duvarda ekranı kapalı split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
 ---
 
 Kumandaya basıyorsun, ama TCL klimadan ne bip sesi var ne hava. TCL'nin Türkçe kullanma kılavuzu bu durumu "Sorun Giderme" tablosunda iki ayrı satırla ele alıyor: **"Cihaz çalışmıyor"** ve **"Cihaz komutlara yanıt vermiyor"**. Tablo çözüm yazmıyor, olası nedenleri sıralıyor; ama bu nedenlerin bir kısmı evde birkaç dakikada kontrol edilebilir: **"Elektrik kesintisi / fiş çekilidir."**, **"ZAMANLAYICI AÇIK işlevi aktiftir."**, **"Uzaktan kumanda pillerinin değiştirilmesi gerekir."** Kılavuzun başka bölümleri de 3 dakikalık korumayı, pil değişimini ve ekran ışığını anlatıyor. Aşağıdaki sıra bu bölümlerden.

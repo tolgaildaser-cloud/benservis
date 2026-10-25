@@ -51,6 +51,14 @@ faq:
     a: "Purevac Ultra kılavuzunun istasyon tablosuna göre emiş zayıfsa toz torbası tamamen dolmuş olabilir; çözüm toz torbasını temizlemek ya da değiştirmek. Kılavuz torbayı yumuşak bir fırçayla temizlemeyi, çok kirlendiğinde yedek torbayla değiştirmeyi söylüyor."
 images:
   coverAlt: "Teleskopik borusu çıkarılmış dikey şarjlı süpürge, yanında boşaltılmış şeffaf toz haznesi ve filtre"
+  steps:
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
 ---
 
 Süpürge çalışıyor, motorun sesi geliyor ama halıdaki kırıntılar yerinde duruyor. Fakir'in Purevac Ultra kılavuzunun sorun giderme tablosunda bu belirti **"Emiş zayıf"**, Inovator 6158 kılavuzunda **"Emiş gücü azalması"** diye geçiyor. İki tablonun sıraladığı nedenlerin tamamı hava yolunun bir yerinde biriken toz ve çöp.

@@ -36,13 +36,13 @@ faq:
 images:
   coverAlt: "Paslanmaz çelik iki kapılı buzdolabının kapısındaki dokunmatik kontrol paneli yakın planda; soldaki dondurucu sıcaklık göstergesinde −18, sağdaki soğutucu göstergesinde 4 derece okunuyor"
   steps:
-    - "Buzdolabı kapısındaki panelde tatil modu göstergesi"
-    - "Kapısı kapatılmış alttan donduruculu buzdolabı"
-    - "Dondurucu çekmecesinde düzenli dizilmiş dondurulmuş gıda paketleri"
-    - "Buzdolabı panelinde kilit simgesi yakın plan"
-    - "İç aydınlatması yanan, kapısı açık buzdolabı"
-    - "Fişi prizden çekilmiş buzdolabının arka alt köşesi"
-    - "Buzdolabı panelinde uyarı gösteren sıcaklık ekranı"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bosch buzdolabının panelinde **super**, **eco** ya da **holiday** yanıyor, bir yerde **alarm** yazısı yanıp sönüyor ya da ekranda bir **kilit** simgesi var. Bu yazıdaki karşılıkların tamamı Bosch'un üç alttan donduruculu No Frost modeli için yayımladığı Türkçe kullanım kılavuzlarından alındı: **Serie 4 KGN56VWF0N**, **Serie 6 KGN76CIE0N** ve **Serie 6 KGN86AID2N**. Başka bir Bosch modelinde panel düzeni ve tuş adları farklı olabilir.

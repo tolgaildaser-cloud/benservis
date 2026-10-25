@@ -49,6 +49,14 @@ faq:
     a: "Beko ısı yalıtımının arasına sızacak kadar çok su kullanılmamasını istiyor; aksi hâlde hoş olmayan kokular çıkar. Islak bir süngerle silip yumuşak bir bezle kurulamak yeterli."
 images:
   coverAlt: "Kapağı açık bırakılmış boş sandık tipi derin dondurucunun iç duvarlarında eriyen beyaz buz tabakası"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Sandık dondurucunun iç duvarlarındaki beyaz tabaka kalınlaştı, sepetler zor oturuyor, kapak eskisi kadar rahat kapanmıyor. Beko'nun BK serisi sandık tipi derin dondurucu kılavuzu iki şey söylüyor: **"Buz birikmesi normal bir durumdur."** ama tabloda **"Dondurucu modunda aşırı buz birikimi meydana gelmiştir."** satırı da var ve nedeni **"Kapı doğru kapatılmamıştır."** Yani önce kapağa bak, sonra buzu elle çöz.

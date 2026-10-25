@@ -45,11 +45,11 @@ faq:
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinin boş sepetleri ve iç gövdesi"
   steps:
-    - "Bulaşık makinesinin kapağındaki kontrol panelinde kısa bir kod gösteren küçük ekran"
-    - "Kapağı kapalı ve paneli sönük duran ankastre bir bulaşık makinesi"
-    - "Akan musluk suyu altında durulanan silindir biçimli bir bulaşık makinesi filtresi"
-    - "Bulaşık makinesinin tabanında duran plastik bir püskürtücü kol"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve yanında bir not kâğıdı"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşık makinesi program sırasında durdu ve ekranda **3C** yazıyor. Samsung'un DW8500AM kılavuzunda bu kodun adı **yıkama pompası kontrolü**, açıklaması tek cümle: yıkama pompası anormal çalışıyor. DW9000H kılavuzunda aynı kod **pompa işlemi kontrolü** adıyla geçiyor ve kullanıcıya bir işlevsel kontrol tarif ediyor. Bu yazıda o kontrolü, kılavuzun önerdiği bakımı ve servisi çağırma sınırını sırayla topladık. Senin modelinde kod tablosu farklı olabilir; kendi kılavuzunla karşılaştır.

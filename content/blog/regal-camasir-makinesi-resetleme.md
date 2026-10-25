@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Küçük bir çamaşır odasında beyaz, ön yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin dijital göstergesi ve altındaki küçük tuş sırası"
-    - "Çamaşır makinesinin büyük, yuvarlak program düğmesinin yakın planı"
-    - "Cam kapağın ardında tamburun dibinde duran bir miktar su"
-    - "Çamaşır makinesi panelinde başlat ve beklet tuşunun yakın planı"
-    - "Duvardaki bir prize takılı beyaz bir elektrik fişi"
-    - "Kapalı ve sıkıca oturmuş cam yükleme kapağı"
-    - "Çamaşır makinesinin üstünde katlanmış duran bir kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program takıldı ya da yanlış programı başlattın; Regal çamaşır makinesini "resetlemek" istiyorsun. Regal'in kılavuzlarında **Reset adında bir tuş yok.** Karşılığı kılavuzun **"Çalışmakta olan bir programı iptal etmek istiyorsanız"** bölümü ve yolu çok basit: **program düğmesi İPTAL konumuna.** Bu yazıda Regal'in CMI 100122 ve CMI 71101 kullanma kılavuzlarından sıfırlamanın sırasını, onu engelleyen çocuk kilidini ve iptalin işe yaramadığı durumları çıkardık. Tuş numaraları modele göre değişiyor; kendi kılavuzuna bak.

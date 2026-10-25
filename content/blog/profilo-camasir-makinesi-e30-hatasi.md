@@ -50,14 +50,14 @@ faq:
 images:
   coverAlt: "Banyoda duvar önünde duran beyaz önden yüklemeli bir çamaşır makinesinin kumanda paneli"
   steps:
-    - "Çamaşır makinesinin ekranında harf ve tirelerden oluşan bir hata kodu"
-    - "Çamaşır makinesinin arkasındaki duvarda kolu açık konumda bir su musluğu"
-    - "Makinenin arkasından musluğa uzanan kıvrımsız beyaz bir su giriş hortumu"
-    - "Su giriş hortumunun ucunda görünen küçük ağ biçimli bir süzgeç"
-    - "Lavaboda tamamen açılmış musluktan güçlü akan su"
-    - "Kapalı konuma çevrilmiş bir musluk ve yanında sessiz duran çamaşır makinesi"
-    - "Kapağı kapalı, ekranı yanan bir çamaşır makinesi ve yanında bekleyen boş bir sepet"
-    - "Çamaşır makinesi kapağının iç kenarındaki tip etiketi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda E:30 yanıyor ama arkasında bir ek daha var: -10, -20 ya da -80. Profilo'nun CGA242X3TR ve CGK264Z0TR kılavuzlarında bu üç kod üç ayrı satır ve her biri başka bir şey söylüyor. **E:30 -10** su girişiyle ilgilidir, **E:30 -20** kritik fonksiyon arızasıdır, **E:30 -80** ise tahliye satırıdır. Bu yazıda ilk ikisinin kılavuzdaki sırasını adım adım topladık; tahliye tarafı için ayrı bir yazımız var. Senin modelinde tuş adları farklı olabilir, kendi kılavuzunla karşılaştır.

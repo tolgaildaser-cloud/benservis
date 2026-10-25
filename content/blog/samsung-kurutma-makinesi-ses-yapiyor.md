@@ -48,6 +48,13 @@ faq:
     a: "Samsung'un kurutma kılavuzu cepleri boşaltmanı istiyor: giysilerin üzerindeki bozuk para, iğne ve toka gibi metal nesneler kazana ve diğer çamaşırlara zarar verebilir. Kurutmadan önce eşyalara yapışmış metal nesneleri çıkar, fermuarları ve mandal kancalarını çek."
 images:
   coverAlt: "Kapağı açık kurutma makinesinin kazanından avuç içine alınmış birkaç bozuk para ve bir düğme; yanında çıkarılmış tiftik filtresi"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kurutma makinesi çalışırken tıkırtı, takırtı ya da alışılmadık bir gürültü çıkarıyor. Samsung'un ısı pompalı kurutucular için Türkçe kılavuzunda bu durumun satırı **"Kurutucu çok gürültülü."** Satırın ilk maddesi en sık rastlanan sebebi gösteriyor: **"Bozuk paraları, gevşek düğmeleri, çivileri ve diğer nesneleri arayın ve hemen çıkarın."** DV5000T kılavuzu listeye **çakmağı** da ekliyor. Satırın son maddesi ise her sesin arıza olmadığını hatırlatıyor. Aşağıdaki sıra bu satırı ve kılavuzların kurulum ile bakım bölümlerini izliyor. Kaynak DV90T5240AW ve DV5000T (DV90TA040AE) kılavuzları; parça adları modele göre değişebilir.

@@ -46,14 +46,14 @@ faq:
 images:
   coverAlt: "Çamaşır odasında beyaz, önden yüklemeli bir kurutma makinesi ve yanında katlanmış havlular"
   steps:
-    - "Kurutma makinesinin kontrol panelindeki küçük dijital gösterge ve yanındaki simgeler"
-    - "Kurutma makinesinin üst kısmından dışarı çekilmiş plastik su tankı çekmecesi"
-    - "Kurutma makinesi kapağının iç çerçevesinden çıkarılmış hav filtresi ve üzerindeki ince tüy tabakası"
-    - "Kurutma makinesinin kapak yuvasına yeniden yerleştirilen temiz bir hav filtresi"
-    - "Kurutma makinesinin alt ön kısmında açılmış tekmelik kapağı ve arkasındaki eşanjör kapağı"
-    - "Boşaltılıp yerine takılmayı bekleyen boş bir su tankı"
-    - "Duvardaki bir prize takılı kurutma makinesi fişi"
-    - "Kurutma makinesinin kapak içindeki ürün etiketi ve yanında bir kullanım kılavuzu"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda kurutma makinesi, sağda not defteri ve kalem"
 ---
 
 Vestel kurutma makinesinin ekranında bir **E kodu** belirdi ya da bir uyarı sembolü yanıp sönüyor. Vestel'in kılavuzu bunların iki ayrı dil olduğunu söylüyor: **su tankı, filtre ve eşanjör sembolleri** senin yapacağın bir bakımı hatırlatır, **E ile başlayan kodlar** ise çoğunlukla servis işidir. Bu yazıda Vestel'in KM 96201 ve KM 10WS1101 kurutma makinesi kullanım kılavuzlarındaki hata kodu tablosunu ve sorun giderme satırlarını topladık. Kod listesi ve tuş adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

@@ -51,6 +51,14 @@ faq:
     a: "DemirDöküm'ün A7 inverter kılavuzuna göre E07, sistemdeki iç ünitelerin aynı işletme modunda olmadığını gösterir. Çözüm olarak tüm iç üniteleri soğutmaya ya da tüm iç üniteleri ısıtmaya ayarlaman isteniyor."
 images:
   coverAlt: "Akşam saatinde bir oturma odasında sehpanın üzerinde pil bölmesi açık beyaz bir klima kumandası ve yanında iki ince kalem pil, arkada duvarda kapalı split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda şarj edilen batarya"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Kumandanın tuşuna basıyorsun ama klimada ne ses var ne hareket. DemirDöküm'ün Kion inverter kullanma kılavuzu bu tabloyu kılavuzun sonundaki "Arıza giderme" ekinde üç ayrı satırla veriyor: kumanda ekranının açılmaması, sistemin hemen çalışmaya başlamaması ve sistemin **"tamamen devre dışı (fan çalışmıyor)"** kalması. Çözüm sütunu ise kısa: **"Fişi prize takın ve iç üniteyi çalıştırın."**, **"Pilleri değiştirin. Her zaman iki pili aynı anda değiştirin."**, **"Koruma amacıyla sistem her durdurma sonrasında en az 3 dakika kapalı kalır."** Kumanda hiç işe yaramıyorsa kılavuzun bir de kumandasız çalıştırma yolu var. Aşağıda hepsini sırasıyla anlatıyoruz.

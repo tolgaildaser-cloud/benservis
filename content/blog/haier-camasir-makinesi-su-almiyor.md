@@ -41,6 +41,14 @@ faq:
     a: "Hayır, kılavuzda ayrı bir satır: 'Makineye dolan su boşalıyor.' Sebep olarak tahliye hortumunun yüksekliğinin 80 cm'den kısa olması ya da hortum ucunun suya batmış olması gösteriliyor. Çözüm hortumun düzgünce takıldığından ve suyun içinde olmadığından emin olmak."
 images:
   coverAlt: "Çamaşır makinesinin arkasında duvardaki açık su musluğuna bağlı gri su giriş hortumu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
 ---
 
 Program başladı ama tambura su gelmiyor, ya da makine bir süre bekleyip ekrana **E4** yazıyor. Haier'in HW80/90/100-B14939S8 kılavuzunda bu durumun satırı **"Çamaşır makinesi su almıyor."** Haier bu satırda altı sebep sayıyor: **su olmayabilir**, **giriş hortumu dolaşmış olabilir**, **giriş hortumu filtresi tıkanmış olabilir**, **su basıncı 0,03 MPa altında**, **kapak düzgünce kapatılmamış olabilir** ve **su kesik olabilir.** Kod tablosunda da E4'ün anlamı aynı yere çıkıyor: **12 dakika sonra su seviyesine ulaşılmıyor.**

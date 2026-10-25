@@ -41,12 +41,12 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran, kapağı kapalı ve iç lambası sönük beyaz bir mikrodalga fırın"
   steps:
-    - "Kapağı açık duran bir mikrodalga fırının karanlık iç bölmesi"
-    - "Kapağı yavaşça kapatılan bir mikrodalga fırın"
-    - "Çalışan bir mikrodalga fırının içinde loş ışıkta dönen bir tabak"
-    - "Prizden çekilmiş bir mikrodalga fişi ve yanında aynı prize takılı küçük bir masa lambası"
-    - "Mikrodalga fırının iç tavanındaki kapalı lamba kapağı"
-    - "Kapağı tam kapanmış bir mikrodalga fırın ve kenarındaki kapak contası"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda mikrodalga fırın, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
 ---
 
 Mikrodalganın kapağını açtın, içerisi karanlık. Ya da fırın çalışıyor, tabla dönüyor ama içini göremiyorsun. Mikrodalga fırının iç lambası küçük bir parça, ama yanmaması bazen arıza, bazen tamamen normal bir davranış. Samsung, LG ve Vestel'in mikrodalga fırın kılavuzları lambanın ne zaman sönebileceğini, ne zaman arıza olduğunu ve kimin değiştirmesi gerektiğini anlatıyor. Bu yazıda servisi aramadan önce bakabileceklerini bu üç kılavuzdan sırayla topladık. Senin fırının kılavuzu farklı süreler verebilir, kendininkiyle karşılaştır.

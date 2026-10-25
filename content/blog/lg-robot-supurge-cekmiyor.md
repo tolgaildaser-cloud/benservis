@@ -50,6 +50,14 @@ faq:
     a: "LG'nin sayfasına göre robotun ağzı mendil, çorap, vinil gibi yabancı cisimlerle tıkanırsa emiş gücü düşer ve robot kullanılırken daha yüksek sesler duyulur. Sayfa robotun gücünü kapattıktan sonra cisimlerin bir çubukla çıkarılmasını söylüyor; aletle uğraşmak istemiyorsan yetkili servise bırak."
 images:
   coverAlt: "Ters çevrilmiş bir robot süpürgenin altındaki dönen fırça ve yanında çıkarılmış toz haznesi ile filtreler"
+  steps:
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda robot süpürge, sağda temizleme bezi"
+    - "Çizim: solda robot süpürge, sağda ilgili filtre"
+    - "Çizim: solda robot süpürge, sağda temizleme bezi"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
 ---
 
 Robot her gün turunu atıyor ama halıda saç teli, parkede kırıntı kalıyor. LG Türkiye'nin destek kütüphanesinde bunun için **"[LG CordZero R9] Emiş gücü düşük"** başlıklı bir sayfa var. LG'nin özeti tek cümle: tozu çok iyi ememiyorsa **dönen fırçayı, başlığı ve filtreyi kontrol et.** Sayfanın verdiği adımlar sırayla aşağıda.

@@ -44,6 +44,13 @@ faq:
     a: "Hayır. Siemens'in kılavuzu ocak ile pişirme kabı arasında kesinlikle adaptör plakası kullanılmamasını yazıyor."
 images:
   coverAlt: "Siyah indüksiyonlu ocağın üzerinde duran bir tencerenin tabanına tutulmuş küçük mutfak mıknatısı"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 İndüksiyonlu ocağı açtın, tencereyi koydun ama göz ısıtmaya başlamıyor ya da çok yavaş ısıtıyor. İndüksiyonda ısı tencerenin tabanında oluştuğu için ocak önce kabı **tanımak** zorunda. Siemens'in EH9 ve ED serisi indüksiyonlu ocak kılavuzları bunu tek cümleyle özetliyor: uygun kap **"ferromanyetik tabana sahip olmalı, mıknatısla çekilmeli ve taban pişirme alanının boyutuna uygun olmalıdır."**

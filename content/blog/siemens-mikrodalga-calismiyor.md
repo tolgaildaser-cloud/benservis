@@ -47,6 +47,13 @@ faq:
     a: "BF722 / BF922 tablosuna göre ekran kısa bir süre sonra kapanır ve herhangi bir işlem yapmaya gerek yoktur."
 images:
   coverAlt: "Fırının üstüne yerleştirilmiş, dokunmatik ekranı kapalı duran ankastre bir mikrodalga ve önünde kapağı tam kapanmış cam yüzey"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda panel ekranındaki uyarı"
 ---
 
 Mikrodalgaya dokunuyorsun, ekran tepki vermiyor; ya da program başlıyor ve birkaç saniyede duruyor. Siemens'in BF722 / BF922 ve FF023LM / FF053LM mikrodalga kılavuzlarındaki arıza tablosu bu durumu üç satıra ayırıyor: **"Cihaz çalışmıyor."**, **"Mikrodalga fırın çalışmıyor."** ve **"Mikrodalga çalışması duruyor."** Dokunmatik ekranlı BF722 / BF922'de buna ekrandaki **"D" veya "E" ile başlayan mesaj** ekleniyor.

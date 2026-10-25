@@ -49,6 +49,14 @@ faq:
     a: "Tablonun 'Mevcut süreye göre temizlik yok' satırına göre nedenler güç anahtarının açık olmaması ya da programlanan görevin iptal edilmesi. Çözüm güç anahtarını açmak, sıfırlayıp görevi yeniden tanımlamak."
 images:
   coverAlt: "Oturma odasında halı kenarında durmuş bir robot süpürge ve yerden toplanmış kablolar ile terlikler"
+  steps:
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda tekerlek"
+    - "Çizim: solda robot süpürge, sağda anten girişi ve kablo"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Düğmeye basıyorsun, robot kımıldamıyor; ya da yola çıkıyor, birkaç dakika sonra bir halı kenarında takılıp kalıyor. Samsung'un VR7700 ve VR5000 robot süpürge kılavuzlarının arıza tablosu bu durumları ayrı satırlarda topluyor: **"Cihaz çalışmıyor"**, **"Cihaz takıldı"** ve **"Cihaz yeniden başlatılıyor"**. Satırların çoğunun çözümü kullanıcının elinde.

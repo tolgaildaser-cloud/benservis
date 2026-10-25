@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Akşam saatinde yatak odasında duvara asılı beyaz bir klima ve komodinde duran kumandası"
   steps:
-    - "Komodinin üzerinde ekranı aydınlanmış beyaz bir klima kumandası"
-    - "Kumandanın üzerinde küçük bir saat simgesinin bulunduğu düğmenin yakın planı"
-    - "Loş bir yatak odasında, ön yüzündeki ışığı sönmüş sessiz bir duvar kliması"
-    - "Kumandanın ekranında bir saat göstergesi ve yanında duran duvar saati"
-    - "Kış günü balkonda üzerinden ince buhar yükselen bir klima dış ünitesi"
-    - "Koridordaki sigorta kutusu, kapağı kapalı ve sade"
-    - "Kapalı bir alet çantası ve yanında katlanmış bir klima kullanma kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima güzel güzel çalışırken bir anda susuyor. Bazen gece yarısı, bazen akşam yemeğinde. Kumandaya basınca yeniden açılıyor ama bir süre sonra yine kapanıyor. Vestel'in klima kullanım kılavuzu bu durumu tek bir satırda değil, birkaç ayrı başlıkta anlatıyor: otomatik kapatma, uyku modu, otomatik açma-kapama zamanlayıcısı, buz çözme, voltaj koruması ve hata mesajları. Çoğu, arıza değil bir ayarın sonucu. Bu yazıda servisi aramadan önce bakabileceklerini kılavuzdan sırayla topladık. Kaynak tek bir modelin kılavuzu; senin klimanda tuş adları ve süreler farklı olabilir, kendi kılavuzunla karşılaştır.

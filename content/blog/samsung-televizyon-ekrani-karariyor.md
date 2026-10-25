@@ -41,6 +41,14 @@ faq:
     a: "Samsung e-Kılavuzu bazı OLED modellerde ortam sıcaklığı çok yüksek olduğunda ekranda görüntü izi kalmaması için parlaklığın otomatik azaltıldığını yazıyor. Aynı kılavuz, televizyon iki saat ya da daha uzun süre hareketsiz görüntü gösterdiğinde Ekran Koruyucu'nun devreye girebildiğini de belirtiyor."
 images:
   coverAlt: "Loş bir oturma odasında duvardaki televizyonda yarı karanlık görünen bir manzara görüntüsü, önde koltuğun kolunda duran ince siyah bir kumanda"
+  steps:
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Film ortasında ekranın ışığı azalıyor, bir an kararıp geri geliyor. Samsung'un Türkçe televizyon e-Kılavuzu bunu sorun giderme bölümünde **"Ekran yanıp sönüyor veya kararıyor"** başlığıyla veriyor ve nedeni bir arızadan önce ayarlarda arıyor: **"TV'inizde zaman zaman titremeler veya kararmalar oluyorsa bazı enerji tasarrufu özelliklerini devre dışı bırakmanız gerekebilir."** Kapatılacak dört ayarın adını da veriyor: **"Parlaklık Optimizasyonu, Enerji Tasarruflu Çözüm, Hareketli Aydınlatma veya Kontrast İyileştirici"**. Bu yazıda Samsung'un sırasını menü yollarıyla birlikte veriyoruz ve sorunun televizyonda mı, bağlı cihazda mı olduğunu ayıran Görüntü Testi'yle bitiriyoruz.

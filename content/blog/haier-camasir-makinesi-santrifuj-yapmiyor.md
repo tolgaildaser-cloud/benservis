@@ -41,6 +41,13 @@ faq:
     a: "Haier, makine sıkmıyorsa pompa filtresinin kontrol edilmesini de öneriyor. Ancak bu modelde servis kapağı bozuk para ya da tornavida ile açılıyor; alet gerektiren bu adımı burada vermiyoruz. Yük ve köpük kontrolünden sonra sorun sürüyorsa yetkili servise bırak."
 images:
   coverAlt: "Önden yüklemeli çamaşır makinesinin açık kapağından görünen, bir tarafa toplanmış ıslak çamaşırlar"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Yıkama bitti ama çamaşırlar sırılsıklam, ya da ekranda **Unb** yazıyor. Haier'in HW80/90/100-B14939S8 kılavuzunda bu durumun satırı **"Sıkmada sorun var."** ve Haier'in gösterdiği sebep tek: **çamaşırlar dengesiz olabilir.** Kod tablosunda da **Unb** aynı şeyi söylüyor: **dengesiz yük sorunu.** Kılavuzun köpük notu ise üçüncü bir ihtimali açıyor: çok fazla köpük olursa program **sıkma işlemi yapılmadan** sona erebilir.

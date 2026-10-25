@@ -42,6 +42,14 @@ faq:
     a: "e-Kılavuz bu kontrolleri servis bölümünü aramadan önce yapılacak işler olarak veriyor. Hepsi tamam olduğu hâlde televizyon açılmıyorsa e-Kılavuzun Destek Alma bölümündeki servis isteme yoluyla ya da doğrudan Samsung yetkili servisine başvur; televizyonun arka kapağını açma."
 images:
   coverAlt: "Akşam ışığında oturma odasında kapalı, siyah ekranlı ince bir televizyon ve önündeki sehpada USB-C kablosuna takılı ince siyah bir kumanda"
+  steps:
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda kumandanın pilleri"
+    - "Çizim: solda televizyon, sağda USB bellek ve güncelleme"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
 ---
 
 Kumandanın güç tuşuna basıyorsun, ekran karanlık kalıyor. Samsung'un Türkçe televizyon e-Kılavuzu bu durumu sorun giderme bölümünde **"Açılmıyor"** başlığıyla veriyor ve şöyle başlıyor: **"TV'inizi açmada sorunlar yaşıyorsanız, servis bölümünü aramadan önce yapabileceğiniz birkaç kontrol vardır."** Listenin ilk maddesi iki şeyi birden istiyor: **"TV'nin güç kablosunun her iki ucunun düzgün takıldığını ve uzaktan kumandanın normal çalıştığını onaylayın."** Ardından anten kablosu, kablolu yayın ya da uydu kutusu ve One Connect kablosu geliyor. Kumandanın "normal çalışması" kısmını e-Kılavuzun kumanda sorunları sayfasıyla açıyoruz: pil, şarj ve yeniden eşleme.

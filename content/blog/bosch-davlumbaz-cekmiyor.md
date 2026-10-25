@@ -55,6 +55,14 @@ faq:
     a: "Kılavuz, uzun ve pürüzlü hava çıkış borusu, çok sayıda dirsek ya da 150 mm'den küçük boru çapı kullanıldığında optimum havalandırma performansına ulaşılamayacağını yazıyor. Bu bir montaj konusu; boruya kendin müdahale etme, kurulumu yapan tarafa ya da Bosch müşteri hizmetlerine başvur."
 images:
   coverAlt: "Paslanmaz duvar tipi bir davlumbazın altından çıkarılmış alüminyum kaset filtre, mutfak tezgâhında köpüklü suyla dolu bir leğenin yanında"
+  steps:
+    - "Çizim: solda davlumbaz, sağda prizden çekilen fiş"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda deterjan bölmesi"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda davlumbaz, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Ocakta yemek pişiyor, davlumbaz açık ama buhar dolaplara doğru yayılıyor. Bosch'un DWK065G20T / DWK095G20T / DWK065G60T / DWK095G60T duvar tipi davlumbaz kılavuzu bu durumu arıza tablosunda **"Ürün Hava Çekişi Zayıf."** diye adlandırıyor ve karşısına üç satır yazıyor: **alüminyum filtre**, **hava çıkış bacası** ve **karbon filtre**. Üçünün de ilk kontrolü kullanıcının elinde.

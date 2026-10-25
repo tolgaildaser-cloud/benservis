@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Bir kilerde duran beyaz, kapağı kapalı sandık tipi derin dondurucu"
   steps:
-    - "Sandık tipi dondurucunun ön yüzündeki kontrol paneli, döner bir düğme ve küçük bir ışık"
-    - "Döner ayar düğmesinin yakın planı, dondurucu bölgesine çevrilmiş hâli"
-    - "Döner ayar düğmesinin orta konuma getirildiği yakın plan"
-    - "Tuşlu kontrol panelinde yan yana dizilmiş mavi ışıklı çubuklar"
-    - "Boş, temiz ve kapağı açık bir sandık tipi dondurucunun iç yüzeyi"
-    - "Prizden çekilmiş bir fiş ve yanında duran bir duvar saati"
-    - "Duvardan aralık bırakılarak yerleştirilmiş, önü boş bir sandık tipi dondurucu"
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Yeni aldığın ya da yerini değiştirdiğin Uğur derin dondurucunun önünde bir ayar düğmesi var ve üzerinde ne yazdığı tam anlaşılmıyor. Kaçta durmalı? Soru çok soruluyor, çünkü düğmenin konumu hem gıdanın ne kadar iyi donacağını hem de cihazın ne kadar zorlanacağını belirliyor. Uğur'un yatay derin dondurucu kılavuzları iki farklı kontrol tipini anlatıyor: **döner düğmeli** UED Fonksiyonel Yatay serisi ve **tuşlu, ışıklı** UED Yatay serisi. Bu yazıda ikisinin ayar kurallarını, süper dondurmayı ve elektrik kesintisinden sonra yapılacakları kılavuzlardan topladık. Senin modelinde panel farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -46,6 +46,14 @@ faq:
     a: "Bu durum kılavuzda ayrı bir uyarıyla geçiyor: sigortayı sigorta kutusundan kapat ve müşteri hizmetlerini ara. Bu durumda ocağı kullanmaya devam etme."
 images:
   coverAlt: "Kapalı göstergeli siyah bir cam seramik ocağın dokunmatik kumanda şeridine uzanan parmak"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ocağın dokunmatik tuşlarına basıyorsun ama hiçbir şey yanmıyor, ya da göstergeler yanıp sönüyor ve göz ısınmıyor. Bosch'un cam seramik ocak kılavuzu (PKE6 / PKM6 serisi) bu tabloları "Gösterge alanındaki uyarılar" başlığında tek tek sayıyor ve girişte şunu yazıyor: **"Cihazınızdaki küçük arızaları kendiniz giderebilirsiniz."** Aynı tablo Bosch'un PUG serisi indüksiyonlu ocak kılavuzunda da büyük ölçüde aynı satırlarla yer alıyor.

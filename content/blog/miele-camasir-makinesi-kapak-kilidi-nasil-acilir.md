@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin kapalı, yuvarlak cam kapağı"
   steps:
-    - "Çamaşır makinesi panelinde kapalı konuma çevrilmiş bir program seçim düğmesi"
-    - "Çamaşır makinesinin kontrol panelinde yanıp sönen kısa çizgilerden oluşan bir gösterge"
-    - "Çamaşır makinesinin kontrol panelinde dokunmatik bir başlat tuşu"
-    - "Çamaşır makinesinin alt ön kısmında açılmış küçük bir servis kapağı ve önünde geniş bir fırın tepsisi"
-    - "Çamaşır makinesinin altından çıkarılmış yuvarlak bir yıkama suyu filtresi"
-    - "Çamaşır makinesinin alt kapağı arkasındaki dar bir açıklığa uzanan düz uçlu bir tornavida"
-    - "Kapalı bir çamaşır makinesinin önünde duran katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ama Miele çamaşır makinesinin kapağı hâlâ kilitli. Ya da yıkama yarıda kesildi ve kapağı açmak istiyorsun. Miele'nin kullanım kılavuzu kapak kilidinin neden kapalı kaldığını ve hangi durumda nasıl açılacağını ayrı ayrı anlatıyor: program sonunda, program iptalinden sonra, yıkama sırasında ve elektrik kesildiğinde. Bu yazıda Miele Türkiye kılavuz portalından indirdiğimiz **WWD 120** çamaşır makinesi Türkçe kılavuzundaki adımları sırayla topladık. Tuş adları ve göstergeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

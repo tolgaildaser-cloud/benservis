@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Banyoda duran, kapağı kapalı ön yüklemeli beyaz bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde yanıp sönen ışıklar"
-    - "Sıkıca kapatılmış bir çamaşır makinesi kapağı"
-    - "Duvarda tamamen açık konumda bir su musluğu"
-    - "Musluk ucundan sökülmüş bir su giriş hortumu ve içindeki süzgeç"
-    - "Çamaşır makinesinin ön alt köşesinde açılmış pompa filtresi kapağı ve altında yayvan bir kap"
-    - "Duvarda kapalı konuma çevrilmiş bir su musluğu"
-    - "Çamaşır makinesinin yanında tezgâhta duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Sharp çamaşır makinen programın ortasında durdu ve ekranda E ile başlayan bir kod var ya da yıkama ışıkları belli bir düzende yanıp sönüyor. Sharp kılavuzuna göre makinede yerleşik bir arıza algılama sistemi var ve en sık arıza kodları dört tane: E01, E02, E03, E04. Bu yazı Sharp'ın ES-NB814WNA-BE ve ES-NFA714BWNA-EE kullanım kılavuzlarına dayanıyor (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi). İki kılavuzda tablo aynı; modelin farklıysa kendi kılavuzunla karşılaştır.

@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Aydınlık bir çamaşır odasında beyaz, ön yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin dijital göstergesi ve altındaki tuş sırası"
-    - "Çamaşır makinesinin büyük, yuvarlak program düğmesinin yakın planı"
-    - "Cam kapağın ardında tamburun dibinde duran bir miktar su"
-    - "Çamaşır makinesinin alt köşesindeki kapalı pompa filtresi kapağı"
-    - "Çamaşır makinesi panelinde başlat ve beklet tuşunun yakın planı"
-    - "Duvardaki bir prize takılı beyaz bir elektrik fişi"
-    - "Lavabo altında kapalı konumda bir su musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program takıldı, göstergede bir kod var ya da makine söz dinlemiyor; Vestel çamaşır makinesini "resetlemek" istiyorsun. Vestel'in kılavuzlarında **Reset adında bir tuş yok.** Kılavuzdaki karşılığı **"Çalışmakta olan bir programı iptal etmek istiyorsanız"** bölümü ve yolu tek cümle: **program düğmesini İPTAL konumuna getir.** Bu yazıda Vestel'in CMI 86201 ve KCMI 98142 WIFI kullanma kılavuzlarından sıfırlamanın doğru sırasını, onu engelleyen çocuk kilidini ve bir hata kodundan sonra neden önce sebebin giderilmesi gerektiğini çıkardık.

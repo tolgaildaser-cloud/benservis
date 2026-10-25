@@ -50,6 +50,15 @@ faq:
     a: "Evet. Kılavuz panjuru çok dik açıda ayarlamanın hava akışını sınırlayıp performansı düşürebileceğini, soğutmada uzun süre dik tutulursa kanatta su yoğunlaşıp zemine damlayabileceğini yazıyor. Panjuru elle değil, kumandadaki Swing ya da Sabit tuşuyla ayarla."
 images:
   coverAlt: "Sıcak bir yaz gününde perdeleri kapatılmış bir oturma odası, duvarda çalışan beyaz split klima ve masada kapağı kapatılmış bir dizüstü bilgisayar"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima saatlerdir çalışıyor ama oda ancak biraz serinliyor. Alarko Carrier'ın Carrier split klima kullanım kılavuzu bu tabloyu **"Zayıf Soğutma Performansı"** başlığıyla veriyor ve dokuz olası neden sayıyor. Listedeki neredeyse her satırın çözümü evde yapılabilecek bir iş: **"Isı ayarını düşürün."**, **"Filtreyi çıkartın ve talimatlara göre temizleyin."**, **"Isı kaynaklarının miktarını azaltın."** Kılavuzun bu listede kumandaya dair bir uyarısı da var: sessiz çalışma fonksiyonu **"ürün performansını düşürebilir"**. Carrier kumandasındaki X-ECO tuşu da benzer bir etki yapabiliyor. Aşağıda önce kumanda ayarlarını, sonra odayı, en son filtreyi kontrol ediyoruz.

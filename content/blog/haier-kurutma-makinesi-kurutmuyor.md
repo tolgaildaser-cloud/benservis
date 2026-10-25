@@ -43,6 +43,12 @@ faq:
     a: "Haier'in tablosunda 'Evaporatör tıkalı' satırı var ama kılavuzun bakım bölümünde kullanıcı için bir evaporatör temizlik yordamı yok. Filtreler temiz, yük ve program doğruyken kurutma hâlâ uzunsa yetkili servise başvur."
 images:
   coverAlt: "Kurutma makinesinin açık kapağının iç kenarından yarıya kadar çekilmiş, üzeri gri tiftik kaplı filtre"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama çamaşırlar hâlâ nemli, ya da kurutma saatlerce sürüyor. Haier'in HD100-D357U1E ısı pompalı kurutma makinesi kılavuzunda bu durumun satırı **"Kurutma süresi çok uzun ve sonuçlar tatmin edici değil."** Haier bu satırda altı sebep sayıyor: **program ayarı doğru değil**, **filtre tıkanmış**, **evaporatör tıkalı**, **kurutma makinesi aşırı yüklenmiş**, **çamaşırlar çok ıslak** ve **havalandırma kanalı tıkalı.** Bunların beşini evde kontrol edebilirsin; en sık sebep de filtreler, çünkü Haier'e göre **tıkalı bir filtre daha uzun kurutma programlarına yol açabilir.**

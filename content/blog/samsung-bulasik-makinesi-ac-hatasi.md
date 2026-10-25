@@ -44,11 +44,11 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı ankastre bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesinin kapak üstündeki küçük kontrol paneli ve kısa bir kod gösteren ekranı"
-    - "Kapalı duran bir bulaşık makinesinin sessiz kontrol paneli"
-    - "Mutfak duvarında tek bir duvar prizine doğrudan takılı beyaz bir fiş"
-    - "Kapağı sıkıca kapatılmış bir bulaşık makinesi ve yanında açık duran bir su vanası"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve yanında bir not kâğıdı"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşık makinesi çalışmaya başlamadan ya da program ortasında durdu, ekranda **AC** yazıyor. Samsung'un DW8500AM ve DW5500MM kullanma kılavuzlarında bu kodun karşılığı kısa: **PCB iletişim kontrolü**. Yani makinenin iki elektronik kartı arasında bir haberleşme sorunu var. Bu yazıda kodun anlamını, evde güvenle deneyebileceğin adımları ve servise ne zaman haber vermen gerektiğini kılavuzlardan topladık. Senin modelinde tablo biraz farklı olabilir; kendi kılavuzunla karşılaştır.

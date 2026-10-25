@@ -41,12 +41,12 @@ faq:
 images:
   coverAlt: "Beyaz bir duvar klimasının alt kenarında küçük, sönük bir gösterge lambası ve sakin bir yatak odası"
   steps:
-    - "Komodinin üzerinde duran beyaz bir klima kumandası ve kısık ışıklı bir yatak odası"
-    - "Aynı koridora açılan iki odanın duvarlarında asılı iki beyaz klima iç ünitesi"
-    - "İki ayrı klima kumandası yan yana, ekranları aynı simgeyi gösteriyor"
-    - "Kapakları kapanmış, sessiz bekleyen beyaz bir duvar kliması"
-    - "Klimanın altında zemine serilmiş kuru bir havlu ve yanında bir not defteri"
-    - "Masada açık duran bir not defteri, kalem ve katlanmış bir klima kullanma kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Mitsubishi Electric klimanın ön yüzündeki küçük lamba yanıp sönmeye başladı. Kimi zaman klima hiç çalışmıyor, kimi zaman bir odada çalışıp diğerinde susuyor. MSZ-AP serisinin kullanma kılavuzu bu lamba için iki ayrı anlam veriyor: biri çok odalı sistemlerde arıza olmayan **bekleme modu**, diğeri doğrudan **"klimayı kullanmayı bırak, bayiye başvur"** uyarısı. Hangisi olduğunu evde ayırmak birkaç dakika sürer. Kaynak bu modelin kılavuzu; senin modelinde lamba yeri ve düğme adları farklı olabilir, kendi kılavuzunla karşılaştır.

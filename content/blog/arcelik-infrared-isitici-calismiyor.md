@@ -39,6 +39,13 @@ faq:
     a: "Arçelik kılavuzu yere düşmüş ya da üzerinde gözle görülür hasar olan ısıtıcının kullanılmamasını istiyor. Isıtıcı tüpünde çatlak, kırık varsa, cam paneller hasarlıysa ya da elektrik kablosu zarar görmüşse cihazı çalıştırmadan yetkili servise başvur."
 images:
   coverAlt: "Bir oda köşesinde, ayaklı uzun gövdeli bir infrared ısıtıcı; yatay ısıtıcı tüpü turuncu kızarmış"
+  steps:
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli ısıtıcı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli ısıtıcı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda elektrikli ısıtıcı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda elektrikli ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Arçelik'in ayaklı, taşınabilir infrared ısıtıcısı hiç açılmıyorsa ya da açılıyor ama az ısıtıyorsa, önce kılavuzun kontrollerinden geç. Arçelik kullanma kılavuzunun sorun giderme tablosu "Ürün çalışmıyor" için altı kontrol, "Cihaz düşük güçte çalışıyor" için tek bir kontrol sayıyor. Bu yazıdaki adımlar Arçelik ARC II 1500 M / 2000 M / 2500 M taşınabilir infrared ısıtıcı kılavuzundan.

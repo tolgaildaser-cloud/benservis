@@ -50,14 +50,14 @@ faq:
 images:
   coverAlt: "Banyo lavabosunda açık duran bir musluk ve duvarda asılı beyaz bir kombi"
   steps:
-    - "Pencereleri açık, sakin ve boş bir mutfak"
-    - "Duvara asılı beyaz bir kombinin alt kısmındaki kumanda paneli"
-    - "Ekranı karanlık duran beyaz bir kombinin yakın planı"
-    - "Kombi ekranında duran bir musluk simgesi"
-    - "Kombinin kumanda panelinde yukarı ve aşağı ok biçimli tuşlar"
-    - "Salon duvarında asılı, sade, beyaz bir oda termostatı"
-    - "Kombinin altında borular arasında duran küçük bir kesme vanası"
-    - "Kombinin yanında tezgâhta duran kapalı bir alet çantası ve katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kalorifer çalışıyor, ama musluğu açınca su ısınmıyor. Ya da kombi açık görünüyor, sıcak su hiç gelmiyor. Vaillant'ın ecoTEC intro, ecoTEC plus, ecoTEC pure ve ecoTEC pro kullanma kılavuzları bu durumu ayrı bir başlıkla anlatmıyor; ama dördü de sıcak su ayarını, sıcak su konumunun nasıl kapandığını ve arıza tablosunu aynı mantıkla veriyor. Aşağıda servisi çağırmadan önce evde bakabileceğin her şeyi bu dört kılavuzdan sırayla topladık. Tuş yerleri modele göre değişir; kendi kılavuzunla karşılaştır.

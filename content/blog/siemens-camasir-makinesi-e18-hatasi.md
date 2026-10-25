@@ -52,14 +52,14 @@ faq:
 images:
   coverAlt: "Çamaşır odasında duran beyaz bir çamaşır makinesi ve kapak camının ardında suyun içinde bekleyen çamaşırlar"
   steps:
-    - "Önden yüklemeli bir çamaşır makinesinin kapalı kapağı ve camda görünen su seviyesi"
-    - "Makinenin arkasından çıkıp duvar dibinde düzgünce uzanan gri tahliye hortumu"
-    - "Banyo lavabosunun altında hortum kelepçesiyle sifona bağlanmış tahliye hortumu"
-    - "Makinenin alt köşesindeki açık bakım kapağı ve altında duran sığ plastik bir kap"
-    - "Akan musluk suyu altında yıkanan, iki parçaya ayrılmış yuvarlak pompa kapağı"
-    - "Yerine takılmış pompa kapağının dik duran tutamağının yakın planı"
-    - "Açık deterjan çekmecesinin önünde duran ölçü kabı ve küçük bir sürahi su"
-    - "Mutfak tezgâhında yanyana duran bir telefon ve kapalı bir kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Siemens çamaşır makinen programı yarıda kesti, tamburda su duruyor ve ekranda **E:18** var. Siemens'in kullanım kılavuzu bu kodu net tarif ediyor: deterjanlı su cihazdan pompalanıp boşaltılamıyor. Kodun nedenleri arasında senin evde bakabileceğin dört şey var: tahliye hortumu, gider, pis su pompası ve deterjan miktarı. Aşağıdaki sıra Siemens WG52A203TR ve WG54K2Y0TR kılavuzlarından derlendi; senin makinende düğme ve kapak yerleri farklıysa kendi kılavuzuna bak.

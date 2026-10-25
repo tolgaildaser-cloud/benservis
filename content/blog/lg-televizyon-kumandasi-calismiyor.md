@@ -46,6 +46,14 @@ faq:
     a: "LG kılavuzu bunun için televizyonun kablosuz modül özelliklerinde Bluetooth desteği olup olmadığını kontrol etmeni istiyor. Sihirli Kumanda'nın kullanılabilirliği bu desteğe bağlı."
 images:
   coverAlt: "Oturma odasında açık bir televizyonun önünde, koltukta oturan birinin elinde televizyona doğru tutulmuş beyaz bir kumanda, sehpada pil kutusu"
+  steps:
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda kumandanın pilleri"
+    - "Çizim: solda televizyon, sağda kumandanın pilleri"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Kumandaya basıyorsun, televizyon tepki vermiyor. LG'nin Türkçe televizyon kılavuzları bunu sorun giderme bölümünde **"TV uzaktan kumandayla kontrol edilemiyor."** satırıyla veriyor ve üç kontrol istiyor: **"Ürün üzerindeki uzaktan kumanda sensörünü kontrol edin ve tekrar deneyin."**, **"Ürün ve uzaktan kumanda arasında engel olup olmadığını kontrol edin."** ve pillerin çalışır durumda ve doğru kutupla takılı olması. Sihirli Uzaktan Kumanda kullanıyorsan iki konu daha var: kumandanın televizyona kaydedilmesi ve yakındaki modemin yarattığı parazit. Bu yazıda LG'nin 2019, 2021 ve 2023 tarihli üç kılavuzundaki bu satırları sıraya koyuyoruz.

@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve altındaki sade tezgâh"
   steps:
-    - "Masada açık duran bir kombi kullanma kılavuzu"
-    - "Kombi kumanda panelinde yan yana dizili sade tuşlar"
-    - "Kombi ekranında yanıp sönen bir sıcaklık değerinin bulanık görüntüsü"
-    - "Banyo lavabosunda buhar yükselen açık bir musluk"
-    - "Mutfak lavabosunda akan suyun yakın planı"
-    - "Salon duvarında asılı, sade, beyaz bir oda termostatı"
-    - "Yaz güneşi vuran sakin bir salon ve duvarda beyaz bir panel radyatör"
+    - "Çizim: solda duvar tipi kombi, sağda kapak"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Vaillant kombide sıcak su sıcaklığını değiştirmek kolay, ama hangi tuşa basılacağı modele göre değişiyor. Bu yazıda ecoTEC intro, ecoTEC plus, ecoTEC pure ve ecoTEC pro kullanma kılavuzlarındaki tarifleri bir araya getirdik: sıcak su ekranı nasıl açılır, değer nasıl kaydedilir, kaç dereceye dikkat etmek gerekir, regler bağlıysa ne değişir ve yazın yalnız sıcak su nasıl kullanılır.

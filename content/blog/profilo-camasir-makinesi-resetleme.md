@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhı altında beyaz, önden yüklemeli bir çamaşır makinesi"
   steps:
-    - "Sönük ekranlı bir çamaşır makinesi kumanda paneli"
-    - "Çamaşır makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Çamaşır makinesi kumanda panelinde başlat ve beklet tuşunun yakın planı"
-    - "Cam kapağın ardında suyla dolu, sakin duran bir tambur"
-    - "Çamaşır makinesi kumanda panelinde yan yana duran iki seçenek tuşu"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Çamaşır makinesinin büyük, yuvarlak program seçme düğmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program takıldı, tuşlar tepki vermiyor ya da ekranda bir kod duruyor; ilk akla gelen "makineyi resetlemek". Profilo'nun çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok**, ama sıfırlamanın her basamağı yazılı: **programı iptal etmek, iki tuşla yeniden başlatmak, en az 30 saniye güç kaynağından ayırmak** ve temel ayarlar menüsünden **rES ile fabrika ayarlarına dönmek.** Bu yazıda sırayı Profilo'nun iki kılavuzundan, CGK264Z0TR ve CGA242X3TR'den çıkardık. Tuş yerleri modelden modele değişir; kendi kılavuzunla karşılaştır.

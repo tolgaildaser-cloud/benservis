@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, düğmeli ve küçük dijital saatli ankastre bir fırın"
   steps:
-    - "Ankastre fırının panelinde yan yana iki döner düğme ve aralarında küçük bir saat"
-    - "Fırın panelindeki küçük dijital saat ekranının yakın planı"
-    - "Fırın panelinde eksi, MODE ve artı yazılı üç küçük tuş"
-    - "Fırın panelinde döner mekanik saat düğmesinin yakın planı"
-    - "Büyük renkli ekranlı ankastre bir fırının ayarlar menüsü"
-    - "Karanlık bir mutfakta sönük ekranlı bir ankastre fırın"
-    - "Fırın panelinde fonksiyon ve termostat düğmelerinin yakın planı"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Fırını yeni taktın ya da elektrik gidip geldi; ekranda sıfırlar yanıp sönüyor ve fırın düğmeleri çevirdiğin hâlde çalışmıyor. Vestel fırınlarda bu çoğu zaman bir arıza değil, **saat ayarı bekleyen** fırın. Vestel'in ankastre fırın kılavuzu açık: pişirme için fonksiyon ve sıcaklık düğmelerinin ayarlanması **ve fırın saatinin programlanması gerekir; aksi durumda fırın çalışmaz.** Bu yazıda Vestel'in iki kılavuzundan, çok modelli VAF serisi ankastre fırın kılavuzu ile menülü AF-107892 X WIFI kılavuzundan, üç saat tipinde ayarın nasıl yapıldığını çıkardık.

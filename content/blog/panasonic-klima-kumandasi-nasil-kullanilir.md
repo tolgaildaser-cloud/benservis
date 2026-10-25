@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Salon sehpasının üstünde duran beyaz bir klima kumandası, arkada duvarda split klima"
   steps:
-    - "Arka kapağı açılmış bir klima kumandası ve yanında iki küçük pil"
-    - "Ekranında saat görünen beyaz bir klima kumandası yakından"
-    - "Duvarda yeni çalışmaya başlamış bir split klima iç ünitesi"
-    - "Klima kumandasının ekranında yan yana dizili küçük mod simgeleri"
-    - "Klima kumandasında yukarı ve aşağı ok biçimli düğmeler yakından"
-    - "Kanatçığı aşağıya dönük, hava üfleyen bir split klima"
-    - "Akşam ışığında komodinin üstünde duran bir klima kumandası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Panasonic klimanın kumandasında çok düğme var ve bazıları yalnız simgeyle işaretli. Sıcak ya da soğuk ayarı, mod değiştirme, fanı kısma, zamanlayıcı kurma gibi günlük işlerin hepsi birkaç düğmeyle yapılıyor. Bu yazıda Panasonic'in TZ serisi (CS-TZ..ZKEW) Türkçe kullanım kılavuzunun **Hızlı kılavuz** ve **Kullanma** sayfalarını sırayla anlattık. Kılavuz bu seriye ait; senin kumandanda düğmelerin yeri ya da bazı işlevler farklı olabilir. Düğme simgeleri PDF'te resimle gösterildiği için simgeleri kendi kılavuzunla karşılaştır.

@@ -39,12 +39,12 @@ faq:
 images:
   coverAlt: "Salonda duvara monte edilmiş geniş ekranlı bir televizyon, ekranda ayar menüsü"
   steps:
-    - "Sehpanın üstünde duran siyah bir televizyon kumandası yakından"
-    - "Televizyon ekranında açılmış sade bir kurulum menüsü"
-    - "Balkon korkuluğuna monte edilmiş bir uydu çanak anteni"
-    - "Televizyon ekranında ilerleme çubuğu gösteren bir arama ekranı"
-    - "Koltukta oturan birinin bakış açısından kanal listesi gösteren bir ekran"
-    - "Televizyonun arkasındaki anten ve uydu girişlerine takılı kablolar"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda bekleme süresi için saat"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Panasonic televizyonu yeni kurdun, uydu çanağını değiştirdin ya da kanallar bir gün kayboldu. Hepsinde çözüm aynı menüden geçiyor: **Kanal Tarama Menüsü**. Panasonic'in MX serisi (TX-55MX950E) Türkçe eHELP kılavuzu bu menünün yolunu, uydu, kablo ve karasal yayın için ayrı ayrı adımlarını veriyor. Bu yazıda o adımları kısalttık. Kılavuz bu seriye ait; eski Panasonic modellerinde menü adları ya da sırası farklı olabilir, kendi televizyonunun Yardım menüsüyle karşılaştır.

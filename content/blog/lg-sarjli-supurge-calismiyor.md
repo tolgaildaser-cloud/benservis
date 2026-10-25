@@ -46,6 +46,14 @@ faq:
     a: "LG'nin sayfasına göre piller sarf malzemesidir ve kullanım ömürleri sınırlıdır. Pil tam şarjlı olduğu hâlde kullanım süresi çok kısaysa pil ömrünün sonuna gelmiştir ve değiştirilmesi gerekir. Sorun sürerse LG Electronics Çağrı Merkezi 444 6 543 aranabilir."
 images:
   coverAlt: "Duvara monte şarj istasyonunda duran kablosuz dikey süpürge ve pil göstergesindeki ışıklar"
+  steps:
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda kumandanın pilleri"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
 ---
 
 Süpürgeyi istasyondan alıp Güç düğmesine basıyorsun, hiçbir şey olmuyor. LG Türkiye'nin destek kütüphanesinde bu durum için ayrı bir sayfa var: **"[LG CordZero A9] Açılmıyor"**. Sayfanın ilk cümlesi nedeni de söylüyor: **"Pil seviyesi düşükse, elektrikli süpürge açılmayabilir."** Kalan nedenler pilin takılışı, adaptör ve şarj portu; hepsi evde kontrol edilebilir.

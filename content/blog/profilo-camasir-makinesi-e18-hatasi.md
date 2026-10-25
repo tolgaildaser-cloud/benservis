@@ -54,14 +54,14 @@ faq:
 images:
   coverAlt: "Banyo köşesinde beyaz önden yüklemeli bir çamaşır makinesi ve tamburunun camında görünen suyla dolu çamaşırlar"
   steps:
-    - "Çamaşır makinesinin arkasından duvara doğru uzanan gri, kıvrımsız bir tahliye hortumu"
-    - "Lavabo kenarına asılmış tahliye hortumunun ucu ve yanında duran bir şerit metre"
-    - "Lavabonun altındaki beyaz plastik sifon ve ona hortum kelepçesiyle bağlanmış hortum"
-    - "Çamaşır makinesinin alt ön köşesinde açılmış küçük bakım kapağı ve önünde sığ bir kap"
-    - "Elde tutulan, tüy ve küçük bir düğmeyle kirlenmiş yuvarlak pompa kapağı filtresi"
-    - "Çamaşır makinesinin alt köşesinde yerine takılmış, tutamağı dik duran pompa kapağı"
-    - "Deterjan çekmecesinin ikinci bölmesine bir sürahiden su dökülmesi"
-    - "Çalışma tezgâhında kapalı duran bir alet çantası ve açık bir kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitmek üzereyken makine durdu, tamburda su kaldı ve ekranda **E:18** yazıyor. Profilo bu kodu kullanım kılavuzunda tek bir cümleyle tarif ediyor: deterjanlı su cihazdan pompalanıp boşaltılamıyor. İyi haber şu ki kılavuzun bu satır için verdiği kontrollerin çoğu senin yapabileceğin işler: hortum, gider ve pis su pompasının temizliği. Bu yazı Profilo CGA242X3TR ve CGK264Z0TR kullanım kılavuzlarına dayanıyor; senin modelinde kapak ve düğme yerleri farklı olabilir, kendi kılavuzunla karşılaştır.

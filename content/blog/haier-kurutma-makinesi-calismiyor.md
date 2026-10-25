@@ -42,6 +42,13 @@ faq:
     a: "Kılavuzun 'Ekran koduyla sorun giderme' tablosundaki kodların hepsinin çözümü 'Müşteri hizmetleri ile iletişime geçin.' Haier, önlemlerden sonra kod tekrar görünürse cihazı kapatıp güç bağlantısını kesmeni ve müşteri hizmetleriyle iletişime geçmeni istiyor."
 images:
   coverAlt: "Kapağı kapalı beyaz bir kurutma makinesinin üst köşesindeki çekmece tipi su tankının yarı dışarı çekilmiş hâli"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
 ---
 
 Çamaşırları yerleştirdin, düğmeye bastın ama kurutma makinesi başlamıyor. Haier'in HD100-D357U1E ısı pompalı kurutma makinesi kılavuzunda bu durumun satırı **"Kurutma makinesi çalışmıyor."** Haier bu satırda altı sebep sayıyor ve hepsi kontrol edilebilir şeyler: **güç kaynağına bağlantı zayıf**, **güç kesintisi**, **kurutma programı ayarlanmamış**, **cihaz açılmamış**, **su tankı dolu** ve **kapak düzgün kapanmamış.** Kılavuz, satış sonrası servisle iletişime geçmeden önce **gösterilen tüm olasılıkları kontrol etmeni** istiyor.

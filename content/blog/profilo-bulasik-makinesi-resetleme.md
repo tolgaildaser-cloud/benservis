@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Beyaz mutfak dolapları arasında kumanda paneli önde görünen solo bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi ekranında kısa bir harf uyarısı ve yanında kilit simgeli tuş"
-    - "Bulaşık makinesi panelinde başlat tuşunun yakın planı"
-    - "Kapağı kapalı, sessizce bekleyen bir bulaşık makinesi"
-    - "Hafifçe aralanmış bulaşık makinesi kapağından yükselen ince bir buhar"
-    - "Bulaşık makinesinin tabanında yerinden çıkarılmış silindir biçimli süzgeç"
-    - "Duvardaki prizden çekilmiş bir bulaşık makinesi fişi"
-    - "Bulaşık makinesi kapağının iç kenarındaki tip etiketi ve yanında katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, yanlış programı seçtin ya da makine bir tuşa tepki vermiyor; Profilo bulaşık makinesini resetlemek istiyorsun. Profilo'nun BM6380MA kılavuzunda iş kolay, çünkü panelde **Start tuşu ve Reset tuşu** tek tuş: programı iptal etmek için bu tuşa **yaklaşık 3 saniye** basılıyor. Kılavuzun arıza tablosu da birkaç yerde aynı çözümü veriyor: **programı Reset ile iptal ediniz.** Bu yazıda BM6380MA ve tam ankastre BMS623V5 kullanım kılavuzlarından resetin sırasını, onu engelleyen tuş kilidini, fişle yapılan bekletmeyi ve fabrika ayarına dönüşü çıkardık. Senin modelinde tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.

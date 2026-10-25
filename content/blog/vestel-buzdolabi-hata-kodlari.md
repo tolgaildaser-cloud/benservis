@@ -34,6 +34,15 @@ faq:
     a: "Bu bir hata kodu değil. Vestel kılavuzlarındaki kapı açık alarm fonksiyonuna göre buzdolabının kapısı 2 dakikadan uzun süre açık kalırsa bip-bip şeklinde sesli uyarı duyulur. Kapıyı kapatman yeterli."
 images:
   coverAlt: "No-frost bir buzdolabının kapağındaki dijital gösterge panelinde dondurucu ve soğutucu sıcaklık göstergeleri, birinde E harfiyle başlayan bir uyarı kodu"
+  steps:
+    - "Çizim: solda buzdolabı, sağda not defteri ve kalem"
+    - "Çizim: solda buzdolabı, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Buzdolabının göstergesinde derece yerine **E** ile başlayan bir kod var. Vestel'in no-frost buzdolabı kullanım kılavuzlarına göre buzdolabı, soğutucu ya da dondurucu bölmenin sıcaklığı uygun olmayan seviyeye geldiğinde ya da cihazla ilgili bir sorun olduğunda seni uyarır; uyarılar **gösterge panosundaki dondurucu ve soğutucu bölme ayar göstergelerinde uyarı kodlarıyla** yapılır. Bu yazıda o tabloyu, Vestel'in her kod için verdiği adımlarla birlikte veriyoruz.

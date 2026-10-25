@@ -59,6 +59,15 @@ faq:
     a: "Samsung'a göre kalıntı filtresinin tıkanması bu alandan sızıntıya yol açabilir ve filtrenin temizlenmesi gerekir. Kapak bazı modellerde üstüne hafifçe bastırınca açılıyor; açılmıyorsa Samsung anahtar ya da bozuk para kullanılmasını söylüyor. Aletle açman gerekiyorsa bu işi yetkili servise bırak. Filtre temizliğinin adımları Samsung 5C hatası yazısında."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin önünde zeminde küçük bir su birikintisi; deterjan çekmecesi dışarı çekilmiş, yanında katlanmış bir bez"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Çamaşır makinesinin önünde ya da altında su birikmiş, ama suyun nereden geldiği belli değil. Samsung Türkiye'nin destek sayfası bu durumda bir arama sırası veriyor ve ilk sırada çoğu kişinin bakmadığı yer var: **deterjan çekmecesi.** Sayfaya göre **tambur ile deterjan gözünü birbirine bağlayan hortum deterjan nedeniyle tıkanabilir.** Kılavuzun sorun giderme tablosundaki **"Su sızıyor."** satırı ise kapağı, hortum bağlantılarını, aşırı yüklemeyi ve köpüğü sayıyor. Aşağıdaki sıra bu ikisini birleştiriyor. Kaynak WW4000T ve WW5000C serilerinin kılavuzları ile Samsung Türkiye'nin iki destek sayfası; parça adları modele göre değişebilir.

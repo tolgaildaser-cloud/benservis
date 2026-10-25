@@ -40,6 +40,13 @@ faq:
     a: "Kılavuzun kod tablosunda F3 sıcaklık sensörü hatası, F4 ısıtma sorunu, F7 motor arızası, FA su seviye sensörü hatası ve fC0/fC1/FC2 anormal iletişim hatası olarak geçiyor; hepsinin çözümü 'Satış sonrası hizmetler ile görüşün.' Bu kodlarda evde denenecek adım yok."
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin kapalı kapağı ve üstteki kontrol panelinde yanmayan ekran"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kullanım kılavuzu ve tablosu"
 ---
 
 Programı seçtin, düğmeye bastın ama makine hiç tepki vermiyor. Haier'in HW80/90/100-B14939S8 kullanım kılavuzundaki arıza giderme tablosunda bu durumun satırı açık: **"Çamaşır makinesi çalışmıyor."** Haier bu satırda beş sebep sayıyor ve beşinin de çözümü kullanıcının elinde: **program henüz başlamamış olabilir**, **kapak düzgünce kapatılmamış olabilir**, **makine açılmamış olabilir**, **elektrik kesintisi** ve **çocuk kilidi devrede olabilir.** Kılavuz, satış sonrası hizmetlerle görüşmeden önce **belirtilen tüm olasılıkları kontrol etmeni** istiyor.

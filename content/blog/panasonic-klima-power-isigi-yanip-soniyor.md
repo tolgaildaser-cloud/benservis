@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Kış günü salon duvarında çalışan beyaz bir split klima iç ünitesi"
   steps:
-    - "Klima iç ünitesinin ön yüzündeki küçük gösterge lambaları yakından"
-    - "Kanatçığı kapalı duran bir split klima ve önünde boş bir koltuk"
-    - "Koridorun iki ucundaki odalarda duvara asılı iki ayrı klima iç ünitesi"
-    - "Masada duran bir klima kumandası ve yanında katlanmış kullanma kılavuzu"
-    - "Komodinin üstünde ekranı aydınlanmış bir klima kumandası"
-    - "Lavabonun kenarında kurumaya bırakılmış ince ağlı klima filtreleri"
-    - "Sehpada açık bir not defteri ve klima kumandası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Panasonic klimanın ön panelindeki **POWER** ışığı yanıp sönüyor, klima bazen üflüyor, bazen susuyor. Bu belirti çoğu zaman arıza değil. Panasonic'in TZ serisi (CS-TZ..ZKEW) Türkçe kullanım kılavuzu, GÜÇ göstergesinin yanıp söndüğü birkaç ayrı durumu tarif ediyor; bunların bir kısmını "Daha fazlası için" bölümünde, bir kısmını "Aşağıdaki durumlar üründe arıza olduğunu göstermez" tablosunda anlatıyor. Bu yazıda o durumları sırayla ayırdık. Kılavuz bu seriye ait; senin modelinde davranış farklı olabilir, kendi kılavuzunla karşılaştır.

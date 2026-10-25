@@ -62,6 +62,15 @@ faq:
     a: "DV5000T kılavuzunun bu satırdaki tek önerisi, kötü koku içeren öğelerin iyice yıkandığından emin olmak. Kokulu giysiyi önce iyice yıka."
 images:
   coverAlt: "Penceresi aralık bir çamaşır odasında kapağı açık kurutma makinesi; yanında tezgâha bırakılmış boş su tankı ve çıkarılmış tiftik filtresi"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda pencere"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda bekleme süresi için saat"
 ---
 
 Kurutucudan çıkan çamaşır temiz kokmuyor ya da makinenin kapağını açınca rutubetli bir koku geliyor. Samsung'un ısı pompalı kurutucular için Türkçe kılavuzunda bu durumun satırı **"Kurutucudan koku geliyor."** Satırın ilk maddesi çoğu kişinin aklına gelmeyen bir sebebi söylüyor: **"Boya, vernik, temizlik maddeleri ve diğer ev eşyalarının kokusu havada dolaşıp kurutucuya girmiş olabilir."** Yani koku her zaman makinenin içinden gelmiyor; bazen odanın havasından geliyor. Aşağıdaki sıra bu satırı, Samsung Türkiye'nin "kötü koku" destek sayfasını ve kılavuzun bakım bölümünü izliyor. Kaynak DV90T5240AW ve DV5000T (DV90TA040AE) kılavuzları; mesaj ve tuş adları modele göre değişebilir.

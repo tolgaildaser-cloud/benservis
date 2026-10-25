@@ -49,12 +49,12 @@ faq:
 images:
   coverAlt: "Çamaşır odasında duran önden yüklemeli bir çamaşır makinesi ve içinde çamaşırlar"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde kısa bir kod gösteren küçük ekran"
-    - "Cam kapağı kapalı, tamburu duran önden yüklemeli bir çamaşır makinesi"
-    - "Duvar prizinden çekilmiş, yanında duran bir çamaşır makinesi fişi"
-    - "Çamaşır makinesinin program düğmesinin ve başlat tuşunun yakın planı"
-    - "Duvardaki tek bir prize doğrudan takılı beyaz bir fiş"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve yanında bir not kâğıdı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Makine yıkamanın ortasında durdu, tambur dönmüyor ve ekranda **3E** yazıyor. Samsung'un kod sayfasında bu kod, **3C** ve **3E1–3E4** varyantlarıyla birlikte tek bir satırda duruyor: **motor sorunu**. Samsung'un yeni Türkçe kılavuzlarında (WW5000C, WW4000T) aynı ailenin karşılığı 3C. Bu yazıda Samsung'un kendi kaynaklarına göre kodun anlamını, evde güvenle deneyebileceğin sırayı ve servisi çağırma noktasını topladık. Senin modelinde kod biraz farklı görünebilir; kendi kılavuzunla karşılaştır.

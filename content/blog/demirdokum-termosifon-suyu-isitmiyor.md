@@ -54,6 +54,13 @@ faq:
     a: "Kılavuzun arıza tablosu bu belirtiye iki sebep yazıyor: şebeke bağlantısında çok düşük gerilim ve ısıtma elemanında kireçlenme. İkisinde de çözüm müşteri hizmetlerini bilgilendirmek. Kılavuz ayrıca rezistansın her 2 yılda bir temizlenmesini istiyor; bu iş de müşteri hizmetlerine ait."
 images:
   coverAlt: "Banyo duvarında asılı beyaz silindir bir elektrikli termosifonun altındaki döner ayar düğmesi ve yanındaki iki küçük gösterge ışığı"
+  steps:
+    - "Çizim: solda duvar tipi şofben, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda bekleme süresi için saat"
 ---
 
 Sıcak su musluğunu açıyorsun ve su soğuk akıyor. DemirDöküm'ün **DT4-B 50 / 65 / 80** elektrikli termosifonunda ekran yok; durumu iki küçük ışık ve bir döner düğme anlatıyor. Kılavuzun arıza tablosu bu belirtiyi **"Ürün çalışmaz"** ve **"Sıcak su yok"** diye iki satıra ayırıyor. İlkinin çözümü kullanıcının elinde; ikincisinden önce de düğmenin konumuna bakmak gerekiyor, çünkü bir konum suyu bilerek ısıtmıyor.

@@ -36,12 +36,12 @@ faq:
 images:
   coverAlt: "Yatak odası duvarında asılı beyaz bir split klima ve ön panelindeki küçük lambalar"
   steps:
-    - "Klima iç ünitesinin ön yüzünde yan yana dizilmiş gösterge lambaları"
-    - "Komodinin üstünde ekranı aydınlanmış beyaz bir klima kumandası"
-    - "Kanatçığı kapalı, durmuş hâlde bir split klima iç ünitesi"
-    - "Kumandanın yanında açık duran bir not defteri"
-    - "Banyo lavabosunda durulanmış ince ağlı klima filtreleri"
-    - "Masada katlanmış bir klima kullanma kılavuzu ve yanında kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda not defteri ve kalem"
 ---
 
 Panasonic klimada ön paneldeki **TIMER** ışığı yanıp sönmeye başladı ve klima soğutmayı ya da ısıtmayı bıraktı. Panasonic bu ışığı iki ayrı anlamda kullanıyor: sabit yanması zamanlayıcının kurulu olduğunu, klima dururken yanıp sönmesi ise hafızada bir hata kaydı olduğunu gösteriyor. Bu yazıda farkı, Panasonic'in TZ serisi (CS-TZ..ZKEW) Türkçe kullanım kılavuzundan derledik. Kılavuz bu seriye ait; senin modelinde lamba sırası ya da düğme simgeleri farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -48,6 +48,8 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ## Protherm arıza kodları tablosu
 
+![Çizim: solda duvar tipi kombi, sağda not defteri ve kalem](/tamir-gorsel/protherm-kombi-ariza-kodlari/kod-tablosu-01.png)
+
 | Kod | Model | Kılavuzdaki anlamı | Kılavuzun kullanıcıya verdiği adım |
 |---|---|---|---|
 | **F.22** | Puma Condens | Tesisat basıncı çok düşük; ısıtma sistemindeki su yetersiz | Dolum basıncını kontrol et, ısıtma sistemini doldur |

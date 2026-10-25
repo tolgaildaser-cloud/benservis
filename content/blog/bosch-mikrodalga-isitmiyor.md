@@ -47,6 +47,13 @@ faq:
     a: "Bosch kılavuzuna göre metal mikrodalgaları geçirmez, bu yüzden metal kaptaki yemekler iyi ısınmaz. Alüminyum kaplar ayrıca kıvılcım oluşumuna neden olabilir ve kılavuz bunların cihazda kullanılmamasını istiyor."
 images:
   coverAlt: "Mutfak dolabına gömülü ankastre bir mikrodalga fırının kapağı açık, içinde cam kapta duran bir tabak yemek"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Mikrodalgayı her zamanki süreye kurdun ama yemek ortası buz gibi çıkıyor. Bosch'un BEL623M / BEL653M ankastre mikrodalga kılavuzunun arıza tablosunda bu belirti şöyle geçiyor: **"Yemekler eskiye oranla daha yavaş ısınıyor."** Tablo bunun üç nedenini sayıyor ve üçü de ayarla ilgili: güç, miktar ve yemeğin başlangıç sıcaklığı. Aynı tabloda gözden kaçabilecek bir neden daha var: **demo modu.**

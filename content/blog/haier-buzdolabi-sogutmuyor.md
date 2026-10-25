@@ -46,6 +46,14 @@ faq:
     a: "Haier'e göre güç bağlantısı kesildikten sonra cihaz açıldığında doğru sıcaklıklara ulaşılması 12 saate kadar sürebilir. Güç geri geldiğinde cihaz kesintiden önceki ayarlarla devam ediyor."
 images:
   coverAlt: "Kapısı açık çok kapılı bir buzdolabının raflarında aralarında boşluk bırakılarak dizilmiş kaplar ve şişeler"
+  steps:
+    - "Çizim: solda buzdolabı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Süt eskisi kadar soğuk değil, içerideki yiyecekler çabuk bozuluyor. Haier'in HCR5919 ailesini de kapsayan çok kapılı buzdolabı kılavuzunda bu durumun satırı **"Cihazın içi yeterince soğuk değil."** Haier bu satırda altı sebep sayıyor ve hepsi kullanımla ilgili: **sıcaklık çok yüksek ayarlanmış**, **çok sıcak ürünler saklanmış**, **bir seferde çok fazla yiyecek depolanmış**, **ürünler birbirine çok yakın**, **cihazın bir kapısı/çekmecesi sıkıca kapatılmamış** ve **kapı/çekmece çok sık veya çok uzun süre açıldı.** Kılavuz, bir sorunla karşılaşınca satış sonrası servise gitmeden önce **gösterilen tüm olasılıkları kontrol etmeni** istiyor.

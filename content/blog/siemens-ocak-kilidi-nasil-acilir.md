@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhına gömülü siyah cam yüzeyli bir indüksiyon ocağın dokunmatik kumanda şeridi"
   steps:
-    - "İndüksiyon ocağın cam yüzeyi kuru bir bezle siliniyor, üzerinde hiçbir kap yok"
-    - "Temiz ve parlak bir ocak kumanda şeridi, ışıkları sönük"
-    - "Ocağın kumanda şeridinde açma kapama simgesinin bulunduğu bölge"
-    - "Ocağın kumanda şeridinde çocuk kilidi simgesinin bulunduğu bölge"
-    - "Ocağın kumanda şeridi ve yanında açık duran bir kullanma kılavuzu sayfası"
-    - "Koridordaki sigorta kutusunun kapağı kapalı, sade"
-    - "Kapalı bir ocak ve yanında not defteri ile kalem"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Akşam yemeği için ocağı açmak istiyorsun, dokunmatik tuşlar tepki vermiyor. Ekranda bir sembol yanıyor ya da hiçbir şey olmuyor. Siemens indüksiyonlu ocaklarda bunun en sık nedeni **çocuk kilidi**: tek bir dokunuşla açılmayan, birkaç saniye basılı tutmayı isteyen bir güvenlik özelliği. Siemens'in EH9 ve ED serisi indüksiyonlu ocak kılavuzları kilidin nasıl açılıp kapatıldığını, ocak her kapandığında neden kendiliğinden kilitlenebildiğini ve temizlik sırasında devreye giren kısa süreli kilidi ayrı ayrı anlatıyor. Bu yazıda o adımları sırayla topladık. Senin ocağında sembollerin yeri farklı olabilir, kendi kılavuzunla karşılaştır.

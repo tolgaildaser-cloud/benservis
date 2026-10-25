@@ -46,6 +46,14 @@ faq:
     a: "Evet. TCL tablosuna göre bu ses, sıcaklık değişimi nedeniyle ön panelin genleşip büzülmesinden kaynaklanır ve bir sorun olduğunu göstermez."
 images:
   coverAlt: "Kış sabahı soğuk bir oturma odasında yere serili kalın halı, duvarda kanatları aşağıya dönük çalışan beyaz split klima ve koltuğun koluna atılmış örgü bir şal"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klimayı kışın ısıtmaya aldın ama odaya gelen hava ılık kalıyor ya da iç ünitenin fanı arada tamamen duruyor. TCL'nin Türkçe kullanma kılavuzu bu iki durumu ayrı yerlerde anlatıyor. Fanın durması ısıtma bölümünde açıklanıyor: cihaz **"kondenserdeki buzu temizlemek için gerekli olan bir buz çözme çevrimini otomatik olarak etkinleştirebilir. Bu prosedür genellikle 2-10 dakika sürer."** Zayıf ısıtma ise sorun giderme tablosundaki **"Yetersiz hava akışı, sıcak ya da soğuk"** satırına düşüyor; bu satır sıcaklık ayarını, tıkalı giriş-çıkışı, kirli filtreyi ve minimumda kalan fan hızını sayıyor. Aşağıda önce ısıtmaya özgü notları, sonra bu kontrolleri sıraladık.

@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Duvar dibindeki şarj tabanına dik yerleştirilmiş ıslak kuru süpürge"
   steps:
-    - "Duvar prizine takılı süpürge adaptörünün fişi"
-    - "Şarj tabanına bağlanan şarj kablosu ve duvar dibindeki taban"
-    - "Şarj tabanına dikey oturtulmuş ıslak kuru süpürge"
-    - "Kablosuz dikey süpürgenin gövdesine yerleştirilen pil paketi"
-    - "Serin, güneş almayan bir köşede şarj tabanında bekleyen süpürge"
-    - "Şarj sırasında ışığı yanıp sönen süpürge ekranı"
-    - "Kapalı duran süpürge ve yanında kullanım kılavuzu"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda dikey süpürge, sağda kumandanın pilleri"
+    - "Çizim: solda dikey süpürge, sağda bekleme süresi için saat"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
 ---
 
 Akşam süpürgeyi tabana koydun, sabah aldığında ekran hâlâ boş pil gösteriyor. Tineco'nun Türkiye sitesindeki **Floor One S3, S5, S7 FlashDry, iFloor 3** (ıslak kuru) ve **Pure One S12** (kuru dikey) kılavuzları şarj sorununda aynı noktalara bakıyor: orijinal adaptör, tabana doğru oturma, pil teması ve ortam sıcaklığı. Bu yazı onları sırayla dolaşıyor.

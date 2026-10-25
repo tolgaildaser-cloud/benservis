@@ -49,6 +49,14 @@ faq:
     a: "Kılavuzun önerisi, temizlik bittikten sonra süpürgeyi küçük toz parçacıklarını çekmesi için 10 saniye ya da daha uzun süre çalıştırmak."
 images:
   coverAlt: "Toz haznesi çıkarılmış kablosuz dikey süpürge ve yanında kurumaya bırakılmış yıkanabilir filtre"
+  steps:
+    - "Çizim: solda dikey süpürge, sağda temizleme bezi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
 ---
 
 Süpürge çalışıyor ama emişi birden düşüyor, üstüne bir de titreme sesi geliyor. Samsung'un Jet 70 (VS7000) kılavuzunun sorun giderme tablosunda bu belirti aynen var: **"Emiş gücü aniden azalıyor ve elektrik süpürgesi bir titreme sesi çıkarıyor."** Tablonun üç çözümü de hava yolunu temizlemekle ilgili: fırça, hazne, boru ve filtre.

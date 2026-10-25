@@ -51,14 +51,14 @@ faq:
 images:
   coverAlt: "Kapağı açık bir bulaşık makinesinin tabanında yerinde duran silindir biçimli süzgeç"
   steps:
-    - "Bulaşık makinesinin kumanda panelinde parmakla basılı tutulan bir tuş"
-    - "Bulaşık makinesinin tabanından çevrilerek çıkarılan silindir biçimli bir süzgeç"
-    - "Elde tutulan düz, ince delikli metal bir mikro süzgeç"
-    - "İki parmakla birbirine bastırılan plastik süzgeç tırnaklarının yakın planı"
-    - "Mutfak musluğunun akan suyu altında tutulan süzgeç parçaları"
-    - "Birleştirilmiş, temiz bir bulaşık makinesi süzgecinin yakın planı"
-    - "Bulaşık makinesinin tabanına yerleştirilip çevrilen süzgeç ve yan yana gelmiş iki ok işareti"
-    - "Prizden çekilmiş bir fiş ve yanında kapalı bir su musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşık makinesi programın ortasında durdu ve ekranda **E:22** yanıp sönüyor. İlk akla gelen pompa ya da kart olur; ama Profilo'nun kendi kılavuzu bu kod için çok daha sade bir şey söylüyor: süzgeçler pislenmiş veya tıkanmış. Bu yazıda Profilo'nun BM6380MA ve BMS623V5 kullanım kılavuzlarına dayanarak, servisi aramadan önce evde yapabileceğin her şeyi sırasıyla topladık. Senin modelinde tuş adları ya da kodun yazılışı farklı olabilir, kendi kılavuzunla karşılaştır.

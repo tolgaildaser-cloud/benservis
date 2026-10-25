@@ -49,12 +49,12 @@ faq:
 images:
   coverAlt: "Çamaşır odasında kapağı kapalı duran beyaz bir kurutma makinesi ve ekranında kısa bir uyarı"
   steps:
-    - "Kurutma makinesinin kapağı tamamen kapanmış hâlde yandan görünümü"
-    - "Kurutma makinesinin kontrol panelinde başlatma düğmesinin yakın planı"
-    - "Kurutma makinesi ekranında küçük bir kilit simgesi"
-    - "Birbirinden ayrılmış çamaşırların makine kapağının önünde sepette beklemesi"
-    - "Açık duran kurutma makinesi kapağının iç yüzü ve lastik conta çevresi"
-    - "Kapağı kapalı kurutma makinesinin yanında kullanım kılavuzu ve telefon"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kurutma makinesini çalıştırmak istedin ama ekranda **dC** belirdi ya da makine "Kapak açik" yazıp başlamadı. Samsung'un tarifiyle bu, makinenin kapağı açık durumdayken çalıştırılmak istendiğini düşündüğü anlamına geliyor. Çoğu zaman kapağın tam kapanmamasıyla ilgili; bazen de çocuk kilidi ya da yükleme. Bu yazıda Samsung'un DV5000T ve ısı pompalı SimpleUX Türkçe kılavuzlarında kapakla ilgili ne varsa topladık. DV5000T bu durumu dC koduyla, SimpleUX ekranlı modeller "Kapak açik" yazısıyla gösteriyor.

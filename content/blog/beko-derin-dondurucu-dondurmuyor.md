@@ -48,6 +48,14 @@ faq:
     a: "Beko'ya göre cihaz +10 °C ile +40 °C arasındaki ortam sıcaklıklarında çalışacak şekilde tasarlanmış; +40 °C'nin üzerinde iç sıcaklık artabilir. Kılavuz cihazın düz, kuru ve iyi havalandırmalı bir yere konmasını istiyor. Nemli ya da havasız ortamda dış duvarlarda nem oluşmasını ise normal sayıyor; damlaları yumuşak bir bezle silmen yeterli."
 images:
   coverAlt: "Garajda duvar dibinde duran beyaz sandık tipi derin dondurucunun ön yüzündeki termostat kutusu"
+  steps:
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
 ---
 
 Sandık dondurucunun ön yüzündeki **kırmızı ışık** sönmüyor ve içerideki paketler yumuşak. Beko'nun BK serisi sandık tipi derin dondurucu kılavuzunda bu tablonun satırı **"Sıcaklık değerleri yeteri kadar düşük değildir (kırmızı LED ışık açık)."** Beko bu satıra dört neden yazıyor: kapağı engelleyen yiyecek, yanlış yerleşim, yakındaki ısı kaynağı ve termostat düğmesinin konumu.

@@ -51,6 +51,14 @@ faq:
     a: "WW4000T kılavuzu deterjan çekmecesinde tablet ya da kapsül ve çamaşır topu ya da filesi biçimindeki deterjanların kullanılmamasını istiyor. Kendi modelinin kılavuzundaki deterjan bölümüne bak."
 images:
   coverAlt: "Çamaşır makinesinden çıkarılmış deterjan çekmecesi lavabonun içinde akan suyun altında; yanında yumuşak bir fırça ve ince uzun bir şişe fırçası"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda temizlik fırçası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program bitmiş, çekmeceyi açınca toz deterjanın büyük kısmı yerinde duruyor ya da bölmede ıslak bir deterjan topağı kalmış. Samsung'un Türkçe kullanım kılavuzlarındaki sorun giderme tablosunda bu durumun satırı uzun ama açık: **"Bir programdan sonra, deterjan çekmecesinde deterjan kalıyor."** Satırın ilk maddesi deterjanla değil suyla ilgili: **"Çamaşır makinesine gelen suyun basıncının yeterli olduğunu kontrol edin."** Aşağıdaki sıra bu satırı ve kılavuzun deterjan çekmecesi bölümünü izliyor. Kaynak WW4000T ve WW5000C serilerinin kılavuzları; bölme ve parça adları modele göre değişebilir.

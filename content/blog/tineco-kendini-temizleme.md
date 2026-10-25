@@ -38,12 +38,12 @@ faq:
 images:
   coverAlt: "Şarj tabanında dik duran ve fırça silindiri yıkanan ıslak kuru süpürge"
   steps:
-    - "Lavaboda boşaltılıp durulanan kirli su deposu"
-    - "Musluk suyuyla doldurulan temiz su deposu"
-    - "Duvar prizine takılı şarj tabanı adaptörü"
-    - "Kullanımdan sonra şarj tabanına dik yerleştirilen süpürge"
-    - "Süpürge sapındaki kendi kendini temizleme düğmesi"
-    - "Döngü sonrası boşaltılan kirli su deposu ve şarjda bekleyen süpürge"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda çalışma sesi"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
 ---
 
 Islak kuru süpürgenin en çok sevilen özelliği, işi bitince fırçasını kendisinin yıkaması. Ama bazen düğmeye basıyorsun, cihaz yalnızca bir cümle söyleyip duruyor. Tineco'nun Türkiye sitesindeki **Floor One S3, S5, S7 FlashDry** ve **iFloor 3** kılavuzları döngünün sırasını ve başlaması için gereken koşulları açıkça yazıyor. Kılavuzlarda parçanın adı S3 ve iFloor 3'te **yıkama başlığı**, S5 ve S7'de **fırça silindiri**; ikisi aynı yumuşak silindir.

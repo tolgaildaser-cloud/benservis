@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Oturma odasında duvara monte edilmiş, ekranında ayar menüsü açık bir televizyon"
   steps:
-    - "Televizyon ekranında açık duran akıllı TV ana ekranı"
-    - "Televizyonun arka panelinde anten girişine takılı bir koaksiyel kablo"
-    - "Televizyon ekranında açılmış bir ayarlar menüsü"
-    - "Televizyon ekranında kaynak türü seçim listesi"
-    - "Televizyon ekranında ilerleyen bir kanal tarama çubuğu"
-    - "Balkon korkuluğuna monte edilmiş bir uydu çanağı"
-    - "Televizyon ekranında açık duran bir kanal listesi"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda bekleme süresi için saat"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sharp televizyonunu yeni kurdun, taşındın ya da yayıncı frekans değiştirdi ve kanallar kayboldu. Kanal ayarlama Sharp'ta televizyonun işletim sistemine göre değişiyor: Google TV'li modellerde bir menü yolu, TiVo'lu modellerde başka bir yol var. Bu yazıda Sharp'ın Google TV ve TiVo televizyon kılavuzlarındaki (kılavuzların İngilizce baskısı, alıntılar ve menü adları Türkçeye çevrildi) kanal tarama adımlarını topladık. Menü adları televizyonunda Türkçe görünüyorsa anlam aynı.

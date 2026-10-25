@@ -42,6 +42,12 @@ faq:
     a: "Hayır. Samsung kılavuzu döner halka ve döner tabla takılı olmadan mikrodalga fırının çalıştırılmamasını istiyor. Kurulumda halkanın fırının ortasına, tablanın da ortadaki bağlayıcıya oturacak şekilde halkanın üzerine konması ve tablanın serbestçe dönüp dönmediğinin kontrol edilmesi isteniyor."
 images:
   coverAlt: "Mikrodalga fırının tabanında ortadaki bağlayıcının çevresine yerleştirilmiş tekerlekli döner halka ve yanında çıkarılmış cam tabla"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda mikrodalga fırın, sağda temizleme bezi"
+    - "Çizim: solda mikrodalga fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Cam tabla yerinde duruyor ama dönmüyor, ya da dönerken sekiyor, tıkırdıyor. Samsung'un MS23K3555ES ve ankastre MG22M8074AT kılavuzlarının sorun giderme tablosunda tablaya ayrılmış bir bölüm var: **"Döner Tabla."** Orada üç ayrı belirti yazıyor: tabla **"yerinden çıkıyor veya dönmeyi durduruyor"**, **"dönerken sürükleniyor"**, **"dönerken tıkırdıyor ve çok gürültülü."** Üçünün de ilk çözümü elle yapılıyor.

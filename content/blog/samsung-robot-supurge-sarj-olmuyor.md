@@ -48,6 +48,14 @@ faq:
     a: "Hayır. VR7700 kılavuzu bu üründeki pilin kullanıcı tarafından değiştirilemeyeceğini yazıyor; VR5000 kılavuzu da bataryayı kendi başına çıkarmaya çalışmamayı, değişim için servis sağlayıcıya ya da kalifiye bir uzmana başvurmayı istiyor."
 images:
   coverAlt: "Duvar dibindeki şarj istasyonuna yanaşmış yuvarlak bir robot süpürge ve önünde boş bırakılmış parke zemin"
+  steps:
+    - "Çizim: solda robot süpürge, sağda kapak"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
 ---
 
 Robot temizliği bitirip istasyona dönüyor ama ertesi gün yerinden kalkmıyor. Samsung'un VR7700 ve VR5000 robot süpürge kılavuzlarının arıza tablosunda bu belirti tek satırla geçiyor: **"Cihaz şarj olmuyor"**. Tablonun gösterdiği iki neden de kullanıcının elinde: güç anahtarı ve temas.

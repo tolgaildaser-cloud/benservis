@@ -49,14 +49,14 @@ faq:
 images:
   coverAlt: "Mutfakta kapağı aralık duran beyaz bir alttan donduruculu buzdolabı ve içindeki dolu raflar"
   steps:
-    - "Buzdolabının arkasında duvardaki prize takılı beyaz bir fiş"
-    - "Buzdolabı kapağındaki dokunmatik kumanda panelinin yakın planı"
-    - "Kumanda panelinde yan yana duran tatil ve eco tuşları"
-    - "Buzdolabı panelinde parlayan bir sıcaklık göstergesi"
-    - "Kapı rafları dolu, tam kapanmış bir buzdolabı kapağı"
-    - "Duvarla buzdolabı arasında bırakılmış boşluk ve önü açık hava ızgarası"
-    - "Tezgâhta soğumaya bırakılmış, kapağı kapalı bir tencere"
-    - "Kapağı açık bırakılmış boş bir dondurucu çekmecesi ve yanında bir sünger"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda panel radyatör ve vanası"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının ışığı yanıyor, motor çalışıyor gibi, ama içerisi ılık. Profilo'nun buzdolabı kılavuzlarında bu durumun karşılığı tek bir arıza değil, bir dizi kontrol: bazı modlar soğutmayı kasten azaltıyor, bazı kullanım alışkanlıkları da sıcaklığı yükseltiyor. Bu yazıda Profilo'nun BD3056 ile iki BD20 serisinin kullanım kılavuzlarındaki arıza tablolarını ve ayar bölümlerini sırayla topladık. Tuş adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

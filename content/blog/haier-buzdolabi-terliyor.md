@@ -47,6 +47,12 @@ faq:
     a: "Haier'e göre Power-Freeze, Super-Cool, Holiday veya Auto Set modu etkinse ya da ekran kilitliyse ilgili bölmenin sıcaklığı ayarlanamıyor ve gösterge sesli uyarıyla yanıp sönüyor. Panel kapılar kapalıyken 30 saniye tuşa basılmazsa kendiliğinden kilitleniyor; kilidi F düğmesiyle açılıyor."
 images:
   coverAlt: "Buzdolabı rafındaki ağzı açık bir sürahi ve iç duvarda biriken küçük su damlacıkları"
+  steps:
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
 ---
 
 Buzdolabı rafının üstünde, arka duvarda ya da kapların çevresinde ince su damlacıkları birikiyor. Haier'in HCR5919 ailesini de kapsayan çok kapılı buzdolabı kılavuzunda bu durumun satırı **"Soğutucu bölmesinin iç kısmında nem oluşumu."** Haier bu satırda dört sebep sayıyor: **iklim çok sıcak ve çok nemli**, **cihazın bir kapısı/çekmecesi sıkıca kapatılmamış**, **kapı/çekmece çok sık veya çok uzun süre açıldı** ve **yiyecek kapları veya sıvılar açık bırakılmış.** Kılavuzun sıcaklık bölümü de iç sıcaklığı etkileyen dört etkeni sayıyor: **ortam sıcaklığı, kapı açma sıklığı, depolanan gıda miktarı ve cihazın kurulumu.**

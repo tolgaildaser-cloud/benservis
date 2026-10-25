@@ -45,6 +45,13 @@ faq:
     a: "Kılavuza göre F102 fırın kapağının tam kapanmadığını ya da kapak kilidinin arızalı olduğunu gösterir. Çözüm: kapağı kapatmak, cihazı kapatıp tekrar açmak. Mesaj görünmeye devam ederse satıcıya ya da Yetkili Servise başvurulması isteniyor."
 images:
   coverAlt: "Paslanmaz çelik bir ankastre fırının dokunmatik ekranı, içi karanlık ve tepsisi boş"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
 ---
 
 Fırını çalıştırdın, ekran yanıyor ama içerisi ısınmıyor. Electrolux'un EOC8P39WX kullanma kılavuzundaki sorun giderme tablosunda bu belirtinin karşılığı tek satır: **"Cihaz ısınmıyor."** Tablonun saydığı dört nedenin üçü bir ayar ya da kapakla ilgili; dördüncüsü sigorta. Bu yazı EOC8P39WX / EOC8P39WZ / KOCBP39WX kılavuzuna dayanıyor; menü adları başka modellerde farklı olabilir.
