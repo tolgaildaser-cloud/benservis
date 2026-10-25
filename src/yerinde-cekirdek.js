@@ -121,6 +121,15 @@ export function cepNormal(tel) {
   return /^05\d{9}$/.test(n) ? n : null;
 }
 
+// ─── Tıkla-ara (Verimor, PR-4) ───────────────────────────────────────────────────────────────────
+// Müşteri telefonu tarayıcıdan gelmez: API iş kimliğinden yerinde_musteri'yi okur; panel yalnız iş id + dahili yollar.
+export const ARAMA_BEKLEME_SN = 15; // aynı işte art arda arama (çift tıklama) engeli
+export const aranabilir = (durum) => !["tamam", "iptal"].includes(durum);
+// Kayıtlı cep (05XXXXXXXXX) → Verimor'un beklediği 905XXXXXXXXX; geçersizse null.
+export const verimorNo = (tel) => { const n = cepNormal(tel); return n ? "9" + n : null; };
+// Santral dahilisi: 2–6 rakam; boş ya da geçersizse null.
+export const dahiliOku = (v) => { const d = String(v ?? "").replace(/\D/g, ""); return /^\d{2,6}$/.test(d) ? d : null; };
+
 // ─── Tarih yardımcıları (yerel saat) ─────────────────────────────────────────────────────────────
 export const isoDay = (d) => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
 export function parseDay(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
@@ -241,6 +250,7 @@ export function olayMetni(olay) {
     case "kayit": return "Kayıt girildi";
     case "durum": return "Durum: " + (durumAd[deger] || deger);
     case "arama_ulasilamadi": return "Arandı, ulaşılamadı";
+    case "arama": return deger === "deneme" ? "Deneme araması (0850, gerçek arama yapılmadı)" : "0850 hattından arama başlatıldı";
     case "randevu": return "Randevu verildi / değişti";
     case "teknisyen": return "Teknisyen: " + (deger === "yok" ? "yok" : deger.toUpperCase());
     case "garanti": return "Garanti: " + (GARANTI_AD[{ e: "E", h: "H", bilinmiyor: "?" }[deger]] || deger);
