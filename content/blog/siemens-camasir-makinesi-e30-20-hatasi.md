@@ -50,6 +50,14 @@ faq:
     a: "Siemens'in E:30-20 talimatındaki son adım: arıza devam ederse müşteri hizmetlerini ara. Kılavuza göre müşteri hizmetlerine başvururken cihazın ürün numarasını (E-Nr.), imalat numarasını (FD) ve sayma numarasını (Z-Nr.) hazır bulundurman gerekir."
 images:
   coverAlt: "Çamaşır makinesinin arkasındaki su musluğunu kapatan bir el; arka planda ekranı yanan ön yüklemeli çamaşır makinesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda paneldeki tuş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda paneldeki tuş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda paneldeki tuş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program ortasında makine durdu ve ekranda **E:30-20** belirdi. Siemens'in yeni nesil çamaşır makinesi kılavuzlarında bu kodun ilk karşılığı **"Kritik fonksiyon arızası."** İlk talimat da net: **musluğu kapat.** Kılavuza göre makine, hata mesajıyla birlikte suyu kendisi boşaltmaya başlar; senden beklenen, bu boşaltmanın bitmesini beklemek ve cihazı yeniden başlatmaktır. Aynı satır iki kullanıcı kaynaklı sebebi de sayıyor: fazla deterjan ve çalışma sırasında eklenen su.

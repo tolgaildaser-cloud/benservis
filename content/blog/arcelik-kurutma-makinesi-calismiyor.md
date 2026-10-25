@@ -53,6 +53,13 @@ faq:
     a: "Hayır. Kılavuz su tankının program çalışırken kesinlikle yerinden çıkarılmamasını istiyor. Tank program sırasında dolarsa makine kendiliğinden beklemeye geçer; o zaman tankı boşaltıp Başla/Bekle ile devam ettirebilirsin."
 images:
   coverAlt: "Çamaşırla dolu tamburu görünen, kapağı aralık beyaz kurutma makinesinin önünde duran sepet"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda su tankı"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
 ---
 
 Islak çamaşırları tambura koydun, programı çevirdin ama kurutma makinesi ses vermiyor ya da bir süre çalışıp duruyor. Arçelik'in yoğuşmalı kurutma makinesi kılavuzunda iki ayrı satır var: **"Kurutma makinesi açılmıyor veya program başlatılamıyor."** ve **"Program nedensiz olarak yarıda kesildi."** İkisinin nedenleri de kapak, düğmeler ve su tankı etrafında dönüyor.

@@ -51,6 +51,15 @@ faq:
     a: "Evet. Airfel kılavuzuna göre uyku modunda ısıtma ayarı 1 saat sonra 1°C, bir saat sonra 1°C daha düşer; uyku özelliği 8 saat sonra devreden çıkar. MODE, FAN ya da ON/OFF düğmesine basmak da uyku modunu iptal eder."
 images:
   coverAlt: "Kış sabahı buğulu pencereli bir yatak odasında kapalı perdeler, duvarda kanatları aşağı bakan beyaz split klima ve yatağın ucunda katlı bir battaniye"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Soğuk bir sabah klimayı ısıtmaya aldın, ama ya hava ılık geliyor ya da klima bir süre sonra sıcak hava vermeyi bırakıp sadece fan çalıştırıyor. Airfel'in Türkçe kullanım kılavuzu ısıtmadaki zayıflığı sorun giderme tablosunda **"Düşük ısıtma performansı"** satırıyla veriyor ve üç neden sayıyor: dış sıcaklığın çok düşük olması, kapı ve pencerelerden giren soğuk hava ve azalmış soğutucu akışkan. Isıtırken fana geçmeyi ise "arıza değil" listesinde açıklıyor: **"Buzlanmayı önlemek için ünite kendi kendine ayar değiştirebilir. Sıcaklık arttığı zaman, ünite önceden seçilen modda yeniden çalışmaya başlayacaktır."** Bu yazıda Airfel'in ısıtma notlarını kumanda kılavuzundaki mod ve uyku ayarlarıyla birlikte sırayla anlatıyoruz.

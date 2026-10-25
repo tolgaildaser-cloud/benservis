@@ -36,13 +36,13 @@ faq:
 images:
   coverAlt: "Solo bulaşık makinesinin kumanda paneli yakın planda; ekranın yanında musluk, tuz, parlatıcı ve kablosuz ağ sembolleri görünüyor"
   steps:
-    - "Bulaşık makinesinin arkasında açık musluk ve düz uzanan giriş hortumu"
-    - "Tam açık musluğun altında su dolan kova"
-    - "Bulaşık makinesinin tabanında açık tuz kabı"
-    - "Bulaşık makinesi kapağının içinde açık parlatıcı kabı"
-    - "Bulaşık makinesi ekranında su sertliği ayarı"
-    - "Bulaşık makinesi panelinde anahtar sembolü yakın plan"
-    - "Fişi prizden çekilmiş bulaşık makinesi"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda paneldeki tuş"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Siemens bulaşık makinenin panelinde bir sembol yandı ya da ekranda **H04**, **r:05**, **h:01** gibi bir yazı belirdi. Bunların çoğu arıza değil; bir ayarın, bir sarf malzemesinin ya da bir fonksiyonun durumunu gösterir. Bu yazıdaki karşılıkların tamamı **Siemens'in kendi kullanım kılavuzundan** alındı.

@@ -49,6 +49,15 @@ faq:
     a: "Samsung'un tablosu sigorta ya da devre kesici atmışsa devreyi sıfırlamanı, bu durum art arda tekrarlanıyorsa elektrikçi çağırmanı söylüyor. Kesiciyi defalarca kaldırmaya devam etme."
 images:
   coverAlt: "Ortasına yatay bölücü takılmış iki bölmeli ankastre fırının kapağı aralık, iç lambası yanıyor"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda paneldeki tuş"
+    - "Çizim: solda ankastre fırın, sağda paneldeki tuş"
+    - "Çizim: solda ankastre fırın, sağda paneldeki tuş"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Fırını ayarladın, lamba yanıyor ama içerisi ısınmıyor. Samsung'un Türkçe ankastre fırın kılavuzlarındaki sorun giderme tablosunda bu belirti **"Fırın ısınmıyor."** diye geçiyor ve üç neden sayılıyor: **kapak açık, fırın kontrolleri doğru ayarlanmamış, evdeki sigorta ya da devre kesici atmış.** Samsung'un ikili pişirme özellikli modellerinde bir neden daha var: **bölücü.** Bu yazıda Samsung'un NV7B4420ZAK ve NV75R7647RS kılavuzlarındaki tabloları ve bilgi kodlarını birlikte okuyoruz; menü ve tuş adları modele göre değişebilir.

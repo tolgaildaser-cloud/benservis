@@ -43,6 +43,15 @@ faq:
     a: "Konu aynı: suyun tahliye edilememesi. Eski modellerde Bosch bu durumu E18, F18 ya da d02 koduyla gösterir. O kod için ayrı rehberimiz var: Bosch çamaşır makinesi E18 hatası."
 images:
   coverAlt: "Çamaşır makinesinin ön alt köşesinde açılmış bakım kapağı, önünde geniş bir kap ve yere serilmiş havlu"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program sıkmaya geçmek üzereyken durdu, camdan bakınca tamburun dibinde su var ve ekranda **E:30-80** yazıyor. Bazı modellerde aynı durum **E:36-10** olarak da görünür. Bosch'un yeni nesil kullanım kılavuzlarında bu satırın karşılığı şu: **"Deterjanlı su cihazdan pompalanıp boşaltılmıyor."** Kılavuzun saydığı sebepler tahliye hortumundan pompa kapağına kadar uzanıyor ve çoğu evde kontrol edilebilecek noktalar.

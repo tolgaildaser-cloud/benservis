@@ -66,6 +66,15 @@ faq:
     a: "Hayır. Condens 5700i W kılavuzu, bir arızayı sıfırlamak için tekrarlanan girişimlerin cihazın güvenlik nedeniyle bloke olmasına yol açabileceğini yazıyor (arıza kodu 2980); bu blokajı ancak yetkili firma ya da müşteri hizmetleri arızanın nedenini yerinde giderdikten sonra kaldırabiliyor. Tüm kılavuzların ortak talimatı: arıza giderilemiyorsa yetkili servisi ya da müşteri hizmetlerini ara, arıza kodunu ve cihaz bilgilerini bildir."
 images:
   coverAlt: "Duvara monte beyaz bir kombi ve yanında duvardaki oda termostatı; önde termostatik vanası görünen beyaz bir panel radyatör"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor ama petekler soğuk. Bosch'un Condens serisi kullanma kılavuzlarında bu belirtinin karşılığı bir arıza kodu değil, büyük ihtimalle önce bir **ayar**: kılavuzların her birinde ısıtmayı kapatıp sıcak suyu çalışır bırakan bir **yaz işletimi** anlatılıyor ve cümle açık: **"Yaz işletiminde sirkülasyon pompası ve dolayısıyla da ısıtma kapalıdır."** Bosch'un kılavuzlarında ayrı bir "petekler ısınmıyor" tablosu yok; bu yazıda Condens 1200W, 2200i W, 2300i W, 2500 W, 5700i W ve 7000iW kılavuzlarının kullanım, enerji tasarrufu, arıza ve bakım bölümlerinde kullanıcıya verilen talimatları belirtiye göre sıralıyoruz.

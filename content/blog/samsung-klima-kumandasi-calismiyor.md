@@ -48,6 +48,13 @@ faq:
     a: "Samsung kılavuzu kumandaya çarpılmamasını, sallanmamasını, düşürülmemesini ve sökülmeye çalışılmamasını istiyor. Pil değiştirirken pil sıvısının cildine temas etmemesine de dikkat et. Kumanda sağlam pillerle çalışmıyorsa Samsung yetkili servisine başvur."
 images:
   coverAlt: "Bir elin tuttuğu beyaz klima kumandası ve yanında sehpanın üzerinde duran iki yeni AAA pil"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kumandaya basıyorsun ama klima tepki vermiyor. Samsung'un Türkçe kullanım kılavuzunun sorun giderme tablosunda bu belirtinin karşılığı **"Uzaktan kumanda çalışmıyor."** ve ilk çözüm en basiti: **"Uzaktan kumandanın pillerini değiştirin."** Samsung ayrıca sinyal yolunu ve odadaki parlak ışık kaynaklarını kontrol etmeni istiyor. Bu yazıda Samsung'un kendi sırasını adım adım anlatıyoruz.

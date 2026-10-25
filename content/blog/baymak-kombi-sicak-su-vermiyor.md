@@ -66,6 +66,14 @@ faq:
     a: "Duotec, Duotec DHW ve Eco CT 20 kılavuzlarındaki hata kodu listesinde F52 'Kullanım suyu sensör arızası', F50 'Sıcak su boyler sensör arızası' olarak geçiyor. Kılavuzun hata kodları için tek talimatı RESET tuşuna basmak ve sorun devam ederse mutlaka yetkili servisi aramak. Sensöre kullanıcı müdahalesi tarif edilmiyor."
 images:
   coverAlt: "Banyo lavabosunun üstünde açık bir musluktan buharsız akan su ve arka plandaki duvarda beyaz bir kombi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluğu açıyorsun, su akıyor ama ısınmıyor. Baymak'ın kendi sitesinde tam bu soruya ayrılmış bir yazı var: **"Kombi Neden Suyu Isıtmaz?"** Yazının verdiği ilk cevap bir parça değil: **"başlıca nedeni su basıncının düşük olmasıdır."** Aynı yazı termostat ayarını da sayıyor ve dışarıdan görebileceğin şeylerle görmediklerini ayırıyor: basıncı, ayarı, sıcaklığı sen kontrol edersin; pompa, eşanjör, sensör ve elektrik bağlantıları yetkili servisin işi. Bu yazıda o sırayı Duotec, Duotec Compact, Duotec DHW, Eco CT 20 ve Lunatec kullanma kılavuzlarındaki talimatlarla birleştiriyoruz.

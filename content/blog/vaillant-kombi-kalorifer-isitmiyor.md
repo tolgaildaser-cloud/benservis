@@ -62,6 +62,14 @@ faq:
     a: "Olmayabilir. Kılavuzların durum kodu listesinde S.08 var: ecoTEC pure'da 'Isıtma işleminden sonra geçici kapatma', ecoTEC pro'da 'Kalorifer kalan bekleme süresi xx dakika', ecoTEC plus'ta S.008 'brülör bekleme süresinde'. Bu kodu görüyorsan kombi bilerek bekliyor. Uzun süre geçtiği hâlde ısıtma başlamıyorsa yetkili servise başvur."
 images:
   coverAlt: "Duvara monte beyaz bir kombi ve yanında duvara asılı dijital bir oda termostatı; önde soğuk görünen beyaz bir panel radyatör"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor, ama petekler soğuk. Kombi çalışıyor gibi görünüyor, sadece ısıtma yapmıyor. Vaillant'ın ecoTEC kullanma kılavuzlarının dördünde de bu durumun kendi satırı var: **"Isıtma işletime geçmiyor (Sıcak su hazırlama çalışıyor)."** Kılavuzların bu satır için verdiği neden bir parça değil, bir ayar: **"Harici regler doğru ayarlanmamış."** Regler, kombiye bağlı oda termostatı demek. Bu yazıda o satırı ve kombinin kendi ısıtma ayarlarını, dört Vaillant kılavuzundan sırayla anlatıyoruz.

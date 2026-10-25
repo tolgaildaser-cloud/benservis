@@ -43,6 +43,10 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ademiX kılavuzunun "Gösterilen semboller" tablosu kısa: dört durum simgesi, bir bakım simgesi, bir arıza gösterimi ve bir bilgi yazısı.
 
+![Çizim: DemirDöküm kombi ekran simgeleri tablosu (alev, basınç, musluk, radyatör, anahtar, saat, kilit) ve anlamları (1/3)](/tamir-gorsel/demirdokum-kombi-sembolleri-ve-anlamlari/sembol-tablosu-01.png)
+![Çizim: DemirDöküm kombi ekran simgeleri tablosu (alev, basınç, musluk, radyatör, anahtar, saat, kilit) ve anlamları (2/3)](/tamir-gorsel/demirdokum-kombi-sembolleri-ve-anlamlari/sembol-tablosu-02.png)
+![Çizim: DemirDöküm kombi ekran simgeleri tablosu (alev, basınç, musluk, radyatör, anahtar, saat, kilit) ve anlamları (3/3)](/tamir-gorsel/demirdokum-kombi-sembolleri-ve-anlamlari/sembol-tablosu-03.png)
+
 | Sembol | Sürekli yanıyor | Yanıp sönüyor |
 |---|---|---|
 | **Alev** | Doğru brülör işletimi, brülör açık | — |

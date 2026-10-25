@@ -55,6 +55,14 @@ faq:
     a: "Samsung'un LC talimatı yeniden çalıştırmayı değil, önce montöre, sorun sürerse Samsung servisine başvurmayı söylüyor. Kaçağın kaynağı belli değilse makineyi o hâliyle yeniden kullanmak yerine bu sırayı izlemek daha doğru olur."
 images:
   coverAlt: "Kapağı kapalı bir bulaşık makinesinin önünde mutfak zemininde duran nemli bir bez"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda **LC** yazıyor. Bazı Samsung modellerinde aynı durum **LE** olarak görünür. Samsung bu kodu **"Sızıntı sorunları"** olarak tanımlıyor; kılavuzlardaki başlığı ise **"Sızıntı kontrolü"**. Yani makine bir su kaçağı algılamış.

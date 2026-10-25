@@ -69,6 +69,14 @@ faq:
     a: "Olmayabilir. Buderus'un 'Kombi ateşleme yapmıyor' rehberine göre oda termostatı kullanılıyorsa kombi ihtiyaç oluşmadıkça devreye girmez; ortam sıcaklığı ayarlanan değerin üzerindeyse kombi ateşleme denemesi yapmaz. Önce termostattaki ayara ve sıcaklık talebine bak."
 images:
   coverAlt: "Mutfak duvarındaki beyaz bir kombinin ekranına bakan bir kişi; yanında duvara asılı küçük bir oda termostatı"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombinin ekranı açık, belki bir şey yanıp sönüyor, ama ne petekler ısınıyor ne de kombi devreye giriyor. Buderus'un "Kombi Nasıl Açılır?" rehberinde bu durumun ayrı bir başlığı var: **"Kombi Çalışmıyorsa Olası Nedenler."** Sayfanın yaklaşımı sakin: basit nedenlere bağlı olarak da kombi açıldığı hâlde çalışmayabilir; yapılacak şey temel birkaç kontrol, sorun sürerse yetkili servis. Listenin dikkat çeken maddesi şu: kombi **güvenlik nedeniyle kendini kilitlemiş** olabilir. Bu yazıda o listeyi, Buderus kılavuzlarının arıza ve sıfırlama bölümleriyle birlikte sırayla anlatıyoruz.

@@ -65,6 +65,15 @@ faq:
     a: "Buderus'un rehber sayfası devirdaim pompası, üç yollu vana, tıkalı tesisat filtresi, peteklerde çamurlaşma ve dış hava sensörü arızasını kullanıcı müdahalesiyle giderilemeyecek ya da servis gerektiren nedenler olarak sayıyor. Basınç normal, mod doğru, vanalar açık ama sorun sürüyorsa sayfanın tavsiyesi yetkili servis çağırmak."
 images:
   coverAlt: "Oturma odasında beyaz bir panel radyatörün yanında duran kişi elini radyatörün üstüne koymuş; arka planda mutfak duvarında beyaz bir kombi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor ama petekler soğuk. Buderus kendi sitesinde bu durum için ayrı bir rehber yayımlıyor: **"Kombi Çalışıyor Ama Petekler Isınmıyor."** Sayfanın saptaması şu: sorun kimi zaman kombinin ayarından, kimi zaman tesisattan, kimi zaman da bir arızadan kaynaklanır. Listenin ilk altı maddesi senin bakabileceğin şeyler (mod, sıcaklık, hava, basınç, vanalar, oda termostatı); kalan beşi servisin işi. Bu yazıda o listeyi Buderus'un kullanma kılavuzlarındaki ayar bölümleriyle birlikte sırayla anlatıyoruz.

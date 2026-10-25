@@ -54,6 +54,14 @@ faq:
     a: "Uğur'un çok modlu sandık kılavuzundaki nota göre cihaz soğutucu konumunda kullanılırken kapağın açılıp kapanmasından dolayı iç gövdede yoğuşma oluşabilir; bu durumda tabanda biriken suyun belirli aralıklarla tahliye edilmesi gerekiyor."
 images:
   coverAlt: "Kapağı açık bırakılmış boş bir sandık tipi derin dondurucunun iç kenarlarında eriyen kalın buz tabakası ve önünde su toplamak için konmuş bir kap"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda buzlanma ve buz çözme"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
 ---
 
 Sandığın kenarlarında beyaz bir buz tabakası büyüyor, sepet zor oturuyor ya da dikey modelde kapının etrafı karlanmış. Uğur'un derin dondurucu kılavuzlarındaki arıza tablosu bunu **"Cihazın üst kenarında yoğun buz oluşumu var."** (dikey modellerde **"kapı kenarlarında"**) diye yazıyor ve karşısına üç neden koyuyor: kapağın sık açılması, tahliye kapaklarının tam kapanmaması ve hasarlı conta. Biriken buz için de net bir eşik veriyor: **2-3 mm.**

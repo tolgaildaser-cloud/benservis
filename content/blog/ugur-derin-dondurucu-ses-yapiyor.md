@@ -50,6 +50,13 @@ faq:
     a: "Uğur'un arıza tablosunda 'Cihaz çok ses yapıyor' satırının ilk nedeni ayakların yere tam oturmaması: zeminin düz olduğundan emin olup ayakları destekleyerek yere tam oturtman isteniyor. Diğer iki neden cihazın duvara ya da bir eşyaya değmesi ve içerideki kapların birbirine değmesi."
 images:
   coverAlt: "Duvardan bir karış uzağa çekilmiş beyaz bir sandık tipi derin dondurucu ve yanındaki eşyayla arasında açık bırakılmış boşluk"
+  steps:
+    - "Çizim: solda buzdolabı, sağda çalışma sesi"
+    - "Çizim: solda buzdolabı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda çalışma sesi"
 ---
 
 Gece sessizlikte derin dondurucudan gelen ses dikkatini çekiyor: bazen uğultu, bazen tık, bazen titreşim. Uğur'un derin dondurucu kılavuzları bu konuyu iki tabloyla ele alıyor. Arıza tablosunda **"Cihaz çok ses yapıyor."** satırı üç nedene ayrılıyor; hemen ardından gelen **"Cihaz Çalışma Sesleri"** tablosu ise hangi seslerin normal olduğunu sayıyor. Kılavuzun cümlesi: **cihaz çalışırken birtakım sesler çıkartacaktır, bu sesler normal olabilir.**

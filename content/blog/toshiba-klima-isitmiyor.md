@@ -49,6 +49,15 @@ faq:
     a: "Toshiba'ya göre ısı dışarıdan emilip odaya verilir; dışarıdaki sıcaklık çok düşükse kılavuz klimayla birlikte başka bir ısınma cihazı kullanmanı öneriyor. Kılavuzdaki ısıtma çalışma koşulu dış sıcaklık için -15°C ile 24°C arası, oda sıcaklığı için 28°C'nin altı."
 images:
   coverAlt: "Kış öğleden sonrası salonda duvardaki beyaz split klimaya doğru tutulan uzaktan kumanda, sehpada buharı tüten bir fincan"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klimayı ısıtmaya aldın ama oda bir türlü ısınmıyor ya da gelen hava serin. Toshiba'nın Türkçe kullanıcı kılavuzları bu belirtide iki şeye ayrı ayrı bakmanı sağlıyor: kontrol noktası tablosundaki **"Soğutma veya Isıtma anormal derecede düşük seviyede."** satırı ve yalnız ısıtma modellerine ait çalışma notları. İkincisi kışa özgü: Toshiba klima ısıtmaya başlamadan önce üniteyi 5 dakika ön ısıtır, buz çözerken fanları durdurur ve 8°C işlemi açıksa odayı yalnız 5-13°C aralığında tutar. Bu yazıda önce bu notları, sonra evde yapılacak kontrolleri sırayla anlatıyoruz.

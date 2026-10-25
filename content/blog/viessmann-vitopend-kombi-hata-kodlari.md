@@ -50,6 +50,14 @@ faq:
     a: "Vitopend 100-W kullanma kılavuzu, ısıtma sistemini açarken manometreden basıncın kontrol edilmesini istiyor ve minimum sistem basıncını 0,8 bar (0,08 MPa) olarak veriyor. Basınç çok düşükse kılavuzun önerisi sisteme su doldurmak ya da yetkili tesisat firmasına haber vermek."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmındaki kontrol paneli; dijital ekranda rakam okunmayan soyut bir gösterge ve iki tuşa uzanan bir el"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Viessmann **Vitopend 100-W** kombinin ekranında bir F kodu yanıp sönüyor ve reset atıp atmamak konusunda kararsızsın. Vitopend'in kullanma kılavuzu bu kararı senin yerine veriyor: kodları iki gruba ayırıyor, birinde reset'i sana bırakıyor, diğerinde doğrudan servise yönlendiriyor. Kılavuzun kendi ifadesiyle ikinci grupta **"Burada belirtilen bir kilit, sistem işletmecisi tarafından açılamaz."**

@@ -51,6 +51,14 @@ faq:
     a: "Bosch'un KGN76.. kılavuzuna göre soğutucu bölmesi için önerilen sıcaklık 4 °C, derin dondurucu bölüm için −18 °C."
 images:
   coverAlt: "Kapısı açık kombi buzdolabının içinde raflara dizilmiş yiyecekler; bir el üst kapıdaki kumanda panelinin tuşuna basıyor"
+  steps:
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda paneldeki tuş"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
 ---
 
 Buzdolabının ışığı yanıyor, ekranı çalışıyor ama içerisi soğumuyor; ya da ekrandaki derece ayarladığın değerden çok farklı. Bosch'un KGN76.. serisi kombi buzdolabı kullanım kılavuzundaki arıza tablosu bu durum için birkaç ayrı satır veriyor. En dikkat çekeni şu: **"Cihaz soğutmuyor, göstergeler ve aydınlatma yanıyor."** Bosch'a göre bunun nedeni **"Sergileme modu devreye sokulmuştur."** Diğer satırlar sıcaklığın ayardan sapması, kapı ve sıcaklık alarmı, kapanmış hava açıklıkları ve bir kerede çok fazla yiyecek. Hepsi evde kontrol edilebiliyor.

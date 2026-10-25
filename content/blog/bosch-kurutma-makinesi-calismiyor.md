@@ -53,6 +53,14 @@ faq:
     a: "Bu bir arıza değil. Bosch'a göre soğutma prosesi etkindir ve yaklaşık 10 dakika sürer; bu sırada program değiştirme. Cihaz duraklatıldığı hâlde tambur dönüyorsa da sebep yine soğutma prosesi, müdahale gerekmiyor."
 images:
   coverAlt: "Çamaşır makinesinin üzerine yerleştirilmiş beyaz kurutma makinesinin ön panelindeki program düğmesi"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda paneldeki tuş"
+    - "Çizim: solda kurutma makinesi, sağda paneldeki tuş"
+    - "Çizim: solda kurutma makinesi, sağda su tankı"
 ---
 
 Kurutma makinesine çamaşırları koydun, düğmeyi çevirdin ama tambur dönmüyor; belki ekran bile karanlık. Bosch'un ısı pompalı kurutma makinesi kılavuzundaki arıza tablosunda iki satır bu durumu anlatıyor: **"Cihaz çalışmıyor."** ve **"Program çalışmaya başlamıyor."** Birincisi elektrikle, ikincisi kumanda ayarlarıyla ilgili; ikisi de çoğu zaman evde çözülüyor.
