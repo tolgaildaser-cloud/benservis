@@ -13,7 +13,7 @@ import { TR_IL_ILCE } from "./tr-iller.js";
 import {
   PILOT_IL, ILCE_KONUM, TEKNISYENLER, SLOTLAR, CALISMA_GUNLERI, URUNLER, URUN_MODEL, DURUMLAR, durumAd, KAPALI,
   GECISLER, TEKNISYEN_GECISLER, FOTO_TIPLERI, FOTO_EN_FAZLA, GARANTI_SECENEK, arizalarFor, tekFor, pad, slotAd, slotKisa, isoDay, isWorkDay, addWorkDays, monday,
-  fmtDT, fmtD, fmtDS, gunAdi, slaAsimi, yolDk, randevuOner, cakisma, planlanabilir, olayMetni, ozet,
+  fmtDT, fmtD, fmtDS, gunAdi, slaAsimi, yolDk, randevuOner, slotIsleri, slotEngeli, slotEngelMetni, planlanabilir, olayMetni, ozet,
   kisiselVeriVar, cepNormal, SIKISIK_DK,
 } from "./yerinde-cekirdek.js";
 
@@ -273,12 +273,12 @@ function Genel({ o, isler, teknisyenler, ac, goster }) {
   const kartlar = [
     ["Açık iş emirleri", o.acik.length, `${o.acik.filter((j) => j.durum === "atolye").length} tanesi atölyede`, "pano", "var(--fg)", "var(--bg)"],
     ["Aranacak", o.aranacak.length, sla.length ? `${sla.length} kayıt 2 iş gününü aştı` : "Hepsi süresinde", "tel", "var(--warn)", "var(--warn-soft)"],
-    ["Bugün randevu", `${o.bugunRandevu.length}/${o.kapasite}`, "dolu / toplam aralık", "takvim", "var(--accent)", "var(--accent-soft)"],
+    ["Bugün randevu", o.bugunRandevu.length, `${o.doluAralik}/${o.kapasite} aralık dolu`, "takvim", "var(--accent)", "var(--accent-soft)"],
     ["İlk ziyarette çözüm", o.ftf === null ? "—" : "%" + o.ftf, "hedef ≥ %80", "tamam", "var(--ok)", "var(--ok-soft)"],
   ];
   const yaklasan = isler.filter((j) => j.randevuGun && j.randevuGun >= o.bugun && ["randevu", "yolda", "serviste"].includes(j.durum))
     .sort((a, b) => (a.randevuGun + pad(a.randevuSlot)).localeCompare(b.randevuGun + pad(b.randevuSlot)));
-  const yuzde = o.kapasite ? Math.round((100 * o.bugunRandevu.length) / o.kapasite) : 0;
+  const yuzde = o.kapasite ? Math.round((100 * o.doluAralik) / o.kapasite) : 0;
   return (
     <section className="dash">
       <div className="kcards">
@@ -325,9 +325,9 @@ function Genel({ o, isler, teknisyenler, ac, goster }) {
           </div>
           <div className="card cap">
             <div className="cap-top">Bugünkü teknisyen kapasitesi<b>%{yuzde}</b></div>
-            <strong>{o.bugunRandevu.length} <span>/ {o.kapasite} aralık dolu</span></strong>
+            <strong>{o.doluAralik} <span>/ {o.kapasite} aralık dolu · {o.bugunRandevu.length} iş</span></strong>
             <div className="bar"><i style={{ width: yuzde + "%" }} /></div>
-            <small>{teknisyenler.map((t) => `${t.kod}: ${o.bugunRandevu.filter((j) => j.tek === t.kod).length}/${SLOTLAR.length}`).join(" · ")} · boş {o.kapasite - o.bugunRandevu.length} aralık</small>
+            <small>{teknisyenler.map((t) => { const b = o.bugunRandevu.filter((j) => j.tek === t.kod); return `${t.kod}: ${b.length} iş, ${new Set(b.map((j) => j.randevuSlot)).size}/${SLOTLAR.length} aralık`; }).join(" · ")} · boş {o.kapasite - o.doluAralik} aralık</small>
           </div>
         </div>
       </div>
@@ -416,8 +416,8 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
     if (gecis === "randevu" && (!f.randevuGun || f.randevuSlot === "")) { toast("Önce randevu gününü ve saat aralığını seçin"); return; }
     const rs = f.randevuSlot === "" ? null : Number(f.randevuSlot);
     if (f.tek && f.randevuGun && rs != null) {
-      const c = cakisma(isler, f.tek, f.randevuGun, rs, j.no);
-      if (c) { toast(`${f.tek} bu aralıkta dolu: ${c.no} (${c.ilce})`); return; }
+      const e = slotEngeli(isler, f.tek, f.randevuGun, rs, j.ilce, j.no);
+      if (e) { toast(slotEngelMetni(f.tek, j.ilce, e)); return; }
     }
     setMesgul(true);
     const istek = { alanlar: { garanti: f.garanti, seri: f.seri, tek: f.tek, istenenGun: f.istenenGun, istenenSlot: f.istenenSlot, randevuGun: f.randevuGun, randevuSlot: f.randevuSlot, tnot: f.tnot } };
@@ -484,7 +484,7 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
 // ─── Takvim: teknisyen × gün × 2 saatlik aralık, ardışık işler arası yol tahmini ────────────────
 function Takvim({ isler, teknisyenler, ac }) {
   const [hafta, setHafta] = useState(0);
-  // Hafta sonu açılınca geçen hafta değil gelecek hafta gösterilir (randevu yalnız hafta içi).
+  // Pazar açılınca geçen hafta değil gelecek hafta gösterilir (randevu Pazartesi–Cumartesi).
   const bugunD = new Date();
   const start = monday(bugunD); start.setDate(start.getDate() + (isWorkDay(bugunD) ? 0 : 7) + hafta * 7);
   const days = CALISMA_GUNLERI.map((g) => { const d = new Date(start); d.setDate(d.getDate() + g - 1); return isoDay(d); });
@@ -498,7 +498,7 @@ function Takvim({ isler, teknisyenler, ac }) {
           <span className="mono">{fmtD(days[0])} – {fmtD(days[days.length - 1])}</span>
           <button className="btn" type="button" aria-label="Sonraki hafta" onClick={() => setHafta(hafta + 1)}>›</button>
         </div>
-        <span className="hint">2 saatlik aralıklar · her yakada 1 teknisyen · yol süresi ilçe merkezleri arası tahmindir</span>
+        <span className="hint">09–18 · 2 saatlik aralıklar · aralığa yakın adreslerden en fazla 3 iş · yol süresi ilçe merkezleri arası tahmindir</span>
       </header>
       <div className="cal-wrap"><div className="cal" style={{ gridTemplateColumns: `96px repeat(${days.length}, minmax(170px, 1fr))` }}>
         <div className="h" />
@@ -507,21 +507,24 @@ function Takvim({ isler, teknisyenler, ac }) {
           <React.Fragment key={t.kod}>
             <div className="tech">{t.kod}<small>{t.yaka} yakası</small></div>
             {days.map((d) => {
-              let onceki = null, toplamYol = 0, adet = 0;
+              let onceki = null, toplamYol = 0, adet = 0, doluAralik = 0;
               const hucre = SLOTLAR.map((h) => {
-                const j = cakisma(isler, t.kod, d, h, null);
-                if (!j) return <div key={h} className="slot bos"><b>{slotKisa(h)}</b>boş</div>;
-                adet++;
-                let yol = null;
-                if (onceki) {
-                  const dk = yolDk(onceki.ilce, j.ilce); toplamYol += dk;
-                  const bitisik = SLOTLAR.indexOf(h) - SLOTLAR.indexOf(onceki.randevuSlot) === 1;
-                  yol = <span className={"yol" + (bitisik && dk > SIKISIK_DK ? " uzun" : "")}>← {onceki.ilce}'den ~{dk} dk</span>;
-                }
-                onceki = j;
-                return <div key={h} className="slot dolu" tabIndex={0} onClick={() => ac(j.id)} onKeyDown={(e) => e.key === "Enter" && ac(j.id)}><b>{slotKisa(h)}</b>{j.ilce} · {j.urun}{yol}</div>;
+                const liste = slotIsleri(isler, t.kod, d, h);
+                if (!liste.length) return <div key={h} className="slot bos"><b>{slotKisa(h)}</b>boş</div>;
+                doluAralik++;
+                return <div key={h} className="slot-grup">{liste.map((j, k) => {
+                  adet++;
+                  let yol = null;
+                  if (onceki) {
+                    const dk = yolDk(onceki.ilce, j.ilce); toplamYol += dk;
+                    const bitisik = h - onceki.randevuSlot === 2; // arka arkaya iki aralık (15–16 payı bitişik değil)
+                    yol = <span className={"yol" + (bitisik && dk > SIKISIK_DK ? " uzun" : "")}>← {onceki.ilce}'den ~{dk} dk</span>;
+                  }
+                  onceki = j;
+                  return <div key={j.id} className="slot dolu" tabIndex={0} onClick={() => ac(j.id)} onKeyDown={(e) => e.key === "Enter" && ac(j.id)}><b>{k === 0 ? slotKisa(h) : "+"}</b>{j.ilce} · {j.urun}{yol}</div>;
+                })}</div>;
               });
-              return <div key={d} className="cell">{hucre}<div className="daysum">{adet}/{SLOTLAR.length} dolu{toplamYol ? " · ~" + toplamYol + " dk yol" : ""}</div></div>;
+              return <div key={d} className="cell">{hucre}<div className="daysum">{adet} iş · {doluAralik}/{SLOTLAR.length} aralık{toplamYol ? " · ~" + toplamYol + " dk yol" : ""}</div></div>;
             })}
           </React.Fragment>
         ))}
@@ -572,8 +575,8 @@ function YeniKayit({ isler, teknisyenler, isOlustur, toast, sonra }) {
     if (serbestUyari) return err("Telefon ya da e-posta yalnız müşteri alanlarına yazılır; açıklama, not, referans ve temsilci alanlarından çıkarın.");
     if (!!f.randevuGun !== (f.randevuSlot !== "")) return err("Randevu için hem günü hem saat aralığını seçin ya da ikisini de boş bırakın.");
     if (f.randevuGun && !tek) return err("Pilot bölge dışındaki kayda randevu verilemez.");
-    if (f.randevuGun && !isWorkDay(new Date(f.randevuGun + "T12:00"))) return err("Randevu yalnız hafta içine verilir.");
-    if (f.randevuGun) { const c = cakisma(isler, tek, f.randevuGun, Number(f.randevuSlot), null); if (c) return err(`${tek} bu aralıkta dolu (${c.no}, ${c.ilce}). Önerilerden birini seçin.`); }
+    if (f.randevuGun && !isWorkDay(new Date(f.randevuGun + "T12:00"))) return err("Randevu Pazartesi–Cumartesi verilir (Pazar kapalı).");
+    if (f.randevuGun) { const e = slotEngeli(isler, tek, f.randevuGun, Number(f.randevuSlot), f.ilce, null); if (e) return err(slotEngelMetni(tek, f.ilce, e)); }
     setHata(""); setMesgul(true);
     const r = await isOlustur({ ...f, talep: f.talep ? new Date(f.talep).toISOString() : null, belirti: f.belirti || arizalarFor(f.urun)[0], mukerrerOnay: !!mukerrer });
     setMesgul(false);
@@ -852,18 +855,20 @@ const ornekVeri = (() => {
   const wd = (n) => isoDay(n >= 0 ? addWorkDays(today, n) : (() => { const r = new Date(today); let k = -n; while (k > 0) { r.setDate(r.getDate() - 1); if (isWorkDay(r)) k--; } return r; })());
   const bugunIs = isWorkDay(today) ? isoDay(today) : wd(1);
   const raw = [
-    ["Ayşe Yılmaz", "Kadıköy", "Su sebili", "Soğutmuyor", "randevu", 0, 10, "E", 10],
-    ["Mehmet Demir", "Şişli", "Mini buzdolabı", "Buzlanma / su birikmesi", "tamam", -2, 10, "H", 10],
-    ["Zeynep Kaya", "Ataşehir", "Koltuk ve halı yıkama makinesi", "Emiş gücü zayıf", "serviste", 0, 8, "E", 8],
-    ["Okan Arslan", "Beşiktaş", "Robot süpürge", "İstasyona dönmüyor / takılıyor", "randevu", 1, 14, "H", 14],
-    ["Elif Şahin", "Ümraniye", "Mikrodalga fırın", "Isıtmıyor", "atolye", -3, 14, "E", 12],
-    ["Can Öztürk", "Kağıthane", "Yağlı radyatör", "Isıtmıyor", "yeni", null, null, "?", 12],
-    ["Deniz Aydın", "Üsküdar", "Havuz temizleme robotu", "Motor dönmüyor", "parca", -1, 12, "E", 12],
-    ["Selin Koç", "Beyoğlu", "Dikiş / overlok makinesi", "İplik atıyor / dikiş kaçırıyor", "randevu", 2, 10, "H", 10],
+    ["Ayşe Yılmaz", "Kadıköy", "Su sebili", "Soğutmuyor", "randevu", 0, 11, "E", 11],
+    ["Mehmet Demir", "Şişli", "Mini buzdolabı", "Buzlanma / su birikmesi", "tamam", -2, 11, "H", 11],
+    ["Zeynep Kaya", "Ataşehir", "Koltuk ve halı yıkama makinesi", "Emiş gücü zayıf", "serviste", 0, 9, "E", 9],
+    ["Okan Arslan", "Beşiktaş", "Robot süpürge", "İstasyona dönmüyor / takılıyor", "randevu", 1, 16, "H", 16],
+    ["Elif Şahin", "Ümraniye", "Mikrodalga fırın", "Isıtmıyor", "atolye", -3, 13, "E", 13],
+    ["Can Öztürk", "Kağıthane", "Yağlı radyatör", "Isıtmıyor", "yeni", null, null, "?", 13],
+    ["Deniz Aydın", "Üsküdar", "Havuz temizleme robotu", "Motor dönmüyor", "parca", -1, 13, "E", 13],
+    ["Selin Koç", "Beyoğlu", "Dikiş / overlok makinesi", "İplik atıyor / dikiş kaçırıyor", "randevu", 2, 11, "H", 11],
     ["Burak Çelik", "Maltepe", "Kule / ayaklı vantilatör", "Ses / titreşim", "tamam", -1, 16, "E", 16],
-    ["Gizem Polat", "Sarıyer", "Su sebili", "Su sızdırıyor", "yeni", null, null, "E", 14],
-    ["Hakan Yurt", "Pendik", "Mini buzdolabı", "Soğutmuyor", "randevu", 0, 14, "E", 14],
-    ["Merve Tan", "Bakırköy", "Koltuk ve halı yıkama makinesi", "Su sızdırıyor", "randevu", 0, 12, "H", 12],
+    ["Gizem Polat", "Sarıyer", "Su sebili", "Su sızdırıyor", "yeni", null, null, "E", 13],
+    ["Hakan Yurt", "Pendik", "Mini buzdolabı", "Soğutmuyor", "randevu", 0, 16, "E", 16],
+    ["Merve Tan", "Bakırköy", "Koltuk ve halı yıkama makinesi", "Su sızdırıyor", "randevu", 0, 13, "H", 13],
+    // Aynı aralıkta yakın iki iş: Kadıköy ile Üsküdar (~23 dk) bugün 11–13'te birlikte.
+    ["Serkan Ak", "Üsküdar", "Su sebili", "Kireçlenme / tıkanma", "randevu", 0, 11, "E", 11],
   ];
   return raw.map(([ad, ilce, urun, belirti, durum, gunFark, saat, garanti, istSlot], i) => {
     const talep = new Date(today); talep.setDate(talep.getDate() - (i % 4) - 1); talep.setHours(9 + (i % 6), 15);
@@ -944,7 +949,7 @@ background:var(--bg);color:var(--fg);font:14px/1.5 var(--f-body);min-height:100v
 .yp .cal>div{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:8px}
 .yp .cal .h{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.yp .cal .h.today{color:var(--accent);font-weight:600}
 .yp .cal .tech{font-weight:600;font-size:13px}.yp .cal .tech small{display:block;font-weight:400;color:var(--muted);font-size:11px}
-.yp .cell{display:grid;gap:4px}.yp .slot{border-radius:6px;padding:4px 7px;font-size:12px;min-height:30px}
+.yp .cell{display:grid;gap:4px}.yp .slot-grup{display:grid;gap:2px}.yp .slot{border-radius:6px;padding:4px 7px;font-size:12px;min-height:30px}
 .yp .slot.dolu{background:var(--accent-soft);cursor:pointer}.yp .slot.bos{border:1px dashed var(--line);color:var(--muted)}
 .yp .slot b{font-family:var(--f-mono);font-weight:500;font-size:11px;margin-right:4px}
 .yp .slot .yol{display:block;font:10px var(--f-mono);color:var(--muted)}.yp .slot .yol.uzun{color:var(--warn)}

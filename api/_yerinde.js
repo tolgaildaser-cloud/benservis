@@ -4,6 +4,7 @@
 // ⛔ Kişisel veri loglanmaz: hata yanıtları ve console çıktıları ad/telefon/adres taşımaz.
 import supabase from "./_supabase.js";
 import { yerindeRolOku } from "../src/yerinde-kimlik.js";
+import { aralikEngeli } from "../src/yerinde-cekirdek.js";
 
 export async function yerindeKimlik(req, res) {
   const token = String(req.headers?.authorization || "").replace(/^Bearer\s+/i, "").trim();
@@ -21,5 +22,16 @@ export async function yerindeKimlik(req, res) {
   return { user, rol, teknisyenKod };
 }
 
-// Postgres benzersizlik ihlali → aynı teknisyene aynı gün + slot (yerinde_isler_slot_tekil).
+// Postgres benzersizlik ihlali (yerinde_isler_slot_tekil). 25 Eki SQL'iyle index kalktı; eski şemada çalışırsa hâlâ anlamlı.
 export const slotCakisti = (error) => error?.code === "23505";
+
+// Aralık kuralı sunucuda da uygulanır (istemci eski listeyle karar vermiş olabilir): aynı teknisyen + gün + aralıkta
+// en fazla SLOT_EN_FAZLA iş ve hepsi yeni adrese yakın. Engel yoksa null, varsa { sebep, is: { no, ilce } }.
+export async function aralikKontrol({ tek, gun, slot, ilce, haricId = null }) {
+  if (!tek || !gun || slot == null) return null;
+  let q = supabase.from("yerinde_isler").select("id, no, ilce").eq("teknisyen_kod", tek).eq("randevu_gun", gun).eq("randevu_slot", slot).neq("durum", "iptal");
+  if (haricId) q = q.neq("id", haricId);
+  const { data, error } = await q;
+  if (error) return { sebep: "okunamadi" };
+  return aralikEngeli(data || [], ilce);
+}
