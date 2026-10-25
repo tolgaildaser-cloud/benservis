@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfakta kapağı kapalı, beyaz bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kapağının kapalı haldeki üst kenarı"
-    - "Bulaşık makinesi kumanda panelinde açma ve kapama düğmesinin yakın planı"
-    - "Bulaşık makinesi kumanda panelindeki program seçme düğmesi"
-    - "Bulaşık makinesi kumanda panelinde sıralı gecikme gösterge lambaları"
-    - "Kumanda paneli sönük duran bir bulaşık makinesi"
-    - "Bulaşık makinesinin içinde köpük kalıntısı olan alt sepet"
-    - "Bulaşık makinesi kapağının iç kenarındaki veri plakası bölgesi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Program yanlış seçildi, makine yarıda durdu ya da tuşlar artık tepki vermiyor; akla ilk gelen "makineyi resetlemek". Indesit bulaşık makinelerinde bunun için ayrı bir tuş yok, ama ayrı bir düğme adı var: kılavuzun kontrol paneli listesinde ilk düğme **gösterge ışıklı Açma-kapama/Sıfırlama düğmesi.** Kılavuz bu düğmeyle üç iş anlatıyor: **yanlış programı değiştirmek, komutlara yanıt vermeyen makineyi 1 dakika kapatıp açmak** ve **programı sıfırlamak.** Bu yazıdaki sırayı iki Indesit Türkçe belgesinden çıkardık: DFG 26B10 için günlük referans kılavuzu ve DFG 15B10 için kullanım talimatları.

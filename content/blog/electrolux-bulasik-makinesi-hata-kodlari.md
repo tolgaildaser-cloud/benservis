@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin kapağının üst kenarındaki küçük dijital ekran"
   steps:
-    - "Bulaşık makinesinin ekranında bir harf ve kod beliren yakın plan, yanında not kâğıdı"
-    - "Tezgâh altındaki açık bir su musluğu ve ona bağlı düz uzanan giriş hortumu"
-    - "Lavabo altında bükülmeden uzanan gri bir tahliye hortumu"
-    - "Lavaboda yıkanmış silindir biçimli bir filtre ve yanında yassı metal bir süzgeç"
-    - "Kapalı bir su musluğu ve düzgün yerleştirilmiş tabaklarla dolu alt sepet"
-    - "Bulaşık makinesinin arkasından yukarı doğru kıvrılarak çıkan tahliye hortumu"
-    - "Kapağı kapalı, ekranı sönük bir ankastre bulaşık makinesi"
-    - "Fişi çekilmiş bir bulaşık makinesi kablosu ve yanında katlanmış kullanma kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, ekranda **i** ile başlayan bir kod yanıyor. Electrolux bulaşık makinelerinde bu kodlar "alarm kodu" adıyla geçiyor ve her biri makinenin hangi aşamada takıldığını söylüyor. Electrolux'un ESM89400SX modeli için hazırladığı kullanma kılavuzu, sorun giderme bölümünde bu kodları tek tek listeliyor; bazılarını evde çözmek mümkün, bazıları doğrudan servis işi. Bu yazıda kılavuzdaki her kodu ve önerilen kontrolü sırayla topladık. Senin modelinde kod listesi farklı olabilir, kendi kılavuzunla karşılaştır.

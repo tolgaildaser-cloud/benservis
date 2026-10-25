@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında cam sürahisi yarıya kadar kahveyle dolu siyah bir filtre kahve makinesi"
   steps:
-    - "Filtre kahve makinesinin cam sürahisine akan berrak su"
-    - "Üst kapağı açık, filtre konisi çıkarılmış bir filtre kahve makinesi"
-    - "Filtre kahve makinesinin yanındaki su göstergesi ve maksimum işareti"
-    - "Filtre konisinin içinde öğütülmüş kahve ve yanında ölçü kaşığı"
-    - "Sıcak plakanın üstündeki cam sürahi ve yanan açma düğmesi"
-    - "Cam sürahiye damlayan taze filtre kahve"
-    - "Kapatılmış filtre kahve makinesi ve yanında bir fincan kahve"
-    - "Lavaboda akan su altında durulanan filtre konisi"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda kapak"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin filtre kahve makinesi basit bir cihaz: hazneye su, filtreye kahve, düğmeye bas. Yine de ilk kullanımda kılavuzun istediği boş demlemeyi atlamak, hazneye sıcak su koymak ya da demleme sırasında kapağı açmak tadı da cihazı da etkiliyor. Bu yazı Kiwi'nin cam sürahili **KCM-7551 ve KCM-7542** kılavuzlarına, bardağa demleyen **KCM-7515** için de kendi kılavuzuna dayanıyor. Kiwi'nin en net uyarısı şu: **hazneye kaynatılmış su koyma**, makine yalnız oda sıcaklığındaki suyu ısıtmak için tasarlanmış.

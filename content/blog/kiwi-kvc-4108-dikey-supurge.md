@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ahşap zeminde duran kablolu dikey bir süpürge, çıkarılmış şeffaf toz haznesi ve yanında siklon filtre"
   steps:
-    - "Kutudan yeni çıkmış dikey süpürgenin üzerindeki koruyucu folyo"
-    - "Süpürgenin borusuna takılmış zemin fırçası ve yanında dar alan başlığı"
-    - "Prize takılmış fiş ve süpürgenin gövdesindeki açma düğmesi"
-    - "Çöp kutusunun üzerinde alt kapağı açılmış şeffaf toz haznesi"
-    - "Masada yan yana dizilmiş siklon filtre, köpük filtre tutucu ve köpük filtre"
-    - "Lavabo musluğunun altında ılık suyla durulanan köpük filtre"
-    - "Havlu üzerinde kurumaya bırakılmış filtre parçaları"
+    - "Çizim: solda dikey süpürge, sağda ambalaj kutusu"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda temizleme bezi"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 **Kiwi KVC-4108**, kablolu bir dikey elektrikli süpürge: sapı, ana gövdesi, HEPA filtresi, şeffaf toz haznesi ve iki başlığı var. Kardeş model **KVC-4109** aynı yapıda, biraz daha güçlü. İkisinde de emişi koruyan iş aynı: hazneyi boşaltmak ve filtre setini düzenli yıkamak. Bu yazı iki modelin Kiwi kullanım kılavuzuna dayanıyor; parçaların adları ve sıra kılavuzdaki gibi.

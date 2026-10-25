@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kapağı açık küçük bir waffle makinesi, petek desenli yapışmaz plakaları görünüyor"
   steps:
-    - "Düz bir tezgâhta çevresi boş bırakılmış, ambalajından yeni çıkarılmış küçük bir tost makinesi"
-    - "Kapağı kapalı, prize takılı ve ısınan küçük bir waffle makinesi"
-    - "Yapışmaz waffle plakasına fırçayla sürülen ince bir kat tereyağı"
-    - "Kapağı kapatılıp kilitlenmiş bir tost makinesi"
-    - "Fişi çekilmiş, iki yarısı açık halde soğumaya bırakılmış bir waffle makinesi"
-    - "Soğumuş petek desenli plakanın nemli bir süngerle silinmesi"
-    - "Kuru bezle silinen tost makinesinin parlak dış gövdesi"
+    - "Çizim: solda tost ve waffle makinesi, sağda ambalaj kutusu"
+    - "Çizim: solda tost ve waffle makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda tost ve waffle makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda tost ve waffle makinesi, sağda kapak"
+    - "Çizim: solda tost ve waffle makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda tost ve waffle makinesi, sağda ilgili filtre"
+    - "Çizim: solda tost ve waffle makinesi, sağda temizleme bezi"
 ---
 
 Kiwi'nin küçük tost ve waffle makinelerinde plakalar sabit; çıkarıp yıkanmıyor. Bu yüzden temizlik de kullanım da Kiwi'nin tarif ettiği sırayla yapılınca kolay. Bu yazı Kiwi'nin **KSM-2405T (tost), KSM-2405W (waffle) ve KSM-2405K (çocuk waffle)** Türkçe kullanım kılavuzlarına dayanıyor. Üç kılavuzun kullanım ve temizlik metni aynı; Kiwi bu modelleri tek ailede, KSM-2405 adıyla anlatıyor.

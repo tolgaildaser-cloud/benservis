@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin kontrol paneli ve kapalı ön kapağı"
   steps:
-    - "Bulaşık makinesinin üst kenarındaki dijital süre göstergesi"
-    - "Tezgâh altındaki dolapta duvara bağlı küçük bir köşe musluğu"
-    - "Akan suyun altında tutulan küçük, beyaz plastik bir hortum süzgeci"
-    - "Bulaşık makinesinin tabanından çıkarılmış silindir biçimli metal süzgeç ve mikro filtre"
-    - "Süzgeç yuvasının altında açık duran boşaltma pompası kapağı ve yanında küçük bir kap"
-    - "Kapağı kapalı bir bulaşık makinesinin yanan kontrol paneli"
-    - "Kapalı bir bulaşık makinesinin önünde tezgâhta duran katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşık makinesi programın ortasında durdu ve süre göstergesinde **F** ile bir sayı dönüşümlü yanıp sönüyor. Miele bu kodları kullanım kılavuzunun "Ne yapmalı, eğer…?" bölümünde topluyor ve her biri için kendi başına yapabileceklerini yazıyor. Bu yazıda Miele Türkiye'nin kılavuz portalından indirdiğimiz iki Türkçe kılavuzu (G 5000 ve G 7110 serisi) temel aldık. Tuş adları ve göstergeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

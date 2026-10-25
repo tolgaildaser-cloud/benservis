@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Masada duran şarjlı bir küçük şarjlı süpürge, yanında çıkarılmış toz haznesi ve filtre"
   steps:
-    - "Şarj kablosu çıkarılmış, kapalı bir küçük şarjlı süpürge"
-    - "Çöp kutusunun üzerinde boşaltılan küçük şarjlı süpürgenin toz haznesi"
-    - "Çöp kutusunun kenarına hafifçe vurulan süpürge filtresi"
-    - "Musluk altında durulanan küçük süpürge filtresi"
-    - "Küçük şarjlı süpürgenin gövdesinin yumuşak nemli bezle silinmesi"
-    - "Havlu üzerinde kurumaya bırakılmış filtre ve hazne"
-    - "Filtresi ve haznesi yerine takılmış küçük şarjlı süpürge"
+    - "Çizim: solda el süpürgesi, sağda şarj edilen batarya"
+    - "Çizim: solda el süpürgesi, sağda su ya da toz haznesi"
+    - "Çizim: solda el süpürgesi, sağda temizlik fırçası"
+    - "Çizim: solda el süpürgesi, sağda ilgili filtre"
+    - "Çizim: solda el süpürgesi, sağda şarj edilen batarya"
+    - "Çizim: solda el süpürgesi, sağda su ya da toz haznesi"
+    - "Çizim: solda el süpürgesi, sağda su ya da toz haznesi"
 ---
 
 Kiwi'nin el süpürgelerinin hazneleri küçük: KVC-4036'da 160 ml, KVC-4085 ve KVC-4086'da 0,3 litre. Kiwi bu yüzden hazneyi sık boşaltmanı ve filtreyi düzenli temizlemeni istiyor. Temizlik birkaç dakika sürer, ama yıkama suyu ve kuruma kuralı modele göre değişiyor. Bu yazı Kiwi'nin el ve araç süpürgesi kılavuzlarına dayanıyor: şarjlı **KVC-4036**, **KVC-4085**, **KVC-4086**, oto tipi **KVC-4050** ve çakmak girişli **KVC-4005**.

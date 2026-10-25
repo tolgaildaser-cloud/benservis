@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Banyoda beyaz, önden yüklemeli bir çamaşır makinesi ve kapalı cam kapak"
   steps:
-    - "Kumanda paneli sönük duran beyaz bir çamaşır makinesinin önden görünümü"
-    - "Çamaşır makinesi kumanda panelinde yanıp sönen turuncu bir gösterge lambası"
-    - "Çamaşır makinesinin program seçme düğmesinin yakın planı"
-    - "Dijital ekranlı bir çamaşır makinesi kumanda panelinin geniş planı"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Cam kapağın ardında dönmeye başlayan çamaşırlarla dolu tambur"
-    - "Kapatılmış bir su musluğu ve ona bağlı beyaz su giriş hortumu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yanlış seçildi, ışıklar anlamsız bir desende yanıp sönüyor ya da makine hiçbir tuşa tepki vermiyor; akla ilk gelen "resetlemek". Indesit'in çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok.** Kılavuzlar bunun yerine üç ayrı işlem anlatıyor: **programı beklemeye alıp iptal etmek, makineyi kapatmak** ve arıza ışıkları yandığında **fişi çekip 1 dakika sonra yeniden açmak.** Bu yazıdaki sırayı iki Indesit Türkçe kılavuzundan çıkardık: düğmeli IWC 71052 ve dijital ekranlı EWE 71083. Tuş yerleri modele göre değişir; kendi kılavuzunla karşılaştır.

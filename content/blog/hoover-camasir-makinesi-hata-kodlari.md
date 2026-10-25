@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Banyoda duran beyaz bir önden yüklemeli çamaşır makinesinin kontrol paneli"
   steps:
-    - "Çamaşır makinesinin ekranında harf ve sayıdan oluşan küçük bir kod"
-    - "Duvardaki su musluğuna bağlı gri bir giriş hortumu"
-    - "Makinenin arkasından sökülmüş giriş hortumunun ağzındaki küçük süzgeç"
-    - "Ön alttaki kapağı açılmış pompa filtresi ve altına serilmiş bir bez"
-    - "Deterjan çekmecesinin içinde az miktarda toz deterjan"
-    - "Kapak contasına sıkışmış bir tişört ucu"
-    - "Prizden çekilmiş fiş ve yanında kapalı duran çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Hoover çamaşır makinen program ortasında durdu ve ekranda E ile başlayan bir kod belirdi. Ya da ekranı olmayan modelde bütün ışıklar aynı anda yanıp sönmeye başladı. Hoover'ın H3WPS294TAM6-17 modeline ait Türkçe kullanım kılavuzu bu durumlar için bir hata tablosu veriyor ve dört kodu tek tek açıklıyor. Bu yazıda tabloyu, ekransız modellerde ışıkları nasıl sayacağını ve servisi aramadan önce yapabileceklerini topladık. Kılavuz bu modele ait; senin makinende panel ve düğme adları farklı olabilir, kendi kılavuzunla karşılaştır.

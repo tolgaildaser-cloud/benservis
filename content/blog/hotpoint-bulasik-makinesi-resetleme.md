@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Modern bir mutfakta kapağı kapalı, gri bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kumanda panelinde küçük bir kilit simgesi yanan gösterge"
-    - "Bulaşık makinesi kumanda panelinde açma ve kapama düğmesinin yakın planı"
-    - "Bulaşık makinesinin tabanında tahliye edilen az miktarda su"
-    - "Bulaşık makinesi ekranında geri sayım gösteren bir süre göstergesi"
-    - "Kumanda paneli sönük duran bir bulaşık makinesi"
-    - "Kapağı aralık bırakılmış ve içinden hafif buhar çıkan bir bulaşık makinesi"
-    - "Bulaşık makinesi kapağının iç kenarındaki veri plakası bölgesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Yanlış programı başlattın, makine ekranda geri sayıp duruyor ya da tuşlar hiç tepki vermiyor; akla ilk gelen "resetlemek". Hotpoint Ariston'un bulaşık makinesi için yayımladığı Türkçe günlük referans kılavuzunda iki düğme bu işi görüyor: kontrol panelinin ilk düğmesi **Açık-Kapalı/Sıfırlama,** ve uzun basışta **Su Boşaltma** işlevini çalıştıran **BAŞLAT/DURAKLAT.** Kılavuz bunlarla dört iş anlatıyor: **programı değiştirmek, programı iptal edip suyu boşaltmak, gecikmeyi kaldırmak** ve **komutlara yanıt vermeyen makineyi 1 dakika kapatıp açmak.** Bu yazı HFC 3B19 X kaydındaki bu kılavuzu izliyor; kendi modelinle karşılaştır.

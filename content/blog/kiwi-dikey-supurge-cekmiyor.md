@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Parke zeminde duran şarjlı dikey bir süpürge ve yanında çıkarılmış şeffaf toz haznesi"
   steps:
-    - "Duvara yaslanmış, kapalı bir şarjlı dikey süpürge"
-    - "Çöp kutusunun üzerinde açılan şeffaf toz haznesinin kapağı"
-    - "Toz haznesinden çıkarılmış filtre tutucunun yumuşak fırçayla temizlenmesi"
-    - "Havlu üzerinde kurumaya bırakılmış yıkanmış süpürge filtresi"
-    - "Süpürgenin emiş ağzına bakılan zemin fırçasının alt yüzü"
-    - "Toz haznesine geri takılan kuru filtre"
-    - "Şarj adaptörüne bağlı ve gösterge ışıkları yanan dikey süpürge"
+    - "Çizim: solda dikey süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
 ---
 
 Süpürge çalışıyor, motor sesi geliyor ama halıdaki kırıntılar yerinde duruyor. Kiwi'nin dikey süpürge kılavuzlarında bunun için ayrı bir sorun giderme tablosu yok; ama temizlik ve bakım bölümleri emişi düşüren her şeyi tek tek sayıyor: dolu hazne, kirli ya da ıslak filtre, tıkalı açıklıklar ve yanlış takılmış parçalar. Bu yazı Kiwi'nin şarjlı **KVC-4040**, **KVC-4041** ve **KVC-4040BLF** ile kablolu **KVC-4108** ve **KVC-4109** kılavuzlarına dayanıyor.

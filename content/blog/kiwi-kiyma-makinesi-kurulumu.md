@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında beyaz gövdeli bir elektrikli kıyma makinesi, önünde sökülmüş helezon, kıyma plakası ve kilit somunu"
   steps:
-    - "Bulaşıklıkta kurumaya bırakılmış kıyma makinesi parçaları"
-    - "Öğütme başlığının içine yerleştirilmiş spiral besleme helezonu"
-    - "Helezonun ucuna takılmış küçük metal kesme bıçağı"
-    - "Bıçağın önüne oturtulmuş delikli metal kıyma plakası"
-    - "Başlığın ucuna vidalanmış halka biçimli kilit somunu"
-    - "Gövdeye takılmış öğütme başlığı ve üstünde besleme tepsisi"
-    - "Kıyma makinesi gövdesindeki düğmeler ve geri çalıştırma tuşu"
+    - "Çizim: solda kıyma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kıyma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kıyma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kıyma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kıyma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kıyma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kıyma makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi kıyma makinesini kutudan çıkardığında karşına helezon, bıçak, birkaç delikli plaka ve bir somun çıkar. Hangisinin önce takılacağı ve bıçağın hangi yöne bakacağı, kıymanın çıkıp çıkmamasını belirler. Kiwi'nin KMG-2603 kılavuzu bunu tek cümleyle söylüyor: **"Düz taraf dışa gelmezse kıyma işlemi gerçekleşmeyecektir."** Bu yazıdaki kurulum, kullanım ve temizlik adımları Kiwi KMG-2603 ve KMG-2616 kullanım kılavuzlarından.

@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Geniş bir salon penceresinin camında çalışan kare biçimli cam silme robotu"
   steps:
-    - "Düz ve temiz bir pencere camı ile önünde boş bırakılmış zemin"
-    - "Prize takılı adaptöre bağlı cam silme robotu"
-    - "Metal balkon korkuluğuna kilitlenmiş bir karabina ve güvenlik halatı"
-    - "Cam silme robotunun alt yüzüne yapıştırılmış nemli mikrofiber bez"
-    - "Pencere camında kuru bezle silinmiş küçük bir alan"
-    - "Pencere kenarından uzakta cama tutunmuş cam silme robotu"
-    - "Camdan alınmış cam silme robotu ve yanında toplanmış halat"
-    - "Askıda kurumaya bırakılmış yıkanmış mikrofiber bezler"
+    - "Çizim: solda cam silme robotu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda cam silme robotu, sağda prizden çekilen fiş"
+    - "Çizim: solda cam silme robotu, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda cam silme robotu, sağda su ya da toz haznesi"
+    - "Çizim: solda cam silme robotu, sağda temizleme bezi"
+    - "Çizim: solda cam silme robotu, sağda uzaktan kumanda"
+    - "Çizim: solda cam silme robotu, sağda uzaktan kumanda"
+    - "Çizim: solda cam silme robotu, sağda su ya da toz haznesi"
 ---
 
 Cam silme robotu kutudan çıktı: bez, solüsyon, halat, adaptör. Ecovacs'ın Winbot kılavuzu işin büyük kısmının robot cama konmadan önce yapıldığını gösteriyor; halat, bez ve camın kendisi doğru hazırlanırsa robot kendiliğinden tutunup siliyor. Bu yazı Ecovacs'ın **WINBOT MINI** Türkçe kullanım kılavuzuna, **WINBOT W2 PRO OMNI** kılavuzunun Türkçe güvenlik bölümüne ve Ecovacs Türkiye'nin W2 PRO OMNI destek sayfasına dayanıyor.

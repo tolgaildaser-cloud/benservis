@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında yuvarlak tabanlı küçük bir mısır patlatma makinesi ve yanında bir kâse patlamış mısır"
   steps:
-    - "Düz bir mutfak tezgâhında duran mısır patlatma makinesinin tabanı"
-    - "Küçük bir ölçü kaşığıyla pişirme plakasına dökülen sıvı yağ"
-    - "Büyük şeffaf bir ölçü kabında kuru mısır taneleri"
-    - "Pişirme plakasının üzerine yerleştirilmiş şeffaf kase ve yanında prize uzanan kablo"
-    - "Kasenin içinde patlamaya başlayan mısır taneleri"
-    - "Ters çevrilmiş şeffaf kase ve yanında ayrılmış taban"
-    - "Soğumuş patlamış mısır haznesinin yanında yumuşak bir fırça ve nemli bez"
+    - "Çizim: solda mısır patlatma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mısır patlatma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mısır patlatma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mısır patlatma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda mısır patlatma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda mısır patlatma makinesi, sağda kapak"
+    - "Çizim: solda mısır patlatma makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin **KPM-7407** mısır patlatma makinesi tek düğmeli, yapışmaz pişirme yüzeyli ve karıştırma çubuklu bir cihaz. İnsanların en çok sorduğu üç şeyin cevabı Kiwi'nin kendi kılavuzunda var: nasıl kullanılır, yağ konur mu, nasıl temizlenir. Bu yazı üçünü de kılavuzdaki sırayla anlatıyor; kılavuzda olmayan bir tarif ya da ölçü eklemiyor.

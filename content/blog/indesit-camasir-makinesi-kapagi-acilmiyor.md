@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin kapalı cam kapağı"
   steps:
-    - "Çamaşır makinesi kumanda panelinde yanan küçük bir kilit simgesi"
-    - "Çamaşır makinesi kumanda panelinde başlat ve durdur tuşunun yakın planı"
-    - "Cam kapağın ardında suyla dolu, durgun bir tambur"
-    - "Çamaşır makinesinin program düğmesinin boşaltma konumuna yakın planı"
-    - "Duvardaki gider ağzına uzanan gri bir tahliye hortumu"
-    - "Kapalı duran bir çamaşır makinesi kapağının tutamak bölgesi"
-    - "Prizden çekilmiş bir fiş ve yanında kapatılmış bir su musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Program bitti, ekran "SON" dedi ama kapak açılmıyor; ya da yanlış bir şeyi tambura attın ve yıkamayı yarıda kesip kapağı açmak istiyorsun. Indesit çamaşır makinelerinde kapak güvenlik için kilitlenir ve bu kilidin bir göstergesi var: **KAPAK KİLİTLİ.** Kılavuzun tek kuralı şu: **gösterge yanarken kapak açılmaz, söndüğünde açılır.** Bu yazıdaki sırayı iki Indesit Türkçe kılavuzundan çıkardık: düğmeli IWC 71052 ve dijital ekranlı EWE 71083.

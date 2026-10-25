@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Cam kapağın ardında suyla dolu kalmış bir çamaşır makinesi tamburu"
   steps:
-    - "Çamaşır makinesi kumanda panelinde program seçme düğmesinin yakın planı"
-    - "Yıkama sonunda tamburda suda bekleyen ipek bir bluz"
-    - "Çamaşır makinesinin program düğmesinin boşaltma konumunda yakın planı"
-    - "Çamaşır makinesinin arkasından lavabo kenarına uzanan gri bir tahliye hortumu"
-    - "Lavabonun altındaki plastik bir sifonun yakın planı"
-    - "Çamaşır makinesinin alt ön kısmında açılmış küçük bir servis kapağı ve önünde sığ bir kap"
-    - "Kapatılmış bir su musluğu ve prizden çekilmiş bir fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti ama tamburda su duruyor, çamaşırlar sırılsıklam; ya da makine sıkmaya geçmeden bekliyor. Indesit'in kılavuzunda "su boşaltmıyor" satırının dört nedeni var ve bunların ikisi aslında arıza değil: **program tahliyeyi öngörmüyor** ya da **Kolay ütü işlevi devrede.** Diğer ikisi hortum ve giderle ilgili: **tahliye hortumu bükülmüş** ya da **tahliye kanalı tıkalı.** Bunlara ek olarak kılavuz, pompanın koruyucu bölmesine düşen küçük cisimlerin nasıl temizleneceğini anlatıyor. Bu yazıdaki sırayı iki Indesit Türkçe kılavuzundan çıkardık: IWC 71052 ve EWE 71083.

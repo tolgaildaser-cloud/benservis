@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir şofben ve altında kapalı duran sıcak su musluğu"
   steps:
-    - "Kapısı ve penceresi açık, boş bir banyo"
-    - "Şofben ekranında yanıp sönen kısa bir harf ve sayı dizisi"
-    - "Duvardaki gaz borusu üzerinde sarı kollu bir vana"
-    - "Şofbenin ön yüzünde yuvarlak bir döner düğme"
-    - "Akan su altında lavabo musluğunun yakın planı"
-    - "Şofbenin yanında duvara asılı boş bir not kâğıdı"
-    - "Tezgâhta açık duran şofben kullanma kılavuzu"
+    - "Çizim: solda duvar tipi şofben, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Sıcak suyu açtın, su ısınmadı ve şofbenin ekranında F04 yanıp sönmeye başladı. DemirDöküm'ün L 275 F ve L 350 F gazlı şofben kılavuzlarında bu kodun anlamı açık: ateşleme arızası. Şofben gazı tutuşturamadı ya da alev ateşleme sırasında söndü, o yüzden kendini kilitledi. Kılavuzun kullanıcıya bıraktığı adımlar az ama net: gaz vanaları, açıp kapatarak reset ve üç deneme sınırı. Bu yazıda o sırayı DemirDöküm'ün kullanma kılavuzu ve montaj kılavuzundan topladık.

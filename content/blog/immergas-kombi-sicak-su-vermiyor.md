@@ -47,14 +47,14 @@ faq:
 images:
   coverAlt: "Banyoda açık bir lavabo musluğu ve arkada duvara asılı beyaz bir kombi"
   steps:
-    - "Kombi panelinde küçük simgeli bir ekran ve yanında tek bir tuş"
-    - "Kombi panelinde yan yana duran iki küçük ayar tuşu"
-    - "Banyo lavabosunda açık duran bir musluk"
-    - "Kombinin altındaki borularda sarı kollu bir gaz vanası"
-    - "Kombinin ön panelinde ibreli yuvarlak bir basınç göstergesi"
-    - "Kombi panelinde diğerlerinden ayrı duran yuvarlak bir tuş"
-    - "Çatıda gökyüzüne bakan güneş paneli"
-    - "Tezgâhta duran bir telefon ve yanında katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluğu açıyorsun, su ısınmıyor. Kombi çalışıyor gibi görünüyor, belki petekler de ısınıyor, ama banyoya sıcak su gelmiyor. Immergas'ın Victrix Tera 28 1 - 32 1 kılavuzunda "sıcak su yok" diye ayrı bir arıza satırı yok. Kullanıcıya bıraktığı kontroller kombinin modu, sıcak su ayarı, basınç ve ekrandaki işaretlerle kodlar. Bu yazıda o kontrolleri sırayla verdik. Kılavuzun Türkçesine ulaşamadık; alıntıları Immergas'ın Macarca sürümünden biz çevirdik. Kodların Türkçe adlarını Immergas Türkiye'nin kod sayfasından aldık. Senin modelin farklıysa kendi kılavuzunla karşılaştır.

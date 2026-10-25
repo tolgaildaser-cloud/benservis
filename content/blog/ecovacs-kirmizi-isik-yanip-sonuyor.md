@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Parke zeminde durmuş yuvarlak bir robot süpürgenin üst yüzündeki yanan düğme"
   steps:
-    - "Robot süpürgenin yanında telefon ekranında açık bildirim sayfası"
-    - "Şarj istasyonuna yerleştirilmiş robot süpürge"
-    - "Kanepe altında bir kabloya takılıp kalmış robot süpürge"
-    - "Robot süpürgeden çıkarılmış ana fırça ve etrafına dolanmış saçlar"
-    - "Ters çevrilmiş robot süpürgenin alt yüzündeki tekerlekler ve sensörler"
-    - "Robot süpürgenin arka tarafına takılan su deposu"
-    - "Üst kapağı açık robot süpürgenin güç anahtarı bölümü"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda tekerlek"
+    - "Çizim: solda robot süpürge, sağda temizlik fırçası"
+    - "Çizim: solda robot süpürge, sağda telefon ve kullanım kılavuzu"
 ---
 
 Robot salonun ortasında durdu, düğmesindeki ışık kırmızı yanıp sönüyor. Ecovacs'ın Türkçe kılavuzlarında bu ışığın tek bir anlamı var: **"Robotta bir sorun var."** Hangi sorun olduğunu robot sesli bildirimle söylüyor, uygulama da ayrıntı veriyor. Bu yazı Ecovacs'ın **DEEBOT N8**, **N8 PRO**, **N10** ve **T9** Türkçe kılavuzlarına ve Ecovacs Türkiye destek sayfalarına dayanıyor; ışığın anlamını, kılavuzun sorun giderme tablosundaki ilgili satırlarla birlikte sırayla veriyor.

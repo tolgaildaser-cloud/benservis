@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin kapalı, yuvarlak cam kapağı"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde yanan küçük bir kilit göstergesi"
-    - "Çamaşır makinesinin kontrol panelinde yuvarlak bir başlat duraklat tuşu"
-    - "Cam kapağın arkasında kazanın alt kısmında görünen bir miktar su"
-    - "Kapalı konuma çevrilmiş yuvarlak bir program seçim halkası"
-    - "Çamaşır makinesinin panelinde kablosuz bağlantı simgesi taşıyan bir konum"
-    - "Çamaşır makinesinin alt ön kısmındaki filtre kapağı, altına serilmiş bez ve geniş bir kap"
-    - "Duvardaki prizden çekilmiş bir çamaşır makinesi fişi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Candy çamaşır makinesi durdu ama kapak açılmıyor. Kulpu çektikçe kapak yerinden kıpırdamıyor ve paneldeki küçük kilit ışığı hâlâ yanıyor. Candy'nin kullanım kılavuzuna göre bunun çoğu zaman bir güvenlik sebebi var: kazanda su ya da sıcaklık varken kapak bilerek kilitli tutuluyor. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz RapidÓ serisi çamaşır makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

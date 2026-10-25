@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin dijital ekranlı kontrol paneli"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde yanıp sönen küçük gösterge ışıkları"
-    - "Çamaşır makinesinin arkasındaki duvarda açık konumda bir su musluğu"
-    - "Çamaşır makinesinin arkasından sökülmüş giriş hortumunun ucundaki küçük süzgeç"
-    - "Çamaşır makinesinin alt ön kısmındaki filtre kapağı ve altına serilmiş emici bir bez"
-    - "Lavabo giderine doğru akan bir miktar su"
-    - "Çamaşır makinesinin deterjan çekmecesinin yanında duran ölçü kabı"
-    - "Kapalı bir çamaşır makinesi kapağının kenarındaki kilit yuvası"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Candy çamaşır makinesi programın ortasında durdu ve ekranda **E** harfiyle başlayan bir kod çıktı. Ya da ekranı olmayan modelde tüm ışıklar birlikte yanıp sönüyor. Candy bu kodları kullanım kılavuzunun sorun giderme bölümünde tek tabloda topluyor. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz RapidÓ serisi çamaşır makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Kodlar ve tuşlar modele göre değişebilir; kendi kılavuzunla karşılaştır.

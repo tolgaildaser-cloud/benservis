@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Kış akşamı sıcak ışıklı bir salonda duvara asılı beyaz bir split klima ve koltukta katlı bir battaniye"
   steps:
-    - "Sehpada duran bir klima kumandasının boş ekranı"
-    - "Duvarda asılı sade bir oda termometresi"
-    - "Klima kumandasında yan yana iki sıcaklık ayar tuşu"
-    - "Kapalı bir klima kullanma kılavuzu ve yanında bir kalem"
-    - "Kanadı aşağıya eğilmiş bir duvar kliması ve altında halı"
-    - "Loş bir yatak odasında sessiz çalışan bir duvar kliması"
-    - "Banyo lavabosunda durulanmış ince ağlı bir klima filtresi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, klimayı ısıtmaya alacaksın ama kumandada hangi simgenin ısıtma olduğundan ve kaç dereceye ayarlaman gerektiğinden emin değilsin. Ayarı çok düşük bırakırsan klima hiç ısıtmaz, en yükseğe çekersen daha hızlı ısınacağını sanırsın. Bu yazıda ısıtma modunun kumandada nasıl göründüğünü ve sıcaklığın nereye ayarlanacağını dört üreticinin kendi Türkçe kılavuzundan topladık: Daikin Sensira, Beko 509411–525411, Arçelik 09325–24325 ve Mitsubishi Electric MSZ-AP. Değerler modele göre değişir; kendi klimanın kılavuzu farklı bir şey yazıyorsa **kendi kılavuzun esastır.**

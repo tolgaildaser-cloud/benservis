@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Banyoda duran, ön yüklemeli beyaz bir çamaşır makinesi ve kapalı kapağı"
   steps:
-    - "Çamaşır makinesinin ekranında yanan bir hata kodu"
-    - "Duvardaki açık konumda bir çamaşır makinesi su musluğu"
-    - "Çamaşır makinesinin alt ön köşesinde açılmış pompa filtresi kapağı ve altında yayvan bir kap"
-    - "Sıkıca kapatılmış bir çamaşır makinesi kapağının yakın planı"
-    - "Tambur içinde dağınık duran birkaç havlu"
-    - "Duvarda kapalı konuma çevrilmiş bir su musluğu"
-    - "Çamaşır makinesinin kontrol panelindeki güç tuşu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hisense çamaşır makinen program ortasında durdu, ışıklar yanıp sönüyor, sesli uyarı veriyor ve ekranda F ile başlayan bir kod var. Hisense kılavuzuna göre makine bir düzensizlik saptadığında programı keser ve kodu ekranda **F:XX** biçiminde gösterir. Bu yazıda Hisense'in WF5S ve WF3S serisi kullanım kılavuzlarındaki hata tablosunu (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) kod kod açtık. Modelin farklıysa kendi kılavuzunla karşılaştır.

@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında küçük, şeffaf hazneli şarjlı bir doğrayıcı, yanında USB kablosu ve doğranmış soğan"
   steps:
-    - "Küçük bir doğrayıcının motor kafasına takılı USB şarj kablosu ve prizdeki adaptör"
-    - "Motor kafasının üstünde yanan küçük gösterge ışığı, yakın plan"
-    - "Şeffaf haznenin ortasındaki mile oturtulmuş doğrama bıçağı"
-    - "Hazneye konmuş iri doğranmış sebzeler, haznenin yan yüzünde çizgi işareti"
-    - "Haznenin üstüne yerleştirilmiş kapak ve onun üstüne oturtulmuş motor kafası"
-    - "Tezgâhta çalışan şarjlı doğrayıcı ve haznede incelmiş sebzeler"
-    - "Lavaboda sabunlu suyla yıkanan şeffaf hazne ve kapak"
+    - "Çizim: solda şarjlı doğrayıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda şarjlı doğrayıcı, sağda şarj edilen batarya"
+    - "Çizim: solda şarjlı doğrayıcı, sağda su ya da toz haznesi"
+    - "Çizim: solda şarjlı doğrayıcı, sağda su ya da toz haznesi"
+    - "Çizim: solda şarjlı doğrayıcı, sağda kapak"
+    - "Çizim: solda şarjlı doğrayıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda şarjlı doğrayıcı, sağda su ya da toz haznesi"
 ---
 
 Kiwi'nin şarjlı doğrayıcısı kablosuz çalışır, ama düzgün çalışması iki şeye bağlıdır: şarjın tam dolması ve parçaların doğru sırayla takılması. Kiwi'nin KC-8202, KC-8203 ve KC-8204 kılavuzları ikisini de kısa ve net anlatıyor. Örneğin şarj için: **"Işıklar kırmızıya dönerek ünitenin şarj olduğunu gösterir. Tamamen şarj olduğunda, gösterge ışıkları söner."** Bu yazıdaki şarj, kullanım ve temizlik adımları bu üç kılavuzdan; üçünün Türkçe metni hazne kapasitesi dışında aynı.

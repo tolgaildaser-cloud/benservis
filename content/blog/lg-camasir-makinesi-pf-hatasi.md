@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında ekranı yanan beyaz bir önden yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde başlatma ve durdurma düğmesinin yakın planı"
-    - "Kararmış ekranlı bir çamaşır makinesi kontrol panelinde güç düğmesi"
-    - "Duvardaki prize tam oturmuş beyaz bir fiş"
-    - "Zeminde kenara bırakılmış, kullanılmayan bir çoklu priz"
-    - "Çamaşır makinesinin yanında duvarda sade, beyaz bir topraklı priz"
-    - "Zeminde düz duran, sağlam görünümlü beyaz bir elektrik kablosu"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve garanti kartı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
 ---
 
 Yıkama durdu, ekranda **PF** yazıyor. LG'nin F4V5RGP2T, F4V3VYW3WE ve F4Y5EYW0W kullanma kılavuzlarında bu kodun başlığı **güç arızası**: çalışma sırasında güç arızası veya elektrik hizmetinde yetersizlik meydana gelmiş olabilir. LG'nin bu kod için verdiği çözüm tek adım: programı yeniden başlatmak için Başlat/Durdur düğmesine basın. PF, LG tablosunda servis çağırmanı istemeyen kodlardan biri; yine de sık tekrarlıyorsa kılavuzun güç uyarılarına göre bakılacak yerler var.

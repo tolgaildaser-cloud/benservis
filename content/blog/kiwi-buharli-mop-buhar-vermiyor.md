@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Parke zeminde dik duran bir buharlı mop ve gövdesindeki şeffaf su haznesi"
   steps:
-    - "Buharlı mopun gövdesindeki neredeyse boş şeffaf su haznesi"
-    - "Prizden çekilmiş fiş ve mopun haznesine ölçüm kabıyla dökülen su"
-    - "Tezgâhta duran bir şişe damıtılmış su ve küçük bir ölçüm kabı"
-    - "Buharlı mopun sapındaki yanan küçük gösterge ışığı"
-    - "Buharlı mopun sapındaki buhar seçim tuşu"
-    - "Buharlı mopun çıkarılmış su haznesi ve yanında bir kaşık beyaz sirke"
-    - "Kapatılıp dik konumda duvara yaslanmış buharlı mop"
+    - "Çizim: solda buharlı mop, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı mop, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı mop, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı mop, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı mop, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı mop, sağda kireç çözücü şişesi"
+    - "Çizim: solda buharlı mop, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kiwi buharlı mopun fişi takılı, ışığı yanıyor ama zeminde buhar yok. Kiwi'nin **KSC-4215** buharlı mop, **KSC-4220** buharlı otomatik paspas ve **KSC-4221** buharlı paspas kılavuzlarında sorun giderme tablosu yok; ama kullanım ve bakım bölümleri buharın kesilmesine yol açan durumları tek tek anlatıyor: boş hazne, yanlış su, tamamlanmamış ısınma, kapalı buhar kademesi ve kireç. Aşağıdaki sıra bu bölümlerden kuruldu.

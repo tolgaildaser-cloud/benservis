@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Oturma odası duvarının üst kısmına monte edilmiş beyaz bir split klima iç ünitesi"
   steps:
-    - "Masada ekranı yukarı bakan bir klima kumandası"
-    - "Kapakları kapalı, sessiz duran bir split klima iç ünitesi"
-    - "Kış günü balkonda üzeri hafif buzlanmış bir klima dış ünitesi"
-    - "Duvarda sabit bir saat ve altında klima iç ünitesi"
-    - "Karla kaplı bir balkonda duran klima dış ünitesi"
-    - "Lavabo üzerinde ılık su altında yıkanan ince ağlı klima hava filtresi"
-    - "Önünde perde ya da eşya bulunmayan, açık duran bir klima iç ünitesi"
-    - "Klima kumandasının yanında masada duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hisense klimanı ısıtmaya aldın ama oda ısınmıyor, iç ünite soğuk üflüyor ya da hiç üflemiyorsa önce klimanın kendi davranışlarını tanımak gerekiyor. Ön ısıtma ve defrost, ilk bakışta arıza gibi görünen ama kılavuzda normal sayılan iki durum. Bu yazıda Hisense'in iç ünite ve kumanda kılavuzlarında (kılavuzların İngilizce baskısı, alıntılar Türkçeye çevrildi) ısıtmayla ilgili ne varsa topladık.

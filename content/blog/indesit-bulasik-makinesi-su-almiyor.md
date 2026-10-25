@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Mutfakta kapağı açık, sepetleri boş bir bulaşık makinesi"
   steps:
-    - "Tezgah altındaki bir su musluğunun açık konumdaki kolu"
-    - "Bulaşık makinesinin arkasından duvara uzanan beyaz bir su giriş hortumu"
-    - "Bulaşık makinesinin tabanında silindirik filtre ve süzgeç plakası"
-    - "Bir su giriş hortumunun ucundaki küçük süzgeç filtrenin yakın planı"
-    - "Bir kovaya akan berrak su ve hortum ucu"
-    - "Bulaşık makinesi kumanda panelinde açma ve kapama düğmesi"
-    - "Kapatılmış bir su musluğu ve prizden çekilmiş bir fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
 ---
 
 Program başladı, gösterge ışıkları yanıp sönüyor ama makinenin içinden su sesi gelmiyor. Indesit'in DFG 15B10 için yayımladığı Türkçe kullanım talimatlarında bu durumun kendi satırı var: **"Bulaşık makinesi su almıyor. Yanıp sönen ışıklar ile destekleniyor."** Kılavuz dört neden sayıyor: **şebekede su yok ya da musluk kapalı, su giriş hortumu kıvrılmış, filtreler tıkanmış** ya da **drenaj kanalı tıkanmış.** Bu yazıdaki sırayı bu talimatlardan ve DFG 26B10'un günlük referans kılavuzundan çıkardık. Kendi modelinin kılavuzuyla karşılaştır.

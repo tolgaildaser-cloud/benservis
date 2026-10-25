@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin üst kenarındaki tuşlu kontrol paneli"
   steps:
-    - "Bulaşık makinesi kontrol panelinde tek başına duran bir başlat tuşu"
-    - "Kontrol panelinde sırayla yanan küçük program ışıkları"
-    - "Açık bulaşık makinesi kapağının iç yüzünde deterjan haznesi"
-    - "Kontrol panelinde yanan küçük saat göstergeleri"
-    - "Bulaşık makinesi panelinde kilit simgesi taşıyan bir tuş"
-    - "Duvardaki prizden çekilmiş bir bulaşık makinesi fişi"
-    - "Tezgâh altındaki dolapta kapatılmış küçük bir köşe musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda uzaktan kumanda"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda çalışma sesi"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Candy bulaşık makinesinde yanlış programı başlattın, program bir yerde takıldı ya da ekranda bir hata kodu var ve "makineyi nasıl resetlerim" diye arıyorsun. Candy'nin kullanım kılavuzunda bu iş için tek bir tuş var: **START/RESET**. Kısa basış programı başlatıyor, uzun basış çalışan programı siliyor. Kılavuz ayrıca çocuk kilidi ve hata kodları için ayrı yollar veriyor. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz CF serisi bulaşık makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

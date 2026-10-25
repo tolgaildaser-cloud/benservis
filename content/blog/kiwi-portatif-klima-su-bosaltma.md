@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Oda köşesinde, pencereye uzanan egzoz hortumu takılı beyaz bir portatif klima"
   steps:
-    - "Portatif klimanın ekranında yanıp sönen su dolu simgesi"
-    - "Düz zeminde duran portatif klimanın alt kısmının önüne konmuş sığ bir kap"
-    - "Portatif klimanın alt tahliye ağzından sığ bir kaba akan su"
-    - "Yerine takılmış tahliye tapası ve yanında katlanmış kuru bir bez"
-    - "Portatif klimanın arkasına takılı ince tahliye hortumu ve zemindeki bir kova"
-    - "Arkasından geniş egzoz hortumu çıkarılmış portatif klima ve bağlı ince drenaj hortumu"
-    - "Üzerine örtü serilmiş, kuru bir depoda dik duran portatif klima"
+    - "Çizim: solda klima, sağda prizden çekilen fiş"
+    - "Çizim: solda klima, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda klima, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda klima, sağda prizden çekilen fiş"
+    - "Çizim: solda klima, sağda duvar giderine giden hortum"
+    - "Çizim: solda klima, sağda duvar giderine giden hortum"
+    - "Çizim: solda klima, sağda ilgili filtre"
 ---
 
 Kiwi portatif klimanın ekranında **Dolu** simgesi yanıp sönüyor ve **E7** ya da **FL** yazıyorsa klima bozulmadı; su deposu doldu. Kiwi'nin KAC-7910, KAC-7911 ve KAC-7914 kılavuzları bu durumu "su dolu hatırlatıcısı" olarak anlatıyor ve tarifi tek cümleyle veriyor: **cihazı kapatın ve fişini çekin, su deposunu boşalttıktan sonra cihaz tekrar çalışmaya hazır olacaktır.** KAC-7912 kılavuzunda aynı uyarının adı **FL**. Bu yazı suyun nasıl boşaltılacağını, sürekli tahliye için hortumun nereye bağlanacağını ve sezon sonu bakımını Kiwi'nin kendi kılavuzlarından sıralıyor.

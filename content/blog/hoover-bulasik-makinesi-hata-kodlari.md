@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhının altına yerleştirilmiş beyaz bir bulaşık makinesinin kapağı ve kontrol paneli"
   steps:
-    - "Bulaşık makinesinin panelinde yanan kısa bir harf ve sayı kodu"
-    - "Tezgâh altındaki su musluğuna bağlı bir giriş hortumu"
-    - "Makinenin arkasından sökülmüş hortumun ağzındaki küçük kum filtresi"
-    - "Lavabo altındaki sifona bağlanmış gri bir tahliye hortumu"
-    - "Musluk altında yıkanan silindir biçimli bulaşık makinesi filtresi"
-    - "Prizden çekilmiş fiş ve kapağı kapalı bulaşık makinesi"
-    - "Kapalı bir alet çantası ve yanında katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hoover bulaşık makinen kısa bir sesli sinyal verdi, ekranda E ile başlayan bir kod belirdi ve yıkama durdu. Ekransız modelde ise bütün ışıklar sırayla yanıp sönmeye başladı. Hoover'ın HF 3E53E0W-17 ve HF 6C7F0X-17 modellerine ait Türkçe kullanım kılavuzları aynı hata tablosunu veriyor ve altı kodu açıklıyor. Bu yazıda tabloyu, ekransız modellerde ışıkları nasıl okuyacağını ve servisi aramadan önce yapabileceklerini topladık. Kılavuzlar bu modellere ait; senin makinende panel ve düğme adları farklı olabilir, kendi kılavuzunla karşılaştır.

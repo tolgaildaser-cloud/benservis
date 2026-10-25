@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Oturma odasında zeminde duran küçük beyaz bir fanlı ısıtıcı ve önündeki halı"
   steps:
-    - "Duvar prizine doğrudan takılmış bir ısıtıcı fişi"
-    - "Fanlı ısıtıcının üstündeki döner işlev düğmesi"
-    - "Fanlı ısıtıcının yanında yanan küçük kontrol lambası ve termostat düğmesi"
-    - "Priz tipi ısıtıcının ön yüzündeki dijital ekran"
-    - "Kapatılmış bir fanlı ısıtıcının ön ızgarası"
-    - "Düz ahşap zemine yerleştirilmiş fanlı ısıtıcının tabanı"
-    - "Fanlı ısıtıcının hava emme ızgarasında duran ince bir fırça"
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
+    - "Çizim: solda elektrikli ısıtıcı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda elektrikli ısıtıcı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda elektrikli ısıtıcı, sağda panel ekranındaki uyarı"
+    - "Çizim: solda elektrikli ısıtıcı, sağda uzaktan kumanda"
+    - "Çizim: solda elektrikli ısıtıcı, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda elektrikli ısıtıcı, sağda prizden çekilen fiş"
 ---
 
 Kiwi ısıtıcı fan çalışıyor, fan dönüyor ama yüzüne gelen hava ılık değil, serin. Bu her zaman arıza değil. Kiwi'nin KHT-8415, KHT-8422, KHT-8430 ve KHT-8490 kılavuzları fanın ısıtmadan üflediği durumları kendisi anlatıyor: işlev düğmesinin **yalnızca havalandırma** konumu, oda **ayarlanan sıcaklığa** gelince ısıtmanın kesilmesi ve cihaz **kapatılırken** fanın bir süre çalışmaya devam etmesi. Aşağıdaki kontroller bu dört kılavuzdan.

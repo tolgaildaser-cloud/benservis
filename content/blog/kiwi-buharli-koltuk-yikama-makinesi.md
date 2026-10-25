@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Kumaş bir koltuğun yanında duran tutma kollu bir koltuk ve halı yıkama makinesi"
   steps:
-    - "Tutma kolundan kaldırılmış şeffaf temiz su tankının MAX çizgisine kadar doldurulması"
-    - "Koltuk yıkama makinesinin tutma koluna takılmış ana fırça başlığı"
-    - "Kumaş koltuğun arka yüzündeki küçük bir alanda deneme yapılan fırça başlığı"
-    - "Prize takılmış fiş ve cihazın üstündeki yanan güç göstergesi"
-    - "Cihazın gövdesindeki dokunmatik mod düğmeleri"
-    - "Ön ısıtma sırasında yanıp sönen küçük bir gösterge ışığı"
-    - "Koltuk minderinin üzerinde ileri geri gezdirilen fırça başlığı"
-    - "Boşaltılmış ve durulanmış kirli su tankı ile hortum tutucusuna sarılmış hortum"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda temizlik fırçası"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda temizlik fırçası"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin buharlı koltuk ve halı yıkama makineleri, düz su püskürtüp çeken modellerden farklı olarak suyu ısıtabiliyor ve buhar verebiliyor. Bu yüzden kullanımda iki yeni adım var: doğru modu seçmek ve ön ısıtmayı beklemek. Bu yazı Kiwi'nin iki kılavuzuna dayanıyor: beş modlu **KCC-4332** ve normal su, sıcak su ve buhar modlu **KCC-4321**.

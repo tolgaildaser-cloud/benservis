@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran küçük gövdeli bir buharlı temizleyici, yanında huni, ölçüm kabı ve birkaç fırça aparatı"
   steps:
-    - "Düz bir tezgâhta fişi prizden çekilmiş duran küçük gövdeli buharlı temizleyici"
-    - "Buharlı temizleyicinin açık su ağzına takılmış huni ve dökülen su"
-    - "Buharlı temizleyicinin üstüne yeniden takılmış emniyet kapağı"
-    - "Buharlı temizleyicinin gövdesinde yanan küçük gösterge ışığı"
-    - "Lavaboya doğru tutulmuş buharlı temizleyicinin nozulundan çıkan buhar"
-    - "Buharlı temizleyicinin nozuluna takılmış yuvarlak naylon fırça"
-    - "Fayans derzine doğru tutulmuş açılı nozul ve hafif buhar"
-    - "Kullanımdan sonra dik duran buharlı temizleyici ve yanında katlanmış kuru bez"
+    - "Çizim: solda buharlı temizleyici, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı temizleyici, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı temizleyici, sağda kapak"
+    - "Çizim: solda buharlı temizleyici, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı temizleyici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı temizleyici, sağda bekleme süresi için saat"
+    - "Çizim: solda buharlı temizleyici, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin buharlı temizleyicileri iki tipte geliyor: elde tutulan küçük gövdeli modeller (**KSC-4210**, **KSC-4213**) ve hortumlu, tekerlekli kazan modelleri (**KSC-4217**, **KSC-4255**). Hepsinde mantık aynı: hazneye su konur, emniyet kapağı kapanır, cihaz ısınır ve buhar düğmesiyle kullanılır. Farklar su miktarında, ısınma süresinde ve kapağın açılış biçiminde. Bu yazı dört modelin Türkçe kılavuzuna dayanıyor.

@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Karanlık bir banyoda kumanda paneli ışıkları yanan beyaz bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi kumanda panelinde yan yana dizilmiş gösterge lambaları"
-    - "Kumanda panelinde yanıp sönen turuncu bir başlat lambası"
-    - "Çamaşır makinesi kumanda panelindeki işlev tuşlarının yakın planı"
-    - "Duvardaki su musluğuna bağlı beyaz bir su giriş hortumu"
-    - "Yıkama sonunda yavaşça dönen tamburdaki buruşuksuz gömlekler"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Çamaşır makinesinin arkasındaki ürün etiketi bölgesinin yakın planı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Indesit çamaşır makinesinde ışıkların yanıp sönmesi her zaman arıza demek değil. Kılavuzlarda yanıp sönen bir lambanın en az beş ayrı anlamı var: **program beklemede, seçtiğin işlev uyumsuz, makine su alamıyor, Kolay ütü devri bitmeyi bekliyor** ya da **gerçek bir arıza uyarısı.** Hangisi olduğunu ışığın yerinden, renginden ve diğer lambalarla birlikte nasıl yandığından anlarsın. Bu yazıdaki anlamları üç Indesit Türkçe kılavuzundan çıkardık: düğmeli IWC 71052, dijital ekranlı EWD 81283 ve EWE 71083.

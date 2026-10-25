@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Banyo duvarında tek düğmeli ve küçük ekranlı beyaz bir şofben"
   steps:
-    - "Kapısı ve penceresi açık, sakin bir banyo"
-    - "Şofbenin küçük siyah ekranında iki harfli bir yazı"
-    - "Tezgâhta açık duran bir kullanım kılavuzunun tablo sayfası"
-    - "Şofbenin ön yüzündeki tek yuvarlak düğmenin yakın planı"
-    - "Şofbenin yanında duvarda asılı bir not kâğıdı"
-    - "Banyo girişindeki kapalı sigorta kutusu"
-    - "Tezgâhta duran bir telefon ve yanında katlanmış kılavuz"
+    - "Çizim: solda duvar tipi şofben, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi şofben, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi şofben, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi şofben, sağda not defteri ve kalem"
 ---
 
 Duş için sıcak suyu açtın ama şofben yanmadı; ekranda AL yazısı ile bir sayı sırayla yanıp sönüyor. ECA'nın Phoenix hermetik şofben kılavuzu bu ekranı açıklıyor: bir hata olduğunda AL ve hata kodu dönüşümlü görünür. Kılavuzun sonundaki sorun giderme tablosu her kodun muhtemel sebebini ve çözümünü veriyor. Çoğunun çözümü "yetkili servisi arayınız"; birkaçı ise reset ya da beklemeyle geçiyor. Bu yazıda tabloyu senin yapabileceklerin ve servise bırakman gerekenler diye ayırdık. Kılavuz PH HM 11 LT/DK modeline ait; şofbenin farklıysa kendi kılavuzuyla karşılaştır.

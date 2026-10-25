@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında duran beyaz bir kurutma makinesinin ön yüzü ve üst çekmecesi"
   steps:
-    - "Kurutma makinesinin kontrol panelinde yanıp sönen küçük bir su tankı simgesi"
-    - "Yuvasından yarıya kadar çekilmiş plastik su tankı"
-    - "Banyo lavabosuna boşaltılan berrak su"
-    - "Kurutma makinesinin üst köşesindeki boş tank yuvası"
-    - "Tiftik tutulmuş ince ağlı bir kurutma filtresi"
-    - "Kurutma makinesinin arkasından gidere uzanan gri bir hortum"
-    - "Kapalı bir kurutma makinesi ve üstünde katlanmış kullanma kılavuzu"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
 ---
 
 Hoover kurutma makinen program ortasında durdu, panelde su tankı simgesi yanıp sönüyor. Ya da program bitti ve ekranda su tankını boşaltman isteniyor. Bu kurutma makineleri çamaşırdan aldığı nemi yoğuşturup bir su tankında topluyor; tank dolunca makine çalışmayı keser. Hoover'ın HBP-10N1BX-17 ve HGD-9N1BGC-17 modellerine ait Türkçe kullanım kılavuzları tankın boşaltılmasını, ilgili simgeyi ve tankı hiç boşaltmamanı sağlayan tahliye hortumu bağlantısını ayrı ayrı anlatıyor. Bu yazıda bunları topladık. Kılavuzlar bu iki modele ait; senin makinende tankın yeri ve simgeler farklı olabilir, kendi kılavuzunla karşılaştır.

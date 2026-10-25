@@ -47,13 +47,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında ekranı yanan, kapağı kapalı beyaz bir önden yüklemeli çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki küçük ekranın yakın planı"
-    - "Kapağı açık, içi boş ve temiz görünen bir çamaşır makinesi tamburu"
-    - "Çamaşır makinesinin kontrol panelinde yan yana duran iki düğme"
-    - "Prizden çekilmiş, zeminde duran bir çamaşır makinesi fişi"
-    - "Duvardaki su musluğunun kapalı konuma getirilmiş kolu"
-    - "Çamaşır makinesinin önünde açılmış küçük tahliye kapağı ve önünde sığ bir kap"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve garanti kartı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Makine durdu, ekranda **tE** yazıyor. LG'nin F4V5RGP2T, F4V3VYW3WE ve F4Y5EYW0W kullanma kılavuzlarında bu kodun başlığı **kontrol hatası**, açıklaması da tek cümle: bu kontrol hatasıdır. Çözüm satırı: güç prizini çıkarın ve servisi arayın. Kodun kendisi evde çözülmüyor; ama ekrandaki yazının gerçekten tE olup olmadığını ayırmak, içerideki suyu ve çamaşırı güvenle almak senin elinde.

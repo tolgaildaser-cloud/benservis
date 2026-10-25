@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Beyaz duvara asılı bir kombi ve küçük ekranında yanan iki haneli bir uyarı"
   steps:
-    - "Kombi ekranının yakın planı ve yanında duran küçük bir not kâğıdı"
-    - "Kombinin altındaki borularda sarı kollu bir gaz vanası"
-    - "Kombinin ön panelinde ibreli yuvarlak bir basınç göstergesi"
-    - "Duvar önünde beyaz bir petek ve ucundaki küçük vana"
-    - "Kombi panelinde diğerlerinden ayrı duran yuvarlak bir tuş"
-    - "Sakin bir mutfakta kapalı duran beyaz bir kombi"
-    - "Tezgâhta duran bir telefon ve yanında katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Immergas kombinin ekranında iki haneli bir sayı yanıyor ve kombi çalışmıyor. Immergas Türkiye'nin sitesinde "Ürün Arıza Kodlarının Tanımları" diye bir sayfa var. Her kodun adını, nedenini ve senden ne yapmanı istediğini orada tek tek yazıyor. Bu yazıda o sayfadaki kombi kodlarını topladık. Reset tuşu, basınç değeri ve reset sınırı içinse Immergas'ın Victrix Tera 28 1 - 32 1 kılavuzuna baktık. Bu kılavuzun Türkçesine ulaşamadık, alıntıları Macarca sürümden biz çevirdik. Senin modelin farklıysa kod adını kendi kılavuzunla karşılaştır.

@@ -37,12 +37,12 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin ışıklı göstergeleri ve dijital ekranı"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki düğme dizisi"
-    - "Kapağı kapalı bir çamaşır makinesinin panelinde yanan kilit göstergesi"
-    - "Panelde bir kez yanıp sönen küçük bir seçenek ışığı"
-    - "Kontrol panelinde yanan tuş kilidi simgesi"
-    - "Panelin köşesinde yanan küçük bir kablosuz bağlantı göstergesi"
-    - "Kontrol panelinde aynı anda yanan birkaç gösterge ışığı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
 ---
 
 Hoover çamaşır makinenin panelinde bir kilit yandı, bir lamba bir kez yanıp söndü, köşedeki kablosuz simgesi sürekli göz kırpıyor. Hangisinin arıza, hangisinin bilgi olduğunu bilmek için kılavuzun kontroller bölümüne bakmak gerekiyor. Hoover'ın H3WPS294TAM6-17 modeline ait Türkçe kullanım kılavuzu paneldeki düğmeleri harflerle, gösterge lambalarını da numaralarla tek tek anlatıyor. Bu yazıda o listeyi sadeleştirip topladık. Kılavuz bu modele ait; senin makinende panel düzeni, simgeler ve düğme adları farklı olabilir, kendi kılavuzunla karşılaştır.

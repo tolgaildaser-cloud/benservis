@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Duvardaki su musluğuna bağlı beyaz bir hortum ve yanında çamaşır makinesi"
   steps:
-    - "Dijital ekranında yanıp sönen yazı olan bir çamaşır makinesi kumanda paneli"
-    - "Çamaşır makinesi kumanda panelinde başlat ve durdur tuşunun yakın planı"
-    - "Açık konumda bir su musluğu kolunun yakın planı"
-    - "Çamaşır makinesinin arka üst köşesindeki su girişine vidalı hortum"
-    - "Lavabo musluğundan akan ince bir su"
-    - "Yan yana konmuş eski ve yeni iki beyaz su giriş hortumu"
-    - "Kapatılmış bir su musluğu ve kumanda paneli sönük bir çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Programı başlattın ama tambura su gelmiyor; ekranda **H2O** yazısı yanıp sönüyor. Hotpoint'in belge portalında RSG 845 J TK modeli için yayımlanan Türkçe kılavuzda bu uyarının tek bir anlamı var: **çamaşır makinesi su almıyor.** Kılavuz bunun altı nedenini sayıyor ve hepsi makinenin dışında, senin kontrol edebileceğin yerlerde: **musluk, hortum, evdeki su, basınç ve BAŞLAT/DURDUR tuşu.** Bu yazı bu listeyi sırayla izliyor.

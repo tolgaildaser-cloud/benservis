@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran, kapısında dokunmatik ekran bulunan kombi tip bir buzdolabı"
   steps:
-    - "Yeni kurulmuş, içi boş ve ışıkları yanan bir buzdolabı"
-    - "Buzdolabı kapısındaki kontrol panelinde soğutucu bölme simgesi"
-    - "Buzdolabı kontrol panelinde dondurucu bölme simgesi"
-    - "Dondurucu çekmecesine yerleştirilmiş küçük porsiyonlu yiyecek paketleri"
-    - "Kontrol panelinde yanan bir tasarruf modu ışığı"
-    - "Hafif aralık kalmış bir buzdolabı kapısı"
-    - "Buzdolabı kontrol panelindeki güç tuşunun yakın planı"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Hisense buzdolabının kapısındaki panelde birkaç tuş var ama hangi tuşun hangi bölmeyi ayarladığı ilk bakışta belli değil. Bu yazıda Hisense'in RB645N4BIE kombi buzdolabı kılavuzundaki (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) panel ayarlarını tuş tuş anlattık. Senin modelinde tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

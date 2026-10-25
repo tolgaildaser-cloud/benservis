@@ -43,14 +43,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kontrol paneli aydınlık, tam otomatik bir espresso makinesi ve altında küçük bir fincan"
   steps:
-    - "Tezgâhta yerine oturtulmuş dış damlama tepsisiyle duran bir espresso makinesi"
-    - "Musluk altında durulanmış şeffaf su haznesi"
-    - "Kapağı açık çekirdek haznesinde kavrulmuş kahve çekirdekleri"
-    - "Kahve musluğunun altında sıcak suyla dolan geniş bir kap"
-    - "Espresso makinesinin musluğundan fincana akan koyu kahve"
-    - "Makineye hortumla bağlanmış süt kabı ve altında köpüklü bir bardak"
-    - "Makineden çekilmiş boş damlama tepsisi ve kahve telvesi kabı"
-    - "Musluğun altına konmuş büyük bir kapla kendi kendini temizleme programı çalışan makine"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda su giriş musluğu"
+    - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
 ---
 
 Kiwi'nin tam otomatik espresso makinesi çekirdeği kendisi öğütüyor, süt köpüğünü kendisi yapıyor; ama bunun karşılığında kılavuzun düzenli istediği birkaç bakım var. Kapsüllü model ise daha basit, ama su konusunda kendine özgü bir kuralı var. Bu yazı Kiwi'nin **KCM-7599** tam otomatik kahve makinesi föyüne ve **KCM-7597** kapsül kahve makinesi kılavuzuna dayanıyor. Kiwi'nin iki makinede de vurguladığı şey aynı: **hazneye sıcak su ya da başka bir sıvı koyma.**

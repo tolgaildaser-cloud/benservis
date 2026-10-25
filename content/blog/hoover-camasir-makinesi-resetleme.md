@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin döner program seçicisi ve dokunmatik düğmeleri"
   steps:
-    - "Kontrol panelinde yan yana dizilmiş düğmeler ve döner seçici"
-    - "Kapalı konuma çevrilmiş döner program seçicisi"
-    - "Çamaşır makinesi kapağının yanındaki sönük kilit göstergesi"
-    - "Prizden çekilmiş bir fiş ve kablosu yerde duran çamaşır makinesi"
-    - "Panelde yanan küçük bir kilit simgesi"
-    - "Ekranda yabancı dilde görünen bir menü yazısı"
-    - "Kapalı duran çamaşır makinesi ve önünde katlanmış kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hoover çamaşır makinen bir programda takıldı, tuşlar tepki vermiyor ya da ekran birden İngilizce konuşmaya başladı. Akla ilk gelen "resetleme" oluyor. Hoover'ın H3WPS294TAM6-17 modeline ait Türkçe kullanım kılavuzunda "reset" adlı bir düğme yok; ama programı iptal etmenin, bir koddan sonra makineyi yeniden başlatmanın, tuş kilidini kaldırmanın ve dili sıfırlamanın yollarını ayrı ayrı anlatıyor. Bu yazıda bunları sırayla topladık. Kılavuz bu modele ait; senin makinende düğme adları ve yerleri farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Çamaşırhanede duran, kapağı kapalı ön yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde başlat ve duraklat tuşu"
-    - "Çamaşır makinesinin kontrol panelindeki güç tuşunun yakın planı"
-    - "Tamburu boş, kapağı aralık bir çamaşır makinesi"
-    - "Çamaşır makinesinin ekranında yanan bir hata kodu"
-    - "Çamaşır makinesi ekranında yanan küçük bir kilit simgesi"
-    - "Kesinti sonrası yeniden yanan çamaşır makinesi ekranı"
-    - "Çamaşır makinesinin yanında tezgâhta duran bir akıllı telefon"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Hisense çamaşır makinen bir programda takıldı, tuşlar tepki vermiyor ya da ekranda hata kodu duruyorsa "resetleme" diye aranan şey genelde programı iptal edip makineyi temiz bir başlangıca döndürmek. Hisense'in WF5S ve WF3S serisi kullanım kılavuzlarında (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ayrı bir reset tuşu yok; bunun yerine birkaç farklı yol var. Hangisinin işine yarayacağı makinenin hangi durumda olduğuna bağlı.

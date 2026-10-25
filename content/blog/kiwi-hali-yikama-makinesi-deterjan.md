@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Halının üzerinde duran bir koltuk ve halı yıkama makinesi ve yanında etiketsiz bir sıvı deterjan şişesi"
   steps:
-    - "Tezgâhta duran etiketsiz, kapaklı bir sıvı deterjan şişesi"
-    - "Koltuk minderinin arka kenarındaki küçük bir alana damlatılmış deterjan"
-    - "Küçük bir kapta suyla karıştırılan az miktarda sıvı deterjan"
-    - "Halıdaki bir lekenin üzerine sprey şişesiyle uygulanan deterjanlı karışım"
-    - "Koltuk yıkama makinesinin temiz su haznesine yalnız musluk suyu doldurulması"
-    - "Lekenin üzerine bastırılmış emme başlığı ve şeffaf kanaldan geçen köpüksüz kirli su"
-    - "Musluk altında çalkalanan temiz su haznesi ve yanında boşaltılmış kirli su tankı"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su ya da toz haznesi"
 ---
 
 "Deterjanı nereye koyacağım?" sorusunun cevabı Kiwi'de modele göre değişiyor. El aparatlı koltuk ve halı yıkama makinelerinde Kiwi'nin kuralı açık: **temiz su haznesine deterjan konmaz**, deterjan cihazın dışında lekeye uygulanır ve sonra makineyle vakumlanır. Dik tip halı yıkama makinelerinde ise depoya köpürmeyen, makinelere özel deterjan konabiliyor. Bu yazı yedi Kiwi kılavuzundaki deterjan cümlelerini yan yana koyuyor: **KCC-4316**, **KCC-4317**, **KCC-4320**, **KCC-4321**, **KCC-4330**, **KCC-4332** ve **KCC-4370**.

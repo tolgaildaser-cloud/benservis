@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında kapağı kapalı beyaz bir önden yüklemeli çamaşır makinesi ve yanında duvardaki su musluğu"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde iki harfli bir kod gösteren küçük ekranın yakın planı"
-    - "Duvardaki su musluğuna bağlı beyaz su giriş hortumu"
-    - "Prizden çekilmiş, zeminde duran bir çamaşır makinesi fişi"
-    - "Kapağı kapalı çamaşır makinesinin camından görünen tamburdaki durgun su"
-    - "Çamaşır makinesinin önünde açılmış küçük tahliye kapağı ve önünde sığ bir kap"
-    - "Kapağı aralık bırakılmış boş bir çamaşır makinesi ve temiz kapak lastiği"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve garanti kartı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Yıkama yarıda kaldı, ekranda **PE** yazıyor. LG'nin F4V5RGP2T, F4V3VYW3WE ve F4Y5EYW0W kullanma kılavuzlarındaki hata tablosu bu kodu tek satırla açıklıyor: **su seviyesi sensörü hatalı**. Çözüm satırı da kısa: musluğu kapat, fişi çek, servisi ara. Bu yazı, servise kadar evde yapabileceğin güvenli işleri ve yapmaman gerekenleri kılavuzun kendi cümleleriyle sıralıyor.

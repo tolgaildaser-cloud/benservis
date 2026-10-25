@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhındaki dolu bir damacananın ağzına takılmış beyaz bir şarjlı su pompası ve altında bir bardak"
   steps:
-    - "Ambalajından çıkarılmış şarjlı su pompası, silikon hortum, çıkış borusu ve USB kablosu"
-    - "USB kablosuyla şarja bağlı, gösterge ışığı yanan bir su pompası"
-    - "Pompanın altına takılmış silikon hortum ve üstündeki çıkış borusu"
-    - "Kapağı yerinde duran bir damacananın ağzına oturtulan su pompası"
-    - "Damacananın içinde düz duran silikon hortum"
-    - "Pompanın çıkış borusundan bardağa akan su"
-    - "Tezgâhta şarj kablosu takılı bir su pompası ve yanında dolu bir damacana"
-    - "Lavaboda ılık sabunlu suyla yıkanan paslanmaz çelik su çıkış borusu"
+    - "Çizim: solda damacana su pompası, sağda ambalaj kutusu"
+    - "Çizim: solda damacana su pompası, sağda USB bellek ve güncelleme"
+    - "Çizim: solda damacana su pompası, sağda duvar giderine giden hortum"
+    - "Çizim: solda damacana su pompası, sağda kapak"
+    - "Çizim: solda damacana su pompası, sağda duvar giderine giden hortum"
+    - "Çizim: solda damacana su pompası, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda damacana su pompası, sağda şarj edilen batarya"
+    - "Çizim: solda damacana su pompası, sağda şarj edilen batarya"
 ---
 
 Kiwi'nin şarjlı su pompası damacanayı kaldırıp devirmeden bardağa su almak için var: damacananın ağzına oturtuyorsun, düğmeye basınca su çıkış borusundan akıyor. Arama önerilerinde "kurulumu", "nasıl takılır" ve "kaç saatte şarj olur" birlikte geçiyor. Kiwi'nin kılavuzu kurulumu büyük ölçüde resimle anlatıyor, ama metinde üç kural açık: **ilk şarj dört saat, damacananın kapağı çıkarılmaz, hortum şişe kenarına yaslanmaz.** Bu yazı Kiwi'nin **KWP-8520, KWP-8513 ve KWP-8521** Türkçe kılavuzlarına dayanıyor.

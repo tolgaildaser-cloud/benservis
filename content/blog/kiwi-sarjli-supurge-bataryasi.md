@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Duvar askısına takılı, şarj adaptörüne bağlı şarjlı dikey bir süpürge ve yanan gösterge ışıkları"
   steps:
-    - "Kutudan yeni çıkmış, şarja takılı bir şarjlı süpürge"
-    - "Süpürgenin şarj girişine takılan kendi adaptörünün ucu"
-    - "Oda içinde, pencereden uzakta şarjda duran süpürge"
-    - "Süpürgenin gövdesinde sırayla yanan şarj gösterge ışıkları"
-    - "Şarjda duran, kapalı bir küçük şarjlı süpürgenin gövdesi"
-    - "Prizden çıkarılmış şarj kablosu ve yanında kullanıma alınmış süpürge"
-    - "Kuru bir dolap içinde duvara asılmış şarjlı süpürge"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda anten girişi ve kablo"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda dikey süpürge, sağda kumandanın pilleri"
 ---
 
 Kiwi'nin şarjlı süpürgelerinde süpürme süresini batarya belirliyor. Kiwi'nin kılavuzlarında bataryayla ilgili cümleler şarj, sıcaklık, gösterge ve saklama başlıklarına dağılmış. Bu yazı onları bir araya topluyor: dikey **KVC-4040**, **KVC-4040BLF** ve **KVC-4041**, el tipi **KVC-4036** ve **KVC-4085**, oto tipi **KVC-4050** ve şarjlı ıslak-kuru temizleyici **KSC-4270**.

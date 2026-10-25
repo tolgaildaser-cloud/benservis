@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında sökülmüş bir katı meyve sıkacağı: motor gövdesi, şeffaf kapak, posa kabı ve paslanmaz filtre yan yana"
   steps:
-    - "Yavaş sıkım meyve presinin şeffaf haznesine dolan temiz su"
-    - "Prizden çekilmiş fişiyle tezgâhta duran kapalı bir meyve sıkacağı"
-    - "Tezgâhta sırayla dizilmiş şeffaf kapak, itici çubuk, posa kabı ve filtre kabı"
-    - "Paslanmaz çelik meyve sıkacağı filtresinin küçük bir fırçayla temizlenmesi"
-    - "Sabunlu suyla dolu lavaboda yıkanan şeffaf meyve sıkacağı parçaları"
-    - "Turuncu lekeli şeffaf plastik bir parçanın yağlı bir bezle silinmesi"
-    - "Nemli bir bezle silinen meyve sıkacağı motor gövdesi"
-    - "Kurulanmış meyve sıkacağı parçalarının bir bez üzerinde dizili hali"
+    - "Çizim: solda katı meyve sıkacağı, sağda su ya da toz haznesi"
+    - "Çizim: solda katı meyve sıkacağı, sağda prizden çekilen fiş"
+    - "Çizim: solda katı meyve sıkacağı, sağda ilgili filtre"
+    - "Çizim: solda katı meyve sıkacağı, sağda temizlik fırçası"
+    - "Çizim: solda katı meyve sıkacağı, sağda iç bölme ve raflar"
+    - "Çizim: solda katı meyve sıkacağı, sağda iç bölme ve raflar"
+    - "Çizim: solda katı meyve sıkacağı, sağda temizleme bezi"
+    - "Çizim: solda katı meyve sıkacağı, sağda ilgili filtre"
 ---
 
 Kiwi, katı meyve sıkacağının filtresinin kolay temizlenmesi için temizliği sıkma işi biter bitmez yapmanı öneriyor. Bu yazı Kiwi'nin iki Türkçe kullanım kılavuzuna dayanıyor: filtreli ve iki hızlı **KCJ-1807 katı meyve sıkacağı** ile burgulu **KJ-1935 yavaş sıkım meyve sebze presi.** İkisinin temizlik kuralları birkaç noktada ayrılıyor; en önemlisi bulaşık makinesi.

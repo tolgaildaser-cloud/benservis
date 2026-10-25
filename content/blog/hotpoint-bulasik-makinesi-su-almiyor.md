@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Modern bir mutfakta kapağı aralık, boş sepetli bir bulaşık makinesi"
   steps:
-    - "Bulaşık makinesi kumanda panelinde yanıp sönen küçük bir musluk simgesi"
-    - "Tezgah altındaki bir su musluğunun açık konumdaki kolu"
-    - "Bulaşık makinesinin arkasında düzgün uzanan beyaz bir su giriş hortumu"
-    - "Lavabo musluğundan akan ince bir su"
-    - "Bir kovaya akan berrak su ve yeni bir hortum ucu"
-    - "Bulaşık makinesi kumanda panelinde başlat düğmesinin yakın planı"
-    - "Kapatılmış bir su musluğu ve prizden çekilmiş bir fiş"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program başladı ama bulaşık makinesinden su sesi gelmiyor; panelde küçük bir ışık yanıp sönüyor. Hotpoint Ariston'un bulaşık makinesi için yayımladığı Türkçe günlük referans kılavuzunda bunun için ayrı bir gösterge var: **su musluğu kapalı gösterge ışığı.** Kılavuza göre bu alarm **giriş suyu olmadığında ya da su musluğu kapalıyken yanıp söner.** Yani sorunun çoğu makinenin dışında: **musluk, hortum, basınç** ve hortumun bağlantı öncesi temizliği. Bu yazıdaki sırayı HFC 3B19 X kaydındaki günlük referans kılavuzundan ve aynı kaydın montaj kılavuzundan çıkardık.

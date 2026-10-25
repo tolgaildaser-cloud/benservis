@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Beyaz bir klima kumandası ve arkada duvara monte edilmiş split klima iç ünitesi"
   steps:
-    - "Arka pil kapağı açılmış beyaz bir klima kumandası"
-    - "Odanın ortasından duvardaki klimaya doğru yöneltilmiş bir kumanda"
-    - "Klima kumandasının ekranında görünen mod simgeleri"
-    - "Klima kumandasının sıcaklık artırma ve azaltma tuşlarının yakın planı"
-    - "Hava yönlendirme kanatları aşağı doğru açılmış bir klima iç ünitesi"
-    - "Klima kumandasının ekranında saat göstergesi"
-    - "Akşam ışığında yatak odası duvarında çalışan bir klima"
-    - "Ekranında kilit simgesi bulunan bir klima kumandası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Hisense klima kumandasında tuşların çoğu iki iş yapıyor: kısa basınca bir özellik, birkaç saniye basılı tutunca başka bir özellik. Sıcak ya da soğuk ayarı yapamıyorsan, saat yanlışsa ya da tuşlar hiç tepki vermiyorsa sebebi genelde budur. Bu yazı Hisense'in RCH-RTY3-0 kumanda kılavuzuna dayanıyor (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi). Senin kumandanda tuş adları farklı olabilir; kumandanın arkasındaki model adını kontrol et.

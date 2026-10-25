@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin kapalı, düz ön kapağı ve üstündeki yatay kulp"
   steps:
-    - "Kapalı bir bulaşık makinesi kapağının üst kenarındaki yatay kulp"
-    - "Bulaşık makinesi kulpunun hemen altındaki küçük kaydırmalı sürgü"
-    - "Yarıya kadar açılmış bir bulaşık makinesi kapağından yükselen hafif buhar"
-    - "Program sonunda kendiliğinden birkaç santim aralanmış bir bulaşık makinesi kapağı"
-    - "Bulaşık makinesinin üst kenarında yazı gösteren küçük bir ekran"
-    - "Açık bir bulaşık makinesi kapağının üst kenarındaki kilit yuvası"
-    - "Kapalı bir bulaşık makinesinin önünde tezgâhta duran katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitti, bulaşıkları alacaksın ama Miele bulaşık makinesinin kapağı kulptan çekince açılmıyor. Ya da kapak yalnız çok zorlayınca kıpırdıyor. Miele'nin kullanım kılavuzlarına bakınca bunun en sık görülen tek bir sebebi olduğu anlaşılıyor: kulpun hemen altındaki **çocuk kilidi sürgüsü**. Bu yazıda Miele Türkiye kılavuz portalından indirdiğimiz G 5000 ve G 7110 serisi Türkçe kılavuzlardaki kapak bölümlerini sırayla topladık. Tuş adları ve göstergeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

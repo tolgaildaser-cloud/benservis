@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş, kapağı kapalı paslanmaz görünümlü bir bulaşık makinesi"
   steps:
-    - "Duvar prizinden çekilmiş bir bulaşık makinesi fişi"
-    - "Hafifçe aralanmış bir bulaşık makinesi kapağından yükselen buhar"
-    - "Bulaşık makinesinin kapak üstündeki kontrol panelinin yakın planı"
-    - "Tezgâh altında duvara monte edilmiş tek bir topraklı priz"
-    - "Kontrol panelinde program ve seçenek düğmelerinin bulunduğu sıra"
-    - "Akan musluk suyu altında yumuşak fırçayla temizlenen silindir biçimli bulaşık makinesi filtresi"
-    - "Kapağı kapalı bulaşık makinesinin yanında tezgâhta duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşık makinesi yıkamanın ortasında durdu ya da program bitince ekranda **HE** yazıyor. LG'nin Türkçe kullanıcı el kitaplarına göre bu kod **ısıtıcı devre arızası** anlamına geliyor. Isıtıcı ve onun devresi senin işin değil; ama servisi çağırmadan önce güvenle yapabileceğin birkaç şey var ve bazıları, aynı kodun bir daha çıkıp çıkmadığını anlamanın tek yolu. Bu yazıda LG'nin DFC325HD ve DFB425FP kılavuzlarında HE ile ve ısıtmayla ilgili ne varsa sırayla topladık. Senin modelinde tuş adları farklı olabilir; kendi kılavuzunla karşılaştır.

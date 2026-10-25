@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Oturma odasında duvar dibindeki şarj istasyonu ve önündeki boş parke zemin"
   steps:
-    - "Şarj istasyonuna yerleşmiş, temizliğe başlamaya hazır robot süpürge"
-    - "Zemin üzerinde yerinde duran şarj istasyonu ve uzaktan gelen robot süpürge"
-    - "Duvara dayalı şarj istasyonunun iki yanında boş bırakılmış alan"
-    - "Şarj istasyonunun önünden kaldırılmış boy aynası"
-    - "Ardına kadar açık bir oda kapısı ve gün ışığı alan koridor"
-    - "Telefon ekranında robot süpürge uygulamasının temizlik sayfası"
-    - "Ters çevrilmiş robot süpürgenin alt yüzündeki tekerlekler ve sensörler"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda kapak"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda telefon ve kullanım kılavuzu"
 ---
 
 Robot salonu süpürdü, sonra koridorda durup bekledi ya da istasyonun etrafında dönüp yanaşamadı. Ecovacs'ın Türkçe kılavuzlarında bu belirti sorun giderme tablosunun ikinci satırı: **"DEEBOT Şarj İstasyonuna yanıt vermiyor."** Ecovacs Türkiye destek sayfasında da ayrı bir soru olarak geçiyor: **"DEEBOT, Yerleştirme İstasyonuna dönmekte zorlanıyor veya Yerleştirme istasyonunu bulamıyor."** Bu yazı Ecovacs'ın **DEEBOT N8**, **N10** ve **T9** Türkçe kılavuzlarına ve N8 destek sayfasına dayanıyor.

@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir kurutma makinesinin kapak ağzına takılı plastik hav filtresi"
   steps:
-    - "Kapağı açılmış bir kurutma makinesi ve prizden çekilmiş fişi"
-    - "Kurutma makinesinin kapak ağzından yukarı çekilerek çıkarılmış açık bir hav filtresi"
-    - "İnce hav tabakası taşıyan bir filtre yüzeyi ve yanında yumuşak bir fırça"
-    - "Kurutma makinesinin alt ön kısmında çıkarılmış süpürgelik kapağı ve görünen iki kilit kolu"
-    - "Çıkarılmış dikdörtgen bir filtre çerçevesi ve yanında katlanmış kuru bir bez"
-    - "Akan musluk suyunun altında tutulan dikdörtgen, gri bir sünger"
-    - "Kilitlenmiş ön kapağı ve yerine takılmış alt kapağıyla temiz bir kurutma makinesi"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
 ---
 
 Candy kurutma makinesi eskisi kadar iyi kurutmuyor, kurutma süresi uzadı ya da paneldeki filtre ışığı yandı. Candy'nin kullanım kılavuzu bu belirtilerin başına tek bir bakımı koyuyor: **filtre temizliği**. Makinede iki temizlik noktası var: kapak ağzındaki hav filtresi ve alt öndeki kondenser filtresiyle süngeri. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz Smart Pro serisi kurutma makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Filtrelerin yeri modele göre değişebilir; kendi kılavuzunla karşılaştır.

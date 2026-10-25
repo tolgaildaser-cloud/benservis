@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında üst kapağı gözlem pencereli beyaz bir ekmek yapma makinesi ve yanında taze bir somun ekmek"
   steps:
-    - "Kapağı açık, içi boş bir ekmek yapma makinesi ve yanında silinmiş parçalar"
-    - "Makinenin içine yerleştirilmiş boş ekmek kalıbı ve ortasındaki yoğurma bıçağı"
-    - "Ekmek kalıbının içine konmuş su, şeker, tuz ve un katmanları"
-    - "Unun bir köşesinde açılmış küçük çukurda duran kuru maya"
-    - "Ekmek yapma makinesinin üst panelindeki menü ve başlat düğmeleri"
-    - "Makineden çıkarılmış sıcak ekmek kalıbı ve yanında bir fırın eldiveni"
-    - "Tel ızgara üzerinde soğumaya bırakılmış somun ekmek"
-    - "Lavabo kenarında yıkanmış ekmek kalıbı ve yoğurma bıçağı"
+    - "Çizim: solda ekmek yapma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ekmek yapma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ekmek yapma makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda ekmek yapma makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda ekmek yapma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ekmek yapma makinesi, sağda çalışma sesi"
+    - "Çizim: solda ekmek yapma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ekmek yapma makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin **KMC-6956** çok fonksiyonlu ekmek yapma makinesi 12 programla çalışıyor ve kılavuzunda hazır tarifler var. Aramalarda en çok "kullanım kılavuzu" ve "tarifleri" soruluyor; bu yazı ikisini birden Kiwi'nin Türkçe kılavuzundan veriyor: ilk çalıştırma, malzeme sırası, programlar, temel ekmek tarifi, ekran uyarıları ve temizlik.

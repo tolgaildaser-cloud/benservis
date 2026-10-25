@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli bir çamaşır makinesinin büyük, yuvarlak program seçim halkası"
   steps:
-    - "Kapalı konuma çevrilmiş yuvarlak bir program seçim halkası"
-    - "Çamaşır makinesinin panelinde sönmüş küçük bir kilit göstergesi"
-    - "Çamaşır makinesinin panelinde yuvarlak bir başlat duraklat tuşu"
-    - "Çamaşır makinesinin dijital ekranında gösterilen bir saat simgesi"
-    - "Çamaşır makinesinin panelinde yan yana duran iki seçim tuşu"
-    - "Duvardaki prizden çekilmiş bir çamaşır makinesi fişi"
-    - "Kapalı bir çamaşır makinesinin önünde duran katlanmış bir kullanım kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 "Candy çamaşır makinesi nasıl resetlenir" diye arıyorsan büyük ihtimalle makine bir programda takıldı, tuşlar tepki vermiyor ya da ekranda bir hata kodu var. Candy'nin kullanım kılavuzunda "reset" adında ayrı bir tuş yok; aynı işi gören üç yol var: programı **OFF konumuyla iptal etmek**, **tuş kilidini** kaldırmak ve bir hata kodunda makineyi **fişten çekip beklemek**. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz RapidÓ serisi çamaşır makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Tuş adları modele göre değişebilir; kendi kılavuzunla karşılaştır.

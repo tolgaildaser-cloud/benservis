@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Masada duran bir akıllı telefon ve arka planda yere park etmiş robot süpürge"
   steps:
-    - "Şarj istasyonunda tam şarj olan robot süpürge"
-    - "Telefon ekranında açılmış robot süpürge uygulamasının ilk sayfası"
-    - "Rafın üzerinde duran ev tipi kablosuz modem"
-    - "Modemin bulunduğu odaya getirilmiş robot süpürge"
-    - "Üst kapağı açık robot süpürgenin düğme bölümü"
-    - "Telefon ekranında kablosuz ağ şifresinin yazıldığı kurulum sayfası"
-    - "Gösterge ışığı sabit yanan robot süpürge"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Robot süpürüyor ama telefondan başlatılamıyor, harita görünmüyor ya da uygulama kurulumu yarıda kalıyor. Ecovacs'ın Türkçe kılavuzlarında bunun karşılığı sorun giderme tablosundaki **"DEEBOT, Wi-Fi ağına bağlanamıyor."** satırı. Tablo beş neden sayıyor; hepsi kullanıcının elinde. Bu yazı Ecovacs'ın **DEEBOT N8**, **N10**, **T9** ve **X1 OMNI** Türkçe kılavuzlarına ve Ecovacs'ın uygulama ve Wi-Fi bağlantısı yardım sayfalarına dayanıyor. Yardım sayfalarının bir kısmı yalnız İngilizce; alıntıları Türkçeye çevirdik.
