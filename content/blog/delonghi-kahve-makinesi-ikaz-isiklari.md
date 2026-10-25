@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında tam otomatik bir espresso makinesi, ön panelinde yanan küçük ikaz lambaları"
   steps:
-    - "Çizim: solda kahve makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki ikaz lambaları"
     - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
-    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
-    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda atık kahve kabı ve damla tepsisi"
+    - "Çizim: solda kahve makinesi, sağda çekirdek kahve kabı"
+    - "Çizim: solda kahve makinesi, sağda ayar kadranı"
+    - "Çizim: solda kahve makinesi, sağda buhar borusu ve süt kabı"
+    - "Çizim: solda kahve makinesi, sağda demleme ünitesi"
     - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
 ---
 
@@ -56,6 +56,8 @@ De'Longhi kahve makinenin panelinde bir lamba yanıp sönüyor ya da sabit yanı
 > ⚡ **Kısa özet:** Hızlı yanıp sönen lambalar çoğu zaman boş su haznesidir. Atık kahve kabı lambasında kabı ve damla haznesini birlikte boşalt. Çekirdek bittiyse kabı doldur. Kireç lambası kireç çözme ister; durulamada hazneyi MAX'a kadar doldur, yoksa makine bir durulama daha ister. Tüm lambalar yanıp sönüyor ve makine çalışmıyorsa fişi çek, yetkili servis.
 
 ## Dedica EC685: lambalar ne söylüyor?
+
+![Çizim: De'Longhi kahve makinesi ikaz lambaları tablosu (lamba durumu ve anlamı) (1/3)](/tamir-gorsel/delonghi-kahve-makinesi-ikaz-isiklari/kod-tablosu-01.png)
 
 | Lambalar | Kılavuzdaki anlamı | Ne yapılır |
 |---|---|---|
@@ -68,6 +70,9 @@ De'Longhi kahve makinenin panelinde bir lamba yanıp sönüyor ya da sabit yanı
 | Tümü yanıp sönüyor, makine çalışmıyor | — | Bağlantıyı derhal kes, yetkili servis |
 
 ## ECAM25033TB: lambalar ne söylüyor?
+
+![Çizim: De'Longhi kahve makinesi ikaz lambaları tablosu (lamba durumu ve anlamı) (2/3)](/tamir-gorsel/delonghi-kahve-makinesi-ikaz-isiklari/kod-tablosu-02.png)
+![Çizim: De'Longhi kahve makinesi ikaz lambaları tablosu (lamba durumu ve anlamı) (3/3)](/tamir-gorsel/delonghi-kahve-makinesi-ikaz-isiklari/kod-tablosu-03.png)
 
 | Lamba | Kılavuzdaki olası neden | Kılavuzdaki çözüm |
 |---|---|---|

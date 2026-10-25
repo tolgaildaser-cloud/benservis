@@ -37,12 +37,12 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında dokunmatik panelli, çekirdek hazneli tam otomatik bir espresso makinesi"
   steps:
-    - "Çizim: solda kahve makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki ikaz lambaları"
     - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
-    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda atık kahve kabı ve damla tepsisi"
     - "Çizim: solda kahve makinesi, sağda kapak"
-    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda demleme ünitesi"
+    - "Çizim: solda kahve makinesi, sağda demleme ünitesi"
     - "Çizim: solda kahve makinesi, sağda kireç çözücü şişesi"
 ---
 
@@ -51,6 +51,8 @@ Arzum Okka Espresso Pro'nun dokunmatik panelinde bir uyarı işareti yandı ve m
 > ⚡ **Kısa özet:** Yetersiz su işaretinde hazneye su ekle ya da hazneyi yeniden oturt. Atık kabı doluysa temizle. Kapak açıksa kapat. Demleme ünitesi yok diyorsa üniteyi tık sesine kadar yerleştir. Grup ortada takıldıysa simgesine 3 saniye bas. Bütün fonksiyon ışıkları yanıp sönüyorsa kireç çözme zamanı.
 
 ## Uyarı işaretleri
+
+![Çizim: Okka Espresso Pro uyarı işaretleri ve ışık düzenleri tablosu (1/2)](/tamir-gorsel/arzum-okka-espresso-pro-uyari-isaretleri/kod-tablosu-01.png)
 
 | Kılavuzdaki sorun | Kılavuzdaki kullanım yöntemi |
 |---|---|
@@ -62,6 +64,8 @@ Arzum Okka Espresso Pro'nun dokunmatik panelinde bir uyarı işareti yandı ve m
 Kılavuz "su haznesini sıfırlama" ifadesini açmıyor; hazneyi çıkarıp yeniden yerine oturtmak olarak anlaşılabilir (çıkarım).
 
 ## Işıklar başka ne söylüyor?
+
+![Çizim: Okka Espresso Pro uyarı işaretleri ve ışık düzenleri tablosu (2/2)](/tamir-gorsel/arzum-okka-espresso-pro-uyari-isaretleri/kod-tablosu-02.png)
 
 | Ne görüyorsun | Kılavuza göre anlamı |
 |---|---|

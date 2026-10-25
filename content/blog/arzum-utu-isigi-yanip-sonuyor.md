@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Ütü masasının ucunda dik duran seramik tabanlı bir buharlı ütü ve katlanmış pamuklu gömlek"
   steps:
-    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
-    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
-    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda ayar kadranı"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki ikaz lambaları"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki ikaz lambaları"
+    - "Çizim: solda buharlı ütü, sağda ayar kadranı"
+    - "Çizim: solda buharlı ütü, sağda ayar kadranı"
     - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
-    - "Çizim: solda buharlı ütü, sağda temizleme bezi"
+    - "Çizim: solda buharlı ütü, sağda kireç çözücü şişesi"
 ---
 
 Arzum ütünle ütü yaparken üstteki küçük ışık bir yanıyor bir sönüyor ve aklına "termostat bozuldu mu?" sorusu geliyor. Arzum'un kılavuzunda bu durum için ayrı bir not var: **"Ütüleme sırasında, ütülenen kumaşa uygun taban sıcaklığının korunması için hazır ışığı yanıp sönebilir."** Yani ışığın yanıp sönmesi tek başına arıza değil. Bu yazı Arzum'un destek sitesindeki **Tessia AR 694 seramik tabanlı ütü** Türkçe kullanma kılavuzuna dayanıyor. Başka bir Arzum ütün varsa düğme ve ışıklar farklı olabilir; kendi kılavuzunla karşılaştır.

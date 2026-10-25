@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında su haznesi arkada duran otomatik bir Türk kahvesi makinesi ve önünde fincanlar"
   steps:
-    - "Çizim: solda Türk kahvesi makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki ikaz lambaları"
     - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
     - "Çizim: solda Türk kahvesi makinesi, sağda kapak"
-    - "Çizim: solda Türk kahvesi makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda atık kahve kabı ve damla tepsisi"
     - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda Türk kahvesi makinesi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki ikaz lambaları"
 ---
 
 Arzum Okka'nın önündeki ışıklardan biri yanıyor, makine kahve pişirmiyor ya da bütün ışıklar bir sinyal sesiyle birlikte yanıp sönüyor. Arzum'un kullanım kılavuzunda bu ışıkların her birinin karşılığı yazılı: makinede üç **uyarı ışığı** var ve her biri cihazın ayrı bir parçasını gösteriyor. Bu yazı Arzum'un destek sitesindeki **Arzum Okka OK001** Türkçe kullanım kılavuzuna dayanıyor; kılavuzun kapağı OK002, OK008 ve OK009 modellerini de sayıyor. Arkasında su haznesi olan, pişirme haznesi kafası dönerek çıkan Okka bu. Okka Minio'da ışıklar farklı; onun için [Arzum Okka resetleme](/blog/arzum-okka-resetleme/) yazısına bak.
@@ -52,6 +52,8 @@ Arzum Okka'nın önündeki ışıklardan biri yanıyor, makine kahve pişirmiyor
 > ⚡ **Kısa özet:** Pişirme sırasında ışığın yanıp sönmesi normal; sinyal sesi gelince kahve hazır. Üst ışık su haznesi, orta ışık pişirme haznesi kafası, alt ışık atık su haznesi demek. Kırmızı yavaş pişirme düğmesi bekleme modudur. Tüm ışıklar sesli sinyalle yanıp sönüyorsa cihazı yeniden çalıştır; sürerse Arzum Okka servisi.
 
 ## Uyarı ışıkları ne söylüyor?
+
+![Çizim: Arzum Okka üst, orta ve alt uyarı ışıkları tablosu ve anlamları (1/1)](/tamir-gorsel/arzum-okka-isiklari-yanip-sonuyor/kod-tablosu-01.png)
 
 | Ne görüyorsun | Kılavuza göre anlamı | Ne yapılır |
 |---|---|---|

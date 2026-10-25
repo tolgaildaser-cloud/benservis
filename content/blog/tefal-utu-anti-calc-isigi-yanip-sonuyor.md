@@ -39,11 +39,11 @@ faq:
 images:
   coverAlt: "Ütü masasında su tanklı bir buharlı ütü ve yanında çıkarılmış küçük bir kireç önleyici kartuş"
   steps:
-    - "Çizim: solda buharlı ütü, sağda panel ekranındaki uyarı"
-    - "Çizim: solda buharlı ütü, sağda ilgili filtre"
-    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki ikaz lambaları"
+    - "Çizim: solda buharlı ütü, sağda kireç önleyici kartuş"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki ikaz lambaları"
     - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
-    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda ayar kadranı"
     - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
     - "Çizim: solda buharlı ütü, sağda telefon ve kullanım kılavuzu"
 ---

@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Dar gövdeli çelik bir espresso makinesinin buhar borusu, altında metal bir süt kabı"
   steps:
-    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kahve makinesi, sağda buhar borusu ve süt kabı"
+    - "Çizim: solda kahve makinesi, sağda buhar borusu ve süt kabı"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki ikaz lambaları"
+    - "Çizim: solda kahve makinesi, sağda buhar borusu ve süt kabı"
+    - "Çizim: solda kahve makinesi, sağda buhar borusu ve süt kabı"
     - "Çizim: solda kahve makinesi, sağda temizleme bezi"
-    - "Çizim: solda kahve makinesi, sağda ilgili filtre"
+    - "Çizim: solda kahve makinesi, sağda kahve ağızları ve fincan"
 ---
 
 De'Longhi Dedica'nın buhar borusunu süte daldırıyorsun ama köpük olmuyor, süt yalnız ısınıyor. Ya da kahvenin üstündeki krema bir gün açık ve sulu, bir gün koyu ve damla damla. De'Longhi'nin kılavuzunda bu üç belirtinin her biri ayrı bir satır: **"Cappuccino hazırlarken sütte köpük oluşmuyor"**, **"Kahve kreması açık renkli"** ve **"Kahve kreması koyu renkli."** Bu yazı De'Longhi Türkiye'nin sitesindeki **EC685 (Dedica)** Türkçe kullanım kılavuzuna dayanıyor. Başka bir modelin varsa bilezik ve tuşlar farklı olabilir.

@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Tam otomatik bir espresso makinesinin çift ağızlı kahve dağıtıcısı altında duran boş bir fincan"
   steps:
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
-    - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
-    - "Çizim: solda kahve makinesi, sağda temizleme bezi"
-    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda kahve ağızları ve fincan"
     - "Çizim: solda kahve makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kahve makinesi, sağda ayar kadranı"
+    - "Çizim: solda kahve makinesi, sağda çekirdek kahve kabı"
+    - "Çizim: solda kahve makinesi, sağda kahve ağızları ve fincan"
+    - "Çizim: solda kahve makinesi, sağda kahve ağızları ve fincan"
+    - "Çizim: solda kahve makinesi, sağda buhar borusu ve süt kabı"
 ---
 
 De'Longhi tam otomatik makinen kahve veriyor ama fincandaki kahve ılık, sulu ya da köpüksüz. Bazen de ağızlardan hiç kahve gelmiyor ya da süt köpürtürken buhar kesiliyor. De'Longhi'nin kılavuzunda bu belirtilerin her biri **"Sorunların giderilmesi"** tablosunda kendi satırıyla duruyor ve çözümlerin çoğu kullanıcıya bırakılmış. Bu yazı De'Longhi Türkiye'nin kendi sitesinde **ECAM25033TB** için yayımladığı Türkçe kullanım kılavuzuna dayanıyor. Başka bir De'Longhi modelin varsa düğme ve tuşlar farklı olabilir; kendi kılavuzunla karşılaştır.
