@@ -17,6 +17,8 @@ import { mutlakGorselUrl } from "./pazar-gorsel.js";
 
 export const SITE = "https://www.benservis.com";
 export const HAZIRLIK_IS_GUNU = { min: 1, max: 3 }; // "tahmini 3 iş gününde kargoda"
+// Kargoda geçen süre: /iade-ve-cayma/ "kargo firmasına göre teslim genellikle 1-3 iş günü daha sürer" (25 Eki, Tolga).
+export const KARGODA_IS_GUNU = { min: 1, max: 3 };
 
 // İade politikası (25 Eki 2026, YK8: GSC "Satıcı girişleri" raporu — `hasMerchantReturnPolicy` eksik alanı).
 // Değerler canlı /iade-ve-cayma/ belgesiyle birebir (#88, uydurma yok): "Ürünü teslim aldığınız günden itibaren
@@ -63,6 +65,7 @@ export function urunTeklifi(u, { saticiAd = "Benservis", site = SITE } = {}) {
         deliveryTime: {
           "@type": "ShippingDeliveryTime",
           handlingTime: { "@type": "QuantitativeValue", minValue: HAZIRLIK_IS_GUNU.min, maxValue: HAZIRLIK_IS_GUNU.max, unitCode: "DAY" },
+          transitTime: { "@type": "QuantitativeValue", minValue: KARGODA_IS_GUNU.min, maxValue: KARGODA_IS_GUNU.max, unitCode: "DAY" },
         },
       },
     } : {}),

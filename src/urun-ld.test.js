@@ -56,6 +56,14 @@ describe("iade politikası (GSC Satıcı girişleri: hasMerchantReturnPolicy)", 
   });
 });
 
+describe("teslim süresi (Rich Results: transitTime)", () => {
+  it("hazırlık 1–3 + kargoda 1–3 iş günü; belge cümlesiyle tutarlı", () => {
+    const d = urunTeklifi({ id: "u1", baslik: "P", fiyat: 509, stok: 10, durum: "aktif" }).shippingDetails.deliveryTime;
+    expect(d.transitTime).toEqual({ "@type": "QuantitativeValue", minValue: 1, maxValue: 3, unitCode: "DAY" });
+    expect(fs.readFileSync("scripts/pazar-hukuk.mjs", "utf8")).toMatch(/1-3 iş günü/);
+  });
+});
+
 describe("tek kaynak", () => {
   it("build kabuğu (pazar-sayfalari.mjs) teklifi aynı yardımcıdan alır", () => {
     const k = urunLd(u);
