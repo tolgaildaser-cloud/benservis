@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında duran, çevirmeli düğmeleri olan beyaz bir mikrodalga fırın"
   steps:
-    - "Mutfak tezgâhında duvardan ve yan dolaplardan boşluk bırakılarak yerleştirilmiş bir mikrodalga"
-    - "Döner tablanın ortasına konmuş yuvarlak cam bir kap"
-    - "Mikrodalga fırının güç seviyesi çevirmeli düğmesi"
-    - "Mikrodalga fırının zamanlayıcı çevirmeli düğmesi"
-    - "Düz bir tabakta döner tablanın üzerinde duran donmuş tavuk parçaları"
-    - "Fırın boşluğunun üst kısmında ızgara rezistansı görünen bir mikrodalga içi"
-    - "Kapağı açık, içi nemli bezle silinmiş temiz bir mikrodalga fırın"
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda buzlanma ve buz çözme"
+    - "Çizim: solda mikrodalga fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda mikrodalga fırın, sağda temizleme bezi"
 ---
 
 Sharp mikrodalga fırınını yeni aldın ya da düğmelerin ne işe yaradığından emin değilsin. Bu yazı Sharp'ın düğmeli YC-MS01E (solo) ve YC-MG01E (ızgaralı) modellerinin Türkçe kullanım kılavuzuna dayanıyor. Dijital ekranlı bir Sharp modelin varsa tuş adları farklı olur; kendi kılavuzunla karşılaştır. Güç seviyeleri, kap seçimi ve güvenlik kuralları genelde aynı mantıkla çalışır.

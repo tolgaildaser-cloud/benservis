@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Beyaz bir kurutmalı çamaşır makinesi ve önündeki fayans zeminde ince bir su izi"
   steps:
-    - "Çamaşır makinesinin arkasındaki duvarda kolu kapalı konuma çevrilmiş bir musluk"
-    - "Prizden çekilmiş, fişi zeminde duran beyaz bir elektrik kablosu"
-    - "Kapalı çamaşır makinesi kapağının camında görünen su ve köpüklü çamaşır"
-    - "Musluğa vidalanmış su giriş hortumunun beyaz bağlantı somunu"
-    - "Sifon borusuna kelepçeyle bağlanmış gri bir tahliye hortumu"
-    - "Açık çamaşır makinesi kapağının lastik contası ve yanında yumuşak bir bez"
-    - "Çamaşır makinesinin üstünde açık duran bir kullanım kılavuzu ve not kâğıdı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
 ---
 
 Ekranda E:35-10 yanıyor ve büyük ihtimalle makinenin çevresinde su var. Siemens'in WN54C2A0TR kurutmalı çamaşır makinesi kılavuzunda bu kodun karşılığı kısa: **cihaz sızdırıyor.** Talimat da iki adım: musluğu kapat, müşteri hizmetlerini ara. Yani E:35 evde onarılan bir kod değil. Ama servisi beklerken yapılacak doğru işler var ve kılavuzun sızıntıyla ilgili başka satırları, suyun dışarıdan gelip gelmediğini ayırmana yardım ediyor. Bu yazıda hepsini aynı kılavuzdan sırayla topladık.

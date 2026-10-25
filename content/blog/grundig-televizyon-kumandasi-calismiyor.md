@@ -43,6 +43,14 @@ faq:
     a: "Var. Grundig kılavuzunun Uzaktan Kumandalar ve Aksesuarlar bölümüne göre Home tuşuna basıp Ayarlar'a, oradan Uzaktan Kumandalar ve Aksesuarlar'a girdiğinde televizyon aksesuarları aramaya başlar; bulunan kumandayı listeden seçip onaylarsın."
 images:
   coverAlt: "Oturma odasında açık bir televizyonun önünde, sehpanın üzerinde pil kapağı çıkarılmış siyah bir kumanda ve yanında iki yeni ince kalem pil"
+  steps:
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda kumandanın pilleri"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
 ---
 
 Kumandaya basıyorsun, televizyon tepki vermiyor. Grundig'in televizyon kılavuzu bu durumu sorun giderme tablosunda **"Uzaktan kumanda çalışmıyor"** satırıyla veriyor ve üç neden sayıyor. İlki en basiti: **"Optik bağlantı yok"**, çözümü **"Uzaktan kumandayı televizyon setine doğru tutun"**. İkincisi piller. Üçüncüsü ise kılavuzun "tanımsız çalışma koşulu" dediği durum; Grundig burada televizyonu **"yaklaşık 2 dakika"** kapalı tutmayı öneriyor. Bu kılavuzlardaki modellerde Bluetooth kumanda da var; kılavuz eşleşme bozulduğunda kumandayı iki tuşla sıfırlamayı anlatıyor. Bu yazıda Grundig'in sırasını 65 GGU 8960 B ve 65 GGU 7900 B kılavuzlarına dayanarak veriyoruz.

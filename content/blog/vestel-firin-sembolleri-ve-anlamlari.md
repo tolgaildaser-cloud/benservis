@@ -43,12 +43,12 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, iki döner düğmeli ankastre bir fırın"
   steps:
-    - "Fırın panelinde yarısı dışarı çıkmış gömme tip bir döner düğme"
-    - "Ankastre fırının döner fonksiyon düğmesinin yakın planı"
-    - "Fırın panelinde döner termostat düğmesinin yakın planı"
-    - "Fırın panelindeki küçük dijital saat ekranı"
-    - "Fırın içinde tel ızgara üzerinde duran bir tepsi börek"
-    - "Kapağı aralık bırakılmış, soğumaya bırakılmış boş bir fırın"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Vestel fırının fonksiyon düğmesinin etrafında bir sıra küçük sembol var ve hangisinin ne yaptığı çoğu zaman ilk bakışta anlaşılmıyor. Bu semboller rastgele değil: her biri fırının içinde **hangi ısıtıcının ve fanın çalışacağını** gösteriyor. Vestel'in çok modelli ankastre fırın kılavuzunda bu eşleşme **Tablo 2**'de, her fonksiyonun ne için kullanılacağı da ayrı başlıklarda anlatılıyor. Bu yazıda o kılavuzdan sembollerin anlamını ve hangi yemekte hangisinin seçileceğini çıkardık. Kılavuza göre **fonksiyonların varlığı ürün modeline göre değişir;** senin fırınında bazıları olmayabilir.

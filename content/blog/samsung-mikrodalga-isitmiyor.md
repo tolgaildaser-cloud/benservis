@@ -46,6 +46,13 @@ faq:
     a: "Samsung tablosunda 'Çözme fonksiyonu çalışmıyor' satırının nedeni çok fazla yiyecek pişirilmesi; çözüm yiyecek miktarını azaltıp fonksiyonu yeniden başlatmak. Otomatik pişirmede duyulan bip sesi ise kılavuza göre yiyeceği çevirme sinyali; çevirdikten sonra Start düğmesine yeniden basılır."
 images:
   coverAlt: "Açık kapaklı bir solo mikrodalga fırının cam tablasının ortasında duran içi su dolu bir bardak"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda buzlanma ve buz çözme"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Mikrodalga çalışıyor, tabla dönüyor, süre geri sayıyor; ama tabak soğuk çıkıyor. Samsung'un MS23K3555ES ve ankastre MG22M8074AT kılavuzlarındaki sorun giderme tablosunda bu belirtinin adı **"Isıtma düzgün çalışmıyor."** Tablonun yazdığı nedenler: **"Fırın çalışmıyor olabilir, çok fazla yiyecek pişirilmekte olabilir veya uygun olmayan pişirme malzemesi kullanılıyor olabilir."** Üçünün de ilk kontrolü senin elinde.

@@ -38,13 +38,13 @@ faq:
 images:
   coverAlt: "Islak fayans zeminde duran ıslak kuru dikey süpürge"
   steps:
-    - "Dik konumda kapatılmış ıslak kuru süpürge"
-    - "Lavabo üzerinde boşaltılan kirli su deposu"
-    - "Akan su altında durulanan depo kapağı filtresi ve şamandıra"
-    - "Havlu üzerinde kurumaya bırakılmış kuru filtre"
-    - "Gövdeden çıkarılmış fırça silindiri ve temizleme fırçası"
-    - "Gövdesine yeniden takılan şeffaf kirli su deposu"
-    - "Hafif eğik tutulan süpürgenin fayans zeminde ilerlemesi"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Zeminden geçiyorsun ama arkanda ince bir su tabakası kalıyor; kirli su deposuna da pek bir şey gelmiyor. Tineco'nun Türkiye sitesindeki **Floor One S3, S5, S7 FlashDry** ve **iFloor 3** kılavuzları bunun için kısa bir liste veriyor: kirli su deposu, depo kapağındaki filtre ve şamandıra, kuru filtre, gider kanalı ve fırça silindiri. Bu yazı listeyi kılavuzdaki sırayla izliyor.

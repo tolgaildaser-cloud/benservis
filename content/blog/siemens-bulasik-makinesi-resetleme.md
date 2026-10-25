@@ -46,13 +46,13 @@ faq:
 images:
   coverAlt: "Mutfak dolaplarıyla aynı hizada, kapağı mobilya paneliyle kaplı tam ankastre bir bulaşık makinesi"
   steps:
-    - "Hafifçe aralanmış bulaşık makinesi kapağının kenarından yükselen ince bir buhar"
-    - "Açık bulaşık makinesi kapağının üst kenarında sıralanmış dokunmatik tuşlar"
-    - "Mobilya paneliyle kaplı bulaşık makinesi kapağının kapanırken görünümü"
-    - "Bulaşık makinesi kapağının üst kenarında aynı anda yanan küçük gösterge ışıkları"
-    - "Kapalı bir tam ankastre bulaşık makinesinin önündeki zemine yansıyan küçük bir ışık"
-    - "Bulaşık makinesinin tabanında yerinden çıkarılmış silindir biçimli süzgeç"
-    - "Bulaşık makinesinin yanında tezgâhta açık duran bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program yarıda kaldı, yanlış programı seçtin ya da panel garip davranıyor; Siemens bulaşık makinesini sıfırlamak istiyorsun. Siemens kılavuzlarında bunun karşılığı **"Programın iptal edilmesi"** bölümü ve sonucu da açıkça yazılı: **program iptal edilir ve cihaz sıfırlanır.** Bu yazıda Siemens'in SN23HW62MT ve SN45EB01NT kullanım kılavuzlarından iptalin sırasını, LED'lerin ne anlattığını, fabrika ayarına dönüşü ve elektronik hata durumundaki sıfırlamayı topladık. İki model de tam ankastre; kumanda paneli kapının üst kenarında. Senin modelinde tuşlar farklı olabilir, kendi kılavuzunla karşılaştır.

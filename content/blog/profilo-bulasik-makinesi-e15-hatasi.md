@@ -45,11 +45,11 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin kapalı kapağı ve üst kenarındaki karanlık bir gösterge paneli"
   steps:
-    - "Tezgâh altında duvara bağlı, kolu kapalı konuma çevrilmiş küçük bir köşe musluğu"
-    - "Duvardaki prizin yanında sarkan, prizden çekilmiş beyaz bir fiş"
-    - "Bulaşık makinesinin panelinde yanan bir hata kodu ve yanında boş bir not kâğıdı"
-    - "Açık bir bulaşık makinesi kapağının iç kenarındaki küçük, gümüş renkli tip plaketi"
-    - "Mutfak tezgâhında duran bir telefon ve açık bir kullanım kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Bulaşık makinesi çalışırken durdu ve ekranda **E:15** yanıyor. Bu kod, Profilo bulaşık makinelerinde evde çözülecek kodlardan biri değil. Profilo BM6380MA kullanım kılavuzunun arıza tablosu E:15'i tek cümleyle açıklıyor: **su koruma sistemi etkin**. Talimatı da kısa: musluğu kapat, müşteri hizmetlerini ara. Bu yazıda kılavuzun bu kodla ilgili söylediklerini, yeni modellerdeki karşılıklarını ve servisi aramadan önce yapman gerekenleri topladık. Kaynaklar iki Profilo modelinin kılavuzu; senin makinende kod yazımı farklı olabilir.

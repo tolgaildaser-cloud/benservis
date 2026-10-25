@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Karanlık salonda açık duran geniş bir televizyon, ekranda boş bir mesaj kutusu"
   steps:
-    - "Sehpada duran siyah bir televizyon kumandası ve arkada açık ekran"
-    - "Televizyonun arka panelindeki anten ve uydu girişlerine takılı kablolar"
-    - "Televizyon ekranında çubuk göstergeli sade bir sinyal ekranı"
-    - "Televizyonun yanında duran küçük bir uydu alıcı kutusu ve kabloları"
-    - "Ekranında sistem menüsü açık bir televizyon"
-    - "Televizyon ekranında ilerleme çubuğu gösteren bir kanal arama ekranı"
-    - "Çatıda gökyüzüne dönük bir uydu çanak anteni"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda uydu çanağı ve LNB"
 ---
 
 Panasonic televizyonu açtın, kanal yerine siyah ekran ya da "sinyal yok" benzeri bir uyarı geldi. Bazen görüntü mozaikleşip donuyor, bazen bazı kanallar hiç bulunamıyor. Panasonic'in MX serisi (TX-55MX950E) Türkçe eHELP kılavuzu bu belirtileri "Sık Sorulan Sorular" bölümünde dijital ve analog yayın için ayrı ayrı ele alıyor. Bu yazıda o kontrolleri evde yapılacak sıraya dizdik. Kılavuz bu seriye ait; menü adları başka modellerde farklı olabilir. Sorun HDMI'ya bağlı bir cihazdaysa [TV HDMI sinyal yok](/blog/tv-hdmi-sinyal-yok/) yazısı daha uygun.

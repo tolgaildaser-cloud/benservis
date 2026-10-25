@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin üst kenarındaki dokunmatik kontrol paneli"
   steps:
-    - "Bulaşık makinesi kontrol panelinde yuvarlak açma kapama simgesi taşıyan tuş"
-    - "Açık bulaşık makinesi kapağının iç yüzünde kapalı duran deterjan haznesi"
-    - "Kontrol panelinde yanan dijital süre göstergesi"
-    - "Mutfak duvarındaki bir priz ve ona takılı beyaz bir fiş"
-    - "Bulaşık makinesi panelinde yan yana duran dokunmatik tuşlar"
-    - "Kontrol panelinde yanıp sönen küçük program göstergeleri"
-    - "Bulaşık makinesinin ekranında açılmış bir ayarlar menüsü listesi"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 "Miele bulaşık makinesi nasıl resetlenir" sorusunun tek bir cevabı yok, çünkü Miele'de ayrı bir reset tuşu bulunmuyor. Kullanım kılavuzu "reset" diye arattığın işi üç farklı yerde anlatıyor: çalışan programı **iptal etmek**, bir hata kodundan sonra makineyi **kapatıp açmak** ve ayarları **fabrika değerlerine** döndürmek. Bu yazıda Miele Türkiye kılavuz portalından indirdiğimiz düğmeli G 5000 ve ekranlı G 7110 serisi Türkçe kılavuzlardaki adımları sırayla topladık. Tuş adları ve göstergeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

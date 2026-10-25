@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Şarj tabanında dik duran ıslak kuru dikey süpürgenin dijital ekranı"
   steps:
-    - "Dik konumda kapatılmış ıslak kuru süpürgenin üst kısmı"
-    - "Musluk altında doldurulan şeffaf temiz su deposu"
-    - "Lavabo üzerinde boşaltılan kirli su deposu ve çıkarılmış filtresi"
-    - "Gövdeden çıkarılmış yumuşak fırça silindiri ve yanında temizleme fırçası"
-    - "Nemli bezle silinen süpürge gövdesindeki sensör bölgesi"
-    - "Akan su altında durulanan kuru filtre"
-    - "Şarj tabanında bekleyen, ekranı sönük ıslak kuru süpürge"
+    - "Çizim: solda dikey süpürge, sağda not defteri ve kalem"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda temizlik fırçası"
+    - "Çizim: solda dikey süpürge, sağda panel ekranındaki uyarı"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda bekleme süresi için saat"
 ---
 
 Tineco süpürgen bir şeye itiraz ediyor ama ekranda bir kod yok: yalnızca bir simge yanıp sönüyor ve İngilizce bir ses konuşuyor. Tineco'nun Türkiye sitesindeki **Floor One S3, S5, S7 FlashDry, iFloor 3** ve **Pure One S12** kullanım kılavuzlarına baktık: hiçbirinde E1, E2 gibi **sayısal hata kodu yok**. Cihaz sorunu üç yolla bildiriyor: dijital ekrandaki simge, LED kir izleme halkasının rengi ve sesli uyarı. Bu yazı, "Tineco hata kodları" diye aranan işaretlerin kılavuzdaki anlamını ve Tineco'nun önerdiği çözümü bir araya getiriyor.

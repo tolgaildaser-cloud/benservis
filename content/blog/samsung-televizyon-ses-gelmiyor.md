@@ -46,6 +46,15 @@ faq:
     a: "Ayarlar > Tüm Ayarlar > Ses > Uzman Ayarları altındaki Ses Sıfırlama, e-Kılavuza göre geçerli ses ayarlarını varsayılanlara döndürüyor."
 images:
   coverAlt: "Oturma odasında açık bir televizyonda renkli bir film sahnesi, ekranın altındaki ses çubuğu ve önde sehpada ses tuşuna basılan bir kumanda"
+  steps:
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda çalışma sesi"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Ekranda her şey yolunda ama hiç ses yok. Samsung'un Türkçe televizyon e-Kılavuzu bunu sorun giderme bölümünde **"Görüntü iyi, ancak ses yok."** başlığıyla veriyor ve ilk iş olarak tek bir ayarı gösteriyor: **"Ses Çıkışı ayarını kontrol edin."** Sesin televizyon hoparlöründen mi, ses çubuğundan mı, bağlı bir kutudan mı geldiğini bu ayar belirliyor. Hemen üstteki **"Hiç ses yok veya maksimum ses düzeyinde ses çok düşük."** başlığı ise önce televizyonun, sonra bağlı cihazın ses düzeyine bakmanı istiyor. Bu yazıda iki başlığı, ses çubuğu kullananlar için eARC/ARC notuyla ve Ses Testi'yle birlikte sıraya koyuyoruz.

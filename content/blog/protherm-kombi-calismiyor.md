@@ -50,6 +50,15 @@ faq:
     a: "Modelden modele değişiyor. Lynx Condens tablosu radyatörün havasının alınmasını, sorun tekrar ederse yetkili bayiye haber verilmesini söylüyor. Puma Condens ve Gepard Condens tabloları ise ısıtma sistemindeki havanın yetkili servise aldırılmasını istiyor. Puma kılavuzu hava alma için bir hava tahliye anahtarı kullanılabileceğini yazıyor; aletle yapılan bu işi emin değilsen servise bırak."
 images:
   coverAlt: "Mutfak duvarındaki ekranı kapalı bir kombinin önünde, telefon ışığıyla altındaki vanalara bakan bir kişi"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda kapak"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan soğuk su akıyor, petekler buz gibi. Protherm'in kullanma kılavuzlarındaki arıza tablosu bu durumu tek satırda topluyor: **"Ürün çalışmıyor: – Sıcak su yok – Isıtma ısınmıyor"**. Tablonun saydığı nedenlerin çoğu arıza değil; kapalı kalmış bir vana, kesilmiş elektrik ya da düşük kalmış bir ayar. Bu yazı Lynx Condens, Puma Condens ve Gepard Condens kılavuzlarına dayanıyor; tuş adları modele göre değişir.

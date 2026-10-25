@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Açık bir buzdolabının sebze çekmecesinde üzeri hafifçe buz tutmuş marul yaprakları"
   steps:
-    - "Buzdolabı kapağındaki kumanda panelinde parlayan bir süper soğutma göstergesi"
-    - "Buzdolabı panelinde yanan bir taze tutma simgesi"
-    - "Buzdolabı panelindeki sıcaklık göstergesi ve yanındaki ayar tuşları"
-    - "Kapağı kapalı bir buzdolabının önünde mutfak masasında duran bir termometre"
-    - "Buzdolabı rafında sensörün önünü kapatmayacak şekilde kenara alınmış uzun bir sürahi"
-    - "Arka duvarla arasında boşluk bırakılarak dizilmiş yiyecek kapları"
-    - "Buzdolabı saklama haznesinin üzerindeki küçük sürgülü sıcaklık ayar düğmesi"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda su ya da toz haznesi"
 ---
 
 Marul yaprakları buz tutmuş, tereyağı taş gibi, süt şişesinin dibinde kristaller var. Siemens'in Türkiye destek sayfası bu durumu "fazla soğutma" olarak adlandırıyor ve sebzelerin, meyvelerin, tereyağı ve peynir gibi yumuşak süt ürünlerinin donmasını örnek veriyor. Çoğu durumda sebep arıza değil; bir mod açık kalmış, ayar kullanımla uyuşmuyor ya da yiyecekler yanlış yerde. Bu yazıda Siemens'in destek sayfasındaki önerileri ve iki Siemens buzdolabı kılavuzundaki ilgili bölümleri sırayla topladık. Panel ve tuş adları modele göre değişir; kendi kılavuzunla karşılaştır.

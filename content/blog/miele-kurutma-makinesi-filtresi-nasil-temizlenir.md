@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Kapağı açık bir kurutma makinesinin kapak ağzında duran plastik hav filtresi"
   steps:
-    - "Kurutma makinesinin kapak ağzından öne doğru çıkarılmış ince, plastik bir hav filtresi"
-    - "Süzgeç yüzeyinde ince bir hav tabakası bulunan plastik bir filtre"
-    - "Kurutma makinesinin kapak ağzında sarı düğmeli ikinci bir hav filtresi"
-    - "Uzun uçlu bir elektrikli süpürge başlığı ve kapak ağzındaki hava girişi açıklıkları"
-    - "Kurutma makinesinin alt ön kısmında açılmış ısı eşanjörü kapağı ve dikdörtgen bir sünger filtre"
-    - "Akan musluk suyunun altında tutulan dikdörtgen, gri bir sünger filtre"
-    - "Kapatılmış alt ön kapağı ve kapalı ana kapağıyla temiz bir kurutma makinesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
 ---
 
 Miele kurutma makinesinin kurutma süresi uzadı, çamaşırlar eskisi kadar kuru çıkmıyor ya da paneldeki filtre kontrol ışığı yandı. Miele'nin kullanım kılavuzu bu belirtilerin çoğunu tek bir işe bağlıyor: **filtre temizliği**. Makinede iki tür filtre var ve her birinin temizlik sıklığı farklı. Bu yazıda Miele Türkiye kılavuz portalından indirdiğimiz **TWD 360 WP** kurutma makinesi Türkçe kılavuzundaki adımları sırayla topladık. Filtrelerin yeri ve düğmeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

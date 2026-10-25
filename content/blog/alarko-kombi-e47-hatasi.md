@@ -44,6 +44,14 @@ faq:
     a: "Evet. Alarko'nun E47 talimatına göre basınç 1.2 bar'a düşürüldükten sonra kombi otomatik olarak yeniden çalışıyor. Problem devam ederse yetkili servisin aranması isteniyor."
 images:
   coverAlt: "Banyoda açık bir sıcak su musluğu ve arka planda duvara monteli bir kombinin altındaki vanalar"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombinin ekranında **E47** görünüyor ve çalışmıyor. Alarko'nun Seradens Super kılavuzu bu kodu **"E47 Yüksek Tesisat Suyu Basıncı Hatası"** olarak tanımlıyor. E04'ün tersi: bu kez kalorifer devresinde su fazla. Kılavuz nedenini de yazıyor: **kalorifer sisteminin aşırı doldurulması E47 hatasına yol açar**; amaç, fazla suyun 3 bar emniyet ventilinden kontrolsüzce boşaltılmasını önlemek. Bu yazı Seradens Super SRS 20/24/28/36 kılavuzuna dayanıyor.

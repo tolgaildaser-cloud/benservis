@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Banyoda duvar kenarına yerleştirilmiş önden yüklemeli beyaz bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde yanan küçük bir uyarı lambası ve dijital gösterge"
-    - "Çamaşır makinesinin alt ön kısmında açılmış küçük bir servis kapağı ve önünde geniş bir fırın tepsisi"
-    - "Fırın tepsisine akan bir miktar su ve yarı açılmış yuvarlak bir filtre kapağı"
-    - "Akan suyun altında yıkanan yuvarlak, plastik bir çamaşır makinesi filtresi"
-    - "Kapatılmış alt servis kapağı ve kuru zemin"
-    - "Çamaşır makinesinin arkasından duvara doğru düz uzanan gri bir boşaltma hortumu"
-    - "Lavabo kenarına dirsekle asılmış ve bantla sabitlenmiş bir boşaltma hortumu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
 ---
 
 Yıkama yarıda kaldı, Miele çamaşır makinesinin kumanda panelinde bir hata kontrol lambası yanıyor, süre göstergesinde **F** ile **11** dönüşümlü yanıp sönüyor ve makine sinyal sesi veriyor. Miele'nin kullanım kılavuzu bu durumu "su çıkışı engellenmiş veya kısıtlanmış olabilir" diye açıklıyor. Yani makine yıkama suyunu dışarı atamıyor. Bu yazıda Miele Türkiye kılavuz portalından indirdiğimiz **WWD 120** çamaşır makinesi Türkçe kılavuzundaki tahliye kontrollerini sırayla topladık. Tuş adları ve göstergeler modele göre değişebilir; kendi kılavuzunla karşılaştır.

@@ -41,12 +41,12 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir termosifonun ön yüzündeki küçük gösterge paneli"
   steps:
-    - "Termosifonun ön panelinde yan yana dizilmiş küçük simgeler ve gösterge ışıkları"
-    - "Lavabo musluğundan akan buharlı sıcak su"
-    - "Banyo duvarında termosifonun yanında duran küçük şalter kutusu"
-    - "Termosifonun dijital göstergeli kontrol paneli ve ortadaki açma kapama düğmesi"
-    - "Termosifonun ekranında iki karakterli bir kod beliren yakın plan"
-    - "Kapatılmış bir termosifon şalteri ve kapalı bir su vanası"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi şofben, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi şofben, sağda telefon ve kullanım kılavuzu"
 ---
 
 Banyoya girdin, termosifonun önündeki ışık yanmıyor. İlk düşünce "termosifon bozuldu" oluyor, ama termosifonlarda birden fazla ışık var ve her biri farklı bir şey söylüyor. Vestel'in göstergeli elektrikli termosifon kılavuzu ile Arçelik'in T 7350 B kılavuzu ışıkların ne zaman yanıp ne zaman söndüğünü anlatıyor. İşin ilginci, **ısıtıcı ışığının sönmesi çoğu zaman iyi haber**: su istenen sıcaklığa ulaşmış demek. Bu yazıda hangi ışığın neyi gösterdiğini ve gerçekten arıza olduğunda ne yapılacağını iki kılavuzdan topladık. Senin termosifonunda ışıklar farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Çamaşır odasında beyaz bir kurutma makinesinin ekranında görünen kısa bir bilgi kodu"
   steps:
-    - "Kurutma makinesinin kontrol paneline yakından bakan biri ve yanında açık duran kullanım kılavuzu"
-    - "Tamamen kapatılmış bir kurutma makinesi kapağının yandan görünümü"
-    - "Kurutma makinesinden çıkarılmış, lavabonun yanında duran beyaz bir su tankı"
-    - "Kapak ağzından çıkarılmış ve iki parçası açılmış bir tiftik filtresi"
-    - "Alt kapağı açık kurutma makinesinde temizleme fırçasıyla temizlenen ısı eşanjörü kanatları"
-    - "Kapalı duran bir kurutma makinesi ve kısa bir bekleme anı"
-    - "Kurutma makinesinin yanında telefonla servis randevusu alan biri"
+    - "Çizim: solda kurutma makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kurutma makinesi durdu ve ekranda iki harfli bir kod belirdi. Samsung bunlara "bilgi kodu" diyor: makine çalışamadığında neden durduğunu bu kodla söylüyor. Kodların bir kısmı senin çözebileceğin şeyler (kapak, su tankı, filtre), bir kısmı ise doğrudan servis işi. Bu yazıda Samsung'un iki Türkçe kılavuzundaki kod tablolarını tek yerde topladık: DV5000T serisi ve ısı pompalı SimpleUX ekranlı modeller. Senin modelinde kodlar farklı yazılabilir; SimpleUX ekranlı makineler bazı durumları kod yerine yazıyla gösteriyor.

@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Lavabo kenarında çıkarılmış süpürge filtreleri ve şeffaf depo"
   steps:
-    - "Kapatılmış ve yan yatırılmadan tutulan kablosuz dikey süpürge"
-    - "Akan su altında durulanan depo kapağı filtresi ve şamandıra"
-    - "Musluk altında yıkanan ıslak kuru süpürge kuru filtresi"
-    - "Nemli bezle silinen kuru süpürgenin ağ filtresi ve toz haznesi"
-    - "Akan su altında yıkanan silindir biçimli süpürge filtresi"
-    - "Havlu üzerinde kurumaya bırakılmış süpürge filtreleri"
-    - "Gövdesine yeniden takılan filtre ve kapatılan toz haznesi kapağı"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda su ya da toz haznesi"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
+    - "Çizim: solda dikey süpürge, sağda ilgili filtre"
 ---
 
 Emiş azaldıysa, cihaz koku yapmaya başladıysa ya da ekranda hava kanalı uyarısı yandıysa ilk bakılacak yer filtre. Tineco'nun Türkiye sitesindeki kılavuzlar iki aile için farklı bir düzen anlatıyor: ıslak kuru **Floor One S3, S5, S7 FlashDry** ve **iFloor 3**'te kirli su tarafındaki filtreler; kuru dikey **Pure One S12** ve **Pure One X**'te ön filtre ile HEPA filtresi. Bu yazı ikisini de kılavuzdaki sırayla anlatıyor.

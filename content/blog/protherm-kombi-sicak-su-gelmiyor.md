@@ -49,14 +49,14 @@ faq:
 images:
   coverAlt: "Banyo lavabosunda açık duran bir musluk ve yan duvarda beyaz bir kombi"
   steps:
-    - "Pencereleri açık, sakin ve boş bir mutfak"
-    - "Ekranı karanlık duran beyaz bir kombinin yakın planı"
-    - "Kombi kumanda panelinde yan yana dizili sade tuşlar"
-    - "Kombi ekranında duran bir musluk simgesi"
-    - "Salon duvarında asılı, sade, beyaz bir oda termostatı"
-    - "Kombinin altında borular arasında duran küçük bir kesme vanası"
-    - "Kombinin alt kısmında yuvarlak kadranlı bir basınç göstergesi"
-    - "Kombinin yanında tezgâhta duran kapalı bir alet çantası ve katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Petekler ısınıyor ya da kombi açık görünüyor, ama musluktan sıcak su gelmiyor. Protherm'in Puma Condens, Lynx Condens ve Gepard Condens kullanma kılavuzlarında bu durum için ayrı bir başlık yok; ama üçü de sıcak su ayarını, işletme modlarını ve arıza tablosunu anlatıyor. Aşağıda servisi çağırmadan önce evde bakabileceğin her şeyi bu üç kılavuzdan sırayla topladık. Tuş düzeni modele göre değişir; kendi kılavuzunla karşılaştır.

@@ -49,12 +49,12 @@ faq:
 images:
   coverAlt: "Banyoda duran önden yüklemeli beyaz bir çamaşır makinesi ve kapalı cam kapağı"
   steps:
-    - "Çamaşır makinesinin kontrol panelinde kısa bir kod gösteren küçük ekran"
-    - "Cam kapağı kapalı, içi buharlı görünen önden yüklemeli bir çamaşır makinesi"
-    - "Çamaşır makinesinin kontrol panelindeki güç düğmesinin yakın planı"
-    - "Duvardaki mavi işaretli soğuk su musluğuna bağlı bir su besleme hortumu"
-    - "Duvar prizine doğrudan takılı tek bir beyaz fiş"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve yanında bir not kâğıdı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Yıkama sırasında makine durdu, ekranda **HE** ya da **HE1** yazıyor. Samsung çamaşır makinelerinde H ile başlayan kodlar ailesi sıcaklıkla ilgili, ama hepsi aynı şeyi söylemiyor: biri hortum bağlantısıyla ilgili, biri ısıtıcıyla, biri yalnız "makine çok sıcak, bekle" demek. Bu yazıda Samsung'un kendi kod sayfalarına ve WW5000C, WW4000T Türkçe kullanma kılavuzlarına göre her kodun anlamını ve evde güvenle yapabileceklerini topladık. Senin modelinde kod biraz farklı görünebilir; kendi kılavuzunla karşılaştır.

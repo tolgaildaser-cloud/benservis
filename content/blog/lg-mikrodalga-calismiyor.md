@@ -49,6 +49,13 @@ faq:
     a: "Hayır. LG kılavuzuna göre fırının kapağına yerleştirilmiş emniyet kilitleri vardır ve kapak açıldığında mevcut pişirme işlemini otomatik olarak durdururlar; fırın kapağı açıkken kullanılamaz. Emniyet kilitlerinin kurcalanmaması gerekir."
 images:
   coverAlt: "Tezgâhtaki bir mikrodalga fırının cam tepsisinde duran, içinde su olan mikrodalgaya uygun bir ölçü kabı"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda iç bölme ve raflar"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Fişi takılı, ama ekrana basınca hiçbir şey olmuyor ya da program başlamıyor. LG'nin MJ3281BP ızgaralı ve konveksiyonlu mikrodalga kılavuzunun son sayfasında bu durum için hazır bir liste var: **"EĞER FIRININIZ ÇALIŞMIYORSA, YETKİLİ SERVİS ÇAĞIRMADAN ÖNCE"** kontrol etmen istenen dört madde. Kılavuzun kurulum, çocuk kilidi ve kapak bölümleri bu listeyi tamamlıyor.

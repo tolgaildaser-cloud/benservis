@@ -53,6 +53,14 @@ faq:
     a: "Hayır. Samsung'un kılavuzu açık: kurutucu tiftik filtresi olmadan çalışmaz. Ekranda 'Filtreyi kontrol edin' görürsen tiftik filtresinin yerine düzgün takıldığını kontrol et; mesaj sürerse servisi ara."
 images:
   coverAlt: "Ekranı kapalı ön yüklemeli kurutma makinesi; kapak kapalı, önünde yere bırakılmış çıkarılmış su tankı ve kontrol panelini işaret eden bir el"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
 ---
 
 Kurutucuyu çalıştırmak istiyorsun ama düğmeye bastığında hiçbir şey olmuyor, ya da program başlıyor gibi yapıp duruyor. Samsung'un ısı pompalı kurutucular için Türkçe kılavuzunda bu durumun satırı **"Kurutucu başlamıyor."**, DV5000T kılavuzunda **"Kurutma makinesi çalışmıyor"**. İki satır neredeyse aynı kontrolleri sayıyor ve çoğu, bir servis çağırmadan önce evde iki dakikada bakılabilecek şeyler. Bir madde ise gözden kaçıyor: Samsung'un kurutucularında programı başlatmak için düğmeye **dokunup basılı tutmak** gerekiyor. Aşağıdaki sıra bu iki satırı ve kılavuzların ilgili bölümlerini izliyor. Kaynak DV90T5240AW ve DV5000T (DV90TA040AE) kılavuzları; tuş ve mesaj adları modele göre değişebilir.

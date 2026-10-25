@@ -50,13 +50,13 @@ faq:
 images:
   coverAlt: "Mutfak dolabına göz hizasında yerleştirilmiş, kapağı kapalı ankastre bir fırın"
   steps:
-    - "Ankastre fırının kapağı ile kumanda paneli arasındaki ince yatay havalandırma aralığı"
-    - "Işığı sönmüş, kapağı kapalı, pişirme sonrası soğumaya bırakılmış bir fırın"
-    - "Fırın kumanda panelinde kapalı konuma çevrilmiş yuvarlak bir seçim düğmesi"
-    - "Önü tamamen boş bırakılmış bir fırın kapağı ve kapak kolunda asılı hiçbir şey olmayan görüntü"
-    - "Fırının dokunmatik ekranında açılmış sade bir ayarlar menüsü"
-    - "Mutfakta sigorta kutusunun kapağı ve yanında duran sönük bir fırın ekranı"
-    - "Fırın ekranının yanında tezgâhta duran bir not kâğıdı ve kalem"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
+    - "Çizim: solda ankastre fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Fırını kapattın, yemeği çıkardın, ama kapağın üstünden hâlâ hava geliyor ve fan sesi dakikalarca sürüyor. Siemens'in HB557JY, HB012FB ve HB976GM kullanım kılavuzlarına göre bu sesin sahibi **soğutma fanı** ve çoğu durumda tam olarak yapması gerekeni yapıyor. Siemens'i ayıran nokta şu: bazı modellerde fanın kapattıktan sonra ne kadar çalışacağını **temel ayarlardan seçebiliyorsun**. Bu yazıda fanın davranışını, ayarını ve servis sınırını bu üç kılavuzdan topladık. Menüler modele göre değişiyor; kendi kılavuzunla karşılaştır.

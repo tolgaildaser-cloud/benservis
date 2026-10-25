@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Çamaşırhanede duran, kapağı kapalı ve program düğmesi görünen bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesinin kontrol panelindeki başlat ve duraklat tuşu"
-    - "Çamaşır makinesinin çevirmeli program düğmesinin yakın planı"
-    - "Tamburunun dibinde az miktarda su görünen bir çamaşır makinesi"
-    - "Çamaşır makinesi ekranında yanıp sönen kısa bir uyarı"
-    - "Çamaşır makinesinin ekranında saat cinsinden gecikme göstergesi"
-    - "Çamaşır makinesinin ekranında yanan bir hata kodu"
-    - "Kapağı kapalı, ekranı yanan ve çalışmaya hazır bir çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Sharp çamaşır makinen bir programda takıldı, kapak açılmıyor, tuşlar tepki vermiyor ya da ekranda bir uyarı duruyorsa aranan şey çoğu zaman makineyi temiz bir başlangıca döndürmek. Sharp'ın ES-NB814WNA-BE ve ES-NFA714BWNA-EE kullanım kılavuzlarında (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) ayrı bir reset tuşu yok; bunun yerine program düğmesiyle iptal ve birkaç yardımcı adım var. Senin modelinde tuş numaraları farklı olabilir; kendi kılavuzunla karşılaştır.

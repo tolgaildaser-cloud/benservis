@@ -50,13 +50,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarında beyaz bir kombi ve altında ibreli küçük bir basınç göstergesi"
   steps:
-    - "Pencereleri açık, ışıkları kapalı sakin bir mutfak"
-    - "Tezgâhta açık duran bir kombi kullanma kılavuzunun kapak sayfası"
-    - "Kombinin altında yuvarlak ibreli bir basınç göstergesinin yakın planı"
-    - "Kombi ekranında basınç simgesinin yanındaki kısa bir değer"
-    - "Kombi ekranında iki kesik çizgi arasında duran yatay bir çubuk"
-    - "Kombinin altındaki borular ve kapalı duran küçük vanalar"
-    - "Kombinin yanında duvara asılı not kâğıdı ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda kapak"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 Kombinin önündeki ibre düşmüş görünüyor ya da ekranda basınç değeri gözüne takıldı. Viessmann'ın Türkçe kullanma kılavuzları burada iki şey söylüyor: basıncı nerede okuyacağını ve hangi değerin altında sistemin "çok düşük" sayıldığını. Kullanıcıya bir doldurma tarifi ise vermiyorlar. Bu yazıda Vitopend 100-W, Vitodens 050-W, Vitodens 100-W/111-W, Vitodens 200-W ve Vitodens Connect/Trend kılavuzlarından okuma ve karşılaştırma adımlarını topladık. Senin modelin farklıysa kendi kılavuzunla karşılaştır.

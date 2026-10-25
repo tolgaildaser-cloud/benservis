@@ -49,13 +49,13 @@ faq:
 images:
   coverAlt: "Mutfakta kapağı aralık kalmış, beyaz, iki kapılı ve alttan dondurucusu olan bir buzdolabı"
   steps:
-    - "Tam kapatılmış beyaz bir buzdolabı kapağı ve contası boyunca düz bir kenar"
-    - "Buzdolabı kapağındaki kumanda panelinde küçük dokunmatik tuşlar"
-    - "Buzdolabı kapağındaki sade bir sıcaklık göstergesinin yakın planı"
-    - "Açık dondurucu çekmecesinde poşetlenmiş, üstü buzlu yiyecek paketleri"
-    - "Buzdolabı rafına dizilmiş market poşetinden yeni çıkmış taze yiyecekler"
-    - "Mutfak tezgâhının yanındaki buzdolabının önü ve altı boş bırakılmış hava açıklıkları"
-    - "Buzdolabının yanında tezgâhta duran açık bir kullanım kılavuzu ve bir telefon"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda uzaktan kumanda"
+    - "Çizim: solda buzdolabı, sağda çalışma sesi"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabı ötüyor, ekranda bir şey yanıp sönüyor ve sesi nasıl susturacağını bilmiyorsun. Siemens'in KG55N, KD76N ve KGN serisi kullanım kılavuzlarında iki ayrı alarm var: **kapı alarmı** ve **sıcaklık (ısı derecesi) alarmı**. İkisinin susturulma yolu farklı ve ikisinin de söylediği şey arızadan çok bir uyarı. Bu yazıda alarmı kapatmayı, sonra neden çaldığını ve ne zaman servis gerektiğini bu üç kılavuzdan sırayla topladık. Tuşların yeri ve simgeleri modele göre değişiyor; kendi kılavuzunla karşılaştır.

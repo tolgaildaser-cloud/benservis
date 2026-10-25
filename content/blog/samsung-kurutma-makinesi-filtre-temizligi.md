@@ -54,14 +54,14 @@ faq:
 images:
   coverAlt: "Kurutma makinesinin kapak ağzından çıkarılmış tiftik filtresi ve yanında küçük bir temizleme fırçası"
   steps:
-    - "Duvardaki prizden çekilmiş bir kurutma makinesi fişi"
-    - "Kapak ağzından yukarı doğru çıkarılan beyaz bir tiftik filtresi"
-    - "Masanın üstünde açılmış iç ve dış filtre parçaları"
-    - "Akan musluk suyu altında yıkanan bir tiftik filtresi ve yanında kurumaya bırakılmış ikinci parça"
-    - "Kapak ağzındaki yuvasına geri takılmış tiftik filtresi"
-    - "Kurutma makinesinin alt ön kısmında açılmış dış kapak ve çıkarılmış iç kapak"
-    - "Isı eşanjörünün ince kanatları üzerinde gezdirilen yumuşak temizleme fırçası"
-    - "Yerine takılmış iç kapak ve kapanmak üzere olan dış kapak"
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda temizlik fırçası"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
 ---
 
 Samsung kurutma makinesinde iki temizlik noktası var: kapak ağzındaki **tiftik filtresi** ve makinenin altındaki **ısı eşanjörü**. İkisi de kirlendiğinde makine haber verir; ekranda FIL tEr, "Filtreyi kontrol edin" ya da "Isi esanjörünü temizleyin" görürsün. Bu yazıda Samsung'un DV5000T ve SimpleUX Türkçe kılavuzlarıyla Samsung Türkiye destek sayfalarındaki temizlik adımlarını tek sırada topladık. Senin modelinde parçaların yeri biraz farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -56,6 +56,15 @@ faq:
     a: "Kumanda kılavuzu eski ve yeni pilin ya da farklı tip pillerin birlikte kullanılmamasını istiyor. Alıcıya doğrudan güneş geliyorsa perdeyi kapat; yakındaki başka elektrikli cihazlar kumandayı etkiliyorsa onları uzaklaştır."
 images:
   coverAlt: "Gündüz bir çalışma odasında masada ekranı yanan beyaz klima kumandası, yanında iki alkali pil ve arkada duvarda kapalı split klima"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Klimaya kumandayla komut veriyorsun ama iç ünite sessiz. Alarko Carrier'ın Carrier split klima kullanım kılavuzu bu durumu "Problemlerin Çözümü" bölümünde **"Cihaz çalışmıyor"** satırıyla veriyor ve her nedenin yanına bir çözüm yazıyor: **"Gücün yeniden sağlanmasını bekleyin."**, **"Pilleri yenileyin."**, **"Cihazı yeniden başlattıktan sonra üç dakika bekleyin."**, **"Zamanlayıcıyı kapatın."** Kumandanın ayrı kılavuzu ise bu listeye iki önemli not ekliyor: kilitli bir kumandanın tuşları çalışmaz ve kumandanın menzili yaklaşık 8 metredir. Aşağıdaki sıra bu iki kılavuzdan.

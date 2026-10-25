@@ -52,6 +52,14 @@ faq:
     a: "Samsung tamburdaki kir ve bakterileri uzaklaştıran temizleme programını (destek sayfasında EKO TAMBUR TEMİZLEME) her 40 yıkamada bir, tambur boşken ve deterjan ya da çamaşır suyu koymadan çalıştırmanı istiyor. Kılavuz kazanın temizliği için temizlik maddesi kullanılmamasını, çünkü kazandaki kimyasal kalıntıların yıkama performansını zayıflattığını yazıyor."
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin önünde renklerine göre ayrılmış iki çamaşır yığını; makinenin deterjan çekmecesi açık"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Program bitti ama çamaşırda leke kalmış, beyazlar grileşmiş ya da çamaşır hâlâ kirli kokuyor. Samsung Türkiye'nin destek sayfasında bu durumun karşılığı **"Samsung Çamaşır makinem temiz yıkamıyor ne yapabilirim?"** Sayfadaki beş önerinin dördü makineden önce, çamaşırla ve ayarlarla ilgili: **ayırmak, program seçmek, sıcaklık seçmek ve yükü doğru belirlemek.** Beşincisi deterjan. Aşağıdaki sıra bu sayfayı ve WW4000T kılavuzunun "çamaşır kılavuzu" bölümünü izliyor; program ve düğme adları modele göre değişebilir.

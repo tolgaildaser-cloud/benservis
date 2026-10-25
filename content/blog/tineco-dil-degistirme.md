@@ -40,12 +40,12 @@ faq:
 images:
   coverAlt: "Dik duran ıslak kuru süpürgenin sapındaki düğme ve dijital ekran"
   steps:
-    - "Açık duran süpürge kullanım kılavuzunun genel bakış sayfası"
-    - "Süpürge gövdesindeki küçük ses ve dil düğmesinin yakın görünümü"
-    - "Süpürge sapındaki dil düğmesi ve yanındaki dijital ekran"
-    - "Ekranı açık, sesli uyarı veren ıslak kuru süpürge"
-    - "Ses düğmesi kısaltılmış, sessiz ortamda duran süpürge"
-    - "Akıllı telefonda açık bir ev aleti uygulaması ve yanında süpürge"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda dikey süpürge, sağda çalışma sesi"
+    - "Çizim: solda dikey süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
 ---
 
 Yeni Tineco'nu ilk açtığında cihaz İngilizce konuşmaya başladı ve uyarıların ne dediğini anlamıyorsun. Tineco'nun Türkiye sitesindeki **Floor One** kılavuzlarına göre bu normal: sesli uyarının **varsayılan ayarı İngilizce**. Dili değiştirmenin iki yolu var ve hangisini kullanacağın modeline bağlı: cihazdaki **Sessiz/Dil Değiştirme düğmesine iki kez basmak** ya da **Tineco uygulamasından** seçmek.

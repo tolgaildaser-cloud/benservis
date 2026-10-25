@@ -39,13 +39,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran, kapısında küçük bir dijital kontrol paneli bulunan kombi tip buzdolabı"
   steps:
-    - "Yeni kurulmuş, kapıları kapalı ve içi boş bir buzdolabı"
-    - "Buzdolabı kontrol panelinde dondurucu ayar göstergesi"
-    - "Buzdolabı kontrol panelinde soğutucu ayar göstergesi"
-    - "Güneşli bir yaz günü mutfakta duran bir buzdolabı"
-    - "Dondurucu çekmecesine yerleştirilmiş taze yiyecek paketleri"
-    - "Kontrol panelinde yanan bir uyarı simgesi"
-    - "Buzdolabının yanında tezgâhta duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Sharp buzdolabının kapısındaki küçük panelde iki tuş ve birkaç sembol var; ama hangi derecenin doğru olduğu panelde yazmıyor. Bu yazıda Sharp'ın SJ-FBA22IMX serisi buzdolabı kılavuzundaki (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) önerilen ayarları, tuşların nasıl çalıştığını ve ayarla ilgili uyarı kodlarını topladık. Senin modelinin paneli farklı olabilir; kendi kılavuzunla karşılaştır.

@@ -46,6 +46,14 @@ faq:
     a: "HB976GM'de evet, ayara bağlı. Temel ayarlarda çocuk kilidi için üç seçenek var: 'Kapak kilidi + tuş kilidi', 'Sadece tuş kilidi' (fabrika ayarı) ve 'Devre dışı'. İlk seçenek açıksa çocuk kilidi kapağı da kilitliyor; kilit tuşuna yaklaşık 4 saniye basılı tutarak ya da temel ayarlardan kapatılabiliyor."
 images:
   coverAlt: "Paslanmaz çelik bir ankastre fırının dokunmatik ekranında kilit simgesi, kapağı kapalı ve içi temiz"
+  steps:
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Fırının kapağını çekiyorsun, kıpırdamıyor. Siemens'in HB976GM kullanım kılavuzundaki arıza tablosunda bu belirtinin kendi satırı var: **"Cihaz kapağı açılmıyor."** Tablonun saydığı iki neden de bir arıza değil, bir güvenlik kilidi: **piroliz temizleme fonksiyonu** ve **çocuk kilidi.** Bu yazı HB976GM kılavuzuna ve Siemens Türkiye'nin destek sayfasına dayanıyor; tuş adları ve menüler modele göre değişebilir.

@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz silindir biçimli bir termosifon ve altındaki boru bağlantıları"
   steps:
-    - "Termosifonun altındaki boru bağlantıları ve küçük pirinç bir vananın yakın planı"
-    - "Emniyet ventilinin boşaltma ucundan tek bir su damlası düşerken"
-    - "Ventilin ucundan aşağı doğru inen ve gidere uzanan şeffaf ince bir hortum"
-    - "Termosifon altındaki vananın üzerinde kapalı küçük bir ayar kapağı"
-    - "Banyo duvarındaki su sayacı ve yanında soğuk su borusu üzerinde ek bir vana"
-    - "Emniyet ventilinin küçük mandalı dik konumda ve altında boş bir kap"
-    - "Kapatılmış bir termosifon şalteri ve kapalı bir su vanası"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi şofben, sağda duvar giderine giden hortum"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi şofben, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi şofben, sağda telefon ve kullanım kılavuzu"
 ---
 
 Banyoda termosifonun altında küçük bir su birikintisi ya da borudan düzenli düşen damlalar. İlk akla gelen "termosifon delindi" oluyor. Çoğu zaman öyle değil: damla, **emniyet ventilinden** geliyor ve üreticilerin kılavuzlarına göre bu bir arıza değil, güvenlik özelliği. Vestel'in elektrikli termosifon kılavuzu ve Arçelik'in T 7350 B kılavuzu bu durumu açıkça "normal" olarak tanımlıyor, ama hangi durumda normal olmadığını da yazıyor. Bu yazıda ikisini yan yana koyduk. Senin termosifonunun kılavuzu farklı basınç değerleri verebilir, kendininkiyle karşılaştır.

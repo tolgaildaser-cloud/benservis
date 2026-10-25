@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında kapağı kapalı, ekranı yanan solo bir mikrodalga fırın"
   steps:
-    - "Mikrodalga fırının kontrol panelinde küçük bir kilit simgesi ve yanındaki durdur tuşu"
-    - "Mikrodalga fırın panelinde saat simgeli yuvarlak bir tuş"
-    - "Mikrodalga fırın panelindeki büyük döner ayar düğmesi"
-    - "Mikrodalga fırının dijital ekranında yanıp sönen dakika hanesi"
-    - "Döner ayar düğmesinin yakın planı ve çevresindeki ince çizgiler"
-    - "Mikrodalga fırın ekranında saat ve dakika arasındaki yanıp sönen iki nokta"
-    - "Çalışan bir mikrodalga fırının içinde dönen cam tabla ve üzerinde bir kase"
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda panel ekranındaki uyarı"
 ---
 
 Elektrik gidip geldi, Vestel mikrodalganın ekranında **0:00** yanıp duruyor ya da saati yaza göre düzeltmek istiyorsun. Vestel'in mikrodalga kılavuzlarında saat ayarı birkaç tuş ve döner düğmeyle yapılıyor; ama tuşun adı ve kaç kez basılacağı modele göre değişiyor. Bu yazıda Vestel'in AMD-2011 S ve MD 20 DB / MD 20 DG kullanım kılavuzlarından saat ayarının sırasını, ayarı engelleyen çocuk kilidini, mutfak zamanlayıcısıyla karışan 00:00 ekranını ve zamanlayıcılı pişirmenin neden saate bağlı olduğunu çıkardık. Kendi modelinin tuş adını kılavuzla karşılaştır.

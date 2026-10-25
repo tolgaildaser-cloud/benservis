@@ -44,6 +44,14 @@ faq:
     a: "Haier, taşma güvenlik cihazının doğru çalışması için makinenin çalışma sırasında hareket ettirilmemesini ya da eğilmemesini istiyor. Eğmek ya da taşımak gerekirse yıkama programının tamamlandığından ve içinde hiç su kalmadığından emin olmalısın."
 images:
   coverAlt: "Açık bir bulaşık makinesinin tabanında, çıkarılmış silindir filtrenin yanında duran bulanık su"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda temizlik fırçası"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda pompa filtresi ve altına konan su kabı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program bitti ama makinenin tabanında kirli su duruyor, ya da ekranda **HATA E3** yazıyor. Haier'in XF-6C2M1PW ürün sayfasından bağlanan bulaşık makinesi kılavuzunda E3'ün anlamı **"Bulaşık makinesi suyu boşaltmıyor."** Haier'in bu kod için istediği kontroller üç yerde toplanıyor: **boşaltma hortumu** (bükülmüş, sıkışmış ya da engellenmiş mi), **filtre** (tıkalı mı) ve evdeki **sifon** (tıkalı mı). "Diğer arızalar" tablosu aynı belirtiye bir de kurulum tarafını ekliyor: **boşaltma borusu uzantısı düzgün bağlanmamış** olabilir.

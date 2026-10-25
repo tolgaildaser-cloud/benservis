@@ -54,6 +54,14 @@ faq:
     a: "Gepard Condens kılavuzunda tesisat basıncı izin verilen aralığın dışına çıktığında ekranda F10 görünüyor ve arıza tablosu F10'u 'ısıtma sisteminde yetersiz su' satırında sayıyor. Tedbir aynı: ısıtma sistemini doldurmak. Hangi kodun çıktığı modele bağlı."
 images:
   coverAlt: "Duvara monteli beyaz bir yoğuşmalı kombinin dijital ekranında düşük basınç uyarısı ve altında boru bağlantıları"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
 ---
 
 Kombinin ekranında **F.22** belirdi ve ısıtma durdu. Protherm'in Puma Condens kullanma kılavuzundaki kod tablosu bu kodu tek satırla açıklıyor: **"F.22 Tesisat basıncı çok düşük"**, olası neden **"Isıtma sistemindeki su yetersiz"**. İyi haber şu: Protherm doldurmayı kullanıcıya veriyor. Bu yazıda Puma Condens, Lynx Condens ve Gepard Condens kılavuzlarındaki sırayı birlikte izliyoruz; tuş ve vana yerleri modele göre değişir.

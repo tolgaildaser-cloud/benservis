@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Salon duvarında asılı beyaz bir split klima iç ünitesi ve önündeki gösterge lambaları"
   steps:
-    - "Klima iç ünitesinin ön yüzünde yan yana duran küçük gösterge lambaları"
-    - "Sehpa üzerinde ekranı aydınlanmış beyaz bir klima kumandası"
-    - "Klima kumandasının yanında açık duran bir not defteri ve kalem"
-    - "Kapalı duran bir split klimanın yatay kanatçığı"
-    - "Lavabonun kenarında kurumaya bırakılmış ince ağlı klima filtreleri"
-    - "Koridordaki elektrik panosunun kapağı açık, şalterler sıra sıra"
-    - "Masada katlanmış bir klima kullanma kılavuzu ve yanında kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda not defteri ve kalem"
 ---
 
 Panasonic klima birden durdu, iç ünitede bir lamba yanıp sönüyor. Panasonic bu durumda klimanın arızayı bir kod olarak hafızaya yazdığını ve bu kodun kumandadan okunabildiğini söylüyor. Bu yazıda Panasonic'in TZ serisi (CS-TZ..ZKEW) Türkçe kullanım kılavuzundaki "Hata kodlarının alınması" bölümünü ve kod tablosunu sade bir dille topladık. Kılavuz bu seriye ait; senin modelinde düğme yerleri ya da bazı kodlar farklı olabilir. Kılavuzun kendisi de "bazı hata kodları modeliniz için geçerli olmayabilir" notunu düşüyor.

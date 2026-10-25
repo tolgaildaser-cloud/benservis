@@ -54,6 +54,15 @@ faq:
     a: "Evet. Carrier'ın uyku modunda ısıtma ayarı 1 saat sonra 1°C, sonraki saatte 1°C daha düşer. Kumandadaki EKO Uyku da ısıtmada ilk 2 saat ayarı saat başı 1°C düşürür."
 images:
   coverAlt: "Kış akşamı lamba ışığında bir oturma odası, kapalı pencerenin önünde kalın perde, duvarda çalışan beyaz split klima ve koltukta katlanmış bir battaniye"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, klimayı ısıtmaya aldın ama oda bir türlü ısınmıyor; ya da klimanın ekranında beklemediğin bir sıcaklık görüyorsun. Alarko Carrier'ın Carrier split klima kılavuzu zayıf ısıtmayı **"Zayıf Isıtma Performansı"** satırında üç nedenle açıklıyor ve çözüm sütununda iki ev işi veriyor: **"Yardımcı ısıtma cihazı kullanın."** ve **"Kullanım sırasında tüm kapıların ve pencerelerin kapalı olduklarından emin olun."** Carrier kumandasının ayrı kılavuzu ise bu listeye kolay gözden kaçan iki ayar ekliyor: ayarı kendiliğinden 8°C'ye indiren F.P işlevi ve kompresörü düşük devirde çalıştıran sessiz fonksiyon. Önce bu ayarları, sonra odayı kontrol ediyoruz.

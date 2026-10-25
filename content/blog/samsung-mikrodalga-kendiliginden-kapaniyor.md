@@ -43,6 +43,13 @@ faq:
     a: "Samsung tablosunda 'Çalıştırma sırasında fırının dışı çok sıcak' satırının iki nedeni var: yetersiz havalandırma alanı ve fırının üzerinde duran nesneler. Çözüm, kurulum kılavuzundaki boşlukları korumak ve fırının üzerindeki tüm nesneleri kaldırmak."
 images:
   coverAlt: "Mutfak tezgâhında duvardan ve yanlardan boşluk bırakılarak yerleştirilmiş, üstünde hiçbir eşya olmayan bir solo mikrodalga fırın"
+  steps:
+    - "Çizim: solda mikrodalga fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda mikrodalga fırın, sağda uzaktan kumanda"
+    - "Çizim: solda mikrodalga fırın, sağda iç bölme ve raflar"
+    - "Çizim: solda mikrodalga fırın, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda mikrodalga fırın, sağda prizden çekilen fiş"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
 ---
 
 Mikrodalgayı üç dakikaya kurdun, bir dakika sonra ekran kararıyor ve fırın susuyor. Samsung'un MS23K3555ES ve ankastre MG22M8074AT kılavuzlarında bu belirti kendi satırıyla geçiyor: **"Çalışma sırasında güç kapanıyor."** Tablonun saydığı beş nedenin hepsi kullanıcının kontrol edebileceği şeyler: uzun pişirme, soğutma fanı, boş çalıştırma, havalandırma ve priz.

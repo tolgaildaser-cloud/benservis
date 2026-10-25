@@ -50,6 +50,15 @@ faq:
     a: "Kılavuz, ürün uzun süre soğutmada çalışırsa ön plakada ve yatay lamellerde yoğuşma oluşabileceğini yazıyor. Kılavuz ayrıca yoğuşma suyunun doğru tahliye edildiğinden emin olmak için gider hortumunun kontrol edilmesini istiyor."
 images:
   coverAlt: "Yaz öğleden sonrası güneş alan bir salonda yarıya kadar çekilmiş açık renk perde, duvarda kanatları açık beyaz split klima ve sehpada bir bardak buzlu su"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Klima çalışıyor, sesi geliyor, ama oda bir türlü serinlemiyor. DemirDöküm'ün Kion inverter kullanma kılavuzu bunu arıza giderme tablosunda **"Yetersiz soğutma veya ısıtma"** başlığıyla ele alıyor ve yedi ayrı neden sıralıyor; çoğunun çözümü evde birkaç dakikalık iş: **"Kapıları ve/veya pencereleri kapatın."**, **"Hava filtrelerini temizleyin."**, **"İç üniteyi güneş ışınlarına karşı koruyun (Örn.: Perde asın, kepenkleri kapatın …)."** Tablodaki satırlardan biri de yalnızca **"Biraz bekleyin."** diyor. Aşağıda DemirDöküm'ün bu satırlarını, kumandadaki mod ve tasarruf ayarlarıyla birlikte kontrol sırasına koyduk.

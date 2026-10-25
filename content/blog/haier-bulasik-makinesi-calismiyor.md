@@ -42,6 +42,13 @@ faq:
     a: "Bu çocuk kilidinin belirtisi. Kılavuza göre çocuk kilidi açıkken yalnız AÇMA/KAPAMA düğmesi aktif kalıyor. ÇOCUK KİLİDİ düğmesine yaklaşık 5 saniye basınca ekranda KİLİT KAPALI yazıyor ve kısa bir bip sesi duyuluyor."
 images:
   coverAlt: "Kapağı kapalı bir bulaşık makinesinin üst kenarındaki kontrol paneli ve AÇMA/KAPATMA düğmesine uzanan bir parmak"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Bulaşıkları yerleştirdin, programı seçtin ama makine başlamıyor. Haier'in XF-6C2M1PW ürün sayfasından bağlanan bulaşık makinesi kılavuzundaki "Diğer arızalar" tablosunun ilk satırı tam bu durum: **"Hiç program çalışmıyor."** Haier burada dört sebep sayıyor: **fiş prize takılmamıştır**, **AÇMA/KAPATMA (O/I) düğmesine basılmamıştır**, **kapak açıktır** ve **elektrik kesilmiştir.** Kılavuzun kontrol paneli bölümü bunlara üç ihtimal daha ekliyor: devrede unutulan **çocuk kilidi**, ayarlı kalmış **gecikmeli başlatma** ve mağazadan kalma **demo modu.**

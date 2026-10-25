@@ -50,6 +50,15 @@ faq:
     a: "Kılavuz deterjan bölmesine 20 ila 30 g deterjan konulmasını öneriyor ve tablet kullanıyorsan bir tanesinin yeterli olduğunu yazıyor. Haier çok az deterjanın bulaşıkları iyi temizlemeyeceğini, fazlasının da daha iyi sonuç vermeyip israf olacağını hatırlatıyor."
 images:
   coverAlt: "Açık bir bulaşık makinesinin alt sepetinde, yüzleri aşağı bakacak şekilde aralıklı dizilmiş tabaklar ve altında görünen püskürtme kolu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
 ---
 
 Program bitti ama tabaklarda yemek kalıntısı var, bardaklar lekeli. Haier'in XF-6C2M1PW bulaşık makinesi ürün sayfasından bağlanan kullanım kılavuzunda bu durumun satırı **"Tabaklar kısmen yıkanıyor."** Haier bu satırda yerleşimden deterjana kadar uzun bir liste veriyor: **püskürtme kolları kısmen engellenmiştir**, **bulaşıklar düzgün yüklenmemiştir**, **yanlış miktarda deterjan ölçülmüştür veya deterjan bayat ve katıdır**, **tuz kabının kapağı düzgün kapatılmamıştır** ve **yıkama programı yeterli değildir.** Bunların hepsi elle, aletsiz düzeltilebilir.

@@ -48,6 +48,15 @@ faq:
     a: "Kılavuza göre ısıtmada oda istenen sıcaklığa ulaştıktan sonra iç ünitenin fanı bir süre daha çalışır ve üflenen hava sıcak hissedilebilir. Sonra oda sana serin gelirse daha yüksek bir sıcaklık ayarla."
 images:
   coverAlt: "Kış akşamı loş bir yatak odasında buğulu cam, duvarda kanatları aşağıya dönük beyaz split klima ve yatağın üzerinde katlanmış kalın bir yorgan"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda pencere"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kışın klimayı ısıtmaya aldın; ya ilk dakikalarda hiç hava gelmiyor ya da sıcak hava bir süre sonra kesiliyor. DemirDöküm'ün Kion inverter kullanma kılavuzu bu iki durumu arıza saymıyor. Tablodaki satır açık: **"Isıtma devresi başlatıldığında hava akımı hemen başlamaz."** Kılavuz bunun nedenini de veriyor: hava, sıcaklık yeterli değere ulaşınca üflenir, yoksa odaya soğuk hava gelirdi. Ara ara kesilen ısıtmayı ise kılavuz buz çözme işlemiyle açıklıyor. Gerçekten zayıf ısıtmada da aynı tablonun **"Yetersiz soğutma veya ısıtma"** satırı devreye giriyor: kapı-pencere, düşük ayar, kirli filtre, hava yolundaki engel. Aşağıda önce normal olanı, sonra kontrol edilecekleri sıraladık.

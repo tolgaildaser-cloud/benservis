@@ -36,13 +36,13 @@ faq:
 images:
   coverAlt: "Beyaz önden yüklemeli çamaşır makinesinin kontrol paneli yakın planda; solda program seçim düğmesi, sağda süre ve sembollerin göründüğü siyah ekran ile altında sıra hâlinde dokunmatik tuşlar"
   steps:
-    - "Program düğmesi pompa konumuna getirilmiş çamaşır makinesi"
-    - "Ekranında kapak kilidi simgesi yanan çalışan çamaşır makinesi"
-    - "Çamaşır makinesinin yuvarlak kapağı ve tutamağı yakın plan"
-    - "Çamaşır makinesi ekranında çocuk kilidi simgesi"
-    - "Çamaşır makinesinin arkasında açık musluk ve düz uzanan giriş hortumu"
-    - "Tamburun içine düzgün yayılmış çamaşırlar"
-    - "Deterjan çekmecesinde ölçülü konmuş toz deterjan"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
 ---
 
 Beko çamaşır makinenin ekranında bir kilit simgesi sönmüyor, ekranda **End** yazıyor ya da süre bir türlü geri saymıyor. Bu yazıdaki karşılıkların tamamı Beko'nun **CMX 11140** modeli için yayımladığı 3 Eylül 2024 tarihli Türkçe kullanma kılavuzundan alındı. Başka bir Beko modelinde panel ve sembol düzeni farklı olabilir.

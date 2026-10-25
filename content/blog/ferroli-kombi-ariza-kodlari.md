@@ -59,6 +59,8 @@ RESET tuşu üç kılavuzda da kontrol panelindeki **6 numaralı tuş**: *"Reset
 
 İki modelin kılavuzundaki arıza listesi (Çizelge 8) birebir aynı.
 
+![Çizim: solda duvar tipi kombi, sağda not defteri ve kalem](/tamir-gorsel/ferroli-kombi-ariza-kodlari/kod-tablosu-01.png)
+
 | Kod | Kılavuzdaki anlamı | Kılavuzun kullanıcıya verdiği adım |
 |---|---|---|
 | **F37** | Sistem su basıncı doğru değil (basınç çok düşük) | Doldurma düğmesiyle basıncı başlangıç değerine getir, sonra düğmeyi kapat |

@@ -43,6 +43,14 @@ faq:
     a: "Bazı modellerdeki SU DURDURMA cihazı, besleme tüpü hasar görürse su akışını durduruyor; bu durumda pencerede kırmızı işaret görünüyor ve Haier'e göre tüpün değiştirilmesi gerekiyor. Su bloğu sistemli hortum elektrikli parça içerdiği için kesilmemeli; değişim için yetkili servise başvur."
 images:
   coverAlt: "Ankastre bir bulaşık makinesinin yanında, tezgah altındaki musluğa bağlı beyaz su besleme hortumu"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Program başladı ama makineden su sesi gelmiyor, ekranda **SU YOK** ya da **HATA E2** yazıyor. Haier'in XF-6C2M1PW ürün sayfasından bağlanan bulaşık makinesi kılavuzunda bu iki uyarının anlamı aynı: **"Bulaşık makinesine su dolmuyor."** Haier bu satırda dört kontrol sıralıyor: **su beslemesinin açık olduğundan**, **su besleme hortumunun bükülmediğinden ve ezilmediğinden**, **boşaltma borusunun uygun yükseklikte olduğundan** emin olmak ve hortumun arkasındaki **"kum" filtresinin tıkanmadığını** kontrol etmek.

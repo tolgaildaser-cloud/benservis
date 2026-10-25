@@ -46,6 +46,14 @@ faq:
     a: "Kılavuz E04 için reset vermiyor. Talimat basıncı kontrol edip 1.2 bar'a doldurmak; bunun ardından kombi otomatik olarak yeniden çalışıyor. Problem devam ederse yetkili servisin aranması isteniyor. Ekranda E46 (basınç sensörü arızası) varsa kılavuz o kod için düğmeye 2 saniye basarak yeniden kurmayı gösteriyor."
 images:
   coverAlt: "Duvardaki beyaz bir kombinin ekranında düşük basınç uyarısı, altında doldurma musluğuna uzanan bir el"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kombi birden durdu ve ekranda **E04** yanıyor. Alarko'nun Seradens Super kombi kılavuzu bu kodu açıkça tanımlıyor: **"E04 Düşük Tesisat Suyu Basıncı Hatası"**. Kılavuzun başka bir yerindeki cümle daha da sade: E04, **kombide su olmadığına işaret eder.** Çözüm de kullanıcıya bırakılmış: basıncı ekrandan okuyup 1.2 bar'a kadar su doldurmak. Bu yazı Seradens Super SRS 20/24/28/36 kılavuzuna dayanıyor; başka bir Alarko modelin varsa düğme numaraları farklı olabilir.

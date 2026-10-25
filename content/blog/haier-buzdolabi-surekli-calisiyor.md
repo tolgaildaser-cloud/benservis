@@ -45,6 +45,14 @@ faq:
     a: "Kılavuzun tablosuna göre akan suya benzer hafif bir ses normal; hafif bir uğultu da yoğuşma önleyici sistemin çalışmasından kaynaklanıyor ve normal. Kabinin kenarlarının ve kapı şeridinin ısınması da tabloda 'Bu normaldir' diye geçiyor."
 images:
   coverAlt: "Mutfakta güneş alan bir pencerenin yanında duran çok kapılı gri buzdolabı ve önündeki boş zemin"
+  steps:
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda su giriş musluğu"
 ---
 
 Buzdolabının sesi kesilmiyor, motor sanki hiç durmuyor. Haier'in HCR5919 ailesini de kapsayan kılavuzunda bu durumun satırı **"Cihaz sık sık çalışıyor veya çok uzun süre çalışıyor."** Haier'in bu satırda saydığı yedi sebepten ikisi aslında arıza değil: **iç veya dış ortam sıcaklığı çok yüksek** ise ve **cihaz bir süredir kapalı** kaldıysa uzun çalışma beklenen bir durum. Kalan beş sebep evde kontrol edilebilir: **sıkıca kapatılmamış kapı/çekmece**, **çok sık açılan kapı**, **çok düşük dondurucu ayarı**, **kirli ya da bozuk conta** ve **sağlanmamış hava sirkülasyonu.**

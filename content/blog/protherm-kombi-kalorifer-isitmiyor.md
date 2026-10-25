@@ -56,14 +56,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarında asılı beyaz bir kombi ve önünde soğuk görünen beyaz bir panel radyatör"
   steps:
-    - "Açık duran bir pencere ve önünde boş, sakin bir mutfak"
-    - "Duvara asılı beyaz bir kombinin küçük dijital ekranının yakın planı"
-    - "Kombinin kumanda panelinde yan yana duran birkaç düğmenin yakın planı"
-    - "Kombi ekranında beliren iki haneli bir sıcaklık değeri"
-    - "Salon duvarında asılı, ekranı boş, beyaz ve sade bir oda termostatı"
-    - "Kombinin altında borular arasında duran küçük bir su doldurma vanası"
-    - "Önü boş bırakılmış beyaz bir panel radyatör ve yan tarafındaki termostatik vana"
-    - "Duvardaki kombinin yanında tezgâhta duran katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
 ---
 
 Musluktan sıcak su geliyor, ama petekler soğuk. Kombi çalışıyor gibi görünüyor, sadece kaloriferi ısıtmıyor. Protherm'in Puma Condens ve Lynx Condens kullanma kılavuzlarının arıza tablosunda bu durum ayrı bir satır olarak geçiyor: **sıcak su hazırlama çalışıyor, ısıtma işletime geçmiyor.** Bu yazıda, servisi çağırmadan önce evde bakabileceğin her şeyi Puma Condens, Lynx Condens ve Gepard Condens kılavuzlarından sırayla topladık. Tuşlar modelden modele değişiyor; kendi kılavuzunla karşılaştır.
