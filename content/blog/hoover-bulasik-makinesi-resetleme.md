@@ -37,13 +37,13 @@ faq:
 images:
   coverAlt: "Bulaşık makinesi kapağının üst kenarındaki düğmeler ve küçük gösterge ışıkları"
   steps:
-    - "Bulaşık makinesi kapağının kenarındaki düğme sırası"
-    - "Panelde sırayla yanıp sönen küçük program ışıkları"
-    - "Açık kapaklı bir bulaşık makinesinin boş deterjan bölmesi"
-    - "Panelde yanan küçük bir saat göstergesi"
-    - "Bulaşık makinesinin dibindeki tuz haznesinin açık kapağı"
-    - "Prizden çekilmiş fiş ve kapağı kapalı bulaşık makinesi"
-    - "Kapalı bir bulaşık makinesi ve önünde katlanmış kullanma kılavuzu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hoover bulaşık makinende yanlış programı başlattın, gecikmeli başlatma kurulu kaldı ya da makine bir hata kodunda takıldı. Çoğu kişi bu durumda "reset" arıyor. Hoover'ın HF 3E53E0W-17 ve HF 6C7F0X-17 modellerine ait Türkçe kullanım kılavuzları sıfırlamayı ayrı bir düğmeyle anlatıyor: çalışan programı iptal etmek, gecikmeli başlatmayı silmek ve tuz göstergesini sıfırlamak için. Bu yazıda bu yolları ve hata kodunda takılırsan ne yapacağını topladık. Kılavuzlar bu iki modele ait; senin makinende düğmenin adı ve yeri farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -47,14 +47,14 @@ faq:
 images:
   coverAlt: "Kış akşamı bir salonda pencere altındaki beyaz petek ve önünde katlı bir battaniye"
   steps:
-    - "Kombi panelinde küçük simgeli bir ekran ve yanında tek bir tuş"
-    - "Kombi panelinde yan yana duran iki küçük ayar tuşu"
-    - "Duvarda asılı sade bir oda kumandası"
-    - "Evin dış duvarında küçük beyaz bir sensör kutusu"
-    - "Duvar önünde beyaz bir petek ve ucundaki küçük vana"
-    - "Kombinin ön panelinde ibreli yuvarlak bir basınç göstergesi"
-    - "Kombi panelinde diğerlerinden ayrı duran yuvarlak bir tuş"
-    - "Tezgâhta duran bir telefon ve yanında katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hava soğudu, kombiyi açtın ama petekler soğuk ya da ancak ılık. Immergas'ın Victrix Tera 28 1 - 32 1 kılavuzunda "ısıtmıyor" diye ayrı bir arıza satırı yok. Kullanıcıya bıraktığı kontroller şunlar: kombinin modu, ısıtma ayarı, bağlıysa kumanda ve dış sensör, basınç ve ekrandaki kodlar. Petek vanaları için Immergas Türkiye'nin kod sayfasındaki talimatları kullandık. Kılavuzun Türkçesine ulaşamadık; alıntıları Macarca sürümden biz çevirdik. Senin modelin farklıysa kendi kılavuzunla karşılaştır.

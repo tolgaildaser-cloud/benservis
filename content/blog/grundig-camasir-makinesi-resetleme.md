@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhının altına yerleştirilmiş beyaz, ön yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Çamaşır makinesi kumanda panelinde yuvarlak başlat ve bekle tuşu"
-    - "Çamaşır makinesinin büyük, yuvarlak program seçim düğmesi"
-    - "Çamaşır makinesinin alt köşesinde kapalı duran pompa filtresi kapağı"
-    - "Kapalı cam yükleme kapağı ve yanındaki gri kapak kolu"
-    - "Açık deterjan çekmecesi ve yanında bir ölçü kabı"
-    - "Çamaşır makinesinin üstünde katlanmış duran bir kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yarıda kaldı, tuşlar tepki vermiyor ya da yanlış programı başlattın; çözüm olarak "resetleme" aranıyor. Grundig'in çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok.** Karşılığı programı iptal etmek; GWM 4701 Y kılavuzunun sorun giderme tablosu bu işi açıkça **"makineyi fabrika ayarlarına getirmek"** diye anlatıyor. Bu yazıda iki Grundig kılavuzundan, Başla / Bekle / İptal tuşuyla çalışan GWM 4701 Y ile program seçim düğmesiyle iptal edilen GWM 9701 Y'den, doğru sıfırlama yolunu sıraladık. Kendi modelinin tuş yerleri için kılavuzuna bak.

@@ -46,14 +46,14 @@ faq:
 images:
   coverAlt: "Mutfak köşesinde üstünde damacana takılı, ön paneli temiz beyaz bir su sebili"
   steps:
-    - "Duvar prizinden çekilmiş bir su sebili fişi"
-    - "Sebilin musluklarının altından çıkarılmış damlalık kabı"
-    - "Bir kase ılık su, bir kaşık karbonat ve yumuşak bir sünger"
-    - "İyice sıkılmış bir bezle silinen su sebilinin ön paneli"
-    - "Sebilin arka alt kısmındaki drenaj kapağının altına konmuş boş bir kova"
-    - "Kuru bir bezle kurulanan su sebili gövdesi"
-    - "Sebilin üst haznesine oturtulmuş dolu bir damacana"
-    - "Bakım için hazırlanmış, fişi çekili bir su sebili"
+    - "Çizim: solda su sebili, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda su sebili, sağda su giriş musluğu"
+    - "Çizim: solda su sebili, sağda ilgili filtre"
+    - "Çizim: solda su sebili, sağda temizleme bezi"
+    - "Çizim: solda su sebili, sağda su giriş musluğu"
+    - "Çizim: solda su sebili, sağda temizleme bezi"
+    - "Çizim: solda su sebili, sağda prizden çekilen fiş"
+    - "Çizim: solda su sebili, sağda su ya da toz haznesi"
 ---
 
 Su sebili her gün su verdiği için dışı kolay kirlenir, musluk altındaki damlalık dolar, içerideki su da uzun süre beklerse kokabilir. Kiwi'nin su sebili kılavuzları temizliği iki parçaya ayırıyor: **dış yüzey ve damlalık senin işin, tankların iç hijyeni ise üç ayda bir yetkili servisin işi.** Bu yazı Kiwi'nin **KWP-8575, KWP-8576, KWP-8556M, KWP-8554 ve KWP-8571** Türkçe kılavuzlarındaki temizlik ve bakım maddelerini sırayla topluyor. Kiwi'nin en sert uyarısı da burada: temizlikte **buhar kullanma, cihaza doğrudan su sıkma.**

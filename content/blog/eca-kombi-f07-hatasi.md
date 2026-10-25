@@ -48,12 +48,12 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve üstünden duvara giren baca borusu"
   steps:
-    - "Ardına kadar açık bir pencere ve boş, sakin bir mutfak"
-    - "Kombi ekranında yanıp sönen kısa bir uyarı yazısı"
-    - "Kombi panelinde diğerlerinden ayrı duran yuvarlak bir tuş"
-    - "Duvarın üst kısmında açık bırakılmış bir havalandırma menfezi"
-    - "Kombinin yanında tezgâhta duran kapalı bir telefon ve katlanmış bir kılavuz"
-    - "Mutfak tezgâhında duran küçük bir defter ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Kombi ekranında F07 yanıp sönüyor, aramalarda çoğu zaman başındaki sıfır olmadan F7 diye yazılıyor. ECA'nın Proteus Premix, Confeo Premix ve Citius Premix kullanma kılavuzlarında bu kodun anlamı aynı: **baca gazı sıcaklığı 95 °C'yi aştı.** Üç kılavuz da bu kod için kullanıcıya tek bir iş bırakıyor ve o iş bir tuş değil, bir telefon. Bu yazıda F07'nin ne demek olduğunu, neden resetle gitmediğini, tekrar ederse hangi kodun geleceğini ve nerede durman gerektiğini bu üç kılavuzdan topladık. Senin kombin başka bir ECA ailesindense kendi kılavuzunla karşılaştır.

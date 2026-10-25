@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Kış sabahı bir balkon duvarına monte edilmiş, üzerinde ince bir buz tabakası olan klima dış ünitesi"
   steps:
-    - "Salon duvarında asılı beyaz bir klima iç ünitesi, kapakları kapalı ve sessiz"
-    - "Sehpanın üzerinde duran beyaz bir klima kumandası"
-    - "Balkonda buz tutmuş bir dış ünitenin yanında duran boş bir su ısıtıcısı ve üzerinde çarpı işareti"
-    - "Soğuk bir günde dış ünitenin üzerinden yükselen ince beyaz buhar"
-    - "Lavabo kenarında kurumaya bırakılmış ince ağlı bir klima hava filtresi"
-    - "Kapalı bir pencere ve önü boş bırakılmış duvar tipi klima"
-    - "Kapalı bir alet çantası ve yanında katlanmış bir klima kullanma kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış sabahı klima ısıtıyor, sonra birden susuyor. İç üniteden hava gelmiyor, balkona bakınca dış ünitenin üstünde ince bir buz tabakası ve yükselen buhar görüyorsun. Çoğu evde bunun adı **buz çözme**, kılavuzlardaki adıyla **defrost**. Vestel, Daikin, Mitsubishi Electric, Samsung ve Arçelik'in kullanma kılavuzları bu durumu aynı şekilde anlatıyor: bu bir koruma işlemi, arıza değil. Bu yazıda servisi aramadan önce bakılacakları bu beş kılavuzdan topladık. Senin klimanın kılavuzu farklı süreler ya da göstergeler verebilir, kendininkiyle karşılaştır.

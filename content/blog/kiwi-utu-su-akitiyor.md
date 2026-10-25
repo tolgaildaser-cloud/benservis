@@ -46,14 +46,14 @@ faq:
 images:
   coverAlt: "Ütü masasında dik duran bir buharlı ütü ve altında küçük ıslak lekeler olan beyaz bir kumaş"
   steps:
-    - "Prizden çekilmiş fişi ve kablosu ütü masasında duran bir buharlı ütü"
-    - "Dik tutulan ütünün şeffaf su haznesine ölçü kabıyla su dökülmesi"
-    - "Ütünün sapındaki sıcaklık kadranı en yüksek konumda"
-    - "Ütünün üstündeki buhar ayar düğmesi kapalı konumda"
-    - "Ütünün burnundaki su sprey ucu ve sprey düğmesi"
-    - "Ütü masasının ucunda dik konumda soğumaya bırakılmış bir ütü"
-    - "Tezgâhta soğumaya bırakılmış, su haznesi kapalı bir dikey buharlı ütü"
-    - "Kablosu toplanmış bir ütü ve yanında açık duran kullanım kılavuzu"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda ilgili filtre"
 ---
 
 Kiwi ütü ısınıyor ama tabandan buhar yerine su damlıyor, beyaz gömlekte ıslak lekeler kalıyor. Kiwi'nin Türkçe kılavuzları bunun için ayrı bir sorun giderme tablosu vermiyor. Ama kullanım bölümünde **"aksi takdirde ütünüz su akıtabilir"** ve **"aksi takdirde tabandan su kaçabilir"** diye iki ayrı uyarı yazıyor. Bu yazı o uyarıları **KSI-6322, KSI-6347 ve KSI-6317** ütü kılavuzlarından, dikey kullanılan modeller için de **KSI-671 ve KSI-682** kılavuzlarından topluyor.

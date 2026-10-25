@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Kumaş kaplı bir koltuğun yanında duran kompakt bir koltuk ve halı yıkama makinesi ve hortumuna bağlı fırça başlığı"
   steps:
-    - "Koltuk yıkama makinesinin çıkarılmış temiz su deposunun musluk altında doldurulması"
-    - "Koltuk yıkama makinesinin gövdesine takılan esnek hortumun ucu"
-    - "Prize takılmış fiş ve makinenin üstündeki güç düğmesi"
-    - "Koltuk minderine fırçalı başlıktan ince su püskürtülmesi"
-    - "Kumaş minder üzerinde ileri geri gezdirilen küçük fırçalı başlık"
-    - "Minderin üzerine bastırılmış emme ağzının içinden geçen kirli su"
-    - "MAX çizgisine kadar dolmuş şeffaf kirli su deposu"
-    - "Boşaltılıp durulanmış kirli su deposu ve gövdeye sarılmış hortum"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda temizlik fırçası"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda temizlik fırçası"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin koltuk ve halı yıkama makineleri aynı mantıkla çalışıyor: temiz su deposundaki su kumaşa püskürtülür, fırçayla ovulur ve emme ağzından kirli su deposuna çekilir. Modelden modele değişen şey düğmelerin yeri ve hortumun takılış biçimi. Bu yazı Kiwi'nin **KCC-4316**, **KCC-4318**, **KCC-4320** ve **KCC-4325W** koltuk ve halı yıkama kılavuzlarına, bir de dik tip **KCC-4370** halı yıkama kılavuzuna dayanıyor. Buhar modlu modeller için ayrı bir yazımız var.

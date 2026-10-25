@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Modern bir çamaşır odasında beyaz, önden yüklemeli bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi kumanda panelinde yanan küçük bir kilit simgesi"
-    - "Çamaşır makinesinin döner program seçme düğmesinin yakın planı"
-    - "Kumanda paneli sönmüş, kapalı duran bir çamaşır makinesi"
-    - "Dijital ekranında yazı görünen bir çamaşır makinesi kumanda paneli"
-    - "Kumanda panelinde yan yana yanıp sönen gösterge lambaları"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Kapatılmış bir su musluğu ve ona bağlı beyaz su giriş hortumu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program yanlış seçildi, ekranda F ile başlayan bir kod belirdi ya da tuşlar artık tepki vermiyor; akla ilk gelen "makineyi resetlemek". Hotpoint'in belge portalında RSG 845 J TK modeli için yayımlanan Türkçe kullanma talimatında **Reset adında ayrı bir tuş yok.** Kılavuz bunun yerine dört işlem anlatıyor: **programı duraklatıp değiştirmek, iptal için tuşu basılı tutmak, gecikmeli başlatmayı kaldırmak** ve hata kodu çıktığında **fişi çekip yaklaşık 1 dakika sonra yeniden açmak.** Tuş adları ve yerleri modele göre değişebilir; kendi kılavuzunla karşılaştır.

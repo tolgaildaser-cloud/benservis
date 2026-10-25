@@ -45,14 +45,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında tabanına oturtulmuş paslanmaz çelik bir su ısıtıcı ve yanında bir kupa"
   steps:
-    - "Güç tabanına oturtulmuş bir su ısıtıcının alt kısmının yakın planı"
-    - "Musluktan su doldurulan, tabanından ayrılmış bir su ısıtıcı"
-    - "Su ısıtıcının sapının altında yanan açma kapama düğmesi"
-    - "Kaynamış suyun buharı yükselen bir su ısıtıcının ağzı"
-    - "Tezgâhta tabanından kaldırılmış, içine soğuk su konmuş bir su ısıtıcı"
-    - "Dijital ekranlı bir barista su ısıtıcısının kontrol tabanı"
-    - "İçinde kireç çözücü çözeltisi bulunan açık kapaklı bir su ısıtıcı"
-    - "Tezgâhta duran su ısıtıcı ve yanında telefon ile kullanım kılavuzu"
+    - "Çizim: solda su ısıtıcı (kettle), sağda prizden çekilen fiş"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda su ısıtıcı (kettle), sağda panel ekranındaki uyarı"
+    - "Çizim: solda su ısıtıcı (kettle), sağda bekleme süresi için saat"
+    - "Çizim: solda su ısıtıcı (kettle), sağda prizden çekilen fiş"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda su ısıtıcı (kettle), sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda su ısıtıcı (kettle), sağda telefon ve kullanım kılavuzu"
 ---
 
 Kiwi kettle'ın düğmesine basıyorsun ama hiç açılmıyor, bastığın an geri atıyor ya da su kaynamadan kapanıyor. Arama önerilerinde de "kiwi kettle açma kapama düğmesi" ve "tamiri" birlikte geçiyor. Kiwi'nin su ısıtıcı kılavuzları düğmenin ne zaman kendiliğinden kapandığını açıkça yazıyor; bu kapanmaların çoğu arıza değil, güvenlik özelliği. Bu yazı **KK-3330 ailesi (KK-3328, KK-3331, KK-3334, KK-3340, KKT-33), KK-3304, KK-3350 ve KK-3361** Türkçe kılavuzlarına dayanıyor.

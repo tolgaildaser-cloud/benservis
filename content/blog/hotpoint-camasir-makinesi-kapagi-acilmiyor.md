@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Önden yüklemeli beyaz bir çamaşır makinesinin kapalı yuvarlak cam kapağı"
   steps:
-    - "Çamaşır makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Çamaşır makinesi kumanda panelinde başlat ve durdur tuşunun yakın planı"
-    - "Cam kapağın ardında yarısına kadar suyla dolu bir tambur"
-    - "Lavabo kenarına uzanan gri bir tahliye hortumu"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Çamaşır makinesinin alt ön kısmında çıkarılmış bir panel ve önünde sığ bir kap"
-    - "Kapalı duran bir çamaşır makinesi kapağının tutamak bölgesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Çevrim bitti ama kapak açılmıyor, ya da elektrik kesildi ve çamaşırlar içeride kaldı. Hotpoint çamaşır makinelerinde kapak, ekrandaki **KAPAK KİLİTLİ** sembolüyle gösterilen bir kilitle kapanır. Hotpoint'in belge portalında RSG 845 J TK modeli için yayımlanan Türkçe kılavuz üç durumu ayırıyor: **çevrim bitti ve sembolün sönmesi bekleniyor, çevrim sürüyor ve önce duraklatman gerekiyor,** ya da **elektrik kesildi ve kapağı elle açmak gerekiyor.** Bu yazı bu sırayı izliyor. Kendi modelinin kılavuzuyla karşılaştır.

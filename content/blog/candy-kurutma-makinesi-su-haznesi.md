@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Kurutma makinesinin üst kısmındaki çekmece biçimli su haznesi ve kontrol paneli"
   steps:
-    - "Kurutma makinesinin kontrol panelinde yanan küçük bir su damlası göstergesi"
-    - "Kurutma makinesinin ön yüzünde iki olası hazne yeri: üstte çekmece, altta süpürgelik kapağı"
-    - "Kurutma makinesinden tutamağından yarıya kadar çekilmiş plastik bir su haznesi"
-    - "Lavaboya doğru eğilmiş bir su haznesinin ağzından akan su"
-    - "Kurutma makinesinin alt ön kısmından çıkarılmış süpürgelik kapağı ve görünen hazne tutamağı"
-    - "Üst kapağı açık, boşaltılmış dikdörtgen bir su haznesi"
-    - "Kurutma makinesinin kontrol panelinde yuvarlak bir başlat tuşu"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Candy kurutma makinesi kurutmanın ortasında durdu ve paneldeki su haznesi ışığı yanıyor. Ya da ekranda haznenin boşaltılması gerektiğini söyleyen bir mesaj var. Candy'nin kullanım kılavuzuna göre makine, çamaşırdan çektiği suyu bir haznede topluyor ve hazne dolunca boşaltılması **gerekiyor**. Candy'nin Türkçe bir sitesi olmadığı için bu yazıda Candy'nin İngiltere sitesindeki kılavuz sayfasından indirdiğimiz Smart Pro serisi kurutma makinesi kılavuzunun İngilizce baskısını kullandık; alıntılar bizim çevirimiz. Haznenin yeri modele göre değişiyor; kendi kılavuzunla karşılaştır.

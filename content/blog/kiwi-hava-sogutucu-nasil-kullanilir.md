@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Oturma odasında, ön ızgarası açık, uzun gövdeli beyaz bir evaporatif hava soğutucu"
   steps:
-    - "Gölgede, düz parke zeminde duran uzun gövdeli bir hava soğutucu"
-    - "Hava soğutucunun üst kapağı açılmış su haznesine sürahiden dökülen su"
-    - "Hava soğutucunun ön kanatlarının açık hâli ve üstteki kontrol paneli"
-    - "Hava soğutucunun yan tarafındaki su seviye penceresi"
-    - "Kanatları yana dönmüş bir hava soğutucunun önden görünümü"
-    - "Lavabonun yanında kurumaya bırakılmış ince bir hava filtresi"
-    - "Tezgâhta yıkanmış boş bir su deposu ve yanında küçük bir su pompası"
+    - "Çizim: solda hava soğutucu, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda hava soğutucu, sağda su ya da toz haznesi"
+    - "Çizim: solda hava soğutucu, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda hava soğutucu, sağda bekleme süresi için saat"
+    - "Çizim: solda hava soğutucu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda hava soğutucu, sağda prizden çekilen fiş"
+    - "Çizim: solda hava soğutucu, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kiwi'nin evaporatif hava soğutucusunda soğutma düğmesi, içindeki su deposuyla birlikte çalışıyor; kılavuz soğutma modunda depoda hep su bulunmasını istiyor. Bu yüzden "nasıl kullanılır" sorusunun yarısı suyla ilgili: depo nereden dolar, ne kadar dolar, buz ya da soğutma elemanı konur mu. Kiwi'nin KFAN-7494, KFAN-7495 ve KFAN-7497 kılavuzları bunları aynı sırayla anlatıyor, masaüstü boyutundaki USB'li KFAN-7613'ün kılavuzu da kısa bir tarif veriyor. Aşağıdaki adımlar bu dört kılavuzdan.

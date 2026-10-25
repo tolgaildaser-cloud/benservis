@@ -47,14 +47,14 @@ faq:
 images:
   coverAlt: "Askıda asılı açık mavi bir gömlek ve yanında dik tutulan beyaz bir buharlı kırışık giderici"
   steps:
-    - "Cihazdan çıkarılmış şeffaf su haznesine ölçü kabından su dökülmesi"
-    - "Buhar başlığına takılmış kumaş fırçası aparatı"
-    - "Prize takılı kırışık gidericinin gövdesindeki gösterge ışığı"
-    - "Askıdaki gömleğe dik konumda buhar veren kırışık giderici"
-    - "İpek bir bluzun üzerine serilmiş ince pamuklu bez ve arkasında buhar"
-    - "Tezgâhta duran kırışık gidericinin yanında yeniden doldurulmuş su haznesi"
-    - "Tezgâhta dik konumda soğumaya bırakılmış kırışık giderici"
-    - "Kuru temiz bir bezle silinen kırışık giderici gövdesi"
+    - "Çizim: solda kırışık giderici, sağda prizden çekilen fiş"
+    - "Çizim: solda kırışık giderici, sağda temizlik fırçası"
+    - "Çizim: solda kırışık giderici, sağda prizden çekilen fiş"
+    - "Çizim: solda kırışık giderici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kırışık giderici, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda kırışık giderici, sağda prizden çekilen fiş"
+    - "Çizim: solda kırışık giderici, sağda prizden çekilen fiş"
+    - "Çizim: solda kırışık giderici, sağda temizleme bezi"
 ---
 
 Kiwi'nin buharlı kırışık gidericisi ütü masası kurmadan askıdaki gömleği, ceketi ya da perdeyi düzeltmek için var. İlk kullanımda en çok sorulan şeyler suyun nereye konduğu, cihazın ne zaman hazır olduğu ve hassas kumaşa ne kadar yaklaşılacağı. Bu yazı Kiwi'nin **KSI-650 (kılavuzda KSI-6450), KSI-671, KSI-660, KSI-6490 ve KSI-646** Türkçe kılavuzlarına dayanıyor. Modeller arasında düğme düzeni değişiyor; temel kural hepsinde aynı: **cihaz dik tutulur, hazne boşken çalıştırılmaz.**

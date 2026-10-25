@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında üst üste duran cam demlikli bir çay makinesi ve yanında bir şişe beyaz sirke"
   steps:
-    - "Prizden çekilmiş fişi tezgâhta duran bir çay makinesi"
-    - "Su ısıtıcının üzerinden alınmış cam demlik ve çıkarılmış metal çay filtresi"
-    - "Çay makinesinin su ısıtıcısına fincandan dökülen beyaz sirke"
-    - "Kapağı kapalı, içinde sirke karışımı bekleyen bir su ısıtıcı"
-    - "Lavabonun üzerinde boşaltılan, içi parlayan bir su ısıtıcı"
-    - "Nemli bir bezle silinen paslanmaz çelik su ısıtıcı ağzı"
-    - "Bulaşık makinesinin üst rafında duran metal çay filtresi"
-    - "Tezgâhta duran çay makinesi ve yanında telefon ile kullanım kılavuzu"
+    - "Çizim: solda çay makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda çay makinesi, sağda ilgili filtre"
+    - "Çizim: solda çay makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda çay makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda çay makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda çay makinesi, sağda temizleme bezi"
+    - "Çizim: solda çay makinesi, sağda ilgili filtre"
+    - "Çizim: solda çay makinesi, sağda kireç çözücü şişesi"
 ---
 
 Kiwi çay makinesinin su ısıtıcısının dibinde beyaz bir katman oluştuysa ya da su artık eskisi gibi kaynamıyorsa sorun büyük ihtimalle kireçtir. Kiwi'nin çay makinesi kılavuzları bunun bir belirtisini açıkça yazıyor: **"Cihaz kaynama noktasına ulaşmadan otomatik olarak kapanıyorsa, kireçten temizlenmesi gerektiğini gösterir."** Bu yazı Kiwi'nin **KTM-2921, KTM-2919 ve KTM-2907** Türkçe kılavuzlarındaki kireç ve temizlik tariflerini bir araya getiriyor. Kiwi'nin seçtiği malzeme belli: **beyaz sirke.** Semaver modellerinde ayrı bir tarif olmadığını aşağıda ayrıca not ettik.

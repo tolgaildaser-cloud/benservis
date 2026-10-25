@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında çelik su ısıtıcılı ve cam demlikli bir çay makinesi, arkada fayans duvar"
   steps:
-    - "Mutfak tezgâhının üstündeki duvar prizine takılı bir fiş"
-    - "Çay makinesinin su ısıtıcısındaki su seviyesi göstergesi"
-    - "Lavabo musluğundan soğuk suyla doldurulan bir çay makinesi su ısıtıcısı"
-    - "Çay makinesinin altlığına oturtulmuş su ısıtıcı ve güç tabanının yakın planı"
-    - "Çay makinesi su ısıtıcısının sapının altındaki açma kapama tuşu"
-    - "Dijital çay makinesinin dokunmatik kontrol paneli"
-    - "Tezgâhta bir şişe beyaz sirke ve kapağı açık bir su ısıtıcı"
-    - "Tezgâhta duran çay makinesi, yanında telefon ve kullanım kılavuzu"
+    - "Çizim: solda çay makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda çay makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda çay makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda çay makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda çay makinesi, sağda kapak"
+    - "Çizim: solda çay makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda çay makinesi, sağda temizleme bezi"
+    - "Çizim: solda çay makinesi, sağda prizden çekilen fiş"
 ---
 
 Sabah çayı için Kiwi çay makinesini çalıştırdın ama su ısınmıyor, ısınıp kaynamadan kapanıyor ya da bir kez kaynatıp tekrar çalışmıyor. Kiwi'nin çay makinesi kılavuzları bu belirtilerin çoğunu kullanım bölümünde tek tek açıklıyor: az su, açık kapak, sıkışmış tuş, susuz çalışma koruması ve kireç. Bu yazı **KTM-2907 ailesi (KTM-2908, KTM-2910, KTM-2911, KTM-2930 semaver dahil), KTM-2919 ve KTM-2921** Türkçe kılavuzlarına dayanıyor.

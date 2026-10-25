@@ -42,14 +42,14 @@ faq:
 images:
   coverAlt: "Banyoda duran beyaz bir önden yüklemeli çamaşır makinesinin dijital ekranlı kontrol paneli"
   steps:
-    - "Çamaşır makinesinin ekranında harf ve kod beliren yakın plan"
-    - "Açık duran bir çamaşır makinesi kapağı ve lastik contanın kenarı"
-    - "Duvardaki açık bir su musluğu ve ona bağlı düz uzanan giriş hortumu"
-    - "Fişi çekilmiş bir çamaşır makinesi kablosu"
-    - "Makinenin alt önündeki açık servis kapağı, önünde düz bir kap ve çıkarılmış pompa filtresi"
-    - "Tamburun içinde düzgünce dağıtılmış birkaç çamaşır"
-    - "Çamaşır makinesinin kontrol panelinde yan yana iki dokunmatik düğme"
-    - "Kapalı bir çamaşır makinesi ve üzerinde katlanmış kullanma kılavuzu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Yıkama yarıda kaldı, ekranda **E4**, **E5** ya da **CLR FLTR** yazıyor. Haier çamaşır makinelerinde bu kodlar makinenin hangi aşamada takıldığını söylüyor ve bir kısmı evde birkaç dakikada çözülüyor. Haier'in HW80, HW90 ve HW100 B14939S8 modelleri için hazırladığı kullanım kılavuzu, arıza giderme bölümünde ekran kodlarını tek tek listeliyor ve hangisinde ne yapılacağını yazıyor. Bu yazıda o tabloyu ve pompa filtresi temizliğini sırayla topladık. Senin modelinin kod listesi farklı olabilir, kendi kılavuzunla karşılaştır.

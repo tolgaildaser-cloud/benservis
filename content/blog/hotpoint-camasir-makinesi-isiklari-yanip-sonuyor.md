@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Loş bir banyoda gösterge ışıkları yanan beyaz bir çamaşır makinesi"
   steps:
-    - "Çamaşır makinesi kumanda panelinde yan yana dizilmiş gösterge lambaları"
-    - "Kumanda panelinde yavaşça yanıp sönen bir başlat lambası"
-    - "Kumanda panelinde yanıp sönen turuncu bir başlat lambası"
-    - "Çamaşır makinesi kumanda panelindeki seçenek tuşlarının yakın planı"
-    - "Duvardaki su musluğuna bağlı beyaz bir su giriş hortumu"
-    - "Prizden çekilmiş bir çamaşır makinesi fişi ve boş priz"
-    - "Çamaşır makinesi kapağının iç kenarındaki ürün etiketi bölgesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda not defteri ve kalem"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hotpoint çamaşır makinesinde bir lambanın yanıp sönmesi çoğu zaman makinenin sana bir şey sorduğu anlamına gelir, arıza değil. Hotpoint'in belge portalında RSG 845 J TK modeli için yayımlanan Türkçe kılavuzda yanıp sönen ışığın beş ayrı anlamı var: **makine açık ve çevrim bekliyor, çevrim duraklatılmış, seçtiğin seçenek uyumsuz, makine su alamıyor** ya da **hata kodu.** Hangisi olduğunu lambanın rengi, hızı ve ekrandaki yazı söyler. Bu yazı bu ayrımı kılavuzdan çıkarıyor.

@@ -39,14 +39,14 @@ faq:
 images:
   coverAlt: "Bir pencere camının iç yüzüne tutunmuş kare biçimli bir cam silme robotu ve ona bağlı güvenlik ipi"
   steps:
-    - "Masada şarj adaptörüne bağlı, kapalı duran bir cam silme robotu"
-    - "Robota takılı güvenlik ipinin iç mekândaki ağır bir mobilyanın ayağına bağlanmış ucu"
-    - "Robotun alt yüzüne takılmış temiz mikrofiber temizlik pedi"
-    - "Robotun su doldurma girişine küçük bir şişeyle temiz su dökülmesi"
-    - "Prize takılı adaptör ve robota giden güç kablosu"
-    - "Pencere camına yeni yerleştirilmiş, camda sabit duran cam silme robotu"
-    - "Camın üst bölümünde yatay ilerleyen robot ve arkasında temizlenmiş bir şerit"
-    - "Leğende yıkanmayı bekleyen mikrofiber pedler ve yanında kapalı robot"
+    - "Çizim: solda cam silme robotu, sağda şarj edilen batarya"
+    - "Çizim: solda cam silme robotu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda cam silme robotu, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda cam silme robotu, sağda deterjan bölmesi"
+    - "Çizim: solda cam silme robotu, sağda prizden çekilen fiş"
+    - "Çizim: solda cam silme robotu, sağda bekleme süresi için saat"
+    - "Çizim: solda cam silme robotu, sağda uzaktan kumanda"
+    - "Çizim: solda cam silme robotu, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Kiwi'nin pencere temizleme robotu camda vakumla tutunur ve kendi rotasında siler, ama doğru hazırlanmazsa ya tutunamaz ya da düşme riski doğar. Bu yazı Kiwi'nin **KWC-7131** ve **KWC-7140** kullanım kılavuzlarına dayanıyor: şarj, güvenlik ipi, ped ve su haznesi, cama yerleştirme, temizlik modları ve LED uyarıları. İki model büyük ölçüde aynı çalışıyor; ayrıldıkları yerleri ayrıca belirttik.

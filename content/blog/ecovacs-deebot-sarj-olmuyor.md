@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Duvar dibindeki şarj istasyonuna yanaşmış yuvarlak bir robot süpürge"
   steps:
-    - "Üst kapağı açık bir robot süpürgenin güç anahtarı bölümü"
-    - "Şarj istasyonuna geri yanaşan robot süpürge"
-    - "Şarj istasyonunun arkasına takılı güç kablosu ve duvardaki priz"
-    - "Robot süpürgenin altındaki metal şarj bağlantılarının kuru bezle silinmesi"
-    - "Duvara dayalı şarj istasyonu ve önünde boş bırakılmış zemin"
-    - "Robot süpürgeden çıkarılmış su deposu ve paspas levhası"
-    - "Şarj istasyonunda duran robot süpürgenin yanan gösterge düğmesi"
+    - "Çizim: solda robot süpürge, sağda kapak"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda prizden çekilen fiş"
+    - "Çizim: solda robot süpürge, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
 ---
 
 Robot temizliği bitirdi, istasyona döndü ama sabah yerinden kalkmıyor; uygulamada pil boş görünüyor. Ecovacs'ın Türkçe kullanım kılavuzlarında bu belirtinin karşılığı sorun giderme tablosunun ilk satırı: **"DEEBOT şarj olmuyor."** Tablo beş neden sayıyor ve dördü kullanıcının elinde. Bu yazı Ecovacs'ın **DEEBOT N8**, **N8 PRO**, **N10** ve **T9** Türkçe kılavuzlarına ve Ecovacs Türkiye destek sayfasındaki N8 sorularına dayanıyor.

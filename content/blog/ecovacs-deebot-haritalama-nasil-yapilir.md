@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Kapıları açık bir evin koridorunda ilerleyen yuvarlak robot süpürge"
   steps:
-    - "Şarj istasyonunda bekleyen ve üst yüzü temiz bir robot süpürge"
-    - "Kabloları ve terlikleri toplanmış, sandalyeleri masaya yanaştırılmış bir oda"
-    - "Ardına kadar açılmış iki oda kapısı ve aradaki koridor"
-    - "Telefon ekranında robot süpürge uygulamasının başlat sayfası"
-    - "Odanın ortasında kendi başına ilerleyen robot süpürge"
-    - "Turunu bitirip şarj istasyonuna geri dönen robot süpürge"
-    - "Telefon ekranında robot süpürge uygulamasının harita yönetimi sayfası"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda anten girişi ve kablo"
+    - "Çizim: solda robot süpürge, sağda kapak"
+    - "Çizim: solda robot süpürge, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda robot süpürge, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
 Yeni bir Deebot aldın; uygulamada oda oda temizlik, sanal sınır ve çizgi çizgi bir ev planı görmek istiyorsun ama harita yarım kaldı ya da hiç çıkmadı. Ecovacs'ın Türkçe destek sayfası ilk haritanın üç koşula bağlı olduğunu yazıyor: robot **istasyondan başlayacak**, turu **kendi başına bitirecek** ve **istasyona kendisi dönecek**. Bu yazı Ecovacs'ın **DEEBOT N8**, **N10** ve **X1 OMNI** Türkçe kılavuzlarına ve Ecovacs Türkiye destek sayfasındaki N8 harita sorularına dayanıyor. Uygulamadaki menü adları modele göre değişebilir.

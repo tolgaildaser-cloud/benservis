@@ -49,14 +49,14 @@ faq:
 images:
   coverAlt: "Banyo lavabosunda açık duran bir musluk ve duvarda asılı beyaz bir kombi"
   steps:
-    - "Pencereleri açık, sakin ve boş bir mutfak"
-    - "Ekranı karanlık duran beyaz bir kombinin yakın planı"
-    - "Kombi kumanda panelinde yan yana dizili sade tuşlar"
-    - "Kombi panelinde yuvarlak bir ayar düğmesi"
-    - "Banyo lavabosunda buhar yükselen açık bir musluk"
-    - "Salon duvarında asılı, sade, beyaz bir oda termostatı"
-    - "Kombinin altında borular arasında duran küçük bir kesme vanası"
-    - "Kombinin yanında tezgâhta duran kapalı bir alet çantası ve katlanmış bir kullanma kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda duvardaki oda termostatı"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Petekler ısınıyor, ama musluktan sıcak su gelmiyor. Ya da kombi açık görünüyor, banyoda su hep soğuk. DemirDöküm'ün Nitromix, ademiX, vintomiX ve Atron Condense kullanma kılavuzlarında bu durumun ayrı bir satırı yok; ama dördü de sıcak su ayarını, çalışma konumlarını ve arıza tablosunu aynı mantıkla anlatıyor. Aşağıda servisi çağırmadan önce evde bakabileceğin her şeyi bu kılavuzlardan sırayla topladık. Tuş düzeni modele göre değişir; kendi kılavuzunla karşılaştır.

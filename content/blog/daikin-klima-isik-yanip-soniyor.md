@@ -40,13 +40,13 @@ faq:
 images:
   coverAlt: "Salon duvarında asılı beyaz bir duvar klimasının ön yüzü ve küçük gösterge lambaları"
   steps:
-    - "Duvar klimasının ön panelinde yan yana dizilmiş küçük gösterge lambaları"
-    - "Koridorun iki ucundaki odalarda duvara asılı iki ayrı klima iç ünitesi"
-    - "Banyo lavabosunda durulanmış ince ağlı iki klima hava filtresi"
-    - "Önündeki perdesi yana çekilmiş, havası serbestçe çıkan bir duvar kliması"
-    - "Koridordaki sigorta kutusunun kapağı açık hâlde, şalterler sıra sıra"
-    - "Sehpanın üzerinde ekranı aydınlanmış beyaz bir klima kumandası"
-    - "Kapalı bir alet çantası ve yanında katlanmış bir klima kullanma kılavuzu"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Daikin klima birden durdu, ön paneldeki lamba yanıp sönmeye başladı. Kumandaya basıyorsun, bir şey değişmiyor. Daikin'in FTXM-M serisi kullanım kılavuzu bu belirtiyi sorun giderme tablosunda ayrı bir satır olarak ele alıyor ve sıralı bir kontrol listesi veriyor. Ayrıca çok odalı sistemlerde lambanın arıza olmadan da yanıp sönebileceğini yazıyor. Bu yazıda servisi aramadan önce evde bakabileceklerini bu kılavuzdan topladık. Kılavuz FTXM-M serisine ait; senin modelinde lamba ve düğme yerleri farklı olabilir, kendi kılavuzunla karşılaştır.

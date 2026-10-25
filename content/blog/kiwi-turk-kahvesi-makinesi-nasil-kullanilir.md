@@ -46,14 +46,14 @@ faq:
 images:
   coverAlt: "Tezgâhta duran elektrikli bir Türk kahvesi makinesi ve yanında köpüklü kahveyle dolu iki fincan"
   steps:
-    - "İçinde yalnız su kaynayan elektrikli bir Türk kahvesi makinesi"
-    - "Kulbu tezgâha dönük, kapalı konumda duran bir Türk kahvesi makinesi"
-    - "Bir kahve fincanından makinenin haznesine dökülen soğuk su"
-    - "Tatlı kaşığında tepeleme Türk kahvesi ve yanında küp şekerler"
-    - "Makinenin haznesindeki kahvenin tahta bir kaşıkla karıştırılması"
-    - "Fincanlara paylaştırılmış ince kahve köpüğü"
-    - "İkinci kez kabaran kahvenin fincanlara dökülmesi"
-    - "Lavabonun yanında soğumaya bırakılmış ve nemli bezle silinmiş kahve makinesi"
+    - "Çizim: solda Türk kahvesi makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda Türk kahvesi makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda Türk kahvesi makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda Türk kahvesi makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda Türk kahvesi makinesi, sağda prizden çekilen fiş"
 ---
 
 Kiwi'nin elektrikli Türk kahvesi makinesi aslında prize takılan bir cezve: kahveyi ocakta pişirir gibi pişiriyorsun, ama ısıyı makine veriyor. Bu yüzden köpüğü tutturmak da taşırmamak da biraz senin dikkatine kalıyor. Kiwi'nin kılavuzu bunun için kısa ve net bir sıra veriyor. Bu yazı **KCM-7512, KCM-7510, KCM-7513, KCM-7514 ve KCM-7570/7571** Türkçe kılavuzlarına dayanıyor; beşinde de kullanım metni aynı, yalnızca hazne miktarı değişiyor. Model kodu kılavuzun kapağında ve garanti belgesinde yazar.

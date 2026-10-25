@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Mutfak dolabına yerleştirilmiş, döner düğmeli ve küçük ekranlı siyah bir ankastre mikrodalga"
   steps:
-    - "Kapağı yarı açık bir ankastre mikrodalganın boş pişirme bölümü"
-    - "Kapağı kapalı mikrodalganın yanındaki tuş sırasının yakın planı"
-    - "Duvardaki bir sigorta kutusunun kapağı açık hâli"
-    - "Sigorta kutusunda yan yana dizili otomatik sigortalar"
-    - "Mikrodalga ekranının ve altındaki döner düğmenin yakın planı"
-    - "Mikrodalga kumanda panelinde kilit sembollü küçük bir tuş"
-    - "Mikrodalga ekranında küçük bir sembolün göründüğü kumanda bölümü"
-    - "Mikrodalganın kapak içindeki ürün etiketi"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda kapak"
+    - "Çizim: solda mikrodalga fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda mikrodalga fırın, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda mikrodalga fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda mikrodalga fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda mikrodalga fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda mikrodalga fırın, sağda sigorta kutusundaki şalterler"
 ---
 
 Mikrodalga tuşlara tepki vermiyor, ekranda tanımadığın bir sembol duruyor ya da program yarıda kalıp bir daha başlamıyor. Akla gelen ilk çözüm "resetlemek". İncelediğimiz Bosch kılavuzunda, BEL623M ve BEL653M ankastre mikrodalgalarda, **"reset" adında bir tuş yok.** Ama kılavuz sıfırlamanın karşılığı olan adımları ayrı ayrı yazıyor: çalışmayı iptal etmek, **sigortayı yaklaşık 10 saniye kapatıp açmak,** çocuk kilidini ve demo modunu kapatmak, saati yeniden girmek. Bu yazıda bu adımları belirtiye göre sıraladık. Senin modelinde tuş sembolleri farklı olabilir; kendi kılavuzunla karşılaştır.

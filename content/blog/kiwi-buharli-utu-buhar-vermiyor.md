@@ -45,14 +45,14 @@ faq:
 images:
   coverAlt: "Ütü masasının üzerinde dik duran, şeffaf su hazneli bir buharlı ütü ve katlanmış pamuklu bir gömlek"
   steps:
-    - "Ölçü kabından şeffaf su haznesine su doldurulan dik duran bir buharlı ütü"
-    - "Buharlı ütünün sapındaki sıcaklık kontrol kadranının yakın planı"
-    - "Prize takılı buharlı ütünün sapındaki gösterge ışığı"
-    - "Buharlı ütünün üst kısmındaki buhar ayar düğmesi"
-    - "Askıdaki bir gömleğe doğru yükselen buhar bulutu"
-    - "Ütü masasında yatay duran, gösterge ışığı yanıp sönen bir ütü"
-    - "Seramik ütü tabanındaki buhar deliklerinin yakın planı ve yanında pamuklu çubuk"
-    - "Fişi çekilmiş, kablosu toplanmış bir buharlı ütü ve yanında kullanım kılavuzu"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda su ya da toz haznesi"
+    - "Çizim: solda buharlı ütü, sağda bekleme süresi için saat"
+    - "Çizim: solda buharlı ütü, sağda ilgili filtre"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
+    - "Çizim: solda buharlı ütü, sağda prizden çekilen fiş"
 ---
 
 Kiwi buharlı ütün ısınıyor, gömlek de düzleşiyor, ama tabandan buhar gelmiyor. Kiwi'nin Türkçe kullanım kılavuzları bu durumu ayrı bir arıza başlığıyla ele almıyor. Buna karşın buharın hangi koşulda çıktığını ve hangi koşulda bilerek kesildiğini açıkça yazıyor. Bu yazı o koşulları **KSI-6322, KSI-6347, KSI-6357, KSI-6323 ve KSI-6317** kılavuzlarından sırayla topluyor. Kılavuzların en önemli cümlesi şu: buharlı ütüleme **yalnızca en yüksek sıcaklık seçildiğinde** mümkün.

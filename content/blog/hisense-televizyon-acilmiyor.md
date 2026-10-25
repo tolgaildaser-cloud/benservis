@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Oturma odasında sehpa üzerinde duran, ekranı kapalı ince çerçeveli bir televizyon"
   steps:
-    - "Duvar prizinden çekilmiş bir televizyon güç kablosu"
-    - "Duvar prizine doğrudan takılı tek bir güç fişi"
-    - "Televizyon çerçevesinin alt kenarında küçük bir bekleme ışığı"
-    - "Sehpa üzerinde televizyona doğru tutulmuş bir uzaktan kumanda"
-    - "Arka kapağı açılmış uzaktan kumandanın pil yuvası"
-    - "Televizyonun arka panelinde HDMI girişine takılı bir kablo"
-    - "Kapalı bir televizyonun yanında prizden çekilmiş fiş ve masa saati"
-    - "Kapalı televizyonun önünde sehpada duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda panel ekranındaki uyarı"
+    - "Çizim: solda televizyon, sağda uzaktan kumanda"
+    - "Çizim: solda televizyon, sağda kumandanın pilleri"
+    - "Çizim: solda televizyon, sağda anten girişi ve kablo"
+    - "Çizim: solda televizyon, sağda prizden çekilen fiş"
+    - "Çizim: solda televizyon, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hisense televizyonun açılmıyor, ekran kararık kalıyor ya da ses gelip görüntü gelmiyorsa ilk iş kılavuzun sorun giderme tablosu. Bu yazıda Hisense'in Türkçe kullanım kılavuzlarında (E7S serisi ve 55U7SE) açılmama ve görüntü sorunlarıyla ilgili ne varsa sırayla topladık. Model adı televizyonun arkasındaki teknik etikette yazıyor; kendi kılavuzunla karşılaştır.

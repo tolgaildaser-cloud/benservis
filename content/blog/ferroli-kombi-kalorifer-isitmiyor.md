@@ -54,14 +54,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve önünde soğuk görünen beyaz bir panel radyatör"
   steps:
-    - "Duvara asılı beyaz bir kombinin kumanda panelindeki tuşların yakın planı"
-    - "Kombi ekranında tek başına duran bir musluk simgesi"
-    - "Kombinin kumanda panelinde artı ve eksi biçimli sıcaklık tuşları"
-    - "Salon duvarında asılı, ekranı boş, beyaz ve sade bir oda termostatı"
-    - "Kombinin altında borular arasında duran küçük bir doldurma düğmesi"
-    - "Kombi ekranında iki harfli bir mesaj ve yanında bekleyen bir kahve fincanı"
-    - "Kombinin altındaki sarı kollu gaz vanasının yakın planı"
-    - "Duvardaki kombinin yanında tezgâhta duran katlanmış bir kullanma kılavuzu ve bir telefon"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluktan sıcak su geliyor, ama petekler soğuk. Kombi çalışıyor gibi görünüyor, sadece ısıtma yapmıyor. Ferroli'nin Bluehelix Tech C, Bluehelix Trio C ve Leone C kullanım kılavuzlarında "petekler ısınmıyor" diye tek bir satır yok; ama üç kılavuz da kombinin açılıp kapanmasını, yaz/kış ayarını, ısıtma sıcaklığını, basıncı ve arıza kodlarını aynı mantıkla anlatıyor. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi bu üç kılavuzdan sırayla topladık. Senin kombinde tuş süreleri farklı olabilir, kendi kılavuzunla karşılaştır.

@@ -45,14 +45,14 @@ faq:
 images:
   coverAlt: "Mutfakta cam su ısıtıcı sürahisi ve termo demliği olan, alt bölmesinde damacana duran çok işlevli bir su sebili"
   steps:
-    - "Su sebilinin alt bölmesine yerleştirilmiş, başlığı takılı bir damacana"
-    - "Duvardan biraz uzakta, düz bir zeminde duran su sebili ve arkasındaki boşluk"
-    - "Su sebilinin dokunmatik kontrol panelinde yanan gösterge ışıkları"
-    - "Kontrol panelinin dijital saat ekranı"
-    - "Su sebilinin musluğundan bardağa akan soğuk su"
-    - "Su sebilinin üstündeki cam su ısıtıcı sürahinin dolması"
-    - "Termo demliğin filtresine konmuş kuru siyah çay"
-    - "Muslukların altındaki çıkarılmış damlalık kabı"
+    - "Çizim: solda su sebili, sağda su ya da toz haznesi"
+    - "Çizim: solda su sebili, sağda prizden çekilen fiş"
+    - "Çizim: solda su sebili, sağda bekleme süresi için saat"
+    - "Çizim: solda su sebili, sağda bekleme süresi için saat"
+    - "Çizim: solda su sebili, sağda bekleme süresi için saat"
+    - "Çizim: solda su sebili, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda su sebili, sağda ilgili filtre"
+    - "Çizim: solda su sebili, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kiwi'nin **KWP-8571** çok fonksiyonlu su sebili bir damacana sebiliyle bir çay makinesini tek gövdede birleştiriyor. Sağda su ısıtan bir cam sürahi, solda kendiliğinden demleyen bir termo demlik, ortada soğuk ve oda sıcaklığında su var. Düğmelerin çoğu dokunmatik ve bazıları çift dokunuş ya da üç saniye basılı tutma istiyor; ilk günlerde en çok burada takılınıyor. Bu yazı yalnız Kiwi'nin KWP-8571 Türkçe kullanım kılavuzuna dayanıyor. Kiwi'nin ilk güvenlik kuralı şu: **üzerinde damacana yokken ısıtma işlevini çalıştırma.**

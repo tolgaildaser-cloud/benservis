@@ -52,13 +52,13 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombinin kumanda paneli ve küçük ekranı"
   steps:
-    - "Açık duran bir pencere ve önünde boş, sakin bir koridor"
-    - "Kombi ekranında beliren küçük bir uyarı simgesinin yakın planı"
-    - "Kombinin önünde duran yuvarlak kadranlı bir basınç göstergesi"
-    - "Kombinin kumanda panelinde yan yana duran ok biçimli iki tuş"
-    - "Kombinin sade kumanda panelinde tek bir yuvarlak tuşun yakın planı"
-    - "Duvarda sessizce bekleyen beyaz bir kombi ve kapalı mutfak dolapları"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve bir not kâğıdı"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda basınç göstergesi (manometre)"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buderus kombinin ekranında bir kod belirdi ve kombi durdu. Buderus'a göre bu bir güvenlik özelliği: arıza durumunda kombi kendi sistemini kapatır, ekranda da arızanın kaynağına işaret eden bir kod gösterir. Bazı arızalarda kombi resetlenmeden yeniden çalışmaz. Bu yazıda Buderus'un resetleme rehberindeki kuralları ve Logamax plus GB072, GB022i, GB122i.2 ve GB172i.2 kılavuzlarındaki adımları bir araya getirdik.

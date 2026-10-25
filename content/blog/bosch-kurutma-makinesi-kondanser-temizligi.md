@@ -50,14 +50,14 @@ faq:
 images:
   coverAlt: "Çamaşır odasında kapağı açık, önden yüklemeli beyaz bir kurutma makinesi"
   steps:
-    - "Kurutma makinesinin açık kapağının iç kenarında duran iki parçalı ince bir tiftik filtresi"
-    - "Lavabo başında akan suyun altında duran açılmış bir tiftik filtresi"
-    - "Kurutma makinesinin üst köşesinden dışarı çekilmiş, içinde biraz su olan yoğuşma suyu kabı"
-    - "Lavabonun kenarında duran küçük plastik bir süzgeç ve yanında yoğuşma suyu kabı"
-    - "Çalışan bir kurutma makinesinin kumanda panelinde yanan küçük bir gösterge"
-    - "Boş tamburu görünen, kapağı açık bir kurutma makinesi"
-    - "Yatay tutulan yoğuşma suyu kabının içinde ılık su ve yanında bir sürahi"
-    - "Kurutma makinesinin üstünde katlanmış nemli havlular ve yanında bir kullanım kılavuzu"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda su tankı"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda su tankı"
+    - "Çizim: solda kurutma makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 "Kondanser temizliği" diye aradığında çoğu tarif, makinenin altındaki kapağı açıp bir bloğu çıkarmayı ve yıkamayı anlatır. Bosch'un ısı pompalı WTW87460TR, WQG244C1TR ve WTWH8760TR kullanım kılavuzlarında böyle bir kullanıcı adımı yok. Bu modellerde Bosch'un ifadesiyle **ısı eşanjörü otomatik olarak temizlenir**. Senin işin, bu otomatik temizliğin düzgün çalışması için gereken üç parçayı temiz tutmak ve ekran istediğinde bakım programını çalıştırmak. Bu yazıda o sırayı üç kılavuzdan topladık. Tuş adları ve göstergeler modele göre değişiyor; kendi kılavuzunla karşılaştır.

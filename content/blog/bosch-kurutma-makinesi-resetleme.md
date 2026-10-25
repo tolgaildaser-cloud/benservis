@@ -46,14 +46,14 @@ faq:
 images:
   coverAlt: "Çamaşır makinesinin üzerine yerleştirilmiş beyaz bir kurutma makinesi"
   steps:
-    - "Kurutma makinesinin ekranında soğutma uyarısının göründüğü sakin bir kumanda paneli"
-    - "Kurutma makinesi ekranında küçük bir kilit simgesinin yakın planı"
-    - "Kapağı açık bir kurutma makinesi ve yanında sepete alınmış çamaşırlar"
-    - "Kurutma makinesinin çekmece tipi su kabı yarı dışarı çekilmiş hâlde"
-    - "Kurutma makinesinin yuvarlak program seçme düğmesinin yakın planı"
-    - "Prizden çekilmiş bir kurutma makinesi fişi ve boş priz"
-    - "Kurutma makinesi kumanda panelinde kablosuz bağlantı simgesi"
-    - "Kurutma makinesinin üstünde katlanmış duran bir kullanım kılavuzu"
+    - "Çizim: solda kurutma makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda kurutma makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program takıldı, ekranda bir kod var ya da makine bir türlü başlamıyor; ilk akla gelen "kurutma makinesini resetlemek". Bosch'un kurutma makinesi kılavuzlarında **Reset adında ayrı bir tuş yok.** Kılavuzlar bunun yerine şu sırayı veriyor: **programı güvenle iptal etmek, cihazı kapatıp açmak**, kod tekrar ederse **en az 30 saniye güç kaynağından ayırmak.** Wi-Fi'li modelde ayrıca yalnız ağ ayarları sıfırlanabiliyor. Kurutmada bir fark var: yarıda kesilen program **yangın riski** taşıyor. Bu yazıda sırayı üç Bosch kılavuzundan çıkardık: WQG244C1TR, WTW87460TR ve WTWH8760TR. Tuş adları modele göre değişir; kendi kılavuzunla karşılaştır.

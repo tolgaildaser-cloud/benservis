@@ -50,14 +50,14 @@ faq:
 images:
   coverAlt: "Mutfak duvarına asılı beyaz bir kombi ve altında açık duran bir lavabo musluğu"
   steps:
-    - "Açık duran bir pencere ve önünde boş, sakin bir mutfak"
-    - "Duvara asılı beyaz bir kombinin karanlık ekranının yakın planı"
-    - "Kombi ekranında beliren musluk biçimli küçük bir simge"
-    - "Lavabo üzerinde sonuna kadar açılmış, gür akan bir musluk"
-    - "Kombinin kumanda panelinde yukarı ve aşağı ok biçimli sıcaklık düğmeleri"
-    - "Kombinin sade kumanda panelinde tek bir yuvarlak tuşun yakın planı"
-    - "Kombinin önünde duran yuvarlak kadranlı bir basınç göstergesi"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve kapalı bir alet çantası"
+    - "Çizim: solda duvar tipi kombi, sağda açık bir pencere"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda su giriş musluğu"
+    - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi kombi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Musluğu açıyorsun, su akıyor ama ısınmıyor; belki petekler sıcak bile. ECA'nın Proteus Premix, Confeo Premix ve Citius Premix kullanma kılavuzlarında bu belirtinin tek bir satırı yok; ama üç kılavuz da kombinin kullanım suyuna nasıl cevap verdiğini, ekran simgelerini ve sıcak suyu ilgilendiren hata kodlarını aynı mantıkla anlatıyor. Bu yazıda servisi çağırmadan önce evde bakabileceğin her şeyi bu üç kılavuzdan sırayla topladık. Tuş yerleri modele göre değişebilir; kendi kılavuzunla karşılaştır.

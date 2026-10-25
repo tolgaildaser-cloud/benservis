@@ -48,14 +48,14 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında siyah bir yağsız fritöz, öne çekilmiş tavasında altın rengi patates dilimleri"
   steps:
-    - "Lavaboda sabunlu suyla yıkanan bir fritöz tavası ve aşındırıcı olmayan bir sünger"
-    - "Çevresinde boşluk bırakılmış, düz bir tezgâhta duran bir yağsız fritöz"
-    - "Fritöz tavasının dibine yerleştirilmiş delikli çıkarılabilir ızgara"
-    - "İçine patates dilimleri konmuş tavanın fritöze kaydırılması"
-    - "Yağsız fritözün sıcaklık ve süre ayar paneli"
-    - "Fritözden dışarı çekilmiş tavada sallanmış patates dilimleri"
-    - "Ahşap bir nihalenin üzerinde duran sıcak fritöz tavası ve yanında silikon maşa"
-    - "Kurumaya bırakılmış temiz fritöz tavası ve ızgarası"
+    - "Çizim: solda airfryer, sağda deterjan bölmesi"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda su giriş musluğu"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda bekleme süresi için saat"
+    - "Çizim: solda airfryer, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda airfryer, sağda temizleme bezi"
+    - "Çizim: solda airfryer, sağda hava giriş ve çıkış ızgarası"
 ---
 
 Kiwi'nin yağsız fritözünü ilk kez kurduysan ya da her seferinde yemek bir yerinde çiğ kalıyorsa, kılavuzun kısa kullanım bölümünü bir kez düzgünce uygulamak çoğu soruyu çözer. Bu yazı Kiwi'nin **KAF-5536, KAF-5535, KAF-5538 ve KAF-5532** Türkçe kullanım kılavuzlarına dayanıyor. Kiwi'nin en sık tekrarladığı iki kural şunlar: **tavaya yağ doldurma** ve **ızgarayı takmadan çalıştırma.**

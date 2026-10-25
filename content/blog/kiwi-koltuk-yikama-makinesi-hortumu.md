@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Koltuk ve halı yıkama makinesinin gövdesine takılı esnek hortum ve ucundaki fırça başlığı"
   steps:
-    - "Prizden çekilmiş fişin yanında, düz zeminde duran koltuk yıkama makinesi"
-    - "Hortumun ucunun makine gövdesindeki yuvaya takılması"
-    - "Hortumun diğer ucuna takılmış fırça başlığı"
-    - "Makine gövdesinin yanındaki hortum çıkarma düğmesi"
-    - "Hortumun ucuna takılmış kendi kendini temizleme parçası"
-    - "Dik tutulmuş hortumun içinden geçen temiz su"
-    - "Gövdenin etrafına sarılmış hortum ve yanında boşaltılmış kirli su tankı"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda temizlik fırçası"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda temizlik fırçası"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su ya da toz haznesi"
 ---
 
 Kiwi koltuk ve halı yıkama makinelerinde hortum iki işi birden yapar: kolun ya da fırçanın ucundan çekilen kirli su hortumdan geçip kirli su tankına gider. Hortum gövdeye tam oturmazsa makine düzgün çekmez; kullanımdan sonra durulanmazsa içinde kir kalır. Bu yazı hortumun takılması, çıkarılması, durulanması ve saklanmasını Kiwi'nin **KCC-4316**, **KCC-4320**, **KCC-4328**, **KCC-4330**, **KCC-4321** ve **KCC-4332** kılavuzlarından derliyor.

@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Mutfak tezgâhında şeffaf kapaklı küçük bir elektrikli yumurta pişirici ve yanında birkaç yumurta"
   steps:
-    - "Boş bir mutfak tezgâhının ortasında duran yuvarlak gövdeli bir yumurta pişirici"
-    - "Ölçü kabından yumurta pişiricinin metal ısıtma plakasına dökülen soğuk su"
-    - "Ucu sivri küçük bir yumurta delme aletinin yanında duran beyaz bir yumurta"
-    - "Yumurta tepsisinin bölmelerine dizilmiş yumurtalar"
-    - "Kapağı kapalı yumurta pişiricinin gövdesindeki açma kapama düğmesi"
-    - "Soğuk musluk suyu altında tutulan haşlanmış yumurtalar"
-    - "Soğumuş ısıtma plakasını silmek için hazır duran nemli bir bez"
+    - "Çizim: solda yumurta pişirici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda yumurta pişirici, sağda bekleme süresi için saat"
+    - "Çizim: solda yumurta pişirici, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda yumurta pişirici, sağda kapak"
+    - "Çizim: solda yumurta pişirici, sağda prizden çekilen fiş"
+    - "Çizim: solda yumurta pişirici, sağda bekleme süresi için saat"
+    - "Çizim: solda yumurta pişirici, sağda prizden çekilen fiş"
 ---
 
 Kiwi yumurta pişiricinin kullanımı modelden modele değişiyor. Kiwi'nin dört kılavuzu dört farklı yol tarif ediyor: **KEB-4308** ve **KEB-4309** düğmeli, kıvamı su miktarıyla ayarlanan cihazlar; **KEB-4310** kıvamı düğmeyle seçiyor ve her seferinde aynı suyu istiyor; **KEB-4311** dokunmatik panelli ve modları süreyle çalışıyor. Bu yazıda her birinin su, kıvam ve temizlik bilgisi yalnız Kiwi'nin kendi kılavuzlarından.

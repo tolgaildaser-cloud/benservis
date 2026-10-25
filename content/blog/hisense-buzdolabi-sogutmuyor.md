@@ -40,14 +40,14 @@ faq:
 images:
   coverAlt: "Mutfakta duran, kapıları kapalı gri metalik görünümlü kombi tip bir buzdolabı"
   steps:
-    - "Mutfakta duvar prizine takılı bir buzdolabı fişi"
-    - "Buzdolabı kapısının üzerindeki dokunmatik kontrol paneli"
-    - "Kapağının arasında bir paket sıkışmış, aralık kalmış bir buzdolabı kapısı"
-    - "Duvardan biraz uzakta, yanlarında boşluk bırakılmış bir buzdolabı"
-    - "Rafları düzenli, kaplar arasında boşluk bırakılmış bir buzdolabı içi"
-    - "Serin bir kilerde duran ayaklı bir buzdolabı"
-    - "Kapakları açık bırakılmış, rafları boşaltılmış bir dondurucu bölme"
-    - "Buzdolabının yanında tezgâhta duran kullanım kılavuzu ve telefon"
+    - "Çizim: solda buzdolabı, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda bekleme süresi için saat"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Hisense buzdolabın çalışıyor gibi ama içi ılık, sebzeler çabuk bozuluyor ya da dondurucu eskisi kadar dondurmuyorsa ilk bakılacak yer kılavuzun sorun giderme tablosu. Bu yazıda Hisense'in RB645N4BIE kombi buzdolabı kılavuzunda (kılavuzun İngilizce baskısı, alıntılar Türkçeye çevrildi) soğutmayla ilgili ne varsa sırayla topladık. Senin modelinde kontrol paneli farklı olabilir; kendi kılavuzunla karşılaştır.

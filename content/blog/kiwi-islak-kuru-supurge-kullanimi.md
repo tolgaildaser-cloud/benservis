@@ -41,14 +41,14 @@ faq:
 images:
   coverAlt: "Fayans zeminde duran şarjlı bir ıslak-kuru zemin temizleyici ve şarj istasyonu"
   steps:
-    - "Duvara yaslanmış şarj istasyonunda duran ıslak-kuru zemin temizleyici"
-    - "Zemin temizleyicinin gövdesine dikey olarak takılan sap"
-    - "Çıkarılmış şeffaf temiz su deposuna şişe kapağıyla dökülen az miktarda deterjan"
-    - "Fayans zeminde duran birkaç büyük kırıntı"
-    - "Geriye doğru eğilmiş zemin temizleyicinin sapındaki güç düğmesi"
-    - "Zemin temizleyicinin sapındaki mod düğmesi"
-    - "Zemin temizleyicinin dijital ekranındaki küçük uyarı simgeleri"
-    - "İstasyonda duran cihaz ve yanında boşaltılmış kirli su deposu"
+    - "Çizim: solda ıslak-kuru süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda ıslak-kuru süpürge, sağda çalışma sesi"
+    - "Çizim: solda ıslak-kuru süpürge, sağda deterjan bölmesi"
+    - "Çizim: solda ıslak-kuru süpürge, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ıslak-kuru süpürge, sağda temizlik fırçası"
+    - "Çizim: solda ıslak-kuru süpürge, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ıslak-kuru süpürge, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ıslak-kuru süpürge, sağda temizlik fırçası"
 ---
 
 Kiwi'nin şarjlı ıslak-kuru süpürgeleri bir yandan temiz su püskürtüp zemini ovuyor, bir yandan kirli suyu ve kiri ayrı bir depoya çekiyor. Doğru çalışması için üç şeye dikkat gerekiyor: depodaki su ve deterjan, seçilen mod ve kullanım sonrası kendi kendini temizleme. Bu yazı Kiwi'nin **KSC-4270** kılavuzuna ve daha kısa olan **KSC-4262** kılavuzuna dayanıyor.

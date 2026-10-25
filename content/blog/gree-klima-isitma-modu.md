@@ -48,13 +48,13 @@ faq:
 images:
   coverAlt: "Kış akşamı perdeleri kapalı bir yatak odasında duvara asılı beyaz bir split klima"
   steps:
-    - "Sehpada duran beyaz bir klima kumandası ve yanında katlı bir battaniye"
-    - "Duvar kliması iç ünitesinin ön yüzündeki küçük gösterge alanı"
-    - "Klima kumandasının ekranında ayar sıcaklığı alanı"
-    - "Kanatları aşağı doğru dönmüş bir duvar kliması"
-    - "Sessiz bir odada kanatları açılmaya başlamış bir duvar kliması"
-    - "Sehpada duran bir klima kumandası ve arkada loş, sakin bir salon"
-    - "Banyo lavabosunda durulanmış ince ağlı bir klima filtresi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Soğuk bir akşam Gree klimayı ısıtmaya almak istiyorsun ama kumandada hangi düğmeye basacağını hatırlamıyorsun. Ya da HEAT'i seçtin, birkaç dakika hiç hava gelmedi. Gree'nin Türkiye sitesinde ürün sayfalarına bağlanan Fairy ve Airy kullanıcı kılavuzları ısıtma modunu kumanda bölümünde tek tek anlatıyor. Arıza analizi tablosu da ilk dakikalardaki sessizliği ayrıca açıklıyor. Bu yazıda ısıtmayı açmayı, sıcaklık aralığını ve normal olan davranışları bu iki kılavuzdan topladık. Kumanda genel bir kumanda; kılavuz her modelin her fonksiyona sahip olmayabileceğini yazıyor, kendi modelinin kılavuzuyla karşılaştır.

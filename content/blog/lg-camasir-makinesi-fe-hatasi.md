@@ -48,14 +48,14 @@ faq:
 images:
   coverAlt: "Çamaşır odasında beyaz bir önden yüklemeli çamaşır makinesi ve camından görünen yüksek su seviyesi"
   steps:
-    - "Duvardaki su musluğunun kapalı konuma getirilmiş kolu"
-    - "Prizden çekilmiş, zeminde duran bir çamaşır makinesi fişi"
-    - "Çamaşır makinesinin önündeki zeminde kuru bir bez"
-    - "Kapağı kapalı çamaşır makinesinin camından görünen tamburdaki durgun su"
-    - "Çamaşır makinesinin önünde açılmış küçük tahliye kapağı ve önünde sığ bir kap"
-    - "Kapağı aralık bırakılmış boş bir çamaşır makinesi ve temiz kapak lastiği"
-    - "Kapalı duran bir musluk ve ona bağlı beyaz su giriş hortumu"
-    - "Tezgâhta duran katlanmış bir kullanma kılavuzu ve garanti kartı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda yere oturan ayaklar ve su terazisi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda ilgili filtre"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda su giriş musluğu"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Makine su almaya devam ediyor, ekranda **FE** yazıyor. LG'nin F4V5RGP2T, F4V3VYW3WE ve F4Y5EYW0W kullanma kılavuzlarında bu kodun başlığı **aşırı akış hatası**, açıklaması tek cümle: **olası arızalı su vanası nedeniyle su aşırı doluyor.** Çözüm satırı da aynı netlikte: su musluğunu kapatın, güç fişini çekin, servisi arayın. Aşağıda bu üç talimatın evde nasıl uygulanacağını ve servise kadar dikkat edilecekleri kılavuza dayanarak sıraladık.
