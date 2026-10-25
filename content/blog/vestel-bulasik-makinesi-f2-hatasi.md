@@ -53,6 +53,15 @@ faq:
     a: "Vestel'in F2 talimatı bu noktada servisle iletişime geçmek. Kılavuza göre filtrelerin yakalayamadığı büyük yemek kalıntıları ve yabancı nesneler atık su pompasını tıkayabilir; filtre yuvasında görünen cisimleri almak kullanıcının işi, pompanın kendisi ise servisin işidir."
 images:
   coverAlt: "Alt sepeti çıkarılmış açık bir bulaşık makinesinin tabanında silindirik filtre grubu ve yanında bir sünger"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda paneldeki tuş"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Program bitmedi, makine durdu ve ekranda **F2** yazıyor; kapağı açtığında tabanda su bekliyor olabilir. Vestel'in bulaşık makinesi kullanım kılavuzlarındaki arıza kodu tablosunda bu kodun karşılığı: **"Su tahliye edilmiyor."** Çözüm sütunu iki şüpheli sayıyor ve bir işlem veriyor: **su tahliye hortumu ve filtreler tıkanmış olabilir; programı iptal et.** Arıza devam ederse servis. Bu yazıda o talimatı, aynı kılavuzların bakım ve kurulum bölümleriyle birlikte adım adım açıyoruz.

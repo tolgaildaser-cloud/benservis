@@ -58,6 +58,14 @@ faq:
     a: "İki Siemens kılavuzu da yağ filtresinin en az 2 ayda bir temizlenmesini öneriyor. Kılavuzlar ayrıca yağ filtresindeki yağ birikintilerinin alev alabileceği uyarısını yapıyor; bu yüzden göstergeyi beklemeden düzenli temizlik isteniyor."
 images:
   coverAlt: "Modern bir mutfakta ocak üstündeki koyu renk davlumbazın kumanda alanında yanan küçük bir filtre sembolü ve altında tezgâhta duran metal yağ filtresi"
+  steps:
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda deterjan bölmesi"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda ilgili filtre"
+    - "Çizim: solda davlumbaz, sağda panel ekranındaki uyarı"
 ---
 
 Davlumbazı kapattın, fan durdu ama kumanda alanında bir sembol yanıp sönmeye devam ediyor. Siemens davlumbazlarda bu çoğu zaman bir arıza değil: kılavuzun adıyla **dolum göstergesi.** LC97FMR60 / LC98KMR60 kılavuzunun cümlesi açık: **yağ filtresi veya koku filtresi doymuşsa, cihaz kapatıldıktan sonra ilgili semboller yanıp söner.** Yapılacak iş de belli: filtreyi temizlemek ya da değiştirmek, ardından göstergeyi sıfırlamak.

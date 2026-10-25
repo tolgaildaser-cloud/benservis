@@ -63,6 +63,14 @@ faq:
     a: "CMI 106221, KCMI 98142 ve CMI 128222 kılavuzlarına göre program bitmeden elektrik kesilirse kapı kilitli kalır. Kılavuzun acil açma talimatı pis suyun pompa filtresinden boşaltılmasını ve açma düzeninin bir aletle çekilmesini istiyor; bu iş için yetkili servise başvurmak en güvenli yoldur."
 images:
   coverAlt: "Programı bitmiş bir çamaşır makinesinin kapalı kapağı ve camın ardında bekleyen ıslak çamaşırlar"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda paneldeki tuş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 Program bitti, çamaşırı almak için kapağın koluna uzandın ama kapak yerinden kıpırdamıyor. Vestel'in çamaşır makinesi kullanım kılavuzlarında bunun bir açıklaması var: makine **yıkama işlemi sona erdikten 2 dakika sonra** kapağı açtırıyor ve kılavuz bu süreyi programın sonuna değil, ayrıca ekliyor. Kapak program sürerken açılmıyorsa da kılavuzun yolu belli: **çocuk kilidini kapat, programı İPTAL'e al, suyu boşalt.** Hiçbirinde kapağı zorlamak yok; Vestel bunu ayrı ayrı iki yerde yasaklıyor.

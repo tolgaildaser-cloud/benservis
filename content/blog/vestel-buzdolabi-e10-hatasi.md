@@ -56,6 +56,14 @@ faq:
     a: "Vestel'in tablosundaki son cümle: uyarı devam ediyorsa en kısa zamanda Vestel iletişim merkezini arayıp teknik destek talep et. Kılavuz bu noktadan sonra kullanıcıya başka adım vermiyor."
 images:
   coverAlt: "Kapağı açık bir no-frost buzdolabının soğutucu bölmesi; arka duvardaki hava kanalı delikleri ve düzenli yerleştirilmiş kaplar"
+  steps:
+    - "Çizim: solda buzdolabı, sağda paneldeki tuş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Buzdolabının göstergesinde **E10** yazıyor. Vestel'in no-frost buzdolabı kullanım kılavuzlarındaki kontrol uyarıları tablosunda bu kodun karşılığı: **soğutucu bölme yeterince soğuk değil.** Vestel'e göre soğutucunun ideal çalışma sıcaklığı **+4 °C**'dir ve bu uyarı görüldüğünde **yiyeceklerin bozulma riski vardır.** Tablo sebebini de yazıyor: uyarı genellikle **uzun süreli elektrik kesintisinden sonra, buzdolabı ilk kez çalıştırıldığında ya da içine sıcak yiyecek konduğunda** görülür. Bu yazıda Vestel'in verdiği adımları sırayla açıyoruz.

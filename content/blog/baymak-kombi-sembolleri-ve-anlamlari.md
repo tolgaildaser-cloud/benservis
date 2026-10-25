@@ -48,6 +48,9 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 Duotec, Duotec Compact ve Duotec DHW'de ekranın iki yanında altı tuş var. Kılavuz tuşları şöyle tanımlıyor:
 
+![Çizim: Baymak kombi ekran simgeleri tablosu (radyatör, musluk, alev, bar çizgileri, menü simgeleri) ve anlamları (1/2)](/tamir-gorsel/baymak-kombi-sembolleri-ve-anlamlari/sembol-tablosu-01.png)
+![Çizim: Baymak kombi ekran simgeleri tablosu (radyatör, musluk, alev, bar çizgileri, menü simgeleri) ve anlamları (2/2)](/tamir-gorsel/baymak-kombi-sembolleri-ve-anlamlari/sembol-tablosu-02.png)
+
 | Tuş | Görevi |
 |---|---|
 | **K1** (Reset) | Reset tuşu |

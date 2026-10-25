@@ -36,13 +36,13 @@ faq:
 images:
   coverAlt: "Bulaşık makinesinin siyah gösterge ekranı yakın planda; solda kırmızı parlatıcı ve tuz uyarı simgeleri, ortada dijital süre, sağda kapı ve kilit simgeleri görünüyor"
   steps:
-    - "Bulaşık makinesi kapağının içinde açık parlatıcı bölmesi"
-    - "Alt sepeti çıkarılmış bulaşık makinesinin tabanındaki tuz bölmesi"
-    - "Bulaşık makinesi ekranında yanan tuz uyarı simgesi"
-    - "Bulaşık makinesi ekranında su sertliği ayarı"
-    - "Bulaşık makinesinden çıkmış lekesiz cam bardaklar"
-    - "Musluk altında fırçayla temizlenen bulaşık makinesi filtreleri"
-    - "Bulaşık makinesi ekranında kilit simgesi yakın plan"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda paneldeki tuş"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
 ---
 
 Beko bulaşık makinesinin ekranında kırmızı bir simge yanıyor, tuşlar tepki vermiyor ya da ekranda **r:3**, **P:2** gibi bir yazı var. Bu yazıdaki karşılıkların tamamı Beko'nun **B 710 serisi** (B 710 i, B 710 b, B 710 si, B 710 sc, B 710 bc, B 710 gc) için yayımladığı 25 Mart 2026 tarihli Türkçe kullanma kılavuzundan alındı.

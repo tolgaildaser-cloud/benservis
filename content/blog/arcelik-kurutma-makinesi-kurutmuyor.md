@@ -52,6 +52,15 @@ faq:
     a: "Arçelik bunu önermiyor. Kılavuza göre kurutma işlemi başladıktan sonra çamaşır eklemek, kurumuş çamaşırların ıslak çamaşırlarla karışmasına ve işlem sonunda bazı çamaşırların nemli kalmasına neden olabilir; sık sık ekleme ya da çıkarma da program süresini uzatır ve enerji tüketimini artırır. Arçelik çamaşır eklemenin program başlamadan önce yapılmasını tavsiye ediyor."
 images:
   coverAlt: "Kapağı açık bir kurutma makinesinin önünde lavabo başında ılık suyla yıkanan ince gözenekli lif filtresi ve tezgâhta katlanmış yumuşak bir bez"
+  steps:
+    - "Çizim: solda kurutma makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda kapak"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda temizleme bezi"
+    - "Çizim: solda kurutma makinesi, sağda hava giriş ve çıkış ızgarası"
+    - "Çizim: solda kurutma makinesi, sağda paneldeki tuş"
 ---
 
 Program bitti ama havlular hâlâ nemli ya da kurutma her seferinde biraz daha uzun sürüyor. Arçelik'in kurutma makinesi kılavuzlarındaki sorun giderme tablosunda bu şikâyetin iki ayrı satırı var: **"Kurutma işlemi uzun sürüyor."** ve **"Kurutma sonunda çamaşırlar nemli çıkıyor."** İki satırda sayılan nedenlerin neredeyse hepsi kullanıcının erişebildiği yerlerde: **lif filtresi, filtre çekmecesi ya da yoğuşturucu, nem sensörü, makinenin önündeki hava yolu ve çamaşırın kendisi.** Arçelik'in kurutucularında hava yolu modele göre farklı bir parçadan geçiyor: 3886 KT gibi modellerde tekmeliğin arkasında **filtre çekmecesi**, 2772 KT gibi modellerde **yoğuşturucu** var. Aşağıdaki sırada iki tip de ayrı ayrı anılıyor; kendi makinende hangisi olduğunu tekmeliği açınca ya da kılavuzunun bakım bölümünde görürsün.

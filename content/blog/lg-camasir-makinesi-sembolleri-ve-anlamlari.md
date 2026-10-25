@@ -36,13 +36,13 @@ faq:
 images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin kontrol paneli yakın planda; dört haneli süre ekranı, altında kilit ve sessiz simgeleri, yanında program düğmesi görünüyor"
   steps:
-    - "Çamaşır makinesi ekranında kapak kilidi simgesi"
-    - "Çamaşır makinesi ekranında çocuk kilidi yazısı"
-    - "Deterjan çekmecesinin ana yıkama bölmesinde toz kireç çözücü"
-    - "Program bittikten sonra kapağı açık bırakılmış çamaşır makinesi"
-    - "Çamaşır makinesinin arkasında açık musluk ve düz giriş hortumu"
-    - "Tamburun içine dengeli yayılmış havlular"
-    - "Ekranında program yeniden başlamış çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda paneldeki tuş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
 ---
 
 LG çamaşır makinesinin ekranında bir simge yanıyor ya da **CL**, **tcL**, **IE** gibi bir yazı çıktı. Bu yazıdaki karşılıkların tamamı LG'nin kendi **F4V3VYW serisi Türkçe kullanıcı el kitabından** alındı.

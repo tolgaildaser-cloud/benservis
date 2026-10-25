@@ -51,6 +51,10 @@ Kılavuz leke seviyesi için ayrıca not düşüyor: tuşa dokunduğunda seviye 
 
 Sembol tarifleri kılavuzdaki küçük çizimlere göre yazıldı.
 
+![Çizim: Vestel çamaşır makinesi panel simgeleri tablosu (saat, kar tanesi, leğen, bulut, yaprak, kilit) ve anlamları (1/3)](/tamir-gorsel/vestel-camasir-makinesi-sembolleri-ve-anlamlari/sembol-tablosu-01.png)
+![Çizim: Vestel çamaşır makinesi panel simgeleri tablosu (saat, kar tanesi, leğen, bulut, yaprak, kilit) ve anlamları (2/3)](/tamir-gorsel/vestel-camasir-makinesi-sembolleri-ve-anlamlari/sembol-tablosu-02.png)
+![Çizim: Vestel çamaşır makinesi panel simgeleri tablosu (saat, kar tanesi, leğen, bulut, yaprak, kilit) ve anlamları (3/3)](/tamir-gorsel/vestel-camasir-makinesi-sembolleri-ve-anlamlari/sembol-tablosu-03.png)
+
 | Sembol (kılavuzdaki çizim) | Kılavuzdaki adı | Ne zaman görünür / ne demek |
 |---|---|---|
 | Saat kadranı | Gecikmeli başlatma | Zaman geciktirme ayarlandı; gecikmeyi iptal edince söner |

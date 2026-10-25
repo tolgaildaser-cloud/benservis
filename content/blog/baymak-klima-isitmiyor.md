@@ -44,6 +44,14 @@ faq:
     a: "Baymak Elegant Air'in inverter tablosu ısıtma için dış sıcaklık aralığını -15 ile 24°C, düşük sıcaklıkta ısıtma için -20 ile 24°C olarak veriyor; oda sıcaklığı için 0-27°C. Kılavuza göre bu aralıkların dışında koruma cihazı etkinleşebilir ve klima çalışmayabilir."
 images:
   coverAlt: "Kış akşamı loş bir oturma odasında kanepeye örtülmüş battaniye, duvarda kanatları açık beyaz split klima ve sehpada duran kumanda"
+  steps:
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda prizden çekilen fiş"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Kış geldi, klimayı ısıtmaya aldın ama oda bir türlü ısınmıyor ya da üfleyen hava ara ara kesiliyor. Baymak'ın Elegant Air kullanma kılavuzu ısıtmanın nasıl başladığını açıkça yazıyor: **"Isıtma fonksiyonu aktif hale getirildiğinde iç ünitenin ön ısıtması yaklaşık 2-5 dakika sürecektir, bundan sonra klima, mekânı ısıtmaya başlayacak ve sıcak hava üfleyecektir."** Kılavuz ayrıca buz çözme sırasında fanların durduğunu, kumandadaki 8°C ısıtma fonksiyonunun odayı yalnız 9°C'ye kadar ısıttığını ve sorun giderme tablosunda "Sıcak veya soğuk, yetersiz hava akışı" için olası nedenleri veriyor. Bu yazıda ısıtmaya özgü notları önce, genel kontrolleri sonra anlatıyoruz.

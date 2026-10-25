@@ -51,6 +51,15 @@ faq:
     a: "Vestel'in tablosu \"Makine yıkama esnasında duruyor\" satırında üç sebep sayıyor: elektrik kesilmiş olabilir (elektriğin gelmesini bekle), program bekleme konumunda olabilir (çalışır konuma getir) ya da su girişinde sorun olabilir (su hortumunun tıkalı olup olmadığını kontrol et). Kılavuza göre yıkama sırasında kapak açılır ya da güç kesilirse, kapak kapatıldığında ya da güç geri geldiğinde program kaldığı yerden devam eder."
 images:
   coverAlt: "Mutfakta tezgâh altına yerleştirilmiş kapağı kapalı bir bulaşık makinesi ve kontrol paneline uzanan bir el"
+  steps:
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda paneldeki tuş"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda paneldeki tuş"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bulaşıkları yerleştirdin, programı seçtin ama makine başlamıyor. Vestel'in Türkçe kullanım kılavuzlarındaki sorun giderme tablosu bu durumu **"Program başlamıyor."** satırında ele alıyor ve yedi sebep sayıyor; ilki **"Elektrik kesintisi."** Bu sebeplerin çoğu evde birkaç dakikada kontrol edilebilir. Bu yazıda Vestel'in tablosunu, makineyi çalıştırma ve filtre temizliği bölümleriyle birlikte adım adım anlatıyoruz.

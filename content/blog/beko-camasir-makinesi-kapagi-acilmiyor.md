@@ -47,6 +47,14 @@ faq:
     a: "Beko'nun kılavuzuna göre evet: Başla / Bekle / İptal tuşuna basarak makineyi bekleme durumuna al, yükleme kapağı açılabilir duruma gelene kadar bekle, kapağı açıp çamaşırı ekle ya da çıkar, kapağı kapat ve Başla / Bekle / İptal tuşuna basarak makineyi yeniden çalıştır. İçerideki su sıcaksa ya da seviyesi kapak hizasının üzerindeyse kapak açılmaz."
 images:
   coverAlt: "Kapağı kapalı ön yüklemeli çamaşır makinesinin cam kapağının ardında tamburda duran su ve çamaşırlar; kontrol panelinde yanan bir kilit simgesi"
+  steps:
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda paneldeki tuş"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
 ---
 
 Program bitti ya da yarıda kaldı, kapağı açmak istiyorsun ama kapak yerinden kıpırdamıyor. Beko'nun çamaşır makinesi kullanma kılavuzlarındaki sorun giderme bölümünde bunun satırı: **"Yükleme kapağı açılmıyor."** Beko bu satırda üç sebep sayıyor: **makinedeki su seviyesi yüzünden kapak kilidi devrede**, **makine suyu ısıtıyor ya da sıkma adımında**, ya da **kapak kilidi program bittikten birkaç dakika sonra devreden çıkıyor.** Üçünde de ilk kural aynı: kapağı zorlama. Bu yazıda Beko'nun sırasını açıyoruz.

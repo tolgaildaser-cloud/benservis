@@ -53,6 +53,14 @@ faq:
     a: "Kılavuzun arıza giderme tablosu bu iki durumu ayırıyor. Uyarı üçgeni sembolü göründüğünde yapılacak iş gösterilen arıza kodunu yetkili teknik servise bildirmektir. Kilidi açma adımı yalnız uyarı üçgeni ve CL (ya da arıza kodu) yanıp sönüp brülör devreye girmediğinde veriliyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin kontrol panelinde küçük siyah-beyaz bir ekran ve iki ok düğmesine uzanan bir el; ekranda okunabilir yazı yok"
+  steps:
+    - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+    - "Çizim: solda duvar tipi kombi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
+    - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
+    - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
 ---
 
 Viessmann kombin ısıtmayı kesti ve ekranda **CL** ile birlikte yanıp sönen bir **uyarı üçgeni** görüyorsun. Viessmann'ın Vitodens 100-W/111-W/111-F ile Vitodens Connect ve Trend kullanma kılavuzları bu görüntüyü tek cümleyle açıklıyor: **"Brülör, bir arıza nedeniyle kilitlenmiştir."** Aynı kılavuzlar bir sonraki cümlede kilidin senin tarafından açılabileceğini de yazıyor. Bu yazıda o kısa işlemi, kılavuzun koyduğu sınırlarla birlikte adım adım anlatıyoruz.
