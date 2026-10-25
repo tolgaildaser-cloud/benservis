@@ -3,7 +3,8 @@
 // Takvim) birebir. Prototipte veri localStorage'daydı; burada GET/POST /api/yerinde/isler ve PATCH /api/yerinde/is/:id.
 // Kurallar ve öneri modeli src/yerinde-cekirdek.js'te (API ile ortak). Rol yalnız app_metadata.rol (src/yerinde-kimlik.js).
 // Teknisyen mobil görünümü (PR-3, 24 Eki): kendi işleri, saha geçişleri, seri no + fotoğraf (private bucket, imzalı URL).
-// Verimor tıkla-ara PR-4: "Ara" düğmesi yok, telefon tel: bağlantısıdır.
+// Verimor tıkla-ara (PR-4, 25 Eki): "Ara" → POST /api/yerinde/ara { id, dahili }. Telefon istemciden gönderilmez; API iş
+// kimliğinden okur. Önce temsilcinin dahilisi çalar, açınca müşteri 0850 hattından aranır. Dahili localStorage'da (kişisel veri değil).
 // ⛔ Kişisel veri analitiğe/loga gitmez; bu bileşen track() çağırmaz.
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import BenservisLogo from "./BenservisLogo.jsx";
@@ -14,7 +15,7 @@ import {
   PILOT_IL, ILCE_KONUM, TEKNISYENLER, SLOTLAR, CALISMA_GUNLERI, URUNLER, URUN_MODEL, DURUMLAR, durumAd, KAPALI,
   GECISLER, TEKNISYEN_GECISLER, FOTO_TIPLERI, FOTO_EN_FAZLA, GARANTI_SECENEK, arizalarFor, tekFor, pad, slotAd, slotKisa, isoDay, isWorkDay, addWorkDays, monday,
   fmtDT, fmtD, fmtDS, gunAdi, slaAsimi, yolDk, randevuOner, slotIsleri, slotEngeli, slotEngelMetni, planlanabilir, olayMetni, ozet,
-  kisiselVeriVar, cepNormal, SIKISIK_DK,
+  kisiselVeriVar, cepNormal, SIKISIK_DK, aranabilir, dahiliOku,
 } from "./yerinde-cekirdek.js";
 
 const ILLER = Object.keys(TR_IL_ILCE).sort((a, b) => a.localeCompare(b, "tr"));
@@ -49,6 +50,7 @@ const basHarf = (ad) => String(ad || "").replace(/\(örnek\)/, "").trim().split(
 
 // ─── Veri katmanı: canlıda API, `npm run dev` + ?onizleme=1'de bellek içi örnek (yalnız ekran görüntüsü için) ─
 const ONIZLEME = import.meta.env.DEV && typeof window !== "undefined" && new URLSearchParams(window.location.search).has("onizleme");
+const DAHILI_KEY = "yerinde_dahilim";
 const ONIZLEME_TEKNISYEN = ONIZLEME && new URLSearchParams(window.location.search).get("onizleme") === "teknisyen";
 
 async function apiCagir(yol, secenek = {}) {
@@ -189,6 +191,27 @@ function Panel({ email, onCikis }) {
     return r;
   };
 
+  // 0850 hattı (Verimor tıkla-ara): hat durumu sunucudan, dahili bu tarayıcıda.
+  const [hat, setHat] = useState(ONIZLEME ? { hazir: true, deneme: true, varsayilanDahili: null } : null);
+  const [dahilim, setDahilim] = useState(() => { try { return localStorage.getItem(DAHILI_KEY) || ""; } catch { return ""; } });
+  useEffect(() => {
+    if (ONIZLEME) return;
+    apiCagir("/api/yerinde/ara").then((r) => setHat(r.ok ? r : { hazir: false, deneme: false, hata: true }));
+  }, []);
+  const dahiliYaz = (v) => { const d = v.replace(/\D/g, "").slice(0, 6); setDahilim(d); try { localStorage.setItem(DAHILI_KEY, d); } catch { /* yok */ } };
+  const ara = async (j) => {
+    if (!dahiliOku(dahilim) && !hat?.varsayilanDahili) { toast("Önce soldaki “Dahilim” alanına santral dahilinizi yazın"); return; }
+    const r = ONIZLEME ? { ok: true, deneme: true, log: { t: new Date().toISOString(), olay: "arama:deneme" } }
+      : await apiCagir("/api/yerinde/ara", { method: "POST", body: JSON.stringify({ id: j.id, dahili: dahilim }) });
+    if (!r.ok) { toast(r.error || "Arama başlatılamadı"); return; }
+    setIsler((l) => l.map((x) => (x.id === j.id ? { ...x, log: [...(x.log || []), r.log] } : x)));
+    toast(r.deneme ? "Deneme modu: arama simüle edildi, kimse aranmadı" : "Telefonunuz çalıyor; açınca müşteri 0850 hattından aranacak");
+  };
+  const [hatSinif, hatBaslik, hatAlt] = !hat ? ["", "0850 hattı", "Kontrol ediliyor"]
+    : hat.deneme ? ["test", "0850 hattı · deneme modu", "Aramalar simüle ediliyor"]
+    : hat.hazir ? ["ok", "0850 hattı bağlı", "Verimor bulut santral"]
+    : ["off", "0850 hattı kapalı", hat.hata ? "Hat durumu okunamadı" : "Verimor anahtarı tanımlı değil"];
+
   const o = useMemo(() => ozet(isler, teknisyenler.length), [isler, teknisyenler]);
   const goster = (v) => setView(v);
   const ac = (id) => { setSecili(id); setView("isler"); };
@@ -215,6 +238,11 @@ function Panel({ email, onCikis }) {
           <button type="button" onClick={() => { yukle(); toast("Liste yenilendi"); }}><Ic p="yenile" sw={1.8} /><span>Listeyi yenile</span></button>
           <button type="button" onClick={onCikis}><Ic p="cikis" sw={1.8} /><span>Çıkış yap</span></button>
         </nav>
+        <div className="hat">
+          <div className="hat-top"><span className={"dot " + hatSinif} aria-hidden="true" /><div><b>{hatBaslik}</b><small>{hatAlt}</small></div></div>
+          <div className="callbox"><label htmlFor="dahilim">Dahilim</label>
+            <input id="dahilim" inputMode="numeric" maxLength={6} placeholder={hat?.varsayilanDahili || "1000"} value={dahilim} onChange={(e) => dahiliYaz(e.target.value)} /></div>
+        </div>
         <div className="user"><span className="user-av">{basHarf(email.split("@")[0].replace(/[._-]+/g, " "))}</span><div><b>{email || "Koordinatör"}</b><small>Koordinatör</small></div></div>
       </aside>
       <div className="shell">
@@ -239,7 +267,7 @@ function Panel({ email, onCikis }) {
           </div>
           {!yuklendi && !hata && <p className="hint">Yükleniyor…</p>}
           {yuklendi && view === "genel" && <Genel o={o} isler={isler} teknisyenler={teknisyenler} ac={ac} goster={goster} />}
-          {yuklendi && view === "isler" && <Isler isler={isler} teknisyenler={teknisyenler} secili={secili} setSecili={setSecili} isKaydet={isKaydet} toast={toast} goster={goster} />}
+          {yuklendi && view === "isler" && <Isler isler={isler} teknisyenler={teknisyenler} secili={secili} setSecili={setSecili} isKaydet={isKaydet} toast={toast} goster={goster} ara={hat?.hazir ? ara : null} />}
           {yuklendi && view === "takvim" && <Takvim isler={isler} teknisyenler={teknisyenler} ac={ac} />}
           {view === "yeni" && <YeniKayit isler={isler} teknisyenler={teknisyenler} isOlustur={isOlustur} toast={toast} sonra={(id) => ac(id)} />}
         </div>
@@ -336,7 +364,7 @@ function Genel({ o, isler, teknisyenler, ac, goster }) {
 }
 
 // ─── İş emirleri: liste + ayrıntı ────────────────────────────────────────────────────────────────
-function Isler({ isler, teknisyenler, secili, setSecili, isKaydet, toast, goster }) {
+function Isler({ isler, teknisyenler, secili, setSecili, isKaydet, toast, goster, ara }) {
   const [q, setQ] = useState("");
   const [fDurum, setFDurum] = useState("");
   const [fTek, setFTek] = useState("");
@@ -379,7 +407,7 @@ function Isler({ isler, teknisyenler, secili, setSecili, isKaydet, toast, goster
         </table></div>
       </div>
       <div className="panel" aria-live="polite">
-        {j ? <Ayrinti key={j.id + j.guncel} j={j} isler={isler} teknisyenler={teknisyenler} isKaydet={isKaydet} toast={toast} />
+        {j ? <Ayrinti key={j.id + j.guncel} j={j} isler={isler} teknisyenler={teknisyenler} isKaydet={isKaydet} toast={toast} ara={ara} />
           : <div className="detail"><p className="empty">Ayrıntıları görmek için listeden bir iş seçin.</p></div>}
       </div>
     </section>
@@ -397,7 +425,7 @@ function Oneriler({ liste, sec }) {
 
 const SlotSecenek = ({ bos }) => <>{bos && <option value="">{bos}</option>}{SLOTLAR.map((h) => <option key={h} value={h}>{slotAd(h)}</option>)}</>;
 
-function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
+function Ayrinti({ j, isler, teknisyenler, isKaydet, toast, ara }) {
   const [f, setF] = useState({
     garanti: j.garanti, seri: j.seri, tek: j.tek || "", istenenGun: j.istenenGun || "", istenenSlot: j.istenenSlot ?? "",
     randevuGun: j.randevuGun || "", randevuSlot: j.randevuSlot ?? "", tnot: j.tnot,
@@ -406,6 +434,8 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
   });
   const [mesgul, setMesgul] = useState(false);
   const d = (k) => (e) => setF((x) => ({ ...x, [k]: e.target.value }));
+  const [araniyor, setAraniyor] = useState(false);
+  const araTikla = async () => { setAraniyor(true); try { await ara(j); } finally { setAraniyor(false); } };
   const sonraki = GECISLER[j.durum] || [];
   const plan = planlanabilir(j.durum);
   const oneriler = plan ? randevuOner(isler, { tek: f.tek, ilce: j.ilce, istenenGun: f.istenenGun || null, istenenSlot: f.istenenSlot === "" ? null : Number(f.istenenSlot), haricNo: j.no }) : [];
@@ -436,7 +466,8 @@ function Ayrinti({ j, isler, teknisyenler, isKaydet, toast }) {
       <div className="sec">
         <div className="sec-h">Kiwi e-postası <span className="mono">{j.kiwiRef ? j.kiwiRef + " · " : ""}{fmtDT(j.talep)}</span></div>
         <dl>
-          <dt>Telefon</dt><dd className="telrow"><a className="mono" href={"tel:" + j.tel}>{j.tel}</a></dd>
+          <dt>Telefon</dt><dd className="telrow"><a className="mono" href={"tel:" + j.tel}>{j.tel}</a>
+            {ara && aranabilir(j.durum) && <button className="btn call" type="button" onClick={araTikla} disabled={araniyor}><Ic p="tel" sw={2} />{araniyor ? "Aranıyor…" : "Ara"}</button>}</dd>
           <dt>Adres</dt><dd>{j.adres}, {j.ilce} / {j.il}</dd>
           {j.tarif && <><dt>Adres tarifi</dt><dd>{j.tarif}</dd></>}
           <dt>Ürün</dt><dd>{j.urun}{j.model && <> · <span className="mono">{j.model}</span></>}</dd>
@@ -969,6 +1000,12 @@ background:var(--bg);color:var(--fg);font:14px/1.5 var(--f-body);min-height:100v
 .yp .side-nav button:focus-visible{outline:2px solid var(--side-hi);outline-offset:1px}
 .yp .side-nav em{font:normal 600 11px var(--f-mono);color:var(--side-muted)}
 .yp .side-nav em.badge{min-width:20px;height:20px;padding:0 6px;border-radius:99px;background:var(--accent);color:#fff;display:inline-grid;place-items:center}
+.yp .hat{margin:12px 16px;border:1px solid var(--side-line);border-radius:10px;padding:12px;display:grid;gap:8px}
+.yp .hat-top{display:flex;gap:10px;align-items:flex-start}.yp .hat b{display:block;font-size:13px;color:#fff;font-weight:600}.yp .hat small{display:block;font-size:11.5px;color:var(--side-muted)}
+.yp .dot{width:8px;height:8px;border-radius:50%;background:var(--side-line);margin-top:5px;flex:none}.yp .dot.ok{background:#22C55E}.yp .dot.test{background:#F59E0B}.yp .dot.off{background:#EF4444}
+.yp .callbox{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--side-muted)}
+.yp .callbox input{width:80px;border:1px solid var(--side-line);background:rgba(255,255,255,.04);color:#fff;border-radius:6px;padding:5px 8px;font:13px var(--f-mono)}
+.yp .btn.call{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:var(--ok);color:#fff;border-color:var(--ok)}.yp .btn.call svg{width:14px;height:14px}
 .yp .user{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--side-line);min-width:0}
 .yp .user-av{width:36px;height:36px;border-radius:8px;background:#334155;color:#fff;display:grid;place-items:center;font:600 13px var(--f-body);flex:none}
 .yp .user div{min-width:0}.yp .user b{display:block;font-size:13px;color:#fff;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -1063,7 +1100,7 @@ background:var(--bg);color:var(--fg);font:14px/1.5 var(--f-body);min-height:100v
 @media (max-width:1100px){.yp .kcards{grid-template-columns:repeat(2,minmax(0,1fr))}.yp .dash-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:980px){.yp .main{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:860px){.yp .app{grid-template-columns:minmax(0,1fr);background:var(--bg)}.yp .side{position:static;height:auto}
-.yp .brand{padding:14px 16px}.yp .user,.yp .nav-h,.yp .top-for,.yp .top-sep{display:none}
+.yp .brand{padding:14px 16px}.yp .hat{margin:0 16px 8px;padding:8px 10px;grid-template-columns:1fr auto;align-items:center}.yp .user,.yp .nav-h,.yp .top-for,.yp .top-sep{display:none}
 .yp .side-nav{flex-direction:row;overflow-x:auto;padding:8px 16px}.yp .side-nav button{white-space:nowrap;width:auto}
 .yp .side-nav button[aria-selected="true"]::before{display:none}.yp .topbar{padding:0 16px}.yp .page{padding:20px 16px 40px}
 .yp .page-head h1{font-size:24px}.yp .steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
