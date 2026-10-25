@@ -654,6 +654,25 @@ export const HATA_KODU_KATMANI = {
     { giris: "Miele — F 35", tip: "kod",
       anlam: "Kapak kilidi bloke olmuş; yetkili servis çağrılır.",
       yazi: "miele-camasir-makinesi-hata-kodlari" }, // https://media.miele.com/downloads/86/90/01_C7F1282812F01FE090BCEF45E10E8690.pdf · md5 4c6bcd02
+    // ——— 25 Eki 2026, YK #182 Dalga 7 (PAZ tamir föyü): 6 giriş; kaynak belge + md5 föyde ———
+    { giris: "Whirlpool — F29 (FdL)", tip: "kod",
+      anlam: "Kapak kilidi açılamıyor; kapak kilit bölgesinden sıkıca bastırılıp Açma/Kapama'ya en az 3 saniye basılır, sıcak programda önce soğuması beklenir; açılmazsa kılavuzun arızada kapak açma bölümüne bakılır, su boşaltmadan önce suyun soğuması beklenir.",
+      yazi: "whirlpool-camasir-makinesi-ariza-kodlari" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-74e562c4-58a7-4720-bacd-70071098cea4/pdf/400010792541EN.pdf · md5 6dcf560e
+    { giris: "Whirlpool — Fod", tip: "kod",
+      anlam: "Aşırı köpük (muhtemelen fazla deterjan) programı kesti; Yoğun Durulama seçeneğiyle Durulama ve Sıkma programı başlatılır, deterjan üreticisinin doz önerisine uyulur, su filtresinin temiz olduğu kontrol edilir.",
+      yazi: "whirlpool-camasir-makinesi-ariza-kodlari" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-74e562c4-58a7-4720-bacd-70071098cea4/pdf/400010792541EN.pdf · md5 6dcf560e
+    { giris: "Midea — E30", tip: "kod",
+      anlam: "Kapak düzgün kapanmamış; kapak düzgün kapatılıp makine yeniden başlatılır. Sorun sürerse müşteri hizmetleri aranır.",
+      yazi: "midea-camasir-makinesi-e21-hatasi" }, // https://www.midea.com/content/dam/midea-aem/uk/laundry/washing-machines/mf20ew80-90-100wb/MF20EW80-90-100WB%20MIDEA-MFL70-S1403B_C14E-EU_NB-PM01-0326.pdf · md5 6cbc56b1
+    { giris: "Midea — E10", tip: "kod",
+      anlam: "Yıkamada su alma sorunu; su basıncının yeterli olduğu kontrol edilir, su hortumu düzeltilir, giriş valfi filtresi temizlenir. Sorun sürerse müşteri hizmetleri aranır.",
+      yazi: "midea-camasir-makinesi-e21-hatasi" }, // https://www.midea.com/content/dam/midea-aem/uk/laundry/washing-machines/mf20ew80-90-100wb/MF20EW80-90-100WB%20MIDEA-MFL70-S1403B_C14E-EU_NB-PM01-0326.pdf · md5 6cbc56b1
+    { giris: "Midea — E21", tip: "kod",
+      anlam: "Su boşaltma süresi aşıldı; tahliye hortumunda tıkanma olup olmadığı kontrol edilir. Sorun sürerse müşteri hizmetleri aranır.",
+      yazi: "midea-camasir-makinesi-e21-hatasi" }, // https://www.midea.com/content/dam/midea-aem/uk/laundry/washing-machines/mf20ew80-90-100wb/MF20EW80-90-100WB%20MIDEA-MFL70-S1403B_C14E-EU_NB-PM01-0326.pdf · md5 6cbc56b1
+    { giris: "Midea — E12", tip: "kod",
+      anlam: "Su taşması; makine yeniden başlatılır. Sorun sürerse müşteri hizmetleri aranır.",
+      yazi: "midea-camasir-makinesi-e21-hatasi" }, // https://www.midea.com/content/dam/midea-aem/uk/laundry/washing-machines/mf20ew80-90-100wb/MF20EW80-90-100WB%20MIDEA-MFL70-S1403B_C14E-EU_NB-PM01-0326.pdf · md5 6cbc56b1
   ],
 
   // ── KURUTMA MAKİNESİ (21 Ağu 2026: Tolga kararıyla AYRI CİHAZ oldu) ───────────────
@@ -1227,6 +1246,103 @@ export const HATA_KODU_KATMANI = {
     { giris: "Sharp — F2", tip: "kod",
       anlam: "Su boşaltılamıyor, boşaltma hortumu ve filtreler tıkalı olabilir; program iptal edilir, hata sürerse servis aranır.",
       yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    // ——— 25 Eki 2026, YK #182 Dalga 7 (PAZ tamir föyü): 32 giriş; kaynak belge + md5 föyde ———
+    { giris: "Sharp — F1", tip: "kod",
+      anlam: "Taşma; makinenin fişi çekilir, musluk kapatılır ve servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F3", tip: "kod",
+      anlam: "Sürekli su girişi; musluk kapatılır ve servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F6", tip: "kod",
+      anlam: "Hatalı ısıtıcı sensörü. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F7", tip: "kod",
+      anlam: "Aşırı ısınma. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F8", tip: "kod",
+      anlam: "Isıtıcı hatası. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — F9", tip: "kod",
+      anlam: "Yönlendirici (diverter) konum hatası. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — FE", tip: "kod",
+      anlam: "Hatalı elektronik kart. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — HI", tip: "kod",
+      anlam: "Yüksek gerilim arızası. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Sharp — LO", tip: "kod",
+      anlam: "Düşük gerilim arızası. Kılavuza göre servis aranır.",
+      yazi: "sharp-bulasik-makinesi-hata-kodlari" }, // https://cdn.shopify.com/s/files/1/0722/9485/8997/files/10811702_k.pdf · md5 5d795d30
+    { giris: "Whirlpool — F9", tip: "kod",
+      anlam: "Makine komutlara yanıt vermiyor (Açık/Kapalı ve BAŞLAT/Duraklat LED'leri hızla yanıp söner); makine Açma/Kapama tuşuyla kapatılır, yaklaşık bir dakika sonra açılıp program yeniden başlatılır; sorun sürerse fiş 1 dakika çekilip yeniden takılır.",
+      yazi: "whirlpool-bulasik-makinesi-resetleme" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-e046d875-d0e4-478d-8bbc-0a7d93659802/pdf/400011476017_EN.pdf · md5 28b16988
+    { giris: "Whirlpool — F12", tip: "kod",
+      anlam: "Makine komutlara yanıt vermiyor (Açık/Kapalı ve BAŞLAT/Duraklat LED'leri hızla yanıp söner); makine Açma/Kapama tuşuyla kapatılır, yaklaşık bir dakika sonra açılıp program yeniden başlatılır; sorun sürerse fiş 1 dakika çekilip yeniden takılır.",
+      yazi: "whirlpool-bulasik-makinesi-resetleme" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-e046d875-d0e4-478d-8bbc-0a7d93659802/pdf/400011476017_EN.pdf · md5 28b16988
+    { giris: "Whirlpool — F15", tip: "kod",
+      anlam: "Su beslemesinde hava var, program erken bitebilir (Açık/Kapalı ve BAŞLAT/Duraklat LED'leri hızla yanıp söner); su tesisatında sızıntı ya da içeri hava girmesine yol açan başka bir sorun olup olmadığı kontrol edilir; sürerse satış sonrası servis aranır.",
+      yazi: "whirlpool-bulasik-makinesi-su-almiyor" }, // https://digitalassets-cdn.thron.com/api/v1/content-delivery/shares/ivq4cm/contents/do-e046d875-d0e4-478d-8bbc-0a7d93659802/pdf/400011476017_EN.pdf · md5 28b16988
+    { giris: "AEG — i41–i44", tip: "kod",
+      anlam: "Su seviyesi algılama sensöründe arıza; filtrelerin temiz olduğu kontrol edilir, makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "AEG — i51–i59 / i5A–i5F", tip: "kod",
+      anlam: "Yıkama ya da boşaltma pompasında arıza; makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "aeg-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/a8a328ca-93f2-42fa-8a16-cd1b7590a91e/241217V37I-pdf.pdf · md5 674698cc
+    { giris: "Zanussi — ışık 1 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 1 kez aralıklı yanıp söner: makine su almıyor; musluğun açık ve tıkalı olmadığı, su basıncının çok düşük olmadığı, giriş hortumu filtresinin tıkalı olmadığı ve hortumun bükülmediği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 2 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 2 kez aralıklı yanıp söner: makine suyu boşaltmıyor; lavabo bağlantısının ve iç filtre sisteminin tıkalı olmadığı, tahliye hortumunun bükülmediği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 3 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 3 kez aralıklı yanıp söner: taşma önleme düzeneği devrede; musluk kapatılır, makinenin doğru kurulduğu ve sepetlerin kılavuza göre yüklendiği kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 4 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 4 kez aralıklı yanıp söner: su seviyesi algılama sensöründe arıza; filtrelerin temiz olduğu kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 5 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 5 kez aralıklı yanıp söner: yıkama ya da boşaltma pompasında arıza. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 6 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 6 kez aralıklı yanıp söner: makinedeki su çok sıcak ya da sıcaklık sensöründe arıza; giriş suyunun 60 °C'yi aşmadığından emin olunur. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 12 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 12 kez aralıklı yanıp söner: makinede teknik arıza. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Zanussi — ışık 15 kez yanıp sönüyor", tip: "belirti",
+      anlam: "Program tuşlarının ışıkları 15 kez aralıklı yanıp söner: makinedeki su seviyesi çok yüksek; filtrelerin temiz olduğu ve tahliye hortumunun yerden doğru yükseklikte takıldığı kontrol edilir. Kontrolden sonra makine kapatılıp açılır; sorun yeniden olursa yetkili servis aranır.",
+      yazi: "zanussi-bulasik-makinesi-ariza-kodlari" }, // https://electrolux.bynder.com/asset/18fcd99a-54be-45c5-8413-f0c7fcaa8e2b/7e878cb1-e68f-4184-a26f-091a2a727d64-pdf.pdf · md5 2d837c98
+    { giris: "Smeg — E1", tip: "kod",
+      anlam: "Aquastop arızası (bazı modellerde); kılavuza göre teknik servis aranır. Arıza sırasında fiş çekilir ve musluk kapatılır; giriş hortumunda elektrovana olduğu için hortum kesilmez.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E2", tip: "kod",
+      anlam: "Güvenlik seviyesi. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E3", tip: "kod",
+      anlam: "Su ısıtma arızası. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E4", tip: "kod",
+      anlam: "Su sıcaklığı algılama arızası. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E5", tip: "kod",
+      anlam: "Su girişi arızası. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E6", tip: "kod",
+      anlam: "Su tahliye arızası. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E7", tip: "kod",
+      anlam: "Türbin akış ölçer arızası (bazı modellerde); çevrimin sonunda gösterilir, makinenin çalışmasını etkilemediği için çevrim yine tamamlanır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E8", tip: "kod",
+      anlam: "Değişken yıkama sistemi arızası. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E9", tip: "kod",
+      anlam: "Su giriş sistemi arızası. Kılavuza göre program durdurulur, makine kapatılır, açılıp yeniden programlanır; arıza sürerse yetkili servise arıza kodu bildirilir.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
+    { giris: "Smeg — E11", tip: "kod",
+      anlam: "Yıkama pompası arızası; kılavuza göre teknik servis aranır.",
+      yazi: "smeg-bulasik-makinesi-hata-kodlari" }, // https://doc.smeg.it/qr/19293008204/EN · md5 00c487db
   ],
 
   "Kombi / Termosifon": [
@@ -2240,6 +2356,73 @@ export const HATA_KODU_KATMANI = {
     { giris: "Airfel Maestro Power — U5-01", tip: "kod",
       anlam: "Termostat bağlantı hatası: termostat bağlantısı 3 dakika sağlanmazsa oluşur; bağlantı gelmezse resetten 3 dakika sonra yeniden belirir, normal çalışma için elektrik kapatılıp açılır.",
       yazi: "airfel-kombi-hata-kodlari" }, // https://airfel.com/uploads/files/Maestro-power-kullanim_k%C4%B1lavuzu.pdf · md5 a2baa359
+    // ——— 25 Eki 2026, YK #182 Dalga 7 (PAZ tamir föyü): 22 giriş; kaynak belge + md5 föyde ———
+    { giris: "Warmhaus — Er 02", tip: "kod",
+      anlam: "Düşük su basıncı: basınç 0,4 bar ya da altına inince çıkar, 1 bar ve üstünde kendiliğinden silinir; kombinin altındaki manometreye bakılır, basınç düşük kalırsa Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 03", tip: "kod",
+      anlam: "Yüksek su basıncı: basınç 3,5 bar ya da üstüne çıkınca verilir, 3 bar ve altında kendiliğinden silinir; sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 04", tip: "kod",
+      anlam: "Uyarı: sıcak su (DHW) NTC probu açık, kısa devre ya da hasarlı; kombi ısıtma probunun sıcaklığıyla çalışmayı sürdürür. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 05", tip: "kod",
+      anlam: "Isıtma (CH) gidiş NTC probu açık, kısa devre ya da hasarlı; ısıtma ve sıcak su talebi durur. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 06", tip: "kod",
+      anlam: "İyonizasyon hatası: doğal gazda art arda 3, LPG'de 1 alev hatası; gaz vanasının açık olduğu kontrol edilir. Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 07", tip: "kod",
+      anlam: "Güvenlik termostatı 3 saniye açık kaldı; kılavuza göre termostat kapanmalı ve kombi sıfırlanmalı. Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 08", tip: "kod",
+      anlam: "İyonizasyon bileşeni hatası: alev algılama sinyali 15 saniye aralık dışında kaldı; sinyal 2 saniye normal kalınca çalışma yeniden başlar. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 09", tip: "kod",
+      anlam: "Pompa enkoder sinyali eksik ya da aralık dışında (yalnız PWM pompalı yapılandırmada); sinyal 5 saniye aralıkta kalınca çalışma kendiliğinden başlar. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 10", tip: "kod",
+      anlam: "Isıtma (CH) dönüş NTC probunda açık ya da kısa devre. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 13", tip: "kod",
+      anlam: "Baca gazı NTC probu 3 saniye 95 °C üstünde (yalnız baca gazı sensörlü yapılandırmada). Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 14", tip: "kod",
+      anlam: "Baca gazı NTC probunda açık ya da kısa devre; ısıtma ve sıcak su talebi durur. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 15", tip: "kod",
+      anlam: "Fan açıkken fan enkoderinden 5 saniye sinyal alınmadı. Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 18", tip: "kod",
+      anlam: "Donma arızası: ısıtma probu 10 saniye 1 °C altında ölçtü, brülör durur; sıcaklık 3 °C'ye çıkınca çalışma kendiliğinden başlar; sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 020", tip: "kod",
+      anlam: "Isıtma (CH) gidiş suyu 95 °C üstünde; sıcaklık 85 °C'ye düşünce çalışma kendiliğinden başlar; sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 22", tip: "kod",
+      anlam: "Yanlış alev: brülör kapalıyken en az 10 saniye alev algılandı; alev sinyali en az 1 saniye kapalı kalınca normal çalışma başlar. Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 41", tip: "kod",
+      anlam: "Alev oluştuktan sonra 30 saniye içinde en az 6 kez art arda alev kaybı. Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 80", tip: "kod",
+      anlam: "Gaz vanası tahrik ve geri bildirim devresinde hata. Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 91", tip: "kod",
+      anlam: "Reküperatörde 4 saniye su algılandı (yalnız reküperatörlü yapılandırmada). Koşul düzelince kod kendiliğinden silinir; arıza sürerse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Warmhaus — Er 96", tip: "kod",
+      anlam: "Fan devri 60 saniye hedef aralığın dışında kaldı. Kilitleme: SIFIRLAMA düğmesine 3 saniye basılır; kod geri gelirse Warmhaus yetkili servisi aranır.",
+      yazi: "warmhaus-kombi-hata-kodlari" }, // https://www.warmhaus.com/storage/product/March2026/warmhaus-glowa-montaj-ve-kullanim-kilavuzu-tr.pdf · md5 9018b4be
+    { giris: "Baxi — E25", tip: "kod",
+      anlam: "Su dolaşımı olmadığı için güvenlik müdahalesi (muhtemelen pompa bloke); R tuşuna en az 2 saniye basılır; tekrar tekrar çıkarsa yetkili servis aranır.",
+      yazi: "baxi-kombi-e25-hatasi" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E26", tip: "kod",
+      anlam: "Isıtma devresinde aşırı sıcaklık ya da su dolaşımı olmadığı için güvenlik müdahalesi (muhtemelen pompa bloke); müdahale tekrar ederse yetkili servis aranır.",
+      yazi: "baxi-kombi-e25-hatasi" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
+    { giris: "Baxi — E10", tip: "kod",
+      anlam: "Su basınç anahtarı izin vermiyor; tesisat basıncının kılavuzdaki değerde (soğukken 1–1,5 bar) olduğu kontrol edilir; doldurma kılavuzun tesisatı doldurma bölümüne göre, önce kombinin elektriği çift kutuplu şalterden kesilerek yapılır.",
+      yazi: "baxi-kombi-e25-hatasi" }, // https://edge.sitecorecloud.io/bdrthermea1-platform-production-864a/media/Project/BaxiIT/BaxiIT/Documents/Manuali-Instal-e-uso/Eco5Blue.pdf · md5 679514bf
   ],
 
   "Buzdolabı": [
