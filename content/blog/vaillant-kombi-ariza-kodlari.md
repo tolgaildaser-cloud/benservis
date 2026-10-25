@@ -35,7 +35,7 @@ faq:
   - q: "Vaillant F.75 ne anlama gelir?"
     a: "F.75 pompa çalıştığında basınç farkının algılanmadığını gösterir; genelde pompa veya su basıncı sensörü arızasıdır. Servis gerekir."
   - q: "Vaillant kombi nasıl reset edilir?"
-    a: "Reset şekli modele göre değişir: ecoTEC plus kılavuzu reset tuşuna bir saniye, ecoTEC pure kılavuzu 3 saniyeden uzun basmayı söylüyor; ecoTEC intro'da açma/kapatma düğmesine 3 saniyeden uzun basılır (en fazla beş kez). Su basıncı düşükse önce ısıtma sistemini doldur. Ateşleme arızasını üç denemede gideremiyorsan yetkili bayiye başvur."
+    a: "Reset şekli modele göre değişir: ecoTEC plus ve ecoTEC pure kılavuzları reset tuşuna 3 saniyeden uzun basmayı söylüyor; ecoTEC intro'da açma/kapatma düğmesine 3 saniyeden uzun basılır (en fazla beş kez). Su basıncı düşükse önce ısıtma sistemini doldur. Ateşleme arızasını üç denemede gideremiyorsan yetkili bayiye başvur."
 images:
   coverAlt: "Kombi çizimi, ekranında hata göstergesi ve yanında kod listesi"
 ---
@@ -92,7 +92,7 @@ Kombi yanmıyor. Önce **gaz vanasının açık** olduğunu, doğalgaz sayacınd
 Pompa çalışırken basınç farkı algılanmıyor; pompa ya da su basıncı sensörü arızasıdır. Servis gerekir.
 
 ## Reset nasıl yapılır?
-Reset şekli modele göre değişir: ecoTEC plus kılavuzu **reset tuşuna bir saniye**, ecoTEC pure kılavuzu **3 saniyeden uzun** basmayı söylüyor; ecoTEC intro'da **açma/kapatma düğmesine 3 saniyeden uzun** basılır (en fazla beş kez). Önce su basıncını kontrol et. Ateşleme arızasını üç denemede gideremiyorsan yetkili bayiye başvur.
+Reset şekli modele göre değişir: ecoTEC plus ve ecoTEC pure kılavuzları **reset tuşuna 3 saniyeden uzun** basmayı söylüyor; ecoTEC intro'da **açma/kapatma düğmesine 3 saniyeden uzun** basılır (en fazla beş kez). Önce su basıncını kontrol et. Ateşleme arızasını üç denemede gideremiyorsan yetkili bayiye başvur.
 
 ## Tahmini maliyet
 Vaillant modeline ve arızaya göre tahmini maliyeti [Benservis](/) söyler; sonra yakınındaki yüksek puanlı kombi servisini ara.

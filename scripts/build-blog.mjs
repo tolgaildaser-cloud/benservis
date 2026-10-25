@@ -853,6 +853,13 @@ const KOPRU_ARIZA = {
   "bosch-camasir-makinesi-e61-hatasi": "hata-kodu-veriyor",
   "profilo-camasir-makinesi-e17-hatasi": "hata-kodu-veriyor",
   "bosch-serie-4-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  // 25 Eki 2026 — YK #182 Dalga 8 sembol yazıları; aynı ailenin çamaşır/bulaşık emsaliyle "hata-kodu-veriyor".
+  "grundig-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "samsung-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "vestel-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "samsung-buzdolabi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "beko-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "bosch-kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
   // ── 1 Eyl 2026: BİREBİR ÇİP EŞLEŞMESİ — kürasyon değil, dize eşleşmesi. Her biri
   // kendi cihazının HIZLI BELİRTİ çipine tam oturuyor; hiçbiri yorum gerektirmedi.
   // ⛔ Elenenler ve sebepleri (yorum gerektirdiği için yazılmadı — yanlış ön-doldurma,
@@ -2465,7 +2472,9 @@ try{window.va&&window.va("event",{name:"servis_cagir",data:{kaynak:K,katman:el.g
 // Gözle kontrol edilmez, build denetler: üretilen HTML'in tamamı (görünen metin + meta +
 // JSON-LD + link adresleri) taranır, eşleşme varsa build DURUR.
 // `ücretsiz` serbesttir (fiyat değil, fiyatın yokluğudur) — desende `ücret(?!siz)` ile ayrıldı.
-const FIYAT_DESENI = /(₺|\bTL\b|\blira\b|fiyat|ücret(?!siz)|maliyet|bedel|\bpara\b|tarife)/i;
+// 25 Eki 2026: `\b` ASCII sınırıdır; Türkçe "ı" harf sayılmadığı için "kısıtlı" içindeki "tl" TL diye yakalanıyordu
+// (Dalga 8 yanlış alarmı). Sınırlar Unicode harf bakışına çevrildi; gerçek "TL" / "lira" / "para" yine yakalanır.
+const FIYAT_DESENI = /(₺|(?<!\p{L})TL(?!\p{L})|(?<!\p{L})lira(?!\p{L})|fiyat|ücret(?!siz)|maliyet|bedel|(?<!\p{L})para(?!\p{L})|tarife)/iu;
 function fiyatDenetimi(dosyalar) {
   const ihlal = [];
   for (const f of dosyalar) {
