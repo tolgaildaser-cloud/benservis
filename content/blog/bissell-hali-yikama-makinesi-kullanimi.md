@@ -44,14 +44,14 @@ faq:
 images:
   coverAlt: "Koltuk minderinin yanında duran, hortumu gövdesine sarılı küçük bir taşınabilir leke temizleme makinesi"
   steps:
-    - "Taşınabilir leke temizleme makinesinin arkasına takılmış hortum ve alet tutucusu"
-    - "Gövdeden çıkarılmış şeffaf temiz su deposu ve yanında duran vidalı kapağı"
-    - "Lavabo musluğunun altında doldurulan, yan yüzünde dolum çizgileri görünen şeffaf su deposu"
-    - "Kapağı kapatılmış temiz su deposunun makine gövdesine oturtulmuş hali"
-    - "Hortumun ucuna takılmış dar ağızlı leke temizleme aleti ve prize uzanan kablo"
-    - "Açık renkli koltuk minderine ince bir sıvı püskürten leke temizleme aleti"
-    - "Kumaş yüzeyde ilerleyen ve ıslak izi toplayan leke temizleme aleti"
-    - "Lavaboda durulanan şeffaf kirli su deposu ve açılmış leke aleti parçaları"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda hortum"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su deposu"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su deposu"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su deposu"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda leke temizleme başlığı"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda leke temizleme başlığı"
+    - "Çizim: solda koltuk ve halı yıkama makinesi, sağda su deposu"
 ---
 
 Bissell'in **SpotClean C5**'i halı, koltuk, araba koltuğu ve merdiven gibi küçük alanlardaki lekeler için yapılmış, taşınabilir bir halı ve koltuk yıkama makinesi. Gövdede iki depo var: önde temiz su ve formül deposu, arkada kirli su deposu. Makine suyu lekeye püskürtüyor, sen aleti ovuyorsun, sonra aynı alet kirli suyu geri emiyor. Bu yazı, Bissell'in Avrupa sitesindeki SpotClean C5 ürün sayfasından bağlanan **resmî kullanım kılavuzuna** ve **güvenlik talimatlarına** dayanıyor. Kullanım kılavuzu yazısız, tamamen resimli; güvenlik ve simge açıklamalarında **kılavuzun İngilizce baskısı** kullanıldı, Türkçe bölümde yalnız garanti metni var. Resimlerden okunan adımlar "kılavuz görseli" diye belirtildi. C5 Select ve C5 Pro (3928N, 3931N) aynı kılavuzda; onlarda alet farklı, temel akış aynı.
