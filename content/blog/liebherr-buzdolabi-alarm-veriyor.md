@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Mutfakta duran, dokunmatik ekranlı, gümüş renkli, alttan dondurucusu olan iki kapılı bir buzdolabı"
   steps:
-    - "Buzdolabı kapağındaki dokunmatik ekranda görünen uyarı mesajı"
-    - "Tamamen kapatılmış buzdolabı kapağı ve kenarındaki conta"
-    - "Dokunmatik ekranda daire içinde onay işareti simgesi"
-    - "Açık dondurucu çekmecesinde dondurulmuş yiyecek paketleri"
-    - "Duvardan ve fırından uygun mesafede duran bir buzdolabı"
-    - "Dokunmatik ekranda ayarlar menüsünü gösteren simge"
-    - "Buzdolabı iç duvarındaki model ve seri numarası etiketi"
+    - "Çizim: solda buzdolabı, sağda ekrandaki alarm uyarısı"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda not defteri ve kalem"
+    - "Çizim: solda buzdolabı, sağda dondurucu çekmecesindeki yiyecekler"
+    - "Çizim: solda buzdolabı, sağda duvarla arasındaki boşluk"
+    - "Çizim: solda buzdolabı, sağda ayar menüsü ve onay tuşu"
+    - "Çizim: solda buzdolabı, sağda telefon ve kullanım kılavuzu"
 ---
 
 Liebherr buzdolabının ötmesi çoğu zaman bir arıza değil, cihazın sana bir şey söylemesi. Yeni dokunmatik ekranlı Liebherr modellerinde dört ayrı uyarı var ve her birinin kapatma yolu farklı. Kapı açık mı kaldı, elektrik mi kesildi, dondurucu mu ısındı, yoksa bir parça mı arızalı? Bu yazı Liebherr'in Türkiye sitesinde ürün sayfalarına bağlı **CNsff 5703 kullanma kılavuzuna** dayanıyor. Türkçe baskı bulunamadı; **kılavuzun İngilizce baskısı** kullanıldı, alıntılar Türkçeye çevrildi. Senin cihazın tuşlu panelli eski bir modelse tuş ve ışık adları farklı olabilir; kendi kılavuzuna bak.
