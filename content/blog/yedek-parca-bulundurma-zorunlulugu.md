@@ -43,13 +43,13 @@ faq:
 images:
   coverAlt: "Aydınlık bir servis tezgâhında düzenli dizilmiş beyaz eşya yedek parçaları ve yanında açık duran bir çamaşır makinesi"
   steps:
-    - "Masada katlanmış, yazısı okunmayan bir fatura ve yanında bir takvim"
-    - "Dizüstü bilgisayar ekranında resmî bir sorgulama sayfası, yanında bir fincan"
-    - "Servis tezgâhında teslim alınan bir çamaşır makinesi ve yanında bir belge"
-    - "Duvarda asılı, günleri işaretlenmemiş sade bir takvim"
-    - "Şeffaf poşet içinde değiştirilmiş eski bir pompa parçası"
-    - "Bir klasörün içinde düzenli duran servis belgeleri"
-    - "Mutfakta yan yana duran çalışır durumdaki buzdolabı ve çamaşır makinesi"
+    - "Çizim: solda beyaz eşya, sağda kullanım kılavuzu ve garanti belgesi"
+    - "Çizim: solda beyaz eşya, sağda telefonda yetkili servis sorgusu"
+    - "Çizim: solda beyaz eşya, sağda not defteri ve kalem"
+    - "Çizim: solda beyaz eşya, sağda tamir süresini sayan saat"
+    - "Çizim: solda beyaz eşya, sağda yedek parça kutusu"
+    - "Çizim: solda beyaz eşya, sağda not defteri ve kalem"
+    - "Çizim: solda beyaz eşya, sağda telefon ve kullanım kılavuzu"
 ---
 
 Beş yıllık çamaşır makinen bozuldu, servis "parçası yok" diyor. Gerçekten olabilir mi? Türkiye'de bunun cevabı yönetmelikte yazılı: üretici ya da ithalatçı, cihazın **kullanım ömrü** boyunca bakım ve onarım hizmeti vermek zorunda. Beyaz eşyalarda bu süre **10 yıl**.
