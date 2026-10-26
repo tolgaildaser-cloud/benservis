@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Duvar dibindeki şarj istasyonuna yanaşmış yuvarlak bir robot süpürge ve önünde boş bırakılmış parke zemin"
   steps:
-    - "Ters çevrilmiş yuvarlak robot süpürgenin alt yüzü ve pil bölmesi"
-    - "Duvar dibinde, önü ve iki yanı boş bırakılmış robot süpürge şarj istasyonu"
-    - "Şarj istasyonunda duran robot süpürgenin üst yüzündeki düğme ve gösterge ışığı"
-    - "Robot süpürgenin alt yüzündeki metal şarj temas noktaları ve yanında katlanmış bez"
-    - "Şarj istasyonuna yeni yerleştirilmiş robot süpürge"
-    - "Robot süpürgenin üst yüzündeki düğmeler"
-    - "Serin, kuru bir odada şarj istasyonunda bekleyen robot süpürge"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda şarj istasyonunun çevresindeki boşluk"
+    - "Çizim: solda robot süpürge, sağda robotun pil göstergesi"
+    - "Çizim: solda robot süpürge, sağda şarj temas noktalarını silen bez"
+    - "Çizim: solda robot süpürge, sağda şarj edilen batarya"
+    - "Çizim: solda robot süpürge, sağda robot üstündeki düğmeler"
+    - "Çizim: solda robot süpürge, sağda telefon ve kullanım kılavuzu"
 ---
 
 Roomba temizliği bitirip Home Base'e dönüyor ama ertesi gün yerinden kalkmıyor, ya da istasyonda dururken hiçbir ışık yanmıyor. iRobot'un Türkiye sitesinde yayımlanan **Roomba 600 serisi** ve **Roomba i serisi** Türkçe kullanıcı kılavuzları bu durumu tek bir tabloda toplamıyor; ama şarj, Home Base'in yeri, temas noktalarının bakımı ve yeniden başlatma için açık talimatlar veriyor. Bu yazıda onları evde denenecek sıraya koyduk.
