@@ -47,14 +47,14 @@ faq:
 images:
   coverAlt: "Beyaz bir klima kumandası ve arkada duvara monte edilmiş split klima iç ünitesi"
   steps:
-    - "Kapağı kaydırılarak açılmış klima kumandasının pil yuvası"
-    - "Ekranında takvim ve saat ayarı görünen klima kumandası"
-    - "Ekranında çalışma modu simgesi görünen klima kumandası"
-    - "Ekranında ayar sıcaklığı ve fan hızı görünen klima kumandası"
-    - "Hava kanatları aşağı doğru açılmış duvar tipi klima iç ünitesi"
-    - "Ekranında özel mod simgesi görünen klima kumandası"
-    - "Duvar tipi klima iç ünitesine doğru tutulan klima kumandası"
-    - "Yan yana duran iki tuşu belirgin klima kumandasının ön yüzü"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumandanın pilleri"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda saat ve zamanlayıcı ayarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumanda tuşları ve ekranı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda kumanda tuşları ve ekranı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda saat ve zamanlayıcı ayarı"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
 ---
 
 Hitachi klima kumandasında MODE tuşu beş modu sırayla dolaşıyor, saat kurulmadan zamanlayıcılar çalışmıyor ve bazı tuş ikilileri modu kilitliyor. Soğuk ya da sıcak ayarı yapamıyorsan, pil değişince saat silindiyse ya da mod değişmiyorsa sebep çoğu zaman bunlardan biri. Bu yazı, Hitachi'nin klima sitesinde "Performance & Shirokuma" duvar tipi serilerinin kumandası olarak yayımlanan **RAR-6NE1 kumanda kılavuzuna** dayanıyor. Türkçe baskı bulunamadı; **kılavuzun İngilizce baskısı** kullanıldı, alıntılar Türkçeye çevrildi. Senin kumandan başka bir modelse tuş adları farklı olabilir; kumandanın üstündeki model adına bak.
