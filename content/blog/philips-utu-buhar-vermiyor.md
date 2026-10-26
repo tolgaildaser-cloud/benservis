@@ -21,6 +21,9 @@ category: "Küçük Ev Aletleri"
 #     "Buharlı ütünüz veya buhar üreticiniz musluk suyuyla kullanılmak üzere tasarlanmıştır. Ancak yaşadığınız bölgenin suyu kireçliyse hızlı kireç oluşumu görülebilir." / "damıtılmış veya demineralize su kullanmanız önerilir (%50 demineralize su ile musluk suyu karışımı da kullanılabilir)." / "lütfen parfümlü su, kurutma makinesinde biriken su, sirke, kola, kireç çözücü maddeler, ütülemeye yardımcı ürünler, kimyasal olarak kireçten arındırılmış su veya başka kimyasallar kullanmayın."
 # BİLEREK YAZILMAYANLAR: sirkeyle ya da kireç çözücüyle temizlik (Philips su sayfası ikisini de yasaklıyor); buhar deliklerini iğne ya da kürdanla açma; "pompa/termostat arızası" gibi belgede olmayan teşhis; buhar kazanlı ütülerin ayrı sorun sayfası (kapsam dışı, bu sayfa buharlı ütü); tabandan su sızması (Philips'in ayrı sayfası var, gövdesi curl ile indirilemedi, bulunamadı listesinde).
 # Alıntı denetim tablosu: philips-utu-buhar-vermiyor.KAYNAK.md
+# 📌 25 Eki 2026 (YK #182, tamir-yazisiz-39, yalnız ekleme): "Buhar kazanlı Philips ütüyse" bölümü, iki SSS, bir servis satırı ve künye satırı eklendi. Tamir merkezindeki yazısız iki kayıt ("Philips buhar kazanlı ütü — buhar üretmiyor", "…Kireç Temizleme ışığı yanıp sönüyor, bip sesi") bu yazıya bağlanır.
+#  BK) "Philips Buhar Kazanlı Ütüm buhar üretmiyor"  https://www.philips.com.tr/c-t/XC000019024/philips-buhar-kazanl%C4%B1-%C3%BCt%C3%BCm-buhar-%C3%BCretmiyor — 200 text/html, dinamik HTML (bu koşu md5 097efb30f3f1f574875c00fd35e2f764; föy md5'i f4521f3feee9ec3083a4820793977301 yeniden üretilemez, kayıttaki cümleler sayfa metninde birebir var). Sayfanın geçerli saydığı modeller: PSG3000/30, PSG3000/20, PSG2000/20. Alıntılar: tamir-yazisiz-39/mevcut-ek/philips-utu-buhar-vermiyor.EK-KAYNAK.md
+#  GSC (www-6, 7 gün): "philips ütü buhar vermiyor ne yapmalıyım" 11 gösterim · OT (25 Eki): "philips buhar kazanlı ütü" → 2. "…kireç temizleme", 5. "…buhar vermiyor". Aynı sorgu ailesi; ayrı sayfa açılmadı.
 guide:
   difficulty: "Kolay"
   time: "~10 dakika"
@@ -43,6 +46,10 @@ faq:
     a: "Philips buharlı ütünün kirecinin 1-2 ayda bir temizlenmesini öneriyor; kendi kendini temizleme işlevi için ayda bir kez ya da gerekirse daha fazla diyor. Philips'e göre düzenli temizlik buhar çıkışını en yüksek seviyede tutar."
   - q: "Philips ütüye hangi su konur?"
     a: "Philips'e göre buharlı ütü musluk suyuyla kullanılmak üzere tasarlanmıştır. Bölgenin suyu kireçliyse kullanım ömrünü uzatmak için damıtılmış ya da demineralize su öneriliyor; yüzde 50 demineralize su ile musluk suyu karışımı da kullanılabilir."
+  - q: "Philips buhar kazanlı ütü buhar vermiyor, ne yapmalıyım?"
+    a: "Philips'in buhar kazanlı ütü sayfası şu nedenleri sayıyor: su haznesi tık sesiyle yerine oturmamış, su MIN seviyesinin altında, ütü hazır ışığı henüz sabit yanmıyor, buhar tetiğine basılmıyor ya da kadran buhar bölgesinde değil, otomatik buhar modu kapalı ya da ütünün kirecinin temizlenmesi gerekiyor. İlk basışta yaklaşık 30 saniyelik gecikme normal."
+  - q: "Philips buhar kazanlı ütüde Kireç Temizleme ışığı yanıp sönüyor ve bip sesi geliyor, neden?"
+    a: "Philips'e göre Kireç Temizleme ışığı yanıp sönüyor ve bip sesi duyuluyorsa ütünün kirecinin temizlenmesi gerekiyor. Kullanım kılavuzundaki kireç temizleme talimatlarını izle. Kireci temizlediğin ve diğer nedenleri kontrol ettiğin hâlde buhar gelmiyorsa Philips destek hattıyla iletişime geçmeni istiyor."
 images:
   coverAlt: "Ütü masasının üzerinde dik duran buharlı bir ütü, yanında su doldurma kabı ve katlanmış bir gömlek"
   steps:
@@ -88,12 +95,28 @@ Philips'in notu: **OptimalTemp** özellikli ütülerde ütü buhar üretmeye haz
 
 Philips bazı modellerde ek bir kireç temizliği tarif ediyor: **Quick Calc Release.** Philips'in listesine göre 8000 Serisi (DST80xx), 7500 Serisi (DST75xx), 7000 Serisi (DST70xx) ile Azur (GC490X, GC45XX), Azur Elite (GC503X) ve Azur Elite Advanced (GC493X) modellerinde toplayıcı tabanın altında. Philips'in sırası: fişi çek ve ütünün soğuk olduğundan emin ol; ütüyü lavabo üzerinde dik tut; toplayıcının kolunu yukarı kaldırıp dışarı çek; toplayıcıyı suyla temizle; kireç parçacıkları düşsün diye ütüyü nazikçe salla; toplayıcıyı geri takıp kolu "klik" sesi gelene kadar aşağı çek. Philips bunu ayda bir kez ya da gerektiğinde istiyor. Model numaran tabanın altında yazar.
 
+## Buhar kazanlı Philips ütüyse
+
+Ütünün suyu gövdede değil ayrı bir istasyonda duruyorsa elindeki buhar kazanlı ütüdür (çıkarım). Philips bu ütüler için ayrı bir sayfa yayımlıyor: **"Philips Buhar Kazanlı Ütüm buhar üretmiyor."** Sayfanın saydığı modeller PSG3000 ve PSG2000. Nedenler ve çözümler şöyle:
+
+| Philips'in yazdığı neden | Çözüm |
+|---|---|
+| Su haznesi doğru yerleştirilmemiş | Hazneyi "tık" sesi duyana kadar yerine yerleştir |
+| Su MIN seviyesinin altında ya da hazne boş | Hazneye MIN simgesinin üzerine çıkacak kadar su koy |
+| Ütü buhar vermeye hazır değil | Mavi/beyaz "ütü hazır" ışığı yanıp sönmeyi bırakıp sabit yanana kadar bekle |
+| Buhar tetiğine basılmıyor ya da ayar yanlış | Tetiğe bas; kadran varsa 2 nokta, 3 nokta ya da LINEN'e al |
+| Otomatik buhar modu kapalı | Tutma yerinin üstündeki ışığın yandığına bak, ütüyü hareket ettir |
+| Kireç Temizleme ışığı yanıp sönüyor, bip sesi geliyor | Kullanım kılavuzundaki kireç temizleme talimatlarını izle |
+
+Philips'in iki notu da var. Buhar tetiğine ilk kez bastığında yaklaşık **30 saniyelik bir gecikme** olur; buhar çıkana kadar tetiğe basmaya devam et. Ütü uzun süre kullanılmadıysa bu gecikme birkaç dakika sürebilir. Duyduğun pompalama sesi de normal. Kireci temizlediğin ve diğer nedenleri kontrol ettiğin hâlde buhar gelmiyorsa Philips teknik bir sorun olabileceğini yazıyor ve destek hattına yönlendiriyor.
+
 ## Ne zaman servis?
 
 | Durum | Kimin işi |
 |---|---|
 | Boş hazne, ısınmamış taban, kapalı buhar ayarı | Senin, bu rehberdeki adımlar |
 | Kireç temizliği (Calc Clean, Quick Calc Release) | Senin; Philips kullanıcıya veriyor |
+| Buhar kazanlı ütüde Kireç Temizleme ışığı ve bip sesi | Senin; kullanım kılavuzundaki kireç temizleme talimatı |
 | Adımlardan sonra da buhar yok | Philips destek hattı |
 
 ⛔ Hazneye sirke ya da kireç çözücü koyma; Philips ikisini de yasaklıyor. Philips'in tarif ettiği kireç temizliği yalnız ütünün kendi işlevleriyle yapılıyor. Ütünün gövdesini sökmeye çalışma.
@@ -103,3 +126,5 @@ Küçük ev aletlerinde kireç bakımı için [Arzum kettle kireç temizleme](/b
 ---
 
 **Kaynak künyesi.** Buhar üretmeme nedenleri ve çözümleri, kireç temizleme tarifleri ve su önerisi Philips Türkiye'nin resmî destek sayfalarından ("Philips Buharlı Ütüm buhar üretmiyor", "Philips Buharlı Ütümün kirecini nasıl temizlerim?", "Philips Buharlı Ütüme/Buhar Üreticime uygun su nedir?") alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+
+Buhar kazanlı ütü bölümü Philips Türkiye'nin "Philips Buhar Kazanlı Ütüm buhar üretmiyor" destek sayfasından alınmıştır.
