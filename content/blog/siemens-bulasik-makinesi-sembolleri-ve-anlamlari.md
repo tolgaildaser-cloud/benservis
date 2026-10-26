@@ -43,6 +43,12 @@ images:
     - "Çizim: solda bulaşık makinesi, sağda paneldeki tuş"
     - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
     - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+video:
+  youtubeId: "EVISHwjfpHo"
+  title: "Siemens bulaşık makinesi sembolleri ve anlamları"
+  description: "Siemens iQ300 kılavuzuna göre musluk, tuz, parlatıcı ve anahtar sembollerinin anlamı; musluk sembolü yanıp sönerse ne yapılır."
+  uploadDate: "2026-10-26T03:46:09Z"
+  duration: "PT52S"
 ---
 
 Siemens bulaşık makinenin panelinde bir sembol yandı ya da ekranda **H04**, **r:05**, **h:01** gibi bir yazı belirdi. Bunların çoğu arıza değil; bir ayarın, bir sarf malzemesinin ya da bir fonksiyonun durumunu gösterir. Bu yazıdaki karşılıkların tamamı **Siemens'in kendi kullanım kılavuzundan** alındı.
