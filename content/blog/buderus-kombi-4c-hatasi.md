@@ -1,47 +1,22 @@
 ---
-title: "Buderus kombi 4C hatası"
-description: "Buderus kombide 4C aşırı ısınma demek; kombi kendini bloke eder. Basınç, kalorifer vanaları ve reset sırası adım adım, Buderus'un belgelerinden."
+title: "Buderus kombi 4C hatası: ne demek, nasıl çözülür?"
+description: "Buderus kombide 4C, tesisat suyunun aşırı ısındığını ve kombinin kendini bloke ettiğini gösterir. Buderus'un sırası: basınç, kalorifer vanası, reset."
 slug: "buderus-kombi-4c-hatasi"
 date: "2026-09-27"
+updated: "2026-10-29"
 category: "Kombi"
 # --- Provenans (yayında görünmez) ---
-# 2026-09-27, curl -sL -A "Mozilla/5.0" ile BU KOŞUDA indirildi; PDF'ler pdftotext -layout ile okundu, sayfa no \f ayracına göre.
-# Web araması yalnız U072 kılavuzunun YERİNİ bulmak için kullanıldı; hiçbir cümle arama sonucundan / üçüncü taraf siteden alınmadı.
-# Alıntı denetim tablosu: buderus-kombi-4c-hatasi.KAYNAK.md
-# K1) Buderus TR "4C Arıza Kodu" sayfası
-#     https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/4c-ariza-kodu/
-#     HTTP 200 · 126.131 B · md5 8a0b1be67aa3ad1ee8a298e6dffab4e4 (dinamik sayfa; md5 indirme anına ait)
-#     Birebir: "kombi tesisatındaki su sıcaklığının maksimum değeri aşarak aşırı ısınmaya yol açtığı anlamına gelmektedir" ·
-#     "kombiniz kendini güvenlik moduna geçirerek korumaya alır" · "kendini bloke ederek çalışmayı durdurur" ·
-#     "ideal aralık 1,2 – 1,5 bar" · "1 bar altında" · "su takviye musluğunu saat yönünün tersine çevirerek" ·
-#     "kalorifer vanalarınız kapalı ise açabilirsiniz" · "kombinizi açıp kapatarak ya da reset düğmesine basarak"
-# K2) Buderus TR "Arıza Kodları ve Çözümleri" dizini — md5 ff763f86f479cd5ba6b5c8935ee0960a
-#     4C'nin geçtiği modeller: U022, U072, U052, U062 (başka modelde yok)
-# K3) Fd kod sayfası — HTTP 200 md5 8a03ca4fe9343798913b698d8c9b43b6 (30 saniye sınırı; Fd U022/U072 listesinde)
-# B1) Logamax U072 Kullanma Kılavuzu 6720813734 (2015/02)
-#     https://buderus-tr-tr-c.boschhc-documents.com/download/file/file/6720813734.pdf
-#     HTTP 200 · 746.828 B · 12 s. · md5 0f67df9c94f4db798d5c3ce9c8b462b8
-#     Gaz kokusu + "dış sacını asla sökmeyin" s.3 · "Çalışma basıncı normal şartlarda 1 ile 2 bar arasıdır" + manometreden oku +
-#     "Basınç çok düşük olduğunda ısıtma suyu ilave edin" + Res.3 kumanda paneli kapağı açık/manometre s.4 ·
-#     yalnız soğukken ilave, doldurma ünitesinin yeri, "Doldurma vanasını açın … 1 ile 2 bar … tekrar kapatın", 3 bar s.5 ·
-#     reset iki yolu, arıza giderilemezse servis + tip etiketi s.7
-# B2) Logamax plus GB022i-20 KD H Kullanma Kılavuzu 6721835260 (2021/03)
-#     https://buderus-tr-tr-b.boschhc-documents.com/download/file/file/6721835260.pdf
-#     HTTP 200 · 577.309 B · 16 s. · md5 285eeb793f4a256196ab942d187cff31
-#     "Sisteme sık su ekleniyorsa … su kaçaklarının çok olduğunu gösterir … Kaçakların giderilmesi gerekmektedir" s.5 ·
-#     "doldurulması işlemi, ısıtma tesisatına göre farklılık gösterir … göstermesini isteyin" s.12
-# B3) Logamax plus GB072-24|24K Kullanma Kılavuzu 6721835150 (2021/03)
-#     https://buderus-tr-tr-b.boschhc-documents.com/download/file/file/6721835150.pdf
-#     HTTP 200 · 1.305.490 B · 16 s. · md5 e90532810ee5ec5e8414b1c01e659a75
-#     "Tesisat kaçakları" s.3 · "göstermesini isteyin" s.5 (U072 dışı modelin kılavuzu; yalnız genel uyarı olarak kullanıldı)
-# BİLEREK yazılmayanlar:
-#  - Aşırı ısınmanın arkasındaki parça (pompa, sensör, eşanjör vb.): sayfa sebebi saymıyor.
-#  - Kalorifer vanasının "hangi" vana olduğu / nerede durduğu (sayfa yalnız "kalorifer vanaları" diyor).
-#  - Su takviye musluğunun her modelde saat yönünün tersine açıldığı: yalnız 4C sayfasının tarifi olarak verildi;
-#    U072 kılavuzu "doldurma vanası" diyor ve yön vermiyor — ikisi yan yana.
-#  - Basınç hedefi için tek rakam: sayfa 1,2–1,5 bar, U072 kılavuzu 1–2 bar; ikisi yan yana.
-#  - U052/U062 kullanma kılavuzu bu koşuda bulunamadı; o modeller için yalnız kod sayfası esas alındı.
-#  - Buderus müşteri hattı numarası (sayfada var; gövdeye alınmadı).
+# 2026-10-27 PAZ (YK #189 fırsat sayfası, yayın 29 Eki): içerik iyileştirmesi; slug, şablon, 6 adım ve images aynı (YK #179).
+# GSC (www-9 Sorgular.csv, 7 gün): "buderus 4c hatası" 188 gösterim poz 9,69 · "buderus kombi 4c hatası" 142 · "buderus 4 c hatası" 81 · "buderus 4c" 26 · "kombi 4c hatası" 19 · "buderus kombi 4c arızası nedir" 12.
+# Belgeler bu koşuda curl -sL --http1.1 -A "Mozilla/5.0 …" ile indirildi, hepsi HTTP 200; PDF'ler pdftotext -layout, sayfa = PDF sayfası (\f ile sayıldı).
+# K1) Buderus TR "4C Arıza Kodu"  https://www.buderus.com/tr/tr/hizmetler/ariza-kodlari-ve-coezuemleri/4c-ariza-kodu/  md5 2b89024df0dd1645ea7f811bd144bec5 (dinamik sayfa; metin 27 Eyl ile birebir)
+# K2) Buderus TR "Arıza Kodları ve Çözümleri" dizini  …/ariza-kodlari-ve-cozumleri/  md5 4da916dcd1d62156d730fcf390e65172 — 4C yalnız Logamax U022, U072, U052, U062 listelerinde; Fd yalnız U022/U072'de
+# K3) Fd sayfası md5 e69be48a0273b764f642e54bf7803c66 · K4) 2E sayfası md5 04440966109d48a49094fb2845edaafb · K5) 4L sayfası md5 0b8b9c897ff5e5977604464e58b637f1
+# B1) Logamax U072 Kullanma Kılavuzu 6720813734  https://buderus-tr-tr-c.boschhc-documents.com/download/file/file/6720813734.pdf  12 s.  md5 0f67df9c94f4db798d5c3ce9c8b462b8 (s.3, 4, 5, 7)
+# B2) GB022i Kullanma Kılavuzu 6721835260  md5 285eeb793f4a256196ab942d187cff31 (s.5, 12) · B3) GB072 Kullanma Kılavuzu 6721835150  md5 e90532810ee5ec5e8414b1c01e659a75 (s.3, 5)
+# B4) Logamax plus GB062-24/20 KD H V2 Montaj ve Bakım Kılavuzu 6721857197 (2025/06, uzmana yönelik)  https://buderus-tr-tr-b.boschhc-documents.com/download/file/file/6721857197.pdf  56 s.  md5 0dc68dfafa76a78d16f4f8c8f35c546f — 4C satırı s.39
+# Tam liste, alıntılar ve md5'ler: buderus-kombi-4c-hatasi.KAYNAK.md
+# Bilerek YAZILMAYANLAR: U serisinde 4C'nin arkasındaki parça (K1 sebep saymıyor; B4'ün listesi yalnız GB062 V2 için ve yalnız uzmana yönelik olarak verildi); U022/U052/U062 kullanma kılavuzu bu koşuda bulunamadı; müşteri hattı numarası.
 guide:
   difficulty: "Kolay"
   time: "~15 dakika"
@@ -63,7 +38,7 @@ faq:
   - q: "Buderus kombiye nasıl su basılır?"
     a: "4C sayfası, kombinin altındaki su takviye musluğunu saat yönünün tersine çevirerek basıncı 1,2-1,5 bar'a yükseltmeyi tarif ediyor. U072 kılavuzuna göre doldurma ünitesi cihazın alt tarafında, ısıtma gidiş suyu ile sıcak kullanım suyu çıkış bağlantısı arasındadır: doldurma vanası açılır, manometrede 1 ile 2 bar arası görünene kadar doldurulur ve vana tekrar kapatılır. Su yalnız cihaz soğukken eklenmeli."
   - q: "Basınç normal ama 4C gitmiyor, ne yapmalıyım?"
-    a: "Buderus'un sırasına göre basınç normalse kalorifer vanaları kontrol edilir, kapalıysa açılır; ardından kombi resetlenir. Tüm bu adımlara rağmen 4C sürüyorsa sayfa Buderus yetkili servisine başvurulmasını istiyor."
+    a: "Buderus'un sırasına göre basınç normalse kalorifer vanaları kontrol edilir, kapalıysa açılır; ardından kombi resetlenir. Tüm bu adımlara rağmen 4C sürüyorsa sayfa Buderus yetkili servisine başvurulmasını istiyor. Buderus'un GB062 V2 montaj ve bakım kılavuzu da 4C için sınırlayıcı, pompa ve ısı bloğu kontrollerini uzmana bırakıyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; borular arasındaki küçük doldurma vanasına uzanan bir el, yanda duvarda bir kalorifer peteğinin yan vanası"
   steps:
@@ -75,7 +50,7 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
 ---
 
-Kombi birden durdu ve ekranda **4C** var. Buderus'un 4C sayfasına göre bu kod, **kombi tesisatındaki su sıcaklığının maksimum değeri aşarak aşırı ısınmaya yol açtığı** anlamına geliyor. Bu olunca kombi **kendini güvenlik moduna geçirir**, bloke eder ve çalışmayı durdurur. Yani kombi kendini korumak için durdu. Sayfanın verdiği sıra şu: su basıncı, kalorifer vanaları, reset; hepsine rağmen kod sürüyorsa yetkili servis.
+Kombi birden durdu ve ekranda **4C** var (aramalarda "4 C" diye ayrı da yazılıyor). Kısa cevap: Buderus'un 4C sayfasına göre bu kod, **kombi tesisatındaki su sıcaklığının maksimum değeri aşarak aşırı ısınmaya yol açtığı** anlamına geliyor. Bu olunca kombi **kendini güvenlik moduna geçirir**, bloke eder ve çalışmayı durdurur. Yani kombi kendini korumak için durdu. Sayfanın verdiği sıra şu: su basıncı, kalorifer vanaları, reset; hepsine rağmen kod sürüyorsa yetkili servis.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -83,9 +58,17 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ## Hangi Buderus kombilerde 4C var
 
-Buderus'un arıza kodları sayfası 4C'yi yalnız **Logamax U022, U072, U052 ve U062** listelerinde veriyor. Bu yazıdaki kullanım adımları Buderus'un **Logamax U072** kullanma kılavuzundan; diğer U modellerinde kendi kılavuzun esastır.
+Buderus'un arıza kodları sayfası 4C'yi yalnız **Logamax U022, U072, U052 ve U062** listelerinde veriyor. Bir istisna da belgelerde var: Buderus'un **Logamax plus GB062 V2** montaj ve bakım kılavuzunun arıza tablosunda da 4C satırı bulunuyor. Model ayrımı şöyle:
 
-Kombin GB serisindense (GB072, GB172i vb.) 4C o modellerin listesinde yok; kendi kodunu [Buderus kombi arıza kodları](/blog/buderus-kombi-ariza-kodlari/) tablosunda bul.
+| Model | 4C nerede geçiyor | Belgenin tanımı | Bu yazıdaki adımların kaynağı |
+|---|---|---|---|
+| Logamax U072 | Arıza kodları sayfası | Su sıcaklığı maksimumu aştı, aşırı ısınma | 4C sayfası + U072 kullanma kılavuzu |
+| Logamax U022 | Arıza kodları sayfası | Aynı 4C sayfası | 4C sayfası (kullanma kılavuzu bulunamadı) |
+| Logamax U052, U062 | Arıza kodları sayfası | Aynı 4C sayfası | 4C sayfası (kullanma kılavuzu bulunamadı) |
+| Logamax plus GB062-24/20 KD H V2 | Montaj ve bakım kılavuzu, s.39 | Yanma gövdesi sıcaklık sınırlayıcısı veya atık gaz sınırlayıcısı devreye girdi | Kılavuz uzmana yönelik; kullanıcıya düşen basınç kontrolü |
+| GB022i, GB072, GB122i, GB172i, GB012, GB042 | Arıza kodları sayfasında 4C yok | – | Kendi kodunu hub tablosunda ara |
+
+Kombin bu listede 4C'siz bir GB modeliyse kodunu [Buderus kombi arıza kodları](/blog/buderus-kombi-ariza-kodlari/) tablosunda bul. Model adı cihazın tip etiketinde yazar; U072'de bu etiket kumanda paneli kapağındadır.
 
 ## Adım adım: evde denenecekler
 
@@ -104,9 +87,19 @@ Kombin GB serisindense (GB072, GB172i vb.) 4C o modellerin listesinde yok; kendi
 
 **5. Bir kez resetle.** 4C sayfası resetin kombiyi **açıp kapatarak** ya da **reset düğmesine basarak** yapılabileceğini söylüyor. U072 kılavuzu iki durumu ayırıyor: ekranda iki arıza sembolü birlikte görünüyorsa **ok** tuşuna basıp semboller kaybolana kadar basılı tut; tek sembol görünüyorsa cihazı **Stand-by (bekleme modu)** tuşuyla kapatıp tekrar çalıştır. Cihaz tekrar çalışınca ekranda gidiş suyu sıcaklığı görünür.
 
-Tuşa ne kadar basacağının bir sınırı var: Buderus'un **Fd** sayfasına göre ekranda Fd, reset tuşuna yanlışlıkla **30 saniyeden uzun** basıldığını gösterir; çözüm tuşa 30 saniyeyi aşmayacak şekilde basmaktır.
+Tuşa ne kadar basacağının bir sınırı var: Buderus'un **Fd** sayfasına göre ekranda Fd, reset tuşuna yanlışlıkla **30 saniyeden uzun** basıldığını gösterir; çözüm tuşa 30 saniyeyi aşmayacak şekilde basmaktır. Fd, Buderus'un listesinde U022 ve U072'de geçiyor. Diğer modellerdeki tuş sırası için [Buderus kombi resetleme](/blog/buderus-kombi-resetleme/) yazısına bak.
 
 **6. Kod sürüyorsa dur.** Buderus'un ifadesiyle: tüm bu adımlara rağmen 4C veriyorsa çözüm için **Buderus yetkili servisine** başvur.
+
+## Servis 4C'de neye bakar
+
+Buderus'un 4C sayfası U serisi için aşırı ısınmanın arkasındaki parçayı saymıyor; bu yüzden U modellerinde "şu parça bozuk" demek tahmin olur. GB062 V2'nin montaj ve bakım kılavuzu ise 4C için uzmanın yapacağı kontrolleri listeliyor: ısı bloğu ve atık gaz **sıcaklık sınırlayıcıları** ile kabloları, ısıtma tesisatının **çalışma basıncı**, **pompanın** çalışması, sigorta, cihazın havasının alınması ve ısı bloğunun su tarafı. Bu listeden kullanıcıya düşen tek adım basınç kontrolü; gerisi kombinin içinde ve servisin işi.
+
+## Karıştırılan kodlar
+
+- **2E ve 4L:** Buderus'un sayfalarına göre ikisi de **tesisat su basıncı düşük** demek ve basıncın 1,2 bar'a yükseltilmesini istiyor: [Buderus kombi 4L ve 2E hatası](/blog/buderus-kombi-4l-hatasi/).
+- **6A:** ateşleme sorunu, gaz vanasından başlar: [Buderus kombi 6A hatası](/blog/buderus-kombi-6a-hatasi/).
+- **Bulaşık makinesindeki 4C** kombiyle ilgisizdir, Samsung'da su tedarikiyle ilgilidir: [Samsung bulaşık makinesi 4C hatası](/blog/samsung-bulasik-makinesi-4c-hatasi/).
 
 ## Basınç sık düşüyorsa
 
