@@ -8,7 +8,7 @@ faq:
   - q: "Onarım Hakkı (Right to Repair) nedir?"
     a: "Onarım Hakkı, tüketicilerin cihazlarını atmak yerine makul şekilde onarabilmesini sağlayan yasal ve toplumsal bir yaklaşımdır. Üreticilerin yedek parça, onarım bilgisi ve uygun fiyatlı tamir seçenekleri sunmasını hedefler; böylece cihazlar daha uzun yaşar, atık azalır."
   - q: "AB Onarım Hakkı yasası ne getiriyor?"
-    a: "Nisan 2024'te kabul edilen AB yasası; üreticilerin garanti süresi dışında da onarım hizmeti sunmasını, yedek parçaları ~10 yıl bulundurmasını, onarım kılavuzu ve teşhis araçlarını erişilebilir kılmasını ve tüketiciyi değişimden ÖNCE onarım seçeneği hakkında bilgilendirmesini öngörüyor."
+    a: "13 Haziran 2024 tarihli AB Onarım Hakkı Direktifi (2024/1799); üreticilerin garanti süresi dışında da onarım hizmeti sunmasını, onarım kılavuzu ve teşhis araçlarını erişilebilir kılmasını ve tüketiciyi değişimden ÖNCE onarım seçeneği hakkında bilgilendirmesini öngörüyor. Yedek parça bulundurma süreleri direktifte değil, ürün gruplarına ait AB tüzüklerinde belirlenir."
   - q: "Onarım Hakkı Türkiye'de geçerli mi?"
     a: "AB yasası doğrudan Türkiye'yi bağlamasa da Türkiye, Gümrük Birliği ve Yeşil Mutabakat uyum süreci nedeniyle bu ilkeleri yakından izliyor. Ayrıca 'onar > değiştir' yaklaşımı, e-atığı azalttığı için Türkiye'nin döngüsel ekonomi ve sıfır atık hedefleriyle de örtüşüyor."
   - q: "Onarım Hakkı bana ne kazandırır?"
@@ -33,9 +33,9 @@ Amaç: cihazların ömrünü uzatmak, **e-atığı ve karbonu azaltmak.**
 
 ## AB Onarım Hakkı yasası ne getiriyor?
 
-AB, **Nisan 2024'te** Onarım Hakkı yasasını kabul etti. Öne çıkan maddeler:
+AB, **13 Haziran 2024** tarihli Onarım Hakkı Direktifi'ni (2024/1799) kabul etti. Öne çıkan maddeler:
 - Üreticiler **garanti süresi dışında da** onarım hizmeti sunacak
-- **Yedek parçalar ~10 yıl** bulundurulacak
+- **Yedek parça süreleri** direktifte değil, ürün gruplarına ait AB tüzüklerinde belirlenir
 - **Onarım kılavuzları ve teşhis araçları** erişilebilir olacak
 - Tüketici, bir cihazı **değiştirmeden ÖNCE onarım seçeneği** hakkında bilgilendirilecek
 
@@ -60,7 +60,7 @@ AB yasasının özündeki ilke — **değişimden önce tüketiciyi onarım seç
 Tüketicinin cihazını atmak yerine makul şekilde onarabilmesini sağlayan yaklaşım.
 
 **AB yasası ne getiriyor?**
-Garanti dışı onarım, ~10 yıl yedek parça, erişilebilir onarım bilgisi, değişimden önce bilgilendirme (Nisan 2024).
+Garanti dışı onarım, erişilebilir onarım bilgisi, değişimden önce bilgilendirme (Haziran 2024); yedek parça süreleri ürün tüzüklerinde.
 
 **Türkiye'de geçerli mi?**
 Doğrudan bağlamıyor ama Gümrük Birliği/Yeşil Mutabakat ve sıfır atık hedefleriyle örtüşüyor.
