@@ -3,7 +3,7 @@ title: "Benservis hakkında: biz kimiz, nasıl çalışır?"
 description: "Benservis nedir, nasıl çalışır ve neden güvenilir? AI destekli arıza teşhisi + tahmini tamir maliyeti + yakınındaki en yüksek puanlı servis. Bil, gör, çağır."
 slug: "hakkimizda"
 date: "2026-06-21"
-updated: "2026-07-01"
+updated: "2026-10-27"
 category: "Kurumsal"
 faq:
   - q: "Benservis nedir?"
@@ -45,6 +45,19 @@ Adres: **Ark 399 Plaza, Suadiye, Kadıköy / İstanbul**
 Sosyal: [Instagram](https://www.instagram.com/benservis.app/) · [TikTok](https://www.tiktok.com/@benservis.app) · [LinkedIn](https://www.linkedin.com/company/benservis/) · [YouTube](https://www.youtube.com/@benservisapp)
 
 İlgili: [Bilgi Merkezi (arıza rehberleri)](/blog/) · [SERBİS'te yetkili servisi nasıl doğrularsın?](/blog/serbis-yetkili-servis-sorgulama/)
+
+## İletişim ve işletme bilgileri
+
+| | |
+|---|---|
+| İşletme adı | Benservis |
+| Unvan | Orient Global Tarımsal Üretim ve Sanayi Ticaret Ltd. Şti. |
+| MERSİS No | 0647069188200001 |
+| Açık adres | Suadiye Mah. Bağdat Cad. Ark 399 Plaza, Kadıköy / İstanbul |
+| Telefon | 0530 710 55 85 |
+| E-posta | info@benservis.com |
+
+Pazaryeri siparişleri için: [İade, Cayma ve Teslimat](/iade-ve-cayma/) · [Mesafeli Satış Sözleşmesi](/mesafeli-satis-sozlesmesi/) · [Ön Bilgilendirme Formu](/on-bilgilendirme-formu/)
 
 ## Sık sorulan sorular
 

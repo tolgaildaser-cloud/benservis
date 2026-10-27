@@ -79,3 +79,17 @@ describe("tek kaynak", () => {
     }
   });
 });
+
+// YK #191 (27 Eki 2026): Merchant Center `brand` yalnız gerçek veriden — başlık markayla başlıyorsa.
+describe("Product marka", () => {
+  const ld = (baslik) => urunLdNesnesi({ ...u, baslik });
+  it("başlık bir üretici adıyla başlıyorsa brand o markadır", () => {
+    expect(ld("Vestel klima filtresi — Vestel uyumlu (42148439)").brand).toEqual({ "@type": "Brand", name: "Vestel" });
+    expect(ld("Daikin kombi baca seti — Daikin yoğuşmalı uyumlu").brand?.name).toBe("Daikin");
+  });
+  it("yalnız 'X uyumlu', 'Üniversal' ya da markasız başlıkta brand yazılmaz; Benservis marka değildir", () => {
+    for (const b of ["Buzdolabı contası — Arçelik uyumlu (49377326)", "Kombi baca dirseği 45 derece — Üniversal yoğuşmalı", "Kombi pompası", "Arçelikler deneme"])
+      expect(ld(b), b).not.toHaveProperty("brand");
+    expect(JSON.stringify(ld("Vestel klima filtresi").brand)).not.toContain("Benservis");
+  });
+});

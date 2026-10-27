@@ -14,6 +14,7 @@
 //   • Kargo: src/kargo.js (189 TL; ürün tek başına 3.000 TL'yi aşıyorsa 0 — sepet kuralıyla aynı).
 import { KARGO_TL, UCRETSIZ_KARGO_ESIK_TL } from "./kargo.js";
 import { mutlakGorselUrl } from "./pazar-gorsel.js";
+import { MARKALAR } from "./constants.js";
 
 export const SITE = "https://www.benservis.com";
 export const HAZIRLIK_IS_GUNU = { min: 1, max: 3 }; // "tahmini 3 iş gününde kargoda"
@@ -72,6 +73,20 @@ export function urunTeklifi(u, { saticiAd = "Benservis", site = SITE } = {}) {
   };
 }
 
+// Marka (YK #191, 27 Eki 2026 — Merchant Center `brand`): YALNIZ gerçek veriden. Pazar tablosunda marka
+// kolonu yok; tek kaynak ürün başlığı. Başlık bir üretici adıyla BAŞLIYORSA ("Vestel klima filtresi",
+// "Daikin kombi baca seti") o marka yazılır. "… — Arçelik uyumlu" yalnız uyumluluk söyler, üreticiyi değil
+// → marka YAZILMAZ; "Üniversal" ve markasız parçada da alan yoktur. "Benservis" satıcıdır, marka değil.
+const MARKA_SIRALI = [...MARKALAR].sort((a, b) => b.length - a.length); // "Mitsubishi Electric" önce
+export function urunMarkasi(baslik) {
+  const b = String(baslik || "").trim().toLocaleLowerCase("tr");
+  for (const m of MARKA_SIRALI) {
+    const k = m.toLocaleLowerCase("tr");
+    if (b.startsWith(k) && !/[\p{L}\p{N}]/u.test(b.charAt(k.length))) return m;
+  }
+  return null;
+}
+
 // ek: { description, category } — kabuk kendi açıklama/kategori metnini verir; istemci açıklamayı kısaltır.
 export function urunLdNesnesi(u, { saticiAd = "Benservis", site = SITE, description, category } = {}) {
   return {
@@ -80,6 +95,7 @@ export function urunLdNesnesi(u, { saticiAd = "Benservis", site = SITE, descript
     ...(description ? { description } : {}),
     ...(u.gorsel_url ? { image: [mutlakGorselUrl(u.gorsel_url, site)] } : {}),
     sku: u.id,
+    ...(urunMarkasi(u.baslik) ? { brand: { "@type": "Brand", name: urunMarkasi(u.baslik) } } : {}),
     url: `${site}/urun/${u.id}`,
     ...(category ? { category } : {}),
     offers: urunTeklifi(u, { saticiAd, site }),

@@ -35,8 +35,8 @@ export const SATICI = {
 const ZORUNLU = ["unvan", "mersis", "adres", "telefon", "eposta"];
 export const eksikSaticiAlanlari = () => ZORUNLU.filter((k) => !SATICI[k]);
 
-export const PAZAR_HUKUK_GUNCELLEME = "25 Ekim 2026"; // YK #188: işletme adı satırı eklendi
-import { UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
+export const PAZAR_HUKUK_GUNCELLEME = "27 Ekim 2026"; // YK #191: kargo tutarı + eşik yazıldı, ödeme metni canlıyla (havale/EFT) uyumlu
+import { KARGO_TL, UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
 import { HAVALE_SURE_SAAT } from "../src/havale.js";
 const KARGO_SURE = "3 (üç) iş günü";
 
@@ -74,7 +74,7 @@ ${SATICI_TABLO}
 </ul>
 
 <h2>3. Ödeme</h2>
-<p>Ödeme, sipariş adımında sunulan yöntemlerle alınır. Kart ile ödemede kart bilgileri lisanslı ödeme kuruluşu tarafından işlenir; satıcıya ve Benservis'e iletilmez.</p>
+<p>Ödeme, sipariş adımında sunulan yöntemlerle alınır. Şu an sunulan yöntem <strong>havale / EFT</strong>'dir. Kart ile ödeme açıldığında kart bilgileri lisanslı ödeme kuruluşu tarafından işlenir; satıcıya ve Benservis'e iletilmez.</p>
 <p><strong>Havale / EFT ile ödeme:</strong> Bu yöntem seçildiğinde sipariş oluşturulur ve hesap bilgileri, ödenecek tutar ve sipariş numaranız ekranda gösterilir. Ödemeyi açıklamaya sipariş numaranızı yazarak <strong>${HAVALE_SURE_SAAT} saat içinde</strong> yapmanız gerekir. Süre içinde ödeme hesaba geçmezse sipariş kendiliğinden iptal olur ve ikinci el üründeki ayırma kalkar. Teslimat süresi ödemenin hesaba geçtiği andan itibaren işler.</p>
 
 <h2>4. Teslimat</h2>
@@ -124,7 +124,7 @@ ${SATICI_TABLO}
 <h2>Madde 3 — Ürün, fiyat ve ödeme</h2>
 <p>3.1. Ürünün temel nitelikleri, adedi, KDV dahil satış fiyatı, teslimat ücreti ve toplam tutarı sipariş özetinde yer alır ve bu sözleşmenin ayrılmaz parçasıdır.</p>
 <p>3.2. Teslimat ücreti ürün fiyatına dahil değildir; sipariş onayından önce Alıcı'ya gösterilir ve toplam tutara eklenir.</p>
-<p>3.3. Ödeme, sipariş adımında sunulan yöntemlerle yapılır. Kart bilgileri lisanslı ödeme kuruluşunca işlenir.</p>
+<p>3.3. Ödeme, sipariş adımında sunulan yöntemlerle yapılır. Şu an sunulan yöntem havale / EFT'dir. Kart ile ödeme açıldığında kart bilgileri lisanslı ödeme kuruluşunca işlenir; Satıcı'ya iletilmez.</p>
 <p>3.4. Havale / EFT ile ödemede Alıcı, sipariş sonunda gösterilen hesaba, açıklamaya sipariş numarasını yazarak toplam tutarı sipariş anından itibaren ${HAVALE_SURE_SAAT} saat içinde öder. Ödeme bu süre içinde Satıcı hesabına geçmezse sipariş kendiliğinden iptal olur; taraflar için bir yükümlülük doğmaz. Ödeme, Satıcı hesabına geçtiği anda onaylanmış sayılır.</p>
 
 <h2>Madde 4 — Teslimat</h2>
@@ -168,7 +168,7 @@ const IADE = `<article>
 <ul>
 <li>Parçalar anlaşmalı tedarikçinin deposundan doğrudan adresinize gönderilir.</li>
 <li>Siparişiniz ödeme onayından itibaren <strong>tahmini ${KARGO_SURE}</strong> içinde kargoya verilir; kargo firmasına göre teslim genellikle 1-3 iş günü daha sürer. Yasal üst sınır siparişten itibaren 30 gündür.</li>
-<li>Kargo ücreti ürün fiyatına dahil değildir; siparişi onaylamadan önce gösterilir. ${UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL'yi aşan siparişlerde kargo ücreti indirim olarak düşülür.</li>
+<li>Kargo ücreti ürün fiyatına dahil değildir: <strong>${KARGO_TL} TL</strong>. Sipariş toplamı <strong>${UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL'yi aşarsa kargo ücretsizdir</strong> (ücret indirim olarak düşülür). Tutar, siparişi onaylamadan önce gösterilir.</li>
 <li>Paketi teslim alırken kontrol edin; hasarlı paketi teslim almayın ya da kargo görevlisine tutanak tutturun.</li>
 </ul>
 
@@ -211,7 +211,7 @@ ${SATICI_TABLO}
 <tr><td>Kimlik ve iletişim</td><td>Ad-soyad, telefon, e-posta</td></tr>
 <tr><td>Teslimat ve fatura</td><td>Teslimat adresi, fatura adresi; kurumsal faturada unvan ve vergi numarası</td></tr>
 <tr><td>Sipariş</td><td>Sipariş edilen ürünler, tutar, sipariş ve teslimat tarihleri, iade/cayma kayıtları</td></tr>
-<tr><td>Ödeme işlemi</td><td>Ödeme sonucu ve işlem numarası; havale / EFT ile ödemede gönderen adı, tutar ve açıklama (banka hesap hareketinden). <strong>Kart bilgileri ödeme kuruluşunca işlenir, tarafımıza iletilmez.</strong></td></tr>
+<tr><td>Ödeme işlemi</td><td>Ödeme sonucu ve işlem numarası; havale / EFT ile ödemede gönderen adı, tutar ve açıklama (banka hesap hareketinden). <strong>Kart ile ödeme açıldığında kart bilgileri ödeme kuruluşunca işlenir, tarafımıza iletilmez.</strong></td></tr>
 <tr><td>İletişim kayıtları</td><td>Sipariş, iade ve şikâyet yazışmaları</td></tr>
 </tbody></table>
 
