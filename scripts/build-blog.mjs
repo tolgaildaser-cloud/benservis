@@ -805,6 +805,7 @@ const KOPRU_ARIZA = {
   "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "vestel-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 29 Eki 2026, YK #189 sembol
   "bosch-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "profilo-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 30 Eki 2026, YK #189 sembol
   "profilo-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 28 Eki 2026, YK #189 sembol
   "siemens-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 30 Eki 2026, YK #189 sembol
   "bosch-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
