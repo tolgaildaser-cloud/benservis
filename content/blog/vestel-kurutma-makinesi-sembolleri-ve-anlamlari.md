@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Kurutma makinesinin program düğmesi ve dokunmatik tuşlu ekran paneli"
   steps:
-    - "Kurutma makinesi ekranında yanan küçük uyarı simgeleri"
-    - "Kurutma makinesinin su tankı çekmecesi dışarı çekilmiş hâlde"
-    - "Kurutma makinesi kapağının içinden çıkarılmış hav filtresi"
-    - "Kurutma makinesinin alt kısmında açılmış tekmelik kapağı"
-    - "Kurutma makinesi ekranında asma kilit simgesi"
-    - "Kurutma makinesinin kararmış ekranında kısa yatay çizgiler"
-    - "Kurutma makinesi yanında kullanım kılavuzu ve telefon"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda su ya da toz haznesi"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda ilgili filtre"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda kurutma makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Vestel kurutma makinesinin ekranında gömlek, tüy ya da saat şeklinde bir simge görünce çoğu kullanıcı arıza sanıyor. Vestel'in kılavuzuna bakınca tablo daha sakin: ekrandaki dokuz sembolün **altısı senin seçtiğin opsiyon**, üçü ise bakım hatırlatması. Gerçek arıza bildirimi, E ile başlayan kodlar, ayrı bir dil.
