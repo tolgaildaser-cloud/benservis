@@ -5,14 +5,16 @@
 // yayına çıkarsa sözleşme eksik kurulur. Bu dosya CI'ı o durumda KIRMIZIDA tutar.
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
-import { SATICI, eksikSaticiAlanlari, PAZAR_HUKUK_SAYFALARI } from "../scripts/pazar-hukuk.mjs";
+import { SATICI, eksikSaticiAlanlari, PAZAR_HUKUK_SAYFALARI, PAZAR_HUKUK_GUNCELLEME } from "../scripts/pazar-hukuk.mjs";
+import { KARGO_TL, UCRETSIZ_KARGO_ESIK_TL } from "../src/kargo.js";
+import { urunTeklifi } from "../src/urun-ld.js";
 
 describe("pazaryeri belgeleri", () => {
   it("YK #175: dört belgede taslak ibaresi yok; güncelleme tarihi basılı", () => {
     for (const h of PAZAR_HUKUK_SAYFALARI) {
       expect(`${h.title} ${h.desc} ${h.govde}`.toLocaleLowerCase("tr"), h.dizin).not.toContain("taslak");
       expect(h.govde, h.dizin).not.toContain("hukuki kontrolden geçirilecektir");
-      expect(h.govde, h.dizin).toContain("Son güncelleme: 25 Ekim 2026");
+      expect(h.govde, h.dizin).toContain(`Son güncelleme: ${PAZAR_HUKUK_GUNCELLEME}`);
     }
   });
 
@@ -65,5 +67,33 @@ describe("pazaryeri belgeleri", () => {
     expect(sepet).toContain('href="/on-bilgilendirme-formu/"');
     expect(sepet).toMatch(/useState\(false\)/); // onay kutusu işaretsiz başlar
     expect(sepet).toMatch(/pazarSiparisi && !sozlesmeOnay/);
+  });
+
+  // YK #191 (27 Eki 2026, Merchant Center): sayfa ile Product şeması aynı kargo kuralını söyler — tek kaynak src/kargo.js.
+  it("iade/teslimat sayfası kargo tutarını ve ücretsiz eşiği kargo.js'den yazar; şema aynı sayılarla", () => {
+    const iade = PAZAR_HUKUK_SAYFALARI.find((h) => h.dizin === "iade-ve-cayma").govde;
+    expect(iade).toContain(`${KARGO_TL} TL`);
+    expect(iade).toContain(`${UCRETSIZ_KARGO_ESIK_TL.toLocaleString("tr-TR")} TL'yi aşarsa kargo ücretsizdir`);
+    const ucret = (fiyat) => urunTeklifi({ id: "x", baslik: "x", fiyat, stok: 1, durum: "aktif" }).shippingDetails.shippingRate.value;
+    expect(ucret(UCRETSIZ_KARGO_ESIK_TL)).toBe(String(KARGO_TL));
+    expect(ucret(UCRETSIZ_KARGO_ESIK_TL + 1)).toBe("0");
+  });
+
+  // YK #191: canlıda kart seçeneği yok (#174) — belgeler kartı koşulsuz vaat etmez.
+  it("ödeme metni canlıyla uyumlu: havale/EFT yazılı, kart yalnız 'açıldığında' koşuluyla", () => {
+    for (const h of PAZAR_HUKUK_SAYFALARI) {
+      expect(h.govde, h.dizin).not.toMatch(/(?<!açıldığında )kart bilgileri (lisanslı )?ödeme kuruluşu/i);
+    }
+    for (const d of ["mesafeli-satis-sozlesmesi", "on-bilgilendirme-formu"]) {
+      expect(PAZAR_HUKUK_SAYFALARI.find((h) => h.dizin === d).govde, d).toMatch(/havale \/ EFT/);
+    }
+  });
+});
+
+// YK #191 (27 Eki 2026, Merchant Center iletişim bilgisi): künye Hakkımızda yazısında; değerler SATICI ile birebir.
+describe("Hakkımızda künyesi", () => {
+  it("unvan, MERSİS, adres, telefon ve e-posta SATICI'daki değerlerle aynı", () => {
+    const md = fs.readFileSync("content/blog/hakkimizda.md", "utf8");
+    for (const k of ["isletmeAdi", "unvan", "mersis", "adres", "telefon", "eposta"]) expect(md, k).toContain(SATICI[k]);
   });
 });
