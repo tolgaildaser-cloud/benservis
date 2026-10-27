@@ -48,14 +48,14 @@ faq:
 images:
   coverAlt: "Kapağı açık bir buzdolabının alt bölümünde, üstünde cam raf bulunan şeffaf sebzelik çekmecesi"
   steps:
-    - "Prizden çekilmiş bir buzdolabı fişi ve boşaltılmış sebzelik çekmecesi"
-    - "Raylar üzerinde öne doğru çekilmiş şeffaf sebzelik çekmecesi"
-    - "Sebzelik bölmesinin ortasında duran plastik ray"
-    - "Sebzelik kapağının yanındaki tırnak ve raydaki boşluk"
-    - "Sebzelik kapağının altındaki nem koruma filtresi ve filtre kapağı"
-    - "Sabunlu suyla yıkanmış ve bez üzerinde kurumaya bırakılmış cam raf"
-    - "Yerine takılmış sebzelik kapağı ve altındaki sebzelik çekmecesi"
-    - "Sebzelik çekmecesinin önündeki sürgülü nem kontrol klapesi"
+    - "Çizim: solda buzdolabı, sağda prizden çekilen fiş"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda iç bölme ve raflar"
+    - "Çizim: solda buzdolabı, sağda kapak"
+    - "Çizim: solda buzdolabı, sağda ilgili filtre"
+    - "Çizim: solda buzdolabı, sağda temizleme bezi"
+    - "Çizim: solda buzdolabı, sağda ilgili filtre"
+    - "Çizim: solda buzdolabı, sağda kapak"
 ---
 
 Vestel buzdolabında sebzeliğin üstündeki cam ya da kapak kirlendiğinde, buğulandığında ya da yerinden oynadığında ilk soru aynı: bu parça nasıl çıkıyor ve nasıl geri takılıyor? Bu yazı Vestel'in kendi sitesinde yayımlanan dört buzdolabı kılavuzuna dayanıyor: **R 5402 NF**, **NF52001**, **NFK52002** ve **NFK64012**. Söküm sırası yalnız R 5402 NF kılavuzunda adım adım anlatılıyor; yeni no-frost kılavuzları ise camdaki buğu ve yük sınırı için bilgi veriyor.

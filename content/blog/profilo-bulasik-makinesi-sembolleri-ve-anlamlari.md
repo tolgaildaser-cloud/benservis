@@ -41,13 +41,13 @@ faq:
 images:
   coverAlt: "Bulaşık makinesinin kumanda paneli ve göstergesi"
   steps:
-    - "Bulaşık makinesinin alt sepeti çıkarılmış hâlde açık tuz kabı"
-    - "Bulaşık makinesi kapağının iç yüzünde açık parlatıcı kabı"
-    - "İçi boş, kapağı açık bulaşık makinesi"
-    - "Tezgâh altında açık su musluğu ve bulaşık makinesi giriş hortumu"
-    - "Fişi prizden çekilmiş bulaşık makinesi kablosu"
-    - "Göstergesi aydınlık bulaşık makinesi kumanda paneli"
-    - "Tezgâh altında kapatılmış su musluğu"
+    - "Çizim: solda bulaşık makinesi, sağda tuz haznesinin vidalı kapağı"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda bulaşık makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda bulaşık makinesi, sağda prizden çekilen fiş"
+    - "Çizim: solda bulaşık makinesi, sağda sigorta kutusundaki şalterler"
+    - "Çizim: solda bulaşık makinesi, sağda su giriş musluğu"
 ---
 
 Profilo bulaşık makinesinin göstergesinde bir sembol yanınca akla ilk gelen "arıza mı?" sorusu oluyor. Profilo'nun kılavuzuna bakınca tablo daha sakin: göstergedeki beş sembolün dördü **tuz, parlatıcı, bakım ya da bağlantı** bildiriyor. Gerçek arıza işareti tek bir sembol ve `E:` ile başlayan kodlar.
