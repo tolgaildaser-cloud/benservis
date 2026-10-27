@@ -45,13 +45,13 @@ faq:
 images:
   coverAlt: "Duvara monte edilmiş beyaz split klima iç ünitesi ve ön yüzündeki küçük gösterge lambaları"
   steps:
-    - "Split klima iç ünitesinin alt köşesinde yan yana duran üç küçük gösterge lambası"
-    - "Kış günü buzlanmış bir klima dış ünitesinin peteği"
-    - "Bir evde iki ayrı odaya takılmış duvar tipi klima iç üniteleri"
-    - "İç üniteden çıkarılmış, tozlu ince örgülü klima hava filtresi"
-    - "Ekranında saat ayarı görünen klima kumandası"
-    - "Duvara monte edilmiş kablolu klima kumandası ve yanında kablosuz kumanda"
-    - "Ön paneli kapalı duran ve kullanılmayan split klima iç ünitesi"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda iç ünitedeki üç gösterge lambası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda buzlanma ve buz çözme"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda ilgili filtre"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda uzaktan kumanda"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda birlikte yanıp sönen üç gösterge lambası"
+    - "Çizim: solda duvar tipi klima iç ünitesi, sağda sigorta kutusundaki şalterler"
 ---
 
 Fujitsu klimanın iç ünitesinde üç küçük lamba var ve arıza bildirimi bu üçünün yanıp sönme düzeniyle yapılıyor. Her yanıp sönme arıza değil: buz çözme, filtre uyarısı ya da elektrik kesintisi sonrası saat hatası da lambayla bildiriliyor. Bu yazı, Fujitsu General'in resmî belge arşivinde ASYG12KMTB duvar tipi iç ünite için yayımlanan **Türkçe kullanım kılavuzuna** dayanıyor. Senin iç ünitenin modeli farklıysa lamba düzeni değişebilir; model adı iç ünitenin yanındaki etikette yazar.
