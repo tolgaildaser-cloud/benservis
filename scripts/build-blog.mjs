@@ -798,6 +798,7 @@ const KOPRU_ARIZA = {
   //    sayfası 0 gösterim) KİRLENMİYOR. PR #156'nın Bosch'ta durduğu yer `title`'dı,
   //    yani ölçülen büyüklüğün ta kendisi; burada ölçülen büyüklüğe temas yok.
   "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "vestel-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 29 Eki 2026, YK #189 sembol
   "bosch-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "profilo-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 28 Eki 2026, YK #189 sembol
   "bosch-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
