@@ -44,13 +44,13 @@ faq:
 images:
   coverAlt: "Ankastre fırının döner düğmeli kumanda paneli ve ekranı"
   steps:
-    - "Fırın ekranında anahtar biçimli çocuk emniyeti simgesi"
-    - "Elektrik kesintisinden sonra yanıp sönen fırın saati"
-    - "Fırının sıcaklık seçme düğmesi yakın plan"
-    - "Kapağı kapalı, içi aydınlık ankastre fırın"
-    - "Fırın ekranında termometre biçimli ısıtma göstergesi"
-    - "Fırının kumanda panelindeki dokunmatik tuşlar"
-    - "Kumanda paneli kapalı duran ankastre fırın"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda çalışma sesi"
+    - "Çizim: solda ankastre fırın, sağda bekleme süresi için saat"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Bosch ankastre fırının düğmesinde ve ekranında onlarca küçük işaret var ve bunların çoğu arıza değil. Bir kısmı **ısıtma türü**, bir kısmı **zaman fonksiyonu**, bir kısmı da **durum bilgisi**. Arıza bildiren küme küçük ve ayrı.

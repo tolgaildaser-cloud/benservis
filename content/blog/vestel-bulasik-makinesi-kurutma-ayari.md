@@ -47,13 +47,13 @@ faq:
 images:
   coverAlt: "Programı bitmiş, kapağı kendiliğinden aralanmış ankastre bir bulaşık makinesi ve üst sepette ağzı aşağı bakan bardaklar"
   steps:
-    - "Bulaşık makinesinin yanında açık duran kullanım kılavuzu ve program tablosu"
-    - "Bulaşık makinesi kontrol panelinde yanan bir opsiyon göstergesi"
-    - "Kontrol panelinde opsiyon ve onay tuşlarının bulunduğu bölüm"
-    - "Program sonunda kendiliğinden aralanmış bulaşık makinesi kapağı"
-    - "Kapağı hafifçe aralık bırakılmış bulaşık makinesi ve içindeki temiz tabaklar"
-    - "Kapak iç yüzünde açık duran parlatıcı bölmesi"
-    - "Kontrol paneli ekranında ayar menüsü görünümü"
+    - "Çizim: solda bulaşık makinesi, sağda kullanım kılavuzu ve tablosu"
+    - "Çizim: solda bulaşık makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda bulaşık makinesi, sağda kapak"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
+    - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
 ---
 
 Vestel bulaşık makinesinde "kurutma" diye tek bir düğme aramak çoğu zaman sonuçsuz kalıyor. Vestel'in kullanım kılavuzlarına göre bulaşıkların ne kadar kuru çıkacağını birkaç ayar birlikte belirliyor: **kurutma adımı olan bir program**, modelinde varsa **Ekstra Kurutma** ve **Enerji Tasarrufu** opsiyonları ve **parlatıcı seviyesi**. Bu yazı Vestel'in kendi sitesinde yayımlanan iki kılavuza dayanıyor: **BM 10502 X GI WIFI** ve **BM 8402 GI Pro WIFI**. Senin modelinde tuş adları ve yerleri farklı olabilir; tuş sırası için kendi kılavuzuna bak.
