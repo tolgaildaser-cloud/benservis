@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Çamaşır makinesinin dokunmatik kumanda paneli ve ekranı"
   steps:
-    - "Çamaşır makinesinin arkasında açık su musluğu ve giriş hortumu"
-    - "Çamaşır makinesinin kapalı yuvarlak kapağı yakın plan"
-    - "Çamaşır makinesi ekranında anahtar biçimli çocuk kilidi simgesi"
-    - "Boş tamburlu çamaşır makinesinin içi"
-    - "Deterjan çekmecesi açık duran çamaşır makinesi"
-    - "Çamaşır makinesi ekranında bekleme durumu"
-    - "Kumanda paneli kapalı duran çamaşır makinesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda duvar giderine giden hortum"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda tambur ve içindeki çamaşır"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Siemens çamaşır makinesinin ekranında tanımadığın bir işaret belirince akla ilk gelen "arıza mı?" sorusu oluyor. Siemens'in kendi kılavuzundaki gösterge tablosuna bakınca durum farklı: işaretlerin büyük kısmı **ayar değeri, program durumu ya da hatırlatma**. Gerçek arıza bildirimi ayrı bir küme.
