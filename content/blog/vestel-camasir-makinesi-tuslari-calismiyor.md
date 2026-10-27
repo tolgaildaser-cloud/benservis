@@ -47,13 +47,13 @@ faq:
 images:
   coverAlt: "Beyaz, önden yüklemeli bir çamaşır makinesinin program düğmesi ve dokunmatik tuşları olan kontrol paneli"
   steps:
-    - "Çamaşır makinesinin dijital göstergesinde yanan iki harfli bir sembol"
-    - "Kontrol panelinde Başlat/Beklet tuşunun yanındaki iki dokunmatik tuş"
-    - "Tamamen kapatılmış çamaşır makinesi kapağı ve çevresindeki conta"
-    - "Kontrol panelinde Başlat/Beklet tuşu ve üstündeki küçük gösterge ışığı"
-    - "Dijital göstergede saat biçiminde bir gecikme simgesi"
-    - "Çamaşır makinesinin yanında masada duran bir akıllı telefon"
-    - "Duvardaki prizden çekilmiş bir çamaşır makinesi fişi"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda kapak"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefonda uygulama ve Wi-Fi bağlantısı"
+    - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
 ---
 
 Programı seçtin, tuşlara basıyorsun ama makine tepki vermiyor. Ya da ışıklar yanıyor, dokunmatik panel duruyor, Başlat tuşu hiçbir şey yapmıyor. Vestel çamaşır makinelerinde bunun çoğu zaman bir arıza değil, kılavuzda adı geçen bir **çalışma durumu** olduğunu görüyoruz: çocuk kilidi, bekleme modu, gecikmeli başlatma ya da Wi-Fi'li modellerde uzaktan kontrol. Bu yazı Vestel'in kendi sitesinde yayımlanan beş çamaşır makinesi kılavuzuna dayanıyor (CMI 86201, CMI 106221, CMI 87302 WIFI, KCMI 98142 WIFI, CMI 128222 WIFI). Senin modelin farklıysa tuş sırası değişebilir; kendi kılavuzuna bak.

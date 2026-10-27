@@ -42,13 +42,13 @@ faq:
 images:
   coverAlt: "Dokunmatik tuşlu ekranı olan ankastre fırının kontrol paneli"
   steps:
-    - "Ankastre fırın ekranında yanıp sönen saat göstergesi"
-    - "Fırın ekranında asma kilit biçimli tuş kilidi simgesi"
-    - "Kapağı kapalı ankastre fırın yandan görünüm"
-    - "Fırın ekranında termometre biçimli iç sıcaklık simgesi"
-    - "Fırın ekranında zil biçimli alarm simgesi"
-    - "Ankastre fırının dokunmatik yukarı ve aşağı tuşları"
-    - "Ev sigorta kutusunda kapalı duran şalterler"
+    - "Çizim: solda ankastre fırın, sağda panel ekranındaki uyarı"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda kapak"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda çalışma sesi"
+    - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
+    - "Çizim: solda ankastre fırın, sağda telefon ve kullanım kılavuzu"
 ---
 
 Arçelik ankastre fırının ekranında küçük bir kilit, açık bir kapak ya da bir zil belirince akla ilk gelen "bozuldu mu?" sorusu. Arçelik'in kendi kılavuzuna bakınca tablo farklı: ekrandaki simgelerin neredeyse hepsi **ayar, durum ya da hatırlatma**. Kılavuzda hata kodu listesi bile yok.
