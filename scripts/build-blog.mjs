@@ -799,6 +799,7 @@ const KOPRU_ARIZA = {
   //    yani ölçülen büyüklüğün ta kendisi; burada ölçülen büyüklüğe temas yok.
   "arcelik-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "bosch-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "profilo-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor", // 28 Eki 2026, YK #189 sembol
   "bosch-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "vaillant-kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
   // 🔴 8 EYL 2026 — HÜKÜM UYGULANDI AMA BOŞLUK YENİDEN AÇILDI (FE ölçtü).
