@@ -7,27 +7,24 @@ category: "Fırın / Ocak"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-01, curl -sL -A "Mozilla/5.0" ile indirildi, hepsi HTTP 200. PDF'ler pdftotext -layout -f N -l N ile sayfa sayfa okundu (sayfa no = PDF sayfası).
 # Web araması yalnız belgelerin YERİNİ bulmak için kullanıldı; hiçbir cümle arama sonucundan, forumdan ya da servis sitesinden alınmadı.
-#  B1) Bosch "Ankastre fırın FRMA226. — Kullanım kılavuzu ve kurulum talimatları", 40 s., md5 a86b168874d8778ca41272c5d7166c07
-#      https://media3.bsh-group.com/Documents/9001771866_D.pdf
+#  KAYNAK DÜZELTMESİ 2026-10-27 (#88): önceki B1 (9001771866_D) ve B2 (9001627929_B) Profilo kılavuzu çıktı; kaynaktan çıkarıldı.
+#  B1) Bosch "Ankastre fırın HBF512B.1T — Kullanım kılavuzu ve kurulum talimatları", 28 s., md5 3fac75fc8fb8bbef288fcc478b030ece (2026-10-27, HTTP 200)
+#      https://media3.bsh-group.com/Documents/9001944574_A.pdf
 #      s.17 "Cihaz çalışmıyor." → "Şebeke bağlantı kablosunun elektrik fişi takılı değil. ▶ Cihazı elektrik şebekesine bağlayınız." / "Sigorta kutusundaki sigorta atmış. ▶ Sigorta kutusundaki ilgili sigortayı kontrol ediniz." / "Elektrik beslemesi kesildi. ▶ Oda aydınlatmasının veya odadaki diğer cihazların çalışıp çalışmadığını kontrol ediniz."
 #      s.17 "Cihaz süre dolduktan sonra tamamen kapanmıyor." → "Bir süre sonra cihaz ısınmayı durduruyor. Fırın lambası ve soğutma fanı kapanmıyor." → "▶ Fonksiyon seçme düğmesi sıfır konumuna çevrilmelidir."
-#      s.18 "Ekranda saat yanıp söner." → "Elektrik beslemesi kesildi. ▶ Saati yeniden ayarlayınız." / "... yanıyor ve cihaz ayarlanamıyor." → "Çocuk kilidi etkinleştirildi. ▶ Çocuk kilidini ... tuşuyla devre dışı bırakınız." / "Ekranda ... içeren bir mesaj görüntülenir" → "Elektronik arızası 1. ... tuşuna basınız. ... a Arıza bir defaya mahsus ise hata mesajı kaybolur. 2. Hata mesajı tekrar belirirse müşteri hizmetlerini arayınız. Hata mesajını ve cihazın E numarasını eksiksiz olarak belirtiniz."
-#      s.7 Sıcaklık seçme düğmesi: "Sıfır konumu — Cihaz ısıtmıyor." / s.6 "Cihaz tipine bağlı olarak sıcaklık seçme düğmesi aşağı bastırılabilir. İçeri itmek veya dışarı çıkarmak için sıfır konumundayken sıcaklık seçme düğmesine basılmalıdır."
-#      s.11 "Not: Bir elektrik kesintisinden sonra çocuk emniyeti artık etkin değildir." / "Çocuk kilidini devre dışı bırakmak için, ekranda ... sönene kadar ... tuşu basılı tutulmalıdır."
-#      s.17 "Sadece eğitimini almış uzman personel cihazda onarımlar yapabilir. ▶ Cihazın arızalanması halinde müşteri hizmetlerini arayın."
+#      s.18 "Ekranda saat yanıp söner." → "Elektrik beslemesi kesildi. ▶ Saati yeniden ayarlayınız." / "... yanıyor ve cihaz ayarlanamıyor." → "Çocuk kilidi etkinleştirildi. ▶ Çocuk kilidini ... tuşuyla devre dışı bırakınız." / "Ekranda ... içeren bir mesaj görüntülenir" → "Elektronik arızası 1. ... tuşuna basınız. ‒ Gerekirse saati yeniden ayarlayınız. a Arıza bir defaya mahsus ise hata mesajı kaybolur. 2. Hata mesajı tekrar belirirse müşteri hizmetlerini arayınız. Hata mesajını ve cihazın E numarasını eksiksiz olarak belirtiniz."
+#      s.7 Sıcaklık ve ayar seviyeleri: "Sıfır konumu — Cihaz ısıtmıyor." / s.6 "Cihaz tipine bağlı olarak sıcaklık seçme düğmesi aşağı bastırılabilir. İçeri itmek veya dışarı çıkarmak için sıfır konumundayken sıcaklık seçme düğmesine basılmalıdır."
+#      s.11 "Not: Bir elektrik kesintisinden sonra çocuk emniyeti artık etkin değildir." / "Çocuk kilidini devre dışı bırakmak için, ekranda ... sönene kadar tuşu basılı tutulmalıdır."
+#      s.17 "Sadece eğitimini almış uzman personel cihazda onarımlar yapabilir. ▶ Cihazın arızalanması halinde müşteri hizmetlerini arayın." / "Bu cihazın elektrik kablosu zarar görmüşse ... üretici, müşteri hizmetleri veya benzer kalifikasyona sahip bir kişi tarafından değiştirilmelidir."
 #      s.19 "Müşteri hizmetlerine başvurduğunuzda cihazınızın ürün numarasını (E-Nr.) ve imalat numarasını (FD) hazır bulundurunuz." / "Numaraların yer aldığı tip plaketini, cihazın kapağını açtığınızda görebilirsiniz."
-#  B2) Bosch "Ankastre fırın FRGA103I — Kullanım kılavuzu ve kurulum talimatları", 32 s., md5 1863661017c72bd0385ba56db04e62de
-#      https://media3.bsh-group.com/Documents/9001627929_B.pdf
-#      s.14 "Cihaz çalışmıyor." → fiş / sigorta / elektrik beslemesi (B1 ile aynı) + "Elektronik hatası 1. Sigortayı kapatarak cihazı kısa süreliğine elektrik şebekesinden ayırınız. 2. Temel ayarları fabrika ayarlarına geri döndürünüz."
-#      s.6 "Sıfır konumu — Cihaz ısıtmıyor."
 #  B3) Bosch "[tr] Kullanma kılavuzu Ankastre fırın HBB23C...", 20 s., md5 5544858a428c91894c15726616c53729
 #      https://media3.bsh-group.com/Documents/9000728669_B.pdf
 #      s.11 "Fırın ısınmıyor." → "Bağlantılarda toz var." → "Döner düğmeleri her iki yönde de birkaç defa çeviriniz."
 #      s.11 "Gösterge panelinde 0 sembolü ve dört adet sıfır yanıp söner." → "Elektrik akımını kesiniz." → "Saati tekrar ayarlayınız."
 #      s.11 "Hata mesajı kaybolmazsa, Teknik Destek Servisine haber veriniz."
 #      s.5 Sıcaklık kumandası "Sıfır konumu — Fırın ısınmıyor."
-#  Okunup kullanılmayan aynı aileden: 9001944574_A (HBF512B.1T, md5 3fac75fc8fb8bbef288fcc478b030ece) ve 9001930148_F (HBJN10Y, md5 73afa0ad2328c7fe9bcbe06cc6d29177) — tabloları B1 ile aynı.
-# BİLEREK YAZILMAYANLAR: sigorta değiştirme / elektrik kablosu (#31; kılavuz kablo değişimini üretici, müşteri hizmetleri ya da kalifiye kişiye veriyor); lamba değişimi (cam kapak ve lamba sökümü); fabrika ayarına dönüşün tuş sırası (modele özgü, yalnız "kılavuzundaki temel ayarlar bölümü" diye anıldı); rezistans, termostat, kart teşhisi (belgede yok); müşteri hizmetleri telefon numarası (güncelliği bu koşuda doğrulanmadı).
+#  Okunup kullanılmayan aynı aileden: 9001930148_F (Bosch HBJN10Y..R, md5 73afa0ad2328c7fe9bcbe06cc6d29177) — s.16 "Cihaz çalışmıyor" satırı B1 ile aynı.
+# BİLEREK YAZILMAYANLAR: sigorta değiştirme / elektrik kablosu (#31; kılavuz kablo değişimini üretici, müşteri hizmetleri ya da kalifiye kişiye veriyor); lamba değişimi (cam kapak ve lamba sökümü); "elektronik hatası → sigortayı kapatıp fabrika ayarına dönme" (27 Eki: yalnız bir Profilo kılavuzunda vardı, Bosch belgesinde karşılığı yok, çıkarıldı); rezistans, termostat, kart teşhisi (belgede yok); müşteri hizmetleri telefon numarası (güncelliği bu koşuda doğrulanmadı).
 # Alıntı denetim tablosu: bosch-firin-isinmiyor.KAYNAK.md
 guide:
   difficulty: "Kolay"
@@ -49,7 +46,7 @@ faq:
   - q: "Fırının ekranında saat yanıp sönüyor, ısıtmıyor."
     a: "Bosch'a göre ekranda saatin yanıp sönmesi elektrik beslemesinin kesildiğini gösterir; çözüm saati yeniden ayarlamak. HBB23C serisinde aynı durum gösterge panelinde 0 sembolü ve dört sıfırın yanıp sönmesiyle görünür."
   - q: "Ekranda bir hata mesajı var, ne yapmalıyım?"
-    a: "Bosch'un FRMA226 kılavuzuna göre önce kılavuzda gösterilen tuşa bas; arıza bir defalıksa mesaj kaybolur, gerekirse saati yeniden ayarla. Hata mesajı tekrar belirirse müşteri hizmetlerini ara ve hata mesajını, cihazın E numarasıyla birlikte eksiksiz bildir. FRGA103I kılavuzu elektronik hatası için sigortayı kapatarak cihazı kısa süreliğine elektrikten ayırmanı ve temel ayarları fabrika ayarlarına döndürmeni öneriyor."
+    a: "Bosch'un HBF512B kılavuzuna göre önce kılavuzda gösterilen tuşa bas; arıza bir defalıksa mesaj kaybolur, gerekirse saati yeniden ayarla. Hata mesajı tekrar belirirse müşteri hizmetlerini ara ve hata mesajını, cihazın E numarasıyla birlikte eksiksiz bildir. HBB23C kılavuzu da aynı sırayı veriyor: tuşa bas, mesaj kaybolmazsa Teknik Destek Servisine haber ver."
   - q: "Süre bitti, fırın ısıtmayı kesti ama lamba ve fan çalışıyor. Arıza mı?"
     a: "Hayır. Bosch'un tablosuna göre süre dolduktan sonra cihaz bir süre sonra ısınmayı durdurur, fırın lambası ve soğutma fanı ise açık kalır. Fonksiyon seçme düğmesini sıfır konumuna çevirdiğinde cihaz kapanır; soğutma fanı cihaz soğuduktan sonra kendiliğinden kapanır."
 images:
@@ -64,7 +61,7 @@ images:
     - "Çizim: solda ankastre fırın, sağda kontrol panelindeki tuş ya da düğme"
 ---
 
-Fırını açtın, fonksiyonu seçtin ama içerisi ısınmıyor; ya da fırın hiç tepki vermiyor. Bosch'un Türkçe ankastre fırın kılavuzlarındaki arıza tablosunda bu iki durum ayrı satırlarda: **"Cihaz çalışmıyor."** ve eski HBB23C serisinde **"Fırın ısınmıyor."** Bosch'un gösterdiği nedenlerin çoğu evde kontrol edilebiliyor: fiş, sigorta, elektrik kesintisi, sıfırda kalan sıcaklık düğmesi, yeniden ayarlanmamış saat ve çocuk kilidi. Bu yazıda Bosch'un FRMA226, FRGA103I ve HBB23C kılavuzlarındaki tabloları tek sırada topluyoruz; düğme ve simge düzeni modele göre değişebilir.
+Fırını açtın, fonksiyonu seçtin ama içerisi ısınmıyor; ya da fırın hiç tepki vermiyor. Bosch'un Türkçe ankastre fırın kılavuzlarındaki arıza tablosunda bu iki durum ayrı satırlarda: **"Cihaz çalışmıyor."** ve eski HBB23C serisinde **"Fırın ısınmıyor."** Bosch'un gösterdiği nedenlerin çoğu evde kontrol edilebiliyor: fiş, sigorta, elektrik kesintisi, sıfırda kalan sıcaklık düğmesi, yeniden ayarlanmamış saat ve çocuk kilidi. Bu yazıda Bosch'un HBF512B ve HBB23C kılavuzlarındaki tabloları tek sırada topluyoruz; düğme ve simge düzeni modele göre değişebilir.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -92,17 +89,17 @@ Bosch'un düğme açıklamalarında bir satır daha var: sıcaklık seçme düğ
 
 **3. Evin elektriği.** Odanın lambası ve diğer cihazlar çalışıyor mu bak; çalışmıyorsa elektrik beslemesi kesilmiş olabilir. Bosch elektrik beslemesinin kesilip kesilmediğini bu yolla anlamanı öneriyor.
 
-**4. Sıcaklık düğmesi.** Sıcaklık seçme düğmesi sıfır konumundaysa bir sıcaklığa çevir; sıfır konumunda fırın ısıtmaz. Bosch'un FRMA226 ve FRGA103I kılavuzlarındaki ayar tablosunda sıfır konumunun karşılığı tek cümle: **"Cihaz ısıtmıyor."** Bosch'a göre cihaz tipine bağlı olarak düğme içeri bastırılabilir; içeri itmek ya da dışarı çıkarmak için düğmeye **sıfır konumundayken** basılır.
+**4. Sıcaklık düğmesi.** Sıcaklık seçme düğmesi sıfır konumundaysa bir sıcaklığa çevir; sıfır konumunda fırın ısıtmaz. Bosch'un HBF512B kılavuzundaki ayar tablosunda sıfır konumunun karşılığı tek cümle: **"Cihaz ısıtmıyor."** Bosch'a göre cihaz tipine bağlı olarak düğme içeri bastırılabilir; içeri itmek ya da dışarı çıkarmak için düğmeye **sıfır konumundayken** basılır.
 
 **5. Saat.** Ekranda saat yanıp sönüyorsa elektrik kesilmiş demektir; saati yeniden ayarla. HBB23C serisinde bu durum gösterge panelinde **0 sembolü ve dört sıfırın** yanıp sönmesiyle görünür; çözüm yine saati yeniden ayarlamak.
 
-**6. Çocuk kilidi.** Fırın ayar kabul etmiyorsa ve ekranda çocuk kilidi simgesi yanıyorsa çocuk kilidini tuşuyla kapat. FRMA226 kılavuzuna göre kilidi kapatmak için simge sönene kadar ilgili tuşu basılı tutman gerekiyor; kılavuz bir elektrik kesintisinden sonra çocuk emniyetinin artık etkin olmadığını da not ediyor.
+**6. Çocuk kilidi.** Fırın ayar kabul etmiyorsa ve ekranda çocuk kilidi simgesi yanıyorsa çocuk kilidini tuşuyla kapat. HBF512B kılavuzuna göre kilidi kapatmak için simge sönene kadar ilgili tuşu basılı tutman gerekiyor; kılavuz bir elektrik kesintisinden sonra çocuk emniyetinin artık etkin olmadığını da not ediyor.
 
 **7. Düğmeleri çevir.** Düğmeli modelde fırın ısınmıyorsa döner düğmeleri her iki yöne birkaç kez çevir. Bosch'un HBB23C tablosu "Fırın ısınmıyor" satırının nedeni olarak **bağlantılarda toz** gösteriyor ve çözüm olarak bunu veriyor.
 
 ## Ekranda hata mesajı görürsen
 
-Bosch'un FRMA226 kılavuzu elektronik arızası için iki aşama veriyor: önce kılavuzda gösterilen tuşa bas; **arıza bir defaya mahsus ise hata mesajı kaybolur,** gerekirse saati yeniden ayarla. Hata mesajı tekrar belirirse müşteri hizmetlerini ara. FRGA103I kılavuzu ise elektronik hatası için **sigortayı kapatarak cihazı kısa süreliğine elektrikten ayırmanı** ve temel ayarları fabrika ayarlarına döndürmeni öneriyor; fabrika ayarının adımları kendi modelinin kılavuzunda.
+Bosch'un HBF512B kılavuzu elektronik arızası için iki aşama veriyor: önce kılavuzda gösterilen tuşa bas; **arıza bir defaya mahsus ise hata mesajı kaybolur,** gerekirse saati yeniden ayarla. Hata mesajı tekrar belirirse müşteri hizmetlerini ara. Eski HBB23C kılavuzunda da sıra aynı: tuşa bas, mesaj kaybolur; **hata mesajı kaybolmazsa Teknik Destek Servisine haber ver.**
 
 ## Arıza olmayan bir durum
 
@@ -125,4 +122,4 @@ Pişirirken kapakta ve mobilyada su damlaları görüyorsan kardeş rehberimiz [
 
 ---
 
-**Kaynak künyesi.** Arıza tablosu ve düğme açıklamaları Bosch'un Türkçe ankastre fırın kılavuzlarından (FRMA226, FRGA103I ve HBB23C serisi) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+**Kaynak künyesi.** Arıza tablosu ve düğme açıklamaları Bosch'un Türkçe ankastre fırın kılavuzlarından (HBF512B.1T ve HBB23C serisi) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**

@@ -7,18 +7,16 @@ category: "Fırın / Ocak"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-01, curl -sL -A "Mozilla/5.0" ile indirildi, hepsi HTTP 200. PDF'ler pdftotext -layout -f N -l N ile sayfa sayfa okundu (sayfa no = PDF sayfası).
 # Web araması yalnız belgelerin YERİNİ bulmak için kullanıldı; hiçbir cümle arama sonucundan, forumdan ya da servis sitesinden alınmadı.
-#  B2) Bosch "Ankastre fırın FRGA103I — Kullanım kılavuzu ve kurulum talimatları", 32 s., md5 1863661017c72bd0385ba56db04e62de
-#      https://media3.bsh-group.com/Documents/9001627929_B.pdf
-#      s.16-17 "Yoğuşma oluşumu" → "Yiyecekleri pişirme bölümünde hazırlarken çok fazla buhar oluşabilir. Cihazınızın enerji açısından çok verimli olması sayesinde çalışma sırasında dışarıya az ısı verilir. Cihazın iç bölümü ve dışındaki cihaz parçaları arasındaki yüksek sıcaklık farkı nedeniyle cihaz kapağında, kumanda alanında veya bitişikteki mobilya üstlerinde yoğuşma suyu oluşabilir. Yoğuşma suyu oluşumu normal, fiziksel bir olaydır. Hasarları önlemek için yoğuşma suyunu siliniz. Cihazda ön ısıtma yaparak yoğuşma suyunu önlemiş olursunuz."
-#      s.16 "Cihaz kapısının açılması sırasında sıcak buhar çıkışı olabilir. Sıcaklık durumuna göre buhar görünmeyebilir. ▶ Cihaz kapağı dikkatlice açılmalıdır. ▶ Çocuklar uzak tutulmalıdır."
-#      s.17 "Pişirme sonrasında kapak açıldığında çok sıcak buhar çıkabilir. ... ▶ Kapağı, sıcak buharın sizden uzağa doğru çıkmasını sağlayacak şekilde kaldırın."
-#      s.4 "Pişirme bölümünde su bulunması halinde su buharı oluşur. ... ▶ Sıcak pişirme bölümüne kesinlikle su dökülmemelidir." / "Pişirme bölümünde uzun süre kalan nem korozyona neden olur. ▶ Kullanım sonrasında pişirme bölümünün kuruması beklenmelidir. ▶ Kapalı pişirme bölümünde uzun süre nemli gıda maddesi muhafaza edilmemelidir." / "Contanın aşırı kirli olması halinde cihaz kapağı artık tam olarak kapanmaz. Yandaki mobilyaların panelleri hasar görebilir. ▶ Contayı daima temiz tutunuz. ▶ Cihazı asla hasarlı bir contayla veya contasız olarak çalıştırmayınız."
-#  B1) Bosch "Ankastre fırın FRMA226. — Kullanım kılavuzu ve kurulum talimatları", 40 s., md5 a86b168874d8778ca41272c5d7166c07
-#      https://media3.bsh-group.com/Documents/9001771866_D.pdf
+#  KAYNAK DÜZELTMESİ 2026-10-27 (#88): önceki B1/B2 olarak anılan 9001771866_D ve 9001627929_B Profilo kılavuzu çıktı; kaynaktan çıkarıldı.
+#  B1) Bosch "Ankastre fırın HBF512B.1T — Kullanım kılavuzu ve kurulum talimatları", 28 s., md5 3fac75fc8fb8bbef288fcc478b030ece (2026-10-27, HTTP 200)
+#      https://media3.bsh-group.com/Documents/9001944574_A.pdf
 #      s.8 "Yoğuşma suyu — Pişirme sırasında pişirme bölümünde ve cihaz kapağında yoğuşma suyu oluşabilir. Yoğuşma suyu normaldir ve cihazın fonksiyonunu etkilemez. Pişirme işleminden sonra yoğuşma suyu temizlenmelidir."
 #      s.8 "Soğutma fanı ... Sıcak hava kapağın üzerinden dışarı çıkar. DİKKAT! Cihaz kapağındaki havalandırma yarıklarının üzerini örtmeyiniz. Cihaz aşırı ısınır. ▶ Havalandırma yarıkları açık bırakılmalıdır."
+#      s.3 "Cihaz kapısının açılması sırasında sıcak buhar çıkışı olabilir. Sıcaklık durumuna göre buhar görünmeyebilir. ▶ Cihaz kapağı dikkatlice açılmalıdır. ▶ Çocuklar uzak tutulmalıdır."
+#      s.4 "Pişirme bölümünde su bulunması halinde su buharı oluşur. Sıcaklık değişimi nedeniyle hasarlar meydana gelebilir. ▶ Sıcak pişirme bölümüne kesinlikle su dökülmemelidir." / "Pişirme bölümünde uzun süre kalan nem korozyona neden olur. ▶ Kullanım sonrasında pişirme bölümünün kuruması beklenmelidir. ▶ Kapalı pişirme bölümünde uzun süre nemli gıda maddesi muhafaza edilmemelidir." / "Contanın aşırı kirli olması halinde cihaz kapağı artık tam olarak kapanmaz. Yandaki mobilyaların panelleri hasar görebilir. ▶ Contayı daima temiz tutunuz. ▶ Cihazı asla hasarlı bir contayla veya contasız olarak çalıştırmayınız." / "Cihazın kapağı açık şekilde soğutulması zaman içinde yanında bulunan mobilya panellerinin hasar görmesine neden olur."
 #      s.12 temizlik tablosu "Kapak contası — Sıcak deterjanlı su — Çıkarılmamalı ve aşındırılmamalıdır."
-#  B3) Bosch "[tr] Kullanma kılavuzu Ankastre fırın HBB23C...", 20 s., md5 5544858a428c91894c15726616c53729
+#      s.19 "Müşteri hizmetlerine başvurduğunuzda cihazınızın ürün numarasını (E-Nr.) ve imalat numarasını (FD) hazır bulundurunuz."
+#  B2) Bosch "[tr] Kullanma kılavuzu Ankastre fırın HBB23C...", 20 s., md5 5544858a428c91894c15726616c53729
 #      https://media3.bsh-group.com/Documents/9000728669_B.pdf
 #      s.6 "Bilgi: Cam üzerinde aşırı yoğuşmayı önlemek için fırının ön ısıtmasını daima yemeği içine koymadan önce gerçekleştirmeniz önerilir."
 #      s.3 "Açık cihaz kapağı ile soğutma: Pişirme alanını sadece kapalı soğumaya bırakınız. Cihaz kapağı sadece aralık bırakılsa bile yanındaki mobilya yüzeyleri zamanla zarar görebilir." / "Nemli gıdalar: Kapalı pişirme alanında uzun süre nemli gıdalar saklamayınız." / "Çok kirli kapı contası: Kapı contası aşırı kirlenmiş ise, cihaz çalışırken fırın kapısı doğru bir şekilde kapanmayacaktır. Yandaki mobilya yüzeyleri hasar görebilir."
@@ -33,8 +31,8 @@ guide:
   cost: "Ücretsiz"
   tools: ["Yumuşak bez", "Sıcak deterjanlı su"]
 steps:
-  - "Fırın kapağını dikkatlice ve sıcak buhar senden uzağa çıkacak şekilde aç; çocukları uzak tut."
-  - "Yemeği fırına koymadan önce ön ısıtma yap; Bosch'a göre bu yoğuşma suyunu önler."
+  - "Fırın kapağını dikkatlice aç; kapak açılırken sıcak buhar çıkabilir, çocukları uzak tut."
+  - "Camda aşırı yoğuşmayı önlemek için ön ısıtmayı yemeği fırına koymadan önce yap."
   - "Pişirme bittikten sonra kapaktaki, kumanda alanındaki ve yan dolaplardaki su damlalarını sil."
   - "Fırını kapağı kapalıyken soğumaya bırak; kapağı aralık bırakma."
   - "Kullanımdan sonra pişirme bölümünün kurumasını bekle; nemli yiyecekleri kapalı fırında uzun süre bekletme."
@@ -42,11 +40,11 @@ steps:
   - "Kapaktaki havalandırma yarıklarının üstünü örtme."
 faq:
   - q: "Bosch fırınımın kapağında ve dolapta su damlaları oluyor, arıza mı?"
-    a: "Bosch'a göre hayır. Kılavuz, pişirme sırasında çok fazla buhar oluşabileceğini ve fırının içi ile dışı arasındaki yüksek sıcaklık farkı nedeniyle cihaz kapağında, kumanda alanında ya da bitişik mobilya üstlerinde yoğuşma suyu oluşabileceğini yazıyor. Bosch bunu normal, fiziksel bir olay olarak tanımlıyor ve hasarı önlemek için suyun silinmesini istiyor."
+    a: "Bosch'a göre hayır. HBF512B kılavuzu, pişirme sırasında pişirme bölümünde ve cihaz kapağında yoğuşma suyu oluşabileceğini, bunun normal olduğunu ve cihazın fonksiyonunu etkilemediğini yazıyor; pişirmeden sonra suyun temizlenmesini istiyor. HBB23C kılavuzu da buharın bir kısmının kapaktan çıkıp kumanda panelinde ya da yandaki mobilyada su damlası olarak yoğunlaştığını ve bunun fiziksel bir olay olduğunu söylüyor."
   - q: "Yoğuşmayı azaltmak için ne yapabilirim?"
-    a: "Bosch'un önerisi ön ısıtma: cihazda ön ısıtma yaparak yoğuşma suyunu önleyebilirsin. HBB23C kılavuzu da cam üzerinde aşırı yoğuşmayı önlemek için ön ısıtmayı daima yemeği fırına koymadan önce yapmanı öneriyor."
+    a: "Bosch'un önerisi ön ısıtma: HBB23C kılavuzu, cam üzerinde aşırı yoğuşmayı önlemek için ön ısıtmayı daima yemeği fırına koymadan önce yapmanı öneriyor."
   - q: "Kapağı açınca yüzüme sıcak buhar geliyor."
-    a: "Bosch kılavuzu kapak açılırken sıcak buhar çıkabileceğini ve sıcaklık durumuna göre buharın görünmeyebileceğini yazıyor. Kapağı dikkatlice ve sıcak buharın senden uzağa çıkacağı şekilde aç, çocukları uzak tut."
+    a: "Bosch kılavuzu kapak açılırken sıcak buhar çıkabileceğini ve sıcaklık durumuna göre buharın görünmeyebileceğini yazıyor. Kapağı dikkatlice aç, çocukları uzak tut."
   - q: "Fırın contası kirli, sorun olur mu?"
     a: "Bosch'a göre conta aşırı kirliyse cihaz kapağı tam kapanmaz ve yandaki mobilyaların panelleri hasar görebilir. Contayı sıcak deterjanlı suyla temiz tut; Bosch'un temizlik tablosuna göre conta çıkarılmamalı ve aşındırılmamalı. Bosch, cihazın hasarlı bir contayla ya da contasız çalıştırılmamasını da istiyor; conta hasarlıysa müşteri hizmetlerine başvur."
 images:
@@ -61,7 +59,7 @@ images:
     - "Çizim: solda ankastre fırın, sağda hava giriş ve çıkış ızgarası"
 ---
 
-Fırında börek ya da kızartma pişiyor; kapağın camı buğulanıyor, kumanda panelinin önünde ve yandaki dolabın kenarında su damlaları birikiyor. Bosch'un Türkçe ankastre fırın kılavuzlarında bunun bir başlığı var: **"Yoğuşma oluşumu."** Bosch'un açıklaması kısa: fırının içi ile dışı arasındaki yüksek sıcaklık farkı nedeniyle kapakta, kumanda alanında ya da bitişik mobilyada **yoğuşma suyu oluşabilir** ve bu **normal, fiziksel bir olaydır.** Yine de Bosch iki şey istiyor: suyun silinmesi ve kapak, conta, havalandırma kurallarına uyulması. Bu yazıda Bosch'un FRGA103I, FRMA226 ve HBB23C kılavuzlarındaki kuralları tek listede topluyoruz.
+Fırında börek ya da kızartma pişiyor; kapağın camı buğulanıyor, kumanda panelinin önünde ve yandaki dolabın kenarında su damlaları birikiyor. Bosch'un Türkçe ankastre fırın kılavuzlarında bunun bir başlığı var: **"Yoğuşma suyu."** HBF512B kılavuzuna göre pişirme sırasında pişirme bölümünde ve kapakta **yoğuşma suyu oluşabilir;** bu **normaldir** ve cihazın fonksiyonunu etkilemez. HBB23C kılavuzu kumanda panelindeki ve yan mobilyadaki damlalar için de aynı şeyi söylüyor: **bu fiziksel bir olaydır.** Yine de Bosch iki şey istiyor: suyun silinmesi ve kapak, conta, havalandırma kurallarına uyulması. Bu yazıda Bosch'un HBF512B ve HBB23C kılavuzlarındaki kuralları tek listede topluyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -82,19 +80,19 @@ HBB23C kılavuzu iki örnek de veriyor: **şuruplu pastalar** pişirirken ve **k
 
 ## Adım adım: evde denenecekler
 
-**1. Kapağı doğru aç.** Fırın kapağını dikkatlice ve sıcak buhar senden uzağa çıkacak şekilde aç; çocukları uzak tut. Bosch'un uyarısı: **sıcaklık durumuna göre buhar görünmeyebilir.**
+**1. Kapağı doğru aç.** Fırın kapağını dikkatlice aç; kapak açılırken sıcak buhar çıkabilir, çocukları uzak tut. Bosch'un uyarısı: **sıcaklık durumuna göre buhar görünmeyebilir.**
 
-**2. Ön ısıtma.** Yemeği fırına koymadan önce ön ısıtma yap; Bosch'a göre bu yoğuşma suyunu önler. HBB23C kılavuzu bunu cam üzerindeki aşırı yoğuşma için özellikle öneriyor: ön ısıtmayı **daima yemeği içine koymadan önce** yap.
+**2. Ön ısıtma.** Camda aşırı yoğuşmayı önlemek için ön ısıtmayı yemeği fırına koymadan önce yap. HBB23C kılavuzunun önerisi bu: cam üzerinde aşırı yoğuşmayı önlemek için ön ısıtmayı **daima yemeği içine koymadan önce** yap.
 
-**3. Damlaları sil.** Pişirme bittikten sonra kapaktaki, kumanda alanındaki ve yan dolaplardaki su damlalarını sil. Bosch'un iki kılavuzu da bunu istiyor: **hasarları önlemek için yoğuşma suyunu siliniz;** pişirme işleminden sonra yoğuşma suyu temizlenmelidir.
+**3. Damlaları sil.** Pişirme bittikten sonra kapaktaki, kumanda alanındaki ve yan dolaplardaki su damlalarını sil. HBF512B kılavuzunun kuralı: **pişirme işleminden sonra yoğuşma suyu temizlenmelidir.** HBB23C kılavuzuna göre panelde ve yan mobilyada biriken damlalar da aynı buhardan geliyor.
 
 **4. Kapak kapalı soğut.** Fırını kapağı kapalıyken soğumaya bırak; kapağı aralık bırakma. HBB23C kılavuzuna göre kapak yalnız aralık bırakılsa bile **yanındaki mobilya yüzeyleri zamanla zarar görebilir.**
 
-**5. Kuru bırak.** Kullanımdan sonra pişirme bölümünün kurumasını bekle; nemli yiyecekleri kapalı fırında uzun süre bekletme. Bosch'a göre pişirme bölümünde uzun süre kalan nem korozyona neden olur. Aynı bölümdeki bir uyarı daha: **sıcak pişirme bölümüne kesinlikle su dökülmemeli;** su buharı oluşur ve sıcaklık değişimi hasara yol açabilir.
+**5. Kuru bırak.** Kullanımdan sonra pişirme bölümünün kurumasını bekle; nemli yiyecekleri kapalı fırında uzun süre bekletme. HBF512B kılavuzuna göre pişirme bölümünde uzun süre kalan nem korozyona neden olur. Aynı bölümdeki bir uyarı daha: **sıcak pişirme bölümüne kesinlikle su dökülmemeli;** su buharı oluşur ve sıcaklık değişimi hasara yol açabilir.
 
 **6. Conta.** Kapak contasını sıcak deterjanlı suyla temiz tut; contayı çıkarma ve aşındırıcı kullanma. Bosch'a göre conta aşırı kirliyse **cihaz kapağı tam kapanmaz** ve yandaki mobilyaların panelleri hasar görebilir.
 
-**7. Havalandırma yarıkları.** Kapaktaki havalandırma yarıklarının üstünü örtme. FRMA226 kılavuzuna göre soğutma fanının sıcak havası kapağın üzerinden çıkar ve bu yarıklar örtülürse **cihaz aşırı ısınır.**
+**7. Havalandırma yarıkları.** Kapaktaki havalandırma yarıklarının üstünü örtme. HBF512B kılavuzuna göre soğutma fanının sıcak havası kapağın üzerinden çıkar ve bu yarıklar örtülürse **cihaz aşırı ısınır.**
 
 ## Ne zaman servis?
 
@@ -112,4 +110,4 @@ Fırın buhar yapıyor ama ısınmıyorsa kardeş rehberimiz [Bosch fırın ıs�
 
 ---
 
-**Kaynak künyesi.** Yoğuşma, buhar, conta ve havalandırma kuralları Bosch'un Türkçe ankastre fırın kılavuzlarından (FRGA103I, FRMA226 ve HBB23C serisi) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**
+**Kaynak künyesi.** Yoğuşma, buhar, conta ve havalandırma kuralları Bosch'un Türkçe ankastre fırın kılavuzlarından (HBF512B.1T ve HBB23C serisi) alınmıştır. Kendi cihazının kılavuzu farklı bir tarif veriyorsa **kendi kılavuzun esastır.**

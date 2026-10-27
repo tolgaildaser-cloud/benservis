@@ -13,12 +13,12 @@ category: "Fırın / Ocak"
 #   tohum "bosch fırın hava" → 1. "…hava üflüyor", 3. "…soğuk hava üflüyor", 4. "…dışarı hava veriyor"; tohum "bosch fırın so" → 1. "…soğutma fanı sürekli çalışıyor".
 # Belgeler: yerel kopyalar blog-taslaklar/kaynak-firin-sprint/ (1 Eki 2026, curl -sL -A "Mozilla/5.0", HTTP 200, media3.bsh-group.com; dl.log).
 #   md5 bu koşuda yeniden alındı, MD5.txt ile aynı. #88: forum/servis sitesi kullanılmadı. Okuma pdftotext -layout, sayfa = PDF sayfası.
-#  (D) Bosch FRMA226. ankastre fırın kullanım kılavuzu  https://media3.bsh-group.com/Documents/9001771866_D.pdf  md5 a86b168874d8778ca41272c5d7166c07
 #  (F) Bosch HBF512B.1T ankastre fırın kullanım kılavuzu  https://media3.bsh-group.com/Documents/9001944574_A.pdf  md5 3fac75fc8fb8bbef288fcc478b030ece
 #  (H) Bosch HBB23C.. ankastre fırın kullanma kılavuzu  https://media3.bsh-group.com/Documents/9000728669_B.pdf  md5 5544858a428c91894c15726616c53729
-#  (G) Bosch FRGA103I ankastre fırın kullanım kılavuzu  https://media3.bsh-group.com/Documents/9001627929_B.pdf  md5 1863661017c72bd0385ba56db04e62de
-# Soğutma fanı D s.8, F s.8, G s.7, H s.5 · arka panel fanı D s.6, F s.6 · kapak açılınca çalışma sürer D s.8 · yoğuşma D s.8
-#   · "süre dolduktan sonra tamamen kapanmıyor" D s.17, F s.17 · hata mesajı D s.18, F s.18 · arıza giderme girişi/uzman D s.17 · ara rafta havalandırma D s.36.
+#  (J) Bosch HBJN10Y..R ankastre fırın kullanım kılavuzu  https://media3.bsh-group.com/Documents/9001930148_F.pdf  md5 73afa0ad2328c7fe9bcbe06cc6d29177
+# KAYNAK DÜZELTMESİ 2026-10-27 (#88): önceki (D) 9001771866_D ve (G) 9001627929_B Profilo kılavuzu çıktı; kaynaktan çıkarıldı. F, H, J bu koşuda yeniden indirildi (HTTP 200, md5 aynı).
+# Soğutma fanı F s.8, J s.7, H s.5 · arka panel fanı F s.6 · kapak açılınca çalışma sürer F s.8 · yoğuşma F s.8
+#   · "süre dolduktan sonra tamamen kapanmıyor" F s.17 · hata mesajı F s.18 · arıza giderme girişi/uzman F s.17 · ara rafta havalandırma F s.23.
 # BİLEREK YAZILMAYANLAR: "soğuk hava" üflediği iddiası ya da açıklaması (kılavuzlarda yok) · fan süresinin dakika olarak değeri (Bosch belgelerinde yok)
 #   · fan motoru, termostat, kart teşhisi · dolaptan söküp montaj düzeltme (montaj uzman işi) · fiyat (#46) · pazar bağlantısı.
 # Alıntı denetim tablosu: bosch-firin-hava-ufluyor.KAYNAK.md
@@ -37,11 +37,11 @@ steps:
   - "Ekranda bir hata mesajı varsa kılavuzdaki tuşa bas; mesaj yeniden çıkıyor ya da fan soğuk fırında da durmuyorsa Bosch müşteri hizmetlerinden servis iste."
 faq:
   - q: "Bosch fırın kapağın üstünden sıcak hava üflüyor, arıza mı?"
-    a: "Hayır. Bosch'un FRMA226, HBF512B ve FRGA103I kılavuzlarına göre soğutma fanı cihaz sıcaklığına göre devreye girer ve devre dışı kalır, sıcak hava da kapağın üzerinden dışarı çıkar. Bu, fırının kendini aşırı ısınmaya karşı soğutma biçimi."
+    a: "Hayır. Bosch'un HBF512B ve HBJN10Y kılavuzlarına göre soğutma fanı cihaz sıcaklığına göre devreye girer ve devre dışı kalır, sıcak hava da kapağın üzerinden dışarı çıkar. Bu, fırının kendini aşırı ısınmaya karşı soğutma biçimi."
   - q: "Fırını kapattım, fan hâlâ çalışıyor; ne zaman durur?"
     a: "Bosch kılavuzları bunun bilerek yapıldığını yazıyor: cihaz çalışmadan sonra hızlı soğusun diye soğutma fanı belirli bir süre daha çalışır. HBB23C kılavuzunda da fan, fırın kapandıktan sonra bir süre dönmeye devam eder. Arıza tablosuna göre cihaz soğuduktan sonra soğutma fanı otomatik olarak kapanır. Kılavuzlarda dakika olarak bir süre verilmiyor."
   - q: "Soğutma fanı sürekli çalışıyor, fırını nasıl tamamen kapatırım?"
-    a: "FRMA226 ve HBF512B arıza tablolarında bu durum var: süre dolduktan sonra cihaz ısınmayı durdurur ama lamba ve soğutma fanı kapanmaz. Sebep fonksiyon seçme düğmesinin sıfırda olmaması. Düğmeyi sıfır konumuna çevirince cihaz, lamba ve arka paneldeki fan kapanır; soğutma fanı da cihaz soğuyunca kendiliğinden durur."
+    a: "HBF512B arıza tablosunda bu durum var: süre dolduktan sonra cihaz ısınmayı durdurur ama lamba ve soğutma fanı kapanmaz. Sebep fonksiyon seçme düğmesinin sıfırda olmaması. Düğmeyi sıfır konumuna çevirince cihaz, lamba ve arka paneldeki fan kapanır; soğutma fanı da cihaz soğuyunca kendiliğinden durur."
   - q: "Kapaktaki yarıkları kapatırsam ne olur?"
     a: "Bosch bunu açıkça yasaklıyor: cihaz kapağındaki havalandırma yarıklarının üzeri örtülürse cihaz aşırı ısınır. Kapak koluna havlu asmak ya da yarıkların önüne bir şey koymak bu yüzden önerilmez."
   - q: "Fırının içinden de fan sesi geliyor, bu ikinci bir fan mı?"
@@ -57,7 +57,7 @@ images:
     - "Çizim: solda ankastre fırın, sağda uzaktan kumanda"
 ---
 
-Fırını açtın ya da yemeği çıkarıp kapattın, kapağın üstünden yüzüne doğru hava geliyor ve bir motor sesi sürüyor. Çoğu zaman bu bir arıza değil, Bosch'un **soğutma fanı**. FRMA226, HBF512B, FRGA103I ve HBB23C kullanım kılavuzları bu fanın ne zaman çalıştığını, neden kapattıktan sonra da döndüğünü ve hangi durumda kapanmadığını aynı dille anlatıyor. Bu yazıda o kuralları ve servis sınırını sırayla topladık. Tuşlar ve göstergeler modele göre değişiyor; kendi kılavuzunla karşılaştır.
+Fırını açtın ya da yemeği çıkarıp kapattın, kapağın üstünden yüzüne doğru hava geliyor ve bir motor sesi sürüyor. Çoğu zaman bu bir arıza değil, Bosch'un **soğutma fanı**. HBF512B, HBJN10Y ve HBB23C kullanım kılavuzları bu fanın ne zaman çalıştığını, neden kapattıktan sonra da döndüğünü ve hangi durumda kapanmadığını aynı dille anlatıyor. Bu yazıda o kuralları ve servis sınırını sırayla topladık. Tuşlar ve göstergeler modele göre değişiyor; kendi kılavuzunla karşılaştır.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
 
@@ -76,21 +76,21 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 ## Adım adım: evde kontrol
 
-**1. Havanın kaynağını bul.** Bosch'un FRMA226, HBF512B ve FRGA103I kılavuzlarında aynı paragraf var: **soğutma fanı, cihaz sıcaklığına göre devreye girer ve devre dışı kalır; sıcak hava kapağın üzerinden dışarı çıkar.** Eski HBB23C kılavuzu görevini de söylüyor: fan, fırının **aşırı ısınmasını önler** ve gerektiğinde çalışıp kesilir. Yani pişirme sırasında kapağın üst kenarından gelen sıcak hava, tasarımın parçası.
+**1. Havanın kaynağını bul.** Bosch'un HBF512B ve HBJN10Y kılavuzlarında aynı paragraf var: **soğutma fanı, cihaz sıcaklığına göre devreye girer ve devre dışı kalır; sıcak hava kapağın üzerinden dışarı çıkar.** Eski HBB23C kılavuzu görevini de söylüyor: fan, fırının **aşırı ısınmasını önler** ve gerektiğinde çalışıp kesilir. Yani pişirme sırasında kapağın üst kenarından gelen sıcak hava, tasarımın parçası.
 
 **2. Kapattıktan sonra bekle.** En sık şaşırtan durum bu. Kılavuzlara göre cihazın çalışmadan sonra **hızlı bir şekilde soğuması için** soğutma fanı **belirli bir süre** daha çalışır. HBB23C'de de fan, fırın kapandıktan sonra bir süre dönmeye devam eder. Arıza tablosunun son cümlesi bunu bağlıyor: **cihaz soğuduktan sonra soğutma fanı otomatik olarak kapanır.** Bosch belgelerinde bu süre dakika olarak verilmiyor; fırın ne kadar ısındıysa fanın o kadar uzun çalışması beklenir.
 
-**3. Düğme sıfırda mı?** FRMA226 ve HBF512B arıza tablolarında ayrı bir satır var: **"Cihaz süre dolduktan sonra tamamen kapanmıyor."** Açıklama: cihaz bir süre sonra ısınmayı durduruyor, ama **fırın lambası ve soğutma fanı kapanmıyor**; hava dolaşımlı ısıtma türlerinde pişirme bölümündeki arka panel fanı da çalışmaya devam ediyor. Çözüm: **fonksiyon seçme düğmesini sıfır konumuna çevirmek.** Cihaz kapanır, lamba ve arka paneldeki fan kapanır, soğutma fanı da cihaz soğuyunca kendiliğinden durur.
+**3. Düğme sıfırda mı?** HBF512B arıza tablosunda ayrı bir satır var: **"Cihaz süre dolduktan sonra tamamen kapanmıyor."** Açıklama: cihaz bir süre sonra ısınmayı durduruyor, ama **fırın lambası ve soğutma fanı kapanmıyor**; hava dolaşımlı ısıtma türlerinde pişirme bölümündeki arka panel fanı da çalışmaya devam ediyor. Çözüm: **fonksiyon seçme düğmesini sıfır konumuna çevirmek.** Cihaz kapanır, lamba ve arka paneldeki fan kapanır, soğutma fanı da cihaz soğuyunca kendiliğinden durur.
 
 **4. Yarıkları açık bırak.** Bosch'un uyarısı kesin: **cihaz kapağındaki havalandırma yarıklarının üzerini örtmeyin, cihaz aşırı ısınır.** HBB23C kılavuzu aynı uyarıyı havalandırma açıklığı için yapıyor. Kapak koluna asılan havlu, yarıkların önüne dayanan bir tepsi ya da dolap kapağı soğutma havasının yolunu keser. Önünü boşalt; fan bu yarıklardan nefes alıp verir.
 
-**5. İçerideki fanı ayırt et.** Kılavuzlarda **3D sıcak hava** ve **sıcak hava hassas** türlerinde fan, **arka panelde bulunan yuvarlak ısıtıcının ısısını eşit biçimde pişirme bölümüne dağıtır**; hava dolaşımlı ızgarada da ızgara ısıtıcısıyla dönüşümlü çalışıp sıcak havayı yemeğin etrafında döndürür. Bu fan pişirme bölümünün içindedir, dışarı hava vermez. FRMA226 kılavuzuna göre çalışma sırasında kapağı açarsan çalışma devam eder; kapak açıkken içeriden gelen sıcak hava bu yüzden normal.
+**5. İçerideki fanı ayırt et.** Kılavuzlarda **3D sıcak hava** ve **hassas sıcak hava** türlerinde fan, **arka panelde bulunan yuvarlak ısıtıcının ısısını eşit biçimde pişirme bölümüne dağıtır**; hava dolaşımlı ızgarada da ızgara ısıtıcısıyla dönüşümlü çalışıp sıcak havayı yemeğin etrafında döndürür. Bu fan pişirme bölümünün içindedir, dışarı hava vermez. HBF512B kılavuzuna göre çalışma sırasında kapağı açarsan çalışma devam eder; kapak açıkken içeriden gelen sıcak hava bu yüzden normal.
 
-**6. Hata mesajı varsa.** Ekranda bir hata mesajı görünüyorsa FRMA226 ve HBF512B'deki sıra: kılavuzda gösterilen tuşa bas, gerekirse saati yeniden ayarla. Arıza bir defalıksa mesaj kaybolur. **Mesaj tekrar belirirse müşteri hizmetlerini ara** ve hata mesajını, cihazın E numarasıyla birlikte eksiksiz bildir.
+**6. Hata mesajı varsa.** Ekranda bir hata mesajı görünüyorsa HBF512B'deki sıra: kılavuzda gösterilen tuşa bas, gerekirse saati yeniden ayarla. Arıza bir defalıksa mesaj kaybolur. **Mesaj tekrar belirirse müşteri hizmetlerini ara** ve hata mesajını, cihazın E numarasıyla birlikte eksiksiz bildir.
 
 ## Kapakta su ve buhar
 
-Fanla birlikte kapakta damlacık görüyorsan o başka bir konu: FRMA226 kılavuzuna göre pişirme sırasında pişirme bölümünde ve kapakta **yoğuşma suyu oluşabilir, bu normaldir** ve cihazın fonksiyonunu etkilemez; pişirmeden sonra silinmesi yeterli. Ayrıntılar [Bosch fırın buhar yapıyor](/blog/bosch-firin-buhar-yapiyor/) yazısında.
+Fanla birlikte kapakta damlacık görüyorsan o başka bir konu: HBF512B kılavuzuna göre pişirme sırasında pişirme bölümünde ve kapakta **yoğuşma suyu oluşabilir, bu normaldir** ve cihazın fonksiyonunu etkilemez; pişirmeden sonra silinmesi yeterli. Ayrıntılar [Bosch fırın buhar yapıyor](/blog/bosch-firin-buhar-yapiyor/) yazısında.
 
 ## Ne zaman servis
 
