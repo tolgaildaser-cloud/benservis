@@ -22,6 +22,7 @@ import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, ARIZA_KUTUSU_YK179, KUTU_MA
 import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
 import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
 import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
+import { merchantFeedXml } from "./merchant-feed.mjs";
 import { nofollowEkle, nofollowSay } from "./ic-baglanti-nofollow.mjs";
 
 marked.setOptions({ gfm: true, breaks: false });
@@ -3160,6 +3161,12 @@ if (!pazarKabukKaynak) {
   kabukYaz(path.join(DIST, "pazar"), pazarKabugu(pazarKabukKaynak, pazarUrunleri), "/pazar");
   for (const u of pazarUrunleri) kabukYaz(path.join(DIST, "urun", u.id), urunKabugu(pazarKabukKaynak, u), `/urun/${u.id}`);
   console.log(`[build-blog] ✓ pazaryeri kabukları: /pazar + ${pazarUrunleri.length} ürün sayfası (indekslenebilir, Product JSON-LD, sitemap'te).`);
+  // Merchant Center feed'i (YK #191, 28 Eki 2026): aynı ürün listesinden; liste okunamadıysa YAZILMAZ
+  // (boş feed Merchant'ta tüm ürünleri düşürür — eksik dosya bir günlük getirme hatasıdır, daha az zararlı).
+  if (sonuc.urunler) {
+    fs.writeFileSync(path.join(DIST, "merchant-feed.xml"), merchantFeedXml(pazarUrunleri));
+    console.log(`[build-blog] ✓ merchant-feed.xml: ${pazarUrunleri.length} ürün (Google Merchant Center, planlanmış getirme).`);
+  } else console.warn("[build-blog] ⚠️  merchant-feed.xml YAZILMADI (ürün listesi okunamadı).");
 }
 
 // lastmod = frontmatter `updated` varsa onu, yoksa `date`'i kullan (Vercel checkout dosya
