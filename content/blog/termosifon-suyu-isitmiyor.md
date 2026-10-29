@@ -158,6 +158,12 @@ Soğuk su girişindeki emniyet ventili ısıtmayla doğrudan ilgili değil, ama 
 
 ⛔ Ventilin **ayarı kurcalanmaz, ventil sökülmez ve tahliye çıkışı kesinlikle kapatılmaz** — iki kılavuzun da ortak yasağı.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [DemirDöküm termosifon suyu ısıtmıyor](/blog/demirdokum-termosifon-suyu-isitmiyor/)
+
 ## Servisi aramadan önce
 
 1. **Şalter açık mı**, sigorta atmış mı, evde elektrik var mı?

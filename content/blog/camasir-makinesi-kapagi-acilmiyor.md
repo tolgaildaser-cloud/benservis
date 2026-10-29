@@ -112,6 +112,9 @@ Kilidi açma yolu ve acil açma kolunun yeri markadan markaya değişir. Kulland
 - [Candy çamaşır makinesi kapağı açılmıyor](/blog/candy-camasir-makinesi-kapagi-acilmiyor/)
 - [AEG çamaşır makinesi kapak kilidi nasıl açılır](/blog/aeg-camasir-makinesi-kapak-kilidi-nasil-acilir/)
 - [Miele çamaşır makinesi kapak kilidi nasıl açılır](/blog/miele-camasir-makinesi-kapak-kilidi-nasil-acilir/)
+- [Electrolux çamaşır makinesi kapağı açılmıyor](/blog/electrolux-camasir-makinesi-kapagi-acilmiyor/)
+- [LG çamaşır makinesi kapağı açılmıyor](/blog/lg-camasir-makinesi-kapagi-acilmiyor/)
+- [Siemens çamaşır makinesi kapak açılmıyor](/blog/siemens-camasir-makinesi-kapak-acilmiyor/)
 
 ## Ne zaman servis gerekir
 

@@ -79,6 +79,13 @@ Bulaşıkların tertemiz ama sırılsıklam mı çıkıyor? İyi haber: bulaşı
 
 **7.** Program bitince kapağı birkaç santim arala ve buharın çıkmasını bekle.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Beko bulaşık makinesi kurutmuyor](/blog/beko-bulasik-makinesi-kurutmuyor/)
+- [Electrolux bulaşık makinesi kurutmuyor](/blog/electrolux-bulasik-makinesi-kurutmuyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 Bu adımlar güvenli ve çoğu zaman ücretsiz — sırayla dene:

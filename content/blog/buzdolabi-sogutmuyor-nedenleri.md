@@ -72,6 +72,15 @@ Buzdolabını açtın, ışık yanıyor, motor sesi de geliyor — ama içerisi 
 
 **7.** Buzluk soğuk ama dolap soğumuyorsa bunu not et ve servis çağır; bu fan ya da defrost tarafıdır.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Vestel buzdolabı E09 hatası](/blog/vestel-buzdolabi-e09-hatasi/)
+- [Electrolux buzdolabı soğutmuyor](/blog/electrolux-buzdolabi-sogutmuyor/)
+- [Samsung buzdolabı soğutmuyor: evde kontrol](/blog/samsung-buzdolabi-sogutmuyor/)
+- [Siemens buzdolabı soğutmuyor](/blog/siemens-buzdolabi-sogutmuyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 Güvenli ve ücretsiz adımlar — sorun çoğu zaman burada çözülür:

@@ -33,6 +33,12 @@ Televizyonu açıyorsun, **ses geliyor ama ekran karanlık** — ya da görünt�
 
 **5. Panel arızası.** Ekranın kendisi (cam panel) hasar gördüyse görüntü kalıcı gitmiştir; en maliyetli arızadır.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Vestel televizyonda sinyal yok, kanal gelmiyor](/blog/vestel-televizyon-sinyal-yok/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 1. **Kaynağı değiştir.** Uzaktan kumandadan giriş/kaynak (Source) tuşuyla HDMI/anten arasında geç; doğru girişi seç.

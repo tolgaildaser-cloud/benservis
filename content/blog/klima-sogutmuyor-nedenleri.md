@@ -72,6 +72,15 @@ Yaz geldi, klimayı açtın ama oda bir türlü serinlemiyor. Panikleyip hemen s
 
 **7.** Filtre temiz ve ayarlar doğruyken hâlâ soğutmuyorsa servis çağır.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Arçelik klima soğutmuyor: evde kontrol](/blog/arcelik-klima-sogutmuyor/)
+- [Daikin klima soğutmuyor: evde kontrol](/blog/daikin-klima-sogutmuyor/)
+- [TCL klima soğutmuyor: yetersiz hava akışı](/blog/tcl-klima-sogutmuyor/)
+- [Uğur klima soğutmuyor](/blog/ugur-klima-sogutmuyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 Bu adımlar güvenli ve ücretsiz — çoğu zaman sorunu burada çözersin:

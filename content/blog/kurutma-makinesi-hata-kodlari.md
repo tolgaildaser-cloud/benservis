@@ -103,6 +103,12 @@ Miele kurutma makineleri arızayı F ile başlayan kodlarla ve ekrandaki uyarıl
 
 - [Miele kurutma makinesi hata kodları](/blog/miele-kurutma-makinesi-hata-kodlari/)
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Samsung kurutma makinesi ses yapıyor](/blog/samsung-kurutma-makinesi-ses-yapiyor/)
+
 ## Hangi noktadan sonra servis işi
 
 Temizlik turu ve reset sonrası aynı kod geri geliyorsa, makine hiç ısıtmıyorsa, tank boşken tank uyarısı sönmüyorsa ya da tamburdan sürtme-gıcırdama sesi geliyorsa iş servisindir. Servisi ararken kodu (ya da ışık düzeninin fotoğrafını) ve model numarasını ilet; doğru parçayla gelinmesini sağlayan en kısa yol budur.

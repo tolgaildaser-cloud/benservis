@@ -78,6 +78,13 @@ Kombin çalışıyor, radyatörler ısınıyor ama musluktan **sıcak su gelmiyo
 
 **6.** Ayar yüksek ve aeratör temizken su hâlâ ılık geliyorsa iç parçalara dokunma, servise başvur.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Buderus kombi sıcak su vermiyor](/blog/buderus-kombi-sicak-su-vermiyor/)
+- [Viessmann kombi sıcak su vermiyor](/blog/viessmann-kombi-sicak-su-vermiyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 1. **Sıcak su ayarını yükselt.** Kombi panelinden sıcak su (musluk) sıcaklığını artır.

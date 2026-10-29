@@ -102,6 +102,12 @@ Contayı temizledin, tamburu kaynattın, filtreyi boşalttın, deterjanı düzel
 | Temizliğe rağmen süren leke | Kazan arası cisim / korozyon | ⛔ Servis |
 | Lekeyle birlikte tıkırtı sesi | Sıkışmış cisim | ⛔ Servis |
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Vestel çamaşır makinesi temiz yıkamıyor](/blog/vestel-camasir-makinesi-temiz-yikamiyor/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. **Contanın kıvrımını aralayıp bak** ve içini sil — siyah lekenin en sık adresi.

@@ -66,6 +66,7 @@ Burada anlatılmayan markalar için ayrı tablolar hazırladık:
 - [AEG bulaşık makinesi arıza kodları](/blog/aeg-bulasik-makinesi-ariza-kodlari/)
 - [Sharp bulaşık makinesi hata kodları](/blog/sharp-bulasik-makinesi-hata-kodlari/)
 - [Hoover bulaşık makinesi hata kodları](/blog/hoover-bulasik-makinesi-hata-kodlari/)
+- [Samsung bulaşık makinesi HC hatası: ısıtma](/blog/samsung-bulasik-makinesi-hc-hatasi/)
 
 ## Kendin çözebileceğin kodlar
 Filtre (E22), tahliye (E24) ve taban suyu (E15) en sık ve en kolay çözülenlerdir:

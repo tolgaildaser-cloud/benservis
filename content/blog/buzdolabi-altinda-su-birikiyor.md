@@ -89,6 +89,12 @@ Buzdolabının altında, sebze gözünde ya da önünde su görmek çoğu zaman 
 
 **7. Fişi tak ve izle.** Fişi tak, kapıları tam kapat. Kuruladığın yerlerin sonraki günlerde yeniden ıslanıp ıslanmadığına bak.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Bosch buzdolabında su birikiyor](/blog/bosch-buzdolabi-icinde-su-birikiyor/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Tahliye deliğini temizlediğin hâlde **su tekrar birikiyorsa**

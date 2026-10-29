@@ -98,6 +98,12 @@ Akü düzenli olarak hızla bitiyorsa [şarjlı süpürge şarj tutmuyor](/blog/
 - **Filtresiz çalıştırma.** Bosch kılavuzları cihazın filtre ünitesi, motor koruma filtresi ya da torba olmadan çalıştırılmamasını ister.
 - **Isıyla kurutma.** Samsung kılavuzu ısı uygulandığında parçanın şeklinin bozulabileceğini belirtir; gölgede kurut.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [LG robot süpürge çekmiyor (CordZero R9)](/blog/lg-robot-supurge-cekmiyor/)
+
 ## Ne zaman servis çağırmalısın?
 
 - Hazne, filtre, hava yolu ve fırça temiz, güç ayarı en yüksekte olduğu hâlde **emiş hâlâ yoksa**

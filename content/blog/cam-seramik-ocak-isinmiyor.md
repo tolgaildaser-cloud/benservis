@@ -93,6 +93,13 @@ Cam seramik ocaklarda cam altındaki sıcaklık belirli sınırı aşınca göz 
 
 🔴 Kapanma **normal kullanımda ve sık** tekrarlanıyorsa koruma gereksiz yere devreye giriyor demektir; sıcaklık sınırlayıcı ya da indüksiyonlu modellerde soğutma fanı tarafı kontrol edilmelidir. Bu servis işidir.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Uğur vitroseramik ocak kendiliğinden kapanıyor](/blog/ugur-ocak-kendiliginden-kapaniyor/)
+- [Siemens indüksiyon ocak tencereyi algılamıyor](/blog/siemens-induksiyon-ocak-tencereyi-algilamiyor/)
+
 ## Servis işareti veren belirtiler
 
 - Sigorta ocak çalıştırılınca tekrar tekrar atıyor.

@@ -68,6 +68,13 @@ Temizliğe rağmen kâğıdı tutmayan conta sana bir şey söylüyor. Neye baka
 
 **Kendin kontrol et:** Akşam mutfak ışığını kapatıp dolabın içine çalışır durumda bir el feneri koy ve kapıyı kapat. Kenarlardan ışık sızan nokta görüyorsan conta orada yalıtmıyor — kâğıt testinin görsel doğrulamasıdır.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Grundig buzdolabı terliyor](/blog/grundig-buzdolabi-terliyor/)
+- [LG buzdolabı terliyor: yoğuşma kontrolü](/blog/lg-buzdolabi-terliyor/)
+
 ## Sertleşmiş conta: değişim servisin işi
 
 Sertleşmiş, çatlamış ya da yırtılmış conta temizlikle geri gelmez; **değişmesi gerekir**. Conta modele özel bir parçadır: yanlış ölçü ya da form, bozuk contadan farksız yalıtım yapar. Bazı modellerde conta yuvaya geçmedir, bazılarında kapı iç panelinin sökülmesi gerekir — panel söküldüğü anda iş, kullanıcı sınırının dışına çıkar.

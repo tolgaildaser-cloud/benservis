@@ -79,6 +79,13 @@ Güvenli ve çoğu zaman ücretsiz:
 
 **6. Program bitince contayı ve kapak çevresini kurula, kapağı açık bırak.**
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Beko çamaşır makinesi kokuyor](/blog/beko-camasir-makinesi-kokuyor/)
+- [Bosch çamaşır makinesi kokuyor](/blog/bosch-camasir-makinesi-kokuyor/)
+
 ## Ne zaman servis çağırmalısın?
 
 - Conta, çekmece ve filtre **temiz olduğu hâlde koku sürüyorsa** (tahliye hattında biyofilm/tıkanıklık)
