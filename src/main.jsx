@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { inject, track } from "@vercel/analytics";
 import App from "./App.jsx";
+import { ziyaretBeacon } from "./ziyaret-sayim.js";
 
 // ——— YK #69 koşu 1/cila ④ — KOD BÖLME ———
 // Önceki hâlde 12 ekranın hepsi tek bundle'a giriyordu: ana sayfaya gelen kullanıcı
@@ -56,6 +57,9 @@ const isPazar       = path.replace(/\/+$/, "") === "/pazar"; // YK #166 PR-4 (no
 const takipIsNo     = isTakip ? decodeURIComponent(path.split("/")[2] || "") : null;
 
 inject(); // Vercel Web Analytics (ziyaret/görüntüleme ölçümü)
+// 29 Eki 2026 (Tolga): PII'siz sayfa-şehir sayacı — yalnız sayfa türü gider, şehir sunucuda Vercel
+// başlığından okunur (src/ziyaret-sayim.js). Statik sayfalar aynı satırı build-blog'dan alır.
+ziyaretBeacon();
 
 // --- PWA (YK Kararı #26, adım 2/5) — service worker kaydı + ana ekrandan açılış ölçümü ---
 // SW yalnız PRODUCTION'da kaydedilir; dev'de HMR'ı ve /api proxy'sini bozmasın.

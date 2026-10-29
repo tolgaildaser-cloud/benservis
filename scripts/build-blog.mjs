@@ -24,6 +24,7 @@ import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
 import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
 import { merchantFeedXml } from "./merchant-feed.mjs";
 import { nofollowEkle, nofollowSay } from "./ic-baglanti-nofollow.mjs";
+import { ZIYARET_BEACON_JS } from "../src/ziyaret-sayim.js";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -1337,6 +1338,7 @@ ${FONT_LINK}
 <style>${CSS}</style>${head}
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>${ZIYARET_BEACON_JS}</script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </head><body${genis ? ' class="genis"' : ""}>
 <header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><nav class="sitenav" aria-label="Ana menü"><a href="/blog/">Bilgi Merkezi</a><a href="/tamir/">Tamir Merkezi</a><a href="/kilavuzlar/">Kullanım Kılavuzları</a><a class="navpazar" href="/pazar">Pazaryeri</a><a class="navcta" href="${navServisHref(canonical)}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg><span class="nav-yakin">Yakın </span>Servisler</a><details class="mnav"><summary aria-label="Menü"><svg class="ac-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><svg class="ac-x" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></summary><div class="mnav-panel"><a href="/pazar">Pazaryeri</a><a href="/blog/">Bilgi Merkezi</a><a href="/tamir/">Tamir Merkezi</a><a href="/kilavuzlar/">Kullanım Kılavuzları</a></div></details></nav></div><a class="pazarbant" href="/pazar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>Pazaryeri <span>· yedek parça →</span></a></header>

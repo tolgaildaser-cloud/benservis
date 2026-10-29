@@ -16,7 +16,7 @@ const BASLIK = {
   pazar: ["Pazar", "Benservis adına ürün ve yedek parça."],
   siparisler: ["Siparişler", "Pazaryeri siparişleri · havale onayı · iptal."],
   // 29 Eki 2026 (Tolga): yakın servis aramaları il/ilçe bazında, PII'siz.
-  servisArama: ["Servis Arama", "Yakın servis aramaları · il/ilçe · kapsamda mı."],
+  servisArama: ["Servis Arama", "Yakın servis aramaları (il/ilçe) ve ziyaretçi şehri · kapsamda mı."],
 };
 
 const LS_KEY = "benservis_admin";
