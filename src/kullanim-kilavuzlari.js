@@ -233,6 +233,13 @@ export const MARKA_KILAVUZLARI = {
   "Casper": {
     url: "https://www.casper.com.tr/destek",
     ozet: "Casper destek sayfası: ürün kılavuzları, sürücüler ve yetkili servis yönlendirmesi.",
+    // YK #192: telefon için kılavuz listesinin kendisi (VIA modelleri listede, FE 29 Eki gördü).
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://www.casper.com.tr/kullanim-kilavuzlari",
+        ozet: "Casper'ın kullanım kılavuzları sayfası: VIA telefonlar dahil ürününü bulup detaylı kullanım kılavuzunu açıyorsun.",
+      },
+    },
   },
   "Canon": {
     url: "https://www.canon.com.tr/support/",
@@ -625,6 +632,13 @@ export const MARKA_KILAVUZLARI = {
   "Honor": {
     url: "https://www.honor.com/tr/support/",
     ozet: "HONOR Türkiye destek merkezi: laptop, tablet ve telefon başlıkları altında ürün rehberleri, garanti sorgulama ve servis merkezi bilgisi bir arada.",
+    // YK #192: telefon için doğrudan ürün kullanım kılavuzu sayfası (FE 29 Eki: başlık "Ürün Kullanım Kılavuzu").
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://www.honor.com/tr/support/product-manual.html?deviceName=phones/",
+        ozet: "HONOR Türkiye ürün kullanım kılavuzu sayfası, telefonlar seçili açılıyor: modelini bulup kılavuzunu görüntülüyorsun.",
+      },
+    },
   },
   "Microsoft": {
     url: "https://support.microsoft.com/tr-tr/surface",
@@ -901,6 +915,49 @@ export const MARKA_KILAVUZLARI = {
       "Klima": {
         url: "https://dijitsu.com.tr/klima",
         ozet: "Dijitsu'nun klima listesi: modelini açıyorsun, ürün sayfasındaki \"Ürün Kullanım Formu\" bağlantısı Türkçe kullanım kılavuzunu PDF olarak indiriyor.",
+      },
+    },
+  },
+  // ── YK #192 (29 Eki 2026): Telefon / Tablet — yalnız cihaza özel adres (Dijitsu emsali):
+  // genel adres yok, başka cihazda kayıt üretmez. Adresler PAZ PLAN.md'den, FE 29 Eki curl 200
+  // + sayfa içeriğinde kılavuz bölümü görülerek alındı.
+  "General Mobile": {
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://www.generalmobile.com/tr/destek/yardim/kullanim-kilavuzlari",
+        ozet: "General Mobile yardım ve destek sitesinin Kullanım Kılavuzları bölümü: akıllı telefon ve tabletinin kılavuzunu PDF olarak indiriyorsun.",
+      },
+    },
+  },
+  "Nokia": {
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://www.hmd.com/tr_tr/support",
+        ozet: "Nokia ve HMD telefonlarının Türkçe destek sayfası (HMD): \"Kullanıcı kılavuzları\" bölümünden modelini seçip kılavuzunu açıyorsun; tuşlu telefonlar ve tabletler de listede.",
+      },
+    },
+  },
+  "Omix": {
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://www.omix.com.tr/tr/kullanim-kilavuzu",
+        ozet: "Omix'in garanti ve kullanım kılavuzu sayfası: telefon ve tablet modellerinin kullanım kılavuzu ile garanti belgesi model model listeli.",
+      },
+    },
+  },
+  "Oppo": {
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://support.oppo.com/tr/user-guide/",
+        ozet: "OPPO Türkiye destek sitesinin kullanım kılavuzu sayfası: telefon modelinin kılavuzuna buradan ulaşıyorsun.",
+      },
+    },
+  },
+  "Tecno": {
+    cihazOzel: {
+      "Telefon / Tablet": {
+        url: "https://turkiye.tecno-mobile.com/support/",
+        ozet: "TECNO Türkiye resmî destek sayfası: çevrimiçi kılavuzları görüntülüyor, kullanıcı kılavuzu dosyalarını indirme bölümünden alıyorsun.",
       },
     },
   },

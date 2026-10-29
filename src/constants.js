@@ -239,10 +239,14 @@ export const CIHAZ_MARKALARI = {
   //    dışı) · Cosori (özeti yalnız air fryer, o cihaz Mikrodalga / Air Fryer'da) ·
   //    Fantom · Rowenta (adres bu cihazı karşılamıyor) · Arzum · Goldmaster · Philips ·
   //    Regal (kapsam gösterilemedi). Haier ve Miele 3 Eki föyüyle eklendi.
-  // YK #192 — İÇERİK kategorisi (teşhis formunda YOK). BOŞ BAŞLAR: genel kılavuz adresi olan
-  // markayı (Samsung, Xiaomi…) buraya koymak, beyaz eşya adresini telefon kılavuzu diye basardı
-  // (#88). Marka, PAZ'ın doğruladığı telefon kılavuz adresi `cihazOzel` ile geldiğinde girer.
-  "Telefon / Tablet": [],
+  // YK #192 — İÇERİK kategorisi (teşhis formunda YOK). Kaynak: PAZ telefon-yk192/PLAN.md
+  // (19 adres), FE 29 Eki'de her sayfayı yeniden açıp başlık + içerikte telefon kılavuzunu gördü.
+  // Genel adresi telefonu da kapsayan marka (Apple · Samsung · Xiaomi) doğrudan,
+  // diğerleri `cihazOzel` ile girer. ⛔ Bilerek dışarıda: Huawei (ürün listesi, kılavuz değil) ·
+  // Vivo (destek ana sayfası) · OnePlus (İspanyolca sayfa) · TCL (kılavuz yalnız TV) · Asus
+  // (sayfa içerik vermedi) · Infinix (liste boş) · Realme (kılavuz sayfası yok) · Reeder (429).
+  "Telefon / Tablet": ["Apple", "Casper", "General Mobile", "Honor", "Nokia", "Omix", "Oppo",
+    "Samsung", "Tecno", "Xiaomi"].sort(trSort),
   "Küçük Ev Aletleri": [
     "Altus", "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "De'Longhi", "Fakir", "Grundig", "Kenwood",
     "King", "Krups", "Kumtel", "Ninja", "Onvo", "Philips", "Profilo", "Russell Hobbs", "Siemens", "Sinbo",
