@@ -192,6 +192,25 @@ const YK185_SUPURGE = ["Cecotec", "Nilfisk", "Polti", "Deerma", "Viomi", "Lydsto
 const YK185_KUCUK_EV = ["Severin", "Melitta", "Gaggia", "Sage", "Remington", "Babyliss", "Beurer", "Laurastar", "Emsan", "Pierre Cardin", "Ariete", "Laifen"];
 const YK185_SU = ["Puricom", "LAICA"];
 
+// YK #192 marka-300 (29 Eki 2026) — Tolga: "yeni marka araştır, marka sayısını 300 üzerine çıkar".
+// Kaynak: seo/marka-300/2026-10-29-yeni-markalar.md (her marka TR satış kanıtı URL'li; mevcut
+// listeyle çakışma yok). YK ayıklaması: POS/etiket yazıcıları (Bixolon · TSC · Godex · Argox)
+// ÇIKTI; 3D yazıcılar Bilgisayar / Yazıcı'da; alt markalardan yalnız Redmi (arama terimi);
+// "şüpheli" bölümünden hiçbiri yok. 103 marka → MARKALAR 229 → 332. Kılavuz adresi bu PR'da YOK
+// (PAZ doğrulayınca kullanim-kilavuzlari.js'e ikinci adım).
+const YK192M_BUZDOLABI = ["Küppersbusch", "Narte", "Keysmart", "Windsor", "Tecna", "Koenic"];
+const YK192M_CAMASIR = ["Küppersbusch"];
+const YK192M_BULASIK = ["Küppersbusch", "Tecna"];
+const YK192M_ANKASTRE = ["Küppersbusch", "Falmec", "Esty", "Femaş", "Narte", "Alveus", "GL General", "White Daisy", "Çetintaş", "Exep", "Kügerr", "Tecna", "Vinola"];
+const YK192M_MIKRODALGA = ["Esty", "Alveus", "White Daisy", "Tecna", "Akel", "Asel", "Musullu", "İtimat", "Moulinex", "Caso", "Cuisinart", "Koenic", "Fritel", "Instant Pot"];
+const YK192M_KLIMA = ["Daylux", "Hexel", "De Dietrich", "General", "Vals", "Olimpia Splendid"];
+const YK192M_KOMBI = ["Hexel", "De Dietrich", "Baykan", "Maktek", "Sanica", "Avesta", "CVS", "Torima", "Troya"];
+const YK192M_TV = ["Nordmende", "Loewe", "Yumatu", "Botech", "Techwood", "Navitech", "Rampage", "GameBooster", "Everest", "Dahua", "Hikvision", "KOORUI", "EIZO", "Redmi"];
+const YK192M_SUPURGE = ["Koenic", "Narwal", "Yeedi", "Roidmi", "Thomas", "Lavor", "Stanley", "Makita", "Jonr", "Mamibot", "Blue House", "Premier", "Zilan"];
+const YK192M_SU = ["Wasspender", "Youban", "Sunday", "Crown", "Robo", "Aquabella", "Neutron", "Hyperwell", "Prio", "Lifetech", "Piksel Aqua", "Dreo", "Alkalinees", "Aquatime"];
+const YK192M_BILGISAYAR = ["Technopc", "Game Garaj", "Dynabook", "Chuwi", "Razer", "Creality", "Anycubic", "Elegoo", "Flashforge", "Bambu Lab", "Prusa", "Olivetti"];
+const YK192M_KUCUK_EV = ["Keysmart", "Musullu", "Moulinex", "Caso", "Cuisinart", "Koenic", "Avesta", "CVS", "Torima", "Blue House", "Premier", "Zilan", "Any Morning", "Fritel", "Vitamix", "NutriBullet", "Bamix", "Blendtec", "Instant Pot", "Morphy Richards", "Zwilling", "Lelit", "Moccamaster", "Ankarsrum", "Janome", "Pfaff", "Bernina"];
+
 // Garanti yönlendirmesi ve teşhis kalitesi için master liste — tüm grupların birleşimi
 // (haritada olmayan cihaz veya "Diğer" → bu liste). Süperset garantisi için üretilir.
 export const MARKALAR = [...new Set([
@@ -204,6 +223,8 @@ export const MARKALAR = [...new Set([
   // 23 Eki 2026 — YK #185 (Tolga: "öncelikli eksik markaları listeye ekle"; kaynak seo/2026-10-23-eksik-markalar.md).
   // Ariston kombi satırında vardı ama süper listede yoktu (süperset açığı) → burada kapandı.
   ...YK185_KOMBI, ...YK185_KLIMA, ...YK185_ANKASTRE, ...YK185_TV, ...YK185_SUPURGE, ...YK185_KUCUK_EV, ...YK185_SU,
+  // 29 Eki 2026 — YK #192 marka-300.
+  ...YK192M_BUZDOLABI, ...YK192M_CAMASIR, ...YK192M_BULASIK, ...YK192M_ANKASTRE, ...YK192M_MIKRODALGA, ...YK192M_KLIMA, ...YK192M_KOMBI, ...YK192M_TV, ...YK192M_SUPURGE, ...YK192M_SU, ...YK192M_BILGISAYAR, ...YK192M_KUCUK_EV,
 ])].sort(trSort);
 
 export const CIHAZ_MARKALARI = {
@@ -212,26 +233,26 @@ export const CIHAZ_MARKALARI = {
   //   yalnız kılavuz adresi doğrulanan cihaz satırına eklendi; Ferre ANKASTRE_EK'e.
   // 3 Eki 2026 (föy 3. parti): Franke · Gaggenau · Wiami · Raks · Kiwi · Aura · Black+Decker · Skytech · Excalibur aynı kuralla.
   "Buzdolabı": [...BEYAZ_ESYA, "Onvo", DIJITSU, "Sunny", "Simfer", "Kumtel", "Teka", "Franke", "Gaggenau",
-    "Hafele", "Tommatech"].sort(trSort),  // YK #185
-  "Çamaşır Makinesi": [...BEYAZ_ESYA, DIJITSU, "Simfer", "Teka", "Tommatech"].sort(trSort),  // YK #185: Teka · Tommatech
+    "Hafele", "Tommatech", ...YK192M_BUZDOLABI].sort(trSort),  // YK #185 · YK #192
+  "Çamaşır Makinesi": [...BEYAZ_ESYA, DIJITSU, "Simfer", "Teka", "Tommatech", ...YK192M_CAMASIR].sort(trSort),  // YK #185: Teka · Tommatech
   // Kurutma makinesi markaları çamaşır makinesiyle aynı üretici kümesi (TR piyasasında
   // kurutmayı satan her marka çamaşır da satıyor) — ayrı liste tutmak ikinci kaynak olurdu.
   "Kurutma Makinesi": [...BEYAZ_ESYA, "Teka"].sort(trSort),  // YK #185: Teka
   "Bulaşık Makinesi": [...BEYAZ_ESYA, "Teka", "Franke", DIJITSU, "Kumtel", "Gaggenau",
-    "Finlux", "Hafele", "Tommatech"].sort(trSort),  // YK #185
-  "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK, "Kiwi", "Toshiba", ...YK185_ANKASTRE])].sort(trSort),  // YK #185
-  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo", DIJITSU, "Sunny", "Kiwi", "Franke", "Wiami", "Toshiba"])].sort(trSort),  // YK #185: Toshiba
+    "Finlux", "Hafele", "Tommatech", ...YK192M_BULASIK].sort(trSort),  // YK #185 · YK #192
+  "Fırın / Ocak / Aspiratör": [...new Set([...BEYAZ_ESYA, ...ANKASTRE_EK, "Kiwi", "Toshiba", ...YK185_ANKASTRE, ...YK192M_ANKASTRE])].sort(trSort),  // YK #185
+  "Mikrodalga / Air Fryer": [...new Set([...KUCUK_EV, ...BEYAZ_ESYA, "Goldmaster", "Kumtel", "Teka", "Onvo", DIJITSU, "Sunny", "Kiwi", "Franke", "Wiami", "Toshiba", ...YK192M_MIKRODALGA])].sort(trSort),  // YK #185: Toshiba
   // 28 Eyl 2026 (Sprint #144 kılavuz föyü): Altus/Grundig/TCL/Fakir/Airfel yalnız klima satırına.
   "Klima": [...KLIMA, "Siemens", "Profilo", "Alarko", "Uğur", "Regal", "Demirdöküm", "Altus", "Grundig", "TCL", "Fakir", "Airfel", DIJITSU, "Emas", "Sunny",
     "Simfer", "Viessmann", "Vaillant", "ECA", "Electrolux", "Raks", "Kiwi",
-    "Finlux", "Kumtel", "Luxell", "Vestfrost", ...YK185_KLIMA].sort(trSort),  // YK #185
-  "Kombi / Termosifon": [...new Set([...KOMBI, "Regal", "Vestel", "Daikin", "King", "Aura (İhlas)", ...YK185_KOMBI])].sort(trSort),  // YK #185
-  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier", "Altus", "Skytech", "Simfer", ...YK185_TV])].sort(trSort),  // YK #185
+    "Finlux", "Kumtel", "Luxell", "Vestfrost", ...YK185_KLIMA, ...YK192M_KLIMA].sort(trSort),  // YK #185
+  "Kombi / Termosifon": [...new Set([...KOMBI, "Regal", "Vestel", "Daikin", "King", "Aura (İhlas)", ...YK185_KOMBI, ...YK192M_KOMBI])].sort(trSort),  // YK #185
+  "Televizyon / Monitör": [...new Set([...TELEVIZYON, ...MONITOR, "Apple", "Haier", "Altus", "Skytech", "Simfer", ...YK185_TV, ...YK192M_TV])].sort(trSort),  // YK #185
   "Süpürge": [...new Set([...SUPURGE, "Roborock", "iRobot", "Hoover", "Siemens", "Profilo", "AEG", "Onvo",
-    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo", "Sunny", "Kiwi", "MOVA", "Einhell", "Aura (İhlas)", "Black+Decker", "Wiami", ...YK185_SUPURGE])].sort(trSort),  // YK #185
+    "Altus", "Grundig", "Miele", "TCL", "King", "Tineco", "Shark", "Sinbo", "Sunny", "Kiwi", "MOVA", "Einhell", "Aura (İhlas)", "Black+Decker", "Wiami", ...YK185_SUPURGE, ...YK192M_SUPURGE])].sort(trSort),  // YK #185
   "Su Sebili / Arıtma": [...SU_ARITMA, "Bosch", "Uğur", "Altus", DIJITSU, "Raks", "Skytech", "Profilo", "Franke", "Grohe",
-    "Xiaomi", "Kiwi", "Homend", "Awox", ...YK185_SU].sort(trSort),  // YK #185
-  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI, "Konica Minolta", "Panasonic", "Excalibur", "OKI", "Zebra", "Citizen", "Roland DG", "Fujifilm"])].sort(trSort),
+    "Xiaomi", "Kiwi", "Homend", "Awox", ...YK185_SU, ...YK192M_SU].sort(trSort),  // YK #185
+  "Bilgisayar / Yazıcı": [...new Set([...BILGISAYAR, ...YAZICI, "Konica Minolta", "Panasonic", "Excalibur", "OKI", "Zebra", "Citizen", "Roland DG", "Fujifilm", ...YK192M_BILGISAYAR])].sort(trSort),
   // YK #149 — İÇERİK kategorisi (teşhis formunda YOK). `KUCUK_EV` dizisi toptan BAĞLANMADI:
   // buraya yalnız kılavuz adresinin küçük ev aletini de karşıladığı PAZ föyünde gösterilen
   // marka girer (30 Eyl 2026: 19 mevcut kayıt + De'Longhi · Krups · WMF + cihaza özel adresle Sinbo).
@@ -261,6 +282,7 @@ export const CIHAZ_MARKALARI = {
     //   Rowenta · Regal bu kararla içeri alındı.
     "Arnica", "Korkmaz", "Karaca", "Schafer", "Regal", "Rowenta", "Dyson", "Dreame", "Shark",
     ...YK185_KUCUK_EV,
+    ...YK192M_KUCUK_EV,  // YK #192 marka-300
   ],
   // haritada olmayanlar → tüm MARKALAR (markalarForCihaz halleder)
 };
