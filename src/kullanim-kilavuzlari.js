@@ -236,8 +236,8 @@ export const MARKA_KILAVUZLARI = {
     // YK #192: telefon için kılavuz listesinin kendisi (VIA modelleri listede, FE 29 Eki gördü).
     cihazOzel: {
       "Telefon / Tablet": {
-        url: "https://www.casper.com.tr/kullanim-kilavuzlari",
-        ozet: "Casper'ın kullanım kılavuzları sayfası: VIA telefonlar dahil ürününü bulup detaylı kullanım kılavuzunu açıyorsun.",
+        url: "https://www.casper.com.tr/kullanim-kilavuzlari?categoryId=2",
+        ozet: "Casper'ın kullanım kılavuzları sayfası, telefonlar filtreli açılıyor: VIA modelini bulup detaylı kullanım kılavuzunu açıyorsun.",
       },
     },
   },
@@ -932,8 +932,8 @@ export const MARKA_KILAVUZLARI = {
   "Nokia": {
     cihazOzel: {
       "Telefon / Tablet": {
-        url: "https://www.hmd.com/tr_tr/support",
-        ozet: "Nokia ve HMD telefonlarının Türkçe destek sayfası (HMD): \"Kullanıcı kılavuzları\" bölümünden modelini seçip kılavuzunu açıyorsun; tuşlu telefonlar ve tabletler de listede.",
+        url: "https://www.hmd.com/tr_tr/support/user-guides",
+        ozet: "HMD'nin Nokia ve HMD telefonları için Türkçe kullanım kılavuzları sayfası: modelini seçip kılavuzunu açıyorsun.",
       },
     },
   },
