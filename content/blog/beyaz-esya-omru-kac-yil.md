@@ -49,6 +49,8 @@ Aşağıdaki değerler yönetmeliğin güncel ekindeki listeden alındı:
 | Kombi | **10 yıl** | 20 iş günü |
 | Televizyon | **10 yıl** | 20 iş günü |
 
+![Buzdolabı, çamaşır, bulaşık ve kurutma makinesi, fırın, klima, televizyon ve elektrikli süpürge için yasal kullanım ömrünü ve azami tamir süresini özetleyen tablo çizimi](/tamir-gorsel/beyaz-esya-omru-kac-yil/omur-tablosu.png)
+
 İş günü de yönetmelikte tanımlı: ulusal, resmî ve dini bayramlar, yılbaşı, 1 Mayıs, 15 Temmuz ve pazar günleri sayılmıyor. Azami tamir süresi, garanti içindeyse arızayı yetkili servise veya satıcıya **bildirdiğin** tarihten, garanti dışındaysa cihazı yetkili servise **teslim ettiğin** tarihten başlar.
 
 ## Garanti ile kullanım ömrü arasındaki fark
