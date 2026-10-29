@@ -1,78 +1,125 @@
 ---
-title: "Beyaz eşya ömrü kaç yıl? Cihaz cihaz ortalama ömür"
-description: "Çamaşır, buzdolabı, bulaşık makinesi, fırın ve kombi ortalama kaç yıl kullanılır? Ömrü uzatan bakım ve tamir mi yenisi mi kararının pratik kuralları."
+title: "Beyaz eşya ömrü kaç yıl? Cihaz cihaz yasal kullanım ömrü"
+description: "Buzdolabı, çamaşır, bulaşık makinesi, fırın, klima, kombi: yasal kullanım ömrü kaç yıl, garanti ne kadar, yedek parça hakkın ne? Tamir mi yenisi mi?"
 slug: "beyaz-esya-omru-kac-yil"
 date: "2026-07-14"
+updated: "2026-10-29"
 category: "Genel"
 faq:
-  - q: "Beyaz eşyaların ortalama ömrü kaç yıldır?"
-    a: "Kaynaklara göre ortalama aralıklar: buzdolabı 12-18 yıl, çamaşır makinesi 10-14 yıl, bulaşık makinesi 9-12 yıl, fırın 13-15 yıl. Marka, kullanım yoğunluğu ve özellikle düzenli bakım bu süreleri ciddi şekilde aşağı-yukarı oynatır."
-  - q: "Beyaz eşyanın ömrünü ne uzatır?"
-    a: "Düzenli küçük bakımlar: çamaşır/bulaşık filtrelerinin temizliği, kireç önleme, buzdolabı kondenserinin tozunun alınması, klimada filtre yıkama, cihazı kapasitesinin üstünde zorlamamak ve voltaj dalgalanmalarına karşı koruma. Çoğu erken 'ölüm' aslında bakımsızlıktır."
-  - q: "Hangi durumda tamir yerine değişim mantıklı?"
-    a: "Yaygın pratik kural: cihaz ortalama ömrünün son çeyreğindeyse VE tamir maliyeti yeni cihaz fiyatının %40-50'sini geçiyorsa değişim düşünülür. Genç cihazda büyük arıza bile çoğu zaman tamire değer; yaşlı cihazda üst üste gelen arızalar değişim sinyalidir."
+  - q: "Beyaz eşyaların kullanım ömrü kaç yıldır?"
+    a: "Satış Sonrası Hizmetler Yönetmeliği'nin ekindeki listede buzdolabı, derin dondurucu, çamaşır makinesi, kurutma makinesi, bulaşık makinesi, fırın, ocak, mikrodalga fırın, elektrikli süpürge, klima, kombi ve televizyon için kullanım ömrü 10 yıl. Süre, cihazın sana teslim edildiği tarihten başlar. Bu, cihazın kaç yıl dayanacağı değil, üreticinin satış sonrası hizmet vermek zorunda olduğu süredir."
+  - q: "Garanti süresi ile kullanım ömrü aynı şey mi?"
+    a: "Hayır. 6502 sayılı Kanun'a göre garanti süresi teslim tarihinden başlar ve asgari iki yıldır. Kullanım ömrü daha uzundur; garanti bittikten sonra da üretici veya ithalatçı bu süre boyunca bakım ve onarım hizmeti sağlamak zorundadır."
+  - q: "Kullanım ömrü içinde yedek parça bulabilir miyim?"
+    a: "Kanun, üretici ve ithalatçıya kullanım ömrü süresince bakım ve onarım hizmeti sağlama yükümlülüğü getiriyor; yönetmelik de tüketici talep ettiğinde yedek parça satışından kaçınılamayacağını söylüyor. Hizmet sağlanmazsa Kanun tazminat talep etme hakkı tanıyor."
   - q: "Tamir mi yenisi mi kararını nasıl veririm?"
-    a: "İki veri gerekir: arızanın ne olduğu ve tahmini tamir maliyeti. Benservis'e cihazını ve belirtiyi yaz; yapay zeka olası arızayı, tahmini maliyeti ve tamir mi yenisi mi önerisini ücretsiz verir — kararı yaş + maliyet tablosuna göre bilinçli verirsin."
+    a: "Önce cihazın yaşını ve garanti ya da kullanım ömrü içinde olup olmadığını öğren, sonra arızanın ne olduğunu ve tamirin neleri kapsadığını netleştir. Benservis'e cihazını ve belirtiyi yazarak olası arızayı ve tahmini tamir maliyetini öğrenebilirsin; karar bu bilgilerle daha sağlam olur."
 images:
   coverAlt: "Üç beyaz eşya silueti ve yanında bölümlü ömür halkası çizimi"
 ---
 
-"Bu makine kaç yıl daha gider?" — servis çağırmadan önce hepimizin kafasındaki soru bu. Cevap hem cihaza hem de (çoğu kişinin sandığından çok daha fazla) **bakıma** bağlı. Bu rehberde cihaz cihaz ortalama ömürleri, ömrü gerçekten uzatan alışkanlıkları ve "tamir mi, yenisi mi" kararının pratik kurallarını topladık.
+"Bu makine kaç yıl daha gider?" Servis çağırmadan önce çoğumuzun aklındaki soru bu. Kesin cevabı yok, ama Türkiye'de sorunun **resmî bir yarısı** var: her cihaz grubu için yönetmelikle belirlenmiş bir **kullanım ömrü**. Bu rehberde o süreleri, garantiyle farkını, haklarını ve "tamir mi, yenisi mi" kararından önce sorulacak soruları topladık.
 
-> ⚡ **Kısa özet:** Buzdolabı **12-18**, çamaşır **10-14**, bulaşık **9-12**, fırın **13-15** yıl (ortalama aralıklar). Ömrü uzatan şey şans değil **bakım**. Değişim kuralı: cihaz ömrünün son çeyreğinde + tamir, yenisinin ~%40-50'sinden pahalıysa değişimi düşün; aksi hâlde tamir çoğu zaman kazanır.
+> ⚡ **Kısa özet:** Buzdolabı, çamaşır, bulaşık, kurutma makinesi, fırın, ocak, mikrodalga, süpürge, klima, kombi ve televizyon için yasal kullanım ömrü **10 yıl**; süre **teslim tarihinden** başlar. Garanti **asgari 2 yıl**. Kullanım ömrü boyunca üretici bakım ve onarım hizmeti vermek, talep edersen **yedek parça satmak** zorunda; yetkili serviste tamir **en fazla 20 iş günü** sürebilir.
 
-## Cihaz cihaz ortalama ömür
+## "Kullanım ömrü" tam olarak ne demek?
 
-Kaynakların verdiği ortalama aralıklar (yoğun kullanım ve bakımsızlık alt sınıra, düzenli bakım üst sınıra iter):
+Günlük dilde "ömür" cihazın bozulana kadar geçen süresi; hukukta anlamı farklı. Satış Sonrası Hizmetler Yönetmeliği kullanım ömrünü, malın tüketiciye **teslim tarihinden başlayan** ve yönetmeliğin ekindeki listede her mal grubu için belirlenen süre olarak tanımlıyor.
 
-| Cihaz | Ortalama ömür |
-|-------|---------------|
-| Buzdolabı | **12-18 yıl** |
-| Fırın | **13-15 yıl** |
-| Çamaşır makinesi | **10-14 yıl** |
-| Bulaşık makinesi | **9-12 yıl** |
-| Kombi | **~15 yıl** (düzenli bakımla) |
-| Klima | **10-15 yıl** |
+Yani bu süre "cihaz bu yaşta bozulur" demek değil. Üretici veya ithalatçının o cihaz için **satış sonrası bakım ve onarım hizmeti sağlamak zorunda olduğu** süre. 6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 58. maddesi bu yükümlülüğü açıkça koyuyor.
 
-İki not: birincisi, bu rakamlar "bu yaşta çöpe" demek değil — 20 yaşında sorunsuz çalışan buzdolabı az değil. İkincisi, üreticinin **yedek parça bulundurma yükümlülüğü** ürünün kullanım ömrü boyunca sürer; yani yaşlı cihazın parçası çoğu zaman hâlâ bulunur.
+Gerçek dayanma süresi kullanıma ve bakıma göre değişir. Bunun için resmî bir liste bulamadığımızdan tahmini yaş aralığı vermiyoruz; yalnız yönetmelikteki süreleri aktarıyoruz.
 
-## Ömrü asıl belirleyen: bakım
+## Cihaz cihaz yasal kullanım ömrü
 
-Erken "ölen" cihazların çoğu aslında yaşlılıktan değil **bakımsızlıktan** gider. En yüksek getirili küçük alışkanlıklar:
+Aşağıdaki değerler yönetmeliğin güncel ekindeki listeden alındı:
 
-- **Çamaşır makinesi:** [tahliye filtresini 1-2 ayda bir temizle](/blog/camasir-makinesi-tahliye-filtresi-temizleme/), kireçle mücadele et, kapasite üstü yükleme yapma.
-- **Bulaşık makinesi:** filtre temizliği + tuz ve parlatıcıyı eksik etme.
-- **Buzdolabı:** yılda 1-2 kez arka kondenserin tozunu al, [doğru sıcaklığa ayarla](/blog/buzdolabi-kac-derece-olmali/), kapı contasını kontrol et.
-- **Klima:** [filtreyi ayda bir yıka](/blog/klima-filtresi-temizleme/), sezon başı bakım yaptır.
-- **Kombi:** yıllık bakım + [yazın doğru modda beklet](/blog/kombi-yazin-kapatilir-mi/).
-- **Hepsi için:** voltaj dalgalanmasına karşı önlem — özellikle [elektrik kesintilerinde fişleri çekmek](/blog/elektrik-kesintisi-sonrasi-cihaz-arizalari/) elektronik kartları korur. (Kart, modern cihazların en pahalı ölüm sebebidir.)
+| Cihaz | Kullanım ömrü | Azami tamir süresi |
+|-------|---------------|--------------------|
+| Buzdolabı | **10 yıl** | 20 iş günü |
+| Derin dondurucu | **10 yıl** | 20 iş günü |
+| Çamaşır makinesi | **10 yıl** | 20 iş günü |
+| Çamaşır kurutma makinesi | **10 yıl** | 20 iş günü |
+| Bulaşık makinesi | **10 yıl** | 20 iş günü |
+| Fırın | **10 yıl** | 20 iş günü |
+| Ocak | **10 yıl** | 20 iş günü |
+| Mikrodalga fırın | **10 yıl** | 20 iş günü |
+| Elektrikli süpürge | **10 yıl** | 20 iş günü |
+| Klima | **10 yıl** | 20 iş günü |
+| Kombi | **10 yıl** | 20 iş günü |
+| Televizyon | **10 yıl** | 20 iş günü |
 
-Bakımsızlığın faturası yalnız arıza da değil: yıpranan cihaz aynı işi daha çok elektrikle yapar — detayı [elektrik faturası neden yüksek](/blog/elektrik-faturasi-neden-yuksek/) yazısında anlattık.
+![Buzdolabı, çamaşır, bulaşık ve kurutma makinesi, fırın, klima, televizyon ve elektrikli süpürge için yasal kullanım ömrünü ve azami tamir süresini özetleyen tablo çizimi](/tamir-gorsel/beyaz-esya-omru-kac-yil/omur-tablosu.png)
 
-## Tamir mi, yenisi mi? Pratik karar kuralları
+İş günü de yönetmelikte tanımlı: ulusal, resmî ve dini bayramlar, yılbaşı, 1 Mayıs, 15 Temmuz ve pazar günleri sayılmıyor. Azami tamir süresi, garanti içindeyse arızayı yetkili servise veya satıcıya **bildirdiğin** tarihten, garanti dışındaysa cihazı yetkili servise **teslim ettiğin** tarihten başlar.
 
-1. **Yaş kuralı:** Cihaz ortalama ömrünün ilk yarısındaysa, büyük arızada bile tamir genelde kazanır. Son çeyrekteyse (ör. 12 yaşındaki bulaşık makinesi) büyük tamire para gömmeden önce iki kez düşün.
-2. **%40-50 kuralı:** Yaygın pratik eşik — tamir maliyeti, aynı segmentte yeni cihaz fiyatının %40-50'sini aşıyorsa VE cihaz yaşlıysa, değişim ekonomik olarak öne geçer.
-3. **Tekrarlayan arıza kuralı:** Aynı cihazda kısa aralıklarla üst üste farklı arızalar çıkıyorsa, bu genel yıpranma sinyalidir; tek seferlik büyük arızadan daha güçlü bir değişim gerekçesidir.
-4. **Enerji sınıfı faktörü:** Çok eski, düşük verimli bir cihazda değişim, elektrik tasarrufuyla kendini kısmen amorti edebilir — ama bu hesap ancak gerçek tüketim farkıyla yapılmalı, satış sloganıyla değil.
-5. **Çevre notu:** Onarılabilir cihazı erken emekli etmek [e-atık](/blog/e-atik-nedir-cihaz-onarim-cevre/) demek; [AB'nin yeni onarım hakkı kuralları](/blog/ab-onarim-hakki-yururlukte/) da tam bu yüzden tamiri varsayılan seçenek yapmaya çalışıyor.
+## Garanti ile kullanım ömrü arasındaki fark
 
-Bu kuralların hepsi iki veriye dayanıyor: **arıza ne ve tamiri kaça mal olur?** Cihaz cihaz güncel tamir fiyat aralıkları için: [çamaşır](/blog/camasir-makinesi-tamiri-kac-para/) · [buzdolabı](/blog/buzdolabi-tamiri-kac-para/) · [bulaşık](/blog/bulasik-makinesi-tamiri-kac-para/) · [kombi](/blog/kombi-tamiri-kac-para/).
+**Garanti** daha kısa ve daha kapsamlı bir güvence. 6502 sayılı Kanun'un 56. maddesine göre garanti süresi malın teslim tarihinden başlar ve **asgari iki yıldır**. Satıcı ya da üretici bunun üstüne ayrıca bir taahhüt verebilir; Kanun buna **ihtiyari garanti** diyor ve taahhüt edilen hakların kullanılması için senden masraf istenemeyeceğini söylüyor.
 
-## Kararı 30 saniyede bilgiyle ver
+Garanti süresi içinde, kullanım kılavuzuna aykırı kullanım dışındaki durumlarda yetkili servis senden **nakliye, kargo veya servis elemanının ulaşım gideri** gibi bir ücret isteyemez. Arıza, cihazın yetkili servise veya satıcıya tesliminden itibaren **on iş günü** içinde giderilemezse, tamir bitene kadar benzer özellikte başka bir cihazın kullanımına verilmesi gerekir; istemezsen bu yükümlülük kalkar.
 
-[Benservis'e](/) cihazını, yaşını ve belirtiyi yaz ("8 yaşında çamaşır makinesi, sıkma yapmıyor" gibi); yapay zeka olası arızayı, **tahmini tamir maliyetini** ve **tamir mi yenisi mi** önerisini ücretsiz söylesin. Önce öğren, sonra karar ver.
+**Kullanım ömrü** ise garanti bittikten sonra da devam eder. Bu dönemde tamir artık ücretli olabilir, ama hizmetin **verilmesi** zorunludur.
+
+## Kullanım ömrü boyunca hakların
+
+Garanti dışında kalan yıllarda bile şu kurallar geçerli:
+
+- **Bakım ve onarım hizmeti:** Üretici veya ithalatçı, kullanım ömrü süresince bakım ve onarım hizmeti sağlamak zorunda.
+- **Yedek parça:** Üretici veya ithalatçılar, tüketicinin talebi üzerine yedek parça satışından kaçınamaz. Ayrıntıları [yedek parça bulundurma zorunluluğu](/blog/yedek-parca-bulundurma-zorunlulugu/) yazısında anlattık.
+- **Parça listesi:** Servis, yedek parça listesini görebileceğin bir yere asmak ya da katalog veya elektronik ortamda göstermek zorunda.
+- **Değişen parça:** Yetkili servis, değiştirdiği parçayı garanti süresi dışında sana iade etmek zorunda.
+- **Tekrarlayan arıza:** Garanti dışında yapılan onarımdan sonra **bir yıl içinde aynı arıza** tekrar ederse, kullanım kılavuzuna aykırı kullanım dışında senden hiçbir isim altında ücret istenemez.
+- **Değişen parçaya garanti:** Garanti dışında değiştirilen ya da satılan parça için **altı aydan az olmamak üzere** garanti verilir.
+- **Tazminat:** Garanti bittikten sonra kullanım ömrü içinde satış sonrası hizmet sağlanmazsa Kanun, zararın tazminini talep etme hakkı tanıyor.
+
+Servis, cihazı teslim alırken bir belge, işi bitirince **servis fişi** vermek zorunda. İkisini de sakla.
+
+## Ömrü uzatan şey: düzenli bakım
+
+Bakım aralıklarını kendi cihazının kullanım kılavuzundan kontrol et:
+
+- **Çamaşır makinesi:** [tahliye filtresini temizle](/blog/camasir-makinesi-tahliye-filtresi-temizleme/), kapasitenin üstünde yükleme yapma.
+- **Kurutma makinesi:** [filtre ve kondenser temizliğini](/blog/kurutma-makinesi-filtre-ve-kondenser-temizligi/) aksatma.
+- **Bulaşık makinesi:** filtreyi temizle, tuz ve parlatıcıyı eksik bırakma.
+- **Buzdolabı:** [doğru sıcaklığa ayarla](/blog/buzdolabi-kac-derece-olmali/), kapı contasını kontrol et.
+- **Klima:** [filtreyi düzenli yıka](/blog/klima-filtresi-temizleme/).
+- **Kombi:** [yazın doğru modda beklet](/blog/kombi-yazin-kapatilir-mi/).
+
+İlgili: [elektrik kesintisi sonrası arızalar](/blog/elektrik-kesintisi-sonrasi-cihaz-arizalari/) · [elektrik faturası neden yüksek](/blog/elektrik-faturasi-neden-yuksek/).
+
+## Cihaz yorulmaya mı başladı? Dikkat edilecek işaretler
+
+Kesin bir ölçü yok; yine de şu durumlar kararı ciddi düşünmeyi gerektirir:
+
+- Kısa aralıklarla **farklı farklı arızalar** çıkıyor.
+- Tamir edilen arıza **yeniden** ortaya çıkıyor.
+- Cihaz eskisi gibi iş görmüyor: çamaşır tam sıkılmıyor, bulaşık temiz çıkmıyor, dolap soğutmakta zorlanıyor.
+- Cihaz **kullanım ömrünü geçmiş**; bu durumda yasal servis güvencesi artık yok, parça ve hizmet için servise önceden sormak gerekir.
+
+## Tamir mi, yenisi mi? Önce bu soruları sor
+
+1. **Cihaz kaç yaşında?** Teslim tarihine bak: garanti içinde mi, kullanım ömrü içinde mi?
+2. **Arıza tam olarak ne?** Tek bir parça mı, yoksa birden fazla sistem mi etkilenmiş? Servisten yazılı açıklama iste.
+3. **Parça bulunuyor mu, tamir ne kadar sürer?** Kullanım ömrü içindeyse yetkili serviste azami süre 20 iş günü.
+4. **Bu arıza daha önce tamir edildi mi?** Son bir yıl içinde aynı arıza için garanti dışı onarım yapıldıysa ücret istenemez; servis fişine bak.
+5. **Değişen parçanın garantisi ne olacak?** Asgari altı ay; süreyi fişe yazdır.
+6. **Enerji tüketimi ne durumda?** Karar verirken yeni cihazın enerji etiketindeki tüketimle mevcut cihazınkini karşılaştır; reklam söylemine değil, etiketteki değere bak.
+7. **Çevreye etkisi ne?** Onarılabilir bir cihazı erken atmak [e-atık](/blog/e-atik-nedir-cihaz-onarim-cevre/) demek. Konunun Avrupa tarafını [AB onarım hakkı](/blog/ab-onarim-hakki-yururlukte/) yazısında, ayrıca [onarım hakkı nedir](/blog/onarim-hakki-nedir/) yazısında anlattık.
+
+Tamir maliyetinin cihaz cihaz nasıl oluştuğunu görmek için: [çamaşır](/blog/camasir-makinesi-tamiri-kac-para/) · [buzdolabı](/blog/buzdolabi-tamiri-kac-para/) · [bulaşık](/blog/bulasik-makinesi-tamiri-kac-para/) · [fırın](/blog/firin-tamiri-kac-para/) · [kombi](/blog/kombi-tamiri-kac-para/). Buzdolabı için ayrıca: [eski buzdolabını değiştirmek mantıklı mı](/blog/eski-buzdolabini-degistirmek-mantikli-mi/).
+
+## Kararı bilgiyle ver
+
+[Benservis'e](/) cihazını, yaşını ve belirtiyi yaz ("8 yaşında çamaşır makinesi, sıkma yapmıyor" gibi); yapay zeka olası arızayı ve tahmini tamir maliyetini söylesin. Önce öğren, sonra karar ver.
 
 ## Sık sorulan sorular
 
-**Ortalama ömürler?**
-Buzdolabı 12-18, çamaşır 10-14, bulaşık 9-12, fırın 13-15 yıl.
+**Beyaz eşyanın yasal kullanım ömrü kaç yıl?**
+Listedeki beyaz eşyalar, klima, kombi ve televizyon için 10 yıl; teslim tarihinden başlar.
 
-**Ömrü ne uzatır?**
-Filtre/kireç/toz bakımları + aşırı yüklememe + voltaj koruması.
+**Garanti kaç yıl?**
+Asgari iki yıl; teslim tarihinden başlar.
 
-**Ne zaman değişim?**
-Ömrün son çeyreği + tamir > yeninin %40-50'si + tekrarlayan arızalar.
-
-**Kararı nasıl veririm?**
-Belirtiyi Benservis'e yaz — arıza + tahmini maliyet + öneri, ücretsiz.
+**Ömür dolunca cihaz atılmalı mı?**
+Hayır. Kullanım ömrü bir hizmet yükümlülüğü süresi; çalışan ve bakımlı cihaz kullanılmaya devam edebilir.
