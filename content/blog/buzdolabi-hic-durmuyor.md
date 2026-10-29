@@ -175,3 +175,9 @@ Bunların hepsi ücretsiz kontrol edilir ve hiçbiri alet istemez. Önce öğren
 - ⛔ **Kural denetimi:** YK #31 bakım seviyesi korundu — parça değişimi/söküm anlatılmadı, gaz-kompresör-fan servise bırakıldı ✓ · suçlayıcı dil yok ✓ · fiyat yok ✓ · marka adı geçmiyor ✓ · keyword stuffing yok ✓.
 - ⚠️ **ASCII-argo denetimi yapıldı:** 17 Ağu'da yakalanan *"kâğıt sıkıştır"* ihlali burada baştan **"kâğıdı kapağın arasına koy"** olarak yazıldı (hem gövdede hem SSS'te). Slug ve başlıkta tuzak kelime yok.
 - 🎬 **Hat tutarlılığı:** 23 Ağu uzun videosu da buzdolabı ("Buzluk soğuk, dolap değil mi?") — aynı hafta aynı cihaz kümesi, çapraz link fırsatı var.
+
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Uğur buzdolabı sürekli çalışıyor](/blog/ugur-buzdolabi-surekli-calisiyor/)

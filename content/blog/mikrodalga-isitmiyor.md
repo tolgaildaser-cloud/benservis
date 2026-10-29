@@ -67,6 +67,12 @@ Mikrodalganı çalıştırıyorsun; ışık yanıyor, tabla dönüyor, fan sesi 
 
 **6.** Su hâlâ ısınmıyorsa ya da ses, kıvılcım veya yanık kokusu varsa cihazı kapat, gövdeyi açma ve servise başvur.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Samsung mikrodalga kendiliğinden kapanıyor](/blog/samsung-mikrodalga-kendiliginden-kapaniyor/)
+
 ## Servisi aramadan önce (yalnız güvenli dış kontroller)
 
 Cihazı **açmadan** yapabileceklerin:

@@ -109,6 +109,12 @@ Denemeye değer tek güvenli hamle şudur: **fişi çek, birkaç dakika bekle, t
 | Kapak klik sesi vermiyor, kilit hizasız | Kapak kilidi mekanizması | ⛔ Servis |
 | Sigorta tekrar tekrar atıyor | Elektrik kaçağı ihtimali | ⛔ Fişi çek, servis |
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Samsung çamaşır makinesi çalışmıyor](/blog/samsung-camasir-makinesi-calismiyor/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. **Prizi başka cihazla test et**, sigorta kutusuna bak, fişi kontrol et.

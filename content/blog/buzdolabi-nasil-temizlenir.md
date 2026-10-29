@@ -106,6 +106,13 @@ Bütün yüzeyleri kuru bezle kurula — özellikle contayı ve raf yuvalarını
 
 Son dokunuş: içine **ağzı açık küçük bir kap karbonat** koy. Kokuları emer; ayda bir tazelersen buzdolabı hep nötr kokar.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Arçelik buzdolabı koku yapıyor](/blog/arcelik-buzdolabi-koku-yapiyor/)
+- [Vestel buzdolabı koku yapıyor](/blog/vestel-buzdolabi-koku-yapiyor/)
+
 ## Hangi noktadan sonra servis işi?
 
 Bu rehberdeki her şey kapı açıkken, alet kullanmadan yapılabilen işlerdir. Şu durumlar ise temizlikle çözülmez ve servis ister:

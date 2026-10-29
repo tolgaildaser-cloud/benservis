@@ -112,6 +112,8 @@ Aynı kod her markada aynı anlama gelmez. Ekrandaki kodu kendi markanın tablos
 - [Whirlpool çamaşır makinesi arıza kodları](/blog/whirlpool-camasir-makinesi-ariza-kodlari/)
 - [Sharp çamaşır makinesi hata kodları](/blog/sharp-camasir-makinesi-hata-kodlari/)
 - [Hisense çamaşır makinesi hata kodları](/blog/hisense-camasir-makinesi-hata-kodlari/)
+- [Samsung çamaşır makinesi OC hatası](/blog/samsung-camasir-makinesi-oc-hatasi/)
+- [Samsung çamaşır makinesi sembolleri ve anlamları](/blog/samsung-camasir-makinesi-sembolleri-ve-anlamlari/)
 
 ## Kendin çözebileceğin kodlar
 Su alma (F17/E8) ve tahliye (F18/E5) kodlarının en sık sebebi basit:

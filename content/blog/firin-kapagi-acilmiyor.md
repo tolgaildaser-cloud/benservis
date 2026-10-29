@@ -88,6 +88,12 @@ Simge yok, piroliz yok, ama kapı fiziken zor açılıyor, gıcırdıyor, bir no
 | Kapı çarpık duruyor, tam kapanmıyor | Menteşe hizası | ⛔ Servis |
 | Elektrik kes-ver sonrası kilit hâlâ takılı | Kilit mekanizması / elektronik | ⛔ Servis |
 
+## İlgili yazılar
+
+Bu konuyla doğrudan ilgili bir yazı daha:
+
+- [Fırın kapağı menteşesi kilitlendi: nasıl açılır?](/blog/firin-kapagi-mentesesi-kilitlendi-nasil-acilir/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. **Fırın sıcak mı?** Sıcaksa bekle; kilit soğumadan açılmaz.

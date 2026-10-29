@@ -106,6 +106,12 @@ Sirke testinde değişmeyen bulanıklık camın yüzeyinin aşınmasıdır. Bunu
 | Film her yıkamada geri geliyor | Doz/ayar sorunu ya da yumuşatma sistemi | ⚠️ Ayarla dene, olmazsa servis |
 | Sirkeyle değişmeyen matlaşma | Cam korozyonu | ⛔ Geri dönmez |
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Beko bulaşık makinesi leke bırakıyor](/blog/beko-bulasik-makinesi-leke-birakiyor/)
+
 ## Ne zaman servis işi?
 
 Bu şikâyetin büyük kısmı ayar ve kullanım tarafında çözülür; ama şu tabloda iş servise döner: tuz haznesi dolu ve ayarlar doğru olduğu hâlde **tuz hiç eksilmiyorsa** (yumuşatma sistemi çalışmıyor olabilir), tuz hazne kapağı **kapanmıyorsa** ya da her ayarı denemene rağmen kireç filmi **her yıkamada** geri geliyorsa. Yumuşatma sistemi makinenin tabanındadır ve içine kullanıcı müdahalesi yapılmaz — kapak ve hazne seviyesi sana, gerisi servise aittir.

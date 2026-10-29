@@ -78,6 +78,16 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **7.** İç ve dış ünitenin önünde engel olup olmadığına yalnız gözle bak; dış üniteye tırmanma.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Arçelik klima ısıtmıyor: evde kontrol](/blog/arcelik-klima-isitmiyor/)
+- [DemirDöküm klima ısıtmıyor: kış kontrolü](/blog/demirdokum-klima-isitmiyor/)
+- [Mitsubishi Electric klima ısıtmıyor: evde kontrol](/blog/mitsubishi-electric-klima-isitmiyor/)
+- [TCL klima ısıtmıyor: kış kontrolü](/blog/tcl-klima-isitmiyor/)
+- [Vestel klima ısıtmıyor: evde kontrol](/blog/vestel-klima-isitmiyor/)
+
 ## Önce şunu ayır: ne zaman sıcak hava gelmiyor?
 
 Hava gelmemesinin **hangi anda** olduğu, sebebi büyük ölçüde gösterir:

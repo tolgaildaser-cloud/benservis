@@ -106,6 +106,8 @@ Takılan programı iptal etmek ya da kapağı güvenle açmak için markanın ke
 - [AEG bulaşık makinesi resetleme nasıl yapılır](/blog/aeg-bulasik-makinesi-resetleme/)
 - [Hoover bulaşık makinesi resetleme nasıl yapılır?](/blog/hoover-bulasik-makinesi-resetleme/)
 - [Miele bulaşık makinesi kapak kilidi nasıl açılır](/blog/miele-bulasik-makinesi-kapak-kilidi-nasil-acilir/)
+- [Beko bulaşık makinesi çalışmıyor](/blog/beko-bulasik-makinesi-calismiyor/)
+- [Electrolux bulaşık makinesi çalışmıyor](/blog/electrolux-bulasik-makinesi-calismiyor/)
 
 ## 5) Sensörler ve beyin — servis sınırı
 

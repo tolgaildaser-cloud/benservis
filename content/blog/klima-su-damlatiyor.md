@@ -65,6 +65,12 @@ Klima açıkken iç üniteden ya da duvardan su damlamaya başladıysa, bu çoğ
 
 **5.** Damlama yoğunsa ya da su prize veya karta yakınsa altına kap koy ve servis çağır.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Mitsubishi Electric klima su damlatıyor](/blog/mitsubishi-electric-klima-su-damlatiyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 Güvenli adımlar — sorun çoğu zaman burada çözülür:

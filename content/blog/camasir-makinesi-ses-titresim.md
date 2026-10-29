@@ -81,6 +81,12 @@ images:
 
 **6.** Santrifüjde artan boğuk uğultu ya da alttan su sızıntısı varsa makineyi kullanma, servise başvur.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Vestel çamaşır makinesi titriyor](/blog/vestel-camasir-makinesi-titriyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 1. **Nakliye cıvatalarını kontrol et.** Yeni kurulumsa arkadaki cıvatalar sökülmüş mü bak.

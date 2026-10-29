@@ -43,6 +43,14 @@ Klimayı açmak istiyorsun ama cihaz hiç tepki vermiyor: ekran yanmıyor, iç �
 
 **6. Kompresör arızası.** Klimanın "kalbi" olan kompresör tamamen arızalandıysa cihaz çalışmaz ya da sürekli açılıp kapanır. En maliyetli arıza türüdür.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Baymak klima çalışmıyor: evde kontrol](/blog/baymak-klima-calismiyor/)
+- [DemirDöküm klima çalışmıyor: evde kontrol](/blog/demirdokum-klima-calismiyor/)
+- [Vestel klima çalışmıyor: evde kontrol](/blog/vestel-klima-calismiyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 Bu adımlar güvenli ve ücretsiz — çoğu zaman sorunu burada çözersin:

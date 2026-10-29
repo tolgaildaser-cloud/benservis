@@ -61,6 +61,13 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **7.** Kapanma belirli bir süreye ya da saate bağlı olmadan sürüyorsa arka kapağı açma, servise başvur.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [LG televizyon kumandası çalışmıyor](/blog/lg-televizyon-kumandasi-calismiyor/)
+- [Grundig televizyon kumandası çalışmıyor](/blog/grundig-televizyon-kumandasi-calismiyor/)
+
 ## Önce şunu not et: televizyon ne zaman kapanıyor?
 
 Kapanmanın **hangi anda** olduğu, sebebi büyük ölçüde gösterir:

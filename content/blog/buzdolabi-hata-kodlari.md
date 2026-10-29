@@ -105,6 +105,14 @@ Bazı modellerde bu uyarılar harf yerine sembolle gösterilir ve tabloya iki du
 
 Ekran temiz diye cihaz sağlam demek değildir. Kompresör sesi hiç gelmiyorsa, arka bölüm hiç ısınmıyorsa ya da soğutma kademeli olarak zayıflıyorsa kod beklemeden belirti üzerinden ilerlemek gerekir. Kod sistemi yalnızca elektronik kartın görebildiği devreleri izler; gaz kaybı gibi arızalar çoğu modelde kod üretmez.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Bosch buzdolabı sembolleri ve anlamları](/blog/bosch-buzdolabi-sembolleri-ve-anlamlari/)
+- [Vestel buzdolabı hata kodları: E01'den E11'e kontrol uyarıları](/blog/vestel-buzdolabi-hata-kodlari/)
+- [LG buzdolabı ekranda OFF yazıyor](/blog/lg-buzdolabi-off-hatasi/)
+
 ## Hangi noktadan sonra servis işi
 
 Reset sonrası kod geri geliyorsa, cihaz hiç soğutmuyorsa ya da bir arıza uyarısıyla birlikte kompresör davranışı bozulduysa iş servisindir. Sensör, fan ve defrost ısıtıcısı değişimi panel sökümü gerektirir; bu hem elektrik hem soğutucu devre riski taşır ve kullanıcı tarafında denenmemelidir. Senin elinde bu noktada değerli bir şey var: kodun kendisi. Servisi ararken kodu ve markayı söylemek, doğru parçayla gelinmesini ve işin tek seferde bitmesini kolaylaştırır.

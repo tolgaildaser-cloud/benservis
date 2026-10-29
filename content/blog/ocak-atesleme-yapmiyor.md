@@ -50,6 +50,12 @@ Ocağın düğmesini çeviriyorsun ama çakmak ateşleme yapmıyor ya da ocak bi
 
 **5. Elektrik bağlantısı / ateşleme düğmesi (ankastre).** Fişi çekik ya da düğme arızalıysa kıvılcım üretilmez.
 
+## İlgili yazılar
+
+Bu konuyla doğrudan ilgili bir yazı daha:
+
+- [Doğalgazlı ocak neden yanmaz? Gözü yanmayan ocakta 6 kontrol](/blog/dogalgazli-ocak-neden-yanmaz/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 1. **Başlıkları temizle ve KURUT.** Gözlerin başlıklarını çıkar, kuru fırçayla temizle; ateşleme ucundaki kiri al. Nem kalmasın — **tamamen kuru** şekilde düz otur.

@@ -135,3 +135,9 @@ Bu noktada iki şey işinize yarar: **hangi arızanın muhtemel olduğu** ve **n
 - [Çamaşır makinesi tahliye filtresi temizleme](/blog/camasir-makinesi-tahliye-filtresi-temizleme/)
 - [Çamaşır makinesi kokuyor](/blog/camasir-makinesi-kokuyor/)
 - [Elektrik faturası neden yüksek?](/blog/elektrik-faturasi-neden-yuksek/)
+
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Haier kurutma makinesi kurutmuyor](/blog/haier-kurutma-makinesi-kurutmuyor/)

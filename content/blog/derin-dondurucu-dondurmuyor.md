@@ -47,6 +47,12 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 > ❄️ **Önce şunu ayır:** cihaz **hiç mi soğutmuyor**, yoksa **soğutuyor ama yeterince dondurmuyor** mu? Birincisi genelde kompresör/gaz tarafını, ikincisi hava akışı ve conta tarafını işaret eder. Bu ayrım, aşağıdaki listede doğru yerden başlamanı sağlar.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Beko derin dondurucu dondurmuyor](/blog/beko-derin-dondurucu-dondurmuyor/)
+
 ## Adım adım: servis çağırmadan önce kontrol listesi
 
 **1. Belirtiyi ayır.** Cihaz **hiç mi soğutmuyor**, yoksa soğutuyor ama yeterince mi dondurmuyor? Bu ayrım, aşağıdaki listede doğru yerden başlamanı sağlar.

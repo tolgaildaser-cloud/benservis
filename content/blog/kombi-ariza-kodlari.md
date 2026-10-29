@@ -121,3 +121,12 @@ Kılavuzun tarif ettiği işler: gaz vanası, su basıncı ve reset; gaz/alev/fa
 
 **Kod tekrar çıkıyorsa?**
 Arıza sürüyordur; markanı, modelini ve kodu Benservis'e yaz.
+
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [DemirDöküm kombi sembolleri ve anlamları](/blog/demirdokum-kombi-sembolleri-ve-anlamlari/)
+- [Baymak kombi sembolleri ve anlamları](/blog/baymak-kombi-sembolleri-ve-anlamlari/)
+- [Viessmann kombi E10 hatası](/blog/viessmann-kombi-e10-hatasi/)
+- [ECA kombi E03 hatası](/blog/eca-kombi-e03-hatasi/)
