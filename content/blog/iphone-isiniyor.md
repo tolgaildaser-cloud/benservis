@@ -3,7 +3,7 @@ title: "iPhone ısınıyor: ne zaman normal, ne zaman müdahale gerekir"
 description: "iPhone ısınıyor mu? Apple'a göre hangi ısınma normaldir, sıcaklık uyarısı çıkınca ne yapılır, şarjda ısınma ve 'Şarj Beklemede' mesajı ne anlama gelir."
 slug: "iphone-isiniyor"
 date: "2026-10-29"
-category: "Genel"
+category: "Telefon / Tablet"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-29 PAZ alt ajanı (apple-benq dalgası, grup A). origin/main'de "iphone" geçen slug yok; laptop-isiniyor-fan-sesi ayrı cihaz.
 # OT (29 Eki, hl=tr): "iphone ısınıyor" → 10 önerinin 10'u sorun varyantı (…şarjı bitiyor, …ne yapmalıyım, …ve donuyor, …şarj olmuyor, …kapanıyor).

@@ -3,7 +3,7 @@ title: "iPad şarj olmuyor: kablo, adaptör ve sıcaklık kontrolü"
 description: "iPad şarj olmuyor ya da yavaş şarj oluyorsa Apple'ın Türkçe destek sayfasındaki sırayla kablo, güç kaynağı, sıcaklık ve zorla yeniden başlatma kontrolü."
 slug: "ipad-sarj-olmuyor"
 date: "2026-10-29"
-category: "Genel"
+category: "Telefon / Tablet"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-29 PAZ alt ajanı (apple-benq dalgası, grup A). origin/main'de "ipad" geçen slug yok.
 # OT (29 Eki, hl=tr): "ipad şarj" → 2. "ipad şarj olmuyor", 9. "…olmuyor uyarısı", 10. "…olmuyor ne yapmalıyım"; "ipad açılmıyor" → 4. "ipad açılmıyor şarj olmuyor".

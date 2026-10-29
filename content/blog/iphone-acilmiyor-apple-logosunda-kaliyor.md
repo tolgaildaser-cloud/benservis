@@ -3,7 +3,7 @@ title: "iPhone açılmıyor ya da Apple logosunda kalıyor: ne yapmalı"
 description: "iPhone açılmıyor, ekran siyah ya da Apple logosunda takılı mı? Apple'ın Türkçe destek sayfalarındaki sırayla: şarj, zorla yeniden başlatma, kurtarma modu."
 slug: "iphone-acilmiyor-apple-logosunda-kaliyor"
 date: "2026-10-29"
-category: "Genel"
+category: "Telefon / Tablet"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-29 PAZ alt ajanı (apple-benq dalgası, grup A). origin/main'de "iphone" geçen slug yok.
 # OT (29 Eki, hl=tr): "iphone açılmıyor" → 10 önerinin 10'u sorun varyantı (elma yanıp sönüyor, logo gelip gidiyor, siyah ekran, restore yazıyor…); "iphone elma" → "iphone elma logosu gelip gidiyor", "…logosunda takılı kaldı".

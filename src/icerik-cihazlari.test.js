@@ -23,12 +23,15 @@ describe("içerik cihazları — teşhissiz kategori", () => {
   it("içerik listesi = teşhis cihazları + teşhissiz kategoriler, sıra korunur", () => {
     expect(ICERIK_CIHAZLARI).toEqual([...CIHAZLAR, ...TESHISSIZ_CIHAZLAR]);
     expect(TESHISSIZ_CIHAZLAR).toContain("Küçük Ev Aletleri");
+    expect(TESHISSIZ_CIHAZLAR).toContain("Telefon / Tablet"); // YK #192
+    expect(CIHAZLAR).not.toContain("Telefon / Tablet");
     for (const ad of TESHISSIZ_CIHAZLAR) expect(teshisVarMi(ad), ad).toBe(false);
     for (const ad of CIHAZLAR) expect(teshisVarMi(ad), ad).toBe(true);
   });
 
   it("teşhissiz kategorinin adresi sabit: kucuk-ev-aletleri", () => {
     expect(cihazSlug("Küçük Ev Aletleri")).toBe("kucuk-ev-aletleri");
+    expect(cihazSlug("Telefon / Tablet")).toBe("telefon-tablet");
     const sluglar = ICERIK_CIHAZLARI.map(cihazSlug);
     expect(new Set(sluglar).size).toBe(sluglar.length); // çakışan adres yok
   });
