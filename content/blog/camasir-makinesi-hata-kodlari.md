@@ -100,6 +100,19 @@ Neff de BSH markasıdır ama kendi hata kodu sayfasını yayımlamadığı için
 
 **7.** Motor, su kaçağı, ısıtma kodu ya da SC görüyorsan müdahale etme, servise başvur.
 
+## Markaya göre hata kodu tabloları
+
+Aynı kod her markada aynı anlama gelmez. Ekrandaki kodu kendi markanın tablosuyla karşılaştır:
+
+- [AEG çamaşır makinesi hata kodları](/blog/aeg-camasir-makinesi-hata-kodlari/)
+- [Zanussi çamaşır makinesi arıza kodları](/blog/zanussi-camasir-makinesi-ariza-kodlari/)
+- [Candy çamaşır makinesi arıza kodları](/blog/candy-camasir-makinesi-ariza-kodlari/)
+- [Hoover çamaşır makinesi hata kodları](/blog/hoover-camasir-makinesi-hata-kodlari/)
+- [Miele çamaşır makinesi hata kodları](/blog/miele-camasir-makinesi-hata-kodlari/)
+- [Whirlpool çamaşır makinesi arıza kodları](/blog/whirlpool-camasir-makinesi-ariza-kodlari/)
+- [Sharp çamaşır makinesi hata kodları](/blog/sharp-camasir-makinesi-hata-kodlari/)
+- [Hisense çamaşır makinesi hata kodları](/blog/hisense-camasir-makinesi-hata-kodlari/)
+
 ## Kendin çözebileceğin kodlar
 Su alma (F17/E8) ve tahliye (F18/E5) kodlarının en sık sebebi basit:
 1. **Musluğu sonuna kadar aç.**

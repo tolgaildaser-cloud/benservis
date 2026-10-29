@@ -98,6 +98,15 @@ Yıkama programı, su hedef sıcaklığa gelmeden bir sonraki aşamaya geçmez. 
 
 ⚠️ Bu kontrolleri program iptal edilmiş ve makine durmuşken yap; çalışırken kapıyı açıp içeri elini sokma — içerideki su sıcak olabilir. Tezgâh altında çalışırken musluğu kapat.
 
+## Markaya göre resetleme ve kapak kilidi
+
+Takılan programı iptal etmek ya da kapağı güvenle açmak için markanın kendi yöntemine bak:
+
+- [Whirlpool bulaşık makinesi resetleme nasıl yapılır](/blog/whirlpool-bulasik-makinesi-resetleme/)
+- [AEG bulaşık makinesi resetleme nasıl yapılır](/blog/aeg-bulasik-makinesi-resetleme/)
+- [Hoover bulaşık makinesi resetleme nasıl yapılır?](/blog/hoover-bulasik-makinesi-resetleme/)
+- [Miele bulaşık makinesi kapak kilidi nasıl açılır](/blog/miele-bulasik-makinesi-kapak-kilidi-nasil-acilir/)
+
 ## 5) Sensörler ve beyin — servis sınırı
 
 Program hep aynı noktada kalıyor, bulaşıklar soğuk çıkıyor ya da filtre-musluk-hortum üçlüsü tertemizken su döngüsü sürüyorsa; iş makinenin ölçüm ve kontrol tarafına gelmiştir: sıcaklık ve su seviyesi sensörleri, kirlilik sensörü ya da elektronik kart.

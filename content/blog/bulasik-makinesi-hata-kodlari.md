@@ -58,6 +58,15 @@ Bu markalarda kodlar model serisine göre değişir (genelde su alma, tahliye ve
 > Beko/Arçelik modelinde kod yerine yanıp sönen ışık deseni de olabilir; kesin anlamı kılavuzdan ya da Benservis'ten doğrula.
 
 
+## Diğer markaların hata kodu tabloları
+
+Burada anlatılmayan markalar için ayrı tablolar hazırladık:
+
+- [Miele bulaşık makinesi hata kodları](/blog/miele-bulasik-makinesi-hata-kodlari/)
+- [AEG bulaşık makinesi arıza kodları](/blog/aeg-bulasik-makinesi-ariza-kodlari/)
+- [Sharp bulaşık makinesi hata kodları](/blog/sharp-bulasik-makinesi-hata-kodlari/)
+- [Hoover bulaşık makinesi hata kodları](/blog/hoover-bulasik-makinesi-hata-kodlari/)
+
 ## Kendin çözebileceğin kodlar
 Filtre (E22), tahliye (E24) ve taban suyu (E15) en sık ve en kolay çözülenlerdir:
 1. **Filtreyi temizle** (taban filtresi).
