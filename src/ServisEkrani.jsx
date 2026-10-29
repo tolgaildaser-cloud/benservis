@@ -450,6 +450,7 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
           const qs = new URLSearchParams();
           if (cihaz) qs.set("cihaz", cihaz);
           qs.set("lat", lat); qs.set("lng", lng);
+          qs.set("kaynak", teshisLogId ? "teshis" : GELIS_KAYNAGI); // arama kaydı: yalnız sayfa türü
           const r = await fetch(`/api/servis/yakin?${qs}`);
           const d = await r.json();
           liste = d?.servisler || [];
@@ -524,6 +525,7 @@ export default function ServisEkrani({ cihaz, marka, belirti, onKapat, onAnaSayf
       const qs = new URLSearchParams();
       if (cihaz) qs.set("cihaz", cihaz);
       qs.set("ilce", ilce);
+      qs.set("kaynak", teshisLogId ? "teshis" : GELIS_KAYNAGI); // arama kaydı: yalnız sayfa türü
       // İl DE gönderilir: aynı ilçe adı birden çok ilde olabiliyor (Yenişehir · Ereğli ·
       // Gölbaşı · Kemalpaşa · Kemer…). İl gitmezse sunucu ada göre eşleştirip başka ilin
       // servisini listeler (12 Eyl 2026). Seçici zaten ili biliyor, yalnız iletilmiyordu.

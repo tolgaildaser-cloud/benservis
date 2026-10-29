@@ -8,6 +8,7 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { eslesenKategoriler } from "../../src/constants.js";
 import { ilSlug } from "../../src/ilce-il.js";
+import { aramaKaydi, YAKIN_KM } from "../../src/servis-arama-kaydi.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 let SERVISLER = [];
@@ -27,9 +28,27 @@ function haversine(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-export default function handler(req, res) {
+// 29 Eki 2026 (Tolga): yakın servis aramaları il/ilçe bazında PII'siz kaydedilir → servis_arama_log.
+// Kurallar src/servis-arama-kaydi.js'te. Kayıt BEST-EFFORT: env yoksa (test/yerel) ya da yazma
+// hata verirse kullanıcının listesi etkilenmez. Supabase istemcisi tembel yüklenir — anahtarsız
+// ortamda createClient import anında patlıyor.
+const ILCE_ANAHTAR = new Set(SERVISLER.filter((s) => s.telefon && s.sehir && s.ilce).map((s) => `${s.sehir}|${s.ilce}`));
+const ilcedeServisVar = (il, ilce) => ILCE_ANAHTAR.has(`${il}|${ilce}`);
+
+async function kaydet(satir) {
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) return;
   try {
-    const { cihaz, lat, lng, ilce, il, q } = req.query || {};
+    const { default: supabase } = await import("../_supabase.js");
+    const { error } = await supabase.from("servis_arama_log").insert(satir);
+    if (error) console.error("[yakin] arama kaydı:", error.message);
+  } catch (e) {
+    console.error("[yakin] arama kaydı:", e?.message || e);
+  }
+}
+
+export default async function handler(req, res) {
+  try {
+    const { cihaz, lat, lng, ilce, il, q, kaynak } = req.query || {};
 
     // İsimle arama (servis paneli kurulumu — servis kendini bulur). Kategori/telefon filtresi YOK.
     if (q) {
@@ -53,16 +72,21 @@ export default function handler(req, res) {
       (s) => s.telefon && (!kat || (Array.isArray(s.kategoriler) && s.kategoriler.some((k) => kat.includes(k))))
     );
 
+    let mod = null, enYakin = null;
     if (lat && lng) {
       const la = parseFloat(lat), ln = parseFloat(lng);
       if (!isNaN(la) && !isNaN(ln)) {
-        list = list
+        const sirali = list
           .map((s) => ({ s, km: s.lat && s.lng ? haversine(la, ln, s.lat, s.lng) : Infinity }))
           .sort((a, b) => a.km - b.km)
-          .slice(0, 150)
-          .map((x) => x.s);
+          .slice(0, 150);
+        list = sirali.map((x) => x.s);
+        mod = "konum";
+        // İl/ilçe kaydı için yalnız il+ilçesi bilinen en yakın servis; koordinat burada kalır.
+        enYakin = sirali.find((x) => x.km <= YAKIN_KM && x.s.sehir && x.s.ilce) || null;
       }
     } else if (ilce) {
+      mod = "ilce";
       // ⚠️ İLÇE ADI TEK BAŞINA KİMLİK DEĞİL (12 Eyl 2026, Tolga: "aynı ilçe adı farklı
       // illerde olabilir"). Veride ölçüldü: "Yenişehir" 133 kayıt (Bursa · Diyarbakır ·
       // Mersin), "Ereğli" 80 (Konya · Zonguldak), "Gölbaşı" 76, "Kemalpaşa" 66, "Kemer" 48.
@@ -74,7 +98,11 @@ export default function handler(req, res) {
       list = [];
     }
 
-    res.setHeader("Cache-Control", "public, max-age=300");
+    if (mod) await kaydet(aramaKaydi({ mod, il, ilce, cihaz, kaynak, sonuc: list, enYakin, ilcedeServisVar }));
+
+    // private: CDN önbelleği aynı ilçe aramasını fonksiyona hiç uğratmadan döndürürse kayıt eksik
+    // sayılırdı. Tarayıcı önbelleği (5 dk) kalır.
+    res.setHeader("Cache-Control", mod ? "private, max-age=300" : "public, max-age=300");
     return res.status(200).json({ servisler: list });
   } catch (e) {
     console.error("[yakin] hata:", e?.message || e);
