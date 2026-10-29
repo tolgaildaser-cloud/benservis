@@ -97,6 +97,12 @@ Bir de yerleşim detayı var: kurutma makinesi ısıyı çevresine atarak çalı
 
 ⛔ **Isıtıcı hattına ve gövde içine girme.** Kurutma makinesinin rezistansı yüksek akım çeker ve kapasitörlü devreler fiş çekildikten sonra bile yük tutabilir. Kullanıcıya ait alan filtreler, tank ve kondanser kapağıdır; sacın arkası servise aittir.
 
+## Miele kurutma makinelerinde
+
+Miele kurutma makineleri arızayı F ile başlayan kodlarla ve ekrandaki uyarılarla bildirir:
+
+- [Miele kurutma makinesi hata kodları](/blog/miele-kurutma-makinesi-hata-kodlari/)
+
 ## Hangi noktadan sonra servis işi
 
 Temizlik turu ve reset sonrası aynı kod geri geliyorsa, makine hiç ısıtmıyorsa, tank boşken tank uyarısı sönmüyorsa ya da tamburdan sürtme-gıcırdama sesi geliyorsa iş servisindir. Servisi ararken kodu (ya da ışık düzeninin fotoğrafını) ve model numarasını ilet; doğru parçayla gelinmesini sağlayan en kısa yol budur.

@@ -78,6 +78,13 @@ Program bitti ama bulaşık makinesinin **tabanında su kaldı** — makine suyu
 5. **Gideri/sifonu kontrol et.** Evye sifonu yeni takıldıysa tapası çıkmamış olabilir.
 6. **Resetle.** Fişi 1 dakika çek, tahliye programını tekrar dene.
 
+## Markaya göre su boşaltmama
+
+Kullandığın markanın rehberinde filtre ve pompanın yeri de anlatılıyor:
+
+- [Arçelik bulaşık makinesi su boşaltmıyor](/blog/arcelik-bulasik-makinesi-su-bosaltmiyor/)
+- [Whirlpool bulaşık makinesi su boşaltmıyor](/blog/whirlpool-bulasik-makinesi-su-bosaltmiyor/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Filtre, pompa kapağı ve hortum temizken **hâlâ su atmıyorsa** (pompa)

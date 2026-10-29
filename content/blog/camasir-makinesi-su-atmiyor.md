@@ -72,6 +72,12 @@ Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir
 3. **Yükü dengele.** Tek ağır parça varsa böl, programı tekrar dene.
 4. **Makineyi resetle.** Fişi 1 dakika çek, tekrar dene.
 
+## Markaya göre tahliye uyarısı
+
+Bazı markalar suyu boşaltamadığında ekranda ayrı bir uyarı gösterir:
+
+- [Miele çamaşır makinesi su tahliyesi uyarısı](/blog/miele-camasir-makinesi-su-tahliyesi-uyarisi/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Filtre temiz, hortum açık olduğu hâlde **hâlâ su atmıyor / çamaşır ıslak kalıyorsa** (pompa)

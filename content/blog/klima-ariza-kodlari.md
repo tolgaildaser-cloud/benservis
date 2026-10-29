@@ -97,6 +97,14 @@ Daikin harf gruplarıyla konuşur ve yaygın serilerde üç kod öne çıkar. **
 
 ⛔ **Dış üniteyi ve gaz devresini kurcalama.** Klimanın gaz hattı basınçlı kapalı bir devredir; açmak da doldurmak da yetki ve ekipman ister. Dış ünite ayrıca 220V beslenir ve fanı güçlüdür. Kullanıcıya ait alan kumanda, şalter ve filtre kapağı seviyesidir; panelin ötesi servise aittir.
 
+## Panasonic klimalarda
+
+Panasonic klimalar arızayı H ve F kodlarıyla, bazı modellerde de iç ünitedeki yanıp sönen ışıklarla bildirir:
+
+- [Panasonic klima arıza kodları](/blog/panasonic-klima-hata-kodlari/)
+- [Panasonic klima POWER ışığı yanıp sönüyor](/blog/panasonic-klima-power-isigi-yanip-soniyor/)
+- [Panasonic klima timer ışığı yanıp sönüyor](/blog/panasonic-klima-timer-isigi-yanip-soniyor/)
+
 ## Göstergesiz modellerde ışık dili
 
 Her iç ünitede dijital ekran yoktur; ekransız modellerde arıza bildirimi ön paneldeki ışıkların yanıp sönme düzeniyle yapılır. Hangi ışığın kaç kez yanıp söndüğü belirli bir koda karşılık gelir ve bu eşleştirme tamamen modele özeldir. Böyle bir durumda ışık düzenini videoya almak, sonra kullanım kılavuzunun arıza tablosuyla karşılaştırmak en sağlıklı yoldur; servisle konuşurken de o video kodun kendisi kadar iş görür.

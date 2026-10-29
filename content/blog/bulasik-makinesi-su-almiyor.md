@@ -87,6 +87,12 @@ Bulaşıkları dizdin, programı başlattın ama makine su almıyor. Sinir bozuc
 5. **Tabanı kurula.** Altta su varsa kurulayıp dene; taşma güvenliği bu yüzden devrede olabilir.
 6. **Resetle.** Fişi 1 dakika çek, çocuk kilidi açık mı bak, tekrar dene.
 
+## Markaya göre su almama kodu
+
+Bazı markalar su alamama durumunu ekranda ayrı bir kodla gösterir:
+
+- [Whirlpool bulaşık makinesi su almıyor](/blog/whirlpool-bulasik-makinesi-su-almiyor/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Musluk açık, süzgeç temiz, hortum düz olduğu hâlde **hâlâ su almıyorsa** (valf/basınç anahtarı)

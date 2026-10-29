@@ -122,6 +122,12 @@ Aynı tabloda E01'e benzeyen ama ayrı olan kodlar var. Hepsinde kılavuzun adı
 
 Kombinin gaz vanasını kapattıysan, E01 için kılavuzun ilk kontrolü tam da bu vanadır. Kılavuzların donma koruması bölümü de bu fonksiyonun çalışabilmesi için **gaz vanasının ve radyatör vanalarının açık** olmasını, cihazın elektrik beslemesinin açık ve sistem su basıncının uygun olmasını şart koşuyor.
 
+## ECA şofben kullanıyorsan
+
+ECA şofbenler arızayı kombilerden farklı, AL ile başlayan kodlarla gösterir:
+
+- [ECA şofben arıza kodları](/blog/eca-sofben-ariza-kodlari/)
+
 ## Ne zaman doğrudan servis
 
 - Gaz vanası açık, hatta gaz var ve bir Reset'ten sonra **E01 sürüyor ya da tekrarlıyorsa.**

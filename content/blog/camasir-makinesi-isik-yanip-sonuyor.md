@@ -93,6 +93,15 @@ images:
 5. **Resetle.** Fişi 1 dakika çek, tekrar dene. Çocuk kilidi açık mı bak.
 6. **Deseni not al.** Hangi ışık, kaç kez yanıyor — kod tablosuna ya da Benservis'e tarif et.
 
+## Markaya göre resetleme
+
+Işıklar takılı kaldığında ilk deneme çoğu zaman resetlemedir; tuş sırası markaya göre değişir:
+
+- [Zanussi çamaşır makinesi resetleme nasıl yapılır](/blog/zanussi-camasir-makinesi-resetleme/)
+- [Candy çamaşır makinesi resetleme nasıl yapılır](/blog/candy-camasir-makinesi-resetleme/)
+- [Sharp çamaşır makinesi resetleme nasıl yapılır](/blog/sharp-camasir-makinesi-resetleme/)
+- [Hisense çamaşır makinesi resetleme nasıl yapılır](/blog/hisense-camasir-makinesi-resetleme/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Kapı, su ve tahliye sağlamken **desen sürüyorsa** (kart/sensör)

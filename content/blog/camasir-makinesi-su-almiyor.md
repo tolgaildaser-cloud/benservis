@@ -84,6 +84,12 @@ images:
 4. **Kapağı tam kapat.** "Klik" sesini duy; kapak iyi kapanmazsa program başlamaz.
 5. **Makineyi resetle.** Fişi 1 dakika çekip tak; çocuk kilidi açık mı bak.
 
+## Markaya göre su almama uyarısı
+
+Bazı markalar su alamama durumunu ekranda ayrı bir kodla gösterir:
+
+- [AEG çamaşır makinesi su almıyor](/blog/aeg-camasir-makinesi-su-almiyor/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Musluk açık, filtre temiz, hortum düz olduğu hâlde **hâlâ su almıyorsa** (valf/basınç anahtarı)

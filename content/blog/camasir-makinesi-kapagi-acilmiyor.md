@@ -103,6 +103,16 @@ Panel tuşlarına basıldığında makine tepki vermiyor ve gösterge üzerinde 
 
 Çocuk kilidi kapağın kendisini kilitlemez ama programı sonlandırmanı engelleyerek kapağın açılmamasına yol açar.
 
+## Markaya göre kapak kilidi
+
+Kilidi açma yolu ve acil açma kolunun yeri markadan markaya değişir. Kullandığın markanın rehberine buradan geçebilirsin:
+
+- [Arçelik çamaşır makinesi kapağı açılmıyor](/blog/arcelik-camasir-makinesi-kapagi-acilmiyor/)
+- [Zanussi çamaşır makinesi kapağı açılmıyor](/blog/zanussi-camasir-makinesi-kapagi-acilmiyor/)
+- [Candy çamaşır makinesi kapağı açılmıyor](/blog/candy-camasir-makinesi-kapagi-acilmiyor/)
+- [AEG çamaşır makinesi kapak kilidi nasıl açılır](/blog/aeg-camasir-makinesi-kapak-kilidi-nasil-acilir/)
+- [Miele çamaşır makinesi kapak kilidi nasıl açılır](/blog/miele-camasir-makinesi-kapak-kilidi-nasil-acilir/)
+
 ## Ne zaman servis gerekir
 
 Bunların hepsi denendiği hâlde kapak kilitli kalıyorsa arıza kilit düzeneğindedir. Servis işareti veren belirtiler:
