@@ -24,6 +24,7 @@ import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
 import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
 import { merchantFeedXml } from "./merchant-feed.mjs";
 import { nofollowEkle, nofollowSay } from "./ic-baglanti-nofollow.mjs";
+import { ZIYARET_BEACON_JS } from "../src/ziyaret-sayim.js";
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -1337,6 +1338,7 @@ ${FONT_LINK}
 <style>${CSS}</style>${head}
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>${ZIYARET_BEACON_JS}</script>
 <script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </head><body${genis ? ' class="genis"' : ""}>
 <header class="site"><div class="wrap"><a class="brand" href="/">${LOGO}${WORDMARK}</a><nav class="sitenav" aria-label="Ana menü"><a href="/blog/">Bilgi Merkezi</a><a href="/tamir/">Tamir Merkezi</a><a href="/kilavuzlar/">Kullanım Kılavuzları</a><a class="navpazar" href="/pazar">Pazaryeri</a><a class="navcta" href="${navServisHref(canonical)}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg><span class="nav-yakin">Yakın </span>Servisler</a><details class="mnav"><summary aria-label="Menü"><svg class="ac-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><svg class="ac-x" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></summary><div class="mnav-panel"><a href="/pazar">Pazaryeri</a><a href="/blog/">Bilgi Merkezi</a><a href="/tamir/">Tamir Merkezi</a><a href="/kilavuzlar/">Kullanım Kılavuzları</a></div></details></nav></div><a class="pazarbant" href="/pazar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>Pazaryeri <span>· yedek parça →</span></a></header>
@@ -2948,7 +2950,7 @@ fs.writeFileSync(
 const HUKUK_SON_GUNCELLEME = "5 Ağustos 2026";
 // Gizlilik ayrıldı (14 Eyl 2026, YK #136 garanti hatırlatıcısı eklemeleri): koşullar metni
 // değişmediği için onun tarihi 5 Ağustos'ta kalır. Kaynak: `benservis-icerik/2026-09-14-YK-KVKK-GARANTI-HATIRLATICI-METNI.md` A-D.
-const GIZLILIK_SON_GUNCELLEME = "14 Eylül 2026";
+const GIZLILIK_SON_GUNCELLEME = "29 Ekim 2026"; // merge günü; #414 toplu sayım paragrafı (YK metni)
 
 // İki sayfada da tekrarlayan kapanış: kullanıcı hukuk metninden çıkarken huniye dönsün.
 const HUKUK_CAPRAZ = (oteki) =>
@@ -3012,6 +3014,7 @@ const GIZLILIK_GOVDE = `<article>
 <h2>Çerezler ve yerel depolama</h2>
 <p>Reklam veya takip çerezi kullanmıyoruz. Sitenin çalışması için tarayıcınızda <strong>yerel depolama</strong> ve <strong>service worker önbelleği</strong> kullanılır (ör. sayfaların çevrimdışı açılabilmesi). Bu önbellekte <strong>konum bilgisi ve kişisel veri tutulmaz</strong>; ikinci el sayfaları önbelleğe hiç alınmaz. Ziyaret istatistikleri, kişi bazlı olmayan ve çerez kullanmayan bir ölçümle (Vercel) toplanır.</p>
 <p>Sitede Google Analytics 4, çerez kullanmayan &quot;consent mode&quot; yapılandırmasıyla çalışır: tarayıcınıza analitik çerezi yazılmaz, ölçüm anonimleştirilmiş sayfa görüntüleme sinyalleriyle yapılır.</p>
+<p>Siteyi geliştirmek için hangi şehirden ve hangi sayfa türüne (blog, tamir, teşhis gibi) günde kaç ziyaret geldiğini toplu sayı olarak tutuyoruz; bu sayım IP adresi, çerez, cihaz ya da kullanıcı kimliğiyle ilişkilendirilmez ve tek bir ziyaretçiye geri götürülemez. Yakınımdaki servis aramalarında da yalnız aranan il/ilçe, cihaz türü ve bulunan servis sayısı toplu olarak kaydedilir; konumunuz ve kimliğiniz saklanmaz.</p>
 
 <h2>Güvenlik</h2>
 <p>Veritabanımızda satır düzeyi erişim kısıtlaması (RLS) açıktır; kayıtlara yalnızca yetkili sunucu tarafı erişebilir. Genel uçlarda istek sınırlaması uygulanır. Yönetim panelleri belirteçle (token) korunur.</p>

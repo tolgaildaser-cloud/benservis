@@ -9,11 +9,14 @@ import { NAVY as INK, BG as PAPER, BLUE, SLATE, HAIR as LINE } from "./theme.js"
 // Pazar sekmesi kendi parçasında: rapora giren admin onu indirmez.
 const AdminPazarPaneli = lazy(() => import("./AdminPazarPaneli.jsx"));
 const AdminSiparisPaneli = lazy(() => import("./AdminSiparisPaneli.jsx"));
-const SEKMELER = [["rapor", "Teşhis Raporu"], ["pazar", "Pazar"], ["siparisler", "Siparişler"]];
+const AdminServisAramaPaneli = lazy(() => import("./AdminServisAramaPaneli.jsx"));
+const SEKMELER = [["rapor", "Teşhis Raporu"], ["pazar", "Pazar"], ["siparisler", "Siparişler"], ["servisArama", "Servis Arama"]];
 const BASLIK = {
   rapor: ["Teşhis Raporu", "Ham veri matrisi · tarih aralığı seç, çek, Excel'e aktar."],
   pazar: ["Pazar", "Benservis adına ürün ve yedek parça."],
   siparisler: ["Siparişler", "Pazaryeri siparişleri · havale onayı · iptal."],
+  // 29 Eki 2026 (Tolga): yakın servis aramaları il/ilçe bazında, PII'siz.
+  servisArama: ["Servis Arama", "Yakın servis aramaları (il/ilçe) ve ziyaretçi şehri · kapsamda mı."],
 };
 
 const LS_KEY = "benservis_admin";
@@ -124,6 +127,12 @@ export default function RaporPaneli() {
           <div style={{ marginTop: 14 }}>
             <Suspense fallback={<div style={{ color: SLATE, fontSize: 14 }}>Yükleniyor…</div>}>
               <AdminPazarPaneli sir={sir} onYetkisiz={cikis} />
+            </Suspense>
+          </div>
+        ) : sekme === "servisArama" ? (
+          <div style={{ marginTop: 14 }}>
+            <Suspense fallback={<div style={{ color: SLATE, fontSize: 14 }}>Yükleniyor…</div>}>
+              <AdminServisAramaPaneli sir={sir} onYetkisiz={cikis} />
             </Suspense>
           </div>
         ) : sekme === "siparisler" ? (
