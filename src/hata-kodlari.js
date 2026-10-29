@@ -3483,6 +3483,9 @@ export const HATA_KODU_KATMANI = {
   //   sayfa → belgedeki sayfa; kartta gösterilir.
   // 30 Eyl 2026, PAZ tamir föyü: 37 giriş (föydeki 2 Philips Airfryer girişi alınmadı:
   // air fryer "Mikrodalga / Air Fryer" cihazında kalır ve belgenin üretici bağlantısı doğrulanmadı).
+  // ── YK #192 (29 Eki 2026): TEŞHİSSİZ İÇERİK KATEGORİSİ — Telefon / Tablet. Küçük Ev
+  // Aletleri ile aynı kural: boşken /tamir/telefon-tablet/ basılmaz; giriş PAZ föyünden (#88).
+  "Telefon / Tablet": [],
   "Küçük Ev Aletleri": [
     { giris: "De'Longhi EC685 — ikaz lambaları hızlı hızlı yanıp sönüyor", tip: "kod",
       anlam: "Hazne boş ya da cihaz kahve dağıtımı yapamıyor; su haznesi doldurulur.",

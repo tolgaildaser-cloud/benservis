@@ -15,7 +15,10 @@ export const CIHAZLAR = [
 // Teşhissiz kategoride `/?cihaz=` köprüsü BASILMAZ (App.jsx o slug'ı çözemez, form yanlış ya da
 // boş açılırdı). Yerine üreticinin destek adresi + genel "Servis Bul" + kardeş yazılar basılır
 // (scripts/build-blog.mjs). Yeni bir teşhissiz kategori açmak = bu diziye bir satır.
-export const TESHISSIZ_CIHAZLAR = ["Küçük Ev Aletleri"];
+// YK #192 (29 Eki 2026): Tolga — "tamir, blog ve onarım merkezi yazılarımızda tüm telefon
+// markaları ile ilgili yazı olsun, kılavuzlarda da". 2 Ağu "telefon olmasın" kuralı kalktı.
+// YK kararı: TEŞHİSSİZ (#149 emsali) — teşhis akışı ve tarife motoru telefon verisi taşımıyor.
+export const TESHISSIZ_CIHAZLAR = ["Küçük Ev Aletleri", "Telefon / Tablet"];
 export const ICERIK_CIHAZLARI = [...CIHAZLAR, ...TESHISSIZ_CIHAZLAR];
 export const teshisVarMi = (cihaz) => CIHAZLAR.includes(cihaz);
 
@@ -236,6 +239,14 @@ export const CIHAZ_MARKALARI = {
   //    dışı) · Cosori (özeti yalnız air fryer, o cihaz Mikrodalga / Air Fryer'da) ·
   //    Fantom · Rowenta (adres bu cihazı karşılamıyor) · Arzum · Goldmaster · Philips ·
   //    Regal (kapsam gösterilemedi). Haier ve Miele 3 Eki föyüyle eklendi.
+  // YK #192 — İÇERİK kategorisi (teşhis formunda YOK). Kaynak: PAZ telefon-yk192/PLAN.md
+  // (19 adres), FE 29 Eki'de her sayfayı yeniden açıp başlık + içerikte telefon kılavuzunu gördü.
+  // Genel adresi telefonu da kapsayan marka (Apple · Samsung · Xiaomi) doğrudan,
+  // diğerleri `cihazOzel` ile girer. ⛔ Bilerek dışarıda: Huawei (ürün listesi, kılavuz değil) ·
+  // Vivo (destek ana sayfası) · OnePlus (İspanyolca sayfa) · TCL (kılavuz yalnız TV) · Asus
+  // (sayfa içerik vermedi) · Infinix (liste boş) · Realme (kılavuz sayfası yok) · Reeder (429).
+  "Telefon / Tablet": ["Apple", "Casper", "General Mobile", "Honor", "Nokia", "Omix", "Oppo",
+    "Samsung", "Tecno", "Xiaomi"].sort(trSort),
   "Küçük Ev Aletleri": [
     "Altus", "Arçelik", "Arzum", "Beko", "Bosch", "Braun", "De'Longhi", "Fakir", "Grundig", "Kenwood",
     "King", "Krups", "Kumtel", "Ninja", "Onvo", "Philips", "Profilo", "Russell Hobbs", "Siemens", "Sinbo",
