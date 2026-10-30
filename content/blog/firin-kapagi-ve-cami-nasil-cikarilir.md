@@ -38,7 +38,7 @@ images:
     - "Fırının fişini prizden çeken beyaz eldivenli sade siluet el, yanında soğumuş fırın"
     - "Sonuna kadar açılmış fırın kapağını tutan beyaz eldivenli sade siluet el"
     - "Menteşedeki kilit levyesini kaldıran beyaz eldivenli sade siluet el"
-    - "Kapağı iki yanından kavrayıp yukarı doğru çeken iki beyaz eldivenli sade siluet el"
+    - "Fırın kapağını kavrayıp yukarı doğru çeken beyaz eldivenli sade siluet el"
     - "Havlu üzerine yatırılmış kapağın üst kaplamasına basan beyaz eldivenli sade siluet el"
     - "Çıkarılmış camı yumuşak bezle silen beyaz eldivenli sade siluet el"
     - "Menteşeleri fırındaki yuvalara yerleştirerek kapağı takan beyaz eldivenli sade siluet el"
