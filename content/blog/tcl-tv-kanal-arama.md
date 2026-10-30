@@ -41,7 +41,7 @@ images:
     - "Ekrandaki ülke listesinden bir satırı seçen beyaz eldivenli sade siluet el"
     - "Kumandada OK tuşuna basan beyaz eldivenli sade siluet el, ekranda otomatik arama satırı seçili"
     - "Ekrandaki kanal seçici listesinde bir satırı seçen beyaz eldivenli sade siluet el"
-    - "Ekranda ilerleme çubuğu dolarken kumandayı tutan beyaz eldivenli sade siluet el"
+    - "Ekranda kanal listesi açıkken kumandayı tutan beyaz eldivenli sade siluet el"
     - "Kanal listesinde bir kanalı seçip silme tuşuna basan beyaz eldivenli sade siluet el"
 ---
 

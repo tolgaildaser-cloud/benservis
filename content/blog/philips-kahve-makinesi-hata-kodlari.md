@@ -33,7 +33,7 @@ images:
   coverAlt: "Ekranında yazısız bir uyarı simgesi yanan tam otomatik espresso makinesi çizimi"
   steps:
     - "Çizim: solda kahve makinesi, sağda ekranında yanıp sönen uyarı simgesi"
-    - "Beyaz eldivenli sade siluet el, kahve hunisine ters çevrilmiş kaşık sapını sokuyor"
+    - "Beyaz eldivenli sade siluet el, kahve hunisini temizliyor"
     - "Beyaz eldivenli sade siluet el, demleme grubunu ılık su akan musluğun altında tutuyor"
     - "Beyaz eldivenli sade siluet el, demleme grubunu servis kapağının içine itiyor"
     - "Beyaz eldivenli sade siluet el, su haznesini musluktan dolduruyor"
