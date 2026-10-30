@@ -2,7 +2,7 @@
 // GET ?from=YYYY-MM-DD&to=YYYY-MM-DD (yoksa son 30 gün). Kaynak public.sayfa_sehir_sayac (yalnız günlük toplam).
 // 29 Eki 2026 (Tolga): "12 Kas raporuna şehir kırılımı da girsin."
 import supabase from "../_supabase.js";
-import { sehirTopla } from "../../src/ziyaret-sayim.js";
+import { sehirTopla, okumaIlistir } from "../../src/ziyaret-sayim.js";
 
 function yetkiKontrol(req) {
   const auth = req.headers["authorization"] || "";
@@ -29,7 +29,15 @@ export default async function handler(req, res) {
       .lte("gun", toQ)
       .limit(50000);
     if (error) return res.status(500).json({ ok: false, error: error.message });
-    const sehirler = sehirTopla(data || []);
+    // 30 Eki 2026: okuma (süre + kaydırma) final ping'leri. Tablo yoksa (migration koşmadıysa) şehir
+    // tablosu yine döner, okuma sütunları boş kalır.
+    const ok2 = await supabase
+      .from("sayfa_okuma_sayac")
+      .select("ulke,bolge,sehir,sure,kaydirma,sayi")
+      .gte("gun", fromQ)
+      .lte("gun", toQ)
+      .limit(50000);
+    const sehirler = okumaIlistir(sehirTopla(data || []), ok2.error ? [] : ok2.data);
     const top = (f) => sehirler.filter(f).reduce((n, s) => n + s.toplam, 0);
     return res.status(200).json({
       ok: true,
@@ -38,6 +46,7 @@ export default async function handler(req, res) {
       kapsamda: top((s) => s.kapsam === "kapsamda"),
       disi: top((s) => s.kapsam === "disi"),
       yurtDisi: top((s) => s.kapsam === "yurt-disi"),
+      okumaVar: !ok2.error,
       sehirler,
     });
   } catch (e) {

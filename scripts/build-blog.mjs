@@ -2951,7 +2951,7 @@ fs.writeFileSync(
 const HUKUK_SON_GUNCELLEME = "5 Ağustos 2026";
 // Gizlilik ayrıldı (14 Eyl 2026, YK #136 garanti hatırlatıcısı eklemeleri): koşullar metni
 // değişmediği için onun tarihi 5 Ağustos'ta kalır. Kaynak: `benservis-icerik/2026-09-14-YK-KVKK-GARANTI-HATIRLATICI-METNI.md` A-D.
-const GIZLILIK_SON_GUNCELLEME = "29 Ekim 2026"; // merge günü; #414 toplu sayım paragrafı (YK metni)
+const GIZLILIK_SON_GUNCELLEME = "30 Ekim 2026"; // merge günü; #414 toplu sayım paragrafı (YK metni)
 
 // İki sayfada da tekrarlayan kapanış: kullanıcı hukuk metninden çıkarken huniye dönsün.
 const HUKUK_CAPRAZ = (oteki) =>
@@ -3015,7 +3015,7 @@ const GIZLILIK_GOVDE = `<article>
 <h2>Çerezler ve yerel depolama</h2>
 <p>Reklam veya takip çerezi kullanmıyoruz. Sitenin çalışması için tarayıcınızda <strong>yerel depolama</strong> ve <strong>service worker önbelleği</strong> kullanılır (ör. sayfaların çevrimdışı açılabilmesi). Bu önbellekte <strong>konum bilgisi ve kişisel veri tutulmaz</strong>; ikinci el sayfaları önbelleğe hiç alınmaz. Ziyaret istatistikleri, kişi bazlı olmayan ve çerez kullanmayan bir ölçümle (Vercel) toplanır.</p>
 <p>Sitede Google Analytics 4, çerez kullanmayan &quot;consent mode&quot; yapılandırmasıyla çalışır: tarayıcınıza analitik çerezi yazılmaz, ölçüm anonimleştirilmiş sayfa görüntüleme sinyalleriyle yapılır.</p>
-<p>Siteyi geliştirmek için hangi şehirden ve hangi sayfa türüne (blog, tamir, teşhis gibi) günde kaç ziyaret geldiğini toplu sayı olarak tutuyoruz; bu sayım IP adresi, çerez, cihaz ya da kullanıcı kimliğiyle ilişkilendirilmez ve tek bir ziyaretçiye geri götürülemez. Yakınımdaki servis aramalarında da yalnız aranan il/ilçe, cihaz türü ve bulunan servis sayısı toplu olarak kaydedilir; konumunuz ve kimliğiniz saklanmaz.</p>
+<p>Siteyi geliştirmek için hangi şehirden ve hangi sayfa türüne (blog, tamir, teşhis gibi) günde kaç ziyaret geldiğini, sayfada kalınan sürenin ve okunan kısmın kabaca hangi aralıkta olduğunu (örneğin 10 saniyeden az, sayfanın yarısına kadar) toplu sayı olarak tutuyoruz; bu sayım IP adresi, çerez, cihaz ya da kullanıcı kimliğiyle ilişkilendirilmez ve tek bir ziyaretçiye geri götürülemez. Yakınımdaki servis aramalarında da yalnız aranan il/ilçe, cihaz türü ve bulunan servis sayısı toplu olarak kaydedilir; konumunuz ve kimliğiniz saklanmaz.</p>
 
 <h2>Güvenlik</h2>
 <p>Veritabanımızda satır düzeyi erişim kısıtlaması (RLS) açıktır; kayıtlara yalnızca yetkili sunucu tarafı erişebilir. Genel uçlarda istek sınırlaması uygulanır. Yönetim panelleri belirteçle (token) korunur.</p>

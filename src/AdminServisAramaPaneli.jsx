@@ -89,14 +89,14 @@ export default function AdminServisAramaPaneli({ sir, onYetkisiz }) {
           <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: 19, color: INK, margin: "26px 0 6px" }}>Ziyaretçi şehri</h2>
           <div style={{ fontSize: 14, color: INK, marginBottom: 12 }}>
             <b>{sehir.toplam}</b> sayfa açılışı · kapsamda <b>{sehir.kapsamda}</b> · dışı <b>{sehir.disi}</b> · yurt dışı <b>{sehir.yurtDisi}</b>
-            <span style={{ color: SLATE }}> · Vercel şehir başlığı, toplu sayım</span>
+            <span style={{ color: SLATE }}> · Vercel şehir başlığı, toplu sayım · yüzdeler sayfa kapanırken gelen ölçüme göre</span>
           </div>
           {sehirler.length === 0 ? (
             <div style={{ color: SLATE, fontSize: 14, textAlign: "center", padding: 24, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12 }}>Bu aralıkta kayıt yok.</div>
           ) : (
             <div style={{ overflowX: "auto", border: `1px solid ${LINE}`, borderRadius: 12, background: "#fff" }}>
               <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 13 }}>
-                <thead><tr style={{ background: "#F1F5F9" }}>{["Şehir", "İl", "Kapsam", "Toplam", ...TURLER.map((t) => t[1])].map((h) => <th key={h} style={thS}>{h}</th>)}</tr></thead>
+                <thead><tr style={{ background: "#F1F5F9" }}>{["Şehir", "İl", "Kapsam", "Toplam", ...TURLER.map((t) => t[1]), "10 sn altında çıkan", "Sonuna kadar okuyan"].map((h) => <th key={h} style={thS}>{h}</th>)}</tr></thead>
                 <tbody>
                   {sehirler.map((g, i) => (
                     <tr key={i}>
@@ -105,6 +105,8 @@ export default function AdminServisAramaPaneli({ sir, onYetkisiz }) {
                       <td style={{ ...tdS, color: KAPSAM_YAZI[g.kapsam][1], fontWeight: 700 }}>{KAPSAM_YAZI[g.kapsam][0]}</td>
                       <td style={tdS}>{g.toplam}</td>
                       {TURLER.map(([k]) => <td key={k} style={tdS}>{g.tur[k] || 0}</td>)}
+                      <td style={tdS} title={g.okuma?.final ? `${g.okuma.final} kapanış ölçümü` : "ölçüm yok"}>{g.okuma?.kisaYuzde != null ? `%${g.okuma.kisaYuzde}` : "—"}</td>
+                      <td style={tdS} title={g.okuma?.final ? `${g.okuma.final} kapanış ölçümü` : "ölçüm yok"}>{g.okuma?.sonunaYuzde != null ? `%${g.okuma.sonunaYuzde}` : "—"}</td>
                     </tr>
                   ))}
                 </tbody>

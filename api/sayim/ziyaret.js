@@ -1,7 +1,8 @@
 // api/sayim/ziyaret.js — PII'siz sayfa-şehir sayacı (29 Eki 2026, Tolga). Beacon hedefi.
-// POST {t: sayfa türü}. Şehir Vercel başlıklarından; günlük toplam public.sayfa_sehir_artir() ile +1.
+// POST {t: sayfa türü} → public.sayfa_sehir_artir() (+1 ziyaret). POST {t, son: 1, s: süre aralığı, k: kaydırma
+// aralığı} → public.sayfa_okuma_artir() (sayfa kapanırken, 30 Eki 2026). Şehir Vercel başlıklarından.
 // Ham istek, IP, UA, çerez, kimlik SAKLANMAZ. Bot UA'sı sayılmaz. Her durumda 204 — beacon cevap okumaz.
-import { ziyaretAnahtari } from "../../src/ziyaret-sayim.js";
+import { ziyaretAnahtari, okumaAnahtari } from "../../src/ziyaret-sayim.js";
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
@@ -12,9 +13,18 @@ export default async function handler(req, res) {
     const a = ziyaretAnahtari(req.headers, govde);
     if (a && process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_KEY) {
       const { default: supabase } = await import("../_supabase.js");
-      const { error } = await supabase.rpc("sayfa_sehir_artir", {
-        p_gun: a.gun, p_ulke: a.ulke, p_bolge: a.bolge, p_sehir: a.sehir, p_tur: a.tur,
-      });
+      // 30 Eki 2026: sayfa kapanırken gelen final ping (süre + kaydırma aralığı) AYRI tabloya;
+      // açılış ping'i ziyaret sayacına. Biri diğerini saymaz → çift sayım yok.
+      const o = okumaAnahtari(govde);
+      const { error } = o
+        ? await supabase.rpc("sayfa_okuma_artir", {
+          p_gun: a.gun, p_ulke: a.ulke, p_bolge: a.bolge, p_sehir: a.sehir, p_tur: a.tur,
+          p_sure: o.sure, p_kaydirma: o.kaydirma,
+        })
+        : govde?.son === 1 ? { error: null } // bozuk final ping: hiçbir sayaca yazılmaz
+          : await supabase.rpc("sayfa_sehir_artir", {
+            p_gun: a.gun, p_ulke: a.ulke, p_bolge: a.bolge, p_sehir: a.sehir, p_tur: a.tur,
+          });
       if (error) console.error("[ziyaret] sayaç:", error.message);
     }
   } catch (e) {

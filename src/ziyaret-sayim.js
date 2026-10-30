@@ -30,9 +30,35 @@ export function ziyaretBeacon() {
     var p = location.pathname;
     var t = p === "/" ? "teshis" : /^\/blog/.test(p) ? "blog" : /^\/tamir/.test(p) ? "tamir"
       : /^\/kilavuzlar/.test(p) ? "kilavuz" : /^\/(pazar|urun|ikinci-el)/.test(p) ? "urun" : "diger";
-    var b = JSON.stringify({ t: t });
-    if (navigator.sendBeacon) navigator.sendBeacon("/api/sayim/ziyaret", new Blob([b], { type: "application/json" }));
-    else if (window.fetch) fetch("/api/sayim/ziyaret", { method: "POST", body: b, keepalive: true, headers: { "Content-Type": "application/json" } }).catch(function () {});
+    var gonder = function (o) {
+      var b = JSON.stringify(o);
+      if (navigator.sendBeacon) navigator.sendBeacon("/api/sayim/ziyaret", new Blob([b], { type: "application/json" }));
+      else if (window.fetch) fetch("/api/sayim/ziyaret", { method: "POST", body: b, keepalive: true, headers: { "Content-Type": "application/json" } }).catch(function () {});
+    };
+    gonder({ t: t }); // açılış ping'i — ziyaret sayısı
+    // 30 Eki 2026 (Tolga: "ne kadar kalıyor, hemen çıkıyor mu, aradığını buluyor mu?"): sayfa
+    // gizlenince/kapanınca TEK final ping. Ham süre ve yüzde gitmez, yalnız aralık (PII'siz).
+    var gorunur = 0, bas = document.visibilityState === "visible" ? Date.now() : 0, derin = 0, bitti = false;
+    var olc = function () {
+      var h = document.documentElement, y = Math.max(h.scrollHeight - h.clientHeight, 1);
+      var r = Math.min(100, ((window.scrollY || h.scrollTop || 0) / y) * 100);
+      if (h.scrollHeight <= h.clientHeight + 4) r = 100; // tek ekranlık sayfa: tamamı görüldü
+      if (r > derin) derin = r;
+    };
+    var son = function () {
+      if (bitti) return; bitti = true;
+      if (bas) gorunur += Date.now() - bas;
+      olc();
+      var sn = gorunur / 1000;
+      gonder({ t: t, son: 1, s: sn < 10 ? "0-10" : sn < 60 ? "10-60" : "60+",
+        k: derin >= 90 ? 100 : derin >= 75 ? 75 : derin >= 50 ? 50 : derin >= 25 ? 25 : 0 });
+    };
+    addEventListener("scroll", olc, { passive: true });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") son();
+    });
+    addEventListener("pagehide", son);
+    olc();
   } catch (e) { /* sayaç kullanıcıyı asla etkilemez */ }
 }
 export const ZIYARET_BEACON_JS = `(${ziyaretBeacon.toString()})();`;
@@ -80,6 +106,18 @@ export function ziyaretAnahtari(headers, govde, simdi = new Date()) {
   return { gun, ulke, bolge, sehir, tur };
 }
 
+export const SURE_ARALIKLARI = ["0-10", "10-60", "60+"];
+export const KAYDIRMA_ARALIKLARI = [0, 25, 50, 75, 100];
+
+// Final ping'in okuma anahtarı (süre + kaydırma aralığı) ya da null. Açılış ping'i null döner;
+// tanınmayan aralık değeri atılır (serbest değer DB'ye girmez).
+export function okumaAnahtari(govde) {
+  if (!govde || govde.son !== 1) return null;
+  const sure = SURE_ARALIKLARI.includes(govde.s) ? govde.s : null;
+  const kaydirma = KAYDIRMA_ARALIKLARI.includes(govde.k) ? govde.k : null;
+  return sure && kaydirma !== null ? { sure, kaydirma } : null;
+}
+
 // Admin tablosu için: satır → il slug'ı + kapsam etiketi (yalnız TR).
 export function sehirEtiketi({ ulke, bolge }) {
   if (ulke !== "TR") return { il: null, kapsam: "yurt-disi" };
@@ -98,4 +136,24 @@ export function sehirTopla(satirlar) {
     g.set(k, x);
   }
   return [...g.values()].sort((a, b) => b.toplam - a.toplam);
+}
+
+// Final ping satırları → şehir başına okuma özeti; sehirTopla çıktısına iliştirilir.
+// kisa = 10 sn altında çıkan, sonuna = sayfayı sonuna kadar kaydıran (≥%90 → 100). Yüzde, final
+// ping sayısına göredir (açılış ping'ine göre değil: reklam engelleyici/eski tarayıcı farkı karışmasın).
+export function okumaIlistir(sehirler, okumaSatirlari) {
+  const g = new Map();
+  for (const r of okumaSatirlari || []) {
+    const k = `${r.ulke}|${r.bolge}|${r.sehir}`;
+    const x = g.get(k) || { final: 0, kisa: 0, sonuna: 0 };
+    x.final += r.sayi || 0;
+    if (r.sure === "0-10") x.kisa += r.sayi || 0;
+    if (r.kaydirma === 100) x.sonuna += r.sayi || 0;
+    g.set(k, x);
+  }
+  const yuzde = (a, b) => (b ? Math.round((a / b) * 100) : null);
+  return (sehirler || []).map((s) => {
+    const o = g.get(`${s.ulke}|${s.bolge}|${s.sehir}`) || { final: 0, kisa: 0, sonuna: 0 };
+    return { ...s, okuma: { final: o.final, kisaYuzde: yuzde(o.kisa, o.final), sonunaYuzde: yuzde(o.sonuna, o.final) } };
+  });
 }
