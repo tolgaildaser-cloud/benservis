@@ -36,12 +36,12 @@ images:
   coverAlt: "Pil simgesi neredeyse boş görünen bir akıllı telefonun sade çizimi"
   steps:
     - "Yeni kutusunun yanında duran, ekranında dönen yükleme simgesi olan telefon çizimi"
-    - "Pencere kenarında tutulan, ekranında sinyal çubukları dolan telefonu tutan buğday tenli sade siluet el"
-    - "Hızlı paneldeki Wi-Fi ve Bluetooth simgelerine dokunan buğday tenli sade siluet el"
+    - "Pencere kenarında tutulan, ekranında sinyal çubukları dolan telefonu tutan beyaz eldivenli sade siluet el"
+    - "Hızlı paneldeki Wi-Fi ve Bluetooth simgelerine dokunan beyaz eldivenli sade siluet el"
     - "Ekranında süpürge benzeri temizlik simgesi ve onay işareti görünen telefon çizimi"
     - "Uygulama simgelerinin üzerinde küçük ay simgeleri görünen telefon ekranı çizimi"
     - "Durum çubuğunda yaprak biçimli tasarruf simgesi görünen telefon çizimi"
-    - "Uygulama simgesini çöp kutusuna sürükleyen buğday tenli sade siluet el"
+    - "Uygulama simgesini çöp kutusuna sürükleyen beyaz eldivenli sade siluet el"
     - "Ekranında pil simgesi ve tarama çizgileri görünen tanılama ekranı çizimi"
 ---
 

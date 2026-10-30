@@ -36,13 +36,13 @@ images:
   coverAlt: "Masada duran, ekranı donmuş görünen bir akıllı telefonun sade çizimi"
   steps:
     - "Ekranında boş bir uyarı kutusu ve iki düğme görünen telefon çizimi"
-    - "Ekranı alttan yukarı kaydıran buğday tenli sade siluet el"
-    - "Telefonun yan güç düğmesine basılı tutan buğday tenli sade siluet el ve yanında kum saati simgesi"
+    - "Ekranı alttan yukarı kaydıran beyaz eldivenli sade siluet el"
+    - "Telefonun yan güç düğmesine basılı tutan beyaz eldivenli sade siluet el ve yanında kum saati simgesi"
     - "Ekranında çarpı işaretli tek bir uygulama simgesi görünen telefon çizimi"
     - "Ekranında kilit ve kalkan simgesi görünen telefon çizimi"
     - "Telefondan buluta giden yedek oku ve yanında sıfırlama simgesi çizimi"
     - "Ekranında aşağı ok simgeli güncelleme çubuğu olan telefon çizimi"
-    - "Siyah ekranda yazısız menü satırları görünen ve yan tuşlarına iki parmakla basılan telefonu tutan buğday tenli sade siluet el"
+    - "Siyah ekranda yazısız menü satırları görünen ve yan tuşlarına iki parmakla basılan telefonu tutan beyaz eldivenli sade siluet el"
 ---
 
 Telefon bir anda takılıyor, ekran dokunuşa yanıt vermiyor ya da açılışta logoda kalıyor. "Xiaomi telefon donuyor" ya da "Redmi telefon donuyor" diye arayanlar için Xiaomi Türkiye'nin destek sayfasında tek bir SSS makalesi var. Xiaomi, makalenin tüm modeller için geçerli olduğunu belirtiyor. Aşağıdaki adımların hepsi bu makaleden alındı. Kendi tahminimizi eklemedik. Makalenin son bölümü servis çalışanına hitap eden bir dille yazılmış; o kısmı sana göre sadeleştirdik, anlamı değiştirmedik.

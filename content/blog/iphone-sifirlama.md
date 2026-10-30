@@ -37,7 +37,7 @@ images:
   steps:
     - "Telefondan buluta ve dizüstü bilgisayara giden iki yedek oku çizimi"
     - "Kol saati ile telefon arasındaki bağın koptuğunu gösteren kesik çizgi çizimi"
-    - "Ayarlar listesinde en alttaki satıra dokunan buğday tenli sade siluet el"
+    - "Ayarlar listesinde en alttaki satıra dokunan beyaz eldivenli sade siluet el"
     - "Ekranında küçük SIM kartı simgesi ve iki seçenek düğmesi görünen telefon çizimi"
     - "Ekranında parola noktaları ve dolan yedek çubuğu görünen telefon çizimi"
     - "Ekranında yalnız boş bir karşılama ekranı görünen telefon çizimi"
