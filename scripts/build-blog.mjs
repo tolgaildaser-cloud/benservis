@@ -723,6 +723,7 @@ const KOPRU_ARIZA = {
   "petekler-isinmiyor": "petekler-isinmiyor",
   "kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "baymak-kombi-ariza-kodlari": "ariza-kodu-veriyor",
+  "kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
   "baymak-kombi-sembolleri-ve-anlamlari": "ariza-kodu-veriyor",
   "vaillant-kombi-ariza-kodlari": "ariza-kodu-veriyor",
   "protherm-kombi-ariza-kodlari": "ariza-kodu-veriyor",
