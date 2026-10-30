@@ -40,7 +40,7 @@ images:
   steps:
     - "Televizyon kumandasındaki kaynak düğmesine basan beyaz eldivenli sade siluet el, ekranda kaynak listesi çizimi, okunur yazı yok"
     - "Televizyonun arkasındaki anten girişine kabloyu işaret eden beyaz eldivenli sade siluet el"
-    - "Kumandayla kanal taraması başlatan beyaz eldivenli sade siluet el, ekranda ilerleme çubuğu çizimi"
+    - "Kumandayla kanal taraması başlatan beyaz eldivenli sade siluet el, ekranda kanal listesi"
     - "Ekranda iki yatay çubuk gösteren sinyal bilgisi çizimi, yanında kumandaya uzanan beyaz eldivenli sade siluet el"
     - "Ekranda güç menüsü, kumandanın yön düğmesine basan beyaz eldivenli sade siluet el"
     - "Düz mavi bir televizyon ekranı ve kumandayı tutan beyaz eldivenli sade siluet el"

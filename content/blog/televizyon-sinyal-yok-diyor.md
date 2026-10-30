@@ -36,7 +36,7 @@ images:
     - "Anten kablosunu televizyonun arkasındaki girişe takan beyaz eldivenli sade siluet el"
     - "Anten kablosunu tutup yüzeyini kontrol eden beyaz eldivenli sade siluet el"
     - "Set üstü kutunun üzerindeki güç tuşuna basan beyaz eldivenli sade siluet el"
-    - "Ekrandaki sinyal çubuğuna bakan beyaz eldivenli sade siluet el ve kumanda"
+    - "Ekrandaki ayar listesine bakan beyaz eldivenli sade siluet el ve kumanda"
     - "Kumandada menü tuşuna basan beyaz eldivenli sade siluet el"
     - "Televizyonun yanında telefon simgesi olan servis çağırma çizimi"
 ---

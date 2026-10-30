@@ -37,7 +37,7 @@ images:
     - "Aynı sinyal halkasının içinde duran sade yazıcı ve dizüstü bilgisayar çizimi"
     - "Ayarlar penceresinde yazıcılar bölümünü açan beyaz eldivenli sade siluet el"
     - "Ekranda yüklü yazıcılar listesine bakan beyaz eldivenli sade siluet el"
-    - "Yazıcı satırının yanındaki ekle düğmesine basan beyaz eldivenli sade siluet el"
+    - "Ayar listesinde yazıcı satırını seçen beyaz eldivenli sade siluet el"
     - "Listede yazıcı yokken elle ekle bağlantısına dokunan beyaz eldivenli sade siluet el"
     - "Ekranda güncelleme okları dönen sade sürücü penceresi ve yanında onay işareti"
     - "Yazıcı önünde kutu ve yükleme çubuğu olan sade bilgisayar ekranı çizimi"

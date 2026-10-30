@@ -42,7 +42,7 @@ images:
     - "Ekrandaki anten tipi listesinde seçeneği işaretleyen kumandalı beyaz eldivenli sade siluet el"
     - "Ekrandaki uydu listesinde satırı seçen kumandalı beyaz eldivenli sade siluet el"
     - "Ekrandaki ayar menüsünde LNB gücünü açık konuma getiren kumandalı beyaz eldivenli sade siluet el"
-    - "Ekranda ilerleme çubuğu dolarken bekleyen, yanında saat simgesi olan beyaz eldivenli sade siluet el"
+    - "Ekranda kanal listesi açıkken bekleyen beyaz eldivenli sade siluet el"
     - "Ekrandaki tarama modu seçeneğini değiştiren kumandalı beyaz eldivenli sade siluet el"
     - "Ekrandaki uydu güncellemesi seçeneğini onaylayan kumandalı beyaz eldivenli sade siluet el"
 ---
