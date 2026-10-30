@@ -1701,7 +1701,7 @@ function kopruKapsamDenetimi(posts) {
   //    yanlış ön-doldurur. Kürasyon ilkesi: yanlış ön-doldurma, ön-doldurmamaktan kötüdür → yalnız cihaz taşır.
   //  · arcelik-firin-sembolleri-ve-anlamlari (YK #189, 28 Eki): aynı gerekçe (fırın listesinde gösterge belirtisi yok).
   //  · bosch-firin-sembolleri-ve-anlamlari (YK #189, 29 Eki): aynı gerekçe (fırın listesinde gösterge belirtisi yok).
-  const SEMBOL_ISTISNA = new Set(["vestel-firin-sembolleri-ve-anlamlari", "arcelik-firin-sembolleri-ve-anlamlari", "bosch-firin-sembolleri-ve-anlamlari"]);
+  const SEMBOL_ISTISNA = new Set(["vestel-firin-sembolleri-ve-anlamlari", "arcelik-firin-sembolleri-ve-anlamlari", "bosch-firin-sembolleri-ve-anlamlari", "beko-firin-sembolleri-ve-anlamlari"]);
   const sembolYazisi = (p) => /sembolleri-ve-anlamlari$/.test(p.slug || "");
   const sembolKacan = posts.filter((p) => sembolYazisi(p) && !KOPRU_ARIZA[p.slug] && !SEMBOL_ISTISNA.has(p.slug));
   if (sembolKacan.length) {
