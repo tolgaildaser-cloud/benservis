@@ -35,7 +35,7 @@ images:
     - "Ekranda yanıp sönen petek simgesi ve yanında radyatör çizimi"
     - "Ekranda musluk simgesi ve yanında akan su damlası çizimi"
     - "Ekranda küçük alev simgesi ve yanında kombinin gövdesi çizimi"
-    - "Ekranda basınç göstergesi simgesi, yanında yeşil bölgede duran ibreli gösterge"
+    - "Ekranda basınç göstergesi simgesi, yanında ibresi orta bölgede duran gösterge"
     - "Ekrandaki uyarı simgesi ve yanında telefon simgesi olan servis çağırma çizimi"
 ---
 

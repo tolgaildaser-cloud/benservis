@@ -42,7 +42,7 @@ images:
     - "Klima ekranını telefonla fotoğraflayan beyaz eldivenli sade siluet el"
     - "Klima iç ünitesinin filtre kapağını kaldırıp kirli filtreyi gösteren beyaz eldivenli sade siluet el"
     - "Kumandada mod tuşuna basan beyaz eldivenli sade siluet el, yanında iç ve dış ünite çizimi"
-    - "İç ünite ile dış üniteyi birbirine bağlayan kablo çizimi, ortasında kesik işareti"
+    - "Priz ve kablo çizimi, kabloyu kontrol etmeyi gösteren işaret"
     - "Elektrik kartı çizimi üzerinde uyarı üçgeni, yanında servis çantası simgesi"
     - "Dış ünitede karlı bir kanat ve buz çözme buharı çizimi"
     - "Not defterine kod ve model bilgisini yazan beyaz eldivenli sade siluet el"

@@ -41,7 +41,7 @@ images:
   coverAlt: "Duvara asılı beyaz split klima iç ünitesi, çevresinde yumuşak ses dalgası çizgileri"
   steps:
     - "Telefonunu klimaya doğru tutup sesi kaydeden beyaz eldivenli sade siluet el"
-    - "Klima iç ünitesinin içinden akan suyu ve boruyu gösteren kesit çizim, yanında dalga çizgileri"
+    - "Klima iç ünitesi ve yanında su damlası simgesi"
     - "Duvar panelinin ısınıp soğurken hafifçe genleşmesini gösteren ok çizimi"
     - "Soğutucu akışın yön değiştirdiği boru çizimi, yanında ince ıslık çizgileri"
     - "Klima içinde küçük bir valf ve fan, yanında kısa tık işaretleri"

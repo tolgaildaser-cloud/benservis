@@ -40,7 +40,7 @@ images:
     - "Sandık dondurucunun tahliye kapağını yerine bastıran beyaz eldivenli sade siluet el"
     - "Kapak contasını parmağıyla yoklayan beyaz eldivenli sade siluet el"
     - "Dondurucu ile ocak arasında açık bırakılmış boşluğu gösteren sade çizim"
-    - "İç duvardaki buz tabakasının kalınlığını yoklayan beyaz eldivenli sade siluet el"
+    - "İç duvardaki buz tabakasını büyüteçle inceleyen çizim"
     - "Prizden fişi çeken beyaz eldivenli sade siluet el, yanında kapağı açık boş dondurucu"
 ---
 

@@ -36,7 +36,7 @@ images:
   coverAlt: "Ön yüklemeli çamaşır makinesinin kapağı ve kapak kilidi simgesi yanan kontrol paneli"
   steps:
     - "Açık kapağın kenarında sıkışmış çorabı çıkaran beyaz eldivenli sade siluet el"
-    - "Kapağı kilit sesiyle kapatan beyaz eldivenli sade siluet el, yanında ses dalgası çizimi"
+    - "Kapağı kapatan beyaz eldivenli sade siluet el, yanında ses dalgası çizimi"
     - "Panelde kapak açık uyarı simgesi yanan çamaşır makinesi ve ekrana bakan beyaz eldivenli sade siluet el"
     - "Panelde asma kilit biçiminde kapak simgesi ve yanındaki ok işaretleri"
     - "Kum saati simgesi ve kapağa dokunmadan bekleyen beyaz eldivenli sade siluet el"
