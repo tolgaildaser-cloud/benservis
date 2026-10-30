@@ -265,7 +265,7 @@ export const CIHAZ_MARKALARI = {
   // Genel adresi telefonu da kapsayan marka (Apple · Samsung · Xiaomi) doğrudan,
   // diğerleri `cihazOzel` ile girer. ⛔ Bilerek dışarıda: Huawei (ürün listesi, kılavuz değil) ·
   // Vivo (destek ana sayfası) · OnePlus (İspanyolca sayfa) · TCL (kılavuz yalnız TV) · Asus
-  // (sayfa içerik vermedi) · Infinix (liste boş) · Realme (kılavuz sayfası yok) · Reeder (429).
+  // (sayfa içerik vermedi) · Infinix · Reeder (yalnız SSS var, kılavuz değil) · Realme (kılavuz sayfası yok).
   "Telefon / Tablet": ["Apple", "Casper", "General Mobile", "Honor", "Nokia", "Omix", "Oppo",
     "Samsung", "Tecno", "Xiaomi"].sort(trSort),
   "Küçük Ev Aletleri": [

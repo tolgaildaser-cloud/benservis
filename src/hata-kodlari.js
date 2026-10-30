@@ -3485,7 +3485,33 @@ export const HATA_KODU_KATMANI = {
   // air fryer "Mikrodalga / Air Fryer" cihazında kalır ve belgenin üretici bağlantısı doğrulanmadı).
   // ── YK #192 (29 Eki 2026): TEŞHİSSİZ İÇERİK KATEGORİSİ — Telefon / Tablet. Küçük Ev
   // Aletleri ile aynı kural: boşken /tamir/telefon-tablet/ basılmaz; giriş PAZ föyünden (#88).
-  "Telefon / Tablet": [],
+  // 29 Eki 2026, PAZ kayıt dosyası telefon-yk192/kayit/2026-10-30-hata-kodu-kayitlari.js (6 belirti).
+  "Telefon / Tablet": [
+  { giris: "Samsung Galaxy — telefon donuyor / dokunmaya tepki vermiyor", tip: "belirti",
+    anlam: "Samsung zorla yeniden başlatmayı, yazılım ve uygulama güncellemelerini kontrol etmeyi, sorunlu uygulamanın verisini silmeden önce yedek almayı öneriyor; donma sürerse iş yetkili servisindir.",
+    belge: "https://www.samsung.com/tr/support/mobile-devices/how-can-i-fix-freezing-problem-on-my-galaxy-phone/", sayfa: "",
+    yazi: "samsung-telefon-donuyor" },
+  { giris: "Xiaomi / Redmi — pil çabuk bitiyor", tip: "belirti",
+    anlam: "Xiaomi sistemi güncel tutmayı ve güç tüketimi sıralamasından en çok harcayan donanım ve yazılıma bakmayı öneriyor; telefon kullanılmıyorken de pil hızla düşüyorsa iş yetkili servisindir.",
+    belge: "https://www.mi.com/tr/support/faq/details/KA-03340/", sayfa: "",
+    yazi: "xiaomi-telefon-pil-cabuk-bitiyor" },
+  { giris: "Apple iPhone — pil çabuk bitiyor", tip: "belirti",
+    anlam: "Apple pil kullanımı grafiğinden en çok pil kullanan uygulamaları görmeyi, Düşük Güç Modu'nu ve İyileştirilmiş Pil Şarjı'nı öneriyor; Pil Sağlığı'nda servis uyarısı varsa pil değişimi iş yetkili servisindir.",
+    belge: "https://support.apple.com/tr-tr/120745", sayfa: "",
+    yazi: "iphone-pil-cabuk-bitiyor" },
+  { giris: "Apple iPhone — açılmıyor / Apple logosunda kalıyor", tip: "belirti",
+    anlam: "Apple önce bir saat şarj etmeyi ve zorla yeniden başlatmayı, logoda takılı kalıyorsa bilgisayarla kurtarma modunu öneriyor; yine açılmıyorsa iş yetkili servisindir.",
+    belge: "https://support.apple.com/tr-tr/116940", sayfa: "",
+    yazi: "iphone-acilmiyor-apple-logosunda-kaliyor" },
+  { giris: "Apple iPhone — ısınıyor / sıcaklık uyarısı", tip: "belirti",
+    anlam: "Apple kurulum, şarj ve yoğun kullanımda ısınmanın normal olduğunu, sıcaklık uyarısı çıkarsa cihazı kapatıp serin bir yerde soğumaya bırakmayı söylüyor; uyarı sık tekrar ediyorsa iş yetkili servisindir.",
+    belge: "https://support.apple.com/tr-tr/118431", sayfa: "",
+    yazi: "iphone-isiniyor" },
+  { giris: "Apple iPad — şarj olmuyor", tip: "belirti",
+    anlam: "Apple iPad'le gelen kabloyu ve USB güç adaptörünü, gerekirse farklı bir adaptör ve kabloyu denemeyi, sonra zorla yeniden başlatmayı öneriyor; yine şarj olmuyorsa iş yetkili servisindir.",
+    belge: "https://support.apple.com/tr-tr/102612", sayfa: "",
+    yazi: "ipad-sarj-olmuyor" },
+  ],
   "Küçük Ev Aletleri": [
     { giris: "De'Longhi EC685 — ikaz lambaları hızlı hızlı yanıp sönüyor", tip: "kod",
       anlam: "Hazne boş ya da cihaz kahve dağıtımı yapamıyor; su haznesi doldurulur.",
