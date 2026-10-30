@@ -827,6 +827,8 @@ const KOPRU_ARIZA = {
   //    Google'ın gördüğü hiçbir şey değişmiyor → 31 Ağu sembol ölçümü kirlenmiyor.
   "arcelik-bulasik-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "arcelik-buzdolabi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "beko-buzdolabi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "hoover-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "arcelik-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "bosch-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   // 🔁 3 Eyl 2026 — BU YORUM HATANIN KENDİSİYDİ, DÜZELTİLDİ. Eski hâli şunu diyordu:
