@@ -20,13 +20,13 @@ create table if not exists public.sayfa_okuma_sayac (
 );
 alter table public.sayfa_okuma_sayac enable row level security;
 
-create or replace function public.sayfa_okuma_artir(p_gun date, p_ulke text, p_bolge text, p_sehir text, p_tur text, p_sure text, p_kaydirma smallint)
+create or replace function public.sayfa_okuma_artir(p_gun date, p_ulke text, p_bolge text, p_sehir text, p_tur text, p_sure text, p_kaydirma integer)
 returns void language sql as $$
   insert into public.sayfa_okuma_sayac (gun, ulke, bolge, sehir, tur, sure, kaydirma, sayi)
-  values (p_gun, coalesce(p_ulke, ''), coalesce(p_bolge, ''), coalesce(p_sehir, ''), p_tur, p_sure, p_kaydirma, 1)
+  values (p_gun, coalesce(p_ulke, ''), coalesce(p_bolge, ''), coalesce(p_sehir, ''), p_tur, p_sure, p_kaydirma::smallint, 1)
   on conflict (gun, ulke, bolge, sehir, tur, sure, kaydirma) do update set sayi = public.sayfa_okuma_sayac.sayi + 1;
 $$;
-revoke all on function public.sayfa_okuma_artir(date, text, text, text, text, text, smallint) from public, anon, authenticated;
+revoke all on function public.sayfa_okuma_artir(date, text, text, text, text, text, integer) from public, anon, authenticated;
 
 -- Kontrol: tablo boş başlar (0 beklenir).
 select count(*) as okuma_satir from public.sayfa_okuma_sayac;
