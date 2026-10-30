@@ -92,6 +92,8 @@ Bu konuda kılavuzlar ayrışıyor. Arçelik'e göre tezgâh yüksekliği uyguns
 
 Kurulumdan sonra su tankı uyarısı yanıyorsa: [Kurutma makinesi su tankı dolu uyarısı](/blog/kurutma-makinesi-su-tanki-dolu-uyarisi/). Filtre bakımı için: [Kurutma makinesi filtre ve kondenser temizliği](/blog/kurutma-makinesi-filtre-ve-kondenser-temizligi/).
 
+**İlgili yazı:** [Kurutma makinesi çamaşır makinesinin üstüne konur mu?](/blog/kurutma-makinesi-camasir-makinesinin-ustune-konur-mu/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. Makinenin markası ve modeli ne, kılavuzu elinde mi?

@@ -87,6 +87,8 @@ Baymak Lunatec'e göre önerilen basınç 1,0 ile 1,5 bar arası; basınç 0,5 b
 
 Hava almak her soğuk peteği düzeltmez. Peteğin hangi kısmının soğuk olduğu, hangi katta sorun olduğu farklı sebeplere işaret eder. Bu ayrım [petekler ısınmıyor](/blog/petekler-isinmiyor/) yazısında. Basınç her hava almadan sonra hızla düşüyorsa [kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) yazısına geç.
 
+**İlgili yazılar:** [Kombi su ekleme nasıl yapılır: 6 markanın kılavuzuyla](/blog/kombi-su-ekleme-nasil-yapilir/) · [Kombi kaç derece olmalı: üretici kılavuzlarına göre ayar](/blog/kombi-kac-derece-olmali/)
+
 ## Servis çağırmadan önce üç not
 
 1. Hangi radyatörün, hangi katta soğuk kaldığını yaz.

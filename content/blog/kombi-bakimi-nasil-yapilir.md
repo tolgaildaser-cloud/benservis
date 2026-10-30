@@ -98,6 +98,8 @@ Bosch'un kılavuzuna göre sisteme sık su ekleniyorsa bu, sistemde su kaçağı
 
 [Kombi basıncı kaç olmalı?](/blog/kombi-basinci-kac-olmali/) · [Kombi genleşme tankı](/blog/kombi-genlesme-tanki/) · [Petekler ısınmıyor](/blog/petekler-isinmiyor/) · [Kombi yazın kapatılır mı?](/blog/kombi-yazin-kapatilir-mi/)
 
+**İlgili yazı:** [Petek havası nasıl alınır: kombi kılavuzlarına göre adımlar](/blog/petek-havasi-nasil-alinir/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. Göstergedeki basıncı ve en son ne zaman su eklediğini not et.

@@ -83,6 +83,8 @@ Belgeleri birlikte okuyunca suyun geldiği yerler şöyle sıralanıyor:
 
 Ventilden su geliyorsa: [Kombi emniyet ventili ve su basıncı sensörü](/blog/kombi-emniyet-ventili-ve-presostat/). Kombinin altından damlıyorsa: [Kombi contası ve conta seti](/blog/kombi-contasi-ve-conta-seti/). Basınç ısınınca yükseliyorsa: [Kombi genleşme tankı](/blog/kombi-genlesme-tanki/). Basınç sürekli düşüyorsa: [Kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/).
 
+**İlgili yazı:** [Petek havası nasıl alınır: kombi kılavuzlarına göre adımlar](/blog/petek-havasi-nasil-alinir/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. Suyun hangi borudan ya da noktadan geldiğini, damla mı akış mı olduğunu not et.

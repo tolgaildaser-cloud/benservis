@@ -87,6 +87,8 @@ LG'nin kılavuzu kapak yönünün değiştirilebildiğini söylüyor. Ancak maki
 
 Kurutma makinesinden ayrı bakım için: [Kurutma makinesi filtre ve kondenser temizliği](/blog/kurutma-makinesi-filtre-ve-kondenser-temizligi/). Su tankı uyarısı için: [Kurutma makinesi su tankı dolu uyarısı](/blog/kurutma-makinesi-su-tanki-dolu-uyarisi/).
 
+**İlgili yazı:** [Kurutma makinesi nasıl kurulur: kılavuzlara göre hazırlık](/blog/kurutma-makinesi-nasil-kurulur/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. İki makinenin markası ve modeli ne, aynı üreticiden mi?

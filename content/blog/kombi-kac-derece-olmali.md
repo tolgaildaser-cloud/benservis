@@ -82,3 +82,5 @@ ECA'nın ekranında petek simgesi kalorifer, musluk simgesi sıcak su devresini 
 Değerler doğru ama petekler soğuksa sorun ayarda değildir. Önce [petekler ısınmıyor](/blog/petekler-isinmiyor/) yazısındaki ayrıma bak.
 
 Belirtiyi benservis.com'a yaz; olası arızayı ücretsiz öğren, sonra yakınındaki puanlı servislerden birini çağır. Bil, gör, çağır.
+
+**İlgili yazılar:** [Kombi su ekleme nasıl yapılır: 6 markanın kılavuzuyla](/blog/kombi-su-ekleme-nasil-yapilir/) · [Petek havası nasıl alınır: kombi kılavuzlarına göre adımlar](/blog/petek-havasi-nasil-alinir/)

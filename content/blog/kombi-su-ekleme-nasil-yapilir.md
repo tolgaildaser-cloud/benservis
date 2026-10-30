@@ -87,6 +87,8 @@ Vaillant ve DemirDöküm kılavuzları ısıtma sistemine yalnız uygun kalorife
 
 Basınç çok düştüğünde birçok kombi kod gösterir. DemirDöküm ve Vaillant'ta bu kod F.22. Ayrıntısı [DemirDöküm kombi F22 hatası](/blog/demirdokum-kombi-f22-hatasi/) ve [Vaillant kombi F22 hatası](/blog/vaillant-kombi-f22-hatasi/) yazılarında. Doğru aralığın ne olduğunu [kombi basıncı kaç olmalı](/blog/kombi-basinci-kac-olmali/) yazısında, basıncın neden sürekli düştüğünü [kombi basıncı sürekli düşüyor](/blog/kombi-basinc-dusuyor/) yazısında bulabilirsin.
 
+**İlgili yazılar:** [Petek havası nasıl alınır: kombi kılavuzlarına göre adımlar](/blog/petek-havasi-nasil-alinir/) · [Kombi kaç derece olmalı: üretici kılavuzlarına göre ayar](/blog/kombi-kac-derece-olmali/)
+
 ## Servis çağırmadan önce üç not
 
 1. Kombinin marka ve modelini yaz.
