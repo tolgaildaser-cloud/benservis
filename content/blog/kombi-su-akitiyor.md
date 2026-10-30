@@ -36,7 +36,7 @@ images:
   coverAlt: "Duvarda asılı jenerik bir kombinin altında zemine düşen su damlalarının sade çizimi"
   steps:
     - "Kombinin yanındaki prizden fişi çeken beyaz eldivenli sade siluet el"
-    - "Kombi basınç göstergesi çizimi; ibre kırmızı bölgeye yakın"
+    - "Kombi basınç göstergesi çizimi; ibre üst sınıra yakın gri bölgede"
     - "Kombinin altından çıkan iki ince boru; birinin ucunda damla, beyaz eldivenli sade siluet el işaret ediyor"
     - "Doldurma vanasının kolunu kapalı konuma çeviren beyaz eldivenli sade siluet el ve onay işareti"
     - "Radyatör vanasının altını kuru bezle yoklayan beyaz eldivenli sade siluet el; zeminde küçük ıslaklık lekesi"

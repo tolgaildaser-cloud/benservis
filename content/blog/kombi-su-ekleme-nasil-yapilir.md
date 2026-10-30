@@ -33,7 +33,7 @@ faq:
 images:
   coverAlt: "Duvara asılı jenerik kombinin altında mavi doldurma vanası ve yanında basınç göstergesi çizimi"
   steps:
-    - "İbresi kırmızı bölgenin hemen üstünde duran yuvarlak basınç göstergesine bakan beyaz eldivenli sade siluet el"
+    - "İbresi alt sınırın hemen üstünde duran yuvarlak basınç göstergesine bakan beyaz eldivenli sade siluet el"
     - "Kombinin alt kısmında borular arasında işaretlenmiş mavi doldurma vanası çizimi"
     - "Radyatörün yan tarafındaki termostatik vanayı açık konuma çeviren beyaz eldivenli sade siluet el"
     - "Mavi doldurma vanasını yavaşça çeviren beyaz eldivenli sade siluet el ve yükselen ibreli gösterge"
