@@ -4,7 +4,7 @@
 // plaka→il eşlemesi kapsam ilini kaçırırsa 12 Kas raporu yanlış okunur.
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
-import { sayfaTuru, ziyaretAnahtari, sehirEtiketi, sehirTopla, PLAKA_IL, ZIYARET_BEACON_JS } from "./ziyaret-sayim.js";
+import { sayfaTuru, ziyaretAnahtari, sehirEtiketi, sehirTopla, PLAKA_IL, ZIYARET_BEACON_JS, okumaAnahtari, okumaIlistir, ziyaretBeacon } from "./ziyaret-sayim.js";
 import { KAPSAM_ILLER } from "./kapsam-iller.js";
 import handler from "../api/sayim/ziyaret.js";
 
@@ -54,7 +54,7 @@ describe("beacon", () => {
     expect(sayfaTuru("/blog/iphone-isiniyor/")).toBe("blog");
     expect(sayfaTuru("/tamir/klima/")).toBe("tamir");
     expect(sayfaTuru("/urun/abc")).toBe("urun");
-    expect(ZIYARET_BEACON_JS).toMatch(/JSON\.stringify\(\{\s*t: t\s*\}\)/);
+    expect(ZIYARET_BEACON_JS).toMatch(/gonder\(\{\s*t: t\s*\}\)/);
     expect(ZIYARET_BEACON_JS).not.toMatch(/href|search|referrer|cookie/);
   });
   it("statik şablon ve SPA girişi beacon'ı taşır", () => {
@@ -65,5 +65,56 @@ describe("beacon", () => {
     let kod;
     await handler({ method: "POST", headers: H, body: JSON.stringify({ t: "blog" }) }, { setHeader() {}, status(c) { kod = c; return this; }, end() {} });
     expect(kod).toBe(204);
+  });
+});
+
+describe("okuma ölçümü — süre + kaydırma (30 Eki 2026)", () => {
+  it("final ping yalnız aralık taşır; açılış ping'i okuma sayılmaz; serbest değer atılır", () => {
+    expect(okumaAnahtari({ t: "blog" })).toBeNull();
+    expect(okumaAnahtari({ t: "blog", son: 1, s: "0-10", k: 25 })).toEqual({ sure: "0-10", kaydirma: 25 });
+    expect(okumaAnahtari({ t: "blog", son: 1, s: "37", k: 25 })).toBeNull();
+    expect(okumaAnahtari({ t: "blog", son: 1, s: "60+", k: 33 })).toBeNull();
+  });
+
+  it("şehir başına %10 sn altı ve %sonuna kadar, final ping sayısına göre", () => {
+    const sehirler = sehirTopla([{ ulke: "TR", bolge: "34", sehir: "Kadıköy", tur: "blog", sayi: 9 }]);
+    const [k] = okumaIlistir(sehirler, [
+      { ulke: "TR", bolge: "34", sehir: "Kadıköy", sure: "0-10", kaydirma: 0, sayi: 2 },
+      { ulke: "TR", bolge: "34", sehir: "Kadıköy", sure: "60+", kaydirma: 100, sayi: 1 },
+      { ulke: "TR", bolge: "34", sehir: "Kadıköy", sure: "10-60", kaydirma: 50, sayi: 1 },
+    ]);
+    expect(k.okuma).toEqual({ final: 4, kisaYuzde: 50, sonunaYuzde: 25 });
+    expect(okumaIlistir(sehirler, [])[0].okuma.kisaYuzde).toBeNull();
+  });
+
+  it("tarayıcıda: açılışta 1 ping, gizlenince TEK final ping (aralıklarla), ikinci gizlenme ping atmaz", () => {
+    const gidenler = [];
+    const dinle = {};
+    const doc = {
+      visibilityState: "visible",
+      documentElement: { scrollHeight: 3000, clientHeight: 1000, scrollTop: 0 },
+      addEventListener: (ad, f) => { dinle["doc:" + ad] = f; },
+    };
+    const eski = { location: globalThis.location, document: globalThis.document, navigator: globalThis.navigator, addEventListener: globalThis.addEventListener, scrollY: globalThis.scrollY };
+    Object.defineProperty(globalThis, "location", { value: { pathname: "/blog/x/" }, configurable: true });
+    Object.defineProperty(globalThis, "document", { value: doc, configurable: true });
+    Object.defineProperty(globalThis, "navigator", { value: { sendBeacon: (u, b) => { gidenler.push(b); return true; } }, configurable: true });
+    globalThis.addEventListener = (ad, f) => { dinle["win:" + ad] = f; };
+    globalThis.scrollY = 2000; // en alta inmiş
+    const pencereVardi = "window" in globalThis; if (!pencereVardi) globalThis.window = globalThis;
+    try {
+      ziyaretBeacon();
+      expect(gidenler).toHaveLength(1);
+      doc.visibilityState = "hidden"; dinle["doc:visibilitychange"]();
+      dinle["win:pagehide"]();
+      expect(gidenler).toHaveLength(2);
+    } finally {
+      for (const [k, v] of Object.entries(eski)) Object.defineProperty(globalThis, k, { value: v, configurable: true, writable: true });
+      if (!pencereVardi) delete globalThis.window;
+    }
+    return Promise.all(gidenler.map((b) => b.text())).then(([ac, son]) => {
+      expect(JSON.parse(ac)).toEqual({ t: "blog" });
+      expect(JSON.parse(son)).toEqual({ t: "blog", son: 1, s: "0-10", k: 100 });
+    });
   });
 });
