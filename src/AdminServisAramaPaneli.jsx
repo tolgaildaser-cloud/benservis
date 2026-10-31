@@ -3,15 +3,10 @@
 // (api/admin/servis-arama.js). Soru: kullanıcı nerede servis arıyor ve orada dizinimiz var mı?
 // İkinci tablo: sayfa-şehir sayacı (api/admin/sehir-sayac.js) — ziyaretçi hangi şehirden, il kapsamda mı.
 import React, { useState, useEffect } from "react";
-import { NAVY as INK, BLUE, SLATE, HAIR as LINE } from "./theme.js";
+import { NAVY as INK, SLATE, HAIR as LINE } from "./theme.js";
 import { KAPSAM_ILLER } from "./kapsam-iller.js";
 
-const bugun = () => new Date().toISOString().slice(0, 10);
-const gunOnce = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
-
-export default function AdminServisAramaPaneli({ sir, onYetkisiz }) {
-  const [from, setFrom] = useState(gunOnce(14));
-  const [to, setTo] = useState(bugun());
+export default function AdminServisAramaPaneli({ sir, from, to, yenile, onYetkisiz }) {
   const [veri, setVeri] = useState(null);
   const [sehir, setSehir] = useState(null);
   const [durum, setDurum] = useState("bosta");
@@ -33,10 +28,8 @@ export default function AdminServisAramaPaneli({ sir, onYetkisiz }) {
     } catch (e) { setHata(e.message); setDurum("hata"); }
   };
   useEffect(() => { cek(); // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [from, to, yenile]);
 
-  const inputS = { padding: "8px 10px", border: `1px solid ${LINE}`, borderRadius: 8, fontSize: 16, fontFamily: "inherit", marginTop: 3 };
-  const btnS = { padding: "9px 18px", background: BLUE, color: "#fff", border: "none", borderRadius: 9, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" };
   const thS = { padding: "8px 10px", color: SLATE, fontWeight: 700, whiteSpace: "nowrap", borderBottom: `1px solid ${LINE}`, textAlign: "left" };
   const tdS = { padding: "7px 10px", color: INK, whiteSpace: "nowrap", borderBottom: "1px solid #F1F5F9" };
   const gruplar = (veri?.gruplar || []).filter((g) => !yalnizDisi || !g.kapsamda);
@@ -46,16 +39,9 @@ export default function AdminServisAramaPaneli({ sir, onYetkisiz }) {
 
   return (
     <div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "flex-end", margin: "0 0 16px" }}>
-        <label style={{ fontSize: 12, color: SLATE, fontWeight: 600, display: "flex", flexDirection: "column" }}>Başlangıç
-          <input type="date" value={from} onChange={(e) => setFrom(e.target.value)} style={inputS} /></label>
-        <label style={{ fontSize: 12, color: SLATE, fontWeight: 600, display: "flex", flexDirection: "column" }}>Bitiş
-          <input type="date" value={to} onChange={(e) => setTo(e.target.value)} style={inputS} /></label>
-        <button onClick={cek} disabled={durum === "yukleniyor"} style={btnS}>{durum === "yukleniyor" ? "Çekiliyor…" : "Raporu çek"}</button>
-        <label style={{ fontSize: 13, color: INK, display: "flex", gap: 6, alignItems: "center" }}>
-          <input type="checkbox" checked={yalnizDisi} onChange={(e) => setYalnizDisi(e.target.checked)} /> Yalnız kapsam dışı
-        </label>
-      </div>
+      <label style={{ fontSize: 13, color: INK, display: "flex", gap: 6, alignItems: "center", marginBottom: 12 }}>
+        <input type="checkbox" checked={yalnizDisi} onChange={(e) => setYalnizDisi(e.target.checked)} /> Yalnız kapsam dışı
+      </label>
       {durum === "hata" && <div style={{ color: "#DC2626", fontSize: 13.5, marginBottom: 12 }}>{hata}</div>}
       {veri && (
         <>
