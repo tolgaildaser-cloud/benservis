@@ -87,6 +87,8 @@ Pil Sağlığı ekranında **maksimum pil kapasitesi** ve **en yüksek performan
 
 Güncelleme, pil önerileri, kullanım listesi, Wi-Fi, Düşük Güç Modu ve şarj ayarları kullanıcı seviyesindeki işlerdir. Bunlara rağmen pil çabuk bitiyor ya da Pil Sağlığı ekranı servis öneriyorsa sıra servise gelmiştir. Telefonun içini açmak bu listenin parçası değildir. Pil değişimi için üreticinin resmî servis sayfasına bak.
 
+**İlgili yazı:** [iPhone sıfırlama: Apple'ın fabrika ayarları adımları](/blog/iphone-sifirlama/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. **Ayarlar > Pil** ekranında en çok pil kullanan uygulamaları not et.
