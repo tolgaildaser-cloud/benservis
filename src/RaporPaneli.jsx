@@ -12,6 +12,7 @@ const AdminPazarPaneli = lazy(() => import("./AdminPazarPaneli.jsx"));
 const AdminSiparisPaneli = lazy(() => import("./AdminSiparisPaneli.jsx"));
 const AdminServisAramaPaneli = lazy(() => import("./AdminServisAramaPaneli.jsx"));
 const AdminTeshisPaneli = lazy(() => import("./AdminTeshisPaneli.jsx"));
+const AdminUyelikPaneli = lazy(() => import("./AdminUyelikPaneli.jsx"));
 
 const SEKMELER = [
   ["genel", "Genel bakış"], ["teshis", "Teşhis"], ["servis", "Servis talebi ve kapsam"], ["icerik", "İçerik ve Google"],
@@ -23,7 +24,6 @@ const VERISIZ = {
   genel: "Vercel Analytics (ziyaretçi, olaylar), Google Search Console, teshis_log, servis_arama_log, siparişler, servis başvuruları, üyeler. Bu sekme panonun 3. PR'ında bağlanır.",
   icerik: "Google Search Console CSV yüklemesi, Vercel Analytics, site sayaçları. Bu sekme panonun 4. PR'ında bağlanır.",
   yerinde: "is_talepleri, yerinde_isler, yerinde_is_log, yerinde_teknisyenler. Bu sekme panonun 5. PR'ında bağlanır.",
-  uyelik: "üyeler, cihazlar, Vercel olayları. Bu sekme panonun 5. PR'ında bağlanır.",
   sosyal: "YouTube, Instagram, TikTok, LinkedIn; API bağlantıları henüz yok. Bu sekme panonun 6. PR'ında bağlanır.",
 };
 const SUZGEC_AD = { il: "İl", ilce: "İlçe", cihaz: "Cihaz", marka: "Marka", tur: "Kaynak sayfa", gelis: "Geliş" };
@@ -144,6 +144,7 @@ export default function RaporPaneli() {
 
         <Suspense fallback={Yukleniyor}>
           {sekme === "teshis" && <AdminTeshisPaneli sir={sir} suzgec={suzgec} yenile={yenile} onYetkisiz={yetkisiz} onSecenek={secenekAl} />}
+          {sekme === "uyelik" && <AdminUyelikPaneli yenile={yenile} />}
           {sekme === "servis" && <AdminServisAramaPaneli sir={sir} from={suzgec.from} to={suzgec.to} yenile={yenile} onYetkisiz={yetkisiz} />}
           {sekme === "pazar" && (
             <>
