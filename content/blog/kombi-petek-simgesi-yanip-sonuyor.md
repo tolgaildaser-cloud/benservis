@@ -36,7 +36,7 @@ images:
     - "Kombi panelindeki mod tuşuna dokunan beyaz eldivenli sade siluet el, ekranda petek ve musluk simgeleri yan yana"
     - "Kombi ekranında alev simgesini işaret eden beyaz eldivenli sade siluet el"
     - "Ekranda yanıp sönen musluk simgesi, yanında sabit duran petek simgesi ve onları gösteren beyaz eldivenli sade siluet el"
-    - "Yuvarlak basınç göstergesini işaret eden beyaz eldivenli sade siluet el, ibre yeşil bölgede"
+    - "Duvar tipi kombi ve yanında yuvarlak basınç göstergesi çizimi"
     - "Ekrandaki harf ve rakam kodunu not defterine yazan beyaz eldivenli sade siluet el"
     - "Telefon ve kombi kullanma kılavuzu simgesi yanında duran beyaz eldivenli sade siluet el"
 ---

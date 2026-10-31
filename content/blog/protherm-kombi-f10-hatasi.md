@@ -36,9 +36,9 @@ images:
   steps:
     - "Kombinin dijital ekranını gösteren beyaz eldivenli sade siluet el, ekranda soyut bir kod ve basınç çubuğu"
     - "Yuvarlak basınç göstergesini işaret eden beyaz eldivenli sade siluet el, ibre alt bölgede"
-    - "Radyatörün yan tarafındaki termostatik vanayı açık konuma çeviren beyaz eldivenli sade siluet el"
+    - "Kombi ve yanında vanaya uzanan beyaz eldivenli sade siluet el"
     - "Soğuk su borusundaki mavi doldurma vanasını sola çeviren beyaz eldivenli sade siluet el, yanında yükselen ibreli gösterge"
-    - "Mavi doldurma vanasını sağa çevirerek kapatan beyaz eldivenli sade siluet el, gösterge yeşil bölgede"
+    - "Kombi ve yanında vanaya uzanan beyaz eldivenli sade siluet el"
     - "Radyatörün üst köşesindeki hava alma vidasının altında bez tutan beyaz eldivenli sade siluet el"
     - "Kombi ekranındaki basınç değerine yeniden bakan beyaz eldivenli sade siluet el"
 ---

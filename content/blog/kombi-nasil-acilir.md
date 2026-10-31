@@ -34,7 +34,7 @@ images:
     - "Kombinin yanında telefon simgesi ve servis simgesi olan sade çizim"
     - "Kombinin gaz borusu üzerindeki kollu vanayı çeviren beyaz eldivenli sade siluet el"
     - "Kombinin altındaki vanalardan birini akış yönüne çeviren beyaz eldivenli sade siluet el"
-    - "İbresi yeşil bölgede duran yuvarlak basınç göstergesine bakan beyaz eldivenli sade siluet el"
+    - "Duvar tipi kombi ve yanında yuvarlak basınç göstergesi çizimi"
     - "Kombinin ön panelindeki açma tuşuna basan beyaz eldivenli sade siluet el, ekran yanıyor"
     - "Ekranda radyatör ve musluk simgesi yanarken tuşa dokunan beyaz eldivenli sade siluet el"
 ---
