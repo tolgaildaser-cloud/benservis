@@ -36,7 +36,7 @@ images:
   coverAlt: "Kapağı açık, boşaltılmış sade bir sandık derin dondurucu ve yanında bez ile ılık su kabı"
   steps:
     - "Dondurucunun fişini prizden çeken beyaz eldivenli sade siluet el"
-    - "Donmuş paketleri soğuk saklama kutusuna yerleştiren beyaz eldivenli sade siluet el"
+    - "Dondurucudan yandaki saklama kutusuna giden ok çizimi"
     - "Sepeti dondurucudan dışarı çıkaran beyaz eldivenli sade siluet el"
     - "Nemli bezle iç duvarı silen beyaz eldivenli sade siluet el"
     - "Kapak contasının körük aralarını bezle silen beyaz eldivenli sade siluet el"

@@ -39,8 +39,8 @@ faq:
 images:
   coverAlt: "Banyo duvarına asılı beyaz bir elektrikli termosifon ve ön yüzündeki küçük gösterge paneli"
   steps:
-    - "Termosifonun yanında kapağı kapalı alet çantasıyla bekleyen servis teknisyeni silueti, yüz yok"
-    - "Açık sıcak su musluğundan akan su ve yanında termosifon çizimi"
+    - "Termosifon ve yanında kapalı alet çantası çizimi"
+    - "Termosifon ve yanında vanaya uzanan beyaz eldivenli sade siluet el"
     - "Termosifonun şalterine uzanan beyaz eldivenli sade siluet el ve yanan güç ışığı"
     - "Termosifon panelindeki artı ve eksi düğmelerine basan beyaz eldivenli sade siluet el"
     - "Termosifon panelinde sönmüş ısıtıcı ışığı ve yanan sıcak su hazır ışığı çizimi"

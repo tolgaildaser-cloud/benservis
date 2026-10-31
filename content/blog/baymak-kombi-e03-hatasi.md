@@ -33,7 +33,7 @@ faq:
 images:
   coverAlt: "Duvara asılı jenerik beyaz kombinin ekranında soyut bir uyarı göstergesi, yanında yuvarlak basınç göstergesi ve reset tuşuna uzanan beyaz eldivenli sade siluet el"
   steps:
-    - "Açık bir pencerenin yanında duran duvar tipi kombi çizimi ve pencereyi işaret eden beyaz eldivenli sade siluet el"
+    - "Duvar tipi kombi ve yanında açık pencere çizimi"
     - "Kombi panelindeki ekranı gösteren beyaz eldivenli sade siluet el ve yanıp sönen uyarı göstergesi"
     - "Yuvarlak basınç göstergesini işaret eden beyaz eldivenli sade siluet el, ibre yeşil bölgede"
     - "Kombi panelindeki reset tuşuna basan beyaz eldivenli sade siluet el"

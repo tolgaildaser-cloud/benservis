@@ -33,7 +33,7 @@ faq:
 images:
   coverAlt: "Duvara asılı jenerik kombinin kontrol panelinde yanıp sönen uyarı simgesi ve yanında beyaz eldivenli sade siluet el"
   steps:
-    - "Pencereyi açan beyaz eldivenli sade siluet el ve yanında kapalı konumdaki gaz vanası çizimi"
+    - "Duvar tipi kombi ve yanında açık pencere çizimi"
     - "Kombinin ekranında yanıp sönen uyarı simgesine bakan beyaz eldivenli sade siluet el"
     - "Kontrol panelindeki iki tuşa aynı anda basan beyaz eldivenli sade siluet el"
     - "Dokunmatik ekrandaki arıza numarasını gösteren beyaz eldivenli sade siluet el ve yanında not defteri"

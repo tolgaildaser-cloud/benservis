@@ -35,7 +35,7 @@ images:
   steps:
     - "Kombi ekranındaki kodu gösteren beyaz eldivenli sade siluet el, ekranda soyut bir harf ve rakam kodu"
     - "Kombinin altında borular arasındaki sarı kollu gaz vanasını gösteren beyaz eldivenli sade siluet el"
-    - "Yuvarlak basınç göstergesini işaret eden beyaz eldivenli sade siluet el, ibre yeşil bölgede"
+    - "Duvar tipi kombi ve yanında yuvarlak basınç göstergesi çizimi"
     - "Kombi panelindeki reset tuşuna basan beyaz eldivenli sade siluet el"
     - "Kombi ekranına bakan beyaz eldivenli sade siluet el, ekranda beliren alev simgesi"
     - "Telefon ve kombi kullanım kılavuzunu yan yana tutan beyaz eldivenli sade siluet el"
