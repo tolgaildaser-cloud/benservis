@@ -52,6 +52,12 @@ images:
     - "Akan suyun altında fırçalanan pompa filtresi ve filtreden çıkan tüy, düğme, bozuk para"
     - "Yarım turda kalmış ve altından damlayan filtre ile sonuna kadar çevrilmiş filtrenin karşılaştırması"
     - "Kısa program kadranı ve denemenin iki sonucu: program ilerliyor ya da aynı noktada duruyor"
+video:
+  youtubeId: "rbCq0iRfm7A"
+  title: "Bosch çamaşır makinesi E18 hatası: su gitmiyorsa ne yapmalı?"
+  description: "Bosch çamaşır makinesinde E18 hatasında su tahliye edilemez: hortum, sifon, acil boşaltma ve pompa filtresi kontrolü."
+  uploadDate: "2026-10-31T04:24:00Z"
+  duration: "PT52S"
 ---
 
 Program bitti sandın, kapağı açmaya gittin ama kilit açılmadı; camdan bakınca kazanın dibinde su duruyor. Panelde ise **E18** yazıyor. Kısa cevap: Bosch'un kendi destek sayfasına göre E18, **makinenin atık suyu tahliye edemediğini** gösterir. Bosch'un saydığı sebepler **tıkanmış pompa** ve **bükülmüş tahliye hortumudur**; şirket bu sorunun çoğu zaman kullanıcı tarafından çözülebildiğini de yazıyor. Aynı arıza bazı modellerde **F18** ya da **d02** olarak görünür.

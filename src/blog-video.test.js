@@ -212,6 +212,7 @@ describe("gerçek içerik (content/blog)", () => {
       "vestel-buzdolabi-sogutmuyor": "aJb3SdPh64Y", // 23 Eki 2026, PAZ yayın paketi (YK #134)
       "bosch-sarjli-supurge-cekmiyor": "bkcm7z96mek", // 24 Eki 2026, PAZ yayın paketi (YK #134)
       "siemens-bulasik-makinesi-sembolleri-ve-anlamlari": "EVISHwjfpHo", // 26 Eki 2026, PAZ yayın paketi (YK #134)
+      "bosch-camasir-makinesi-e18-hatasi": "rbCq0iRfm7A", // 31 Eki 2026, PAZ yayın paketi (YK #134)
     });
   });
   it("tüm video kayıtları denetimden geçer", () => {
