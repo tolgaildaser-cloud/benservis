@@ -124,4 +124,11 @@ describe("kapsam kilidi", () => {
     expect(p).toContain("Henüz veri yok.");
     for (const k of ["genel", "teshis", "servis", "icerik", "pazar", "yerinde", "uyelik", "sosyal"]) expect(p).toContain(`["${k}", "`);
   });
+  it("üye sayı ucu yalnız count döner, satır okumaz, 1 saat önbellekli", () => {
+    const u = oku("../api/istatistik/uyeler.js");
+    expect(u).not.toMatch(/ad,|eposta|email|telefon/i);
+    expect(u.match(/head: true/g)).toHaveLength(3);
+    expect(u).toContain('"public, max-age=3600"');
+    expect(u).toContain("withRateLimit");
+  });
 });
