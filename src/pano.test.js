@@ -126,7 +126,7 @@ describe("kapsam kilidi", () => {
   });
   it("üye sayı ucu yalnız count döner, satır okumaz, 1 saat önbellekli", () => {
     const u = oku("../api/istatistik/uyeler.js");
-    expect(u).not.toMatch(/ad,|eposta|email|telefon/i);
+    expect(u.match(/\.select\("[^"]*"/g)).toEqual(['.select("id"', '.select("id"', '.select("id"']);
     expect(u.match(/head: true/g)).toHaveLength(3);
     expect(u).toContain('"public, max-age=3600"');
     expect(u).toContain("withRateLimit");
