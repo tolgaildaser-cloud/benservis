@@ -17,7 +17,7 @@ const ACILMAYAN = new Set([
   "https://www.electrolux.com.tr/services/eml/asset/11ec906c-2b6e-4688-bd4b-b8812b6673fd/E4RM3Q/3cab0ab9-beb3-464f-8642-21303ec7754e/ORIGINAL/3cab0ab9-beb3-464f-8642-21303ec7754e.pdf",
   "https://www.ferroli.com.tr/docs/bluehelix-trio-kullanim-kilavuzu-715g5.pdf"
 ]);
-const ELENEN = /bilerek|elen|alınmadı|kullanılmadı|\b40[34]\b|başka model/i;
+const ELENEN = /b[iİı]lerek|\belen|al[ıi]nmad[ıi]|kullan[ıi]lmad[ıi]|\b40[34]\b|başka model/iu;
 
 export function kaynakUrlleri(ham) {
   const fm = /^---\r?\n([\s\S]*?)\r?\n---/.exec(ham)?.[1] || "";
