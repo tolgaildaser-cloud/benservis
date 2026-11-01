@@ -33,7 +33,7 @@ faq:
 images:
   coverAlt: "Kurutma makinesinin çekmece biçimli su tankı ve yanındaki lavabo çizimi"
   steps:
-    - "Kurutma makinesinin fişini prizden çeken beyaz eldivenli sade siluet el"
+    - "Kurutma makinesi, prize uzanan kablo ve beyaz eldivenli sade siluet el"
     - "Çekmece biçimli su tankını iki elle yatay tutup lavaboya boşaltan beyaz eldivenli sade siluet el"
     - "Tank girişindeki huniyi musluk altında tutan beyaz eldivenli sade siluet el"
     - "Küçük bir filtreyi sıcak akan suyun altında tutan beyaz eldivenli sade siluet el"

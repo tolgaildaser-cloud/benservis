@@ -35,7 +35,7 @@ faq:
 images:
   coverAlt: "Sonuna kadar açılmış fırın kapağı ve menteşe bölgesi çizimi"
   steps:
-    - "Fırının fişini prizden çeken beyaz eldivenli sade siluet el, yanında soğumuş fırın"
+    - "Fırın, prize uzanan kablo ve beyaz eldivenli sade siluet el"
     - "Sonuna kadar açılmış fırın kapağını tutan beyaz eldivenli sade siluet el"
     - "Menteşedeki kilit levyesini kaldıran beyaz eldivenli sade siluet el"
     - "Fırın kapağını kavrayıp yukarı doğru çeken beyaz eldivenli sade siluet el"

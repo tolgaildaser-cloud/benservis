@@ -36,7 +36,7 @@ images:
     - "Silme modülünü robotun arkasına tıklayana kadar iten beyaz eldivenli sade siluet el"
     - "Su deposunun kapağını açıp içine su dolduran beyaz eldivenli sade siluet el"
     - "Islatılmış silme bezini yuvasına bastırarak yerleştiren beyaz eldivenli sade siluet el"
-    - "Silme bezini musluk altında yıkayan beyaz eldivenli sade siluet el"
+    - "Robot süpürge, yanında bez tutan beyaz eldivenli sade siluet el"
     - "Su deposu kapağındaki küçük hava deliğini bezle silen beyaz eldivenli sade siluet el"
     - "Halının kenarında duran robot süpürge ve yanında telefon ekranında su akışı çubuğu çizimi"
     - "Robot süpürgenin yanında telefon simgesi bulunan servis çağırma çizimi"

@@ -35,7 +35,7 @@ images:
     - "Aküyü cihazın içine tık sesiyle iten beyaz eldivenli sade siluet el"
     - "Şarj kablosunu cihazın şarj girişine takan beyaz eldivenli sade siluet el"
     - "Kapalı duran dikey süpürgenin yanında bekleyen beyaz eldivenli sade siluet el ve küçük saat simgesi"
-    - "Toz haznesini çöp kutusunun üstünde boşaltan beyaz eldivenli sade siluet el"
+    - "Dikey süpürge, yanında filtre ve filtreyi tutan beyaz eldivenli sade siluet el"
     - "Süpürge başlığının altındaki fırçadan sarılı saçı çeken beyaz eldivenli sade siluet el"
     - "Açma kapama düğmesine basan beyaz eldivenli sade siluet el ve yanan gösterge"
     - "Dikey süpürgenin yanında telefon simgesi olan servis çağırma çizimi"
