@@ -21,6 +21,7 @@ import { hataKoduKayitlari, TIP_BASLIK, TIP_ETIKET, HATA_KODU_SIRA } from "../sr
 import { ARIZA_KUTUSU_SAYFALARI, ARIZA_KUTUSU_YK161, ARIZA_KUTUSU_YK179, KUTU_MARKA, kutuluSlug, kutuKapisi } from "../src/ariza-kutusu-sayfalari.js";
 import { videoDenetimi, videoEkle, videoLd, VIDEO_CSS, VIDEO_JS } from "./blog-video.mjs";
 import { satinAlEkle, SATIN_AL_EK } from "./blog-satin-al.mjs";
+import { kaynakUrlleri, kaynakSatiri } from "./yazi-kaynak.mjs";
 import { pazarUrunleriniGetir, pazarKabugu, urunKabugu, pazarSitemapGirdileri } from "./pazar-sayfalari.mjs";
 import { merchantFeedXml } from "./merchant-feed.mjs";
 import { nofollowEkle, nofollowSay } from "./ic-baglanti-nofollow.mjs";
@@ -306,6 +307,8 @@ th{background:${T.BG}}
    kural 28 sayfaya canlıda enjekte edilip ölçüldü: 320 ve 375'te taşma 28/28 sıfır.
    Kapsayıcı güvenlik ağıdır: bugün hiçbir tablo kutu içinde kaydırma istemiyor (ölçüldü),
    ama gelecekte gerçekten geniş bir tablo gelirse sayfa değil kendi kutusu kayar. */
+.yazi-kaynak{font-size:14px;color:#5B6B7B;margin:22px 0 0;overflow-wrap:anywhere}
+.yazi-kaynak a{color:inherit;text-decoration:underline}
 .tablo-kap{overflow-x:auto;max-width:100%;margin:18px 0}
 .tablo-kap table{margin:0}
 @media(max-width:640px){th,td{padding:8px;overflow-wrap:anywhere}}
@@ -1388,7 +1391,8 @@ const posts = serpistir(
   fs.readdirSync(CONTENT)
     .filter((f) => f.endsWith(".md"))
     .map((f) => {
-      const { data, content } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"));
+      const ham = fs.readFileSync(path.join(CONTENT, f), "utf8");
+      const { data, content } = matter(ham);
       // Paragraf/madde BAŞINDAKİ bold lead-in'e .lead sınıfı ver (blok yapılacak); cümle
       // ORTASINDAKİ bold (<p>metin <strong>) eşleşmez → inline kalır.
       // Tablolar kaydırılabilir kapsayıcıya alınır (taşma güvenlik ağı; gerekçe CSS'te .tablo-kap).
@@ -1401,7 +1405,7 @@ const posts = serpistir(
         .replace(/<(p|li)><strong>/g, '<$1><strong class="lead">')
         .replace(/<table>/g, '<div class="tablo-kap"><table>')
         .replace(/<\/table>/g, "</table></div>");
-      return { ...data, html };
+      return { ...data, html, kaynaklar: kaynakUrlleri(ham) };
     })
     .filter((p) => p.slug && p.title)
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
@@ -2078,6 +2082,7 @@ for (const p of posts) {
     author: { "@type": "Organization", name: "Benservis", url: `${SITE}/` },
     publisher: { "@type": "Organization", name: "Benservis", logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } },
     mainEntityOfPage: canonical,
+    ...(p.kaynaklar.length ? { citation: p.kaynaklar } : {}),
   };
   const crumbLd = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -2123,7 +2128,7 @@ for (const p of posts) {
   // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
   // YK #173 (b): `parca:` frontmatter'lı yazıda ilk H2 altı + gövde sonu "satın al" bağlantısı
   // (scripts/blog-satin-al.mjs); alanı olmayan yazının çıktısı bayt bayt aynı.
-  const body = `<article>${yaziBasi(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
+  const body = `<article>${yaziBasi(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${kaynakSatiri(p.kaynaklar)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
