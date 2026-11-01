@@ -2073,7 +2073,7 @@ for (const p of posts) {
   const ld = {
     "@context": "https://schema.org", "@type": "Article",
     headline: p.title, description: p.description,
-    datePublished: p.date, dateModified: p.date,
+    datePublished: p.date, dateModified: p.updated || p.date,
     inLanguage: "tr-TR", image: kapak ? `${SITE}${kapak}` : `${SITE}/og.png`,
     author: { "@type": "Organization", name: "Benservis", url: `${SITE}/` },
     publisher: { "@type": "Organization", name: "Benservis", logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } },
@@ -3221,7 +3221,10 @@ fs.writeFileSync(
     .map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`)
     .join("\n")}\n</urlset>\n`
 );
-fs.writeFileSync(path.join(DIST, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
+// Bot politikası (YK #201): arama ve eğitim botları açık; yazılı olsun diye tek tek sayılır.
+const ROBOT_ACIK = ["OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Claude-SearchBot", "Claude-User", "Googlebot", "Bingbot", "Applebot",
+  "GPTBot", "ClaudeBot", "CCBot", "Bytespider", "Google-Extended", "Applebot-Extended", "Amazonbot"];
+fs.writeFileSync(path.join(DIST, "robots.txt"), [...ROBOT_ACIK, "*"].map((b) => `User-agent: ${b}\nAllow: /\n`).join("\n") + `\nSitemap: ${SITE}/sitemap.xml\n`);
 
 // ——— ANA SAYFA ÖN-RENDER (Tolga talimatı 9 Ağu; 17 Ağu dizin okumasından önce) ———
 // SORUN: /tamir/ · /blog/ · /kilavuzlar/ bu betikten statik basılıyordu, ANA SAYFA hiç
