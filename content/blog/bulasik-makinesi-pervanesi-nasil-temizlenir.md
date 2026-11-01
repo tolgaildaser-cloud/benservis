@@ -36,7 +36,7 @@ faq:
 images:
   coverAlt: "Kapağı açık bulaşık makinesinin alt sepeti çekilmiş, tabanda alt pervane görünüyor"
   steps:
-    - "Fişi prizden çeken beyaz eldivenli sade siluet el ve yanında kapalı musluk çizimi"
+    - "Bulaşık makinesi, prize uzanan kablo ve beyaz eldivenli sade siluet el"
     - "Alt pervanenin deliklerine ışık tutarak bakan beyaz eldivenli sade siluet el"
     - "Alt pervaneyi yukarı doğru çekip çıkaran beyaz eldivenli sade siluet el"
     - "Üst pervanenin somununu sola çeviren beyaz eldivenli sade siluet el"

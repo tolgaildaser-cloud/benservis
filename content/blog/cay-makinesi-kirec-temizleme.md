@@ -40,7 +40,7 @@ images:
     - "Fişe takılı çay makinesinin yanında bekletme için duran saat çizimi"
     - "Çay makinesinin kontrol panelindeki simgeye dokunan beyaz eldivenli sade siluet el"
     - "Su ısıtıcıdaki sirkeli karışımı lavaboya boşaltan beyaz eldivenli sade siluet el"
-    - "Nemli bezle çay makinesinin dış yüzeyini silen beyaz eldivenli sade siluet el"
+    - "Çay makinesi, yanında bez tutan beyaz eldivenli sade siluet el"
     - "Çay makinesinin yanında telefon simgesi olan müşteri hizmetleri çizimi"
 ---
 
