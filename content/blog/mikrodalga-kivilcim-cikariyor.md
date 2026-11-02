@@ -90,6 +90,12 @@ Diğer ev aletlerinde "kapağı aç, içine bak" kültürü bir yere kadar çal�
 | Mika plaka delinmiş, yanık kokusu | Plaka ömrünü doldurmuş | ⛔ Kullanma, servis |
 | Temiz cihazda, cam kapla kıvılcım | İç aksam (magnetron/kanal) | ⛔ Servis |
 
+## İlgili yazılar
+
+Bu konuyla doğrudan ilgili bir yazı daha:
+
+- [Mikrodalgada hangi kaplar kullanılır?](/blog/mikrodalgada-hangi-kaplar-kullanilir/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. **Kabı sorgula:** metal, folyo, yaldız var mıydı? Cam kapla tekrar dene.

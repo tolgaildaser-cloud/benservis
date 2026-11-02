@@ -78,6 +78,14 @@ Aşağıdaki yedi adım sırayla yapılır ve hiçbiri alet ya da söküm gerekt
 
 > 💡 Koku da varsa: aynı temizlik mantığını koku tarafında anlatan [bulaşık makinesi kokusu rehberimiz](/blog/bulasik-makinesi-kokuyor/) filtre ve conta bölümünü daha ayrıntılı ele alıyor.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Beko bulaşık makinesi temiz yıkamıyor](/blog/beko-bulasik-makinesi-temiz-yikamiyor/)
+- [Siemens bulaşık makinesi temiz yıkamıyor](/blog/siemens-bulasik-makinesi-temiz-yikamiyor/)
+- [Vestel bulaşık makinesi temiz yıkamıyor](/blog/vestel-bulasik-makinesi-temiz-yikamiyor/)
+
 ## Ne zaman mutlaka servis çağırmalısın?
 
 - Kollar, filtre temiz ve tuz/parlatıcı tamken **hâlâ kötü yıkıyorsa**

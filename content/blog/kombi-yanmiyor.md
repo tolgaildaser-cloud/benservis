@@ -88,6 +88,13 @@ Kombin çalışmıyor: sıcak su yok, ısıtma soğuk — kombi **yanmıyor ya d
 
 **6. Servisin bakacağı nedenler.** Montaj ve bakım kılavuzlarının ateşleme arızası tablosunda gaz vanası dışında şunlar da var: gaz giriş basıncının çok düşük olması, yoğuşma suyu gider hattının tıkalı olması, gaz armatürü, ateşleme sistemi, topraklama ve elektronik kart. Atık gaz (baca) hattındaki bir arıza da ayrı bir kodla görünür (DemirDöküm Atron Condense'te F05). Bunların kontrolü yetkili servisin işidir.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Baymak kombi kalorifer ısıtmıyor](/blog/baymak-kombi-kalorifer-isitmiyor/)
+- [DemirDöküm kombi çalışmıyor: sıcak su da yok](/blog/demirdokum-kombi-calismiyor/)
+
 ## Servisi aramadan önce kendin kontrol et
 
 Kılavuzların kullanıcıya bıraktığı kontroller:

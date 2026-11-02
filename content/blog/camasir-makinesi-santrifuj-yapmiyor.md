@@ -163,3 +163,9 @@ Altısı da ücretsiz kontrol edilir, hiçbiri alet istemez. Önce öğren, sonr
 - 🔗 **İç link adayları (FE bağlar):** `camasir-makinesi-su-atmiyor` (tahliye bölümünden) · `camasir-makinesi-tahliye-filtresi-temizleme` (altın standart rehber — 3. maddeden) · `camasir-makinesi-ses-titresim` (terazi bölümünden) · `camasir-makinesi-tamiri-kac-para`.
 - 📖 **Rehber dönüşümü adayı:** 3. madde (tahliye filtresi) zaten canlı rehbere sahip; bu yazının **1. maddesi (yük dağıtma)** ileride `steps:` kurgusuna çevrilebilir — bakım seviyesinde, alet istemiyor, YK #31 sınırının içinde.
 - ⛔ **Kural denetimi:** bakım seviyesi korundu (kayış/kömür/rulman/kart servise bırakıldı) ✓ · suçlayıcı dil yok ✓ · fiyat yok ✓ · marka adı geçmiyor ✓ · keyword stuffing yok ✓.
+
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Beko çamaşır makinesi santrifüj yapmıyor](/blog/beko-camasir-makinesi-santrifuj-yapmiyor/)

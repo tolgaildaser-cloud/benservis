@@ -77,6 +77,7 @@ Yıkama bitti ama çamaşırlar sırılsıklam — makine suyu atamamış. Sinir
 Bazı markalar suyu boşaltamadığında ekranda ayrı bir uyarı gösterir:
 
 - [Miele çamaşır makinesi su tahliyesi uyarısı](/blog/miele-camasir-makinesi-su-tahliyesi-uyarisi/)
+- [Electrolux çamaşır makinesi su boşaltmıyor](/blog/electrolux-camasir-makinesi-su-bosaltmiyor/)
 
 ## Ne zaman mutlaka servis çağırmalısın?
 

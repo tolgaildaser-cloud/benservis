@@ -79,6 +79,12 @@ Fanlı modun tek görevi sıcak havayı fırının her köşesine eşit dağıtm
 
 ⚠️ Test **gözle ve dışarıdan** yapılır: çalışan fırının içine elini sokma, rezistansa hiçbir şeyle dokunma, testi çocuklardan uzak yap. Panel ya da taban sacı sökmek bu testin parçası değildir.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Bosch fırın buhar yapıyor: kapakta ve dolapta su damlaları](/blog/bosch-firin-buhar-yapiyor/)
+
 ## 4) Rezistans, termostat, conta — servis tarafı
 
 Kullanımı düzelttin, fan dönüyor, kızarma testi alt tarafın çalışmadığını gösteriyor — ya da tersine her şey çalışır görünürken yemekler sürekli yanıyor. Artık cihaz tarafındasın:

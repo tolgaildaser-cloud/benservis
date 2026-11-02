@@ -107,6 +107,12 @@ Kapı gözle görülür biçimde düşmüşse, açılıp kapanırken sürtüyor 
 | Kapı düşük duruyor, sürtüyor | Menteşe | ⛔ Servis |
 | Kapı tutuyor ama içeride buzlanma var | Sızıntı başka noktada olabilir | ⚠️ Testi tüm kenarlarda tekrarla |
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Samsung buzdolabı kapısı tam kapanmıyor](/blog/samsung-buzdolabi-kapisi-kapanmiyor/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. **İçeriye bak:** taşan şişe, oturmamış çekmece, hizayı aşan poşet var mı?

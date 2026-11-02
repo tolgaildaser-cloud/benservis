@@ -70,6 +70,12 @@ Aşağıdaki yedi adım sırayla yapılır; hiçbiri alet ya da söküm gerektir
 
 > 💡 Aynı conta kıvrımı işini çamaşır makinesinde de yapıyoruz: [çamaşır makinesi koku rehberimiz](/blog/camasir-makinesi-kokuyor/) contayı ve deterjan çekmecesini adım adım anlatıyor.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Bosch buzdolabı buzlanma yapıyor: buz çözme](/blog/bosch-buzdolabi-buzlanma-yapiyor/)
+
 ## Ne zaman servis çağırmalısın?
 
 - Conta ve alışkanlıklar düzgün olduğu hâlde **arka duvar sürekli kalın buz tutuyorsa** (defrost)
