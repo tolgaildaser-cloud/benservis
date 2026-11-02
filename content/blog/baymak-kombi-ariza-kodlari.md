@@ -3,7 +3,7 @@ title: "Baymak kombi arıza kodları ve anlamları"
 description: "Baymak kombi arıza kodları: E01 ateşleme, E05 fan, F37 düşük su basıncı ve diğerlerinin anlamı, güvenle kendin yapabileceklerin. Bil, gör, çağır."
 slug: "baymak-kombi-ariza-kodlari"
 date: "2026-06-19"
-updated: "2026-09-17"
+updated: "2026-11-02"
 category: "Kombi"
 # 🔴 22 Ağu 2026 — YAZI BAŞTAN YAZILDI (kod tablosu denetimi, TARAMA-1).
 # Eski hâlinde düşük su basıncı kodu "E04" diye veriliyordu ve yazının omurgası buydu:
@@ -65,7 +65,7 @@ Baymak kombin ekranında bir arıza kodu gösteriyor. Bu rehberde Baymak'ın **k
 >
 > **E05** — Fan geri besleme hatası → 🔧 servis
 
-## Baymak kombi arıza kodları
+## Baymak kombi arıza kodları ne anlama gelir?
 🛠️ = güvenle kendin · 🔧 = yetkili servis
 
 | Kod | Anlamı | Ne yapmalı |
@@ -85,7 +85,7 @@ Duotec Compact 24 ve Eco CT 20 kılavuzlarındaki tam E listesi şudur: **E01, E
 
 Sirkülasyon tarafındaki kodlar noktalı düzende gelir: **E.01.17** ve **H.01.18**.
 
-## Öne çıkan kodlar
+## En sık görülen Baymak kodlarında ne yapılır?
 
 ### F37 / H.02.07 — Düşük su basıncı (güvenle çözülür)
 Basıncı kombi soğukken oku ve serinin kılavuzundaki değerle karşılaştır:

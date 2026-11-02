@@ -3,6 +3,7 @@ title: "Bosch çamaşır makinesi E17 hatası"
 description: "Bosch çamaşır makinesi E17 (F17) hatası: su besleme süresi aşıldı. Musluk, giriş hortumu ve süzgeç temizliği Bosch kılavuzundaki sırayla."
 slug: "bosch-camasir-makinesi-e17-hatasi"
 date: "2026-09-28"
+updated: "2026-11-02"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-09-28, curl -sL -A "Mozilla/5.0" ile indirildi, hepsi HTTP 200; PDF'ler pdftotext -layout ile, sayfa ayracı \f sayılarak okundu.
@@ -86,13 +87,13 @@ Bosch'un kullanım kılavuzlarındaki tabloda E:17'nin karşısında üç madde 
 
 Kısacası E17, makinenin içinden çok **makineye gelen suyun yolunu** işaret eder. Bu yüzden kontrollerin hepsi musluk ile makinenin arka yüzü arasında kalır.
 
-## Suyun tersi: E18
+## E17 ile E18 arasındaki fark nedir?
 
 E17 suyun **girememesi**, E18 ise suyun **çıkamaması**dır. İki kod yan yana okunduğunda kolayca karışır. Makinenin içinde su kalmışsa ve program sıkmaya geçemiyorsa aradığın kod büyük ihtimalle E18'dir: [Bosch çamaşır makinesi E18 hatası](/blog/bosch-camasir-makinesi-e18-hatasi/). Bosch'un yayımladığı kodların tamamı için: [Bosch çamaşır makinesi hata kodları](/blog/bosch-camasir-makinesi-hata-kodlari/).
 
 Yeni nesil Bosch makinelerde su alma sorunu farklı bir kodla görünür: [Bosch çamaşır makinesi E:30-10 hatası](/blog/bosch-camasir-makinesi-e30-10-hatasi/).
 
-## Sınır nerede biter
+## Kendin çözme sınırı nerede biter?
 
 Musluk tam açık, hortum düz, süzgeç temiz ve E17 hâlâ geliyorsa Bosch kullanıcıya başka bir adım vermiyor; sıradaki yer müşteri hizmetleri ve servis randevusudur. Bosch kılavuzunun müşteri hizmetleri bölümü de onarımın eğitimli servis teknisyenleri tarafından, orijinal yedek parçalarla yapılmasını öneriyor; servisi ararken cihazın ürün numarasını (E-Nr.) ve üretim numarasını (FD) hazır tutmanı istiyor. Kılavuza göre bu bilgiler modele göre kapağın iç kısmında, servis kapağında ya da cihazın arka tarafında yazar.
 

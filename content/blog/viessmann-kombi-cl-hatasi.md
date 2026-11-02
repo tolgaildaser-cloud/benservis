@@ -3,6 +3,7 @@ title: "Viessmann kombi CL hatası"
 description: "Viessmann kombide CL ve yanıp sönen uyarı üçgeni: brülör bir arıza nedeniyle kilitlenmiş. Arıza numarasını not etme, kilidi açma ve servis sınırı."
 slug: "viessmann-kombi-cl-hatasi"
 date: "2026-09-27"
+updated: "2026-11-02"
 category: "Kombi"
 # --- Provenans (yayında görünmez) ---
 # 2026-09-27 · curl -sL -A "Mozilla/5.0" ile BU KOŞUDA indirildi, hepsi HTTP 200; pdftotext -layout ile sayfa sayfa okundu;
@@ -69,7 +70,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 > ⚡ **Kısa özet:** CL + yanıp sönen üçgen = brülör kilitlendi. Sıra şu: ok düğmeleriyle arıza numarasını gör → not et → iki ok düğmesine birlikte ~4 sn dokun → dönen çubuğu bekle. Kilidi art arda açmaya çalışma; CL geri gelirse arıza numarasıyla yetkili servis.
 
-## Önce iki görüntüyü ayır
+## Uyarı üçgeni iki farklı durumda ne anlama gelir?
 
 Kılavuzun "Ne yapmalı?" tablosu, uyarı üçgenini iki farklı satırda veriyor ve yapılacak iş bunlara göre değişiyor:
 
@@ -98,7 +99,7 @@ Kilidi açma adımı yalnız ikinci satır için. Kılavuza göre ekrandaki beya
 
 Kılavuzda bir kolaylık notu da var: brülör arızası göstergesi önce menü düğmesine **4 saniye** basılarak kapatılabilir; kilit daha sonra yukarı ve aşağı ok düğmelerine aynı anda dokunularak açılabilir.
 
-## Arıza mesajlarını sonradan sorgulamak
+## Arıza mesajları sonradan nasıl sorgulanır?
 
 Ekrandaki arıza göstergesini „OK" ile onaylayıp giriş ekranına dönebilirsin. Kılavuza göre arızayı sonradan kontrol panelinin menüsünden sorgulamak da mümkün ve **en fazla 5 arıza mesajı** gösterilebiliyor. Arıza ancak daha sonraki bir tarihte giderilebilecekse mesaj **ertesi gün saat 7:00'de** yeniden gösteriliyor. Servisi aradığında bu listedeki numaraları da okuyabilirsin.
 

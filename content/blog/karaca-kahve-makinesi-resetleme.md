@@ -3,11 +3,15 @@ title: "Karaca kahve makinesi resetleme ve kırmızı ışık"
 description: "Karaca Hatır Türk kahvesi makinesinde kırmızı ışık neden yanar, kalibrasyonla resetleme nasıl yapılır? Adımlar Karaca'nın Hatır Köz kılavuzundan."
 slug: "karaca-kahve-makinesi-resetleme"
 date: "2026-10-25"
+updated: "2026-11-02"
 category: "Küçük Ev Aletleri"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-25 PAZ alt ajanı (YK #182 Dalga 8, küme Z6, grup B). origin/main'de "karaca" slug/başlıkta yok; gövdede yalnız homend-airfryer-kullanimi ve homend-robot-supurge-resetleme (grup adı olarak). Dalga 6/7/8 klasörlerinde karaca slug'ı yok.
 # Arama kanıtı (#164, bu koşu 25 Eki, hl=tr gl=tr, _kaynak/ot-ozet.txt): "karaca kahve makinesi r" → 1. "…resetleme", 2. "…resetleme nasıl yapılır"; "karaca hatır kahve makinesi r" → 1. "…resetleme", 3. "…resetleme nasıl yapılır", 5. "karaca hatır köz kahve makinesi resetleme"; "karaca kahve makinesi k" → 1. "…kırmızı ışık hatası", 2. "…kırmızı ışık uyarısı çözümü", 4. "…kırmızı ışık uyarısı neden yanıyor"; "karaca kahve makinesi" → 2. "…resetleme", 5. "…kırmızı ışık hatası". Resetleme ve kırmızı ışık aynı kılavuz SSS'sinden karşılandığı için tek yazı. GSC: "karaca" satırı yok.
 # Belge (#88). Zincir: karaca.com ürün sayfası (200, curl; PDF adresi sayfa HTML'inde) → cdn.karaca.com (Karaca'nın CDN'i) PDF (200, application/pdf):
+#  Belge adresleri (2 Kas 2026 yeniden indirildi, HTTP 200, md5 değişmedi):
+#   KOZ https://cdn.karaca.com/brands/karaca/hatir-koz-kullanim-kilavuzu.pdf
+#   PRF https://cdn.karaca.com/image/2025/guide/karaca-hatir-perfetto-espresso-ve-turk-kahvesi-makinesi-000001000242552001-kullanim-kilavuzu.pdf
 #  (KOZ) Karaca Hatır Köz Türk Kahvesi Makinesi kullanım kılavuzu ve garanti belgesi, TR+EN+DE, 40 s., md5 f5da0a5d2bfb5ebd3939460a3a4b75bc — metin katmanı yok; tesseract -l tur OCR; TR s.3 güvenlik, s.5 pişirme, s.6 uyarılar + ışık tablosu, s.7 temizlik + SSS (kırmızı ışık / kalibrasyon). Işık tablosu ve SSS sayfa görüntüsünden de okundu.
 #  (PRF) Karaca Hatır Perfetto Espresso ve Türk Kahvesi Makinesi kılavuzu, 80 s., md5 79fedcf5d24c2ace1a699b08a4b3c17b — s.11 "4 adımda Türk kahvesi ayarları" (kalibrasyon) ve konum değişikliği notu.
 # BİLEREK YAZILMAYANLAR: Hüps, Mod, Plus, Neo, su hazneli Hatır için ayrı tuş kombinasyonu (bu koşuda ürün sayfalarında kılavuz yoktu) · kart, sensör, rezistans teşhisi (#31) · fiyat (#46).
