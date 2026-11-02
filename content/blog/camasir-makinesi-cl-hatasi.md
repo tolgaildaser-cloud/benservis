@@ -2,7 +2,7 @@
 title: "Çamaşır makinesi CL hatası ne demek? Vestel, LG, Arçelik"
 description: "Çamaşır makinesinde CL arıza değil, çocuk kilidi göstergesidir. Vestel ve LG kılavuzlarına göre kilidi kapatma tuşları; Arçelik'te kilit Con yazar."
 slug: "camasir-makinesi-cl-hatasi"
-date: "2026-11-03"
+date: "2026-11-02"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-02 Pzt PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK-TUM.md #200 [HK] "çamaşır makinesi CL hatası / CL ne demek"). Slug origin/main content/blog/'da yok; yakın yazılar: camasir-makinesi-kapak-kilidi-arizasi, camasir-makinesi-programi-iptal-etme, vestel-/lg-camasir-makinesi-sembolleri-ve-anlamlari (CL'yi ayrı yazı olarak anlatan yok).

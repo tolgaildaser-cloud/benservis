@@ -2,7 +2,7 @@
 title: "Samsung kurutma makinesi sembolleri ve anlamları"
 description: "Samsung kurutma makinesi ekranındaki çocuk kilidi, Wi-Fi, nem alarmı, su tankı ve ısı eşanjörü simgeleri ne demek? DV5000T ve DV90T kılavuzlarına göre."
 slug: "samsung-kurutma-makinesi-sembolleri-ve-anlamlari"
-date: "2026-11-03"
+date: "2026-11-02"
 category: "Kurutma makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-02 Pzt PAZ alt ajanı (YK #189 sembol kuyruğu: SEMBOL-ENVANTERI.md #8 Samsung kurutma, YAZILABİLİR; YK #197). Slug origin/main content/blog/'da yok; yakın Samsung kurutma yazıları: samsung-kurutma-makinesi-hata-kodlari (bilgi kodları), -filtre-temizligi, -dc-hatasi, -ses-yapiyor, -kokuyor, -kurutmuyor. Sembol yazısı yok.

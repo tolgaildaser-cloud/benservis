@@ -2,7 +2,7 @@
 title: "Şofben neden ısıtmaz? DemirDöküm, ECA ve Baymak kılavuzları"
 description: "Şofben neden ısıtmaz? DemirDöküm, Vaillant, ECA ve Baymak kılavuzlarına göre gaz vanası, elektrik, sıcaklık ayarı, su akışı ve RESET kontrolleri."
 slug: "sofben-neden-isitmaz"
-date: "2026-11-03"
+date: "2026-11-02"
 category: "Kombi/Termosifon"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-02 Pzt PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK-TUM.md #207 [BL] "şofben neden ısıtmaz / su ısıtmıyor / sıcak su vermez"). Slug origin/main content/blog/'da yok. Yakın markalı yazılar: ariston-sofben-a1-hatasi, baymak-sofben-a01-hatasi, demirdokum-sofben-f4-arizasi, eca-sofben-ariza-kodlari, vaillant-sofben-ariza-kodlari (kod yazıları; genel belirti yazısı yok). termosifon-suyu-isitmiyor elektrikli cihaz, çakışmaz.
