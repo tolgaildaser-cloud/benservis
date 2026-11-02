@@ -2189,6 +2189,7 @@ if (kayanSlug.length) {
 // tamir merkezi"): /tamir/ artık "Benservis ustası" setini kullanıyor, /blog/ ve
 // /kilavuzlar/ ise insansız sette KALIYOR. Üçü aynı `merkez-gorsel/` kökünü paylaştığı
 // için ayrım kök listesiyle yapıldı — ikinci bir kategori listesi açılmadı.
+const fotosuzKategori = new Set();
 const merkezFotosu = (slug, oncelik = []) => {
   for (const kok of [...oncelik, "merkez-gorsel", "anasayfa/cihaz"]) {
     for (const uz of GORSEL_UZANTILARI) {
@@ -2196,6 +2197,7 @@ const merkezFotosu = (slug, oncelik = []) => {
       if (fs.existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
     }
   }
+  fotosuzKategori.add(slug); // kart ikona düşer; build sonunda uyarı basılır
   return null;
 };
 
@@ -3338,4 +3340,5 @@ anaSayfaOnRender(tamirliKat);
   console.log(`[build-blog] ✓ iç bağlantı nofollow: parametreli ${sonra.qsToplam} bağlantının tamamı nofollow (önce ${once.qsNofollowsuz} nofollow'suz) · ${degisen} sayfa · parametresiz ${sonra.duzToplam} bağlantıda nofollow 0.`);
 }
 
+if (fotosuzKategori.size) console.warn(`[build-blog] ⚠️  kategori görseli yok, kart ikona düştü: ${[...fotosuzKategori].join(", ")}`);
 console.log(`[build-blog] ${posts.length} yazı + /blog + sitemap üretildi.`);
