@@ -34,6 +34,13 @@ export const KAPSAM_ILLER = {
   mugla: "Muğla",
   tekirdag: "Tekirdağ",
   mardin: "Mardin",
+  kastamonu: "Kastamonu",
+  denizli: "Denizli",
+  manisa: "Manisa",
+  samsun: "Samsun",
+  van: "Van",
+  zonguldak: "Zonguldak",
+  usak: "Uşak",
 };
 
 export const kapsamdaMi = (sehirSlug) => Object.hasOwn(KAPSAM_ILLER, String(sehirSlug ?? ""));
