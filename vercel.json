@@ -48,7 +48,8 @@
     { "source": "/yerinde", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
   ],
   "functions": {
-    "api/servis/yakin.js": { "includeFiles": "src/services-data.json" }
+    "api/servis/yakin.js": { "includeFiles": "src/services-data.json" },
+    "api/admin/servis-dizin.js": { "includeFiles": "src/services-data.json" }
   },
   "crons": [
     { "path": "/api/cron/expire", "schedule": "*/5 * * * *" }

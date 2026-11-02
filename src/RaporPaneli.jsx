@@ -11,6 +11,7 @@ import { ARALIKLAR, SUZGEC_ALANLARI, aralikHesapla, suzgecOku, suzgecYaz } from 
 const AdminPazarPaneli = lazy(() => import("./AdminPazarPaneli.jsx"));
 const AdminSiparisPaneli = lazy(() => import("./AdminSiparisPaneli.jsx"));
 const AdminServisAramaPaneli = lazy(() => import("./AdminServisAramaPaneli.jsx"));
+const AdminServisDizinPaneli = lazy(() => import("./AdminServisDizinPaneli.jsx"));
 const AdminTeshisPaneli = lazy(() => import("./AdminTeshisPaneli.jsx"));
 const AdminUyelikPaneli = lazy(() => import("./AdminUyelikPaneli.jsx"));
 
@@ -145,7 +146,7 @@ export default function RaporPaneli() {
         <Suspense fallback={Yukleniyor}>
           {sekme === "teshis" && <AdminTeshisPaneli sir={sir} suzgec={suzgec} yenile={yenile} onYetkisiz={yetkisiz} onSecenek={secenekAl} />}
           {sekme === "uyelik" && <AdminUyelikPaneli yenile={yenile} />}
-          {sekme === "servis" && <AdminServisAramaPaneli sir={sir} from={suzgec.from} to={suzgec.to} yenile={yenile} onYetkisiz={yetkisiz} />}
+          {sekme === "servis" && <><AdminServisAramaPaneli sir={sir} from={suzgec.from} to={suzgec.to} yenile={yenile} onYetkisiz={yetkisiz} /><AdminServisDizinPaneli sir={sir} yenile={yenile} onYetkisiz={yetkisiz} /></>}
           {sekme === "pazar" && (
             <>
               <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
