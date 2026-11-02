@@ -3,6 +3,7 @@ title: "Bosch çamaşır makinesi kapağı açılmıyor"
 description: "Bosch çamaşır makinesinin kapağı açılmıyorsa Bosch kılavuzundaki üç sebep: sıcaklık, su seviyesi, elektrik kesintisi. Sırayla ne yapılır, ne zaman servis?"
 slug: "bosch-camasir-makinesi-kapak-acilmiyor"
 date: "2026-09-29"
+updated: "2026-11-02"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-09-29 PAZ alt ajanı (sprint #144, Bosch çamaşır belirti koşusu). Belgeler bu koşuda curl -sL -A "Mozilla/5.0" ile media3.bosch-home.com'dan yeniden indirildi, HTTP 200;
@@ -69,17 +70,17 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 
 **5. Elektrik kesildiyse bekle.** Üçüncü sebep **elektrik kesintisi**. Bosch'un eski WAK kılavuzuna göre **elektrik geldiğinde program çalışmaya devam eder.** Acelen yoksa beklemek yeterli: elektrik gelsin, program bitsin, kapak simgesi sönsün.
 
-## Çamaşırları hemen çıkarman gerekiyorsa
+## Çamaşırları hemen çıkarman gerekirse ne yapılır?
 
 Bosch'un kılavuzunda elektrik kesintisi için bir **acil kilit açma mekanizması** tarif ediliyor. Ön şartı pis su pompasının boşaltılması; mekanizma da **bir aletle** aşağı çekiliyor. Bosch'un kesin kuralı: **camdan su görünüyorsa kapak açılmamalıdır.** Aletle kilit mekanizmasına müdahale ettiği için bu işlemi bu rehberde kullanıcı adımı olarak vermiyoruz. Acelen varsa kilidi yetkili servise açtır; acelen yoksa elektriğin gelmesini bekle, Bosch'a göre program kendiliğinden devam eder.
 
-## Eski WAK serisinde farklı olan
+## Eski WAK serisinde ne farklı?
 
 Bosch'un eski WAK20200TR kılavuzunda aynı satır soru biçiminde: **"Çamaşır doldurma kapağı açılamazsa."** Tablo önce **güvenlik fonksiyonunun** devrede olup olmadığını ve programın iptal edilip edilmediğini soruyor. İkinci soru, sıkma devri göstergesinde **"– – –"** ayarının seçili olup olmadığı; aynı soru tablonun "deterjanlı su cihazdan pompalanıp boşaltılmıyor" satırında da geçiyor. Üçüncü madde, kapağın **yalnız acil durumda açma** fonksiyonuyla açılabileceği durumlar. Yani eski modellerde de mantık aynı: içeride su ya da sıcaklık varken kapak kilitli kalır.
 
 Ekranda kapak simgesi **yanıp sönüyor** ve program başlamıyorsa sorun ters yönde, kapak kapanmıyordur; bunun için [Bosch çamaşır makinesi E16 hatası](/blog/bosch-camasir-makinesi-e16-hatasi/) yazısına bak. Ekrandaki diğer simgeler [Bosch çamaşır makinesi sembolleri ve anlamları](/blog/bosch-camasir-makinesi-sembolleri-ve-anlamlari/) yazısında. Markadan bağımsız genel kontrol listesi için [çamaşır makinesinin kapağı açılmıyor](/blog/camasir-makinesi-kapagi-acilmiyor/) yazısına bakabilirsin.
 
-## Sınır nerede biter
+## Kendin çözme sınırı nerede biter?
 
 Sıcaklık düştü, su boşaltıldı, elektrik geldi ve kapak hâlâ açılmıyorsa Bosch'un kılavuzu kullanıcıya başka yol vermiyor. Bosch'un uyarısı açık: **usulüne uygun olmayan onarımlar tehlikelidir**, cihazda onarımı **yalnız bunun eğitimini almış uzman personel** yapabilir. Eski WAK kılavuzunun sırası: program ayar düğmesini **Kapalı** konumuna getir, **fişi çek, musluğu kapat** ve yetkili servisi çağır.
 

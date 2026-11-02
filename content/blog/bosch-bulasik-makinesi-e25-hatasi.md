@@ -3,6 +3,7 @@ title: "Bosch bulaşık makinesi E25 hatası: pompa tıkalı"
 description: "Bosch bulaşık makinesi E25: pompa yabancı cisimle tıkanmış ya da pompa kapağı yerine oturmamış. Bosch'un pompa temizliği adımları ve servis sınırı."
 slug: "bosch-bulasik-makinesi-e25-hatasi"
 date: "2026-09-28"
+updated: "2026-11-02"
 category: "Bulaşık makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-09-28 PAZ alt ajanı (sprint #144). Belgelerin hepsi bu koşuda curl -sL -A "Mozilla/5.0" ile indirildi, HTTP 200.
@@ -98,7 +99,7 @@ Bosch'un uyarısı baştan: pompa **cam parçacıkları** nedeniyle tıkanmış 
 
 > ⚠️ **Kapsam notu:** Bosch'un E25 sayfası kapağın "kilitlenerek veya vidaları iyice sıkılarak" takılmasından söz ediyor; yani bazı modellerde kapak vidalı. Bu rehber, kılavuzda anlatılan kaşıkla kaldırılan ve bastırınca oturan kapak içindir. Senin makinende kapak vidalıysa açmayı yetkili servise bırak.
 
-## E25 ile E24 ve E:61-02 arasındaki bağ
+## E25 ile E24 ve E:61-02 arasındaki bağ nedir?
 
 Bosch'un kullanma kılavuzundaki arıza tablosunda pompa kapağı iki kodda geçiyor. **E:24** satırının sebeplerinden biri "atık su pompasının kapağı gevşek", **E:25** satırı ise "atık su pompası bloke olmuş veya atık su pompasının kapağı yerine oturmamış". Makine suyu atamıyorsa ve ekranda E24 varsa bakılacak ilk yerler için [Bosch bulaşık makinesi E24 hatası](/blog/bosch-bulasik-makinesi-e24-hatasi/) yazısına bakabilirsin.
 

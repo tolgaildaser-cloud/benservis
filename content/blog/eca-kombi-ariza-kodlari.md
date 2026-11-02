@@ -3,6 +3,7 @@ title: "ECA kombi arıza kodları"
 description: "ECA Proteus, Confeo ve Citius Premix kombilerde E ve F kodlarının anlamı, reset ve basınç ekleme adımları; üç ailenin kendi kılavuzlarından."
 slug: "eca-kombi-ariza-kodlari"
 date: "2026-09-15"
+updated: "2026-11-02"
 category: "Kombi"
 faq:
   - q: "ECA kombide E ile başlayan kodla F ile başlayan kod arasındaki fark ne?"
@@ -70,7 +71,7 @@ Bu yazıdaki kodlar ECA'nın üç yoğuşmalı kombi ailesinin kendi kullanma k�
 
 Bu durumda kod okumakla uğraşma; önce güvenlik.
 
-## Önce iki şeyi öğren: model ve kodun harfi
+## Kodu okumadan önce hangi iki şeyi bilmelisin?
 
 **Model.** Kılavuzun kapağında kombinin model adı yazar. Confeo Premix ve Citius Premix kılavuzlarındaki kumanda paneli çiziminde model adı panelin üzerinde de görünüyor.
 
@@ -132,7 +133,7 @@ F40'ın eşiği kılavuza göre değişiyor: Proteus Premix'te 3±0,3 bar, Citiu
 
 Proteus Premix tablosunda ayrıca: **E07** eşanjör yüksek sıcaklık hatası, **E08** alev devresi hatası, **E54** sifon hatası, **E83** ateşleme devresi hatası (bu dördünde önce Reset, sürüyorsa 🔧); **F22** gaz valfi devresi hatası ve **F25** elektronik kart arızası (🔧). Proteus Premix'te **F41, F42, F43** otomatik doldurma sorunlarını gösterir; kılavuz önce Reset'i, sürerse servisi söylüyor.
 
-## Aynı numara, farklı anlam
+## Aynı numara neden farklı anlama gelebilir?
 
 - **E83:** Proteus Premix'te ateşleme devresi hatası; Confeo Premix'te egzoz gazı yüksek sıcaklık uyarısı. Citius Premix tablosunda E83 yok.
 - **Ayda iki kez F07:** Proteus ve Citius'ta F58, Confeo'da E83 olarak çıkıyor.
@@ -153,12 +154,12 @@ Doldurma vanasının yeri kılavuzundaki çizimde gösterilir. Proteus Premix k�
 
 Kılavuzun hükmü net: **basınç sık sık düşüyorsa sistemde bir su kaçağı söz konusudur** ve bir tesisatçı çağırmak gerekir. Confeo Premix'in bunun için ayrı kodu var: E38; kılavuz muhtemel sebep olarak tesisatta veya kombide su kaçağını gösteriyor. Ayrıntı için: [kombi basıncı düşüyor](/blog/kombi-basinc-dusuyor/) · [kombi basıncı kaç olmalı](/blog/kombi-basinci-kac-olmali/).
 
-## Ekranda kod değil: AP ve ASE
+## Ekrandaki AP ve ASE ne demek?
 
 - **AP:** Hava tahliye modu. Kombi 160 saniye boyunca tesisattaki havayı boşaltır. Kılavuza göre cihaza ilk kez elektrik verildiğinde ya da elektrik kapatılıp açıldıktan sonra, E03 sonrası Reset ardından ve F37 ya da F40 hatası geçtikten sonra çalışır. **AP sürerken Reset'e basma.**
 - **ASE:** Bakım hatırlatıcısı. Cihaz ısıtmayı aksatmadan çalışmaya devam eder; kılavuz yıllık bakım için E.C.A. yetkili servisiyle iletişime geçilmesini istiyor.
 
-## Reset'in sınırı
+## Reset'in sınırı nedir?
 
 Reset, E kodlarının çoğunda kılavuzun ilk önerisi; ama sınırı var. 1 saat içinde 5'ten fazla Reset'e basılırsa kombi **F13 fazla resetleme hatası** verir ve bu kodun çözümü doğrudan yetkili servis. Bir kez bas; kod sürüyor ya da geri geliyorsa tekrar tekrar deneme.
 

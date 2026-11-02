@@ -3,6 +3,7 @@ title: "Bosch kombi CE ve 0Y-A1 hatası"
 description: "Bosch kombide CE, Bosch'a göre tesisat su basıncının düşük olduğunu söyler; 0Y-A1'in çözümü de aynı. Basıncı 1,2 bar'a getirme adım adım."
 slug: "bosch-kombi-ce-hatasi"
 date: "2026-09-28"
+updated: "2026-11-02"
 category: "Kombi"
 # --- Provenans (yayında görünmez) ---
 # 2026-09-28, curl -sL -A "Mozilla/5.0" ile BU KOŞUDA indirildi; PDF'ler pdftotext (-raw ve -layout) ile okundu, sayfa no -f/-l ile.
@@ -17,12 +18,12 @@ category: "Kombi"
 #     Birebir: "Tesisat ile ilgili hata var." | "Tesisat su basıncı 1.2 bar'a yülseltilmeli. Yetkili servise başvurun."
 # K3) Bosch TR dizin · .../ariza-kodlari-ve-cozumleri/ · HTTP 200 · md5 92d4b4cafaffae97b4a3b4f58851a8ee
 #     CE → Condens 2500 W, Comfort Condense, Class 2000 W, Class 6000 W, Classic Silver, ClassicPlus · 0Y-A1 → Condens 7000i W
-# B1) Condens 2500 W Kullanma Kılavuzu 6721835246 (2021/03) · https://bosch-tr-tr-b.boschhc-documents.com/download/pdf/file/6721835246
+# B1) Condens 2500 W Kullanma Kılavuzu 6721835246 (2021/03) · https://bosch-tr-tr-b.boschhc-documents.com/download/file/file/6721835246.pdf
 #     HTTP 200 · 1.789.580 B · 16 s. · md5 81853ab2ff146ad75d9398dc0c9832b0
 #     "3.2 Isıtma tesisatının çalışma basıncının kontrol edilmesi": 1–2 bar, en uygun basıncı yetkili servisten öğren, manometreden oku,
 #     düşükse ısıtma suyu ilave et · "3.3 Isıtma suyunun ilave edilmesi": doldurma ünitesinin yeri, 3 bar + emniyet ventili,
 #     doldurma vanasını aç / 1–2 bar / tekrar kapat (s.8) · sık su = kaçak s.4 · reset + servis + tip etiketi s.13
-# B2) Condens 7000i W Kullanma Kılavuzu 6721835270 (2021/03) · https://bosch-tr-tr-b.boschhc-documents.com/download/pdf/file/6721835270
+# B2) Condens 7000i W Kullanma Kılavuzu 6721835270 (2021/03) · https://bosch-tr-tr-b.boschhc-documents.com/download/file/file/6721835270.pdf
 #     HTTP 200 · 1.119.714 B · 16 s. · md5 a485d15ed4c4466367fc4daa73fa1afb
 #     Manometre Res.1 [7] s.8 · reset s.12 · basınç 1–2 bar, doldurma tesisata göre farklı / servisten göstermesini iste, yalnız soğukken,
 #     maks. gidiş 40 °C, 3 bar, radyatör havası s.13 · sık su = kaçak s.5
