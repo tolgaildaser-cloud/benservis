@@ -88,6 +88,8 @@ Telefon bu ölçütlerin çok altında kalıyor ve kullanılmıyorken de ısın�
 
 Sıcaklık kontrolü, süre ölçümü, güç tüketimi sıralaması, uçak modu, şarj süresi kontrolü ve temiz kurulum kullanıcı seviyesindeki işlerdir. Bunlara rağmen pil hızla bitiyorsa Xiaomi, telefonu satış sonrası servise göndermeni öneriyor. Telefonun içini açmak ya da pili kendin değiştirmek bu listenin parçası değildir. Pil değişimi için üreticinin resmî servis sayfasına bak.
 
+**İlgili yazı:** [Xiaomi telefon donuyor: Xiaomi'nin önerdiği çözüm sırası](/blog/xiaomi-telefon-donuyor/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. Telefon **soğukta mı** çabuk bitiyor, normal sıcaklıkta mı, not et.

@@ -3485,7 +3485,8 @@ export const HATA_KODU_KATMANI = {
   // air fryer "Mikrodalga / Air Fryer" cihazında kalır ve belgenin üretici bağlantısı doğrulanmadı).
   // ── YK #192 (29 Eki 2026): TEŞHİSSİZ İÇERİK KATEGORİSİ — Telefon / Tablet. Küçük Ev
   // Aletleri ile aynı kural: boşken /tamir/telefon-tablet/ basılmaz; giriş PAZ föyünden (#88).
-  // 29 Eki 2026, PAZ kayıt dosyası telefon-yk192/kayit/2026-10-30-hata-kodu-kayitlari.js (6 belirti).
+  // 29 Eki 2026, PAZ kayıt dosyası telefon-yk192/kayit/2026-10-30-hata-kodu-kayitlari.js (6 belirti);
+  // 30 Eki: 2026-11-02-hata-kodu-kayitlari.js (+2 belirti, +1 ayar).
   "Telefon / Tablet": [
   { giris: "Samsung Galaxy — telefon donuyor / dokunmaya tepki vermiyor", tip: "belirti",
     anlam: "Samsung zorla yeniden başlatmayı, yazılım ve uygulama güncellemelerini kontrol etmeyi, sorunlu uygulamanın verisini silmeden önce yedek almayı öneriyor; donma sürerse iş yetkili servisindir.",
@@ -3511,6 +3512,18 @@ export const HATA_KODU_KATMANI = {
     anlam: "Apple iPad'le gelen kabloyu ve USB güç adaptörünü, gerekirse farklı bir adaptör ve kabloyu denemeyi, sonra zorla yeniden başlatmayı öneriyor; yine şarj olmuyorsa iş yetkili servisindir.",
     belge: "https://support.apple.com/tr-tr/102612", sayfa: "",
     yazi: "ipad-sarj-olmuyor" },
+  { giris: "Samsung Galaxy — pil çabuk bitiyor", tip: "belirti",
+    anlam: "Samsung kullanılmayan Wi-Fi, Bluetooth gibi özellikleri kapatmayı, Cihaz bakımıyla optimize etmeyi, nadiren kullanılan uygulamaları uyku moduna almayı ve Güç tasarrufu modunu öneriyor; pil tüketilebilir bir bileşendir ve azalan kapasite geri kazanılamaz.",
+    belge: "https://www.samsung.com/tr/support/mobile-devices/what-to-do-when-your-samsung-galaxy-device-battery-drains-faster/", sayfa: "",
+    yazi: "samsung-telefon-pil-cabuk-bitiyor" },
+  { giris: "Xiaomi / Redmi — telefon donuyor / yanıt vermiyor", tip: "belirti",
+    anlam: "Xiaomi ara sıra takılmanın normal olduğunu söylüyor; arka plandaki uygulamaları kapatmayı, güç düğmesini 10 saniyeden uzun basılı tutarak zorla yeniden başlatmayı, sık donmada yedekleyip fabrika ayarlarına dönmeyi öneriyor; sorun sürerse iş teknik servisindir.",
+    belge: "https://www.mi.com/tr/support/faq/details/KA-03342/", sayfa: "",
+    yazi: "xiaomi-telefon-donuyor" },
+  { giris: "Apple iPhone — fabrika ayarlarına sıfırlama", tip: "ayar",
+    anlam: "Apple önce yedek almayı, sonra Ayarlar > Genel > Aktar veya Sıfırla > Tüm İçerikleri ve Ayarları Sil yolunu izlemeyi söylüyor; bu işlem aygıttaki bilgileri siler, bittiğinde Merhaba ekranı görünür.",
+    belge: "https://support.apple.com/tr-tr/108931", sayfa: "",
+    yazi: "iphone-sifirlama" },
   ],
   "Küçük Ev Aletleri": [
     { giris: "De'Longhi EC685 — ikaz lambaları hızlı hızlı yanıp sönüyor", tip: "kod",

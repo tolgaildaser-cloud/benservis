@@ -104,6 +104,8 @@ Sıra önemli. Önce ayarları sıfırla, sonuç alamazsan fabrika ayarlarına g
 
 Zorla yeniden başlatma, güncelleme, yer açma, uygulama verisini silme ve iki sıfırlama adımı kullanıcı seviyesindeki işlerdir. Bunlara rağmen telefon donmaya devam ediyorsa Samsung, Galaxy cihazını en yakın Samsung servis noktasına götürmeni öneriyor. Telefonun içini açmak ya da pile müdahale etmek bu listenin parçası değildir. Pil ya da parça değişimi gerekiyorsa üreticinin resmî servis sayfasına bak.
 
+**İlgili yazı:** [Samsung telefon pili çabuk bitiyor: Samsung'un önerileri](/blog/samsung-telefon-pil-cabuk-bitiyor/)
+
 ## Servis çağırmadan önce üç dakika
 
 1. Ekran tamamen donduysa **Ses kısma + Güç** tuşlarıyla yeniden başlat.
