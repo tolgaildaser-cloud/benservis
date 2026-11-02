@@ -844,6 +844,7 @@ const KOPRU_ARIZA = {
   "hoover-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "arcelik-camasir-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   "bosch-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
+  "samsung-kurutma-makinesi-sembolleri-ve-anlamlari": "hata-kodu-veriyor",
   // 🔁 3 Eyl 2026 — BU YORUM HATANIN KENDİSİYDİ, DÜZELTİLDİ. Eski hâli şunu diyordu:
   // *"Kurutma yazıları `category: Çamaşır makinesi` taşıyor → çözen tarafta cihaz
   // 'Çamaşır Makinesi' olur … kurutmaya ÖZEL belirtiler bu cihazda çözülmediği için o
