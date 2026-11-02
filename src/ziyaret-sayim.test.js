@@ -34,17 +34,17 @@ describe("kapsam etiketi", () => {
   });
   it("TR kapsamda / dışı, yurt dışı ayrı", () => {
     expect(sehirEtiketi({ ulke: "TR", bolge: "34" })).toEqual({ il: "istanbul", kapsam: "kapsamda" });
-    expect(sehirEtiketi({ ulke: "TR", bolge: "65" })).toEqual({ il: "van", kapsam: "disi" });
+    expect(sehirEtiketi({ ulke: "TR", bolge: "36" })).toEqual({ il: "kars", kapsam: "disi" });
     expect(sehirEtiketi({ ulke: "DE", bolge: "BE" }).kapsam).toBe("yurt-disi");
   });
   it("sehirTopla günleri ve türleri birleştirir", () => {
     const g = sehirTopla([
       { ulke: "TR", bolge: "34", sehir: "Kadıköy", tur: "blog", sayi: 3 },
       { ulke: "TR", bolge: "34", sehir: "Kadıköy", tur: "teshis", sayi: 2 },
-      { ulke: "TR", bolge: "65", sehir: "Van", tur: "blog", sayi: 1 },
+      { ulke: "TR", bolge: "36", sehir: "Kars", tur: "blog", sayi: 1 },
     ]);
     expect(g[0]).toMatchObject({ sehir: "Kadıköy", il: "istanbul", kapsam: "kapsamda", toplam: 5, tur: { blog: 3, teshis: 2 } });
-    expect(g[1]).toMatchObject({ il: "van", kapsam: "disi", toplam: 1 });
+    expect(g[1]).toMatchObject({ il: "kars", kapsam: "disi", toplam: 1 });
   });
 });
 

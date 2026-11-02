@@ -26,8 +26,8 @@ describe("aramaKaydi — PII'siz satır", () => {
   it("ilçe modu: il adı slug'a çevrilir; kapsam dışı il kapsamda sayılmaz", () => {
     expect(aramaKaydi({ mod: "ilce", il: "Bursa", ilce: "Yenişehir", sonuc: [{}], ilcedeServisVar: hepsiVar }))
       .toMatchObject({ il: "bursa", ilce: "Yenişehir", kapsamda: true });
-    expect(aramaKaydi({ mod: "ilce", il: "Van", ilce: "Tuşba", sonuc: [], ilcedeServisVar: hepsiVar }))
-      .toMatchObject({ il: "van", kapsamda: false });
+    expect(aramaKaydi({ mod: "ilce", il: "Kars", ilce: "Kağızman", sonuc: [], ilcedeServisVar: hepsiVar }))
+      .toMatchObject({ il: "kars", kapsamda: false });
   });
 
   it("kapsamdaki ilde dizinde o ilçede servis yoksa kapsam dışı", () => {
@@ -47,11 +47,11 @@ describe("aramaKaydi — PII'siz satır", () => {
 describe("aramaTopla — admin tablosu", () => {
   it("il/ilçe/kapsamda grupları, sonuçsuz sayısı, çoktan aza", () => {
     const g = aramaTopla([
-      { il: "van", ilce: "Tuşba", kapsamda: false, sonuc: 0 },
-      { il: "van", ilce: "Tuşba", kapsamda: false, sonuc: 0 },
+      { il: "kars", ilce: "Tuşba", kapsamda: false, sonuc: 0 },
+      { il: "kars", ilce: "Tuşba", kapsamda: false, sonuc: 0 },
       { il: "istanbul", ilce: "Kadıköy", kapsamda: true, sonuc: 12 },
     ]);
-    expect(g[0]).toEqual({ il: "van", ilce: "Tuşba", kapsamda: false, arama: 2, sonucsuz: 2 });
+    expect(g[0]).toEqual({ il: "kars", ilce: "Tuşba", kapsamda: false, arama: 2, sonucsuz: 2 });
     expect(g[1]).toMatchObject({ il: "istanbul", arama: 1, sonucsuz: 0 });
   });
 });

@@ -39,7 +39,8 @@ CITY_DISPLAY = {"istanbul": "İstanbul", "izmir": "İzmir", "ankara": "Ankara",
                 "gaziantep": "Gaziantep",
                 "antalya": "Antalya", "konya": "Konya", "mersin": "Mersin", "kocaeli": "Kocaeli",
                 "balikesir": "Balıkesir", "aydin": "Aydın", "sakarya": "Sakarya", "kutahya": "Kütahya",
-                "mugla": "Muğla", "tekirdag": "Tekirdağ", "mardin": "Mardin"}
+                "mugla": "Muğla", "tekirdag": "Tekirdağ", "mardin": "Mardin",
+                "kastamonu": "Kastamonu", "denizli": "Denizli", "manisa": "Manisa", "samsun": "Samsun", "van": "Van", "zonguldak": "Zonguldak", "usak": "Uşak"}
 CITY_DISTRICTS = {
     "istanbul": ["Adalar","Arnavutköy","Ataşehir","Avcılar","Bağcılar","Bahçelievler","Bakırköy",
         "Başakşehir","Bayrampaşa","Beşiktaş","Beykoz","Beylikdüzü","Beyoğlu","Büyükçekmece","Çatalca",
@@ -99,6 +100,13 @@ CITY_DISTRICTS = {
         "Muratlı","Saray","Süleymanpaşa","Şarköy"],
     "mardin": ["Artuklu","Dargeçit","Derik","Kızıltepe","Mazıdağı","Midyat","Nusaybin","Ömerli","Savur",
         "Yeşilli"],
+    "kastamonu": ["Abana","Ağlı","Araç","Azdavay","Bozkurt","Cide","Çatalzeytin","Daday","Devrekani","Doğanyurt","Hanönü","İhsangazi","İnebolu","Küre","Merkez","Pınarbaşı","Seydiler","Şenpazar","Taşköprü","Tosya"],
+    "denizli": ["Acıpayam","Babadağ","Baklan","Bekilli","Beyağaç","Bozkurt","Buldan","Çal","Çameli","Çardak","Çivril","Güney","Honaz","Kale","Merkezefendi","Pamukkale","Sarayköy","Serinhisar","Tavas"],
+    "manisa": ["Ahmetli","Akhisar","Alaşehir","Demirci","Gölmarmara","Gördes","Kırkağaç","Köprübaşı","Kula","Salihli","Sarıgöl","Saruhanlı","Selendi","Soma","Şehzadeler","Turgutlu","Yunusemre"],
+    "samsun": ["Alaçam","Asarcık","Atakum","Ayvacık","Bafra","Canik","Çarşamba","Havza","İlkadım","Kavak","Ladik","19 Mayıs","Salıpazarı","Tekkeköy","Terme","Vezirköprü","Yakakent"],
+    "van": ["Bahçesaray","Başkale","Çaldıran","Çatak","Edremit","Erciş","Gevaş","Gürpınar","İpekyolu","Muradiye","Özalp","Saray","Tuşba"],
+    "zonguldak": ["Alaplı","Çaycuma","Devrek","Ereğli","Gökçebey","Kilimli","Kozlu","Merkez"],
+    "usak": ["Banaz","Eşme","Karahallı","Merkez","Sivaslı","Ulubey"],
 }
 ALL_CITIES = list(CITY_DISTRICTS.keys())
 CITIES = [c for c in ALL_CITIES if not CITIES_SEL or c in CITIES_SEL]
