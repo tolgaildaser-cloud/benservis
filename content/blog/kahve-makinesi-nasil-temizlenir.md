@@ -37,14 +37,14 @@ faq:
   - q: "Kahve makinesinin damlama tepsisi ne zaman boşaltılır?"
     a: "De'Longhi EC685 damlama haznesindeki yüzer gösterge fincan yerleştirme tepsisinden çıkıntı yapmaya başlamadan önce tepsinin boşaltılmasını ister; aksi hâlde su kenarlardan taşıp makineye zarar verebilir. Arzum, atık kabı dolu uyarısı verdiğinde kabın temizlenmesini ister."
 images:
-  coverAlt: "Mutfak tezgâhında duran sade bir espresso kahve makinesi çizimi"
+  coverAlt: "Fincanlı sade espresso makinesi çizimi"
   steps:
     - "Kahve makinesinin fişini prizden çeken beyaz eldivenli sade siluet el çizimi"
-    - "Damlama tepsisini makineden çıkaran beyaz eldivenli sade siluet el çizimi"
+    - "Kahve makinesinden damlama tepsisini çıkaran beyaz eldivenli sade siluet el çizimi"
     - "Su haznesini nemli bezle silen beyaz eldivenli sade siluet el çizimi"
     - "Filtreyi akan suyun altında durulayan beyaz eldivenli sade siluet el çizimi"
     - "Süt köpürtme ucunu inceleyen beyaz eldivenli sade siluet el çizimi"
-    - "Makinenin dış yüzeyini bezle silen beyaz eldivenli sade siluet el çizimi"
+    - "Kahve makinesi ve yanında bez tutan beyaz eldivenli sade siluet el çizimi"
     - "Su haznesine kireç çözücü çözeltiyi dolduran beyaz eldivenli sade siluet el çizimi"
 ---
 

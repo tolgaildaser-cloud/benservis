@@ -37,11 +37,11 @@ faq:
   - q: "Emniyet ventilinden su damlaması normal mi?"
     a: "Vestel kılavuzu termosifon çalışırken basıncın artacağını ve emniyet ventilinden su damlamasının normal olduğunu yazar. Arçelik de ventilin tahliye borusundan su damlayabileceğini, bunun arıza olmayıp güvenlik standardı gereği olduğunu belirtir. Damlama durmuyorsa servise haber ver."
 images:
-  coverAlt: "Banyo duvarına asılı beyaz bir elektrikli termosifonun sade çizimi"
+  coverAlt: "Beyaz elektrikli termosifon ve önündeki ayar düğmesinin sade çizimi"
   steps:
-    - "Sıcak su musluğunu açan beyaz eldivenli sade siluet el ve duvardaki termosifon çizimi"
+    - "Termosifon ve yanında vanaya uzanan beyaz eldivenli sade siluet el çizimi"
     - "Termosifonun elektrik ışığını gösteren beyaz eldivenli sade siluet el çizimi"
-    - "Termosifonun sıcaklık düğmesini çeviren beyaz eldivenli sade siluet el çizimi"
+    - "Termosifonun ayar düğmesine uzanan beyaz eldivenli sade siluet el çizimi"
     - "Termosifonun ısıtıcı ışığına bakan beyaz eldivenli sade siluet el çizimi"
     - "Sıcak su musluğunu dikkatle açan beyaz eldivenli sade siluet el çizimi"
     - "Emniyet ventilinin drenaj hortumunu gösteren beyaz eldivenli sade siluet el çizimi"

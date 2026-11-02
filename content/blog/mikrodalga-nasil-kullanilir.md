@@ -37,13 +37,13 @@ faq:
   - q: "Mikrodalga boş çalıştırılır mı?"
     a: "Hayır. Samsung ve Arçelik kılavuzlarının ikisi de fırını boşken çalıştırmamanı istiyor."
 images:
-  coverAlt: "Mutfak tezgâhında duran sade bir mikrodalga fırın çizimi"
+  coverAlt: "Camlı kapaklı, sağında düğmeleri olan mikrodalga fırının sade çizimi"
   steps:
     - "Mikrodalga fırının fişini prize takan beyaz eldivenli sade siluet el çizimi"
     - "Fırının içindeki döner tablaya dokunan beyaz eldivenli sade siluet el çizimi"
-    - "Kabı döner tablanın ortasına koyan beyaz eldivenli sade siluet el çizimi"
+    - "Mikrodalganın içinde tablaya kap koyan beyaz eldivenli sade siluet el çizimi"
     - "Fırının kontrol panelindeki düğmeyi çeviren beyaz eldivenli sade siluet el çizimi"
-    - "Fırının kontrol panelinde süre ayarlayan beyaz eldivenli sade siluet el çizimi"
+    - "Mikrodalganın süre düğmesine uzanan beyaz eldivenli sade siluet el çizimi"
     - "Fırının başlat düğmesine basan beyaz eldivenli sade siluet el çizimi"
     - "Eldivenle fırından kabı çıkaran beyaz eldivenli sade siluet el çizimi"
 ---
