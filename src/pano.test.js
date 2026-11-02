@@ -3,6 +3,7 @@ import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import { xlsxYap, zipYap, sutunAdi, sayfaAdlari, csvYap } from "./xlsx-yaz.js";
 import { panoHesapla, suz, kaynakTuru, gelisEtiketi, gunTR } from "./teshis-pano.js";
+import { dizinOzet, basvuruOzet } from "./servis-dizin-ozet.js";
 import { suzgecOku, suzgecYaz, aralikHesapla, apiSorgu } from "./pano-suzgec.js";
 
 const metin = (u) => new TextDecoder().decode(u);
@@ -130,5 +131,34 @@ describe("kapsam kilidi", () => {
     expect(u.match(/count: "exact", head: true/g)).toHaveLength(3);
     expect(u).toContain('"public, max-age=3600"');
     expect(u).toContain("withRateLimit");
+  });
+});
+
+describe("Servis dizini özeti", () => {
+  const liste = [
+    { ad: "A", telefon: "05551112233", adres: "Gizli sok", sehir: "bursa", ilce: "Nilüfer", kategoriler: ["Klima", "Kombi"], serbis: true, yetkili: true },
+    { ad: "B", telefon: "05554445566", adres: "Gizli cad", sehir: "bursa", ilce: "Osmangazi", kategoriler: ["Klima"] },
+    { ad: "C", telefon: "05557778899", adres: "Gizli yol", sehir: "kars", ilce: "Merkez", kategoriler: [] },
+  ];
+  it("il, ilçe ve cihaz sayar, kapsam etiketler", () => {
+    const o = dizinOzet(liste, { bursa: "Bursa" });
+    expect(o.toplam).toBe(3);
+    expect(o.iller[0]).toMatchObject({ ad: "Bursa", kapsamda: true, toplam: 2, serbis: 1, yetkili: 1, ilceSayisi: 2 });
+    expect(o.iller[1]).toMatchObject({ kapsamda: false, toplam: 1 });
+    expect(o.ilceler).toHaveLength(3);
+    expect(o.cihazlar[0]).toEqual({ cihaz: "Klima", toplam: 2 });
+  });
+  it("kişisel veri çıktıya girmez", () => {
+    const j = JSON.stringify(dizinOzet(liste, { bursa: "Bursa" }));
+    expect(j).not.toMatch(/0555|Gizli/);
+  });
+  it("başvuruları durum ve ile göre sayar", () => {
+    expect(basvuruOzet([{ il: "Bursa", durum: "bekliyor" }, { il: "Bursa", durum: "onaylandi" }, { il: null, durum: "reddedildi" }, { il: "Bursa", durum: "toplam" }])[0])
+      .toEqual({ il: "Bursa", bekliyor: 1, onaylandi: 1, reddedildi: 0, toplam: 3 });
+  });
+  it("uç yalnız il ve durum seçer", () => {
+    const u = fs.readFileSync("api/admin/servis-dizin.js", "utf8");
+    expect(u).toContain('.select("il,durum")');
+    expect(u).not.toMatch(/select\("\*"\)/);
   });
 });
