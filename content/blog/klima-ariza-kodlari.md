@@ -115,6 +115,12 @@ Her iç ünitede dijital ekran yoktur; ekransız modellerde arıza bildirimi ön
 
 Sezon ortasında kodların bir kısmı aslında bakımsızlıktan tetiklenir: kirli filtre hava akışını boğar, iç ünite sensörleri gerçek dışı değerler okur ve cihaz korumaya geçer. Filtre temizliği kullanıcının güvenle yapabildiği tek işlemdir ve on beş dakika sürer — adım adım anlatımı benservis.com blogundaki klima filtresi nasıl temizlenir yazısında bulabilirsin.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Daikin klima E7 hatası](/blog/daikin-klima-e7-hatasi/)
+
 ## Hangi noktadan sonra servis işi
 
 Reset sonrası tekrar gelen her kod, gaz ve voltaj kodlarının tamamı ve haberleşme hataları servis konusudur. Elinde kod ve model numarası varsa servisi aramadan önce işin yarısı bitmiş demektir: doğru parça, tek seferde çözüm.

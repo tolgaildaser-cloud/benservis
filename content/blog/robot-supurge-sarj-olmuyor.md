@@ -89,6 +89,12 @@ Yukarıdakiler temizse ve robot şarj oluyor ama eskisi gibi gitmiyorsa, sıra b
 
 Bu belirtiler arıza değil, ömrünü dolduran bir parçanın doğal tablosudur. Kritik nokta şu: kapasite kaybı geri döndürülemez — hiçbir temizlik, sıfırlama ya da "şarj alışkanlığı" yaşlanmış bataryayı geri getirmez.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Samsung robot süpürge çalışmıyor](/blog/samsung-robot-supurge-calismiyor/)
+
 ## Batarya değişimi: burası servis işi
 
 ⛔ **Kendin-çöz sınırı burada biter.** Batarya, gövdenin altındaki vidalı bölmenin içindedir ve lityum hücrelerle çalışmak şaka kaldırmaz: delinen ya da kısa devre yapan hücre yangın çıkarabilir. Ayrıca piyasadaki uyumsuz ve sahte bataryalar hem cihazın elektroniğine zarar verir hem de aynı riski eve taşır. Doğru hamle, orijinal batarya kullanan yetkili ya da puanlı bir servise gitmektir; işlem servis için kısa ve rutin bir iştir.

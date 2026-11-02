@@ -82,6 +82,12 @@ Camın ardında **soluk bir silüet** — menü yazıları, hareket eden görün
 
 **Silüet yok → sinyal ya da kart tarafı.** Görüntü hiç üretilmiyorsa ihtimaller televizyonun içindeki kartlara doğru genişler. Burada evde yapılabilecek şey kalmaz; belirtileri not edip servise aktarmak en doğrusu.
 
+## Markaya göre
+
+Bu konuya yakın, markaya özel yazılar:
+
+- [Vestel televizyon açılmıyor: evde kontrol](/blog/vestel-televizyon-acilmiyor/)
+
 ## 5) Kendin-çöz sınırı: kapağın arkası servise ait
 
 Fener testi teşhis koydurur ama onarım kapak arkasında yapılır — ve orası kullanıcıya ait bir alan değildir.

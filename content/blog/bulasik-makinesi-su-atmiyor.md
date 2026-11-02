@@ -84,6 +84,7 @@ Kullandığın markanın rehberinde filtre ve pompanın yeri de anlatılıyor:
 
 - [Arçelik bulaşık makinesi su boşaltmıyor](/blog/arcelik-bulasik-makinesi-su-bosaltmiyor/)
 - [Whirlpool bulaşık makinesi su boşaltmıyor](/blog/whirlpool-bulasik-makinesi-su-bosaltmiyor/)
+- [Beko bulaşık makinesi su boşaltmıyor](/blog/beko-bulasik-makinesi-su-bosaltmiyor/)
 
 ## Ne zaman mutlaka servis çağırmalısın?
 
