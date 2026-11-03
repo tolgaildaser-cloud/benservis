@@ -2,7 +2,7 @@
 title: "Çamaşır makinesi hortumu nasıl bağlanır? Arçelik, Samsung"
 description: "Çamaşır makinesi su giriş ve gider hortumu nasıl bağlanır? Arçelik ve Samsung kılavuzlarına göre musluk bağlantısı, gider yüksekliği ve sızıntı kontrolü."
 slug: "camasir-makinesi-hortumu-nasil-baglanir"
-date: "2026-11-04"
+date: "2026-11-03"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-03 Sal PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md "2 Kas 2026" #243 [KU] "çamaşır makinesi su giriş hortumu / gider hortumu bağlama, gider yüksekliği"). Slug origin/main content/blog/'da yok. Yakın yazılar: camasir-makinesi-su-almiyor, camasir-makinesi-su-atmiyor, camasir-makinesi-su-kaciriyor, camasir-makinesi-tahliye-filtresi-temizleme, samsung-camasir-makinesi-su-sizdiriyor. Bu yazı kurulum bağlantısını anlatır, arıza yazılarıyla çakışmaz.

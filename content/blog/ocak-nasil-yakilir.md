@@ -2,7 +2,7 @@
 title: "Ocak nasıl yakılır? Simfer ve Vestel gazlı ocak kılavuzları"
 description: "Gazlı ocak nasıl yakılır? Simfer ve Vestel kılavuzlarına göre düğmeyi bastırma, bekleme süresi, alev ayarı, elektrik yokken yakma ve gaz kokusu."
 slug: "ocak-nasil-yakilir"
-date: "2026-11-04"
+date: "2026-11-03"
 category: "Fırın / Ocak"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-03 Sal PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md "2 Kas 2026" #250 [KU] "ocak nasıl yakılır (doğalgaz / elektrikli / indüksiyon)"). Slug origin/main content/blog/'da yok. Yakın yazılar: simfer-ocak-nasil-calisir (markalı), ocak-atesleme-yapmiyor, ocak-gaz-emniyeti-sonduruyor, ocak-alevi-sari-yaniyor, dogalgazli-ocak-neden-yanmaz, hafele-elektrikli-ocak-nasil-calisir. Bu yazı markasız genel yakma sırasıdır; sorun giderme yazılarıyla çakışmaz.

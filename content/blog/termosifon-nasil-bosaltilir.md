@@ -2,7 +2,7 @@
 title: "Termosifon nasıl boşaltılır? Vestel ve Arçelik kılavuzları"
 description: "Termosifon nasıl boşaltılır? Vestel ve Arçelik kılavuzlarına göre elektriği kesme, su vanasını kapatma, emniyet ventili mandalı ve yeniden doldurma sırası."
 slug: "termosifon-nasil-bosaltilir"
-date: "2026-11-04"
+date: "2026-11-03"
 category: "Kombi/Termosifon"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-03 Sal PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md "2 Kas 2026" #246 [KU] "termosifon nasıl boşaltılır / su boşaltma / uzun süre kullanılmayacaksa"). Slug origin/main content/blog/'da yok. Yakın yazılar: termosifon-nasil-kullanilir, termosifon-nasil-calisir, termosifon-emniyet-ventili-su-damlatiyor, termosifon-suyu-isitmiyor. Bu yazı boşaltma ve yeniden doldurma sırasını anlatır, açma-ayar yazısıyla çakışmaz.
