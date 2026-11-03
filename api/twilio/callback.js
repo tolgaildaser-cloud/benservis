@@ -29,7 +29,7 @@ export default async function handler(req, res) {
   const authToken = process.env.TWILIO_AUTH_TOKEN;
   if (!authToken) {
     console.error("TWILIO_AUTH_TOKEN env eksik: callback reddedildi");
-    return res.status(403).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Forbidden</Say></Response>');
+    return res.status(503).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Forbidden</Say></Response>');
   }
   {
     const twilio = (await import("twilio")).default;

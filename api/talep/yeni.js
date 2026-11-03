@@ -74,7 +74,7 @@ async function handler(req, res) {
     .select()
     .single();
 
-  if (te) return res.status(500).json({ error: te.message });
+  if (te) { console.error("[talep/yeni]", te.message); return res.status(500).json({ error: "Talep kaydedilemedi, tekrar dene." }); }
 
   // İlk mesajı ekle
   if (ilk_mesaj?.trim()) {

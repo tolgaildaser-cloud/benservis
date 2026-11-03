@@ -50,7 +50,7 @@ export default async function handler(req, res) {
     .lt("son_kabul_tarihi", new Date().toISOString())
     .limit(50);
 
-  if (fetchErr) return res.status(500).json({ error: fetchErr.message });
+  if (fetchErr) { console.error("[cron/expire]", fetchErr.message); return res.status(500).json({ error: "okuma hatası" }); }
   if (!dolmus || dolmus.length === 0) {
     return res.status(200).json({ islem: 0, havale_iptal: havaleIptal, mesaj: "Süresi dolan iş yok" });
   }

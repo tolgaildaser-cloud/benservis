@@ -43,7 +43,7 @@ async function handler(req, res) {
     if (talep_id) {
       const { data: talep, error: te } = await supabase
         .from("talepler")
-        .select("id, alici_ad, alici_email, odeme_durumu, tutar, created_at, teslim_onay_tarihi, ilk_mesaj")
+        .select("id, alici_ad, odeme_durumu, tutar, created_at, teslim_onay_tarihi, ilk_mesaj") // alıcı e-postası satıcıya dönmez (3 Kas 2026)
         .eq("id", talep_id)
         .eq("ilan_id", ilan.id)  // güvenlik: sadece bu ilana ait talepler
         .single();

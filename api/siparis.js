@@ -65,7 +65,7 @@ async function handler(req, res) {
       .in("id", urun_idler)
     : { data: [], error: null };
 
-  if (error) return res.status(500).json({ error: error.message });
+  if (error) { console.error("[siparis]", error.message); return res.status(500).json({ error: "Sipariş şu an alınamadı, tekrar dene." }); }
 
   // İkinci el ilanları — Benservis satar, cihaz kaydına bağlı, aktif ve stoklu olmalı.
   const ilanKalemleri = [];
@@ -239,7 +239,7 @@ async function handler(req, res) {
     .select("id, siparis_no, tutar, odeme_durumu, created_at")
     .single();
 
-  if (insErr) return res.status(500).json({ error: insErr.message });
+  if (insErr) { console.error("[siparis] kayıt:", insErr.message); return res.status(500).json({ error: "Sipariş şu an alınamadı, tekrar dene." }); }
 
   return res.status(201).json({
     ok: true,

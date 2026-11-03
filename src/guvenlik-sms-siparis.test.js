@@ -31,6 +31,11 @@ describe("uç düzeltmeleri", () => {
       expect(s, f).toMatch(/export default yalnizPost\(withRateLimit\(handler/);
     }
   });
+  it("hata metni ve alıcı e-postası dışarı dönmez", () => {
+    for (const f of ["api/siparis.js", "api/talep/yeni.js", "api/cron/expire.js"])
+      expect(fs.readFileSync(f, "utf8"), f).not.toMatch(/json\(\{ error: \w+\.message \}\)/);
+    expect(fs.readFileSync("api/talep/satici/[token].js", "utf8")).not.toMatch(/select\("[^"]*alici_email/);
+  });
   it("Twilio token yoksa reddeder, URL sabit", () => {
     const s = fs.readFileSync("api/twilio/callback.js", "utf8");
     expect(s).toContain("if (!authToken) {");
