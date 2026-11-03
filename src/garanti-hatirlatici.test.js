@@ -120,7 +120,7 @@ describe("POST /api/garanti/hatirlatici", () => {
   it("onay kutusu boş → 400, veritabanına yazılmaz", async () => {
     const { default: handler } = await import("../api/garanti/hatirlatici.js");
     const r = yanit();
-    await handler({ method: "POST", body: { ...gecerli, garanti_bitis_tarihi: "2099-01-01", riza: false } }, r);
+    await handler({ method: "POST", headers: { origin: "https://www.benservis.com" }, body: { ...gecerli, garanti_bitis_tarihi: "2099-01-01", riza: false } }, r);
     expect(r.kod).toBe(400);
     expect(insert).not.toHaveBeenCalled();
   });
@@ -128,7 +128,7 @@ describe("POST /api/garanti/hatirlatici", () => {
   it("geçerli → 201, kaynak + rıza zamanı + sürüm ile yazılır", async () => {
     const { default: handler } = await import("../api/garanti/hatirlatici.js");
     const r = yanit();
-    await handler({ method: "POST", body: { ...gecerli, garanti_bitis_tarihi: "2099-01-01" } }, r);
+    await handler({ method: "POST", headers: { origin: "https://www.benservis.com" }, body: { ...gecerli, garanti_bitis_tarihi: "2099-01-01" } }, r);
     expect(r.kod).toBe(201);
     const satir = insert.mock.calls[0][0];
     expect(satir.kaynak).toBe("garanti-hatirlatici");
@@ -140,7 +140,7 @@ describe("POST /api/garanti/hatirlatici", () => {
   it("GET → 405", async () => {
     const { default: handler } = await import("../api/garanti/hatirlatici.js");
     const r = yanit();
-    await handler({ method: "GET" }, r);
+    await handler({ method: "GET", headers: { origin: "https://www.benservis.com" } }, r);
     expect(r.kod).toBe(405);
   });
 });

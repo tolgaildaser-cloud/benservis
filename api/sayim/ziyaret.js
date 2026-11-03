@@ -3,8 +3,9 @@
 // aralığı} → public.sayfa_okuma_artir() (sayfa kapanırken, 30 Eki 2026). Şehir Vercel başlıklarından.
 // Ham istek, IP, UA, çerez, kimlik SAKLANMAZ. Bot UA'sı sayılmaz. Her durumda 204 — beacon cevap okumaz.
 import { ziyaretAnahtari, okumaAnahtari } from "../../src/ziyaret-sayim.js";
+import { originKapisi } from "../_origin.js";
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(204).end();
   try {
@@ -32,3 +33,5 @@ export default async function handler(req, res) {
   }
   return res.status(204).end();
 }
+
+export default originKapisi(handler, { sessiz: true });

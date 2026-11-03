@@ -8,6 +8,7 @@
 import supabase from "../_supabase.js";
 import { sendSMS, setCorsHeaders } from "../_verimor.js";
 import { withRateLimit } from "../_ratelimit.js";
+import { originKapisi } from "../_origin.js";
 
 // Adres metninden ilçe tahmin eder: "Kadıköy, Moda Cad. 12/3" → "Kadıköy"
 function ilcedenAdres(adres) {
@@ -111,7 +112,7 @@ async function handler(req, res) {
 
 // Per-IP rate-limit: 5/saat. Bu uç kullanıcının verdiği numaraya SMS gönderir →
 // limitsiz olsa döngüyle farklı numaralara spam/toll-fraud yapılabilirdi. fail-open.
-export default withRateLimit(handler, {
+export default withRateLimit(originKapisi(handler), {
   prefix: "is-yeni",
   limits: [{ tokens: 5, window: "1 h" }],
 });
