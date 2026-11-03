@@ -30,10 +30,11 @@ import { ODEME_KILIT_DK } from "../src/ikinci-el-kilit.js";
 import { anahtarGecerli, ilanKilitle } from "./_kilit.js";
 import { HAVALE_KILIT_DK, havaleSonu } from "../src/havale.js";
 import { cepDogrula, adresDogrula } from "../src/teslimat-dogrula.js";
+import { withRateLimit } from "./_ratelimit.js";
 
 const EPOSTA_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   setCorsHeaders(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
@@ -208,6 +209,14 @@ export default async function handler(req, res) {
   const telStr = String(alici_tel);
   const tel = telStr.startsWith("+") ? telStr : `+90${telStr.replace(/^0/, "")}`;
 
+  // Açık havale sınırı (güvenlik incelemesi, 3 Kas 2026): aynı telefonla ödemesi beklenen 2 havale
+  // siparişi varken yenisi açılmaz → sahte siparişle ilanları 24 saat kilitlemek zorlaşır.
+  if (havale) {
+    const { count: acik } = await supabase.from("siparisler").select("id", { count: "exact", head: true })
+      .eq("alici_tel", teslimat?.tel || tel).eq("odeme_saglayici", "havale").eq("odeme_durumu", "odeme_bekleniyor");
+    if ((acik || 0) >= 2) return res.status(429).json({ error: "Bu telefonla ödemesi bekleyen siparişlerin var. Önce onları tamamla ya da bizimle iletişime geç." });
+  }
+
   const { data: siparis, error: insErr } = await supabase
     .from("siparisler")
     .insert({
@@ -244,3 +253,5 @@ export default async function handler(req, res) {
     } } : {}),
   });
 }
+
+export default withRateLimit(handler, { prefix: "siparis", limits: [{ tokens: 6, window: "1 h" }, { tokens: 20, window: "1 d" }] });
