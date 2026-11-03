@@ -131,9 +131,9 @@ function guideMeta(g) {
 // Ağırlık seti SPA'nın `index.html`'indekiyle BİREBİR aynı olmalı — ikisi ayrışırsa
 // blogdan uygulamaya geçen kullanıcı aynı fontu ikinci kez indirir (önbellek ıskalar).
 const FONT_LINK =
-  `<link rel="preconnect" href="https://fonts.googleapis.com">` +
-  `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
-  `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">`;
+  // Fontlar kendi sunucumuzdan (KVKK yurt dışı aktarım + hız, 3 Kas 2026): public/fonts/.
+  `<link rel="preload" href="/fonts/hanken-grotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>` +
+  `<link rel="stylesheet" href="/fonts/fonts.css">`;
 
 // YK #78 — GA4 çerezsiz "consent mode". SPA'nın `index.html`'indeki blokla BİREBİR aynı
 // olmalı; ayrışırsa ölçüm iki ayrı davranışa böler.

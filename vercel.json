@@ -43,6 +43,7 @@
     { "source": "/siparis/:siparis",              "destination": "/api/odeme/sonuc?siparis=:siparis" }
   ],
   "headers": [
+    { "source": "/fonts/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }] },
     { "source": "/ikinci-el", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
     { "source": "/ikinci-el/:yol*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
     { "source": "/yerinde", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }

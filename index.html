@@ -33,9 +33,9 @@
          <head>'de: bağlantı ısınması hemen, istek ilk taramada başlıyor.
          Ağırlık seti 20 dosyadaki tüm @import'ların BİRLEŞİMİ — hiçbir yüzeyde
          eksik ağırlık kalmasın diye tek tek toplandı. display=swap korundu. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" />
+    <!-- Fontlar kendi sunucumuzdan (KVKK yurt dışı aktarım + hız, 3 Kas 2026) -->
+    <link rel="preload" href="/fonts/hanken-grotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin /><link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
