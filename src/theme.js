@@ -18,5 +18,4 @@ export const RED     = "#DC2626"; // hata / yıkıcı eylem (semantik, marka dı
 // sürdürülebilirlik. Yerel sabit AÇMAK yerine token — tek stil kaynağı ilkesi (#69 cila ①).
 export const GREEN_TINT = "#F0FDF4"; // yeşil kâğıt zemin (GREEN'in en açık kademesi)
 export const GREEN_DEEP = "#15803D"; // yeşil metin/aksan — açık zeminde okunur kontrast
-export const FONT_IMPORT =
-  "@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');";
+export const FONT_IMPORT = "@import url('/fonts/fonts.css');"; // kendi sunucumuz (3 Kas 2026)
