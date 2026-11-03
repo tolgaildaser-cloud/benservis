@@ -4,6 +4,8 @@
 // POST /api/talep/alici/:token { action: 'teslim_onayla' }  → teslim onayı
 import supabase from "../../_supabase.js";
 import { sendSMS } from "../../_verimor.js";
+import { withRateLimit } from "../../_ratelimit.js";
+import { smsGonderilsinMi, yalnizPost, MESAJ_EN_UZUN } from "../../_sms-sinir.js";
 
 const BASE_URL = "https://benservis.com";
 
@@ -14,7 +16,7 @@ function e164(tel) {
   return "+90" + d;
 }
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -79,16 +81,18 @@ export default async function handler(req, res) {
     // — Mesaj gönder —
     if (action === "mesaj") {
       if (!icerik?.trim()) return res.status(400).json({ error: "Mesaj boş olamaz" });
+      if (icerik.length > MESAJ_EN_UZUN) return res.status(400).json({ error: "Mesaj çok uzun" });
       if (["teslim_onaylandi", "iptal"].includes(talep.odeme_durumu))
         return res.status(400).json({ error: "Bu talep kapalı" });
 
+      const smsGitsin = await smsGonderilsinMi(supabase, talep.id, "alici");
       await supabase.from("mesajlar").insert({
         talep_id: talep.id, gonderen: "alici", icerik: icerik.trim(),
       });
 
       // Satıcıya SMS bildirimi
       const saticiUrl = `${BASE_URL}/ikinci-el/satis/${talep.ilanlar.satici_token}`;
-      try {
+      if (smsGitsin) try {
         await sendSMS(
           e164(talep.ilanlar.satici_tel),
           `Benservis: "${talep.ilanlar.baslik}" ilanında yeni mesaj var.\nPanele git: ${saticiUrl}`
@@ -132,3 +136,5 @@ export default async function handler(req, res) {
 
   return res.status(405).json({ error: "Method not allowed" });
 }
+
+export default yalnizPost(withRateLimit(handler, { prefix: "talepalici", limits: [{ tokens: 20, window: "10 m" }, { tokens: 60, window: "1 d" }] }), handler);

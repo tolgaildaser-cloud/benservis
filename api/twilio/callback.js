@@ -24,14 +24,17 @@ export default async function handler(req, res) {
   }
 
   // Twilio imza doğrulaması — sahte webhook isteklerini engeller
+  // 3 Kas 2026: token yoksa doğrulama atlanmaz, istek reddedilir (eskiden fail-open).
+  // URL sabit: Host başlığı istemcinin elinde, imza kontrolünü ona bağlamak güvenli değil.
   const authToken = process.env.TWILIO_AUTH_TOKEN;
-  if (authToken) {
+  if (!authToken) {
+    console.error("TWILIO_AUTH_TOKEN env eksik: callback reddedildi");
+    return res.status(503).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Forbidden</Say></Response>');
+  }
+  {
     const twilio = (await import("twilio")).default;
     const signature = req.headers["x-twilio-signature"] || "";
-    // Tam URL'yi req header'larından oluştur
-    const protocol = req.headers["x-forwarded-proto"] || "https";
-    const host = req.headers["host"] || "www.benservis.com";
-    const url = `${protocol}://${host}/api/twilio/callback`;
+    const url = "https://www.benservis.com/api/twilio/callback";
     const params = req.body || {};
     const valid = twilio.validateRequest(authToken, signature, url, params);
     if (!valid) {
