@@ -9,6 +9,7 @@ import supabase from "../_supabase.js";
 import { withRateLimit } from "../_ratelimit.js";
 import { PAZAR_CIHAZLARI, PARCA_TURLERI } from "../../src/pazar-sozluk.js";
 import { TR_IL_ILCE } from "../../src/tr-iller.js";
+import { originKapisi } from "../_origin.js";
 
 // `KvkkNotu` bileşeninin metin sürümü. Metin değişirse bu sayı artar.
 export const KVKK_METIN_V = 1;
@@ -46,7 +47,7 @@ async function handler(req, res) {
   return res.status(201).json({ ok: true });
 }
 
-export default withRateLimit(handler, {
+export default withRateLimit(originKapisi(handler), {
   prefix: "pazar-talep",
   limits: [{ tokens: 3, window: "10 m" }, { tokens: 10, window: "1 d" }],
 });

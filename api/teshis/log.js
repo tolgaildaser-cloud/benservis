@@ -5,14 +5,8 @@
 import supabase from "../_supabase.js";
 import { withRateLimit } from "../_ratelimit.js";
 import { TR_IL_ILCE } from "../../src/tr-iller.js";
+import { originIzinli as originOk } from "../_origin.js";
 
-const IZIN = ["benservis.com", "vercel.app", "localhost"];
-function originOk(req) {
-  const raw = req.headers.origin || req.headers.referer || "";
-  if (!raw) return true;
-  try { const h = new URL(raw).hostname; return IZIN.some((a) => h === a || h.endsWith("." + a)); }
-  catch { return true; }
-}
 const str = (v, n = 120) => (typeof v === "string" && v.trim() ? v.trim().slice(0, n) : null);
 const num = (v) => (v == null || isNaN(Number(v)) ? null : Math.round(Number(v)));
 

@@ -4,8 +4,9 @@
 // Auth yok — is_no + durum=tamamlandi + puan IS NULL kontrolleriyle güvenlik sağlanır.
 import supabase from "../_supabase.js";
 import { setCorsHeaders } from "../_verimor.js";
+import { originKapisi } from "../_origin.js";
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   setCorsHeaders(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
@@ -40,3 +41,5 @@ export default async function handler(req, res) {
 
   return res.status(200).json({ ok: true });
 }
+
+export default originKapisi(handler);

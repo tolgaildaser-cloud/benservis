@@ -2,20 +2,8 @@
 // Anahtar yalnız sunucuda (Vercel ortam değişkeni) durur, tarayıcıya asla düşmez.
 // Koruma: IP başına rate-limit (withRateLimit) + origin kontrol + prompt boyut tavanı.
 import { withRateLimit } from "./_ratelimit.js";
+import { originIzinli as originOk } from "./_origin.js";
 
-// Origin/Referer bizim alan adımızdan mı? (UCUZ katman — spoof edilebilir, asıl
-// savunma rate-limit. Origin/Referer YOKSA engelleme: same-origin/edge'i kırma.)
-const IZIN = ["benservis.com", "vercel.app", "localhost"];
-function originOk(req) {
-  const raw = req.headers.origin || req.headers.referer || "";
-  if (!raw) return true;
-  try {
-    const h = new URL(raw).hostname;
-    return IZIN.some((a) => h === a || h.endsWith("." + a));
-  } catch {
-    return true;
-  }
-}
 
 const MAX_PROMPT = 12000; // gerçek teşhis prompt'u ~4k; bu 3x marj (dev prompt kötüye kullanımını kısar)
 

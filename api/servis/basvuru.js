@@ -3,6 +3,7 @@
 // Alanlar: ad, sahip_ad, email, telefon, il, ilce, adres?,
 //          kategoriler[]?, yetkili?, tier?, yetkili_markalar[]?, notlar?
 import supabase from "../_supabase.js";
+import { originKapisi } from "../_origin.js";
 
 function setCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -10,7 +11,7 @@ function setCors(res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   setCors(res);
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST")   return res.status(405).json({ error: "Method not allowed" });
@@ -83,3 +84,5 @@ export default async function handler(req, res) {
 
   return res.status(201).json({ ok: true, id: data.id });
 }
+
+export default originKapisi(handler);

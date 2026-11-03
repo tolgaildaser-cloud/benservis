@@ -11,6 +11,7 @@
 import supabase from "../_supabase.js";
 import { withRateLimit } from "../_ratelimit.js";
 import { garantiKaydiDogrula } from "../../src/garanti-hatirlatici.js";
+import { originKapisi } from "../_origin.js";
 
 async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
@@ -30,7 +31,7 @@ async function handler(req, res) {
 }
 
 // Kişisel veri yazan açık uç: teşhisle aynı sıkılıkta sınır (kötüye kullanım / sahte kayıt).
-export default withRateLimit(handler, {
+export default withRateLimit(originKapisi(handler), {
   prefix: "garanti-hatirlatici",
   limits: [{ tokens: 3, window: "60 s" }, { tokens: 10, window: "1 d" }],
 });

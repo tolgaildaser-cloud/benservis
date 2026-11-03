@@ -7,6 +7,7 @@ import supabase from "../_supabase.js";
 import { sendSMS } from "../_verimor.js";
 import { withRateLimit } from "../_ratelimit.js";
 import crypto from "crypto";
+import { originKapisi } from "../_origin.js";
 
 const BASE_URL = "https://benservis.com";
 
@@ -100,7 +101,7 @@ async function handler(req, res) {
 }
 
 // Public + satıcıya SMS gönderir → taciz/kredi-yakma önlemek için per-IP 8/saat (fail-open).
-export default withRateLimit(handler, {
+export default withRateLimit(originKapisi(handler), {
   prefix: "talep-yeni",
   limits: [{ tokens: 8, window: "1 h" }],
 });

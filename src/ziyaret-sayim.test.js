@@ -9,7 +9,7 @@ import { KAPSAM_ILLER } from "./kapsam-iller.js";
 import handler from "../api/sayim/ziyaret.js";
 
 const TARAYICI = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1";
-const H = { "user-agent": TARAYICI, "x-vercel-ip-country": "TR", "x-vercel-ip-country-region": "34", "x-vercel-ip-city": "Kad%C4%B1k%C3%B6y", "x-forwarded-for": "85.1.2.3" };
+const H = { origin: "https://www.benservis.com", "user-agent": TARAYICI, "x-vercel-ip-country": "TR", "x-vercel-ip-country-region": "34", "x-vercel-ip-city": "Kad%C4%B1k%C3%B6y", "x-forwarded-for": "85.1.2.3" };
 
 describe("ziyaretAnahtari — yalnız toplam anahtarı", () => {
   it("alanlar gün/ülke/bölge/şehir/tür; IP ve UA yok", () => {

@@ -45,7 +45,7 @@ function cagir(handler, { method = "GET", query = {}, body } = {}) {
       json(v) { coz({ kod: this.kod, govde: v, basliklar: this.basliklar }); return this; },
       end() { coz({ kod: this.kod }); return this; },
     };
-    handler({ method, query, body, headers: {} }, res);
+    handler({ method, query, body, headers: { origin: "https://www.benservis.com" } }, res);
   });
 }
 
