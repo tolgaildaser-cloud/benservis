@@ -86,6 +86,7 @@ const ASLA_CACHE = [
   "/api/diagnose",
   "/api/stt",
   "/api/teshis/log",
+  "/api/push",
   "/api/admin",
   "/admin",
   "/servis-admin",
@@ -274,4 +275,23 @@ self.addEventListener("fetch", (e) => {
 
   // 7b) Hash'li build çıktıları ve diğer statikler → cache-first (ad hash'li, içerik sabit).
   e.respondWith(cacheOnce(request, STATIK_CACHE).catch(() => caches.match(request).then((c) => c || Response.error())));
+});
+
+// ── Web Push (YK #203 PR-1, 3 Kas 2026) ─────────────────────────────────────
+// Gövde: {baslik, metin, url}. url yalnız kendi sitemizdeki yol olabilir; dışarıya yönlendirme yok.
+const guvenliYol = (u) => (typeof u === "string" && /^\/(?!\/)/.test(u) ? u : "/");
+self.addEventListener("push", (e) => {
+  let v = {};
+  try { v = e.data ? e.data.json() : {}; } catch { v = {}; }
+  e.waitUntil(self.registration.showNotification(v.baslik || "Benservis", {
+    body: v.metin || "", icon: "/apple-touch-icon.png", badge: "/apple-touch-icon.png", data: { url: guvenliYol(v.url) },
+  }));
+});
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const yol = guvenliYol(e.notification.data?.url);
+  e.waitUntil(self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((l) => {
+    const acik = l.find((c) => new URL(c.url).origin === self.location.origin);
+    return acik ? acik.navigate(yol).then((c) => c && c.focus()) : self.clients.openWindow(yol);
+  }));
 });
