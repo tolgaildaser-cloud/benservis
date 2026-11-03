@@ -1,6 +1,6 @@
 // api/push/abone.js — Web Push aboneliği kaydı (YK #203 PR-1, 3 Kas 2026).
 // POST {endpoint, p256dh, auth, cihaz} → push_abone'ye ekle/güncelle (aynı endpoint: teşhis tarihi ve cihaz yenilenir,
-// iptal_at sıfırlanır). DELETE {endpoint} → iptal_at = now(). IP, UA, kimlik SAKLANMAZ. Yanıt yalnız {ok}.
+// iptal_at sıfırlanır). DELETE {endpoint} → satır silinir (gizlilik metni #bildirim). IP, UA, kimlik SAKLANMAZ. Yanıt yalnız {ok}.
 import { withRateLimit } from "../_ratelimit.js";
 import { CIHAZLAR } from "../../src/constants.js";
 
@@ -21,7 +21,8 @@ async function handler(req, res) {
   const { default: supabase } = await import("../_supabase.js");
   if (req.method === "DELETE") {
     if (typeof g?.endpoint !== "string") return res.status(400).json({ ok: false });
-    const { error } = await supabase.from("push_abone").update({ iptal_at: new Date().toISOString() }).eq("endpoint", g.endpoint);
+    // Gizlilik metni: rıza geri alınınca kayıt silinir (iptal işareti değil).
+    const { error } = await supabase.from("push_abone").delete().eq("endpoint", g.endpoint);
     return res.status(error ? 500 : 200).json({ ok: !error });
   }
   const v = gecerliGovde(g);

@@ -3040,6 +3040,12 @@ const GIZLILIK_GOVDE = `<article>
 <p>Sitede Google Analytics 4, çerez kullanmayan &quot;consent mode&quot; yapılandırmasıyla çalışır: tarayıcınıza analitik çerezi yazılmaz, ölçüm anonimleştirilmiş sayfa görüntüleme sinyalleriyle yapılır.</p>
 <p>Siteyi geliştirmek için hangi şehirden ve hangi sayfa türüne (blog, tamir, teşhis gibi) günde kaç ziyaret geldiğini, sayfada kalınan sürenin ve okunan kısmın kabaca hangi aralıkta olduğunu (örneğin 10 saniyeden az, sayfanın yarısına kadar) toplu sayı olarak tutuyoruz; bu sayım IP adresi, çerez, cihaz ya da kullanıcı kimliğiyle ilişkilendirilmez ve tek bir ziyaretçiye geri götürülemez. Yakınımdaki servis aramalarında da yalnız aranan il/ilçe, cihaz türü ve bulunan servis sayısı toplu olarak kaydedilir; konumunuz ve kimliğiniz saklanmaz.</p>
 
+<h2 id="bildirim">Bildirimler (tarayıcı push bildirimi)</h2>
+<p>İsterseniz, teşhis sonucu ekranında tarayıcınızın bildirim izni istemesine onay verebilirsiniz. Onay vermezseniz hiçbir şey değişmez; site aynı şekilde çalışır.</p>
+<p>Onay verirseniz size yalnız iki tür bildirim göndeririz: teşhisten birkaç gün sonra &quot;cihazınız düzeldi mi?&quot; sorusu ve ayda en çok bir kez, cihaz türünüze göre mevsimsel bakım hatırlatması. Bir ayda ikiden fazla bildirim göndermeyiz. Reklam, kampanya ya da üçüncü taraf bildirimi göndermiyoruz.</p>
+<p>Bildirim için tarayıcınızın bize verdiği abonelik adresi ve teknik anahtarlar, izin tarihi, seçtiğiniz cihaz türü ve son gönderim zamanı saklanır. Adınız, telefonunuz, e-postanız, IP adresiniz veya konumunuz bu kayda yazılmaz; bildirim kaydı kullanıcı hesabınızla ya da teşhis içeriğinizle ilişkilendirilmez. Gönderim, tarayıcı üreticisinin (Google, Apple, Mozilla) bildirim altyapısı üzerinden yapılır; bu altyapıya yalnız şifreli bildirim içeriği gider.</p>
+<p>Bildirimleri dilediğiniz zaman kapatabilirsiniz: tarayıcınızın site ayarlarından izni kaldırmanız yeterlidir; iptal edilen abonelik ilk gönderim denemesinde kaydımızdan silinir. Bu veri, KVKK madde 5/1-a kapsamında açık rızanıza dayanılarak işlenir ve rızanızı geri aldığınızda silinir.</p>
+
 <h2>Güvenlik</h2>
 <p>Veritabanımızda satır düzeyi erişim kısıtlaması (RLS) açıktır; kayıtlara yalnızca yetkili sunucu tarafı erişebilir. Genel uçlarda istek sınırlaması uygulanır. Yönetim panelleri belirteçle (token) korunur.</p>
 

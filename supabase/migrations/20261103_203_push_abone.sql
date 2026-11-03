@@ -2,7 +2,8 @@
 --   · PII YOK: ad, e-posta, telefon, IP, user-agent SAKLANMAZ. Yalnız tarayıcının verdiği push adresi
 --     (endpoint) + şifreleme anahtarları, teşhis yapılan cihaz türü ve tarihler.
 --   · RLS açık, politika yok → anon okuyamaz/yazamaz; yalnız service key (api/push/abone.js) yazar.
---   · İzin iptalinde satır silinmez, iptal_at dolar (ölçüm: izin iptali sayısı).
+--   · İzin iptalinde satır SİLİNİR (gizlilik metni #bildirim); iptal sayısı pano ölçümünden, satırdan değil.
+--     iptal_at yalnız gönderim ucunun kısa süreli işareti (PR-2), satır aynı koşuda silinir.
 --
 -- ⚠️ ÇALIŞTIRAN: Tolga, Supabase SQL Editor'da TEK SEFERDE. FE canlı DB'ye yazmaz. Tekrar çalıştırılabilir.
 
