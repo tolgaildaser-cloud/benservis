@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import ServisEkrani from "./ServisEkrani.jsx";
 
 // ⛔ DPP PANELİ (`DPPEkrani`) BU EKRANDAN KALDIRILDI — 2 Eyl 2026, Tolga: "ölü kodu temizle".
@@ -12,6 +12,7 @@ import { CIHAZLAR, MARKALAR, markalarForCihaz, cihazSlug, tabloBul } from "./con
 import CihazIkon from "./cihaz-ikonlari.jsx";
 import BenservisLogo from "./BenservisLogo.jsx";
 import AnaEkranaEkle from "./AnaEkranaEkle.jsx";
+const BildirimIzni = lazy(() => import("./BildirimIzni.jsx")); // YK #203: yalnız sonuç ekranında yüklenir
 import AnaSayfaVitrin from "./AnaSayfaVitrin.jsx";
 import GarantiHatirlatici from "./GarantiHatirlatici.jsx";
 import { rehberBul, ZORLUK_TR } from "./onarim-rehberleri.js";
@@ -900,6 +901,7 @@ Kurallar: en fazla 3 olası arıza (olasılığa göre sırala), olasilik 0-100,
               </div>
               {/* PWA ipucu (YK #26): yalnız sonuç ekranında + 2. ziyaretten sonra; kendi içinde eleniyor */}
               <AnaEkranaEkle />
+              <Suspense fallback={null}><BildirimIzni cihaz={cihaz} /></Suspense>
             </div>
   ) : null;
 
