@@ -2,6 +2,7 @@
 // POST {endpoint, p256dh, auth, cihaz} → push_abone'ye ekle/güncelle (aynı endpoint: teşhis tarihi ve cihaz yenilenir,
 // iptal_at sıfırlanır). DELETE {endpoint} → satır silinir (gizlilik metni #bildirim). IP, UA, kimlik SAKLANMAZ. Yanıt yalnız {ok}.
 import { withRateLimit } from "../_ratelimit.js";
+import { originKapisi } from "../_origin.js";
 import { CIHAZLAR } from "../../src/constants.js";
 
 export function gecerliGovde(g) {
@@ -34,4 +35,5 @@ async function handler(req, res) {
   return res.status(error ? 500 : 200).json({ ok: !error });
 }
 
-export default withRateLimit(handler, { prefix: "pushabone", limits: [{ tokens: 10, window: "1 h" }] });
+// PR-2: başka siteden ya da başlıksız (curl) yazma kapalı; tarayıcı aynı kökenli fetch'te Origin gönderir.
+export default originKapisi(withRateLimit(handler, { prefix: "pushabone", limits: [{ tokens: 10, window: "1 h" }] }));
