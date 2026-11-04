@@ -43,11 +43,11 @@ faq:
   - q: "Semboller bütün Profilo fırınlarda aynı mı?"
     a: "Değil. FRMA226'da ekran, saat, çocuk emniyeti, hızlı ısıtma, pizza, alttan ısıtma, sıcak hava hassas ve üstten/alttan ısıtma var; buz çözme yok. FRGA103I'de ekran yok, dört ısıtma türü var ve buz çözme onlardan biri. Kesin karşılık kendi modelinin kılavuzundadır."
 images:
-  coverAlt: "Düğmeli ve ekranlı sade ankastre fırın kumanda paneli çizimi"
+  coverAlt: "Üstünde düğmeleri olan sade ankastre fırın çizimi"
   steps:
-    - "Fırın panelindeki kilit tuşunu basılı tutan beyaz eldivenli sade siluet el çizimi"
+    - "Ekranlı kontrol panelinde işaretli tuşa basan beyaz eldivenli sade siluet el çizimi"
     - "Fırın panelindeki saat tuşuna dokunan beyaz eldivenli sade siluet el çizimi"
-    - "Fırının sıcaklık düğmesini çeviren beyaz eldivenli sade siluet el çizimi"
+    - "Fırının sol üstteki işaretli düğmesine uzanan beyaz eldivenli sade siluet el çizimi"
     - "Fırın düğmesinin yanındaki gösterge lambasının önünde bekleyen beyaz eldivenli sade siluet el çizimi"
     - "Fırının işlev düğmesini çeviren beyaz eldivenli sade siluet el çizimi"
     - "Fırın panelindeki bir tuşa basan beyaz eldivenli sade siluet el çizimi"
