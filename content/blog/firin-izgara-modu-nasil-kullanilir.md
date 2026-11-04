@@ -2,7 +2,7 @@
 title: "Fırın ızgara modu nasıl kullanılır? Raf, kademe, süre"
 description: "Fırın ızgara modu nasıl kullanılır? Arçelik 9658 ve Profilo FRGA103I kılavuzlarına göre raf, ızgara kademesi, kapak, yağ tepsisi ve çevirme zamanı."
 slug: "firin-izgara-modu-nasil-kullanilir"
-date: "2026-11-05"
+date: "2026-11-04"
 category: "Fırın / Ocak"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-04 Çar PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md "2 Kas 2026" #261 [KU, öncelik O] "fırın ızgara modu nasıl kullanılır"). Y satırlarının hepsi ⚠/gaz/şofben ya da önceki koşularda alındı/belge yok; O sırasında #255 (klima, yedekten) ve #260 alındı, #256/#258/#259 ⚠ belge, #257 rezistans atlandı. Slug origin/main content/blog/'da yok (4 Kas fetch, 1.299 dosya; "izgara" geçen slug yok). Yakın yazılar: firin-nasil-temizlenir, firin-esit-pisirmiyor, firin-isinmiyor, firin-calismiyor-ne-yapmali, arcelik-firin-sembolleri-ve-anlamlari, ferre-firin-pisirme-ayarlari, luxell-firin-pisirme-ayarlari.

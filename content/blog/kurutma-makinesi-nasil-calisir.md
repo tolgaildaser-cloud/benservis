@@ -2,7 +2,7 @@
 title: "Kurutma makinesi nasıl çalışır? Yoğuşmalı ve ısı pompalı"
 description: "Kurutma makinesi nasıl çalışır? Arçelik ve Samsung kılavuzlarına göre sıcak hava, nem sensörü, yoğuşma, su tankı ve ısı pompalı makinenin farkı."
 slug: "kurutma-makinesi-nasil-calisir"
-date: "2026-11-05"
+date: "2026-11-04"
 category: "Kurutma makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-04 Çar PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md "2 Kas 2026" #260 [KU, öncelik O] "kurutma makinesi nasıl çalışır (havalandırmalı / yoğuşmalı / ısı pompalı)"). Y satırlarının hepsi ⚠/gaz/şofben ya da önceki koşularda alındı ya da belge yok; O sırasında #256, #258, #259 ⚠ belge, #257 rezistans (servis parçası) atlandı. Slug origin/main content/blog/'da yok (4 Kas fetch, 1.299 dosya). Yakın yazılar: kurutma-makinesi-nasil-kullanilir (adım adım kullanım), kurutma-makinesi-filtre-ve-kondenser-temizligi, kurutma-makinesi-kurutmuyor, kurutma-makinesi-su-tanki-dolu-uyarisi. Bu yazı çalışma mantığını ve iki sistemin farkını anlatır; kurulum ve ilk kullanım yazısıyla çakışmaz.

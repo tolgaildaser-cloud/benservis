@@ -2,7 +2,7 @@
 title: "Klima nasıl çalışır? Arçelik ve Vestel mod kılavuzları"
 description: "Klima nasıl çalışır? Arçelik 182410 ve Vestel Nova kılavuzlarına göre soğutma, ısıtma, nem alma, fan ve otomatik modların mantığı, mod ve sıcaklık seçimi."
 slug: "klima-nasil-calisir"
-date: "2026-11-05"
+date: "2026-11-04"
 category: "Klima"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-03 Sal PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md "2 Kas 2026" #255 [KU, öncelik O] "klima nasıl çalışır (mod mantığı: soğutma / ısıtma / dry)"). Sıradaki ilk üç konudan #251 ütü ve #254 mikrodalga alındı, #253 klima su tahliye hortumu belge yokluğundan düştü; bu üçüncü konu #255. Slug origin/main content/blog/'da yok (3 Kas fetch). Yakın yazılar: klima-isitma-modu-kac-derece-olmali, klima-calismiyor, klima-kumandasi-calismiyor, klima-su-damlatiyor, arcelik-klima-calismiyor, vestel-klima-calismiyor, klima-filtresi-temizleme. Bu yazı mod mantığını anlatır; ısıtma sıcaklığı ve sorun giderme yazılarıyla çakışmaz.
