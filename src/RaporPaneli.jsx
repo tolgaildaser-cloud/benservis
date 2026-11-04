@@ -14,10 +14,11 @@ const AdminServisAramaPaneli = lazy(() => import("./AdminServisAramaPaneli.jsx")
 const AdminServisDizinPaneli = lazy(() => import("./AdminServisDizinPaneli.jsx"));
 const AdminTeshisPaneli = lazy(() => import("./AdminTeshisPaneli.jsx"));
 const AdminUyelikPaneli = lazy(() => import("./AdminUyelikPaneli.jsx"));
+const AdminBildirimPaneli = lazy(() => import("./AdminBildirimPaneli.jsx"));
 
 const SEKMELER = [
   ["genel", "Genel bakış"], ["teshis", "Teşhis"], ["servis", "Servis talebi ve kapsam"], ["icerik", "İçerik ve Google"],
-  ["pazar", "Pazar"], ["yerinde", "Yerinde"], ["uyelik", "Üyelik"], ["sosyal", "Sosyal"],
+  ["pazar", "Pazar"], ["yerinde", "Yerinde"], ["uyelik", "Üyelik"], ["bildirim", "Bildirim"], ["sosyal", "Sosyal"],
 ];
 // Eski adresler kırılmasın.
 const ESKI_SEKME = { rapor: "teshis", siparisler: "pazar", servisArama: "servis" };
@@ -146,6 +147,7 @@ export default function RaporPaneli() {
         <Suspense fallback={Yukleniyor}>
           {sekme === "teshis" && <AdminTeshisPaneli sir={sir} suzgec={suzgec} yenile={yenile} onYetkisiz={yetkisiz} onSecenek={secenekAl} />}
           {sekme === "uyelik" && <AdminUyelikPaneli yenile={yenile} />}
+          {sekme === "bildirim" && <AdminBildirimPaneli sir={sir} yenile={yenile} onYetkisiz={yetkisiz} />}
           {sekme === "servis" && <><AdminServisAramaPaneli sir={sir} from={suzgec.from} to={suzgec.to} yenile={yenile} onYetkisiz={yetkisiz} /><AdminServisDizinPaneli sir={sir} yenile={yenile} onYetkisiz={yetkisiz} /></>}
           {sekme === "pazar" && (
             <>

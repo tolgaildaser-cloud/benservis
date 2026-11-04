@@ -36,3 +36,37 @@ describe("push aboneliği", () => {
     expect(q).not.toMatch(/^\s+(ip|user_agent|email|telefon|ad)\s/m);
   });
 });
+
+// YK #203 PR-2: gönderim kuralları.
+import { gonderimGovdesi, icYol, buAySayisi, tavanDolu, abonelikBitti, trAy } from "./push-gonderim.js";
+describe("push gönderimi", () => {
+  it("gövde başlık ≤60, metin ≤160 ister; yol yalnız site içi", () => {
+    expect(gonderimGovdesi({ baslik: "", metin: "x" })).toBeNull();
+    expect(gonderimGovdesi({ baslik: "a".repeat(61), metin: "x" })).toBeNull();
+    expect(gonderimGovdesi({ baslik: "B", metin: "m".repeat(161) })).toBeNull();
+    expect(gonderimGovdesi({ baslik: " B ", metin: " m ", url: "https://kotu.site", ad: "x" })).toEqual({ baslik: "B", metin: "m", url: "/" });
+    expect(icYol("//kotu.site")).toBe("/");
+    expect(icYol("/blog/klima-nasil-calisir/")).toBe("/blog/klima-nasil-calisir/");
+  });
+  it("ay tavanı Türkiye ayına göre: yeni ayda sayaç sıfırlanır", () => {
+    const simdi = Date.parse("2026-11-30T22:30:00Z"); // TR: 1 Ara 01:30
+    expect(trAy(simdi)).toBe("2026-12");
+    expect(buAySayisi({ son_gonderim: "2026-11-30T10:00:00Z", ay_gonderim: 2 }, simdi)).toBe(0);
+    expect(tavanDolu({ son_gonderim: "2026-11-30T21:30:00Z", ay_gonderim: 2 }, simdi)).toBe(true);
+    expect(tavanDolu({ son_gonderim: null, ay_gonderim: 5 }, simdi)).toBe(false);
+  });
+  it("404/410 abonelik bitti sayılır", () => {
+    expect(abonelikBitti(410)).toBe(true);
+    expect(abonelikBitti(404)).toBe(true);
+    expect(abonelikBitti(500)).toBe(false);
+  });
+  it("admin ucu endpoint/anahtar dönmez, yetki ve VAPID kapısı var", () => {
+    const k = fs.readFileSync(new URL("../api/admin/push.js", import.meta.url), "utf8");
+    expect(k).toMatch(/adminYetkili\(req\)/);
+    expect(k).toMatch(/VAPID ayarı eksik/);
+    expect(k.match(/const LISTE = "([^"]+)"/)[1]).not.toMatch(/endpoint|p256dh|auth/);
+  });
+  it("abone ucu Origin kapısının arkasında", () => {
+    expect(fs.readFileSync(new URL("../api/push/abone.js", import.meta.url), "utf8")).toMatch(/originKapisi\(withRateLimit/);
+  });
+});
