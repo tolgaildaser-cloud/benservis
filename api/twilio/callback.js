@@ -17,12 +17,6 @@ export default async function handler(req, res) {
     res.setHeader("Content-Type", "text/xml");
     return res.status(405).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Method Not Allowed</Say></Response>');
   }
-  if (!process.env.TWILIO_PHONE_NUMBER) {
-    console.error("TWILIO_PHONE_NUMBER env eksik");
-    res.setHeader("Content-Type", "text/xml");
-    return res.status(500).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say language="tr-TR">Sistem hatası.</Say></Response>');
-  }
-
   // Twilio imza doğrulaması — sahte webhook isteklerini engeller
   // 3 Kas 2026: token yoksa doğrulama atlanmaz, istek reddedilir (eskiden fail-open).
   // URL sabit: Host başlığı istemcinin elinde, imza kontrolünü ona bağlamak güvenli değil.
@@ -40,6 +34,13 @@ export default async function handler(req, res) {
     if (!valid) {
       return res.status(403).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say>Forbidden</Say></Response>');
     }
+  }
+
+  // Güvenlik PR-B: telefon env kontrolü imzadan SONRA; imzasız istek env durumunu (500/503) öğrenemez.
+  if (!process.env.TWILIO_PHONE_NUMBER) {
+    console.error("TWILIO_PHONE_NUMBER env eksik");
+    res.setHeader("Content-Type", "text/xml");
+    return res.status(503).send('<?xml version="1.0" encoding="UTF-8"?><Response><Say language="tr-TR">Sistem hatası.</Say></Response>');
   }
 
   const arayanTel = req.body?.From || req.query?.From;

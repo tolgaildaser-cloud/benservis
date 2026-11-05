@@ -6,6 +6,7 @@ import supabase from "../_supabase.js";
 import { paytrAyarlari, paytrToken, PAYTR_TOKEN_URL, siparisOid, sepetBase64, kurus } from "../_paytr.js";
 import { sayfaHTML, kacis, tl, RENK } from "./_sayfa.js";
 import { UCRETSIZ_KARGO_ESIK_TL } from "../../src/kargo.js";
+import { satilanIlanlar } from "../_siparis-odeme.js";
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -44,6 +45,15 @@ export default async function handler(req, res) {
   }
   if (!["odeme_bekleniyor", "odeme_basarisiz"].includes(s.odeme_durumu)) {
     return hataSayfasi(res, 409, "Bu sipariş ödemeye kapalı", `Sipariş durumu: ${kacis(s.odeme_durumu)}.`);
+  }
+
+  // Güvenlik PR-B (5 Kas 2026): ikinci el ilanı bu arada satılmış ya da kaldırılmışsa ödeme açılmaz.
+  const ilanIdler = satilanIlanlar(s);
+  if (ilanIdler.length) {
+    const { data: aktif, error: e2 } = await supabase.from("ilanlar").select("id").in("id", ilanIdler).eq("durum", "aktif").gt("stok", 0);
+    if (e2 || (aktif || []).length < ilanIdler.length) {
+      return hataSayfasi(res, 409, "Ürün artık satışta değil", "Siparişinizdeki ikinci el ürün satılmış ya da kaldırılmış; ödeme alınmadı.");
+    }
   }
 
   // Her deneme yeni merchant_oid: ilk 32 karakter sipariş id'si (bildirimde siparişe buradan dönülür).

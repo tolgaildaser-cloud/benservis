@@ -41,7 +41,15 @@ export default async function handler(req, res) {
       return res.status(500).send("DB error"); // OK dönülmez → PayTR bildirimi yeniden dener
     }
     // Satıldı / kilit bırakma mantığı havale ile ortak (api/_siparis-odeme.js, YK #174).
-    if (guncelle.odeme_durumu === "odendi" && yazilan?.length) await ilanlariSatildiYap(supabase, siparis);
+    if (guncelle.odeme_durumu === "odendi" && yazilan?.length) {
+      const r = await ilanlariSatildiYap(supabase, siparis);
+      // Güvenlik PR-B: ilan bu arada başka siparişle satılmışsa para alınmış ama ürün yok → incelemeye.
+      if (r?.eksik) {
+        await supabase.from("siparisler").update({ odeme_durumu: "odeme_incelemede", odeme_hata: "ilan başka siparişle satılmış" })
+          .eq("id", siparis.id);
+        console.error("PayTR: ödenen siparişte satılmış ilan:", siparis.siparis_no);
+      }
+    }
     if (guncelle.odeme_durumu === "odeme_basarisiz" && yazilan?.length) await ilanKilitleriniBirak(supabase, siparis);
   }
 

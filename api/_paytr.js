@@ -61,6 +61,9 @@ export const oidSiparisId = (oid) => {
 // Bildirimden yazılacak alanlar (saf fonksiyon — test edilir).
 export function bildirimGuncellemesi(siparis, b) {
   if (!siparis || siparis.odeme_durumu === "odendi") return null; // ilk başarılı bildirim esas
+  // Güvenlik PR-B (5 Kas 2026): incelemedeki sipariş (para alınmış, tutar tutmamış) sonraki bildirimle
+  // ezilmez; başarısız bildirim onu "odeme_basarisiz"e çevirip ilan ayırmasını bırakmazdı.
+  if (siparis.odeme_durumu === "odeme_incelemede") return null;
   const ortak = {
     odeme_oid: String(b.merchant_oid),
     odeme_tipi: b.payment_type ? String(b.payment_type).slice(0, 10) : null,
@@ -68,7 +71,15 @@ export function bildirimGuncellemesi(siparis, b) {
   };
   if (b.status === "success") {
     // PayTR'ye gönderilen tutar (kuruş) siparişle aynı olmalı; değilse ödeme alındı ama incelemeye düşer.
-    const tutarUyar = String(b.payment_amount ?? "") === String(kurus(siparis.tutar));
+    // total_amount (taksit farkı dahil tahsil edilen) sipariş tutarından az olamaz.
+    const beklenen = kurus(siparis.tutar);
+    const tahsil = Number.parseInt(b.total_amount, 10);
+    const tutarUyar = String(b.payment_amount ?? "") === String(beklenen) && Number.isFinite(tahsil) && tahsil >= beklenen;
+    // Admin iptal ettikten sonra gelen ödeme: para alınmış ama ilan başkasına gitmiş olabilir → incelemeye.
+    if (siparis.odeme_durumu === "iptal") {
+      return { ...ortak, odeme_durumu: "odeme_incelemede", odeme_toplam_kurus: Number.isFinite(tahsil) ? tahsil : null,
+        odeme_tarihi: new Date().toISOString(), odeme_hata: "iptal sonrası ödeme geldi" };
+    }
     return {
       ...ortak,
       odeme_durumu: tutarUyar ? "odendi" : "odeme_incelemede",
