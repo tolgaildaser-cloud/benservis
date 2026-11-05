@@ -1500,6 +1500,19 @@ html, body { margin: 0; overflow-x: hidden; background: ${CREAM};
   .vitrin-ustmenu a[href="/tamir/"] { display: none; }
 }
 .vitrin-kayit-serit { display: none; }
+/* HERO DARALT (5 Kas 2026, Tolga): masaüstünde ilk ekranda hero + "Hangi cihazın bozuldu?"
+   + alt satır + ilk sıra 4 cihaz kartı ve kart adları görünsün (1470x830 ölçüldü: kart altı 1012 -> 810).
+   Satır içi stilleri ezmek için !important; mobil (900px altı) eskisi gibi. */
+@media (min-width: 901px) {
+  .vitrin-hero { padding-bottom: 22px !important; }
+  .vitrin-hero-ic { padding-top: 10px !important; }
+  .vitrin-rozetler { margin-bottom: 14px !important; }
+  .vitrin-h1 { font-size: 42px !important; margin-bottom: 10px !important; }
+  .vitrin-alt { margin-bottom: 18px !important; }
+  .vitrin-populer { margin-top: 10px !important; }
+  .vitrin-cihaz-bolum { padding-top: 24px !important; }
+  .vitrin-cihaz-alt { margin-bottom: 16px !important; }
+}
 /* MOBİL ÜST MENÜ (2 Eki 2026, Tolga): ☰ düğmesi ve açılır panel masaüstünde kapalı;
    640px bloğunda açılır. Panel yalnız menü açıkken DOM'a girer. */
 .ustbar-menu-btn { display: none; }

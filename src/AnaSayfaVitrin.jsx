@@ -253,7 +253,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           Fotoğraf yerine derinlikli degrade + ızgara dokusu: casting kuralına uyan
           uygun stok bulunamadı, GRF'ye foto talebi backlog'a açıldı. Placeholder
           BİLEREK "boş fotoğraf kutusu" değil — kendi başına bitmiş görünüyor. */}
-      <section ref={heroRef} style={st.hero}>
+      <section ref={heroRef} className="vitrin-hero" style={st.hero}>
         {/* GRF hero fotoğrafı (17 Ağu teslimi) — degradenin ÜZERİNE biner.
             ⚠️ Degrade SİLİNMEDİ: dosya inmezse/yavaş inerse ekran boş kalmaz, altta
             aynı kompozisyon durur. Üstündeki koyu perde başlık ve kutunun okunmasını
@@ -363,8 +363,8 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
           </a>
         </div>
 
-        <div style={st.heroIc}>
-          <div style={st.rozetler}>
+        <div className="vitrin-hero-ic" style={st.heroIc}>
+          <div className="vitrin-rozetler" style={st.rozetler}>
             <span style={st.rozet}>★ Google puanlı servisler</span>
             <span style={st.rozet}>✓ Ücretsiz teşhis</span>
             {/* 21 Ağu 2026: rozet ELLE "96" yazıyordu, aşağıdaki bant ise 160 diyordu —
@@ -375,8 +375,8 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             <span style={st.rozet}>◎ {IST.servis >= 10000 ? "10.000+" : trSayi(IST.servis)} servis</span>
           </div>
 
-          <h1 style={st.h1}>{VAAT.h1}</h1>
-          <p style={st.altBaslik}>{VAAT.alt}</p>
+          <h1 className="vitrin-h1" style={st.h1}>{VAAT.h1}</h1>
+          <p className="vitrin-alt" style={st.altBaslik}>{VAAT.alt}</p>
 
           {/* Tek büyük "derdini yaz" kutusu — araştırma deseni 1.
               ⛔ Yeni akış açmaz: yazılan metin mevcut formun `belirti` alanına iner. */}
@@ -396,7 +396,7 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
             </button>
           </div>
 
-          <div style={st.populer}>
+          <div className="vitrin-populer" style={st.populer}>
             <span style={st.populerEtiket}>Popüler:</span>
             {POPULER.map((p) => (
               <button key={p.etiket} style={st.populerLink} onClick={() => { setDert(p.etiket); onDertYaz(p.etiket, p.cihaz); }}>
@@ -424,9 +424,9 @@ export default function AnaSayfaVitrin({ onDertYaz, onCihazSec, onFormaGit, onLo
       </a>
 
       {/* ═══ ② CİHAZ KARTLARI ═══ */}
-      <section style={st.bolumDis}><div style={st.bolum}>
+      <section style={st.bolumDis}><div className="vitrin-cihaz-bolum" style={st.bolum}>
         <h2 style={st.h2}>Hangi cihazın bozuldu?</h2>
-        <p style={st.bolumAlt}>Cihazını seç, belirtiyi kendi kelimelerinle anlat — olası arızayı ve tahmini tutarı teşhisten sonra görürsün.</p>
+        <p className="vitrin-cihaz-alt" style={st.bolumAlt}>Cihazını seç, belirtiyi kendi kelimelerinle anlat — olası arızayı ve tahmini tutarı teşhisten sonra görürsün.</p>
         <div className="vitrin-kartlar" style={st.kartlar}>
           {CIHAZLAR.map((c) => {
             const fotoVar = FOTOGRAFLI.has(c);
