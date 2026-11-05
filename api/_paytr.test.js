@@ -58,6 +58,24 @@ describe("PayTR bildirimi (2. adım)", () => {
     expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odendi" }, b)).toBeNull();
     expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odendi" }, { ...b, status: "failed" })).toBeNull();
   });
+
+  it("güvenlik PR-B: incelemedeki sipariş ezilmez, eksik tahsilat ve iptal sonrası ödeme incelemeye", () => {
+    expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odeme_incelemede" }, { ...b, status: "failed" })).toBeNull();
+    expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odeme_incelemede" }, b)).toBeNull();
+    expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odeme_bekleniyor" }, { ...b, total_amount: "50000" }).odeme_durumu).toBe("odeme_incelemede");
+    expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odeme_bekleniyor" }, { ...b, total_amount: "57000" }).odeme_durumu).toBe("odendi");
+    const i = bildirimGuncellemesi({ tutar: 549, odeme_durumu: "iptal" }, b);
+    expect(i.odeme_durumu).toBe("odeme_incelemede");
+    expect(i.odeme_hata).toBe("iptal sonrası ödeme geldi");
+  });
+
+  it("güvenlik PR-B: ödeme sayfası satılmış ilanı açmaz; callback eksik satışı incelemeye alır; Twilio imza önce", () => {
+    const oku = (f) => fs.readFileSync(new URL(f, import.meta.url), "utf8");
+    expect(oku("./odeme/paytr.js")).toMatch(/Ürün artık satışta değil/);
+    expect(oku("./odeme/callback.js")).toMatch(/ilan başka siparişle satılmış/);
+    const t = oku("./twilio/callback.js");
+    expect(t.indexOf("TWILIO_AUTH_TOKEN")).toBeLessThan(t.indexOf("!process.env.TWILIO_PHONE_NUMBER"));
+  });
 });
 
 describe("kaynak kuralları", () => {

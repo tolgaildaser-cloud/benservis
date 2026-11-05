@@ -14,10 +14,12 @@ export function satilanIlanlar(siparis) {
 export async function ilanlariSatildiYap(supabase, siparis) {
   const idler = satilanIlanlar(siparis);
   if (!idler.length) return null;
-  const { error } = await supabase.from("ilanlar")
+  const { data, error } = await supabase.from("ilanlar")
     .update({ durum: "satildi", stok: 0, kilit_token: null, kilit_bitis: null })
-    .in("id", idler).eq("durum", "aktif");
+    .in("id", idler).eq("durum", "aktif").select("id");
   if (error) console.error("İkinci el ilan satıldı yapılamadı:", siparis.siparis_no, error.message);
+  // Güvenlik PR-B: satıldı yapılamayan ilan (başka siparişle satılmış) varsa çağıran incelemeye alır.
+  if (!error && (data || []).length < idler.length) return { eksik: idler.length - (data || []).length };
   return error || null;
 }
 
