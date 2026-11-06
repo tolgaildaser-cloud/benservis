@@ -69,7 +69,7 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Vaillant ecoTEC intro ve ecoTEC pure kılavuzlarına göre F.28 'Ateşleme başarısız' demektir: arka arkaya 3 başarısız ateşleme denemesinden sonra kombi arıza konumuna geçer. ecoTEC plus/exclusive'te kod F.028, eşik 5 denemedir. İlk tedbir gaz kesme vanasını kontrol etmek, sonra modelin reset yöntemi."
 faq:
   - q: "Vaillant kombide F28 hatası ne demek?"

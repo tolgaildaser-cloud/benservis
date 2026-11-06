@@ -2,9 +2,9 @@
 title: "Davlumbaz ışığı yanıp sönüyor: 1 ve 2 ne demek?"
 description: "Davlumbazda 1 ya da 2 yanıp sönüyorsa iki Arçelik kılavuzu bunu filtre uyarısı olarak anlatıyor: yağ filtresi 40, karbon filtre 160 saat. Sıfırlama sırası."
 slug: "davlumbaz-isigi-yanip-sonuyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Davlumbaz"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Arçelik davlumbazda 1 yanıp sönüyorsa yağ filtresinin yıkanma, 2 yanıp sönüyorsa karbon filtrenin değişim zamanı gelmiştir. Arçelik P 78 SYS kılavuzunda yağ filtresi uyarısı 40, karbon filtre uyarısı 160 saatlik çalışmadan sonra yanar. İkisi birlikte sırayla yanıp sönebilir; filtre işinden sonra gösterge sıfırlanır."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi; BOSLUK.md sürüm 4 #364 "davlumbaz ışığı yanıp sönüyor / Arçelik-Beko davlumbaz 2 yanıp sönüyor"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya). Yakın: siemens-davlumbaz-filtre-uyarisi (yalnız Siemens), davlumbaz-kendi-kendine-calisiyor (otomatik mod niyeti), davlumbaz-yag-filtresi-nasil-temizlenir, davlumbaz-karbon-filtre-degisimi. Aynı Salı paketindeki davlumbaz-bakimi-nasil-yapilir (PR #456, henüz main'de değil) ile farklı sorgu: bu yazı gösterge ışığı, o yazı genel bakım. #456 merge olunca iç bağlantı eklenebilir (doğrulayıcı main'de olmayan bağlantıyı kopuk sayıyor).

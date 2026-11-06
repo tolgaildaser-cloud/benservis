@@ -47,7 +47,7 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "DemirDöküm kullanma kılavuzlarına göre F.28 'Ateşleme başarısız' demektir: kombi art arda yanmayı denedi, olmadı ve arıza konumuna geçti. Deneme sayısı Nitromix'te 2, ademiX ve vintomiX'te 3, Nitromix Ioni ve isomiX'te 5'tir. Kılavuzların sırası: gaz kesme vanası açık mı, model yöntemiyle reset, sınırda servis."
 faq:
   - q: "DemirDöküm kombide F28 hatası ne demek?"

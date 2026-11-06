@@ -38,7 +38,7 @@ images:
     - "Kombinin yanındaki raftan sprey kutusunu ve temizlik şişesini uzaklaştıran eldivenli el"
     - "Ardına kadar açılmış pencere ve kapı, perde hafifçe havalanıyor, kombi kapalı konumda"
     - "Telefon, not defteri ve kombinin model etiketi yan yana, servis çağırmaya hazır bilgi listesi"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Baymak Duotec kılavuzuna göre kombi bacası iki iş yapar: yanma için temiz havayı dışarıdan alır, atık gazı dışarı atar. ECA'ya göre sızdırmazlığı bozulan baca bağlantısından karbonmonoksit sızar ve zehirlenmeye yol açar. Her 90° dirsek 1 m baca sayılır; takmak, uzatmak, kısaltmak yalnız yetkili servisin işidir."
 faq:
   - q: "Kombi bacası ne işe yarar?"

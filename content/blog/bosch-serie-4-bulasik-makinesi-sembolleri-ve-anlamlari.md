@@ -28,7 +28,7 @@ images:
     - "Bulaşık makinesinin tabanında açık tuz kabı"
     - "Bulaşık makinesi kapağının içinde açık parlatıcı kabı"
     - "Bulaşık makinesi sepetinde aralıklı dizilmiş tabaklar"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Bosch Serie 4 kısa kılavuzuna göre su girişi (musluk) göstergesi E:32-00 ile aynı satırdadır: hortum bükülmüş, musluk kapalı ya da kireçlenmiş veya süzgeç tıkalıdır; musluktan en az 10 litre/dakika su akmalıdır. E:61-02 atık su pompası bloke, E:92-40 süzgeçler tıkalı demektir."
 faq:
   - q: "Bosch Serie 4'te su girişi (musluk) göstergesi ne demek?"

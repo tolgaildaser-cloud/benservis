@@ -2,9 +2,9 @@
 title: "Termosifon ne kadar elektrik harcar, ömrü kaç yıl?"
 description: "Termosifon yılda ne kadar elektrik harcar? Baymak bilgi kartında 1.328–1.411 kWh, Arçelik kılavuzunda 2000 W ve 10 yıl kullanım ömrü. Tasarruf ve bakım."
 slug: "termosifon-ne-kadar-elektrik-harcar"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Kombi/Termosifon"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Baymak Aqua LCD Prizmatik ürün bilgi kartına göre bir termosifon standart M kullanım profilinde yılda 1.328–1.411 kWh elektrik kullanıyor; 50 litrelik modelde bu 1.359 kWh. Arçelik T 7350 LUX kılavuzu ısıtma gücünü 2000 W, kullanım ömrünü 10 yıl olarak veriyor."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi, sürdürülebilirlik yazısı; BOSLUK.md sürüm 4 #438 "termosifon ne kadar elektrik harcar / tüketir + ömrü kaç yıl"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya). Yakın: termosifon-nasil-kullanilir, termosifon-suyu-isitmiyor, termosifon-sigorta-attiriyor, termosifon-emniyet-ventili-su-damlatiyor; "elektrik harcar" serisinde termosifon yok.

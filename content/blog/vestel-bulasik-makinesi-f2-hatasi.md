@@ -51,7 +51,7 @@ images:
     - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
     - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
     - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Vestel bulaşık makinesi kılavuzlarına göre F2 'Su tahliye edilmiyor' demektir; sebep tıkanmış tahliye hortumu ve filtrelerdir. Vestel'in talimatı programı iptal etmektir: Başlat/Beklet tuşuna 3 saniye basılır, makine suyu yaklaşık 30 saniye tahliye eder. Filtre ve hortum temizken arıza sürerse servis aranır."
 faq:
   - q: "Vestel bulaşık makinesi F2 hatası ne demek?"

@@ -30,7 +30,7 @@ images:
     - "Sepete yayılmış, sıcaklığı çıkan çamaşırlar"
     - "Tamburu yarıya kadar dolu kurutma makinesi"
     - "Penceresi açık bir çamaşır odasında kurutma makinesi"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Bosch WTW87460TR, WTH85200TR ve WTW85461TR kılavuzlarına göre paneldeki işaretlerin çoğu bakım uyarısıdır: su kabı işareti yoğuşma suyu kabının boşaltılmasını ister, ardından start tuşuna basılır. Ekrandaki selfCleaning yazısı hata değil, ısı eşanjörünün otomatik temizliğidir; bu sırada su kabı çıkarılmaz."
 faq:
   - q: "Bosch kurutma makinesinde su kabı işareti yandı, arıza mı?"

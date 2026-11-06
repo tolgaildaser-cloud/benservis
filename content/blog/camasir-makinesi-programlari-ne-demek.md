@@ -2,7 +2,7 @@
 title: "Çamaşır makinesi programları ne demek? Sentetik, mix, eko"
 description: "Çamaşır makinesi programları ne demek? Beko D4 9101 E ve Bosch WGA244A0TR kılavuzuna göre pamuklu, sentetik, mix, eko, yünlü ve kısa programlar."
 slug: "camasir-makinesi-programlari-ne-demek"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md #292 [5 Kas ara tarama] "çamaşır makinesi programları ne demek (sentetik, karma, eko, mix, pamuklu)"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.308 dosya). Program anlamlarını anlatan jenerik yazı yok; süre ve sembol yazıları var. Yakın yazılar: camasir-makinesi-program-sureleri (süre), camasir-makinesi-nasil-calistirilir (genel kullanım), camasir-makinesi-programi-iptal-etme, camasir-makinesi-kirec-ve-tambur-temizligi, beko-/bosch-camasir-makinesi-sembolleri-ve-anlamlari.

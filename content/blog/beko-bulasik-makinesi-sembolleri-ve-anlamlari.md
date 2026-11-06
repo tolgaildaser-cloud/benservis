@@ -28,7 +28,7 @@ images:
     - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
     - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
     - "Çizim: solda bulaşık makinesi, sağda kapak"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Beko'nun B 710 serisi kullanma kılavuzuna göre tuz göstergesi tuz bittiğinde yanar; tuz yeni konduysa çözünene kadar birkaç saat yanmaya devam eder. Su sertliği 1. seviyedeyse ya da su 7 °dH'nin altındaysa tuz gerekmez ama gösterge sürekli yanar. Kilit simgesi çocuk kilididir, P4 tuşuna 3 saniye basılınca kalkar."
 faq:
   - q: "Beko bulaşık makinesinde tuz göstergesi neden sürekli yanıyor?"

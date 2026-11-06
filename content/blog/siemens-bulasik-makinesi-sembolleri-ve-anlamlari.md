@@ -34,7 +34,7 @@ video:
   description: "Siemens iQ300 kılavuzuna göre musluk, tuz, parlatıcı ve anahtar sembollerinin anlamı; musluk sembolü yanıp sönerse ne yapılır."
   uploadDate: "2026-10-26T03:46:09Z"
   duration: "PT52S"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Siemens iQ300 (SN23IW62KT) kılavuzuna göre musluk sembolü su girişinde ya da çıkışında arıza olduğunu, anahtar sembolü tuş kilidinin açık olduğunu gösterir. Ekrandaki H04 hata değil, fabrika çıkışlı su sertliği ayarıdır (H00–H07). Musluk açıkken akan su en az 10 litre/dakika olmalıdır."
 faq:
   - q: "Siemens bulaşık makinesinde musluk işareti yanıyor, ne demek?"

@@ -34,7 +34,7 @@ video:
   description: "Arçelik kurutma makinesinde su tankı ve filtre simgesinin sabit yanması ile yanıp sönmesi arasındaki fark."
   uploadDate: "2026-09-13T05:16:33Z"
   duration: "PT1M16S"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Arçelik 3771 KTE ve 3890 KT kılavuzlarına göre su tankı ve filtre simgeleri arıza değil, bakım uyarısıdır. Program bitince su tankı simgesi yanarsa tank boşaltılır; program sırasında yanıp sönerse makine beklemeye geçmiştir, tank boşaltılıp Başla/Bekle/İptal'e basınca program kaldığı yerden devam eder."
 faq:
   - q: "Arçelik kurutma makinesinde su tankı simgesi yanıyorsa ne yapmalı?"

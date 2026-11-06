@@ -28,7 +28,7 @@ images:
     - "Bulaşık makinesinin arkasında açık su musluğu ve giriş hortumu"
     - "Bulaşık makinesi ekranında erteleme göstergesi"
     - "Kapağı kapalı, panelinde su kesik uyarısı yanan bulaşık makinesi"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Arçelik 6382 ve 9460 FCB kılavuzlarına göre paneldeki göstergelerin çoğu arıza değil: program evresi, tuz/parlatıcı uyarısı ya da senin seçimin. 6382'de Su Kesik göstergesi makineye su alınamadığını gösterir, su gelince kendiliğinden söner. Tuz doldurulduktan sonra tuz uyarısı tuz çözünene kadar birkaç saat yanabilir."
 faq:
   - q: "Arçelik bulaşık makinesinde aynı anda birden fazla gösterge yanıyor, arıza mı?"

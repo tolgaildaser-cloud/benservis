@@ -2,7 +2,7 @@
 title: "Derin dondurucu su akıtıyor: nedenleri ve ne yapılır?"
 description: "Derin dondurucu su akıtıyorsa ne yapılır? Beko BK 3315 ve Vestel SD50011 kılavuzuna göre yoğuşma, su tepsisi, su akış tapası ve yerleşim kontrolü."
 slug: "derin-dondurucu-su-akitiyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Buzdolabı"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md #282 [5 Kas ara tarama] "derin dondurucu su akıtıyor / altından su geliyor"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.308 dosya); "su akıtıyor" geçen derin dondurucu yazısı yok (marka sürümü de yok). Yakın yazılar: derin-dondurucu-buz-cozme, derin-dondurucu-nasil-temizlenir, derin-dondurucu-buzlanma-yapiyor, derin-dondurucu-dondurmuyor, derin-dondurucu-kac-derece-olmali.

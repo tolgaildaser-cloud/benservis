@@ -39,7 +39,7 @@ images:
     - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
     - "Çizim: solda kahve makinesi, sağda çalışma sesi"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Karaca Hatır Köz kılavuzunda reset tuşu yok; tarif edilen işlem kalibrasyon. Sürekli kırmızı ışık ve 3 bip, makinenin boş ya da yalnız suyla çalıştırıldığını gösterir; hazne max çizgisinin üzerindeyse de kırmızı yanar. Kılavuza göre önce iç tavan nemli bezle silinir, uyarı sürerse kalibrasyon yapılır."
 faq:
   - q: "Karaca kahve makinesi resetleme nasıl yapılır?"

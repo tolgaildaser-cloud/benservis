@@ -2,9 +2,9 @@
 title: "Klima kendi kendine açılıyor: Arçelik ve Vestel'e göre"
 description: "Klima kendi kendine açılıp kapanıyorsa Arçelik ve Vestel kılavuzları önce zamanlayıcıyı ve elektrik kesintisinden sonra otomatik başlatmayı gösteriyor."
 slug: "klima-kendi-kendine-aciliyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Klima"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Klima kendi kendine açılıyorsa önce kumandadaki otomatik açma saatine ve elektrik kesintisinden sonraki otomatik başlatmaya bak. Arçelik 09340–24340 kılavuzunda otomatik başlatma fabrika ayarıdır, düğme 6 saniye basılı tutularak kapatılır. Vestel Nova Inverter 12 de kaldığı yerden devam eder."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi; BOSLUK.md sürüm 4 #291 "klima kendi kendine açılıyor / duruyor"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya). Yakın: vestel-klima-kendiliginden-kapaniyor (yalnız Vestel, kapanma niyeti), klima-saatte-ne-kadar-elektrik-harcar.

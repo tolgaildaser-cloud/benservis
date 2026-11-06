@@ -61,7 +61,7 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
     - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Baymak'ın Duotec, Duotec DHW ve Eco CT 20 kullanma kılavuzlarına göre F13 'Reset kilitlenmesi' demektir; aynı satırdaki talimat cihazın elektrik beslemesini kapatıp açmaktır. Kombi yeniden çalıştırıldıktan sonra F13 geri gelirse kılavuza göre yetkili servis aranır."
 faq:
   - q: "Baymak kombide F13 hatası ne demek?"

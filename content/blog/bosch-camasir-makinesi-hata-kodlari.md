@@ -35,7 +35,7 @@ video:
   description: "Bosch çamaşır makinesinde E16, E17 ve E18'de kullanıcının yapabilecekleri; üreticinin servise yönlendirdiği kodlar."
   uploadDate: "2026-09-13T05:16:52Z"
   duration: "PT1M16S"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Bosch Türkiye destek sayfası çamaşır makinesi için 10 kod yayımlar: E16, E17, E18, E19, E20, E23, E25, E26, E27, E28. Yeni modeller E, eski modeller F önekiyle aynı numarayı gösterir (E18 = F18). E16, E17, E18 ve E20'de Bosch kullanıcıya bir kontrol tarif eder, diğerlerinde servise yönlendirir."
 faq:
   - q: "Bosch çamaşır makinesi E18 (F18) ne demek?"

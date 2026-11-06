@@ -50,7 +50,7 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
     - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
     - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Viessmann'ın Vitodens 100-W/111-W/111-F ve Vitodens Connect/Trend kılavuzlarına göre ekranda CL ve yanıp sönen uyarı üçgeni, brülörün bir arıza nedeniyle kilitlendiğini gösterir. Arıza numarası not edilir, yukarı ve aşağı ok düğmelerine birlikte yaklaşık 4 saniye dokunulur; CL geri gelirse yetkili servis çağrılır."
 faq:
   - q: "Viessmann kombide CL ne demek?"

@@ -2,9 +2,9 @@
 title: "Kahve makinesi kendi kendine kapanıyor: süre ayarı"
 description: "Kahve makinesi kendi kendine kapanıyorsa önce otomatik kapanma ayarına bak. DeLonghi EC685 ve ECAM 25.033 kılavuzlarına göre süreler ve ayar sırası."
 slug: "kahve-makinesi-kendi-kendine-kapaniyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Küçük Ev Aletleri"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Kahve makinesi bir süre kullanılmayınca kendiliğinden kapanıyorsa bu enerji tasarrufu için yapılmış otomatik kapanma ayarıdır. DeLonghi EC685 kılavuzunda süre 9 dakika, 30 dakika ya da 3 saat; ECAM 25.033'te 15 dakika ile 3 saat arasında seçilir. Makine herhangi bir tuşla yeniden açılır."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi; BOSLUK.md sürüm 4 #371 "kahve makinesi kendi kendine kapanıyor (otomatik kapanma; DeLonghi, Arçelik)"). #275 bulaşık makinesi kendi kendine su alıyor düştüğü için tablodaki Y satırından alındı. Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya). Yakın: delonghi-kahve-makinesi-ikaz-isiklari, delonghi-kahve-makinesi-kirec-temizleme, kahve-makinesi-nasil-temizlenir (kapanma niyeti yok).

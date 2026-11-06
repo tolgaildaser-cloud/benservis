@@ -30,7 +30,7 @@ steps:
   - "Resetleyip kısa bir programla dene. Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve kısa bir program başlat; kod geri geliyorsa servis gerekir."
 images:
   coverAlt: "Dolap nişine yerleştirilmiş beyaz çamaşır makinesi ve üstündeki rafta katlı havlular"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Profilo, Bosch ve Siemens ile aynı BSH platformunu kullanır; Bosch Türkiye'nin yayımladığı listeye göre E18 suyun tahliye edilemediğini, E17 su besleme süresinin aşıldığını, E23 küvette su olduğunu ve cihazın sızdırdığını gösterir. E ve F önekleri aynı numarada aynı arızadır (E18 = F18)."
 faq:
   - q: "Profilo çamaşır makinesi E18 hatası ne demek?"

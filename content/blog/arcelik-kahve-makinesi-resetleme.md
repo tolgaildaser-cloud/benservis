@@ -37,7 +37,7 @@ images:
     - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda kahve makinesi, sağda panel ekranındaki uyarı"
     - "Çizim: solda kahve makinesi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Arçelik'in Telve (TKM 9961), Mini Telve (K 3300) ve Telve X (TKM 3341) kılavuzlarında reset tuşu ya da fabrika ayarı yok. Pişirme, başlatma butonuna 3 saniye basılı tutularak iptal edilir; hata ışığında makine kapatılır, hazne tabanı, ısıtıcı yüzeyi ve sensör camı nemli bezle silinip makine yeniden açılır."
 faq:
   - q: "Arçelik kahve makinesi resetleme nasıl yapılır?"

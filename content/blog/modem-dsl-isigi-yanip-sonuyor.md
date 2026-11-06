@@ -2,9 +2,9 @@
 title: "Modem DSL ışığı yanıp sönüyor: TP-Link'e göre ne yapılır?"
 description: "Modemde DSL ışığı yanıp sönüyor ya da sönükse TP-Link belgeleri hattın eşleşmediğini söylüyor. Işık tablosu, splitter, kablo, reset ve operatör sırası."
 slug: "modem-dsl-isigi-yanip-sonuyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Bilgisayar / yazıcı"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "TP-Link Archer VR300 kılavuzuna göre DSL ışığının yanıp sönmesi hat eşleşmesinin sürdüğünü, sönük kalması bağlantı olmadığını gösterir. TP-Link SSS 735 önce modem türünü, sonra splitter ve 2 telefon kablosunu, sonra reseti, en son servis sağlayıcıyı kontrol etmeni istiyor. Işık dili markaya göre değişir."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi; BOSLUK.md sürüm 4 #410 "modem ışığı kırmızı yanıyor / yanıp sönüyor (internet, DSL, PON, power ışığı)"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya); envanterde hiç modem yazısı yok. Yakın: laptop-wifi-baglanmiyor, tv-internete-baglanmiyor.

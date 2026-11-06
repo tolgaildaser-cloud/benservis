@@ -38,7 +38,7 @@ steps:
   - "Fişi tak ve kısa bir programla dene. Kod tekrar geliyorsa kapı kilidi, su giriş valfi, tahliye pompası ve elektronik kart tarafı servise aittir."
 images:
   coverAlt: "Çamaşır makinesinin kumanda paneli ve deterjan çekmecesi alt açıdan"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Vestel çamaşır makinesi kılavuzlarının 'Otomatik Arıza Uyarıları' tablosunda 4 kod var: E01 kapı açık kalmış, E02 su basıncı ya da kazan su seviyesi düşük, E03 pompa arızalı, pompa filtresi tıkalı ya da pompa bağlantısı arızalı, E04 makinede aşırı su var. E05 ve sonrası bu tabloda geçmez."
 faq:
   - q: "Vestel çamaşır makinesi E03 hatası ne demek?"

@@ -6,7 +6,7 @@ date: "2026-08-26"
 category: "Kombi"
 images:
   coverAlt: "Duvar tipi kombinin dijital ekranı ve kumanda tuşları"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Vaillant ecoTEC pro ve intro kılavuzlarına göre simgelerin çoğu arıza değil, çalışma durumudur: ecoTEC pro tablosundaki 3 göstergede (sıcak su, ısıtma, konfor) yanıp sönme brülörün devrede olduğunu gösterir. Anahtar simgesi bakım zamanıdır, kılavuza göre arıza değil. Arıza ayrı, F.XX koduyla gösterilir."
 faq:
   - q: "Vaillant kombide radyatör simgesi yanıp sönüyorsa ne demek?"

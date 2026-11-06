@@ -40,7 +40,7 @@ images:
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Profilo'nun CGK264Z0TR ve CGA242X3TR kılavuzlarında Reset tuşu yok. CGK264Z0TR'ye göre yeniden başlatma için İlave durulama ve Kırışık Azaltma tuşlarına aynı anda yaklaşık 3 saniye basılır; arıza tekrar ederse cihaz en az 30 saniye güçten ayrılır. Fabrika ayarı temel ayarlardaki rES ile yapılır."
 faq:
   - q: "Profilo çamaşır makinesinde reset tuşu var mı?"

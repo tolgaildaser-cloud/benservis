@@ -28,7 +28,7 @@ images:
     - "Deterjan çekmecesine ölçü kabıyla konan az miktarda deterjan"
     - "Çamaşır makinesi ekranında bekleme durumu"
     - "Fişi prizden çekilmiş çamaşır makinesi"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Bosch WGA142Z0TR ve WAW28760TR kılavuzlarına göre ekrandaki simgelerin çoğu arıza değil, program durumu ya da uyarıdır: musluk simgesi su basıncının olmadığını ya da çok düşük olduğunu, yanıp sönen çocuk kilidi kilit açıkken tuşa basıldığını gösterir. Gerçek hata ayrı olarak E ile başlayan kodla gösterilir."
 faq:
   - q: "Bosch çamaşır makinesinde kapak simgesi ne anlama gelir?"

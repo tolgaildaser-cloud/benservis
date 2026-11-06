@@ -48,7 +48,7 @@ video:
   description: "Bosch çamaşır makinesinde E18 hatasında su tahliye edilemez: hortum, sifon, acil boşaltma ve pompa filtresi kontrolü."
   uploadDate: "2026-10-31T04:24:00Z"
   duration: "PT52S"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Bosch Türkiye destek sayfasına göre E18, makinenin atık suyu tahliye edemediğini gösterir; F18 ve d02 aynı arızanın kodlarıdır. Bosch'un saydığı sebepler tıkanmış pompa ve bükülmüş tahliye hortumudur; ikisi temizken su hâlâ gitmiyorsa pompa arızası servis işidir."
 faq:
   - q: "Bosch çamaşır makinesi E18 hatası ne demek?"

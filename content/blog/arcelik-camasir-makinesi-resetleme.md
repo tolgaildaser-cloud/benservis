@@ -40,7 +40,7 @@ images:
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Arçelik'in 7103 D ve 9103 HE kılavuzlarında Reset tuşu yok; karşılığı programı iptal etmek. Tuşlu 9103 HE'de Başla / Bekle / İptal tuşuna 3 saniye basılır ve ekranda End görünür. Düğmeli 7103 D'de Program Seçim düğmesi başka programa çevrilir. Ekranda Con varsa önce çocuk kilidi kapatılır."
 faq:
   - q: "Arçelik çamaşır makinesinde reset tuşu var mı?"

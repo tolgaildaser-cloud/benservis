@@ -2,9 +2,9 @@
 title: "Çamaşır makinesi kendi kendine su alıyor: 7 kontrol"
 description: "Çamaşır makinesi sürekli su alıp boşaltıyor mu? Arçelik ve Vestel kılavuzlarına göre hortum yüksekliği, iptal soğutması, filtre ve valf kontrolü."
 slug: "camasir-makinesi-kendi-kendine-su-aliyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Çamaşır makinesi"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Çamaşır makinesi kendi kendine su alıp boşaltıyorsa kılavuzlara göre ilk bakılacak yer tahliye hortumunun yüksekliğidir. Arçelik 8124 HST kılavuzu hortumun en az 40, en çok 100 cm yükseğe takılmasını istiyor. Vestel CMI 86201 kılavuzu valf arızasında makinenin sürekli su alabileceğini yazıyor."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi; BOSLUK.md sürüm 4 #274 "çamaşır makinesi kendi kendine su alıyor"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya). Yakın: camasir-makinesi-su-almiyor (ters belirti), camasir-makinesi-su-atmiyor, camasir-makinesi-programi-iptal-etme.

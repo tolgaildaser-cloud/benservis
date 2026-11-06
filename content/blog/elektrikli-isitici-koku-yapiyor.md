@@ -2,9 +2,9 @@
 title: "Elektrikli ısıtıcı koku yapıyor ya da sigorta attırıyor"
 description: "Elektrikli ısıtıcı koku yapıyor ya da sigorta attırıyorsa Arçelik ve Kiwi kılavuzları ilk açılış kokusunu, bağımsız prizi ve servis sınırını anlatıyor."
 slug: "elektrikli-isitici-koku-yapiyor"
-date: "2026-11-10"
+date: "2026-11-06"
 category: "Küçük Ev Aletleri"
-updated: "2026-11-10"
+updated: "2026-11-06"
 kisaCevap: "Yeni elektrikli ısıtıcının ilk açılışta hafif koku yapması normaldir; Kiwi KHT-8415 kılavuzu kokunun geçici olduğunu yazıyor. Koku sürüyor ya da kısa devre belirtisi varsa Arçelik FLV S 2500 TWF kılavuzu ısıtıcıyı hemen durdurup servise başvurmanı istiyor. 1000-2000 W ısıtıcı bağımsız prize takılmalı."
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #213 Salı paketi; BOSLUK.md sürüm 4 #348 "elektrikli ısıtıcı neden sigorta attırıyor" + #349 "elektrikli ısıtıcı koku yapıyor / yanık kokusu"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.311 dosya). Yakın: kiwi-isitici-fan-soguk-ufluyor, arcelik-infrared-isitici-calismiyor, kiwi-quartz-isitici-kullanimi (marka yazıları, koku/sigorta niyeti yok).
