@@ -49,6 +49,20 @@ const slugify = (s) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+// YK #214: "Son güncelleme: Kasım 2026" satırı için ay + yıl.
+const TR_AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+const ayYil = (d) => {
+  const [y, m] = String(d || "").split("-");
+  const ay = TR_AYLAR[Number(m) - 1];
+  return ay && /^\d{4}$/.test(y) ? `${ay} ${y}` : "";
+};
+// YK #214: sayfa başındaki "Kısa cevap" kutusu (frontmatter `kisaCevap:`, 2-3 cümle). Yoksa hiç basılmaz.
+const kisaCevapKutusu = (p) => {
+  const m = typeof p.kisaCevap === "string" ? p.kisaCevap.trim() : "";
+  return m ? `<aside class="kisa-cevap" aria-label="Kısa cevap"><p class="kc-baslik">Kısa cevap</p><p>${esc(m)}</p></aside>` : "";
+};
+const guncellemeEki = (p) => (p.updated && String(p.updated) !== String(p.date) && ayYil(p.updated) ? ` · Son güncelleme: ${ayYil(p.updated)}` : "");
+
 const trDate = (d) => {
   const [y, m, day] = String(d).split("-");
   return day && m && y ? `${day}.${m}.${y}` : String(d);
@@ -260,6 +274,9 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);l
 .yazibasi.yb-fotosuz .yb-perde{background:linear-gradient(180deg,#1E293B 0%,#172033 100%)}
 .yazibasi .yb-ic{position:relative;z-index:2;padding:clamp(26px,4vw,44px) clamp(22px,3.4vw,40px)}
 .yazibasi .yb-ust{margin:0 0 10px;font-size:13px;font-weight:600;color:#93C5FD;letter-spacing:.02em}
+.kisa-cevap{margin:18px 0 6px;padding:14px 16px;background:#EFF6FF;border:1px solid #BFDBFE;border-left:4px solid #2563EB;border-radius:10px}
+.kisa-cevap p{margin:0;font-size:16px;line-height:1.6;color:#1E293B}
+.kisa-cevap .kc-baslik{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#2563EB;margin-bottom:4px}
 /* Kategori artık link. Görsel dil AYNEN korunur (aynı mavi, aynı ağırlık) — yalnız
    altı noktalı çizgiyle "tıklanır" işaretlenir, üstüne gelince tam alt çizgi + beyaz.
    Dokunma hedefi 44px'e ulaşsın diye dikey padding + negatif margin (satır yüksekliği
@@ -1418,6 +1435,8 @@ const posts = serpistir(
         .replace(/<(p|li)><strong>/g, '<$1><strong class="lead">')
         .replace(/<table>/g, '<div class="tablo-kap"><table>')
         .replace(/<\/table>/g, "</table></div>");
+      // YK #214 (6 Kas 2026, GEO): `sss:` da kabul edilir, tek kaynak `faq` (FAQPage JSON-LD buradan basılır).
+      if (!Array.isArray(data.faq) && Array.isArray(data.sss)) data.faq = data.sss;
       return { ...data, html, kaynaklar: kaynakUrlleri(ham) };
     })
     .filter((p) => p.slug && p.title)
@@ -1516,7 +1535,7 @@ const yaziBasi = (p) => {
     gorsel +
     `<div class="yb-perde"></div>` +
     `<div class="yb-ic">` +
-      `<p class="yb-ust">${katLinki(p)} · ${esc(trDate(p.date))}</p>` +
+      `<p class="yb-ust">${katLinki(p)} · ${esc(trDate(p.date))}${esc(guncellemeEki(p))}</p>` +
       `<h1>${esc(p.title)}</h1>` +
       guideMeta(p.guide) +
       KOPRU_SATIRI(p) +
@@ -2142,7 +2161,7 @@ for (const p of posts) {
   // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
   // YK #173 (b): `parca:` frontmatter'lı yazıda ilk H2 altı + gövde sonu "satın al" bağlantısı
   // (scripts/blog-satin-al.mjs); alanı olmayan yazının çıktısı bayt bayt aynı.
-  const body = `<article>${yaziBasi(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${kaynakSatiri(p.kaynaklar)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
+  const body = `<article>${yaziBasi(p)}${kisaCevapKutusu(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${kaynakSatiri(p.kaynaklar)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));
