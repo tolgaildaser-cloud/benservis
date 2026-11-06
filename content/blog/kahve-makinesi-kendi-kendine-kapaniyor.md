@@ -36,7 +36,7 @@ faq:
   - q: "Makine kapanmadan önce neden su akıtıyor?"
     a: "ECAM 25.033 kahve hazırlandıysa her kapatılışında otomatik durulama yapar; bu sırada kahve dağıtıcısından bir miktar sıcak su çıkar. Kılavuz su sıçramalarıyla temas etmemen konusunda uyarıyor."
 images:
-  coverAlt: "Sade espresso makinesi ve yanında küçük saat simgesi çizimi"
+  coverAlt: "Sade kahve makinesi ve yanında kum saati çizimi"
   steps:
     - "Kahve makinesinin yanında fincan tutan beyaz eldivenli sade siluet el"
     - "Kahve makinesinin panelindeki tuşa basan beyaz eldivenli sade siluet el"

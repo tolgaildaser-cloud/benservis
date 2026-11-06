@@ -36,7 +36,7 @@ faq:
   - q: "Isıtıcının üstüne çamaşır kurutulur mu?"
     a: "Hayır. İki kılavuz da aşırı ısınmayı önlemek için ısıtıcının üzerini örtmemeni istiyor. Arçelik yangın tehlikesine karşı ısıtıcının yanına yanıcı nesneler ve giysiler koymamanı söylüyor."
 images:
-  coverAlt: "Sade elektrikli ısıtıcı ve üstünde ince duman kıvrımı çizimi"
+  coverAlt: "Sade elektrikli ısıtıcı ve yanında hava akımı simgesi çizimi"
   steps:
     - "Pencereyi aralayan beyaz eldivenli sade siluet el"
     - "Isıtıcının fişini prizden çeken beyaz eldivenli sade siluet el"

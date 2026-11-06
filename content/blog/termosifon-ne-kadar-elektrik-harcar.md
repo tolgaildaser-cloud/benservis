@@ -37,7 +37,7 @@ faq:
   - q: "Magnezyum anot ne sıklıkla değişir?"
     a: "Arçelik kılavuzu deponun delinmesini önleyen magnezyum anot çubuğunun su sertliğine ve kullanım şekline bağlı olarak ortalama 2 yılda bir değiştirilmesini, yılda bir kontrol ettirilmesini öneriyor."
 images:
-  coverAlt: "Duvarda sade termosifon ve yanında küçük şimşek simgesi çizimi"
+  coverAlt: "Sade termosifon ve yanında enerji göstergesi çizimi"
   steps:
     - "Termosifonun yan etiketine bakan beyaz eldivenli sade siluet el"
     - "Ürün bilgi kartını tutan beyaz eldivenli sade siluet el"

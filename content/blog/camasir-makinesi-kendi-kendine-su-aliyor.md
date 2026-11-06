@@ -36,7 +36,7 @@ faq:
   - q: "Makine kapalıyken de su alıyorsa ne yapmalı?"
     a: "Vestel kılavuzu su giriş valflerinin filtreleri tıkanırsa ya da valfler arızalanırsa makinenin sürekli su alabileceğini yazıyor. Arçelik giderilemeyen arızada makineyi kapatmanı, fişi çekmeni, musluğu kapatmanı ve yetkili servisi aramanı istiyor."
 images:
-  coverAlt: "Sade çamaşır makinesi ve arkasından duvara yükselen tahliye hortumu çizimi"
+  coverAlt: "Sade çamaşır makinesi ve yanında su damlaları çizimi"
   steps:
     - "Çamaşır makinesinin camından içeri bakan beyaz eldivenli sade siluet el"
     - "Kontrol panelindeki düğmenin yanında bekleyen beyaz eldivenli sade siluet el"

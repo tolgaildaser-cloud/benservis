@@ -36,7 +36,7 @@ faq:
   - q: "Karbon filtre yıkanır mı?"
     a: "Hayır. P 24 YEI kılavuzu karbon filtrenin yıkanamayacağını ve kendini yenileyemeyeceğini, her durumda en az dört ayda bir değiştirilmesinin şart olduğunu yazıyor."
 images:
-  coverAlt: "Sade davlumbaz ve ön panelinde yanan küçük gösterge ışığı çizimi"
+  coverAlt: "Sade davlumbaz ve yanında kontrol paneli çizimi"
   steps:
     - "Davlumbaz panelindeki göstergeye bakan beyaz eldivenli sade siluet el"
     - "Davlumbaz panelindeki saat tuşuna uzanan beyaz eldivenli sade siluet el"

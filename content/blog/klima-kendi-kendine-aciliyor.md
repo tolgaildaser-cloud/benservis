@@ -36,7 +36,7 @@ faq:
   - q: "Klima kurduğum saatte açılmıyor ya da yanlış saatte açılıyor, neden?"
     a: "Arçelik klima program ayarında kumandanın saatini esas aldığı için saatin ve sabah-akşam (AM/PM) ayarının doğru olmasını istiyor. Kumanda saati yanlışsa klima beklemediğin saatte açılabilir."
 images:
-  coverAlt: "Duvarda sade split klima ve yanında küçük saat çizimi"
+  coverAlt: "Sade split klima ve yanında kum saati çizimi"
   steps:
     - "Klima kumandasının ekranına bakan beyaz eldivenli sade siluet el"
     - "Kumandadaki zamanlayıcı tuşuna basan beyaz eldivenli sade siluet el"

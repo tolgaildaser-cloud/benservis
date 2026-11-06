@@ -37,7 +37,7 @@ faq:
   - q: "Power ışığı yanıp sönerken modemi kapatabilir miyim?"
     a: "Hayır. Archer VR300 kılavuzuna göre Power ışığı yanıp sönüyorsa sistem açılıyor ya da yazılım güncelleniyordur; bu sırada modemin bağlantısını kesmemeni ve kapatmamanı istiyor."
 images:
-  coverAlt: "Sade modem ve üstünde yanıp sönen küçük ışık çizimi"
+  coverAlt: "Sade modem ve yanında kontrol paneli çizimi"
   steps:
     - "Modemin ön ışıklarına bakan beyaz eldivenli sade siluet el"
     - "Modemin yanında bekleyen ve fişe dokunmayan beyaz eldivenli sade siluet el"
