@@ -36,7 +36,7 @@ faq:
   - q: "Şofben ekranı hiç yanmıyorsa ne yapılır?"
     a: "DemirDöküm arıza tablosu binadaki elektrik beslemesi kesildiyse sigortayı kontrol etmeni yazıyor; ürün elektrik geri gelince otomatik çalışır. ECA Phoenix cihaz başlamıyorsa fişi kontrol etmeni, sorun çözülmezse yetkili servisi aramanı istiyor."
 images:
-  coverAlt: "Banyo duvarında ekranı parlayan sade bir şofben çizimi"
+  coverAlt: "Sade şofben ve yanında sigorta kutusu çizimi"
   steps:
     - "Şofbenin ekranına bakan beyaz eldivenli sade siluet el"
     - "Şofbenin ayar düğmesini çeviren beyaz eldivenli sade siluet el"

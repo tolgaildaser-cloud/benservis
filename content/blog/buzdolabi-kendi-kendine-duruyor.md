@@ -36,7 +36,7 @@ faq:
   - q: "Buzdolabında hiçbir gösterge yanmıyorsa ne yapmalıyım?"
     a: "Bosch KGE kılavuzu nedenleri elektrik kesintisi, kapalı sigorta ya da prize iyi takılmamış fiş olarak veriyor. Fişi takmanı, elektrik olup olmadığını ve sigortaları kontrol etmeni istiyor."
 images:
-  coverAlt: "Sade çift kapılı buzdolabı ve yanında küçük saat çizimi"
+  coverAlt: "Sade buzdolabı ve yanında kum saati çizimi"
   steps:
     - "Buzdolabı kapağındaki ekrana bakan beyaz eldivenli sade siluet el"
     - "Buzdolabı ekranındaki tuşa dokunan beyaz eldivenli sade siluet el"

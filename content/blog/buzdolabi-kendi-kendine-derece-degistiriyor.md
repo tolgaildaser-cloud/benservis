@@ -36,7 +36,7 @@ faq:
   - q: "Buzdolabının ekranı kendi kendine kararıyor, arıza mı?"
     a: "Arçelik 5845 NFEY kılavuzuna göre kapılar açılıp kapanmadığında enerji tasarrufu fonksiyonu otomatik devreye girer ve tasarruf simgesi dışındaki simgeler söner. Bir düğmeye basınca ya da kapı açılınca ekran normale döner; bu fonksiyon iptal edilemez."
 images:
-  coverAlt: "Sade buzdolabı kapağındaki dijital ekran çizimi"
+  coverAlt: "Sade buzdolabı ve yanında termometre çizimi"
   steps:
     - "Buzdolabı kapağındaki ekrana bakan beyaz eldivenli sade siluet el"
     - "Buzdolabı ekranındaki soğutma tuşuna basan beyaz eldivenli sade siluet el"

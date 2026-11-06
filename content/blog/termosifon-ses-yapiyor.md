@@ -37,7 +37,7 @@ faq:
   - q: "Şebeke basıncı ne zaman yüksek sayılır?"
     a: "Arçelik T 7350 SM E kılavuzu şebeke suyu basıncı 6 bar işletme basıncını geçerse emniyet ventilinden önce soğuk su hattına bir basınç düşürücü bağlanmasını istiyor. Basınç düşürücü sayaç yakınında olmalı."
 images:
-  coverAlt: "Duvarda sade termosifon ve yanında ses dalgası simgesi çizimi"
+  coverAlt: "Duvarda sade termosifon ve yanında hava akımı simgesi çizimi"
   steps:
     - "Duvardaki şalteri aşağı indiren beyaz eldivenli sade siluet el"
     - "Termosifonun önünde not defterine yazan beyaz eldivenli sade siluet el"

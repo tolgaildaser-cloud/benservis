@@ -36,7 +36,7 @@ faq:
   - q: "Elektrik düşükken şofben ne yapar?"
     a: "DemirDöküm L 275 F gerilim çok düşükken F.06 gösterir; gerilim 175 V (± 10 V) üzerine çıkınca ürün normal çalışmaya kendiliğinden döner. ECA Phoenix düşük voltajda AL37 verir ve elektrik tesisatının yeterli hale getirilmesini ister."
 images:
-  coverAlt: "Banyo duvarında sade bir şofben ve altında kapalı bir musluk çizimi"
+  coverAlt: "Sade şofben ve yanında kullanım kılavuzu çizimi"
   steps:
     - "Kapalı musluğun yanında şofbene bakan beyaz eldivenli sade siluet el"
     - "Kar taneli pencere önünde sade şofben ve yanında beyaz eldivenli sade siluet el"

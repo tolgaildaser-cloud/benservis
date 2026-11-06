@@ -36,7 +36,7 @@ faq:
   - q: "Kontrolden sonra bakım daha erken gerekebilir mi?"
     a: "Evet. DemirDöküm kontrol sonuçlarına bağlı olarak daha erken bakım gerekebileceğini yazıyor. Ulusal yönetmelikler daha kısa aralık öngörüyorsa o aralıklara uyulmasını istiyor."
 images:
-  coverAlt: "Banyo duvarında sade bir şofben ve yanında duvar takvimi çizimi"
+  coverAlt: "Sade şofben ve yanında sprey şişesi çizimi"
   steps:
     - "Duvar takviminde bir günü işaretleyen beyaz eldivenli sade siluet el"
     - "Telefonla randevu alan beyaz eldivenli sade siluet el, yanında sade şofben"

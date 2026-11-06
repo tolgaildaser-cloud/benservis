@@ -36,7 +36,7 @@ faq:
   - q: "Hava alındıktan sonra basınç neden düşer?"
     a: "Purjörden çıkan hava ve suyla tesisattaki su azalır. DemirDöküm Ademix hava aldıktan sonra tesisat basıncını yeniden kontrol etmeni, gerekirse doldurma ve hava alma adımlarını tekrarlamanı istiyor."
 images:
-  coverAlt: "Duvarda sade bir kombi ve yanında sade bir petek çizimi"
+  coverAlt: "Sade kombi ve yanında bez çizimi"
   steps:
     - "Kombinin ekranındaki basınç göstergesine bakan beyaz eldivenli sade siluet el"
     - "Petek vanasını açan beyaz eldivenli sade siluet el"

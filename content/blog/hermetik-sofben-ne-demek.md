@@ -37,7 +37,7 @@ faq:
   - q: "Hermetik şofbenin bakımı ne sıklıkla yapılır?"
     a: "ECA yüksek performans ve emniyetli kullanım için yılda bir kez bakım yapılmasını, Baymak yıllık bakım ve kontrollerin en az yılda bir kez yetkili servise yaptırılmasını istiyor. Bakımda fan, baca ve gaz valfi kontrol edilir."
 images:
-  coverAlt: "Duvarda sade şofben ve üstünden dışarı çıkan çift cidarlı baca borusu çizimi"
+  coverAlt: "Duvarda sade şofben ve yanında büyüteç çizimi"
   steps:
     - "Şofbenin yan yüzündeki etikete bakan beyaz eldivenli sade siluet el"
     - "Şofbenin üstünden duvara giden baca borusunu gösteren beyaz eldivenli sade siluet el"

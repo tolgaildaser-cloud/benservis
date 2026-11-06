@@ -36,7 +36,7 @@ faq:
   - q: "Magnezyum çubuk ne işe yarar?"
     a: "Vestel kılavuzuna göre ısıtıcı rezistans aşınmaya karşı magnezyum çubukla korunur. Çubuğun bitip bitmediği her yıl kontrol edilmeli, biterse yetkili servis yenisiyle değiştirmeli."
 images:
-  coverAlt: "Duvarda sade termosifon, yanında bez ve kova çizimi"
+  coverAlt: "Duvarda sade termosifon ve yanında sprey şişesi çizimi"
   steps:
     - "Duvardaki şalteri aşağı indiren beyaz eldivenli sade siluet el"
     - "Termosifonun dış yüzeyini bezle silen beyaz eldivenli sade siluet el"

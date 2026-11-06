@@ -36,7 +36,7 @@ faq:
   - q: "Solo derin dondurucu ne demek?"
     a: "Solo kelimesi bu yazının dayandığı Vestel CDL711 E NF ve Beko BK 3215 Joker kılavuzlarında geçmiyor. Satıcının ya da üreticinin bu kelimeyle neyi kastettiğini kendi cihazının kılavuzundan ya da ürün sayfasından kontrol et."
 images:
-  coverAlt: "Yan yana sade sandık tipi ve dikey derin dondurucu çizimi"
+  coverAlt: "Sade derin dondurucu ve yanında büyüteç çizimi"
   steps:
     - "Derin dondurucu kılavuzunun kapağını tutan beyaz eldivenli sade siluet el"
     - "Derin dondurucunun iç duvarına bakan beyaz eldivenli sade siluet el"

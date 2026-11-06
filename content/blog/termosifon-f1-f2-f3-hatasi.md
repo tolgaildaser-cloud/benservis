@@ -36,7 +36,7 @@ faq:
   - q: "Her termosifonda F kodları aynı mı?"
     a: "Hayır. Vestel 20214615 kılavuzu benzer durumlar için E kodları kullanıyor: E1 termistör hatası, E2 düşük voltaj uyarısı, E3 susuz çalıştırma. Kodun anlamı için kendi modelinin kılavuzuna bakmalısın."
 images:
-  coverAlt: "Duvarda sade dijital ekranlı termosifon ve yanında uyarı simgesi çizimi"
+  coverAlt: "Duvarda sade termosifon ve yanında kontrol paneli çizimi"
   steps:
     - "Termosifonun ekranına bakıp not alan beyaz eldivenli sade siluet el"
     - "Termosifonun yanındaki etikete bakan beyaz eldivenli sade siluet el"

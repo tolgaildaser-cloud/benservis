@@ -36,7 +36,7 @@ faq:
   - q: "Elektrik kesildikten sonra derin dondurucuyu hemen çalıştırmalı mıyım?"
     a: "Uğur UED 6204 kılavuzu ani elektrik kesintilerinde fişi prizden çekmeni, elektrik geldikten 20 dakika sonra yeniden takmanı istiyor. Gerekçe olarak elektrik ilk geldiğinde oluşan yüksek voltajın dondurucuya zarar verebilmesini gösteriyor."
 images:
-  coverAlt: "Sade dikey derin dondurucu ve yanında küçük ses dalgası çizimi"
+  coverAlt: "Sade derin dondurucu ve yanında sigorta kutusu çizimi"
   steps:
     - "Derin dondurucunun önünde durup dinleyen beyaz eldivenli sade siluet el"
     - "Duvardaki prize fişi takan beyaz eldivenli sade siluet el"

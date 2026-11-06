@@ -36,7 +36,7 @@ faq:
   - q: "Fan kısa süre çalışıp duruyorsa ne yapmalıyım?"
     a: "DemirDöküm bunu F05 arızası olarak veriyor; neden yanma havası ya da atık gaz sistemindeki bir arıza. Kılavuz atık gaz borusunun bloke olmamasını sağlamanı, arıza sürerse yetkili servise başvurmanı istiyor."
 images:
-  coverAlt: "Banyo duvarında sade bir şofben ve yanında küçük ses dalgası çizgileri"
+  coverAlt: "Sade şofben ve yanında hava akımı simgesi çizimi"
   steps:
     - "Şofbenin yanında dinleyen beyaz eldivenli sade siluet el"
     - "Şofbenin ekranını gösteren beyaz eldivenli sade siluet el"

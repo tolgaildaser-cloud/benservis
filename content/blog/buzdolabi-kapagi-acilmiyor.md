@@ -36,7 +36,7 @@ faq:
   - q: "Buzdolabı kapı contası neyle temizlenir?"
     a: "Bosch KGE kılavuzu kapı contasının yalnız temiz suyla silinmesini, ardından iyice silinip kurulanmasını istiyor. Uğur UES 470 kılavuzu da contayı yalnız temiz su ve pamuklu bir bezle temizlemeni söylüyor."
 images:
-  coverAlt: "Kapısı kapalı sade çift kapılı buzdolabı çizimi"
+  coverAlt: "Sade buzdolabı ve yanında sigorta kutusu çizimi"
   steps:
     - "Kapalı buzdolabının önünde bekleyen beyaz eldivenli sade siluet el"
     - "Buzdolabı kolundan eli çeken beyaz eldivenli sade siluet el"

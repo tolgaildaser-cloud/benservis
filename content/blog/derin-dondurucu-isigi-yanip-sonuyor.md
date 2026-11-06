@@ -36,7 +36,7 @@ faq:
   - q: "Derin dondurucunun hiç ışığı yanmıyorsa ne yapmalıyım?"
     a: "Beko kılavuzu önce elektrik kesintisine, fişin prize tam takılı olup olmadığına, sigortaya ve termostatın OFF konumunda olup olmadığına bakmanı istiyor. Vestel prizi başka bir cihazla denemeyi öneriyor."
 images:
-  coverAlt: "Sade sandık tipi derin dondurucunun önündeki küçük ışıklı panel çizimi"
+  coverAlt: "Sade derin dondurucu ve yanında kullanım kılavuzu çizimi"
   steps:
     - "Derin dondurucunun önündeki ışıklı panele bakan beyaz eldivenli sade siluet el"
     - "Duvar saatine bakan beyaz eldivenli sade siluet el, yanında derin dondurucu"

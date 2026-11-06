@@ -36,7 +36,7 @@ faq:
   - q: "Kombinin basıncı kendi kendine yükselirse ne yapmalıyım?"
     a: "ECA Citius Premix doldurma vanasının mutlaka kapatılmasını istiyor ve 3,3 ± 0,3 bar basınçta F40 hatası veriyor. Bosch Condens 1200W'de 3 bar aşılmamalı, emniyet ventili açılır. Hata sürerse yetkili servise haber ver."
 images:
-  coverAlt: "Duvarda sade bir kombi ve altında sade bir petek çizimi"
+  coverAlt: "Sade kombi ve yanında sigorta kutusu çizimi"
   steps:
     - "Kombinin ekranına bakan beyaz eldivenli sade siluet el"
     - "Kombinin yanında bekleyen, düğmeye dokunmayan beyaz eldivenli sade siluet el"

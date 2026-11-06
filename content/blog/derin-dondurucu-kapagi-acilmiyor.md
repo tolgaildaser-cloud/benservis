@@ -36,7 +36,7 @@ faq:
   - q: "Derin dondurucumun kilidi var, anahtarı ne yapmalıyım?"
     a: "Vestel SD50011 kılavuzu kapak kilidine ait anahtarı güvenli bir yerde saklamanı istiyor. Uğur da cihazda kilit varsa anahtarını çocukların ulaşamayacağı bir yerde saklamanı söylüyor."
 images:
-  coverAlt: "Kapağı kapalı sade sandık tipi derin dondurucu ve yanında küçük kum saati çizimi"
+  coverAlt: "Sade derin dondurucu ve yanında kum saati çizimi"
   steps:
     - "Kapalı derin dondurucunun yanında kum saatine bakan beyaz eldivenli sade siluet el"
     - "Derin dondurucu tutamağından eli çeken beyaz eldivenli sade siluet el"

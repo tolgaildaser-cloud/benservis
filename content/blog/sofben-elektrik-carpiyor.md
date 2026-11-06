@@ -36,7 +36,7 @@ faq:
   - q: "Şofben hangi sigortaya bağlanmalı?"
     a: "ECA Phoenix minimum 3 mm temas açıklığına sahip 2A çift kutuplu bir W otomat istiyor. DemirDöküm ürünün kontak boşluğu en az 3 mm olan bir elektrik ayırma donanımı, örneğin sigorta ya da devre koruma şalteri üzerinden bağlanmasını yazıyor."
 images:
-  coverAlt: "Banyo duvarında sade bir şofben ve koridorda sade bir sigorta kutusu çizimi"
+  coverAlt: "Sade şofben ve yanında sigorta kutusu çizimi"
   steps:
     - "Şofbenden geri çekilen beyaz eldivenli sade siluet el"
     - "Sigorta kutusundaki şalteri indiren beyaz eldivenli sade siluet el"

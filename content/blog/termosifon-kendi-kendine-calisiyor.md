@@ -36,7 +36,7 @@ faq:
   - q: "Termosifon kendi kendine kapanıyor, neden?"
     a: "Vestel kılavuzunda düşük voltajda koruma devreye girer ve ekranda E2 görünür; voltaj düzelince cihaz kaldığı yerden devam eder. Arçelik'te turbo modu istenen sıcaklığa ulaşınca kendiliğinden kapanır."
 images:
-  coverAlt: "Duvarda sade termosifon ve yanında küçük saat çizimi"
+  coverAlt: "Duvarda sade termosifon ve yanında kontrol paneli çizimi"
   steps:
     - "Termosifonun önünde not defterine yazan beyaz eldivenli sade siluet el"
     - "Termosifonun ok tuşlarına basan beyaz eldivenli sade siluet el"

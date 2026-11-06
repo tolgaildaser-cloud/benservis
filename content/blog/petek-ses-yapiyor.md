@@ -36,7 +36,7 @@ faq:
   - q: "Tesisat suyu ses yapar mı?"
     a: "Vaillant kılavuzuna göre çok kireçli, aşırı korozif ya da kimyasal içeren kalorifer suyu sistemdeki su geçen parçaları tıkar ve seslere neden olur. Baymak da tesisattaki pislik ve çapağın kombinin sesli çalışmasına yol açabileceğini yazıyor."
 images:
-  coverAlt: "Duvarda sade panel radyatör ve yanında ses dalgası simgesi çizimi"
+  coverAlt: "Duvarda sade panel radyatör ve yanında hava akımı simgesi çizimi"
   steps:
     - "Radyatöre kulak veren, elinde not kâğıdı tutan beyaz eldivenli sade siluet el"
     - "Radyatörün alt köşesindeki vanayı çeviren beyaz eldivenli sade siluet el"

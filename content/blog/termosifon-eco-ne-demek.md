@@ -36,7 +36,7 @@ faq:
   - q: "Eco modda termosifon neden bazen çok ısınıyor?"
     a: "Hijyen ısıtması yüzünden. Vestel en az haftada bir kez suyu 65 °C'ye çıkarıp 1 saat tutar. Arçelik SM E stand-by konumunda 30 günlük periyotlarla suyu 70 °C'ye çıkarır."
 images:
-  coverAlt: "Duvarda sade termosifon ve yanında yaprak simgesi çizimi"
+  coverAlt: "Duvarda sade termosifon ve yanında sigorta kutusu çizimi"
   steps:
     - "Termosifonun yan yüzündeki etikete bakan beyaz eldivenli sade siluet el"
     - "Termosifonun yuvarlak ayar düğmesini çeviren beyaz eldivenli sade siluet el"

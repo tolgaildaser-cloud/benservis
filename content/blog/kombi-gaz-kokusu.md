@@ -36,7 +36,7 @@ faq:
   - q: "Karbonmonoksit kokudan anlaşılır mı?"
     a: "Hayır. Bosch kılavuzu karbonmonoksiti göremeyeceğini, tadamayacağını ve koklayamayacağını yazıyor. Bunun için tesisatın düzenli aralıklarla yetkili serviste kontrol ettirilmesini ve hemen alarm veren bir CO dedektörü kullanılmasını öneriyor."
 images:
-  coverAlt: "Duvarda sade bir kombi ve açık bir pencere çizimi"
+  coverAlt: "Sade kombi ve yanında sprey şişesi çizimi"
   steps:
     - "Elektrik düğmesinden uzak duran beyaz eldivenli sade siluet el"
     - "Kombinin altındaki gaz vanasını kapatan beyaz eldivenli sade siluet el"

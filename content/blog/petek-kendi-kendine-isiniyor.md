@@ -36,7 +36,7 @@ faq:
   - q: "Danfoss Eco'nun varsayılan sıcaklıkları kaç derece?"
     a: "Kılavuza göre Evde Modu 21 °C, Dışarıda ya da Gece Modu 17 °C, Tatil Modu 15 °C. Danfoss iki mod arasında 4 dereceyi geçmeyen bir fark öneriyor; ayar aralığı 5-28 °C."
 images:
-  coverAlt: "Duvarda sade panel radyatör, yanında küçük saat ve kar tanesi çizimi"
+  coverAlt: "Duvarda sade panel radyatör ve yanında kum saati çizimi"
   steps:
     - "Radyatörün üstüne elini koyan beyaz eldivenli sade siluet el"
     - "Kombinin ekranına bakan beyaz eldivenli sade siluet el"
