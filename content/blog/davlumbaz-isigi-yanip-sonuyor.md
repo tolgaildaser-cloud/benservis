@@ -85,7 +85,7 @@ P 78 SYS kılavuzu standart çalışma modunda karbon filtre uyarısının aktif
 
 ## Filtre uyarısını geciktirmek sorun olur mu?
 
-P 24 YEI kılavuzu bu durumda filtreyi değiştirmeyi geciktirmemeni, temel temizliğin yapılmaması ve filtrelerin değiştirilmemesinin yangın riskine yol açabileceğini yazıyor. Aynı Salı yayımlanan davlumbaz bakımı yazısı genel temizliği ayrıntılı anlatıyor.
+P 24 YEI kılavuzu bu durumda filtreyi değiştirmeyi geciktirmemeni, temel temizliğin yapılmaması ve filtrelerin değiştirilmemesinin yangın riskine yol açabileceğini yazıyor. Genel temizliğin adımları için [davlumbaz bakımı nasıl yapılır](/blog/davlumbaz-bakimi-nasil-yapilir/) yazısına bak.
 
 ## Bu konuda hangi yazılara bakılır?
 
