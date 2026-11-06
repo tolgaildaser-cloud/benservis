@@ -60,7 +60,15 @@ export const oidSiparisId = (oid) => {
 
 // Bildirimden yazılacak alanlar (saf fonksiyon — test edilir).
 export function bildirimGuncellemesi(siparis, b) {
-  if (!siparis || siparis.odeme_durumu === "odendi") return null; // ilk başarılı bildirim esas
+  if (!siparis) return null;
+  if (siparis.odeme_durumu === "odendi") {
+    // Güvenlik PR-C: aynı siparişe başka bir denemeden (farklı merchant_oid) ikinci başarılı ödeme → iz bırak,
+    // durum değişmez (ilk başarılı bildirim esas); admin iade için görür. Aynı oid'in tekrarı sessiz geçer.
+    if (b.status === "success" && siparis.odeme_oid && String(b.merchant_oid) !== String(siparis.odeme_oid)) {
+      return { odeme_hata: `mükerrer ödeme: ${String(b.merchant_oid).slice(0, 64)} (${Number.parseInt(b.total_amount, 10) || "?"} kuruş)` };
+    }
+    return null; // ilk başarılı bildirim esas
+  }
   // Güvenlik PR-B (5 Kas 2026): incelemedeki sipariş (para alınmış, tutar tutmamış) sonraki bildirimle
   // ezilmez; başarısız bildirim onu "odeme_basarisiz"e çevirip ilan ayırmasını bırakmazdı.
   if (siparis.odeme_durumu === "odeme_incelemede") return null;

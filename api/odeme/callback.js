@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
   const id = oidSiparisId(b.merchant_oid);
   const { data: siparis } = id
-    ? await supabase.from("siparisler").select("id, siparis_no, tutar, odeme_durumu, urunler").eq("id", id).single()
+    ? await supabase.from("siparisler").select("id, siparis_no, tutar, odeme_durumu, odeme_oid, urunler").eq("id", id).single()
     : { data: null };
   if (!siparis) {
     console.error("PayTR bildirimi: sipariş bulunamadı");
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
   const guncelle = bildirimGuncellemesi(siparis, b);
   if (guncelle) {
     const { data: yazilan, error } = await supabase.from("siparisler").update(guncelle)
-      .eq("id", siparis.id).neq("odeme_durumu", "odendi").select("id");
+      .eq("id", siparis.id).neq("odeme_durumu", guncelle.odeme_durumu ? "odendi" : "__yok__").select("id");
     if (error) {
       console.error("PayTR bildirimi yazılamadı:", siparis.siparis_no, error.message);
       return res.status(500).send("DB error"); // OK dönülmez → PayTR bildirimi yeniden dener
