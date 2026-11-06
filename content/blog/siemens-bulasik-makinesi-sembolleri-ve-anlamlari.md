@@ -18,21 +18,6 @@ steps:
   - "Suyunun sertliğini öğren; Setup tuşuna yaklaşık 3 saniye basıp Hxx ayarını kılavuzun tablosundaki değere getir ve yine 3 saniye basarak kaydet."
   - "Anahtar sembolü yanıyorsa tuşuna yaklaşık 3 saniye basarak tuş kilidini kapat."
   - "Musluk sembolü yanıp sönüyorsa cihazı kapat, fişini çek, en az 2 dakika bekleyip yeniden çalıştır; sorun dönerse musluğu kapatıp müşteri hizmetlerini ara."
-faq:
-  - q: "Siemens bulaşık makinesinde musluk işareti yanıyor, ne demek?"
-    a: "Siemens'in iQ300 kılavuzuna göre musluk sembolü su girişinde veya çıkışında bir arıza olduğunu gösterir. Sabit yanıyorsa kılavuz bunu E:32-00 ile aynı satırda veriyor: giriş hortumu bükülmüş, musluk kapalı, musluk sıkışmış ya da kireçlenmiş veya hortumun su bağlantısındaki süzgeç tıkanmış olabilir. Kılavuzun eşiği şu: musluk açıkken akan su en az 10 litre/dakika olmalı."
-  - q: "Musluk sembolü yanıp sönüyorsa ne yapmalıyım?"
-    a: "Kılavuz yanıp sönen su beslemesi göstergesini teknik bir arıza olarak tanımlıyor. Sıra şu: cihazı kapat, fişi çek ya da sigortayı indir, en az 2 dakika bekle, elektriği ver ve cihazı çalıştır. Sorun yeniden çıkarsa cihazı kapat, musluğu kapat, fişi çek ve müşteri hizmetlerine hata kodunu bildir."
-  - q: "Siemens bulaşık makinesinde anahtar işareti ne anlama geliyor?"
-    a: "Anahtar biçimindeki sembol tuş kilidinin açık olduğunu gösterir. Kilit, tuşuna yaklaşık 3 saniye basılarak açılır ve aynı şekilde kapatılır. Kılavuza göre program bitince kilit kendiliğinden kalkar, elektrik kesintisinde ise açık kalmaya devam eder."
-  - q: "Ekranda H04 yazıyor, bu bir hata mı?"
-    a: "Hayır. H ile başlayan değerler su sertliği ayarıdır ve H00 ile H07 arasında değişir. Siemens'in kılavuzuna göre fabrika ayarı H04'tür. H00 seçilirse su yumuşatma sistemi kapanır ve tuz ilave etme göstergesi devre dışı kalır."
-  - q: "Ekranda 0h:01m görünüyor ve makine su boşaltıyor, normal mi?"
-    a: "Evet. Kılavuza göre Reset 4 sec. tuşuna yaklaşık 4 saniye basılarak program iptal edildiğinde yaklaşık 1 dakika tüm LED'ler yanar; LED'ler sönünce göstergede 0h:01m çıkar ve kalan su boşaltılır. Program bittiğinde ise ekranda 0h:00m görünür."
-  - q: "Tuz eklediğim halde tuz göstergesi neden sönmüyor?"
-    a: "Kılavuzun arıza tablosunda tuz göstergesinin yanması için iki sebep var: özel tuz eksik ya da sensör özel tuz tabletlerini algılamıyor. Çözüm olarak tablet değil, bulaşık makineleri için toz özel tuz kullanılması isteniyor; kılavuz sofra tuzunu da kabul etmiyor."
-  - q: "Bütün ışıklar aynı anda yanıp sönüyor, makine bozuldu mu?"
-    a: "Kılavuz bu durum için iki ihtimal veriyor. Birincisi yazılım güncellemesi: yaklaşık 30 dakika beklenir, cihaz hâlâ hazır değilse ana şalter tuşuna yaklaşık 4 saniye basılarak sıfırlanır. İkincisi elektronik sistemin bir hata tespit etmesi: önce 4 saniyelik sıfırlama, sonra fişi çekip en az 2 dakika bekleme; sorun sürerse müşteri hizmetleri."
 images:
   coverAlt: "Solo bulaşık makinesinin kumanda paneli yakın planda; ekranın yanında musluk, tuz, parlatıcı ve kablosuz ağ sembolleri görünüyor"
   steps:
@@ -49,6 +34,21 @@ video:
   description: "Siemens iQ300 kılavuzuna göre musluk, tuz, parlatıcı ve anahtar sembollerinin anlamı; musluk sembolü yanıp sönerse ne yapılır."
   uploadDate: "2026-10-26T03:46:09Z"
   duration: "PT52S"
+updated: "2026-11-10"
+kisaCevap: "Siemens iQ300 (SN23IW62KT) kılavuzuna göre musluk sembolü su girişinde ya da çıkışında arıza olduğunu, anahtar sembolü tuş kilidinin açık olduğunu gösterir. Ekrandaki H04 hata değil, fabrika çıkışlı su sertliği ayarıdır (H00–H07). Musluk açıkken akan su en az 10 litre/dakika olmalıdır."
+faq:
+  - q: "Siemens bulaşık makinesinde musluk işareti yanıyor, ne demek?"
+    a: "Siemens iQ300 kılavuzuna göre musluk sembolü su girişinde ya da çıkışında arıza olduğunu gösterir. Sabit yanıyorsa sebep bükülmüş giriş hortumu, kapalı ya da kireçlenmiş musluk veya tıkalı süzgeçtir. Kılavuzun eşiği: musluk açıkken akan su en az 10 litre/dakika olmalı."
+  - q: "Musluk sembolü yanıp sönüyorsa ne yapmalıyım?"
+    a: "Kılavuz yanıp sönen su beslemesi göstergesini teknik arıza olarak tanımlar. Cihazı kapat, fişi çek ya da sigortayı indir, en az 2 dakika bekle, elektriği verip çalıştır. Sorun yeniden çıkarsa cihazı kapat, musluğu kapat, fişi çek ve müşteri hizmetlerine hata kodunu bildir."
+  - q: "Siemens bulaşık makinesinde anahtar işareti ne anlama geliyor?"
+    a: "Anahtar sembolü tuş kilidinin açık olduğunu gösterir. Kilit, tuşuna yaklaşık 3 saniye basılarak açılır ve aynı şekilde kapatılır. Kılavuza göre program bitince kilit kendiliğinden kalkar; elektrik kesintisinde açık kalır."
+  - q: "Ekranda H04 yazıyor, bu bir hata mı?"
+    a: "Hayır. H ile başlayan değerler su sertliği ayarıdır ve H00 ile H07 arasında değişir; Siemens kılavuzuna göre fabrika ayarı H04'tür. H00 seçilirse su yumuşatma sistemi kapanır ve tuz ilave etme göstergesi devre dışı kalır."
+  - q: "Ekranda 0h:01m görünüyor ve makine su boşaltıyor, normal mi?"
+    a: "Evet. Kılavuza göre Reset 4 sec. tuşuna yaklaşık 4 saniye basılarak program iptal edildiğinde yaklaşık 1 dakika tüm LED'ler yanar; LED'ler sönünce göstergede 0h:01m çıkar ve kalan su boşaltılır. Program bittiğinde ekranda 0h:00m görünür."
+  - q: "Tuz eklediğim hâlde tuz göstergesi neden sönmüyor?"
+    a: "Kılavuzun arıza tablosuna göre sebep ya özel tuzun eksik olması ya da sensörün özel tuz tabletlerini algılamamasıdır. Çözüm tablet değil, bulaşık makineleri için toz özel tuz kullanmaktır; kılavuz sofra tuzunu kabul etmez."
 ---
 
 Siemens bulaşık makinenin panelinde bir sembol yandı ya da ekranda **H04**, **r:05**, **h:01** gibi bir yazı belirdi. Bunların çoğu arıza değil; bir ayarın, bir sarf malzemesinin ya da bir fonksiyonun durumunu gösterir. Bu yazıdaki karşılıkların tamamı **Siemens'in kendi kullanım kılavuzundan** alındı.

@@ -28,17 +28,19 @@ steps:
   - "Pompa filtresini temizle. Alt ön köşedeki servis kapağını aç, önüne havlu ser ve sığ bir kap tut; filtreyi çevirip çıkar, tüyü ve yabancı cisimleri temizle, sonuna kadar çevirerek sıkıca geri tak."
   - "Tahliye hortumunu ve gideri kontrol et. Hortum bükülmemiş olsun; bağlandığı gider hattı yavaş akıyorsa önce onu aç."
   - "Resetleyip kısa bir programla dene. Program düğmesini kapalı konuma al, fişi bir dakika çek, tekrar tak ve kısa bir program başlat; kod geri geliyorsa servis gerekir."
-faq:
-  - q: "Profilo çamaşır makinesi E18 hatası ne demek?"
-    a: "E18, tahliye süresinin aşıldığını gösterir: makine içindeki suyu atamıyordur. En sık sebep tüy ya da yabancı cisimle tıkanmış pompa filtresi ve bükülmüş tahliye hortumudur. Filtre ve hortum temizliğiyle çoğu zaman evde, ücretsiz çözülür; temizken tekrar ediyorsa pompa tarafı servisliktir."
-  - q: "Profilo'da çıkan kodlar Bosch ve Siemens'tekiyle aynı mı?"
-    a: "Evet. Profilo, Bosch ve Siemens ile aynı grubun (BSH) çatısı altındadır ve aynı platformu kullanır; E17, E18 ve E23 gibi kodlar üç markada da aynı anlama gelir. Bu yüzden Bosch için yayımlanmış kod listesi Profilo sahipleri için de geçerli bir başvurudur. Dikkat: o listede F21 diye bir kod yok."
-  - q: "Profilo F21 hatası ne demek?"
-    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok — Bosch, Siemens ve Profilo'nun hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Motor tarafında gerçekten sorun varsa belirtisi nettir: kazan hiç dönmez, düzensiz döner ya da sıkmaya geçemez — ve o iş servise aittir."
-  - q: "Profilo E23 hatasında ilk ne yapmalı?"
-    a: "E23, makinenin taban tarafına su indiğini ve sızıntı güvenliğinin devreye girdiğini gösterir. İlk iki hamle fişi çekmek ve musluğu kapatmaktır; ardından makinenin çevresinde görünür ıslaklık olup olmadığına bakılır. Sızıntının kaynağını (conta, hortum, pompa) bulmak servis işidir."
 images:
   coverAlt: "Dolap nişine yerleştirilmiş beyaz çamaşır makinesi ve üstündeki rafta katlı havlular"
+updated: "2026-11-10"
+kisaCevap: "Profilo, Bosch ve Siemens ile aynı BSH platformunu kullanır; Bosch Türkiye'nin yayımladığı listeye göre E18 suyun tahliye edilemediğini, E17 su besleme süresinin aşıldığını, E23 küvette su olduğunu ve cihazın sızdırdığını gösterir. E ve F önekleri aynı numarada aynı arızadır (E18 = F18)."
+faq:
+  - q: "Profilo çamaşır makinesi E18 hatası ne demek?"
+    a: "E18, makinenin içindeki suyu tahliye edemediğini gösterir. BSH'nin yayımladığı listede sebep tıkalı pompa filtresi ve bükülmüş tahliye hortumudur; ikisi de servis kapağı seviyesinde kullanıcı kontrolüdür. Filtre ve hortum temizken kod tekrar ediyorsa pompa tarafı servis işidir."
+  - q: "Profilo'daki kodlar Bosch ve Siemens'tekiyle aynı mı?"
+    a: "Evet. Profilo, Bosch ve Siemens aynı BSH grubunun platformunu kullanır; Bosch Türkiye'nin yayımladığı on kodluk liste (E16, E17, E18, E19, E20, E23, E25, E26, E27, E28) Siemens'in kendi tablosuyla birebir aynıdır ve Profilo için de başvurudur."
+  - q: "Profilo F21 hatası ne demek?"
+    a: "BSH'nin yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekrandaki kodu kendi modelinin kılavuzundaki arıza tablosundan teyit et."
+  - q: "Profilo E23 hatasında ilk ne yapmalı?"
+    a: "BSH kılavuzuna göre E23, küvette su olduğunu ve cihazın sızdırdığını gösterir. İlk iki hamle fişi çekmek ve musluğu kapatmaktır. Sızıntının kaynağını bulmak yetkili servisin işidir."
 ---
 
 Yıllardır sorunsuz çalışan Profilo makinen bu sabah programın ortasında durdu ve ekranda daha önce hiç görmediğin bir şey var: **E18**. Türkiye mutfaklarının en yerleşik markalarından Profilo, bugün Bosch ve Siemens ile aynı çatının (BSH) altında üretiliyor ve arızayı onlarla **aynı E/F kodlarıyla** bildiriyor. Bu, senin için iyi haber: kodların anlamı oturmuş, belgelenmiş ve büyük kısmı önce evde kontrol edilebilir cinsten. Bu rehberde Profilo'da en sık çıkan kodları, kendin bakabileceğin noktaları ve işin servise geçtiği çizgiyi anlatıyoruz.
@@ -75,7 +77,7 @@ Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabili
 |-----|--------|------------|
 | **E17 / F17** | Su alamıyor ⚠️ Profilo SSS'inde "su basıncı yüksek" | 🛠️ Musluğu ve giriş hattını kontrol et |
 | **E18 / F18** | Su atamıyor (tahliye) | 🛠️ Pompa filtresini ve hortumu temizle |
-| **E23 / F23** | Aquastop etkinleştirildi, tabana su indi | 🔧 Servis (sızıntı tespiti) |
+| **E23 / F23** | Küvette su var, cihaz sızdırıyor | 🔧 Su musluğunu kapat, yetkili servisi çağır |
 | **E19 / F19** | Isıtma süresi aşıldı | 🔧 Bosch/Siemens: "kendi kendine düzeltilemez" |
 | **E20 / F20** | Beklenmeyen ısınma | 🛠️ Makineyi açıp kapatarak sıfırla; düzelmezse servis |
 | **E25 / F25** | Bulanıklık sensörü arızası | 🔧 Servis |

@@ -3,7 +3,6 @@ title: "Bosch çamaşır makinesi hata kodları: E16'dan E28'e resmî liste"
 description: "Bosch'un yayımladığı on çamaşır makinesi kodu: E16, E17, E18, E19, E20, E23, E25, E26, E27, E28. Anlamları, Bosch'un kendi çözümü ve servis sınırı."
 slug: "bosch-camasir-makinesi-hata-kodlari"
 date: "2026-06-19"
-updated: "2026-08-22"
 category: "Çamaşır makinesi"
 # 23 Eki 2026 (YK #182 Dalga 2, PAZ): E23 satırı Bosch WAK24210TR kılavuzuna göre düzeltildi
 # (9000941315_A, md5 e1a8d222…, s.26: "Küvet içinde su var, cihaz sızdırıyor"); eski "Aquastop etkinleştirildi" yanlıştı.
@@ -28,19 +27,6 @@ category: "Çamaşır makinesi"
 #    doğrusu söyleniyor. (Beko E10 vakasındaki kararın aynısı.)
 # 📌 Neff iddiası yumuşatıldı: BSH platform ortaklığı belgeli, Neff'in KOD TABLOSU değil —
 #    neff-home.com'da hata kodu sayfası bulunamadı. Siemens teyitli, o kaldı.
-faq:
-  - q: "Bosch çamaşır makinesi F18 (E18) ne demek?"
-    a: "E18/F18, makinenin atık suyu tahliye edemediğini gösterir; tamburda su kalmış olabilir. Bosch'un kendi sayfası bunu çoğu zaman kullanıcının çözebileceğini söylüyor: tahliye hortumunun bükülmediğini kontrol et, alt kapağı açıp pompa filtresine yabancı cisim kaçıp kaçmadığına bak. Aynı arıza bazı Bosch modellerinde d02 koduyla da görünür."
-  - q: "Bosch'ta E ve F kodları arasındaki fark ne?"
-    a: "Aynı arıza, model neslinine göre farklı önekle gösterilir: yeni Bosch modelleri 'E', eski modeller 'F' önekiyle aynı numarayı verir. Yani E18 ile F18 aynı anlama gelir. Bosch kendi sayfalarında da kodları 'E18 veya F18' biçiminde ikili yazar."
-  - q: "Bosch F21 kodu ne anlama gelir?"
-    a: "Bosch'un yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok — BSH'nin hiçbir bölge sitesinde ve kılavuzunda geçmiyor. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekranında F21 gördüğünü düşünüyorsan kodu bir kez daha kontrol et ve kendi modelinin kılavuzundan teyit et: listedeki kodlar E ve F biçimiyle eşli yazılır (E16/F16, E17/F17, E18/F18 gibi) ve bu eşlerin arasında 21 yoktur."
-  - q: "Siemens ve Neff'te de aynı kodlar mı geçerli?"
-    a: "Siemens'te evet: Siemens'in kendi destek sayfalarındaki tablo Bosch'unkiyle kelime kelime aynıdır. Neff için aynı şeyi söyleyemiyoruz; Neff BSH grubunun markası olmasına rağmen kendi sitesinde bir hata kodu sayfası yayımlamıyor. Platform ortaklığı belgeli, kod tablosu ortaklığı değil."
-  - q: "Bosch çamaşır makinesinde köpük (kabarcık) işareti ne demek?"
-    a: "Köpük/kabarcık sembolü aşırı köpük algılandığını gösterir; bir hata kodu değildir. Daha az ve makineye uygun deterjan kullan — program köpüğü atmak için kendini uzatabilir. Sürekli çıkıyorsa deterjan dozunu ve cinsini gözden geçir."
-  - q: "Ekrandaki kod bu listede yok, ne yapmalıyım?"
-    a: "Bosch yüzlerce model üretir ve yayımladığı liste on kodludur. Ekrandaki kodu ve cihaz modelini Benservis'e yaz, olası arızayı ve tahmini maliyeti saniyede söyleyelim."
 images:
   coverAlt: "Çamaşır odasında yan yana duran iki ön yüklemeli makine ve arkalarındaki mavi duvar"
 video:
@@ -49,6 +35,21 @@ video:
   description: "Bosch çamaşır makinesinde E16, E17 ve E18'de kullanıcının yapabilecekleri; üreticinin servise yönlendirdiği kodlar."
   uploadDate: "2026-09-13T05:16:52Z"
   duration: "PT1M16S"
+updated: "2026-11-10"
+kisaCevap: "Bosch Türkiye destek sayfası çamaşır makinesi için 10 kod yayımlar: E16, E17, E18, E19, E20, E23, E25, E26, E27, E28. Yeni modeller E, eski modeller F önekiyle aynı numarayı gösterir (E18 = F18). E16, E17, E18 ve E20'de Bosch kullanıcıya bir kontrol tarif eder, diğerlerinde servise yönlendirir."
+faq:
+  - q: "Bosch çamaşır makinesi E18 (F18) ne demek?"
+    a: "Bosch'a göre E18/F18, makinenin atık suyu tahliye edemediğini gösterir; su tamburda kalır. Bosch tahliye hortumunun bükülmediğini kontrol etmeyi ve alt kapağı açıp pompa filtresine yabancı cisim kaçıp kaçmadığına bakmayı söyler. Aynı arıza bazı modellerde d02 koduyla görünür."
+  - q: "Bosch'ta E ve F kodları arasındaki fark ne?"
+    a: "Aynı arıza, model nesline göre farklı önekle gösterilir: yeni Bosch modelleri E, eski modeller F önekiyle aynı numarayı verir. E18 ile F18 aynı anlama gelir; Bosch kendi sayfalarında kodları 'E18 veya F18' biçiminde ikili yazar."
+  - q: "Bosch E23 hatası ne demek?"
+    a: "Bosch WAK24210TR kullanım kılavuzu E23 için 'Küvet içinde su var, cihaz sızdırıyor' der ve önce su musluğunu kapatıp yetkili servisi çağırmayı ister. Kaçağın kaynağını servis bulur."
+  - q: "Bosch E20 hatası arıza mı?"
+    a: "Bosch E20'yi 'beklenmeyen ısınma' olarak tanımlar ve önce makineyi açıp kapatarak sıfırlamayı önerir. Sıfırlamadan sonra kod tekrar geliyorsa servis randevusu gerekir."
+  - q: "Bosch F21 kodu ne anlama gelir?"
+    a: "Bosch'un yayımladığı çamaşır makinesi listesinde F21 diye bir kod yok; listedeki E/F eşlerinin arasında 21 bulunmaz. BSH'nin tahrik tarafı için kullandığı kod E80'dir. Ekrandaki kodu kendi modelinin kılavuzundaki arıza tablosundan teyit et."
+  - q: "Siemens ve Neff'te de aynı kodlar mı geçerli?"
+    a: "Siemens'te evet: Siemens'in kendi destek sayfalarındaki tablo Bosch'unkiyle kelime kelime aynıdır. Neff kendi sitesinde hata kodu sayfası yayımlamadığı için Neff tablosu teyit edilemiyor."
 ---
 
 Bosch çamaşır makinen ekranında bir hata kodu gösteriyor ve ne demek olduğunu çözmek istiyorsun. Bu rehberde **Bosch'un kendi destek sayfalarında yayımladığı on kodu**, Bosch'un verdiği çözümle birlikte topladık.
@@ -135,16 +136,3 @@ Hangi işin ne kadar tuttuğunu belirleyen faktörler: [Çamaşır makinesi tami
 
 İlgili: [Çamaşır makinesi hata kodları (marka marka)](/blog/camasir-makinesi-hata-kodlari/) · [Su almıyor](/blog/camasir-makinesi-su-almiyor/) · [Su atmıyor](/blog/camasir-makinesi-su-atmiyor/) · [Işıklar yanıp sönüyor](/blog/camasir-makinesi-isik-yanip-sonuyor/) · [Bosch çamaşır makinesi sembolleri ve anlamları](/blog/bosch-camasir-makinesi-sembolleri-ve-anlamlari/)
 
-## Sık sorulan sorular
-
-**E18 / F18 ne demek?**
-Atık su tahliye edilemiyor. Tahliye hortumunu ve pompa filtresini kontrol et; Bosch bunu kullanıcının çözebileceğini yazıyor.
-
-**E ve F farkı ne?**
-Yeni modeller E, eski modeller F önekiyle aynı numarayı gösterir (E18 = F18).
-
-**F21 ne anlama gelir?**
-Bosch'un listesinde F21 diye bir kod yok. Tahrik/motor tarafının BSH kodu E80'dir.
-
-**Siemens/Neff'te aynı mı?**
-Siemens'te evet, tablo kelime kelime aynı. Neff kendi kod sayfasını yayımlamıyor, o yüzden aynı şeyi söyleyemiyoruz.

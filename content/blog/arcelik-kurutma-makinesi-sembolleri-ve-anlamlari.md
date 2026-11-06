@@ -18,19 +18,6 @@ steps:
   - "Program başlamıyorsa kapağı tam kapat; arada çamaşır ucu kalmadığından emin ol."
   - "Tuşlar tepki vermiyorsa çocuk kilidini kaldır."
   - "Filtre simgesi temizlikten sonra da yanıp sönüyorsa ya da yanık kokusu varsa makineyi durdur, fişini çek ve servise başvur."
-faq:
-  - q: "Arçelik kurutma makinesinde su tankı simgesi yanıyorsa ne yapmalı?"
-    a: "Su tankını boşaltmak gerekir; arıza değildir. Arçelik 3771 KTE kılavuzuna göre program tamamlandığında su tankının boşaltılması gerektiğini gösteren uyarı sembolü yanar. Program devam ederken su tankı dolarsa sembol yanıp sönmeye başlar ve makine beklemeye geçer; bu durumda tanktaki suyu boşaltıp Başla/Bekle/İptal düğmesine basınca uyarı sembolü söner ve program kaldığı yerden devam eder."
-  - q: "Filtre temizliği simgesi sürekli yanıp sönüyor, normal mi?"
-    a: "Hayır, bu normal yanmadan farklı bir durumdur ve kılavuz ikisini ayırır. Arçelik kılavuzuna göre program tamamlandığında filtrenin temizlenmesi gerektiğini gösteren uyarı sembolü yanar — bu olağan bakım hatırlatmasıdır. Ama kılavuz hemen ardından şunu ekler: filtre temizliği sembolü sürekli yanıp sönüyorsa Sorun giderme bölümüne bakın. Yani sabit yanma bakım, sürekli yanıp sönme ayrı bir durumdur."
-  - q: "Filtre çekmecesi simgesi ile filtre temizliği simgesi aynı şey mi?"
-    a: "Değil, iki ayrı sembol ve iki ayrı parça. Arçelik 3771 KTE kılavuzu ekran sembolleri listesinde Filtre Temizliği uyarı sembolü ile Filtre Çekmecesi Temizliği uyarı sembolünü ayrı satırlar olarak veriyor. Kılavuza göre filtre çekmecesinin temizlenmesi gerektiğini hatırlatmak için uyarı sembolü belirli aralıklarla yanıp söner — yani bu sembolün yanıp sönmesi tasarım gereğidir."
-  - q: "Yükleme kapağı simgesi ne anlama gelir?"
-    a: "Arçelik kılavuzu bunu tek cümleyle tanımlıyor: kurutma makinesinin yükleme kapağı açıkken bu uyarı sembolü yanar. Program başlamıyorsa bakılacak ilk yer budur; kapağın tam kapanmasını engelleyen bir çamaşır ucu bile programı başlatmaz."
-  - q: "Kıyafet etiketindeki kurutma sembolleri ne anlatıyor?"
-    a: "Kurutmanın yapılıp yapılamayacağını ve hangi sıcaklıkta yapılacağını. Arçelik 3890 KT kılavuzu bu sembolleri ayrı bir tablo olarak veriyor: kurutucuda kurutulabilir, kurutucuda kurutulmaz, kurutma yapılmaz, herhangi bir sıcaklıkta, düşük sıcaklıkta, orta sıcaklıkta, yüksek sıcaklıkta, ısı olmadan, hassas/narin kurutma, sererek kurutun, asarak kurutun, gölgede sererek kurutun, ıslak asarak kurutun. Kılavuzun kuralı net: sadece etiketinde kurutma makinesinde kurutulabilir yazan çamaşırları kurutun."
-  - q: "Bu semboller bütün Arçelik kurutma makinelerinde aynı mı?"
-    a: "Aynı değil ve bunu üreticinin kendisi söylüyor. Arçelik kılavuzu uyarı sembolleri bölümüne şu notu koyuyor: Uyarı sembolleri makinenizin modeline göre farklılık gösterebilir. Karşılaştırdığımız iki Arçelik kılavuzunun sembol listeleri de birebir aynı değil. Kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Çamaşır kurutma makinesinin ekranı ve kumanda düğmeleri"
   steps:
@@ -47,6 +34,21 @@ video:
   description: "Arçelik kurutma makinesinde su tankı ve filtre simgesinin sabit yanması ile yanıp sönmesi arasındaki fark."
   uploadDate: "2026-09-13T05:16:33Z"
   duration: "PT1M16S"
+updated: "2026-11-10"
+kisaCevap: "Arçelik 3771 KTE ve 3890 KT kılavuzlarına göre su tankı ve filtre simgeleri arıza değil, bakım uyarısıdır. Program bitince su tankı simgesi yanarsa tank boşaltılır; program sırasında yanıp sönerse makine beklemeye geçmiştir, tank boşaltılıp Başla/Bekle/İptal'e basınca program kaldığı yerden devam eder."
+faq:
+  - q: "Arçelik kurutma makinesinde su tankı simgesi yanıyorsa ne yapmalı?"
+    a: "Arçelik 3771 KTE kılavuzuna göre program bitince su tankı simgesi yanarsa tank boşaltılır. Program sürerken tank dolarsa simge yanıp söner ve makine beklemeye geçer; suyu boşaltıp Başla/Bekle/İptal düğmesine basınca simge söner ve program kaldığı yerden devam eder."
+  - q: "Filtre temizliği simgesi sürekli yanıp sönüyor, normal mi?"
+    a: "Kılavuz iki durumu ayırır. Program bitince filtre temizliği simgesinin yanması olağan bakım hatırlatmasıdır. Simge sürekli yanıp sönüyorsa kılavuz Sorun giderme bölümüne yönlendirir; bu durum olağan hatırlatma değildir."
+  - q: "Filtre çekmecesi simgesi ile filtre temizliği simgesi aynı şey mi?"
+    a: "Hayır. Arçelik 3771 KTE kılavuzu bunları iki ayrı uyarı sembolü olarak verir. Filtre çekmecesi simgesi, çekmecenin temizlenmesini hatırlatmak için belirli aralıklarla yanıp söner; bu tasarım gereğidir."
+  - q: "Yükleme kapağı simgesi ne anlama gelir?"
+    a: "Arçelik kılavuzuna göre kurutma makinesinin yükleme kapağı açıkken bu uyarı sembolü yanar. Program başlamıyorsa ilk bakılacak yer kapaktır; kapanma sesi gelene kadar kapağı it."
+  - q: "Kıyafet etiketindeki kurutma sembolleri ne anlatıyor?"
+    a: "Arçelik 3890 KT kılavuzu etiket sembollerini ayrı tablo olarak verir: kurutucuda kurutulabilir ya da kurutulmaz, düşük, orta, yüksek sıcaklık, ısısız, sererek ya da asarak kurutma gibi. Kılavuzun kuralı: yalnız etiketinde kurutma makinesinde kurutulabilir yazan çamaşırı kurut."
+  - q: "Bu semboller bütün Arçelik kurutma makinelerinde aynı mı?"
+    a: "Hayır. Arçelik kılavuzu uyarı sembolleri bölümüne 'Uyarı sembolleri makinenizin modeline göre farklılık gösterebilir' notunu koyar; 3771 KTE ve 3890 KT'nin sembol listeleri de birebir aynı değildir. Kesin karşılık kendi modelinin kılavuzundadır."
 ---
 
 Kurutma makinesinin ekranında bir uyarı simgesi belirdiğinde ilk refleks çoğu zaman "arıza mı?" oluyor. Arçelik'in kendi kullanma kılavuzlarına bakıldığında ise bu simgelerin neredeyse tamamının anlattığı şey aynı: **makine bakım istiyor.** Su tankı dolmuş, filtre tıkanmış, çekmece temizlenmeli, kapak açık kalmış.

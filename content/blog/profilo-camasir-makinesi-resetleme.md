@@ -30,17 +30,6 @@ steps:
   - "Tuşlar yanıt vermiyor ya da kod çıkıyorsa İlave durulama ve Kırışık Azaltma'ya birlikte 3 saniye basarak yeniden başlat."
   - "Arıza tekrar ederse cihazı fişten ya da sigortadan en az 30 saniye ayır."
   - "Son çare olarak temel ayarlar menüsünde rES ile fabrika ayarlarına dön; olmuyorsa servisi ara."
-faq:
-  - q: "Profilo çamaşır makinesinde reset tuşu var mı?"
-    a: "Profilo'nun CGK264Z0TR ve CGA242X3TR kılavuzlarında Reset adında ayrı bir tuş yok. CGK264Z0TR kılavuzu yeniden başlatmayı İlave durulama ve Kırışık Azaltma tuşlarına aynı anda yaklaşık 3 saniye basmak olarak tarif ediyor; fabrika ayarına dönüş ise temel ayarlar menüsündeki rES ayarıyla yapılıyor."
-  - q: "Profilo çamaşır makinesi resetleme yapmıyor, neden?"
-    a: "En sık engel çocuk kilidi. Kılavuza göre kilit, cihaz bekleme modundayken ve elektrik kesintisinde de etkin kalır; program çalışmaya başlamıyorsa ilk kontrol budur. Bitiş Erteleme etkinse program da hemen başlamaz. İkisi de kapalıyken tuşlar yine tepki vermiyorsa 30 saniye güç kesme adımına geç."
-  - q: "Fabrika ayarlarına dönünce ne olur?"
-    a: "Kılavuz rES'i temel ayarlar listesinin son maddesi olarak veriyor: cihazın fabrika ayarlarına geri döndürülmesi. Aynı listede sinyal ses seviyesi, ekran parlaklığı ve kırışıklık azaltma gibi ayarlar var. Kılavuz bunu arıza çözümü olarak sunmuyor; önce yeniden başlatma ve güç kesme adımlarını dene."
-  - q: "İptalden sonra kapak neden açılmıyor?"
-    a: "Profilo'ya göre sıcaklık ya da su seviyesi yüksek olduğunda kapak güvenlik nedeniyle kilitli kalır. Sıcaklık yüksekse ilgili Durulama programını, su seviyesi yüksekse Sıkma ya da uygun bir boşaltma programını başlat. Elektrik kesintisinde kilitli kalan kapak için kılavuz acil kilit açma düğmesini gösteriyor."
-  - q: "Home Connect bağlantısı kopunca makineyi sıfırlamak gerekir mi?"
-    a: "Hayır. CGK264Z0TR kılavuzu bu durumda yalnız ağ ayarlarını sıfırlamayı öneriyor: Uzaktan Kontrol'e 3 saniye basılıyor, ekranda rES görünene kadar ilgili seçeneğe basılıyor, ardından Başlat Beklet'e 3 saniye basılıyor. Yazılım güncellemesi sürerken ise ağ ya da fabrika ayarı sıfırlanmamalı."
 images:
   coverAlt: "Mutfak tezgâhı altında beyaz, önden yüklemeli bir çamaşır makinesi"
   steps:
@@ -51,13 +40,26 @@ images:
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda panel ekranındaki uyarı"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda sigorta kutusundaki şalterler"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-10"
+kisaCevap: "Profilo'nun CGK264Z0TR ve CGA242X3TR kılavuzlarında Reset tuşu yok. CGK264Z0TR'ye göre yeniden başlatma için İlave durulama ve Kırışık Azaltma tuşlarına aynı anda yaklaşık 3 saniye basılır; arıza tekrar ederse cihaz en az 30 saniye güçten ayrılır. Fabrika ayarı temel ayarlardaki rES ile yapılır."
+faq:
+  - q: "Profilo çamaşır makinesinde reset tuşu var mı?"
+    a: "Profilo'nun CGK264Z0TR ve CGA242X3TR kılavuzlarında Reset adında ayrı bir tuş yok. CGK264Z0TR yeniden başlatmayı İlave durulama ve Kırışık Azaltma tuşlarına aynı anda yaklaşık 3 saniye basmak olarak tarif eder; fabrika ayarına dönüş temel ayarlardaki rES ile yapılır."
+  - q: "Profilo çamaşır makinesi resetleme yapmıyor, neden?"
+    a: "En sık engel çocuk kilidi. Kılavuza göre kilit bekleme modunda ve elektrik kesintisinde de etkin kalır, yani fişi çekmek onu kapatmaz. Bitiş Erteleme etkinse program hemen başlamaz. İkisi de kapalıyken tuşlar tepki vermiyorsa cihazı en az 30 saniye güçten ayır."
+  - q: "Fişi çekmek Profilo'yu sıfırlar mı?"
+    a: "Kılavuzda güçten ayırmak ikinci adımdır ve süresi bellidir: yeniden başlatma işe yaramazsa cihaz en az 30 saniye güç kaynağından ayrılır. Arıza yine sürerse üçüncü adım müşteri hizmetlerini aramaktır. Güç kesmek çocuk kilidini kapatmaz."
+  - q: "Fabrika ayarlarına dönünce ne olur?"
+    a: "CGK264Z0TR kılavuzu rES'i temel ayarlar listesinin son maddesi olarak verir: cihaz fabrika ayarlarına döner. Aynı listede sinyal ses seviyesi, ekran parlaklığı ve kırışıklık azaltma ayarları bulunur. Kılavuz bunu arıza çözümü olarak sunmaz; önce yeniden başlatma ve güç kesme denenir."
+  - q: "İptalden sonra kapak neden açılmıyor?"
+    a: "Profilo'ya göre sıcaklık ya da su seviyesi yüksekken kapak güvenlik nedeniyle kilitli kalır. Sıcaklık yüksekse ilgili Durulama programını, su seviyesi yüksekse Sıkma ya da uygun bir boşaltma programını başlat. Elektrik kesintisinde kilitli kalan kapak için kılavuz acil kilit açma düğmesini gösterir."
+  - q: "Home Connect bağlantısı kopunca makineyi sıfırlamak gerekir mi?"
+    a: "Hayır. CGK264Z0TR kılavuzu yalnız ağ ayarlarını sıfırlamayı önerir: Uzaktan Kontrol'e 3 saniye bas, ekranda rES görünene kadar ilgili seçeneğe bas, ardından Başlat Beklet'e 3 saniye bas. Yazılım güncellemesi sürerken ağ ya da fabrika ayarı sıfırlanmaz."
 ---
 
 Program takıldı, tuşlar tepki vermiyor ya da ekranda bir kod duruyor; ilk akla gelen "makineyi resetlemek". Profilo'nun çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok**, ama sıfırlamanın her basamağı yazılı: **programı iptal etmek, iki tuşla yeniden başlatmak, en az 30 saniye güç kaynağından ayırmak** ve temel ayarlar menüsünden **rES ile fabrika ayarlarına dönmek.** Bu yazıda sırayı Profilo'nun iki kılavuzundan, CGK264Z0TR ve CGA242X3TR'den çıkardık. Tuş yerleri modelden modele değişir; kendi kılavuzunla karşılaştır.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** Ekran karanlıksa Başlat Beklet'e bas. Kilit simgesi varsa çocuk kilidini kapat. Başlat Beklet ile iptal et. Kapak kilitliyse Durulama ya da Sıkma. Tuşlar donduysa İlave durulama ve Kırışık Azaltma'ya birlikte 3 saniye bas. Tekrar ederse 30 saniye güçten ayır. Son çare rES. Olmuyorsa servis.
 
 ## Ekran ne söylüyor
 

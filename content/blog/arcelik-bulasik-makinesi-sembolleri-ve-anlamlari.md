@@ -18,21 +18,6 @@ steps:
   - "Su Kesik Uyarı göstergesi yanıyorsa suyun kesik olmadığını ve musluğun açık olduğunu kontrol et."
   - "Program Evreleri Takip göstergelerinin hiçbiri yanmıyorsa erteleme ayarının devrede olup olmadığına bak."
   - "Su akıyor ve musluk açık olduğu hâlde Su Kesik göstergesi yanıyorsa yetkili servisi çağır."
-faq:
-  - q: "Arçelik bulaşık makinesinde aynı anda birden fazla gösterge yanıyor, arıza mı?"
-    a: "Hayır, normal çalışma görüntüsüdür. Arçelik 6382 kılavuzu Program Evreleri Takip göstergeleri için birebir şunu yazıyor: yıkama program boyunca Yıkama / Durulama / Kurutma adımlarında göstergeler sırası ile yanar, biten adımın göstergesi sönmez, göstergeler eklenerek yanar. Yani makine ilerledikçe yanan gösterge sayısı artar. Aynı kılavuza göre program bittiğinde yıkama adımlarının göstergeleri söner ve sadece Program Bitti göstergesi yanar."
-  - q: "Tuz doldurdum ama tuz uyarı göstergesi hâlâ yanıyor, sensör mü bozuk?"
-    a: "Büyük ihtimalle değil, çünkü üretici bu gecikmeyi kılavuzda yazıyor. Arçelik 9460 FCB kılavuzu birebir şöyle diyor: farklı markaların farklı tuz tanecik boyutuna sahip olmasına ve su sertliğine bağlı olarak tuzun su içinde çözünmesi birkaç saat sürebilir, bu nedenle tuzun makineye doldurulmasından sonra Tuz Eksikliği Uyarı göstergesi belirli bir süre yanmaya devam eder. Lamba günlerce sönmüyorsa konunun ayrıntısı ayrı yazımızda."
-  - q: "Su Kesik uyarı göstergesi yandı, ne yapmalıyım?"
-    a: "Önce suyu kontrol et. Arçelik 6382 kılavuzuna göre makine içine su alınamadığı durumda Su Kesik Uyarı göstergesi yanar ve suyun gelmesi durumunda uyarı lambası otomatik olarak söndürülür. Kılavuzun kendi uyarı satırı sınırı da çiziyor: gösterge yandığında suyun kesik olmadığından, musluğun kapalı olmadığından emin olun; su akıyor ve musluk açıksa Yetkili Servisi çağırın."
-  - q: "Ekranda CL 3, CL 2, CL 1 ve CL On yazıyor, bu ne?"
-    a: "Çocuk kilidi geri sayımıdır. Arçelik 6382 kılavuzuna göre Çocuk (Düğme) Kilidi düğmesine üç saniye basılı tutulduğunda Ekran Bilgi Satırında CL 3, CL 2, CL 1 ve CL On yazar; iptal ederken aynı sayım CL Off ile biter. Aynı kılavuz kilidin ne yaptığını da sınırlıyor: seçilen programın ya da fonksiyonların değiştirilmesini önler ve Başla / Bekle / İptal düğmesini etkisiz hale getirir. Önemli bir not da orada: çocuk kilidi makinenin kapısını kilitlemez."
-  - q: "Erteleme kurdum ama hiçbir evre göstergesi yanmıyor, makine çalışmıyor mu?"
-    a: "Çalışmıyor olması beklenen durum. Arçelik 6382 kılavuzunun kendi notu şöyle: Zaman Erteleme devredeyken, Program Evreleri Takip göstergelerinden hiçbirisi yanmaz. Ankastre 9460 FCB kılavuzunda ise ayrı bir davranış tanımlı: erteleme fonksiyonu devredeyken kapı açılırsa geri sayım durdurulur ve başlat ikonu yanıp sönmeye başlar. Her iki durumda da yanıp sönme bir arıza değil, duraklatma bildirimi."
-  - q: "Bütün Arçelik bulaşık makinelerinde göstergeler aynı mı?"
-    a: "Aynı değil ve fark küçük de değil. Karşılaştırdığımız iki Arçelik bulaşık makinesi kılavuzunun panel listeleri fiilen farklı: 6382'de Su Kesik Uyarı göstergesi, dört adımlı Program Evreleri Takip göstergeleri, Çocuk Kilidi göstergesi ve Ses Seviye göstergesi var; ankastre 9460 FCB listesinde bunların hiçbiri yok, onun yerine Erteleme Geri Sayım Göstergesi ile Yarım Yük ve Ekstra Durulama fonksiyon göstergeleri var. Kesin karşılık kendi modelinin kılavuzundadır."
-  - q: "Panelde yanan her işaret arıza mı demek?"
-    a: "Hayır. Arçelik bulaşık makinesi panellerindeki kalemlerin çoğu ya program durumu (Yıkama, Durulama, Kurutma, Program Bitti), ya tüketim uyarısı (tuz, parlatıcı), ya da senin yaptığın seçim (Tablet Deterjan, Az Bulaşık, Hızlı Yıkama, Yarım Yük, Erteleme, Çocuk Kilidi). Arıza panelde ayrı bir dille, E ile başlayan hata kodu olarak gösterilir; o kodların anlamları için Arçelik bulaşık makinesi hata kodları yazımıza bakabilirsin."
 images:
   coverAlt: "Bulaşık makinesinin kumanda paneli ve gösterge ışıkları"
   steps:
@@ -43,6 +28,21 @@ images:
     - "Bulaşık makinesinin arkasında açık su musluğu ve giriş hortumu"
     - "Bulaşık makinesi ekranında erteleme göstergesi"
     - "Kapağı kapalı, panelinde su kesik uyarısı yanan bulaşık makinesi"
+updated: "2026-11-10"
+kisaCevap: "Arçelik 6382 ve 9460 FCB kılavuzlarına göre paneldeki göstergelerin çoğu arıza değil: program evresi, tuz/parlatıcı uyarısı ya da senin seçimin. 6382'de Su Kesik göstergesi makineye su alınamadığını gösterir, su gelince kendiliğinden söner. Tuz doldurulduktan sonra tuz uyarısı tuz çözünene kadar birkaç saat yanabilir."
+faq:
+  - q: "Arçelik bulaşık makinesinde aynı anda birden fazla gösterge yanıyor, arıza mı?"
+    a: "Hayır. Arçelik 6382 kılavuzuna göre Program Evreleri Takip göstergeleri Yıkama / Durulama / Kurutma adımlarında sırayla ve eklenerek yanar; biten adımın göstergesi sönmez. Program bitince yıkama adımlarının göstergeleri söner ve yalnız Program Bitti göstergesi yanar."
+  - q: "Tuz doldurdum ama tuz uyarı göstergesi hâlâ yanıyor, neden?"
+    a: "Arçelik 9460 FCB kılavuzuna göre tuzun suda çözünmesi tuz markasına ve su sertliğine bağlı olarak birkaç saat sürer; bu yüzden tuz doldurulduktan sonra Tuz Eksikliği Uyarı göstergesi belirli bir süre yanmaya devam eder."
+  - q: "Su Kesik uyarı göstergesi yandı, ne yapmalıyım?"
+    a: "Arçelik 6382 kılavuzuna göre makineye su alınamadığında Su Kesik göstergesi yanar ve su gelince kendiliğinden söner. Suyun kesik ve musluğun kapalı olmadığından emin ol; su akıyor ve musluk açıkken gösterge sürüyorsa kılavuza göre yetkili servis çağrılır."
+  - q: "Ekranda CL 3, CL 2, CL 1 ve CL On yazıyor, bu ne?"
+    a: "Çocuk kilidi geri sayımıdır. Arçelik 6382 kılavuzuna göre Çocuk Kilidi düğmesine 3 saniye basılınca ekranda CL 3, CL 2, CL 1 ve CL On yazar; iptalde sayım CL Off ile biter. Kilit program değişikliğini ve Başla / Bekle / İptal düğmesini engeller, kapıyı kilitlemez."
+  - q: "Erteleme kurdum ama hiçbir evre göstergesi yanmıyor, makine çalışmıyor mu?"
+    a: "Arçelik 6382 kılavuzuna göre Zaman Erteleme devredeyken Program Evreleri Takip göstergelerinin hiçbiri yanmaz. 9460 FCB'de erteleme sırasında kapı açılırsa geri sayım durur ve başlat ikonu yanıp söner. İkisi de arıza değildir."
+  - q: "Panelde yanan her işaret arıza mı demek?"
+    a: "Hayır. Arçelik bulaşık makinesi panelindeki kalemlerin çoğu program durumu (Yıkama, Durulama, Kurutma, Program Bitti), tüketim uyarısı (tuz, parlatıcı) ya da kullanıcı seçimidir (Yarım Yük, Erteleme, Çocuk Kilidi). Arıza ayrı olarak E ile başlayan hata koduyla gösterilir."
 ---
 
 Bulaşık makinesinin panelinde tanımadığın bir ışık yandığında ilk düşünce genellikle aynı oluyor: "arıza mı?" Arçelik'in kendi kullanma kılavuzlarına bakıldığında ise tablo başka türlü görünüyor. Panel listesindeki kalemlerin büyük çoğunluğu **program durumu**, **tüketim uyarısı** ya da **senin yaptığın seçim**. Arıza kılavuzda ayrı bir yerde duruyor ve simgeyle değil **hata koduyla** anlatılıyor.

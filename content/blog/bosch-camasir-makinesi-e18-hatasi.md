@@ -3,7 +3,6 @@ title: "Bosch çamaşır makinesi E18 (F18) hatası: ne demek, çözümü"
 description: "Bosch çamaşır makinesinde E18 (F18, d02), suyun tahliye edilemediğini gösterir. Bosch kılavuzundaki sırayla hortum, sifon, pompa filtresi ve servis sınırı."
 slug: "bosch-camasir-makinesi-e18-hatasi"
 date: "2026-08-21"
-updated: "2026-10-28"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-27 PAZ (YK #189 fırsat sayfası 1/30): içerik iyileştirmesi; slug, şablon ve yapı aynı (YK #179 dondurması).
@@ -32,15 +31,6 @@ steps:
   - "Kapağın iç kısmını, dişlerini ve pompa gövdesini temizle; pompa çarkının dönebildiğini kontrol et."
   - "Pompa kapağını sonuna kadar çevir, tutamak dik dursun; servis kapağını kapat."
   - "Fişi tak, 1 litre suyla Boşaltma programını dene ve sızıntıya bak; hata sürerse servis gerekir."
-faq:
-  - q: "Bosch çamaşır makinesi E18 hatası ne demek?"
-    a: "Bosch'un Türkiye destek sayfasına göre E18, makinenin atık suyu tahliye edemediğini gösterir; tamburda su kalmış da olabilir. Bosch'un saydığı sebepler pompanın tıkanması ve tahliye hortumunun bükülmesidir, kılavuzlar buna tıkalı boşaltma borusunu da ekler. Yani kod bir parçanın yandığını değil, suyun gitmediğini söyler ve Bosch bu sorunun çoğu zaman kullanıcı tarafından çözülebildiğini belirtir."
-  - q: "E18, F18 ve d02 aynı şey mi?"
-    a: "Evet. Bosch'un destek sayfası, farklı modellerde bu hatanın farklı kodlarla göründüğünü ve F18 ile d02'nin aynı arızanın kodları olduğunu yazıyor. Yeni nesil bazı Bosch kılavuzlarında ise E:18 satırı yok; tahliye sebepleri E:30 / -80 satırında listeleniyor. Ekranındaki yazıyı kendi modelinin kılavuzundaki arıza tablosuyla karşılaştırmak en sağlam yoldur."
-  - q: "Filtreyi temizledim ama E18 yine geliyor, sırada ne var?"
-    a: "Bosch kılavuzları iki sebep sayar: tıkalı pis su pompası ve tıkalı boşaltma hortumu ya da borusu. Pompa temizse sifona bağlı hortum ucunu ve gider bağlantısını kontrol et; yeni nesil kılavuzlar hortumun en fazla 1 metre yüksekliğe bağlanmasını ve izinsiz uzatma yapılmamasını da şart koşar. Bunlara rağmen su gitmiyorsa Bosch'a göre pompada arıza olabilir ve orası servis işidir."
-  - q: "Kazan su dolu kaldıysa çamaşırları çıkarabilir miyim?"
-    a: "Kapağı zorlamadan önce suyu boşaltman gerekir, çünkü makine içeride su varken kilidi açmaz. Bosch'un sırası şöyle: musluğu kapat, makineyi kapatıp fişini çek, su sıcaksa soğumasını bekle, servis kapağını aç ve acil boşaltma hortumundan suyu bir kaba al. Kap dolunca tıpayı kapatıp boşaltır, işlemi su bitene kadar tekrarlarsın."
 images:
   coverAlt: "Aydınlık bir banyoda duran beyaz çamaşır makinesinin işaretsiz kumanda paneli ve deterjan çekmecesi"
   steps:
@@ -58,13 +48,24 @@ video:
   description: "Bosch çamaşır makinesinde E18 hatasında su tahliye edilemez: hortum, sifon, acil boşaltma ve pompa filtresi kontrolü."
   uploadDate: "2026-10-31T04:24:00Z"
   duration: "PT52S"
+updated: "2026-11-10"
+kisaCevap: "Bosch Türkiye destek sayfasına göre E18, makinenin atık suyu tahliye edemediğini gösterir; F18 ve d02 aynı arızanın kodlarıdır. Bosch'un saydığı sebepler tıkanmış pompa ve bükülmüş tahliye hortumudur; ikisi temizken su hâlâ gitmiyorsa pompa arızası servis işidir."
+faq:
+  - q: "Bosch çamaşır makinesi E18 hatası ne demek?"
+    a: "Bosch'un Türkiye destek sayfasına göre E18, makinenin atık suyu tahliye edemediğini gösterir ve su tamburda kalır. Bosch'un saydığı sebepler tıkalı pompa ve bükülmüş tahliye hortumudur; kılavuzlar tıkalı boşaltma borusunu da ekler. Bosch çoğu zaman kullanıcının çözdüğünü yazar."
+  - q: "E18, F18 ve d02 aynı şey mi?"
+    a: "Evet. Bosch'un destek sayfası F18 ve d02'nin aynı arızanın kodları olduğunu yazar. WGA142X1TR ve WGA244A0TR gibi yeni nesil kılavuzlarda E:18 satırı yoktur; aynı tahliye sebepleri E:30 / -80 satırında listelenir."
+  - q: "Bosch E18 hatası nasıl giderilir?"
+    a: "Bosch'un sırası: musluğu kapat ve fişi çek, tahliye hortumundaki bükülmeyi düzelt, sifona bağlı hortumu temizle, servis kapağından suyu boşaltıp pompayı temizle ve çarkın döndüğünü kontrol et. Ardından II numaralı göze 1 litre su dökerek Boşaltma programını başlat."
+  - q: "Filtreyi temizledim ama E18 yine geliyor, sırada ne var?"
+    a: "Pompa temizse sifona bağlı hortum ucunu ve gider bağlantısını kontrol et. Yeni nesil Bosch kılavuzları hortumun en fazla 1 metre yüksekliğe bağlanmasını ve izinsiz uzatma yapılmamasını şart koşar. Bunlara rağmen su gitmiyorsa Bosch'a göre pompada arıza vardır ve onarım servisindir."
+  - q: "Kazanda su kaldıysa çamaşırları nasıl çıkarırım?"
+    a: "Makine içeride su varken kapak kilidini açmaz. Bosch'un sırası: musluğu kapat, fişi çek, su sıcaksa soğumasını bekle, servis kapağını aç ve acil boşaltma hortumundan suyu bir kaba al. Su bitene kadar tıpayı kapatıp kabı boşaltarak tekrarla."
 ---
 
 Program bitti sandın, kapağı açmaya gittin ama kilit açılmadı; camdan bakınca kazanın dibinde su duruyor. Panelde ise **E18** yazıyor. Kısa cevap: Bosch'un kendi destek sayfasına göre E18, **makinenin atık suyu tahliye edemediğini** gösterir. Bosch'un saydığı sebepler **tıkanmış pompa** ve **bükülmüş tahliye hortumudur**; şirket bu sorunun çoğu zaman kullanıcı tarafından çözülebildiğini de yazıyor. Aynı arıza bazı modellerde **F18** ya da **d02** olarak görünür.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** E18 = su tahliye edilemedi. Sıra şu: musluğu kapat ve fişi çek → tahliye hortumunda bükülme → gider ve sifon → pompa kapağını açıp temizleme → Boşaltma programıyla deneme. Hepsi temizse ve su hâlâ gitmiyorsa iş pompadadır → servis.
 
 ## Adım adım: evde denenecekler
 

@@ -27,15 +27,6 @@ steps:
   - "Makineyi yeniden aç; ışık sabit beyaza dönünce yeni bir pişirme başlat."
   - "Telve'de su gösterge ışığı kırmızıysa depoyu max çizgisine kadar doldur; depoyu çıkarıp taktıysan pompa işlemini tekrarla."
   - "Hata temizlik ve kapatıp açmadan sonra tekrar ediyorsa Arçelik yetkili servisine başvur."
-faq:
-  - q: "Arçelik kahve makinesi resetleme nasıl yapılır?"
-    a: "Arçelik'in Telve (TKM 9961), Mini Telve (K 3300) ve Telve X (TKM 3341) kılavuzlarında ayrı bir reset tuşu ya da fabrika ayarı yok. Kılavuzdaki karşılığı hata ışığında makineyi kapatıp hazne tabanını, ısıtıcı yüzeyini ve sensör camını nemli bezle temizlemek, sonra makineyi yeniden açmak. Pişirmeyi iptal etmek için başlatma butonuna üç saniye basılı tutuluyor."
-  - q: "Arçelik Telve'de pembe ışık yanıp sönüyor, ne demek?"
-    a: "Mini Telve (K 3300) ve Telve X (TKM 3341) kılavuzlarında yanıp sönen pembe ışık pişirme hatası. Hazneyi yuvadan al, ısıtıcı soğukken hazne tabanını, ısıtıcı yüzeyini ve sensör camını nemli bezle temizle. Işık beyaza dönünce yeni pişirme başlatabilirsin; tekrar ederse servise başvur."
-  - q: "Arçelik kahve makinesi kendiliğinden kapanıyor mu?"
-    a: "Kapanmıyor, uyku moduna geçiyor. Kılavuzlara göre makinede üç dakika hiçbir işlem yapılmazsa bip sesiyle bekleme konumuna geçiyor. Başlatma butonuna bastığında uyarı sesi duyuluyor, durum ışığı beyaz yanıyor ve makine kullanıma hazır hale geliyor; Mini Telve'de hazneyi yuvaya koyup çıkarmak da yetiyor."
-  - q: "Arçelik kahve makinesi hiç çalışmıyor, önce neye bakmalıyım?"
-    a: "Mini Telve kılavuzunun servis öncesi listesi üç şey sayıyor: cihazın prize takılı olup olmadığı, kabloda kopukluk ya da zedelenme olup olmadığı ve pişme algılama sensörünün temizliği. Pişirme haznesi yerine tam oturmazsa da makine çalışmıyor."
 images:
   coverAlt: "Mutfak tezgâhında çelik cezveli otomatik bir Türk kahvesi makinesi ve yanında iki fincan"
   steps:
@@ -46,11 +37,22 @@ images:
     - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda kahve makinesi, sağda panel ekranındaki uyarı"
     - "Çizim: solda kahve makinesi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-10"
+kisaCevap: "Arçelik'in Telve (TKM 9961), Mini Telve (K 3300) ve Telve X (TKM 3341) kılavuzlarında reset tuşu ya da fabrika ayarı yok. Pişirme, başlatma butonuna 3 saniye basılı tutularak iptal edilir; hata ışığında makine kapatılır, hazne tabanı, ısıtıcı yüzeyi ve sensör camı nemli bezle silinip makine yeniden açılır."
+faq:
+  - q: "Arçelik kahve makinesi resetleme nasıl yapılır?"
+    a: "Telve, Mini Telve ve Telve X kılavuzlarında ayrı reset tuşu yok. Karşılığı: hata ışığında makineyi kapat, ısıtıcı soğukken hazne tabanını, ısıtıcı yüzeyini ve sensör camını nemli bezle temizle, sonra yeniden aç. Pişirmeyi iptal etmek için başlatma butonuna 3 saniye basılı tutulur."
+  - q: "Arçelik Telve'de pembe ışık yanıp sönüyor, ne demek?"
+    a: "Mini Telve (K 3300) ve Telve X (TKM 3341) kılavuzlarında yanıp sönen pembe ışık pişirme hatasıdır. Hazneyi al, ısıtıcı soğukken hazne tabanını, ısıtıcı yüzeyini ve sensör camını nemli bezle temizle. Işık beyaza dönünce yeni pişirme başlatılır; hata tekrar ederse servise başvurulur."
+  - q: "Arçelik Telve'de kırmızı ışık ne demek?"
+    a: "Renk modele göre değişir. Telve'de (TKM 9961) seçili butondaki sabit kırmızı zaman aşımı, yanıp sönen kırmızı seviye aşım hatasıdır; su ışığı sabit kırmızıysa su bitmiştir. Mini Telve ve Telve X'te sabit kırmızı 'pişiriyor', yanıp sönen kırmızı 'pişirdi, hazneyi al' demektir."
+  - q: "Arçelik kahve makinesi kendiliğinden kapanıyor mu?"
+    a: "Kapanmaz, uyku moduna geçer. Kılavuzlara göre 3 dakika işlem yapılmazsa makine bip sesiyle bekleme konumuna geçer. Başlatma butonuna basınca ışık beyaz yanar ve makine hazır olur; Mini Telve'de hazneyi yuvaya koyup çıkarmak da yeter."
+  - q: "Arçelik kahve makinesi hiç çalışmıyor, önce neye bakmalıyım?"
+    a: "Mini Telve kılavuzunun servis öncesi listesi üç şey sayar: cihazın prize takılı olması, kabloda kopukluk ya da zedelenme olmaması ve pişme algılama sensörünün temizliği. Pişirme haznesi yerine tam oturmazsa da makine çalışmaz."
 ---
 
 Arçelik Türk kahvesi makinen pembe ya da kırmızı yanıp sönüyor, kahveyi pişirmiyor ya da hiç tepki vermiyor; aklına ilk gelen "resetleme". Önce bilmen gereken şu: Arçelik'in **Telve (TKM 9961)**, **Mini Telve (K 3300)** ve **Telve X (TKM 3341)** Türkçe kılavuzlarında ayrı bir reset tuşu ya da fabrika ayarı yok. Kılavuzların anlattığı, makinenin ışıklarla ne söylediği, pişirmenin nasıl iptal edildiği ve hata ışığında makinenin nasıl kapatılıp temizlenip yeniden açıldığı. Resetleme dediğimiz iş pratikte bu. Bu yazı Arçelik'in ürün sayfalarındaki bu üç kılavuza dayanıyor; başka bir modelin varsa ışık renkleri farklı olabilir, kendi kılavuzunla karşılaştır.
-
-> ⚡ **Kısa özet:** Reset tuşu yok. Pişirmeyi durdurmak için başlatma butonuna üç saniye bas. Hata ışığında makineyi kapat, hazneyi al, ısıtıcı soğuyunca hazne tabanını, ısıtıcı yüzeyini ve sensör camını nemli bezle sil, yeniden aç. Işık sabit beyazsa makine hazır. Telve'de su ışığı kırmızıysa depoyu doldur. Tekrarlarsa servis.
 
 ## Işıklar ne söylüyor?
 

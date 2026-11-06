@@ -61,6 +61,11 @@ const kisaCevapKutusu = (p) => {
   const m = typeof p.kisaCevap === "string" ? p.kisaCevap.trim() : "";
   return m ? `<aside class="kisa-cevap" aria-label="Kısa cevap"><p class="kc-baslik">Kısa cevap</p><p>${esc(m)}</p></aside>` : "";
 };
+// YK #214: Kısa cevaplı (GEO) sayfada frontmatter faq'ı sayfada da görünür basılır — FAQPage JSON-LD'deki
+// soru/cevap ile sayfadaki metin aynı kalsın (gövdedeki elle yazılmış SSS bölümleri bu sayfalarda kaldırıldı).
+const sssBolumu = (p) => (typeof p.kisaCevap === "string" && Array.isArray(p.faq) && p.faq.length
+  ? `<section class="sss" aria-label="Sık sorulan sorular"><h2>Sık sorulan sorular</h2>${p.faq.map((x) => `<h3>${esc(x.q)}</h3><p>${esc(x.a)}</p>`).join("")}</section>`
+  : "");
 const guncellemeEki = (p) => (p.updated && String(p.updated) !== String(p.date) && ayYil(p.updated) ? ` · Son güncelleme: ${ayYil(p.updated)}` : "");
 
 const trDate = (d) => {
@@ -276,6 +281,8 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);l
 .yazibasi .yb-ust{margin:0 0 10px;font-size:13px;font-weight:600;color:#93C5FD;letter-spacing:.02em}
 .kisa-cevap{margin:18px 0 6px;padding:14px 16px;background:#EFF6FF;border:1px solid #BFDBFE;border-left:4px solid #2563EB;border-radius:10px}
 .kisa-cevap p{margin:0;font-size:16px;line-height:1.6;color:#1E293B}
+.sss h3{font-size:17px;margin:18px 0 6px}
+.sss p{margin:0 0 6px}
 .kisa-cevap .kc-baslik{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#2563EB;margin-bottom:4px}
 /* Kategori artık link. Görsel dil AYNEN korunur (aynı mavi, aynı ağırlık) — yalnız
    altı noktalı çizgiyle "tıklanır" işaretlenir, üstüne gelince tam alt çizgi + beyaz.
@@ -2161,7 +2168,7 @@ for (const p of posts) {
   // ardında kalır; ilgili yazılar ikincil çıkıştır, onu yukarı alıp CTA'yı aşağı itmez.
   // YK #173 (b): `parca:` frontmatter'lı yazıda ilk H2 altı + gövde sonu "satın al" bağlantısı
   // (scripts/blog-satin-al.mjs); alanı olmayan yazının çıktısı bayt bayt aynı.
-  const body = `<article>${yaziBasi(p)}${kisaCevapKutusu(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${kaynakSatiri(p.kaynaklar)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
+  const body = `<article>${yaziBasi(p)}${kisaCevapKutusu(p)}${ARIZA_KUTUSU(p, "ust")}${satinAlEkle(videoEkle(kontrolGorselleriEkle({ ...p, html: adimGorselleriEkle(p) }), p), p)}${sssBolumu(p)}${kaynakSatiri(p.kaynaklar)}${ARIZA_KUTUSU(p, "alt")}${YAZI_CTA(p)}${PWA_NOT}${ilgiliYazilar(p)}${tamirGeriSatiri(p)}</article>${STICKY(p)}${p.video ? VIDEO_JS(p.slug) : ""}${ARIZA_KUTUSU_EK(p)}${SATIN_AL_EK(p)}`;
   const dir = path.join(OUT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: p.title, desc: p.description, canonical, head, body, image: kapak ? `${SITE}${kapak}` : "" }));

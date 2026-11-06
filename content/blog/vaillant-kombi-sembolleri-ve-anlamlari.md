@@ -4,21 +4,23 @@ description: "Ekrandaki simgelerin çoğu arıza değil, çalışma durumu. Vail
 slug: "vaillant-kombi-sembolleri-ve-anlamlari"
 date: "2026-08-26"
 category: "Kombi"
-faq:
-  - q: "Vaillant kombide radyatör simgesi yanıp sönüyorsa ne demek?"
-    a: "Brülörün o an yandığı anlamına gelir; arıza değildir. ecoTEC pro kılavuzuna göre ısıtma konumu simgesi sürekli yanıyorsa ısıtma konumunda ısı talebi vardır, yanıp sönüyorsa brülör ısıtma konumundadır. ecoTEC intro kılavuzu aynı mantığı kalorifer konumu için kurar: sürekli yanma gidiş suyu itibari sıcaklığını, yanıp sönme güncel ısıtma talebini gösterir. Yani yanıp sönme cihazın çalıştığının işaretidir."
-  - q: "Kombide anahtar işareti ne anlama geliyor?"
-    a: "Bakım zamanının geldiğini söyler ve Vaillant kılavuzu bunun arıza olmadığını açıkça yazar: ekranda bakım sembolü görünürse ürün bakımı gereklidir, ürün arıza konumunda değildir ve çalışmaya devam eder. Kılavuzun tarif ettiği iş yetkili bayiye başvurmaktır. Kılavuz bir de şunu ekliyor: aynı anda su basıncı yanıp sönerek gösteriliyorsa ısıtma suyu ilave edin."
-  - q: "Basınç simgesi yanıp sönüyor, ne yapmalı?"
-    a: "Sistem basıncı izin verilen aralığın dışına çıkmış demektir. ecoTEC pro kılavuzuna göre basınç göstergesi sürekli yanıyorsa sistem basıncı izin verilen aralıktadır, yanıp sönüyorsa dolum basıncı izin verilen aralığın dışındadır. Kılavuz ekranda kesik kesik çizgilerin izin verilen aralığı gösterdiğini de belirtir. Bakım sembolüyle birlikte yanıp sönüyorsa kılavuzun önerisi ısıtma suyu ilave etmektir."
-  - q: "Kombi neden bir süre yanmıyor, sonra kendiliğinden yanıyor?"
-    a: "Bu bir arıza değil, cihazın kendi koruması olabilir. Vaillant ecoTEC pro kılavuzunda brülör bekleme süresi aktif diye ayrı bir gösterge vardır ve kılavuz sebebini de yazar: sık sık açma/kapatma işlemini önlemek için, ürünün kullanım ömrünü arttırır. Yani kombi bilerek bekliyor."
-  - q: "Yaz konumu simgesi ne işe yarar?"
-    a: "Isıtmanın kapalı olduğunu gösterir. ecoTEC pro kılavuzu bu simgeyi yaz konumu aktif olarak adlandırır ve karşılığını ısıtma konumu kapalı diye verir. Sıcak su çalışmaya devam eder, radyatörler ısınmaz. Yazın radyatörlerin soğuk olmasının sebebi çoğu zaman arıza değil bu ayardır."
-  - q: "F ile başlayan kod ile diğer simgeler aynı şey mi?"
-    a: "Değil, ayrı kümelerdir. Vaillant ecoTEC pro kılavuzu üründe arıza satırını F.XX biçiminde ayrı bir kalem olarak verir ve bunun ana ekran yerine gösterildiğini, gerekirse açıklayıcı metnin de görüntülendiğini yazar. Yani durum simgeleri ile arıza kodları farklı kümelerdir; ekranda gördüğün her simge arıza değildir."
 images:
   coverAlt: "Duvar tipi kombinin dijital ekranı ve kumanda tuşları"
+updated: "2026-11-10"
+kisaCevap: "Vaillant ecoTEC pro ve intro kılavuzlarına göre simgelerin çoğu arıza değil, çalışma durumudur: ecoTEC pro tablosundaki 3 göstergede (sıcak su, ısıtma, konfor) yanıp sönme brülörün devrede olduğunu gösterir. Anahtar simgesi bakım zamanıdır, kılavuza göre arıza değil. Arıza ayrı, F.XX koduyla gösterilir."
+faq:
+  - q: "Vaillant kombide radyatör simgesi yanıp sönüyorsa ne demek?"
+    a: "Arıza değildir. ecoTEC pro kılavuzuna göre ısıtma simgesi sürekli yanıyorsa ısı talebi vardır, yanıp sönüyorsa brülör ısıtma konumunda çalışıyordur. ecoTEC intro'da sürekli yanma gidiş suyu itibari sıcaklığını, yanıp sönme güncel ısıtma talebini gösterir."
+  - q: "Kombide anahtar işareti ne anlama geliyor?"
+    a: "Bakım zamanının geldiğini gösterir. Vaillant kılavuzuna göre bakım sembolü görünürse ürün bakımı gereklidir; ürün arıza konumunda değildir ve çalışmaya devam eder. Yapılacak iş yetkili bayiye başvurmaktır. Aynı anda su basıncı yanıp sönüyorsa kılavuz ısıtma suyu ilave etmeyi söyler."
+  - q: "Basınç simgesi yanıp sönüyor, ne yapmalı?"
+    a: "ecoTEC pro kılavuzuna göre basınç göstergesi sürekli yanıyorsa sistem basıncı izin verilen aralıktadır, yanıp sönüyorsa dolum basıncı aralığın dışındadır; ekrandaki kesik çizgiler aralığı gösterir. Basınç ilaveye rağmen sürekli düşüyorsa sistem su kaybediyordur ve kaybın yerini yetkili servis bulur."
+  - q: "Kombi neden bir süre yanmıyor, sonra kendiliğinden yanıyor?"
+    a: "ecoTEC pro kılavuzunda 'brülör bekleme süresi aktif' diye ayrı bir gösterge vardır. Kılavuza göre amacı sık açma/kapatmayı önlemek ve ürünün kullanım ömrünü artırmaktır. Bu gösterge varken kombi bilerek bekler."
+  - q: "Yaz konumu simgesi ne işe yarar?"
+    a: "ecoTEC pro kılavuzu bu simgeyi 'yaz konumu aktif' diye adlandırır ve karşılığını 'ısıtma konumu kapalı' diye verir. Bu konumda sıcak su çalışır, radyatörler ısınmaz."
+  - q: "F ile başlayan kod ile diğer simgeler aynı şey mi?"
+    a: "Hayır. ecoTEC pro kılavuzu üründe arızayı F.XX biçiminde ayrı bir kalem olarak verir; kod ana ekran yerine gösterilir, gerekirse açıklayıcı metin de görüntülenir. Durum simgeleri ile arıza kodları ayrı kümelerdir."
 ---
 
 Kombinin ekranında bir simge yanıp söndüğünde ilk düşünce genelde aynı oluyor: "arıza mı?" Vaillant'ın kendi kullanma kılavuzlarına bakıldığında ise durum tersine yakın — **ekrandaki göstergelerin çoğu cihazın o an ne yaptığını anlatıyor.** Yanıp sönen radyatör simgesi brülörün yandığını, anahtar simgesi bakım zamanının geldiğini söylüyor ve kılavuz ikincisi için *"ürün arıza konumunda değildir"* diye açıkça yazıyor.

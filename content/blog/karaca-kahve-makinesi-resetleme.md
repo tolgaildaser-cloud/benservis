@@ -3,7 +3,6 @@ title: "Karaca kahve makinesi resetleme ve kırmızı ışık"
 description: "Karaca Hatır Türk kahvesi makinesinde kırmızı ışık neden yanar, kalibrasyonla resetleme nasıl yapılır? Adımlar Karaca'nın Hatır Köz kılavuzundan."
 slug: "karaca-kahve-makinesi-resetleme"
 date: "2026-10-25"
-updated: "2026-11-02"
 category: "Küçük Ev Aletleri"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-25 PAZ alt ajanı (YK #182 Dalga 8, küme Z6, grup B). origin/main'de "karaca" slug/başlıkta yok; gövdede yalnız homend-airfryer-kullanimi ve homend-robot-supurge-resetleme (grup adı olarak). Dalga 6/7/8 klasörlerinde karaca slug'ı yok.
@@ -30,15 +29,6 @@ steps:
   - "Kalibrasyon melodisini duyunca tuşu bırak."
   - "Cezveyi hemen haznesine tak; sesli uyarıdan sonra Türk Kahvesi tuşuna yeniden bas ve ışık sönene kadar basılı tut."
   - "Sesli uyarı gelip tüm fonksiyon ışıkları yanıp sönünce kalibrasyon bitmiştir; pişirmeye başla."
-faq:
-  - q: "Karaca kahve makinesi resetleme nasıl yapılır?"
-    a: "Karaca'nın Hatır Köz kılavuzunda 'reset' adlı bir tuş yok; kılavuzun tarif ettiği işlem kalibrasyon. Fişi çek, cezveyi çıkar, Türk Kahvesi tuşuna basılı tutarak fişi tak, melodiyi duyunca bırak, cezveyi tak ve sesli uyarıdan sonra tuşa ışık sönene kadar bas. Bitince makine ses verir ve tüm fonksiyon ışıkları yanıp söner."
-  - q: "Karaca kahve makinesinde kırmızı ışık neden yanar?"
-    a: "Hatır Köz kılavuzuna göre makine boşken ya da yalnız suyla çalıştırıldığında durum ışığı sürekli kırmızı yanıyor ve üç bip geliyor. Pişirme haznesi max seviyesinin üzerinde doldurulduğunda da makine çalışmıyor, durum ışığı kırmızı yanıyor ve uyarı sinyali veriyor."
-  - q: "İç tavanı sildim, kırmızı ışık hâlâ yanıyor."
-    a: "Kılavuzun sıradaki adımı kalibrasyon: temiz cezveyle, cezve takılı değilken Türk Kahvesi tuşuna basılı tutup fişi takarak başlıyorsun. Kalibrasyondan sonra da uyarı sürüyorsa Karaca yetkili servisine başvur."
-  - q: "Hatır Perfetto'da kalibrasyon farklı mı?"
-    a: "Evet. Perfetto kılavuzunda kalibrasyon Kişi Sayısı ve Fincan Boyutu tuşlarıyla yapılıyor, su haznesi dolu ve cezve boş olarak takılıyor. Kılavuz cihazı başka bir şehirde ya da yükseklikte kullanacaksan kalibrasyonu yeniden yapmanı öneriyor."
 images:
   coverAlt: "Mutfak tezgâhında cezveli otomatik bir Türk kahvesi makinesi ve yanında boş bir fincan"
   steps:
@@ -49,11 +39,20 @@ images:
     - "Çizim: solda kahve makinesi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda kahve makinesi, sağda su ya da toz haznesi"
     - "Çizim: solda kahve makinesi, sağda çalışma sesi"
+updated: "2026-11-10"
+kisaCevap: "Karaca Hatır Köz kılavuzunda reset tuşu yok; tarif edilen işlem kalibrasyon. Sürekli kırmızı ışık ve 3 bip, makinenin boş ya da yalnız suyla çalıştırıldığını gösterir; hazne max çizgisinin üzerindeyse de kırmızı yanar. Kılavuza göre önce iç tavan nemli bezle silinir, uyarı sürerse kalibrasyon yapılır."
+faq:
+  - q: "Karaca kahve makinesi resetleme nasıl yapılır?"
+    a: "Hatır Köz kılavuzunda tarif edilen işlem kalibrasyon: fişi çek, cezveyi çıkar, Türk Kahvesi tuşuna basılı tutarak fişi tak, melodide bırak, cezveyi tak ve sesli uyarıdan sonra tuşa ışık sönene kadar bas. Bitince makine ses verir ve tüm fonksiyon ışıkları yanıp söner."
+  - q: "Karaca kahve makinesinde kırmızı ışık neden yanar?"
+    a: "Hatır Köz kılavuzuna göre makine boşken ya da yalnız suyla çalıştırıldığında durum ışığı sürekli kırmızı yanar ve üç bip gelir (üçüncüsü uzun). Pişirme haznesi max seviyesinin üzerinde doldurulduğunda da makine çalışmaz, ışık kırmızı yanar ve uyarı sinyali verir."
+  - q: "İç tavanı sildim, kırmızı ışık hâlâ yanıyor, ne yapmalıyım?"
+    a: "Kılavuzun sıradaki adımı kalibrasyon: temiz cezveyle, cezve takılı değilken Türk Kahvesi tuşuna basılı tutup fişi takarak başlanır. Kılavuz ayrıca gösterge camı temiz değilse makinenin kahve miktarını algılayamadığını yazar. Kalibrasyondan sonra uyarı sürüyorsa Karaca yetkili servisine başvurulur."
+  - q: "Hatır Perfetto'da kalibrasyon farklı mı?"
+    a: "Evet. Perfetto kılavuzunda kalibrasyon Kişi Sayısı ve Fincan Boyutu tuşlarına birlikte basılarak yapılır; su haznesi dolu, cezve boş takılır. Kalibrasyon yapılmadan Közde Türk Kahvesi fonksiyonu çalışmaz. Cihaz başka bir şehirde ya da yükseklikte kullanılacaksa kalibrasyon yenilenir."
 ---
 
 Karaca kahve makinen kırmızı ışık verip çalışmıyor, aklına "resetleme" geliyor. Karaca'nın sitesinde kılavuzu açıkça yayımlanan Hatır modellerinden **Hatır Köz Türk Kahvesi Makinesi**'nin kılavuzu bu sorunu kendi "Sıkça Sorulan Sorular" bölümünde ele alıyor ve çözüm olarak bir **kalibrasyon** adımı veriyor. Kılavuzda "reset" diye bir tuş ya da menü yok; internette resetleme diye anlatılan işlem kılavuzdaki bu kalibrasyon (çıkarım). Bu yazı o sırayı, ışıkların ne söylediğini ve Hatır Perfetto'daki farklı yolu anlatıyor.
-
-> ⚡ **Kısa özet:** Sürekli kırmızı ışık ve üç bip, makine boş ya da yalnız suyla çalıştırıldı demek. Hazne max çizgisinin üzerindeyse de kırmızı yanar. Önce iç tavanı nemli bezle sil. Sürerse fişi çek, cezveyi çıkar, Türk Kahvesi tuşuna basılı tutarak fişi tak, melodide bırak, cezveyi tak ve tuşa ışık sönene kadar bas.
 
 ## Işık ve ses ne söylüyor?
 
