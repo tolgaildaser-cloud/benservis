@@ -8,6 +8,7 @@ import { sayfaHTML, kacis, tl, RENK } from "./_sayfa.js";
 import { UCRETSIZ_KARGO_ESIK_TL } from "../../src/kargo.js";
 import { satilanIlanlar } from "../_siparis-odeme.js";
 
+export const ODEME_SURE_SAAT = 24;
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 const kokUrl = (req) => (process.env.VERCEL_ENV === "production"
@@ -34,7 +35,7 @@ export default async function handler(req, res) {
 
   const { data: s, error } = await supabase
     .from("siparisler")
-    .select("id, siparis_no, urunler, tutar, kargo_tl, kargo_indirim_tl, alici_ad, alici_tel, alici_adres, alici_email, odeme_durumu, odeme_saglayici")
+    .select("id, siparis_no, urunler, tutar, kargo_tl, kargo_indirim_tl, alici_ad, alici_tel, alici_adres, alici_email, odeme_durumu, odeme_saglayici, created_at")
     .eq("id", id)
     .single();
   if (error || !s || s.odeme_saglayici !== "paytr") return hataSayfasi(res, 404, "Sipariş bulunamadı", "Bu sipariş için kart ile ödeme açık değil.");
@@ -45,6 +46,11 @@ export default async function handler(req, res) {
   }
   if (!["odeme_bekleniyor", "odeme_basarisiz"].includes(s.odeme_durumu)) {
     return hataSayfasi(res, 409, "Bu sipariş ödemeye kapalı", `Sipariş durumu: ${kacis(s.odeme_durumu)}.`);
+  }
+
+  // Güvenlik PR-C (6 Kas 2026): 24 saatten eski ödenmemiş sipariş ödemeye açılmaz (fiyat/stok değişmiş olabilir).
+  if (s.created_at && Date.now() - new Date(s.created_at).getTime() > ODEME_SURE_SAAT * 3600e3) {
+    return hataSayfasi(res, 409, "Ödeme süresi doldu", "Bu siparişin ödeme süresi geçti; ürünü yeniden sepete ekleyip yeni sipariş oluşturun.");
   }
 
   // Güvenlik PR-B (5 Kas 2026): ikinci el ilanı bu arada satılmış ya da kaldırılmışsa ödeme açılmaz.

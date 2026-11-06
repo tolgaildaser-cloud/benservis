@@ -6,11 +6,13 @@
 import supabase from "../_supabase.js";
 import { sendSMS } from "../_verimor.js";
 import { suresiDolanHavaleleriIptalEt } from "../_siparis-odeme.js";
+import { cronYetkili } from "../_cron.js";
 
 export default async function handler(req, res) {
   // Cron güvenliği
-  const token = (req.headers.authorization || "").replace("Bearer ", "").trim();
-  if (token !== process.env.CRON_SECRET) {
+  // Güvenlik PR-C (6 Kas 2026): CRON_SECRET boş/tanımsızsa uç kapalı (eskiden boş sır + başlıksız istek
+  // eşleşebiliyordu); karşılaştırma sabit zamanlı.
+  if (!cronYetkili(req.headers.authorization, process.env.CRON_SECRET)) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 

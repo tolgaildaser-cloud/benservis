@@ -95,3 +95,25 @@ describe("kaynak kuralları", () => {
     expect(oku("./odeme/callback.js")).toMatch(/send\("OK"\)/);
   });
 });
+
+describe("güvenlik PR-C", () => {
+  const b = { merchant_oid: "0f8fad5bd9cb469fa16570867728950eTabc", status: "success", total_amount: "54900", payment_amount: "54900" };
+  it("ödenmiş siparişe farklı denemeden ikinci ödeme iz bırakır, durum değişmez; aynı oid sessiz", () => {
+    const m = bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odendi", odeme_oid: "0f8fad5bd9cb469fa16570867728950eTxyz" }, b);
+    expect(m.odeme_durumu).toBeUndefined();
+    expect(m.odeme_hata).toMatch(/^mükerrer ödeme: 0f8fad5b/);
+    expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odendi", odeme_oid: b.merchant_oid }, b)).toBeNull();
+    expect(bildirimGuncellemesi({ tutar: 549, odeme_durumu: "odendi", odeme_oid: "x" }, { ...b, status: "failed" })).toBeNull();
+  });
+  it("cron: boş sır ve yanlış başlık reddedilir", async () => {
+    const { cronYetkili } = await import("./_cron.js");
+    expect(cronYetkili("", "")).toBe(false);
+    expect(cronYetkili("Bearer ", "")).toBe(false);
+    expect(cronYetkili(undefined, undefined)).toBe(false);
+    expect(cronYetkili("Bearer yanlis", "dogru-sir")).toBe(false);
+    expect(cronYetkili("Bearer dogru-sir", "dogru-sir")).toBe(true);
+  });
+  it("ödeme sayfası 24 saatten eski siparişi açmaz", () => {
+    expect(fs.readFileSync(new URL("./odeme/paytr.js", import.meta.url), "utf8")).toMatch(/Ödeme süresi doldu/);
+  });
+});
