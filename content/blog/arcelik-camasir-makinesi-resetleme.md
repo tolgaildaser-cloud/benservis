@@ -30,17 +30,6 @@ steps:
   - "Kapak hâlâ açılmıyorsa Pompa+Sıkma programını seçip suyu tahliye et, kapak ışığının açılabilir konuma gelmesini bekle."
   - "Yeni programı seç, gerekiyorsa deterjan ve yumuşatıcıyı yeniden koy, Başla / Bekle ile başlat."
   - "Program yine başlamıyor ya da aynı uyarı tekrar ediyorsa Arçelik yetkili servisine haber ver."
-faq:
-  - q: "Arçelik çamaşır makinesinde reset tuşu var mı?"
-    a: "Arçelik'in 7103 D ve 9103 HE kılavuzlarında Reset adında ayrı bir tuş yok. Kılavuzdaki karşılığı Programın iptal edilmesi bölümü. 9103 HE'nin sorun giderme tablosu, program başlatılamadığında Başla / Bekle / İptal düğmesine 3 saniye basarak makineyi fabrika ayarlarına getirmeyi söylüyor; 7103 D'de aynı satırın çözümü Program Seçim düğmesini çevirip başka bir program seçmek."
-  - q: "Arçelik çamaşır makinesi resetleme yapmıyor, neden?"
-    a: "En sık engel çocuk kilidi. Kılavuza göre çocuk kilidi açıkken Program Seçim düğmesiyle başka bir program seçilse bile önceki program çalışmaya devam eder ve ekranda Con görünür. Önce kilidi kapat, sonra iptal adımını tekrarla. Kilit kapalıyken de iptal olmuyorsa yetkili servis."
-  - q: "Fişi çekip takınca makine sıfırlanır mı?"
-    a: "Kılavuzlar bunu bir sıfırlama yöntemi olarak anlatmıyor. 7103 D kılavuzunun notu tersini söylüyor: elektrik kesintilerinde ya da fiş prizden çıkarıldığında çocuk kilidi devreden çıkmaz. Programı bitirmek için kılavuzdaki iptal adımını kullan."
-  - q: "İptalden sonra kapak neden açılmıyor?"
-    a: "Kapak kilidi su seviyesine bağlı. Arçelik'e göre makinenin içindeki su sıcaklığı yüksekse ya da su seviyesi kapak hizasının üzerindeyse kapak açılmaz. 9103 HE kılavuzunun çözümü program düğmesini Pompa+Sıkma programına getirip suyu tahliye etmek. Program bittikten sonra da kapak kilidinin devreden çıkması birkaç dakika sürebilir."
-  - q: "İptal ettikten sonra deterjanı yeniden koymam gerekir mi?"
-    a: "Gerekebilir. 7103 D kılavuzuna göre programın iptal edildiği adıma bağlı olarak yeni seçtiğin program için tekrar deterjan ve yumuşatıcı koyman gerekebilir."
 images:
   coverAlt: "Çamaşır odasında beyaz, ön yüklemeli bir çamaşır makinesi ve sönük kumanda paneli"
   steps:
@@ -51,13 +40,24 @@ images:
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda bekleme süresi için saat"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda deterjan bölmesi"
     - "Çizim: solda ön yüklemeli çamaşır makinesi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-06"
+kisaCevap: "Arçelik'in 7103 D ve 9103 HE kılavuzlarında Reset tuşu yok; karşılığı programı iptal etmek. Tuşlu 9103 HE'de Başla / Bekle / İptal tuşuna 3 saniye basılır ve ekranda End görünür. Düğmeli 7103 D'de Program Seçim düğmesi başka programa çevrilir. Ekranda Con varsa önce çocuk kilidi kapatılır."
+faq:
+  - q: "Arçelik çamaşır makinesinde reset tuşu var mı?"
+    a: "Arçelik'in 7103 D ve 9103 HE kılavuzlarında Reset adında ayrı bir tuş yok; karşılığı 'Programın iptal edilmesi' bölümü. 9103 HE'nin sorun giderme tablosu, program başlatılamadığında Başla / Bekle / İptal düğmesine 3 saniye basmayı makineyi fabrika ayarlarına getirmek olarak anlatır."
+  - q: "Arçelik çamaşır makinesi resetleme yapmıyor, neden?"
+    a: "En sık engel çocuk kilidi. 7103 D kılavuzuna göre kilit açıkken başka program seçilse bile önceki program çalışmaya devam eder ve ekranda Con görünür. 7103 D'de kilit 2. Yardımcı Fonksiyon tuşuna, 9103 HE'de 2. ve 4. tuşlara 3 saniye basılarak kapanır."
+  - q: "Fişi çekip takınca makine sıfırlanır mı?"
+    a: "Kılavuzlar bunu sıfırlama yöntemi olarak anlatmaz. 7103 D kılavuzuna göre elektrik kesintisinde ya da fiş prizden çıkarıldığında çocuk kilidi devreden çıkmaz. Programı bitirmek için kılavuzdaki iptal adımı kullanılır."
+  - q: "İptalden sonra kapak neden açılmıyor?"
+    a: "Arçelik'e göre içerideki su sıcaksa ya da su seviyesi kapak hizasının üzerindeyse kapak açılmaz. 9103 HE kılavuzunun çözümü program düğmesini Pompa+Sıkma programına getirip suyu tahliye etmek. Program bittikten sonra kapak kilidinin devreden çıkması birkaç dakika sürer."
+  - q: "İptalden sonra makine neden bir süre çalışıyor?"
+    a: "7103 D kılavuzuna göre iptalden sonra, içeride su olup olmadığına bakılmaksızın Pompa fonksiyonu 1-2 dakika çalışır. Süre bitince makine yeni seçilen programın ilk adımından çalışmaya hazır olur. İptal edilen adıma göre deterjan ve yumuşatıcıyı yeniden koymak gerekir."
 ---
 
 Program takıldı, ekran tepki vermiyor ya da yanlış programı başlattın; ilk akla gelen "makineyi resetlemek". Arçelik'in çamaşır makinesi kılavuzlarında **Reset adında ayrı bir tuş yok**. Kılavuzdaki karşılığı **"Programın iptal edilmesi"** bölümü; 9103 HE kılavuzunun sorun giderme tablosu bu işi açıkça **"makineyi fabrika ayarlarına getirmek"** diye tarif ediyor. Bu yazıda Arçelik'in iki kılavuzundan, tuşlu 9103 HE ile Program Seçim düğmesiyle çalışan 7103 D'den, sıfırlamanın doğru yolunu sırayla çıkardık. Tuş yerleri modelden modele değişir; kendi kılavuzunla karşılaştır.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** Ekranda Con varsa önce çocuk kilidini kapat. Tuşlu modelde Başla / Bekle / İptal'e 3 saniye bas, ekranda End görünsün. Düğmeli modelde Program Seçim düğmesini başka programa çevir. Pompa suyu boşaltsın, kapak açılmıyorsa Pompa+Sıkma. Sonra yeni programı başlat. Olmuyorsa Arçelik yetkili servisi.
 
 ## Ekran ne söylüyor
 

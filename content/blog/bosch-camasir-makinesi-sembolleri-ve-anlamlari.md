@@ -18,19 +18,6 @@ steps:
   - "Köpük tespiti simgesi yandıysa sonraki yıkamada deterjan dozunu düşür."
   - "Gerilim kontrol göstergesi yanıyorsa makineye müdahale etme; gerilim düzelince program kendiliğinden devam eder."
   - "Yanık kokusu, kumanda panelinde ısınma ya da anormal ses varsa makineyi çalıştırmayı bırak ve fişini çek."
-faq:
-  - q: "Bosch çamaşır makinesinde kapak simgesi ne anlama gelir?"
-    a: "Üç farklı durumu anlatır ve hangisi olduğunu simgenin davranışı söyler. WGA142Z0TR kılavuzuna göre kapak simgesi yanıyorsa kapak kilitlidir ve açılamaz, yanıp sönüyorsa kapak açıktır, sönükse kilit açılmıştır ve kapak açılabilir. Daha eski WAW28760TR kılavuzunda ise aynı simge yanıyorsa kapak açılabilir, program başlatıldıktan sonra yanıp sönüyorsa kapak doğru kapatılmamıştır. Yani okuma yönü modele göre değişir, ölçüt kendi kılavuzundur."
-  - q: "Musluk simgesi yanıyorsa ne yapmalı?"
-    a: "Bu bir arıza kodu değil, su gelmediğinin bildirimidir. WGA142Z0TR kılavuzu bu simgeyi su basıncı yok ya da su basıncı çok düşük olarak tanımlar. WAW28760TR kılavuzu ayrımı daha net yapar: simge yanıyorsa su musluğu açık değildir veya su basıncı yoktur, yanıp sönüyorsa su basıncı çok düşüktür ve bu program süresini uzatabilir. İlk bakılacak yer musluk ve giriş hortumudur."
-  - q: "Çocuk kilidi simgesi neden yanıp sönüyor?"
-    a: "Kilit çalıştığı için. WGA142Z0TR kılavuzuna göre simge sabit yanıyorsa çocuk kilidi etkinleştirilmiştir; yanıp sönüyorsa çocuk kilidi etkinken cihaza kumanda edilmiştir, yani bir tuşa basılmış ama kilit bunu engellemiştir. WAW28760TR kılavuzunda da aynı mantık vardır: sabit yanma kilidin etkin olduğunu, yanıp sönme program seçme düğmesinin çevrildiğini gösterir."
-  - q: "Tambur temizleme simgesi arıza mı?"
-    a: "Hayır, hatırlatmadır. WGA142Z0TR kılavuzu bu göstergeyi tambur temizleme hatırlatması olarak adlandırır: yanıp sönüyorsa tambur kirlidir ve tamburun ve pis su haznesinin temizliği için Tambur Temizleme programının çalıştırılması gerekir. Servis çağırmayı gerektiren bir durum değildir."
-  - q: "E ile başlayan gösterge ile diğer simgeler aynı şey mi?"
-    a: "Değil. Bosch kılavuzları program durumu göstergeleri ile hata göstergesini ayrı başlıklar altında verir. WAW28760TR kılavuzunda hata göstergesi E: - - biçiminde ayrı bir satırdır; WGA142Z0TR kılavuzunda ise hata satırı hata kodu, hata göstergesi ve sinyal olarak tanımlanır. Yani ekranda gördüğün her simge hata değildir; hata kodları ayrı bir kümedir."
-  - q: "Semboller bütün Bosch modellerinde aynı mı?"
-    a: "Aynı değil. Karşılaştırdığımız iki Bosch kılavuzu aynı işlevi farklı biçimde gösteriyor ve kılavuzun kendisi de sıkma devir sayısı için maksimum değerin seçilen programa ve modele bağlı olduğunu yazıyor. Bu yüzden buradaki tablo bir yön göstergesidir; kesin karşılık kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Çamaşır makinesinin kumanda paneli ve ekranı"
   steps:
@@ -41,6 +28,21 @@ images:
     - "Deterjan çekmecesine ölçü kabıyla konan az miktarda deterjan"
     - "Çamaşır makinesi ekranında bekleme durumu"
     - "Fişi prizden çekilmiş çamaşır makinesi"
+updated: "2026-11-06"
+kisaCevap: "Bosch WGA142Z0TR ve WAW28760TR kılavuzlarına göre ekrandaki simgelerin çoğu arıza değil, program durumu ya da uyarıdır: musluk simgesi su basıncının olmadığını ya da çok düşük olduğunu, yanıp sönen çocuk kilidi kilit açıkken tuşa basıldığını gösterir. Gerçek hata ayrı olarak E ile başlayan kodla gösterilir."
+faq:
+  - q: "Bosch çamaşır makinesinde kapak simgesi ne anlama gelir?"
+    a: "Modele göre değişir. WGA142Z0TR kılavuzuna göre simge yanıyorsa kapak kilitlidir, yanıp sönüyorsa kapak açıktır, sönükse kapak açılabilir. WAW28760TR kılavuzunda ise simge yanıyorsa kapak açılabilir, program başladıktan sonra yanıp sönüyorsa kapak doğru kapatılmamıştır."
+  - q: "Musluk simgesi yanıyorsa ne yapmalı?"
+    a: "Arıza kodu değil, su gelmediğinin bildirimidir. WAW28760TR kılavuzuna göre simge yanıyorsa su musluğu açık değildir ya da su basıncı yoktur; yanıp sönüyorsa su basıncı çok düşüktür ve program uzar. İlk bakılacak yer musluk ve giriş hortumudur."
+  - q: "Çocuk kilidi simgesi neden yanıp sönüyor?"
+    a: "WGA142Z0TR kılavuzuna göre simge sabit yanıyorsa çocuk kilidi etkindir; yanıp sönüyorsa kilit etkinken bir tuşa basılmış ve kilit bunu engellemiştir. WAW28760TR'de yanıp sönme, kilit etkinken program seçme düğmesinin çevrildiğini gösterir."
+  - q: "Tambur temizleme simgesi arıza mı?"
+    a: "Hayır, hatırlatmadır. WGA142Z0TR kılavuzuna göre gösterge yanıp sönüyorsa tambur kirlidir ve tamburun ve pis su haznesinin temizliği için Tambur Temizleme programı çalıştırılır."
+  - q: "Köpük simgesi ne demek?"
+    a: "WAW28760TR kılavuzunda ayrı bir köpük tespiti göstergesi vardır: makine fazla köpük algılamıştır. Sonraki yıkamada deterjan dozunu düşür."
+  - q: "E ile başlayan gösterge ile diğer simgeler aynı şey mi?"
+    a: "Hayır. Bosch kılavuzları program durumu göstergeleri ile hata göstergesini ayrı verir: WAW28760TR'de hata göstergesi 'E: - -' biçiminde ayrı bir satırdır, WGA142Z0TR'de 'hata kodu, hata göstergesi, sinyal' olarak tanımlanır. Ekrandaki her simge hata değildir."
 ---
 
 Çamaşır makinesinin ekranında bir simge belirdiğinde ilk düşünce genelde aynı oluyor: "bozuldu mu?" Oysa Bosch'un kendi kullanma kılavuzlarına bakıldığında ekrandaki göstergelerin büyük çoğunluğu arıza değil — **program durumu, ayar bilgisi veya hatırlatma**.

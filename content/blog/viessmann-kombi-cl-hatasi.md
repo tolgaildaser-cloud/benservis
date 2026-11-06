@@ -3,7 +3,6 @@ title: "Viessmann kombi CL hatası"
 description: "Viessmann kombide CL ve yanıp sönen uyarı üçgeni: brülör bir arıza nedeniyle kilitlenmiş. Arıza numarasını not etme, kilidi açma ve servis sınırı."
 slug: "viessmann-kombi-cl-hatasi"
 date: "2026-09-27"
-updated: "2026-11-02"
 category: "Kombi"
 # --- Provenans (yayında görünmez) ---
 # 2026-09-27 · curl -sL -A "Mozilla/5.0" ile BU KOŞUDA indirildi, hepsi HTTP 200; pdftotext -layout ile sayfa sayfa okundu;
@@ -41,17 +40,6 @@ steps:
   - "Ekranda dönen çubuğu bekle; arıza gittiyse ana ekran açılır."
   - "Kilidi kısa aralıklarla art arda açmaya çalışma."
   - "CL yeniden gelirse not ettiğin arıza numarasıyla yetkili servisi ara."
-faq:
-  - q: "Viessmann kombide CL ne demek?"
-    a: "Viessmann'ın Vitodens 100-W/111-W/111-F ile Vitodens Connect ve Trend kullanma kılavuzlarına göre ekranda CL ve yanıp sönen uyarı üçgeni görünüyorsa brülör bir arıza nedeniyle kilitlenmiştir ve devreye girmez. Kılavuz bu durumda brülörün kilidinin kullanıcı tarafından açılabileceğini yazıyor."
-  - q: "Viessmann kombinin kilidi nasıl açılır?"
-    a: "Kılavuzdaki sıra şöyle: yukarı/aşağı ok düğmeleriyle arıza numarasını görüntüle, arıza numarasını not et, sonra yukarı ve aşağı ok düğmelerine birlikte yaklaşık 4 saniye dokun. Ekranda dönen bir çubuk kilit açma işleminin başladığını gösterir. Arıza giderildiyse ana ekran açılır. Arıza tekrar meydana gelirse yetkili teknik servise haber verilir."
-  - q: "Kilidi birkaç kez açmayı denesem olur mu?"
-    a: "Viessmann bunu istemiyor. Kılavuzdaki tehlike uyarısına göre giderilmeyen arızalar hayati tehlike oluşturabilir; brülör kısa aralıklarla birkaç kez açılmamalı, arıza tekrar meydana gelirse yetkili teknik servise haber verilmeli. Servis arızanın nedenini inceleyip giderebilir."
-  - q: "Arıza numarasını neden not etmeliyim?"
-    a: "Kılavuz bunu ayrı bir adım olarak veriyor ve gerekçesini de yazıyor: bu sayede yetkili servis hazırlıklı olarak gelir. Arıza numaraları kontrol panelinin menüsünden de sorgulanabilir; kılavuza göre en fazla 5 arıza mesajı gösterilir."
-  - q: "Ekranda uyarı üçgeni var ama yanıp sönmüyor, CL de yok. Kilidi açabilir miyim?"
-    a: "Kılavuzun arıza giderme tablosu bu iki durumu ayırıyor. Uyarı üçgeni sembolü göründüğünde yapılacak iş gösterilen arıza kodunu yetkili teknik servise bildirmektir. Kilidi açma adımı yalnız uyarı üçgeni ve CL (ya da arıza kodu) yanıp sönüp brülör devreye girmediğinde veriliyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin kontrol panelinde küçük siyah-beyaz bir ekran ve iki ok düğmesine uzanan bir el; ekranda okunabilir yazı yok"
   steps:
@@ -62,13 +50,24 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda bekleme süresi için saat"
     - "Çizim: solda duvar tipi kombi, sağda paneldeki tuş"
     - "Çizim: solda duvar tipi kombi, sağda not defteri ve kalem"
+updated: "2026-11-06"
+kisaCevap: "Viessmann'ın Vitodens 100-W/111-W/111-F ve Vitodens Connect/Trend kılavuzlarına göre ekranda CL ve yanıp sönen uyarı üçgeni, brülörün bir arıza nedeniyle kilitlendiğini gösterir. Arıza numarası not edilir, yukarı ve aşağı ok düğmelerine birlikte yaklaşık 4 saniye dokunulur; CL geri gelirse yetkili servis çağrılır."
+faq:
+  - q: "Viessmann kombide CL ne demek?"
+    a: "Viessmann'ın Vitodens 100-W/111-W/111-F ile Vitodens Connect ve Trend kılavuzlarına göre ekranda CL ve yanıp sönen uyarı üçgeni varsa brülör bir arıza nedeniyle kilitlenmiştir ve devreye girmez. Kılavuz bu durumda kilidin kullanıcı tarafından açılabileceğini yazar."
+  - q: "Viessmann kombinin kilidi nasıl açılır?"
+    a: "Kılavuzdaki sıra: ok düğmeleriyle arıza numarasını görüntüle ve not et, sonra yukarı ve aşağı ok düğmelerine birlikte yaklaşık 4 saniye dokun. Dönen çubuk kilit açmanın başladığını gösterir; arıza giderildiyse ana ekran açılır. Arıza tekrar ederse yetkili teknik servise haber verilir."
+  - q: "Kilidi birkaç kez açmayı denesem olur mu?"
+    a: "Hayır. Kılavuzdaki tehlike uyarısına göre giderilmeyen arızalar hayati tehlike oluşturur; brülör kısa aralıklarla birkaç kez açılmaz. Arıza tekrar meydana gelirse yetkili teknik servise haber verilir."
+  - q: "Arıza numarasını neden not etmeliyim?"
+    a: "Kılavuz bunu ayrı bir adım olarak verir: yetkili servis böylece hazırlıklı gelir. Arıza numaraları kontrol panelinin menüsünden sonradan da sorgulanır; en fazla 5 arıza mesajı gösterilir. Arıza daha sonra giderilecekse mesaj ertesi gün saat 7:00'de yeniden gösterilir."
+  - q: "Uyarı üçgeni yanıp sönmüyor, CL de yok, kilidi açabilir miyim?"
+    a: "Kılavuzun arıza giderme tablosu bu iki durumu ayırır. Uyarı üçgeni sabit görünüyorsa yapılacak iş gösterilen arıza kodunu yetkili teknik servise bildirmektir. Kilit açma adımı yalnız üçgen ve CL ya da arıza kodu yanıp sönüp brülör devreye girmediğinde verilir."
 ---
 
 Viessmann kombin ısıtmayı kesti ve ekranda **CL** ile birlikte yanıp sönen bir **uyarı üçgeni** görüyorsun. Viessmann'ın Vitodens 100-W/111-W/111-F ile Vitodens Connect ve Trend kullanma kılavuzları bu görüntüyü tek cümleyle açıklıyor: **"Brülör, bir arıza nedeniyle kilitlenmiştir."** Aynı kılavuzlar bir sonraki cümlede kilidin senin tarafından açılabileceğini de yazıyor. Bu yazıda o kısa işlemi, kılavuzun koyduğu sınırlarla birlikte adım adım anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** CL + yanıp sönen üçgen = brülör kilitlendi. Sıra şu: ok düğmeleriyle arıza numarasını gör → not et → iki ok düğmesine birlikte ~4 sn dokun → dönen çubuğu bekle. Kilidi art arda açmaya çalışma; CL geri gelirse arıza numarasıyla yetkili servis.
 
 ## Uyarı üçgeni iki farklı durumda ne anlama gelir?
 

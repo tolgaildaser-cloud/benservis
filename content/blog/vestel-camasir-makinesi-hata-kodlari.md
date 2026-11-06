@@ -36,17 +36,21 @@ steps:
   - "Pompa filtresini çıkar ve temizle. Alt ön köşedeki kapağı aç, önüne geniş bir havlu ser ve sığ bir kap tut; filtreyi saat yönünün tersine çevirip çıkar, tüy ve yabancı cisimleri temizle, yuvasına parmağınla değil gözle bak, sonra sonuna kadar çevirerek sıkıca geri tak."
   - "Tahliye hortumunu ve gider hattını kontrol et. Hortum makinenin arkasında bükülmüş, ezilmiş ya da halının altında kalmış olmasın; lavabo gideri yavaş akıyorsa önce onu çöz."
   - "Fişi tak ve kısa bir programla dene. Kod tekrar geliyorsa kapı kilidi, su giriş valfi, tahliye pompası ve elektronik kart tarafı servise aittir."
-faq:
-  - q: "Vestel çamaşır makinesi E03 hatası ne demek?"
-    a: "Vestel'in kılavuzuna göre E03 üç şeyden birini gösterir: pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı. Kılavuzun evde önerdiği adım pompa filtresinin temizlenmesi; sorun sürerse yetkili servise başvurulur. Tahliye hortumunun bükülmediğine bakmak da zararsız bir kontrol. Filtre ve hortum temizken kod tekrar ediyorsa pompa tarafı servis işidir."
-  - q: "Vestel E01 hatası neden çıkar?"
-    a: "Vestel'in kendi ifadesi tek cümle: makinenizin kapısı açık kalmış. Makine güvenlik gereği başlamaz. Çoğu zaman kapağa sıkışan bir çamaşır ucu ya da tam kapanmamış kapak suçludur; kapağı 'klik' sesiyle tam kapatmak genelde yeterlidir. Kapak tam kapandığı hâlde kod sürüyorsa kilit mekanizması servislik olabilir — ama bunu kod söylemiyor, biz eleme yoluyla varıyoruz."
-  - q: "Vestel çamaşır makinesinde hata kodu nasıl sıfırlanır?"
-    a: "Makineyi kapat, fişini çekip yaklaşık beş dakika bekle ve tekrar takıp programı yeniden başlat. Reset kodu siler ama sebebi ortadan kaldırmaz; filtre hâlâ tıkalıysa ya da kapı kilitlenemiyorsa kod geri gelir. Reset, tek seferlik elektronik takılmaları elemek için bir test adımıdır."
-  - q: "Ekrandaki kod bu yazıdaki listede yok, ne yapmalıyım?"
-    a: "Vestel uzun yıllardır çok sayıda seri üretiyor ve kod tablosu nesilden nesile değişiyor; aynı numara farklı serilerde farklı anlama gelebiliyor. Bu yazıda anlamı yaygın biçimde sabit olan kodlar var. Kodu ve model bilgini Benservis'e yaz; olası arızayı ve tahmini maliyeti ücretsiz öğren."
 images:
   coverAlt: "Çamaşır makinesinin kumanda paneli ve deterjan çekmecesi alt açıdan"
+updated: "2026-11-06"
+kisaCevap: "Vestel çamaşır makinesi kılavuzlarının 'Otomatik Arıza Uyarıları' tablosunda 4 kod var: E01 kapı açık kalmış, E02 su basıncı ya da kazan su seviyesi düşük, E03 pompa arızalı, pompa filtresi tıkalı ya da pompa bağlantısı arızalı, E04 makinede aşırı su var. E05 ve sonrası bu tabloda geçmez."
+faq:
+  - q: "Vestel çamaşır makinesi E03 hatası ne demek?"
+    a: "Vestel kılavuzuna göre E03 üç şeyden birini gösterir: pompa arızalı, pompa filtresi tıkalı ya da pompanın elektriksel bağlantısı arızalı. Kılavuzun evde önerdiği adım pompa filtresinin temizlenmesidir; sorun sürerse yetkili servise başvurulur."
+  - q: "Vestel E01 hatası neden çıkar?"
+    a: "Vestel'in ifadesi tek cümle: makinenizin kapısı açık kalmış. Kılavuza göre kapı tam kapatılmazsa makine yıkamayı başlatmaz. Kapak kenarına sıkışan çamaşırı al ve kapağı 'klik' sesiyle kapat. Kapak tam kapalıyken kod sürüyorsa kilit tarafı servis işidir."
+  - q: "Vestel E02 hatası ne demek?"
+    a: "Vestel tablosunda E02'nin karşılığı: makinenizin su basıncı veya kazan su seviyesi düşük. Önce musluğun tam açık olduğunu, giriş hortumunun ezilmediğini ve musluk kapalıyken giriş süzgecinin temiz olduğunu kontrol et. Kod sürerse kılavuza göre makineyi kapat, fişi çek, musluğu kapat ve servisi ara."
+  - q: "Vestel E04 hatası ne demek?"
+    a: "Vestel tablosuna göre E04, makinede aşırı miktarda su olduğunu gösterir. Makine suyu kendisi boşaltır; ardından makineyi kapat, fişini çek, musluğu kapat ve yetkili servisi ara."
+  - q: "Ekrandaki kod E01-E04 dışında, ne yapmalıyım?"
+    a: "Vestel'in kullanım kılavuzlarındaki otomatik arıza uyarıları tablosu E01 ile E04 arasındaki 4 koddan oluşur; E05 ve üzeri bu tabloda yoktur. Kodun karşılığı kendi modelinin kullanım kılavuzundan doğrulanır."
 ---
 
 Makine tam sıkmaya geçecekken durdu, ekranda **E03** yazıyor ve kazanın içi su dolu. Ya da daha programın başında **E01** verip hiç başlamadı. Vestel çamaşır makineleri arızayı E önekli kodlarla bildirir ve iyi haber şu: en sık çıkan üç kodun — **E01, E02, E03** — üçü de önce evde, hiçbir şey sökmeden yapılabilecek kontrollerle karşılanır. Bu rehberde her kodun anlamını, kendin bakabileceğin yerleri ve işin servise geçtiği çizgiyi anlatıyoruz.

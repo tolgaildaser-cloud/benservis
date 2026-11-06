@@ -58,17 +58,6 @@ steps:
   - "Reseti kılavuzdaki deneme sınırını aşmadan tekrarla."
   - "Yoğuşma suyu gider hattında ve gider hunisinde gözle görülen bir tıkanıklık olup olmadığına bak; bir şey görürsen dokunmadan servise bildir."
   - "Kod geri geliyorsa denemeyi bırak ve yetkili servise başvur."
-faq:
-  - q: "Vaillant kombide F28 hatası ne demek?"
-    a: "Vaillant'ın ecoTEC intro kullanma kılavuzundaki arıza tablosu F.28'i 'Ateşleme başarısız' diye adlandırıyor ve nedenini 'Arka arkaya üç başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer' diye veriyor. ecoTEC pure kılavuzu da aynı ifadeyi kullanıyor. ecoTEC plus ve ecoTEC exclusive kılavuzunda kod üç haneli yazılıyor: F.028, 'Başlatma evresinde alev sinyali algılanmadı'; bu kılavuzda eşik beş başarısız ateşleme denemesi."
-  - q: "Vaillant kombide F28 çıkınca ilk ne yapmalıyım?"
-    a: "ecoTEC intro, ecoTEC pure ve ecoTEC plus/exclusive kılavuzlarında F.28 satırının ilk tedbiri aynı: gaz kesme vanasının açık olup olmadığını kontrol et. Dört kılavuzun arıza giderme tablosu da ürün çalışmıyorsa her iki gaz kesme vanasını, yani tesisattaki ve üründeki vanayı açmanı istiyor. ecoTEC pure ve ecoTEC pro kılavuzları kapatma vanalarının yerini ve kullanımını montajı yapan tesisatçıya sormanı söylüyor. Ortamda gaz kokusu varsa bu adımların hiçbiri yapılmaz; kılavuzun gaz kokusu talimatı uygulanır."
-  - q: "Vaillant kombi F28'de nasıl resetlenir, kaç kez denenir?"
-    a: "Modele göre değişiyor. ecoTEC pure ve ecoTEC plus/exclusive kılavuzları reset tuşunu 3 saniyeden uzun basılı tutmanı, ecoTEC pro kılavuzu reset tuşuna bir saniye basmanı söylüyor. ecoTEC intro'da reset, ana ekranda açma/kapatma düğmesine 3 saniyeden uzun basılarak yapılıyor ve ekranda rE görünüyor. Deneme sınırı ecoTEC plus/exclusive'te 'Maksimum tekrar sayısı: 3'; ecoTEC pure ve pro kılavuzları arızayı üç denemede gideremezsen yetkili bayiye başvurmanı istiyor. ecoTEC intro kılavuzu resetin en fazla beş kez yapılabileceğini yazıyor."
-  - q: "Vaillant kombide F.281 ne demek?"
-    a: "F.281 ecoTEC plus ve ecoTEC exclusive kullanma kılavuzundaki arıza tablosunda yer alıyor: 'Alev stabilizasyon süresi boyunca söndü.' Nedeni ve tedbiri F.028 ile aynı yazılmış: arka arkaya beş başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer; gaz kesme vanası kontrol edilir, reset tuşu 3 saniyeden uzun basılı tutulur (en fazla 3 kez), arıza giderilemiyorsa yetkili servise başvurulur."
-  - q: "F28 ile F29 arasındaki fark ne?"
-    a: "F.29 kullanma kılavuzlarındaki arıza tablolarında yer almıyor; kullanıcıya adım verilmemiş. Vaillant'ın yetkili servise yönelik montaj kılavuzları F.29'u ecoTEC intro'da 'İşletim sırasında ateşleme ve kontrol arızası - Alev sönüyor', ecoTEC pure'da 'Alev kaybından sonra yeniden ateşleme başarısız' diye tanımlıyor. Yani F.28 ateşlemenin başlangıçta tutmadığını, F.29 ise çalışma sırasında sönen alevin yeniden yakılamadığını anlatıyor. F.29 için yetkili servise başvurulur."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; altındaki borular arasında sarı kollu bir gaz vanası ve ekranında rakam okunmayan soyut bir arıza göstergesi"
   steps:
@@ -80,13 +69,24 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-06"
+kisaCevap: "Vaillant ecoTEC intro ve ecoTEC pure kılavuzlarına göre F.28 'Ateşleme başarısız' demektir: arka arkaya 3 başarısız ateşleme denemesinden sonra kombi arıza konumuna geçer. ecoTEC plus/exclusive'te kod F.028, eşik 5 denemedir. İlk tedbir gaz kesme vanasını kontrol etmek, sonra modelin reset yöntemi."
+faq:
+  - q: "Vaillant kombide F28 hatası ne demek?"
+    a: "ecoTEC intro ve ecoTEC pure kılavuzları F.28'i 'Ateşleme başarısız' diye adlandırır: arka arkaya 3 başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer. ecoTEC plus/exclusive'te kod F.028 yazılır, 'Başlatma evresinde alev sinyali algılanmadı' diye tanımlanır ve eşik 5 denemedir."
+  - q: "Vaillant kombide F28 çıkınca ilk ne yapmalıyım?"
+    a: "Kılavuzlardaki ilk tedbir gaz kesme vanasının açık olduğunu kontrol etmek; ürün çalışmıyorsa tesisattaki ve üründeki iki vana da açık olmalı. Vanaların yerini montajı yapan tesisatçıya sor. Ortamda gaz kokusu varsa bu adımların hiçbiri yapılmaz, kılavuzun gaz kokusu talimatı uygulanır."
+  - q: "Vaillant kombi F28'de nasıl resetlenir, kaç kez denenir?"
+    a: "ecoTEC pure ve plus/exclusive: reset tuşu 3 saniyeden uzun, en fazla 3 deneme. ecoTEC pro: reset tuşuna 1 saniye, 3 denemede gitmezse yetkili bayi. ecoTEC intro: açma/kapatma düğmesine 3 saniyeden uzun, ekranda rE görünür, en fazla 5 kez. Sınırda kod sürüyorsa yetkili servis."
+  - q: "Vaillant kombide F.281 ne demek?"
+    a: "ecoTEC plus ve ecoTEC exclusive kılavuzunda F.281 'Alev stabilizasyon süresi boyunca söndü' demektir. Nedeni ve tedbiri F.028 ile aynıdır: gaz kesme vanası kontrolü, reset tuşu 3 saniyeden uzun (en fazla 3 kez), giderilemiyorsa yetkili servis."
+  - q: "F28 ile F29 arasındaki fark ne?"
+    a: "F.29 kullanma kılavuzlarının arıza tablosunda yoktur. Vaillant'ın montaj kılavuzları F.29'u ecoTEC intro'da 'İşletim sırasında ateşleme ve kontrol arızası - Alev sönüyor', ecoTEC pure'da 'Alev kaybından sonra yeniden ateşleme başarısız' diye tanımlar. F.29'da yetkili servise başvurulur."
 ---
 
 Vaillant kombinin ekranında **F.28** görüyorsan Vaillant'ın kendi arıza tablosu bunu iki kelimeyle adlandırıyor: **"Ateşleme başarısız."** Nedeni de tabloda yazılı: *"Arka arkaya üç başarısız ateşleme denemesinden sonra ürün arıza konumuna geçer."* Yani kombi yanmayı birkaç kez denedi, alevi tutturamadı ve kendini durdurdu. Kullanma kılavuzu sana bu noktada üç iş bırakıyor: gaz kesme vanasına bakmak, resetlemek ve sonuç alamazsan yetkili servisi çağırmak. Bu yazıda bu üç adımı dört Vaillant kullanma kılavuzundan, modelden modele değişen yerleriyle birlikte anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** F.28 = Vaillant'a göre ateşleme başarısız. Sıra şu: gaz kokusu var mı → gaz kesme vanası (varsa ikisi de) açık mı → kılavuzundaki yöntemle reset → deneme sınırında dur → yetkili servis. Gaz kokusu varsa hiçbir düğmeye dokunma.
 
 ## Adım adım: evde denenecekler
 

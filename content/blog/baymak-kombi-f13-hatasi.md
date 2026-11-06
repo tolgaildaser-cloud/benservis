@@ -52,15 +52,6 @@ steps:
   - "Kombinin gaz vanasının açık olduğunu kontrol et."
   - "ON/OFF tuşuyla çalışma konumunu seç; kış konumunda ekranda radyatör ve musluk sembolleri görünür."
   - "F13 geri gelirse ya da sorun devam ederse yetkili servisi ara."
-faq:
-  - q: "Baymak kombide F13 hatası ne demek?"
-    a: "Duotec, Duotec DHW ve Eco CT 20 kullanma kılavuzlarındaki hata kodu tablosunda F13'ün karşılığı 'Reset kilitlenmesi'. Tablo aynı satırda talimatı da veriyor: cihaz elektrik beslemesini açıp kapatınız."
-  - q: "F13'te RESET tuşuna basmak yeterli mi?"
-    a: "Baymak'ın kılavuzları hata kodları için genel olarak RESET tuşuna basılmasını söylüyor; F13 satırında ise parantez içinde ayrı bir talimat var: cihazın elektrik beslemesini kapatıp açmak. Bu yüzden F13'te kılavuzun kendi satırındaki talimatı uygula. Sorun devam ederse kılavuza göre yetkili servis aranır."
-  - q: "Kombiyi kapalı bırakıp servisi bekleyebilir miyim?"
-    a: "Kılavuz bir uyarı düşüyor: kombi kapatıldıktan sonra donmaya karşı korumalı değildir. Donma koruması fonksiyonunun çalışması için kombinin elektrik beslemesinin açık, gaz vanasının açık, su basıncının doğru değerlerde olması ve kombinin bloke durumda olmaması gerekiyor. Havalar soğuksa bunu servise bildir."
-  - q: "Lunatec kombimde F13 diye bir kod göremiyorum."
-    a: "Lunatec kılavuzunun arıza tablolarında F13 yok; Lunatec H ve E ile başlayan noktalı kodlar kullanıyor. F13, Duotec ve Eco serisinin kod tablosunda geçiyor."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin ön paneli; dijital ekranda soyut bir kod göstergesi ve yanında birkaç yuvarlak tuş"
   steps:
@@ -70,13 +61,24 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda sarı kollu gaz vanası"
     - "Çizim: solda duvar tipi kombi, sağda panel radyatör ve vanası"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-06"
+kisaCevap: "Baymak'ın Duotec, Duotec DHW ve Eco CT 20 kullanma kılavuzlarına göre F13 'Reset kilitlenmesi' demektir; aynı satırdaki talimat cihazın elektrik beslemesini kapatıp açmaktır. Kombi yeniden çalıştırıldıktan sonra F13 geri gelirse kılavuza göre yetkili servis aranır."
+faq:
+  - q: "Baymak kombide F13 hatası ne demek?"
+    a: "Duotec, Duotec DHW ve Eco CT 20 kullanma kılavuzlarındaki hata kodu tablosunda F13'ün karşılığı 'Reset kilitlenmesi'dir. Tablo aynı satırda talimatı da verir: cihaz elektrik beslemesini açıp kapatınız."
+  - q: "F13'te RESET tuşuna basmak yeterli mi?"
+    a: "Baymak kılavuzları hata kodları için genel olarak RESET tuşunu söyler; F13 satırında ise ayrı bir talimat vardır: cihazın elektrik beslemesini kapatıp açmak. F13'te bu satırdaki talimat uygulanır; sorun devam ederse yetkili servis aranır."
+  - q: "F13'ten sonra Baymak kombi nasıl yeniden çalıştırılır?"
+    a: "Kılavuzdaki çalıştırma sırası: enerji beslemesini sağla, gaz vanası açık mı bak, kış konumu için ON/OFF tuşuna basıp ekranda radyatör ve musluk sembollerini gör. Yaz konumunda yalnız musluk sembolü görünene kadar ON/OFF'a basılır. Besleme yerini bilmiyorsan kapağı açma, servise sor."
+  - q: "Kombiyi kapalı bırakıp servisi bekleyebilir miyim?"
+    a: "Kılavuza göre kombi kapatıldıktan sonra donmaya karşı korumalı değildir. Donma korumasının çalışması için elektrik beslemesi açık, gaz vanası açık, su basıncı doğru ve kombi bloke durumda olmamalıdır. Havalar soğuksa bunu servise bildir."
+  - q: "Lunatec kombimde F13 diye bir kod göremiyorum, neden?"
+    a: "Lunatec kılavuzunun arıza tablolarında F13 yoktur; Lunatec H ve E ile başlayan noktalı kodlar kullanır. F13, Duotec ve Eco serisinin kod tablosunda geçer."
 ---
 
 Baymak kombinin ekranında **F13** görüyorsan Baymak'ın kullanma kılavuzundaki karşılığı şu: **"Reset kilitlenmesi."** Aynı satırda parantez içinde talimat da var: **"cihaz elektrik beslemesini açıp kapatınız."** Yani bu kodda Baymak'ın tarif ettiği işlem, kombinin elektriğini kapatıp yeniden açmak. Bu yazıda o işlemi ve kombiyi yeniden çalıştırmayı Baymak'ın kılavuzlarıyla adım adım anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** F13 = Baymak'a göre reset kilitlenmesi. Sıra şu: kodu not et → kombinin elektrik beslemesini kes → yeniden ver → gaz vanası açık mı bak → ON/OFF ile çalışma konumunu seç. F13 geri gelirse yetkili servis.
 
 ## F13 hangi Baymak'ta çıkar
 

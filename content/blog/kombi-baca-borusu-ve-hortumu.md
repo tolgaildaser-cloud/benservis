@@ -29,19 +29,6 @@ steps:
   - "Kombinin çevresinden sprey, klorlu temizlik maddesi, boya ve yapıştırıcı gibi kimyasalları kaldır."
   - "Baca gazı kokusu alırsan kapı ve pencereleri açıp cereyan yap, kombiyi kapat ve yetkili servisi ara."
   - "Servisi ararken not ettiğin kodu, kombinin modelini ve gördüğün belirtiyi hazır tut."
-faq:
-  - q: "Kombi bacası ne işe yarar?"
-    a: "İki iş yapar: kombinin yanma için ihtiyaç duyduğu temiz havayı dışarıdan alır, yanmadan çıkan atık gazı dışarı atar. Baymak Duotec'in kılavuzu bunu böyle anlatıyor; Duotec iç içe geçmiş iki borudan oluşan yatay eş eksenli bacaya göre tasarlanmış. ECA'da da atık gaz içteki borudan, taze hava dıştaki borudan geçer."
-  - q: "Kombi baca hatası hangi kodla görünür?"
-    a: "Markaya göre değişir. ECA Confeo Premix'te F07 yüksek baca gazı sıcaklığı, F53 baca gazı sıcaklık sensörü hatasıdır. DemirDöküm Nitromix'te F.29, F.67 ve F.68'in olası nedenleri arasında atık gaz yolu sayılıyor; F.77 atık gaz klapesi arızasıdır. Baymak Duotec'in tablosunda baca adıyla bir kod yok; E05 fan geri besleme hatasıdır."
-  - q: "Kombi bacası yerinden çıkarsa ne olur?"
-    a: "ECA'nın kılavuzuna göre sızdırmazlığı bozulan baca bağlantılarından karbonmonoksit (CO) sızabilir ve bu zehirlenmeye yol açar. DemirDöküm de tıkanmış ya da sızdıran atık gaz yolunu ölüm tehlikesi olarak yazıyor. Böyle bir durumda kombiyi kapat, kapı ve pencereleri aç, yetkili servisi ara; bacayı yerine kendin takma."
-  - q: "Kombi bacasını kendim uzatabilir ya da kısaltabilir miyim?"
-    a: "Hayır. ECA, orijinal baca kitinin kesilmesini ya da ek yapılmasını uygun bulmuyor ve baca bağlantısında yetkili servise danışmadan değişiklik yapılmamasını istiyor. DemirDöküm atık gaz sisteminde hiçbir değişiklik yapılmamasını yazıyor. İzin verilen baca uzunluğu modele göre değişir ve her dirsek bu uzunluğu kısaltır; hesabı servis yapar."
-  - q: "Kombi bacası nasıl temizlenir?"
-    a: "İncelediğimiz kılavuzlar kullanıcıya baca temizliği tarif etmiyor. DemirDöküm kendi başına bakım ya da onarım yapılmamasını istiyor; atık gaz sisteminin yıpranma, hasar ve bağlantılar açısından kontrolü yıllık bakımda servis tarafından yapılıyor. ECA ve Baymak yıllık bakımı yetkili servise bırakıyor."
-  - q: "Kombi baca seti nereden alınır?"
-    a: "Üreticinin orijinal parçasından. Baymak yalnız kendi sağladığı aksesuarların kullanılmasını istiyor, aksi halde ürün garanti dışı kalıyor. ECA yalnız orijinal yanma havası/atık gaz borularını kabul ediyor. DemirDöküm sertifikalı baca bileşenlerini ürün numaralarıyla kılavuzunda listeliyor. Montaj yetkili kişilerin işidir."
 images:
   coverAlt: "Duvara asılı kombinin üstünden çıkıp dış duvara uzanan iç içe iki borulu baca, sade çizim"
   steps:
@@ -51,13 +38,26 @@ images:
     - "Kombinin yanındaki raftan sprey kutusunu ve temizlik şişesini uzaklaştıran eldivenli el"
     - "Ardına kadar açılmış pencere ve kapı, perde hafifçe havalanıyor, kombi kapalı konumda"
     - "Telefon, not defteri ve kombinin model etiketi yan yana, servis çağırmaya hazır bilgi listesi"
+updated: "2026-11-06"
+kisaCevap: "Baymak Duotec kılavuzuna göre kombi bacası iki iş yapar: yanma için temiz havayı dışarıdan alır, atık gazı dışarı atar. ECA'ya göre sızdırmazlığı bozulan baca bağlantısından karbonmonoksit sızar ve zehirlenmeye yol açar. Her 90° dirsek 1 m baca sayılır; takmak, uzatmak, kısaltmak yalnız yetkili servisin işidir."
+faq:
+  - q: "Kombi bacası ne işe yarar?"
+    a: "Baymak Duotec kılavuzuna göre baca, yanma için gereken temiz havayı dışarıdan alır ve yanmadan çıkan atık gazı dışarı atar. Duotec iç içe iki borudan oluşan yatay eş eksenli bacaya göre tasarlanmıştır. ECA'da atık gaz içteki borudan, taze hava dıştaki borudan geçer."
+  - q: "Kombi baca hatası hangi kodla görünür?"
+    a: "Markaya göre değişir. ECA Confeo Premix'te F07 yüksek baca gazı sıcaklığı, F53 baca gazı sıcaklık sensörü hatasıdır. DemirDöküm Nitromix'te F.77 atık gaz klapesi arızasıdır; F.29, F.67 ve F.68'in olası nedenleri arasında atık gaz yolu sayılır. Baymak Duotec tablosunda baca adıyla kod yoktur."
+  - q: "Kombi bacası yerinden çıkarsa ne olur?"
+    a: "ECA kılavuzuna göre sızdırmazlığı bozulan baca bağlantısından karbonmonoksit (CO) sızar ve zehirlenmeye yol açar. DemirDöküm tıkanmış ya da sızdıran atık gaz yolunu ölüm tehlikesi olarak yazar. Bu durumda kombiyi kapat, kapı ve pencereleri aç, yetkili servisi ara; bacayı kendin takma."
+  - q: "Kombi bacasını kendim uzatabilir ya da kısaltabilir miyim?"
+    a: "Hayır. ECA orijinal baca kitinin kesilmesini ya da ek yapılmasını uygun bulmaz; DemirDöküm atık gaz sisteminde değişiklik yapılmamasını yazar. İzin verilen uzunluk modele göre değişir; Baymak ve ECA her 90° dirseği 1 m baca uzunluğu sayar. Hesabı ve montajı servis yapar."
+  - q: "Baca gazı kokusu alırsam ne yapmalıyım?"
+    a: "DemirDöküm'e göre erişebildiğin kapı ve pencereleri aç, cereyan yap, kombiyi kapat ve yetkili servisi bilgilendir. Doğalgaz kokusu ayrı bir durumdur: ECA'ya göre gaz vanalarını kapat, kibrit ya da çakmak yakma, elektrik düğmelerine dokunma, havalandır ve 187'yi ara."
+  - q: "Kombi baca seti nereden alınır?"
+    a: "Üreticinin orijinal parçasından. Baymak yalnız kendi sağladığı aksesuarı kabul eder, aksi hâlde ürün garanti dışı kalır. ECA yalnız orijinal yanma havası/atık gaz borularını kabul eder. DemirDöküm sertifikalı baca bileşenlerini ürün numaralarıyla listeler. Montaj yetkili kişinin işidir."
 ---
 
 Kombin ekranda bir kod gösterip durdu ya da ortamda alışılmadık bir koku var. Kodun karşılığında "baca gazı", "atık gaz" ya da "fan" yazıyorsa sorun kombinin hava alıp gaz attığı yolda olabilir. Bacanın takılması, uzatılması ve değişimi **yetkili servis işi**; senin yapabileceğin, kodu doğru okumak, birkaç güvenli gözlem yapmak ve koku varsa doğru adımları atmak.
 
 Bu yazıdaki bilgiler üreticilerin kendi belgelerinden: **Baymak** (Duotec yoğuşmalı kombi), **DemirDöküm** (Nitromix kullanma ile montaj ve bakım kılavuzları) ve **ECA** (Confeo Premix yoğuşmalı kombi). Kendi kombinin kesin kod listesi kendi kılavuzunda yazar. Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** Kombi bacası iki iş yapar: yanma için **temiz havayı dışarıdan alır**, **atık gazı dışarı atar**. Sızdırmaz bağlantı güvenlik için şart; ECA, bağlantıdan sızacak **karbonmonoksitin (CO)** zehirlenmeye yol açacağını yazıyor. Bacayı **söküp takmak, uzatmak, kısaltmak yalnız yetkili servisin işi**. Baca gazı kokusu alırsan kapı ve pencereleri aç, kombiyi kapat, servisi ara.
 
 ## Hangi belirtiler bacayı işaret eder?
 

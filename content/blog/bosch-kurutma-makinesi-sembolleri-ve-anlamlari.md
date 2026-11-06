@@ -19,21 +19,6 @@ steps:
   - "Program bitince çamaşırı yay ve ısısının gitmesini bekle; sıcak çamaşır ıslak algılanır."
   - "Çamaşır nemliyse maksimum dolum miktarını aşma, daha uzun süreli ya da süreli bir program seç."
   - "Makinenin hava girişini kapatma ve odayı havalandır."
-faq:
-  - q: "Bosch kurutma makinesinde su kabı işareti yandı ve program iptal oldu, arıza mı?"
-    a: "Hayır, kılavuzun kendi arıza tablosunda bu satır bir bakım uyarısı olarak geçiyor. WTW87460TR kılavuzu bu gösterge için birebir şunu yazıyor: yoğuşma suyu kabını boşaltınız ve start tuşuna basınız. Aynı satırda ikinci bir ihtimal de var: opsiyonel yoğuşma suyu tahliyesi kurulmuşsa tahliye hortumu tıkanmış veya bükülmüş olabilir; hortumda birikme olup olmadığını kontrol edip hortumu yıkamak ve bükmeden yerleştirmek gerekiyor. Kabı boşaltıp start'a bastıktan sonra uyarı geri geliyorsa iş servise gider."
-  - q: "Ekranda selfCleaning yazıyor, makine bozuldu mu?"
-    a: "Bozulmadı. WTW87460TR kılavuzunun arıza tablosunda bu satırın karşılığı birebir şöyle: hata yok, ısı eşanjörü otomatik olarak temizlenir. Kılavuzun tek uyarısı var ve önemli: görüntüleme sırasında yoğuşma suyu kabını çekip çıkarmayın. Aynı kılavuz kurutma sırasında duyulan alışılmadık sesler için de aynı sebebi gösteriyor: ısı eşanjörünün otomatik temizlemesi sırasında sesler duyulur, hata yok."
-  - q: "Tiftik filtresini temizledim ama uyarı yine yandı, filtre sensörü mü bozuk?"
-    a: "Isı pompalı modelde bu genellikle ikinci bir filtreyi işaret ediyor. WTH85200TR kılavuzunun panel listesinde tiftik filtresi göstergesi tek bir işe değil iki işe yönlendiriyor: tiftik filtresini temizleyiniz ve EasyClean filtresini temizleyiniz. Yani ısı pompalı bu modelde kapak filtresini temizlemek yetmiyor, eşanjörün bakım kapağının arkasındaki EasyClean filtresinin keçesi de temizleniyor. Kılavuz keçe için temizlik malzemesi kullanılmamasını ve yalnız temiz, kuru keçenin yerleştirilmesini söylüyor. Yoğuşmalı WTW87460TR ve WTW85461TR kılavuzlarının panel listesinde EasyClean hiç geçmiyor."
-  - q: "Gösterge alanı söndü ve start tuşu yanıp sönüyor, cihaz arızalandı mı?"
-    a: "Hayır. WTW87460TR kılavuzunun arıza tablosunda bu tam olarak bir satır ve karşılığı şu: hata yok, enerji tasarruf modu aktif. Aynı kılavuz modun ne yaptığını da anlatıyor: kurutma makinesi uzun süre kullanılmazsa, program başlatma işleminden önce ve program sonundan sonra enerji tasarrufu için otomatik olarak kapanır; gösterge alanı ve gösterge lambaları birkaç saniye sonra söner."
-  - q: "Kurutma bitti ama çamaşır hâlâ nemli çıkıyor, panelde de bir işaret yok. Neden?"
-    a: "Kılavuz bunun için panelde bir simge beklemiyor, doğrudan sebep listesi veriyor. WTW87460TR kılavuzu şunları sayıyor: sıcak çamaşırlar program sonunda olduklarından daha ıslak algılanır, çamaşırları yayıp ısının gitmesini bekleyin; kurutma hedefine ince ayar yapın ya da daha uzun süreli bir program seçin; programın maksimum dolum miktarını aştıysanız çamaşırlar doğru kurutulamaz; ve tamburdaki nem sensörünü temizleyin, ince bir kireç tabakası sensörleri engelleyebilir. Aynı kılavuz kurutmanın elektrik kesintisi, yoğuşma kabının dolması veya maksimum kurutma süresinin aşılması nedeniyle iptal edilmiş olabileceğini de yazıyor."
-  - q: "Isı pompalı Bosch kurutma makinem çalışırken soğuk hissediliyor, ısıtmıyor mu?"
-    a: "Kılavuza göre bu beklenen davranış. WTW87460TR arıza tablosunda satır birebir şöyle: kurutmaya rağmen kurutma makinesinin soğuk olduğu hissediliyor — hata yok, ısı pompalı kurutma makinesi düşük sıcaklıklarda daha verimli kurutma yapar. Aynı tabloda kurutma süresinin uzaması için de arıza dışı sebepler sayılıyor: kirli tiftik filtresi, kapalı veya erişilemeyen hava girişi, 35 santigrat derecenin üzerindeki ortam sıcaklığı ve odadaki yetersiz hava sirkülasyonu."
-  - q: "Bütün Bosch kurutma makinelerinde panel aynı mı?"
-    a: "Aynı değil, ve fark kâğıt üstünde görülüyor. Karşılaştırdığımız üç Bosch kurutma makinesi kılavuzunun panel listeleri birbirini tutmuyor: WTW87460TR listesinde ısı eşanjörünün otomatik temizlendiğini bildiren selfCleaning göstergesi ve sinyal aktif göstergesi var; ısı pompalı WTH85200TR listesinde selfCleaning yok, buna karşılık tiftik filtresi göstergesi EasyClean filtresine de yönlendiriyor; WTW85461TR listesinde ise süreli program ve sıkma devir sayısı göstergeleri ayrı ayrı sayılıyor. Panel simgelerinin şekli de modele göre değişiyor. Kesin karşılık her zaman kendi modelinin kullanma kılavuzundadır."
 images:
   coverAlt: "Kurutma makinesinin kumanda paneli ve gösterge alanı"
   steps:
@@ -45,6 +30,21 @@ images:
     - "Sepete yayılmış, sıcaklığı çıkan çamaşırlar"
     - "Tamburu yarıya kadar dolu kurutma makinesi"
     - "Penceresi açık bir çamaşır odasında kurutma makinesi"
+updated: "2026-11-06"
+kisaCevap: "Bosch WTW87460TR, WTH85200TR ve WTW85461TR kılavuzlarına göre paneldeki işaretlerin çoğu bakım uyarısıdır: su kabı işareti yoğuşma suyu kabının boşaltılmasını ister, ardından start tuşuna basılır. Ekrandaki selfCleaning yazısı hata değil, ısı eşanjörünün otomatik temizliğidir; bu sırada su kabı çıkarılmaz."
+faq:
+  - q: "Bosch kurutma makinesinde su kabı işareti yandı, arıza mı?"
+    a: "Hayır. WTW87460TR kılavuzunun arıza tablosuna göre yapılacak iş yoğuşma suyu kabını boşaltıp start tuşuna basmaktır. Opsiyonel yoğuşma suyu tahliyesi kuruluysa tahliye hortumu tıkalı ya da bükülmüştür; hortum yıkanır ve bükülmeden yerleştirilir."
+  - q: "Ekranda selfCleaning yazıyor, makine bozuldu mu?"
+    a: "Hayır. WTW87460TR kılavuzuna göre karşılığı 'hata yok, ısı eşanjörü otomatik olarak temizlenir'. Bu gösterge sırasında yoğuşma suyu kabı çekip çıkarılmaz. Kurutma sırasındaki alışılmadık sesler de aynı otomatik temizlikten gelir."
+  - q: "Tiftik filtresini temizledim ama uyarı yine yandı, neden?"
+    a: "Isı pompalı WTH85200TR kılavuzunda tiftik filtresi göstergesi iki işe yönlendirir: tiftik filtresini ve eşanjör bakım kapağının arkasındaki EasyClean filtresini temizlemek. Keçe için temizlik malzemesi kullanılmaz, yalnız temiz ve kuru keçe takılır."
+  - q: "Gösterge alanı söndü ve start tuşu yanıp sönüyor, cihaz arızalandı mı?"
+    a: "Hayır. WTW87460TR kılavuzuna göre bu 'hata yok, enerji tasarruf modu aktif' demektir. Makine uzun süre kullanılmazsa program başlamadan önce ve program bittikten sonra kendini kapatır; gösterge alanı birkaç saniye sonra söner."
+  - q: "Kurutma bitti ama çamaşır hâlâ nemli çıkıyor, neden?"
+    a: "WTW87460TR kılavuzuna göre sıcak çamaşır olduğundan ıslak algılanır, yayıp soğumasını bekle. Maksimum dolum miktarı aşıldıysa çamaşır doğru kurumaz; kurutma hedefine ince ayar yap ya da uzun program seç. Tamburdaki nem sensörünü temizle, ince kireç tabakası sensörü engeller."
+  - q: "Isı pompalı Bosch kurutma makinem çalışırken soğuk hissediliyor, ısıtmıyor mu?"
+    a: "WTW87460TR arıza tablosuna göre bu 'hata yok': ısı pompalı kurutma makinesi düşük sıcaklıkta daha verimli kurutur. Süre uzuyorsa tabloya göre sebepler kirli tiftik filtresi, kapalı hava girişi, 35 °C üstü ortam ve odadaki yetersiz hava sirkülasyonudur."
 ---
 
 Kurutma makinesinin panelinde tanımadığın bir işaret yandığında ilk düşünce genellikle aynı oluyor: "arıza mı?" Bosch'un kendi kullanma kılavuzlarına bakıldığında tablo başka türlü görünüyor. Panel listesindeki kalemlerin büyük çoğunluğu ya **bakım uyarısı**, ya **program evresi**, ya da **senin yaptığın seçim**. Gerçek arıza kılavuzda ayrı bir bölümde duruyor ve orada bile satırların çoğu "hata yok" diye başlıyor.

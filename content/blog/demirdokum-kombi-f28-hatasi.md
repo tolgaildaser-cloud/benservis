@@ -3,7 +3,6 @@ title: "DemirDöküm kombi F28 hatası: ne demek, nasıl giderilir?"
 description: "DemirDöküm F28 hatası ateşleme başarısız demek. ademiX, Nitromix, vintomiX ve isomiX kılavuzlarına göre gaz vanası, reset yöntemi ve deneme sınırı."
 slug: "demirdokum-kombi-f28-hatasi"
 date: "2026-09-28"
-updated: "2026-10-30"
 category: "Kombi"
 # --- Provenans (yayında görünmez) ---
 # 2026-10-27 PAZ (YK #189 fırsat sayfası 3/30, yayın Cum 30 Eki): içerik iyileştirmesi; slug, şablon ve yapı aynı (YK #179 dondurması).
@@ -38,19 +37,6 @@ steps:
   - "Kombiyi kendi modelinin kılavuzundaki yöntemle resetle."
   - "Yoğuşma suyu gider hattına ve gider hunisine gözle bak; bir tıkanıklık görürsen dokunmadan yetkili bayiye bildir."
   - "Kılavuzdaki deneme sınırında kod hâlâ duruyorsa resetlemeyi bırak ve yetkili servise başvur."
-faq:
-  - q: "DemirDöküm kombide F28 hatası ne demek?"
-    a: "DemirDöküm'ün kullanma kılavuzlarındaki arıza tablosu F.28'i 'Ateşleme başarısız' diye adlandırıyor: kombi art arda birkaç kez yanmayı denedi, olmadı ve arıza konumuna geçti. Deneme sayısı modele göre değişiyor: Nitromix'te iki, ademiX ve vintomiX'te üç, Nitromix Ioni ve isomiX'te beş. Ioni ve isomiX'te kod F.028 olarak yazılıyor ve 'Başlatma evresinde alev sinyali algılanmadı' diye tanımlanıyor. Kılavuzların ilk tedbiri gaz kesme vanasının açık olup olmadığını kontrol etmek."
-  - q: "DemirDöküm kombi F28 hatası nasıl giderilir?"
-    a: "Kullanma kılavuzlarının sırası aynı: önce gaz kesme vanasının açık olduğunu kontrol et, sonra kombiyi kendi modelinin yöntemiyle resetle, deneme sınırında kod sürüyorsa yetkili servise başvur. Dışarıda ikinci bir gaz kesme vanası varsa onun da açık olması gerekiyor. Gaz kokusu varsa bu adımların hiçbiri yapılmaz."
-  - q: "DemirDöküm kombi nasıl resetlenir?"
-    a: "Modele göre değişiyor. Nitromix: reset tuşuna 1 saniye bas, en fazla üç deneme. Nitromix Ioni ve isomiX: reset tuşunu 3 saniyeden uzun basılı tut, en fazla üç tekrar. ademiX (AS/2): ana ekranda açma/kapatma düğmesine 5 saniyeden uzun bas. vintomiX: açma/kapatma düğmesine 3 saniyeden uzun bas, en fazla beş kez; ekranda rE görünür."
-  - q: "ademiX ile Nitromix'te F28 farklı mı?"
-    a: "Kodun adı aynı, 'Ateşleme başarısız'. Fark deneme sayısında ve resette: ademiX kılavuzu arka arkaya üç başarısız denemeden sonra arıza konumunu, reset için açma/kapatma düğmesine 5 saniyeden uzun basmayı söylüyor. Nitromix kılavuzu iki denemeden sonra arıza konumunu, reset tuşuna 1 saniye basmayı ve en fazla üç resetleme denemesini söylüyor."
-  - q: "F28 ile F29 arasındaki fark ne?"
-    a: "DemirDöküm'ün servise yönelik Nitromix, ademiX ve vintomiX montaj kılavuzları F.28'i 'Ateşleme başarısız', F.29'u 'İşletim sırasında ateşleme ve kontrol arızası - Alev sönüyor' diye tanımlıyor. F.29 kullanma kılavuzlarının tablosunda yer almıyor, yani kullanıcıya adım verilmemiş; F.29 gördüysen yetkili servise başvur."
-  - q: "Ekranımda F28 değil F04 yazıyor, aynı şey mi?"
-    a: "DemirDöküm'ün Atron Condense ve Nitron Plus kullanma kılavuzlarında ateşleme arızası F04 koduyla gösteriliyor. O modeller için DemirDöküm kombi F04 hatası yazısına bak."
 images:
   coverAlt: "Duvara asılı beyaz bir kombinin alt kısmı; borular arasında sarı kollu bir gaz kesme vanası ve kombinin ön panelinde soyut, rakamsız bir ekran"
   steps:
@@ -61,13 +47,26 @@ images:
     - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda duvar tipi kombi, sağda kontrol panelindeki tuş ya da düğme"
     - "Çizim: solda duvar tipi kombi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-06"
+kisaCevap: "DemirDöküm kullanma kılavuzlarına göre F.28 'Ateşleme başarısız' demektir: kombi art arda yanmayı denedi, olmadı ve arıza konumuna geçti. Deneme sayısı Nitromix'te 2, ademiX ve vintomiX'te 3, Nitromix Ioni ve isomiX'te 5'tir. Kılavuzların sırası: gaz kesme vanası açık mı, model yöntemiyle reset, sınırda servis."
+faq:
+  - q: "DemirDöküm kombide F28 hatası ne demek?"
+    a: "DemirDöküm kılavuzlarındaki arıza tablosu F.28'i 'Ateşleme başarısız' diye adlandırır: kombi art arda yanmayı denedi, olmadı ve arıza konumuna geçti. Nitromix Ioni ve isomiX'te kod F.028 yazılır ve 'Başlatma evresinde alev sinyali algılanmadı' diye tanımlanır."
+  - q: "DemirDöküm kombi F28 hatası nasıl giderilir?"
+    a: "Kılavuzların sırası aynı: gaz kesme vanasının açık olduğunu kontrol et, dışarıda ikinci vana varsa onu da kontrol et, kombiyi kendi modelinin yöntemiyle resetle, deneme sınırında kod sürüyorsa yetkili servise başvur. Gaz kokusu varsa bu adımların hiçbiri yapılmaz."
+  - q: "DemirDöküm kombi nasıl resetlenir?"
+    a: "Modele göre değişir. Nitromix: reset tuşuna 1 saniye, en fazla 3 deneme. Nitromix Ioni ve isomiX: reset tuşu 3 saniyeden uzun, en fazla 3 tekrar. ademiX AS/2: açma/kapatma düğmesine 5 saniyeden uzun. vintomiX: açma/kapatma düğmesine 3 saniyeden uzun, en fazla 5 kez; ekranda rE görünür."
+  - q: "ademiX ile Nitromix'te F28 farklı mı?"
+    a: "Kodun adı aynı: 'Ateşleme başarısız'. ademiX kılavuzu 3 başarısız denemeden sonra arıza konumunu ve açma/kapatma düğmesine 5 saniyeden uzun basmayı yazar. Nitromix kılavuzu 2 denemeden sonra arıza konumunu, reset tuşuna 1 saniye basmayı ve en fazla 3 denemeyi yazar."
+  - q: "F28 ile F29 arasındaki fark ne?"
+    a: "DemirDöküm'ün Nitromix, ademiX ve vintomiX montaj kılavuzları F.28'i 'Ateşleme başarısız', F.29'u 'İşletim sırasında ateşleme ve kontrol arızası - Alev sönüyor' diye tanımlar. F.29 kullanma kılavuzlarının tablosunda yoktur, kullanıcıya adım verilmez; F.29'da yetkili servise başvurulur."
+  - q: "Ekranımda F28 değil F04 yazıyor, aynı şey mi?"
+    a: "DemirDöküm'ün Atron Condense ve Nitron Plus kullanma kılavuzlarında ateşleme arızası F04 koduyla gösterilir. O modeller için DemirDöküm kombi F04 hatası yazısına bak."
 ---
 
 DemirDöküm kombide **F28 hatası, "Ateşleme başarısız" demek.** DemirDöküm'ün kendi arıza tablosuna göre kombi yanmayı art arda birkaç kez denedi, alevi tutturamadı ve **arıza konumuna geçti.** Kullanma kılavuzu sana bu noktada üç iş bırakıyor: gaz kesme vanasına bakmak, resetlemek ve sonuç alamazsan yetkili servise başvurmak. Bu yazıda bu adımları DemirDöküm'ün Nitromix, Nitromix Ioni, ademiX, vintomiX ve isomiX kullanma kılavuzlarından, modelden modele değişen yerleriyle birlikte anlatıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** F.28 (Ioni ve isomiX'te F.028) = DemirDöküm'e göre ateşleme başarısız. Sıra şu: gaz kokusu var mı → gaz kesme vanası (varsa ikisi de) açık mı → modelinin kılavuzundaki yöntemle reset → deneme sınırında dur → yetkili servis. Gaz kokusu varsa hiçbir düğmeye dokunma.
 
 ## Adım adım: evde denenecekler
 

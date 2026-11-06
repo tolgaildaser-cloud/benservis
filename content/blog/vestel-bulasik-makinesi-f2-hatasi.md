@@ -40,17 +40,6 @@ steps:
   - "Filtre yuvasında kalan suyu süngerle al ve yuvadaki yabancı cisimleri dikkatle temizle."
   - "Filtreleri birleştir, grubu yerine takıp saat yönünde çevir ve sepeti geri yerleştir."
   - "Tahliye hortumunun bükülmediğini kontrol et, fişi tak ve programı yeniden başlat; F2 sürerse servisle iletişime geç."
-faq:
-  - q: "Vestel bulaşık makinesi F2 hatası ne demek?"
-    a: "Vestel'in kullanım kılavuzlarındaki arıza kodu tablosunda F2'nin karşılığı su tahliye edilmiyor. Tablonun çözüm sütununa göre su tahliye hortumu ve filtreler tıkanmış olabilir; programı iptal et, arıza devam ederse servisle iletişime geç."
-  - q: "Programı nasıl iptal ederim?"
-    a: "Vestel kılavuzuna göre program çalışırken Başlat/Beklet tuşuna 3 saniye basılı tutulur. İptal sırasında Bitiş ışığı yanıp söner ve makine içindeki suyu yaklaşık 30 saniye boyunca tahliye eder. Eski nesil kılavuzda da aynı işlem Başla/Bekle tuşuyla yapılıyor."
-  - q: "Filtreyi temizlerken nelere dikkat etmeliyim?"
-    a: "Önce makinenin güç kaynağını kes. Vestel, atık su pompası bölgesini temizlerken kırık cam parçaları ya da sivri uçlu eşyalar nedeniyle yaralanma riskine karşı uyarıyor; elini körlemesine sokma. Filtre grubunu geri takarken saat yönünde çevirerek yerine oturt: Vestel'e göre filtrenin hatalı takılması yıkama verimini düşürür ve makine asla filtresiz kullanılmamalıdır."
-  - q: "F2 yoksa ama program bitince makinede su kalıyorsa?"
-    a: "Vestel'in sorun giderme tablosunda bu belirtinin sebepleri su boşaltma hortumunun tıkalı ya da katlanmış olması, filtrelerin tıkanması ya da programın henüz bitmemiş olmasıdır. Çözüm tıkanmaya neden olan malzemeleri temizleyip makineyi yeniden çalıştırmak ya da programın bitmesini beklemektir."
-  - q: "Filtreler temiz, F2 hâlâ çıkıyor. Ne yapmalıyım?"
-    a: "Vestel'in F2 talimatı bu noktada servisle iletişime geçmek. Kılavuza göre filtrelerin yakalayamadığı büyük yemek kalıntıları ve yabancı nesneler atık su pompasını tıkayabilir; filtre yuvasında görünen cisimleri almak kullanıcının işi, pompanın kendisi ise servisin işidir."
 images:
   coverAlt: "Alt sepeti çıkarılmış açık bir bulaşık makinesinin tabanında silindirik filtre grubu ve yanında bir sünger"
   steps:
@@ -62,13 +51,26 @@ images:
     - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
     - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
     - "Çizim: solda bulaşık makinesi, sağda telefon ve kullanım kılavuzu"
+updated: "2026-11-06"
+kisaCevap: "Vestel bulaşık makinesi kılavuzlarına göre F2 'Su tahliye edilmiyor' demektir; sebep tıkanmış tahliye hortumu ve filtrelerdir. Vestel'in talimatı programı iptal etmektir: Başlat/Beklet tuşuna 3 saniye basılır, makine suyu yaklaşık 30 saniye tahliye eder. Filtre ve hortum temizken arıza sürerse servis aranır."
+faq:
+  - q: "Vestel bulaşık makinesi F2 hatası ne demek?"
+    a: "Vestel kılavuzlarındaki arıza kodu tablosunda F2'nin karşılığı 'Su tahliye edilmiyor'dur. Çözüm sütununa göre su tahliye hortumu ve filtreler tıkanmıştır; program iptal edilir, arıza devam ederse servisle iletişime geçilir. Eski nesil kılavuzda F2 'Makine atık suları boşaltamıyor' diye yazılır."
+  - q: "Vestel bulaşık makinesinde program nasıl iptal edilir?"
+    a: "Vestel kılavuzuna göre program çalışırken Başlat/Beklet tuşuna 3 saniye basılı tutulur. İptal sırasında Bitiş ışığı yanıp söner ve makine içindeki suyu yaklaşık 30 saniye boyunca tahliye eder. Eski nesilde aynı işlem Başla/Bekle tuşuyla yapılır."
+  - q: "F2 için filtre nasıl temizlenir?"
+    a: "Önce güç kaynağını kes, alt sepeti çıkar. Filtre grubunu saatin aksi yönünde çevirip kaldır, bol suyla durula, yuvadaki suyu gerekirse süngerle al ve görünen cisimleri temizle. Vestel kırık cam ve sivri eşyaya karşı uyarır. Grubu saat yönünde çevirerek tak; makine asla filtresiz kullanılmaz."
+  - q: "Vestel bulaşık makinesi tahliye hortumu nasıl bağlı olmalı?"
+    a: "Vestel'in kurulum bölümüne göre hortum pis su giderine ya da evye kenarına bağlanır ve bu bağlantı yerden en az 50 cm, en çok 110 cm yüksekte olmalıdır. Makine yerleştirilirken hortumlar sıkışmamalıdır; eski nesil kılavuz 4 metreden uzun hortumu kabul etmez."
+  - q: "F2 yok ama program bitince makinede su kalıyorsa ne yapmalıyım?"
+    a: "Vestel'in sorun giderme tablosunda bu belirtinin sebepleri tıkalı ya da katlanmış boşaltma hortumu, tıkanmış filtreler ya da henüz bitmemiş programdır. Çözüm tıkanmaya neden olan malzemeleri temizleyip makineyi yeniden çalıştırmak ya da programın bitmesini beklemektir."
+  - q: "Filtreler temiz, F2 hâlâ çıkıyor, ne yapmalıyım?"
+    a: "Vestel'in F2 talimatı bu noktada servisle iletişime geçmektir. Kılavuza göre filtrelerin yakalayamadığı büyük kalıntılar atık su pompasını tıkar; filtre yuvasında görünen cismi almak kullanıcının, pompanın kendisi servisin işidir."
 ---
 
 Program bitmedi, makine durdu ve ekranda **F2** yazıyor; kapağı açtığında tabanda su bekliyor olabilir. Vestel'in bulaşık makinesi kullanım kılavuzlarındaki arıza kodu tablosunda bu kodun karşılığı: **"Su tahliye edilmiyor."** Çözüm sütunu iki şüpheli sayıyor ve bir işlem veriyor: **su tahliye hortumu ve filtreler tıkanmış olabilir; programı iptal et.** Arıza devam ederse servis. Bu yazıda o talimatı, aynı kılavuzların bakım ve kurulum bölümleriyle birlikte adım adım açıyoruz.
 
 Cihazına özel tahmini maliyeti benservis.com'daki ücretsiz teşhisten alabilirsin.
-
-> ⚡ **Kısa özet:** F2 = Vestel'e göre su tahliye edilmiyor. Sıra şu: Başlat/Beklet 3 saniye → program iptal, makine suyu tahliye eder → fişi çek → alt sepet çıkar → filtre grubunu çıkar, bol suyla durula → yuvadaki suyu süngerle al, cisimleri temizle → filtreyi kilitle → tahliye hortumuna bak → yeniden başlat. F2 sürüyorsa → servis.
 
 ## Adım adım: evde denenecekler
 

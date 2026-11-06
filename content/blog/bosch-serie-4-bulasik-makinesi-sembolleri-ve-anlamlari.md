@@ -18,21 +18,6 @@ steps:
   - "Tuz göstergesi yanıyorsa özel tuzu programı başlatmadan hemen önce tuz kabına doldur; tuz kabına deterjan koyma."
   - "Parlatıcı göstergesi yanıyorsa kapağı kaldır, parlatıcıyı max işaretine kadar doldur ve kapağı yerine oturana kadar kapat."
   - "Bulaşıkları, püskürtülen su yüzeylerine ulaşacak şekilde aralıklı yerleştir."
-faq:
-  - q: "Bosch Serie 4'te su girişi (musluk) göstergesi ne demek?"
-    a: "Bosch'un Serie 4 kısa kılavuzundaki arıza tablosu bu göstergeyi E:32-00 ile birlikte veriyor: E:32-00 değişimli olarak yanıyor veya su girişi göstergesi yanıyor. Tabloda dört sebep sıralanıyor: besleme hortumu bükülmüş, musluk kapalı, musluk sıkışmış veya kireçlenmiş, besleme hortumunun ya da AquaStop hortumunun su bağlantısındaki süzgeçler tıkanmış. Kılavuz ayrıca ölçülebilir bir eşik veriyor: musluk açıkken akan su miktarı (debi) en az 10 litre/dakika olmalıdır."
-  - q: "Serie 4'te E:32-00 kodu çıkınca ne yapmalı?"
-    a: "Kılavuzun sırası şu: besleme hortumunu bükülme olmadan döşeyin, musluğu açın, musluk sıkışmış veya kireçlenmişse yine musluğu kontrol edin. Süzgeç tıkanması için kılavuz 11 adım veriyor: cihazı kapatın, fişi çekin, musluğu kapatın, su bağlantısını sökün, süzgeci besleme hortumundan çıkarın, temizleyin, yerine yerleştirin, su bağlantısını vidalayın, sızdırmazlığı kontrol edin, elektriği verin, cihazı çalıştırın."
-  - q: "E:61-02 kodu ne anlama geliyor?"
-    a: "Bosch'un Serie 4 tablosunda E:61-02 değişimli olarak yanıyor satırının iki sebebi var: atık su pompası bloke olmuş ve atık su pompasının kapağı gevşek. Çözüm olarak atık su pompasını temizleyin ve atık su pompasının kapağını doğru şekilde oturtun yazıyor. Bu kod bulaşık makinesine aittir; çamaşır makinelerindeki benzer numaralarla karıştırılmamalıdır."
-  - q: "E:92-40 kodu ne demek?"
-    a: "Kılavuzun tablosunda tek satır: süzgeçler pislenmiş veya tıkanmış, çözüm süzgeçleri temizleyin. Süzgeç temizliği kılavuzda ayrı bir bölüm olarak da anlatılıyor: süzgeç sistemi çıkarılır, mikro süzgeç aşağı doğru çekilerek alınır, elemanlar musluk suyunun altında temizlenir, parçalar birleştirilir ve kaba süzgeç saat yönünde çevrilerek yerine oturtulur; ok işaretlerinin karşı karşıya durmasına dikkat edilir."
-  - q: "Tuz ve parlatıcı göstergeleri neyi söyler?"
-    a: "Serie 4 kısa kılavuzu her ikisinin de doldurma yordamını veriyor. Özel tuz için kılavuzun uyarısı şu: makinede hasar oluşmasını önlemek amacıyla, özel tuzu programı başlatmadan hemen önce özel tuz kabına doldurun; ilk çalıştırma sırasında kap tamamen suyla doldurulur ve tuz kaba doldurulurken taşan su akıp gider. Kılavuz bu kaba kesinlikle deterjan doldurulmamasını söylüyor. Parlatıcı ise max işaretine kadar doldurulur ve kapak duyulur şekilde yerine oturur."
-  - q: "Su sertliği ayarı göstergede nasıl görünür?"
-    a: "Serie 4'te su sertliği temel ayarlardan yapılıyor ve ekranda Hxx olarak görünüyor. Kılavuzun tablosu değerleri şöyle veriyor: yumuşak 0-1,1 mmol/l için H00, yumuşak 1,2-1,4 için H01, orta 1,5-1,8 için H02, orta 1,9-2,1 için H03, orta 2,2-2,9 için H04, sert 3,0-3,7 için H05, sert 3,8-5,4 için H06, sert 5,5-8,9 için H07."
-  - q: "Bu semboller bütün Bosch modellerinde aynı mı?"
-    a: "Bu yazıdaki karşılıklar Bosch'un Serie 4 kısa kılavuzlarından (SMS4IKI62T, SMS4IKW62T, SMS4IKW61T) alınmıştır. Bosch'un farklı serilerinde panel düzeni ve kod biçimi değişebiliyor; özellikle iki haneli E15 tipi kodlar ile Serie 4'ün E:32-00 biçimindeki kodları aynı gösterim değildir. Kendi modelinin kılavuzundaki tablo esastır."
 images:
   coverAlt: "Bulaşık makinesinin kontrol paneli yakın planda; su girişi, tuz ve parlatıcı göstergeleri ile iki haneli gösterge ekranı görünüyor"
   steps:
@@ -43,6 +28,21 @@ images:
     - "Bulaşık makinesinin tabanında açık tuz kabı"
     - "Bulaşık makinesi kapağının içinde açık parlatıcı kabı"
     - "Bulaşık makinesi sepetinde aralıklı dizilmiş tabaklar"
+updated: "2026-11-06"
+kisaCevap: "Bosch Serie 4 kısa kılavuzuna göre su girişi (musluk) göstergesi E:32-00 ile aynı satırdadır: hortum bükülmüş, musluk kapalı ya da kireçlenmiş veya süzgeç tıkalıdır; musluktan en az 10 litre/dakika su akmalıdır. E:61-02 atık su pompası bloke, E:92-40 süzgeçler tıkalı demektir."
+faq:
+  - q: "Bosch Serie 4'te su girişi (musluk) göstergesi ne demek?"
+    a: "Serie 4 kısa kılavuzu bu göstergeyi E:32-00 ile aynı satırda verir. Sebepler: besleme hortumu bükülmüş, musluk kapalı, musluk sıkışmış ya da kireçlenmiş, hortumun ya da AquaStop hortumunun bağlantısındaki süzgeçler tıkanmış. Musluk açıkken akan su en az 10 litre/dakika olmalıdır."
+  - q: "Serie 4'te E:32-00 kodu çıkınca ne yapmalı?"
+    a: "Kılavuzun sırası: hortumu bükülmeden döşe, musluğu aç ve kontrol et. Süzgeç tıkalıysa cihazı kapat, fişi çek, musluğu kapat, su bağlantısını söküp süzgeci çıkar ve temizle, geri tak, bağlantıyı vidala, sızdırmazlığı kontrol et, elektriği verip cihazı çalıştır."
+  - q: "E:61-02 kodu ne anlama geliyor?"
+    a: "Bosch Serie 4 tablosunda E:61-02'nin iki sebebi var: atık su pompası bloke olmuş ya da pompa kapağı gevşek. Çözüm atık su pompasını temizlemek ve kapağını doğru oturtmaktır; kapak duyulur şekilde yerine oturur. Bu kod bulaşık makinesine aittir."
+  - q: "E:92-40 kodu ne demek?"
+    a: "Kılavuz tablosunda E:92-40 süzgeçlerin pislendiğini ya da tıkandığını gösterir; çözüm süzgeçleri temizlemektir. Süzgeç sistemi çıkarılır, elemanlar musluk suyunun altında temizlenir, kaba süzgeç saat yönünde çevrilerek takılır ve ok işaretleri karşı karşıya gelir."
+  - q: "Su sertliği ayarı göstergede nasıl görünür?"
+    a: "Serie 4'te su sertliği temel ayarlardan yapılır ve ekranda Hxx olarak görünür: H00 (0-1,1 mmol/l) ile H07 (5,5-8,9 mmol/l) arasında 8 kademe vardır; orta sertlik 2,2-2,9 mmol/l için H04'tür."
+  - q: "Tuz ve parlatıcı nasıl doldurulur?"
+    a: "Kılavuza göre özel tuz, hasarı önlemek için programı başlatmadan hemen önce tuz kabına doldurulur; ilk çalıştırmada kap suyla doludur ve taşan su akıp gider. Bu kaba deterjan konmaz. Parlatıcı max işaretine kadar doldurulur ve kapak duyulur şekilde kapanır."
 ---
 
 Serie 4'ün panelinde bir gösterge yanıyor ya da ekranda **E:** ile başlayan bir kod var. Bu yazıdaki karşılıkların tamamı Bosch'un **Serie 4 kısa kılavuzundan** alındı.

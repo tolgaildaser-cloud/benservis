@@ -18,21 +18,6 @@ steps:
   - "Bulaşıklar temiz ya da kuru çıkmıyorsa parlatıcı göstergesine bak; parlatıcı yeterliyse P: ayarını yükselt."
   - "Filtreleri haftada en az bir kez çevirerek çıkar, musluk altında fırçayla temizle ve kaba filtreyi tık sesi gelene kadar çevirerek yerine tak."
   - "Tuşlar tepki vermiyorsa makine açık ve kapı kapalıyken P4 tuşuna 3 saniye basarak çocuk kilidini kaldır."
-faq:
-  - q: "Beko bulaşık makinesinde tuz göstergesi neden sürekli yanıyor?"
-    a: "Beko'nun B 710 kılavuzu üç durum sayıyor. Birincisi tuz bitmiştir: gösterge yanmaya başladığında tuz bölmesine yeniden tuz doldurmanız gerekir. İkincisi tuz yeni konmuştur: kılavuza göre tuzun suda çözünmesi birkaç saat sürebilir, bu nedenle doldurmadan sonra gösterge belirli bir süre yanmaya devam eder. Üçüncüsü su sertliği ayarı 1. seviyededir ya da suyunuz 7 °dH'nin altındadır: bu durumda tuz kullanmanız gerekmez ama kılavuzun ifadesiyle Tuz Eksikliği Uyarı göstergesi sürekli yanacaktır."
-  - q: "Beko bulaşık makinesinde yıldız gibi yanan kırmızı işaret ne?"
-    a: "B 710 kılavuzunun ekran çiziminde ışıltı biçimindeki işaret Parlatıcı Eksikliği Uyarı Göstergesi olarak numaralanmış. Kılavuza göre bu gösterge yanmaya başladığında parlatıcı bölmesine yeniden parlatıcı doldurmanız gerekir. Bölme MAX seviyesine kadar doldurulur ve kapak hafifçe bastırılarak kapatılır."
-  - q: "Beko bulaşık makinesinde kilit işareti yanıyor, tuşlar çalışmıyor. Ne yapmalıyım?"
-    a: "Kilit simgesi Çocuk Kilidi göstergesidir. B 710 kılavuzuna göre makine açık ve kapı kapalıyken P4 tuşuna 3 saniye basılı tutarsanız kilit iptal olur ve gösterge söner. Kilit seçilen fonksiyonların değiştirilmesini önler ve Başla / Bekle / İptal tuşunu etkisiz hale getirir. Kılavuz iki not daha düşüyor: çocuk kilidi makinenin kapısını kilitlemez ve makineyi Açma / Kapatma tuşuyla kapatırsanız kilit otomatik olarak devreden çıkar."
-  - q: "Beko bulaşık makinesi ekranında r:3, P:2, S:1 yazıyor, bunlar ne?"
-    a: "Bunlar alt menü ayarlarıdır, arıza değildir. B 710 kılavuzuna göre P3 tuşuna 3 saniye basınca alt menüye girilir. r: su sertliği seviyesidir (r:1-r:5), P: parlatıcı dozudur (P:0 hiç parlatıcı atılmaz, P:4'te 5 doz atılır), S: uyarı sesi seviyesidir (S:0 kapalı, S:1 orta, S:2 yüksek; fabrika ayarı S:2). Ayarlar Açma / Kapatma tuşuna 3 saniye basarak menüden çıkınca otomatik kaydedilir."
-  - q: "Programı iptal edince ekranda 0:01 yazıyor, makine bozuldu mu?"
-    a: "Hayır. B 710 kılavuzuna göre Başla / Bekle / İptal tuşuna 3 saniye basıldığında ekranda 3 – 2 – 1 geri sayımından sonra 0:01 görüntülenir ve tahliye işlemi başlar. Tahliye 2 dakika içinde tamamlanır ve bittiğinde makine sesli uyarı verir. Kılavuz bazı modellerde sesli uyarı olmadığını da not ediyor."
-  - q: "Beko bulaşık makinesinde Wi-Fi (HomeWhiz) işareti yanıp sönüyor, neden?"
-    a: "B 710 kılavuzuna göre HomeWhiz ikonu sürekli yanıyorsa ürün kablosuz ağa bağlıdır; sürekli olarak kısa aralıklarla yanıp sönüyorsa bağlantı açıktır ama ağa bağlanamamıştır veya bağlanmaya çalışmaktadır. Kılavuz örnek olarak kablosuz bağlantı ayarının kapalı olmasını ya da makinenin kapısının açık olmasını veriyor. İlk kurulum 5 dakika içinde tamamlanmazsa simge kapanır ve kurulum 1. adımdan tekrarlanır."
-  - q: "Bu semboller bütün Beko bulaşık makinelerinde aynı mı?"
-    a: "Değil. Bu yazıdaki karşılıklar Beko'nun B 710 i, B 710 b, B 710 si, B 710 sc, B 710 bc ve B 710 gc modelleri için yayımladığı 25 Mart 2026 tarihli Türkçe kullanma kılavuzundan alınmıştır. Kılavuz da hata kodlarının modele göre değişiklik gösterebileceğini yazıyor. Farklı bir Beko modelinde panel ve tuş düzeni değişebilir; kendi modelinin kılavuzu esastır."
 images:
   coverAlt: "Bulaşık makinesinin siyah gösterge ekranı yakın planda; solda kırmızı parlatıcı ve tuz uyarı simgeleri, ortada dijital süre, sağda kapı ve kilit simgeleri görünüyor"
   steps:
@@ -43,6 +28,21 @@ images:
     - "Çizim: solda bulaşık makinesi, sağda parlatıcı haznesi"
     - "Çizim: solda bulaşık makinesi, sağda ilgili filtre"
     - "Çizim: solda bulaşık makinesi, sağda kapak"
+updated: "2026-11-06"
+kisaCevap: "Beko'nun B 710 serisi kullanma kılavuzuna göre tuz göstergesi tuz bittiğinde yanar; tuz yeni konduysa çözünene kadar birkaç saat yanmaya devam eder. Su sertliği 1. seviyedeyse ya da su 7 °dH'nin altındaysa tuz gerekmez ama gösterge sürekli yanar. Kilit simgesi çocuk kilididir, P4 tuşuna 3 saniye basılınca kalkar."
+faq:
+  - q: "Beko bulaşık makinesinde tuz göstergesi neden sürekli yanıyor?"
+    a: "Beko B 710 kılavuzu üç durum sayar: tuz bitmiştir ve yeniden doldurulur; tuz yeni konmuştur ve çözünmesi birkaç saat sürer; su sertliği 1. seviyededir ya da su 7 °dH'nin altındadır. Son durumda tuz gerekmez ama Tuz Eksikliği Uyarı göstergesi sürekli yanar."
+  - q: "Beko bulaşık makinesinde yıldız gibi yanan kırmızı işaret ne?"
+    a: "B 710 kılavuzunun ekran çiziminde ışıltı biçimindeki işaret Parlatıcı Eksikliği Uyarı Göstergesidir. Yandığında parlatıcı bölmesi MAX seviyesine kadar doldurulur ve kapak hafifçe bastırılarak kapatılır."
+  - q: "Beko bulaşık makinesinde kilit işareti yanıyor, tuşlar çalışmıyor, ne yapmalıyım?"
+    a: "Kilit simgesi Çocuk Kilidi göstergesidir. B 710 kılavuzuna göre makine açık ve kapı kapalıyken P4 tuşuna 3 saniye basılınca kilit kalkar. Kilit Başla / Bekle / İptal tuşunu etkisiz kılar, kapıyı kilitlemez; makine Açma / Kapatma tuşuyla kapatılınca kendiliğinden devreden çıkar."
+  - q: "Beko bulaşık makinesi ekranında r:3, P:2, S:1 yazıyor, bunlar ne?"
+    a: "Alt menü ayarlarıdır, arıza değildir. B 710 kılavuzuna göre P3 tuşuna 3 saniye basınca alt menüye girilir: r: su sertliği (r:1-r:5), P: parlatıcı dozu (P:0 parlatıcı yok), S: uyarı sesi (S:0 kapalı, fabrika ayarı S:2). Açma / Kapatma'ya 3 saniye basınca ayarlar kaydedilir."
+  - q: "Programı iptal edince ekranda 0:01 yazıyor, makine bozuldu mu?"
+    a: "Hayır. B 710 kılavuzuna göre Başla / Bekle / İptal tuşuna 3 saniye basıldığında 3 – 2 – 1 geri sayımından sonra ekranda 0:01 görünür ve tahliye başlar. Tahliye 2 dakika içinde biter ve makine sesli uyarı verir; bazı modellerde sesli uyarı yoktur."
+  - q: "Beko bulaşık makinesinde Wi-Fi (HomeWhiz) işareti yanıp sönüyor, neden?"
+    a: "B 710 kılavuzuna göre HomeWhiz ikonu sürekli yanıyorsa ürün ağa bağlıdır; kısa aralıklarla yanıp sönüyorsa bağlantı açıktır ama ağa bağlanamamıştır, örneğin kablosuz ayar kapalıdır ya da kapı açıktır. İlk kurulum 5 dakikada tamamlanmazsa simge kapanır ve kurulum baştan yapılır."
 ---
 
 Beko bulaşık makinesinin ekranında kırmızı bir simge yanıyor, tuşlar tepki vermiyor ya da ekranda **r:3**, **P:2** gibi bir yazı var. Bu yazıdaki karşılıkların tamamı Beko'nun **B 710 serisi** (B 710 i, B 710 b, B 710 si, B 710 sc, B 710 bc, B 710 gc) için yayımladığı 25 Mart 2026 tarihli Türkçe kullanma kılavuzundan alındı.
