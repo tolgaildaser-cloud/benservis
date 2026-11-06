@@ -2,7 +2,7 @@
 title: "Derin dondurucu su akıtıyor: nedenleri ve ne yapılır?"
 description: "Derin dondurucu su akıtıyorsa ne yapılır? Beko BK 3315 ve Vestel SD50011 kılavuzuna göre yoğuşma, su tepsisi, su akış tapası ve yerleşim kontrolü."
 slug: "derin-dondurucu-su-akitiyor"
-date: "2026-11-09"
+date: "2026-11-10"
 category: "Buzdolabı"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md #282 [5 Kas ara tarama] "derin dondurucu su akıtıyor / altından su geliyor"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.308 dosya); "su akıtıyor" geçen derin dondurucu yazısı yok (marka sürümü de yok). Yakın yazılar: derin-dondurucu-buz-cozme, derin-dondurucu-nasil-temizlenir, derin-dondurucu-buzlanma-yapiyor, derin-dondurucu-dondurmuyor, derin-dondurucu-kac-derece-olmali.
@@ -34,14 +34,14 @@ faq:
   - q: "Buz çözme sırasında akan suyu ne yapmalıyım?"
     a: "Beko'da buz çözme suyu arkadaki su toplama tepsisinde toplanır; büyük bir buz parçası varsa tepsideki su seviyesini kontrol etmeni, taşacaksa boşaltmanı istiyor. Vestel'de bir kabı su akış kanalının altına koyup kanal tapalarını çıkararak suyu boşaltırsın."
 images:
-  coverAlt: "Kapağı kapalı sade bir sandık tipi derin dondurucu ve önünde küçük bir su birikintisi çizimi"
+  coverAlt: "Sade derin dondurucu ve yanında su damlaları çizimi"
   steps:
-    - "Derin dondurucunun dış yüzeyini yumuşak bezle silen beyaz eldivenli sade siluet el"
+    - "Derin dondurucunun altından damlayan su, bez tutan beyaz eldivenli sade siluet el çizimi"
     - "Derin dondurucu ile duvar arasındaki boşluğu gösteren beyaz eldivenli sade siluet el"
     - "Derin dondurucunun kapağını kapatan beyaz eldivenli sade siluet el"
     - "Derin dondurucunun arkasındaki küçük su tepsisini çıkaran beyaz eldivenli sade siluet el"
     - "Derin dondurucunun önüne su toplama kabı koyan beyaz eldivenli sade siluet el"
-    - "Derin dondurucunun tabanındaki tapayı çeken beyaz eldivenli sade siluet el"
+    - "Derin dondurucunun önündeki işaretli tahliye tapası, altında kova, tapaya uzanan beyaz eldivenli sade siluet el çizimi"
     - "Telefonla servisi arayan beyaz eldivenli sade siluet el, yanında derin dondurucu"
 ---
 

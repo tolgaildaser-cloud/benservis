@@ -2,7 +2,7 @@
 title: "Davlumbaz bakımı nasıl yapılır? Bosch ve Vestel kılavuzu"
 description: "Davlumbaz bakımı nasıl yapılır? Bosch DWK ve Vestel AD-63330 kılavuzuna göre yağ filtresi yıkama, karbon filtre değişimi, gövde temizliği ve sıklık."
 slug: "davlumbaz-bakimi-nasil-yapilir"
-date: "2026-11-09"
+date: "2026-11-10"
 category: "Davlumbaz"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md #285 [5 Kas ara tarama] "davlumbaz bakımı nasıl yapılır"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.308 dosya). Yakın yazılar (tek parça odaklı): davlumbaz-yag-filtresi-nasil-temizlenir, davlumbaz-karbon-filtre-degisimi, davlumbaz-cekmiyor, davlumbaz-gurultulu-calisiyor, davlumbaz-calismiyor.
@@ -34,11 +34,11 @@ faq:
   - q: "Davlumbazı filtresiz çalıştırabilir miyim?"
     a: "Hayır. Bosch karbon filtre kullanılsın ya da kullanılmasın yağ filtrelerinin her durumda takılı olmasını istiyor. Vestel de ürünü filtresiz çalıştırmamanı ve ıslak filtreyi kesinlikle yerine takmamanı yazıyor."
 images:
-  coverAlt: "Ocak üstünde sade bir davlumbaz ve yanında çıkarılmış metal yağ filtresi çizimi"
+  coverAlt: "Sade davlumbaz ve yanında sprey şişesi çizimi"
   steps:
     - "Davlumbazın fişini prizden çeken beyaz eldivenli sade siluet el"
-    - "Davlumbazın altından metal yağ filtresini indiren beyaz eldivenli sade siluet el"
-    - "Köpüklü su dolu lavaboda filtreyi fırçalayan beyaz eldivenli sade siluet el"
+    - "Davlumbaz, ok ve çıkarılmış filtreye uzanan beyaz eldivenli sade siluet el çizimi"
+    - "Buharı tüten lavaboda filtre, fırçayı tutan beyaz eldivenli sade siluet el çizimi"
     - "Kurumuş filtreyi davlumbazın altına yerleştiren beyaz eldivenli sade siluet el"
     - "Yuvarlak karbon filtreyi davlumbazın motor kapağına çeviren beyaz eldivenli sade siluet el"
     - "Davlumbaz gövdesini yumuşak bezle silen beyaz eldivenli sade siluet el"

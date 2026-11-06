@@ -2,7 +2,7 @@
 title: "Çamaşır makinesi programları ne demek? Sentetik, mix, eko"
 description: "Çamaşır makinesi programları ne demek? Beko D4 9101 E ve Bosch WGA244A0TR kılavuzuna göre pamuklu, sentetik, mix, eko, yünlü ve kısa programlar."
 slug: "camasir-makinesi-programlari-ne-demek"
-date: "2026-11-09"
+date: "2026-11-10"
 category: "Çamaşır makinesi"
 # --- Provenans (yayında görünmez) ---
 # 2026-11-06 Cum PAZ alt ajanı (YK #197 boşluk yazısı; BOSLUK.md #292 [5 Kas ara tarama] "çamaşır makinesi programları ne demek (sentetik, karma, eko, mix, pamuklu)"). Slug origin/main content/blog/'da ve blog-taslaklar'da yok (6 Kas fetch, 1.308 dosya). Program anlamlarını anlatan jenerik yazı yok; süre ve sembol yazıları var. Yakın yazılar: camasir-makinesi-program-sureleri (süre), camasir-makinesi-nasil-calistirilir (genel kullanım), camasir-makinesi-programi-iptal-etme, camasir-makinesi-kirec-ve-tambur-temizligi, beko-/bosch-camasir-makinesi-sembolleri-ve-anlamlari.
@@ -34,10 +34,10 @@ faq:
   - q: "Kazan ya da tambur temizleme programı çamaşırla çalıştırılır mı?"
     a: "Hayır. Beko Kazan Temizleme programını kesinlikle çamaşırsız ve makine boşken, 1-2 ayda bir çalıştırmanı istiyor; bunun yıkama programı değil bakım programı olduğunu yazıyor. Bosch Tambur Temizleme programını ilk kullanımdan önce, 40 °C ve daha düşük sıcaklıkta sık yıkamada ve uzun süre kullanım dışı kalınca öneriyor."
 images:
-  coverAlt: "Program düğmesi olan sade bir çamaşır makinesi ve yanında katlanmış havlu ile gömlek çizimi"
+  coverAlt: "Sade çamaşır makinesi ve yanında kontrol paneli çizimi"
   steps:
-    - "Bir gömleğin iç etiketini tutan beyaz eldivenli sade siluet el"
-    - "Çamaşır makinesinin program düğmesini çeviren beyaz eldivenli sade siluet el"
+    - "Askıdaki tişörtün bakım etiketi ve büyüteç, beyaz eldivenli sade siluet el çizimi"
+    - "Kontrol panelinde işaretli tuşa basan beyaz eldivenli sade siluet el çizimi"
     - "Havlu ve gömleği birlikte tambura koyan beyaz eldivenli sade siluet el"
     - "Program düğmesini eko konumuna çeviren beyaz eldivenli sade siluet el"
     - "Tambura birkaç parça çamaşır koyan beyaz eldivenli sade siluet el"
