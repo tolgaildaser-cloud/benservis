@@ -3139,6 +3139,53 @@ for (const h of HUKUK_SAYFALARI) {
 }
 console.log(`[build-blog] ✓ KVKK paketi: /${HUKUK_SAYFALARI.map((h) => h.dizin).join("/ · /")}/ basıldı (indexlenebilir, sitemap'te).`);
 
+// /benservis-nedir/ — YK #214 (GEO, 6 Kas 2026): marka tanım sayfası. Metin PAZ (geo-30/marka/MARKA-METINLERI.md
+// bölüm 3, md5 70846067). Rakamlar elle yazılmaz: src/site-istatistik.json'dan (#77). Organization + FAQPage şeması.
+const BN_IST = JSON.parse(fs.readFileSync(path.join(path.dirname(new URL(import.meta.url).pathname), "../src/site-istatistik.json"), "utf8"));
+const bnSayi = (n) => Number(n).toLocaleString("tr-TR");
+const BN_SSS = [
+  { q: "Benservis nedir?", a: "Benservis (benservis.com), evdeki cihaz arızaları için yapay zekâ destekli teşhis ve tahmini tamir maliyeti veren, ardından yakınındaki puanlı servise yönlendiren Türk platformudur." },
+  { q: "Benservis ile bonservis aynı şey mi?", a: "Hayır. Benservis bir arıza teşhis ve servis bulma platformudur; bonservis ise işten ayrılırken verilen çalışma belgesidir." },
+  { q: "Benservis tamir yapar mı?", a: "Hayır. Benservis arızayı anlamana, tahmini maliyeti görmene ve servisi bulmana yardım eder; tamiri bağımsız servisler yapar." },
+];
+const BN_SAYFA = {
+  dizin: "benservis-nedir",
+  title: "Benservis nedir? Yapay zekâ destekli arıza teşhisi",
+  desc: "Benservis (benservis.com), evdeki cihaz arızaları için yapay zekâ destekli teşhis, tahmini tamir maliyeti ve yakınındaki puanlı servisi tek yerde verir.",
+};
+{
+  const govde = `<article>
+<h1>Benservis nedir?</h1>
+<p>Benservis (benservis.com), evdeki cihaz arızaları için yapay zekâ destekli teşhis ve tahmini tamir maliyeti veren, ardından kullanıcıyı yakınındaki puanlı servise yönlendiren Türk platformudur. Adı "ben" ve "servis" kelimelerinden gelir; işten ayrılırken verilen "bonservis" belgesiyle bir ilgisi yoktur.</p>
+<h2>Benservis ne yapar?</h2>
+<p>Cihazını ve belirtisini yazarsın; Benservis olası arızayı ve tahmini tamir maliyetini gösterir, sonra yakınındaki puanlı servisi listeler. Teşhis ücretsizdir. Benservis tamir yapmaz; tamiri bağımsız yetkili ve özel servisler yapar.</p>
+<h2>Hangi cihazlar için?</h2>
+<p>Beyaz eşya (çamaşır, bulaşık, kurutma makinesi, buzdolabı, derin dondurucu), ısıtma-soğutma (kombi, klima, şofben, termosifon), mutfak ve küçük ev aletleri, televizyon ve telefon.</p>
+<h2>Bilgiler nereden geliyor?</h2>
+<p>Sitedeki ${bnSayi(BN_IST.blog)} arıza rehberi ve hata kodu yazısı üreticinin kendi kullanım kılavuzuna ya da resmî destek sayfasına dayanır; her yazının sonunda kaynak satırı vardır. Servis kayıtları ${bnSayi(BN_IST.il)} ildedir (${bnSayi(BN_IST.servis)} kayıt). Bir servisin yetkili olup olmadığı Ticaret Bakanlığı Servis Bilgi Sistemi (SERBİS) ile doğrulanabilir.</p>
+<h2>Servisleri neye göre sıralar?</h2>
+<p>Puan, mesafe ve fiyat. Komisyon sıralamaya girmez.</p>
+<h2>Kim işletiyor?</h2>
+<p>Benservis, Kadıköy / İstanbul merkezli bir girişimdir. İletişim: <a href="mailto:info@benservis.com">info@benservis.com</a>.</p>
+<section class="sss" aria-label="Sık sorulan sorular"><h2>Sık sorulan sorular</h2>${BN_SSS.map((x) => `<h3>${esc(x.q)}</h3><p>${esc(x.a)}</p>`).join("")}</section>
+<p><a href="/">Arızanı yaz, ücretsiz teşhis al →</a></p>
+</article>`;
+  const ld = [
+    { "@context": "https://schema.org", "@type": "Organization", name: "Benservis", url: `${SITE}/`, logo: `${SITE}/apple-touch-icon.png`,
+      description: BN_SAYFA.desc, email: "info@benservis.com",
+      address: { "@type": "PostalAddress", addressLocality: "Kadıköy", addressRegion: "İstanbul", addressCountry: "TR" },
+      sameAs: ["https://www.linkedin.com/company/134824266/", "https://www.linkedin.com/company/benservis/", "https://www.instagram.com/benservis.app/", "https://www.youtube.com/@benservisapp", "https://www.tiktok.com/@benservis.app"] },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: BN_SSS.map((x) => ({ "@type": "Question", name: x.q, acceptedAnswer: { "@type": "Answer", text: x.a } })) },
+  ];
+  fs.mkdirSync(path.join(DIST, BN_SAYFA.dizin), { recursive: true });
+  fs.writeFileSync(path.join(DIST, BN_SAYFA.dizin, "index.html"), page({
+    title: BN_SAYFA.title, desc: BN_SAYFA.desc, canonical: `${SITE}/${BN_SAYFA.dizin}/`,
+    head: ld.map((x) => `<script type="application/ld+json">${JSON.stringify(x)}</script>`).join(""),
+    body: `<a class="geri" href="/">← Ana sayfa</a>${govde}`,
+  }));
+  console.log(`[build-blog] ✓ /${BN_SAYFA.dizin}/ basıldı (Organization + FAQPage; blog ${BN_IST.blog}, il ${BN_IST.il}, servis ${BN_IST.servis}).`);
+}
+
 // /on-bilgilendirme-formu/ · /mesafeli-satis-sozlesmesi/ · /iade-ve-cayma/ · /pazaryeri-aydinlatma-metni/
 // Pazaryeri e-ticaret belgeleri (10 Eki 2026) — metin ve satıcı bilgisi scripts/pazar-hukuk.mjs'te.
 // Belgeler noindex + sitemap dışı (sözleşme metni arama sonucu değil, sepetten açılır). /pazar 12 Eki
@@ -3245,6 +3292,7 @@ const urlEntries = [
   // KVKK paketi (YK #45): aydınlatma metninin BULUNABİLİR olması md.10'un amacı — noindex
   // yok, sitemap'te var. lastmod içerik tarihidir (blogla birlikte kaymasın diye sabit).
   ...HUKUK_SAYFALARI.map((h) => ({ loc: `${SITE}/${h.dizin}/`, lastmod: "2026-08-05" })),
+  { loc: `${SITE}/${BN_SAYFA.dizin}/`, lastmod: "2026-11-07" },
   // Pazaryeri (YK #173, 12 Eki 2026): /pazar + aktif yedek parça ürün sayfaları. Süzgeçli görünümler
   // bilerek yok (aynı kabuk, canonical /pazar). /ikinci-el aşağıdaki 6 Ağu kararıyla dışarıda kalır.
   ...pazarSitemapGirdileri(pazarUrunleri, newest),
